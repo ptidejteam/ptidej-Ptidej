@@ -1,0 +1,1155 @@
+#Micro-architecture 220 similar at 0% with Composite Design Motif
+220.0.component = java.lang.Object
+220.0.composite = java.io.PrintStream
+220.0.leaf = ptidej.example.composite2.AbstractDocument
+220.0.Name = Composite Design Motif
+220.0.XCommand = command
+
+#Micro-architecture 214 similar at 0% with Composite Design Motif
+214.0.component = java.lang.Object
+214.0.composite = java.lang.Class
+214.0.leaf = ptidej.example.composite2.AbstractDocument
+214.0.Name = Composite Design Motif
+214.0.XCommand = command
+
+#Micro-architecture 179 similar at 0% with Composite Design Motif
+179.0.component = java.lang.Object
+179.0.composite = java.lang.String
+179.0.leaf = ptidej.example.composite2.Main
+179.0.Name = Composite Design Motif
+179.0.XCommand = command
+
+#Micro-architecture 216 similar at 0% with Composite Design Motif
+216.0.component = java.lang.Object
+216.0.composite = java.lang.System
+216.0.leaf = ptidej.example.composite2.AbstractDocument
+216.0.Name = Composite Design Motif
+216.0.XCommand = command
+
+#Micro-architecture 200 similar at 0% with Composite Design Motif
+200.0.component = java.lang.Object
+200.0.composite = java.util.Vector
+200.0.leaf = ptidej.example.composite2.Document
+200.0.Name = Composite Design Motif
+200.0.XCommand = command
+
+#Micro-architecture 197 similar at 0% with Composite Design Motif
+197.0.component = java.lang.Object
+197.0.composite = ptidej.example.composite2.AbstractDocument
+197.0.leaf = ptidej.example.composite2.Document
+197.0.Name = Composite Design Motif
+197.0.XCommand = command
+
+#Micro-architecture 208 similar at 0% with Composite Design Motif
+208.0.component = java.lang.Object
+208.0.composite = ptidej.example.composite2.AbstractDocument
+208.0.leaf = ptidej.example.composite2.Element
+208.0.Name = Composite Design Motif
+208.0.XCommand = command
+
+#Micro-architecture 184 similar at 0% with Composite Design Motif
+184.0.component = java.lang.Object
+184.0.composite = ptidej.example.composite2.Document
+184.0.leaf = ptidej.example.composite2.Main
+184.0.Name = Composite Design Motif
+184.0.XCommand = command
+
+#Micro-architecture 196 similar at 0% with Composite Design Motif
+196.0.component = java.lang.Object
+196.0.composite = ptidej.example.composite2.Element
+196.0.leaf = ptidej.example.composite2.Document
+196.0.Name = Composite Design Motif
+196.0.XCommand = command
+
+#Micro-architecture 185 similar at 0% with Composite Design Motif
+185.0.component = java.lang.Object
+185.0.composite = ptidej.example.composite2.Element
+185.0.leaf = ptidej.example.composite2.Main
+185.0.Name = Composite Design Motif
+185.0.XCommand = command
+
+#Micro-architecture 230 similar at 0% with Composite Design Motif
+230.0.component = java.lang.Object
+230.0.composite = ptidej.example.composite2.Element
+230.0.leaf = ptidej.example.composite2.Paragraph
+230.0.Name = Composite Design Motif
+230.0.XCommand = command
+
+#Micro-architecture 163 similar at 0% with Composite Design Motif
+163.0.component = java.lang.Object
+163.0.composite = ptidej.example.composite2.Element
+163.0.leaf = ptidej.example.composite2.Title
+163.0.Name = Composite Design Motif
+163.0.XCommand = command
+
+#Micro-architecture 182 similar at 0% with Composite Design Motif
+182.0.component = java.lang.Object
+182.0.composite = ptidej.example.composite2.IndentedParagraph
+182.0.leaf = ptidej.example.composite2.Main
+182.0.Name = Composite Design Motif
+182.0.XCommand = command
+
+#Micro-architecture 177 similar at 0% with Composite Design Motif
+177.0.component = java.lang.Object
+177.0.composite = ptidej.example.composite2.Paragraph
+177.0.leaf = ptidej.example.composite2.IndentedParagraph
+177.0.Name = Composite Design Motif
+177.0.XCommand = command
+
+#Micro-architecture 188 similar at 0% with Composite Design Motif
+188.0.component = java.lang.Object
+188.0.composite = ptidej.example.composite2.Paragraph
+188.0.leaf = ptidej.example.composite2.Main
+188.0.Name = Composite Design Motif
+188.0.XCommand = command
+
+#Micro-architecture 180 similar at 0% with Composite Design Motif
+180.0.component = java.lang.Object
+180.0.composite = ptidej.example.composite2.Title
+180.0.leaf = ptidej.example.composite2.Main
+180.0.Name = Composite Design Motif
+180.0.XCommand = command
+
+#Micro-architecture 308 similar at 0% with Composite Design Motif
+308.0.component = ptidej.example.composite2.AbstractDocument
+308.0.composite = ptidej.example.composite2.Element
+308.0.leaf = ptidej.example.composite2.Paragraph
+308.0.Name = Composite Design Motif
+308.0.XCommand = command
+
+#Micro-architecture 274 similar at 0% with Composite Design Motif
+274.0.component = ptidej.example.composite2.AbstractDocument
+274.0.composite = ptidej.example.composite2.Element
+274.0.leaf = ptidej.example.composite2.Title
+274.0.Name = Composite Design Motif
+274.0.XCommand = command
+
+#Micro-architecture 287 similar at 0% with Composite Design Motif
+287.0.component = ptidej.example.composite2.AbstractDocument
+287.0.composite = ptidej.example.composite2.Paragraph
+287.0.leaf = ptidej.example.composite2.IndentedParagraph
+287.0.Name = Composite Design Motif
+287.0.XCommand = command
+
+#Micro-architecture 254 similar at 0% with Composite Design Motif
+254.0.component = ptidej.example.composite2.Element
+254.0.composite = ptidej.example.composite2.Paragraph
+254.0.leaf = ptidej.example.composite2.IndentedParagraph
+254.0.Name = Composite Design Motif
+254.0.XCommand = command
+
+#Micro-architecture 32 similar at 8% with Composite Design Motif
+32.8.component = java.lang.Object
+32.8.composite = java.io.PrintStream
+32.8.leaf = ptidej.example.composite2.Document
+32.8.Name = Composite Design Motif
+32.8.XCommand = command
+
+#Micro-architecture 41 similar at 8% with Composite Design Motif
+41.8.component = java.lang.Object
+41.8.composite = java.io.PrintStream
+41.8.leaf = ptidej.example.composite2.Element
+41.8.Name = Composite Design Motif
+41.8.XCommand = command
+
+#Micro-architecture 19 similar at 8% with Composite Design Motif
+19.8.component = java.lang.Object
+19.8.composite = java.io.PrintStream
+19.8.leaf = ptidej.example.composite2.IndentedParagraph
+19.8.Name = Composite Design Motif
+19.8.XCommand = command
+
+#Micro-architecture 24 similar at 8% with Composite Design Motif
+24.8.component = java.lang.Object
+24.8.composite = java.io.PrintStream
+24.8.leaf = ptidej.example.composite2.Main
+24.8.Name = Composite Design Motif
+24.8.XCommand = command
+
+#Micro-architecture 60 similar at 8% with Composite Design Motif
+60.8.component = java.lang.Object
+60.8.composite = java.io.PrintStream
+60.8.leaf = ptidej.example.composite2.Paragraph
+60.8.Name = Composite Design Motif
+60.8.XCommand = command
+
+#Micro-architecture 8 similar at 8% with Composite Design Motif
+8.8.component = java.lang.Object
+8.8.composite = java.io.PrintStream
+8.8.leaf = ptidej.example.composite2.Title
+8.8.Name = Composite Design Motif
+8.8.XCommand = command
+
+#Micro-architecture 28 similar at 8% with Composite Design Motif
+28.8.component = java.lang.Object
+28.8.composite = java.lang.Class
+28.8.leaf = ptidej.example.composite2.Document
+28.8.Name = Composite Design Motif
+28.8.XCommand = command
+
+#Micro-architecture 36 similar at 8% with Composite Design Motif
+36.8.component = java.lang.Object
+36.8.composite = java.lang.Class
+36.8.leaf = ptidej.example.composite2.Element
+36.8.Name = Composite Design Motif
+36.8.XCommand = command
+
+#Micro-architecture 13 similar at 8% with Composite Design Motif
+13.8.component = java.lang.Object
+13.8.composite = java.lang.Class
+13.8.leaf = ptidej.example.composite2.IndentedParagraph
+13.8.Name = Composite Design Motif
+13.8.XCommand = command
+
+#Micro-architecture 21 similar at 8% with Composite Design Motif
+21.8.component = java.lang.Object
+21.8.composite = java.lang.Class
+21.8.leaf = ptidej.example.composite2.Main
+21.8.Name = Composite Design Motif
+21.8.XCommand = command
+
+#Micro-architecture 54 similar at 8% with Composite Design Motif
+54.8.component = java.lang.Object
+54.8.composite = java.lang.Class
+54.8.leaf = ptidej.example.composite2.Paragraph
+54.8.Name = Composite Design Motif
+54.8.XCommand = command
+
+#Micro-architecture 2 similar at 8% with Composite Design Motif
+2.8.component = java.lang.Object
+2.8.composite = java.lang.Class
+2.8.leaf = ptidej.example.composite2.Title
+2.8.Name = Composite Design Motif
+2.8.XCommand = command
+
+#Micro-architecture 44 similar at 8% with Composite Design Motif
+44.8.component = java.lang.Object
+44.8.composite = java.lang.String
+44.8.leaf = ptidej.example.composite2.AbstractDocument
+44.8.Name = Composite Design Motif
+44.8.XCommand = command
+
+#Micro-architecture 26 similar at 8% with Composite Design Motif
+26.8.component = java.lang.Object
+26.8.composite = java.lang.String
+26.8.leaf = ptidej.example.composite2.Document
+26.8.Name = Composite Design Motif
+26.8.XCommand = command
+
+#Micro-architecture 34 similar at 8% with Composite Design Motif
+34.8.component = java.lang.Object
+34.8.composite = java.lang.String
+34.8.leaf = ptidej.example.composite2.Element
+34.8.Name = Composite Design Motif
+34.8.XCommand = command
+
+#Micro-architecture 11 similar at 8% with Composite Design Motif
+11.8.component = java.lang.Object
+11.8.composite = java.lang.String
+11.8.leaf = ptidej.example.composite2.IndentedParagraph
+11.8.Name = Composite Design Motif
+11.8.XCommand = command
+
+#Micro-architecture 52 similar at 8% with Composite Design Motif
+52.8.component = java.lang.Object
+52.8.composite = java.lang.String
+52.8.leaf = ptidej.example.composite2.Paragraph
+52.8.Name = Composite Design Motif
+52.8.XCommand = command
+
+#Micro-architecture 1 similar at 8% with Composite Design Motif
+1.8.component = java.lang.Object
+1.8.composite = java.lang.String
+1.8.leaf = ptidej.example.composite2.Title
+1.8.Name = Composite Design Motif
+1.8.XCommand = command
+
+#Micro-architecture 30 similar at 8% with Composite Design Motif
+30.8.component = java.lang.Object
+30.8.composite = java.lang.System
+30.8.leaf = ptidej.example.composite2.Document
+30.8.Name = Composite Design Motif
+30.8.XCommand = command
+
+#Micro-architecture 38 similar at 8% with Composite Design Motif
+38.8.component = java.lang.Object
+38.8.composite = java.lang.System
+38.8.leaf = ptidej.example.composite2.Element
+38.8.Name = Composite Design Motif
+38.8.XCommand = command
+
+#Micro-architecture 14 similar at 8% with Composite Design Motif
+14.8.component = java.lang.Object
+14.8.composite = java.lang.System
+14.8.leaf = ptidej.example.composite2.IndentedParagraph
+14.8.Name = Composite Design Motif
+14.8.XCommand = command
+
+#Micro-architecture 22 similar at 8% with Composite Design Motif
+22.8.component = java.lang.Object
+22.8.composite = java.lang.System
+22.8.leaf = ptidej.example.composite2.Main
+22.8.Name = Composite Design Motif
+22.8.XCommand = command
+
+#Micro-architecture 56 similar at 8% with Composite Design Motif
+56.8.component = java.lang.Object
+56.8.composite = java.lang.System
+56.8.leaf = ptidej.example.composite2.Paragraph
+56.8.Name = Composite Design Motif
+56.8.XCommand = command
+
+#Micro-architecture 4 similar at 8% with Composite Design Motif
+4.8.component = java.lang.Object
+4.8.composite = java.lang.System
+4.8.leaf = ptidej.example.composite2.Title
+4.8.Name = Composite Design Motif
+4.8.XCommand = command
+
+#Micro-architecture 51 similar at 8% with Composite Design Motif
+51.8.component = java.lang.Object
+51.8.composite = java.util.Vector
+51.8.leaf = ptidej.example.composite2.AbstractDocument
+51.8.Name = Composite Design Motif
+51.8.XCommand = command
+
+#Micro-architecture 43 similar at 8% with Composite Design Motif
+43.8.component = java.lang.Object
+43.8.composite = java.util.Vector
+43.8.leaf = ptidej.example.composite2.Element
+43.8.Name = Composite Design Motif
+43.8.XCommand = command
+
+#Micro-architecture 20 similar at 8% with Composite Design Motif
+20.8.component = java.lang.Object
+20.8.composite = java.util.Vector
+20.8.leaf = ptidej.example.composite2.IndentedParagraph
+20.8.Name = Composite Design Motif
+20.8.XCommand = command
+
+#Micro-architecture 25 similar at 8% with Composite Design Motif
+25.8.component = java.lang.Object
+25.8.composite = java.util.Vector
+25.8.leaf = ptidej.example.composite2.Main
+25.8.Name = Composite Design Motif
+25.8.XCommand = command
+
+#Micro-architecture 61 similar at 8% with Composite Design Motif
+61.8.component = java.lang.Object
+61.8.composite = java.util.Vector
+61.8.leaf = ptidej.example.composite2.Paragraph
+61.8.Name = Composite Design Motif
+61.8.XCommand = command
+
+#Micro-architecture 10 similar at 8% with Composite Design Motif
+10.8.component = java.lang.Object
+10.8.composite = java.util.Vector
+10.8.leaf = ptidej.example.composite2.Title
+10.8.Name = Composite Design Motif
+10.8.XCommand = command
+
+#Micro-architecture 18 similar at 8% with Composite Design Motif
+18.8.component = java.lang.Object
+18.8.composite = ptidej.example.composite2.AbstractDocument
+18.8.leaf = ptidej.example.composite2.IndentedParagraph
+18.8.Name = Composite Design Motif
+18.8.XCommand = command
+
+#Micro-architecture 23 similar at 8% with Composite Design Motif
+23.8.component = java.lang.Object
+23.8.composite = ptidej.example.composite2.AbstractDocument
+23.8.leaf = ptidej.example.composite2.Main
+23.8.Name = Composite Design Motif
+23.8.XCommand = command
+
+#Micro-architecture 59 similar at 8% with Composite Design Motif
+59.8.component = java.lang.Object
+59.8.composite = ptidej.example.composite2.AbstractDocument
+59.8.leaf = ptidej.example.composite2.Paragraph
+59.8.Name = Composite Design Motif
+59.8.XCommand = command
+
+#Micro-architecture 7 similar at 8% with Composite Design Motif
+7.8.component = java.lang.Object
+7.8.composite = ptidej.example.composite2.AbstractDocument
+7.8.leaf = ptidej.example.composite2.Title
+7.8.Name = Composite Design Motif
+7.8.XCommand = command
+
+#Micro-architecture 48 similar at 8% with Composite Design Motif
+48.8.component = java.lang.Object
+48.8.composite = ptidej.example.composite2.Document
+48.8.leaf = ptidej.example.composite2.AbstractDocument
+48.8.Name = Composite Design Motif
+48.8.XCommand = command
+
+#Micro-architecture 40 similar at 8% with Composite Design Motif
+40.8.component = java.lang.Object
+40.8.composite = ptidej.example.composite2.Document
+40.8.leaf = ptidej.example.composite2.Element
+40.8.Name = Composite Design Motif
+40.8.XCommand = command
+
+#Micro-architecture 16 similar at 8% with Composite Design Motif
+16.8.component = java.lang.Object
+16.8.composite = ptidej.example.composite2.Document
+16.8.leaf = ptidej.example.composite2.IndentedParagraph
+16.8.Name = Composite Design Motif
+16.8.XCommand = command
+
+#Micro-architecture 58 similar at 8% with Composite Design Motif
+58.8.component = java.lang.Object
+58.8.composite = ptidej.example.composite2.Document
+58.8.leaf = ptidej.example.composite2.Paragraph
+58.8.Name = Composite Design Motif
+58.8.XCommand = command
+
+#Micro-architecture 6 similar at 8% with Composite Design Motif
+6.8.component = java.lang.Object
+6.8.composite = ptidej.example.composite2.Document
+6.8.leaf = ptidej.example.composite2.Title
+6.8.Name = Composite Design Motif
+6.8.XCommand = command
+
+#Micro-architecture 49 similar at 8% with Composite Design Motif
+49.8.component = java.lang.Object
+49.8.composite = ptidej.example.composite2.Element
+49.8.leaf = ptidej.example.composite2.AbstractDocument
+49.8.Name = Composite Design Motif
+49.8.XCommand = command
+
+#Micro-architecture 17 similar at 8% with Composite Design Motif
+17.8.component = java.lang.Object
+17.8.composite = ptidej.example.composite2.Element
+17.8.leaf = ptidej.example.composite2.IndentedParagraph
+17.8.Name = Composite Design Motif
+17.8.XCommand = command
+
+#Micro-architecture 46 similar at 8% with Composite Design Motif
+46.8.component = java.lang.Object
+46.8.composite = ptidej.example.composite2.IndentedParagraph
+46.8.leaf = ptidej.example.composite2.AbstractDocument
+46.8.Name = Composite Design Motif
+46.8.XCommand = command
+
+#Micro-architecture 29 similar at 8% with Composite Design Motif
+29.8.component = java.lang.Object
+29.8.composite = ptidej.example.composite2.IndentedParagraph
+29.8.leaf = ptidej.example.composite2.Document
+29.8.Name = Composite Design Motif
+29.8.XCommand = command
+
+#Micro-architecture 37 similar at 8% with Composite Design Motif
+37.8.component = java.lang.Object
+37.8.composite = ptidej.example.composite2.IndentedParagraph
+37.8.leaf = ptidej.example.composite2.Element
+37.8.Name = Composite Design Motif
+37.8.XCommand = command
+
+#Micro-architecture 55 similar at 8% with Composite Design Motif
+55.8.component = java.lang.Object
+55.8.composite = ptidej.example.composite2.IndentedParagraph
+55.8.leaf = ptidej.example.composite2.Paragraph
+55.8.Name = Composite Design Motif
+55.8.XCommand = command
+
+#Micro-architecture 3 similar at 8% with Composite Design Motif
+3.8.component = java.lang.Object
+3.8.composite = ptidej.example.composite2.IndentedParagraph
+3.8.leaf = ptidej.example.composite2.Title
+3.8.Name = Composite Design Motif
+3.8.XCommand = command
+
+#Micro-architecture 47 similar at 8% with Composite Design Motif
+47.8.component = java.lang.Object
+47.8.composite = ptidej.example.composite2.Main
+47.8.leaf = ptidej.example.composite2.AbstractDocument
+47.8.Name = Composite Design Motif
+47.8.XCommand = command
+
+#Micro-architecture 31 similar at 8% with Composite Design Motif
+31.8.component = java.lang.Object
+31.8.composite = ptidej.example.composite2.Main
+31.8.leaf = ptidej.example.composite2.Document
+31.8.Name = Composite Design Motif
+31.8.XCommand = command
+
+#Micro-architecture 39 similar at 8% with Composite Design Motif
+39.8.component = java.lang.Object
+39.8.composite = ptidej.example.composite2.Main
+39.8.leaf = ptidej.example.composite2.Element
+39.8.Name = Composite Design Motif
+39.8.XCommand = command
+
+#Micro-architecture 15 similar at 8% with Composite Design Motif
+15.8.component = java.lang.Object
+15.8.composite = ptidej.example.composite2.Main
+15.8.leaf = ptidej.example.composite2.IndentedParagraph
+15.8.Name = Composite Design Motif
+15.8.XCommand = command
+
+#Micro-architecture 57 similar at 8% with Composite Design Motif
+57.8.component = java.lang.Object
+57.8.composite = ptidej.example.composite2.Main
+57.8.leaf = ptidej.example.composite2.Paragraph
+57.8.Name = Composite Design Motif
+57.8.XCommand = command
+
+#Micro-architecture 5 similar at 8% with Composite Design Motif
+5.8.component = java.lang.Object
+5.8.composite = ptidej.example.composite2.Main
+5.8.leaf = ptidej.example.composite2.Title
+5.8.Name = Composite Design Motif
+5.8.XCommand = command
+
+#Micro-architecture 50 similar at 8% with Composite Design Motif
+50.8.component = java.lang.Object
+50.8.composite = ptidej.example.composite2.Paragraph
+50.8.leaf = ptidej.example.composite2.AbstractDocument
+50.8.Name = Composite Design Motif
+50.8.XCommand = command
+
+#Micro-architecture 33 similar at 8% with Composite Design Motif
+33.8.component = java.lang.Object
+33.8.composite = ptidej.example.composite2.Paragraph
+33.8.leaf = ptidej.example.composite2.Document
+33.8.Name = Composite Design Motif
+33.8.XCommand = command
+
+#Micro-architecture 42 similar at 8% with Composite Design Motif
+42.8.component = java.lang.Object
+42.8.composite = ptidej.example.composite2.Paragraph
+42.8.leaf = ptidej.example.composite2.Element
+42.8.Name = Composite Design Motif
+42.8.XCommand = command
+
+#Micro-architecture 9 similar at 8% with Composite Design Motif
+9.8.component = java.lang.Object
+9.8.composite = ptidej.example.composite2.Paragraph
+9.8.leaf = ptidej.example.composite2.Title
+9.8.Name = Composite Design Motif
+9.8.XCommand = command
+
+#Micro-architecture 45 similar at 8% with Composite Design Motif
+45.8.component = java.lang.Object
+45.8.composite = ptidej.example.composite2.Title
+45.8.leaf = ptidej.example.composite2.AbstractDocument
+45.8.Name = Composite Design Motif
+45.8.XCommand = command
+
+#Micro-architecture 27 similar at 8% with Composite Design Motif
+27.8.component = java.lang.Object
+27.8.composite = ptidej.example.composite2.Title
+27.8.leaf = ptidej.example.composite2.Document
+27.8.Name = Composite Design Motif
+27.8.XCommand = command
+
+#Micro-architecture 35 similar at 8% with Composite Design Motif
+35.8.component = java.lang.Object
+35.8.composite = ptidej.example.composite2.Title
+35.8.leaf = ptidej.example.composite2.Element
+35.8.Name = Composite Design Motif
+35.8.XCommand = command
+
+#Micro-architecture 12 similar at 8% with Composite Design Motif
+12.8.component = java.lang.Object
+12.8.composite = ptidej.example.composite2.Title
+12.8.leaf = ptidej.example.composite2.IndentedParagraph
+12.8.Name = Composite Design Motif
+12.8.XCommand = command
+
+#Micro-architecture 53 similar at 8% with Composite Design Motif
+53.8.component = java.lang.Object
+53.8.composite = ptidej.example.composite2.Title
+53.8.leaf = ptidej.example.composite2.Paragraph
+53.8.Name = Composite Design Motif
+53.8.XCommand = command
+
+#Micro-architecture 122 similar at 8% with Composite Design Motif
+122.8.component = ptidej.example.composite2.AbstractDocument
+122.8.composite = java.io.PrintStream
+122.8.leaf = ptidej.example.composite2.Element
+122.8.Name = Composite Design Motif
+122.8.XCommand = command
+
+#Micro-architecture 112 similar at 8% with Composite Design Motif
+112.8.component = ptidej.example.composite2.AbstractDocument
+112.8.composite = java.io.PrintStream
+112.8.leaf = ptidej.example.composite2.IndentedParagraph
+112.8.Name = Composite Design Motif
+112.8.XCommand = command
+
+#Micro-architecture 133 similar at 8% with Composite Design Motif
+133.8.component = ptidej.example.composite2.AbstractDocument
+133.8.composite = java.io.PrintStream
+133.8.leaf = ptidej.example.composite2.Paragraph
+133.8.Name = Composite Design Motif
+133.8.XCommand = command
+
+#Micro-architecture 101 similar at 8% with Composite Design Motif
+101.8.component = ptidej.example.composite2.AbstractDocument
+101.8.composite = java.io.PrintStream
+101.8.leaf = ptidej.example.composite2.Title
+101.8.Name = Composite Design Motif
+101.8.XCommand = command
+
+#Micro-architecture 116 similar at 8% with Composite Design Motif
+116.8.component = ptidej.example.composite2.AbstractDocument
+116.8.composite = java.lang.Class
+116.8.leaf = ptidej.example.composite2.Element
+116.8.Name = Composite Design Motif
+116.8.XCommand = command
+
+#Micro-architecture 106 similar at 8% with Composite Design Motif
+106.8.component = ptidej.example.composite2.AbstractDocument
+106.8.composite = java.lang.Class
+106.8.leaf = ptidej.example.composite2.IndentedParagraph
+106.8.Name = Composite Design Motif
+106.8.XCommand = command
+
+#Micro-architecture 127 similar at 8% with Composite Design Motif
+127.8.component = ptidej.example.composite2.AbstractDocument
+127.8.composite = java.lang.Class
+127.8.leaf = ptidej.example.composite2.Paragraph
+127.8.Name = Composite Design Motif
+127.8.XCommand = command
+
+#Micro-architecture 95 similar at 8% with Composite Design Motif
+95.8.component = ptidej.example.composite2.AbstractDocument
+95.8.composite = java.lang.Class
+95.8.leaf = ptidej.example.composite2.Title
+95.8.Name = Composite Design Motif
+95.8.XCommand = command
+
+#Micro-architecture 117 similar at 8% with Composite Design Motif
+117.8.component = ptidej.example.composite2.AbstractDocument
+117.8.composite = java.lang.Object
+117.8.leaf = ptidej.example.composite2.Element
+117.8.Name = Composite Design Motif
+117.8.XCommand = command
+
+#Micro-architecture 107 similar at 8% with Composite Design Motif
+107.8.component = ptidej.example.composite2.AbstractDocument
+107.8.composite = java.lang.Object
+107.8.leaf = ptidej.example.composite2.IndentedParagraph
+107.8.Name = Composite Design Motif
+107.8.XCommand = command
+
+#Micro-architecture 128 similar at 8% with Composite Design Motif
+128.8.component = ptidej.example.composite2.AbstractDocument
+128.8.composite = java.lang.Object
+128.8.leaf = ptidej.example.composite2.Paragraph
+128.8.Name = Composite Design Motif
+128.8.XCommand = command
+
+#Micro-architecture 96 similar at 8% with Composite Design Motif
+96.8.component = ptidej.example.composite2.AbstractDocument
+96.8.composite = java.lang.Object
+96.8.leaf = ptidej.example.composite2.Title
+96.8.Name = Composite Design Motif
+96.8.XCommand = command
+
+#Micro-architecture 114 similar at 8% with Composite Design Motif
+114.8.component = ptidej.example.composite2.AbstractDocument
+114.8.composite = java.lang.String
+114.8.leaf = ptidej.example.composite2.Element
+114.8.Name = Composite Design Motif
+114.8.XCommand = command
+
+#Micro-architecture 104 similar at 8% with Composite Design Motif
+104.8.component = ptidej.example.composite2.AbstractDocument
+104.8.composite = java.lang.String
+104.8.leaf = ptidej.example.composite2.IndentedParagraph
+104.8.Name = Composite Design Motif
+104.8.XCommand = command
+
+#Micro-architecture 125 similar at 8% with Composite Design Motif
+125.8.component = ptidej.example.composite2.AbstractDocument
+125.8.composite = java.lang.String
+125.8.leaf = ptidej.example.composite2.Paragraph
+125.8.Name = Composite Design Motif
+125.8.XCommand = command
+
+#Micro-architecture 94 similar at 8% with Composite Design Motif
+94.8.component = ptidej.example.composite2.AbstractDocument
+94.8.composite = java.lang.String
+94.8.leaf = ptidej.example.composite2.Title
+94.8.Name = Composite Design Motif
+94.8.XCommand = command
+
+#Micro-architecture 119 similar at 8% with Composite Design Motif
+119.8.component = ptidej.example.composite2.AbstractDocument
+119.8.composite = java.lang.System
+119.8.leaf = ptidej.example.composite2.Element
+119.8.Name = Composite Design Motif
+119.8.XCommand = command
+
+#Micro-architecture 108 similar at 8% with Composite Design Motif
+108.8.component = ptidej.example.composite2.AbstractDocument
+108.8.composite = java.lang.System
+108.8.leaf = ptidej.example.composite2.IndentedParagraph
+108.8.Name = Composite Design Motif
+108.8.XCommand = command
+
+#Micro-architecture 130 similar at 8% with Composite Design Motif
+130.8.component = ptidej.example.composite2.AbstractDocument
+130.8.composite = java.lang.System
+130.8.leaf = ptidej.example.composite2.Paragraph
+130.8.Name = Composite Design Motif
+130.8.XCommand = command
+
+#Micro-architecture 98 similar at 8% with Composite Design Motif
+98.8.component = ptidej.example.composite2.AbstractDocument
+98.8.composite = java.lang.System
+98.8.leaf = ptidej.example.composite2.Title
+98.8.Name = Composite Design Motif
+98.8.XCommand = command
+
+#Micro-architecture 124 similar at 8% with Composite Design Motif
+124.8.component = ptidej.example.composite2.AbstractDocument
+124.8.composite = java.util.Vector
+124.8.leaf = ptidej.example.composite2.Element
+124.8.Name = Composite Design Motif
+124.8.XCommand = command
+
+#Micro-architecture 113 similar at 8% with Composite Design Motif
+113.8.component = ptidej.example.composite2.AbstractDocument
+113.8.composite = java.util.Vector
+113.8.leaf = ptidej.example.composite2.IndentedParagraph
+113.8.Name = Composite Design Motif
+113.8.XCommand = command
+
+#Micro-architecture 134 similar at 8% with Composite Design Motif
+134.8.component = ptidej.example.composite2.AbstractDocument
+134.8.composite = java.util.Vector
+134.8.leaf = ptidej.example.composite2.Paragraph
+134.8.Name = Composite Design Motif
+134.8.XCommand = command
+
+#Micro-architecture 103 similar at 8% with Composite Design Motif
+103.8.component = ptidej.example.composite2.AbstractDocument
+103.8.composite = java.util.Vector
+103.8.leaf = ptidej.example.composite2.Title
+103.8.Name = Composite Design Motif
+103.8.XCommand = command
+
+#Micro-architecture 121 similar at 8% with Composite Design Motif
+121.8.component = ptidej.example.composite2.AbstractDocument
+121.8.composite = ptidej.example.composite2.Document
+121.8.leaf = ptidej.example.composite2.Element
+121.8.Name = Composite Design Motif
+121.8.XCommand = command
+
+#Micro-architecture 110 similar at 8% with Composite Design Motif
+110.8.component = ptidej.example.composite2.AbstractDocument
+110.8.composite = ptidej.example.composite2.Document
+110.8.leaf = ptidej.example.composite2.IndentedParagraph
+110.8.Name = Composite Design Motif
+110.8.XCommand = command
+
+#Micro-architecture 132 similar at 8% with Composite Design Motif
+132.8.component = ptidej.example.composite2.AbstractDocument
+132.8.composite = ptidej.example.composite2.Document
+132.8.leaf = ptidej.example.composite2.Paragraph
+132.8.Name = Composite Design Motif
+132.8.XCommand = command
+
+#Micro-architecture 100 similar at 8% with Composite Design Motif
+100.8.component = ptidej.example.composite2.AbstractDocument
+100.8.composite = ptidej.example.composite2.Document
+100.8.leaf = ptidej.example.composite2.Title
+100.8.Name = Composite Design Motif
+100.8.XCommand = command
+
+#Micro-architecture 111 similar at 8% with Composite Design Motif
+111.8.component = ptidej.example.composite2.AbstractDocument
+111.8.composite = ptidej.example.composite2.Element
+111.8.leaf = ptidej.example.composite2.IndentedParagraph
+111.8.Name = Composite Design Motif
+111.8.XCommand = command
+
+#Micro-architecture 118 similar at 8% with Composite Design Motif
+118.8.component = ptidej.example.composite2.AbstractDocument
+118.8.composite = ptidej.example.composite2.IndentedParagraph
+118.8.leaf = ptidej.example.composite2.Element
+118.8.Name = Composite Design Motif
+118.8.XCommand = command
+
+#Micro-architecture 129 similar at 8% with Composite Design Motif
+129.8.component = ptidej.example.composite2.AbstractDocument
+129.8.composite = ptidej.example.composite2.IndentedParagraph
+129.8.leaf = ptidej.example.composite2.Paragraph
+129.8.Name = Composite Design Motif
+129.8.XCommand = command
+
+#Micro-architecture 97 similar at 8% with Composite Design Motif
+97.8.component = ptidej.example.composite2.AbstractDocument
+97.8.composite = ptidej.example.composite2.IndentedParagraph
+97.8.leaf = ptidej.example.composite2.Title
+97.8.Name = Composite Design Motif
+97.8.XCommand = command
+
+#Micro-architecture 120 similar at 8% with Composite Design Motif
+120.8.component = ptidej.example.composite2.AbstractDocument
+120.8.composite = ptidej.example.composite2.Main
+120.8.leaf = ptidej.example.composite2.Element
+120.8.Name = Composite Design Motif
+120.8.XCommand = command
+
+#Micro-architecture 109 similar at 8% with Composite Design Motif
+109.8.component = ptidej.example.composite2.AbstractDocument
+109.8.composite = ptidej.example.composite2.Main
+109.8.leaf = ptidej.example.composite2.IndentedParagraph
+109.8.Name = Composite Design Motif
+109.8.XCommand = command
+
+#Micro-architecture 131 similar at 8% with Composite Design Motif
+131.8.component = ptidej.example.composite2.AbstractDocument
+131.8.composite = ptidej.example.composite2.Main
+131.8.leaf = ptidej.example.composite2.Paragraph
+131.8.Name = Composite Design Motif
+131.8.XCommand = command
+
+#Micro-architecture 99 similar at 8% with Composite Design Motif
+99.8.component = ptidej.example.composite2.AbstractDocument
+99.8.composite = ptidej.example.composite2.Main
+99.8.leaf = ptidej.example.composite2.Title
+99.8.Name = Composite Design Motif
+99.8.XCommand = command
+
+#Micro-architecture 123 similar at 8% with Composite Design Motif
+123.8.component = ptidej.example.composite2.AbstractDocument
+123.8.composite = ptidej.example.composite2.Paragraph
+123.8.leaf = ptidej.example.composite2.Element
+123.8.Name = Composite Design Motif
+123.8.XCommand = command
+
+#Micro-architecture 102 similar at 8% with Composite Design Motif
+102.8.component = ptidej.example.composite2.AbstractDocument
+102.8.composite = ptidej.example.composite2.Paragraph
+102.8.leaf = ptidej.example.composite2.Title
+102.8.Name = Composite Design Motif
+102.8.XCommand = command
+
+#Micro-architecture 115 similar at 8% with Composite Design Motif
+115.8.component = ptidej.example.composite2.AbstractDocument
+115.8.composite = ptidej.example.composite2.Title
+115.8.leaf = ptidej.example.composite2.Element
+115.8.Name = Composite Design Motif
+115.8.XCommand = command
+
+#Micro-architecture 105 similar at 8% with Composite Design Motif
+105.8.component = ptidej.example.composite2.AbstractDocument
+105.8.composite = ptidej.example.composite2.Title
+105.8.leaf = ptidej.example.composite2.IndentedParagraph
+105.8.Name = Composite Design Motif
+105.8.XCommand = command
+
+#Micro-architecture 126 similar at 8% with Composite Design Motif
+126.8.component = ptidej.example.composite2.AbstractDocument
+126.8.composite = ptidej.example.composite2.Title
+126.8.leaf = ptidej.example.composite2.Paragraph
+126.8.Name = Composite Design Motif
+126.8.XCommand = command
+
+#Micro-architecture 81 similar at 8% with Composite Design Motif
+81.8.component = ptidej.example.composite2.Element
+81.8.composite = java.io.PrintStream
+81.8.leaf = ptidej.example.composite2.IndentedParagraph
+81.8.Name = Composite Design Motif
+81.8.XCommand = command
+
+#Micro-architecture 92 similar at 8% with Composite Design Motif
+92.8.component = ptidej.example.composite2.Element
+92.8.composite = java.io.PrintStream
+92.8.leaf = ptidej.example.composite2.Paragraph
+92.8.Name = Composite Design Motif
+92.8.XCommand = command
+
+#Micro-architecture 70 similar at 8% with Composite Design Motif
+70.8.component = ptidej.example.composite2.Element
+70.8.composite = java.io.PrintStream
+70.8.leaf = ptidej.example.composite2.Title
+70.8.Name = Composite Design Motif
+70.8.XCommand = command
+
+#Micro-architecture 75 similar at 8% with Composite Design Motif
+75.8.component = ptidej.example.composite2.Element
+75.8.composite = java.lang.Class
+75.8.leaf = ptidej.example.composite2.IndentedParagraph
+75.8.Name = Composite Design Motif
+75.8.XCommand = command
+
+#Micro-architecture 85 similar at 8% with Composite Design Motif
+85.8.component = ptidej.example.composite2.Element
+85.8.composite = java.lang.Class
+85.8.leaf = ptidej.example.composite2.Paragraph
+85.8.Name = Composite Design Motif
+85.8.XCommand = command
+
+#Micro-architecture 63 similar at 8% with Composite Design Motif
+63.8.component = ptidej.example.composite2.Element
+63.8.composite = java.lang.Class
+63.8.leaf = ptidej.example.composite2.Title
+63.8.Name = Composite Design Motif
+63.8.XCommand = command
+
+#Micro-architecture 76 similar at 8% with Composite Design Motif
+76.8.component = ptidej.example.composite2.Element
+76.8.composite = java.lang.Object
+76.8.leaf = ptidej.example.composite2.IndentedParagraph
+76.8.Name = Composite Design Motif
+76.8.XCommand = command
+
+#Micro-architecture 86 similar at 8% with Composite Design Motif
+86.8.component = ptidej.example.composite2.Element
+86.8.composite = java.lang.Object
+86.8.leaf = ptidej.example.composite2.Paragraph
+86.8.Name = Composite Design Motif
+86.8.XCommand = command
+
+#Micro-architecture 64 similar at 8% with Composite Design Motif
+64.8.component = ptidej.example.composite2.Element
+64.8.composite = java.lang.Object
+64.8.leaf = ptidej.example.composite2.Title
+64.8.Name = Composite Design Motif
+64.8.XCommand = command
+
+#Micro-architecture 73 similar at 8% with Composite Design Motif
+73.8.component = ptidej.example.composite2.Element
+73.8.composite = java.lang.String
+73.8.leaf = ptidej.example.composite2.IndentedParagraph
+73.8.Name = Composite Design Motif
+73.8.XCommand = command
+
+#Micro-architecture 83 similar at 8% with Composite Design Motif
+83.8.component = ptidej.example.composite2.Element
+83.8.composite = java.lang.String
+83.8.leaf = ptidej.example.composite2.Paragraph
+83.8.Name = Composite Design Motif
+83.8.XCommand = command
+
+#Micro-architecture 62 similar at 8% with Composite Design Motif
+62.8.component = ptidej.example.composite2.Element
+62.8.composite = java.lang.String
+62.8.leaf = ptidej.example.composite2.Title
+62.8.Name = Composite Design Motif
+62.8.XCommand = command
+
+#Micro-architecture 77 similar at 8% with Composite Design Motif
+77.8.component = ptidej.example.composite2.Element
+77.8.composite = java.lang.System
+77.8.leaf = ptidej.example.composite2.IndentedParagraph
+77.8.Name = Composite Design Motif
+77.8.XCommand = command
+
+#Micro-architecture 88 similar at 8% with Composite Design Motif
+88.8.component = ptidej.example.composite2.Element
+88.8.composite = java.lang.System
+88.8.leaf = ptidej.example.composite2.Paragraph
+88.8.Name = Composite Design Motif
+88.8.XCommand = command
+
+#Micro-architecture 66 similar at 8% with Composite Design Motif
+66.8.component = ptidej.example.composite2.Element
+66.8.composite = java.lang.System
+66.8.leaf = ptidej.example.composite2.Title
+66.8.Name = Composite Design Motif
+66.8.XCommand = command
+
+#Micro-architecture 82 similar at 8% with Composite Design Motif
+82.8.component = ptidej.example.composite2.Element
+82.8.composite = java.util.Vector
+82.8.leaf = ptidej.example.composite2.IndentedParagraph
+82.8.Name = Composite Design Motif
+82.8.XCommand = command
+
+#Micro-architecture 93 similar at 8% with Composite Design Motif
+93.8.component = ptidej.example.composite2.Element
+93.8.composite = java.util.Vector
+93.8.leaf = ptidej.example.composite2.Paragraph
+93.8.Name = Composite Design Motif
+93.8.XCommand = command
+
+#Micro-architecture 72 similar at 8% with Composite Design Motif
+72.8.component = ptidej.example.composite2.Element
+72.8.composite = java.util.Vector
+72.8.leaf = ptidej.example.composite2.Title
+72.8.Name = Composite Design Motif
+72.8.XCommand = command
+
+#Micro-architecture 80 similar at 8% with Composite Design Motif
+80.8.component = ptidej.example.composite2.Element
+80.8.composite = ptidej.example.composite2.AbstractDocument
+80.8.leaf = ptidej.example.composite2.IndentedParagraph
+80.8.Name = Composite Design Motif
+80.8.XCommand = command
+
+#Micro-architecture 91 similar at 8% with Composite Design Motif
+91.8.component = ptidej.example.composite2.Element
+91.8.composite = ptidej.example.composite2.AbstractDocument
+91.8.leaf = ptidej.example.composite2.Paragraph
+91.8.Name = Composite Design Motif
+91.8.XCommand = command
+
+#Micro-architecture 69 similar at 8% with Composite Design Motif
+69.8.component = ptidej.example.composite2.Element
+69.8.composite = ptidej.example.composite2.AbstractDocument
+69.8.leaf = ptidej.example.composite2.Title
+69.8.Name = Composite Design Motif
+69.8.XCommand = command
+
+#Micro-architecture 79 similar at 8% with Composite Design Motif
+79.8.component = ptidej.example.composite2.Element
+79.8.composite = ptidej.example.composite2.Document
+79.8.leaf = ptidej.example.composite2.IndentedParagraph
+79.8.Name = Composite Design Motif
+79.8.XCommand = command
+
+#Micro-architecture 90 similar at 8% with Composite Design Motif
+90.8.component = ptidej.example.composite2.Element
+90.8.composite = ptidej.example.composite2.Document
+90.8.leaf = ptidej.example.composite2.Paragraph
+90.8.Name = Composite Design Motif
+90.8.XCommand = command
+
+#Micro-architecture 68 similar at 8% with Composite Design Motif
+68.8.component = ptidej.example.composite2.Element
+68.8.composite = ptidej.example.composite2.Document
+68.8.leaf = ptidej.example.composite2.Title
+68.8.Name = Composite Design Motif
+68.8.XCommand = command
+
+#Micro-architecture 87 similar at 8% with Composite Design Motif
+87.8.component = ptidej.example.composite2.Element
+87.8.composite = ptidej.example.composite2.IndentedParagraph
+87.8.leaf = ptidej.example.composite2.Paragraph
+87.8.Name = Composite Design Motif
+87.8.XCommand = command
+
+#Micro-architecture 65 similar at 8% with Composite Design Motif
+65.8.component = ptidej.example.composite2.Element
+65.8.composite = ptidej.example.composite2.IndentedParagraph
+65.8.leaf = ptidej.example.composite2.Title
+65.8.Name = Composite Design Motif
+65.8.XCommand = command
+
+#Micro-architecture 78 similar at 8% with Composite Design Motif
+78.8.component = ptidej.example.composite2.Element
+78.8.composite = ptidej.example.composite2.Main
+78.8.leaf = ptidej.example.composite2.IndentedParagraph
+78.8.Name = Composite Design Motif
+78.8.XCommand = command
+
+#Micro-architecture 89 similar at 8% with Composite Design Motif
+89.8.component = ptidej.example.composite2.Element
+89.8.composite = ptidej.example.composite2.Main
+89.8.leaf = ptidej.example.composite2.Paragraph
+89.8.Name = Composite Design Motif
+89.8.XCommand = command
+
+#Micro-architecture 67 similar at 8% with Composite Design Motif
+67.8.component = ptidej.example.composite2.Element
+67.8.composite = ptidej.example.composite2.Main
+67.8.leaf = ptidej.example.composite2.Title
+67.8.Name = Composite Design Motif
+67.8.XCommand = command
+
+#Micro-architecture 71 similar at 8% with Composite Design Motif
+71.8.component = ptidej.example.composite2.Element
+71.8.composite = ptidej.example.composite2.Paragraph
+71.8.leaf = ptidej.example.composite2.Title
+71.8.Name = Composite Design Motif
+71.8.XCommand = command
+
+#Micro-architecture 74 similar at 8% with Composite Design Motif
+74.8.component = ptidej.example.composite2.Element
+74.8.composite = ptidej.example.composite2.Title
+74.8.leaf = ptidej.example.composite2.IndentedParagraph
+74.8.Name = Composite Design Motif
+74.8.XCommand = command
+
+#Micro-architecture 84 similar at 8% with Composite Design Motif
+84.8.component = ptidej.example.composite2.Element
+84.8.composite = ptidej.example.composite2.Title
+84.8.leaf = ptidej.example.composite2.Paragraph
+84.8.Name = Composite Design Motif
+84.8.XCommand = command
+
+#Micro-architecture 144 similar at 8% with Composite Design Motif
+144.8.component = ptidej.example.composite2.Paragraph
+144.8.composite = java.io.PrintStream
+144.8.leaf = ptidej.example.composite2.IndentedParagraph
+144.8.Name = Composite Design Motif
+144.8.XCommand = command
+
+#Micro-architecture 137 similar at 8% with Composite Design Motif
+137.8.component = ptidej.example.composite2.Paragraph
+137.8.composite = java.lang.Class
+137.8.leaf = ptidej.example.composite2.IndentedParagraph
+137.8.Name = Composite Design Motif
+137.8.XCommand = command
+
+#Micro-architecture 138 similar at 8% with Composite Design Motif
+138.8.component = ptidej.example.composite2.Paragraph
+138.8.composite = java.lang.Object
+138.8.leaf = ptidej.example.composite2.IndentedParagraph
+138.8.Name = Composite Design Motif
+138.8.XCommand = command
+
+#Micro-architecture 135 similar at 8% with Composite Design Motif
+135.8.component = ptidej.example.composite2.Paragraph
+135.8.composite = java.lang.String
+135.8.leaf = ptidej.example.composite2.IndentedParagraph
+135.8.Name = Composite Design Motif
+135.8.XCommand = command
+
+#Micro-architecture 139 similar at 8% with Composite Design Motif
+139.8.component = ptidej.example.composite2.Paragraph
+139.8.composite = java.lang.System
+139.8.leaf = ptidej.example.composite2.IndentedParagraph
+139.8.Name = Composite Design Motif
+139.8.XCommand = command
+
+#Micro-architecture 145 similar at 8% with Composite Design Motif
+145.8.component = ptidej.example.composite2.Paragraph
+145.8.composite = java.util.Vector
+145.8.leaf = ptidej.example.composite2.IndentedParagraph
+145.8.Name = Composite Design Motif
+145.8.XCommand = command
+
+#Micro-architecture 143 similar at 8% with Composite Design Motif
+143.8.component = ptidej.example.composite2.Paragraph
+143.8.composite = ptidej.example.composite2.AbstractDocument
+143.8.leaf = ptidej.example.composite2.IndentedParagraph
+143.8.Name = Composite Design Motif
+143.8.XCommand = command
+
+#Micro-architecture 141 similar at 8% with Composite Design Motif
+141.8.component = ptidej.example.composite2.Paragraph
+141.8.composite = ptidej.example.composite2.Document
+141.8.leaf = ptidej.example.composite2.IndentedParagraph
+141.8.Name = Composite Design Motif
+141.8.XCommand = command
+
+#Micro-architecture 142 similar at 8% with Composite Design Motif
+142.8.component = ptidej.example.composite2.Paragraph
+142.8.composite = ptidej.example.composite2.Element
+142.8.leaf = ptidej.example.composite2.IndentedParagraph
+142.8.Name = Composite Design Motif
+142.8.XCommand = command
+
+#Micro-architecture 140 similar at 8% with Composite Design Motif
+140.8.component = ptidej.example.composite2.Paragraph
+140.8.composite = ptidej.example.composite2.Main
+140.8.leaf = ptidej.example.composite2.IndentedParagraph
+140.8.Name = Composite Design Motif
+140.8.XCommand = command
+
+#Micro-architecture 136 similar at 8% with Composite Design Motif
+136.8.component = ptidej.example.composite2.Paragraph
+136.8.composite = ptidej.example.composite2.Title
+136.8.leaf = ptidej.example.composite2.IndentedParagraph
+136.8.Name = Composite Design Motif
+136.8.XCommand = command
+

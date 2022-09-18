@@ -1,0 +1,7 @@
+2003-03-26    <Jean-Daniel.Fekete@inria.fr>
+
+	* src/infovis/panel/SplashPanel.java: idem
+	* build.xml: stick to version 0.3beta1
+
+	* TODO: Added tasks.
+

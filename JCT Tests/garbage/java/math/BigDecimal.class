@@ -1,0 +1,973 @@
+package java.math;
+public class BigDecimal
+extends java.lang.Number
+implements java.lang.Comparable
+{
+private static class LongOverflow
+{
+final private static java.lang.Object LONGMIN;
+
+final private static java.lang.Object LONGMAX;
+
+private void <init>()
+{
+
+}
+
+public static void check(java.lang.Object arg0)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}
+
+static class StringBuilderHelper
+{
+final java.lang.Object sb;
+
+final java.lang.Object cmpCharArray;
+
+final static java.lang.Object DIGIT_TENS;
+
+final static java.lang.Object DIGIT_ONES;
+
+void <init>()
+{
+
+}
+
+java.lang.StringBuilder getStringBuilder()
+{
+
+}
+
+char[] getCompactCharArray()
+{
+
+}
+
+int putIntCompact(java.lang.Object arg0)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}
+
+private static class UnsafeHolder
+{
+final private static java.lang.Object unsafe;
+
+final private static java.lang.Object intCompactOffset;
+
+final private static java.lang.Object intValOffset;
+
+private void <init>()
+{
+
+}
+
+static void setIntCompactVolatile(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static void setIntValVolatile(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}
+
+final private java.lang.Object intVal;
+
+final private java.lang.Object scale;
+
+private transient java.lang.Object precision;
+
+private transient java.lang.Object stringCache;
+
+final static java.lang.Object INFLATED;
+
+final private static java.lang.Object INFLATED_BIGINT;
+
+final private transient java.lang.Object intCompact;
+
+final private static java.lang.Object MAX_COMPACT_DIGITS;
+
+final private static java.lang.Object serialVersionUID;
+
+final private static java.lang.Object threadLocalStringBuilderHelper;
+
+final private static java.lang.Object zeroThroughTen;
+
+final private static java.lang.Object ZERO_SCALED_BY;
+
+final private static java.lang.Object HALF_LONG_MAX_VALUE;
+
+final private static java.lang.Object HALF_LONG_MIN_VALUE;
+
+final public static java.lang.Object ZERO;
+
+final public static java.lang.Object ONE;
+
+final public static java.lang.Object TEN;
+
+final public static java.lang.Object ROUND_UP;
+
+final public static java.lang.Object ROUND_DOWN;
+
+final public static java.lang.Object ROUND_CEILING;
+
+final public static java.lang.Object ROUND_FLOOR;
+
+final public static java.lang.Object ROUND_HALF_UP;
+
+final public static java.lang.Object ROUND_HALF_DOWN;
+
+final public static java.lang.Object ROUND_HALF_EVEN;
+
+final public static java.lang.Object ROUND_UNNECESSARY;
+
+final private static java.lang.Object double10pow;
+
+final private static java.lang.Object float10pow;
+
+final private static java.lang.Object LONG_TEN_POWERS_TABLE;
+
+private static volatile java.lang.Object BIG_TEN_POWERS_TABLE;
+
+final private static java.lang.Object BIG_TEN_POWERS_TABLE_INITLEN;
+
+final private static java.lang.Object BIG_TEN_POWERS_TABLE_MAX;
+
+final private static java.lang.Object THRESHOLDS_TABLE;
+
+final private static java.lang.Object DIV_NUM_BASE;
+
+final private static java.lang.Object LONGLONG_TEN_POWERS_TABLE;
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private int adjustScale(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static long parseExp(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.math.BigDecimal valueOf(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.math.BigDecimal valueOf(java.lang.Object arg0)
+{
+
+}
+
+static java.math.BigDecimal valueOf(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+static java.math.BigDecimal valueOf(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+static java.math.BigDecimal zeroValueOf(java.lang.Object arg0)
+{
+
+}
+
+public static java.math.BigDecimal valueOf(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal add(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal add(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.math.BigDecimal[] preAlign(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+public java.math.BigDecimal subtract(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal subtract(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.math.BigDecimal multiply(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal multiply(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.math.BigDecimal divide(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public java.math.BigDecimal divide(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public java.math.BigDecimal divide(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.math.BigDecimal divide(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.math.BigDecimal divide(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal divide(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.math.BigDecimal divideToIntegralValue(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal divideToIntegralValue(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.math.BigDecimal remainder(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal remainder(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.math.BigDecimal[] divideAndRemainder(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal[] divideAndRemainder(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.math.BigDecimal pow(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal pow(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.math.BigDecimal abs()
+{
+
+}
+
+public java.math.BigDecimal abs(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal negate()
+{
+
+}
+
+public java.math.BigDecimal negate(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal plus()
+{
+
+}
+
+public java.math.BigDecimal plus(java.lang.Object arg0)
+{
+
+}
+
+public int signum()
+{
+
+}
+
+public int scale()
+{
+
+}
+
+public int precision()
+{
+
+}
+
+public java.math.BigInteger unscaledValue()
+{
+
+}
+
+public java.math.BigDecimal round(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal setScale(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.math.BigDecimal setScale(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.math.BigDecimal setScale(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal movePointLeft(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal movePointRight(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal scaleByPowerOfTen(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal stripTrailingZeros()
+{
+
+}
+
+public int compareTo(java.lang.Object arg0)
+{
+
+}
+
+private int compareMagnitude(java.lang.Object arg0)
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal min(java.lang.Object arg0)
+{
+
+}
+
+public java.math.BigDecimal max(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+public java.lang.String toEngineeringString()
+{
+
+}
+
+public java.lang.String toPlainString()
+{
+
+}
+
+private java.lang.String getValueString(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public java.math.BigInteger toBigInteger()
+{
+
+}
+
+public java.math.BigInteger toBigIntegerExact()
+{
+
+}
+
+public long longValue()
+{
+
+}
+
+public long longValueExact()
+{
+
+}
+
+public int intValue()
+{
+
+}
+
+public int intValueExact()
+{
+
+}
+
+public short shortValueExact()
+{
+
+}
+
+public byte byteValueExact()
+{
+
+}
+
+public float floatValue()
+{
+
+}
+
+public double doubleValue()
+{
+
+}
+
+public java.math.BigDecimal ulp()
+{
+
+}
+
+private java.lang.String layoutChars(java.lang.Object arg0)
+{
+
+}
+
+private static java.math.BigInteger bigTenToThe(java.lang.Object arg0)
+{
+
+}
+
+private static java.math.BigInteger expandBigIntegerTenPowers(java.lang.Object arg0)
+{
+
+}
+
+private static long longMultiplyPowerTen(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.math.BigInteger bigMultiplyPowerTen(java.lang.Object arg0)
+{
+
+}
+
+private java.math.BigInteger inflated()
+{
+
+}
+
+private static void matchScale(java.lang.Object arg0)
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.IOException, java.lang.ClassNotFoundException
+{
+
+}
+
+private void writeObject(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static int longDigitLength(java.lang.Object arg0)
+{
+
+}
+
+private static int bigDigitLength(java.lang.Object arg0)
+{
+
+}
+
+private int checkScale(java.lang.Object arg0)
+{
+
+}
+
+private static long compactValFor(java.lang.Object arg0)
+{
+
+}
+
+private static int longCompareMagnitude(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static int saturateLong(java.lang.Object arg0)
+{
+
+}
+
+private static void print(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.math.BigDecimal audit()
+{
+
+}
+
+private static int checkScaleNonZero(java.lang.Object arg0)
+{
+
+}
+
+private static int checkScale(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static int checkScale(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static java.math.BigDecimal doRound(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static java.math.BigDecimal doRound(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.math.BigDecimal doRound(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.math.BigInteger divideAndRoundByTenPow(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.math.BigDecimal divideAndRound(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+private static long divideAndRound(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static boolean commonNeedIncrement(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private static boolean needIncrement(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+private static java.math.BigInteger divideAndRound(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.math.BigDecimal divideAndRound(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+private static boolean needIncrement(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+private static java.math.BigInteger divideAndRound(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.math.BigDecimal divideAndRound(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+private static boolean needIncrement(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+private static java.math.BigDecimal createAndStripZerosToMatchScale(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.math.BigDecimal createAndStripZerosToMatchScale(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.math.BigDecimal stripZerosToMatchScale(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private static long add(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static java.math.BigDecimal add(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.math.BigDecimal add(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private static java.math.BigDecimal add(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private static java.math.BigDecimal add(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private static java.math.BigInteger bigMultiplyPowerTen(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static java.math.BigInteger bigMultiplyPowerTen(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static java.math.BigDecimal divideSmallFastPath(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+private static java.math.BigDecimal divide(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+private static java.math.BigDecimal divide(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+private static java.math.BigDecimal divide(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+private static java.math.BigDecimal divide(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+private static java.math.BigDecimal multiplyDivideAndRound(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+private static java.math.BigDecimal divideAndRound128(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5, java.lang.Object arg6)
+{
+
+}
+
+private static java.math.BigDecimal roundedTenPower(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+static java.math.BigDecimal scaledTenPow(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static long[] divRemNegativeLong(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static long make64(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static long mulsub(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+private static boolean unsignedLongCompare(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static boolean unsignedLongCompareEq(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static int compareMagnitudeNormalized(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private static int compareMagnitudeNormalized(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private static int compareMagnitudeNormalized(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private static long multiply(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static java.math.BigDecimal multiply(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.math.BigDecimal multiply(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.math.BigDecimal multiply(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.math.BigDecimal multiplyAndRound(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private static java.math.BigDecimal multiplyAndRound(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private static java.math.BigDecimal multiplyAndRound(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private static java.math.BigDecimal doRound128(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+private static int precision(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static boolean longLongCompareMagnitude(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private static java.math.BigDecimal divide(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+private static java.math.BigDecimal divide(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+private static java.math.BigDecimal divide(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+private static java.math.BigDecimal divide(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

@@ -1,0 +1,25 @@
+package java.lang.annotation;
+abstract public interface Annotation
+{
+abstract public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+abstract public int hashCode()
+{
+
+}
+
+abstract public java.lang.String toString()
+{
+
+}
+
+abstract public java.lang.Class annotationType()
+{
+
+}
+
+
+}

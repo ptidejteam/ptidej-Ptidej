@@ -1,0 +1,105 @@
+<!-- documents 
+GraphML documents start with an optional content description,
+followed by the declaration of any number of keys and a sequence of graphs.
+-->
+<!ELEMENT graphml ((desc)?,(key)*,(graph)*)>
+<!-- comments
+A description element contains human-readable text
+describing the content of the element it appears in.
+-->
+<!ELEMENT desc (#PCDATA)>
+<!-- remote definitions
+A locator may be used instead of other content of a graph or data element
+to refer to the location of the actual definition of the enclosing item's
+content.
+-->
+<!ELEMENT locator EMPTY>
+<!ATTLIST locator
+xmlns:xlink CDATA #FIXED "http://www.w3.org/TR/2000/PR-xlink-20001220/"
+xlink:href CDATA #REQUIRED
+xlink:type (simple) #FIXED "simple"
+>
+<!-- graphs
+A graph contains an optional description, keys local to this graph,
+and either a locator indicating that the graph is defined elsewhere,
+or lists of nodes, (hyper)edges, and data associated with the graph
+(in any order).
+A graph may be identified using the "id" attribute. The mandatory attribute
+"edgedefault" indicates whether edges are directed or undirected by default;
+this can be overwritten locally by every edge.
+-->
+<!ELEMENT graph ((desc)?,(key)*,((((data)|(node)|(edge)|(hyperedge))*)|(locator)))>
+<!ATTLIST graph
+id ID #IMPLIED
+edgedefault (directed|undirected) #REQUIRED
+>
+<!-- nodes
+Each node in a graph has to have a (unique) id.
+It may contain a description, followed by a sequence of ports and node
+data in any order, and may contain another graph. Alternatively,
+it can be defined in another location, including a different file.
+Ports are identified by a name which does not have to be unique throughout
+the document, but within a node. They can be nested hierarchically.
+-->
+<!ELEMENT node ((desc)?,((((data)|(port))*,(graph)?)|(locator)))>
+<!ATTLIST node id ID #REQUIRED>
+<!ELEMENT port ((desc)?,((data)|(port))*)>
+<!ATTLIST port name NMTOKEN #REQUIRED>
+<!-- edges
+Similiar to nodes, edges may contain a separate description, followed by
+any number of edge data and, potentially, a nested graph.
+An edge must refer to a source and a target node, and may specify ports
+it attaches to. However, such ports are not implicitly created and must
+therefore be defined at the corresponding node.
+Using the attribute "directed", the default value defined for the enclosing
+graph can be overwritten.
+-->
+<!ELEMENT edge ((desc)?,(data)*,(graph)?)>
+<!ATTLIST edge
+id ID #IMPLIED
+source IDREF #REQUIRED
+sourceport NMTOKEN #IMPLIED
+target IDREF #REQUIRED
+targetport NMTOKEN #IMPLIED
+directed (true|false) #IMPLIED
+>
+<!-- hyperedges
+Since the number of nodes incident to a hyperedge is arbitrary, they are
+not referred to via attributes of hyperedge. Rather, a child element
+endpoint is created for each incident node, which refers to the node and,
+optionally, the port it is incident to. For each incidence, it can be
+specified separately whether the node is a source ("out"), a target ("in"),
+or neither ("undir").
+-->
+<!ELEMENT hyperedge ((desc)?,((data)|(endpoint))*,(graph)?)>
+<!ATTLIST hyperedge id ID #IMPLIED>
+<!ELEMENT endpoint ((desc)?)>
+<!ATTLIST endpoint
+id ID #IMPLIED
+node IDREF #REQUIRED
+port NMTOKEN #IMPLIED
+type (in|out|undir) "undir"
+>
+<!-- additional data
+Additional data can be attached to any GraphML item by inserting data tags.
+To distinguish different sorts of data, those of the same sort refer
+to a common key tag. A key may specify the domain it is valid for,
+and may contain a default value for that domain. A key can thus be seen
+as the declaration of an array, non-default values of which are defined
+by the respective element.
+Extension modules may overwrite the common content model of key and data
+and add new attributes to keys to provide data type information.
+-->
+<!ENTITY % GRAPHML.key.attrib "">
+<!ENTITY % GRAPHML.data.content "(#PCDATA)">
+<!ELEMENT key %GRAPHML.data.content;>
+<!ATTLIST key
+id ID #REQUIRED
+for (graph|node|edge|hyperedge|port|endpoint|all) "all"
+%GRAPHML.key.attrib;
+>
+<!ELEMENT data %GRAPHML.data.content;>
+<!ATTLIST data
+key IDREF #REQUIRED
+id ID #IMPLIED
+>

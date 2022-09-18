@@ -1,0 +1,92 @@
+<html><head><title>SDMetrics Open Core - Readme.html</title></head><body>
+
+<h1>SDMetrics Open Core V2.31</h1>
+
+This archive contains the open core distribution of SDMetrics.
+The functionality of the SDMetrics Open Core includes
+<ul>
+<li>Customizable import of XMI1.x/2.x files and UML 1.x/2.x models
+<li>Calculation of design metrics
+<li>Checking design rules
+<li>Calculation of relation matrices
+</ul>
+
+<a name="whatsnew">
+<h2>1. What's new in version 2.31</h2>
+
+<h3>1.1 New features</h3>
+
+Maintenance release:
+
+<ul>
+<li>Fixed problem reading XMI transformation files with "ignore" or "xmi2assoc" triggers when the default locale is Turkish. 
+<li>Improved import of suppliers for meta-types "realization" and "substitution".
+<li>New metric procedure "substring".
+<li>New function "parsenumber" in metric expressions.
+<li>New metrics for UML2 sequence diagrams.
+</ul>
+
+<h3>1.2 Migrating from version 2.3</h3>
+
+No API changes.
+
+<h2>2. Compiling and testing the SDMetrics Open Core sources</h2>
+
+To compile and test the SDMetrics Open Core, you will need
+<ul>
+<li>a Java SE 6 Development Kit,
+<li>Ant 1.8,
+<li>JUnit 4.8,
+</ul>
+
+and be familiar with running Ant.<p> 
+
+To <b>compile</b> the sources, run the target "compile" of the Ant <tt>build.xml</tt> script. 
+The class files will be placed in a new directory "bin".<p>
+
+To <b>test</b> the SDMetrics Open Core, run the target "test" of the Ant
+<tt>build.xml</tt> script. This will compile the source and its JUnit test classes to "bin",
+and run all the JUnit test cases. A protocol of the test run will be stored in a new
+directory "testout". Note that JUnit must be included in Ant's class path to execute the JUnit tests.
+There are several ways to accomplish this, please consult the Ant Manual.<p>
+
+
+<h2>3. Integrating the SDMetrics Open Core</h2>
+
+To get acquainted with the SDMetrics Open Core API, check out
+the <a href="javadoc/index.html">Javadocs</a> that come with this
+distribution. The package summaries include tutorials how to programmatically
+parse an XMI file of a UML model, calculate the metrics, and check the
+design rules.<p>
+
+<b>Note:</b> The SDMetrics default project files (meta model definitions, XMI transformations, 
+metric definitions) are located in folder src/com/sdmetrics/resources.
+
+<a name="license">
+<h2>4. Licensing</h2>
+This distribution of the SDMetrics Open Core is released under the GNU Affero General Public License
+Version 3. See file <a href="agpl.txt">agpl.txt</a> for license terms and conditions.<p>
+If you are interested in integrating the SDMetrics Open Core (or parts of it) in closed source software, 
+you may obtain a commercial SDMetrics <a href="http://www.sdmetrics.com/SourceLic.html">source code license</a>.
+Please contact me for further details.
+
+<a name="contact">
+<h2>5. Contact</h2>
+
+For product news and information, visit the SDMetrics web site:
+<a href="http://www.sdmetrics.com">www.sdmetrics.com</a><p>
+
+For any questions concerning the SDMetrics Open Core:<p>
+
+<table>
+<tr><td>E-mail:</td><td><a href="mailto:info@sdmetrics.com">info@sdmetrics.com</a></td></tr>
+<tr><td>Postal address:</td><td>J&uuml;rgen W&uuml;st</td></tr>
+<tr><td></td><td>In der Lache 17</td></tr>
+<tr><td></td><td>67308 Zellertal</td></tr>
+<tr><td></td><td>Germany</td></tr>
+<tr><td>Phone:</td><td>+49 6355 954 761</td></tr>
+</table>
+
+<hr>
+Copyright (C) 2012 J&uuml;rgen W&uuml;st
+</body></html>

@@ -1,0 +1,35 @@
+No source name|-1|classLoad0|caffeine.test.collection.A|-1|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|main|-1|-1|caffeine.test.collection.A|void
+A.java|69|constructorEntry0|caffeine.test.collection.A|1000|-1|No comment|void
+A.java|69|fieldModification0|hashtable|1000|-1|caffeine.test.collection.A|caffeine.remote.Hashtable
+No source name|-1|classLoad0|caffeine.test.collection.A$InnerA|-1|-1|No comment|void
+A.java|45|constructorEntry0|caffeine.test.collection.A$InnerA|1001|-1|No comment|void
+A.java|47|constructorExit0|caffeine.test.collection.A$InnerA|1001|-1|No comment|void
+A.java|47|fieldModification0|hashtable|1000|1001|caffeine.test.collection.A|caffeine.test.collection.A$InnerA
+A.java|45|constructorEntry0|caffeine.test.collection.A$InnerA|1002|-1|No comment|void
+A.java|48|constructorExit0|caffeine.test.collection.A$InnerA|1002|-1|No comment|void
+A.java|48|fieldModification0|hashtable|1000|1002|caffeine.test.collection.A|caffeine.test.collection.A$InnerA
+A.java|69|fieldModification0|vector|1000|-1|caffeine.test.collection.A|caffeine.remote.Vector
+A.java|45|constructorEntry0|caffeine.test.collection.A$InnerA|1003|-1|No comment|void
+A.java|51|constructorExit0|caffeine.test.collection.A$InnerA|1003|-1|No comment|void
+A.java|51|fieldModification0|vector|1000|1003|caffeine.test.collection.A|caffeine.test.collection.A$InnerA
+A.java|45|constructorEntry0|caffeine.test.collection.A$InnerA|1004|-1|No comment|void
+A.java|52|constructorExit0|caffeine.test.collection.A$InnerA|1004|-1|No comment|void
+A.java|52|fieldModification0|vector|1000|1004|caffeine.test.collection.A|caffeine.test.collection.A$InnerA
+A.java|69|constructorExit0|caffeine.test.collection.A|1000|-1|No comment|void
+A.java|69|methodEntry0|run|-1|1000|caffeine.test.collection.A|void
+String.java|2131|methodEntry0|toString|-1|1001|caffeine.test.collection.A$InnerA|void
+String.java|2131|methodExit0|toString|-1|1001|caffeine.test.collection.A$InnerA|void
+A.java|70|fieldAccess0|hashtable|1000|-1|caffeine.test.collection.A|void
+String.java|2131|methodEntry0|toString|-1|1002|caffeine.test.collection.A$InnerA|void
+String.java|2131|methodExit0|toString|-1|1002|caffeine.test.collection.A$InnerA|void
+A.java|70|fieldAccess0|vector|1000|-1|caffeine.test.collection.A|void
+String.java|2131|methodEntry0|toString|-1|1003|caffeine.test.collection.A$InnerA|void
+String.java|2131|methodExit0|toString|-1|1003|caffeine.test.collection.A$InnerA|void
+A.java|70|fieldAccess0|vector|1000|-1|caffeine.test.collection.A|void
+String.java|2131|methodEntry0|toString|-1|1004|caffeine.test.collection.A$InnerA|void
+String.java|2131|methodExit0|toString|-1|1004|caffeine.test.collection.A$InnerA|void
+A.java|70|methodExit0|run|-1|1000|caffeine.test.collection.A|void
+NativeMethodAccessorImpl.java|-1|methodExit0|main|-1|-1|caffeine.test.collection.A|void
+No source name|-1|programEnd0|programEnd0|-1|-1|main|void
+

@@ -1,0 +1,9 @@
+NativeMethodAccessorImpl.java|-1|methodEntry0|main|-1|-1|caffeine.test.association2.Association|void
+Association.java|25|constructorEntry0|caffeine.test.association2.A|1000|-1|No comment|void
+Association.java|26|methodEntry0|operation|-1|1000|caffeine.test.association2.A|void
+A.java|27|constructorEntry0|caffeine.test.association2.B|1001|-1|No comment|void
+A.java|28|methodEntry0|operation|1000|1001|caffeine.test.association2.B|void
+Association.java|27|methodEntry0|operation|-1|1001|caffeine.test.association2.B|void
+No source name|-1|programEnd0|programEnd0|-1|-1|main|void
+Finalizer.java|-1|finalizerEntry0|caffeine.test.association2.A|1000|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|caffeine.test.association2.B|1001|-1|No comment|void

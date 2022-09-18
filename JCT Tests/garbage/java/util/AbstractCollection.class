@@ -1,0 +1,93 @@
+package java.util;
+abstract public class AbstractCollection
+implements java.util.Collection
+{
+final private static java.lang.Object MAX_ARRAY_SIZE;
+
+protected void <init>()
+{
+
+}
+
+abstract public java.util.Iterator iterator()
+{
+
+}
+
+abstract public int size()
+{
+
+}
+
+public boolean isEmpty()
+{
+
+}
+
+public boolean contains(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Object[] toArray()
+{
+
+}
+
+public java.lang.Object[] toArray(java.lang.Object arg0)
+{
+
+}
+
+private static java.lang.Object[] finishToArray(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static int hugeCapacity(java.lang.Object arg0)
+{
+
+}
+
+public boolean add(java.lang.Object arg0)
+{
+
+}
+
+public boolean remove(java.lang.Object arg0)
+{
+
+}
+
+public boolean containsAll(java.lang.Object arg0)
+{
+
+}
+
+public boolean addAll(java.lang.Object arg0)
+{
+
+}
+
+public boolean removeAll(java.lang.Object arg0)
+{
+
+}
+
+public boolean retainAll(java.lang.Object arg0)
+{
+
+}
+
+public void clear()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+
+}

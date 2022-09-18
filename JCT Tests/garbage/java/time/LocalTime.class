@@ -1,0 +1,355 @@
+package java.time;
+final public class LocalTime
+implements java.io.Serializable, java.lang.Comparable, java.time.temporal.Temporal, java.time.temporal.TemporalAdjuster
+{
+final public static java.lang.Object MIN;
+
+final public static java.lang.Object MAX;
+
+final public static java.lang.Object MIDNIGHT;
+
+final public static java.lang.Object NOON;
+
+final private static java.lang.Object HOURS;
+
+final static java.lang.Object HOURS_PER_DAY;
+
+final static java.lang.Object MINUTES_PER_HOUR;
+
+final static java.lang.Object MINUTES_PER_DAY;
+
+final static java.lang.Object SECONDS_PER_MINUTE;
+
+final static java.lang.Object SECONDS_PER_HOUR;
+
+final static java.lang.Object SECONDS_PER_DAY;
+
+final static java.lang.Object MILLIS_PER_DAY;
+
+final static java.lang.Object MICROS_PER_DAY;
+
+final static java.lang.Object NANOS_PER_SECOND;
+
+final static java.lang.Object NANOS_PER_MINUTE;
+
+final static java.lang.Object NANOS_PER_HOUR;
+
+final static java.lang.Object NANOS_PER_DAY;
+
+final private static java.lang.Object serialVersionUID;
+
+final private java.lang.Object hour;
+
+final private java.lang.Object minute;
+
+final private java.lang.Object second;
+
+final private java.lang.Object nano;
+
+public static java.time.LocalTime now()
+{
+
+}
+
+public static java.time.LocalTime now(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.LocalTime now(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.LocalTime of(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.time.LocalTime of(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public static java.time.LocalTime of(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+public static java.time.LocalTime ofSecondOfDay(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.LocalTime ofNanoOfDay(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.LocalTime from(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.LocalTime parse(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.LocalTime parse(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static java.time.LocalTime create(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+public boolean isSupported(java.lang.Object arg0)
+{
+
+}
+
+public boolean isSupported(java.lang.Object arg0)
+{
+
+}
+
+public java.time.temporal.ValueRange range(java.lang.Object arg0)
+{
+
+}
+
+public int get(java.lang.Object arg0)
+{
+
+}
+
+public long getLong(java.lang.Object arg0)
+{
+
+}
+
+private int get0(java.lang.Object arg0)
+{
+
+}
+
+public int getHour()
+{
+
+}
+
+public int getMinute()
+{
+
+}
+
+public int getSecond()
+{
+
+}
+
+public int getNano()
+{
+
+}
+
+public java.time.LocalTime with(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime with(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.LocalTime withHour(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime withMinute(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime withSecond(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime withNano(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime truncatedTo(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime plus(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime plus(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.LocalTime plusHours(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime plusMinutes(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime plusSeconds(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime plusNanos(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime minus(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime minus(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.LocalTime minusHours(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime minusMinutes(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime minusSeconds(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalTime minusNanos(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Object query(java.lang.Object arg0)
+{
+
+}
+
+public java.time.temporal.Temporal adjustInto(java.lang.Object arg0)
+{
+
+}
+
+public long until(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.String format(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime atDate(java.lang.Object arg0)
+{
+
+}
+
+public java.time.OffsetTime atOffset(java.lang.Object arg0)
+{
+
+}
+
+public int toSecondOfDay()
+{
+
+}
+
+public long toNanoOfDay()
+{
+
+}
+
+public int compareTo(java.lang.Object arg0)
+{
+
+}
+
+public boolean isAfter(java.lang.Object arg0)
+{
+
+}
+
+public boolean isBefore(java.lang.Object arg0)
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+private java.lang.Object writeReplace()
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.InvalidObjectException
+{
+
+}
+
+void writeExternal(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static java.time.LocalTime readExternal(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

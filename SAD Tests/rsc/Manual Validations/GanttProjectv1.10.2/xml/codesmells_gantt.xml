@@ -1,0 +1,4099 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE codesmells SYSTEM "codesmells_gantt.dtd">
+<codesmells>
+	<program type="Java">
+		<name>GanttProject v1.10.2</name>
+		<location>?</location>
+		<codesmell name="Long Method">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.GanttResourcePanel</entity>
+								<comment>Constructeur : 50 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.GanttGraphicArea</entity>
+								<comment>Constructeur : 350 instruc., paintCalendar1(...) : 170 instruc. ....</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.GanttOptions</entity>
+								<comment>save() : 110 instruc. ....</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.GanttOptions#GanttXMLOptionsBase</entity>
+								<comment>startElement(...) : 255 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.GanttProject</entity>
+								<comment>Constructeur : 250 instruc., addButton : 190 instruc. ....</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.GanttTree</entity>
+								<comment>Constructeur : 70 instruc. ....</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.GanttTree#GanttTreeDropListener</entity>
+								<comment>drop(...) : 55 instruc. ....</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.ResourceLoadGraphicArea</entity>
+								<comment>Constructeur  : 84 instruc. ....</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="9">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.io.GanttCSVExport</entity>
+								<comment>getMaxSize() : 72 instruc., writeTask() : 45 instruc., save() : 32 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="10">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.io.GanttHTMLExport</entity>
+								<comment>save() : 64 instruc., writeTask() : 31</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="11">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.io.GanttPDFExport</entity>
+								<comment>save() : 48 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="12">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.io.GanttXFIGSaver</entity>
+								<comment>setProjectPlotTimes() : 38 instruc., taskToBox() : 64 instruc. ...</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="13">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLOpen#DefaultTagHandler</entity>
+								<comment>startElement() : 108 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="14">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLSaver</entity>
+								<comment>writeTask : 78 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="15">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogCalendar</entity>
+								<comment>Constructeur : 80 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="16">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogDate</entity>
+								<comment>Constructeur : 41 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="17">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogInfo</entity>
+								<comment>Constructeur : 62 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="18">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogPerson</entity>
+								<comment>initComponent() : 200 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="19">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogProperties</entity>
+								<comment>actionPerformed() : 57 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="20">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.GanttPanelDate#GanttDialogDateDay</entity>
+								<comment>paintComponent() : 49 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="21">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.GanttPanelDate</entity>
+								<comment>Constructeur : 56 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="22">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.GanttPreviewPrint</entity>
+								<comment>Constructeur : 44 instruc., actionPerformed() : 41 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="23">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean</entity>
+								<comment>constructGeneralPanel() : 130 instruc., constructNotesPanel() : 40 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="24">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.GanttURLChooser</entity>
+								<comment>Constructeur : 53 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="25">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.GeneralDialog</entity>
+								<comment>Constructeur : 51 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="26">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.TipsDialog</entity>
+								<comment>Constructeur : 117 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="27">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutAuthorPanel</entity>
+								<comment>Constructeur : 52 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="28">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.options.ColorSettingsPanel</entity>
+								<comment>Constructeur : 75 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="29">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.options.CSVSettingsPanel</entity>
+								<comment>Constructeur : 97 instruc., applyChanges() : 46 instruc., initialize() : 37 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="30">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.options.PDFSettingsPanel</entity>
+								<comment>Constructeur : 38 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="31">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.options.ProjectSettingsPanel</entity>
+								<comment>Constructeur : 46 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="32">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.options.SettingsDialog</entity>
+								<comment>valueChanged()  : 41 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="33">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.taskproperties.TaskAllocationsPanel</entity>
+								<comment>constructResourcesPanel(...) : 43 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="34">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.taskproperties.TaskDependenciesPanel</entity>
+								<comment>constructPredecessorsPanel() : 38 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="35">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.task.TaskManagerImpl</entity>
+								<comment>Constructeur : 36 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="36">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.task.algorithm.RecalculateTaskScheduleAlgorithm</entity>
+								<comment>fulfilConstraints() : 73 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="37">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.chart.ChartHeaderImpl</entity>
+								<comment>createFrames(...) : 46 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="38">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer</entity>
+								<comment>paint() : 36 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="39">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.shape.Shape</entity>
+								<comment>Constructeur :  58 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="40">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.export.JDKFontLocator</entity>
+								<comment>getFontRecords(...) : 36 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="41">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.export.PDFExportProcessor</entity>
+								<comment>doExport(...) : 32 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="42">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.parser.AllocationTagHandler</entity>
+								<comment>loadAllocation(...) : 38 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="43">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.parser.ResourceTagHandler</entity>
+								<comment>startElement(...) : 255 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="44">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.parser.TaskTagHandler</entity>
+								<comment>loadTask(...) : 73 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="45">
+					<roles>
+						<longMethods>
+							<longMethod>
+								<entity>net.sourceforge.ganttproject.gui.options.LanguageSettingsPanel</entity>
+								<comment>changeLanguage(...) : 44 instruc.</comment>
+							</longMethod>
+						</longMethods>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Large Class">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<largeClasses>
+							<largeClass>
+								<entity>net.sourceforge.ganttproject.GanttGraphicArea</entity>
+								<comment>81 éléments</comment>
+							</largeClass>
+						</largeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<largeClasses>
+							<largeClass>
+								<entity>net.sourceforge.ganttproject.GanttOptions</entity>
+								<comment>104 éléments</comment>
+							</largeClass>
+						</largeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<largeClasses>
+							<largeClass>
+								<entity>net.sourceforge.ganttproject.GanttProject</entity>
+								<comment>78 éléments</comment>
+							</largeClass>
+						</largeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<largeClasses>
+							<largeClass>
+								<entity>net.sourceforge.ganttproject.GanttTree</entity>
+								<comment>5 éléments</comment>
+							</largeClass>
+						</largeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<largeClasses>
+							<largeClass>
+								<entity>net.sourceforge.ganttproject.ResourceLoadGraphicArea</entity>
+								<comment>73 éléments</comment>
+							</largeClass>
+						</largeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<largeClasses>
+							<largeClass>
+								<entity>net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean</entity>
+								<comment>94 éléments</comment>
+							</largeClass>
+						</largeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<largeClasses>
+							<largeClass>
+								<entity>net.sourceforge.ganttproject.task.TaskImpl</entity>
+								<comment>68 éléments</comment>
+							</largeClass>
+						</largeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<largeClasses>
+							<largeClass>
+								<entity>net.sourceforge.ganttproject.shape.ColorConstants</entity>
+								<comment>134 éléments</comment>
+							</largeClass>
+						</largeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="9">
+					<roles>
+						<largeClasses>
+							<largeClass>
+								<entity>net.sourceforge.ganttproject.gui.options.CSVSettingsPanel</entity>
+								<comment>48 éléments</comment>
+							</largeClass>
+						</largeClasses>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Lazy Class">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.GanttResourcePanel#GanttAdjustementListener</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.gui.DialogAligner</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.event.TaskDependencyEvent</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.event.TaskListenerAdapter</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.RangeSearchFromKey</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.RangeSearchToKey</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.TaskDependencyException</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.TaskDependencySliceAsDependee</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="9">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.TaskDependencySliceAsDependant</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="10">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.constraint.StartStartConstraintImpl</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="11">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.constraint.FinishFinishConstraintImpl</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="12">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.constraint.StartFinishConstraintImpl</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="13">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.constraint.FinishStartConstraintImpl</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="14">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.hierarchy.TaskHierarchyManagerImpl</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="15">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.algorithm.AlgorithmBase</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="16">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.time.TimeUnitGraph#Composition</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="17">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.action.ResourceActionSet</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="18">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.export.ExportException</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="19">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.export.FontMetricsStorage</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="20">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.export.JDKFontLocator</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="21">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.export.PDFExportData</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="22">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.export.ResourceChartExportProcessor</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="23">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.parser.FileFormatException</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="24">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.document.AbstractDocument</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="25">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.document.AbstractURLDocument</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="26">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.GanttExportSettings</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="27">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.GanttProject#FacadeInvalidator</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="28">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.GanttResourcePanel#</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="29">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.GanttTree#GanttAdjustementListener</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="30">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.GanttTree#GanttTransferableTreePath</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="31">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.GanttTree#GanttTreeExpansionListener</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="32">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.GanttTree#GanttTreeModelListener</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="33">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.PrjInfos</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="34">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.gui.TestGanttRolloverButton#MouseOverHandler</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="35">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutAuthorPanel#AuthorsInfo</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="36">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutJavaInfosPanel#SystemInfo</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="37">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutLibraryPanel#LibraryInfo</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="38">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.gui.projectwizard.I18N</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="39">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.gui.projectwizard.ProjectNamePage</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="40">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.gui.projectwizard.RoleSetPage</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="41">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.ResourceAssignmentCollectionImpl#MutationInfo</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="42">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.ResourceAssignmentCollectionImpl#ResourceAssignmentImpl</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="43">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.TaskLengthImpl</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="44">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.TaskManagerImpl#FacadeFactoryImpl</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="45">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.TaskManagerImpl#FacadeImpl</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="46">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.event.TaskHierarchyEvent</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="47">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.event.TaskScheduleEvent</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="48">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.constraint.ConstraintImpl</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="49">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.TaskDependencyCollectionImpl#MutationInfo</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="50">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.task.algorithm.AlgorithmCollection</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="51">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.time.TimeUnitManagerImpl</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="52">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer#GraphicPrimitive</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="53">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer#Line</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="54">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer#Rectangle</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="55">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer#Text</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="56">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.time.gregorian.GregorianTimeUnitStack#UnitInfo</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="57">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.time.gregorian.GregorianTimeUnitStack#LineItem</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="58">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.roles.RoleImpl</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="59">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.resource.ResourceEvent</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="60">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.export.FontTriplet</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="61">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.export.GanttChartExportProcessor</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="62">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.parser.ParsingContext</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="63">
+					<roles>
+						<lazyClasses>
+							<lazyClass>
+								<entity>net.sourceforge.ganttproject.GanttGraphicArea#GanttPaintParam</entity>
+								<comment/>
+							</lazyClass>
+						</lazyClasses>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Data Class">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.GanttExportSettings</entity>
+								<comment>0 méthode</comment>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.GanttProject#ExportFileInfo</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.GanttTaskRelationship</entity>
+								<comment>trop d&apos;accesseurs</comment>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.PrjInfos</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.io.GanttXFIGSaver#TextObject</entity>
+								<comment>0 méthode</comment>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.io.GanttXFIGSaver#BoxObject</entity>
+								<comment>0 méthode</comment>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogDate</entity>
+								<comment>1 getter</comment>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogInfo</entity>
+								<comment>0 méthode</comment>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="9">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogPerson</entity>
+								<comment>1 getter</comment>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="10">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.GanttMetalTheme</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="11">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.GanttURLChooser</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="12">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.UIConfiguration</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="13">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutAuthorPanel#AuthorsInfo</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="14">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutAuthorPanel#AuthorsFieldTableModel</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="15">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutJavaInfosPanel#SystemInfo</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="16">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutJavaInfosPanel#AboutFieldTableModel</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="17">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutLibraryPanel#LibraryInfo</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="18">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutLibraryPanel#LibraryFieldTableModel</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="19">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.projectwizard.I18N</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="20">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.projectwizard.ProjectNamePage</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="21">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.projectwizard.RoleSetPage</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="22">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.taskproperties.DependencyTableModel#TaskComboItem</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="23">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.task.ResourceAssignmentCollectionImpl#ResourceAssignmentImpl</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="24">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.task.TaskImpl</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="25">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.task.TaskLengthImpl</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="26">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.task.TaskManagerImpl#FacadeImpl</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="27">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.task.event.TaskDependencyEvent</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="28">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.task.event.TaskHierarchyEvent</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="29">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.task.event.TaskScheduleEvent</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="30">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.TaskDependencyCollectionImpl#MutatorInfo</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="31">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.TaskDependencyImpl</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="32">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.task.dependency.constraint.ConstraintImpl</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="33">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.task.algorithm.AlgorithmCollection</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="34">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.task.algorithm.AlgorithmBase</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="35">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.time.TimeUnitGraph#Composition</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="36">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.time.TimeUnitImpl</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="37">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.time.TimeUnitManagerImpl</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="38">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.time.gregorian.GregorianTimeUnitStack</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="39">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.time.gregorian.GregorianTimeUnitStack#TimeFrameImpl</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="40">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.time.gregorian.GregorianTimeUnitStack#TimeFrameImpl#UnitInfo</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="41">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.time.gregorian.GregorianTimeUnitStack#TimeFrameImplLineItem</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="42">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.chart.ChartModelImpl</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="43">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.chart.ChartUIConfiguration</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="44">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer#GraphicPrimitive</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="45">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer#Rectangle</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="46">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer#Line</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="47">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer#Text</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="48">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.roles.RoleImpl</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="49">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.roles.RolePersistentID</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="50">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.shape.ColorConstants</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="51">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.shape.ShapeConstants</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="52">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.resource.HumanResource</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="53">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.resource.ProjectResource</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="54">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.resource.ResourceEvent</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="55">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.action.ResourceActionSet</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="56">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.export.DeprecatedProjectExportData</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="57">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.export.ProjectExportData</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="58">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.export.GanttChartExportData</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="59">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.export.FontRecord</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="60">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.export.FontTriplet</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="61">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.export.TTFFileExt</entity>
+								<comment>se trouve dans le meme JDKFontLocator.java</comment>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="62">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.export.PDFExportData</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="63">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.export.ResourceChartExportData</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="64">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.parser.ParsingContext</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="65">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.document.FileDocument</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="66">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.document.HttpDocument</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="67">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.GanttTree#GanttTransferableTreePath</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="68">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.GanttGraphicArea#GanttPaintParam</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="69">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.GanttTask</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="70">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="71">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.gui.options.CSVSettingsPanel</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="72">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.io.CSVOptions</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="73">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.action.ResourceAction</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="74">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.shape.JPaintCombo</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="75">
+					<roles>
+						<dataClasses>
+							<dataClass>
+								<entity>net.sourceforge.ganttproject.shape.JPaintList</entity>
+								<comment/>
+							</dataClass>
+						</dataClasses>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Too much information hiding">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<tooMuchInformationsHiding>
+							<tooMuchInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogPerson</entity>
+								<comment/>
+							</tooMuchInformationHiding>
+						</tooMuchInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<tooMuchInformationsHiding>
+							<tooMuchInformationHiding>
+								<entity>net.sourceforge.ganttproject.chart.ChartHeaderImpl</entity>
+								<comment/>
+							</tooMuchInformationHiding>
+						</tooMuchInformationsHiding>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Not enough information hiding">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.GanttExportSettings</entity>
+								<comment>attribut publics utilisés que dans la classe</comment>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.GanttGraphicArea</entity>
+								<comment>oldDate, tree, beg, end utilisés que dans la classe</comment>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.GanttImagePanel</entity>
+								<comment>4 attributs publics au package utilisés que dans la classe</comment>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.GanttOptions</entity>
+								<comment>classes internes GanttXMLOptionsBase publics au package et
+								utilisée que dans la classe</comment>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.GanttProject</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.GanttResourcePanel</entity>
+								<comment>attribut publics utilisés que dans la classe</comment>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.GanttResourcePanel#GanttTableModel</entity>
+								<comment>attribut data</comment>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.GanttTask</entity>
+								<comment>attributs statics non finaux utilisés que dans la classe</comment>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="9">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.GanttTree</entity>
+								<comment>attributs publics et classes internes publiques utilisés que dans la classe</comment>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="10">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.PrjInfos</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="11">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.ResourceLoadGraphicArea</entity>
+								<comment>old, tree</comment>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="12">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.io.GanttCSVExport</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="13">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.io.GanttPDFExport</entity>
+								<comment>convert2PDF() utilisée que dans save()</comment>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="14">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.io.GanttTXTOpen</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="15">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.io.GanttXFIGSaver</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="16">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLOpen</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="17">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLSaver</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="18">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.GanttPanelDate</entity>
+								<comment>classe interne publique et utilisée que dans la classe</comment>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="19">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.GanttPanelDate#GanttDialogDateDay</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="20">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.GanttPreviewPrint</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="21">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.GanttStatusBar</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="22">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="23">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.GanttPreviewPrint#PreviewsPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="24">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.GanttURLChooser</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="25">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.GeneralDialog</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="26">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.ResourcesTableModel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="27">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.RolesTableModel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="28">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.TestGanttRolloverButton</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="29">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.TipsDialog</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="30">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.GanttStatusBar#MessagePanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="31">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutAuthorPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="32">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutAuthorPanel#AuthorsFieldTableModel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="33">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutJavaInfosPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="34">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutJavaInfosPanel#AboutFieldTableModel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="35">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutLibraryPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="36">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutLibraryPanel#LibraryFieldTableModel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="37">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.projectwizard.WizardImpl</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="38">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.server.ConnectionPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="39">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.options.ColorSettingsPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="40">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.options.CSVSettingsPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="41">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.options.ExportSettingsPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="42">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.options.HTMLSettingsPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="43">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.options.LnFSettingsPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="44">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.options.ParametersSettingsPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="45">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.options.PDFSettingsPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="46">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.options.ProjectSettingsPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="47">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.options.RolesSettingsPanel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="48">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.options.SettingsDialog</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="49">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.gui.taskproperties.DependencyTableModel</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="50">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.task.dependency.SearchKey</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="51">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.task.dependency.TaskDependencyCollectionImpl</entity>
+								<comment>addDependency(...)&gt;</comment>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="52">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.time.TimeUnitGraph</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="53">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="54">
+					<roles>
+						<notEnoughInformationsHiding>
+							<notEnoughInformationHiding>
+								<entity>net.sourceforge.ganttproject.language.GanttLanguage</entity>
+								<comment/>
+							</notEnoughInformationHiding>
+						</notEnoughInformationsHiding>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Data Clumps">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<dataClumps>
+							<dataClump>
+								<entity>net.sourceforge.ganttproject.GanttGraphicArea</entity>
+								<comment>oldX &amp; oldY</comment>
+							</dataClump>
+						</dataClumps>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<dataClumps>
+							<dataClump>
+								<entity>net.sourceforge.ganttproject.GanttImagePanel</entity>
+								<comment>x &amp; y =&gt; Point</comment>
+							</dataClump>
+						</dataClumps>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<dataClumps>
+							<dataClump>
+								<entity>net.sourceforge.ganttproject.GanttOptions</entity>
+								<comment>x &amp; y =&gt; Point , width &amp; height =&gt; Dimension</comment>
+							</dataClump>
+						</dataClumps>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<dataClumps>
+							<dataClump>
+								<entity>net.sourceforge.ganttproject.GanttPrintable</entity>
+								<comment>x &amp; y =&gt;</comment>
+							</dataClump>
+						</dataClumps>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<dataClumps>
+							<dataClump>
+								<entity>net.sourceforge.ganttproject.GanttProject</entity>
+								<comment>tout ce qui est lié au menu</comment>
+							</dataClump>
+						</dataClumps>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<dataClumps>
+							<dataClump>
+								<entity>net.sourceforge.ganttproject.GanttResourcePanel</entity>
+								<comment>cx &amp; cy</comment>
+							</dataClump>
+						</dataClumps>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<dataClumps>
+							<dataClump>
+								<entity>net.sourceforge.ganttproject.ResourceLoadGraphicArea</entity>
+								<comment>oldX &amp; oldY</comment>
+							</dataClump>
+						</dataClumps>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<dataClumps>
+							<dataClump>
+								<entity>net.sourceforge.ganttproject.gui.GanttPreviewPrint</entity>
+								<comment>zoomX &amp; zoomY</comment>
+							</dataClump>
+						</dataClumps>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="9">
+					<roles>
+						<dataClumps>
+							<dataClump>
+								<entity>net.sourceforge.ganttproject.gui.GanttPreviewPrint#PreviewPanel</entity>
+								<comment>pageWidth &amp; pageHeight, nbx &amp; nby, _x &amp; _y</comment>
+							</dataClump>
+						</dataClumps>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="10">
+					<roles>
+						<dataClumps>
+							<dataClump>
+								<entity>net.sourceforge.ganttproject.shape.ShapePaint</entity>
+								<comment>width &amp; height</comment>
+							</dataClump>
+						</dataClumps>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Switch Statement">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<switchStatements>
+							<switchStatement>
+								<entity>net.sourceforge.ganttproject.GanttGraphicArea</entity>
+								<comment>8 switch cases. tous à modifier en cas de modification de 1</comment>
+							</switchStatement>
+						</switchStatements>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<switchStatements>
+							<switchStatement>
+								<entity>net.sourceforge.ganttproject.GanttOptions#GanttXMLOptionsBase</entity>
+								<comment/>
+							</switchStatement>
+						</switchStatements>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<switchStatements>
+							<switchStatement>
+								<entity>net.sourceforge.ganttproject.GanttProject</entity>
+								<comment>dans la méthode doExport()</comment>
+							</switchStatement>
+						</switchStatements>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<switchStatements>
+							<switchStatement>
+								<entity>net.sourceforge.ganttproject.GanttResourcePanel#GanttTableModel</entity>
+								<comment>getValueAt()</comment>
+							</switchStatement>
+						</switchStatements>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<switchStatements>
+							<switchStatement>
+								<entity>net.sourceforge.ganttproject.ResourceLoadGraphicArea</entity>
+								<comment>8 switch cases. tous à modifier en cas de modification de 1</comment>
+							</switchStatement>
+						</switchStatements>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<switchStatements>
+							<switchStatement>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLOpen#DefaultTagHandler</entity>
+								<comment/>
+							</switchStatement>
+						</switchStatements>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<switchStatements>
+							<switchStatement>
+								<entity>net.sourceforge.ganttproject.gui.ResourcesTableModel</entity>
+								<comment>sur col dans getValueAt(...) &amp; updateAssignment(...)</comment>
+							</switchStatement>
+						</switchStatements>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<switchStatements>
+							<switchStatement>
+								<entity>net.sourceforge.ganttproject.gui.options.LanguageSettingsPanel</entity>
+								<comment/>
+							</switchStatement>
+						</switchStatements>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="9">
+					<roles>
+						<switchStatements>
+							<switchStatement>
+								<entity>net.sourceforge.ganttproject.gui.options.SettingsDialog</entity>
+								<comment/>
+							</switchStatement>
+						</switchStatements>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="10">
+					<roles>
+						<switchStatements>
+							<switchStatement>
+								<entity>net.sourceforge.ganttproject.gui.taskproperties.DependencyTableModel</entity>
+								<comment>sur col dans getValueAt(...)</comment>
+							</switchStatement>
+						</switchStatements>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="11">
+					<roles>
+						<switchStatements>
+							<switchStatement>
+								<entity>net.sourceforge.ganttproject.GanttOptions#GanttXMLOptionsParser</entity>
+								<comment>dans startElement(...)</comment>
+							</switchStatement>
+						</switchStatements>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Refused Bequest">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.GanttOptions#GanttXMLOptionsBase</entity>
+								<comment>redéfinition de méthodes au lieu de surcharge</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.GanttProject</entity>
+								<comment>resourcesRemoved() non implémentée</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.GanttOptions#FacadeInvalidator</entity>
+								<comment/>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.GanttTree</entity>
+								<comment>méthodes de l&apos;interface DragSourceListener non implémentées</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLOpen#GanttXMLParser</entity>
+								<comment>redéfinition de méthodes</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogCalendar</entity>
+								<comment>actionPerformed() vide</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.gui.GanttMetalTheme</entity>
+								<comment/>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.gui.GanttPanelDate#GanttDialogDateDay</entity>
+								<comment>redéfinition getPreferredSize()</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="9">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutAuthorPanel</entity>
+								<comment>initialize() vide</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="10">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutJavaInfosPanel</entity>
+								<comment>initialize() vide</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="11">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutLibraryPanel</entity>
+								<comment>initialize() vide</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="12">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutLicensePanel</entity>
+								<comment>initialize() vide</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="13">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.gui.projectwizard.RoleSetPage</entity>
+								<comment>setActive() vide</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="14">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.gui.server.ConnectionPanel</entity>
+								<comment>initialize() vide</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="15">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.gui.options.RolesSettingsPanel</entity>
+								<comment>initialize() vide</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="16">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.gui.options.WelcomeSettingsPanel</entity>
+								<comment>initialize() vide</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="17">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.gui.taskproperties.DependencyTableModel</entity>
+								<comment>getLanguage() de la classe mère non utilisée</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="18">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl</entity>
+								<comment>getTextFormater() de la classe mère non utilisée</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="19">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.time.gregorian.GregorianCalendar</entity>
+								<comment>add(...) redéfinie</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="20">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.parser.AllocationTagHandler</entity>
+								<comment>endElement(...) non implémentée</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="21">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.parser.ResourceTagHandler</entity>
+								<comment>endElement(...) &amp; parsingStarted(...) non implémentées</comment>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="22">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.document.AbstractDocument</entity>
+								<comment/>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="23">
+					<roles>
+						<refusedBequests>
+							<refusedBequest>
+								<entity>net.sourceforge.ganttproject.document.AbstractURLDocument</entity>
+								<comment/>
+							</refusedBequest>
+						</refusedBequests>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Message Chains">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<messageChains>
+							<messageChain>
+								<entity>net.sourceforge.ganttproject.GanttTree</entity>
+								<comment>dans la méthode cutSelectedNode() &amp; forwardScheduling()</comment>
+							</messageChain>
+						</messageChains>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<messageChains>
+							<messageChain>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLOpen</entity>
+								<comment>dans load()</comment>
+							</messageChain>
+						</messageChains>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<messageChains>
+							<messageChain>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLSaver</entity>
+								<comment>dans save()</comment>
+							</messageChain>
+						</messageChains>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<messageChains>
+							<messageChain>
+								<entity>net.sourceforge.ganttproject.gui.taskproperties.TaskAllocationsPanel</entity>
+								<comment>dans constructResourcesPanel(...)</comment>
+							</messageChain>
+						</messageChains>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<messageChains>
+							<messageChain>
+								<entity>net.sourceforge.ganttproject.gui.taskproperties.TaskDependenciesPanel</entity>
+								<comment>dans constructPredecessorsPanel(...)</comment>
+							</messageChain>
+						</messageChains>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<messageChains>
+							<messageChain>
+								<entity>net.sourceforge.ganttproject.task.algorithm.RecalculateTaskScheduleAlgorithm</entity>
+								<comment>dans fulfilConstraints(...)</comment>
+							</messageChain>
+						</messageChains>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<messageChains>
+							<messageChain>
+								<entity>net.sourceforge.ganttproject.GanttGraphicArea</entity>
+								<comment>dans adjustDependencies(...) de la classe en ligne TaskListenerAdapter dans le constructeur</comment>
+							</messageChain>
+						</messageChains>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<messageChains>
+							<messageChain>
+								<entity>net.sourceforge.ganttproject.GanttOptions</entity>
+								<comment>dans save() -> serializer</comment>
+							</messageChain>
+						</messageChains>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Aternative Classes With Different Interfaces">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<alternativeClasses>
+							<alternativeClass>
+								<entity>net.sourceforge.ganttproject.ResourceLoadGraphicArea</entity>
+								<comment>avec net.sourceforge.ganttproject.GanttGraphicArea</comment>
+							</alternativeClass>
+						</alternativeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<alternativeClasses>
+							<alternativeClass>
+								<entity>net.sourceforge.ganttproject.io.GanttPDFExport</entity>
+								<comment>avec net.sourceforge.ganttproject.io.GanttHTMLExport</comment>
+							</alternativeClass>
+						</alternativeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<alternativeClasses>
+							<alternativeClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutJavaInfosPanel</entity>
+								<comment>avec net.sourceforge.ganttproject.gui.about.AboutAuthorPanel</comment>
+							</alternativeClass>
+						</alternativeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<alternativeClasses>
+							<alternativeClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutJavaInfosPanel#AboutFieldTableModel</entity>
+								<comment>avec net.sourceforge.ganttproject.gui.about.AboutAuthorPanel#AuthorsFieldTableModel</comment>
+							</alternativeClass>
+						</alternativeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<alternativeClasses>
+							<alternativeClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutLibraryPanel</entity>
+								<comment>avec net.sourceforge.ganttproject.gui.about.AboutJavaInfosPanel</comment>
+							</alternativeClass>
+						</alternativeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<alternativeClasses>
+							<alternativeClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutLibraryPanel#LibraryFieldTableModel</entity>
+								<comment>avec net.sourceforge.ganttproject.gui.about.AboutJavaInfosPanel#AboutFieldTableModel</comment>
+							</alternativeClass>
+						</alternativeClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<alternativeClasses>
+							<alternativeClass>
+								<entity>net.sourceforge.ganttproject.gui.about.AboutLicensePanel</entity>
+								<comment>avec net.sourceforge.ganttproject.gui.about.AboutLibraryPanel</comment>
+							</alternativeClass>
+						</alternativeClasses>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Long Parameter List">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.io.GanttHTMLExport</entity>
+								<comment>save (...): 7 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.io.GanttPDFExport</entity>
+								<comment>save (...): 8 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLOpen</entity>
+								<comment>Constructeur : 6 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogProperties</entity>
+								<comment>Constructeur : 5 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean</entity>
+								<comment>Constructeur : 4 params, addUsingGBL(...) : 7 params, setFirstRow(...) : 6 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.gui.GeneralDialog#SettinsDefaultTreeCellRenderer</entity>
+								<comment>getTreeCellRendererComponent(...) : 7 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.gui.options.CSVSettingsPanel</entity>
+								<comment>addUsingGBL() : 7 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.gui.taskproperties.CommonPanel</entity>
+								<comment>addUsingGBL(...) : 7 params, setFirstRow(...) : 6 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="9">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.time.gregorian.GregorianCalendar</entity>
+								<comment>Constructeurs : 6 params &amp; 5 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="10">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.shape.PaintCellRenderer</entity>
+								<comment>getListCellRendererComponent(...) : 5 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="11">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.shape.ShapePaint</entity>
+								<comment>Constructeur : 5 params, createTexture(...) : 5 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="12">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.task.algorithm.AlgorithmCollection</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="13">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.parser.AllocationTagHandler</entity>
+								<comment>startElement(...) : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="14">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.parser.DependencyTagHandler</entity>
+								<comment>startElement(...) : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="15">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.export.DeprecatedProjectExportData</entity>
+								<comment>Constructeur : 7 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="16">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.gui.GanttCellListRenderer</entity>
+								<comment>getListCellRendererComponent(...) : 5 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="17">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.io.GanttCSVExport</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="18">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogInfo</entity>
+								<comment>Constructeur : 5 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="19">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.GanttExportSettings</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="20">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.GanttGraphicArea#Arrow</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="21">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.GanttGraphicArea#GanttPaintParam</entity>
+								<comment>Constructeur : 7 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="22">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.GanttImagePanel</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="23">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.GanttOptions#GanttXMLOptionsParser</entity>
+								<comment>startElement(...) : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="24">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.GanttTask</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="25">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.GanttTaskRelationship</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="26">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.GanttTree</entity>
+								<comment>insertClonedNode(...) : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="27">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.GanttTree#GanttTreeCellRenderer</entity>
+								<comment>getTreeCellRendererComponent(...) : 7 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="28">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.io.GanttTXTOpen</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="29">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.gui.GanttURLChooser</entity>
+								<comment>Constructeur : 5 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="30">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLOpen#DefaultTagHandler</entity>
+								<comment>startElement(...) : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="31">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLOpen#GanttXMLParser</entity>
+								<comment>startElement(...) : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="32">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLSaver</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="33">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.gui.GeneralDialog</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="34">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer#Line</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="35">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer#Rectangle</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="36">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.action.ImportResources</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="37">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.export.PDFExportData</entity>
+								<comment>Constructeur : 11 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="38">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.PrjInfos</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="39">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.export.ProjectExportData</entity>
+								<comment>Constructeur : 10 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="40">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.parser.ResourceTagHandler</entity>
+								<comment>startElement(...) : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="41">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.gui.projectwizard.RoleSetPage#RoleSetListModel</entity>
+								<comment>getListCellRendererComponent(...) : 5 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="42">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.parser.RoleTagHandler</entity>
+								<comment>startElement(...) : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="43">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.task.event.TaskHierarchyEvent</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="44">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.task.event.TaskScheduleEvent</entity>
+								<comment>Constructeur : 5 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="45">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.parser.TaskTagHandler</entity>
+								<comment>startElement(...) : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="46">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="47">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.time.TimeUnitFunctionOfDateImpl</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="48">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.time.TimeUnitGraph</entity>
+								<comment>createDateFrameableTimeUnit(...) : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="49">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.gui.UIConfiguration</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="50">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.GanttGraphicArea</entity>
+								<comment>Constructeur : 4 params, paintATaskBilan(...) : 4 params, paintResources(...) : 4 params, 
+								printTask(...) : 4 params, paintATaskFather(...) : 5 params, paintATaskChild(...) : 5 params, 
+								drawVerticalLinedash(...) : 5 params, paintAdvancement(...) : 8 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="51">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.io.GanttXFIGSaver</entity>
+								<comment>Constructeur : 4 params, task2text(...) : 4 params, task2box(...) : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="52">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.ResourceLoadGraphicArea</entity>
+								<comment>drawVerticalLinedash(...) : 5 params, paintAResourceLoad(...) : 8 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="53">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer</entity>
+								<comment>createRectangle(...) : 4 params, createLine(...) : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="54">
+					<roles>
+						<longParameterLists>
+							<longParameterList>
+								<entity>net.sourceforge.ganttproject.task.algorithm.AlgorithmCollection</entity>
+								<comment>Constructeur : 4 params</comment>
+							</longParameterList>
+						</longParameterLists>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Temporary Field">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.io.GanttPDFExport</entity>
+								<comment>language</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.io.GanttXFIGSaver</entity>
+								<comment/>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLOpen</entity>
+								<comment>marge, language</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLSaver</entity>
+								<comment>lots</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogCalendar</entity>
+								<comment>attributs utilisés que dans le constructeur</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogDate</entity>
+								<comment>attributs utilisés que dans le constructeur</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.gui.GanttPanelDate</entity>
+								<comment>language</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.gui.GanttPreviewPrint</entity>
+								<comment>index</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="9">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean</entity>
+								<comment>savePredecessor</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="10">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.gui.taskproperties.CommonPanel</entity>
+								<comment>gbc, flowL, firstRowPanel3, nameLabel3</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="11">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.gui.taskproperties.TaskAllocationsPanel</entity>
+								<comment>resourcesScrollPane</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="12">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.gui.taskproperties.TaskDependenciesPanel</entity>
+								<comment>language, gbc, predecessorsScrollPane</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="13">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.task.algorithm.RecalculateTaskScheduleAlgorithm</entity>
+								<comment>myEntranceCounter</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="14">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.time.gregorian.GregorianTimeUnitStack</entity>
+								<comment>myCalendar, myLowestFrameable</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="15">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.chart.ChartModelImpl</entity>
+								<comment>myTimeUnitStack</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="16">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.action.DeleteHumanAction</entity>
+								<comment>MENU_MASK</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="17">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.action.NewHumanAction</entity>
+								<comment>MENU_MASK</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="18">
+					<roles>
+						<temporaryFields>
+							<temporaryField>
+								<entity>net.sourceforge.ganttproject.export.JDKFontLocator</entity>
+								<comment>myFontMetricsStorage</comment>
+							</temporaryField>
+						</temporaryFields>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Poor Usage of Interfaces">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<poorUsagesOfInterfaces>
+							<poorUsageOfInterfaces>
+								<entity>net.sourceforge.ganttproject.time.DateFrameable</entity>
+								<comment/>
+							</poorUsageOfInterfaces>
+						</poorUsagesOfInterfaces>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<poorUsagesOfInterfaces>
+							<poorUsageOfInterfaces>
+								<entity>net.sourceforge.ganttproject.parser.ParsingListener</entity>
+								<comment/>
+							</poorUsageOfInterfaces>
+						</poorUsagesOfInterfaces>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<poorUsagesOfInterfaces>
+							<poorUsageOfInterfaces>
+								<entity>net.sourceforge.ganttproject.resource.ResourceView</entity>
+								<comment/>
+							</poorUsageOfInterfaces>
+						</poorUsagesOfInterfaces>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<poorUsagesOfInterfaces>
+							<poorUsageOfInterfaces>
+								<entity>net.sourceforge.ganttproject.parser.TagHandler</entity>
+								<comment/>
+							</poorUsageOfInterfaces>
+						</poorUsagesOfInterfaces>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<poorUsagesOfInterfaces>
+							<poorUsageOfInterfaces>
+								<entity>net.sourceforge.ganttproject.task.TaskContainmentHierarchyFacade</entity>
+								<comment/>
+							</poorUsageOfInterfaces>
+						</poorUsagesOfInterfaces>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<poorUsagesOfInterfaces>
+							<poorUsageOfInterfaces>
+								<entity>net.sourceforge.ganttproject.task.dependency.TaskDependencyConstraint</entity>
+								<comment/>
+							</poorUsageOfInterfaces>
+						</poorUsagesOfInterfaces>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<poorUsagesOfInterfaces>
+							<poorUsageOfInterfaces>
+								<entity>net.sourceforge.ganttproject.task.TaskManagerConfig</entity>
+								<comment/>
+							</poorUsageOfInterfaces>
+						</poorUsagesOfInterfaces>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<poorUsagesOfInterfaces>
+							<poorUsageOfInterfaces>
+								<entity>net.sourceforge.ganttproject.time.TextFormatter</entity>
+								<comment/>
+							</poorUsageOfInterfaces>
+						</poorUsagesOfInterfaces>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="9">
+					<roles>
+						<poorUsagesOfInterfaces>
+							<poorUsageOfInterfaces>
+								<entity>net.sourceforge.ganttproject.time.TimeUnit</entity>
+								<comment/>
+							</poorUsageOfInterfaces>
+						</poorUsagesOfInterfaces>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="10">
+					<roles>
+						<poorUsagesOfInterfaces>
+							<poorUsageOfInterfaces>
+								<entity>net.sourceforge.ganttproject.gui.projectwizard.WizardPage</entity>
+								<comment/>
+							</poorUsageOfInterfaces>
+						</poorUsagesOfInterfaces>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Poor Usage of Abstract Classes">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<poorUsagesOfAbstractClasses>
+							<poorUsageOfAbstractClasses>
+								<entity>net.sourceforge.ganttproject.gui.projectwizard.WizardImpl</entity>
+								<comment>pas de méthodes abstraites</comment>
+							</poorUsageOfAbstractClasses>
+						</poorUsagesOfAbstractClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<poorUsagesOfAbstractClasses>
+							<poorUsageOfAbstractClasses>
+								<entity>net.sourceforge.ganttproject.gui.taskproperties.CommonPanel</entity>
+								<comment>pas de méthodes abstraites</comment>
+							</poorUsageOfAbstractClasses>
+						</poorUsagesOfAbstractClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<poorUsagesOfAbstractClasses>
+							<poorUsageOfAbstractClasses>
+								<entity>net.sourceforge.ganttproject.task.event.TaskListenerAdapter</entity>
+								<comment>pas de méthodes abstraites</comment>
+							</poorUsageOfAbstractClasses>
+						</poorUsagesOfAbstractClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<poorUsagesOfAbstractClasses>
+							<poorUsageOfAbstractClasses>
+								<entity>net.sourceforge.ganttproject.action.ResourceAction</entity>
+								<comment>pas de méthodes abstraites</comment>
+							</poorUsageOfAbstractClasses>
+						</poorUsagesOfAbstractClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<poorUsagesOfAbstractClasses>
+							<poorUsageOfAbstractClasses>
+								<entity>net.sourceforge.ganttproject.document.AbstractDocument</entity>
+								<comment/>
+							</poorUsageOfAbstractClasses>
+						</poorUsagesOfAbstractClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<poorUsagesOfAbstractClasses>
+							<poorUsageOfAbstractClasses>
+								<entity>net.sourceforge.ganttproject.document.AbstractURLDocument</entity>
+								<comment/>
+							</poorUsageOfAbstractClasses>
+						</poorUsagesOfAbstractClasses>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<poorUsagesOfAbstractClasses>
+							<poorUsageOfAbstractClasses>
+								<entity>net.sourceforge.ganttproject.resource.ProjectResource</entity>
+								<comment/>
+							</poorUsageOfAbstractClasses>
+						</poorUsagesOfAbstractClasses>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Speculative Generality">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<speculativeGeneralities>
+							<speculativeGenerality>
+								<entity>net.sourceforge.ganttproject.gui.projectwizard.WizardImpl</entity>
+								<comment/>
+							</speculativeGenerality>
+						</speculativeGeneralities>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<speculativeGeneralities>
+							<speculativeGenerality>
+								<entity>net.sourceforge.ganttproject.resource.ProjectResource</entity>
+								<comment/>
+							</speculativeGenerality>
+						</speculativeGeneralities>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<speculativeGeneralities>
+							<speculativeGenerality>
+								<entity>net.sourceforge.ganttproject.export.ProjectExportProcessor</entity>
+								<comment/>
+							</speculativeGenerality>
+						</speculativeGeneralities>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<speculativeGeneralities>
+							<speculativeGenerality>
+								<entity>net.sourceforge.ganttproject.document.AbstractURLDocument</entity>
+								<comment/>
+							</speculativeGenerality>
+						</speculativeGeneralities>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+		<codesmell name="Primitive Obsession">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<primitiveObsessions>
+							<primitiveObsession>
+								<entity>net.sourceforge.ganttproject.task.TaskImpl</entity>
+								<comment>myWebLink : String utilisée comme une URL</comment>
+							</primitiveObsession>
+						</primitiveObsessions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<primitiveObsessions>
+							<primitiveObsession>
+								<entity>net.sourceforge.ganttproject.action.DeleteHumanAction</entity>
+								<comment>ICON_URL : String utilisée comme une URL</comment>
+							</primitiveObsession>
+						</primitiveObsessions>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</codesmell>
+	</program>
+</codesmells>

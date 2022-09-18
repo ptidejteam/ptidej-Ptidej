@@ -1,0 +1,49 @@
+package java.security;
+final public class CodeSigner
+implements java.io.Serializable
+{
+final private static java.lang.Object serialVersionUID;
+
+private java.lang.Object signerCertPath;
+
+private java.lang.Object timestamp;
+
+private transient java.lang.Object myhash;
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.security.cert.CertPath getSignerCertPath()
+{
+
+}
+
+public java.security.Timestamp getTimestamp()
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.IOException, java.lang.ClassNotFoundException
+{
+
+}
+
+
+}

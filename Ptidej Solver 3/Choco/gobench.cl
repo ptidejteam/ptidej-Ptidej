@@ -1,0 +1,2 @@
+(allChocoBenchs(),
+ exit(0))

@@ -1,0 +1,4 @@
+net.sourceforge.ganttproject.gui.projectwizard.WizardImpl
+net.sourceforge.ganttproject.export.ProjectExportProcessor
+net.sourceforge.ganttproject.document.AbstractURLDocument
+net.sourceforge.ganttproject.resource.ProjectResource

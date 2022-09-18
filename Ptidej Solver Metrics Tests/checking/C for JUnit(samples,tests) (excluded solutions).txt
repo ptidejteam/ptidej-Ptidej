@@ -1,0 +1,434 @@
+# Micro-architecture 3208 similar at 0% with Composite Design Motif
+3208.0.component = junit.samples.money.IMoney
+3208.0.composite = junit.samples.AllTests
+3208.0.leaf = junit.samples.money.MoneyBag
+3208.0.Name = Composite Design Motif
+3208.0.XCommand = command
+
+# Micro-architecture 6526 similar at 0% with Composite Design Motif
+6526.0.component = junit.samples.money.IMoney
+6526.0.composite = junit.samples.AllTests
+6526.0.leaf = junit.samples.money.Money
+6526.0.Name = Composite Design Motif
+6526.0.XCommand = command
+
+# Micro-architecture 6596 similar at 0% with Composite Design Motif
+6596.0.component = junit.samples.money.IMoney
+6596.0.composite = junit.samples.SimpleTest
+6596.0.leaf = junit.samples.money.MoneyBag
+6596.0.Name = Composite Design Motif
+6596.0.XCommand = command
+
+# Micro-architecture 3105 similar at 0% with Composite Design Motif
+3105.0.component = junit.samples.money.IMoney
+3105.0.composite = junit.samples.SimpleTest
+3105.0.leaf = junit.samples.money.Money
+3105.0.Name = Composite Design Motif
+3105.0.XCommand = command
+
+# Micro-architecture 6552 similar at 0% with Composite Design Motif
+6552.0.component = junit.samples.money.IMoney
+6552.0.composite = junit.samples.VectorTest
+6552.0.leaf = junit.samples.money.MoneyBag
+6552.0.Name = Composite Design Motif
+6552.0.XCommand = command
+
+# Micro-architecture 6462 similar at 0% with Composite Design Motif
+6462.0.component = junit.samples.money.IMoney
+6462.0.composite = junit.samples.VectorTest
+6462.0.leaf = junit.samples.money.Money
+6462.0.Name = Composite Design Motif
+6462.0.XCommand = command
+
+# Micro-architecture 6522 similar at 0% with Composite Design Motif
+6522.0.component = junit.samples.money.IMoney
+6522.0.composite = junit.samples.money.MoneyBag
+6522.0.leaf = junit.samples.money.Money
+6522.0.Name = Composite Design Motif
+6522.0.XCommand = command
+
+# Micro-architecture 6546 similar at 0% with Composite Design Motif
+6546.0.component = junit.samples.money.IMoney
+6546.0.composite = junit.samples.money.MoneyTest
+6546.0.leaf = junit.samples.money.MoneyBag
+6546.0.Name = Composite Design Motif
+6546.0.XCommand = command
+
+# Micro-architecture 6456 similar at 0% with Composite Design Motif
+6456.0.component = junit.samples.money.IMoney
+6456.0.composite = junit.samples.money.MoneyTest
+6456.0.leaf = junit.samples.money.Money
+6456.0.Name = Composite Design Motif
+6456.0.XCommand = command
+
+# Micro-architecture 6593 similar at 0% with Composite Design Motif
+6593.0.component = junit.samples.money.IMoney
+6593.0.composite = junit.samples.money.Money
+6593.0.leaf = junit.samples.money.MoneyBag
+6593.0.Name = Composite Design Motif
+6593.0.XCommand = command
+
+# Micro-architecture 6622 similar at 0% with Composite Design Motif
+6622.0.component = junit.samples.money.IMoney
+6622.0.composite = junit.tests.ActiveTestTest
+6622.0.leaf = junit.samples.money.MoneyBag
+6622.0.Name = Composite Design Motif
+6622.0.XCommand = command
+
+# Micro-architecture 6532 similar at 0% with Composite Design Motif
+6532.0.component = junit.samples.money.IMoney
+6532.0.composite = junit.tests.ActiveTestTest
+6532.0.leaf = junit.samples.money.Money
+6532.0.Name = Composite Design Motif
+6532.0.XCommand = command
+
+# Micro-architecture 6549 similar at 0% with Composite Design Motif
+6549.0.component = junit.samples.money.IMoney
+6549.0.composite = junit.tests.AllTests
+6549.0.leaf = junit.samples.money.MoneyBag
+6549.0.Name = Composite Design Motif
+6549.0.XCommand = command
+
+# Micro-architecture 6459 similar at 0% with Composite Design Motif
+6459.0.component = junit.samples.money.IMoney
+6459.0.composite = junit.tests.AllTests
+6459.0.leaf = junit.samples.money.Money
+6459.0.Name = Composite Design Motif
+6459.0.XCommand = command
+
+# Micro-architecture 3138 similar at 0% with Composite Design Motif
+3138.0.component = junit.samples.money.IMoney
+3138.0.composite = junit.tests.AssertTest
+3138.0.leaf = junit.samples.money.MoneyBag
+3138.0.Name = Composite Design Motif
+3138.0.XCommand = command
+
+# Micro-architecture 3052 similar at 0% with Composite Design Motif
+3052.0.component = junit.samples.money.IMoney
+3052.0.composite = junit.tests.AssertTest
+3052.0.leaf = junit.samples.money.Money
+3052.0.Name = Composite Design Motif
+3052.0.XCommand = command
+
+# Micro-architecture 6621 similar at 0% with Composite Design Motif
+6621.0.component = junit.samples.money.IMoney
+6621.0.composite = junit.tests.ClassLoaderTest
+6621.0.leaf = junit.samples.money.MoneyBag
+6621.0.Name = Composite Design Motif
+6621.0.XCommand = command
+
+# Micro-architecture 6531 similar at 0% with Composite Design Motif
+6531.0.component = junit.samples.money.IMoney
+6531.0.composite = junit.tests.ClassLoaderTest
+6531.0.leaf = junit.samples.money.Money
+6531.0.Name = Composite Design Motif
+6531.0.XCommand = command
+
+# Micro-architecture 6569 similar at 0% with Composite Design Motif
+6569.0.component = junit.samples.money.IMoney
+6569.0.composite = junit.tests.ExceptionTestCaseTest
+6569.0.leaf = junit.samples.money.MoneyBag
+6569.0.Name = Composite Design Motif
+6569.0.XCommand = command
+
+# Micro-architecture 3080 similar at 0% with Composite Design Motif
+3080.0.component = junit.samples.money.IMoney
+3080.0.composite = junit.tests.ExceptionTestCaseTest
+3080.0.leaf = junit.samples.money.Money
+3080.0.Name = Composite Design Motif
+3080.0.XCommand = command
+
+# Micro-architecture 6597 similar at 0% with Composite Design Motif
+6597.0.component = junit.samples.money.IMoney
+6597.0.composite = junit.tests.ExtensionTest
+6597.0.leaf = junit.samples.money.MoneyBag
+6597.0.Name = Composite Design Motif
+6597.0.XCommand = command
+
+# Micro-architecture 3106 similar at 0% with Composite Design Motif
+3106.0.component = junit.samples.money.IMoney
+3106.0.composite = junit.tests.ExtensionTest
+3106.0.leaf = junit.samples.money.Money
+3106.0.Name = Composite Design Motif
+3106.0.XCommand = command
+
+# Micro-architecture 3139 similar at 0% with Composite Design Motif
+3139.0.component = junit.samples.money.IMoney
+3139.0.composite = junit.tests.Failure
+3139.0.leaf = junit.samples.money.MoneyBag
+3139.0.Name = Composite Design Motif
+3139.0.XCommand = command
+
+# Micro-architecture 3053 similar at 0% with Composite Design Motif
+3053.0.component = junit.samples.money.IMoney
+3053.0.composite = junit.tests.Failure
+3053.0.leaf = junit.samples.money.Money
+3053.0.Name = Composite Design Motif
+3053.0.XCommand = command
+
+# Micro-architecture 3173 similar at 0% with Composite Design Motif
+3173.0.component = junit.samples.money.IMoney
+3173.0.composite = junit.tests.InheritedTestCase
+3173.0.leaf = junit.samples.money.MoneyBag
+3173.0.Name = Composite Design Motif
+3173.0.XCommand = command
+
+# Micro-architecture 6488 similar at 0% with Composite Design Motif
+6488.0.component = junit.samples.money.IMoney
+6488.0.composite = junit.tests.InheritedTestCase
+6488.0.leaf = junit.samples.money.Money
+6488.0.Name = Composite Design Motif
+6488.0.XCommand = command
+
+# Micro-architecture 6586 similar at 0% with Composite Design Motif
+6586.0.component = junit.samples.money.IMoney
+6586.0.composite = junit.tests.LoadedFromJar
+6586.0.leaf = junit.samples.money.MoneyBag
+6586.0.Name = Composite Design Motif
+6586.0.XCommand = command
+
+# Micro-architecture 6496 similar at 0% with Composite Design Motif
+6496.0.component = junit.samples.money.IMoney
+6496.0.composite = junit.tests.LoadedFromJar
+6496.0.leaf = junit.samples.money.Money
+6496.0.Name = Composite Design Motif
+6496.0.XCommand = command
+
+# Micro-architecture 6618 similar at 0% with Composite Design Motif
+6618.0.component = junit.samples.money.IMoney
+6618.0.composite = junit.tests.NoTestCaseClass
+6618.0.leaf = junit.samples.money.MoneyBag
+6618.0.Name = Composite Design Motif
+6618.0.XCommand = command
+
+# Micro-architecture 6528 similar at 0% with Composite Design Motif
+6528.0.component = junit.samples.money.IMoney
+6528.0.composite = junit.tests.NoTestCaseClass
+6528.0.leaf = junit.samples.money.Money
+6528.0.Name = Composite Design Motif
+6528.0.XCommand = command
+
+# Micro-architecture 6585 similar at 0% with Composite Design Motif
+6585.0.component = junit.samples.money.IMoney
+6585.0.composite = junit.tests.NoTestCases
+6585.0.leaf = junit.samples.money.MoneyBag
+6585.0.Name = Composite Design Motif
+6585.0.XCommand = command
+
+# Micro-architecture 3095 similar at 0% with Composite Design Motif
+3095.0.component = junit.samples.money.IMoney
+3095.0.composite = junit.tests.NoTestCases
+3095.0.leaf = junit.samples.money.Money
+3095.0.Name = Composite Design Motif
+3095.0.XCommand = command
+
+# Micro-architecture 6533 similar at 0% with Composite Design Motif
+6533.0.component = junit.samples.money.IMoney
+6533.0.composite = junit.tests.NotPublicTestCase
+6533.0.leaf = junit.samples.money.MoneyBag
+6533.0.Name = Composite Design Motif
+6533.0.XCommand = command
+
+# Micro-architecture 6443 similar at 0% with Composite Design Motif
+6443.0.component = junit.samples.money.IMoney
+6443.0.composite = junit.tests.NotPublicTestCase
+6443.0.leaf = junit.samples.money.Money
+6443.0.Name = Composite Design Motif
+6443.0.XCommand = command
+
+# Micro-architecture 6599 similar at 0% with Composite Design Motif
+6599.0.component = junit.samples.money.IMoney
+6599.0.composite = junit.tests.NotVoidTestCase
+6599.0.leaf = junit.samples.money.MoneyBag
+6599.0.Name = Composite Design Motif
+6599.0.XCommand = command
+
+# Micro-architecture 3108 similar at 0% with Composite Design Motif
+3108.0.component = junit.samples.money.IMoney
+3108.0.composite = junit.tests.NotVoidTestCase
+3108.0.leaf = junit.samples.money.Money
+3108.0.Name = Composite Design Motif
+3108.0.XCommand = command
+
+# Micro-architecture 3158 similar at 0% with Composite Design Motif
+3158.0.component = junit.samples.money.IMoney
+3158.0.composite = junit.tests.OneTestCase
+3158.0.leaf = junit.samples.money.MoneyBag
+3158.0.Name = Composite Design Motif
+3158.0.XCommand = command
+
+# Micro-architecture 6471 similar at 0% with Composite Design Motif
+6471.0.component = junit.samples.money.IMoney
+6471.0.composite = junit.tests.OneTestCase
+6471.0.leaf = junit.samples.money.Money
+6471.0.Name = Composite Design Motif
+6471.0.XCommand = command
+
+# Micro-architecture 6566 similar at 0% with Composite Design Motif
+6566.0.component = junit.samples.money.IMoney
+6566.0.composite = junit.tests.OverrideTestCase
+6566.0.leaf = junit.samples.money.MoneyBag
+6566.0.Name = Composite Design Motif
+6566.0.XCommand = command
+
+# Micro-architecture 3077 similar at 0% with Composite Design Motif
+3077.0.component = junit.samples.money.IMoney
+3077.0.composite = junit.tests.OverrideTestCase
+3077.0.leaf = junit.samples.money.Money
+3077.0.Name = Composite Design Motif
+3077.0.XCommand = command
+
+# Micro-architecture 6581 similar at 0% with Composite Design Motif
+6581.0.component = junit.samples.money.IMoney
+6581.0.composite = junit.tests.RepeatedTestTest
+6581.0.leaf = junit.samples.money.MoneyBag
+6581.0.Name = Composite Design Motif
+6581.0.XCommand = command
+
+# Micro-architecture 3091 similar at 0% with Composite Design Motif
+3091.0.component = junit.samples.money.IMoney
+3091.0.composite = junit.tests.RepeatedTestTest
+3091.0.leaf = junit.samples.money.Money
+3091.0.Name = Composite Design Motif
+3091.0.XCommand = command
+
+# Micro-architecture 3147 similar at 0% with Composite Design Motif
+3147.0.component = junit.samples.money.IMoney
+3147.0.composite = junit.tests.SorterTest
+3147.0.leaf = junit.samples.money.MoneyBag
+3147.0.Name = Composite Design Motif
+3147.0.XCommand = command
+
+# Micro-architecture 3061 similar at 0% with Composite Design Motif
+3061.0.component = junit.samples.money.IMoney
+3061.0.composite = junit.tests.SorterTest
+3061.0.leaf = junit.samples.money.Money
+3061.0.Name = Composite Design Motif
+3061.0.XCommand = command
+
+# Micro-architecture 6559 similar at 0% with Composite Design Motif
+6559.0.component = junit.samples.money.IMoney
+6559.0.composite = junit.tests.StackFilterTest
+6559.0.leaf = junit.samples.money.MoneyBag
+6559.0.Name = Composite Design Motif
+6559.0.XCommand = command
+
+# Micro-architecture 3070 similar at 0% with Composite Design Motif
+3070.0.component = junit.samples.money.IMoney
+3070.0.composite = junit.tests.StackFilterTest
+3070.0.leaf = junit.samples.money.Money
+3070.0.Name = Composite Design Motif
+3070.0.XCommand = command
+
+# Micro-architecture 3137 similar at 0% with Composite Design Motif
+3137.0.component = junit.samples.money.IMoney
+3137.0.composite = junit.tests.Success
+3137.0.leaf = junit.samples.money.MoneyBag
+3137.0.Name = Composite Design Motif
+3137.0.XCommand = command
+
+# Micro-architecture 6450 similar at 0% with Composite Design Motif
+6450.0.component = junit.samples.money.IMoney
+6450.0.composite = junit.tests.Success
+6450.0.leaf = junit.samples.money.Money
+6450.0.Name = Composite Design Motif
+6450.0.XCommand = command
+
+# Micro-architecture 3206 similar at 0% with Composite Design Motif
+3206.0.component = junit.samples.money.IMoney
+3206.0.composite = junit.tests.SuiteTest
+3206.0.leaf = junit.samples.money.MoneyBag
+3206.0.Name = Composite Design Motif
+3206.0.XCommand = command
+
+# Micro-architecture 6524 similar at 0% with Composite Design Motif
+6524.0.component = junit.samples.money.IMoney
+6524.0.composite = junit.tests.SuiteTest
+6524.0.leaf = junit.samples.money.Money
+6524.0.Name = Composite Design Motif
+6524.0.XCommand = command
+
+# Micro-architecture 3199 similar at 0% with Composite Design Motif
+3199.0.component = junit.samples.money.IMoney
+3199.0.composite = junit.tests.TestCaseClassLoaderTest
+3199.0.leaf = junit.samples.money.MoneyBag
+3199.0.Name = Composite Design Motif
+3199.0.XCommand = command
+
+# Micro-architecture 6515 similar at 0% with Composite Design Motif
+6515.0.component = junit.samples.money.IMoney
+6515.0.composite = junit.tests.TestCaseClassLoaderTest
+6515.0.leaf = junit.samples.money.Money
+6515.0.Name = Composite Design Motif
+6515.0.XCommand = command
+
+# Micro-architecture 3209 similar at 0% with Composite Design Motif
+3209.0.component = junit.samples.money.IMoney
+3209.0.composite = junit.tests.TestCaseTest
+3209.0.leaf = junit.samples.money.MoneyBag
+3209.0.Name = Composite Design Motif
+3209.0.XCommand = command
+
+# Micro-architecture 3125 similar at 0% with Composite Design Motif
+3125.0.component = junit.samples.money.IMoney
+3125.0.composite = junit.tests.TestCaseTest
+3125.0.leaf = junit.samples.money.Money
+3125.0.Name = Composite Design Motif
+3125.0.XCommand = command
+
+# Micro-architecture 6620 similar at 0% with Composite Design Motif
+6620.0.component = junit.samples.money.IMoney
+6620.0.composite = junit.tests.TestImplementorTest
+6620.0.leaf = junit.samples.money.MoneyBag
+6620.0.Name = Composite Design Motif
+6620.0.XCommand = command
+
+# Micro-architecture 6530 similar at 0% with Composite Design Motif
+6530.0.component = junit.samples.money.IMoney
+6530.0.composite = junit.tests.TestImplementorTest
+6530.0.leaf = junit.samples.money.Money
+6530.0.Name = Composite Design Motif
+6530.0.XCommand = command
+
+# Micro-architecture 3162 similar at 0% with Composite Design Motif
+3162.0.component = junit.samples.money.IMoney
+3162.0.composite = junit.tests.TestListenerTest
+3162.0.leaf = junit.samples.money.MoneyBag
+3162.0.Name = Composite Design Motif
+3162.0.XCommand = command
+
+# Micro-architecture 6475 similar at 0% with Composite Design Motif
+6475.0.component = junit.samples.money.IMoney
+6475.0.composite = junit.tests.TestListenerTest
+6475.0.leaf = junit.samples.money.Money
+6475.0.Name = Composite Design Motif
+6475.0.XCommand = command
+
+# Micro-architecture 3145 similar at 0% with Composite Design Motif
+3145.0.component = junit.samples.money.IMoney
+3145.0.composite = junit.tests.TextRunnerTest
+3145.0.leaf = junit.samples.money.MoneyBag
+3145.0.Name = Composite Design Motif
+3145.0.XCommand = command
+
+# Micro-architecture 6458 similar at 0% with Composite Design Motif
+6458.0.component = junit.samples.money.IMoney
+6458.0.composite = junit.tests.TextRunnerTest
+6458.0.leaf = junit.samples.money.Money
+6458.0.Name = Composite Design Motif
+6458.0.XCommand = command
+
+# Micro-architecture 6603 similar at 0% with Composite Design Motif
+6603.0.component = junit.samples.money.IMoney
+6603.0.composite = junit.tests.WasRun
+6603.0.leaf = junit.samples.money.MoneyBag
+6603.0.Name = Composite Design Motif
+6603.0.XCommand = command
+
+# Micro-architecture 3112 similar at 0% with Composite Design Motif
+3112.0.component = junit.samples.money.IMoney
+3112.0.composite = junit.tests.WasRun
+3112.0.leaf = junit.samples.money.Money
+3112.0.Name = Composite Design Motif
+3112.0.XCommand = command
+

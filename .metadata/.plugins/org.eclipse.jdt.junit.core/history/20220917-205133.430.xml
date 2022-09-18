@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestDB4OSerialiserSanity" project="PADL Serialiser DB4O Tests" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="padl.serialiser.test.TestDB4OSerialiserSanity" time="2.127">
+    <testcase name="testEntities" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="1.128"/>
+    <testcase name="testNames" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="0.271"/>
+    <testcase name="testElements" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="0.255"/>
+    <testcase name="testModels" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="0.268"/>
+    <testcase name="testInheritance" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="0.204"/>
+  </testsuite>
+</testrun>

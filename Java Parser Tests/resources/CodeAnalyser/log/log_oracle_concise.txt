@@ -1,0 +1,231 @@
+void
+demo.codeanalyzer.common.CodeAnalyzer
+demo.codeanalyzer.common.jaxbgen.Rules
+demo.codeanalyzer.common.jaxbgen.Rule
+java.lang.String
+void
+java.lang.String
+void
+java.util.List<demo.codeanalyzer.common.jaxbgen.Rule>
+java.lang.String
+java.lang.String
+void
+java.lang.String
+java.lang.String
+java.util.Collection<demo.codeanalyzer.common.model.Annotation>
+boolean
+boolean
+boolean
+boolean
+boolean
+boolean
+boolean
+demo.codeanalyzer.common.model.Location
+void
+boolean
+void
+boolean
+void
+boolean
+void
+boolean
+void
+boolean
+void
+boolean
+void
+boolean
+java.lang.String
+void
+java.util.Collection<demo.codeanalyzer.common.model.Annotation>
+void
+int
+void
+demo.codeanalyzer.common.model.Location
+void
+demo/codeanalyzer/common/model/BaseJavaClassModelInfo.java
+Pb(77) The value of the field BaseJavaClassModelInfo.privateFlag is not used at 22
+java.util.Collection<demo.codeanalyzer.common.model.Field>
+demo.codeanalyzer.common.model.Field
+java.util.Collection<? extends demo.codeanalyzer.common.model.Method>
+java.lang.String
+java.util.Collection<java.lang.String>
+boolean
+boolean
+boolean
+java.util.Collection<demo.codeanalyzer.common.model.Method>
+java.util.Collection<java.lang.String>
+demo.codeanalyzer.common.model.JavaSourceTreeInfo
+void
+demo.codeanalyzer.common.model.ClassModelMap
+java.util.Map<java.lang.String,demo.codeanalyzer.common.model.ClassFile>
+demo.codeanalyzer.common.model.ClassFile
+void
+demo.codeanalyzer.common.model.Location
+void
+java.lang.String
+void
+void
+demo.codeanalyzer.common.model.ClassFile
+java.util.Collection<java.lang.String>
+void
+java.util.Collection<java.lang.String>
+demo.codeanalyzer.common.model.ClassFile
+void
+void
+demo.codeanalyzer.common.model.Field
+void
+java.util.Collection<demo.codeanalyzer.common.model.Field>
+void
+java.lang.String
+void
+java.lang.String
+java.lang.String
+void
+void
+demo.codeanalyzer.common.model.JavaSourceTreeInfo
+java.util.Collection<demo.codeanalyzer.common.model.Method>
+void
+void
+java.util.Collection<demo.codeanalyzer.common.model.Method>
+void
+void
+java.util.Collection<java.lang.String>
+void
+void
+java.util.Collection<java.lang.String>
+void
+void
+boolean
+void
+void
+boolean
+boolean
+com.sun.source.tree.CompilationUnitTree
+com.sun.source.tree.Tree
+com.sun.source.util.SourcePositions
+com.sun.source.tree.CompilationUnitTree
+void
+com.sun.source.tree.Tree
+void
+com.sun.source.util.SourcePositions
+void
+int
+int
+long
+int
+void
+int
+void
+long
+void
+demo.codeanalyzer.common.model.ClassFile
+java.util.Collection<java.lang.String>
+java.util.Collection<java.lang.String>
+java.lang.String
+demo.codeanalyzer.common.model.ClassFile
+void
+java.util.Collection<java.lang.String>
+void
+void
+java.lang.String
+void
+java.util.Collection<java.lang.String>
+void
+void
+java.lang.String
+com.sun.source.tree.CompilationUnitTree
+void
+com.sun.source.tree.Tree
+void
+com.sun.source.util.SourcePositions
+void
+java.util.Collection
+java.util.Collection
+demo.codeanalyzer.common.model.ErrorDescription
+demo/codeanalyzer/common/rule/AbstractCodeRule.java
+Pb(572) Collection is a raw type. References to generic type Collection<E> should be parameterized at 29
+demo/codeanalyzer/common/rule/AbstractCodeRule.java
+Pb(572) Collection is a raw type. References to generic type Collection<E> should be parameterized at 40
+java.util.Collection
+demo/codeanalyzer/common/rule/JavaCodeRule.java
+Pb(572) Collection is a raw type. References to generic type Collection<E> should be parameterized at 24
+demo.codeanalyzer.common.rule.RuleLoader
+java.util.Set<java.lang.String>
+demo/codeanalyzer/common/rule/RuleLoader.java
+Pb(388) The import demo.codeanalyzer.common.util.CodeAnalyzerConstants.DEFAULT_RULES is never used at 4
+void
+java.util.Collection<demo.codeanalyzer.common.rule.JavaCodeRule<javax.lang.model.element.TypeElement>>
+java.util.Collection<demo.codeanalyzer.common.model.ErrorDescription>
+demo/codeanalyzer/common/rule/RulesEngine.java
+Pb(388) The import demo.codeanalyzer.common.model.ErrorDescription is never used at 11
+demo/codeanalyzer/common/rule/RulesEngine.java
+Pb(572) JavaCodeRule is a raw type. References to generic type JavaCodeRule<E> should be parameterized at 39
+demo/codeanalyzer/common/rule/RulesEngine.java
+Pb(532) Type safety: The expression of type Collection needs unchecked conversion to conform to Collection<ErrorDescription> at 41
+java.util.List<demo.codeanalyzer.common.rule.JavaCodeRule<javax.lang.model.element.TypeElement>>
+java.lang.String
+java.util.List
+demo/codeanalyzer/common/util/CodeAnalyzerUtil.java
+Pb(572) Class is a raw type. References to generic type Class<T> should be parameterized at 35
+demo/codeanalyzer/common/util/CodeAnalyzerUtil.java
+Pb(103) The method newInstance() from the type Class is deprecated at 40
+demo/codeanalyzer/common/util/CodeAnalyzerUtil.java
+Pb(545) Type safety: Unchecked cast from Object to JavaCodeRule<TypeElement> at 41
+demo/codeanalyzer/common/util/CodeAnalyzerUtil.java
+Pb(572) List is a raw type. References to generic type List<E> should be parameterized at 65
+void
+void
+demo/codeanalyzer/helper/ClassInfoDataSetter.java
+Pb(572) Class is a raw type. References to generic type Class<T> should be parameterized at 59
+demo/codeanalyzer/helper/ClassInfoDataSetter.java
+Pb(572) Class is a raw type. References to generic type Class<T> should be parameterized at 60
+demo/codeanalyzer/helper/ClassInfoDataSetter.java
+Pb(531) Type safety: The method isAssignableFrom(Class) belongs to the raw type Class. References to generic type Class<T> should be parameterized at 61
+void
+demo.codeanalyzer.common.model.LocationInfo
+void
+void
+java.nio.CharBuffer
+void
+void
+void
+void
+void
+void
+java.lang.Object
+demo/codeanalyzer/helper/MethodInfoDataSetter.java
+Pb(133) The constructor SimpleElementVisitor6<Object,MethodInfo>() is deprecated at 72
+demo/codeanalyzer/helper/MethodInfoDataSetter.java
+Pb(133) The constructor SimpleElementVisitor6<Object,MethodInfo>() is deprecated at 72
+java.util.Collection
+demo/codeanalyzer/javacode/rule/MaxParamsForMethod.java
+Pb(572) AbstractCodeRule is a raw type. References to generic type AbstractCodeRule<E> should be parameterized at 19
+demo/codeanalyzer/javacode/rule/MaxParamsForMethod.java
+Pb(572) Collection is a raw type. References to generic type Collection<E> should be parameterized at 24
+java.util.Collection<demo.codeanalyzer.common.model.ErrorDescription>
+demo/codeanalyzer/javacode/rule/OverrideEqualsHashCode.java
+Pb(572) AbstractCodeRule is a raw type. References to generic type AbstractCodeRule<E> should be parameterized at 19
+demo/codeanalyzer/javacode/rule/OverrideEqualsHashCode.java
+Pb(572) ArrayList is a raw type. References to generic type ArrayList<E> should be parameterized at 29
+demo/codeanalyzer/javacode/rule/OverrideEqualsHashCode.java
+Pb(572) ArrayList is a raw type. References to generic type ArrayList<E> should be parameterized at 29
+void
+void
+void
+boolean
+void
+java.util.List<java.io.File>
+void
+boolean
+java.lang.Object
+java.lang.Object
+java.lang.Object
+demo.codeanalyzer.common.model.JavaClassInfo
+void
+boolean
+java.lang.Object
+java.lang.Object
+java.lang.Object
+demo.codeanalyzer.common.model.JavaClassInfo
+Parsing 43 java files took 0 days 0 hours 0 minutes 3 seconds 879 ms with 22 errors.

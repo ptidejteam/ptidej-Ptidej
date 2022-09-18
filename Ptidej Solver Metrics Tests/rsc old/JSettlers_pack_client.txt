@@ -1,0 +1,18 @@
+JSettlers_pack_client
+
+null
+Step	ProblemCreation	Solver	Total
+Ruled	0'4	0'0	0'5
+No Rule	0'0	6'18	6'18
+
+Var	DomainNoRule	DomainRuled	Reduction
+leaf	163	0	100%
+composite	163	163	0%
+component	163	163	0%
+
+Solutions	Total	Ghosted	Valabe
+Ruled	0	0	0
+No rule	5635	5635	0
+
+Inclusion:
+0 solutions included of 0

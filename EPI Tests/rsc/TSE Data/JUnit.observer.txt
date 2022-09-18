@@ -1,0 +1,287 @@
+String Creation Time: 38
+String Length in Tokens: 20155
+--------------------------------------------------
+
+NONE
+Solution Computation Time:45
+Number of Solutions With and Without Ghosts:1
+Number of Solutions Without Ghosts:1
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 5177 similar at 100% with Observer
+5177.100.Subject = junit.framework.TestResult
+5177.100.ConcreteObserver = junit.tests.TestListenerTest
+5177.100.EPI_Abstract_Observer = EPI_Abstract_junit.framework.TestListener
+
+---------------------------------------------
+1
+Solution Computation Time:45
+Number of Solutions With and Without Ghosts:1
+Number of Solutions Without Ghosts:1
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 6011 similar at 100% with Observer
+6011.100.Subject = junit.framework.TestResult
+6011.100.ConcreteObserver = junit.tests.TestListenerTest
+6011.100.EPI_Abstract_Observer = EPI_Abstract_junit.framework.TestListener
+
+---------------------------------------------
+2
+Solution Computation Time:54
+Number of Solutions With and Without Ghosts:4
+Number of Solutions Without Ghosts:4
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 7359 similar at 100% with Observer
+7359.100.Subject = junit.framework.TestResult
+7359.100.ConcreteObserver = junit.textui.TestRunner
+7359.100.EPI_Abstract_Observer = EPI_Abstract_junit.framework.TestListener
+
+# Micro-architecture 7360 similar at 100% with Observer
+7360.100.Subject = junit.framework.TestResult
+7360.100.ConcreteObserver = junit.awtui.TestRunner
+7360.100.EPI_Abstract_Observer = EPI_Abstract_junit.framework.TestListener
+
+# Micro-architecture 7361 similar at 100% with Observer
+7361.100.Subject = junit.framework.TestResult
+7361.100.ConcreteObserver = junit.swingui.TestRunner
+7361.100.EPI_Abstract_Observer = EPI_Abstract_junit.framework.TestListener
+
+# Micro-architecture 7362 similar at 100% with Observer
+7362.100.Subject = junit.framework.TestResult
+7362.100.ConcreteObserver = junit.tests.TestListenerTest
+7362.100.EPI_Abstract_Observer = EPI_Abstract_junit.framework.TestListener
+
+---------------------------------------------
+3
+Solution Computation Time:61
+Number of Solutions With and Without Ghosts:3
+Number of Solutions Without Ghosts:1
+Number of Solutions With Ghosts:2
+
+
+# Micro-architecture 9336 similar at 100% with Observer
+9336.100.Subject = junit.framework.TestResult
+9336.100.Observer = EPI_Abstract_junit.framework.TestListener
+9336.100.ConcreteObserver = junit.tests.TestListenerTest
+
+# Micro-architecture 9379 similar at 100% with Observer
+9379.100.Subject = junit.extensions.TestDecorator
+9379.100.Observer = java.lang.Object
+9379.100.ConcreteObserver = junit.swingui.TestTreeModel
+
+# Micro-architecture 9395 similar at 100% with Observer
+9395.100.Subject = junit.runner.TestCaseClassLoader
+9395.100.Observer = java.lang.Object
+9395.100.ConcreteObserver = junit.runner.ReloadingTestSuiteLoader
+
+---------------------------------------------
+4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2
+Solution Computation Time:54
+Number of Solutions With and Without Ghosts:4
+Number of Solutions Without Ghosts:4
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 10728 similar at 100% with Observer
+10728.100.Subject = junit.framework.TestResult
+10728.100.ConcreteObserver = junit.textui.TestRunner
+10728.100.EPI_Abstract_Observer = EPI_Abstract_junit.framework.TestListener
+
+# Micro-architecture 10729 similar at 100% with Observer
+10729.100.Subject = junit.framework.TestResult
+10729.100.ConcreteObserver = junit.awtui.TestRunner
+10729.100.EPI_Abstract_Observer = EPI_Abstract_junit.framework.TestListener
+
+# Micro-architecture 10730 similar at 100% with Observer
+10730.100.Subject = junit.framework.TestResult
+10730.100.ConcreteObserver = junit.swingui.TestRunner
+10730.100.EPI_Abstract_Observer = EPI_Abstract_junit.framework.TestListener
+
+# Micro-architecture 10731 similar at 100% with Observer
+10731.100.Subject = junit.framework.TestResult
+10731.100.ConcreteObserver = junit.tests.TestListenerTest
+10731.100.EPI_Abstract_Observer = EPI_Abstract_junit.framework.TestListener
+
+---------------------------------------------
+1 and 3
+Solution Computation Time:61
+Number of Solutions With and Without Ghosts:3
+Number of Solutions Without Ghosts:1
+Number of Solutions With Ghosts:2
+
+
+# Micro-architecture 12705 similar at 100% with Observer
+12705.100.Subject = junit.framework.TestResult
+12705.100.Observer = EPI_Abstract_junit.framework.TestListener
+12705.100.ConcreteObserver = junit.tests.TestListenerTest
+
+# Micro-architecture 12748 similar at 100% with Observer
+12748.100.Subject = junit.extensions.TestDecorator
+12748.100.Observer = java.lang.Object
+12748.100.ConcreteObserver = junit.swingui.TestTreeModel
+
+# Micro-architecture 12764 similar at 100% with Observer
+12764.100.Subject = junit.runner.TestCaseClassLoader
+12764.100.Observer = java.lang.Object
+12764.100.ConcreteObserver = junit.runner.ReloadingTestSuiteLoader
+
+---------------------------------------------
+1 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 3
+Solution Computation Time:341
+Number of Solutions With and Without Ghosts:10
+Number of Solutions Without Ghosts:4
+Number of Solutions With Ghosts:6
+
+
+# Micro-architecture 16664 similar at 100% with Observer
+16664.100.Subject = junit.framework.TestResult
+16664.100.Observer = EPI_Abstract_junit.framework.TestListener
+16664.100.ConcreteObserver = junit.textui.TestRunner
+
+# Micro-architecture 16665 similar at 100% with Observer
+16665.100.Subject = junit.framework.TestResult
+16665.100.Observer = EPI_Abstract_junit.framework.TestListener
+16665.100.ConcreteObserver = junit.awtui.TestRunner
+
+# Micro-architecture 16666 similar at 100% with Observer
+16666.100.Subject = junit.framework.TestResult
+16666.100.Observer = EPI_Abstract_junit.framework.TestListener
+16666.100.ConcreteObserver = junit.swingui.TestRunner
+
+# Micro-architecture 16667 similar at 100% with Observer
+16667.100.Subject = junit.framework.TestResult
+16667.100.Observer = EPI_Abstract_junit.framework.TestListener
+16667.100.ConcreteObserver = junit.tests.TestListenerTest
+
+# Micro-architecture 16770 similar at 100% with Observer
+16770.100.Subject = junit.extensions.ActiveTestSuite
+16770.100.Observer = java.lang.Object
+16770.100.ConcreteObserver = junit.tests.ActiveTestTest
+
+# Micro-architecture 16774 similar at 100% with Observer
+16774.100.Subject = junit.extensions.ExceptionTestCase
+16774.100.Observer = java.lang.Object
+16774.100.ConcreteObserver = junit.tests.ExceptionTestCaseTest
+
+# Micro-architecture 16780 similar at 100% with Observer
+16780.100.Subject = junit.extensions.TestDecorator
+16780.100.Observer = java.lang.Object
+16780.100.ConcreteObserver = junit.swingui.TestTreeModel
+
+# Micro-architecture 16822 similar at 100% with Observer
+16822.100.Subject = junit.runner.TestCaseClassLoader
+16822.100.Observer = java.lang.Object
+16822.100.ConcreteObserver = junit.runner.LoadingTestCollector
+
+# Micro-architecture 16823 similar at 100% with Observer
+16823.100.Subject = junit.runner.TestCaseClassLoader
+16823.100.Observer = java.lang.Object
+16823.100.ConcreteObserver = junit.tests.TestCaseClassLoaderTest
+
+# Micro-architecture 16824 similar at 100% with Observer
+16824.100.Subject = junit.runner.TestCaseClassLoader
+16824.100.Observer = java.lang.Object
+16824.100.ConcreteObserver = junit.runner.ReloadingTestSuiteLoader
+
+---------------------------------------------
+2 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2 and 3
+Solution Computation Time:344
+Number of Solutions With and Without Ghosts:10
+Number of Solutions Without Ghosts:4
+Number of Solutions With Ghosts:6
+
+
+# Micro-architecture 20750 similar at 100% with Observer
+20750.100.Subject = junit.framework.TestResult
+20750.100.Observer = EPI_Abstract_junit.framework.TestListener
+20750.100.ConcreteObserver = junit.textui.TestRunner
+
+# Micro-architecture 20751 similar at 100% with Observer
+20751.100.Subject = junit.framework.TestResult
+20751.100.Observer = EPI_Abstract_junit.framework.TestListener
+20751.100.ConcreteObserver = junit.awtui.TestRunner
+
+# Micro-architecture 20752 similar at 100% with Observer
+20752.100.Subject = junit.framework.TestResult
+20752.100.Observer = EPI_Abstract_junit.framework.TestListener
+20752.100.ConcreteObserver = junit.swingui.TestRunner
+
+# Micro-architecture 20753 similar at 100% with Observer
+20753.100.Subject = junit.framework.TestResult
+20753.100.Observer = EPI_Abstract_junit.framework.TestListener
+20753.100.ConcreteObserver = junit.tests.TestListenerTest
+
+# Micro-architecture 20856 similar at 100% with Observer
+20856.100.Subject = junit.extensions.ActiveTestSuite
+20856.100.Observer = java.lang.Object
+20856.100.ConcreteObserver = junit.tests.ActiveTestTest
+
+# Micro-architecture 20860 similar at 100% with Observer
+20860.100.Subject = junit.extensions.ExceptionTestCase
+20860.100.Observer = java.lang.Object
+20860.100.ConcreteObserver = junit.tests.ExceptionTestCaseTest
+
+# Micro-architecture 20866 similar at 100% with Observer
+20866.100.Subject = junit.extensions.TestDecorator
+20866.100.Observer = java.lang.Object
+20866.100.ConcreteObserver = junit.swingui.TestTreeModel
+
+# Micro-architecture 20908 similar at 100% with Observer
+20908.100.Subject = junit.runner.TestCaseClassLoader
+20908.100.Observer = java.lang.Object
+20908.100.ConcreteObserver = junit.runner.LoadingTestCollector
+
+# Micro-architecture 20909 similar at 100% with Observer
+20909.100.Subject = junit.runner.TestCaseClassLoader
+20909.100.Observer = java.lang.Object
+20909.100.ConcreteObserver = junit.tests.TestCaseClassLoaderTest
+
+# Micro-architecture 20910 similar at 100% with Observer
+20910.100.Subject = junit.runner.TestCaseClassLoader
+20910.100.Observer = java.lang.Object
+20910.100.ConcreteObserver = junit.runner.ReloadingTestSuiteLoader
+
+---------------------------------------------
+ALL
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+

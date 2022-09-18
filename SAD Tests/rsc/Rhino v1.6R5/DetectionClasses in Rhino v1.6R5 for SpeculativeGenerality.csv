@@ -1,0 +1,5 @@
+org.mozilla.javascript.NativeFunction
+org.mozilla.javascript.Ref
+org.mozilla.javascript.SecurityController
+org.mozilla.javascript.VMBridge
+org.mozilla.javascript.tools.shell.SecurityProxy

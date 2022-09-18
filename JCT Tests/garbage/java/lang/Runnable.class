@@ -1,0 +1,10 @@
+package java.lang;
+abstract public interface Runnable
+{
+abstract public void run()
+{
+
+}
+
+
+}

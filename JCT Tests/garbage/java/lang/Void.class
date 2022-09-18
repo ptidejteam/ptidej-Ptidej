@@ -1,0 +1,17 @@
+package java.lang;
+final public class Void
+{
+final public static java.lang.Object TYPE;
+
+private void <init>()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

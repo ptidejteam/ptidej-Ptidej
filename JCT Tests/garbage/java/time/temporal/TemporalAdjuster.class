@@ -1,0 +1,10 @@
+package java.time.temporal;
+abstract public interface TemporalAdjuster
+{
+abstract public java.time.temporal.Temporal adjustInto(java.lang.Object arg0)
+{
+
+}
+
+
+}

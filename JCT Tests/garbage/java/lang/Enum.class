@@ -1,0 +1,75 @@
+package java.lang;
+abstract public class Enum
+implements java.io.Serializable, java.lang.Comparable
+{
+final private java.lang.Object name;
+
+final private java.lang.Object ordinal;
+
+final public java.lang.String name()
+{
+
+}
+
+final public int ordinal()
+{
+
+}
+
+protected void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+final public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+final public int hashCode()
+{
+
+}
+
+final protected java.lang.Object clone() throws java.lang.CloneNotSupportedException
+{
+
+}
+
+final public int compareTo(java.lang.Object arg0)
+{
+
+}
+
+final public java.lang.Class getDeclaringClass()
+{
+
+}
+
+public static java.lang.Enum valueOf(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+final protected void finalize()
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.IOException, java.lang.ClassNotFoundException
+{
+
+}
+
+private void readObjectNoData() throws java.io.ObjectStreamException
+{
+
+}
+
+
+}

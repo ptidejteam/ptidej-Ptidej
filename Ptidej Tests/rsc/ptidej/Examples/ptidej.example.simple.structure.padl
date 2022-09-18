@@ -1,0 +1,4 @@
+[ExtraInformation]
+
+Relation1 = addAggregationRelationship(ptidej.example.simple.Simple, newRelation1, ptidej.example.simple.A, 2)
+Relation2 = convertAggregationInComposition(ptidej.example.simple.Simple, ptidej.example.simple.A)

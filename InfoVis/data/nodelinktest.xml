@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE tree SYSTEM "treeml.dtd">
+<tree>
+ <metadata>
+  <dc:title>Example of tree from the article "A Node-Positioning Algorithm"</dc:title>
+ </metadata>
+ <declarations>
+  <attributeDecl name="name" type="String"/>
+  <attributeDecl name="weight" type="Integer"/>
+ </declarations>
+ <branch>
+  <attribute name="name" value="O"/>
+  <attribute name="weight" value="1"/>
+  <branch>
+   <attribute name="name" value="E"/>
+  <attribute name="weight" value="2"/>
+   <leaf>
+    <attribute name="name" value="A"/>
+    <attribute name="weight" value="3"/>
+   </leaf>
+   <branch>
+    <attribute name="name" value="D"/>
+    <attribute name="weight" value="4"/>
+    <leaf>
+     <attribute name="name" value="B"/>
+     <attribute name="weight" value="5"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="C"/>
+     <attribute name="weight" value="6"/>
+    </leaf>    
+   </branch>
+  </branch>
+  <leaf>
+   <attribute name="name" value="F"/>
+   <attribute name="weight" value="7"/>
+  </leaf>
+  <branch>
+   <attribute name="name" value="N"/>
+   <attribute name="weight" value="8"/>
+   <branch>
+    <attribute name="name" value="G"/>
+    <attribute name="weight" value="9"/>
+    <leaf>
+     <attribute name="name" value="H"/>
+     <attribute name="weight" value="10"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="I"/>
+     <attribute name="weight" value="11"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="J"/>
+     <attribute name="weight" value="12"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="K"/>
+     <attribute name="weight" value="13"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="L"/>
+     <attribute name="weight" value="14"/>
+    </leaf>
+   </branch>
+   <leaf>
+    <attribute name="name" value="M"/>
+    <attribute name="weight" value="15"/>
+   </leaf>
+  </branch>
+ </branch>
+</tree>

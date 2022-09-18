@@ -1,0 +1,62 @@
+package java.util.zip;
+public class GZIPOutputStream
+extends java.util.zip.DeflaterOutputStream
+{
+protected java.lang.Object crc;
+
+final private static java.lang.Object GZIP_MAGIC;
+
+final private static java.lang.Object TRAILER_SIZE;
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1) throws java.io.IOException
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.io.IOException
+{
+
+}
+
+public void <init>(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1) throws java.io.IOException
+{
+
+}
+
+public synchronized void write(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.io.IOException
+{
+
+}
+
+public void finish() throws java.io.IOException
+{
+
+}
+
+private void writeHeader() throws java.io.IOException
+{
+
+}
+
+private void writeTrailer(java.lang.Object arg0, java.lang.Object arg1) throws java.io.IOException
+{
+
+}
+
+private void writeInt(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.io.IOException
+{
+
+}
+
+private void writeShort(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.io.IOException
+{
+
+}
+
+
+}

@@ -1,0 +1,80 @@
+package sun.reflect.generics.factory;
+abstract public interface GenericsFactory
+{
+abstract public java.lang.reflect.TypeVariable makeTypeVariable(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+abstract public java.lang.reflect.ParameterizedType makeParameterizedType(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+abstract public java.lang.reflect.TypeVariable findTypeVariable(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.lang.reflect.WildcardType makeWildcard(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+abstract public java.lang.reflect.Type makeNamedType(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.lang.reflect.Type makeArrayType(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.lang.reflect.Type makeByte()
+{
+
+}
+
+abstract public java.lang.reflect.Type makeBool()
+{
+
+}
+
+abstract public java.lang.reflect.Type makeShort()
+{
+
+}
+
+abstract public java.lang.reflect.Type makeChar()
+{
+
+}
+
+abstract public java.lang.reflect.Type makeInt()
+{
+
+}
+
+abstract public java.lang.reflect.Type makeLong()
+{
+
+}
+
+abstract public java.lang.reflect.Type makeFloat()
+{
+
+}
+
+abstract public java.lang.reflect.Type makeDouble()
+{
+
+}
+
+abstract public java.lang.reflect.Type makeVoid()
+{
+
+}
+
+
+}

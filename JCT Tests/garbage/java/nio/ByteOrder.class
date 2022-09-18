@@ -1,0 +1,31 @@
+package java.nio;
+final public class ByteOrder
+{
+private java.lang.Object name;
+
+final public static java.lang.Object BIG_ENDIAN;
+
+final public static java.lang.Object LITTLE_ENDIAN;
+
+private void <init>(java.lang.Object arg0)
+{
+
+}
+
+public static java.nio.ByteOrder nativeOrder()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

@@ -1,0 +1,16 @@
+Package,Base name,Inh Depth,NVI,Local G Count,NVS,New Count,Overriden G Count,Inh Count,Tag,Ovr Tag,Name
+org.apache.log4j.xml,DOMConfigurator,1,1.9090909,21,40.090908,21,0,11,PureExtender,NoOvr,Budding Class
+org.apache.log4j.lf5,LogRecord,1,2.1818182,24,52.36364,23,1,10,Extender,PureReplacer,Budding Class
+org.apache.log4j.lf5.viewer.configure,MRUFileManager,1,1.2727273,14,17.818182,14,0,11,PureExtender,NoOvr,Budding Class
+org.apache.log4j.jdbc,JDBCAppender,2,1.3793104,20,27.586208,16,4,25,Extender,Specializer,Budding Class
+org.apache.log4j,AppenderSkeleton,1,1.7272727,19,32.818184,18,1,10,Extender,PureReplacer,Budding Class
+org.apache.log4j,Hierarchy,1,2.0,22,44.0,22,0,11,PureExtender,NoOvr,Budding Class
+org.apache.log4j.net,SMTPAppender,2,1.5172414,22,33.37931,18,4,25,Extender,Specializer,Budding Class
+org.apache.log4j.lf5.viewer,FilteredLogTableModel,2,1.4074074,19,26.74074,18,1,26,Extender,PureReplacer,Budding Class
+org.apache.log4j.lf5.viewer.categoryexplorer,CategoryNodeEditor,2,1.36,17,23.12,15,2,23,Extender,PureReplacer,Budding Class
+org.apache.log4j.lf5.util,DateFormatManager,1,1.2727273,14,17.818182,14,0,11,PureExtender,NoOvr,Budding Class
+org.apache.log4j.lf5.viewer.configure,ConfigurationManager,1,1.2727273,14,17.818182,14,0,11,PureExtender,NoOvr,Budding Class
+org.apache.log4j,HTMLLayout,2,1.2941177,11,14.235294,5,6,11,Overrider,Equals,Budding Class
+org.apache.log4j.lf5.viewer.categoryexplorer,CategoryAbstractCellEditor,1,1.2727273,14,17.818182,14,0,11,PureExtender,NoOvr,Budding Class
+org.apache.log4j.lf5.viewer,LogBrokerMonitor,1,9.454545,104,983.2727,104,0,11,PureExtender,NoOvr,Budding Class
+org.apache.log4j,Category,1,4.090909,45,184.09091,45,0,11,PureExtender,NoOvr,Budding Class

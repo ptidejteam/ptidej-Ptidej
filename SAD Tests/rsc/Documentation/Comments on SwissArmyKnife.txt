@@ -1,0 +1,6 @@
+Very strange implementation of the Singleton in ArgoUML, see
+for example org.argouml.uml.ui.foundation.core.ActionSetGeneralizableElementRoot
+
+Static methods but not private!
+
+Static method but not main(String[])!

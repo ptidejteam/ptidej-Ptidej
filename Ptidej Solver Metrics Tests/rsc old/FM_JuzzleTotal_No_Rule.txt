@@ -1,0 +1,350 @@
+# Micro-architecture 39 similar at 100% with unknown pattern
+39.100.concreteCreator = org.game.Juzzle.ControlPanel
+39.100.concreteProduct = java.awt.BorderLayout
+39.100.XCommand = No source transformation needed
+
+# Micro-architecture 45 similar at 100% with unknown pattern
+45.100.concreteCreator = org.game.Juzzle.ControlPanel
+45.100.concreteProduct = java.awt.Color
+45.100.XCommand = No source transformation needed
+
+# Micro-architecture 47 similar at 100% with unknown pattern
+47.100.concreteCreator = org.game.Juzzle.ControlPanel
+47.100.concreteProduct = java.awt.Dimension
+47.100.XCommand = No source transformation needed
+
+# Micro-architecture 36 similar at 100% with unknown pattern
+36.100.concreteCreator = org.game.Juzzle.ControlPanel
+36.100.concreteProduct = java.awt.Font
+36.100.XCommand = No source transformation needed
+
+# Micro-architecture 31 similar at 100% with unknown pattern
+31.100.concreteCreator = org.game.Juzzle.ControlPanel
+31.100.concreteProduct = java.awt.GridBagConstraints
+31.100.XCommand = No source transformation needed
+
+# Micro-architecture 43 similar at 100% with unknown pattern
+43.100.concreteCreator = org.game.Juzzle.ControlPanel
+43.100.concreteProduct = java.awt.GridBagLayout
+43.100.XCommand = No source transformation needed
+
+# Micro-architecture 38 similar at 100% with unknown pattern
+38.100.concreteCreator = org.game.Juzzle.ControlPanel
+38.100.concreteProduct = java.awt.GridLayout
+38.100.XCommand = No source transformation needed
+
+# Micro-architecture 44 similar at 100% with unknown pattern
+44.100.concreteCreator = org.game.Juzzle.ControlPanel
+44.100.concreteProduct = java.lang.StringBuffer
+44.100.XCommand = No source transformation needed
+
+# Micro-architecture 35 similar at 100% with unknown pattern
+35.100.concreteCreator = org.game.Juzzle.ControlPanel
+35.100.concreteProduct = javax.swing.ImageIcon
+35.100.XCommand = No source transformation needed
+
+# Micro-architecture 33 similar at 100% with unknown pattern
+33.100.concreteCreator = org.game.Juzzle.ControlPanel
+33.100.concreteProduct = javax.swing.JLabel
+33.100.XCommand = No source transformation needed
+
+# Micro-architecture 46 similar at 100% with unknown pattern
+46.100.concreteCreator = org.game.Juzzle.ControlPanel
+46.100.concreteProduct = javax.swing.JPanel
+46.100.XCommand = No source transformation needed
+
+# Micro-architecture 32 similar at 100% with unknown pattern
+32.100.concreteCreator = org.game.Juzzle.ControlPanel
+32.100.concreteProduct = javax.swing.Timer
+32.100.XCommand = No source transformation needed
+
+# Micro-architecture 37 similar at 100% with unknown pattern
+37.100.concreteCreator = org.game.Juzzle.ControlPanel
+37.100.concreteProduct = javax.swing.border.BevelBorder
+37.100.XCommand = No source transformation needed
+
+# Micro-architecture 42 similar at 100% with unknown pattern
+42.100.concreteCreator = org.game.Juzzle.ControlPanel
+42.100.concreteProduct = javax.swing.border.CompoundBorder
+42.100.XCommand = No source transformation needed
+
+# Micro-architecture 34 similar at 100% with unknown pattern
+34.100.concreteCreator = org.game.Juzzle.ControlPanel
+34.100.concreteProduct = javax.swing.border.EmptyBorder
+34.100.XCommand = No source transformation needed
+
+# Micro-architecture 41 similar at 100% with unknown pattern
+41.100.concreteCreator = org.game.Juzzle.ControlPanel
+41.100.concreteProduct = javax.swing.border.EtchedBorder
+41.100.XCommand = No source transformation needed
+
+# Micro-architecture 40 similar at 100% with unknown pattern
+40.100.concreteCreator = org.game.Juzzle.ControlPanel
+40.100.concreteProduct = org.game.Juzzle.ControlPanel$TimeCounterListener
+40.100.XCommand = No source transformation needed
+
+# Micro-architecture 25 similar at 100% with unknown pattern
+25.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+25.100.concreteProduct = java.awt.image.BufferedImage
+25.100.XCommand = No source transformation needed
+
+# Micro-architecture 24 similar at 100% with unknown pattern
+24.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+24.100.concreteProduct = java.lang.StringBuffer
+24.100.XCommand = No source transformation needed
+
+# Micro-architecture 17 similar at 100% with unknown pattern
+17.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+17.100.concreteProduct = javax.swing.ImageIcon
+17.100.XCommand = No source transformation needed
+
+# Micro-architecture 26 similar at 100% with unknown pattern
+26.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+26.100.concreteProduct = javax.swing.JCheckBoxMenuItem
+26.100.XCommand = No source transformation needed
+
+# Micro-architecture 19 similar at 100% with unknown pattern
+19.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+19.100.concreteProduct = javax.swing.JFileChooser
+19.100.XCommand = No source transformation needed
+
+# Micro-architecture 28 similar at 100% with unknown pattern
+28.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+28.100.concreteProduct = javax.swing.JInternalFrame
+28.100.XCommand = No source transformation needed
+
+# Micro-architecture 22 similar at 100% with unknown pattern
+22.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+22.100.concreteProduct = javax.swing.JMenuBar
+22.100.XCommand = No source transformation needed
+
+# Micro-architecture 13 similar at 100% with unknown pattern
+13.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+13.100.concreteProduct = javax.swing.JMenuItem
+13.100.XCommand = No source transformation needed
+
+# Micro-architecture 23 similar at 100% with unknown pattern
+23.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+23.100.concreteProduct = javax.swing.JMenu
+23.100.XCommand = No source transformation needed
+
+# Micro-architecture 15 similar at 100% with unknown pattern
+15.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+15.100.concreteProduct = javax.swing.JScrollPane
+15.100.XCommand = No source transformation needed
+
+# Micro-architecture 18 similar at 100% with unknown pattern
+18.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+18.100.concreteProduct = javax.swing.border.BevelBorder
+18.100.XCommand = No source transformation needed
+
+# Micro-architecture 16 similar at 100% with unknown pattern
+16.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+16.100.concreteProduct = org.game.Juzzle.ControlPanel
+16.100.XCommand = No source transformation needed
+
+# Micro-architecture 29 similar at 100% with unknown pattern
+29.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+29.100.concreteProduct = org.game.Juzzle.ImageDescription
+29.100.XCommand = No source transformation needed
+
+# Micro-architecture 21 similar at 100% with unknown pattern
+21.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+21.100.concreteProduct = org.game.Juzzle.JuzzlePanel$ImageFileFilter
+21.100.XCommand = No source transformation needed
+
+# Micro-architecture 14 similar at 100% with unknown pattern
+14.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+14.100.concreteProduct = org.game.Juzzle.JuzzlePanel$JuzzlePanelResizer
+14.100.XCommand = No source transformation needed
+
+# Micro-architecture 30 similar at 100% with unknown pattern
+30.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+30.100.concreteProduct = org.game.Juzzle.JuzzlePanel$MenuListener
+30.100.XCommand = No source transformation needed
+
+# Micro-architecture 27 similar at 100% with unknown pattern
+27.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+27.100.concreteProduct = org.game.Juzzle.PuzzlePanel
+27.100.XCommand = No source transformation needed
+
+# Micro-architecture 20 similar at 100% with unknown pattern
+20.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+20.100.concreteProduct = org.game.Juzzle.StartDialog
+20.100.XCommand = No source transformation needed
+
+# Micro-architecture 70 similar at 100% with unknown pattern
+70.100.concreteCreator = org.game.Juzzle.MainFrame
+70.100.concreteProduct = org.game.Juzzle.JuzzlePanel
+70.100.XCommand = No source transformation needed
+
+# Micro-architecture 69 similar at 100% with unknown pattern
+69.100.concreteCreator = org.game.Juzzle.PuzzlePaint
+69.100.concreteProduct = java.awt.Rectangle
+69.100.XCommand = No source transformation needed
+
+# Micro-architecture 65 similar at 100% with unknown pattern
+65.100.concreteCreator = org.game.Juzzle.PuzzlePanel
+65.100.concreteProduct = java.awt.BasicStroke
+65.100.XCommand = No source transformation needed
+
+# Micro-architecture 67 similar at 100% with unknown pattern
+67.100.concreteCreator = org.game.Juzzle.PuzzlePanel
+67.100.concreteProduct = java.awt.Color
+67.100.XCommand = No source transformation needed
+
+# Micro-architecture 62 similar at 100% with unknown pattern
+62.100.concreteCreator = org.game.Juzzle.PuzzlePanel
+62.100.concreteProduct = java.awt.Cursor
+62.100.XCommand = No source transformation needed
+
+# Micro-architecture 64 similar at 100% with unknown pattern
+64.100.concreteCreator = org.game.Juzzle.PuzzlePanel
+64.100.concreteProduct = java.awt.Point
+64.100.XCommand = No source transformation needed
+
+# Micro-architecture 61 similar at 100% with unknown pattern
+61.100.concreteCreator = org.game.Juzzle.PuzzlePanel
+61.100.concreteProduct = java.awt.Rectangle
+61.100.XCommand = No source transformation needed
+
+# Micro-architecture 66 similar at 100% with unknown pattern
+66.100.concreteCreator = org.game.Juzzle.PuzzlePanel
+66.100.concreteProduct = java.lang.StringBuffer
+66.100.XCommand = No source transformation needed
+
+# Micro-architecture 68 similar at 100% with unknown pattern
+68.100.concreteCreator = org.game.Juzzle.PuzzlePanel
+68.100.concreteProduct = org.game.Juzzle.DummyPuzzlePartList
+68.100.XCommand = No source transformation needed
+
+# Micro-architecture 63 similar at 100% with unknown pattern
+63.100.concreteCreator = org.game.Juzzle.PuzzlePanel
+63.100.concreteProduct = org.game.Juzzle.PuzzlePartList
+63.100.XCommand = No source transformation needed
+
+# Micro-architecture 8 similar at 100% with unknown pattern
+8.100.concreteCreator = org.game.Juzzle.PuzzlePartList
+8.100.concreteProduct = java.awt.Rectangle
+8.100.XCommand = No source transformation needed
+
+# Micro-architecture 7 similar at 100% with unknown pattern
+7.100.concreteCreator = org.game.Juzzle.PuzzlePartList
+7.100.concreteProduct = java.awt.geom.AffineTransform
+7.100.XCommand = No source transformation needed
+
+# Micro-architecture 9 similar at 100% with unknown pattern
+9.100.concreteCreator = org.game.Juzzle.PuzzlePartList
+9.100.concreteProduct = java.awt.geom.Area
+9.100.XCommand = No source transformation needed
+
+# Micro-architecture 11 similar at 100% with unknown pattern
+11.100.concreteCreator = org.game.Juzzle.PuzzlePartList
+11.100.concreteProduct = java.awt.geom.GeneralPath
+11.100.XCommand = No source transformation needed
+
+# Micro-architecture 10 similar at 100% with unknown pattern
+10.100.concreteCreator = org.game.Juzzle.PuzzlePartList
+10.100.concreteProduct = java.util.Random
+10.100.XCommand = No source transformation needed
+
+# Micro-architecture 12 similar at 100% with unknown pattern
+12.100.concreteCreator = org.game.Juzzle.PuzzlePartList
+12.100.concreteProduct = org.game.Juzzle.PuzzlePartList$PuzzlePart
+12.100.XCommand = No source transformation needed
+
+# Micro-architecture 53 similar at 100% with unknown pattern
+53.100.concreteCreator = org.game.Juzzle.StartDialog
+53.100.concreteProduct = java.awt.BorderLayout
+53.100.XCommand = No source transformation needed
+
+# Micro-architecture 59 similar at 100% with unknown pattern
+59.100.concreteCreator = org.game.Juzzle.StartDialog
+59.100.concreteProduct = java.awt.Dimension
+59.100.XCommand = No source transformation needed
+
+# Micro-architecture 56 similar at 100% with unknown pattern
+56.100.concreteCreator = org.game.Juzzle.StartDialog
+56.100.concreteProduct = java.awt.FlowLayout
+56.100.XCommand = No source transformation needed
+
+# Micro-architecture 48 similar at 100% with unknown pattern
+48.100.concreteCreator = org.game.Juzzle.StartDialog
+48.100.concreteProduct = javax.swing.JLabel
+48.100.XCommand = No source transformation needed
+
+# Micro-architecture 57 similar at 100% with unknown pattern
+57.100.concreteCreator = org.game.Juzzle.StartDialog
+57.100.concreteProduct = javax.swing.JList
+57.100.XCommand = No source transformation needed
+
+# Micro-architecture 58 similar at 100% with unknown pattern
+58.100.concreteCreator = org.game.Juzzle.StartDialog
+58.100.concreteProduct = javax.swing.JPanel
+58.100.XCommand = No source transformation needed
+
+# Micro-architecture 50 similar at 100% with unknown pattern
+50.100.concreteCreator = org.game.Juzzle.StartDialog
+50.100.concreteProduct = javax.swing.JScrollPane
+50.100.XCommand = No source transformation needed
+
+# Micro-architecture 60 similar at 100% with unknown pattern
+60.100.concreteCreator = org.game.Juzzle.StartDialog
+60.100.concreteProduct = javax.swing.JTextField
+60.100.XCommand = No source transformation needed
+
+# Micro-architecture 51 similar at 100% with unknown pattern
+51.100.concreteCreator = org.game.Juzzle.StartDialog
+51.100.concreteProduct = javax.swing.border.BevelBorder
+51.100.XCommand = No source transformation needed
+
+# Micro-architecture 55 similar at 100% with unknown pattern
+55.100.concreteCreator = org.game.Juzzle.StartDialog
+55.100.concreteProduct = javax.swing.border.CompoundBorder
+55.100.XCommand = No source transformation needed
+
+# Micro-architecture 49 similar at 100% with unknown pattern
+49.100.concreteCreator = org.game.Juzzle.StartDialog
+49.100.concreteProduct = javax.swing.border.EmptyBorder
+49.100.XCommand = No source transformation needed
+
+# Micro-architecture 54 similar at 100% with unknown pattern
+54.100.concreteCreator = org.game.Juzzle.StartDialog
+54.100.concreteProduct = javax.swing.border.EtchedBorder
+54.100.XCommand = No source transformation needed
+
+# Micro-architecture 52 similar at 100% with unknown pattern
+52.100.concreteCreator = org.game.Juzzle.StartDialog
+52.100.concreteProduct = org.game.Juzzle.StartDialog$ImageListRenderer
+52.100.XCommand = No source transformation needed
+
+# Micro-architecture 1 similar at 100% with unknown pattern
+1.100.concreteCreator = org.game.Juzzle.images.JuzzleImages
+1.100.concreteProduct = java.io.InputStreamReader
+1.100.XCommand = No source transformation needed
+
+# Micro-architecture 3 similar at 100% with unknown pattern
+3.100.concreteCreator = org.game.Juzzle.images.JuzzleImages
+3.100.concreteProduct = java.io.LineNumberReader
+3.100.XCommand = No source transformation needed
+
+# Micro-architecture 4 similar at 100% with unknown pattern
+4.100.concreteCreator = org.game.Juzzle.images.JuzzleImages
+4.100.concreteProduct = java.lang.NoClassDefFoundError
+4.100.XCommand = No source transformation needed
+
+# Micro-architecture 5 similar at 100% with unknown pattern
+5.100.concreteCreator = org.game.Juzzle.images.JuzzleImages
+5.100.concreteProduct = java.util.Vector
+5.100.XCommand = No source transformation needed
+
+# Micro-architecture 2 similar at 100% with unknown pattern
+2.100.concreteCreator = org.game.Juzzle.images.JuzzleImages
+2.100.concreteProduct = javax.swing.ImageIcon
+2.100.XCommand = No source transformation needed
+
+# Micro-architecture 6 similar at 100% with unknown pattern
+6.100.concreteCreator = org.game.Juzzle.main
+6.100.concreteProduct = org.game.Juzzle.MainFrame
+6.100.XCommand = No source transformation needed
+

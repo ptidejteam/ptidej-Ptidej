@@ -1,0 +1,33 @@
+CLASS Composite
+
+    ATTRIBUTES
+        PRIVATE  listOfComponents:java.util.Vector
+
+    OPERATIONS
+        PUBLIC printAll():void,
+        PUBLIC addComponent(Component aComponent):void,
+        PUBLIC getComponent(int pos):Component
+        ;
+
+CLASS Leaf
+
+    ATTRIBUTES
+
+    OPERATIONS
+        ;
+
+CLASS Component
+
+    ATTRIBUTES
+
+    OPERATIONS
+        ;
+
+    GENERALIZATION Component
+            SUBCLASSES Composite
+        ;
+
+    GENERALIZATION Component
+            SUBCLASSES Leaf
+        ;
+

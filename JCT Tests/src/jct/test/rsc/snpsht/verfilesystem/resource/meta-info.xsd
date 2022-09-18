@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="file">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="file_id"/>
+        <xs:element ref="revisions"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="file_id" type="xs:string"/>
+  <xs:element name="revisions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="file_rev"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="file_rev">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rev_id"/>
+        <xs:element ref="rev_name"/>
+        <xs:element ref="file_name"/>
+        <xs:element ref="path"/>
+        <xs:element ref="update_time" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="file_rev_path"/>
+        <xs:element ref="rev"/>
+        <xs:element ref="action"/>
+        <xs:element ref="author"/>
+        <xs:element ref="comment"/>
+        <xs:element ref="branch"/>
+        <xs:element ref="previous_file_rev"/>
+        <xs:element ref="next_files_rev"/>
+        <xs:element ref="tags"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rev_name" type="xs:string"/>
+  <xs:element name="file_name" type="xs:string"/>
+  <xs:element name="path" type="xs:string"/>
+  <xs:element name="update_time">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="time"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="start_time"/>
+          <xs:element ref="end_time"/>
+        </xs:sequence>
+      </xs:sequence>
+      <xs:attribute name="type" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="time" type="xs:long"/>
+  <xs:element name="start_time" type="xs:long"/>
+  <xs:element name="end_time" type="xs:long"/>
+  <xs:element name="file_rev_path" type="xs:string"/>
+  <xs:element name="rev" type="xs:string"/>
+  <xs:element name="action" type="xs:string"/>
+  <xs:element name="author" type="xs:string"/>
+  <xs:element name="comment" type="xs:string"/>
+  <xs:element name="branch" type="xs:string"/>
+  <xs:element name="next_files_rev">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="rev_id"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tags">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tag"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tag" type="xs:string"/>
+  <xs:element name="rev_id" type="xs:string"/>
+  <xs:element name="previous_file_rev" type="xs:string"/>
+</xs:schema>

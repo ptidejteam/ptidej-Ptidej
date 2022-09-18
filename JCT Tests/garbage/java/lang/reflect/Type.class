@@ -1,0 +1,10 @@
+package java.lang.reflect;
+abstract public interface Type
+{
+public java.lang.String getTypeName()
+{
+
+}
+
+
+}

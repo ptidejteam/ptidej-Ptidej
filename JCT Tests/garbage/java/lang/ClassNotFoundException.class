@@ -1,0 +1,35 @@
+package java.lang;
+public class ClassNotFoundException
+extends java.lang.ReflectiveOperationException
+{
+final private static java.lang.Object serialVersionUID;
+
+private java.lang.Object ex;
+
+public void <init>()
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.Throwable getException()
+{
+
+}
+
+public java.lang.Throwable getCause()
+{
+
+}
+
+
+}

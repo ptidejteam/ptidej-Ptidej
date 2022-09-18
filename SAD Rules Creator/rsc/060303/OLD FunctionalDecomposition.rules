@@ -1,0 +1,12 @@
+RULE_CARD : FunctionalDecomposition { 
+   RULE : FunctionalDecomposition {ASSOC: associated FROM: mainClass ONE TO: aClass MANY };
+   RULE : mainClass {UNION NoInheritPoly FunctionClass};
+   RULE : NoInheritPoly {INTER NoInheritance NoPolymorphism};
+   RULE : NoInheritance {(METRIC: DIT, 1, 0) };
+   RULE : NoPolymorphism { (STRUCT: DIFFERENT_PARAMETER) };
+   RULE : FunctionClass {(SEMANTIC: CLASSNAME, {Make, Create, Creator, Execute, Exec, Compute, Display, Calculate}) } ; 
+   RULE : aClass {INTER ClassOneMethod FieldPrivate};
+   RULE : ClassOneMethod {(STRUCT: ONE_METHOD)};
+   RULE : FieldPrivate {(STRUCT: PRIVATE_FIELD, 100) };
+};
+

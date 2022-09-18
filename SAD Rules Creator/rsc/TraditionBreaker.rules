@@ -1,0 +1,10 @@
+RULE_CARD : TraditionBreaker { 
+   RULE : TraditionBreaker {INHERIT: inherited FROM: LargeParentClass ONE TO: ChildClass ONE } ; 
+   RULE : LargeParentClass { INTER LargeClass ParentClass } ; 
+   RULE : LargeClass { (METRIC: NMD + NAD, LOW, 10) } ; 
+   RULE : ParentClass {INTER NoInheritance HasChildren };
+   RULE : NoInheritance {(METRIC: DIT, SUP_EQ, 1, 0) };
+   RULE : HasChildren {(METRIC: NOC, SUP_EQ, 1, 0) };
+   RULE : ChildClass { (METRIC: NMD + NAD, HIGH, 10) } ;
+};
+

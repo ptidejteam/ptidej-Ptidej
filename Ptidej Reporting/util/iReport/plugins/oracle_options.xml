@@ -1,0 +1,4 @@
+<iReportPlugin 	name="Oracle options" class="it.businesslogic.ireport.plugin.oracle.OracleOptionsPlugin">
+	<IconFile>/it/businesslogic/ireport/icons/oracle_options.png</IconFile>
+	<Description>Set terriotry and language options for Oracle database performing an ALTER SESSION</Description>
+</iReportPlugin>

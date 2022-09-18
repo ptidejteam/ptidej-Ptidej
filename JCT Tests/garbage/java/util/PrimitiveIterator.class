@@ -1,0 +1,89 @@
+package java.util;
+abstract public interface PrimitiveIterator
+extends java.util.Iterator
+{
+abstract public static interface OfDouble
+extends java.util.PrimitiveIterator
+{
+abstract public double nextDouble()
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Double next()
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+
+}
+
+abstract public static interface OfInt
+extends java.util.PrimitiveIterator
+{
+abstract public int nextInt()
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Integer next()
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+
+}
+
+abstract public static interface OfLong
+extends java.util.PrimitiveIterator
+{
+abstract public long nextLong()
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Long next()
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+
+}
+
+abstract public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+
+}

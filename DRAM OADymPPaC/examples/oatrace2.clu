@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='utf-8'?>
+<clustering>
+<tree orientation="horizontal" size="46">
+<node name="racine">
+	<node name="cluster0">
+		<node name="c17">
+		</node>
+		<node name="c16">
+		</node>
+		<node name="c25">
+		</node>
+		<node name="c2">
+		</node>
+		<node name="c20">
+		</node>
+		<node name="c13">
+		</node>
+		<node name="c24">
+		</node>
+	</node>
+	<node name="cluster1">
+		<node name="c15">
+		</node>
+		<node name="c14">
+		</node>
+		<node name="c19">
+		</node>
+		<node name="c18">
+		</node>
+		<node name="c22">
+		</node>
+		<node name="c23">
+		</node>
+	</node>
+	<node name="cluster2">
+		<node name="c21">
+		</node>
+		<node name="c27">
+		</node>
+		<node name="c12">
+		</node>
+		<node name="c28">
+		</node>
+		<node name="c31">
+		</node>
+		<node name="c3">
+		</node>
+		<node name="c32">
+		</node>
+	</node>
+	<node name="cluster3">
+		<node name="c0">
+		</node>
+		<node name="c5">
+		</node>
+		<node name="c6">
+		</node>
+		<node name="c11">
+		</node>
+		<node name="c43">
+		</node>
+		<node name="c33">
+		</node>
+		<node name="c1">
+		</node>
+		<node name="c10">
+		</node>
+		<node name="c38">
+		</node>
+		<node name="c41">
+		</node>
+		<node name="c26">
+		</node>
+		<node name="c8">
+		</node>
+		<node name="c29">
+		</node>
+		<node name="c36">
+		</node>
+		<node name="c42">
+		</node>
+		<node name="c45">
+		</node>
+	</node>
+	<node name="cluster4">
+		<node name="c7">
+		</node>
+		<node name="c34">
+		</node>
+		<node name="c37">
+		</node>
+		<node name="c35">
+		</node>
+		<node name="c40">
+		</node>
+		<node name="c30">
+		</node>
+		<node name="c9">
+		</node>
+		<node name="c44">
+		</node>
+	</node>
+	<node name="cluster5">
+		<node name="c4">
+		</node>
+	</node>
+	<node name="cluster6">
+		<node name="c39">
+		</node>
+	</node>
+</node>
+</tree>
+<tree orientation="vertical" size="46">
+<node name="racine">
+	<node name="cluster0">
+		<node name="c0">
+		</node>
+		<node name="c16">
+		</node>
+		<node name="c17">
+		</node>
+		<node name="c2">
+		</node>
+		<node name="c20">
+		</node>
+		<node name="c13">
+		</node>
+		<node name="c24">
+		</node>
+	</node>
+	<node name="cluster1">
+		<node name="c19">
+		</node>
+		<node name="c14">
+		</node>
+		<node name="c15">
+		</node>
+		<node name="c18">
+		</node>
+		<node name="c22">
+		</node>
+		<node name="c23">
+		</node>
+	</node>
+	<node name="cluster2">
+		<node name="c38">
+		</node>
+		<node name="c27">
+		</node>
+		<node name="c12">
+		</node>
+		<node name="c28">
+		</node>
+		<node name="c31">
+		</node>
+		<node name="c3">
+		</node>
+		<node name="c21">
+		</node>
+	</node>
+	<node name="cluster3">
+		<node name="c32">
+		</node>
+		<node name="c5">
+		</node>
+		<node name="c6">
+		</node>
+		<node name="c11">
+		</node>
+		<node name="c43">
+		</node>
+		<node name="c33">
+		</node>
+		<node name="c29">
+		</node>
+		<node name="c8">
+		</node>
+		<node name="c41">
+		</node>
+		<node name="c40">
+		</node>
+		<node name="c26">
+		</node>
+		<node name="c36">
+		</node>
+		<node name="c1">
+		</node>
+		<node name="c4">
+		</node>
+		<node name="c44">
+		</node>
+		<node name="c25">
+		</node>
+	</node>
+	<node name="cluster4">
+		<node name="c42">
+		</node>
+		<node name="c34">
+		</node>
+		<node name="c7">
+		</node>
+		<node name="c35">
+		</node>
+		<node name="c39">
+		</node>
+		<node name="c10">
+		</node>
+		<node name="c30">
+		</node>
+		<node name="c37">
+		</node>
+	</node>
+	<node name="cluster5">
+		<node name="c9">
+		</node>
+	</node>
+	<node name="cluster6">
+		<node name="c45">
+		</node>
+	</node>
+</node>
+</tree>
+</clustering>

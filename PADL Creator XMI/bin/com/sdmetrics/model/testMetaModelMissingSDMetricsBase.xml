@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<sdmetricsmetamodel version="2.0">
+
+<!--  The first type must be the 'sdmetricsbase' type -->
+<modelelement name="class">
+	<attribute name="visibility">Visibility of the element (public, protected, package, private).</attribute>
+</modelelement>
+
+</sdmetricsmetamodel>

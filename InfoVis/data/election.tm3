@@ -1,0 +1,53 @@
+Party in 2000	Party in 1996	Party in 1992	Electoral Votes	Bush Votes	Gore Votes	Population				
+STRING	STRING	STRING	INTEGER	INTEGER	INTEGER	INTEGER				
+Republican	Republican	Republican	3	167398	79004	550043		USA	1- West	Alaska
+Democrat	Democrat	Democrat	11	1108864	1247652	4866692		USA	1- West	Washington
+Democrat	Democrat	Democrat	7	713577	720342	2842321		USA	1- West	Oregon
+Republican	Democrat	Democrat	4	301575	279978	1201833		USA	1- West	Nevada
+Democrat	Democrat	Democrat	54	4567429	5861203	29760021		USA	1- West	California
+Democrat	Democrat	Democrat	4	137845	205286	1108229		USA	1- West	Hawaii
+Republican	Republican	Democrat	3	240178	137126	799065		USA	2 - Rockies	Montana
+Republican	Republican	Republican	4	336937	138637	1006749		USA	2 - Rockies	Idaho
+Republican	Republican	Republican	3	147947	60481	453588		USA	2 - Rockies	Wyoming
+Republican	Republican	Republican	5	515096	203053	1722850		USA	2 - Rockies	Utah
+Republican	Republican	Democrat	8	883748	738227	3294394		USA	2 - Rockies	Colorado
+Republican	Democrat	Republican	8	781652	685341	3665228		USA	2 - Rockies	Arizona
+Democrat	Democrat	Democrat	5	286417	286783	1515069		USA	2 - Rockies	New Mexico
+Republican	Republican	Republican	3	174952	95284	638800		USA	3 - Far Midwest	North Dakota
+Republican	Republican	Republican	3	190700	118804	696004		USA	3 - Far Midwest	South Dakota
+Republican	Republican	Republican	5	433850	213776	1201833		USA	3 - Far Midwest	Nebraska
+Republican	Republican	Republican	6	622332	399276	2477574		USA	3 - Far Midwest	Kansas
+Republican	Republican	Republican	8	744337	474276	3145585		USA	3 - Far Midwest	Oklahoma
+Republican	Republican	Republican	32	3799639	2433746	16986510		USA	3 - Far Midwest	Texas
+Democrat	Democrat	Democrat	10	1109659	1168266	4375099		USA	4 - Midwest	Minnesota
+Democrat	Democrat	Democrat	7	634373	638517	2776755		USA	4 - Midwest	Iowa
+Republican	Democrat	Democrat	11	1189924	1111138	5117216		USA	4 - Midwest	Missouri
+Republican	Democrat	Democrat	6	472940	422768	2350725		USA	4 - Midwest	Arkansas
+Republican	Democrat	Democrat	9	927871	792344	4219973		USA	4 - Midwest	Louisiana
+Democrat	Democrat	Democrat	11	1237279	1242987	4891769		USA	5 - Central	Wisconsin
+Democrat	Democrat	Democrat	22	2019421	2589026	11430602		USA	5 - Central	Illinois
+Republican	Democrat	Democrat	8	872520	638923	3685296		USA	5 - Central	Kentucky
+Republican	Democrat	Democrat	11	1061949	981720	4877185		USA	5 - Central	Tennessee
+Republican	Republican	Republican	7	572844	404614	2573216		USA	5 - Central	Mississippi
+Republican	Republican	Republican	9	941173	692611	5117216		USA	5 - Central	Alabama
+Democrat	Democrat	Democrat	18	1953139	2170418	9295297		USA	6 - Mid & South	Michigan
+Republican	Republican	Republican	12	1245836	901980	5544159		USA	6 - Mid & South	Indiana
+Republican	Democrat	Democrat	21	2350363	2183628	10847115		USA	6 - Mid & South	Ohio
+Republican	Democrat	Democrat	5	336473	295497	1793477		USA	6 - Mid & South	West Virginia
+Republican	Republican	Republican	13	1437490	1217290	6187358		USA	6 - Mid & South	Virginia
+Republican	Republican	Republican	14	1631163	1257692	6628637		USA	6 - Mid & South	North Carolina
+Republican	Republican	Republican	8	786892	566037	3486703		USA	6 - Mid & South	South Carolina
+Republican	Republican	Democrat	13	1419720	1116230	6478216		USA	6 - Mid & South	Georgia
+Republican	Democrat	Republican	25	2912790	2912253	12937926		USA	6 - Mid & South	Florida
+Democrat	Democrat	Democrat	4	286616	37127	1227928		USA	7 - North & East	Maine
+Republican	Democrat	Democrat	4	273559	266348	1109252		USA	7 - North & East	New Hampshire
+Democrat	Democrat	Democrat	3	119775	149022	562758		USA	7 - North & East	Vermont
+Democrat	Democrat	Democrat	12	878502	1616487	6016425		USA	7 - North & East	Massachusetts
+Democrat	Democrat	Democrat	4	130555	249508	1003464		USA	7 - North & East	Rhode Island
+Democrat	Democrat	Democrat	8	561104	64452	3287116		USA	7 - North & East	Connecticut
+Democrat	Democrat	Democrat	33	2403374	4107697	17990455		USA	7 - North & East	New York
+Democrat	Democrat	Democrat	15	1284173	1788850	7730188		USA	7 - North & East	New Jersey
+Democrat	Democrat	Democrat	23	2281127	2485967	11881643		USA	7 - North & East	Pennsylvania
+Democrat	Democrat	Democrat	3	137288	180068	666168		USA	7 - North & East	Delaware
+Democrat	Democrat	Democrat	10	813724	1143888	4781468		USA	7 - North & East	Maryland
+Democrat	Democrat	Democrat	2	18073	171923	606900		USA	7 - North & East	Washington DC

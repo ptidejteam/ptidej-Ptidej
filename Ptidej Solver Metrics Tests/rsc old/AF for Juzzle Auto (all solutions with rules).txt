@@ -1,0 +1,42 @@
+# Micro-architecture 2 similar at 100% with unknown pattern
+2.100.abstractfactory = org.game.Juzzle.IPuzzlePartList
+2.100.abstractproduct = java.awt.Rectangle
+2.100.concretefactory = org.game.Juzzle.PuzzlePartList
+2.100.product = java.awt.Rectangle
+2.100.XCommand = No source transformation needed
+
+# Micro-architecture 1 similar at 100% with unknown pattern
+1.100.abstractfactory = org.game.Juzzle.IPuzzlePartList
+1.100.abstractproduct = java.awt.geom.AffineTransform
+1.100.concretefactory = org.game.Juzzle.PuzzlePartList
+1.100.product = java.awt.geom.AffineTransform
+1.100.XCommand = No source transformation needed
+
+# Micro-architecture 3 similar at 100% with unknown pattern
+3.100.abstractfactory = org.game.Juzzle.IPuzzlePartList
+3.100.abstractproduct = java.awt.geom.Area
+3.100.concretefactory = org.game.Juzzle.PuzzlePartList
+3.100.product = java.awt.geom.Area
+3.100.XCommand = No source transformation needed
+
+# Micro-architecture 5 similar at 100% with unknown pattern
+5.100.abstractfactory = org.game.Juzzle.IPuzzlePartList
+5.100.abstractproduct = java.awt.geom.GeneralPath
+5.100.concretefactory = org.game.Juzzle.PuzzlePartList
+5.100.product = java.awt.geom.GeneralPath
+5.100.XCommand = No source transformation needed
+
+# Micro-architecture 4 similar at 100% with unknown pattern
+4.100.abstractfactory = org.game.Juzzle.IPuzzlePartList
+4.100.abstractproduct = java.util.Random
+4.100.concretefactory = org.game.Juzzle.PuzzlePartList
+4.100.product = java.util.Random
+4.100.XCommand = No source transformation needed
+
+# Micro-architecture 6 similar at 100% with unknown pattern
+6.100.abstractfactory = org.game.Juzzle.IPuzzlePartList
+6.100.abstractproduct = org.game.Juzzle.PuzzlePartList$PuzzlePart
+6.100.concretefactory = org.game.Juzzle.PuzzlePartList
+6.100.product = org.game.Juzzle.PuzzlePartList$PuzzlePart
+6.100.XCommand = No source transformation needed
+

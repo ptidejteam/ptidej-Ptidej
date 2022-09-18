@@ -1,0 +1,14 @@
+C:\Documents and Settings\ngjanice\Eclipse\workspace\SADPJ Builder\bin\
+C:\Documents and Settings\ngjanice\Eclipse\workspace\MoDeC Bytecode Instrumentation Tests\Instrumented Classes\SADJP Builder\
+
+C:\Documents and Settings\ngjanice\Eclipse\workspace\MoDeC Bytecode Instrumentation Tests\Instrumented Classes\SADJP Builder\Evaluation_SearchManager_Builder_GetSQLStatement.trace
+BUILDER.SearchManager
+BUILDER/BuilderFactory.class
+BUILDER/buttonHandler.class
+BUILDER/CandSrchBuilder.class
+BUILDER/EmpSrchBuilder.class
+BUILDER/MyUtil.class
+BUILDER/SearchManager$1.class
+BUILDER/SearchManager.class
+BUILDER/UIBuilder.class
+BUILDER/UIDirector.class

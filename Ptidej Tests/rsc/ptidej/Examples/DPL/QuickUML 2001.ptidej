@@ -1,0 +1,3 @@
+[Ptidej Project]
+Name = QuickUML 2001
+JavaCode = ../../../../P-MARt Workspace/QuickUML 2001/bin/acme/;../../../../P-MARt Workspace/QuickUML 2001/bin/diagram/;../../../../P-MARt Workspace/QuickUML 2001/bin/diagram/figures/;../../../../P-MARt Workspace/QuickUML 2001/bin/diagram/shape/;../../../../P-MARt Workspace/QuickUML 2001/bin/diagram/tool/;../../../../P-MARt Workspace/QuickUML 2001/bin/uml/;../../../../P-MARt Workspace/QuickUML 2001/bin/uml/builder/;../../../../P-MARt Workspace/QuickUML 2001/bin/uml/diagram/;../../../../P-MARt Workspace/QuickUML 2001/bin/uml/ui/;../../../../P-MARt Workspace/QuickUML 2001/bin/uml/ui/border/;../../../../P-MARt Workspace/QuickUML 2001/bin/util/;

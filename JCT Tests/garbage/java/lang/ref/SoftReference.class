@@ -1,0 +1,25 @@
+package java.lang.ref;
+public class SoftReference
+extends java.lang.ref.Reference
+{
+private static java.lang.Object clock;
+
+private java.lang.Object timestamp;
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.Object get()
+{
+
+}
+
+
+}

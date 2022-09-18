@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="LA_ruleset"
+	xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+	<description>PMD Plugin preferences rule set</description>
+
+	<rule name="MethodsLAPDRule" language="java" message="MethodsLAPDRule"
+		class="rules.MethodsLAPDRule">
+		<description>
+	
+	</description>
+		<priority>1</priority>
+		<example>
+		
+		</example>
+
+	</rule>
+
+
+
+	<rule name="AttributesLAPDRule" language="java" message="AttributesLAPDRule"
+		class="rules.AttributesLAPDRule">
+		<description>
+	
+	</description>
+		<priority>1</priority>
+		<example>
+		
+		</example>
+
+	</rule>
+
+</ruleset>

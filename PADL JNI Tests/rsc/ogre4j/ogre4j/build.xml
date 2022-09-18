@@ -1,0 +1,125 @@
+<!-- 
+  This source file is part of ogre4j
+      (The JNI bindings for OGRE)
+  For the latest info, see http://www.ogre4j.org/
+  
+  Copyright (c) 2005 netAllied GmbH, Tettnang
+  Also see acknowledgements in Readme.html
+  
+  This program is free software; you can redistribute it and/or modify it under
+  the terms of the GNU Lesser General Public License as published by the Free Software
+  Foundation; either version 2 of the License, or (at your option) any later
+  version.
+  
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+  
+  You should have received a copy of the GNU Lesser General Public License along with
+  this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+  Place - Suite 330, Boston, MA 02111-1307, USA, or go to
+  http://www.gnu.org/copyleft/lesser.txt.
+  
+  Use this file to create the JNI header files via ANT.
+  
+  Version Information:
+ 
+  $Revision: 1.6 $
+  $Date: 2005/08/26 00:43:02 $
+  $Author: earl3982 $
+ -->
+
+<project name="ogre4j" default="jniheaders" basedir=".">
+
+	<target name="jniheaders">
+		<javah destdir="src/native/include/jni" verbose="no" force="no">
+			<class name="org.ogre4j.Animation" />
+			<class name="org.ogre4j.AnimationState" />
+			<class name="org.ogre4j.AnimationTrack" />
+			<class name="org.ogre4j.AxisAlignedBox" />
+			<class name="org.ogre4j.Billboard" />
+			<class name="org.ogre4j.BillboardSet" />
+			<class name="org.ogre4j.Bone" />
+			<class name="org.ogre4j.Camera" />
+			<class name="org.ogre4j.ColourValue" />
+			<class name="org.ogre4j.ControllerValue" />
+			<class name="org.ogre4j.D3D9RenderSystem" />
+			<class name="org.ogre4j.D3D7RenderSystem" />
+			<class name="org.ogre4j.D3D9RenderWindow" />
+			<class name="org.ogre4j.DefaultHardwareBufferManager" />
+			<class name="org.ogre4j.Entity" />
+			<class name="org.ogre4j.EventProcessor" />
+			<class name="org.ogre4j.EventTargetImpl" />
+			<class name="org.ogre4j.FrameListener" />
+			<class name="org.ogre4j.FrameStats" />
+			<class name="org.ogre4j.Frustum" />
+			<class name="org.ogre4j.GLRenderSystem" />
+			<class name="org.ogre4j.HardwareBuffer" />
+			<class name="org.ogre4j.HardwareBufferManager" />
+			<class name="org.ogre4j.HardwareIndexBuffer" />
+			<class name="org.ogre4j.HardwareVertexBuffer" />
+			<class name="org.ogre4j.Helper" />
+			<class name="org.ogre4j.IndexData" />
+			<class name="org.ogre4j.InputEvent" />
+			<class name="org.ogre4j.InputReader" />
+			<class name="org.ogre4j.InstancePointer" />
+			<class name="org.ogre4j.KeyFrame" />
+			<class name="org.ogre4j.Light" />
+			<class name="org.ogre4j.LogManager" />
+			<class name="org.ogre4j.MaterialManager" />
+			<class name="org.ogre4j.Mesh" />
+			<class name="org.ogre4j.MeshManager" />
+			<class name="org.ogre4j.MeshSerializer" />
+			<class name="org.ogre4j.MouseMotionTargetImpl" />
+			<class name="org.ogre4j.MovableObject" />
+			<class name="org.ogre4j.NativeObject" />
+			<class name="org.ogre4j.NativeSingleton" />
+			<class name="org.ogre4j.Node" />
+			<class name="org.ogre4j.Overlay" />
+			<class name="org.ogre4j.OverlayElement" />
+			<class name="org.ogre4j.OverlayManager" />
+			<class name="org.ogre4j.Plane" />
+			<class name="org.ogre4j.PlatformManager" />
+			<class name="org.ogre4j.Ray" />
+			<class name="org.ogre4j.RaySceneQuery" />
+			<class name="org.ogre4j.RenderTarget" />
+			<class name="org.ogre4j.RenderTargetListener" />
+			<class name="org.ogre4j.RenderWindow" />
+			<class name="org.ogre4j.Resource" />
+			<class name="org.ogre4j.ResourceManager" />
+			<class name="org.ogre4j.ResourceGroupManager" />
+			<class name="org.ogre4j.Root" />
+			<class name="org.ogre4j.SceneManager" />
+			<class name="org.ogre4j.SceneNode" />
+			<class name="org.ogre4j.SceneType" />
+			<class name="org.ogre4j.Serializer" />
+			<class name="org.ogre4j.ShadowCaster" />
+			<class name="org.ogre4j.ShadowRenderable" />
+			<class name="org.ogre4j.Skeleton" />
+			<class name="org.ogre4j.SkeletonInstance" />
+			<class name="org.ogre4j.SkeletonManager" />
+			<class name="org.ogre4j.SkeletonSerializer" />
+			<class name="org.ogre4j.StaticGeometry" />
+			<class name="org.ogre4j.StringInterface" />
+			<class name="org.ogre4j.SubEntity" />
+			<class name="org.ogre4j.SubMesh" />
+			<class name="org.ogre4j.Texture" />
+			<class name="org.ogre4j.TextureManager" />
+			<class name="org.ogre4j.VertexBoneAssignment" />
+			<class name="org.ogre4j.VertexBufferBinding" />
+			<class name="org.ogre4j.VertexData" />
+			<class name="org.ogre4j.VertexDeclaration" />
+			<class name="org.ogre4j.VertexElement" />
+			<class name="org.ogre4j.Viewport" />
+			<class name="org.ogre4j.Win32Window" />
+		</javah>
+	</target>
+
+	<target name="javadoc">
+		<mkdir dir="apidocs" />
+		<javadoc sourcepath="src/java" destdir="apidocs">
+			<fileset dir="src/java" />
+		</javadoc>
+	</target>
+
+</project>

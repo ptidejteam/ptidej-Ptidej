@@ -1,0 +1,20 @@
+package java.lang;
+class AssertionStatusDirectives
+{
+java.lang.Object classes;
+
+java.lang.Object classEnabled;
+
+java.lang.Object packages;
+
+java.lang.Object packageEnabled;
+
+java.lang.Object deflt;
+
+void <init>()
+{
+
+}
+
+
+}

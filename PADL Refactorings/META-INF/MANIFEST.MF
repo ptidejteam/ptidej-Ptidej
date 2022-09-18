@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PADL Refactorings
+Bundle-SymbolicName: PADL_Refactorings
+Bundle-Version: 1.0.0
+Export-Package: padl.refactoring.method
+Require-Bundle: CPL,
+ PADL
+Bundle-RequiredExecutionEnvironment: J2SE-1.4

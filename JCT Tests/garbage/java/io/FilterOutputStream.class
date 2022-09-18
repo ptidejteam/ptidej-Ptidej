@@ -1,0 +1,38 @@
+package java.io;
+public class FilterOutputStream
+extends java.io.OutputStream
+{
+protected java.lang.Object out;
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void write(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public void write(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public void write(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.io.IOException
+{
+
+}
+
+public void flush() throws java.io.IOException
+{
+
+}
+
+public void close() throws java.io.IOException
+{
+
+}
+
+
+}

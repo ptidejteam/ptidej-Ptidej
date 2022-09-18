@@ -1,0 +1,90 @@
+package sun.misc;
+public class JarIndex
+{
+private java.lang.Object indexMap;
+
+private java.lang.Object jarMap;
+
+private java.lang.Object jarFiles;
+
+final public static java.lang.Object INDEX_NAME;
+
+final private static java.lang.Object metaInfFilenames;
+
+public void <init>()
+{
+
+}
+
+public void <init>(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public void <init>(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public static sun.misc.JarIndex getJarIndex(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public static sun.misc.JarIndex getJarIndex(java.lang.Object arg0, java.lang.Object arg1) throws java.io.IOException
+{
+
+}
+
+public java.lang.String[] getJarFiles()
+{
+
+}
+
+private void addToList(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public java.util.LinkedList get(java.lang.Object arg0)
+{
+
+}
+
+public void add(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private void addMapping(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private void parseJars(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public void write(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public void read(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public void merge(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

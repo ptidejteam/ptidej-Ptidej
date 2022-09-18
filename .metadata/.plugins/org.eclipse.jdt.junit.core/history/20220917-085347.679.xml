@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestCreatorCPPFileUsingANTLR" project="PADL Creator C++ Tests" tests="27" started="27" failures="0" errors="0" ignored="0">
+  <testsuite name="TestSuite with 27 tests [example: padl.creator.cppfile.antlr.test.all.TestCPPCreator@4cb2c100]" time="0.114">
+    <testsuite name="TestSuite with 27 tests [example: padl.creator.cppfile.antlr.test.all.TestWorld]" time="0.114">
+      <testsuite name="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.054">
+        <testcase name="testClassTeamField" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.046"/>
+        <testcase name="testClassGameUseRelationship" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+        <testcase name="testGlobalField" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.001"/>
+        <testcase name="testClassTeamDestructor" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+        <testcase name="testClass" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.001"/>
+        <testcase name="testStruc" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+        <testcase name="testEnum" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.001"/>
+        <testcase name="testClassTeamMethod" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.001"/>
+        <testcase name="testClassGameField" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+        <testcase name="testClassGameConstructor" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.001"/>
+        <testcase name="testClassGameMethod" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+        <testcase name="testClassTeamConstructor" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.001"/>
+        <testcase name="testClassTeamUseRelationship" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+      </testsuite>
+      <testsuite name="padl.creator.cppfile.antlr.test.all.TestInheritance" time="0.014">
+        <testcase name="testClass" classname="padl.creator.cppfile.antlr.test.all.TestInheritance" time="0.012"/>
+        <testcase name="testGhost" classname="padl.creator.cppfile.antlr.test.all.TestInheritance" time="0.001"/>
+        <testcase name="testInheritedEntities" classname="padl.creator.cppfile.antlr.test.all.TestInheritance" time="0.0"/>
+        <testcase name="testInheritingEntities" classname="padl.creator.cppfile.antlr.test.all.TestInheritance" time="0.001"/>
+      </testsuite>
+      <testsuite name="padl.creator.cppfile.antlr.test.all.TestCpoint" time="0.016">
+        <testcase name="testClassCpointMethod" classname="padl.creator.cppfile.antlr.test.all.TestCpoint" time="0.013"/>
+        <testcase name="testClass" classname="padl.creator.cppfile.antlr.test.all.TestCpoint" time="0.001"/>
+        <testcase name="testClassCpointConstructor" classname="padl.creator.cppfile.antlr.test.all.TestCpoint" time="0.0"/>
+        <testcase name="testClassCpointField" classname="padl.creator.cppfile.antlr.test.all.TestCpoint" time="0.0"/>
+      </testsuite>
+      <testsuite name="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.029">
+        <testcase name="testClassCpointMethod" classname="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.021"/>
+        <testcase name="testClass" classname="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.001"/>
+        <testcase name="testGhost" classname="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.002"/>
+        <testcase name="testClassCpointRelationship" classname="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.0"/>
+        <testcase name="testClassCpointField" classname="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.0"/>
+        <testcase name="testClassCsegmentConstructor" classname="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.001"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

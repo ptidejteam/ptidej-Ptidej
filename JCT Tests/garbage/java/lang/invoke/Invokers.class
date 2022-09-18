@@ -1,0 +1,169 @@
+package java.lang.invoke;
+class Invokers
+{
+private static class Lazy
+{
+final private static java.lang.Object MH_asSpreader;
+
+private void <init>()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}
+
+final private java.lang.Object targetType;
+
+final private java.lang.Object invokers;
+
+final static java.lang.Object INV_EXACT;
+
+final static java.lang.Object INV_GENERIC;
+
+final static java.lang.Object INV_BASIC;
+
+final static java.lang.Object INV_LIMIT;
+
+final private static java.lang.Object MH_LINKER_ARG_APPENDED;
+
+final private static java.lang.Object NF_checkExactType;
+
+final private static java.lang.Object NF_checkGenericType;
+
+final private static java.lang.Object NF_getCallSiteTarget;
+
+final private static java.lang.Object NF_checkCustomized;
+
+void <init>(java.lang.Object arg0)
+{
+
+}
+
+java.lang.invoke.MethodHandle exactInvoker()
+{
+
+}
+
+java.lang.invoke.MethodHandle genericInvoker()
+{
+
+}
+
+java.lang.invoke.MethodHandle basicInvoker()
+{
+
+}
+
+private java.lang.invoke.MethodHandle cachedInvoker(java.lang.Object arg0)
+{
+
+}
+
+private synchronized java.lang.invoke.MethodHandle setCachedInvoker(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.lang.invoke.MethodHandle makeExactOrGeneralInvoker(java.lang.Object arg0)
+{
+
+}
+
+private void maybeCompileToBytecode(java.lang.Object arg0)
+{
+
+}
+
+static java.lang.invoke.MemberName invokeBasicMethod(java.lang.Object arg0)
+{
+
+}
+
+private boolean checkInvoker(java.lang.Object arg0)
+{
+
+}
+
+java.lang.invoke.MethodHandle spreadInvoker(java.lang.Object arg0)
+{
+
+}
+
+private static java.lang.Class impliedRestargType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+static java.lang.invoke.MemberName methodHandleInvokeLinkerMethod(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.lang.invoke.LambdaForm invokeHandleForm(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+static java.lang.invoke.WrongMethodTypeException newWrongMethodTypeException(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static void checkExactType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static java.lang.Object checkGenericType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static java.lang.invoke.MemberName linkToCallSiteMethod(java.lang.Object arg0)
+{
+
+}
+
+static java.lang.invoke.MemberName linkToTargetMethod(java.lang.Object arg0)
+{
+
+}
+
+private static java.lang.invoke.LambdaForm callSiteForm(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static java.lang.Object getCallSiteTarget(java.lang.Object arg0)
+{
+
+}
+
+static void checkCustomized(java.lang.Object arg0)
+{
+
+}
+
+static void maybeCustomize(java.lang.Object arg0)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

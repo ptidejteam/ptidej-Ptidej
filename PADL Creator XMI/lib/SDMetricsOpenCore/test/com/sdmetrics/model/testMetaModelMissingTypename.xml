@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<sdmetricsmetamodel version="2.0">
+
+<modelelement name="sdmetricsbase">
+  <attribute name="context" type="ref">Owner of the element in the UML model.</attribute>
+  <attribute name="id">Unique identifier of the model element.</attribute>
+  <attribute name="name">Name of the element in UML model.</attribute>
+</modelelement>
+
+<!-- next element is missing its type name -->
+<modelelement >
+	<attribute name="visibility">Visibility of the element (public, protected, package, private).</attribute>
+</modelelement>
+
+</sdmetricsmetamodel>

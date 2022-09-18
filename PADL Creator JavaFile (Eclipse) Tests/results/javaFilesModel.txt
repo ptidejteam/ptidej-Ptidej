@@ -1,0 +1,1080 @@
+Summary for :
+javaFilesModelNumber of classes: 10
+Number of ghosts: 53
+Number of interfaces: 1
+Number of association relationships: 0
+Number of aggregation relationships [1,n]: 0
+Number of aggregation relationships [1,1]: 0
+Number of composition relationships: 0
+Number of container-aggregation relationships [1,n]: 0
+Number of container-aggregation relationships [1,1]: 0
+Number of container-composition relationships: 0
+Number of creation relationships: 0
+Number of use relationships: 0
+Number of fields: 32
+Number of methods: 156
+Number of message sends: 0
+Number of pattern models: 0 result from the java generator//id= java.lang.Object
+public ghost Object {
+    //id= <init>()
+    public Object() {
+    }
+
+
+}
+
+//id= java.lang.String
+public ghost String {
+
+}
+
+//id= java.util.List<IParameter>
+public ghost List<IParameter> {
+
+}
+
+//id= padl.creator.javafile.astVisitors.ClassInstanceCreation
+public ghost ClassInstanceCreation {
+
+}
+
+//id= padl.creator.javafile.astVisitors.CompilationUnit
+public ghost CompilationUnit {
+
+}
+
+//id= padl.creator.javafile.astVisitors.ExtendedASTVisitor
+public ghost ExtendedASTVisitor {
+
+}
+
+//id= padl.creator.javafile.astVisitors.ICodeLevelModel
+public ghost ICodeLevelModel {
+
+}
+
+//id= padl.creator.javafile.astVisitors.MethodDeclaration
+public ghost MethodDeclaration {
+
+}
+
+//id= padl.creator.javafile.astVisitors.MethodInvocation
+public ghost MethodInvocation {
+
+}
+
+//id= padl.creator.javafile.astVisitors.PackageDeclaration
+public ghost PackageDeclaration {
+
+}
+
+//id= padl.creator.javafile.astVisitors.SimpleName
+public ghost SimpleName {
+
+}
+
+//id= padl.creator.javafile.astVisitors.SingleVariableDeclaration
+public ghost SingleVariableDeclaration {
+
+}
+
+//id= padl.creator.javafile.astVisitors.TypeDeclaration
+public ghost TypeDeclaration {
+
+}
+
+//id= padl.creator.javafile.astVisitors.VariableDeclarationFragment
+public ghost VariableDeclarationFragment {
+
+}
+
+//id= padl.creator.javafile.astVisitors.VisitorFirstParsing
+public class VisitorFirstParsing extends ExtendedASTVisitor {
+
+    //id= entitiesStack
+    private final java.util.Stack<padl.creator.javafile.astVisitors.IFirstClassEntity> entitiesStack;
+    //id= myCurrentEntity
+    private padl.creator.javafile.astVisitors.IFirstClassEntity myCurrentEntity;
+    //id= myCurrentPackage
+    private padl.creator.javafile.astVisitors.IPackage myCurrentPackage;
+    //id= padlModel
+    private final padl.creator.javafile.astVisitors.ICodeLevelModel padlModel;
+    //id= public <init>(padl.creator.javafile.astVisitors.ICodeLevelModel)
+    public VisitorFirstParsing(padl.creator.javafile.astVisitors.ICodeLevelModel aCodeLevelModel) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.CompilationUnit)
+    public boolean visit(padl.creator.javafile.astVisitors.CompilationUnit node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.MethodDeclaration)
+    public boolean visit(padl.creator.javafile.astVisitors.MethodDeclaration node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.PackageDeclaration)
+    public boolean visit(padl.creator.javafile.astVisitors.PackageDeclaration node) {
+    }
+
+    //id= public padl.creator.javafile.astVisitors.ICodeLevelModel getPadlModel()
+    public padl.creator.javafile.astVisitors.ICodeLevelModel getPadlModel() {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.ClassInstanceCreation)
+    public void endVisit(padl.creator.javafile.astVisitors.ClassInstanceCreation node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.CompilationUnit)
+    public void endVisit(padl.creator.javafile.astVisitors.CompilationUnit node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.MethodDeclaration)
+    public void endVisit(padl.creator.javafile.astVisitors.MethodDeclaration node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.PackageDeclaration)
+    public void endVisit(padl.creator.javafile.astVisitors.PackageDeclaration node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.SimpleName)
+    public void endVisit(padl.creator.javafile.astVisitors.SimpleName node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.TypeDeclaration)
+    public void endVisit(padl.creator.javafile.astVisitors.TypeDeclaration node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.TypeDeclaration)
+    public boolean visit(padl.creator.javafile.astVisitors.TypeDeclaration node) {
+    }
+
+
+}
+//id= padl.creator.javafile.astVisitors.VisitorSecondParsing
+public class VisitorSecondParsing extends ExtendedASTVisitor {
+
+    //id= entitiesStack
+    private final java.util.Stack<padl.creator.javafile.astVisitors.IFirstClassEntity> entitiesStack;
+    //id= fieldsCounter
+    private long fieldsCounter;
+    //id= myCurrentEntity
+    private padl.creator.javafile.astVisitors.IFirstClassEntity myCurrentEntity;
+    //id= myCurrentOperation
+    private padl.creator.javafile.astVisitors.IOperation myCurrentOperation;
+    //id= myCurrentPackage
+    private padl.creator.javafile.astVisitors.IPackage myCurrentPackage;
+    //id= padlModel
+    private final padl.creator.javafile.astVisitors.ICodeLevelModel padlModel;
+    //id= parametersList
+    private java.util.List<padl.creator.javafile.astVisitors.IParameter> parametersList;
+    //id= public <init>(padl.creator.javafile.astVisitors.ICodeLevelModel)
+    public VisitorSecondParsing(padl.creator.javafile.astVisitors.ICodeLevelModel aCodeLevelModel) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.ClassInstanceCreation)
+    public boolean visit(padl.creator.javafile.astVisitors.ClassInstanceCreation node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.CompilationUnit)
+    public boolean visit(padl.creator.javafile.astVisitors.CompilationUnit node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.MethodDeclaration)
+    public boolean visit(padl.creator.javafile.astVisitors.MethodDeclaration node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.PackageDeclaration)
+    public boolean visit(padl.creator.javafile.astVisitors.PackageDeclaration node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.SimpleName)
+    public boolean visit(padl.creator.javafile.astVisitors.SimpleName node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.SingleVariableDeclaration)
+    public boolean visit(padl.creator.javafile.astVisitors.SingleVariableDeclaration node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.TypeDeclaration)
+    public boolean visit(padl.creator.javafile.astVisitors.TypeDeclaration node) {
+    }
+
+    //id= public padl.creator.javafile.astVisitors.ICodeLevelModel getPadlModel()
+    public padl.creator.javafile.astVisitors.ICodeLevelModel getPadlModel() {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.ClassInstanceCreation)
+    public void endVisit(padl.creator.javafile.astVisitors.ClassInstanceCreation node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.CompilationUnit)
+    public void endVisit(padl.creator.javafile.astVisitors.CompilationUnit node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.MethodDeclaration)
+    public void endVisit(padl.creator.javafile.astVisitors.MethodDeclaration node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.PackageDeclaration)
+    public void endVisit(padl.creator.javafile.astVisitors.PackageDeclaration node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.SimpleName)
+    public void endVisit(padl.creator.javafile.astVisitors.SimpleName node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.TypeDeclaration)
+    public void endVisit(padl.creator.javafile.astVisitors.TypeDeclaration node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.VariableDeclarationFragment)
+    public boolean visit(padl.creator.javafile.astVisitors.VariableDeclarationFragment node) {
+    }
+
+
+}
+//id= padl.creator.javafile.astVisitors.VisitorThirdParsing
+public class VisitorThirdParsing extends ExtendedASTVisitor {
+
+    //id= constructorsCounter
+    private long constructorsCounter;
+    //id= creationsCounter
+    private final long creationsCounter;
+    //id= entitiesStack
+    private final java.util.Stack<padl.creator.javafile.astVisitors.IFirstClassEntity> entitiesStack;
+    //id= fieldsCounter
+    private final long fieldsCounter;
+    //id= methodsCounter
+    private long methodsCounter;
+    //id= myCurrentEntity
+    private padl.creator.javafile.astVisitors.IFirstClassEntity myCurrentEntity;
+    //id= myCurrentOperation
+    private padl.creator.javafile.astVisitors.IOperation myCurrentOperation;
+    //id= myCurrentPackage
+    private padl.creator.javafile.astVisitors.IPackage myCurrentPackage;
+    //id= padlModel
+    private final padl.creator.javafile.astVisitors.ICodeLevelModel padlModel;
+    //id= public <init>(padl.creator.javafile.astVisitors.ICodeLevelModel)
+    public VisitorThirdParsing(padl.creator.javafile.astVisitors.ICodeLevelModel aPadlModel) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.CompilationUnit)
+    public boolean visit(padl.creator.javafile.astVisitors.CompilationUnit node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.MethodDeclaration)
+    public boolean visit(padl.creator.javafile.astVisitors.MethodDeclaration node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.MethodInvocation)
+    public boolean visit(padl.creator.javafile.astVisitors.MethodInvocation node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.PackageDeclaration)
+    public boolean visit(padl.creator.javafile.astVisitors.PackageDeclaration node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.SimpleName)
+    public boolean visit(padl.creator.javafile.astVisitors.SimpleName node) {
+    }
+
+    //id= public padl.creator.javafile.astVisitors.ICodeLevelModel getPadlModel()
+    public padl.creator.javafile.astVisitors.ICodeLevelModel getPadlModel() {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.CompilationUnit)
+    public void endVisit(padl.creator.javafile.astVisitors.CompilationUnit node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.MethodDeclaration)
+    public void endVisit(padl.creator.javafile.astVisitors.MethodDeclaration node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.PackageDeclaration)
+    public void endVisit(padl.creator.javafile.astVisitors.PackageDeclaration node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.SimpleName)
+    public void endVisit(padl.creator.javafile.astVisitors.SimpleName node) {
+    }
+
+    //id= public void endVisit(padl.creator.javafile.astVisitors.TypeDeclaration)
+    public void endVisit(padl.creator.javafile.astVisitors.TypeDeclaration node) {
+    }
+
+    //id= public boolean visit(padl.creator.javafile.astVisitors.TypeDeclaration)
+    public boolean visit(padl.creator.javafile.astVisitors.TypeDeclaration node) {
+    }
+
+
+}
+//id= padl.creator.javafile.util.Expression
+public ghost Expression {
+
+}
+
+//id= padl.creator.javafile.util.IAbstractLevelModel
+public ghost IAbstractLevelModel {
+
+}
+
+//id= padl.creator.javafile.util.ICodeLevelModel
+public ghost ICodeLevelModel {
+
+}
+
+//id= padl.creator.javafile.util.IFirstClassEntity
+public ghost IFirstClassEntity {
+
+}
+
+//id= padl.creator.javafile.util.IMethod
+public ghost IMethod {
+
+}
+
+//id= padl.creator.javafile.util.IMethodBinding
+public ghost IMethodBinding {
+
+}
+
+//id= padl.creator.javafile.util.IOperation
+public ghost IOperation {
+
+}
+
+//id= padl.creator.javafile.util.IPackage
+public ghost IPackage {
+
+}
+
+//id= padl.creator.javafile.util.ITypeBinding
+public ghost ITypeBinding {
+
+}
+
+//id= padl.creator.javafile.util.MethodInvocationUtils
+public class MethodInvocationUtils extends Object {
+
+    //id= ghostsMethodsCounter
+    private static long ghostsMethodsCounter;
+    //id= private static boolean isSameParameters(padl.creator.javafile.util.IMethodBinding, padl.creator.javafile.util.IMethod)
+    private static boolean isSameParameters(padl.creator.javafile.util.IMethodBinding aMethodBinding, padl.creator.javafile.util.IMethod aMethod) {
+    }
+
+    //id= private static padl.creator.javafile.util.IBinding getExpressionTypeBinding(padl.creator.javafile.util.Expression)
+    private static padl.creator.javafile.util.IBinding getExpressionTypeBinding(padl.creator.javafile.util.Expression anExpression) {
+    }
+
+    //id= public static int getMethodInvocationCardinality(int, padl.creator.javafile.util.Expression)
+    public static int getMethodInvocationCardinality(int aType, padl.creator.javafile.util.Expression anExpression) {
+    }
+
+    //id= public static int getMethodInvocationType(padl.creator.javafile.util.IOperation, int, padl.creator.javafile.util.Expression)
+    public static int getMethodInvocationType(padl.creator.javafile.util.IOperation anOperation, int methodCalledModifiers, padl.creator.javafile.util.Expression anExpression) {
+    }
+
+    //id= public static padl.creator.javafile.util.IField getFieldInvocation(padl.creator.javafile.util.ICodeLevelModel, padl.creator.javafile.util.Expression, padl.creator.javafile.util.IFirstClassEntity)
+    public static padl.creator.javafile.util.IField getFieldInvocation(padl.creator.javafile.util.ICodeLevelModel aPadlModel, padl.creator.javafile.util.Expression anExpression, padl.creator.javafile.util.IFirstClassEntity anEntity) {
+    }
+
+    //id= public static padl.creator.javafile.util.IFirstClassEntity getFieldDeclaringEntity(padl.creator.javafile.util.ICodeLevelModel, padl.creator.javafile.util.Expression, int, java.lang.String)
+    public static padl.creator.javafile.util.IFirstClassEntity getFieldDeclaringEntity(padl.creator.javafile.util.ICodeLevelModel aPadlModel, padl.creator.javafile.util.Expression anExpression, int aInvokedMethodType, java.lang.String aCurrentPackageName) {
+    }
+
+    //id= public static padl.creator.javafile.util.IMethod getCalledMethod(padl.creator.javafile.util.IFirstClassEntity, padl.creator.javafile.util.IMethodBinding, padl.creator.javafile.util.ICodeLevelModel, java.lang.String)
+    public static padl.creator.javafile.util.IMethod getCalledMethod(padl.creator.javafile.util.IFirstClassEntity anEntity, padl.creator.javafile.util.IMethodBinding aMethodBinding, padl.creator.javafile.util.ICodeLevelModel aPadlModel, java.lang.String aCurrentPackageName) {
+    }
+
+    //id= public static void initializeGhostsMethodsCounter()
+    public static void initializeGhostsMethodsCounter() {
+    }
+
+    //id= static boolean isByField(int)
+    static boolean isByField(int aInvokedMethodType) {
+    }
+
+    //id= static boolean isByFieldOrParam(int)
+    static boolean isByFieldOrParam(int aInvokedMethodType) {
+    }
+
+    //id= static int getWayOfMethodCalled(int, padl.creator.javafile.util.Expression)
+    static int getWayOfMethodCalled(int methodCalledModifiers, padl.creator.javafile.util.Expression anExpression) {
+    }
+
+    //id= MethodInvocationUtils
+    public MethodInvocationUtils() {
+    }
+
+
+}
+//id= padl.creator.javafile.util.PackageCreator
+public interface PackageCreator {
+    //id=  padl.creator.javafile.util.IPackage create(char[])
+     padl.creator.javafile.util.IPackage create(char aName) {
+    }
+
+
+}
+
+//id= padl.creator.javafile.util.PadlParserUtil
+public class PadlParserUtil extends Object {
+
+    //id= DEFAULT_PACKAGE_NAME
+    private static final char DEFAULT_PACKAGE_NAME;
+    //id= DEFAULT_PACKAGE_NAME_STRING
+    private static final java.lang.String DEFAULT_PACKAGE_NAME_STRING;
+    //id= private static padl.creator.javafile.util.IFirstClassEntity getOrCreateExistingEntity(boolean, padl.creator.javafile.util.ITypeBinding, padl.creator.javafile.util.ICodeLevelModel, java.lang.String)
+    private static padl.creator.javafile.util.IFirstClassEntity getOrCreateExistingEntity(boolean isDealingWithExtend, padl.creator.javafile.util.ITypeBinding anEntityTypeBinding, padl.creator.javafile.util.ICodeLevelModel aPadlModel, java.lang.String aCurrentPackageName) {
+    }
+
+    //id= private static padl.creator.javafile.util.IFirstClassEntity getOrCreateGhostEntity(boolean, padl.creator.javafile.util.ITypeBinding, padl.creator.javafile.util.ICodeLevelModel, java.lang.String)
+    private static padl.creator.javafile.util.IFirstClassEntity getOrCreateGhostEntity(boolean isDealingWithExtend, padl.creator.javafile.util.ITypeBinding anEntityTypeBinding, padl.creator.javafile.util.ICodeLevelModel aPadlModel, java.lang.String aCurrentPackageName) {
+    }
+
+    //id= private static padl.creator.javafile.util.IPackage createPackage(char[], padl.creator.javafile.util.ICodeLevelModel)
+    private static padl.creator.javafile.util.IPackage createPackage(char aPackageName, padl.creator.javafile.util.ICodeLevelModel aCodeLevelModel) {
+    }
+
+    //id= private static padl.creator.javafile.util.IPackage createPackage(char[], padl.creator.javafile.util.IPackage, padl.creator.javafile.util.ICodeLevelModel)
+    private static padl.creator.javafile.util.IPackage createPackage(char aPackageName, padl.creator.javafile.util.IPackage aPackage, padl.creator.javafile.util.ICodeLevelModel aCodeLevelModel) {
+    }
+
+    //id= public static char computeSignature(java.lang.String, java.util.List<IParameter>, java.lang.String, int)
+    public static char computeSignature(java.lang.String methodName, java.util.List<IParameter> parametersList, java.lang.String returnType, int modifier) {
+    }
+
+    //id= public static char computeSimpleName(char[])
+    public static char computeSimpleName(char aFullyQualifiedName) {
+    }
+
+    //id= public static char extractPackageName(char[])
+    public static char extractPackageName(char aJVMClassName) {
+    }
+
+    //id= public static int getDim(padl.creator.javafile.util.ITypeBinding)
+    public static int getDim(padl.creator.javafile.util.ITypeBinding aTypeBinding) {
+    }
+
+    //id= public static java.lang.String getTypeName(padl.creator.javafile.util.ITypeBinding)
+    public static java.lang.String getTypeName(padl.creator.javafile.util.ITypeBinding aTypeBinding) {
+    }
+
+    //id= public static java.lang.String renameWith$(java.lang.String, java.lang.String)
+    public static java.lang.String renameWith$(java.lang.String entityQualifiedName, java.lang.String packageName) {
+    }
+
+    //id= public static padl.creator.javafile.util.IEntity getOrCreateEntity(boolean, padl.creator.javafile.util.ITypeBinding, padl.creator.javafile.util.ICodeLevelModel, java.lang.String)
+    public static padl.creator.javafile.util.IEntity getOrCreateEntity(boolean isDealingWithExtend, padl.creator.javafile.util.ITypeBinding anEntityTypeBinding, padl.creator.javafile.util.ICodeLevelModel aPadlModel, java.lang.String aCurrentPackageName) {
+    }
+
+    //id= public static padl.creator.javafile.util.IFirstClassEntity createGhost(padl.creator.javafile.util.IAbstractLevelModel, char[], char[])
+    public static padl.creator.javafile.util.IFirstClassEntity createGhost(padl.creator.javafile.util.IAbstractLevelModel anAbstractLevelModel, char aFullyQualifiedName, char aName) {
+    }
+
+    //id= public static padl.creator.javafile.util.IPackage getOrCreatePackage(char[], padl.creator.javafile.util.ICodeLevelModel)
+    public static padl.creator.javafile.util.IPackage getOrCreatePackage(char aPackageName, padl.creator.javafile.util.ICodeLevelModel aCodeLevelModel) {
+    }
+
+    //id= public static padl.creator.javafile.util.IPackage searchForPackage(padl.creator.javafile.util.IAbstractLevelModel, char[], padl.creator.javafile.util.PackageCreator)
+    public static padl.creator.javafile.util.IPackage searchForPackage(padl.creator.javafile.util.IAbstractLevelModel anAbstractLevelModel, char anEntityName, padl.creator.javafile.util.PackageCreator aPackageCreator) {
+    }
+
+    //id= PadlParserUtil
+    public PadlParserUtil() {
+    }
+
+
+}
+//id= padl.creator.javafile.visitor.IAbstractLevelModel
+public ghost IAbstractLevelModel {
+
+}
+
+//id= padl.creator.javafile.visitor.IAggregation
+public ghost IAggregation {
+
+}
+
+//id= padl.creator.javafile.visitor.IAssociation
+public ghost IAssociation {
+
+}
+
+//id= padl.creator.javafile.visitor.IClass
+public ghost IClass {
+
+}
+
+//id= padl.creator.javafile.visitor.IComposition
+public ghost IComposition {
+
+}
+
+//id= padl.creator.javafile.visitor.IConstituent
+public ghost IConstituent {
+
+}
+
+//id= padl.creator.javafile.visitor.IConstructor
+public ghost IConstructor {
+
+}
+
+//id= padl.creator.javafile.visitor.IContainerAggregation
+public ghost IContainerAggregation {
+
+}
+
+//id= padl.creator.javafile.visitor.IContainerComposition
+public ghost IContainerComposition {
+
+}
+
+//id= padl.creator.javafile.visitor.ICreation
+public ghost ICreation {
+
+}
+
+//id= padl.creator.javafile.visitor.IDelegatingMethod
+public ghost IDelegatingMethod {
+
+}
+
+//id= padl.creator.javafile.visitor.IDesignMotifModel
+public ghost IDesignMotifModel {
+
+}
+
+//id= padl.creator.javafile.visitor.IField
+public ghost IField {
+
+}
+
+//id= padl.creator.javafile.visitor.IFirstClassEntity
+public ghost IFirstClassEntity {
+
+}
+
+//id= padl.creator.javafile.visitor.IGetter
+public ghost IGetter {
+
+}
+
+//id= padl.creator.javafile.visitor.IGhost
+public ghost IGhost {
+
+}
+
+//id= padl.creator.javafile.visitor.IInterface
+public ghost IInterface {
+
+}
+
+//id= padl.creator.javafile.visitor.IMemberClass
+public ghost IMemberClass {
+
+}
+
+//id= padl.creator.javafile.visitor.IMemberGhost
+public ghost IMemberGhost {
+
+}
+
+//id= padl.creator.javafile.visitor.IMemberInterface
+public ghost IMemberInterface {
+
+}
+
+//id= padl.creator.javafile.visitor.IMethod
+public ghost IMethod {
+
+}
+
+//id= padl.creator.javafile.visitor.IMethodInvocation
+public ghost IMethodInvocation {
+
+}
+
+//id= padl.creator.javafile.visitor.IPackage
+public ghost IPackage {
+
+}
+
+//id= padl.creator.javafile.visitor.IParameter
+public ghost IParameter {
+
+}
+
+//id= padl.creator.javafile.visitor.ISetter
+public ghost ISetter {
+
+}
+
+//id= padl.creator.javafile.visitor.IUseRelationship
+public ghost IUseRelationship {
+
+}
+
+//id= padl.creator.javafile.visitor.IWalker
+public ghost IWalker {
+
+}
+
+//id= padl.creator.javafile.visitor.PadlGhostPrinter
+public class PadlGhostPrinter extends Object implements IWalker {
+
+    //id= public java.lang.Object getResult()
+    public java.lang.Object getResult() {
+    }
+
+    //id= public java.lang.String getName()
+    public java.lang.String getName() {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IAbstractLevelModel)
+    public void close(padl.creator.javafile.visitor.IAbstractLevelModel anAbstractLevelModel) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IClass)
+    public void close(padl.creator.javafile.visitor.IClass aClass) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IConstructor)
+    public void close(padl.creator.javafile.visitor.IConstructor aConstructor) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IDelegatingMethod)
+    public void close(padl.creator.javafile.visitor.IDelegatingMethod aDelegatingMethod) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IDesignMotifModel)
+    public void close(padl.creator.javafile.visitor.IDesignMotifModel aPatternModel) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IGetter)
+    public void close(padl.creator.javafile.visitor.IGetter aGetter) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IGhost)
+    public void close(padl.creator.javafile.visitor.IGhost aGhost) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IInterface)
+    public void close(padl.creator.javafile.visitor.IInterface anInterface) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IMemberClass)
+    public void close(padl.creator.javafile.visitor.IMemberClass aMemberClass) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IMemberGhost)
+    public void close(padl.creator.javafile.visitor.IMemberGhost aMemberGhost) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IMemberInterface)
+    public void close(padl.creator.javafile.visitor.IMemberInterface aMemberInterface) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IMethod)
+    public void close(padl.creator.javafile.visitor.IMethod aMethod) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IPackage)
+    public void close(padl.creator.javafile.visitor.IPackage aPackage) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.ISetter)
+    public void close(padl.creator.javafile.visitor.ISetter aSetter) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IAbstractLevelModel)
+    public void open(padl.creator.javafile.visitor.IAbstractLevelModel anAbstractLevelModel) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IClass)
+    public void open(padl.creator.javafile.visitor.IClass aClass) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IConstructor)
+    public void open(padl.creator.javafile.visitor.IConstructor aConstructor) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IDelegatingMethod)
+    public void open(padl.creator.javafile.visitor.IDelegatingMethod aDelegatingMethod) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IDesignMotifModel)
+    public void open(padl.creator.javafile.visitor.IDesignMotifModel aPatternModel) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IGetter)
+    public void open(padl.creator.javafile.visitor.IGetter aGetter) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IGhost)
+    public void open(padl.creator.javafile.visitor.IGhost aGhost) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IInterface)
+    public void open(padl.creator.javafile.visitor.IInterface anInterface) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IMemberClass)
+    public void open(padl.creator.javafile.visitor.IMemberClass aMemberClass) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IMemberGhost)
+    public void open(padl.creator.javafile.visitor.IMemberGhost aMemberGhost) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IMemberInterface)
+    public void open(padl.creator.javafile.visitor.IMemberInterface aMemberInterface) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IMethod)
+    public void open(padl.creator.javafile.visitor.IMethod aMethod) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IPackage)
+    public void open(padl.creator.javafile.visitor.IPackage aPackage) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.ISetter)
+    public void open(padl.creator.javafile.visitor.ISetter aSetter) {
+    }
+
+    //id= public void reset()
+    public void reset() {
+    }
+
+    //id= public void unknownConstituentHandler(java.lang.String, padl.creator.javafile.visitor.IConstituent)
+    public void unknownConstituentHandler(java.lang.String aCalledMethodName, padl.creator.javafile.visitor.IConstituent aConstituent) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IAggregation)
+    public void visit(padl.creator.javafile.visitor.IAggregation anAggregation) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IAssociation)
+    public void visit(padl.creator.javafile.visitor.IAssociation anAssociation) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IComposition)
+    public void visit(padl.creator.javafile.visitor.IComposition aComposition) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IContainerAggregation)
+    public void visit(padl.creator.javafile.visitor.IContainerAggregation aContainerAggregation) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IContainerComposition)
+    public void visit(padl.creator.javafile.visitor.IContainerComposition aContainerComposition) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.ICreation)
+    public void visit(padl.creator.javafile.visitor.ICreation aCreation) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IField)
+    public void visit(padl.creator.javafile.visitor.IField aField) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IMethodInvocation)
+    public void visit(padl.creator.javafile.visitor.IMethodInvocation aMethodInvocation) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IParameter)
+    public void visit(padl.creator.javafile.visitor.IParameter aParameter) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IUseRelationship)
+    public void visit(padl.creator.javafile.visitor.IUseRelationship aUse) {
+    }
+
+    //id= PadlGhostPrinter
+    public PadlGhostPrinter() {
+    }
+
+
+}
+//id= padl.creator.javafile.visitor.PadlPrinterVisitor
+public class PadlPrinterVisitor extends Object implements IWalker {
+
+    //id=  void printTopEntityClose(padl.creator.javafile.visitor.IFirstClassEntity)
+     void printTopEntityClose(padl.creator.javafile.visitor.IFirstClassEntity entity) {
+    }
+
+    //id=  void printTopEntityOpen(padl.creator.javafile.visitor.IFirstClassEntity)
+     void printTopEntityOpen(padl.creator.javafile.visitor.IFirstClassEntity entity) {
+    }
+
+    //id= currentEntity
+     java.lang.String currentEntity;
+    //id= currentPackage
+     java.lang.String currentPackage;
+    //id= inFile
+     boolean inFile;
+    //id= public <init>()
+    public PadlPrinterVisitor() {
+    }
+
+    //id= public <init>(boolean)
+    public PadlPrinterVisitor(boolean _inFile) {
+    }
+
+    //id= public java.lang.Object getResult()
+    public java.lang.Object getResult() {
+    }
+
+    //id= public java.lang.String getName()
+    public java.lang.String getName() {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IAbstractLevelModel)
+    public void close(padl.creator.javafile.visitor.IAbstractLevelModel anAbstractLevelModel) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IClass)
+    public void close(padl.creator.javafile.visitor.IClass aClass) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IConstructor)
+    public void close(padl.creator.javafile.visitor.IConstructor aConstructor) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IDelegatingMethod)
+    public void close(padl.creator.javafile.visitor.IDelegatingMethod aDelegatingMethod) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IDesignMotifModel)
+    public void close(padl.creator.javafile.visitor.IDesignMotifModel aPatternModel) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IGetter)
+    public void close(padl.creator.javafile.visitor.IGetter aGetter) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IGhost)
+    public void close(padl.creator.javafile.visitor.IGhost aGhost) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IInterface)
+    public void close(padl.creator.javafile.visitor.IInterface anInterface) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IMemberClass)
+    public void close(padl.creator.javafile.visitor.IMemberClass aMemberClass) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IMemberGhost)
+    public void close(padl.creator.javafile.visitor.IMemberGhost aMemberGhost) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IMemberInterface)
+    public void close(padl.creator.javafile.visitor.IMemberInterface aMemberInterface) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IMethod)
+    public void close(padl.creator.javafile.visitor.IMethod aMethod) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.IPackage)
+    public void close(padl.creator.javafile.visitor.IPackage aPackage) {
+    }
+
+    //id= public void close(padl.creator.javafile.visitor.ISetter)
+    public void close(padl.creator.javafile.visitor.ISetter aSetter) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IAbstractLevelModel)
+    public void open(padl.creator.javafile.visitor.IAbstractLevelModel anAbstractLevelModel) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IClass)
+    public void open(padl.creator.javafile.visitor.IClass aClass) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IConstructor)
+    public void open(padl.creator.javafile.visitor.IConstructor aConstructor) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IDelegatingMethod)
+    public void open(padl.creator.javafile.visitor.IDelegatingMethod aDelegatingMethod) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IDesignMotifModel)
+    public void open(padl.creator.javafile.visitor.IDesignMotifModel aPatternModel) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IGetter)
+    public void open(padl.creator.javafile.visitor.IGetter aGetter) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IGhost)
+    public void open(padl.creator.javafile.visitor.IGhost aGhost) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IInterface)
+    public void open(padl.creator.javafile.visitor.IInterface anInterface) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IMemberClass)
+    public void open(padl.creator.javafile.visitor.IMemberClass aMemberClass) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IMemberGhost)
+    public void open(padl.creator.javafile.visitor.IMemberGhost aMemberGhost) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IMemberInterface)
+    public void open(padl.creator.javafile.visitor.IMemberInterface aMemberInterface) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IMethod)
+    public void open(padl.creator.javafile.visitor.IMethod aMethod) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.IPackage)
+    public void open(padl.creator.javafile.visitor.IPackage aPackage) {
+    }
+
+    //id= public void open(padl.creator.javafile.visitor.ISetter)
+    public void open(padl.creator.javafile.visitor.ISetter aSetter) {
+    }
+
+    //id= public void reset()
+    public void reset() {
+    }
+
+    //id= public void unknownConstituentHandler(java.lang.String, padl.creator.javafile.visitor.IConstituent)
+    public void unknownConstituentHandler(java.lang.String aCalledMethodName, padl.creator.javafile.visitor.IConstituent aConstituent) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IAggregation)
+    public void visit(padl.creator.javafile.visitor.IAggregation anAggregation) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IAssociation)
+    public void visit(padl.creator.javafile.visitor.IAssociation anAssociation) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IComposition)
+    public void visit(padl.creator.javafile.visitor.IComposition aComposition) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IContainerAggregation)
+    public void visit(padl.creator.javafile.visitor.IContainerAggregation aContainerAggregation) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IContainerComposition)
+    public void visit(padl.creator.javafile.visitor.IContainerComposition aContainerComposition) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.ICreation)
+    public void visit(padl.creator.javafile.visitor.ICreation aCreation) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IField)
+    public void visit(padl.creator.javafile.visitor.IField aField) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IMethodInvocation)
+    public void visit(padl.creator.javafile.visitor.IMethodInvocation aMethodInvocation) {
+    }
+
+    //id= public void visit(padl.creator.javafile.visitor.IParameter)
+    public void visit(padl.creator.javafile.visitor.IParameter aParameter) {
+    }
+
+    //id= resultRep
+     java.lang.String resultRep;
+    //id= writer
+     java.io.PrintStream writer;
+    //id= public void visit(padl.creator.javafile.visitor.IUseRelationship)
+    public void visit(padl.creator.javafile.visitor.IUseRelationship aUse) {
+    }
+
+
+}
+//id= padl.creator.CompleteJavaFileCreator
+public class CompleteJavaFileCreator extends Object implements ICodeLevelModelCreator {
+
+    //id= codeLevelModel
+    private padl.creator.ICodeLevelModel codeLevelModel;
+    //id= javaProject
+    private padl.creator.SourceInputsHolder javaProject;
+    //id= public <init>(java.lang.String, java.lang.String)
+    public CompleteJavaFileCreator(java.lang.String aSourcePathEntry, java.lang.String aClasspathEntry) {
+    }
+
+    //id= public <init>(java.lang.String, java.lang.String, java.lang.String[])
+    public CompleteJavaFileCreator(java.lang.String aSourcePathEntry, java.lang.String aClasspathEntry, java.lang.String aPathFilesList) {
+    }
+
+    //id= public void create(padl.creator.ICodeLevelModel)
+    public void create(padl.creator.ICodeLevelModel aCodeLevelModel) {
+    }
+
+    //id= private void createModelFormSource(padl.creator.ICodeLevelModel, padl.creator.SourceInputsHolder)
+    private void createModelFormSource(padl.creator.ICodeLevelModel aCodeLevelModel, padl.creator.SourceInputsHolder javaProject) {
+    }
+
+
+}
+//id= padl.creator.ICodeLevelModel
+public ghost ICodeLevelModel {
+
+}
+
+//id= padl.creator.ICodeLevelModelCreator
+public ghost ICodeLevelModelCreator {
+
+}
+
+//id= padl.creator.LightJavaFileCreator
+public class LightJavaFileCreator extends Object implements ICodeLevelModelCreator {
+
+    //id= codeLevelModel
+    private padl.creator.ICodeLevelModel codeLevelModel;
+    //id= javaProject
+    private padl.creator.SourceInputsHolder javaProject;
+    //id= private void createModelFormSource(padl.creator.ICodeLevelModel, padl.creator.SourceInputsHolder)
+    private void createModelFormSource(padl.creator.ICodeLevelModel aCodeLevelModel, padl.creator.SourceInputsHolder javaProject) {
+    }
+
+    //id= public <init>(java.lang.String, java.lang.String)
+    public LightJavaFileCreator(java.lang.String aSourcePathEntry, java.lang.String aClasspathEntry) {
+    }
+
+    //id= public <init>(java.lang.String, java.lang.String, java.lang.String[])
+    public LightJavaFileCreator(java.lang.String aSourcePathEntry, java.lang.String aClasspathEntry, java.lang.String aPathFilesList) {
+    }
+
+    //id= public void create(padl.creator.ICodeLevelModel)
+    public void create(padl.creator.ICodeLevelModel aCodeLevelModel) {
+    }
+
+    //id= public padl.creator.ICodeLevelModel getCodeLevelModel()
+    public padl.creator.ICodeLevelModel getCodeLevelModel() {
+    }
+
+
+}
+//id= padl.creator.Main
+public class Main extends Object {
+
+    //id= public static void main(java.lang.String[])
+    public static void main(java.lang.String args) {
+    }
+
+    //id= Main
+    public Main() {
+    }
+
+
+}
+//id= padl.creator.SourceInputsHolder
+public ghost SourceInputsHolder {
+
+}
+

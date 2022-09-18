@@ -1,0 +1,30 @@
+package java.security;
+abstract public interface Principal
+{
+abstract public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.lang.String toString()
+{
+
+}
+
+abstract public int hashCode()
+{
+
+}
+
+abstract public java.lang.String getName()
+{
+
+}
+
+public boolean implies(java.lang.Object arg0)
+{
+
+}
+
+
+}

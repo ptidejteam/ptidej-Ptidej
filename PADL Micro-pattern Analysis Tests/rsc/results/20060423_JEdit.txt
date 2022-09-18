@@ -1,0 +1,43 @@
+
+###### Results #####
+2006/04/23 Heure  03:13:20
+Designator : 0.0 %
+Taxonormy : 3.2697547683923704 %
+Joiner : 0.0 %
+Pool : 1.9073569482288828 %
+
+Sink : 7.356948228882834 %
+Record : 2.7247956403269753 %
+DataManager : 3.542234332425068 %
+
+Function Pointer : 1.9073569482288828 %
+Function Object : 2.4523160762942777 %
+Cobol Like : 0.2724795640326976 %
+
+State Less : 14.713896457765667 %
+Common State :1 9.536784741144414 %
+Canopy : 11.716621253405995 %
+Immutable : 10.08174386920981 %
+
+Box : 2.7247956403269753 %
+Compound Box : 0.5449591280653951 %
+
+Implementor : 6.267029972752043 %
+Overrider : 7.084468664850136 %
+Extender : 7.084468664850136 %
+
+Outline : 1.0899182561307903 %
+Trait : 0.5449591280653951 %
+State Machine : 1.6348773841961852 %
+PureType : 5.449591280653951 %
+AugmentedType : 0.0 %
+PseudoClass : 0.5449591280653951 %
+
+Sampler : 2.997275204359673 %
+Restricted Creation : 0.5449591280653951 %
+
+Combined total : 105.99455040871936 %
+Coverage : 63.0 %
+
+
+Nb Class : 367.0

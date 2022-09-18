@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ptidej UI AspectJ
+Bundle-SymbolicName: Ptidej_UI_AspectJ
+Bundle-Version: 1.0.0
+Export-Package: ptidej.ui.kernel,
+ ptidej.ui.kernel.builder
+Require-Bundle: CPL,
+ PADL,
+ PADL_Creator_AspectJ,
+ Ptidej_UI
+Automatic-Module-Name: Ptidej.UI.AspectJ

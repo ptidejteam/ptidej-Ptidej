@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<sdmetricsmetamodel version="0.9alpha">
+
+<modelelement name="sdmetricsbase">
+  <attribute name="context" type="ref" />
+</modelelement>
+
+</sdmetricsmetamodel>

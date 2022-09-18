@@ -1,0 +1,68 @@
+package java.util;
+public class DoubleSummaryStatistics
+implements java.util.function.DoubleConsumer
+{
+private java.lang.Object count;
+
+private java.lang.Object sum;
+
+private java.lang.Object sumCompensation;
+
+private java.lang.Object simpleSum;
+
+private java.lang.Object min;
+
+private java.lang.Object max;
+
+public void <init>()
+{
+
+}
+
+public void accept(java.lang.Object arg0)
+{
+
+}
+
+public void combine(java.lang.Object arg0)
+{
+
+}
+
+private void sumWithCompensation(java.lang.Object arg0)
+{
+
+}
+
+final public long getCount()
+{
+
+}
+
+final public double getSum()
+{
+
+}
+
+final public double getMin()
+{
+
+}
+
+final public double getMax()
+{
+
+}
+
+final public double getAverage()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+
+}

@@ -1,0 +1,1 @@
+java -classpath jtb122.jar EDU.purdue.jtb.JTB -np util.parser.java.v15.nodes -vp util.parser.java.v15.visitors java1.5.jj

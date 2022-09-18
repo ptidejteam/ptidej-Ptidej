@@ -1,0 +1,1308 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE tree SYSTEM "treeml.dtd">
+<tree>
+ <metadata>
+  <dc:title>Test TreeML document</dc:title>
+  <dc:creator>Jean-Daniel Fekete</dc:creator>
+  <dc:subject>Small directory tree</dc:subject>
+  <dc:publisher>INRIA, France</dc:publisher>
+  <dc:contributor>Catherine Plaisant, University of
+  Maryland</dc:contributor>
+  <dc:date>Dec. 2002</dc:date>
+  <dc:rights>Free of use, not copyrighted.</dc:rights>
+ </metadata>
+ <declarations>
+  <attributeDecl name="name" type="String"/>
+  <attributeDecl name="length" type="Long"/>
+  <attributeDecl name="lastModified" type="Long"/>
+  <attributeDecl name="degree" type="Integer"/>
+ </declarations>
+ <branch>
+   <attribute name="degree" value="211"/>
+  <branch>
+    <attribute name="name" value="."/>
+    <attribute name="lastModified" value="1035843407776"/>
+    <attribute name="degree" value="211"/>
+   <leaf>
+    <attribute name="name" value=".classpath"/>
+    <attribute name="length" value="710"/>
+    <attribute name="lastModified" value="1035285605831"/>
+    <attribute name="degree" value="1"/></leaf>
+   <leaf>
+    <attribute name="name" value=".cvsignore"/>
+    <attribute name="length" value="15"/>
+    <attribute name="lastModified" value="1034152704550"/>
+    <attribute name="degree" value="1"/></leaf>
+   <leaf>
+    <attribute name="name" value=".project"/>
+    <attribute name="length" value="383"/>
+    <attribute name="lastModified" value="1025301280000"/>
+    <attribute name="degree" value="1"/></leaf>
+   <leaf>
+    <attribute name="name" value="build"/>
+    <attribute name="length" value="0"/>
+    <attribute name="lastModified" value="1033473904053"/>
+    <attribute name="degree" value="1"/></leaf>
+   <leaf>
+    <attribute name="name" value="build.xml"/>
+    <attribute name="length" value="1368"/>
+    <attribute name="lastModified" value="1035010151769"/>
+    <attribute name="degree" value="1"/></leaf>
+   <leaf>
+    <attribute name="name" value="build.xml.~1.2.~"/>
+    <attribute name="length" value="1364"/>
+    <attribute name="lastModified" value="1034603972939"/>
+    <attribute name="degree" value="1"/></leaf>
+   <branch>
+     <attribute name="name" value="examples"/>
+     <attribute name="lastModified" value="1035561687333"/>
+     <attribute name="degree" value="3"/>
+    <branch>
+      <attribute name="name" value="CVS"/>
+      <attribute name="lastModified" value="1035561689246"/>
+      <attribute name="degree" value="3"/>
+     <leaf>
+      <attribute name="name" value="Entries"/>
+      <attribute name="length" value="61"/>
+      <attribute name="lastModified" value="1035616362868"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Repository"/>
+      <attribute name="length" value="17"/>
+      <attribute name="lastModified" value="1035561687373"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Root"/>
+      <attribute name="length" value="53"/>
+      <attribute name="lastModified" value="1035561687353"/>
+      <attribute name="degree" value="1"/></leaf>
+    </branch>
+   </branch>
+   <branch>
+     <attribute name="name" value="CVS"/>
+     <attribute name="lastModified" value="1033476787089"/>
+     <attribute name="degree" value="3"/>
+    <leaf>
+     <attribute name="name" value="Entries"/>
+     <attribute name="length" value="328"/>
+     <attribute name="lastModified" value="1035561687383"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="Repository"/>
+     <attribute name="length" value="8"/>
+     <attribute name="lastModified" value="1033476727273"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="Root"/>
+     <attribute name="length" value="53"/>
+     <attribute name="lastModified" value="1033476727253"/>
+     <attribute name="degree" value="1"/></leaf>
+   </branch>
+   <branch>
+     <attribute name="name" value="tests"/>
+     <attribute name="lastModified" value="1034880597317"/>
+     <attribute name="degree" value="5"/>
+    <leaf>
+     <attribute name="name" value="ColumnsTest.java"/>
+     <attribute name="length" value="4363"/>
+     <attribute name="lastModified" value="1035271943270"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="RunAllUnitTests.java"/>
+     <attribute name="length" value="427"/>
+     <attribute name="lastModified" value="1034866862305"/>
+     <attribute name="degree" value="1"/></leaf>
+    <branch>
+      <attribute name="name" value="CVS"/>
+      <attribute name="lastModified" value="1034880599149"/>
+      <attribute name="degree" value="3"/>
+     <leaf>
+      <attribute name="name" value="Entries"/>
+      <attribute name="length" value="108"/>
+      <attribute name="lastModified" value="1035561639354"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Repository"/>
+      <attribute name="length" value="14"/>
+      <attribute name="lastModified" value="1034880597337"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Root"/>
+      <attribute name="length" value="53"/>
+      <attribute name="lastModified" value="1034880597327"/>
+      <attribute name="degree" value="1"/></leaf>
+    </branch>
+   </branch>
+   <branch>
+     <attribute name="name" value="lib"/>
+     <attribute name="lastModified" value="1034865628260"/>
+     <attribute name="degree" value="10"/>
+    <leaf>
+     <attribute name="name" value="ant.jar"/>
+     <attribute name="length" value="417110"/>
+     <attribute name="lastModified" value="1025301276000"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="xml-writer.jar"/>
+     <attribute name="length" value="5234"/>
+     <attribute name="lastModified" value="969266444000"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="gl4java-glffonts.jar"/>
+     <attribute name="length" value="617012"/>
+     <attribute name="lastModified" value="1025301275000"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="gl4java-glutfonts.jar"/>
+     <attribute name="length" value="120802"/>
+     <attribute name="lastModified" value="1025301275000"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="gl4java.jar"/>
+     <attribute name="length" value="226519"/>
+     <attribute name="lastModified" value="1025301277000"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="junit.jar"/>
+     <attribute name="length" value="117522"/>
+     <attribute name="lastModified" value="1022773574000"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="png.jar"/>
+     <attribute name="length" value="54181"/>
+     <attribute name="lastModified" value="1025301276000"/>
+     <attribute name="degree" value="1"/></leaf>
+    <branch>
+      <attribute name="name" value="CVS"/>
+      <attribute name="lastModified" value="1033476791075"/>
+      <attribute name="degree" value="3"/>
+     <leaf>
+      <attribute name="name" value="Entries"/>
+      <attribute name="length" value="341"/>
+      <attribute name="lastModified" value="1034880534156"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Repository"/>
+      <attribute name="length" value="12"/>
+      <attribute name="lastModified" value="1033476787079"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Root"/>
+      <attribute name="length" value="53"/>
+      <attribute name="lastModified" value="1033476787069"/>
+      <attribute name="degree" value="1"/></leaf>
+    </branch>
+   </branch>
+   <branch>
+     <attribute name="name" value="data"/>
+     <attribute name="lastModified" value="1035932397843"/>
+     <attribute name="degree" value="10"/>
+    <leaf>
+     <attribute name="name" value="52weeks.tqd"/>
+     <attribute name="length" value="440633"/>
+     <attribute name="lastModified" value="1025301280000"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="treeml.dtd.~1.2.~"/>
+     <attribute name="length" value="820"/>
+     <attribute name="lastModified" value="1034540735790"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="salivary.tqd"/>
+     <attribute name="length" value="6134"/>
+     <attribute name="lastModified" value="1025301280000"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="test3.xml"/>
+     <attribute name="length" value="23455"/>
+     <attribute name="lastModified" value="1035925813640"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="testtree.xml"/>
+     <attribute name="length" value="58091"/>
+     <attribute name="lastModified" value="1035932397853"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="testtreeml.xml"/>
+     <attribute name="length" value="243"/>
+     <attribute name="lastModified" value="1034540768417"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="treeml.dtd"/>
+     <attribute name="length" value="866"/>
+     <attribute name="lastModified" value="1035932525577"/>
+     <attribute name="degree" value="1"/></leaf>
+    <branch>
+      <attribute name="name" value="CVS"/>
+      <attribute name="lastModified" value="1033476791065"/>
+      <attribute name="degree" value="3"/>
+     <leaf>
+      <attribute name="name" value="Entries"/>
+      <attribute name="length" value="191"/>
+      <attribute name="lastModified" value="1034854823174"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Repository"/>
+      <attribute name="length" value="13"/>
+      <attribute name="lastModified" value="1033476787039"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Root"/>
+      <attribute name="length" value="53"/>
+      <attribute name="lastModified" value="1033476787029"/>
+      <attribute name="degree" value="1"/></leaf>
+    </branch>
+   </branch>
+   <branch>
+     <attribute name="name" value="class"/>
+     <attribute name="lastModified" value="1035932309616"/>
+     <attribute name="degree" value="79"/>
+    <leaf>
+     <attribute name="name" value="ColumnsTest.class"/>
+     <attribute name="length" value="3749"/>
+     <attribute name="lastModified" value="1035562891154"/>
+     <attribute name="degree" value="1"/></leaf>
+    <leaf>
+     <attribute name="name" value="RunAllUnitTests.class"/>
+     <attribute name="length" value="1157"/>
+     <attribute name="lastModified" value="1035562891174"/>
+     <attribute name="degree" value="1"/></leaf>
+    <branch>
+      <attribute name="name" value="infovis"/>
+      <attribute name="lastModified" value="1035562888760"/>
+      <attribute name="degree" value="77"/>
+     <leaf>
+      <attribute name="name" value="Table.class"/>
+      <attribute name="length" value="4090"/>
+      <attribute name="lastModified" value="1035562888029"/>
+      <attribute name="degree" value="1"/></leaf>
+     <branch>
+       <attribute name="name" value="tree"/>
+       <attribute name="lastModified" value="1035562889932"/>
+       <attribute name="degree" value="1"/>
+      <leaf>
+       <attribute name="name" value="DefaultCellRenderer.class"/>
+       <attribute name="length" value="1462"/>
+       <attribute name="lastModified" value="1035562889932"/>
+       <attribute name="degree" value="1"/></leaf>
+     </branch>
+     <leaf>
+      <attribute name="name" value="Tree$BreadthFirstVisitor.class"/>
+      <attribute name="length" value="621"/>
+      <attribute name="lastModified" value="1035562888750"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Tree$ChildrenIterator.class"/>
+      <attribute name="length" value="1110"/>
+      <attribute name="lastModified" value="1035562888760"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Tree$DepthFirstVisitor.class"/>
+      <attribute name="length" value="618"/>
+      <attribute name="lastModified" value="1035562888740"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Tree.class"/>
+      <attribute name="length" value="12096"/>
+      <attribute name="lastModified" value="1035562888730"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Column.class"/>
+      <attribute name="length" value="4043"/>
+      <attribute name="lastModified" value="1035562887889"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="GLVisualization.class"/>
+      <attribute name="length" value="222"/>
+      <attribute name="lastModified" value="1035562887929"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Graph$1.class"/>
+      <attribute name="length" value="714"/>
+      <attribute name="lastModified" value="1035562887949"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Graph.class"/>
+      <attribute name="length" value="2335"/>
+      <attribute name="lastModified" value="1035562887959"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="JVisualization.class"/>
+      <attribute name="length" value="211"/>
+      <attribute name="lastModified" value="1035562887979"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Pickable.class"/>
+      <attribute name="length" value="276"/>
+      <attribute name="lastModified" value="1035562887989"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Table$RowComparator.class"/>
+      <attribute name="length" value="205"/>
+      <attribute name="lastModified" value="1035562888009"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Table$RowIterator.class"/>
+      <attribute name="length" value="1003"/>
+      <attribute name="lastModified" value="1035562888019"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Table$TableIterator.class"/>
+      <attribute name="length" value="247"/>
+      <attribute name="lastModified" value="1035562888039"/>
+      <attribute name="degree" value="1"/></leaf>
+     <branch>
+       <attribute name="name" value="examples"/>
+       <attribute name="lastModified" value="1035562889121"/>
+       <attribute name="degree" value="2"/>
+      <leaf>
+       <attribute name="name" value="GLTimeSeriesExample.class"/>
+       <attribute name="length" value="1687"/>
+       <attribute name="lastModified" value="1035562889091"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="JTimeSeriesExample.class"/>
+       <attribute name="length" value="1680"/>
+       <attribute name="lastModified" value="1035562889121"/>
+       <attribute name="degree" value="1"/></leaf>
+     </branch>
+     <branch>
+       <attribute name="name" value="utils"/>
+       <attribute name="lastModified" value="1035562889972"/>
+       <attribute name="degree" value="3"/>
+      <leaf>
+       <attribute name="name" value="CharStack.class"/>
+       <attribute name="length" value="1492"/>
+       <attribute name="lastModified" value="1035562889952"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="FloatStack.class"/>
+       <attribute name="length" value="1495"/>
+       <attribute name="lastModified" value="1035562889962"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="IntStack.class"/>
+       <attribute name="length" value="1472"/>
+       <attribute name="lastModified" value="1035562889982"/>
+       <attribute name="degree" value="1"/></leaf>
+     </branch>
+     <branch>
+       <attribute name="name" value="column"/>
+       <attribute name="lastModified" value="1035562889011"/>
+       <attribute name="degree" value="9"/>
+      <leaf>
+       <attribute name="name" value="CategoricalFormat.class"/>
+       <attribute name="length" value="2750"/>
+       <attribute name="lastModified" value="1035562888810"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="ColumnComparator.class"/>
+       <attribute name="length" value="581"/>
+       <attribute name="lastModified" value="1035562888820"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="FloatColumn.class"/>
+       <attribute name="length" value="5522"/>
+       <attribute name="lastModified" value="1035562888881"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="IntColumn.class"/>
+       <attribute name="length" value="5579"/>
+       <attribute name="lastModified" value="1035562888901"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="LongColumn.class"/>
+       <attribute name="length" value="5522"/>
+       <attribute name="lastModified" value="1035562888931"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="Metadata.class"/>
+       <attribute name="length" value="647"/>
+       <attribute name="lastModified" value="1035562888941"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="NumberColumn.class"/>
+       <attribute name="length" value="1593"/>
+       <attribute name="lastModified" value="1035562888951"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="ObjectColumn.class"/>
+       <attribute name="length" value="5554"/>
+       <attribute name="lastModified" value="1035562888981"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="StringColumn.class"/>
+       <attribute name="length" value="5482"/>
+       <attribute name="lastModified" value="1035562889011"/>
+       <attribute name="degree" value="1"/></leaf>
+     </branch>
+     <branch>
+       <attribute name="name" value="panel"/>
+       <attribute name="lastModified" value="1035562889872"/>
+       <attribute name="degree" value="9"/>
+      <leaf>
+       <attribute name="name" value="ColumnListModel.class"/>
+       <attribute name="length" value="1251"/>
+       <attribute name="lastModified" value="1035562889692"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="RangeSlider.class"/>
+       <attribute name="length" value="8459"/>
+       <attribute name="lastModified" value="1035562889872"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="FilteredColumnListModel$Filter.class"/>
+       <attribute name="length" value="270"/>
+       <attribute name="lastModified" value="1035562889732"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="FilteredColumnListModel.class"/>
+       <attribute name="length" value="1943"/>
+       <attribute name="lastModified" value="1035562889722"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="GLVisualizationPanel.class"/>
+       <attribute name="length" value="2884"/>
+       <attribute name="lastModified" value="1035562889782"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="JVisualizationPanel.class"/>
+       <attribute name="length" value="1080"/>
+       <attribute name="lastModified" value="1035562889812"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="LabelPanel.class"/>
+       <attribute name="length" value="1246"/>
+       <attribute name="lastModified" value="1035562889832"/>
+       <attribute name="degree" value="1"/></leaf>
+      <branch>
+        <attribute name="name" value="filter"/>
+        <attribute name="lastModified" value="1035562889912"/>
+        <attribute name="degree" value="2"/>
+       <leaf>
+        <attribute name="name" value="ComposeFilter.class"/>
+        <attribute name="length" value="768"/>
+        <attribute name="lastModified" value="1035562889882"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="NotInternalFilter.class"/>
+        <attribute name="length" value="544"/>
+        <attribute name="lastModified" value="1035562889912"/>
+        <attribute name="degree" value="1"/></leaf>
+      </branch>
+     </branch>
+     <branch>
+       <attribute name="name" value="io"/>
+       <attribute name="lastModified" value="1035562889501"/>
+       <attribute name="degree" value="14"/>
+      <leaf>
+       <attribute name="name" value="AbstractReader.class"/>
+       <attribute name="length" value="2774"/>
+       <attribute name="lastModified" value="1035562889151"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="AbstractTableReader.class"/>
+       <attribute name="length" value="2543"/>
+       <attribute name="lastModified" value="1035562889181"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="AbstractTableWriter.class"/>
+       <attribute name="length" value="3041"/>
+       <attribute name="lastModified" value="1035562889201"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="CSVTableReader.class"/>
+       <attribute name="length" value="6155"/>
+       <attribute name="lastModified" value="1035562889471"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="CSVTableWriter.class"/>
+       <attribute name="length" value="2268"/>
+       <attribute name="lastModified" value="1035562889491"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="TQDTableReader.class"/>
+       <attribute name="length" value="2390"/>
+       <attribute name="lastModified" value="1035562889511"/>
+       <attribute name="degree" value="1"/></leaf>
+      <branch>
+        <attribute name="name" value="tree"/>
+        <attribute name="lastModified" value="1035932708540"/>
+        <attribute name="degree" value="8"/>
+       <leaf>
+        <attribute name="name" value="AbstractTreeReader.class"/>
+        <attribute name="length" value="592"/>
+        <attribute name="lastModified" value="1035562889521"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="AbstractTreeWriter.class"/>
+        <attribute name="length" value="749"/>
+        <attribute name="lastModified" value="1035562889531"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="DirectoryTreeReader.class"/>
+        <attribute name="length" value="3171"/>
+        <attribute name="lastModified" value="1035562889551"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="SimpleXMLTreeReader.class"/>
+        <attribute name="length" value="4283"/>
+        <attribute name="lastModified" value="1035562889571"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="XMLTreeReader.class"/>
+        <attribute name="length" value="2991"/>
+        <attribute name="lastModified" value="1035562889622"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="XMLTreeWriter$1.class"/>
+        <attribute name="length" value="1380"/>
+        <attribute name="lastModified" value="1035932708530"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="XMLTreeWriter$2.class"/>
+        <attribute name="length" value="638"/>
+        <attribute name="lastModified" value="1035932708540"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="XMLTreeWriter.class"/>
+        <attribute name="length" value="4566"/>
+        <attribute name="lastModified" value="1035932708520"/>
+        <attribute name="degree" value="1"/></leaf>
+      </branch>
+     </branch>
+     <branch>
+       <attribute name="name" value="visualization"/>
+       <attribute name="lastModified" value="1035562890293"/>
+       <attribute name="degree" value="25"/>
+      <leaf>
+       <attribute name="name" value="AbstractVisualization.class"/>
+       <attribute name="length" value="1001"/>
+       <attribute name="lastModified" value="1035562890062"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="GLTreemapVisualization$1.class"/>
+       <attribute name="length" value="2057"/>
+       <attribute name="lastModified" value="1035562890122"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="GLTreemapVisualization$2.class"/>
+       <attribute name="length" value="677"/>
+       <attribute name="lastModified" value="1035562890102"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="GLTreemapVisualization.class"/>
+       <attribute name="length" value="4156"/>
+       <attribute name="lastModified" value="1035562890092"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="TimeSeriesVisualization.class"/>
+       <attribute name="length" value="4012"/>
+       <attribute name="lastModified" value="1035562890182"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="TreemapVisualization.class"/>
+       <attribute name="length" value="2265"/>
+       <attribute name="lastModified" value="1035562890262"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="TreemapVisitor.class"/>
+       <attribute name="length" value="784"/>
+       <attribute name="lastModified" value="1035562890232"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="TreemapVisualization$1.class"/>
+       <attribute name="length" value="1202"/>
+       <attribute name="lastModified" value="1035562890293"/>
+       <attribute name="degree" value="1"/></leaf>
+      <branch>
+        <attribute name="name" value="treemap"/>
+        <attribute name="lastModified" value="1035562891114"/>
+        <attribute name="degree" value="17"/>
+       <leaf>
+        <attribute name="name" value=".cvsignore"/>
+        <attribute name="length" value="24"/>
+        <attribute name="lastModified" value="1034152637293"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="BorderDrawer.class"/>
+        <attribute name="length" value="1602"/>
+        <attribute name="lastModified" value="1035562890353"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="BoxDrawer.class"/>
+        <attribute name="length" value="358"/>
+        <attribute name="lastModified" value="1035562890373"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="ColorDrawer.class"/>
+        <attribute name="length" value="688"/>
+        <attribute name="lastModified" value="1035562890383"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="ColumnBoxDrawer.class"/>
+        <attribute name="length" value="2304"/>
+        <attribute name="lastModified" value="1035562890403"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="GLBoxDrawer.class"/>
+        <attribute name="length" value="3808"/>
+        <attribute name="lastModified" value="1035562890583"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="JavaBoxDrawer.class"/>
+        <attribute name="length" value="1577"/>
+        <attribute name="lastModified" value="1035562890593"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="LabeledBorderDrawer$Labeler.class"/>
+        <attribute name="length" value="296"/>
+        <attribute name="lastModified" value="1035562890623"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="LabeledBorderDrawer.class"/>
+        <attribute name="length" value="2528"/>
+        <attribute name="lastModified" value="1035562890693"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="NullDrawer.class"/>
+        <attribute name="length" value="1293"/>
+        <attribute name="lastModified" value="1035562890723"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="SliceAndDice.class"/>
+        <attribute name="length" value="2793"/>
+        <attribute name="lastModified" value="1035562890793"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Squarified.class"/>
+        <attribute name="length" value="3909"/>
+        <attribute name="lastModified" value="1035562890863"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Treemap$1.class"/>
+        <attribute name="length" value="1156"/>
+        <attribute name="lastModified" value="1035562890963"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Treemap$2.class"/>
+        <attribute name="length" value="1110"/>
+        <attribute name="lastModified" value="1035562890994"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Treemap$3.class"/>
+        <attribute name="length" value="1360"/>
+        <attribute name="lastModified" value="1035562890933"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Treemap$WeightBuilder.class"/>
+        <attribute name="length" value="253"/>
+        <attribute name="lastModified" value="1035562891124"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Treemap.class"/>
+        <attribute name="length" value="2754"/>
+        <attribute name="lastModified" value="1035562890953"/>
+        <attribute name="degree" value="1"/></leaf>
+      </branch>
+     </branch>
+    </branch>
+   </branch>
+   <branch>
+     <attribute name="name" value="src"/>
+     <attribute name="lastModified" value="1033477668296"/>
+     <attribute name="degree" value="95"/>
+    <branch>
+      <attribute name="name" value="CVS"/>
+      <attribute name="lastModified" value="1033476787099"/>
+      <attribute name="degree" value="3"/>
+     <leaf>
+      <attribute name="name" value="Entries"/>
+      <attribute name="length" value="14"/>
+      <attribute name="lastModified" value="1033476787099"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Repository"/>
+      <attribute name="length" value="12"/>
+      <attribute name="lastModified" value="1033476787019"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Root"/>
+      <attribute name="length" value="53"/>
+      <attribute name="lastModified" value="1033476787009"/>
+      <attribute name="degree" value="1"/></leaf>
+    </branch>
+    <branch>
+      <attribute name="name" value="infovis"/>
+      <attribute name="lastModified" value="1035285883200"/>
+      <attribute name="degree" value="92"/>
+     <leaf>
+      <attribute name="name" value="Column.java"/>
+      <attribute name="length" value="8699"/>
+      <attribute name="lastModified" value="1035275156213"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="GLVisualization.java"/>
+      <attribute name="length" value="278"/>
+      <attribute name="lastModified" value="1033919256587"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Graph.java"/>
+      <attribute name="length" value="3042"/>
+      <attribute name="lastModified" value="1034261804392"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="JVisualization.java"/>
+      <attribute name="length" value="264"/>
+      <attribute name="lastModified" value="1033919266261"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Pickable.java"/>
+      <attribute name="length" value="346"/>
+      <attribute name="lastModified" value="1034677646824"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Table.java"/>
+      <attribute name="length" value="4521"/>
+      <attribute name="lastModified" value="1034870970542"/>
+      <attribute name="degree" value="1"/></leaf>
+     <leaf>
+      <attribute name="name" value="Tree.java"/>
+      <attribute name="length" value="25617"/>
+      <attribute name="lastModified" value="1034870372773"/>
+      <attribute name="degree" value="1"/></leaf>
+     <branch>
+       <attribute name="name" value="CVS"/>
+       <attribute name="lastModified" value="1033476787109"/>
+       <attribute name="degree" value="3"/>
+      <leaf>
+       <attribute name="name" value="Entries"/>
+       <attribute name="length" value="436"/>
+       <attribute name="lastModified" value="1035561639324"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="Repository"/>
+       <attribute name="length" value="20"/>
+       <attribute name="lastModified" value="1033476786999"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="Root"/>
+       <attribute name="length" value="53"/>
+       <attribute name="lastModified" value="1033476786989"/>
+       <attribute name="degree" value="1"/></leaf>
+     </branch>
+     <branch>
+       <attribute name="name" value="tree"/>
+       <attribute name="lastModified" value="1034854746924"/>
+       <attribute name="degree" value="4"/>
+      <leaf>
+       <attribute name="name" value="DefaultCellRenderer.java"/>
+       <attribute name="length" value="1431"/>
+       <attribute name="lastModified" value="1034688707398"/>
+       <attribute name="degree" value="1"/></leaf>
+      <branch>
+        <attribute name="name" value="CVS"/>
+        <attribute name="lastModified" value="1034854748526"/>
+        <attribute name="degree" value="3"/>
+       <leaf>
+        <attribute name="name" value="Entries"/>
+        <attribute name="length" value="60"/>
+        <attribute name="lastModified" value="1034854823194"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Repository"/>
+        <attribute name="length" value="25"/>
+        <attribute name="lastModified" value="1034854746944"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Root"/>
+        <attribute name="length" value="53"/>
+        <attribute name="lastModified" value="1034854746934"/>
+        <attribute name="degree" value="1"/></leaf>
+      </branch>
+     </branch>
+     <branch>
+       <attribute name="name" value="examples"/>
+       <attribute name="lastModified" value="1033476787039"/>
+       <attribute name="degree" value="5"/>
+      <leaf>
+       <attribute name="name" value="GLTimeSeriesExample.java"/>
+       <attribute name="length" value="1037"/>
+       <attribute name="lastModified" value="1035285891892"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="JTimeSeriesExample.java"/>
+       <attribute name="length" value="987"/>
+       <attribute name="lastModified" value="1035285892002"/>
+       <attribute name="degree" value="1"/></leaf>
+      <branch>
+        <attribute name="name" value="CVS"/>
+        <attribute name="lastModified" value="1033476789202"/>
+        <attribute name="degree" value="3"/>
+       <leaf>
+        <attribute name="name" value="Entries"/>
+        <attribute name="length" value="119"/>
+        <attribute name="lastModified" value="1035561639364"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Repository"/>
+        <attribute name="length" value="29"/>
+        <attribute name="lastModified" value="1033476787059"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Root"/>
+        <attribute name="length" value="53"/>
+        <attribute name="lastModified" value="1033476787049"/>
+        <attribute name="degree" value="1"/></leaf>
+      </branch>
+     </branch>
+     <branch>
+       <attribute name="name" value="utils"/>
+       <attribute name="lastModified" value="1034513096228"/>
+       <attribute name="degree" value="6"/>
+      <leaf>
+       <attribute name="name" value="CharStack.java"/>
+       <attribute name="length" value="1006"/>
+       <attribute name="lastModified" value="1034690489511"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="FloatStack.java"/>
+       <attribute name="length" value="977"/>
+       <attribute name="lastModified" value="1034690470414"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="IntStack.java"/>
+       <attribute name="length" value="991"/>
+       <attribute name="lastModified" value="1034690451486"/>
+       <attribute name="degree" value="1"/></leaf>
+      <branch>
+        <attribute name="name" value="CVS"/>
+        <attribute name="lastModified" value="1034513098251"/>
+        <attribute name="degree" value="3"/>
+       <leaf>
+        <attribute name="name" value="Entries"/>
+        <attribute name="length" value="150"/>
+        <attribute name="lastModified" value="1034854823264"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Repository"/>
+        <attribute name="length" value="26"/>
+        <attribute name="lastModified" value="1034513096248"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Root"/>
+        <attribute name="length" value="53"/>
+        <attribute name="lastModified" value="1034513096238"/>
+        <attribute name="degree" value="1"/></leaf>
+      </branch>
+     </branch>
+     <branch>
+       <attribute name="name" value="column"/>
+       <attribute name="lastModified" value="1035275020498"/>
+       <attribute name="degree" value="12"/>
+      <leaf>
+       <attribute name="name" value="CategoricalFormat.java"/>
+       <attribute name="length" value="2099"/>
+       <attribute name="lastModified" value="1035022387979"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="ColumnComparator.java"/>
+       <attribute name="length" value="456"/>
+       <attribute name="lastModified" value="1035275522380"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="StringColumn.java"/>
+       <attribute name="length" value="7640"/>
+       <attribute name="lastModified" value="1035275479898"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="FloatColumn.java"/>
+       <attribute name="length" value="9069"/>
+       <attribute name="lastModified" value="1035271762871"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="IntColumn.java"/>
+       <attribute name="length" value="9141"/>
+       <attribute name="lastModified" value="1035271601749"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="LongColumn.java"/>
+       <attribute name="length" value="9019"/>
+       <attribute name="lastModified" value="1035271778343"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="Metadata.java"/>
+       <attribute name="length" value="1346"/>
+       <attribute name="lastModified" value="1034883045126"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="NumberColumn.java"/>
+       <attribute name="length" value="1749"/>
+       <attribute name="lastModified" value="1035275266211"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="ObjectColumn.java"/>
+       <attribute name="length" value="8950"/>
+       <attribute name="lastModified" value="1035275502251"/>
+       <attribute name="degree" value="1"/></leaf>
+      <branch>
+        <attribute name="name" value="CVS"/>
+        <attribute name="lastModified" value="1033476789142"/>
+        <attribute name="degree" value="3"/>
+       <leaf>
+        <attribute name="name" value="Entries"/>
+        <attribute name="length" value="476"/>
+        <attribute name="lastModified" value="1035561754740"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Repository"/>
+        <attribute name="length" value="27"/>
+        <attribute name="lastModified" value="1033476786979"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Root"/>
+        <attribute name="length" value="53"/>
+        <attribute name="lastModified" value="1033476786969"/>
+        <attribute name="degree" value="1"/></leaf>
+      </branch>
+     </branch>
+     <branch>
+       <attribute name="name" value="panel"/>
+       <attribute name="lastModified" value="1035285892243"/>
+       <attribute name="degree" value="14"/>
+      <leaf>
+       <attribute name="name" value="ColumnListModel.java"/>
+       <attribute name="length" value="1329"/>
+       <attribute name="lastModified" value="1035272517997"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="LabelPanel.java"/>
+       <attribute name="length" value="974"/>
+       <attribute name="lastModified" value="1035274585232"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="RangeSlider.java"/>
+       <attribute name="length" value="15533"/>
+       <attribute name="lastModified" value="1034883436409"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="FilteredColumnListModel.java"/>
+       <attribute name="length" value="1854"/>
+       <attribute name="lastModified" value="1034871082233"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="GLVisualizationPanel.java"/>
+       <attribute name="length" value="2424"/>
+       <attribute name="lastModified" value="1035285883260"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="JVisualizationPanel.java"/>
+       <attribute name="length" value="1087"/>
+       <attribute name="lastModified" value="1035285892283"/>
+       <attribute name="degree" value="1"/></leaf>
+      <branch>
+        <attribute name="name" value="CVS"/>
+        <attribute name="lastModified" value="1034880546924"/>
+        <attribute name="degree" value="3"/>
+       <leaf>
+        <attribute name="name" value="Entries"/>
+        <attribute name="length" value="357"/>
+        <attribute name="lastModified" value="1035561639304"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Repository"/>
+        <attribute name="length" value="26"/>
+        <attribute name="lastModified" value="1034880546904"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Root"/>
+        <attribute name="length" value="53"/>
+        <attribute name="lastModified" value="1034880546894"/>
+        <attribute name="degree" value="1"/></leaf>
+      </branch>
+      <branch>
+        <attribute name="name" value="filter"/>
+        <attribute name="lastModified" value="1034880546864"/>
+        <attribute name="degree" value="5"/>
+       <leaf>
+        <attribute name="name" value="ComposeFilter.java"/>
+        <attribute name="length" value="613"/>
+        <attribute name="lastModified" value="1034871842135"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="NotInternalFilter.java"/>
+        <attribute name="length" value="316"/>
+        <attribute name="lastModified" value="1034871660825"/>
+        <attribute name="degree" value="1"/></leaf>
+       <branch>
+         <attribute name="name" value="CVS"/>
+         <attribute name="lastModified" value="1034880548817"/>
+         <attribute name="degree" value="3"/>
+        <leaf>
+         <attribute name="name" value="Entries"/>
+         <attribute name="length" value="112"/>
+         <attribute name="lastModified" value="1034880579040"/>
+         <attribute name="degree" value="1"/></leaf>
+        <leaf>
+         <attribute name="name" value="Repository"/>
+         <attribute name="length" value="33"/>
+         <attribute name="lastModified" value="1034880546884"/>
+         <attribute name="degree" value="1"/></leaf>
+        <leaf>
+         <attribute name="name" value="Root"/>
+         <attribute name="length" value="53"/>
+         <attribute name="lastModified" value="1034880546874"/>
+         <attribute name="degree" value="1"/></leaf>
+       </branch>
+      </branch>
+     </branch>
+     <branch>
+       <attribute name="name" value="io"/>
+       <attribute name="lastModified" value="1034803193313"/>
+       <attribute name="degree" value="18"/>
+      <leaf>
+       <attribute name="name" value="AbstractReader.java"/>
+       <attribute name="length" value="2246"/>
+       <attribute name="lastModified" value="1034802338604"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="AbstractTableReader.java"/>
+       <attribute name="length" value="3329"/>
+       <attribute name="lastModified" value="1033745707624"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="AbstractTableWriter.java"/>
+       <attribute name="length" value="1991"/>
+       <attribute name="lastModified" value="1034847060656"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="CSVTableReader.java"/>
+       <attribute name="length" value="7045"/>
+       <attribute name="lastModified" value="1034802904818"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="CSVTableWriter.java"/>
+       <attribute name="length" value="2686"/>
+       <attribute name="lastModified" value="1034849014051"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="TQDTableReader.java"/>
+       <attribute name="length" value="1759"/>
+       <attribute name="lastModified" value="1033745740532"/>
+       <attribute name="degree" value="1"/></leaf>
+      <branch>
+        <attribute name="name" value="CVS"/>
+        <attribute name="lastModified" value="1033476789172"/>
+        <attribute name="degree" value="3"/>
+       <leaf>
+        <attribute name="name" value="Entries"/>
+        <attribute name="length" value="351"/>
+        <attribute name="lastModified" value="1034854823224"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Repository"/>
+        <attribute name="length" value="23"/>
+        <attribute name="lastModified" value="1033476786959"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Root"/>
+        <attribute name="length" value="53"/>
+        <attribute name="lastModified" value="1033476786949"/>
+        <attribute name="degree" value="1"/></leaf>
+      </branch>
+      <branch>
+        <attribute name="name" value="tree"/>
+        <attribute name="lastModified" value="1034803320866"/>
+        <attribute name="degree" value="9"/>
+       <leaf>
+        <attribute name="name" value="AbstractTreeReader.java"/>
+        <attribute name="length" value="427"/>
+        <attribute name="lastModified" value="1033745867204"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="AbstractTreeWriter.java"/>
+        <attribute name="length" value="568"/>
+        <attribute name="lastModified" value="1034843097087"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="XMLTreeWriter.java"/>
+        <attribute name="length" value="5066"/>
+        <attribute name="lastModified" value="1035932708159"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="DirectoryTreeReader.java"/>
+        <attribute name="length" value="2690"/>
+        <attribute name="lastModified" value="1034854706346"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="SimpleXMLTreeReader.java"/>
+        <attribute name="length" value="4059"/>
+        <attribute name="lastModified" value="1034801361809"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="XMLTreeReader.java"/>
+        <attribute name="length" value="2114"/>
+        <attribute name="lastModified" value="1034854200278"/>
+        <attribute name="degree" value="1"/></leaf>
+       <branch>
+         <attribute name="name" value="CVS"/>
+         <attribute name="lastModified" value="1033802673654"/>
+         <attribute name="degree" value="3"/>
+        <leaf>
+         <attribute name="name" value="Entries"/>
+         <attribute name="length" value="346"/>
+         <attribute name="lastModified" value="1034854823234"/>
+         <attribute name="degree" value="1"/></leaf>
+        <leaf>
+         <attribute name="name" value="Repository"/>
+         <attribute name="length" value="28"/>
+         <attribute name="lastModified" value="1033802671671"/>
+         <attribute name="degree" value="1"/></leaf>
+        <leaf>
+         <attribute name="name" value="Root"/>
+         <attribute name="length" value="53"/>
+         <attribute name="lastModified" value="1033802671661"/>
+         <attribute name="degree" value="1"/></leaf>
+       </branch>
+      </branch>
+     </branch>
+     <branch>
+       <attribute name="name" value="visualization"/>
+       <attribute name="lastModified" value="1034147155073"/>
+       <attribute name="degree" value="23"/>
+      <leaf>
+       <attribute name="name" value="AbstractVisualization.java"/>
+       <attribute name="length" value="1127"/>
+       <attribute name="lastModified" value="1034677812402"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="TreemapVisitor.java"/>
+       <attribute name="length" value="750"/>
+       <attribute name="lastModified" value="1034068393578"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="TreemapVisualization.java"/>
+       <attribute name="length" value="2109"/>
+       <attribute name="lastModified" value="1034068398234"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="GLTreemapVisualization.java"/>
+       <attribute name="length" value="5933"/>
+       <attribute name="lastModified" value="1035285883170"/>
+       <attribute name="degree" value="1"/></leaf>
+      <leaf>
+       <attribute name="name" value="TimeSeriesVisualization.java"/>
+       <attribute name="length" value="6845"/>
+       <attribute name="lastModified" value="1034678274817"/>
+       <attribute name="degree" value="1"/></leaf>
+      <branch>
+        <attribute name="name" value="CVS"/>
+        <attribute name="lastModified" value="1033476789152"/>
+        <attribute name="degree" value="3"/>
+       <leaf>
+        <attribute name="name" value="Entries"/>
+        <attribute name="length" value="319"/>
+        <attribute name="lastModified" value="1035561639294"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Repository"/>
+        <attribute name="length" value="34"/>
+        <attribute name="lastModified" value="1033476786939"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Root"/>
+        <attribute name="length" value="53"/>
+        <attribute name="lastModified" value="1033476786929"/>
+        <attribute name="degree" value="1"/></leaf>
+      </branch>
+      <branch>
+        <attribute name="name" value="treemap"/>
+        <attribute name="lastModified" value="1035276622676"/>
+        <attribute name="degree" value="15"/>
+       <leaf>
+        <attribute name="name" value=".cvsignore"/>
+        <attribute name="length" value="24"/>
+        <attribute name="lastModified" value="1034152637293"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="BorderDrawer.java"/>
+        <attribute name="length" value="1271"/>
+        <attribute name="lastModified" value="1035281477485"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="BoxDrawer.java"/>
+        <attribute name="length" value="3261"/>
+        <attribute name="lastModified" value="1034146834462"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="ColorDrawer.java"/>
+        <attribute name="length" value="669"/>
+        <attribute name="lastModified" value="1034146885366"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="ColumnBoxDrawer.java"/>
+        <attribute name="length" value="2311"/>
+        <attribute name="lastModified" value="1034147670701"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Treemap.java"/>
+        <attribute name="length" value="5011"/>
+        <attribute name="lastModified" value="1034060004165"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="GLBoxDrawer.java"/>
+        <attribute name="length" value="4321"/>
+        <attribute name="lastModified" value="1034417294036"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="JavaBoxDrawer.java"/>
+        <attribute name="length" value="1869"/>
+        <attribute name="lastModified" value="1034147095067"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="LabeledBorderDrawer.java"/>
+        <attribute name="length" value="2194"/>
+        <attribute name="lastModified" value="1035281491335"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="NullDrawer.java"/>
+        <attribute name="length" value="1542"/>
+        <attribute name="lastModified" value="1034146737072"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="SliceAndDice.java"/>
+        <attribute name="length" value="2657"/>
+        <attribute name="lastModified" value="1034147686044"/>
+        <attribute name="degree" value="1"/></leaf>
+       <leaf>
+        <attribute name="name" value="Squarified.java"/>
+        <attribute name="length" value="4617"/>
+        <attribute name="lastModified" value="1034657915624"/>
+        <attribute name="degree" value="1"/></leaf>
+       <branch>
+         <attribute name="name" value="CVS"/>
+         <attribute name="lastModified" value="1033931943197"/>
+         <attribute name="degree" value="3"/>
+        <leaf>
+         <attribute name="name" value="Entries"/>
+         <attribute name="length" value="626"/>
+         <attribute name="lastModified" value="1035561639344"/>
+         <attribute name="degree" value="1"/></leaf>
+        <leaf>
+         <attribute name="name" value="Repository"/>
+         <attribute name="length" value="42"/>
+         <attribute name="lastModified" value="1033931941175"/>
+         <attribute name="degree" value="1"/></leaf>
+        <leaf>
+         <attribute name="name" value="Root"/>
+         <attribute name="length" value="53"/>
+         <attribute name="lastModified" value="1033931941164"/>
+         <attribute name="degree" value="1"/></leaf>
+       </branch>
+      </branch>
+     </branch>
+    </branch>
+   </branch>
+  </branch>
+ </branch>
+</tree>

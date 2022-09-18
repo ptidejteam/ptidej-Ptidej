@@ -1,0 +1,175 @@
+package java.util;
+abstract public interface Spliterator
+{
+abstract public static interface OfDouble
+extends java.util.Spliterator.OfPrimitive
+{
+abstract public java.util.Spliterator.OfDouble trySplit()
+{
+
+}
+
+abstract public boolean tryAdvance(java.lang.Object arg0)
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+public boolean tryAdvance(java.lang.Object arg0)
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+
+}
+
+abstract public static interface OfInt
+extends java.util.Spliterator.OfPrimitive
+{
+abstract public java.util.Spliterator.OfInt trySplit()
+{
+
+}
+
+abstract public boolean tryAdvance(java.lang.Object arg0)
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+public boolean tryAdvance(java.lang.Object arg0)
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+
+}
+
+abstract public static interface OfLong
+extends java.util.Spliterator.OfPrimitive
+{
+abstract public java.util.Spliterator.OfLong trySplit()
+{
+
+}
+
+abstract public boolean tryAdvance(java.lang.Object arg0)
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+public boolean tryAdvance(java.lang.Object arg0)
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+
+}
+
+abstract public static interface OfPrimitive
+extends java.util.Spliterator
+{
+abstract public java.util.Spliterator.OfPrimitive trySplit()
+{
+
+}
+
+abstract public boolean tryAdvance(java.lang.Object arg0)
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+
+}
+
+final public static java.lang.Object ORDERED;
+
+final public static java.lang.Object DISTINCT;
+
+final public static java.lang.Object SORTED;
+
+final public static java.lang.Object SIZED;
+
+final public static java.lang.Object NONNULL;
+
+final public static java.lang.Object IMMUTABLE;
+
+final public static java.lang.Object CONCURRENT;
+
+final public static java.lang.Object SUBSIZED;
+
+abstract public boolean tryAdvance(java.lang.Object arg0)
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.util.Spliterator trySplit()
+{
+
+}
+
+abstract public long estimateSize()
+{
+
+}
+
+public long getExactSizeIfKnown()
+{
+
+}
+
+abstract public int characteristics()
+{
+
+}
+
+public boolean hasCharacteristics(java.lang.Object arg0)
+{
+
+}
+
+public java.util.Comparator getComparator()
+{
+
+}
+
+
+}

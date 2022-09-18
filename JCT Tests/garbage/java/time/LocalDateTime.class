@@ -1,0 +1,441 @@
+package java.time;
+final public class LocalDateTime
+implements java.io.Serializable, java.time.chrono.ChronoLocalDateTime, java.time.temporal.Temporal, java.time.temporal.TemporalAdjuster
+{
+final public static java.lang.Object MIN;
+
+final public static java.lang.Object MAX;
+
+final private static java.lang.Object serialVersionUID;
+
+final private java.lang.Object date;
+
+final private java.lang.Object time;
+
+public static java.time.LocalDateTime now()
+{
+
+}
+
+public static java.time.LocalDateTime now(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.LocalDateTime now(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.LocalDateTime of(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+public static java.time.LocalDateTime of(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+public static java.time.LocalDateTime of(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5, java.lang.Object arg6)
+{
+
+}
+
+public static java.time.LocalDateTime of(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+public static java.time.LocalDateTime of(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+public static java.time.LocalDateTime of(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5, java.lang.Object arg6)
+{
+
+}
+
+public static java.time.LocalDateTime of(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.time.LocalDateTime ofInstant(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.time.LocalDateTime ofEpochSecond(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public static java.time.LocalDateTime from(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.LocalDateTime parse(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.LocalDateTime parse(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.time.LocalDateTime with(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public boolean isSupported(java.lang.Object arg0)
+{
+
+}
+
+public boolean isSupported(java.lang.Object arg0)
+{
+
+}
+
+public java.time.temporal.ValueRange range(java.lang.Object arg0)
+{
+
+}
+
+public int get(java.lang.Object arg0)
+{
+
+}
+
+public long getLong(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDate toLocalDate()
+{
+
+}
+
+public int getYear()
+{
+
+}
+
+public int getMonthValue()
+{
+
+}
+
+public java.time.Month getMonth()
+{
+
+}
+
+public int getDayOfMonth()
+{
+
+}
+
+public int getDayOfYear()
+{
+
+}
+
+public java.time.DayOfWeek getDayOfWeek()
+{
+
+}
+
+public java.time.LocalTime toLocalTime()
+{
+
+}
+
+public int getHour()
+{
+
+}
+
+public int getMinute()
+{
+
+}
+
+public int getSecond()
+{
+
+}
+
+public int getNano()
+{
+
+}
+
+public java.time.LocalDateTime with(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime with(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.LocalDateTime withYear(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime withMonth(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime withDayOfMonth(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime withDayOfYear(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime withHour(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime withMinute(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime withSecond(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime withNano(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime truncatedTo(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime plus(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime plus(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.LocalDateTime plusYears(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime plusMonths(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime plusWeeks(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime plusDays(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime plusHours(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime plusMinutes(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime plusSeconds(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime plusNanos(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime minus(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime minus(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.LocalDateTime minusYears(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime minusMonths(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime minusWeeks(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime minusDays(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime minusHours(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime minusMinutes(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime minusSeconds(java.lang.Object arg0)
+{
+
+}
+
+public java.time.LocalDateTime minusNanos(java.lang.Object arg0)
+{
+
+}
+
+private java.time.LocalDateTime plusWithOverflow(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+public java.lang.Object query(java.lang.Object arg0)
+{
+
+}
+
+public java.time.temporal.Temporal adjustInto(java.lang.Object arg0)
+{
+
+}
+
+public long until(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.String format(java.lang.Object arg0)
+{
+
+}
+
+public java.time.OffsetDateTime atOffset(java.lang.Object arg0)
+{
+
+}
+
+public java.time.ZonedDateTime atZone(java.lang.Object arg0)
+{
+
+}
+
+public int compareTo(java.lang.Object arg0)
+{
+
+}
+
+private int compareTo0(java.lang.Object arg0)
+{
+
+}
+
+public boolean isAfter(java.lang.Object arg0)
+{
+
+}
+
+public boolean isBefore(java.lang.Object arg0)
+{
+
+}
+
+public boolean isEqual(java.lang.Object arg0)
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+private java.lang.Object writeReplace()
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.InvalidObjectException
+{
+
+}
+
+void writeExternal(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static java.time.LocalDateTime readExternal(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

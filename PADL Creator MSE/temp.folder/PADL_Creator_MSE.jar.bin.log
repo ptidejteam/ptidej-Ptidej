@@ -1,0 +1,982 @@
+# 04/05/08 3:22:49 EDT PM
+# Eclipse Java Compiler 0.793_R33x, 3.3.2, Copyright IBM Corp 2000, 2008. All rights reserved.
+----------
+1. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSELexer.java (at line 31)
+	private final int YY_START = 1;
+	                  ^^^^^^^^
+The field MSELexer.YY_START is never read locally
+----------
+2. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSELexer.java (at line 88)
+	private boolean yy_eof_done = false;
+	                ^^^^^^^^^^^
+The field MSELexer.yy_eof_done is never read locally
+----------
+3. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSELexer.java (at line 183)
+	private int yylength () {
+	            ^^^^^^^^^^^
+The method yylength() from the type MSELexer is never used locally
+----------
+4. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSELexer.java (at line 196)
+	private final int YY_E_MATCH = 1;
+	                  ^^^^^^^^^^
+The field MSELexer.YY_E_MATCH is never read locally
+----------
+----------
+5. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 11)
+	import java.util.Iterator;
+	       ^^^^^^^^^^^^^^^^^^
+The import java.util.Iterator is never used
+----------
+6. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 13)
+	import java.util.Map;
+	       ^^^^^^^^^^^^^
+The import java.util.Map is never used
+----------
+7. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 14)
+	import java.util.HashMap;
+	       ^^^^^^^^^^^^^^^^^
+The import java.util.HashMap is never used
+----------
+8. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 15)
+	import padl.kernel.Constants;
+	       ^^^^^^^^^^^^^^^^^^^^^
+The import padl.kernel.Constants is never used
+----------
+9. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 16)
+	import padl.kernel.IAssociation;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^
+The import padl.kernel.IAssociation is never used
+----------
+10. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 17)
+	import padl.kernel.IContainerAggregation;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import padl.kernel.IContainerAggregation is never used
+----------
+11. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 18)
+	import padl.kernel.IElement;
+	       ^^^^^^^^^^^^^^^^^^^^
+The import padl.kernel.IElement is never used
+----------
+12. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 19)
+	import padl.kernel.IEntity;
+	       ^^^^^^^^^^^^^^^^^^^
+The import padl.kernel.IEntity is never used
+----------
+13. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 20)
+	import padl.kernel.IField;
+	       ^^^^^^^^^^^^^^^^^^
+The import padl.kernel.IField is never used
+----------
+14. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 21)
+	import padl.kernel.ICodeLevelModel;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import padl.kernel.ICodeLevelModel is never used
+----------
+15. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 22)
+	import padl.kernel.IMethod;
+	       ^^^^^^^^^^^^^^^^^^^
+The import padl.kernel.IMethod is never used
+----------
+16. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 23)
+	import padl.kernel.IParameter;
+	       ^^^^^^^^^^^^^^^^^^^^^^
+The import padl.kernel.IParameter is never used
+----------
+17. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 24)
+	import padl.kernel.exception.ModelDeclarationException;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import padl.kernel.exception.ModelDeclarationException is never used
+----------
+18. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 25)
+	import padl.kernel.impl.Factory;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^
+The import padl.kernel.impl.Factory is never used
+----------
+19. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 28)
+	import padl.creator.misc.Utils;
+	       ^^^^^^^^^^^^^^^^^^^^^^^
+The import padl.creator.misc.Utils is never used
+----------
+20. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 30)
+	import util.lang.Modifier;
+	       ^^^^^^^^^^^^^^^^^^
+The import util.lang.Modifier is never used
+----------
+21. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 279)
+	int idleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^^
+The local variable idleft is never read
+----------
+22. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 280)
+	int idright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^^
+The local variable idright is never read
+----------
+23. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 294)
+	int nameleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^^^^
+The local variable nameleft is never read
+----------
+24. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 295)
+	int nameright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^^^^
+The local variable nameright is never read
+----------
+25. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 309)
+	int nameleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^^^^
+The local variable nameleft is never read
+----------
+26. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 310)
+	int nameright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^^^^
+The local variable nameright is never read
+----------
+27. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 324)
+	int nameleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^^^^
+The local variable nameleft is never read
+----------
+28. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 325)
+	int nameright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^^^^
+The local variable nameright is never read
+----------
+29. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 339)
+	int nameleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^^^^
+The local variable nameleft is never read
+----------
+30. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 340)
+	int nameright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^^^^
+The local variable nameright is never read
+----------
+31. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 354)
+	int stringleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^^^^^^
+The local variable stringleft is never read
+----------
+32. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 355)
+	int stringright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^^^^^^
+The local variable stringright is never read
+----------
+33. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 369)
+	int nameleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).left;
+	    ^^^^^^^^
+The local variable nameleft is never read
+----------
+34. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 370)
+	int nameright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).right;
+	    ^^^^^^^^^
+The local variable nameright is never read
+----------
+35. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 384)
+	int exprleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).left;
+	    ^^^^^^^^
+The local variable exprleft is never read
+----------
+36. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 385)
+	int exprright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).right;
+	    ^^^^^^^^^
+The local variable exprright is never read
+----------
+37. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 399)
+	int nameleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).left;
+	    ^^^^^^^^
+The local variable nameleft is never read
+----------
+38. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 400)
+	int nameright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).right;
+	    ^^^^^^^^^
+The local variable nameright is never read
+----------
+39. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 414)
+	int idleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).left;
+	    ^^^^^^
+The local variable idleft is never read
+----------
+40. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 415)
+	int idright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).right;
+	    ^^^^^^^
+The local variable idright is never read
+----------
+41. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 429)
+	int idleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).left;
+	    ^^^^^^
+The local variable idleft is never read
+----------
+42. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 430)
+	int idright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).right;
+	    ^^^^^^^
+The local variable idright is never read
+----------
+43. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 528)
+	int integerleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^^^^^^^
+The local variable integerleft is never read
+----------
+44. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 529)
+	int integerright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^^^^^^^
+The local variable integerright is never read
+----------
+45. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 543)
+	int stringleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^^^^^^
+The local variable stringleft is never read
+----------
+46. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 544)
+	int stringright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^^^^^^
+The local variable stringright is never read
+----------
+47. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 558)
+	int nameleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^^^^
+The local variable nameleft is never read
+----------
+48. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 559)
+	int nameright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^^^^
+The local variable nameright is never read
+----------
+49. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 584)
+	int pcleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^^
+The local variable pcleft is never read
+----------
+50. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 585)
+	int pcright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^^
+The local variable pcright is never read
+----------
+51. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 599)
+	int vcleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^^
+The local variable vcleft is never read
+----------
+52. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 600)
+	int vcright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^^
+The local variable vcright is never read
+----------
+53. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 614)
+	int pcleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^^
+The local variable pcleft is never read
+----------
+54. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 615)
+	int pcright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^^
+The local variable pcright is never read
+----------
+55. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 629)
+	int idleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^^
+The local variable idleft is never read
+----------
+56. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 630)
+	int idright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^^
+The local variable idright is never read
+----------
+57. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 644)
+	int pleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).left;
+	    ^^^^^
+The local variable pleft is never read
+----------
+58. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 645)
+	int pright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).right;
+	    ^^^^^^
+The local variable pright is never read
+----------
+59. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 659)
+	int pleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).left;
+	    ^^^^^
+The local variable pleft is never read
+----------
+60. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 660)
+	int pright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-0)).right;
+	    ^^^^^^
+The local variable pright is never read
+----------
+61. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 696)
+	int nameleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-3)).left;
+	    ^^^^^^^^
+The local variable nameleft is never read
+----------
+62. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 697)
+	int nameright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-3)).right;
+	    ^^^^^^^^^
+The local variable nameright is never read
+----------
+63. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 699)
+	int idleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-2)).left;
+	    ^^^^^^
+The local variable idleft is never read
+----------
+64. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 700)
+	int idright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-2)).right;
+	    ^^^^^^^
+The local variable idright is never read
+----------
+65. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 718)
+	int nameleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-2)).left;
+	    ^^^^^^^^
+The local variable nameleft is never read
+----------
+66. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 719)
+	int nameright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-2)).right;
+	    ^^^^^^^^^
+The local variable nameright is never read
+----------
+67. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 736)
+	int nameleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).left;
+	    ^^^^^^^^
+The local variable nameleft is never read
+----------
+68. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 737)
+	int nameright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).right;
+	    ^^^^^^^^^
+The local variable nameright is never read
+----------
+69. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 769)
+	int typeleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-2)).left;
+	    ^^^^^^^^
+The local variable typeleft is never read
+----------
+70. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 770)
+	int typeright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-2)).right;
+	    ^^^^^^^^^
+The local variable typeright is never read
+----------
+71. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 772)
+	int idleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).left;
+	    ^^^^^^
+The local variable idleft is never read
+----------
+72. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 773)
+	int idright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).right;
+	    ^^^^^^^
+The local variable idright is never read
+----------
+73. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 791)
+	int typeleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-3)).left;
+	    ^^^^^^^^
+The local variable typeleft is never read
+----------
+74. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 792)
+	int typeright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-3)).right;
+	    ^^^^^^^^^
+The local variable typeright is never read
+----------
+75. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 794)
+	int idleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-2)).left;
+	    ^^^^^^
+The local variable idleft is never read
+----------
+76. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 795)
+	int idright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-2)).right;
+	    ^^^^^^^
+The local variable idright is never read
+----------
+77. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 842)
+	int start_valleft = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).left;
+	    ^^^^^^^^^^^^^
+The local variable start_valleft is never read
+----------
+78. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\MSEParser.java (at line 843)
+	int start_valright = ((padl.creator.javacup.runtime.Symbol)CUP$MSEParser$stack.elementAt(CUP$MSEParser$top-1)).right;
+	    ^^^^^^^^^^^^^^
+The local variable start_valright is never read
+----------
+----------
+79. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\emit.java (at line 561)
+	short[] temp_table = new short[2*row.size()];
+	                                 ^^^^^^^^^^
+The static method size() from the type parse_action_row should be accessed in a static way
+----------
+80. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\emit.java (at line 565)
+	for (int j = 0; j < row.size(); j++)
+	                    ^^^^^^^^^^
+The static method size() from the type parse_action_row should be accessed in a static way
+----------
+81. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\emit.java (at line 644)
+	parse_action     act;
+	                 ^^^
+The local variable act is never read
+----------
+82. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\emit.java (at line 654)
+	short[] temp_table = new short[2*red_tab.under_state[i].size()];
+	                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The static method size() from the type parse_reduce_row should be accessed in a static way
+----------
+83. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\emit.java (at line 657)
+	for (int j=0; j<red_tab.under_state[i].size(); j++)
+	                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The static method size() from the type parse_reduce_row should be accessed in a static way
+----------
+----------
+84. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\internal_error.java (at line 4)
+	public class internal_error extends Exception
+	             ^^^^^^^^^^^^^^
+The serializable class internal_error does not declare a static final serialVersionUID field of type long
+----------
+----------
+85. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\lalr_state.java (at line 701)
+	symbol       shift_sym;
+	             ^^^^^^^^^
+The local variable shift_sym is never read
+----------
+----------
+86. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\lr_item_core.java (at line 34)
+	symbol          after_dot = null;
+	                ^^^^^^^^^
+The local variable after_dot is never read
+----------
+----------
+87. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parse_action_table.java (at line 68)
+	for (int col = 0; col < under_state[row].size(); col++)
+	                        ^^^^^^^^^^^^^^^^^^^^^^^
+The static method size() from the type parse_action_row should be accessed in a static way
+----------
+88. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parse_action_table.java (at line 115)
+	for (int col = 0; col < under_state[row].size(); col++)
+	                        ^^^^^^^^^^^^^^^^^^^^^^^
+The static method size() from the type parse_action_row should be accessed in a static way
+----------
+----------
+89. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parse_reduce_table.java (at line 66)
+	for (int col = 0; col < under_state[row].size(); col++)
+	                        ^^^^^^^^^^^^^^^^^^^^^^^
+The static method size() from the type parse_reduce_row should be accessed in a static way
+----------
+----------
+90. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 486)
+	private final parser parser;
+	                     ^^^^^^
+The field CUP$parser$actions.parser is never read locally
+----------
+91. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 694)
+	int the_idleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^^
+The local variable the_idleft is never read
+----------
+92. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 695)
+	int the_idright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^^
+The local variable the_idright is never read
+----------
+93. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 706)
+	int the_idleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^^
+The local variable the_idleft is never read
+----------
+94. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 707)
+	int the_idright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^^
+The local variable the_idright is never read
+----------
+95. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 730)
+	int the_idleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^^
+The local variable the_idleft is never read
+----------
+96. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 731)
+	int the_idright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^^
+The local variable the_idright is never read
+----------
+97. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 754)
+	int the_idleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^^
+The local variable the_idleft is never read
+----------
+98. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 755)
+	int the_idright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^^
+The local variable the_idright is never read
+----------
+99. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 766)
+	int non_term_idleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^^^^^^^
+The local variable non_term_idleft is never read
+----------
+100. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 767)
+	int non_term_idright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^^^^^^^
+The local variable non_term_idright is never read
+----------
+101. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 801)
+	int term_idleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^^^
+The local variable term_idleft is never read
+----------
+102. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 802)
+	int term_idright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^^^
+The local variable term_idright is never read
+----------
+103. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 867)
+	int an_idleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^
+The local variable an_idleft is never read
+----------
+104. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 868)
+	int an_idright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^
+The local variable an_idright is never read
+----------
+105. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 879)
+	int another_idleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^^^^^^
+The local variable another_idleft is never read
+----------
+106. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 880)
+	int another_idright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^^^^^^
+The local variable another_idright is never read
+----------
+107. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 900)
+	int labidleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^
+The local variable labidleft is never read
+----------
+108. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 901)
+	int labidright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^
+The local variable labidright is never read
+----------
+109. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 912)
+	int code_strleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^^^^
+The local variable code_strleft is never read
+----------
+110. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 913)
+	int code_strright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^^^^
+The local variable code_strright is never read
+----------
+111. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 927)
+	int symidleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)).left;
+	    ^^^^^^^^^
+The local variable symidleft is never read
+----------
+112. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 928)
+	int symidright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)).right;
+	    ^^^^^^^^^^
+The local variable symidright is never read
+----------
+113. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 930)
+	int labidleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^
+The local variable labidleft is never read
+----------
+114. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 931)
+	int labidright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^
+The local variable labidright is never read
+----------
+115. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 980)
+	production p = new production(lhs_nt, rhs_parts, rhs_pos);
+	           ^
+The local variable p is never read
+----------
+116. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1012)
+	int term_nameleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^^^^^
+The local variable term_nameleft is never read
+----------
+117. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1013)
+	int term_nameright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^^^^^
+The local variable term_nameright is never read
+----------
+118. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1027)
+	production p;
+	           ^
+The local variable p is never read
+----------
+119. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1120)
+	int lhs_idleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-5)).left;
+	    ^^^^^^^^^^
+The local variable lhs_idleft is never read
+----------
+120. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1121)
+	int lhs_idright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-5)).right;
+	    ^^^^^^^^^^^
+The local variable lhs_idright is never read
+----------
+121. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1122)
+	String lhs_id = (String)((padl.creator.javacup.runtime.Symbol) CUP$parser$stack.elementAt(CUP$parser$top-5)).value;
+	       ^^^^^^
+The local variable lhs_id is never read
+----------
+122. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1132)
+	int lhs_idleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-2)).left;
+	    ^^^^^^^^^^
+The local variable lhs_idleft is never read
+----------
+123. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1133)
+	int lhs_idright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-2)).right;
+	    ^^^^^^^^^^^
+The local variable lhs_idright is never read
+----------
+124. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1134)
+	String lhs_id = (String)((padl.creator.javacup.runtime.Symbol) CUP$parser$stack.elementAt(CUP$parser$top-2)).value;
+	       ^^^^^^
+The local variable lhs_id is never read
+----------
+125. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1144)
+	int lhs_idleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^^
+The local variable lhs_idleft is never read
+----------
+126. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1145)
+	int lhs_idright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^^
+The local variable lhs_idright is never read
+----------
+127. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1200)
+	int start_nameleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-2)).left;
+	    ^^^^^^^^^^^^^^
+The local variable start_nameleft is never read
+----------
+128. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1201)
+	int start_nameright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-2)).right;
+	    ^^^^^^^^^^^^^^^
+The local variable start_nameright is never read
+----------
+129. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1202)
+	String start_name = (String)((padl.creator.javacup.runtime.Symbol) CUP$parser$stack.elementAt(CUP$parser$top-2)).value;
+	       ^^^^^^^^^^
+The local variable start_name is never read
+----------
+130. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1212)
+	int start_nameleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^^^^^^^^
+The local variable start_nameleft is never read
+----------
+131. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1213)
+	int start_nameright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^^^^^^^^
+The local variable start_nameright is never read
+----------
+132. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1246)
+	int symleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^
+The local variable symleft is never read
+----------
+133. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1247)
+	int symright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^
+The local variable symright is never read
+----------
+134. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1267)
+	int symleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).left;
+	    ^^^^^^^
+The local variable symleft is never read
+----------
+135. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1268)
+	int symright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-0)).right;
+	    ^^^^^^^^
+The local variable symright is never read
+----------
+136. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1591)
+	int user_codeleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)).left;
+	    ^^^^^^^^^^^^^
+The local variable user_codeleft is never read
+----------
+137. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1592)
+	int user_coderight = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)).right;
+	    ^^^^^^^^^^^^^^
+The local variable user_coderight is never read
+----------
+138. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1608)
+	int user_codeleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)).left;
+	    ^^^^^^^^^^^^^
+The local variable user_codeleft is never read
+----------
+139. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1609)
+	int user_coderight = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)).right;
+	    ^^^^^^^^^^^^^^
+The local variable user_coderight is never read
+----------
+140. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1625)
+	int user_codeleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)).left;
+	    ^^^^^^^^^^^^^
+The local variable user_codeleft is never read
+----------
+141. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1626)
+	int user_coderight = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)).right;
+	    ^^^^^^^^^^^^^^
+The local variable user_coderight is never read
+----------
+142. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1642)
+	int user_codeleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)).left;
+	    ^^^^^^^^^^^^^
+The local variable user_codeleft is never read
+----------
+143. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1643)
+	int user_coderight = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)).right;
+	    ^^^^^^^^^^^^^^
+The local variable user_coderight is never read
+----------
+144. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1830)
+	int start_valleft = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)).left;
+	    ^^^^^^^^^^^^^
+The local variable start_valleft is never read
+----------
+145. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\parser.java (at line 1831)
+	int start_valright = ((padl.creator.javacup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)).right;
+	    ^^^^^^^^^^^^^^
+The local variable start_valright is never read
+----------
+----------
+146. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\production.java (at line 422)
+	action_part act_part;
+	            ^^^^^^^^
+The local variable act_part is never read
+----------
+147. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\javacup\production.java (at line 552)
+	production   new_prod;
+	             ^^^^^^^^
+The local variable new_prod is never read
+----------
+----------
+148. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 350)
+	m_current_token = m_lexGen.EOS;
+	                           ^^^
+The static field CLexGen.EOS should be accessed in a static way
+----------
+149. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 431)
+	private final int START = 1;
+	                  ^^^^^
+The field CEmit.START is never read locally
+----------
+150. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 432)
+	private final int END = 2;
+	                  ^^^
+The field CEmit.END is never read locally
+----------
+151. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 433)
+	private final int NONE = 4;
+	                  ^^^^
+The field CEmit.NONE is never read locally
+----------
+152. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 438)
+	private final boolean EDBG = true;
+	                      ^^^^
+The field CEmit.EDBG is never read locally
+----------
+153. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 1829)
+	m_spec.m_current_token = m_lexGen.EOS;
+	                                  ^^^
+The static field CLexGen.EOS should be accessed in a static way
+----------
+154. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 1833)
+	if (m_lexGen.END_OF_INPUT != m_spec.m_current_token) // CSA fix.
+	             ^^^^^^^^^^^^
+The static field CLexGen.END_OF_INPUT should be accessed in a static way
+----------
+155. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 1840)
+	while (m_lexGen.END_OF_INPUT != m_spec.m_current_token)
+	                ^^^^^^^^^^^^
+The static field CLexGen.END_OF_INPUT should be accessed in a static way
+----------
+156. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 1847)
+	if (m_lexGen.END_OF_INPUT == m_spec.m_current_token)
+	             ^^^^^^^^^^^^
+The static field CLexGen.END_OF_INPUT should be accessed in a static way
+----------
+157. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 1895)
+	CNfa p;
+	     ^
+The local variable p is never read
+----------
+158. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 1907)
+	if (m_lexGen.AT_BOL == m_spec.m_current_token)
+	             ^^^^^^
+The static field CLexGen.AT_BOL should be accessed in a static way
+----------
+159. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 1926)
+	if (m_lexGen.AT_EOL == m_spec.m_current_token)
+	             ^^^^^^
+The static field CLexGen.AT_EOL should be accessed in a static way
+----------
+160. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 1987)
+	while (m_lexGen.OR == m_spec.m_current_token)
+	                ^^
+The static field CLexGen.OR should be accessed in a static way
+----------
+161. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2113)
+	if (m_lexGen.CLOSURE == m_spec.m_current_token
+	             ^^^^^^^
+The static field CLexGen.CLOSURE should be accessed in a static way
+----------
+162. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2114)
+	|| m_lexGen.PLUS_CLOSE == m_spec.m_current_token
+	            ^^^^^^^^^^
+The static field CLexGen.PLUS_CLOSE should be accessed in a static way
+----------
+163. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2115)
+	|| m_lexGen.OPTIONAL == m_spec.m_current_token)
+	            ^^^^^^^^
+The static field CLexGen.OPTIONAL should be accessed in a static way
+----------
+164. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2123)
+	if (m_lexGen.CLOSURE == m_spec.m_current_token
+	             ^^^^^^^
+The static field CLexGen.CLOSURE should be accessed in a static way
+----------
+165. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2124)
+	|| m_lexGen.OPTIONAL == m_spec.m_current_token)
+	            ^^^^^^^^
+The static field CLexGen.OPTIONAL should be accessed in a static way
+----------
+166. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2129)
+	if (m_lexGen.CLOSURE == m_spec.m_current_token
+	             ^^^^^^^
+The static field CLexGen.CLOSURE should be accessed in a static way
+----------
+167. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2130)
+	|| m_lexGen.PLUS_CLOSE == m_spec.m_current_token)
+	            ^^^^^^^^^^
+The static field CLexGen.PLUS_CLOSE should be accessed in a static way
+----------
+168. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2158)
+	int c;
+	    ^
+The local variable c is never read
+----------
+169. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2165)
+	if (m_lexGen.OPEN_PAREN == m_spec.m_current_token)
+	             ^^^^^^^^^^
+The static field CLexGen.OPEN_PAREN should be accessed in a static way
+----------
+170. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2170)
+	if (m_lexGen.CLOSE_PAREN == m_spec.m_current_token)
+	             ^^^^^^^^^^^
+The static field CLexGen.CLOSE_PAREN should be accessed in a static way
+----------
+171. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2187)
+	if (m_lexGen.L == m_spec.m_current_token &&
+	             ^
+The static field CLexGen.L should be accessed in a static way
+----------
+172. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2196)
+	if (false == (m_lexGen.ANY == m_spec.m_current_token
+	                       ^^^
+The static field CLexGen.ANY should be accessed in a static way
+----------
+173. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2197)
+	|| m_lexGen.CCL_START == m_spec.m_current_token
+	            ^^^^^^^^^
+The static field CLexGen.CCL_START should be accessed in a static way
+----------
+174. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2215)
+	else if (m_lexGen.ANY == m_spec.m_current_token)
+	                  ^^^
+The static field CLexGen.ANY should be accessed in a static way
+----------
+175. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2227)
+	if (m_lexGen.AT_BOL == m_spec.m_current_token)
+	             ^^^^^^
+The static field CLexGen.AT_BOL should be accessed in a static way
+----------
+176. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2236)
+	if (false == (m_lexGen.CCL_END == m_spec.m_current_token))
+	                       ^^^^^^^
+The static field CLexGen.CCL_END should be accessed in a static way
+----------
+177. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2275)
+	while (m_lexGen.EOS != m_spec.m_current_token 
+	                ^^^
+The static field CLexGen.EOS should be accessed in a static way
+----------
+178. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2276)
+	&& m_lexGen.CCL_END != m_spec.m_current_token)
+	            ^^^^^^^
+The static field CLexGen.CCL_END should be accessed in a static way
+----------
+179. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2279)
+	if (m_lexGen.DASH == m_spec.m_current_token && -1 != first)
+	             ^^^^
+The static field CLexGen.DASH should be accessed in a static way
+----------
+180. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2283)
+	if (m_spec.m_current_token == m_lexGen.CCL_END)
+	                                       ^^^^^^^
+The static field CLexGen.CCL_END should be accessed in a static way
+----------
+181. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 2968)
+	CAccept accept;
+	        ^^^^^^
+The local variable accept is never read
+----------
+182. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 3170)
+	int i;
+	    ^
+The local variable i is never read
+----------
+183. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 3196)
+	CDfa next;
+	     ^^^^
+The local variable next is never read
+----------
+184. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 4994)
+	int count = 0;
+	    ^^^^^
+The local variable count is never read
+----------
+185. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 5418)
+	int elem;
+	    ^^^^
+The local variable elem is never read
+----------
+186. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 5863)
+	int code;
+	    ^^^^
+The local variable code is never read
+----------
+187. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 7145)
+	int elem;
+	    ^^^^
+The local variable elem is never read
+----------
+188. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 7146)
+	int size;
+	    ^^^^
+The local variable size is never read
+----------
+189. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 7491)
+	private void new_block(int bnum) {
+	             ^^^^^^^^^^^^^^^^^^^
+The method new_block(int) from the type SparseBitSet is never used locally
+----------
+190. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\jlex\JLex.java (at line 7752)
+	private boolean isValid() {
+	                ^^^^^^^^^
+The method isValid() from the type SparseBitSet is never used locally
+----------
+----------
+191. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\misc\Attribute.java (at line 23)
+	import java.io.IOException;
+	       ^^^^^^^^^^^^^^^^^^^
+The import java.io.IOException is never used
+----------
+----------
+192. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\misc\Element.java (at line 23)
+	import java.io.IOException;
+	       ^^^^^^^^^^^^^^^^^^^
+The import java.io.IOException is never used
+----------
+----------
+193. WARNING in D:\Software\Ptidej Workspace 3\PADL Creator MSE\src\padl\creator\misc\Value.java (at line 23)
+	import java.io.IOException;
+	       ^^^^^^^^^^^^^^^^^^^
+The import java.io.IOException is never used
+----------
+193 problems (193 warnings)

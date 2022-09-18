@@ -1,0 +1,11 @@
+driver = mendel.Driver
+
+parts = mendel.part.EntitySelection,mendel.part.tool.FamilyTool,mendel.part.tool.SetPrototypeRecTool,mendel.part.output.FamilyInterfaceOutput,mendel.part.output.FileOutput
+
+filters=mendel.filter.ClassFilter,mendel.filter.AnonymousFilter,mendel.filter.PackageFilter
+
+excludeSingleFamily = true
+printinterface = true
+
+qualifier=results/fam/
+suffix = _ProtoSetR.csv

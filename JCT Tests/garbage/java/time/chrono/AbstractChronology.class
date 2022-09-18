@@ -1,0 +1,156 @@
+package java.time.chrono;
+abstract public class AbstractChronology
+implements java.time.chrono.Chronology
+{
+final static java.lang.Object DATE_ORDER;
+
+final static java.lang.Object DATE_TIME_ORDER;
+
+final static java.lang.Object INSTANT_ORDER;
+
+final private static java.lang.Object CHRONOS_BY_ID;
+
+final private static java.lang.Object CHRONOS_BY_TYPE;
+
+static java.time.chrono.Chronology registerChrono(java.lang.Object arg0)
+{
+
+}
+
+static java.time.chrono.Chronology registerChrono(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static boolean initCache()
+{
+
+}
+
+static java.time.chrono.Chronology ofLocale(java.lang.Object arg0)
+{
+
+}
+
+static java.time.chrono.Chronology of(java.lang.Object arg0)
+{
+
+}
+
+private static java.time.chrono.Chronology of0(java.lang.Object arg0)
+{
+
+}
+
+static java.util.Set getAvailableChronologies()
+{
+
+}
+
+protected void <init>()
+{
+
+}
+
+public java.time.chrono.ChronoLocalDate resolveDate(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+void resolveProlepticMonth(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.time.chrono.ChronoLocalDate resolveYearOfEra(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.time.chrono.ChronoLocalDate resolveYMD(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.time.chrono.ChronoLocalDate resolveYD(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.time.chrono.ChronoLocalDate resolveYMAA(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.time.chrono.ChronoLocalDate resolveYMAD(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.time.chrono.ChronoLocalDate resolveYAA(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.time.chrono.ChronoLocalDate resolveYAD(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.time.chrono.ChronoLocalDate resolveAligned(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+void addFieldValue(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public int compareTo(java.lang.Object arg0)
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+java.lang.Object writeReplace()
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.ObjectStreamException
+{
+
+}
+
+void writeExternal(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static java.time.chrono.Chronology readExternal(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

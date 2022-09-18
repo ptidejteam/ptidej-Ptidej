@@ -1,0 +1,10 @@
+driver = mendel.Driver
+
+parts = mendel.part.EntitySelection,mendel.part.tool.FamilyTool,mendel.part.tool.MajorityPrototypeRecTool,mendel.part.tool.HammingTool,mendel.part.output.HammingSeriesOutput,mendel.part.output.FileOutput
+
+filters=mendel.filter.ClassFilter,mendel.filter.AnonymousFilter,mendel.filter.PackageFilter
+
+excludeSingleFamily = true
+
+qualifier=results/fam/
+suffix = _hammingSeries.csv

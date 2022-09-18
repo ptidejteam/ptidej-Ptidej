@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<sdmetricsmetamodel version="2.0">
+
+<modelelement name="sdmetricsbase">
+  <attribute name="context" type="ref" />
+  <attribute name="id" />
+  <attribute name="name" />
+</modelelement>
+
+<modelelement name="test">
+	<attribute name="valueSet" type="ref" multiplicity="many"/>
+	<attribute name="elemSet" multiplicity="many"/>
+</modelelement>
+
+<modelelement name="class" />
+
+<modelelement name="operation" />
+
+<modelelement name="package" />
+</sdmetricsmetamodel>

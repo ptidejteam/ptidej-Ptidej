@@ -1,0 +1,20 @@
+package java.net;
+abstract public class ContentHandler
+{
+public void <init>()
+{
+
+}
+
+abstract public java.lang.Object getContent(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public java.lang.Object getContent(java.lang.Object arg0, java.lang.Object arg1) throws java.io.IOException
+{
+
+}
+
+
+}

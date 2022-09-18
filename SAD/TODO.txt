@@ -1,0 +1,110 @@
+Dans org.swt
+# Results of the detection of the Small classes
+ThresholdNMD+NAD = -1.0
+////////////////////////////////////////////////////////
+
+- Pb: CodeSmell identifié par le nom : ne permet de distinguer
+  deux methodes de même nom mais de signatures differentes 
+  A remplacer par IEntity
+
+- Enlever les contexts
+
+- La plupart des HashMap doivent être supprimés car n'apporte
+  rien
+  A remplacer par des Set
+
+- Exclure dans le calcul des métriques les methodes <clinit>
+  et <init>
+
+- Tous les codes smells n'ont pas forcément:
+      private final HashMap values, thresholdValues;
+  cf. public interface ICodeSmell : retirer les signatures suivantes:
+  	public HashMap<String, Double> getValues();
+	// TODO: TO BE REMOVED!!!
+	public HashMap<String, Double> getThresholdValues();
+  Une fois retiré de la classe, il faut s'assurer que toutes ces 
+  méthodes ont été retirées dans les classes qui implémentent ICodeSmell.
+	
+	
+	final HashMap thresholdMap = new HashMap();
+				// TODO : pb ici les thresholds pour NAD et NMD sont les mêmes
+				// car mapOfLargeClassesValues.put(anClass, new Double(NMD + NAD)); 
+				thresholdMap.put("NAD", new Double(this.boxPlot.getMaxBound()));
+				thresholdMap.put("NMD", new Double(this.boxPlot.getMaxBound()));
+
+//////////////////////////////////////////////////////////
+Définir des valeurs seuils pour la détection des défauts
+de conception car sinon des antipatterns qui figuraient
+bien au niveau du code dans la première version apparaissent
+ dans la seconde version comme de nouveaux patrons qui se sont 
+ ajoutés alors que ce n'est pas le cas!
+ 
+ Conclusion : 
+ - le boxplot induit en erreur 
+ - ajouter un attribut classe dans Antipattern
+ - ajouter une methode IAntipattern getAntipattern(IClass iClass)
+ - écrire méthode qui compare si deux antipatterns sont identiques
+ - écrire méthode qui compare si deux codesmells sont identiques
+ - réécrire Differentiator sans le codelevelmodel
+   mais en faisant une différence entre les classes
+   des antipatterns 
+
+//////////////////////////////////////////////////////
+
+Dans Codesmell.java
+
+	/**
+	 * Compares the specified codesmell with this codesmell for equality
+	 * We consider that a code smell is equal to another code smell if they
+	 * involve the same class. we do not compare their other attributes.
+	 * 
+	 * @param the code smell to be compared
+	 * @return boolean : true if the specified code smell is the same as this code smell
+	 */
+	public boolean equalsCodeSmell(final ICodeSmell cs)
+	
+///////////////////////////////////////////////////////
+
+Ajouter au BlobDetection, la detection de LowCohesionDetection + 
+ControllerClasssDetection.
+
+
+Il faut extraire les methodes dans detect() de BlobDetection.java
+
+
+//////////////////////////////////////////////////////
+
+Dans LongMethodDetection.java
+final Integer value = this.annotator.getInstructionCount(
+							aClass.getName(), aMethod.getID());
+
+Avec les valeurs suivantes :
+
+aClass.getName() : javax.xml.parsers.DocumentBuilder
+aMethod.getID()  : isNamespaceAware()
+
+value = null
+
+/////////////////////////////////////////////////////
+
+Pb le boxplot donne la valeur que ce soit pour les NAD ou NMD
+
+####Blob
+#Large Class
+ NameClass : org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram
+ Values    : {NAD=13.0, NMD=9.0}
+ Threshold : {NAD=13.0, NMD=13.0}
+#Data Class
+ NameClass : org.argouml.uml.diagram.ui.ActionAddAssociationRole
+ Values    : {NAD=1.0, NMD=1.0}
+
+####Blob
+#Data Class
+ NameClass : org.apache.xerces.validators.common.InsertableElementsInfo
+ Values    : {NAD=8.0, NMD=1.0}
+#Large Class
+ NameClass : org.apache.xerces.validators.common.DFAContentModel
+ Values    : {NAD=22.0, NMD=13.0}
+ Threshold : {NAD=23.0, NMD=23.0}
+
+ de plus, getHigherValues ne marche pas!!!

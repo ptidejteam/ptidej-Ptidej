@@ -1,0 +1,13 @@
+Observations:
+
+- Dans JFreechart, 2 défauts (Spaghetti Code et AntiSingleton) évoluent de la même façon ce qui est un peu normal 
+  car ils ont des règles qui sont assez proches cf. UseGlobalVariable.
+- Dans OpenJMail, il n'y a aucun défaut ce qui laisse à penser que ce système a été bien conçu.
+- Dans PCGen, le nombre de Spaghetti Code a considérablement augmenté entre les versions v2.3.9 et v4.1.7, puis
+ a diminué ensuite petit à petit : passant de 220 (à la version v4.1.7) à 62 (à la dernière version).
+- Dans Xerces, on observe des pics de défauts notamment à la version v2.0.0 et la version v2.7.0.
+
+
+A FAIRE:
+- Détecter un autre défaut : large class but not complex!
+- Corréler quelques résultats avec les bugs.

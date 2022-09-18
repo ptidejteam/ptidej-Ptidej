@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="examples"/>
+	<classpathentry kind="src" path="tests"/>
+	<classpathentry kind="lib" path="lib/antlrall.jar"/>
+	<classpathentry kind="lib" path="lib/agile2d.jar"/>
+	<classpathentry kind="lib" path="lib/agile2d_opengl.jar"/>
+	<classpathentry kind="lib" path="lib/xml-writer.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

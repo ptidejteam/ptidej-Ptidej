@@ -1,0 +1,350 @@
+package java.time;
+final public class Duration
+implements java.io.Serializable, java.lang.Comparable, java.time.temporal.TemporalAmount
+{
+private static class DurationUnits
+{
+final static java.lang.Object UNITS;
+
+private void <init>()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}
+
+final public static java.lang.Object ZERO;
+
+final private static java.lang.Object serialVersionUID;
+
+final private static java.lang.Object BI_NANOS_PER_SECOND;
+
+final private static java.lang.Object PATTERN;
+
+final private java.lang.Object seconds;
+
+final private java.lang.Object nanos;
+
+public static java.time.Duration ofDays(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.Duration ofHours(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.Duration ofMinutes(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.Duration ofSeconds(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.Duration ofSeconds(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.time.Duration ofMillis(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.Duration ofNanos(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.Duration of(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.time.Duration from(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.Duration parse(java.lang.Object arg0)
+{
+
+}
+
+private static long parseNumber(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private static int parseFraction(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.time.Duration create(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+public static java.time.Duration between(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static java.time.Duration create(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public long get(java.lang.Object arg0)
+{
+
+}
+
+public java.util.List getUnits()
+{
+
+}
+
+public boolean isZero()
+{
+
+}
+
+public boolean isNegative()
+{
+
+}
+
+public long getSeconds()
+{
+
+}
+
+public int getNano()
+{
+
+}
+
+public java.time.Duration withSeconds(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration withNanos(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration plus(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration plus(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.Duration plusDays(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration plusHours(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration plusMinutes(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration plusSeconds(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration plusMillis(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration plusNanos(java.lang.Object arg0)
+{
+
+}
+
+private java.time.Duration plus(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.Duration minus(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration minus(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.Duration minusDays(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration minusHours(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration minusMinutes(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration minusSeconds(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration minusMillis(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration minusNanos(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration multipliedBy(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration dividedBy(java.lang.Object arg0)
+{
+
+}
+
+private java.math.BigDecimal toSeconds()
+{
+
+}
+
+private static java.time.Duration create(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Duration negated()
+{
+
+}
+
+public java.time.Duration abs()
+{
+
+}
+
+public java.time.temporal.Temporal addTo(java.lang.Object arg0)
+{
+
+}
+
+public java.time.temporal.Temporal subtractFrom(java.lang.Object arg0)
+{
+
+}
+
+public long toDays()
+{
+
+}
+
+public long toHours()
+{
+
+}
+
+public long toMinutes()
+{
+
+}
+
+public long toMillis()
+{
+
+}
+
+public long toNanos()
+{
+
+}
+
+public int compareTo(java.lang.Object arg0)
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+private java.lang.Object writeReplace()
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.InvalidObjectException
+{
+
+}
+
+void writeExternal(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static java.time.Duration readExternal(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

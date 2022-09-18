@@ -1,0 +1,17 @@
+FM_JTans
+
+null
+Step	ProblemCreation	Solver	Total
+Ruled	0'0	0'0	0'0
+No Rule	0'0	0'1	0'1
+
+Var	DomainNoRule	DomainRuled	Reduction
+concreteCreator	141	0	100%
+concreteProduct	141	0	100%
+
+Solutions	Total	Ghosted	Valabe
+Ruled	1	0	1
+No rule	91	84	7
+
+Inclusion:
+1 solutions included of 1

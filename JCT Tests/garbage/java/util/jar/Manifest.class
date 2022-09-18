@@ -1,0 +1,152 @@
+package java.util.jar;
+public class Manifest
+implements java.lang.Cloneable
+{
+static class FastInputStream
+extends java.io.FilterInputStream
+{
+private java.lang.Object buf;
+
+private java.lang.Object count;
+
+private java.lang.Object pos;
+
+void <init>(java.lang.Object arg0)
+{
+
+}
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public int read() throws java.io.IOException
+{
+
+}
+
+public int read(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.io.IOException
+{
+
+}
+
+public int readLine(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.io.IOException
+{
+
+}
+
+public byte peek() throws java.io.IOException
+{
+
+}
+
+public int readLine(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public long skip(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public int available() throws java.io.IOException
+{
+
+}
+
+public void close() throws java.io.IOException
+{
+
+}
+
+private void fill() throws java.io.IOException
+{
+
+}
+
+
+}
+
+private java.lang.Object attr;
+
+private java.lang.Object entries;
+
+public void <init>()
+{
+
+}
+
+public void <init>(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public java.util.jar.Attributes getMainAttributes()
+{
+
+}
+
+public java.util.Map getEntries()
+{
+
+}
+
+public java.util.jar.Attributes getAttributes(java.lang.Object arg0)
+{
+
+}
+
+public void clear()
+{
+
+}
+
+public void write(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static void make72Safe(java.lang.Object arg0)
+{
+
+}
+
+public void read(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+private java.lang.String parseName(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private int toLower(java.lang.Object arg0)
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public java.lang.Object clone()
+{
+
+}
+
+
+}

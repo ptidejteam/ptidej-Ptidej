@@ -1,0 +1,18 @@
+package java.io;
+public class UnsupportedEncodingException
+extends java.io.IOException
+{
+final private static java.lang.Object serialVersionUID;
+
+public void <init>()
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+
+}

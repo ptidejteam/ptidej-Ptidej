@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PADL Statements
+Bundle-SymbolicName: PADL_Statements
+Bundle-Version: 1.5.0
+Export-Package: padl.statement.kernel,
+ padl.statement.kernel.impl
+Require-Bundle: CPL;bundle-version="1.0.0",
+ PADL;bundle-version="1.0.0"
+Automatic-Module-Name: PADL.Statements

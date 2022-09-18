@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ptidej UI Analyses
+Bundle-SymbolicName: Ptidej_UI_Analyses
+Bundle-Version: 1.0.0
+Export-Package: ptidej.ui.analysis,
+ ptidej.ui.analysis.repository,
+ ptidej.ui.analysis.repository.comparator,
+ ptidej.ui.analysis.repository.comparator.model,
+ ptidej.ui.analysis.repository.comparator.ui
+Require-Bundle: CPL,
+ PADL,
+ PADL_Creator_AOL,
+ Ptidej,
+ Ptidej_UI
+Automatic-Module-Name: Ptidej.UI.Analyses

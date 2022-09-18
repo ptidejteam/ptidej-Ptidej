@@ -1,0 +1,12 @@
+<iReportPlugin 	
+	name="Register to JasperForge.org"
+	class="it.businesslogic.ireport.plugin.jforg.RegistrationPlugin"
+	loadOnStartup="true"
+	hide = "true"
+	configurable = "false">
+	
+	<IconFile>/it/businesslogic/ireport/icons/upgrade.png</IconFile>
+	
+	<Description>Point the browser to the JasperForge.org registration page</Description>
+
+</iReportPlugin>

@@ -1,0 +1,140 @@
+# Micro-architecture 1 similar at 100% with unknown pattern
+1.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+1.100.abstractproduct = soc.client.SOCDisplaylessPlayerClient
+1.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+1.100.product = soc.client.SOCDisplaylessPlayerClient
+1.100.XCommand = No source transformation needed
+
+# Micro-architecture 25 similar at 100% with unknown pattern
+25.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+25.100.abstractproduct = soc.client.SOCDisplaylessPlayerClient
+25.100.concretefactory = soc.robot.SOCRobotClient
+25.100.product = soc.robot.SOCRobotClient
+25.100.XCommand = No source transformation needed
+
+# Micro-architecture 7 similar at 100% with unknown pattern
+7.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+7.100.abstractproduct = soc.game.SOCGame
+7.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+7.100.product = soc.game.SOCGame
+7.100.XCommand = No source transformation needed
+
+# Micro-architecture 18 similar at 100% with unknown pattern
+18.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+18.100.abstractproduct = soc.game.SOCGame
+18.100.concretefactory = soc.robot.SOCRobotClient
+18.100.product = soc.game.SOCGame
+18.100.XCommand = No source transformation needed
+
+# Micro-architecture 27 similar at 100% with unknown pattern
+27.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+27.100.abstractproduct = soc.robot.SOCRobotClient
+27.100.concretefactory = soc.robot.SOCRobotClient
+27.100.product = soc.robot.SOCRobotClient
+27.100.XCommand = No source transformation needed
+
+# Micro-architecture 23 similar at 100% with unknown pattern
+23.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+23.100.abstractproduct = soc.util.CappedQueue
+23.100.concretefactory = soc.robot.SOCRobotClient
+23.100.product = soc.util.CappedQueue
+23.100.XCommand = No source transformation needed
+
+# Micro-architecture 22 similar at 100% with unknown pattern
+22.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+22.100.abstractproduct = soc.util.SOCRobotParameters
+22.100.concretefactory = soc.robot.SOCRobotClient
+22.100.product = soc.util.SOCRobotParameters
+22.100.XCommand = No source transformation needed
+
+# Micro-architecture 37 similar at 100% with unknown pattern
+37.100.abstractfactory = soc.game.SOCDevCardConstants
+37.100.abstractproduct = soc.game.SOCDevCardConstants
+37.100.concretefactory = soc.game.SOCPlayer
+37.100.product = soc.game.SOCPlayer
+37.100.XCommand = No source transformation needed
+
+# Micro-architecture 36 similar at 100% with unknown pattern
+36.100.abstractfactory = soc.game.SOCDevCardConstants
+36.100.abstractproduct = soc.game.SOCLRPathData
+36.100.concretefactory = soc.game.SOCPlayer
+36.100.product = soc.game.SOCLRPathData
+36.100.XCommand = No source transformation needed
+
+# Micro-architecture 46 similar at 100% with unknown pattern
+46.100.abstractfactory = soc.game.SOCDevCardConstants
+46.100.abstractproduct = soc.game.SOCPlayer
+46.100.concretefactory = soc.game.SOCPlayer
+46.100.product = soc.game.SOCPlayer
+46.100.XCommand = No source transformation needed
+
+# Micro-architecture 45 similar at 100% with unknown pattern
+45.100.abstractfactory = soc.game.SOCDevCardConstants
+45.100.abstractproduct = soc.util.NodeLenVis
+45.100.concretefactory = soc.game.SOCPlayer
+45.100.product = soc.util.NodeLenVis
+45.100.XCommand = No source transformation needed
+
+# Micro-architecture 58 similar at 100% with unknown pattern
+58.100.abstractfactory = soc.game.SOCResourceConstants
+58.100.abstractproduct = soc.game.SOCDevCardConstants
+58.100.concretefactory = soc.game.SOCPlayer
+58.100.product = soc.game.SOCPlayer
+58.100.XCommand = No source transformation needed
+
+# Micro-architecture 57 similar at 100% with unknown pattern
+57.100.abstractfactory = soc.game.SOCResourceConstants
+57.100.abstractproduct = soc.game.SOCLRPathData
+57.100.concretefactory = soc.game.SOCPlayer
+57.100.product = soc.game.SOCLRPathData
+57.100.XCommand = No source transformation needed
+
+# Micro-architecture 67 similar at 100% with unknown pattern
+67.100.abstractfactory = soc.game.SOCResourceConstants
+67.100.abstractproduct = soc.game.SOCPlayer
+67.100.concretefactory = soc.game.SOCPlayer
+67.100.product = soc.game.SOCPlayer
+67.100.XCommand = No source transformation needed
+
+# Micro-architecture 66 similar at 100% with unknown pattern
+66.100.abstractfactory = soc.game.SOCResourceConstants
+66.100.abstractproduct = soc.util.NodeLenVis
+66.100.concretefactory = soc.game.SOCPlayer
+66.100.product = soc.util.NodeLenVis
+66.100.XCommand = No source transformation needed
+
+# Micro-architecture 214 similar at 100% with unknown pattern
+214.100.abstractfactory = soc.message.SOCMessage
+214.100.abstractproduct = soc.util.SOCRobotParameters
+214.100.concretefactory = soc.message.SOCUpdateRobotParams
+214.100.product = soc.util.SOCRobotParameters
+214.100.XCommand = No source transformation needed
+
+# Micro-architecture 249 similar at 100% with unknown pattern
+249.100.abstractfactory = soc.server.genericServer.Server
+249.100.abstractproduct = soc.server.SOCGameTimeoutChecker
+249.100.concretefactory = soc.server.SOCServer
+249.100.product = soc.server.SOCGameTimeoutChecker
+249.100.XCommand = No source transformation needed
+
+# Micro-architecture 253 similar at 100% with unknown pattern
+253.100.abstractfactory = soc.server.genericServer.Server
+253.100.abstractproduct = soc.server.SOCReplaceRequest
+253.100.concretefactory = soc.server.SOCServer
+253.100.product = soc.server.SOCReplaceRequest
+253.100.XCommand = No source transformation needed
+
+# Micro-architecture 288 similar at 100% with unknown pattern
+288.100.abstractfactory = soc.server.genericServer.Server
+288.100.abstractproduct = soc.server.SOCServer
+288.100.concretefactory = soc.server.SOCServer
+288.100.product = soc.server.SOCServer
+288.100.XCommand = No source transformation needed
+
+# Micro-architecture 287 similar at 100% with unknown pattern
+287.100.abstractfactory = soc.server.genericServer.Server
+287.100.abstractproduct = soc.util.SOCRobotParameters
+287.100.concretefactory = soc.server.SOCServer
+287.100.product = soc.util.SOCRobotParameters
+287.100.XCommand = No source transformation needed
+

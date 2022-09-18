@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE tree SYSTEM "treeml.dtd">
+<tree>
+ <metadata>
+  <dc:title>Example of tree from the article "A Node-Positioning Algorithm"</dc:title>
+ </metadata>
+ <declarations>
+  <attributeDecl name="name" type="String"/>
+ </declarations>
+ <branch>
+  <attribute name="name" value="O"/>
+  <leaf>
+   <attribute name="name" value="A"/>
+  </leaf>
+  <leaf>
+   <attribute name="name" value="B"/>
+  </leaf>
+  <leaf>
+   <attribute name="name" value="C"/>
+  </leaf>  
+ </branch>
+</tree>

@@ -1,0 +1,12 @@
+<iReportPlugin 	
+	name="Example 1"
+	class="it.businesslogic.ireport.plugin.examples.HelloWorld"
+	loadOnStartup="false"
+	hide = "false"
+	configurable = "true">
+	
+	<IconFile>/it/businesslogic/ireport/icons/menu/new.gif</IconFile>
+	
+	<Description>This example shows how to create a very simple plugin for iReport.</Description>
+
+</iReportPlugin>

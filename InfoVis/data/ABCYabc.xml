@@ -1,0 +1,414 @@
+<?xml version="1.0" standalone="no"?>
+
+<!DOCTYPE tree SYSTEM "treeml.dtd">
+<tree>
+ <declarations>
+  <attributeDecl name="name" type="String"/>
+  <attributeDecl name="length" type="Real"/>
+ </declarations>
+ <branch>
+   <attribute name="name" value="?abc56?"/>
+  <branch>
+    <attribute name="name" value="?abc47?"/>
+    <attribute name="length" value="0.00351"/>
+   <branch>
+     <attribute name="name" value="?abc18?"/>
+     <attribute name="length" value="0.00394"/>
+    <branch>
+      <attribute name="name" value="?abc13?"/>
+      <attribute name="length" value="0.00555"/>
+     <branch>
+       <attribute name="name" value="?abc3?"/>
+       <attribute name="length" value="0.02751"/>
+      <branch>
+        <attribute name="name" value="?abc0?"/>
+        <attribute name="length" value="0.06332"/>
+       <leaf>
+        <attribute name="name" value="CAC0984"/>
+        <attribute name="length" value="0.2039"/></leaf>
+       <leaf>
+        <attribute name="name" value="Cj0774c"/>
+        <attribute name="length" value="0.2461"/></leaf>
+      </branch>
+      <branch>
+        <attribute name="name" value="?abc2?"/>
+        <attribute name="length" value="0.36109"/>
+       <branch>
+         <attribute name="name" value="?abc1?"/>
+         <attribute name="length" value="0.0"/>
+        <leaf>
+         <attribute name="name" value="CPn0280"/>
+         <attribute name="length" value="0.0"/></leaf>
+        <leaf>
+         <attribute name="name" value="CP0478"/>
+         <attribute name="length" value="0.0"/></leaf>
+       </branch>
+       <leaf>
+        <attribute name="name" value="dppF_1"/>
+        <attribute name="length" value="0.0"/></leaf>
+      </branch>
+     </branch>
+     <branch>
+       <attribute name="name" value="?abc12?"/>
+       <attribute name="length" value="0.01054"/>
+      <branch>
+        <attribute name="name" value="?abc6?"/>
+        <attribute name="length" value="0.04275"/>
+       <branch>
+         <attribute name="name" value="?abc5?"/>
+         <attribute name="length" value="0.20976"/>
+        <branch>
+         <attribute name="name" value="?abc4?"/>
+         <attribute name="length" value="0.0095"/>
+         <leaf>
+         <attribute name="name" value="AbcC"/>
+         <attribute name="length" value="0.01626"/></leaf>
+         <leaf>
+         <attribute name="name" value="HP1576"/>
+         <attribute name="length" value="0.0082"/></leaf>
+        </branch>
+        <leaf>
+         <attribute name="name" value="jhp1484"/>
+         <attribute name="length" value="0.02108"/></leaf>
+       </branch>
+       <leaf>
+        <attribute name="name" value="FN0660"/>
+        <attribute name="length" value="0.22755"/></leaf>
+      </branch>
+      <branch>
+        <attribute name="name" value="?abc11?"/>
+        <attribute name="length" value="0.05711"/>
+       <branch>
+         <attribute name="name" value="?abc10?"/>
+         <attribute name="length" value="0.09547"/>
+        <branch>
+         <attribute name="name" value="?abc8?"/>
+         <attribute name="length" value="0.02418"/>
+         <branch>
+         <attribute name="name" value="?abc7?"/>
+         <attribute name="length" value="0.10394"/>
+         <leaf>
+         <attribute name="name" value="SPy0320"/>
+         <attribute name="length" value="0.00289"/></leaf>
+         <leaf>
+         <attribute name="name" value="spyM18_0315"/>
+         <attribute name="length" value="0.00558"/></leaf>
+         </branch>
+         <leaf>
+         <attribute name="name" value="AtmD"/>
+         <attribute name="length" value="0.11923"/></leaf>
+        </branch>
+        <branch>
+         <attribute name="name" value="?abc9?"/>
+         <attribute name="length" value="0.13195"/>
+         <leaf>
+         <attribute name="name" value="spr0149"/>
+         <attribute name="length" value="5.6E-4"/></leaf>
+         <leaf>
+         <attribute name="name" value="SP0151"/>
+         <attribute name="length" value="0.00228"/></leaf>
+        </branch>
+       </branch>
+       <leaf>
+        <attribute name="name" value="ORF4"/>
+        <attribute name="length" value="0.23529"/></leaf>
+      </branch>
+     </branch>
+    </branch>
+    <branch>
+      <attribute name="name" value="?abc17?"/>
+      <attribute name="length" value="0.01016"/>
+     <branch>
+       <attribute name="name" value="?abc14?"/>
+       <attribute name="length" value="0.00541"/>
+      <leaf>
+       <attribute name="name" value="Cgl0636"/>
+       <attribute name="length" value="0.29781"/></leaf>
+      <leaf>
+       <attribute name="name" value="BA_0883"/>
+       <attribute name="length" value="0.23316"/></leaf>
+     </branch>
+     <branch>
+       <attribute name="name" value="?abc16?"/>
+       <attribute name="length" value="0.2864"/>
+      <branch>
+        <attribute name="name" value="?abc15?"/>
+        <attribute name="length" value="0.01284"/>
+       <leaf>
+        <attribute name="name" value="SA0420"/>
+        <attribute name="length" value="0.0"/></leaf>
+       <leaf>
+        <attribute name="name" value="SAV0462"/>
+        <attribute name="length" value="0.0"/></leaf>
+      </branch>
+      <leaf>
+       <attribute name="name" value="MW0416"/>
+       <attribute name="length" value="0.01355"/></leaf>
+     </branch>
+    </branch>
+   </branch>
+   <branch>
+     <attribute name="name" value="?abc46?"/>
+     <attribute name="length" value="0.00745"/>
+    <branch>
+      <attribute name="name" value="?abc36?"/>
+      <attribute name="length" value="0.00899"/>
+     <branch>
+       <attribute name="name" value="?abc33?"/>
+       <attribute name="length" value="0.00314"/>
+      <branch>
+        <attribute name="name" value="?abc25?"/>
+        <attribute name="length" value="0.00458"/>
+       <branch>
+         <attribute name="name" value="?abc22?"/>
+         <attribute name="length" value="0.07623"/>
+        <branch>
+         <attribute name="name" value="?abc21?"/>
+         <attribute name="length" value="0.03593"/>
+         <branch>
+         <attribute name="name" value="?abc20?"/>
+         <attribute name="length" value="0.02235"/>
+         <branch>
+         <attribute name="name" value="?abc19?"/>
+         <attribute name="length" value="0.08923"/>
+         <leaf>
+         <attribute name="name" value="abc_xa"/>
+         <attribute name="length" value="0.02601"/></leaf>
+         <leaf>
+         <attribute name="name" value="abc_xc"/>
+         <attribute name="length" value="0.02772"/></leaf>
+         </branch>
+         <leaf>
+         <attribute name="name" value="XF0875"/>
+         <attribute name="length" value="0.12941"/></leaf>
+         </branch>
+         <leaf>
+         <attribute name="name" value="PA5503"/>
+         <attribute name="length" value="0.14267"/></leaf>
+        </branch>
+        <leaf>
+         <attribute name="name" value="CC2669"/>
+         <attribute name="length" value="0.16581"/></leaf>
+       </branch>
+       <branch>
+         <attribute name="name" value="?abc24?"/>
+         <attribute name="length" value="0.01062"/>
+        <branch>
+         <attribute name="name" value="?abc23?"/>
+         <attribute name="length" value="0.20304"/>
+         <leaf>
+         <attribute name="name" value="NMB1948"/>
+         <attribute name="length" value="0.0059"/></leaf>
+         <leaf>
+         <attribute name="name" value="NMA0504"/>
+         <attribute name="length" value="0.00634"/></leaf>
+        </branch>
+        <leaf>
+         <attribute name="name" value="RSc0920"/>
+         <attribute name="length" value="0.22349"/></leaf>
+       </branch>
+      </branch>
+      <branch>
+        <attribute name="name" value="?abc32?"/>
+        <attribute name="length" value="0.01536"/>
+       <branch>
+         <attribute name="name" value="?abc27?"/>
+         <attribute name="length" value="0.02224"/>
+        <branch>
+         <attribute name="name" value="?abc26?"/>
+         <attribute name="length" value="0.04764"/>
+         <leaf>
+         <attribute name="name" value="BMEII0337"/>
+         <attribute name="length" value="0.20619"/></leaf>
+         <leaf>
+         <attribute name="name" value="mll4792"/>
+         <attribute name="length" value="0.19107"/></leaf>
+        </branch>
+        <leaf>
+         <attribute name="name" value="PA2350"/>
+         <attribute name="length" value="0.25491"/></leaf>
+       </branch>
+       <branch>
+         <attribute name="name" value="?abc31?"/>
+         <attribute name="length" value="0.00513"/>
+        <branch>
+         <attribute name="name" value="?abc28?"/>
+         <attribute name="length" value="0.01369"/>
+         <leaf>
+         <attribute name="name" value="TP0120"/>
+         <attribute name="length" value="0.26064"/></leaf>
+         <leaf>
+         <attribute name="name" value="DR1356"/>
+         <attribute name="length" value="0.32301"/></leaf>
+        </branch>
+        <branch>
+         <attribute name="name" value="?abc30?"/>
+         <attribute name="length" value="0.0901"/>
+         <branch>
+         <attribute name="name" value="?abc29?"/>
+         <attribute name="length" value="0.15312"/>
+         <leaf>
+         <attribute name="name" value="Atu4487"/>
+         <attribute name="length" value="-0.00141"/></leaf>
+         <leaf>
+         <attribute name="name" value="AGR_L_765"/>
+         <attribute name="length" value="0.00141"/></leaf>
+         </branch>
+         <leaf>
+         <attribute name="name" value="SMc03159"/>
+         <attribute name="length" value="0.15918"/></leaf>
+        </branch>
+       </branch>
+      </branch>
+     </branch>
+     <branch>
+       <attribute name="name" value="?abc35?"/>
+       <attribute name="length" value="0.26687"/>
+      <branch>
+        <attribute name="name" value="?abc34?"/>
+        <attribute name="length" value="0.00407"/>
+       <leaf>
+        <attribute name="name" value="sfbB"/>
+        <attribute name="length" value="0.00552"/></leaf>
+       <leaf>
+        <attribute name="name" value="sfbB_st"/>
+        <attribute name="length" value="-0.00234"/></leaf>
+      </branch>
+      <leaf>
+       <attribute name="name" value="STY0559"/>
+       <attribute name="length" value="0.00206"/></leaf>
+     </branch>
+    </branch>
+    <branch>
+      <attribute name="name" value="?abc45?"/>
+      <attribute name="length" value="0.00931"/>
+     <branch>
+       <attribute name="name" value="?abc37?"/>
+       <attribute name="length" value="0.02768"/>
+      <leaf>
+       <attribute name="name" value="SCL11.15c"/>
+       <attribute name="length" value="0.25134"/></leaf>
+      <leaf>
+       <attribute name="name" value="YPO1318"/>
+       <attribute name="length" value="0.24256"/></leaf>
+     </branch>
+     <branch>
+       <attribute name="name" value="?abc44?"/>
+       <attribute name="length" value="0.07912"/>
+      <branch>
+        <attribute name="name" value="?abc38?"/>
+        <attribute name="length" value="0.06918"/>
+       <leaf>
+        <attribute name="name" value="PM1728"/>
+        <attribute name="length" value="0.10587"/></leaf>
+       <leaf>
+        <attribute name="name" value="HI0621"/>
+        <attribute name="length" value="0.11215"/></leaf>
+      </branch>
+      <branch>
+        <attribute name="name" value="?abc43?"/>
+        <attribute name="length" value="0.00614"/>
+       <branch>
+         <attribute name="name" value="?abc42?"/>
+         <attribute name="length" value="0.06707"/>
+        <branch>
+         <attribute name="name" value="?abc41?"/>
+         <attribute name="length" value="0.07394"/>
+         <branch>
+         <attribute name="name" value="?abc39?"/>
+         <attribute name="length" value="0.02024"/>
+         <leaf>
+         <attribute name="name" value="STY0274"/>
+         <attribute name="length" value="0.00451"/></leaf>
+         <leaf>
+         <attribute name="name" value="abc_st"/>
+         <attribute name="length" value="0.00424"/></leaf>
+         </branch>
+         <branch>
+         <attribute name="name" value="?abc40?"/>
+         <attribute name="length" value="0.02203"/>
+         <leaf>
+         <attribute name="name" value="abc_ecO"/>
+         <attribute name="length" value="7.4E-4"/></leaf>
+         <leaf>
+         <attribute name="name" value="abc_ecK"/>
+         <attribute name="length" value="0.00217"/></leaf>
+         </branch>
+        </branch>
+        <leaf>
+         <attribute name="name" value="YPO1073"/>
+         <attribute name="length" value="0.10099"/></leaf>
+       </branch>
+       <leaf>
+        <attribute name="name" value="VC0907"/>
+        <attribute name="length" value="0.17127"/></leaf>
+      </branch>
+     </branch>
+    </branch>
+   </branch>
+  </branch>
+  <branch>
+    <attribute name="name" value="?abc53?"/>
+    <attribute name="length" value="0.03726"/>
+   <branch>
+     <attribute name="name" value="?abc50?"/>
+     <attribute name="length" value="0.02297"/>
+    <branch>
+      <attribute name="name" value="?abc48?"/>
+      <attribute name="length" value="0.03948"/>
+     <leaf>
+      <attribute name="name" value="yusC"/>
+      <attribute name="length" value="0.15344"/></leaf>
+     <leaf>
+      <attribute name="name" value="BH3481"/>
+      <attribute name="length" value="0.13946"/></leaf>
+    </branch>
+    <branch>
+      <attribute name="name" value="?abc49?"/>
+      <attribute name="length" value="0.19761"/>
+     <leaf>
+      <attribute name="name" value="lin2514"/>
+      <attribute name="length" value="0.01001"/></leaf>
+     <leaf>
+      <attribute name="name" value="lmo2419"/>
+      <attribute name="length" value="0.01058"/></leaf>
+    </branch>
+   </branch>
+   <branch>
+     <attribute name="name" value="?abc52?"/>
+     <attribute name="length" value="0.2492"/>
+    <branch>
+      <attribute name="name" value="?abc51?"/>
+      <attribute name="length" value="0.00455"/>
+     <leaf>
+      <attribute name="name" value="SA0769"/>
+      <attribute name="length" value="0.0"/></leaf>
+     <leaf>
+      <attribute name="name" value="SAV0837"/>
+      <attribute name="length" value="0.0"/></leaf>
+    </branch>
+    <leaf>
+     <attribute name="name" value="MW0790"/>
+     <attribute name="length" value="0.00425"/></leaf>
+   </branch>
+  </branch>
+  <branch>
+    <attribute name="name" value="?abc55?"/>
+    <attribute name="length" value="0.05963"/>
+   <branch>
+     <attribute name="name" value="?abc54?"/>
+     <attribute name="length" value="0.18792"/>
+    <leaf>
+     <attribute name="name" value="lmo0284"/>
+     <attribute name="length" value="0.00977"/></leaf>
+    <leaf>
+     <attribute name="name" value="lin0312"/>
+     <attribute name="length" value="0.00798"/></leaf>
+   </branch>
+   <leaf>
+    <attribute name="name" value="BA_0757"/>
+    <attribute name="length" value="0.20113"/></leaf>
+  </branch>
+ </branch>
+</tree>
+

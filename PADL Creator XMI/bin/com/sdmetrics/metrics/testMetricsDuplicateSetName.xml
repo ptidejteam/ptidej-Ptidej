@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<sdmetrics version="2.0">
+
+<set name="Operations" domain="class">
+<description>The set of operations of a class.</description>
+<projection relset="ownedoperations" />
+</set>
+
+<set name="Operations" domain="class">
+<description>The set so nice they named it twice.</description>
+<projection relset="ownedoperations" />
+</set>
+</sdmetrics>

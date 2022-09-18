@@ -1,0 +1,23 @@
+package java.security;
+abstract public interface Key
+extends java.io.Serializable
+{
+final public static java.lang.Object serialVersionUID;
+
+abstract public java.lang.String getAlgorithm()
+{
+
+}
+
+abstract public java.lang.String getFormat()
+{
+
+}
+
+abstract public byte[] getEncoded()
+{
+
+}
+
+
+}

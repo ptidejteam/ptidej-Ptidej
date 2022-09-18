@@ -1,0 +1,42 @@
+Family, ChopBoxConnector, PureOverrider, 1.0, 3, 1.0
+1, chop(CH.ifa.draw.framework.Figure java.awt.Point ) java.awt.Point, 
+Family, LineConnection, PureOverrider, 0.5, 2, 4.5
+1, handles() java.util.Vector, 
+Family, ChangeConnectionHandle, PureOverrider, 1.0, 2, 5.0
+5, setPoint(int int ) void, locate() java.awt.Point, disconnect() void, connect(CH.ifa.draw.framework.Connector ) void, target() CH.ifa.draw.framework.Connector, 
+Family, Command, PureOverrider, 0.8888889, 9, 1.8888888
+0, 
+Family, DrawApplet, PureOverrider, 0.6666667, 3, 3.0
+1, createTools(javax.swing.JPanel ) void, 
+Family, RectangleFigure, Overrider, 1.0, 2, 7.5
+4, polygon() java.awt.Polygon, containsPoint(int int ) boolean, draw(java.awt.Graphics ) void, connectionInsets() java.awt.Insets, 
+Family, AbstractFigure, Extender, 0.75, 4, 24.5
+3, read(CH.ifa.draw.util.StorableInput ) void, write(CH.ifa.draw.util.StorableOutput ) void, draw(java.awt.Graphics ) void, 
+Family, CompositeFigure, Overrider, 0.5, 4, 15.25
+3, basicDisplayBox(java.awt.Point java.awt.Point ) void, displayBox() java.awt.Rectangle, handles() java.util.Vector, 
+Family, CreationTool, PureOverrider, 0.5, 2, 5.5
+0, 
+Family, FigureTransferCommand, PureOverrider, 0.8, 5, 2.0
+1, execute() void, 
+Family, DrawApplication, PureOverrider, 0.6, 5, 6.4
+0, 
+Family, DecoratorFigure, Overrider, 1.0, 2, 7.5
+1, displayBox() java.awt.Rectangle, 
+Family, AbstractLocator, PureExtender, 0.6, 5, 2.0
+1, locate(CH.ifa.draw.framework.Figure ) java.awt.Point, 
+Family, SelectionTool, Extender, 0.5, 2, 5.5
+1, mouseDown(java.awt.event.MouseEvent int int ) void, 
+Family, AbstractTool, PureOverrider, 0.54545456, 11, 4.909091
+0, 
+Family, AbstractHandle, PureOverrider, 0.5714286, 7, 4.857143
+0, 
+Family, PolyLineFigure, Extender, 1.0, 2, 19.0
+4, endPoint(int int ) void, startPoint() java.awt.Point, startPoint(int int ) void, endPoint() java.awt.Point, 
+Family, AttributeFigure, PureOverrider, 0.33333334, 6, 15.666667
+6, basicDisplayBox(java.awt.Point java.awt.Point ) void, read(CH.ifa.draw.util.StorableInput ) void, basicMoveBy(int int ) void, displayBox() java.awt.Rectangle, write(CH.ifa.draw.util.StorableOutput ) void, handles() java.util.Vector, 
+Family, TextFigure, PureOverrider, 0.5, 2, 4.5
+0, 
+Family, AbstractConnector, Overrider, 1.0, 3, 4.0
+0, 
+Family, LocatorHandle, PureOverrider, 0.9166667, 12, 1.75
+0, 

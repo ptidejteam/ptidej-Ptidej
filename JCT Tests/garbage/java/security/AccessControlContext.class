@@ -1,0 +1,164 @@
+package java.security;
+final public class AccessControlContext
+{
+private java.lang.Object context;
+
+private java.lang.Object isPrivileged;
+
+private java.lang.Object isAuthorized;
+
+private java.lang.Object privilegedContext;
+
+private java.lang.Object combiner;
+
+private java.lang.Object permissions;
+
+private java.lang.Object parent;
+
+private java.lang.Object isWrapped;
+
+private java.lang.Object isLimited;
+
+private java.lang.Object limitedContext;
+
+private static java.lang.Object debugInit;
+
+private static java.lang.Object debug;
+
+static sun.security.util.Debug getDebug()
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.security.ProtectionDomain[] getContext()
+{
+
+}
+
+boolean isPrivileged()
+{
+
+}
+
+java.security.DomainCombiner getAssignedCombiner()
+{
+
+}
+
+public java.security.DomainCombiner getDomainCombiner()
+{
+
+}
+
+java.security.DomainCombiner getCombiner()
+{
+
+}
+
+boolean isAuthorized()
+{
+
+}
+
+public void checkPermission(java.lang.Object arg0) throws java.security.AccessControlException
+{
+
+}
+
+private void checkPermission2(java.lang.Object arg0)
+{
+
+}
+
+java.security.AccessControlContext optimize()
+{
+
+}
+
+private static java.security.ProtectionDomain[] combine(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private void calculateFields(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+private boolean equalContext(java.lang.Object arg0)
+{
+
+}
+
+private boolean equalPDs(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private boolean equalLimitedContext(java.lang.Object arg0)
+{
+
+}
+
+private static java.security.AccessControlContext getNextPC(java.lang.Object arg0)
+{
+
+}
+
+private static boolean containsAllPDs(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private boolean containsAllLimits(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

@@ -1,0 +1,46 @@
+package java.util;
+abstract public class AbstractSequentialList
+extends java.util.AbstractList
+{
+protected void <init>()
+{
+
+}
+
+public java.lang.Object get(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Object set(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void add(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.Object remove(java.lang.Object arg0)
+{
+
+}
+
+public boolean addAll(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.util.Iterator iterator()
+{
+
+}
+
+abstract public java.util.ListIterator listIterator(java.lang.Object arg0)
+{
+
+}
+
+
+}

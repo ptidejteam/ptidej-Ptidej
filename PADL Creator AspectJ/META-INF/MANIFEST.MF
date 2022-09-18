@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PADL Creator AspectJ
+Bundle-SymbolicName: PADL_Creator_AspectJ
+Bundle-Version: 1.0.0
+Export-Package: padl.aspectj.kernel,
+ padl.aspectj.kernel.exception,
+ padl.aspectj.kernel.impl,
+ padl.creator.aspectjlst,
+ padl.creator.aspectjlst.util
+Require-Bundle: CPL,
+ PADL,
+ org.eclipse.equinox.common;bundle-version="3.6.100"
+Bundle-ClassPath: lib/aspectjrt.jar,
+ lib/aspectjtools_v1.5.0 WITHOUT OSGI.jar
+Automatic-Module-Name: PADL.Creator.AspectJ

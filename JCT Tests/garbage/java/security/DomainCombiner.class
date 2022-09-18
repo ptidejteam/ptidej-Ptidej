@@ -1,0 +1,10 @@
+package java.security;
+abstract public interface DomainCombiner
+{
+abstract public java.security.ProtectionDomain[] combine(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+
+}

@@ -1,0 +1,102 @@
+%%
+%% AOL spec
+%%
+
+
+%
+% RCS $Id: aol.tex,v 1.1 2003/08/18 21:07:31 toor Exp $
+%
+% RCS $Log: aol.tex,v $
+% RCS Revision 1.1  2003/08/18 21:07:31  toor
+% RCS Initial revision
+% RCS
+%
+
+
+\appendix{\acs{AOL}}
+\label{chapter:aol}
+
+\begin{scriptsize}
+\begin{verbatim}
+Metacharacters extended BNF notation:
+
+        {}   means zero or more times
+        []   means an optional element, so 0 or 1 time
+        ""   means a terminal symbol
+        |    means the boolean symbol OR
+        ()   means a block of elements, useful to group them
+
+AOL_design_description::= list_AOL_declarations
+list_AOL_declarations ::= {AOL_decl ";"}
+AOL_decl              ::= class
+                        | association
+                        | generalization
+                        | aggregation
+
+/*-------------------------- CLASSES ------------------------*/
+
+class            ::= CLASS class_name scope
+                       [ATTRIBUTES attribute_list]
+                          [OPERATIONS operation_list]
+class_name       ::= id
+scope            ::= "{" (EXTERNAL | ABSTRACT) "}"
+attribute_list   ::= [attribute {"," attribute}]
+attribute        ::= visibility [SHARED]
+                       attribute_name ":" type
+visibility       ::= PUBLIC
+                  | PRIVATE
+                  | PROTECTED
+                  | UNDEF_SCOPE
+attribute_name   ::= id
+operation_list   ::= [operation {"," operation}]
+operation        ::= visibility [SHARED] operation_name
+                       "(" operation_arg_list ")" [":" type]
+                          [an_annotation]
+operation_name   ::= id
+opeation_arg_list::= [argument {"," argument}]
+argument         ::= arg_name [":" type]
+an_annotation    ::= "{" (ABSTRACT | other_annotations) "}"
+other_annotations::= string
+
+/*-------------------------- RELATIONS  ----------------------*/
+
+association      ::= RELATION [relation_name] ROLES roles
+                       [ATTRIBUTES attribute_list]
+                          [IS_A_CLASS assoc_class_id_ref]
+relation_name    ::= id
+roles            ::= role "," role {"," role}
+role             ::= [NAME role_name] CLASS class_id_ref
+                       MULT multiplicity
+                         [QUALIFIER qualifier_name]
+role_name        ::= id
+class_id_ref     ::= id_ref
+multiplicity     ::= string | ONE | MANY
+                       | ONE_OR_MANY  | OPTIONALLY_ONE
+
+qualifier_name   ::= string
+assoc_class_id_ref ::= id_ref
+
+aggregation      ::= AGGREGATION [NAME aggregation_name]
+                       CONTAINER role PARTS part_roles
+aggregation_name ::= id
+part_roles       ::= role {"," role}
+
+generalization   ::= GENERALIZATION
+                      [DISCRIMINATOR discriminator_name]
+                       super_class_id_ref SUBCLASSES
+                         sub_classes_ids
+
+discriminator_name ::= string
+super_class_id_ref ::= id_ref
+sub_classes_ids  ::= sub_class_id {"," sub_class}
+sub_class        ::= id
+
+id               ::= IDENTIFIER
+id_ref           ::= IDENTIFIER
+\end{verbatim}
+\end{scriptsize}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../thesis"
+%%% End: 

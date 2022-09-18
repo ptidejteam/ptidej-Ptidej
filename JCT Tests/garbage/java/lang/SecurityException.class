@@ -1,0 +1,28 @@
+package java.lang;
+public class SecurityException
+extends java.lang.RuntimeException
+{
+final private static java.lang.Object serialVersionUID;
+
+public void <init>()
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+
+}

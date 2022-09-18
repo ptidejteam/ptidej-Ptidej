@@ -1,0 +1,739 @@
+No source name|-1|classLoad0|fr.emn.metaj.original.DataList|-1|-1|No comment|void
+ExpDataListNil.java|12|constructorEntry0|fr.emn.metaj.original.DataList|1369|-1|No comment|void
+ExpDataListNil.java|12|constructorExit0|fr.emn.metaj.original.DataList|1369|-1|No comment|void
+ExpDataListCons.java|18|constructorEntry0|fr.emn.metaj.original.DataList|1372|-1|No comment|void
+ExpDataListCons.java|18|constructorExit0|fr.emn.metaj.original.DataList|1372|-1|No comment|void
+ExpDataListCons.java|18|constructorEntry0|fr.emn.metaj.original.DataList|1375|-1|No comment|void
+ExpDataListCons.java|18|constructorExit0|fr.emn.metaj.original.DataList|1375|-1|No comment|void
+ExpDataListCons.java|18|constructorEntry0|fr.emn.metaj.original.DataList|1378|-1|No comment|void
+ExpDataListCons.java|18|constructorExit0|fr.emn.metaj.original.DataList|1378|-1|No comment|void
+ExpDataListCons.java|18|constructorEntry0|fr.emn.metaj.original.DataList|1381|-1|No comment|void
+ExpDataListCons.java|18|constructorExit0|fr.emn.metaj.original.DataList|1381|-1|No comment|void
+No source name|-1|classLoad0|fr.emn.metaj.original.MethodList|-1|-1|No comment|void
+ExpMethodListNil.java|12|constructorEntry0|fr.emn.metaj.original.MethodList|1383|-1|No comment|void
+ExpMethodListNil.java|12|constructorExit0|fr.emn.metaj.original.MethodList|1383|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1385|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1385|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1387|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1387|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1389|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1389|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1391|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1391|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1393|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1393|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1395|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1395|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1397|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1397|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1399|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1399|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1401|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1401|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1403|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1403|-1|No comment|void
+No source name|-1|classLoad0|fr.emn.metaj.original.BaseClass|-1|-1|No comment|void
+Class.java|12|constructorEntry0|fr.emn.metaj.original.BaseClass|1406|-1|No comment|void
+BaseClass.java|15|methodEntry0|setExtendsLink|1406|1406|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|15|methodExit0|setExtendsLink|1406|1406|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1403
+BaseClass.java|16|methodEntry0|setDataList|1406|1406|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|16|fieldModification0|dataList|1406|1381|fr.emn.metaj.original.BaseClass|fr.emn.metaj.original.DataList
+BaseClass.java|16|methodExit0|setDataList|1406|1406|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|17|methodEntry0|setMethodList|1406|1406|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|17|fieldModification0|methodList|1406|1403|fr.emn.metaj.original.BaseClass|fr.emn.metaj.original.MethodList
+BaseClass.java|17|methodExit0|setMethodList|1406|1406|fr.emn.metaj.original.BaseClass|void
+Class.java|12|constructorExit0|fr.emn.metaj.original.BaseClass|1406|-1|No comment|void
+ExpDataListNil.java|12|constructorEntry0|fr.emn.metaj.original.DataList|1409|-1|No comment|void
+ExpDataListNil.java|12|constructorExit0|fr.emn.metaj.original.DataList|1409|-1|No comment|void
+ExpDataListCons.java|18|constructorEntry0|fr.emn.metaj.original.DataList|1412|-1|No comment|void
+ExpDataListCons.java|18|constructorExit0|fr.emn.metaj.original.DataList|1412|-1|No comment|void
+ExpDataListCons.java|18|constructorEntry0|fr.emn.metaj.original.DataList|1415|-1|No comment|void
+ExpDataListCons.java|18|constructorExit0|fr.emn.metaj.original.DataList|1415|-1|No comment|void
+ExpDataListCons.java|18|constructorEntry0|fr.emn.metaj.original.DataList|1418|-1|No comment|void
+ExpDataListCons.java|18|constructorExit0|fr.emn.metaj.original.DataList|1418|-1|No comment|void
+ExpMethodListNil.java|12|constructorEntry0|fr.emn.metaj.original.MethodList|1420|-1|No comment|void
+ExpMethodListNil.java|12|constructorExit0|fr.emn.metaj.original.MethodList|1420|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1422|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1422|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1424|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1424|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1426|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1426|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1428|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1428|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1430|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1430|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1432|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1432|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1434|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1434|-1|No comment|void
+Class.java|12|constructorEntry0|fr.emn.metaj.original.BaseClass|1437|-1|No comment|void
+BaseClass.java|15|methodEntry0|setExtendsLink|1437|1437|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|15|methodExit0|setExtendsLink|1437|1437|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1434
+BaseClass.java|16|methodEntry0|setDataList|1437|1437|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|16|fieldModification0|dataList|1437|1418|fr.emn.metaj.original.BaseClass|fr.emn.metaj.original.DataList
+BaseClass.java|16|methodExit0|setDataList|1437|1437|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|17|methodEntry0|setMethodList|1437|1437|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|17|fieldModification0|methodList|1437|1434|fr.emn.metaj.original.BaseClass|fr.emn.metaj.original.MethodList
+BaseClass.java|17|methodExit0|setMethodList|1437|1437|fr.emn.metaj.original.BaseClass|void
+Class.java|12|constructorExit0|fr.emn.metaj.original.BaseClass|1437|-1|No comment|void
+ExpDataListNil.java|12|constructorEntry0|fr.emn.metaj.original.DataList|1440|-1|No comment|void
+ExpDataListNil.java|12|constructorExit0|fr.emn.metaj.original.DataList|1440|-1|No comment|void
+ExpDataListCons.java|18|constructorEntry0|fr.emn.metaj.original.DataList|1443|-1|No comment|void
+ExpDataListCons.java|18|constructorExit0|fr.emn.metaj.original.DataList|1443|-1|No comment|void
+ExpDataListCons.java|18|constructorEntry0|fr.emn.metaj.original.DataList|1446|-1|No comment|void
+ExpDataListCons.java|18|constructorExit0|fr.emn.metaj.original.DataList|1446|-1|No comment|void
+ExpMethodListNil.java|12|constructorEntry0|fr.emn.metaj.original.MethodList|1448|-1|No comment|void
+ExpMethodListNil.java|12|constructorExit0|fr.emn.metaj.original.MethodList|1448|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1450|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1450|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1452|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1452|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1454|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1454|-1|No comment|void
+Class.java|12|constructorEntry0|fr.emn.metaj.original.BaseClass|1457|-1|No comment|void
+BaseClass.java|15|methodEntry0|setExtendsLink|1457|1457|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|15|methodExit0|setExtendsLink|1457|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1454
+BaseClass.java|16|methodEntry0|setDataList|1457|1457|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|16|fieldModification0|dataList|1457|1446|fr.emn.metaj.original.BaseClass|fr.emn.metaj.original.DataList
+BaseClass.java|16|methodExit0|setDataList|1457|1457|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|17|methodEntry0|setMethodList|1457|1457|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|17|fieldModification0|methodList|1457|1454|fr.emn.metaj.original.BaseClass|fr.emn.metaj.original.MethodList
+BaseClass.java|17|methodExit0|setMethodList|1457|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|12|constructorExit0|fr.emn.metaj.original.BaseClass|1457|-1|No comment|void
+ExpDataListNil.java|12|constructorEntry0|fr.emn.metaj.original.DataList|1460|-1|No comment|void
+ExpDataListNil.java|12|constructorExit0|fr.emn.metaj.original.DataList|1460|-1|No comment|void
+ExpMethodListNil.java|12|constructorEntry0|fr.emn.metaj.original.MethodList|1462|-1|No comment|void
+ExpMethodListNil.java|12|constructorExit0|fr.emn.metaj.original.MethodList|1462|-1|No comment|void
+ExpMethodListCons.java|21|constructorEntry0|fr.emn.metaj.original.MethodList|1464|-1|No comment|void
+ExpMethodListCons.java|21|constructorExit0|fr.emn.metaj.original.MethodList|1464|-1|No comment|void
+Class.java|12|constructorEntry0|fr.emn.metaj.original.BaseClass|1467|-1|No comment|void
+BaseClass.java|15|methodEntry0|setExtendsLink|1467|1467|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|15|methodExit0|setExtendsLink|1467|1467|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1464
+BaseClass.java|16|methodEntry0|setDataList|1467|1467|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|16|fieldModification0|dataList|1467|1460|fr.emn.metaj.original.BaseClass|fr.emn.metaj.original.DataList
+BaseClass.java|16|methodExit0|setDataList|1467|1467|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|17|methodEntry0|setMethodList|1467|1467|fr.emn.metaj.original.BaseClass|void
+BaseClass.java|17|fieldModification0|methodList|1467|1464|fr.emn.metaj.original.BaseClass|fr.emn.metaj.original.MethodList
+BaseClass.java|17|methodExit0|setMethodList|1467|1467|fr.emn.metaj.original.BaseClass|void
+Class.java|12|constructorExit0|fr.emn.metaj.original.BaseClass|1467|-1|No comment|void
+Class.java|88|methodEntry0|methodList|1466|1467|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodEntry0|getExtendsLink|1466|1467|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodExit0|getExtendsLink|1466|1467|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodEntry0|getMethodList|1466|1467|fr.emn.metaj.original.BaseClass|void
+Class.java|76|fieldAccess0|methodList|1467|-1|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodExit0|getMethodList|1466|1467|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1464
+BaseClass.java|53|constructorEntry0|fr.emn.metaj.original.MethodList|1470|-1|No comment|void
+BaseClass.java|53|constructorExit0|fr.emn.metaj.original.MethodList|1470|-1|No comment|void
+BaseClass.java|52|methodEntry0|append|1467|1464|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1464|1462|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodExit0|append|1464|1462|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1464
+MethodList.java|19|methodEntry0|cons|1464|1470|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1471|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1471|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1464|1470|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1471
+BaseClass.java|52|methodExit0|append|1467|1464|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1471
+Class.java|88|methodExit0|methodList|1466|1467|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1471
+ExpMethodClass.java|24|methodEntry0|lookup|1367|1471|fr.emn.metaj.original.MethodList|void
+ExpMethodClass.java|24|methodExit0|lookup|1367|1471|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1471
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1470|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1470|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1471|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1471|-1|No comment|void
+Class.java|100|methodEntry0|newNew|1456|1457|fr.emn.metaj.original.BaseClass|void
+No source name|-1|classLoad0|fr.emn.metaj.original.Instance|-1|-1|No comment|void
+Class.java|36|methodEntry0|dataList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodEntry0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodExit0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|48|methodEntry0|getDataList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|48|fieldAccess0|dataList|1457|-1|fr.emn.metaj.original.BaseClass|void
+Class.java|48|methodExit0|getDataList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1446
+BaseClass.java|27|constructorEntry0|fr.emn.metaj.original.DataList|1475|-1|No comment|void
+BaseClass.java|27|constructorExit0|fr.emn.metaj.original.DataList|1475|-1|No comment|void
+BaseClass.java|26|methodEntry0|append|1457|1446|fr.emn.metaj.original.DataList|void
+DataList.java|24|methodEntry0|append|1446|1443|fr.emn.metaj.original.DataList|void
+DataList.java|24|methodEntry0|append|1443|1440|fr.emn.metaj.original.DataList|void
+DataList.java|24|methodExit0|append|1443|1440|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1446
+DataList.java|24|methodEntry0|cons|1443|1475|fr.emn.metaj.original.DataList|void
+DataList.java|28|constructorEntry0|fr.emn.metaj.original.DataList|1477|-1|No comment|void
+DataList.java|28|constructorExit0|fr.emn.metaj.original.DataList|1477|-1|No comment|void
+DataList.java|24|methodExit0|cons|1443|1475|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1477
+DataList.java|24|methodExit0|append|1446|1443|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1477
+DataList.java|24|methodEntry0|cons|1446|1477|fr.emn.metaj.original.DataList|void
+DataList.java|28|constructorEntry0|fr.emn.metaj.original.DataList|1479|-1|No comment|void
+DataList.java|28|constructorExit0|fr.emn.metaj.original.DataList|1479|-1|No comment|void
+DataList.java|24|methodExit0|cons|1446|1477|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseClass.java|26|methodExit0|append|1457|1446|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1479
+Class.java|36|methodExit0|dataList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseClass.java|64|constructorEntry0|fr.emn.metaj.original.Instance|1480|-1|No comment|void
+No source name|-1|classLoad0|fr.emn.metaj.original.BaseInstance|-1|-1|No comment|void
+Instance.java|12|constructorEntry0|fr.emn.metaj.original.BaseInstance|1481|-1|No comment|void
+BaseInstance.java|10|methodEntry0|setInstanceLink|1481|1481|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|10|methodExit0|setInstanceLink|1481|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|11|methodEntry0|setDataList|1481|1481|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|11|methodExit0|setDataList|1481|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|12|fieldModification0|referent|1481|1480|fr.emn.metaj.original.BaseInstance|fr.emn.metaj.original.Instance
+Instance.java|12|constructorExit0|fr.emn.metaj.original.BaseInstance|1481|-1|No comment|void
+BaseClass.java|64|constructorExit0|fr.emn.metaj.original.Instance|1480|-1|No comment|void
+Class.java|100|methodExit0|newNew|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1480
+ExpNew.java|21|methodEntry0|getInstanceLink|1064|1480|fr.emn.metaj.original.Instance|void
+Instance.java|48|methodEntry0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|48|methodExit0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+ExpNew.java|21|methodExit0|getInstanceLink|1064|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+Class.java|88|methodEntry0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodEntry0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodExit0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodEntry0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|fieldAccess0|methodList|1457|-1|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodExit0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1454
+BaseClass.java|53|constructorEntry0|fr.emn.metaj.original.MethodList|1482|-1|No comment|void
+BaseClass.java|53|constructorExit0|fr.emn.metaj.original.MethodList|1482|-1|No comment|void
+BaseClass.java|52|methodEntry0|append|1457|1454|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1454|1452|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1452|1450|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1450|1448|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodExit0|append|1450|1448|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1454
+MethodList.java|19|methodEntry0|cons|1450|1482|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1483|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1483|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1450|1482|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1483
+MethodList.java|19|methodExit0|append|1452|1450|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1483
+MethodList.java|19|methodEntry0|cons|1452|1483|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1484|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1484|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1452|1483|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1484
+MethodList.java|19|methodExit0|append|1454|1452|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1484
+MethodList.java|19|methodEntry0|cons|1454|1484|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1485|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1485|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1454|1484|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1485
+BaseClass.java|52|methodExit0|append|1457|1454|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1485
+Class.java|88|methodExit0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1485
+ExpNew.java|21|methodEntry0|member|1064|1485|fr.emn.metaj.original.MethodList|void
+MethodList.java|39|methodEntry0|member|1485|1484|fr.emn.metaj.original.MethodList|void
+MethodList.java|39|methodEntry0|member|1484|1483|fr.emn.metaj.original.MethodList|void
+MethodList.java|39|methodExit0|member|1484|1483|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1485
+MethodList.java|39|methodExit0|member|1485|1484|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@-1
+ExpNew.java|21|methodExit0|member|1064|1485|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@-1
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1482|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1482|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1483|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1483|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1484|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1484|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1485|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1485|-1|No comment|void
+ExpNew.java|26|methodEntry0|lookupMethod|1064|1480|fr.emn.metaj.original.Instance|void
+Instance.java|78|methodEntry0|lookupMethod|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|78|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|25|methodEntry0|getInstanceLink|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|48|methodEntry0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|48|methodExit0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+BaseInstance.java|25|methodExit0|getInstanceLink|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+Class.java|88|methodEntry0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodEntry0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodExit0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodEntry0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|fieldAccess0|methodList|1457|-1|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodExit0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1454
+BaseClass.java|53|constructorEntry0|fr.emn.metaj.original.MethodList|1491|-1|No comment|void
+BaseClass.java|53|constructorExit0|fr.emn.metaj.original.MethodList|1491|-1|No comment|void
+BaseClass.java|52|methodEntry0|append|1457|1454|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1454|1452|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1452|1450|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1450|1448|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodExit0|append|1450|1448|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1454
+MethodList.java|19|methodEntry0|cons|1450|1491|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1492|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1492|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1450|1491|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1492
+MethodList.java|19|methodExit0|append|1452|1450|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1492
+MethodList.java|19|methodEntry0|cons|1452|1492|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1493|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1493|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1452|1492|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1493
+MethodList.java|19|methodExit0|append|1454|1452|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1493
+MethodList.java|19|methodEntry0|cons|1454|1493|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1494|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1494|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1454|1493|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1494
+BaseClass.java|52|methodExit0|append|1457|1454|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1494
+Class.java|88|methodExit0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1494
+BaseInstance.java|25|methodEntry0|lookup|1481|1494|fr.emn.metaj.original.MethodList|void
+MethodList.java|30|methodEntry0|lookup|1494|1493|fr.emn.metaj.original.MethodList|void
+MethodList.java|30|methodEntry0|lookup|1493|1492|fr.emn.metaj.original.MethodList|void
+MethodList.java|30|methodExit0|lookup|1493|1492|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1494
+MethodList.java|30|methodExit0|lookup|1494|1493|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1019
+BaseInstance.java|25|methodExit0|lookup|1481|1494|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1019
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1491|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1491|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1492|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1492|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1493|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1494|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1494|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1493|-1|No comment|void
+Instance.java|78|methodExit0|lookupMethod|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1019
+ExpNew.java|26|methodExit0|lookupMethod|1064|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1019
+ExpData.java|21|methodEntry0|lookupData|1011|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodEntry0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodExit0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1476
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodExit0|lookupData|1011|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodEntry0|lookupData|1015|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpData.java|21|methodExit0|lookupData|1015|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpMethod.java|110|methodEntry0|lookupMethod|1068|1480|fr.emn.metaj.original.Instance|void
+Instance.java|78|methodEntry0|lookupMethod|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|78|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|25|methodEntry0|getInstanceLink|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|48|methodEntry0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|48|methodExit0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+BaseInstance.java|25|methodExit0|getInstanceLink|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+Class.java|88|methodEntry0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodEntry0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodExit0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodEntry0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|fieldAccess0|methodList|1457|-1|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodExit0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1454
+BaseClass.java|53|constructorEntry0|fr.emn.metaj.original.MethodList|1501|-1|No comment|void
+BaseClass.java|53|constructorExit0|fr.emn.metaj.original.MethodList|1501|-1|No comment|void
+BaseClass.java|52|methodEntry0|append|1457|1454|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1454|1452|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1452|1450|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1450|1448|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodExit0|append|1450|1448|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1454
+MethodList.java|19|methodEntry0|cons|1450|1501|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1502|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1502|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1450|1501|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1502
+MethodList.java|19|methodExit0|append|1452|1450|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1502
+MethodList.java|19|methodEntry0|cons|1452|1502|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1503|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1503|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1452|1502|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1503
+MethodList.java|19|methodExit0|append|1454|1452|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1503
+MethodList.java|19|methodEntry0|cons|1454|1503|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1504|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1504|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1454|1503|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1504
+BaseClass.java|52|methodExit0|append|1457|1454|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1504
+Class.java|88|methodExit0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1504
+BaseInstance.java|25|methodEntry0|lookup|1481|1504|fr.emn.metaj.original.MethodList|void
+MethodList.java|30|methodEntry0|lookup|1504|1503|fr.emn.metaj.original.MethodList|void
+MethodList.java|30|methodExit0|lookup|1504|1503|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1504
+BaseInstance.java|25|methodExit0|lookup|1481|1504|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1033
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1501|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1501|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1502|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1502|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1503|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1504|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1504|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1503|-1|No comment|void
+Instance.java|78|methodExit0|lookupMethod|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1033
+ExpMethod.java|110|methodExit0|lookupMethod|1068|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1033
+ExpData.java|21|methodEntry0|lookupData|1024|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodEntry0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodExit0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1476
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodExit0|lookupData|1024|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodEntry0|lookupData|1027|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpData.java|21|methodExit0|lookupData|1027|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpMethod.java|110|methodEntry0|lookupMethod|1073|1480|fr.emn.metaj.original.Instance|void
+Instance.java|78|methodEntry0|lookupMethod|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|78|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|25|methodEntry0|getInstanceLink|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|48|methodEntry0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|48|methodExit0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+BaseInstance.java|25|methodExit0|getInstanceLink|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+Class.java|88|methodEntry0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodEntry0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodExit0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodEntry0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|fieldAccess0|methodList|1457|-1|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodExit0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1454
+BaseClass.java|53|constructorEntry0|fr.emn.metaj.original.MethodList|1515|-1|No comment|void
+BaseClass.java|53|constructorExit0|fr.emn.metaj.original.MethodList|1515|-1|No comment|void
+BaseClass.java|52|methodEntry0|append|1457|1454|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1454|1452|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1452|1450|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1450|1448|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodExit0|append|1450|1448|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1454
+MethodList.java|19|methodEntry0|cons|1450|1515|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1516|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1516|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1450|1515|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1516
+MethodList.java|19|methodExit0|append|1452|1450|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1516
+MethodList.java|19|methodEntry0|cons|1452|1516|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1517|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1517|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1452|1516|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1517
+MethodList.java|19|methodExit0|append|1454|1452|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1517
+MethodList.java|19|methodEntry0|cons|1454|1517|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1518|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1518|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1454|1517|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1518
+BaseClass.java|52|methodExit0|append|1457|1454|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1518
+Class.java|88|methodExit0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1518
+BaseInstance.java|25|methodEntry0|lookup|1481|1518|fr.emn.metaj.original.MethodList|void
+BaseInstance.java|25|methodExit0|lookup|1481|1518|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1518
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1515|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1515|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1516|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1516|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1517|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1518|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1517|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1518|-1|No comment|void
+Instance.java|78|methodExit0|lookupMethod|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1051
+ExpMethod.java|110|methodExit0|lookupMethod|1073|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1051
+ExpData.java|21|methodEntry0|lookupData|1038|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodEntry0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodExit0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1476
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodExit0|lookupData|1038|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodEntry0|lookupData|1043|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpData.java|21|methodExit0|lookupData|1043|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpData.java|21|methodEntry0|lookupData|1041|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodEntry0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodExit0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1476
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodExit0|lookupData|1041|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodEntry0|lookupData|1047|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpData.java|21|methodExit0|lookupData|1047|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpMethod.java|110|methodEntry0|lookupMethod|1077|1480|fr.emn.metaj.original.Instance|void
+Instance.java|78|methodEntry0|lookupMethod|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|78|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|25|methodEntry0|getInstanceLink|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|48|methodEntry0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|48|methodExit0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+BaseInstance.java|25|methodExit0|getInstanceLink|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+Class.java|88|methodEntry0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodEntry0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodExit0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodEntry0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|fieldAccess0|methodList|1457|-1|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodExit0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1454
+BaseClass.java|53|constructorEntry0|fr.emn.metaj.original.MethodList|1524|-1|No comment|void
+BaseClass.java|53|constructorExit0|fr.emn.metaj.original.MethodList|1524|-1|No comment|void
+BaseClass.java|52|methodEntry0|append|1457|1454|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1454|1452|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1452|1450|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1450|1448|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodExit0|append|1450|1448|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1454
+MethodList.java|19|methodEntry0|cons|1450|1524|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1525|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1525|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1450|1524|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1525
+MethodList.java|19|methodExit0|append|1452|1450|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1525
+MethodList.java|19|methodEntry0|cons|1452|1525|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1526|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1526|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1452|1525|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1526
+MethodList.java|19|methodExit0|append|1454|1452|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1526
+MethodList.java|19|methodEntry0|cons|1454|1526|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1527|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1527|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1454|1526|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1527
+BaseClass.java|52|methodExit0|append|1457|1454|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1527
+Class.java|88|methodExit0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1527
+BaseInstance.java|25|methodEntry0|lookup|1481|1527|fr.emn.metaj.original.MethodList|void
+MethodList.java|30|methodEntry0|lookup|1527|1526|fr.emn.metaj.original.MethodList|void
+MethodList.java|30|methodExit0|lookup|1527|1526|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1527
+BaseInstance.java|25|methodExit0|lookup|1481|1527|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1033
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1524|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1524|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1525|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1525|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1526|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1527|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1527|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1526|-1|No comment|void
+Instance.java|78|methodExit0|lookupMethod|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1033
+ExpMethod.java|110|methodExit0|lookupMethod|1077|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1033
+ExpData.java|21|methodEntry0|lookupData|1024|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodEntry0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodExit0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1476
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodExit0|lookupData|1024|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodEntry0|lookupData|1027|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpData.java|21|methodExit0|lookupData|1027|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpData.java|21|methodEntry0|lookupData|1081|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodEntry0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodExit0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1476
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodExit0|lookupData|1081|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpMethod.java|110|methodEntry0|lookupMethod|1087|1480|fr.emn.metaj.original.Instance|void
+Instance.java|78|methodEntry0|lookupMethod|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|78|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|25|methodEntry0|getInstanceLink|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|48|methodEntry0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|48|methodExit0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+BaseInstance.java|25|methodExit0|getInstanceLink|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+Class.java|88|methodEntry0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodEntry0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodExit0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodEntry0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|fieldAccess0|methodList|1457|-1|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodExit0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1454
+BaseClass.java|53|constructorEntry0|fr.emn.metaj.original.MethodList|1539|-1|No comment|void
+BaseClass.java|53|constructorExit0|fr.emn.metaj.original.MethodList|1539|-1|No comment|void
+BaseClass.java|52|methodEntry0|append|1457|1454|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1454|1452|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1452|1450|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1450|1448|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodExit0|append|1450|1448|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1454
+MethodList.java|19|methodEntry0|cons|1450|1539|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1540|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1540|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1450|1539|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1540
+MethodList.java|19|methodExit0|append|1452|1450|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1540
+MethodList.java|19|methodEntry0|cons|1452|1540|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1541|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1541|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1452|1540|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1541
+MethodList.java|19|methodExit0|append|1454|1452|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1541
+MethodList.java|19|methodEntry0|cons|1454|1541|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1542|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1542|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1454|1541|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1542
+BaseClass.java|52|methodExit0|append|1457|1454|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1542
+Class.java|88|methodExit0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1542
+BaseInstance.java|25|methodEntry0|lookup|1481|1542|fr.emn.metaj.original.MethodList|void
+BaseInstance.java|25|methodExit0|lookup|1481|1542|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1542
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1539|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1539|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1540|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1540|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1541|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1542|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1542|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1541|-1|No comment|void
+Instance.java|78|methodExit0|lookupMethod|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1051
+ExpMethod.java|110|methodExit0|lookupMethod|1087|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1051
+ExpData.java|21|methodEntry0|lookupData|1038|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodEntry0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodExit0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1476
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodExit0|lookupData|1038|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodEntry0|lookupData|1043|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpData.java|21|methodExit0|lookupData|1043|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpData.java|21|methodEntry0|lookupData|1041|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodEntry0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodExit0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1476
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodExit0|lookupData|1041|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodEntry0|lookupData|1047|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpData.java|21|methodExit0|lookupData|1047|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpMethod.java|110|methodEntry0|lookupMethod|1091|1480|fr.emn.metaj.original.Instance|void
+Instance.java|78|methodEntry0|lookupMethod|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|78|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|25|methodEntry0|getInstanceLink|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|48|methodEntry0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|48|methodExit0|getInstanceLink|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+BaseInstance.java|25|methodExit0|getInstanceLink|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1456
+Class.java|88|methodEntry0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodEntry0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|60|methodExit0|getExtendsLink|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodEntry0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|void
+Class.java|76|fieldAccess0|methodList|1457|-1|fr.emn.metaj.original.BaseClass|void
+Class.java|76|methodExit0|getMethodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1454
+BaseClass.java|53|constructorEntry0|fr.emn.metaj.original.MethodList|1548|-1|No comment|void
+BaseClass.java|53|constructorExit0|fr.emn.metaj.original.MethodList|1548|-1|No comment|void
+BaseClass.java|52|methodEntry0|append|1457|1454|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1454|1452|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1452|1450|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodEntry0|append|1450|1448|fr.emn.metaj.original.MethodList|void
+MethodList.java|19|methodExit0|append|1450|1448|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1454
+MethodList.java|19|methodEntry0|cons|1450|1548|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1549|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1549|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1450|1548|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1549
+MethodList.java|19|methodExit0|append|1452|1450|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1549
+MethodList.java|19|methodEntry0|cons|1452|1549|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1550|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1550|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1452|1549|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1550
+MethodList.java|19|methodExit0|append|1454|1452|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1550
+MethodList.java|19|methodEntry0|cons|1454|1550|fr.emn.metaj.original.MethodList|void
+MethodList.java|23|constructorEntry0|fr.emn.metaj.original.MethodList|1551|-1|No comment|void
+MethodList.java|23|constructorExit0|fr.emn.metaj.original.MethodList|1551|-1|No comment|void
+MethodList.java|19|methodExit0|cons|1454|1550|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1551
+BaseClass.java|52|methodExit0|append|1457|1454|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1551
+Class.java|88|methodExit0|methodList|1456|1457|fr.emn.metaj.original.BaseClass|com.sun.tools.jdi.ObjectReferenceImpl@1551
+BaseInstance.java|25|methodEntry0|lookup|1481|1551|fr.emn.metaj.original.MethodList|void
+MethodList.java|30|methodEntry0|lookup|1551|1550|fr.emn.metaj.original.MethodList|void
+MethodList.java|30|methodExit0|lookup|1551|1550|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1551
+BaseInstance.java|25|methodExit0|lookup|1481|1551|fr.emn.metaj.original.MethodList|com.sun.tools.jdi.ObjectReferenceImpl@1033
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1548|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1548|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1549|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1549|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1550|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.MethodList|1551|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1550|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.MethodList|1551|-1|No comment|void
+Instance.java|78|methodExit0|lookupMethod|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1033
+ExpMethod.java|110|methodExit0|lookupMethod|1091|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1033
+ExpData.java|21|methodEntry0|lookupData|1024|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodEntry0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+DataList.java|35|methodExit0|lookup|1479|1477|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|com.sun.tools.jdi.ObjectReferenceImpl@1476
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodExit0|lookupData|1024|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1476
+ExpData.java|21|methodEntry0|lookupData|1027|1480|fr.emn.metaj.original.Instance|void
+Instance.java|64|methodEntry0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|64|fieldAccess0|referent|1481|-1|fr.emn.metaj.original.BaseInstance|void
+BaseInstance.java|20|methodEntry0|getDataList|1481|1480|fr.emn.metaj.original.Instance|void
+Instance.java|35|methodEntry0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|void
+Instance.java|35|methodExit0|getDataList|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodExit0|getDataList|1481|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1479
+BaseInstance.java|20|methodEntry0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+BaseInstance.java|20|methodExit0|lookup|1481|1479|fr.emn.metaj.original.DataList|void
+Instance.java|64|methodExit0|lookupData|1480|1481|fr.emn.metaj.original.BaseInstance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+ExpData.java|21|methodExit0|lookupData|1027|1480|fr.emn.metaj.original.Instance|com.sun.tools.jdi.ObjectReferenceImpl@1478
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.Instance|1480|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.Instance|1480|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.DataList|1475|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.DataList|1475|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.DataList|1477|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.DataList|1479|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.DataList|1479|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.DataList|1477|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|fr.emn.metaj.original.BaseInstance|1481|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|fr.emn.metaj.original.BaseInstance|1481|-1|No comment|void
+No source name|-1|programEnd0|programEnd0|-1|-1|main|void

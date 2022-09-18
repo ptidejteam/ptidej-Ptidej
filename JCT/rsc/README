@@ -1,0 +1,117 @@
+* JCT README
+
+** Dependence
+
+You need a few utilities in order to generate the documentation, the version are
+informative only, it should works with any later version and probably some
+earlier also:
+ - Apache Ant: http://ant.apache.org/ [1.7.1]
+ - Javadoc: http://java.sun.com/j2se/javadoc/ [the one included with the Sun JDK
+1.6.0.12] (usualy included within all JDK distribution)
+ - UML Graph: http://www.umlgraph.org/ [5.2]
+
+Download and install each of them.
+
+** Fetching the source code
+
+This file intends to provide an access to the JCT documentation.
+
+JCT is composed of 4 Eclipse projects:
+ - JCT-Utils
+ - JCT
+ - JCT-Impl
+ - JCT-Tools
+
+You should first download them from the Ptidej SVN, with the names:
+ - JCT Utils
+ - JCT
+ - JCT Impl
+ - JCT Tools
+
+** Updating the configuration to reflect local filesystem
+
+In the JCT Project, you will find a directory named "rsc", in which there is
+this README file, another directory named "doc" and some other miscellaneous
+files dans directories.
+
+Open the file named rsc/doc/build.xml, on lines 34 to 40, you will find the
+following tags:
+
+<example>
+<property name="root_dir" value="/home/swoog/docs/boulot/UdeM/Maitrise"/>
+<property name="util_dir" value="${root_dir}/JCT-Utils"/>
+<property name="interface_dir" value="${root_dir}/JCT"/>
+<property name="impl_dir" value="${root_dir}/JCT-Impl"/>
+<property name="tools_dir" value="${root_dir}/JCT-Tools"/>
+<property name="doc_dir" value="${interface_dir}/doc"/>
+<property name="umlgraph_jar" value="/usr/share/UMLGraph/lib/UmlGraph.jar"/>
+</example>
+
+The first line (root_dir) should contains the path to the directory in which you
+checked out the project from the SVN.
+
+The four following lines (util_dir, interface_dir, impl_dir, tools_dir) should
+contains the name of the directories in which you checked out each project.
+
+The sixth line (doc_dir) should contains the path to the directory in which you
+want the documentation to be stored.
+
+The last list (umlgraph_jar) should contains the path to the UMLGraph jar you
+generated to install UMLGraph.
+
+** Generate and browse the documentation
+
+Once each variable has been set to an adequate value, spawn a new shell in the 
+rsc/doc directory and simply run ant (ant and javadoc need to be in your PATH).
+
+The documentation will be generated, There are five entry points to the Javadoc:
+ - ${doc_dir}/util/index.html
+ - ${doc_dir}/jct/util/index.html
+ - ${doc_dir}/jct/kernel/index.html
+ - ${doc_dir}/jct/impl/index.html
+ - ${doc_dir}/jct/tools/index.html
+
+The two main entry points being jct/kernel and jct/impl.
+
+** Online version
+
+There is an online version which may not be up-to-date, you are strongly
+encourage to generate your own version of the JavaDoc from the source code:
+
+ - [[https://web.soccerlab.polymtl.ca/rptidej/ptidejlab/Software/Ptidej%205%20Workspace/JCT%20Doc/util/index.html][util]]
+ - [[https://web.soccerlab.polymtl.ca/rptidej/ptidejlab/Software/Ptidej%205%20Workspace/JCT%20Doc/jct/util/index.html][jct.util]]
+ - [[https://web.soccerlab.polymtl.ca/rptidej/ptidejlab/Software/Ptidej%205%20Workspace/JCT%20Doc/jct/kernel/index.html][jct.kernel]]
+ - [[https://web.soccerlab.polymtl.ca/rptidej/ptidejlab/Software/Ptidej%205%20Workspace/JCT%20Doc/jct/impl/index.html][jct.impl]]
+ - [[https://web.soccerlab.polymtl.ca/rptidej/ptidejlab/Software/Ptidej%205%20Workspace/JCT%20Doc/jct/tools/index.html][jct.tools]]
+
+** Miscellaneous
+
+If there are some more information you need, you still may look at the code or
+contact directly the author, Mathieu Lemoine, at lemoinem@iro.umontreal.ca
+
+** License
+Licensed under 3-clause BSD License:
+Copyright © 2009, Mathieu Lemoine
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+ - Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ - Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+ - Neither the name of Mathieu Lemoine nor the
+   names of contributors may be used to endorse or promote products
+   derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY Mathieu Lemoine ''AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL Mathieu Lemoine BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

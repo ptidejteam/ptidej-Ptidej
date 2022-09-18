@@ -1,0 +1,46 @@
+package java.time.chrono;
+abstract public interface Era
+extends java.time.temporal.TemporalAccessor, java.time.temporal.TemporalAdjuster
+{
+abstract public int getValue()
+{
+
+}
+
+public boolean isSupported(java.lang.Object arg0)
+{
+
+}
+
+public java.time.temporal.ValueRange range(java.lang.Object arg0)
+{
+
+}
+
+public int get(java.lang.Object arg0)
+{
+
+}
+
+public long getLong(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Object query(java.lang.Object arg0)
+{
+
+}
+
+public java.time.temporal.Temporal adjustInto(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.String getDisplayName(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+
+}

@@ -1,0 +1,25 @@
+No source name|-1|classLoad0|caffeine.test.nextEvent3.HelloWorld|-1|-1|No comment|void
+SimpleExample.java|9|constructorEntry0|caffeine.test.nextEvent3.HelloWorld|1001|-1|No comment|void
+SimpleExample.java|9|fieldModification0|greetings|1001|-1|caffeine.test.nextEvent3.HelloWorld|java.lang.String
+SimpleExample.java|9|constructorExit0|caffeine.test.nextEvent3.HelloWorld|1001|-1|No comment|void
+SimpleExample.java|11|methodEntry0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodExit0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodEntry0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodExit0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodEntry0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodExit0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodEntry0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodExit0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodEntry0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodExit0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodEntry0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodExit0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodEntry0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodExit0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodEntry0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodExit0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodEntry0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodExit0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodEntry0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+SimpleExample.java|11|methodExit0|getGreetings|1000|1001|caffeine.test.nextEvent3.HelloWorld|void
+No source name|-1|programEnd0|programEnd0|-1|-1|main|void

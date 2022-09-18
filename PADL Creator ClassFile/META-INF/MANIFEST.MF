@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PADL Creator ClassFile
+Bundle-SymbolicName: PADL_Creator_ClassFile
+Bundle-Version: 1.5.0
+Export-Package: padl.creator.classfile,
+ padl.creator.classfile.relationship,
+ padl.creator.classfile.util
+Require-Bundle: CPL,
+ PADL
+Automatic-Module-Name: PADL.Creator.ClassFile

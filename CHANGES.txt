@@ -1,0 +1,64 @@
+Version 5.9
+-------------
+
+Moved to new repository v5.3 (formely v5.2).
+Adapted all the code to JDK 17.
+Broke the Eclipse CDT-based C++ parser.
+
+Version 5.8.2
+-------------
+
+Improved performance of C++ parser.
+Improved error reporting, especially coming from Eclipse.
+
+Version 5.8.1
+-------------
+
+Fixed bug that prevented design motifs to appear in the user interface for identification.
+Replaced some 4-clause BSD licenses into 3-clause BSD (compatible with GPL), with permission by author.
+
+Version 5.8
+-----------
+
+Most of the source code of Ptidej is now GPL, some is 3-clause BSD (compatible with GPL). All is open-source!
+The source code of the 5 series is available at https://bitbucket.org/yann-gael/ptidej-5/.
+
+Version 5.7.5
+-------------
+
+Improved the art-work for "go to" and "relationships".
+Removed useless check-boxes in the hierarchical views for sub-first-class entities.
+Made it possible to centre on constituents of types method, field, relationship...
+Improved logging to also log error from the Eclipse OSGI framework.
+Fixed bug while cloning extended models, like C++ models.
+Implemented the Extension Design Pattern on IConsituent, with new IConstituentExtension interface.
+Added implementations of the Bridge and Interpreter design motifs for identification.
+
+Version 5.7.4
+-------------
+
+Improved the user-interface, now all the analyses work no matter the environment.
+Made sure that all out and err outputs messages go to the log file.
+
+Version 5.7.1
+-------------
+
+Fixed C++ parser that would not work in certain environment. Rewrote entirely the caller of the Eclipse plug-in.
+Improved the Console to reduce dramatically the time it takes to display messages.
+
+Version 5.6.1
+-------------
+
+Improved dramatically performance but removing issues with Console display on slower computers.
+
+Version 5.6
+-----------
+
+First complete, working version since 1.0. Now includes new user-interface, improved meta-model and creators (performance and memory footprint), new quality analyses, including:
+- Quality attributes (PQMOD and QMOOD)
+- Quality metrics (72 metrics)
+- Micro-patterns (27)
+- Design motifs (20)
+- Code smells (33)
+- Design smells (18)
+The meta-model has been rewritten to be extensible, extensions are available for AspectJ code and C++ code.

@@ -1,0 +1,417 @@
+package java.net;
+public class InetAddress
+implements java.io.Serializable
+{
+final static class Cache
+{
+final static class Type
+extends java.lang.Enum
+{
+final public static java.lang.Object Positive;
+
+final public static java.lang.Object Negative;
+
+public static java.net.InetAddress.Cache.Type[] values()
+{
+
+}
+
+public static java.net.InetAddress.Cache.Type valueOf(java.lang.Object arg0)
+{
+
+}
+
+private void <init>()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}
+
+private java.lang.Object cache;
+
+private java.lang.Object type;
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+private int getPolicy()
+{
+
+}
+
+public java.net.InetAddress.Cache put(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.net.InetAddress.CacheEntry get(java.lang.Object arg0)
+{
+
+}
+
+
+}
+
+final static class CacheEntry
+{
+java.lang.Object addresses;
+
+java.lang.Object expiration;
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+
+}
+
+static class InetAddressHolder
+{
+java.lang.Object originalHostName;
+
+java.lang.Object hostName;
+
+java.lang.Object address;
+
+java.lang.Object family;
+
+void <init>()
+{
+
+}
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+void init(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.lang.String getHostName()
+{
+
+}
+
+java.lang.String getOriginalHostName()
+{
+
+}
+
+int getAddress()
+{
+
+}
+
+int getFamily()
+{
+
+}
+
+
+}
+
+final static java.lang.Object IPv4;
+
+final static java.lang.Object IPv6;
+
+static transient java.lang.Object preferIPv6Address;
+
+final transient java.lang.Object holder;
+
+private static java.lang.Object nameServices;
+
+private transient java.lang.Object canonicalHostName;
+
+final private static java.lang.Object serialVersionUID;
+
+private static java.lang.Object addressCache;
+
+private static java.lang.Object negativeCache;
+
+private static java.lang.Object addressCacheInit;
+
+static java.lang.Object unknown_array;
+
+static java.lang.Object impl;
+
+final private static java.lang.Object lookupTable;
+
+private static java.lang.Object cachedLocalHost;
+
+private static java.lang.Object cacheTime;
+
+final private static java.lang.Object maxCacheTime;
+
+final private static java.lang.Object cacheLock;
+
+final private static java.lang.Object FIELDS_OFFSET;
+
+final private static java.lang.Object UNSAFE;
+
+final private static java.lang.Object serialPersistentFields;
+
+java.net.InetAddress.InetAddressHolder holder()
+{
+
+}
+
+void <init>()
+{
+
+}
+
+private java.lang.Object readResolve() throws java.io.ObjectStreamException
+{
+
+}
+
+public boolean isMulticastAddress()
+{
+
+}
+
+public boolean isAnyLocalAddress()
+{
+
+}
+
+public boolean isLoopbackAddress()
+{
+
+}
+
+public boolean isLinkLocalAddress()
+{
+
+}
+
+public boolean isSiteLocalAddress()
+{
+
+}
+
+public boolean isMCGlobal()
+{
+
+}
+
+public boolean isMCNodeLocal()
+{
+
+}
+
+public boolean isMCLinkLocal()
+{
+
+}
+
+public boolean isMCSiteLocal()
+{
+
+}
+
+public boolean isMCOrgLocal()
+{
+
+}
+
+public boolean isReachable(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public boolean isReachable(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.io.IOException
+{
+
+}
+
+public java.lang.String getHostName()
+{
+
+}
+
+java.lang.String getHostName(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.String getCanonicalHostName()
+{
+
+}
+
+private static java.lang.String getHostFromNameService(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public byte[] getAddress()
+{
+
+}
+
+public java.lang.String getHostAddress()
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+private static void cacheInitIfNeeded()
+{
+
+}
+
+private static void cacheAddresses(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.net.InetAddress[] getCachedAddresses(java.lang.Object arg0)
+{
+
+}
+
+private static sun.net.spi.nameservice.NameService createNSProvider(java.lang.Object arg0)
+{
+
+}
+
+public static java.net.InetAddress getByAddress(java.lang.Object arg0, java.lang.Object arg1) throws java.net.UnknownHostException
+{
+
+}
+
+public static java.net.InetAddress getByName(java.lang.Object arg0) throws java.net.UnknownHostException
+{
+
+}
+
+private static java.net.InetAddress getByName(java.lang.Object arg0, java.lang.Object arg1) throws java.net.UnknownHostException
+{
+
+}
+
+public static java.net.InetAddress[] getAllByName(java.lang.Object arg0) throws java.net.UnknownHostException
+{
+
+}
+
+private static java.net.InetAddress[] getAllByName(java.lang.Object arg0, java.lang.Object arg1) throws java.net.UnknownHostException
+{
+
+}
+
+public static java.net.InetAddress getLoopbackAddress()
+{
+
+}
+
+private static int checkNumericZone(java.lang.Object arg0) throws java.net.UnknownHostException
+{
+
+}
+
+private static java.net.InetAddress[] getAllByName0(java.lang.Object arg0) throws java.net.UnknownHostException
+{
+
+}
+
+static java.net.InetAddress[] getAllByName0(java.lang.Object arg0, java.lang.Object arg1) throws java.net.UnknownHostException
+{
+
+}
+
+private static java.net.InetAddress[] getAllByName0(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.net.UnknownHostException
+{
+
+}
+
+private static java.net.InetAddress[] getAddressesFromNameService(java.lang.Object arg0, java.lang.Object arg1) throws java.net.UnknownHostException
+{
+
+}
+
+private static java.net.InetAddress[] checkLookupTable(java.lang.Object arg0)
+{
+
+}
+
+private static void updateLookupTable(java.lang.Object arg0)
+{
+
+}
+
+public static java.net.InetAddress getByAddress(java.lang.Object arg0) throws java.net.UnknownHostException
+{
+
+}
+
+public static java.net.InetAddress getLocalHost() throws java.net.UnknownHostException
+{
+
+}
+
+native private static void init()
+{
+
+}
+
+static java.net.InetAddress anyLocalAddress()
+{
+
+}
+
+static java.net.InetAddressImpl loadImpl(java.lang.Object arg0)
+{
+
+}
+
+private void readObjectNoData(java.lang.Object arg0) throws java.io.IOException, java.lang.ClassNotFoundException
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.IOException, java.lang.ClassNotFoundException
+{
+
+}
+
+private void writeObject(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

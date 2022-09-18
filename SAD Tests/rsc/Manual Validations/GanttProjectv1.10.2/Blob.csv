@@ -1,0 +1,8 @@
+net.sourceforge.ganttproject.GanttGraphicArea
+net.sourceforge.ganttproject.GanttOptions
+net.sourceforge.ganttproject.GanttProject
+net.sourceforge.ganttproject.GanttTree
+net.sourceforge.ganttproject.ResourceLoadGraphicArea
+net.sourceforge.ganttproject.task.TaskImpl
+net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+net.sourceforge.ganttproject.gui.options.CSVSettingsPanel

@@ -1,0 +1,12 @@
+Package,Base name,Inh Depth,NVI,Local G Count,NVS,New Count,Overriden G Count,Inh Count,Tag,Ovr Tag,Large Class,Budding Class,Blooming Class
+CH.ifa.draw.figures,LineConnection,3,1.5483872,32,49.54839,23,9,53,Extender,Specializer,Y,Y,Y
+CH.ifa.draw.standard,AbstractFigure,1,3.090909,34,105.090904,33,1,10,Extender,PureReplacer,Y,Y,Y
+CH.ifa.draw.standard,CompositeFigure,2,1.4090909,31,43.681816,24,7,37,Extender,Specializer,Y,Y,Y
+CH.ifa.draw.standard,ConnectionTool,2,1.4285715,15,21.428572,10,5,16,Extender,Replacer,N,Y,Y
+CH.ifa.draw.standard,StandardDrawingView,5,0.6292906,55,34.61098,50,5,432,Extender,PureReplacer,Y,N,Y
+CH.ifa.draw.samples.pert,PertFigure,3,1.0588236,24,25.411766,14,10,58,Extender,Specializer,Y,Y,Y
+CH.ifa.draw.contrib,PolygonFigure,3,1.5918367,26,41.387753,14,12,37,Extender,Equals,Y,Y,Y
+CH.ifa.draw.application,DrawApplication,6,0.76076555,53,40.320576,53,0,418,PureExtender,NoOvr,Y,N,Y
+CH.ifa.draw.standard,DecoratorFigure,2,1.3181819,29,38.227276,9,20,24,Overrider,Replacer,Y,Y,Y
+CH.ifa.draw.figures,PolyLineFigure,2,1.3181819,29,38.227276,18,11,33,Extender,Specializer,Y,Y,Y
+CH.ifa.draw.figures,TextFigure,3,1.8367347,30,55.10204,17,13,36,Extender,Specializer,Y,Y,Y

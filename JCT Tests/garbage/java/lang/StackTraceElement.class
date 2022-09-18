@@ -1,0 +1,61 @@
+package java.lang;
+final public class StackTraceElement
+implements java.io.Serializable
+{
+private java.lang.Object declaringClass;
+
+private java.lang.Object methodName;
+
+private java.lang.Object fileName;
+
+private java.lang.Object lineNumber;
+
+final private static java.lang.Object serialVersionUID;
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+public java.lang.String getFileName()
+{
+
+}
+
+public int getLineNumber()
+{
+
+}
+
+public java.lang.String getClassName()
+{
+
+}
+
+public java.lang.String getMethodName()
+{
+
+}
+
+public boolean isNativeMethod()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+
+}

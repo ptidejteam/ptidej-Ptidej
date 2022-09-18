@@ -1,0 +1,35 @@
+C for Juzzle
+
+null
+
+With rules
+	Problem creation: 0'2
+	Solving: 0'0
+	Total: 0'3
+	Total number of solutions: 0
+	Number of solutions with Ghosts: 0
+	Number of solutions without Ghosts: 0
+
+Without rule
+	Problem creation: 0'0
+	Solving: 0'44
+	Total: 0'44
+	Total number of solutions: 1746
+	Number of solutions with Ghosts: 1726
+	Number of solutions without Ghosts: 20
+
+Variable "leaf"
+	Domain size without rule: 99
+	Domain size with rules: 0
+	Domain reduction: 100.0%
+Variable "composite"
+	Domain size without rule: 99
+	Domain size with rules: 99
+	Domain reduction: 0.0%
+Variable "component"
+	Domain size without rule: 99
+	Domain size with rules: 99
+	Domain reduction: 0.0%
+
+Inclusion:
+0 solutions included of 0

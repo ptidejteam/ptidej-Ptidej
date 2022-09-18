@@ -1,0 +1,143 @@
+String Creation Time: 38
+String Length in Tokens: 20155
+--------------------------------------------------
+
+NONE
+Solution Computation Time:23
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1
+Solution Computation Time:23
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2
+Solution Computation Time:24
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3
+Solution Computation Time:40
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2
+Solution Computation Time:24
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 3
+Solution Computation Time:40
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 3
+Solution Computation Time:383
+Number of Solutions With and Without Ghosts:3
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:3
+
+
+# Micro-architecture 70107 similar at 100% with ObserverWithConcreteSubject
+70107.100.Subject = junit.extensions.TestDecorator
+70107.100.ConcreteSubject = junit.extensions.TestSetup
+70107.100.Observer = java.lang.Object
+70107.100.ConcreteObserver = junit.tests.ExtensionTest
+
+# Micro-architecture 70108 similar at 100% with ObserverWithConcreteSubject
+70108.100.Subject = junit.extensions.TestDecorator
+70108.100.ConcreteSubject = junit.extensions.RepeatedTest
+70108.100.Observer = java.lang.Object
+70108.100.ConcreteObserver = junit.tests.RepeatedTestTest
+
+# Micro-architecture 70109 similar at 100% with ObserverWithConcreteSubject
+70109.100.Subject = junit.extensions.TestDecorator
+70109.100.ConcreteSubject = junit.extensions.RepeatedTest
+70109.100.Observer = java.lang.Object
+70109.100.ConcreteObserver = junit.tests.ActiveTestTest
+
+---------------------------------------------
+2 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2 and 3
+Solution Computation Time:387
+Number of Solutions With and Without Ghosts:3
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:3
+
+
+# Micro-architecture 94789 similar at 100% with ObserverWithConcreteSubject
+94789.100.Subject = junit.extensions.TestDecorator
+94789.100.ConcreteSubject = junit.extensions.TestSetup
+94789.100.Observer = java.lang.Object
+94789.100.ConcreteObserver = junit.tests.ExtensionTest
+
+# Micro-architecture 94790 similar at 100% with ObserverWithConcreteSubject
+94790.100.Subject = junit.extensions.TestDecorator
+94790.100.ConcreteSubject = junit.extensions.RepeatedTest
+94790.100.Observer = java.lang.Object
+94790.100.ConcreteObserver = junit.tests.RepeatedTestTest
+
+# Micro-architecture 94791 similar at 100% with ObserverWithConcreteSubject
+94791.100.Subject = junit.extensions.TestDecorator
+94791.100.ConcreteSubject = junit.extensions.RepeatedTest
+94791.100.Observer = java.lang.Object
+94791.100.ConcreteObserver = junit.tests.ActiveTestTest
+
+---------------------------------------------
+ALL
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+

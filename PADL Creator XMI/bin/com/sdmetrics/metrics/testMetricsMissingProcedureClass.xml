@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<sdmetrics version="2.2">
+
+<ruleprocedure name="classless">
+<description>This custom procedure has no defining class.</description>
+</ruleprocedure>
+
+</sdmetrics>

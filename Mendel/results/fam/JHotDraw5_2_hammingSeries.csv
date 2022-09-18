@@ -1,0 +1,42 @@
+ChopBoxConnector, PolyLineConnector, ChopEllipseConnector, ChopPolygonConnector
+Pure, 0.0, 0.0, 0.0
+LineConnection, PertDependency, ElbowConnection
+Heterogeneous, 0.75, 0.8
+ChangeConnectionHandle, ChangeConnectionEndHandle, ChangeConnectionStartHandle
+Pure, 0.0, 0.0
+Command, ToggleGridCommand, FigureTransferCommand, ChangeAttributeCommand, SendToBackCommand, GroupCommand, UngroupCommand, BringToFrontCommand, InsertImageCommand, AlignCommand
+HomogeneousOutlier, 0.5, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.0
+DrawApplet, PertApplet, NothingApplet, JavaDrawApplet
+HomogeneousOutlier, 0.0, 0.0, 0.8571428571428571
+RectangleFigure, TriangleFigure, DiamondFigure
+HomogeneousOutlier, 0.6363636363636364, 0.0
+AbstractFigure, AttributeFigure, CompositeFigure, DecoratorFigure, PolyLineFigure
+Heterogeneous, 0.6153846153846154, 0.8888888888888888, 0.6896551724137931, 0.6896551724137931
+CompositeFigure, PertFigure, StandardDrawing, GraphicalCompositeFigure, GroupFigure
+Heterogeneous, 0.875, 0.75, 0.8421052631578947, 0.5
+CreationTool, TextTool, PertFigureCreationTool
+NullPrototype, 1.0, 1.0
+FigureTransferCommand, DuplicateCommand, CopyCommand, CutCommand, DeleteCommand, PasteCommand
+Homogeneous, 0.0, 0.0, 0.0, 0.0, 0.6666666666666666
+DrawApplication, NetApp, NothingApp, MDI_DrawApplication, PertApplication, SplitPaneDrawApplication
+HomogeneousOutlier, 0.0, 0.0, 1.0, 0.0, 1.0
+DecoratorFigure, BorderDecorator, AnimationDecorator
+Heterogeneous, 0.8571428571428571, 0.875
+AbstractLocator, ElbowTextLocator, RelativeLocator, PolygonFigure$1, OffsetLocator, PolyLineLocator
+HomogeneousOutlier, 0.0, 0.6666666666666666, 0.0, 0.75, 0.0
+SelectionTool, CustomSelectionTool, MySelectionTool
+Heterogeneous, 0.8888888888888888, 0.5
+AbstractTool, ActionTool, DragTracker, PolygonTool, SelectAreaTracker, ScribbleTool, CreationTool, SelectionTool, HandleTracker, URLTool, ConnectionTool, FollowURLTool
+Homogeneous, 0.5, 0.3333333333333333, 0.5, 0.0, 0.6, 0.5, 0.5, 0.0, 0.6, 0.8, 0.75
+AbstractHandle, PolygonScaleHandle, ChangeConnectionHandle, LocatorHandle, TriangleRotationHandle, PolygonHandle, RadiusHandle, ElbowHandle
+Heterogeneous, 0.7142857142857143, 0.8181818181818182, 0.6666666666666666, 0.7142857142857143, 0.5, 0.25, 0.25
+PolyLineFigure, LineConnection, LineFigure
+HeterogeneousScattered, 0.875, 0.3333333333333333
+AttributeFigure, EllipseFigure, TextFigure, RectangleFigure, RoundRectangleFigure, ImageFigure, PolygonFigure
+Homogeneous, 0.2, 0.7333333333333333, 0.0, 0.3333333333333333, 0.4, 0.6923076923076923
+TextFigure, NodeFigure, NumberTextFigure
+NullPrototype, 1.0, 1.0
+AbstractConnector, ChopBoxConnector, LocatorConnector, ShortestDistanceConnector
+HeterogeneousScattered, 0.3333333333333333, 1.0, 0.3333333333333333
+LocatorHandle, ConnectionHandle, SouthEastHandle, NullHandle, NorthEastHandle, NorthWestHandle, EastHandle, PolyLineHandle, FontSizeHandle, WestHandle, SouthHandle, NorthHandle, SouthWestHandle
+HomogeneousOutlier, 0.8571428571428571, 0.0, 1.0, 0.0, 0.0, 0.0, 0.5, 0.6666666666666666, 0.0, 0.0, 0.0, 0.0

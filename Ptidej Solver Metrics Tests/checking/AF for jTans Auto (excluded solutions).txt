@@ -1,0 +1,357 @@
+# Micro-architecture 349 similar at 100% with unknown pattern
+349.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+349.100.abstractproduct = net.phbwt.jtans.guiconfig.ConfigWindow
+349.100.concretefactory = net.phbwt.jtans.AbstractApplication
+349.100.product = net.phbwt.jtans.guiconfig.ConfigWindow
+349.100.XCommand = No source transformation needed
+
+# Micro-architecture 347 similar at 100% with unknown pattern
+347.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+347.100.abstractproduct = net.phbwt.jtans.guiinfo.InfoWindowController
+347.100.concretefactory = net.phbwt.jtans.AbstractApplication
+347.100.product = net.phbwt.jtans.guiinfo.InfoWindowController
+347.100.XCommand = No source transformation needed
+
+# Micro-architecture 359 similar at 100% with unknown pattern
+359.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+359.100.abstractproduct = net.phbwt.jtans.guimain.MainWindow
+359.100.concretefactory = net.phbwt.jtans.AbstractApplication
+359.100.product = net.phbwt.jtans.guimain.MainWindow
+359.100.XCommand = No source transformation needed
+
+# Micro-architecture 40 similar at 100% with unknown pattern
+40.100.abstractfactory = net.phbwt.jtans.calc.CalcFigure
+40.100.abstractproduct = net.phbwt.jtans.calc.CalcPieceC
+40.100.concretefactory = net.phbwt.jtans.calc.CalcFigure
+40.100.product = net.phbwt.jtans.calc.CalcPieceC
+40.100.XCommand = No source transformation needed
+
+# Micro-architecture 43 similar at 100% with unknown pattern
+43.100.abstractfactory = net.phbwt.jtans.calc.CalcFigure
+43.100.abstractproduct = net.phbwt.jtans.calc.CalcPieceGT
+43.100.concretefactory = net.phbwt.jtans.calc.CalcFigure
+43.100.product = net.phbwt.jtans.calc.CalcPieceGT
+43.100.XCommand = No source transformation needed
+
+# Micro-architecture 34 similar at 100% with unknown pattern
+34.100.abstractfactory = net.phbwt.jtans.calc.CalcFigure
+34.100.abstractproduct = net.phbwt.jtans.calc.CalcPieceMT
+34.100.concretefactory = net.phbwt.jtans.calc.CalcFigure
+34.100.product = net.phbwt.jtans.calc.CalcPieceMT
+34.100.XCommand = No source transformation needed
+
+# Micro-architecture 37 similar at 100% with unknown pattern
+37.100.abstractfactory = net.phbwt.jtans.calc.CalcFigure
+37.100.abstractproduct = net.phbwt.jtans.calc.CalcPiecePT
+37.100.concretefactory = net.phbwt.jtans.calc.CalcFigure
+37.100.product = net.phbwt.jtans.calc.CalcPiecePT
+37.100.XCommand = No source transformation needed
+
+# Micro-architecture 31 similar at 100% with unknown pattern
+31.100.abstractfactory = net.phbwt.jtans.calc.CalcFigure
+31.100.abstractproduct = net.phbwt.jtans.calc.CalcPieceT
+31.100.concretefactory = net.phbwt.jtans.calc.CalcFigure
+31.100.product = net.phbwt.jtans.calc.CalcPieceT
+31.100.XCommand = No source transformation needed
+
+# Micro-architecture 41 similar at 100% with unknown pattern
+41.100.abstractfactory = net.phbwt.jtans.calc.CalcFigure
+41.100.abstractproduct = net.phbwt.jtans.calc.CalcPiece
+41.100.concretefactory = net.phbwt.jtans.calc.CalcFigure
+41.100.product = net.phbwt.jtans.calc.CalcPieceC
+41.100.XCommand = No source transformation needed
+
+# Micro-architecture 44 similar at 100% with unknown pattern
+44.100.abstractfactory = net.phbwt.jtans.calc.CalcFigure
+44.100.abstractproduct = net.phbwt.jtans.calc.CalcPiece
+44.100.concretefactory = net.phbwt.jtans.calc.CalcFigure
+44.100.product = net.phbwt.jtans.calc.CalcPieceGT
+44.100.XCommand = No source transformation needed
+
+# Micro-architecture 35 similar at 100% with unknown pattern
+35.100.abstractfactory = net.phbwt.jtans.calc.CalcFigure
+35.100.abstractproduct = net.phbwt.jtans.calc.CalcPiece
+35.100.concretefactory = net.phbwt.jtans.calc.CalcFigure
+35.100.product = net.phbwt.jtans.calc.CalcPieceMT
+35.100.XCommand = No source transformation needed
+
+# Micro-architecture 38 similar at 100% with unknown pattern
+38.100.abstractfactory = net.phbwt.jtans.calc.CalcFigure
+38.100.abstractproduct = net.phbwt.jtans.calc.CalcPiece
+38.100.concretefactory = net.phbwt.jtans.calc.CalcFigure
+38.100.product = net.phbwt.jtans.calc.CalcPiecePT
+38.100.XCommand = No source transformation needed
+
+# Micro-architecture 32 similar at 100% with unknown pattern
+32.100.abstractfactory = net.phbwt.jtans.calc.CalcFigure
+32.100.abstractproduct = net.phbwt.jtans.calc.CalcPiece
+32.100.concretefactory = net.phbwt.jtans.calc.CalcFigure
+32.100.product = net.phbwt.jtans.calc.CalcPieceT
+32.100.XCommand = No source transformation needed
+
+# Micro-architecture 25 similar at 100% with unknown pattern
+25.100.abstractfactory = net.phbwt.jtans.calc.CalcFigure
+25.100.abstractproduct = net.phbwt.jtans.calc.CalcPolyPoints
+25.100.concretefactory = net.phbwt.jtans.calc.CalcFigure
+25.100.product = net.phbwt.jtans.calc.CalcPolyPoints
+25.100.XCommand = No source transformation needed
+
+# Micro-architecture 28 similar at 100% with unknown pattern
+28.100.abstractfactory = net.phbwt.jtans.calc.CalcFigure
+28.100.abstractproduct = net.phbwt.jtans.calc.CalcPolyTriangles
+28.100.concretefactory = net.phbwt.jtans.calc.CalcFigure
+28.100.product = net.phbwt.jtans.calc.CalcPolyTriangles
+28.100.XCommand = No source transformation needed
+
+# Micro-architecture 729 similar at 100% with unknown pattern
+729.100.abstractfactory = net.phbwt.jtans.calc.CalcPiece
+729.100.abstractproduct = net.phbwt.jtans.calc.CalcPolyPoints
+729.100.concretefactory = net.phbwt.jtans.calc.CalcPiece
+729.100.product = net.phbwt.jtans.calc.CalcPolyPoints
+729.100.XCommand = No source transformation needed
+
+# Micro-architecture 745 similar at 100% with unknown pattern
+745.100.abstractfactory = net.phbwt.jtans.calc.DisplayFigure
+745.100.abstractproduct = net.phbwt.jtans.calc.PixelPiece
+745.100.concretefactory = net.phbwt.jtans.calc.DisplayFigure
+745.100.product = net.phbwt.jtans.calc.PixelPiece
+745.100.XCommand = No source transformation needed
+
+# Micro-architecture 746 similar at 100% with unknown pattern
+746.100.abstractfactory = net.phbwt.jtans.calc.DisplayFigure
+746.100.abstractproduct = net.phbwt.jtans.calc.PixelPolygon
+746.100.concretefactory = net.phbwt.jtans.calc.DisplayFigure
+746.100.product = net.phbwt.jtans.calc.PixelPiece
+746.100.XCommand = No source transformation needed
+
+# Micro-architecture 312 similar at 100% with unknown pattern
+312.100.abstractfactory = net.phbwt.jtans.calc.EditableFigure
+312.100.abstractproduct = net.phbwt.jtans.calc.PixelPiece
+312.100.concretefactory = net.phbwt.jtans.calc.EditableFigure
+312.100.product = net.phbwt.jtans.calc.PixelPiece
+312.100.XCommand = No source transformation needed
+
+# Micro-architecture 313 similar at 100% with unknown pattern
+313.100.abstractfactory = net.phbwt.jtans.calc.EditableFigure
+313.100.abstractproduct = net.phbwt.jtans.calc.PixelPolygon
+313.100.concretefactory = net.phbwt.jtans.calc.EditableFigure
+313.100.product = net.phbwt.jtans.calc.PixelPiece
+313.100.XCommand = No source transformation needed
+
+# Micro-architecture 524 similar at 100% with unknown pattern
+524.100.abstractfactory = net.phbwt.jtans.calc.PixelFigure
+524.100.abstractproduct = net.phbwt.jtans.calc.PixelOutlinePolygon
+524.100.concretefactory = net.phbwt.jtans.calc.PixelFigure
+524.100.product = net.phbwt.jtans.calc.PixelOutlinePolygon
+524.100.XCommand = No source transformation needed
+
+# Micro-architecture 742 similar at 100% with unknown pattern
+742.100.abstractfactory = net.phbwt.jtans.calc.PixelFigure
+742.100.abstractproduct = net.phbwt.jtans.calc.PixelPiece
+742.100.concretefactory = net.phbwt.jtans.calc.DisplayFigure
+742.100.product = net.phbwt.jtans.calc.PixelPiece
+742.100.XCommand = No source transformation needed
+
+# Micro-architecture 318 similar at 100% with unknown pattern
+318.100.abstractfactory = net.phbwt.jtans.calc.PixelFigure
+318.100.abstractproduct = net.phbwt.jtans.calc.PixelPiece
+318.100.concretefactory = net.phbwt.jtans.calc.EditableFigure
+318.100.product = net.phbwt.jtans.calc.PixelPiece
+318.100.XCommand = No source transformation needed
+
+# Micro-architecture 743 similar at 100% with unknown pattern
+743.100.abstractfactory = net.phbwt.jtans.calc.PixelFigure
+743.100.abstractproduct = net.phbwt.jtans.calc.PixelPolygon
+743.100.concretefactory = net.phbwt.jtans.calc.DisplayFigure
+743.100.product = net.phbwt.jtans.calc.PixelPiece
+743.100.XCommand = No source transformation needed
+
+# Micro-architecture 319 similar at 100% with unknown pattern
+319.100.abstractfactory = net.phbwt.jtans.calc.PixelFigure
+319.100.abstractproduct = net.phbwt.jtans.calc.PixelPolygon
+319.100.concretefactory = net.phbwt.jtans.calc.EditableFigure
+319.100.product = net.phbwt.jtans.calc.PixelPiece
+319.100.XCommand = No source transformation needed
+
+# Micro-architecture 523 similar at 100% with unknown pattern
+523.100.abstractfactory = net.phbwt.jtans.calc.PixelFigure
+523.100.abstractproduct = net.phbwt.jtans.calc.PixelPolygon
+523.100.concretefactory = net.phbwt.jtans.calc.PixelFigure
+523.100.product = net.phbwt.jtans.calc.PixelOutlinePolygon
+523.100.XCommand = No source transformation needed
+
+# Micro-architecture 699 similar at 100% with unknown pattern
+699.100.abstractfactory = net.phbwt.jtans.calc.StaticCalcOutline
+699.100.abstractproduct = net.phbwt.jtans.calc.CalcOutlinePolygon
+699.100.concretefactory = net.phbwt.jtans.calc.StaticCalcOutline
+699.100.product = net.phbwt.jtans.calc.CalcOutlinePolygon
+699.100.XCommand = No source transformation needed
+
+# Micro-architecture 698 similar at 100% with unknown pattern
+698.100.abstractfactory = net.phbwt.jtans.calc.StaticCalcOutline
+698.100.abstractproduct = net.phbwt.jtans.calc.CalcPolyPoints
+698.100.concretefactory = net.phbwt.jtans.calc.StaticCalcOutline
+698.100.product = net.phbwt.jtans.calc.CalcOutlinePolygon
+698.100.XCommand = No source transformation needed
+
+# Micro-architecture 695 similar at 100% with unknown pattern
+695.100.abstractfactory = net.phbwt.jtans.calc.StaticCalcOutline
+695.100.abstractproduct = net.phbwt.jtans.calc.CalcPolyPoints
+695.100.concretefactory = net.phbwt.jtans.calc.StaticCalcOutline
+695.100.product = net.phbwt.jtans.calc.CalcPolyPoints
+695.100.XCommand = No source transformation needed
+
+# Micro-architecture 264 similar at 100% with unknown pattern
+264.100.abstractfactory = net.phbwt.jtans.guicommon.Config
+264.100.abstractproduct = net.phbwt.jtans.guicommon.Config$ConfigItem
+264.100.concretefactory = net.phbwt.jtans.guicommon.Config
+264.100.product = net.phbwt.jtans.guicommon.FigureGroup
+264.100.XCommand = No source transformation needed
+
+# Micro-architecture 258 similar at 100% with unknown pattern
+258.100.abstractfactory = net.phbwt.jtans.guicommon.Config
+258.100.abstractproduct = net.phbwt.jtans.guicommon.Config$ConfigItem
+258.100.concretefactory = net.phbwt.jtans.guicommon.Config
+258.100.product = net.phbwt.jtans.guicommon.Surface
+258.100.XCommand = No source transformation needed
+
+# Micro-architecture 273 similar at 100% with unknown pattern
+273.100.abstractfactory = net.phbwt.jtans.guicommon.Config
+273.100.abstractproduct = net.phbwt.jtans.guicommon.Config$ConfigItem
+273.100.concretefactory = net.phbwt.jtans.guicommon.Config
+273.100.product = net.phbwt.jtans.guicommon.Trait
+273.100.XCommand = No source transformation needed
+
+# Micro-architecture 254 similar at 100% with unknown pattern
+254.100.abstractfactory = net.phbwt.jtans.guicommon.Config
+254.100.abstractproduct = net.phbwt.jtans.guicommon.Config
+254.100.concretefactory = net.phbwt.jtans.guicommon.Config
+254.100.product = net.phbwt.jtans.guicommon.Config
+254.100.XCommand = No source transformation needed
+
+# Micro-architecture 266 similar at 100% with unknown pattern
+266.100.abstractfactory = net.phbwt.jtans.guicommon.Config
+266.100.abstractproduct = net.phbwt.jtans.guicommon.FigureGroup
+266.100.concretefactory = net.phbwt.jtans.guicommon.Config
+266.100.product = net.phbwt.jtans.guicommon.FigureGroup
+266.100.XCommand = No source transformation needed
+
+# Micro-architecture 259 similar at 100% with unknown pattern
+259.100.abstractfactory = net.phbwt.jtans.guicommon.Config
+259.100.abstractproduct = net.phbwt.jtans.guicommon.Surface
+259.100.concretefactory = net.phbwt.jtans.guicommon.Config
+259.100.product = net.phbwt.jtans.guicommon.Surface
+259.100.XCommand = No source transformation needed
+
+# Micro-architecture 275 similar at 100% with unknown pattern
+275.100.abstractfactory = net.phbwt.jtans.guicommon.Config
+275.100.abstractproduct = net.phbwt.jtans.guicommon.Trait
+275.100.concretefactory = net.phbwt.jtans.guicommon.Config
+275.100.product = net.phbwt.jtans.guicommon.Trait
+275.100.XCommand = No source transformation needed
+
+# Micro-architecture 536 similar at 100% with unknown pattern
+536.100.abstractfactory = net.phbwt.jtans.guiconfig.SurfaceComponentGroup
+536.100.abstractproduct = net.phbwt.jtans.guiconfig.SurfaceExampleComponent
+536.100.concretefactory = net.phbwt.jtans.guiconfig.SurfaceComponentGroup
+536.100.product = net.phbwt.jtans.guiconfig.SurfaceExampleComponent
+536.100.XCommand = No source transformation needed
+
+# Micro-architecture 555 similar at 100% with unknown pattern
+555.100.abstractfactory = net.phbwt.jtans.guiconfig.TraitComponentGroup
+555.100.abstractproduct = net.phbwt.jtans.guiconfig.TraitExampleComponent
+555.100.concretefactory = net.phbwt.jtans.guiconfig.TraitComponentGroup
+555.100.product = net.phbwt.jtans.guiconfig.TraitExampleComponent
+555.100.XCommand = No source transformation needed
+
+# Micro-architecture 3 similar at 100% with unknown pattern
+3.100.abstractfactory = net.phbwt.jtans.guiinfo.InfoWindowController
+3.100.abstractproduct = net.phbwt.jtans.guiinfo.InfoWindowController
+3.100.concretefactory = net.phbwt.jtans.guiinfo.InfoWindowController
+3.100.product = net.phbwt.jtans.guiinfo.InfoWindowController
+3.100.XCommand = No source transformation needed
+
+# Micro-architecture 642 similar at 100% with unknown pattern
+642.100.abstractfactory = net.phbwt.jtans.guimain.MainWindow
+642.100.abstractproduct = net.phbwt.jtans.calc.CalcFigure
+642.100.concretefactory = net.phbwt.jtans.guimain.MainWindow
+642.100.product = net.phbwt.jtans.calc.CalcFigure
+642.100.XCommand = No source transformation needed
+
+# Micro-architecture 678 similar at 100% with unknown pattern
+678.100.abstractfactory = net.phbwt.jtans.guimain.MainWindow
+678.100.abstractproduct = net.phbwt.jtans.calc.DisplayFigure
+678.100.concretefactory = net.phbwt.jtans.guimain.MainWindow
+678.100.product = net.phbwt.jtans.calc.DisplayFigure
+678.100.XCommand = No source transformation needed
+
+# Micro-architecture 661 similar at 100% with unknown pattern
+661.100.abstractfactory = net.phbwt.jtans.guimain.MainWindow
+661.100.abstractproduct = net.phbwt.jtans.calc.EditableFigure
+661.100.concretefactory = net.phbwt.jtans.guimain.MainWindow
+661.100.product = net.phbwt.jtans.calc.EditableFigure
+661.100.XCommand = No source transformation needed
+
+# Micro-architecture 677 similar at 100% with unknown pattern
+677.100.abstractfactory = net.phbwt.jtans.guimain.MainWindow
+677.100.abstractproduct = net.phbwt.jtans.calc.PixelFigure
+677.100.concretefactory = net.phbwt.jtans.guimain.MainWindow
+677.100.product = net.phbwt.jtans.calc.DisplayFigure
+677.100.XCommand = No source transformation needed
+
+# Micro-architecture 662 similar at 100% with unknown pattern
+662.100.abstractfactory = net.phbwt.jtans.guimain.MainWindow
+662.100.abstractproduct = net.phbwt.jtans.calc.PixelFigure
+662.100.concretefactory = net.phbwt.jtans.guimain.MainWindow
+662.100.product = net.phbwt.jtans.calc.EditableFigure
+662.100.XCommand = No source transformation needed
+
+# Micro-architecture 665 similar at 100% with unknown pattern
+665.100.abstractfactory = net.phbwt.jtans.guimain.MainWindow
+665.100.abstractproduct = net.phbwt.jtans.guimain.DisplayFigureComponent
+665.100.concretefactory = net.phbwt.jtans.guimain.MainWindow
+665.100.product = net.phbwt.jtans.guimain.DisplayFigureComponent
+665.100.XCommand = No source transformation needed
+
+# Micro-architecture 673 similar at 100% with unknown pattern
+673.100.abstractfactory = net.phbwt.jtans.guimain.MainWindow
+673.100.abstractproduct = net.phbwt.jtans.guimain.EditableFigureComponent
+673.100.concretefactory = net.phbwt.jtans.guimain.MainWindow
+673.100.product = net.phbwt.jtans.guimain.EditableFigureComponent
+673.100.XCommand = No source transformation needed
+
+# Micro-architecture 659 similar at 100% with unknown pattern
+659.100.abstractfactory = net.phbwt.jtans.guimain.MainWindow
+659.100.abstractproduct = net.phbwt.jtans.guimain.StatusBar
+659.100.concretefactory = net.phbwt.jtans.guimain.MainWindow
+659.100.product = net.phbwt.jtans.guimain.StatusBar
+659.100.XCommand = No source transformation needed
+
+# Micro-architecture 188 similar at 100% with unknown pattern
+188.100.abstractfactory = net.phbwt.jtans.jTansApplet
+188.100.abstractproduct = net.phbwt.jtans.guicommon.Config
+188.100.concretefactory = net.phbwt.jtans.jTansApplet
+188.100.product = net.phbwt.jtans.guicommon.Config
+188.100.XCommand = No source transformation needed
+
+# Micro-architecture 183 similar at 100% with unknown pattern
+183.100.abstractfactory = net.phbwt.jtans.jTansApplet
+183.100.abstractproduct = net.phbwt.jtans.guiconfig.ConfigWindow
+183.100.concretefactory = net.phbwt.jtans.jTansApplet
+183.100.product = net.phbwt.jtans.guiconfig.ConfigWindow
+183.100.XCommand = No source transformation needed
+
+# Micro-architecture 181 similar at 100% with unknown pattern
+181.100.abstractfactory = net.phbwt.jtans.jTansApplet
+181.100.abstractproduct = net.phbwt.jtans.guiinfo.InfoWindowController
+181.100.concretefactory = net.phbwt.jtans.jTansApplet
+181.100.product = net.phbwt.jtans.guiinfo.InfoWindowController
+181.100.XCommand = No source transformation needed
+
+# Micro-architecture 194 similar at 100% with unknown pattern
+194.100.abstractfactory = net.phbwt.jtans.jTansApplet
+194.100.abstractproduct = net.phbwt.jtans.guimain.MainWindow
+194.100.concretefactory = net.phbwt.jtans.jTansApplet
+194.100.product = net.phbwt.jtans.guimain.MainWindow
+194.100.XCommand = No source transformation needed
+

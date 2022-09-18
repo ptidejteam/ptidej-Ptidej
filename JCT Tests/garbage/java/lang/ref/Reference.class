@@ -1,0 +1,93 @@
+package java.lang.ref;
+abstract public class Reference
+{
+private static class Lock
+{
+private void <init>()
+{
+
+}
+
+
+}
+
+private static class ReferenceHandler
+extends java.lang.Thread
+{
+private static void ensureClassInitialized(java.lang.Object arg0)
+{
+
+}
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void run()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}
+
+private java.lang.Object referent;
+
+volatile java.lang.Object queue;
+
+java.lang.Object next;
+
+private transient java.lang.Object discovered;
+
+private static java.lang.Object lock;
+
+private static java.lang.Object pending;
+
+static boolean tryHandlePending(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Object get()
+{
+
+}
+
+public void clear()
+{
+
+}
+
+public boolean isEnqueued()
+{
+
+}
+
+public boolean enqueue()
+{
+
+}
+
+void <init>(java.lang.Object arg0)
+{
+
+}
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

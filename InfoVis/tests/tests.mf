@@ -1,0 +1,3 @@
+Main-Class: RunAllUnitTests
+Class-Path: infovis.jar lib/junit.jar
+Created-By: Jean-Daniel Fekete

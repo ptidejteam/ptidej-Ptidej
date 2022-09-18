@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<sdmetrics version="2.0">
+
+<metric name="NumOps" domain="class">
+<description>Metric with multiple calculation procedures. Trying doesn't hurt.</description>
+<projection relset="ownedoperations" />
+<compoundmetric term="InheritedOps+DefinedOps" />
+</metric>
+
+</sdmetrics>

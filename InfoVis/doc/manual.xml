@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "f:/tei-emacs/xml/dtds/docbook/docbookx.dtd">
+<book id="the-infovis-toolkit">
+ <bookinfo>
+  <author>
+   <firstname>Jean-Daniel</firstname>
+   <surname>Fekete</surname>
+   <affiliation>
+    <orgname>INRIA</orgname>
+    <address role="email">Jean-Daniel.Fekete@inria.fr</address>
+   </affiliation>
+  </author>
+  <editor>
+   <firstname>Jean-Daniel</firstname>
+   <surname>Fekete</surname>
+  </editor>
+  <copyright>
+   <year>2003</year>
+   <holder>INRIA</holder>
+  </copyright>
+  <title>The InfoVis Toolkit</title>
+  <legalnotice>
+   <para>The contents of this book can be freely used and distributed
+    as far as the source is mentioned as a reference that is, its
+    bibliograph.</para>
+  </legalnotice>
+  <publisher>
+   <publishername>INRIA Futurs/LRI</publishername>
+   <address>LRI, Batiment 490, Universit�e Paris-Sud, F91405
+   Orsay, France</address>
+  </publisher>
+  <revhistory>
+   <revision>
+    <revnumber>0.1</revnumber>
+    <date>January 2003</date>
+    <revremark>Start of document</revremark>
+   </revision>
+  </revhistory>
+ </bookinfo>
+
+ <chapter>
+  <title>Introduction</title>
+
+  <para>The InfoVis toolkit is a software package aimed at simplifying
+  the development of Information Visualization Systems.  It is written
+  in Java, capitalizing on its rich interactive graphics environment
+  and portability. </para>
+
+  <para>Information Visualization is a domain that emerged in the
+  early 1990 and has expanded at a steady pace, showing great results,
+  innovative concepts and techniques.  So many concepts and techniques
+  that it is challenging to keep pace with the implementation of the
+  most useful techniques for applications.  The InfoVis toolkit is
+  designed to be a repository of know-how for building highest quality
+  information visualization systems.</para>
+
+ </chapter>
+
+ <chapter>
+  <title>Data Structures</title>
+
+  <para> The three main data structures in information visualization
+  are the table, the tree and the graph.  These data structures are
+  well documented on text books such as <citation>Knuth97</citation>
+  <citation>Cormen01</citation>, albeit with a different focus than
+  ours.  In information visualization, a table is more like a database
+  table than the crude computer science data structure called an
+  array.</para>
+
+  <para>Since trees and graphs are best defined as special tables,
+   let's introduce tables first.</para>
+
+  <section>
+   <title>Table and Columns</title>
+
+   <section>
+    <title>Metadata</title>
+
+    <para><indexterm><primary>Metadata</primary></indexterm>Metadata
+    is information about the data.  Columns and tables can contain
+    metadata implemented as an associative map between a key and a
+    value, usually strings.</para>
+
+    <section>
+     <title>Aggregation</title> <para><indexterm>
+     <primary>Aggregation</primary></indexterm>Aggregation information
+     applies to columns in a Tree.  Some columns only define values
+     for the leaf nodes of the tree.  For example, when loading the a
+     file directory in a Tree, InfoVis doesn't provide size
+     information for directories, only for files.  However, we know
+     what the file size of a directory means, it is the sum of the
+     file sizes.  In that situation, the column containing the file
+     sizes will have an aggregation metadata explaining just that: the
+     file sizes add up with the hierarchy.</para>
+
+     <para>Adding up with the hierarchy is a common aggregation
+     method, but others exist as well.  First, some column don't
+     aggregate at all.  For example, the file names don't aggregate,
+     but it turns out they are defined for all the directories so we
+     don't need to invent a new name.  Usually, nominal and
+     categorical information don't aggregate.  If your file have
+     types, such as image or text, the directory cannot simply compute
+     a similar category.  We will see later that we could still create
+     an aggregation function in similar cases, but let's continue with
+     simpler cases.</para>
+
+     <para>The InfoVis Toolkit defines seven well understood
+      aggregation types: <firstterm>additive</firstterm>,
+      <firstterm>max</firstterm>, <firstterm>min</firstterm>,
+      <firstterm>mean</firstterm>, <firstterm>concat</firstterm>,
+      <firstterm>atleaf</firstterm> and <firstterm>none</firstterm>.
+      We have already discussed the additive type.  The "max", "min"
+      and "mean" are similar.  "Max" computes the maximum over all the
+      children as the aggregation function.  "Min" and "mean" compute
+      the minimum and the mean respectively.  As an example, consider
+      file dates in a directory tree.  If you are interested by
+      finding the latests work performed, you want to aggregate dates
+      on the maximum date value of each directory.</para>
+
+     <para>The "concat" type is for string values and simply specifies
+     that the values will be concatenated into a string with a space
+     between them.  Finally, the "atleaf" means that the attributes
+     are only defined at the leaves, not for interior nodes.  In that
+     case, any of the numeric aggregation function can be freely
+     applied to the column if it is a numerical column, and the
+     concatenation function can be applied in all cases.</para>
+
+     <para>There is one class defined to manage each aggregation
+     function.  These classes are useful to compute the aggregated
+     values of a column or checking whether a column belongs to one
+     aggregation category.  Furthermore, new aggregation classes can
+     be defined if you need it.  In that case, you will need to define
+     how to recognize a column that aggregates using your function and
+     to compute the function.  The
+     <classname>AggregationCategory</classname> class is a factory for
+     aggregation functions so you can add yours and it will be
+     correctly applied.  </para>
+
+     <para>Aggregation information is stored with the
+     <constant>AGGREGATION_TYPE</constant> metadata key.  The
+     following constants are defined in
+     <filename>infovis.metadata.AggregationConstants.java</filename>:
+      <itemizedlist>
+       <listitem>
+	<para><constant>AGGREGATION_TYPE_NONE</constant></para>
+       </listitem>
+       <listitem>
+	<para><constant>AGGREGATION_TYPE_NONE</constant></para>
+       </listitem>
+       <listitem>
+	<para><constant>AGGREGATION_TYPE_ATLEAF</constant></para>
+       </listitem>
+       <listitem>
+	<para><constant>AGGREGATION_TYPE_ADDITIVE</constant></para>
+       </listitem>
+       <listitem>
+	<para><constant>AGGREGATION_TYPE_MAX</constant></para>
+       </listitem>
+       <listitem>
+	<para><constant>AGGREGATION_TYPE_MIN</constant></para>
+       </listitem>
+       <listitem>
+	<para><constant>AGGREGATION_TYPE_MEAN</constant></para>
+       </listitem>
+       <listitem>
+	<para><constant>AGGREGATION_TYPE_CONCAT</constant></para>
+       </listitem>
+      </itemizedlist>
+     </para>
+     
+     <section>
+      <title>The Aggregation Class</title>
+      
+      <classsynopsis>
+       <ooclass>
+	<modifier>public interface</modifier>
+	<classname>Aggregation </classname>
+       </ooclass>
+       <oointerface>
+	<interfacename>AggregationConstants</interfacename>
+       </oointerface>
+       <fieldsynopsis>
+	<modifier>public static final</modifier>
+	<type>short</type>
+	<varname>AGGREGATE_NO</varname>
+	<initializer>0</initializer>
+       </fieldsynopsis>
+       <fieldsynopsis>
+	<modifier>public static final</modifier>
+	<type>short</type>
+	<varname>AGGREGATE_YES</varname>
+	<initializer>1</initializer>
+       </fieldsynopsis>
+       <fieldsynopsis>
+	<modifier>public static final</modifier>
+	<type>short</type>
+	<varname>AGGREGATE_COMPATIBLE</varname>
+	<initializer>-1</initializer>
+       </fieldsynopsis>
+       <methodsynopsis>
+	<modifier>public</modifier>
+	<type>short</type>
+	<methodname>isAggregating</methodname>
+	<methodparam>
+	 <parameter>Column col</parameter>
+	</methodparam>
+       </methodsynopsis>
+       <methodsynopsis>
+	<modifier>public</modifier>
+	<type>Column</type>
+	<methodname>aggregate</methodname>
+	<methodparam>
+	 <type>Column</type>
+	 <parameter>src</parameter>
+	</methodparam>
+	<methodparam>
+	 <type>Tree</type>
+	 <parameter>tree</parameter>
+	</methodparam>
+	<methodparam>
+	 <type>Column</type>
+	 <parameter>dst</parameter>
+	</methodparam>
+       </methodsynopsis>
+      </classsynopsis>
+     </section>
+    </section>
+   </section>
+
+  </section>
+  
+
+ </chapter>
+
+ 
+</book>

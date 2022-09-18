@@ -1,0 +1,91 @@
+A few notes on how to install PaLM:
+
+0) First, you should install Claire properly. 
+   PaLM v1.324 works with Claire v3.2.52 (http://www.choco-constraints.net/download/CLAIRE%20v3.2.52.zip)
+   Second, you should install Choco properly.
+   PaLM v1.324 works with Choco v1.324 (http://www.choco-constraints.net/download/chocov1.324.zip)
+   Third, you should install Iceberg properly.
+   PaLM v1.324 works with Iceberg v0.5 (http://www.choco-constraints.net/download/icebergv0.5.zip)
+
+1) A sound directory organization consists in having the following files in a XXX directory (on my computer, XXX is "c:/devclaire3/PaLM")
+
+init.cl     (claire configuration file)
+install.txt (this file: installation notes)
+readme.txt  (a table of contents of the PaLM library)
+release.txt (a release history of PaLM)
+license.txt (the PaLM License)
+
+v1.324/
+    (the place for the Claire sources of PaLM)
+	p-model.cl       : the object-oriented basis and global tools        
+	p-domain.cl      : handling lazy enumerated domains                  
+	p-explain.cl     : explanation related tools and interface           
+	p-variables.cl   : variable definitions for PALM                     
+	p-constraints.cl : arithmetic constraint definitions for PALM        
+	p-ac4.cl         : constraints in extension à la AC4                 
+	p-symbolic.cl    : some symbolic constraints for PALM                
+	p-bool.cl        : handling boolean connectors as constraints        
+	p-solve.cl       : solving problems in e-cp                          
+	palmapi.cl       : application programmer interface (public methods) 
+	p-namespace.cl   : transparent connection with choco and ice
+
+v1.324/obj/
+    (the place to put all generated C++ files, empty for the moment)
+
+doc/
+    (the place for all documentation)
+	tutorial-1.cl    : code examples for http://www.e-constraints.net/palm/manual/palm-note-firssteps.html
+	tutorial-2.cl    : code examples for http://www.e-constraints.net/palm/manual/palm-note-search.html
+    (an online documentation is available at http://www.e-constraints.net/palm/manual.html)
+
+
+2) You must edit the Claire configuration file (init.cl) and change the directory on the 
+   line defining the PaLM module. Replace:
+
+ChocoInstallationDir:string := "." // do set the variable !!
+IceInstallationDir:string   := "." // do set the variable !!
+PalmInstallationDir: string := "." // do set the variable !!
+by
+ChocoInstallationDir:string := XXXX // do set the variable !!
+IceInstallationDir:string   := XXXX // do set the variable !!
+PalmInstallationDir: string := XXXX // do set the variable !!
+
+(use the absolute path for the real name of XXXX, using / as a file separator)
+
+
+3) run Claire from the XXX directory with the following shell command
+
+  claire -s 4 4 -m palm
+
+you get the interpreter prompt and you can now run palm programs
+palm>
+
+Before writing your own PaLM programs, you should test PaLM by launching the palmtest module : 
+
+  claire -s 4 4 -m palmtest
+
+and once in the interpreter launching : allPalmTests()
+The whole set of test should pass with a "true" indication. 
+
+From there, you can type-in your own programs. 
+
+
+4) In order to have a faster PaLM interpreter (which is much nicer for larger problems), you should compile the library.
+In order to do so, type at the shell prompt (this instruction supposes that you already have compiled choco with the 
+claire/EXTENDABLE_CHOCO:boolean variable - in model.cl - set to true)
+
+  claire -s 4 4 -cm palm
+
+You are compiling the Claire module to C++. This should produce a run-time program containing all the PaLM primitives
+linked with a Claire interpreter.
+
+If you want to test the compiled version of PaLM, you should compile palmtest : 
+
+  claire -s 4 4 -cm palmtest
+
+and launch palmtest before launching : allPalmTests() 
+
+
+For all installation problems, send an email to palmbugs@e-constraints.net 
+
+Narendra 

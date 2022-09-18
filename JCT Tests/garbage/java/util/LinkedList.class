@@ -1,0 +1,473 @@
+package java.util;
+public class LinkedList
+extends java.util.AbstractSequentialList
+implements java.io.Serializable, java.lang.Cloneable, java.util.Deque, java.util.List
+{
+private class DescendingIterator
+implements java.util.Iterator
+{
+final private java.lang.Object itr;
+
+private void <init>()
+{
+
+}
+
+public boolean hasNext()
+{
+
+}
+
+public java.lang.Object next()
+{
+
+}
+
+public void remove()
+{
+
+}
+
+
+}
+
+final static class LLSpliterator
+implements java.util.Spliterator
+{
+final static java.lang.Object BATCH_UNIT;
+
+final static java.lang.Object MAX_BATCH;
+
+final java.lang.Object list;
+
+java.lang.Object current;
+
+java.lang.Object est;
+
+java.lang.Object expectedModCount;
+
+java.lang.Object batch;
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+final int getEst()
+{
+
+}
+
+public long estimateSize()
+{
+
+}
+
+public java.util.Spliterator trySplit()
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+public boolean tryAdvance(java.lang.Object arg0)
+{
+
+}
+
+public int characteristics()
+{
+
+}
+
+
+}
+
+private class ListItr
+implements java.util.ListIterator
+{
+private java.lang.Object lastReturned;
+
+private java.lang.Object next;
+
+private java.lang.Object nextIndex;
+
+private java.lang.Object expectedModCount;
+
+void <init>(java.lang.Object arg0)
+{
+
+}
+
+public boolean hasNext()
+{
+
+}
+
+public java.lang.Object next()
+{
+
+}
+
+public boolean hasPrevious()
+{
+
+}
+
+public java.lang.Object previous()
+{
+
+}
+
+public int nextIndex()
+{
+
+}
+
+public int previousIndex()
+{
+
+}
+
+public void remove()
+{
+
+}
+
+public void set(java.lang.Object arg0)
+{
+
+}
+
+public void add(java.lang.Object arg0)
+{
+
+}
+
+public void forEachRemaining(java.lang.Object arg0)
+{
+
+}
+
+final void checkForComodification()
+{
+
+}
+
+
+}
+
+private static class Node
+{
+java.lang.Object item;
+
+java.lang.Object next;
+
+java.lang.Object prev;
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+
+}
+
+transient java.lang.Object size;
+
+transient java.lang.Object first;
+
+transient java.lang.Object last;
+
+final private static java.lang.Object serialVersionUID;
+
+public void <init>()
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+private void linkFirst(java.lang.Object arg0)
+{
+
+}
+
+void linkLast(java.lang.Object arg0)
+{
+
+}
+
+void linkBefore(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.lang.Object unlinkFirst(java.lang.Object arg0)
+{
+
+}
+
+private java.lang.Object unlinkLast(java.lang.Object arg0)
+{
+
+}
+
+java.lang.Object unlink(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Object getFirst()
+{
+
+}
+
+public java.lang.Object getLast()
+{
+
+}
+
+public java.lang.Object removeFirst()
+{
+
+}
+
+public java.lang.Object removeLast()
+{
+
+}
+
+public void addFirst(java.lang.Object arg0)
+{
+
+}
+
+public void addLast(java.lang.Object arg0)
+{
+
+}
+
+public boolean contains(java.lang.Object arg0)
+{
+
+}
+
+public int size()
+{
+
+}
+
+public boolean add(java.lang.Object arg0)
+{
+
+}
+
+public boolean remove(java.lang.Object arg0)
+{
+
+}
+
+public boolean addAll(java.lang.Object arg0)
+{
+
+}
+
+public boolean addAll(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void clear()
+{
+
+}
+
+public java.lang.Object get(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Object set(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void add(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.Object remove(java.lang.Object arg0)
+{
+
+}
+
+private boolean isElementIndex(java.lang.Object arg0)
+{
+
+}
+
+private boolean isPositionIndex(java.lang.Object arg0)
+{
+
+}
+
+private java.lang.String outOfBoundsMsg(java.lang.Object arg0)
+{
+
+}
+
+private void checkElementIndex(java.lang.Object arg0)
+{
+
+}
+
+private void checkPositionIndex(java.lang.Object arg0)
+{
+
+}
+
+java.util.LinkedList.Node node(java.lang.Object arg0)
+{
+
+}
+
+public int indexOf(java.lang.Object arg0)
+{
+
+}
+
+public int lastIndexOf(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Object peek()
+{
+
+}
+
+public java.lang.Object element()
+{
+
+}
+
+public java.lang.Object poll()
+{
+
+}
+
+public java.lang.Object remove()
+{
+
+}
+
+public boolean offer(java.lang.Object arg0)
+{
+
+}
+
+public boolean offerFirst(java.lang.Object arg0)
+{
+
+}
+
+public boolean offerLast(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Object peekFirst()
+{
+
+}
+
+public java.lang.Object peekLast()
+{
+
+}
+
+public java.lang.Object pollFirst()
+{
+
+}
+
+public java.lang.Object pollLast()
+{
+
+}
+
+public void push(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Object pop()
+{
+
+}
+
+public boolean removeFirstOccurrence(java.lang.Object arg0)
+{
+
+}
+
+public boolean removeLastOccurrence(java.lang.Object arg0)
+{
+
+}
+
+public java.util.ListIterator listIterator(java.lang.Object arg0)
+{
+
+}
+
+public java.util.Iterator descendingIterator()
+{
+
+}
+
+private java.util.LinkedList superClone()
+{
+
+}
+
+public java.lang.Object clone()
+{
+
+}
+
+public java.lang.Object[] toArray()
+{
+
+}
+
+public java.lang.Object[] toArray(java.lang.Object arg0)
+{
+
+}
+
+private void writeObject(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.IOException, java.lang.ClassNotFoundException
+{
+
+}
+
+public java.util.Spliterator spliterator()
+{
+
+}
+
+
+}

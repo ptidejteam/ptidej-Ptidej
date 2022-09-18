@@ -1,0 +1,22 @@
+package java.io;
+public class OptionalDataException
+extends java.io.ObjectStreamException
+{
+final private static java.lang.Object serialVersionUID;
+
+public java.lang.Object length;
+
+public java.lang.Object eof;
+
+void <init>(java.lang.Object arg0)
+{
+
+}
+
+void <init>(java.lang.Object arg0)
+{
+
+}
+
+
+}

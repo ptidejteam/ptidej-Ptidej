@@ -1,0 +1,148 @@
+Family, Expression, Extender, 0.71428573, 7, 0.0
+4, callVisitors(org.apache.xpath.ExpressionOwner org.apache.xpath.XPathVisitor ) void, fixupVariables(java.util.Vector int ) void, deepEquals(org.apache.xpath.Expression ) boolean, execute(org.apache.xpath.XPathContext ) org.apache.xpath.objects.XObject, 
+Family, DTMDefaultBaseIterators$SingletonIterator, PureOverrider, 1.0, 2, 0.0
+1, next() int, 
+Family, ElemLiteralResult, PureOverrider, 0.5, 2, 0.0
+2, execute(org.apache.xalan.transformer.TransformerImpl ) void, getXSLToken() int, 
+Family, DTMDefaultBaseTraversers$DescendantTraverser, PureOverrider, 1.0, 4, 0.0
+2, first(int int ) int, first(int ) int, 
+Family, DTMDefaultBaseIterators, Overrider, 0.6666667, 3, 0.0
+27, getNumberOfNodes() int, needsTwoThreads() boolean, getNodeNameX(int ) java.lang.String, getDeclHandler() org.xml.sax.ext.DeclHandler, getDocumentTypeDeclarationPublicIdentifier() java.lang.String, getContentHandler() org.xml.sax.ContentHandler, getNodeValue(int ) java.lang.String, getNextNodeIdentity(int ) int, nextNode() boolean, isAttributeSpecified(int ) boolean, getNamespaceURI(int ) java.lang.String, getAttributeNode(int java.lang.String java.lang.String ) int, setProperty(java.lang.String java.lang.Object ) void, dispatchToEvents(int org.xml.sax.ContentHandler ) void, getPrefix(int ) java.lang.String, getErrorHandler() org.xml.sax.ErrorHandler, getElementById(java.lang.String ) int, getUnparsedEntityURI(java.lang.String ) java.lang.String, getSourceLocatorFor(int ) javax.xml.transform.SourceLocator, getDTDHandler() org.xml.sax.DTDHandler, dispatchCharactersEvents(int org.xml.sax.ContentHandler boolean ) void, getLexicalHandler() org.xml.sax.ext.LexicalHandler, getDocumentTypeDeclarationSystemIdentifier() java.lang.String, getNodeName(int ) java.lang.String, getStringValue(int ) org.apache.xml.utils.XMLString, getLocalName(int ) java.lang.String, getEntityResolver() org.xml.sax.EntityResolver, 
+Family, Instruction, PureOverrider, 0.42307693, 26, 0.0
+0, 
+Family, ToSAXHandler, Overrider, 1.0, 3, 0.0
+35, startElement(java.lang.String java.lang.String java.lang.String org.xml.sax.Attributes ) void, processingInstruction(java.lang.String java.lang.String ) void, startElement(java.lang.String java.lang.String java.lang.String ) void, endDocument() void, namespaceAfterStartElement(java.lang.String java.lang.String ) void, setEscaping(boolean ) boolean, serialize(org.w3c.dom.Node ) void, setOutputStream(java.io.OutputStream ) void, endPrefixMapping(java.lang.String ) void, elementDecl(java.lang.String java.lang.String ) void, endDTD() void, indent(int ) void, skippedEntity(java.lang.String ) void, setOutputFormat(java.util.Properties ) void, reset() boolean, ignorableWhitespace(char[] int int ) void, startPrefixMapping(java.lang.String java.lang.String ) void, startPrefixMapping(java.lang.String java.lang.String boolean ) boolean, characters(char[] int int ) void, startEntity(java.lang.String ) void, startCDATA() void, characters(java.lang.String ) void, getWriter() java.io.Writer, setWriter(java.io.Writer ) void, endCDATA() void, startElement(java.lang.String ) void, attributeDecl(java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String ) void, externalEntityDecl(java.lang.String java.lang.String java.lang.String ) void, internalEntityDecl(java.lang.String java.lang.String ) void, getOutputStream() java.io.OutputStream, endElement(java.lang.String java.lang.String java.lang.String ) void, endElement(java.lang.String ) void, getOutputFormat() java.util.Properties, comment(char[] int int ) void, setDocumentLocator(org.xml.sax.Locator ) void, 
+Family, XMLErrorResources, Other, 0.5, 2, 0.0
+0, 
+Family, Comparator, PureOverrider, 1.0, 6, 0.0
+2, compareNumbers(double double ) boolean, compareStrings(org.apache.xml.utils.XMLString org.apache.xml.utils.XMLString ) boolean, 
+Family, ProcessorTemplateElem, PureOverrider, 0.85714287, 7, 0.0
+0, 
+Family, VariableRefBase, PureOverrider, 0.6666667, 3, 0.0
+1, translate(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, 
+Family, XMLStringFactory, PureOverrider, 1.0, 2, 0.0
+4, newstr(char[] int int ) org.apache.xml.utils.XMLString, newstr(java.lang.String ) org.apache.xml.utils.XMLString, newstr(org.apache.xml.utils.FastStringBuffer int int ) org.apache.xml.utils.XMLString, emptystr() org.apache.xml.utils.XMLString, 
+Family, Function2Args, PureOverrider, 0.71428573, 7, 0.0
+1, execute(org.apache.xpath.XPathContext ) org.apache.xpath.objects.XObject, 
+Family, Type, Overrider, 0.9, 10, 0.0
+4, identicalTo(org.apache.xalan.xsltc.compiler.util.Type ) boolean, toString() java.lang.String, toJCType() org.apache.bcel.generic.Type, toSignature() java.lang.String, 
+Family, XResourceBundle, PureOverrider, 1.0, 18, 0.0
+1, getContents() java.lang.Object[][], 
+Family, SerializerBase, Overrider, 1.0, 3, 0.0
+38, flushPending() void, startElement(java.lang.String java.lang.String java.lang.String ) void, endDocument() void, namespaceAfterStartElement(java.lang.String java.lang.String ) void, setEscaping(boolean ) boolean, serialize(org.w3c.dom.Node ) void, setOutputStream(java.io.OutputStream ) void, skippedEntity(java.lang.String ) void, reset() boolean, setCdataSectionElements(java.util.Vector ) void, startPrefixMapping(java.lang.String java.lang.String boolean ) boolean, setContentHandler(org.xml.sax.ContentHandler ) void, attributeDecl(java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String ) void, getOutputStream() java.io.OutputStream, endElement(java.lang.String java.lang.String java.lang.String ) void, endElement(java.lang.String ) void, getOutputFormat() java.util.Properties, comment(char[] int int ) void, startDTD(java.lang.String java.lang.String java.lang.String ) void, startElement(java.lang.String java.lang.String java.lang.String org.xml.sax.Attributes ) void, processingInstruction(java.lang.String java.lang.String ) void, endPrefixMapping(java.lang.String ) void, elementDecl(java.lang.String java.lang.String ) void, endDTD() void, setOutputFormat(java.util.Properties ) void, ignorableWhitespace(char[] int int ) void, startPrefixMapping(java.lang.String java.lang.String ) void, startEntity(java.lang.String ) void, characters(char[] int int ) void, getWriter() java.io.Writer, characters(java.lang.String ) void, startCDATA() void, setWriter(java.io.Writer ) void, endCDATA() void, startElement(java.lang.String ) void, addUniqueAttribute(java.lang.String java.lang.String int ) void, externalEntityDecl(java.lang.String java.lang.String java.lang.String ) void, internalEntityDecl(java.lang.String java.lang.String ) void, 
+Family, VariableBase, Overrider, 1.0, 2, 0.0
+3, typeCheck(org.apache.xalan.xsltc.compiler.SymbolTable ) org.apache.xalan.xsltc.compiler.util.Type, translate(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, parseContents(org.apache.xalan.xsltc.compiler.Parser ) void, 
+Family, FunctionOneArg, PureOverrider, 0.8, 15, 0.0
+1, execute(org.apache.xpath.XPathContext ) org.apache.xpath.objects.XObject, 
+Family, DTMDefaultBaseIterators$RootIterator, PureOverrider, 1.0, 2, 0.0
+1, next() int, 
+Family, ClassGenerator, PureOverrider, 0.75, 4, 0.0
+1, isExternal() boolean, 
+Family, XNodeSet, PureOverrider, 1.0, 3, 0.0
+0, 
+Family, ToStream, Overrider, 0.6666667, 3, 0.0
+7, processingInstruction(java.lang.String java.lang.String ) void, endDocument() void, namespaceAfterStartElement(java.lang.String java.lang.String ) void, startDocumentInternal() void, addUniqueAttribute(java.lang.String java.lang.String int ) void, entityReference(java.lang.String ) void, endElement(java.lang.String ) void, 
+Family, DTMAxisIteratorBase, PureOverrider, 0.8, 20, 0.0
+4, gotoMark() void, setStartNode(int ) org.apache.xml.dtm.DTMAxisIterator, next() int, setMark() void, 
+Family, DTMManager, Extender, 0.5, 2, 0.0
+10, createDTMIterator(int ) org.apache.xml.dtm.DTMIterator, getDTM(javax.xml.transform.Source boolean org.apache.xml.dtm.DTMWSFilter boolean boolean ) org.apache.xml.dtm.DTM, createDTMIterator(java.lang.String org.apache.xml.utils.PrefixResolver ) org.apache.xml.dtm.DTMIterator, getDTMIdentity(org.apache.xml.dtm.DTM ) int, getDTMHandleFromNode(org.w3c.dom.Node ) int, getDTM(int ) org.apache.xml.dtm.DTM, createDocumentFragment() org.apache.xml.dtm.DTM, createDTMIterator(java.lang.Object int ) org.apache.xml.dtm.DTMIterator, createDTMIterator(int org.apache.xml.dtm.DTMFilter boolean ) org.apache.xml.dtm.DTMIterator, release(org.apache.xml.dtm.DTM boolean ) boolean, 
+Family, ElemTemplateElement, Extender, 0.41379312, 29, 0.0
+0, 
+Family, ChildTestIterator, PureOverrider, 0.6, 5, 0.0
+0, 
+Family, EmptySerializer, Extender, 0.5, 2, 0.0
+5, endElement(java.lang.String ) void, characters(java.lang.String ) void, setEscaping(boolean ) boolean, characters(char[] int int ) void, startElement(java.lang.String ) void, 
+Family, XSLTElementProcessor, PureOverrider, 0.54545456, 11, 0.0
+0, 
+Family, DTMDefaultBaseIterators$DescendantIterator, PureOverrider, 1.0, 2, 0.0
+1, next() int, 
+Family, StepPattern, PureOverrider, 0.5, 2, 0.0
+1, execute(org.apache.xpath.XPathContext ) org.apache.xpath.objects.XObject, 
+Family, NameBase, PureOverrider, 1.0, 3, 0.0
+1, translate(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, 
+Family, NodeCounter, PureOverrider, 1.0, 3, 0.0
+2, getCounter() java.lang.String, setStartNode(int ) org.apache.xalan.xsltc.dom.NodeCounter, 
+Family, BasicTestIterator, PureOverrider, 0.5, 2, 0.0
+3, getNextNode() int, setRoot(int java.lang.Object ) void, detach() void, 
+Family, AVTPart, PureOverrider, 1.0, 2, 0.0
+4, fixupVariables(java.util.Vector int ) void, evaluate(org.apache.xpath.XPathContext org.apache.xml.utils.FastStringBuffer int org.apache.xml.utils.PrefixResolver ) void, getSimpleString() java.lang.String, callVisitors(org.apache.xalan.templates.XSLTVisitor ) void, 
+Family, UnaryOperation, PureOverrider, 1.0, 4, 0.0
+1, operate(org.apache.xpath.objects.XObject ) org.apache.xpath.objects.XObject, 
+Family, Pattern, Extender, 0.5, 2, 0.0
+4, getPriority() double, typeCheck(org.apache.xalan.xsltc.compiler.SymbolTable ) org.apache.xalan.xsltc.compiler.util.Type, translate(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, toString() java.lang.String, 
+Family, PredicatedNodeTest, Extender, 1.0, 2, 0.0
+10, isDocOrdered() boolean, getLastPos(org.apache.xpath.XPathContext ) int, getDTM(int ) org.apache.xml.dtm.DTM, getAxis() int, getCurrentNode() int, detach() void, nextNode() int, callVisitors(org.apache.xpath.ExpressionOwner org.apache.xpath.XPathVisitor ) void, getAnalysisBits() int, getRoot() int, 
+Family, AttributeValue, PureOverrider, 1.0, 2, 0.0
+3, toString() java.lang.String, typeCheck(org.apache.xalan.xsltc.compiler.SymbolTable ) org.apache.xalan.xsltc.compiler.util.Type, translate(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, 
+Family, XPathVisitor, PureOverrider, 0.4, 5, 0.0
+0, 
+Family, ElemTemplate, Overrider, 1.0, 2, 0.0
+0, 
+Family, Function, Overrider, 0.5714286, 7, 0.0
+2, fixupVariables(java.util.Vector int ) void, execute(org.apache.xpath.XPathContext ) org.apache.xpath.objects.XObject, 
+Family, NodeTest, Extender, 1.0, 2, 0.0
+9, deepEquals(org.apache.xpath.Expression ) boolean, getLastPos(org.apache.xpath.XPathContext ) int, getAxis() int, getPredicateCount() int, fixupVariables(java.util.Vector int ) void, getProximityPosition(org.apache.xpath.XPathContext ) int, canTraverseOutsideSubtree() boolean, getPredicate(int ) org.apache.xpath.Expression, callVisitors(org.apache.xpath.ExpressionOwner org.apache.xpath.XPathVisitor ) void, 
+Family, ElemUse, Extender, 0.5, 4, 0.0
+3, getNodeName() java.lang.String, execute(org.apache.xalan.transformer.TransformerImpl ) void, getXSLToken() int, 
+Family, Function3Args, PureOverrider, 0.75, 4, 0.0
+1, execute(org.apache.xpath.XPathContext ) org.apache.xpath.objects.XObject, 
+Family, RelativePathPattern, Overrider, 0.6666667, 3, 0.0
+7, toString() java.lang.String, typeCheck(org.apache.xalan.xsltc.compiler.SymbolTable ) org.apache.xalan.xsltc.compiler.util.Type, isWildcard() boolean, setParser(org.apache.xalan.xsltc.compiler.Parser ) void, translate(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, reduceKernelPattern() void, getKernelPattern() org.apache.xalan.xsltc.compiler.StepPattern, 
+Family, DTMStringPool, PureOverrider, 1.0, 2, 0.0
+3, stringToIndex(java.lang.String ) int, removeAllElements() void, indexToString(int ) java.lang.String, 
+Family, DTMDefaultBaseIterators$NamespaceIterator, PureOverrider, 1.0, 2, 0.0
+1, next() int, 
+Family, LocPathIterator, Overrider, 0.625, 8, 0.0
+1, nextNode() int, 
+Family, XPATHErrorResources, Other, 0.5, 2, 0.0
+0, 
+Family, Expression, Overrider, 0.5714286, 21, 0.0
+3, typeCheck(org.apache.xalan.xsltc.compiler.SymbolTable ) org.apache.xalan.xsltc.compiler.util.Type, translate(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, toString() java.lang.String, 
+Family, LocationPathPattern, Other, 0.33333334, 3, 0.0
+6, toString() java.lang.String, isWildcard() boolean, typeCheck(org.apache.xalan.xsltc.compiler.SymbolTable ) org.apache.xalan.xsltc.compiler.util.Type, translate(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, reduceKernelPattern() void, getKernelPattern() org.apache.xalan.xsltc.compiler.StepPattern, 
+Family, DTMNodeListBase, Overrider, 0.6666667, 3, 0.0
+2, getLength() int, item(int ) org.w3c.dom.Node, 
+Family, ElemVariable, PureOverrider, 1.0, 3, 0.0
+1, execute(org.apache.xalan.transformer.TransformerImpl ) void, 
+Family, AxesWalker, PureOverrider, 0.5, 2, 0.0
+5, isDocOrdered() boolean, detach() void, getNextNode() int, getLastPos(org.apache.xpath.XPathContext ) int, setRoot(int ) void, 
+Family, NumberType, Overrider, 1.0, 2, 0.0
+21, ADD() org.apache.bcel.generic.Instruction, DIV() org.apache.bcel.generic.Instruction, translateBox(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, translateTo(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator java.lang.Class ) void, translateTo(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator org.apache.xalan.xsltc.compiler.util.BooleanType ) void, distanceTo(org.apache.xalan.xsltc.compiler.util.Type ) int, identicalTo(org.apache.xalan.xsltc.compiler.util.Type ) boolean, REM() org.apache.bcel.generic.Instruction, translateUnBox(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, toSignature() java.lang.String, translateTo(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator org.apache.xalan.xsltc.compiler.util.StringType ) void, MUL() org.apache.bcel.generic.Instruction, STORE(int ) org.apache.bcel.generic.Instruction, LOAD(int ) org.apache.bcel.generic.Instruction, translateTo(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator org.apache.xalan.xsltc.compiler.util.ReferenceType ) void, translateToDesynthesized(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator org.apache.xalan.xsltc.compiler.util.BooleanType ) org.apache.xalan.xsltc.compiler.FlowList, SUB() org.apache.bcel.generic.Instruction, toString() java.lang.String, translateTo(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator org.apache.xalan.xsltc.compiler.util.Type ) void, NEG() org.apache.bcel.generic.Instruction, toJCType() org.apache.bcel.generic.Type, 
+Family, FunctionDef1Arg, PureOverrider, 1.0, 9, 0.0
+1, execute(org.apache.xpath.XPathContext ) org.apache.xpath.objects.XObject, 
+Family, ExtensionHandlerJava, PureOverrider, 1.0, 2, 0.0
+5, isElementAvailable(java.lang.String ) boolean, processElement(java.lang.String org.apache.xalan.templates.ElemTemplateElement org.apache.xalan.transformer.TransformerImpl org.apache.xalan.templates.Stylesheet java.lang.Object ) void, callFunction(java.lang.String java.util.Vector java.lang.Object org.apache.xalan.extensions.ExpressionContext ) java.lang.Object, callFunction(org.apache.xpath.functions.FuncExtFunction java.util.Vector org.apache.xalan.extensions.ExpressionContext ) java.lang.Object, isFunctionAvailable(java.lang.String ) boolean, 
+Family, ExsltBase, Other, 1.0, 4, 0.0
+0, 
+Family, ExtensionHandler, PureOverrider, 0.33333334, 3, 0.0
+5, isElementAvailable(java.lang.String ) boolean, processElement(java.lang.String org.apache.xalan.templates.ElemTemplateElement org.apache.xalan.transformer.TransformerImpl org.apache.xalan.templates.Stylesheet java.lang.Object ) void, callFunction(java.lang.String java.util.Vector java.lang.Object org.apache.xalan.extensions.ExpressionContext ) java.lang.Object, callFunction(org.apache.xpath.functions.FuncExtFunction java.util.Vector org.apache.xalan.extensions.ExpressionContext ) java.lang.Object, isFunctionAvailable(java.lang.String ) boolean, 
+Family, SyntaxTreeNode, Extender, 0.4, 5, 0.0
+2, typeCheck(org.apache.xalan.xsltc.compiler.SymbolTable ) org.apache.xalan.xsltc.compiler.util.Type, translate(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, 
+Family, GetOptsException, Other, 1.0, 2, 0.0
+0, 
+Family, DTMDefaultBaseIterators$InternalAxisIteratorBase, PureOverrider, 0.87096775, 31, 0.0
+2, setStartNode(int ) org.apache.xml.dtm.DTMAxisIterator, next() int, 
+Family, XObject, PureOverrider, 0.42857143, 7, 0.0
+2, getType() int, getTypeString() java.lang.String, 
+Family, Operation, PureOverrider, 1.0, 14, 0.0
+0, 
+Family, FunctionCall, PureOverrider, 0.875, 24, 0.0
+1, translate(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, 
+Family, RelativeLocationPath, Overrider, 1.0, 2, 0.0
+6, setAxis(int ) void, typeCheck(org.apache.xalan.xsltc.compiler.SymbolTable ) org.apache.xalan.xsltc.compiler.util.Type, translate(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, toString() java.lang.String, setParser(org.apache.xalan.xsltc.compiler.Parser ) void, getAxis() int, 
+Family, DTMDocument, PureOverrider, 0.5, 2, 0.0
+1, createExpandedNameTable() void, 
+Family, XString, Overrider, 1.0, 2, 0.0
+10, dispatchCharactersEvents(org.xml.sax.ContentHandler ) void, charAt(int ) char, appendToFsb(org.apache.xml.utils.FastStringBuffer ) void, fsb() org.apache.xml.utils.FastStringBuffer, length() int, dispatchAsComment(org.xml.sax.ext.LexicalHandler ) void, getChars(int int char[] int ) void, hasString() boolean, str() java.lang.String, object() java.lang.Object, 
+Family, XSLTErrorResources, Other, 0.5, 2, 0.0
+0, 
+Family, DTMAxisTraverser, PureOverrider, 0.75, 12, 0.0
+2, next(int int int ) int, next(int int ) int, 
+Family, SAX2DTM, Overrider, 1.0, 2, 0.0
+2, startDocument() void, endDocument() void, 
+Family, IdKeyPattern, Other, 1.0, 2, 0.0
+0, 
+Family, TopLevelElement, Overrider, 0.5, 10, 0.0
+2, translate(org.apache.xalan.xsltc.compiler.util.ClassGenerator org.apache.xalan.xsltc.compiler.util.MethodGenerator ) void, parseContents(org.apache.xalan.xsltc.compiler.Parser ) void, 
+Family, MethodGenerator, Overrider, 0.8333333, 6, 0.0
+1, getLocalIndex(java.lang.String ) int, 

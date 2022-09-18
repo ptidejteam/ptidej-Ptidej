@@ -1,0 +1,51 @@
+package java.util;
+abstract public interface ListIterator
+extends java.util.Iterator
+{
+abstract public boolean hasNext()
+{
+
+}
+
+abstract public java.lang.Object next()
+{
+
+}
+
+abstract public boolean hasPrevious()
+{
+
+}
+
+abstract public java.lang.Object previous()
+{
+
+}
+
+abstract public int nextIndex()
+{
+
+}
+
+abstract public int previousIndex()
+{
+
+}
+
+abstract public void remove()
+{
+
+}
+
+abstract public void set(java.lang.Object arg0)
+{
+
+}
+
+abstract public void add(java.lang.Object arg0)
+{
+
+}
+
+
+}

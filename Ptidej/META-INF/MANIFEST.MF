@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ptidej
+Bundle-SymbolicName: Ptidej
+Bundle-Version: 1.0.0
+Export-Package: ptidej.solver;uses:="padl.util.adapter,padl.kernel"
+Require-Bundle: CPL,
+ JChoco,
+ PADL,
+ PADL_Design_Motifs;bundle-version="1.5.0",
+ Ptidej_Solver_4,
+ Ptidej_Solver_Metrics
+Bundle-ClassPath: lib/opencsv-2.3.jar,
+ .
+Automatic-Module-Name: Ptidej

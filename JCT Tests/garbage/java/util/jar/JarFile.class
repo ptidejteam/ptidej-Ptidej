@@ -1,0 +1,246 @@
+package java.util.jar;
+public class JarFile
+extends java.util.zip.ZipFile
+{
+private class JarEntryIterator
+implements java.util.Enumeration, java.util.Iterator
+{
+final java.lang.Object e;
+
+private void <init>()
+{
+
+}
+
+public boolean hasNext()
+{
+
+}
+
+public java.util.jar.JarEntry next()
+{
+
+}
+
+public boolean hasMoreElements()
+{
+
+}
+
+public java.util.jar.JarEntry nextElement()
+{
+
+}
+
+
+}
+
+private class JarFileEntry
+extends java.util.jar.JarEntry
+{
+void <init>(java.lang.Object arg0)
+{
+
+}
+
+public java.util.jar.Attributes getAttributes() throws java.io.IOException
+{
+
+}
+
+public java.security.cert.Certificate[] getCertificates()
+{
+
+}
+
+public java.security.CodeSigner[] getCodeSigners()
+{
+
+}
+
+
+}
+
+private java.lang.Object manRef;
+
+private java.lang.Object manEntry;
+
+private java.lang.Object jv;
+
+private java.lang.Object jvInitialized;
+
+private java.lang.Object verify;
+
+private java.lang.Object hasClassPathAttribute;
+
+private volatile java.lang.Object hasCheckedSpecialAttributes;
+
+final public static java.lang.Object MANIFEST_NAME;
+
+final private static java.lang.Object CLASSPATH_CHARS;
+
+final private static java.lang.Object CLASSPATH_LASTOCC;
+
+final private static java.lang.Object CLASSPATH_OPTOSFT;
+
+private static java.lang.Object javaHome;
+
+private static volatile java.lang.Object jarNames;
+
+public void <init>(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1) throws java.io.IOException
+{
+
+}
+
+public void <init>(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1) throws java.io.IOException
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.io.IOException
+{
+
+}
+
+public java.util.jar.Manifest getManifest() throws java.io.IOException
+{
+
+}
+
+private java.util.jar.Manifest getManifestFromReference() throws java.io.IOException
+{
+
+}
+
+native private java.lang.String[] getMetaInfEntryNames()
+{
+
+}
+
+public java.util.jar.JarEntry getJarEntry(java.lang.Object arg0)
+{
+
+}
+
+public java.util.zip.ZipEntry getEntry(java.lang.Object arg0)
+{
+
+}
+
+public java.util.Enumeration entries()
+{
+
+}
+
+public java.util.stream.Stream stream()
+{
+
+}
+
+private void maybeInstantiateVerifier() throws java.io.IOException
+{
+
+}
+
+private void initializeVerifier()
+{
+
+}
+
+private byte[] getBytes(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public synchronized java.io.InputStream getInputStream(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+private java.util.jar.JarEntry getManEntry()
+{
+
+}
+
+boolean hasClassPathAttribute() throws java.io.IOException
+{
+
+}
+
+private boolean match(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private void checkForSpecialAttributes() throws java.io.IOException
+{
+
+}
+
+private boolean isKnownNotToHaveSpecialAttributes()
+{
+
+}
+
+private synchronized void ensureInitialization()
+{
+
+}
+
+java.util.jar.JarEntry newEntry(java.lang.Object arg0)
+{
+
+}
+
+java.util.Enumeration entryNames(java.lang.Object arg0)
+{
+
+}
+
+java.util.Enumeration entries2()
+{
+
+}
+
+java.security.CodeSource[] getCodeSources(java.lang.Object arg0)
+{
+
+}
+
+private java.util.Enumeration unsignedEntryNames()
+{
+
+}
+
+java.security.CodeSource getCodeSource(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+void setEagerValidation(java.lang.Object arg0)
+{
+
+}
+
+java.util.List getManifestDigests()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

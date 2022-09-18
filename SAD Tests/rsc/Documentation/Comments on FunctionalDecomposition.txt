@@ -1,0 +1,7 @@
+We could look for method with public/protected process-oriented methods,
+being called in a class/abstract class, then the classes are all
+functional decompositions. If the methods are private, then the class
+itself is a Functional Decompositon? But we should remove UI-related
+classes, with their "init"...
+Distinguish Functional Decompositions and Singletons and Applets and
+buffer/output-like classes.

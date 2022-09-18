@@ -1,0 +1,5 @@
+Domain reduction for Juzzle
+Original domain size: 99
+Reduced domain size for leaf: 0 (100.0% of reduction)
+Reduced domain size for composite: 99 (0.0% of reduction)
+Reduced domain size for component: 99 (0.0% of reduction)

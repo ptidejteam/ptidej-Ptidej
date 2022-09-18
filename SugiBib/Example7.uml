@@ -1,0 +1,35 @@
+//
+//                                   SugiBib
+//
+//                                Example7.uml
+//
+//                         lolly notation UML V1.3 3-49
+
+UMLscript VERSION 1 MINOR 14
+DIAGRAM 
+   CLASS String
+     ATTRIBUTES ...
+     OPERATIONS isEqual(String):Boolean,
+             hash():Integer,
+             ...
+     INTERFACES
+       Hashable,
+       Comparable
+     END
+     RELATIONS
+       GENERALIZE 'Comperable'
+     END
+  
+   CLASS {*shortForm} HashTable
+     RELATIONS
+       << use >> DEPENDS ON 'Comperable'
+       DEPENDS ON 'String::Hashable'
+       ASSOC TO [*] ROLE contents 'String'
+       DEPENDS ON 'String::Comparable'
+     END
+
+   CLASS << interface >> Comperable
+     OPERATIONS isEqual(String):Boolean,
+             hash():Integer
+
+END DIAGRAM

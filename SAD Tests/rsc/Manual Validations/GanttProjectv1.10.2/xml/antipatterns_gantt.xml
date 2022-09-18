@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE antipatterns SYSTEM "antipatterns_gantt.dtd">
+<antipatterns>
+	<program type="Java">
+		<name>GanttProject v1.10.2</name>
+		<location>?</location>
+		<antipattern name="Swiss Army Knife">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<swissArmyKnives>
+							<swissArmyKnife>
+								<entity>net.sourceforge.ganttproject.util.BrowserControl</entity>
+							</swissArmyKnife>
+						</swissArmyKnives>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<swissArmyKnives>
+							<swissArmyKnife>
+								<entity>net.sourceforge.ganttproject.util.ColorConvertion</entity>
+							</swissArmyKnife>
+						</swissArmyKnives>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<swissArmyKnives>
+							<swissArmyKnife>
+								<entity>net.sourceforge.ganttproject.io.GanttPDFExport</entity>
+							</swissArmyKnife>
+						</swissArmyKnives>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<swissArmyKnives>
+							<swissArmyKnife>
+								<entity>net.sourceforge.ganttproject.io.GanttHTMLExport</entity>
+							</swissArmyKnife>
+						</swissArmyKnives>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<swissArmyKnives>
+							<swissArmyKnife>
+								<entity>net.sourceforge.ganttproject.gui.DialogAligner</entity>
+							</swissArmyKnife>
+						</swissArmyKnives>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<swissArmyKnives>
+							<swissArmyKnife>
+								<entity>net.sourceforge.ganttproject.document.DocumentCreator</entity>
+							</swissArmyKnife>
+						</swissArmyKnives>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<swissArmyKnives>
+							<swissArmyKnife>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer</entity>
+							</swissArmyKnife>
+						</swissArmyKnives>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<swissArmyKnives>
+							<swissArmyKnife>
+								<entity>net.sourceforge.ganttproject.export.FontMetricsStorage</entity>
+							</swissArmyKnife>
+						</swissArmyKnives>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</antipattern>
+		<antipattern name="Functional Decomposition">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.util.ColorConvertion</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.time.gregorian.GregorianTimeUnitStack</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.parser.ColorValueParser</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.gui.DialogAligner</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.GanttCalendarDays</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.GanttPrintable</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.export.PDFExportProcessor</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.gui.OpenFileDialog</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="9">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.gui.projectwizard.NewProjectWizard</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="10">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.io.GanttTXTOpen</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="11">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.task.algorithm.AdjustTaskBoundsAlgorithm</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="12">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.task.algorithm.FindPossibleDependeesAlgorithmImpl</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="13">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.task.algorithm.RecalculateTaskCompletionPercentageAlgorithm</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="14">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.time.gregorian.MonthTextFormatter</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="15">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.task.hierarchy.TaskHierarchyManagerImpl</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="16">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.chart.GraphicPrimitiveContainer</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="17">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.gui.GanttApplet</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="18">
+					<roles>
+						<functionalDecompositions>
+							<functionalDecomposition>
+								<entity>net.sourceforge.ganttproject.gui.OpenFileDialog</entity>
+							</functionalDecomposition>
+						</functionalDecompositions>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</antipattern>
+		<antipattern name="Blob">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<blobs>
+							<blob>
+								<entity>net.sourceforge.ganttproject.GanttGraphicArea</entity>
+								<comment>communique avec GanttPaintParam, GanttTask et UIConfiguration</comment>
+							</blob>
+						</blobs>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<blobs>
+							<blob>
+								<entity>net.sourceforge.ganttproject.GanttOptions</entity>
+								<comment>communique avec UIConfiguration</comment>
+							</blob>
+						</blobs>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<blobs>
+							<blob>
+								<entity>net.sourceforge.ganttproject.GanttProject</entity>
+								<comment>communique avec UIConfiguration, GanttDialogInfo et EXportFileInfo</comment>
+							</blob>
+						</blobs>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<blobs>
+							<blob>
+								<entity>net.sourceforge.ganttproject.GanttTree</entity>
+								<comment>communique avec Tast et donc pas implémentation avec TaskImpl</comment>
+							</blob>
+						</blobs>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<blobs>
+							<blob>
+								<entity>net.sourceforge.ganttproject.ResourceLoadGraphicArea</entity>
+								<comment>communique avec GanttExportSettings</comment>
+							</blob>
+						</blobs>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<blobs>
+							<blob>
+								<entity>net.sourceforge.ganttproject.task.TaskImpl</entity>
+								<comment>à la fois une Large Class et une Data Class</comment>
+							</blob>
+						</blobs>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<blobs>
+							<blob>
+								<entity>net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean</entity>
+								<comment>à la fois une Large Class et une Data Class</comment>
+							</blob>
+						</blobs>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<blobs>
+							<blob>
+								<entity>net.sourceforge.ganttproject.gui.options.CSVSettingsPanel</entity>
+								<comment>à la fois une Large Class et une Data Class</comment>
+							</blob>
+						</blobs>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</antipattern>
+		<antipattern name="Spaghetti Code">
+			<microArchitectures>
+				<microArchitecture number="1">
+					<roles>
+						<spaghettiCodes>
+							<spaghettiCode>
+								<entity>net.sourceforge.ganttproject.GanttGraphicArea</entity>
+							</spaghettiCode>
+						</spaghettiCodes>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="2">
+					<roles>
+						<spaghettiCodes>
+							<spaghettiCode>
+								<entity>net.sourceforge.ganttproject.GanttOptions</entity>
+							</spaghettiCode>
+						</spaghettiCodes>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="3">
+					<roles>
+						<spaghettiCodes>
+							<spaghettiCode>
+								<entity>net.sourceforge.ganttproject.GanttProject</entity>
+							</spaghettiCode>
+						</spaghettiCodes>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="4">
+					<roles>
+						<spaghettiCodes>
+							<spaghettiCode>
+								<entity>net.sourceforge.ganttproject.ResourceLoadGraphicArea</entity>
+							</spaghettiCode>
+						</spaghettiCodes>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="5">
+					<roles>
+						<spaghettiCodes>
+							<spaghettiCode>
+								<entity>net.sourceforge.ganttproject.io.GanttCSVExport</entity>
+							</spaghettiCode>
+						</spaghettiCodes>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="6">
+					<roles>
+						<spaghettiCodes>
+							<spaghettiCode>
+								<entity>net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean</entity>
+							</spaghettiCode>
+						</spaghettiCodes>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="7">
+					<roles>
+						<spaghettiCodes>
+							<spaghettiCode>
+								<entity>net.sourceforge.ganttproject.gui.options.CSVSettingsPanel</entity>
+							</spaghettiCode>
+						</spaghettiCodes>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="8">
+					<roles>
+						<spaghettiCodes>
+							<spaghettiCode>
+								<entity>net.sourceforge.ganttproject.task.algorithm.RecalculateTaskScheduleAlgorithm</entity>
+							</spaghettiCode>
+						</spaghettiCodes>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="9">
+					<roles>
+						<spaghettiCodes>
+							<spaghettiCode>
+								<entity>net.sourceforge.ganttproject.gui.GanttDialogPerson</entity>
+							</spaghettiCode>
+						</spaghettiCodes>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="10">
+					<roles>
+						<spaghettiCodes>
+							<spaghettiCode>
+								<entity>net.sourceforge.ganttproject.io.GanttCSVExport</entity>
+							</spaghettiCode>
+						</spaghettiCodes>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="11">
+					<roles>
+						<spaghettiCodes>
+							<spaghettiCode>
+								<entity>net.sourceforge.ganttproject.io.GanttXFIGSaver</entity>
+							</spaghettiCode>
+						</spaghettiCodes>
+					</roles>
+				</microArchitecture>
+				<microArchitecture number="12">
+					<roles>
+						<spaghettiCodes>
+							<spaghettiCode>
+								<entity>net.sourceforge.ganttproject.io.GanttXMLSaver</entity>
+							</spaghettiCode>
+						</spaghettiCodes>
+					</roles>
+				</microArchitecture>
+			</microArchitectures>
+		</antipattern>
+	</program>
+</antipatterns>

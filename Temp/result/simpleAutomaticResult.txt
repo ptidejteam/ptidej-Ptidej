@@ -1,0 +1,1672 @@
+# More solution without constraint 0: Composite <#>-> Component of weight 50
+1.7.Name = Composite Design Motif
+# More solution without constraint 0: Composite <#>-> Component of weight 50
+1.7.Sign = Positive
+1.7.XCommand = XCommand = System.out.println("No source transformation needed.");
+1.7.leaf-1 = java.io.PrintStream
+1.7.leaf-2 = java.lang.System
+1.7.leaf-3 = ptidej.example.composite2.Element
+1.7.leaf-4 = ptidej.example.composite2.Title
+1.7.leaf-5 = ptidej.example.composite2.Document
+1.7.leaf-6 = java.util.Vector
+1.7.leaf-7 = java.lang.Class
+1.7.leaf-8 = java.lang.Object
+1.7.leaf-9 = java.lang.String
+1.7.leaf-10 = ptidej.example.composite2.Main
+1.7.leaf-11 = ptidej.example.composite2.AbstractDocument
+1.7.composite = ptidej.example.composite2.IndentedParagraph
+1.7.component = ptidej.example.composite2.Paragraph
+
+# More solution without constraint 0: Composite <#>-> Component of weight 50
+2.7.Name = Composite Design Motif
+# More solution without constraint 0: Composite <#>-> Component of weight 50
+2.7.Sign = Positive
+2.7.XCommand = XCommand = System.out.println("No source transformation needed.");
+2.7.leaf-1 = java.io.PrintStream
+2.7.leaf-2 = java.lang.System
+2.7.leaf-3 = ptidej.example.composite2.Title
+2.7.leaf-4 = ptidej.example.composite2.IndentedParagraph
+2.7.leaf-5 = ptidej.example.composite2.Document
+2.7.leaf-6 = java.util.Vector
+2.7.leaf-7 = java.lang.Class
+2.7.leaf-8 = java.lang.Object
+2.7.leaf-9 = java.lang.String
+2.7.leaf-10 = ptidej.example.composite2.Main
+2.7.leaf-11 = ptidej.example.composite2.AbstractDocument
+2.7.composite = ptidej.example.composite2.Paragraph
+2.7.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite <#>-> Component of weight 50
+3.7.Name = Composite Design Motif
+# More solution without constraint 0: Composite <#>-> Component of weight 50
+3.7.Sign = Positive
+3.7.XCommand = XCommand = System.out.println("No source transformation needed.");
+3.7.leaf-1 = java.io.PrintStream
+3.7.leaf-2 = ptidej.example.composite2.Paragraph
+3.7.leaf-3 = java.lang.System
+3.7.leaf-4 = ptidej.example.composite2.IndentedParagraph
+3.7.leaf-5 = ptidej.example.composite2.Document
+3.7.leaf-6 = java.util.Vector
+3.7.leaf-7 = java.lang.Class
+3.7.leaf-8 = java.lang.Object
+3.7.leaf-9 = java.lang.String
+3.7.leaf-10 = ptidej.example.composite2.Main
+3.7.leaf-11 = ptidej.example.composite2.AbstractDocument
+3.7.composite = ptidej.example.composite2.Title
+3.7.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite <#>-> Component of weight 50
+4.7.Name = Composite Design Motif
+# More solution without constraint 0: Composite <#>-> Component of weight 50
+4.7.Sign = Positive
+4.7.XCommand = XCommand = System.out.println("No source transformation needed.");
+4.7.leaf-1 = java.io.PrintStream
+4.7.leaf-2 = ptidej.example.composite2.Paragraph
+4.7.leaf-3 = java.lang.System
+4.7.leaf-4 = ptidej.example.composite2.Title
+4.7.leaf-5 = ptidej.example.composite2.IndentedParagraph
+4.7.leaf-6 = ptidej.example.composite2.Document
+4.7.leaf-7 = java.util.Vector
+4.7.leaf-8 = java.lang.Class
+4.7.leaf-9 = java.lang.Object
+4.7.leaf-10 = java.lang.String
+4.7.leaf-11 = ptidej.example.composite2.Main
+4.7.composite = ptidej.example.composite2.Element
+4.7.component = ptidej.example.composite2.AbstractDocument
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+5.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+5.3.Sign = Positive
+5.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+5.3.leaf-1 = java.lang.System
+5.3.leaf-2 = ptidej.example.composite2.Element
+5.3.leaf-3 = ptidej.example.composite2.Title
+5.3.leaf-4 = ptidej.example.composite2.IndentedParagraph
+5.3.leaf-5 = ptidej.example.composite2.Document
+5.3.leaf-6 = java.util.Vector
+5.3.leaf-7 = java.lang.Class
+5.3.leaf-8 = java.lang.Object
+5.3.leaf-9 = java.lang.String
+5.3.leaf-10 = ptidej.example.composite2.Main
+5.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+5.3.composite = java.io.PrintStream
+5.3.component = ptidej.example.composite2.Paragraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+6.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+6.3.Sign = Positive
+6.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+6.3.leaf-1 = java.io.PrintStream
+6.3.leaf-2 = ptidej.example.composite2.Element
+6.3.leaf-3 = ptidej.example.composite2.Title
+6.3.leaf-4 = ptidej.example.composite2.IndentedParagraph
+6.3.leaf-5 = ptidej.example.composite2.Document
+6.3.leaf-6 = java.util.Vector
+6.3.leaf-7 = java.lang.Class
+6.3.leaf-8 = java.lang.Object
+6.3.leaf-9 = java.lang.String
+6.3.leaf-10 = ptidej.example.composite2.Main
+6.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+6.3.composite = java.lang.System
+6.3.component = ptidej.example.composite2.Paragraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+7.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+7.3.Sign = Positive
+7.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+7.3.leaf-1 = java.io.PrintStream
+7.3.leaf-2 = java.lang.System
+7.3.leaf-3 = ptidej.example.composite2.Title
+7.3.leaf-4 = ptidej.example.composite2.IndentedParagraph
+7.3.leaf-5 = ptidej.example.composite2.Document
+7.3.leaf-6 = java.util.Vector
+7.3.leaf-7 = java.lang.Class
+7.3.leaf-8 = java.lang.Object
+7.3.leaf-9 = java.lang.String
+7.3.leaf-10 = ptidej.example.composite2.Main
+7.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+7.3.composite = ptidej.example.composite2.Element
+7.3.component = ptidej.example.composite2.Paragraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+8.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+8.3.Sign = Positive
+8.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+8.3.leaf-1 = java.io.PrintStream
+8.3.leaf-2 = java.lang.System
+8.3.leaf-3 = ptidej.example.composite2.Element
+8.3.leaf-4 = ptidej.example.composite2.IndentedParagraph
+8.3.leaf-5 = ptidej.example.composite2.Document
+8.3.leaf-6 = java.util.Vector
+8.3.leaf-7 = java.lang.Class
+8.3.leaf-8 = java.lang.Object
+8.3.leaf-9 = java.lang.String
+8.3.leaf-10 = ptidej.example.composite2.Main
+8.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+8.3.composite = ptidej.example.composite2.Title
+8.3.component = ptidej.example.composite2.Paragraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+9.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+9.3.Sign = Positive
+9.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+9.3.leaf-1 = java.io.PrintStream
+9.3.leaf-2 = java.lang.System
+9.3.leaf-3 = ptidej.example.composite2.Element
+9.3.leaf-4 = ptidej.example.composite2.Title
+9.3.leaf-5 = ptidej.example.composite2.Document
+9.3.leaf-6 = java.util.Vector
+9.3.leaf-7 = java.lang.Class
+9.3.leaf-8 = java.lang.Object
+9.3.leaf-9 = java.lang.String
+9.3.leaf-10 = ptidej.example.composite2.Main
+9.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+9.3.composite = ptidej.example.composite2.IndentedParagraph
+9.3.component = ptidej.example.composite2.Paragraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+10.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+10.3.Sign = Positive
+10.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+10.3.leaf-1 = java.io.PrintStream
+10.3.leaf-2 = java.lang.System
+10.3.leaf-3 = ptidej.example.composite2.Element
+10.3.leaf-4 = ptidej.example.composite2.Title
+10.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+10.3.leaf-6 = java.util.Vector
+10.3.leaf-7 = java.lang.Class
+10.3.leaf-8 = java.lang.Object
+10.3.leaf-9 = java.lang.String
+10.3.leaf-10 = ptidej.example.composite2.Main
+10.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+10.3.composite = ptidej.example.composite2.Document
+10.3.component = ptidej.example.composite2.Paragraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+11.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+11.3.Sign = Positive
+11.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+11.3.leaf-1 = java.io.PrintStream
+11.3.leaf-2 = java.lang.System
+11.3.leaf-3 = ptidej.example.composite2.Element
+11.3.leaf-4 = ptidej.example.composite2.Title
+11.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+11.3.leaf-6 = ptidej.example.composite2.Document
+11.3.leaf-7 = java.lang.Class
+11.3.leaf-8 = java.lang.Object
+11.3.leaf-9 = java.lang.String
+11.3.leaf-10 = ptidej.example.composite2.Main
+11.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+11.3.composite = java.util.Vector
+11.3.component = ptidej.example.composite2.Paragraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+12.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+12.3.Sign = Positive
+12.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+12.3.leaf-1 = java.io.PrintStream
+12.3.leaf-2 = java.lang.System
+12.3.leaf-3 = ptidej.example.composite2.Element
+12.3.leaf-4 = ptidej.example.composite2.Title
+12.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+12.3.leaf-6 = ptidej.example.composite2.Document
+12.3.leaf-7 = java.util.Vector
+12.3.leaf-8 = java.lang.Object
+12.3.leaf-9 = java.lang.String
+12.3.leaf-10 = ptidej.example.composite2.Main
+12.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+12.3.composite = java.lang.Class
+12.3.component = ptidej.example.composite2.Paragraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+13.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+13.3.Sign = Positive
+13.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+13.3.leaf-1 = java.io.PrintStream
+13.3.leaf-2 = java.lang.System
+13.3.leaf-3 = ptidej.example.composite2.Element
+13.3.leaf-4 = ptidej.example.composite2.Title
+13.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+13.3.leaf-6 = ptidej.example.composite2.Document
+13.3.leaf-7 = java.util.Vector
+13.3.leaf-8 = java.lang.Class
+13.3.leaf-9 = java.lang.String
+13.3.leaf-10 = ptidej.example.composite2.Main
+13.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+13.3.composite = java.lang.Object
+13.3.component = ptidej.example.composite2.Paragraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+14.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+14.3.Sign = Positive
+14.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+14.3.leaf-1 = java.io.PrintStream
+14.3.leaf-2 = java.lang.System
+14.3.leaf-3 = ptidej.example.composite2.Element
+14.3.leaf-4 = ptidej.example.composite2.Title
+14.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+14.3.leaf-6 = ptidej.example.composite2.Document
+14.3.leaf-7 = java.util.Vector
+14.3.leaf-8 = java.lang.Class
+14.3.leaf-9 = java.lang.Object
+14.3.leaf-10 = ptidej.example.composite2.Main
+14.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+14.3.composite = java.lang.String
+14.3.component = ptidej.example.composite2.Paragraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+15.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+15.3.Sign = Positive
+15.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+15.3.leaf-1 = java.io.PrintStream
+15.3.leaf-2 = java.lang.System
+15.3.leaf-3 = ptidej.example.composite2.Element
+15.3.leaf-4 = ptidej.example.composite2.Title
+15.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+15.3.leaf-6 = ptidej.example.composite2.Document
+15.3.leaf-7 = java.util.Vector
+15.3.leaf-8 = java.lang.Class
+15.3.leaf-9 = java.lang.Object
+15.3.leaf-10 = java.lang.String
+15.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+15.3.composite = ptidej.example.composite2.Main
+15.3.component = ptidej.example.composite2.Paragraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+16.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+16.3.Sign = Positive
+16.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+16.3.leaf-1 = java.io.PrintStream
+16.3.leaf-2 = java.lang.System
+16.3.leaf-3 = ptidej.example.composite2.Element
+16.3.leaf-4 = ptidej.example.composite2.Title
+16.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+16.3.leaf-6 = ptidej.example.composite2.Document
+16.3.leaf-7 = java.util.Vector
+16.3.leaf-8 = java.lang.Class
+16.3.leaf-9 = java.lang.Object
+16.3.leaf-10 = java.lang.String
+16.3.leaf-11 = ptidej.example.composite2.Main
+16.3.composite = ptidej.example.composite2.AbstractDocument
+16.3.component = ptidej.example.composite2.Paragraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+17.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+17.3.Sign = Positive
+17.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+17.3.leaf-1 = ptidej.example.composite2.Paragraph
+17.3.leaf-2 = java.lang.System
+17.3.leaf-3 = ptidej.example.composite2.Title
+17.3.leaf-4 = ptidej.example.composite2.IndentedParagraph
+17.3.leaf-5 = ptidej.example.composite2.Document
+17.3.leaf-6 = java.util.Vector
+17.3.leaf-7 = java.lang.Class
+17.3.leaf-8 = java.lang.Object
+17.3.leaf-9 = java.lang.String
+17.3.leaf-10 = ptidej.example.composite2.Main
+17.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+17.3.composite = java.io.PrintStream
+17.3.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+18.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+18.3.Sign = Positive
+18.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+18.3.leaf-1 = java.io.PrintStream
+18.3.leaf-2 = java.lang.System
+18.3.leaf-3 = ptidej.example.composite2.Title
+18.3.leaf-4 = ptidej.example.composite2.IndentedParagraph
+18.3.leaf-5 = ptidej.example.composite2.Document
+18.3.leaf-6 = java.util.Vector
+18.3.leaf-7 = java.lang.Class
+18.3.leaf-8 = java.lang.Object
+18.3.leaf-9 = java.lang.String
+18.3.leaf-10 = ptidej.example.composite2.Main
+18.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+18.3.composite = ptidej.example.composite2.Paragraph
+18.3.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+19.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+19.3.Sign = Positive
+19.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+19.3.leaf-1 = java.io.PrintStream
+19.3.leaf-2 = ptidej.example.composite2.Paragraph
+19.3.leaf-3 = ptidej.example.composite2.Title
+19.3.leaf-4 = ptidej.example.composite2.IndentedParagraph
+19.3.leaf-5 = ptidej.example.composite2.Document
+19.3.leaf-6 = java.util.Vector
+19.3.leaf-7 = java.lang.Class
+19.3.leaf-8 = java.lang.Object
+19.3.leaf-9 = java.lang.String
+19.3.leaf-10 = ptidej.example.composite2.Main
+19.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+19.3.composite = java.lang.System
+19.3.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+20.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+20.3.Sign = Positive
+20.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+20.3.leaf-1 = java.io.PrintStream
+20.3.leaf-2 = ptidej.example.composite2.Paragraph
+20.3.leaf-3 = java.lang.System
+20.3.leaf-4 = ptidej.example.composite2.IndentedParagraph
+20.3.leaf-5 = ptidej.example.composite2.Document
+20.3.leaf-6 = java.util.Vector
+20.3.leaf-7 = java.lang.Class
+20.3.leaf-8 = java.lang.Object
+20.3.leaf-9 = java.lang.String
+20.3.leaf-10 = ptidej.example.composite2.Main
+20.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+20.3.composite = ptidej.example.composite2.Title
+20.3.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+21.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+21.3.Sign = Positive
+21.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+21.3.leaf-1 = java.io.PrintStream
+21.3.leaf-2 = ptidej.example.composite2.Paragraph
+21.3.leaf-3 = java.lang.System
+21.3.leaf-4 = ptidej.example.composite2.Title
+21.3.leaf-5 = ptidej.example.composite2.Document
+21.3.leaf-6 = java.util.Vector
+21.3.leaf-7 = java.lang.Class
+21.3.leaf-8 = java.lang.Object
+21.3.leaf-9 = java.lang.String
+21.3.leaf-10 = ptidej.example.composite2.Main
+21.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+21.3.composite = ptidej.example.composite2.IndentedParagraph
+21.3.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+22.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+22.3.Sign = Positive
+22.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+22.3.leaf-1 = java.io.PrintStream
+22.3.leaf-2 = ptidej.example.composite2.Paragraph
+22.3.leaf-3 = java.lang.System
+22.3.leaf-4 = ptidej.example.composite2.Title
+22.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+22.3.leaf-6 = java.util.Vector
+22.3.leaf-7 = java.lang.Class
+22.3.leaf-8 = java.lang.Object
+22.3.leaf-9 = java.lang.String
+22.3.leaf-10 = ptidej.example.composite2.Main
+22.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+22.3.composite = ptidej.example.composite2.Document
+22.3.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+23.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+23.3.Sign = Positive
+23.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+23.3.leaf-1 = java.io.PrintStream
+23.3.leaf-2 = ptidej.example.composite2.Paragraph
+23.3.leaf-3 = java.lang.System
+23.3.leaf-4 = ptidej.example.composite2.Title
+23.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+23.3.leaf-6 = ptidej.example.composite2.Document
+23.3.leaf-7 = java.lang.Class
+23.3.leaf-8 = java.lang.Object
+23.3.leaf-9 = java.lang.String
+23.3.leaf-10 = ptidej.example.composite2.Main
+23.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+23.3.composite = java.util.Vector
+23.3.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+24.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+24.3.Sign = Positive
+24.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+24.3.leaf-1 = java.io.PrintStream
+24.3.leaf-2 = ptidej.example.composite2.Paragraph
+24.3.leaf-3 = java.lang.System
+24.3.leaf-4 = ptidej.example.composite2.Title
+24.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+24.3.leaf-6 = ptidej.example.composite2.Document
+24.3.leaf-7 = java.util.Vector
+24.3.leaf-8 = java.lang.Object
+24.3.leaf-9 = java.lang.String
+24.3.leaf-10 = ptidej.example.composite2.Main
+24.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+24.3.composite = java.lang.Class
+24.3.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+25.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+25.3.Sign = Positive
+25.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+25.3.leaf-1 = java.io.PrintStream
+25.3.leaf-2 = ptidej.example.composite2.Paragraph
+25.3.leaf-3 = java.lang.System
+25.3.leaf-4 = ptidej.example.composite2.Title
+25.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+25.3.leaf-6 = ptidej.example.composite2.Document
+25.3.leaf-7 = java.util.Vector
+25.3.leaf-8 = java.lang.Class
+25.3.leaf-9 = java.lang.String
+25.3.leaf-10 = ptidej.example.composite2.Main
+25.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+25.3.composite = java.lang.Object
+25.3.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+26.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+26.3.Sign = Positive
+26.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+26.3.leaf-1 = java.io.PrintStream
+26.3.leaf-2 = ptidej.example.composite2.Paragraph
+26.3.leaf-3 = java.lang.System
+26.3.leaf-4 = ptidej.example.composite2.Title
+26.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+26.3.leaf-6 = ptidej.example.composite2.Document
+26.3.leaf-7 = java.util.Vector
+26.3.leaf-8 = java.lang.Class
+26.3.leaf-9 = java.lang.Object
+26.3.leaf-10 = ptidej.example.composite2.Main
+26.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+26.3.composite = java.lang.String
+26.3.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+27.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+27.3.Sign = Positive
+27.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+27.3.leaf-1 = java.io.PrintStream
+27.3.leaf-2 = ptidej.example.composite2.Paragraph
+27.3.leaf-3 = java.lang.System
+27.3.leaf-4 = ptidej.example.composite2.Title
+27.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+27.3.leaf-6 = ptidej.example.composite2.Document
+27.3.leaf-7 = java.util.Vector
+27.3.leaf-8 = java.lang.Class
+27.3.leaf-9 = java.lang.Object
+27.3.leaf-10 = java.lang.String
+27.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+27.3.composite = ptidej.example.composite2.Main
+27.3.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+28.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+28.3.Sign = Positive
+28.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+28.3.leaf-1 = java.io.PrintStream
+28.3.leaf-2 = ptidej.example.composite2.Paragraph
+28.3.leaf-3 = java.lang.System
+28.3.leaf-4 = ptidej.example.composite2.Title
+28.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+28.3.leaf-6 = ptidej.example.composite2.Document
+28.3.leaf-7 = java.util.Vector
+28.3.leaf-8 = java.lang.Class
+28.3.leaf-9 = java.lang.Object
+28.3.leaf-10 = java.lang.String
+28.3.leaf-11 = ptidej.example.composite2.Main
+28.3.composite = ptidej.example.composite2.AbstractDocument
+28.3.component = ptidej.example.composite2.Element
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+29.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+29.3.Sign = Positive
+29.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+29.3.leaf-1 = ptidej.example.composite2.Paragraph
+29.3.leaf-2 = java.lang.System
+29.3.leaf-3 = ptidej.example.composite2.Element
+29.3.leaf-4 = ptidej.example.composite2.IndentedParagraph
+29.3.leaf-5 = ptidej.example.composite2.Document
+29.3.leaf-6 = java.util.Vector
+29.3.leaf-7 = java.lang.Class
+29.3.leaf-8 = java.lang.Object
+29.3.leaf-9 = java.lang.String
+29.3.leaf-10 = ptidej.example.composite2.Main
+29.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+29.3.composite = java.io.PrintStream
+29.3.component = ptidej.example.composite2.Title
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+30.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+30.3.Sign = Positive
+30.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+30.3.leaf-1 = java.io.PrintStream
+30.3.leaf-2 = java.lang.System
+30.3.leaf-3 = ptidej.example.composite2.Element
+30.3.leaf-4 = ptidej.example.composite2.IndentedParagraph
+30.3.leaf-5 = ptidej.example.composite2.Document
+30.3.leaf-6 = java.util.Vector
+30.3.leaf-7 = java.lang.Class
+30.3.leaf-8 = java.lang.Object
+30.3.leaf-9 = java.lang.String
+30.3.leaf-10 = ptidej.example.composite2.Main
+30.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+30.3.composite = ptidej.example.composite2.Paragraph
+30.3.component = ptidej.example.composite2.Title
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+31.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+31.3.Sign = Positive
+31.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+31.3.leaf-1 = java.io.PrintStream
+31.3.leaf-2 = ptidej.example.composite2.Paragraph
+31.3.leaf-3 = ptidej.example.composite2.Element
+31.3.leaf-4 = ptidej.example.composite2.IndentedParagraph
+31.3.leaf-5 = ptidej.example.composite2.Document
+31.3.leaf-6 = java.util.Vector
+31.3.leaf-7 = java.lang.Class
+31.3.leaf-8 = java.lang.Object
+31.3.leaf-9 = java.lang.String
+31.3.leaf-10 = ptidej.example.composite2.Main
+31.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+31.3.composite = java.lang.System
+31.3.component = ptidej.example.composite2.Title
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+32.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+32.3.Sign = Positive
+32.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+32.3.leaf-1 = java.io.PrintStream
+32.3.leaf-2 = ptidej.example.composite2.Paragraph
+32.3.leaf-3 = java.lang.System
+32.3.leaf-4 = ptidej.example.composite2.IndentedParagraph
+32.3.leaf-5 = ptidej.example.composite2.Document
+32.3.leaf-6 = java.util.Vector
+32.3.leaf-7 = java.lang.Class
+32.3.leaf-8 = java.lang.Object
+32.3.leaf-9 = java.lang.String
+32.3.leaf-10 = ptidej.example.composite2.Main
+32.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+32.3.composite = ptidej.example.composite2.Element
+32.3.component = ptidej.example.composite2.Title
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+33.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+33.3.Sign = Positive
+33.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+33.3.leaf-1 = java.io.PrintStream
+33.3.leaf-2 = ptidej.example.composite2.Paragraph
+33.3.leaf-3 = java.lang.System
+33.3.leaf-4 = ptidej.example.composite2.Element
+33.3.leaf-5 = ptidej.example.composite2.Document
+33.3.leaf-6 = java.util.Vector
+33.3.leaf-7 = java.lang.Class
+33.3.leaf-8 = java.lang.Object
+33.3.leaf-9 = java.lang.String
+33.3.leaf-10 = ptidej.example.composite2.Main
+33.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+33.3.composite = ptidej.example.composite2.IndentedParagraph
+33.3.component = ptidej.example.composite2.Title
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+34.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+34.3.Sign = Positive
+34.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+34.3.leaf-1 = java.io.PrintStream
+34.3.leaf-2 = ptidej.example.composite2.Paragraph
+34.3.leaf-3 = java.lang.System
+34.3.leaf-4 = ptidej.example.composite2.Element
+34.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+34.3.leaf-6 = java.util.Vector
+34.3.leaf-7 = java.lang.Class
+34.3.leaf-8 = java.lang.Object
+34.3.leaf-9 = java.lang.String
+34.3.leaf-10 = ptidej.example.composite2.Main
+34.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+34.3.composite = ptidej.example.composite2.Document
+34.3.component = ptidej.example.composite2.Title
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+35.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+35.3.Sign = Positive
+35.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+35.3.leaf-1 = java.io.PrintStream
+35.3.leaf-2 = ptidej.example.composite2.Paragraph
+35.3.leaf-3 = java.lang.System
+35.3.leaf-4 = ptidej.example.composite2.Element
+35.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+35.3.leaf-6 = ptidej.example.composite2.Document
+35.3.leaf-7 = java.lang.Class
+35.3.leaf-8 = java.lang.Object
+35.3.leaf-9 = java.lang.String
+35.3.leaf-10 = ptidej.example.composite2.Main
+35.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+35.3.composite = java.util.Vector
+35.3.component = ptidej.example.composite2.Title
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+36.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+36.3.Sign = Positive
+36.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+36.3.leaf-1 = java.io.PrintStream
+36.3.leaf-2 = ptidej.example.composite2.Paragraph
+36.3.leaf-3 = java.lang.System
+36.3.leaf-4 = ptidej.example.composite2.Element
+36.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+36.3.leaf-6 = ptidej.example.composite2.Document
+36.3.leaf-7 = java.util.Vector
+36.3.leaf-8 = java.lang.Object
+36.3.leaf-9 = java.lang.String
+36.3.leaf-10 = ptidej.example.composite2.Main
+36.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+36.3.composite = java.lang.Class
+36.3.component = ptidej.example.composite2.Title
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+37.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+37.3.Sign = Positive
+37.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+37.3.leaf-1 = java.io.PrintStream
+37.3.leaf-2 = ptidej.example.composite2.Paragraph
+37.3.leaf-3 = java.lang.System
+37.3.leaf-4 = ptidej.example.composite2.Element
+37.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+37.3.leaf-6 = ptidej.example.composite2.Document
+37.3.leaf-7 = java.util.Vector
+37.3.leaf-8 = java.lang.Class
+37.3.leaf-9 = java.lang.String
+37.3.leaf-10 = ptidej.example.composite2.Main
+37.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+37.3.composite = java.lang.Object
+37.3.component = ptidej.example.composite2.Title
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+38.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+38.3.Sign = Positive
+38.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+38.3.leaf-1 = java.io.PrintStream
+38.3.leaf-2 = ptidej.example.composite2.Paragraph
+38.3.leaf-3 = java.lang.System
+38.3.leaf-4 = ptidej.example.composite2.Element
+38.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+38.3.leaf-6 = ptidej.example.composite2.Document
+38.3.leaf-7 = java.util.Vector
+38.3.leaf-8 = java.lang.Class
+38.3.leaf-9 = java.lang.Object
+38.3.leaf-10 = ptidej.example.composite2.Main
+38.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+38.3.composite = java.lang.String
+38.3.component = ptidej.example.composite2.Title
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+39.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+39.3.Sign = Positive
+39.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+39.3.leaf-1 = java.io.PrintStream
+39.3.leaf-2 = ptidej.example.composite2.Paragraph
+39.3.leaf-3 = java.lang.System
+39.3.leaf-4 = ptidej.example.composite2.Element
+39.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+39.3.leaf-6 = ptidej.example.composite2.Document
+39.3.leaf-7 = java.util.Vector
+39.3.leaf-8 = java.lang.Class
+39.3.leaf-9 = java.lang.Object
+39.3.leaf-10 = java.lang.String
+39.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+39.3.composite = ptidej.example.composite2.Main
+39.3.component = ptidej.example.composite2.Title
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+40.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+40.3.Sign = Positive
+40.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+40.3.leaf-1 = java.io.PrintStream
+40.3.leaf-2 = ptidej.example.composite2.Paragraph
+40.3.leaf-3 = java.lang.System
+40.3.leaf-4 = ptidej.example.composite2.Element
+40.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+40.3.leaf-6 = ptidej.example.composite2.Document
+40.3.leaf-7 = java.util.Vector
+40.3.leaf-8 = java.lang.Class
+40.3.leaf-9 = java.lang.Object
+40.3.leaf-10 = java.lang.String
+40.3.leaf-11 = ptidej.example.composite2.Main
+40.3.composite = ptidej.example.composite2.AbstractDocument
+40.3.component = ptidej.example.composite2.Title
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+41.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+41.3.Sign = Positive
+41.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+41.3.leaf-1 = ptidej.example.composite2.Paragraph
+41.3.leaf-2 = java.lang.System
+41.3.leaf-3 = ptidej.example.composite2.Element
+41.3.leaf-4 = ptidej.example.composite2.Title
+41.3.leaf-5 = ptidej.example.composite2.Document
+41.3.leaf-6 = java.util.Vector
+41.3.leaf-7 = java.lang.Class
+41.3.leaf-8 = java.lang.Object
+41.3.leaf-9 = java.lang.String
+41.3.leaf-10 = ptidej.example.composite2.Main
+41.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+41.3.composite = java.io.PrintStream
+41.3.component = ptidej.example.composite2.IndentedParagraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+42.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+42.3.Sign = Positive
+42.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+42.3.leaf-1 = java.io.PrintStream
+42.3.leaf-2 = java.lang.System
+42.3.leaf-3 = ptidej.example.composite2.Element
+42.3.leaf-4 = ptidej.example.composite2.Title
+42.3.leaf-5 = ptidej.example.composite2.Document
+42.3.leaf-6 = java.util.Vector
+42.3.leaf-7 = java.lang.Class
+42.3.leaf-8 = java.lang.Object
+42.3.leaf-9 = java.lang.String
+42.3.leaf-10 = ptidej.example.composite2.Main
+42.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+42.3.composite = ptidej.example.composite2.Paragraph
+42.3.component = ptidej.example.composite2.IndentedParagraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+43.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+43.3.Sign = Positive
+43.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+43.3.leaf-1 = java.io.PrintStream
+43.3.leaf-2 = ptidej.example.composite2.Paragraph
+43.3.leaf-3 = ptidej.example.composite2.Element
+43.3.leaf-4 = ptidej.example.composite2.Title
+43.3.leaf-5 = ptidej.example.composite2.Document
+43.3.leaf-6 = java.util.Vector
+43.3.leaf-7 = java.lang.Class
+43.3.leaf-8 = java.lang.Object
+43.3.leaf-9 = java.lang.String
+43.3.leaf-10 = ptidej.example.composite2.Main
+43.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+43.3.composite = java.lang.System
+43.3.component = ptidej.example.composite2.IndentedParagraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+44.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+44.3.Sign = Positive
+44.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+44.3.leaf-1 = java.io.PrintStream
+44.3.leaf-2 = ptidej.example.composite2.Paragraph
+44.3.leaf-3 = java.lang.System
+44.3.leaf-4 = ptidej.example.composite2.Title
+44.3.leaf-5 = ptidej.example.composite2.Document
+44.3.leaf-6 = java.util.Vector
+44.3.leaf-7 = java.lang.Class
+44.3.leaf-8 = java.lang.Object
+44.3.leaf-9 = java.lang.String
+44.3.leaf-10 = ptidej.example.composite2.Main
+44.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+44.3.composite = ptidej.example.composite2.Element
+44.3.component = ptidej.example.composite2.IndentedParagraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+45.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+45.3.Sign = Positive
+45.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+45.3.leaf-1 = java.io.PrintStream
+45.3.leaf-2 = ptidej.example.composite2.Paragraph
+45.3.leaf-3 = java.lang.System
+45.3.leaf-4 = ptidej.example.composite2.Element
+45.3.leaf-5 = ptidej.example.composite2.Document
+45.3.leaf-6 = java.util.Vector
+45.3.leaf-7 = java.lang.Class
+45.3.leaf-8 = java.lang.Object
+45.3.leaf-9 = java.lang.String
+45.3.leaf-10 = ptidej.example.composite2.Main
+45.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+45.3.composite = ptidej.example.composite2.Title
+45.3.component = ptidej.example.composite2.IndentedParagraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+46.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+46.3.Sign = Positive
+46.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+46.3.leaf-1 = java.io.PrintStream
+46.3.leaf-2 = ptidej.example.composite2.Paragraph
+46.3.leaf-3 = java.lang.System
+46.3.leaf-4 = ptidej.example.composite2.Element
+46.3.leaf-5 = ptidej.example.composite2.Title
+46.3.leaf-6 = java.util.Vector
+46.3.leaf-7 = java.lang.Class
+46.3.leaf-8 = java.lang.Object
+46.3.leaf-9 = java.lang.String
+46.3.leaf-10 = ptidej.example.composite2.Main
+46.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+46.3.composite = ptidej.example.composite2.Document
+46.3.component = ptidej.example.composite2.IndentedParagraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+47.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+47.3.Sign = Positive
+47.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+47.3.leaf-1 = java.io.PrintStream
+47.3.leaf-2 = ptidej.example.composite2.Paragraph
+47.3.leaf-3 = java.lang.System
+47.3.leaf-4 = ptidej.example.composite2.Element
+47.3.leaf-5 = ptidej.example.composite2.Title
+47.3.leaf-6 = ptidej.example.composite2.Document
+47.3.leaf-7 = java.lang.Class
+47.3.leaf-8 = java.lang.Object
+47.3.leaf-9 = java.lang.String
+47.3.leaf-10 = ptidej.example.composite2.Main
+47.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+47.3.composite = java.util.Vector
+47.3.component = ptidej.example.composite2.IndentedParagraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+48.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+48.3.Sign = Positive
+48.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+48.3.leaf-1 = java.io.PrintStream
+48.3.leaf-2 = ptidej.example.composite2.Paragraph
+48.3.leaf-3 = java.lang.System
+48.3.leaf-4 = ptidej.example.composite2.Element
+48.3.leaf-5 = ptidej.example.composite2.Title
+48.3.leaf-6 = ptidej.example.composite2.Document
+48.3.leaf-7 = java.util.Vector
+48.3.leaf-8 = java.lang.Object
+48.3.leaf-9 = java.lang.String
+48.3.leaf-10 = ptidej.example.composite2.Main
+48.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+48.3.composite = java.lang.Class
+48.3.component = ptidej.example.composite2.IndentedParagraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+49.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+49.3.Sign = Positive
+49.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+49.3.leaf-1 = java.io.PrintStream
+49.3.leaf-2 = ptidej.example.composite2.Paragraph
+49.3.leaf-3 = java.lang.System
+49.3.leaf-4 = ptidej.example.composite2.Element
+49.3.leaf-5 = ptidej.example.composite2.Title
+49.3.leaf-6 = ptidej.example.composite2.Document
+49.3.leaf-7 = java.util.Vector
+49.3.leaf-8 = java.lang.Class
+49.3.leaf-9 = java.lang.String
+49.3.leaf-10 = ptidej.example.composite2.Main
+49.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+49.3.composite = java.lang.Object
+49.3.component = ptidej.example.composite2.IndentedParagraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+50.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+50.3.Sign = Positive
+50.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+50.3.leaf-1 = java.io.PrintStream
+50.3.leaf-2 = ptidej.example.composite2.Paragraph
+50.3.leaf-3 = java.lang.System
+50.3.leaf-4 = ptidej.example.composite2.Element
+50.3.leaf-5 = ptidej.example.composite2.Title
+50.3.leaf-6 = ptidej.example.composite2.Document
+50.3.leaf-7 = java.util.Vector
+50.3.leaf-8 = java.lang.Class
+50.3.leaf-9 = java.lang.Object
+50.3.leaf-10 = ptidej.example.composite2.Main
+50.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+50.3.composite = java.lang.String
+50.3.component = ptidej.example.composite2.IndentedParagraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+51.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+51.3.Sign = Positive
+51.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+51.3.leaf-1 = java.io.PrintStream
+51.3.leaf-2 = ptidej.example.composite2.Paragraph
+51.3.leaf-3 = java.lang.System
+51.3.leaf-4 = ptidej.example.composite2.Element
+51.3.leaf-5 = ptidej.example.composite2.Title
+51.3.leaf-6 = ptidej.example.composite2.Document
+51.3.leaf-7 = java.util.Vector
+51.3.leaf-8 = java.lang.Class
+51.3.leaf-9 = java.lang.Object
+51.3.leaf-10 = java.lang.String
+51.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+51.3.composite = ptidej.example.composite2.Main
+51.3.component = ptidej.example.composite2.IndentedParagraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+52.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+52.3.Sign = Positive
+52.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+52.3.leaf-1 = java.io.PrintStream
+52.3.leaf-2 = ptidej.example.composite2.Paragraph
+52.3.leaf-3 = java.lang.System
+52.3.leaf-4 = ptidej.example.composite2.Element
+52.3.leaf-5 = ptidej.example.composite2.Title
+52.3.leaf-6 = ptidej.example.composite2.Document
+52.3.leaf-7 = java.util.Vector
+52.3.leaf-8 = java.lang.Class
+52.3.leaf-9 = java.lang.Object
+52.3.leaf-10 = java.lang.String
+52.3.leaf-11 = ptidej.example.composite2.Main
+52.3.composite = ptidej.example.composite2.AbstractDocument
+52.3.component = ptidej.example.composite2.IndentedParagraph
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+53.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+53.3.Sign = Positive
+53.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+53.3.leaf-1 = ptidej.example.composite2.Paragraph
+53.3.leaf-2 = java.lang.System
+53.3.leaf-3 = ptidej.example.composite2.Element
+53.3.leaf-4 = ptidej.example.composite2.Title
+53.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+53.3.leaf-6 = java.util.Vector
+53.3.leaf-7 = java.lang.Class
+53.3.leaf-8 = java.lang.Object
+53.3.leaf-9 = java.lang.String
+53.3.leaf-10 = ptidej.example.composite2.Main
+53.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+53.3.composite = java.io.PrintStream
+53.3.component = ptidej.example.composite2.Document
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+54.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+54.3.Sign = Positive
+54.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+54.3.leaf-1 = java.io.PrintStream
+54.3.leaf-2 = java.lang.System
+54.3.leaf-3 = ptidej.example.composite2.Element
+54.3.leaf-4 = ptidej.example.composite2.Title
+54.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+54.3.leaf-6 = java.util.Vector
+54.3.leaf-7 = java.lang.Class
+54.3.leaf-8 = java.lang.Object
+54.3.leaf-9 = java.lang.String
+54.3.leaf-10 = ptidej.example.composite2.Main
+54.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+54.3.composite = ptidej.example.composite2.Paragraph
+54.3.component = ptidej.example.composite2.Document
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+55.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+55.3.Sign = Positive
+55.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+55.3.leaf-1 = java.io.PrintStream
+55.3.leaf-2 = ptidej.example.composite2.Paragraph
+55.3.leaf-3 = ptidej.example.composite2.Element
+55.3.leaf-4 = ptidej.example.composite2.Title
+55.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+55.3.leaf-6 = java.util.Vector
+55.3.leaf-7 = java.lang.Class
+55.3.leaf-8 = java.lang.Object
+55.3.leaf-9 = java.lang.String
+55.3.leaf-10 = ptidej.example.composite2.Main
+55.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+55.3.composite = java.lang.System
+55.3.component = ptidej.example.composite2.Document
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+56.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+56.3.Sign = Positive
+56.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+56.3.leaf-1 = java.io.PrintStream
+56.3.leaf-2 = ptidej.example.composite2.Paragraph
+56.3.leaf-3 = java.lang.System
+56.3.leaf-4 = ptidej.example.composite2.Title
+56.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+56.3.leaf-6 = java.util.Vector
+56.3.leaf-7 = java.lang.Class
+56.3.leaf-8 = java.lang.Object
+56.3.leaf-9 = java.lang.String
+56.3.leaf-10 = ptidej.example.composite2.Main
+56.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+56.3.composite = ptidej.example.composite2.Element
+56.3.component = ptidej.example.composite2.Document
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+57.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+57.3.Sign = Positive
+57.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+57.3.leaf-1 = java.io.PrintStream
+57.3.leaf-2 = ptidej.example.composite2.Paragraph
+57.3.leaf-3 = java.lang.System
+57.3.leaf-4 = ptidej.example.composite2.Element
+57.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+57.3.leaf-6 = java.util.Vector
+57.3.leaf-7 = java.lang.Class
+57.3.leaf-8 = java.lang.Object
+57.3.leaf-9 = java.lang.String
+57.3.leaf-10 = ptidej.example.composite2.Main
+57.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+57.3.composite = ptidej.example.composite2.Title
+57.3.component = ptidej.example.composite2.Document
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+58.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+58.3.Sign = Positive
+58.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+58.3.leaf-1 = java.io.PrintStream
+58.3.leaf-2 = ptidej.example.composite2.Paragraph
+58.3.leaf-3 = java.lang.System
+58.3.leaf-4 = ptidej.example.composite2.Element
+58.3.leaf-5 = ptidej.example.composite2.Title
+58.3.leaf-6 = java.util.Vector
+58.3.leaf-7 = java.lang.Class
+58.3.leaf-8 = java.lang.Object
+58.3.leaf-9 = java.lang.String
+58.3.leaf-10 = ptidej.example.composite2.Main
+58.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+58.3.composite = ptidej.example.composite2.IndentedParagraph
+58.3.component = ptidej.example.composite2.Document
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+59.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+59.3.Sign = Positive
+59.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+59.3.leaf-1 = java.io.PrintStream
+59.3.leaf-2 = ptidej.example.composite2.Paragraph
+59.3.leaf-3 = java.lang.System
+59.3.leaf-4 = ptidej.example.composite2.Element
+59.3.leaf-5 = ptidej.example.composite2.Title
+59.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+59.3.leaf-7 = java.lang.Class
+59.3.leaf-8 = java.lang.Object
+59.3.leaf-9 = java.lang.String
+59.3.leaf-10 = ptidej.example.composite2.Main
+59.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+59.3.composite = java.util.Vector
+59.3.component = ptidej.example.composite2.Document
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+60.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+60.3.Sign = Positive
+60.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+60.3.leaf-1 = java.io.PrintStream
+60.3.leaf-2 = ptidej.example.composite2.Paragraph
+60.3.leaf-3 = java.lang.System
+60.3.leaf-4 = ptidej.example.composite2.Element
+60.3.leaf-5 = ptidej.example.composite2.Title
+60.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+60.3.leaf-7 = java.util.Vector
+60.3.leaf-8 = java.lang.Object
+60.3.leaf-9 = java.lang.String
+60.3.leaf-10 = ptidej.example.composite2.Main
+60.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+60.3.composite = java.lang.Class
+60.3.component = ptidej.example.composite2.Document
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+61.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+61.3.Sign = Positive
+61.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+61.3.leaf-1 = java.io.PrintStream
+61.3.leaf-2 = ptidej.example.composite2.Paragraph
+61.3.leaf-3 = java.lang.System
+61.3.leaf-4 = ptidej.example.composite2.Element
+61.3.leaf-5 = ptidej.example.composite2.Title
+61.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+61.3.leaf-7 = java.util.Vector
+61.3.leaf-8 = java.lang.Class
+61.3.leaf-9 = java.lang.String
+61.3.leaf-10 = ptidej.example.composite2.Main
+61.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+61.3.composite = java.lang.Object
+61.3.component = ptidej.example.composite2.Document
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+62.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+62.3.Sign = Positive
+62.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+62.3.leaf-1 = java.io.PrintStream
+62.3.leaf-2 = ptidej.example.composite2.Paragraph
+62.3.leaf-3 = java.lang.System
+62.3.leaf-4 = ptidej.example.composite2.Element
+62.3.leaf-5 = ptidej.example.composite2.Title
+62.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+62.3.leaf-7 = java.util.Vector
+62.3.leaf-8 = java.lang.Class
+62.3.leaf-9 = java.lang.Object
+62.3.leaf-10 = ptidej.example.composite2.Main
+62.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+62.3.composite = java.lang.String
+62.3.component = ptidej.example.composite2.Document
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+63.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+63.3.Sign = Positive
+63.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+63.3.leaf-1 = java.io.PrintStream
+63.3.leaf-2 = ptidej.example.composite2.Paragraph
+63.3.leaf-3 = java.lang.System
+63.3.leaf-4 = ptidej.example.composite2.Element
+63.3.leaf-5 = ptidej.example.composite2.Title
+63.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+63.3.leaf-7 = java.util.Vector
+63.3.leaf-8 = java.lang.Class
+63.3.leaf-9 = java.lang.Object
+63.3.leaf-10 = java.lang.String
+63.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+63.3.composite = ptidej.example.composite2.Main
+63.3.component = ptidej.example.composite2.Document
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+64.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+64.3.Sign = Positive
+64.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+64.3.leaf-1 = java.io.PrintStream
+64.3.leaf-2 = ptidej.example.composite2.Paragraph
+64.3.leaf-3 = java.lang.System
+64.3.leaf-4 = ptidej.example.composite2.Element
+64.3.leaf-5 = ptidej.example.composite2.Title
+64.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+64.3.leaf-7 = java.util.Vector
+64.3.leaf-8 = java.lang.Class
+64.3.leaf-9 = java.lang.Object
+64.3.leaf-10 = java.lang.String
+64.3.leaf-11 = ptidej.example.composite2.Main
+64.3.composite = ptidej.example.composite2.AbstractDocument
+64.3.component = ptidej.example.composite2.Document
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+65.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+65.3.Sign = Positive
+65.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+65.3.leaf-1 = ptidej.example.composite2.Paragraph
+65.3.leaf-2 = java.lang.System
+65.3.leaf-3 = ptidej.example.composite2.Element
+65.3.leaf-4 = ptidej.example.composite2.Title
+65.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+65.3.leaf-6 = ptidej.example.composite2.Document
+65.3.leaf-7 = java.util.Vector
+65.3.leaf-8 = java.lang.Class
+65.3.leaf-9 = java.lang.Object
+65.3.leaf-10 = java.lang.String
+65.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+65.3.composite = java.io.PrintStream
+65.3.component = ptidej.example.composite2.Main
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+66.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+66.3.Sign = Positive
+66.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+66.3.leaf-1 = java.io.PrintStream
+66.3.leaf-2 = java.lang.System
+66.3.leaf-3 = ptidej.example.composite2.Element
+66.3.leaf-4 = ptidej.example.composite2.Title
+66.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+66.3.leaf-6 = ptidej.example.composite2.Document
+66.3.leaf-7 = java.util.Vector
+66.3.leaf-8 = java.lang.Class
+66.3.leaf-9 = java.lang.Object
+66.3.leaf-10 = java.lang.String
+66.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+66.3.composite = ptidej.example.composite2.Paragraph
+66.3.component = ptidej.example.composite2.Main
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+67.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+67.3.Sign = Positive
+67.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+67.3.leaf-1 = java.io.PrintStream
+67.3.leaf-2 = ptidej.example.composite2.Paragraph
+67.3.leaf-3 = ptidej.example.composite2.Element
+67.3.leaf-4 = ptidej.example.composite2.Title
+67.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+67.3.leaf-6 = ptidej.example.composite2.Document
+67.3.leaf-7 = java.util.Vector
+67.3.leaf-8 = java.lang.Class
+67.3.leaf-9 = java.lang.Object
+67.3.leaf-10 = java.lang.String
+67.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+67.3.composite = java.lang.System
+67.3.component = ptidej.example.composite2.Main
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+68.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+68.3.Sign = Positive
+68.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+68.3.leaf-1 = java.io.PrintStream
+68.3.leaf-2 = ptidej.example.composite2.Paragraph
+68.3.leaf-3 = java.lang.System
+68.3.leaf-4 = ptidej.example.composite2.Title
+68.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+68.3.leaf-6 = ptidej.example.composite2.Document
+68.3.leaf-7 = java.util.Vector
+68.3.leaf-8 = java.lang.Class
+68.3.leaf-9 = java.lang.Object
+68.3.leaf-10 = java.lang.String
+68.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+68.3.composite = ptidej.example.composite2.Element
+68.3.component = ptidej.example.composite2.Main
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+69.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+69.3.Sign = Positive
+69.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+69.3.leaf-1 = java.io.PrintStream
+69.3.leaf-2 = ptidej.example.composite2.Paragraph
+69.3.leaf-3 = java.lang.System
+69.3.leaf-4 = ptidej.example.composite2.Element
+69.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+69.3.leaf-6 = ptidej.example.composite2.Document
+69.3.leaf-7 = java.util.Vector
+69.3.leaf-8 = java.lang.Class
+69.3.leaf-9 = java.lang.Object
+69.3.leaf-10 = java.lang.String
+69.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+69.3.composite = ptidej.example.composite2.Title
+69.3.component = ptidej.example.composite2.Main
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+70.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+70.3.Sign = Positive
+70.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+70.3.leaf-1 = java.io.PrintStream
+70.3.leaf-2 = ptidej.example.composite2.Paragraph
+70.3.leaf-3 = java.lang.System
+70.3.leaf-4 = ptidej.example.composite2.Element
+70.3.leaf-5 = ptidej.example.composite2.Title
+70.3.leaf-6 = ptidej.example.composite2.Document
+70.3.leaf-7 = java.util.Vector
+70.3.leaf-8 = java.lang.Class
+70.3.leaf-9 = java.lang.Object
+70.3.leaf-10 = java.lang.String
+70.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+70.3.composite = ptidej.example.composite2.IndentedParagraph
+70.3.component = ptidej.example.composite2.Main
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+71.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+71.3.Sign = Positive
+71.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+71.3.leaf-1 = java.io.PrintStream
+71.3.leaf-2 = ptidej.example.composite2.Paragraph
+71.3.leaf-3 = java.lang.System
+71.3.leaf-4 = ptidej.example.composite2.Element
+71.3.leaf-5 = ptidej.example.composite2.Title
+71.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+71.3.leaf-7 = java.util.Vector
+71.3.leaf-8 = java.lang.Class
+71.3.leaf-9 = java.lang.Object
+71.3.leaf-10 = java.lang.String
+71.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+71.3.composite = ptidej.example.composite2.Document
+71.3.component = ptidej.example.composite2.Main
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+72.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+72.3.Sign = Positive
+72.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+72.3.leaf-1 = java.io.PrintStream
+72.3.leaf-2 = ptidej.example.composite2.Paragraph
+72.3.leaf-3 = java.lang.System
+72.3.leaf-4 = ptidej.example.composite2.Element
+72.3.leaf-5 = ptidej.example.composite2.Title
+72.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+72.3.leaf-7 = ptidej.example.composite2.Document
+72.3.leaf-8 = java.lang.Class
+72.3.leaf-9 = java.lang.Object
+72.3.leaf-10 = java.lang.String
+72.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+72.3.composite = java.util.Vector
+72.3.component = ptidej.example.composite2.Main
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+73.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+73.3.Sign = Positive
+73.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+73.3.leaf-1 = java.io.PrintStream
+73.3.leaf-2 = ptidej.example.composite2.Paragraph
+73.3.leaf-3 = java.lang.System
+73.3.leaf-4 = ptidej.example.composite2.Element
+73.3.leaf-5 = ptidej.example.composite2.Title
+73.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+73.3.leaf-7 = ptidej.example.composite2.Document
+73.3.leaf-8 = java.util.Vector
+73.3.leaf-9 = java.lang.Object
+73.3.leaf-10 = java.lang.String
+73.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+73.3.composite = java.lang.Class
+73.3.component = ptidej.example.composite2.Main
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+74.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+74.3.Sign = Positive
+74.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+74.3.leaf-1 = java.io.PrintStream
+74.3.leaf-2 = ptidej.example.composite2.Paragraph
+74.3.leaf-3 = java.lang.System
+74.3.leaf-4 = ptidej.example.composite2.Element
+74.3.leaf-5 = ptidej.example.composite2.Title
+74.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+74.3.leaf-7 = ptidej.example.composite2.Document
+74.3.leaf-8 = java.util.Vector
+74.3.leaf-9 = java.lang.Class
+74.3.leaf-10 = java.lang.String
+74.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+74.3.composite = java.lang.Object
+74.3.component = ptidej.example.composite2.Main
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+75.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+75.3.Sign = Positive
+75.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+75.3.leaf-1 = java.io.PrintStream
+75.3.leaf-2 = ptidej.example.composite2.Paragraph
+75.3.leaf-3 = java.lang.System
+75.3.leaf-4 = ptidej.example.composite2.Element
+75.3.leaf-5 = ptidej.example.composite2.Title
+75.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+75.3.leaf-7 = ptidej.example.composite2.Document
+75.3.leaf-8 = java.util.Vector
+75.3.leaf-9 = java.lang.Class
+75.3.leaf-10 = java.lang.Object
+75.3.leaf-11 = ptidej.example.composite2.AbstractDocument
+75.3.composite = java.lang.String
+75.3.component = ptidej.example.composite2.Main
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+76.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+76.3.Sign = Positive
+76.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+76.3.leaf-1 = java.io.PrintStream
+76.3.leaf-2 = ptidej.example.composite2.Paragraph
+76.3.leaf-3 = java.lang.System
+76.3.leaf-4 = ptidej.example.composite2.Element
+76.3.leaf-5 = ptidej.example.composite2.Title
+76.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+76.3.leaf-7 = ptidej.example.composite2.Document
+76.3.leaf-8 = java.util.Vector
+76.3.leaf-9 = java.lang.Class
+76.3.leaf-10 = java.lang.Object
+76.3.leaf-11 = java.lang.String
+76.3.composite = ptidej.example.composite2.AbstractDocument
+76.3.component = ptidej.example.composite2.Main
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+77.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+77.3.Sign = Positive
+77.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+77.3.leaf-1 = ptidej.example.composite2.Paragraph
+77.3.leaf-2 = java.lang.System
+77.3.leaf-3 = ptidej.example.composite2.Element
+77.3.leaf-4 = ptidej.example.composite2.Title
+77.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+77.3.leaf-6 = ptidej.example.composite2.Document
+77.3.leaf-7 = java.util.Vector
+77.3.leaf-8 = java.lang.Class
+77.3.leaf-9 = java.lang.Object
+77.3.leaf-10 = java.lang.String
+77.3.leaf-11 = ptidej.example.composite2.Main
+77.3.composite = java.io.PrintStream
+77.3.component = ptidej.example.composite2.AbstractDocument
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+78.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+78.3.Sign = Positive
+78.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+78.3.leaf-1 = java.io.PrintStream
+78.3.leaf-2 = java.lang.System
+78.3.leaf-3 = ptidej.example.composite2.Element
+78.3.leaf-4 = ptidej.example.composite2.Title
+78.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+78.3.leaf-6 = ptidej.example.composite2.Document
+78.3.leaf-7 = java.util.Vector
+78.3.leaf-8 = java.lang.Class
+78.3.leaf-9 = java.lang.Object
+78.3.leaf-10 = java.lang.String
+78.3.leaf-11 = ptidej.example.composite2.Main
+78.3.composite = ptidej.example.composite2.Paragraph
+78.3.component = ptidej.example.composite2.AbstractDocument
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+79.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+79.3.Sign = Positive
+79.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+79.3.leaf-1 = java.io.PrintStream
+79.3.leaf-2 = ptidej.example.composite2.Paragraph
+79.3.leaf-3 = ptidej.example.composite2.Element
+79.3.leaf-4 = ptidej.example.composite2.Title
+79.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+79.3.leaf-6 = ptidej.example.composite2.Document
+79.3.leaf-7 = java.util.Vector
+79.3.leaf-8 = java.lang.Class
+79.3.leaf-9 = java.lang.Object
+79.3.leaf-10 = java.lang.String
+79.3.leaf-11 = ptidej.example.composite2.Main
+79.3.composite = java.lang.System
+79.3.component = ptidej.example.composite2.AbstractDocument
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+80.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+80.3.Sign = Positive
+80.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+80.3.leaf-1 = java.io.PrintStream
+80.3.leaf-2 = ptidej.example.composite2.Paragraph
+80.3.leaf-3 = java.lang.System
+80.3.leaf-4 = ptidej.example.composite2.Title
+80.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+80.3.leaf-6 = ptidej.example.composite2.Document
+80.3.leaf-7 = java.util.Vector
+80.3.leaf-8 = java.lang.Class
+80.3.leaf-9 = java.lang.Object
+80.3.leaf-10 = java.lang.String
+80.3.leaf-11 = ptidej.example.composite2.Main
+80.3.composite = ptidej.example.composite2.Element
+80.3.component = ptidej.example.composite2.AbstractDocument
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+81.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+81.3.Sign = Positive
+81.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+81.3.leaf-1 = java.io.PrintStream
+81.3.leaf-2 = ptidej.example.composite2.Paragraph
+81.3.leaf-3 = java.lang.System
+81.3.leaf-4 = ptidej.example.composite2.Element
+81.3.leaf-5 = ptidej.example.composite2.IndentedParagraph
+81.3.leaf-6 = ptidej.example.composite2.Document
+81.3.leaf-7 = java.util.Vector
+81.3.leaf-8 = java.lang.Class
+81.3.leaf-9 = java.lang.Object
+81.3.leaf-10 = java.lang.String
+81.3.leaf-11 = ptidej.example.composite2.Main
+81.3.composite = ptidej.example.composite2.Title
+81.3.component = ptidej.example.composite2.AbstractDocument
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+82.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+82.3.Sign = Positive
+82.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+82.3.leaf-1 = java.io.PrintStream
+82.3.leaf-2 = ptidej.example.composite2.Paragraph
+82.3.leaf-3 = java.lang.System
+82.3.leaf-4 = ptidej.example.composite2.Element
+82.3.leaf-5 = ptidej.example.composite2.Title
+82.3.leaf-6 = ptidej.example.composite2.Document
+82.3.leaf-7 = java.util.Vector
+82.3.leaf-8 = java.lang.Class
+82.3.leaf-9 = java.lang.Object
+82.3.leaf-10 = java.lang.String
+82.3.leaf-11 = ptidej.example.composite2.Main
+82.3.composite = ptidej.example.composite2.IndentedParagraph
+82.3.component = ptidej.example.composite2.AbstractDocument
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+83.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+83.3.Sign = Positive
+83.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+83.3.leaf-1 = java.io.PrintStream
+83.3.leaf-2 = ptidej.example.composite2.Paragraph
+83.3.leaf-3 = java.lang.System
+83.3.leaf-4 = ptidej.example.composite2.Element
+83.3.leaf-5 = ptidej.example.composite2.Title
+83.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+83.3.leaf-7 = java.util.Vector
+83.3.leaf-8 = java.lang.Class
+83.3.leaf-9 = java.lang.Object
+83.3.leaf-10 = java.lang.String
+83.3.leaf-11 = ptidej.example.composite2.Main
+83.3.composite = ptidej.example.composite2.Document
+83.3.component = ptidej.example.composite2.AbstractDocument
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+84.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+84.3.Sign = Positive
+84.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+84.3.leaf-1 = java.io.PrintStream
+84.3.leaf-2 = ptidej.example.composite2.Paragraph
+84.3.leaf-3 = java.lang.System
+84.3.leaf-4 = ptidej.example.composite2.Element
+84.3.leaf-5 = ptidej.example.composite2.Title
+84.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+84.3.leaf-7 = ptidej.example.composite2.Document
+84.3.leaf-8 = java.lang.Class
+84.3.leaf-9 = java.lang.Object
+84.3.leaf-10 = java.lang.String
+84.3.leaf-11 = ptidej.example.composite2.Main
+84.3.composite = java.util.Vector
+84.3.component = ptidej.example.composite2.AbstractDocument
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+85.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+85.3.Sign = Positive
+85.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+85.3.leaf-1 = java.io.PrintStream
+85.3.leaf-2 = ptidej.example.composite2.Paragraph
+85.3.leaf-3 = java.lang.System
+85.3.leaf-4 = ptidej.example.composite2.Element
+85.3.leaf-5 = ptidej.example.composite2.Title
+85.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+85.3.leaf-7 = ptidej.example.composite2.Document
+85.3.leaf-8 = java.util.Vector
+85.3.leaf-9 = java.lang.Object
+85.3.leaf-10 = java.lang.String
+85.3.leaf-11 = ptidej.example.composite2.Main
+85.3.composite = java.lang.Class
+85.3.component = ptidej.example.composite2.AbstractDocument
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+86.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+86.3.Sign = Positive
+86.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+86.3.leaf-1 = java.io.PrintStream
+86.3.leaf-2 = ptidej.example.composite2.Paragraph
+86.3.leaf-3 = java.lang.System
+86.3.leaf-4 = ptidej.example.composite2.Element
+86.3.leaf-5 = ptidej.example.composite2.Title
+86.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+86.3.leaf-7 = ptidej.example.composite2.Document
+86.3.leaf-8 = java.util.Vector
+86.3.leaf-9 = java.lang.Class
+86.3.leaf-10 = java.lang.String
+86.3.leaf-11 = ptidej.example.composite2.Main
+86.3.composite = java.lang.Object
+86.3.component = ptidej.example.composite2.AbstractDocument
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+87.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+87.3.Sign = Positive
+87.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+87.3.leaf-1 = java.io.PrintStream
+87.3.leaf-2 = ptidej.example.composite2.Paragraph
+87.3.leaf-3 = java.lang.System
+87.3.leaf-4 = ptidej.example.composite2.Element
+87.3.leaf-5 = ptidej.example.composite2.Title
+87.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+87.3.leaf-7 = ptidej.example.composite2.Document
+87.3.leaf-8 = java.util.Vector
+87.3.leaf-9 = java.lang.Class
+87.3.leaf-10 = java.lang.Object
+87.3.leaf-11 = ptidej.example.composite2.Main
+87.3.composite = java.lang.String
+87.3.component = ptidej.example.composite2.AbstractDocument
+
+# More solution without constraint 0: Composite -|>- Component of weight 50
+88.3.Name = Composite Design Motif
+# More solution without constraint 0: Composite -|>- Component of weight 50
+88.3.Sign = Positive
+88.3.XCommand = XCommand = System.out.println("No source transformation needed.");
+88.3.leaf-1 = java.io.PrintStream
+88.3.leaf-2 = ptidej.example.composite2.Paragraph
+88.3.leaf-3 = java.lang.System
+88.3.leaf-4 = ptidej.example.composite2.Element
+88.3.leaf-5 = ptidej.example.composite2.Title
+88.3.leaf-6 = ptidej.example.composite2.IndentedParagraph
+88.3.leaf-7 = ptidej.example.composite2.Document
+88.3.leaf-8 = java.util.Vector
+88.3.leaf-9 = java.lang.Class
+88.3.leaf-10 = java.lang.Object
+88.3.leaf-11 = java.lang.String
+88.3.composite = ptidej.example.composite2.Main
+88.3.component = ptidej.example.composite2.AbstractDocument
+

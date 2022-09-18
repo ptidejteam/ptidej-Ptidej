@@ -1,0 +1,309 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.5.0M2 built on Thursday Apr 7, 2005 at 12:53:37 GMT
+---- Dump Properties ---
+Dump file: ajcore.20220916.232758.116.txt
+Dump reason: org.aspectj.apache.bcel.classfile.ClassFormatException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+org.aspectj.apache.bcel.classfile.ClassFormatException: Invalid byte tag in constant pool: 18
+	at org.aspectj.apache.bcel.classfile.Constant.readConstant(Constant.java:145)
+	at org.aspectj.apache.bcel.classfile.ConstantPool.<init>(ConstantPool.java:103)
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:254)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:162)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:227)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveObjectType(BcelWorld.java:203)
+	at org.aspectj.weaver.World.resolveObjectType(World.java:150)
+	at org.aspectj.weaver.World.resolve(World.java:129)
+	at org.aspectj.weaver.World.resolve(World.java:108)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:119)
+	at org.aspectj.weaver.ResolvedTypeX$Name.getDeclaredInterfaces(ResolvedTypeX.java:742)
+	at org.aspectj.weaver.ResolvedTypeX.getDirectSupertypes(ResolvedTypeX.java:48)
+	at org.aspectj.weaver.ResolvedTypeX$Name.isAssignableFrom(ResolvedTypeX.java:714)
+	at org.aspectj.weaver.ResolvedTypeX$Name.isAssignableFrom(ResolvedTypeX.java:686)
+	at org.aspectj.weaver.ResolvedTypeX.isTopmostImplementor(ResolvedTypeX.java:1556)
+	at org.aspectj.weaver.ResolvedTypeMunger.matches(ResolvedTypeMunger.java:87)
+	at org.aspectj.weaver.ConcreteTypeMunger.matches(ConcreteTypeMunger.java:53)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:448)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:334)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.createBinaryTypeFrom(AjLookupEnvironment.java:717)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.createBinaryTypeFrom(LookupEnvironment.java:384)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.accept(Compiler.java:217)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:111)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:43)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:53)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.PackageBinding.getType(PackageBinding.java:134)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.findType(Scope.java:1241)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:2356)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.getType(Scope.java:2115)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.SingleTypeReference.getTypeBinding(SingleTypeReference.java:39)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveType(TypeReference.java:132)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.resolveTypeFor(SourceTypeBinding.java:1057)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.fields(SourceTypeBinding.java:556)
+	at org.aspectj.ajdt.internal.compiler.lookup.EclipseSourceType.fillDeclaredMembers(EclipseSourceType.java:120)
+	at org.aspectj.ajdt.internal.compiler.lookup.EclipseSourceType.getDeclaredMethods(EclipseSourceType.java:141)
+	at org.aspectj.weaver.ResolvedTypeX$Name.getDeclaredMethods(ResolvedTypeX.java:746)
+	at org.aspectj.weaver.ResolvedTypeX$4.get(ResolvedTypeX.java:221)
+	at org.aspectj.weaver.Iterators$3$1.hasNext(Iterators.java:118)
+	at org.aspectj.weaver.Iterators$3.hasNext(Iterators.java:128)
+	at org.aspectj.weaver.ResolvedTypeX.compareToExistingMembers(ResolvedTypeX.java:1369)
+	at org.aspectj.weaver.ResolvedTypeX.addInterTypeMunger(ResolvedTypeX.java:1318)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:455)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveIntertypes(AjLookupEnvironment.java:220)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:162)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:331)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:348)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:683)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.doBuild(AjBuildManager.java:168)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:102)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:109)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:291)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:227)
+	at padl.creator.aspectjlst.util.AjcCompilerWrapper.main(AjcCompilerWrapper.java:31)
+	at padl.creator.aspectjlst.AspectCreator.<init>(AspectCreator.java:111)
+	at padl.creator.aspectj.test.TestModelCreation.setUp(TestModelCreation.java:84)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:130)
+	at junit.framework.TestSuite.runTest(TestSuite.java:241)
+	at junit.framework.TestSuite.run(TestSuite.java:236)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+---- System Properties ---
+java.specification.version=17
+sun.cpu.isalist=amd64
+sun.jnu.encoding=Cp1252
+java.class.path=D:\Software\Ptidej Workspaces\v5.2\PADL Creator AspectJ Tests\bin;D:\Software\Ptidej Workspaces\v5.2\PADL\bin;D:\Software\Ptidej Workspaces\v5.2\CPL\lib\cfparse.jar;D:\Software\Ptidej Workspaces\v5.2\CPL\lib\commons-io-2.4.jar;D:\Software\Ptidej Workspaces\v5.2\CPL\lib\bcel-5.2.jar;D:\Software\Ptidej Workspaces\v5.2\CPL\lib\commons-lang-2.4.jar;D:\Software\Ptidej Workspaces\v5.2\CPL\lib\trove-3.0.0a3.jar;D:\Software\Ptidej Workspaces\v5.2\CPL\bin;D:\Software\Ptidej Workspaces\v5.2\PADL Creator AspectJ\bin;C:\Users\Yann-Gaël Guéhéneuc\.p2\pool\plugins\org.eclipse.equinox.common_3.16.100.v20220315-2327.jar;D:\Software\Ptidej Workspaces\v5.2\PADL Creator AspectJ\lib\aspectjrt.jar;D:\Software\Ptidej Workspaces\v5.2\PADL Creator AspectJ\lib\aspectjtools_v1.5.0 WITHOUT OSGI.jar;D:\Software\Ptidej Workspaces\v5.2\PADL Creator ClassFile\bin;C:\Users\Yann-Gaël Guéhéneuc\.p2\pool\plugins\org.junit_4.13.2.v20211018-1956.jar;C:\Users\Yann-Gaël Guéhéneuc\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;C:\Eclipse\eclipse\configuration\org.eclipse.osgi\213\0\.cp;C:\Eclipse\eclipse\configuration\org.eclipse.osgi\212\0\.cp
+java.vm.vendor=Oracle Corporation
+sun.arch.data.model=64
+user.variant=
+java.vendor.url=https://java.oracle.com/
+user.timezone=America/Toronto
+java.vm.specification.version=17
+os.name=Windows 10
+sun.java.launcher=SUN_STANDARD
+user.country=CA
+sun.boot.library.path=C:\Program Files\Java\jdk-17.0.3.1\bin
+sun.java.command=org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 58771 -testLoaderClass org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader -loaderpluginname org.eclipse.jdt.junit4.runtime -classNames padl.creator.aspectj.test.TestModelCreation
+jdk.debug=release
+sun.cpu.endian=little
+user.home=C:\Users\Yann-Gaël Guéhéneuc
+user.language=en
+java.specification.vendor=Oracle Corporation
+java.version.date=2022-04-22
+java.home=C:\Program Files\Java\jdk-17.0.3.1
+file.separator=\
+java.vm.compressedOopsMode=32-bit
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+java.specification.name=Java Platform API Specification
+user.script=
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.runtime.version=17.0.3.1+2-LTS-6
+user.name=Yann-Gaël Guéhéneuc
+path.separator=;
+os.version=10.0
+java.runtime.name=Java(TM) SE Runtime Environment
+file.encoding=Cp1252
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+java.vendor.url.bug=https://bugreport.java.com/bugreport/
+java.io.tmpdir=C:\Users\YANN-G~1\AppData\Local\Temp\
+java.version=17.0.3.1
+user.dir=D:\Software\Ptidej Workspaces\v5.2\PADL Creator AspectJ Tests
+os.arch=amd64
+java.vm.specification.name=Java Virtual Machine Specification
+sun.os.patch.level=
+native.encoding=Cp1252
+java.library.path=C:\Program Files\Java\jdk-17.0.3.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files (x86)\Python38-32\Scripts\;C:\Program Files (x86)\Python38-32\;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Users\Yann-Gaël Guéhéneuc\AppData\Local\Microsoft\WindowsApps;C:\Users\Yann-Gaël Guéhéneuc\AppData\Roaming\npm;C:\Users\Yann-Gaël Guéhéneuc\AppData\Local\particle\bin;C:\Program Files\FFMPEG\bin;;.
+java.vm.info=mixed mode, sharing
+java.vendor=Oracle Corporation
+java.vm.version=17.0.3.1+2-LTS-6
+sun.io.unicode.encoding=UnicodeLittle
+java.class.version=61.0
+---- Command Line ---
+-noExit
+-XjavadocsInModel
+-d
+C:\Users\YANN-G~1\AppData\Local\Temp\AspectCreatorTemp
+-classpath
+D:\Software\Ptidej Workspaces\v5.2\PADL Creator AspectJ Tests\..\PADL Creator AspectJ\lib\rt.jar;D:\Software\Ptidej Workspaces\v5.2\PADL Creator AspectJ Tests\..\PADL Creator AspectJ\lib\aspectjrt.jar;
+-argfile
+D:\Software\Ptidej Workspaces\v5.2\PADL Creator AspectJ Tests\..\PADL Creator AspectJ Tests\rsc\examples\AJ1.2Example\observer\files.lst
+---- Full Classpath ---
+D:\Software\Ptidej Workspaces\v5.2\PADL Creator AspectJ\lib\rt.jar(63150433 bytes)
+D:\Software\Ptidej Workspaces\v5.2\PADL Creator AspectJ\lib\aspectjrt.jar(42831 bytes)
+D:\Software\Ptidej Workspaces\v5.2\PADL Creator AspectJ\lib\rt.jar(63150433 bytes)
+D:\Software\Ptidej Workspaces\v5.2\PADL Creator AspectJ\lib\aspectjrt.jar(42831 bytes)
+---- Compiler Messages ---
+error at (no source information available)
+D:\Software\Ptidej Workspaces\v5.2\PADL Creator AspectJ Tests\rsc\examples\AJ1.2Example\observer\Demo.java:0::0 Internal compiler error
+org.aspectj.apache.bcel.classfile.ClassFormatException: Invalid byte tag in constant pool: 18
+	at org.aspectj.apache.bcel.classfile.Constant.readConstant(Constant.java:145)
+	at org.aspectj.apache.bcel.classfile.ConstantPool.<init>(ConstantPool.java:103)
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:254)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:162)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:227)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveObjectType(BcelWorld.java:203)
+	at org.aspectj.weaver.World.resolveObjectType(World.java:150)
+	at org.aspectj.weaver.World.resolve(World.java:129)
+	at org.aspectj.weaver.World.resolve(World.java:108)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:119)
+	at org.aspectj.weaver.ResolvedTypeX$Name.getDeclaredInterfaces(ResolvedTypeX.java:742)
+	at org.aspectj.weaver.ResolvedTypeX.getDirectSupertypes(ResolvedTypeX.java:48)
+	at org.aspectj.weaver.ResolvedTypeX$Name.isAssignableFrom(ResolvedTypeX.java:714)
+	at org.aspectj.weaver.ResolvedTypeX$Name.isAssignableFrom(ResolvedTypeX.java:686)
+	at org.aspectj.weaver.ResolvedTypeX.isTopmostImplementor(ResolvedTypeX.java:1556)
+	at org.aspectj.weaver.ResolvedTypeMunger.matches(ResolvedTypeMunger.java:87)
+	at org.aspectj.weaver.ConcreteTypeMunger.matches(ConcreteTypeMunger.java:53)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:448)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:334)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.createBinaryTypeFrom(AjLookupEnvironment.java:717)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.createBinaryTypeFrom(LookupEnvironment.java:384)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.accept(Compiler.java:217)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:111)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:43)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:53)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.PackageBinding.getType(PackageBinding.java:134)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.findType(Scope.java:1241)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:2356)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.getType(Scope.java:2115)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.SingleTypeReference.getTypeBinding(SingleTypeReference.java:39)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveType(TypeReference.java:132)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.resolveTypeFor(SourceTypeBinding.java:1057)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.fields(SourceTypeBinding.java:556)
+	at org.aspectj.ajdt.internal.compiler.lookup.EclipseSourceType.fillDeclaredMembers(EclipseSourceType.java:120)
+	at org.aspectj.ajdt.internal.compiler.lookup.EclipseSourceType.getDeclaredMethods(EclipseSourceType.java:141)
+	at org.aspectj.weaver.ResolvedTypeX$Name.getDeclaredMethods(ResolvedTypeX.java:746)
+	at org.aspectj.weaver.ResolvedTypeX$4.get(ResolvedTypeX.java:221)
+	at org.aspectj.weaver.Iterators$3$1.hasNext(Iterators.java:118)
+	at org.aspectj.weaver.Iterators$3.hasNext(Iterators.java:128)
+	at org.aspectj.weaver.ResolvedTypeX.compareToExistingMembers(ResolvedTypeX.java:1369)
+	at org.aspectj.weaver.ResolvedTypeX.addInterTypeMunger(ResolvedTypeX.java:1318)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:455)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveIntertypes(AjLookupEnvironment.java:220)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:162)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:331)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:348)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:683)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.doBuild(AjBuildManager.java:168)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:102)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:109)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:291)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:227)
+	at padl.creator.aspectjlst.util.AjcCompilerWrapper.main(AjcCompilerWrapper.java:31)
+	at padl.creator.aspectjlst.AspectCreator.<init>(AspectCreator.java:111)
+	at padl.creator.aspectj.test.TestModelCreation.setUp(TestModelCreation.java:84)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:130)
+	at junit.framework.TestSuite.runTest(TestSuite.java:241)
+	at junit.framework.TestSuite.run(TestSuite.java:236)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+
+abort ABORT -- (ClassFormatException) Invalid byte tag in constant pool: 18
+Invalid byte tag in constant pool: 18
+org.aspectj.apache.bcel.classfile.ClassFormatException: Invalid byte tag in constant pool: 18
+	at org.aspectj.apache.bcel.classfile.Constant.readConstant(Constant.java:145)
+	at org.aspectj.apache.bcel.classfile.ConstantPool.<init>(ConstantPool.java:103)
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:254)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:162)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:227)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveObjectType(BcelWorld.java:203)
+	at org.aspectj.weaver.World.resolveObjectType(World.java:150)
+	at org.aspectj.weaver.World.resolve(World.java:129)
+	at org.aspectj.weaver.World.resolve(World.java:108)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:119)
+	at org.aspectj.weaver.ResolvedTypeX$Name.getDeclaredInterfaces(ResolvedTypeX.java:742)
+	at org.aspectj.weaver.ResolvedTypeX.getDirectSupertypes(ResolvedTypeX.java:48)
+	at org.aspectj.weaver.ResolvedTypeX$Name.isAssignableFrom(ResolvedTypeX.java:714)
+	at org.aspectj.weaver.ResolvedTypeX$Name.isAssignableFrom(ResolvedTypeX.java:686)
+	at org.aspectj.weaver.ResolvedTypeX.isTopmostImplementor(ResolvedTypeX.java:1556)
+	at org.aspectj.weaver.ResolvedTypeMunger.matches(ResolvedTypeMunger.java:87)
+	at org.aspectj.weaver.ConcreteTypeMunger.matches(ConcreteTypeMunger.java:53)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:448)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:334)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.createBinaryTypeFrom(AjLookupEnvironment.java:717)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.createBinaryTypeFrom(LookupEnvironment.java:384)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.accept(Compiler.java:217)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:111)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:43)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:53)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.PackageBinding.getType(PackageBinding.java:134)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.findType(Scope.java:1241)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:2356)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.Scope.getType(Scope.java:2115)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.SingleTypeReference.getTypeBinding(SingleTypeReference.java:39)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveType(TypeReference.java:132)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.resolveTypeFor(SourceTypeBinding.java:1057)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeBinding.fields(SourceTypeBinding.java:556)
+	at org.aspectj.ajdt.internal.compiler.lookup.EclipseSourceType.fillDeclaredMembers(EclipseSourceType.java:120)
+	at org.aspectj.ajdt.internal.compiler.lookup.EclipseSourceType.getDeclaredMethods(EclipseSourceType.java:141)
+	at org.aspectj.weaver.ResolvedTypeX$Name.getDeclaredMethods(ResolvedTypeX.java:746)
+	at org.aspectj.weaver.ResolvedTypeX$4.get(ResolvedTypeX.java:221)
+	at org.aspectj.weaver.Iterators$3$1.hasNext(Iterators.java:118)
+	at org.aspectj.weaver.Iterators$3.hasNext(Iterators.java:128)
+	at org.aspectj.weaver.ResolvedTypeX.compareToExistingMembers(ResolvedTypeX.java:1369)
+	at org.aspectj.weaver.ResolvedTypeX.addInterTypeMunger(ResolvedTypeX.java:1318)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:455)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveIntertypes(AjLookupEnvironment.java:220)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:162)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:331)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:348)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:683)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.doBuild(AjBuildManager.java:168)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:102)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:109)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:291)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:227)
+	at padl.creator.aspectjlst.util.AjcCompilerWrapper.main(AjcCompilerWrapper.java:31)
+	at padl.creator.aspectjlst.AspectCreator.<init>(AspectCreator.java:111)
+	at padl.creator.aspectj.test.TestModelCreation.setUp(TestModelCreation.java:84)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:130)
+	at junit.framework.TestSuite.runTest(TestSuite.java:241)
+	at junit.framework.TestSuite.run(TestSuite.java:236)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+
+---- org.aspectj.weaver.bcel.BcelWorld ----
+Shadow mungers:
+Empty
+Type mungers:
+(EclipseTypeMunger ResolvedTypeMunger(Method, java.lang.Object observer.Button.getData()))
+(EclipseTypeMunger ResolvedTypeMunger(Method, void observer.ColorLabel.update()))
+(BcelTypeMunger ResolvedTypeMunger(PrivilegedAccess, void observer.Subject.()))
+(BcelTypeMunger ResolvedTypeMunger(PrivilegedAccess, void observer.Observer.()))
+(EclipseTypeMunger ResolvedTypeMunger(Field, java.util.Vector observer.Subject.observers))
+(EclipseTypeMunger ResolvedTypeMunger(Method, void observer.Subject.addObserver(observer.Observer)))
+(EclipseTypeMunger ResolvedTypeMunger(Method, void observer.Subject.removeObserver(observer.Observer)))
+(EclipseTypeMunger ResolvedTypeMunger(Method, java.util.Vector observer.Subject.getObservers()))
+(EclipseTypeMunger ResolvedTypeMunger(Field, observer.Subject observer.Observer.subject))
+(EclipseTypeMunger ResolvedTypeMunger(Method, void observer.Observer.setSubject(observer.Subject)))
+(EclipseTypeMunger ResolvedTypeMunger(Method, observer.Subject observer.Observer.getSubject()))

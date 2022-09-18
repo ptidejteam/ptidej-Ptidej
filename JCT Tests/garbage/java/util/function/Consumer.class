@@ -1,0 +1,15 @@
+package java.util.function;
+abstract public interface Consumer
+{
+abstract public void accept(java.lang.Object arg0)
+{
+
+}
+
+public java.util.function.Consumer andThen(java.lang.Object arg0)
+{
+
+}
+
+
+}

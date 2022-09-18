@@ -1,0 +1,72 @@
+		final Set <CODESMELL>ClassesFound = new HashSet();
+		final HashMap mapOfClassesWithValues = new HashMap();
+		final HashMap mapClassesWithMethods = new HashMap();
+
+		final Iterator iter = anAbstractLevelModel.getIteratorOnTopLevelEntities();
+		while (iter.hasNext()) {
+			final IEntity entity = (IEntity) iter.next();
+			if (entity instanceof IClass) {
+				final IClass aClass = (IClass) entity;
+				IClass classOf<CODESMELL> = null;
+				IMethod <CODESMELL> = null;
+				Integer longValue = new Integer(0);
+	
+				// for each class, we get the <CODESMELL>
+				final Iterator iter2 = aClass.getIteratorOnConstituents(IMethod.class);
+				while (iter2.hasNext()) {
+					final IMethod aMethod = (IMethod) iter2.next();
+					if (!aMethod.isAbstract() && (aMethod.getVisibility() & Modifier.NATIVE) == 0) {
+						final Integer value = new Integer(aMethod.getCodeLines().length);
+		
+						if (!(value == null)) {
+							if (value.compareTo(longValue) > 0) {
+								longValue = value;
+								<CODESMELL> = aMethod;
+								classOf<CODESMELL> = aClass;
+							}
+		
+							// we put in a map the class with its <CODESMELL>
+							mapClassesWithMethods.put(classOf<CODESMELL>, <CODESMELL>);
+		
+							// we put in a map the class with the value of its
+							// longest method
+							mapOfClassesWithValues.put(
+								classOf<CODESMELL>,
+								new Double[] {new Double(longValue.doubleValue()), new Double(0)});
+						}
+					}
+				}// End of iterator of methods
+			}
+		}// End of iterator of classes
+
+		final BoxPlot boxPlot = new BoxPlot(mapOfClassesWithValues, <FUZZINESS>);
+		setBoxPlot(boxPlot);
+
+		final Map mapOf<CODESMELL>sFromBoxPlot = boxPlot.<ORDINAL_VALUE>();
+
+		final Iterator iter3 = mapOf<CODESMELL>sFromBoxPlot
+			.keySet()
+			.iterator();
+		while (iter3.hasNext()) {
+			// we get first the mapMethodsWithClass(aClass, longMethod)
+			final IClass aClass = (IClass) iter3.next();
+			final IMethod a<CODESMELL> = (IMethod) mapClassesWithMethods
+				.get(aClass);
+			
+			try {
+				ClassProperty classProp = new ClassProperty(aClass);
+				
+				double LOC = ((Double[]) mapOfClassesWithValues.get(aClass))[0].doubleValue();
+				MethodProperty mp = new MethodProperty(a<CODESMELL>);
+				
+				<THRESHOLD>
+				mp.addProperty(new MetricProperty("LOC", LOC, thresholdMap));
+				classProp.addProperty(mp);
+				
+				<CODESMELL>ClassesFound.add(new CodeSmell("<CODESMELL>", "", classProp));
+			} catch (Exception e) {
+				// Not suppose to append :(
+			}
+		}
+
+		this.setSetOfSmells(<CODESMELL>ClassesFound);

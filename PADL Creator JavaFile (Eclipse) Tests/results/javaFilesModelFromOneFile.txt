@@ -1,0 +1,74 @@
+Summary for :
+javaFilesModelNumber of classes: 1
+Number of ghosts: 5
+Number of interfaces: 0
+Number of association relationships: 0
+Number of aggregation relationships [1,n]: 0
+Number of aggregation relationships [1,1]: 0
+Number of composition relationships: 0
+Number of container-aggregation relationships [1,n]: 0
+Number of container-aggregation relationships [1,1]: 0
+Number of container-composition relationships: 0
+Number of creation relationships: 0
+Number of use relationships: 0
+Number of fields: 2
+Number of methods: 3
+Number of message sends: 0
+Number of pattern models: 0 result from the java generator//id= java.lang.Object
+public ghost Object {
+    //id= <init>()
+    public Object() {
+    }
+
+
+}
+
+//id= java.lang.String
+public ghost String {
+
+}
+
+//id= padl.creator.LightJavaFileCreator
+public class LightJavaFileCreator extends Object implements ICodeLevelModelCreator {
+
+    //id= F0_codeLevelModel
+    private padl.creator.ICodeLevelModel codeLevelModel;
+    //id= F1_javaProject
+    private padl.creator.SourceInputsHolder javaProject;
+    //id= private void createModelFormSource(unknown.ghost.packag.ICodeLevelModel, unknown.ghost.packag.SourceInputsHolder)
+    private void createModelFormSource(unknown.ghost.packag.ICodeLevelModel aCodeLevelModel, unknown.ghost.packag.SourceInputsHolder javaProject) {
+    }
+
+    //id= public <init>(java.lang.String, java.lang.String)
+    public LightJavaFileCreator(java.lang.String aSourcePathEntry, java.lang.String aClasspathEntry) {
+    }
+
+    //id= public <init>(java.lang.String, java.lang.String, java.lang.String[])
+    public LightJavaFileCreator(java.lang.String aSourcePathEntry, java.lang.String aClasspathEntry, java.lang.String aPathFilesList) {
+    }
+
+    //id= public void create(unknown.ghost.packag.ICodeLevelModel)
+    public void create(unknown.ghost.packag.ICodeLevelModel aCodeLevelModel) {
+    }
+
+    //id= public padl.creator.ICodeLevelModel getCodeLevelModel()
+    public padl.creator.ICodeLevelModel getCodeLevelModel() {
+    }
+
+
+}
+//id= unknown.ghost.packag.ICodeLevelModel
+public ghost ICodeLevelModel {
+
+}
+
+//id= unknown.ghost.packag.ICodeLevelModelCreator
+public ghost ICodeLevelModelCreator {
+
+}
+
+//id= unknown.ghost.packag.SourceInputsHolder
+public ghost SourceInputsHolder {
+
+}
+

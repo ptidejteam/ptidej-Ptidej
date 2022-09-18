@@ -1,0 +1,175 @@
+package java.time;
+final public class ZoneOffset
+extends java.time.ZoneId
+implements java.io.Serializable, java.lang.Comparable, java.time.temporal.TemporalAccessor, java.time.temporal.TemporalAdjuster
+{
+final private static java.lang.Object SECONDS_CACHE;
+
+final private static java.lang.Object ID_CACHE;
+
+final private static java.lang.Object MAX_SECONDS;
+
+final private static java.lang.Object serialVersionUID;
+
+final public static java.lang.Object UTC;
+
+final public static java.lang.Object MIN;
+
+final public static java.lang.Object MAX;
+
+final private java.lang.Object totalSeconds;
+
+final private transient java.lang.Object id;
+
+public static java.time.ZoneOffset of(java.lang.Object arg0)
+{
+
+}
+
+private static int parseNumber(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public static java.time.ZoneOffset ofHours(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.ZoneOffset ofHoursMinutes(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.time.ZoneOffset ofHoursMinutesSeconds(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public static java.time.ZoneOffset from(java.lang.Object arg0)
+{
+
+}
+
+private static void validate(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static int totalSeconds(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public static java.time.ZoneOffset ofTotalSeconds(java.lang.Object arg0)
+{
+
+}
+
+private void <init>(java.lang.Object arg0)
+{
+
+}
+
+private static java.lang.String buildId(java.lang.Object arg0)
+{
+
+}
+
+public int getTotalSeconds()
+{
+
+}
+
+public java.lang.String getId()
+{
+
+}
+
+public java.time.zone.ZoneRules getRules()
+{
+
+}
+
+public boolean isSupported(java.lang.Object arg0)
+{
+
+}
+
+public java.time.temporal.ValueRange range(java.lang.Object arg0)
+{
+
+}
+
+public int get(java.lang.Object arg0)
+{
+
+}
+
+public long getLong(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Object query(java.lang.Object arg0)
+{
+
+}
+
+public java.time.temporal.Temporal adjustInto(java.lang.Object arg0)
+{
+
+}
+
+public int compareTo(java.lang.Object arg0)
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+private java.lang.Object writeReplace()
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.InvalidObjectException
+{
+
+}
+
+void write(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+void writeExternal(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static java.time.ZoneOffset readExternal(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

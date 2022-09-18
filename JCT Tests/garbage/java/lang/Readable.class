@@ -1,0 +1,10 @@
+package java.lang;
+abstract public interface Readable
+{
+abstract public int read(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+
+}

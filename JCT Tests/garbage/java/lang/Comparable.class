@@ -1,0 +1,10 @@
+package java.lang;
+abstract public interface Comparable
+{
+abstract public int compareTo(java.lang.Object arg0)
+{
+
+}
+
+
+}

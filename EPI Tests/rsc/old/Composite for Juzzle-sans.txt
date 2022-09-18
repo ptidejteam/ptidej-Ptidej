@@ -1,0 +1,163 @@
+# Micro-architecture 2 similar at 100% with Composite
+2.100.Component = java.awt.Dimension
+2.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 3 similar at 100% with Composite
+3.100.Component = java.awt.Dimension
+3.100.Composite = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 4 similar at 100% with Composite
+4.100.Component = java.awt.Dimension
+4.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 5 similar at 100% with Composite
+5.100.Component = java.awt.event.ActionListener
+5.100.Composite = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 6 similar at 100% with Composite
+6.100.Component = javax.swing.JList
+6.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 7 similar at 100% with Composite
+7.100.Component = org.game.Juzzle.PuzzlePanel
+7.100.Composite = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 8 similar at 100% with Composite
+8.100.Component = javax.swing.Timer
+8.100.Composite = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 9 similar at 100% with Composite
+9.100.Component = java.awt.geom.Rectangle2D
+9.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 10 similar at 100% with Composite
+10.100.Component = java.awt.geom.Dimension2D
+10.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 11 similar at 100% with Composite
+11.100.Component = java.awt.image.BufferedImage
+11.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 12 similar at 100% with Composite
+12.100.Component = java.awt.Paint
+12.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 13 similar at 100% with Composite
+13.100.Component = java.awt.Cursor
+13.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 14 similar at 100% with Composite
+14.100.Component = java.io.File
+14.100.Composite = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 15 similar at 100% with Composite
+15.100.Component = java.awt.Image
+15.100.Composite = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 16 similar at 100% with Composite
+16.100.Component = java.awt.image.ColorModel
+16.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 17 similar at 100% with Composite
+17.100.Component = javax.swing.JFileChooser
+17.100.Composite = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 18 similar at 100% with Composite
+18.100.Component = java.awt.geom.GeneralPath
+18.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 19 similar at 100% with Composite
+19.100.Component = java.awt.geom.GeneralPath
+19.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 20 similar at 100% with Composite
+20.100.Component = org.game.Juzzle.StartDialog
+20.100.Composite = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 21 similar at 100% with Composite
+21.100.Component = javax.swing.Icon
+21.100.Composite = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 22 similar at 100% with Composite
+22.100.Component = java.awt.image.WritableRaster
+22.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 23 similar at 100% with Composite
+23.100.Component = org.game.Juzzle.ImageDescription
+23.100.Composite = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 24 similar at 100% with Composite
+24.100.Component = java.awt.Point
+24.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 25 similar at 100% with Composite
+25.100.Component = java.awt.Point
+25.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 26 similar at 100% with Composite
+26.100.Component = java.awt.Rectangle
+26.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 27 similar at 100% with Composite
+27.100.Component = java.awt.Rectangle
+27.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 28 similar at 100% with Composite
+28.100.Component = java.util.Vector
+28.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 29 similar at 100% with Composite
+29.100.Component = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+29.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 30 similar at 100% with Composite
+30.100.Component = javax.swing.filechooser.FileFilter
+30.100.Composite = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 31 similar at 100% with Composite
+31.100.Component = java.lang.String
+31.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 32 similar at 100% with Composite
+32.100.Component = java.lang.String
+32.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 33 similar at 100% with Composite
+33.100.Component = java.lang.String
+33.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 34 similar at 100% with Composite
+34.100.Component = java.lang.String
+34.100.Composite = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 35 similar at 100% with Composite
+35.100.Component = java.lang.String
+35.100.Composite = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 36 similar at 100% with Composite
+36.100.Component = java.awt.Color
+36.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 37 similar at 100% with Composite
+37.100.Component = java.awt.Color
+37.100.Composite = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 38 similar at 100% with Composite
+38.100.Component = org.game.Juzzle.ControlPanel
+38.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 39 similar at 100% with Composite
+39.100.Component = java.awt.Paint
+39.100.Leaf = org.game.Juzzle.PuzzlePaint
+39.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 40 similar at 100% with Composite
+40.100.Component = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+40.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+40.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 41 similar at 100% with Composite
+41.100.Component = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+41.100.Leaf = org.game.Juzzle.PuzzlePartList
+41.100.Composite = org.game.Juzzle.PuzzlePanel
+

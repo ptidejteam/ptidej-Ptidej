@@ -1,0 +1,25 @@
+package java.security;
+public class AccessControlException
+extends java.lang.SecurityException
+{
+final private static java.lang.Object serialVersionUID;
+
+private java.lang.Object perm;
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.security.Permission getPermission()
+{
+
+}
+
+
+}

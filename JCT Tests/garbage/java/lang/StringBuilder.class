@@ -1,0 +1,214 @@
+package java.lang;
+final public class StringBuilder
+extends java.lang.AbstractStringBuilder
+implements java.io.Serializable, java.lang.CharSequence
+{
+final static java.lang.Object serialVersionUID;
+
+public void <init>()
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder append(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder append(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder append(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder append(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder append(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public java.lang.StringBuilder append(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder append(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public java.lang.StringBuilder append(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder append(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder append(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder append(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder append(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder append(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder appendCodePoint(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder delete(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.StringBuilder deleteCharAt(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.StringBuilder replace(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public java.lang.StringBuilder insert(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+public java.lang.StringBuilder insert(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.StringBuilder insert(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.StringBuilder insert(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.StringBuilder insert(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.StringBuilder insert(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+public java.lang.StringBuilder insert(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.StringBuilder insert(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.StringBuilder insert(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.StringBuilder insert(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.StringBuilder insert(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.StringBuilder insert(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public int indexOf(java.lang.Object arg0)
+{
+
+}
+
+public int indexOf(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public int lastIndexOf(java.lang.Object arg0)
+{
+
+}
+
+public int lastIndexOf(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.StringBuilder reverse()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+private void writeObject(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.IOException, java.lang.ClassNotFoundException
+{
+
+}
+
+
+}

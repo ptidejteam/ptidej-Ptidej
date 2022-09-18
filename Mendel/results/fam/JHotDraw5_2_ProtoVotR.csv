@@ -1,0 +1,43 @@
+Family, parent name, NoC, mean NoM, dev NoM, SubBeh Tag, hgi, [DIT]
+Family, ChopBoxConnector, 3, 1.0, 0.0, PureOverrider, 1.0, 2
+1, chop(CH.ifa.draw.framework.Figure java.awt.Point ) java.awt.Point, 
+Family, LineConnection, 2, 4.5, 0.7071067811865476, PureOverrider, 0.5, 3
+1, handles() java.util.Vector, 
+Family, ChangeConnectionHandle, 2, 5.0, 0.0, PureOverrider, 1.0, 2
+5, setPoint(int int ) void, locate() java.awt.Point, disconnect() void, connect(CH.ifa.draw.framework.Connector ) void, target() CH.ifa.draw.framework.Connector, 
+Family, Command, 9, 1.8888888888888888, 0.6009252125773316, PureOverrider, 0.8888889, 1
+2, isExecutable() boolean, execute() void, 
+Family, DrawApplet, 3, 3.0, 3.4641016151377544, PureOverrider, 0.6666667, 6
+1, createTools(javax.swing.JPanel ) void, 
+Family, RectangleFigure, 2, 7.5, 4.949747468305833, Overrider, 1.0, 3
+4, polygon() java.awt.Polygon, containsPoint(int int ) boolean, draw(java.awt.Graphics ) void, connectionInsets() java.awt.Insets, 
+Family, AbstractFigure, 4, 24.5, 10.376254944182254, Extender, 0.75, 1
+9, getAttribute(java.lang.String ) java.lang.Object, basicDisplayBox(java.awt.Point java.awt.Point ) void, read(CH.ifa.draw.util.StorableInput ) void, basicMoveBy(int int ) void, displayBox() java.awt.Rectangle, setAttribute(java.lang.String java.lang.Object ) void, write(CH.ifa.draw.util.StorableOutput ) void, draw(java.awt.Graphics ) void, handles() java.util.Vector, 
+Family, CompositeFigure, 4, 15.25, 7.88986691902975, Overrider, 0.5, 2
+3, basicDisplayBox(java.awt.Point java.awt.Point ) void, displayBox() java.awt.Rectangle, handles() java.util.Vector, 
+Family, CreationTool, 2, 5.5, 6.363961030678928, PureOverrider, 0.5, 2
+0, 
+Family, FigureTransferCommand, 5, 2.0, 0.0, PureOverrider, 0.8, 2
+2, isExecutable() boolean, execute() void, 
+Family, DrawApplication, 5, 6.4, 8.706319543871567, PureOverrider, 0.6, 6
+1, createTools(javax.swing.JToolBar ) void, 
+Family, DecoratorFigure, 2, 7.5, 0.7071067811865476, Overrider, 1.0, 2
+1, displayBox() java.awt.Rectangle, 
+Family, AbstractLocator, 5, 2.0, 1.4142135623730951, PureExtender, 0.6, 1
+1, locate(CH.ifa.draw.framework.Figure ) java.awt.Point, 
+Family, SelectionTool, 2, 5.5, 4.949747468305833, Extender, 0.5, 2
+1, mouseDown(java.awt.event.MouseEvent int int ) void, 
+Family, AbstractTool, 11, 4.909090909090909, 3.6729972898042123, PureOverrider, 0.54545456, 1
+3, mouseDown(java.awt.event.MouseEvent int int ) void, mouseDrag(java.awt.event.MouseEvent int int ) void, mouseUp(java.awt.event.MouseEvent int int ) void, 
+Family, AbstractHandle, 7, 4.857142857142857, 2.8535691936340255, PureOverrider, 0.5714286, 1
+3, locate() java.awt.Point, invokeStep(int int int int CH.ifa.draw.framework.DrawingView ) void, draw(java.awt.Graphics ) void, 
+Family, PolyLineFigure, 2, 19.0, 18.384776310850235, Extender, 1.0, 2
+4, endPoint(int int ) void, startPoint() java.awt.Point, endPoint() java.awt.Point, startPoint(int int ) void, 
+Family, AttributeFigure, 6, 15.666666666666666, 9.750213672872338, PureOverrider, 0.33333334, 2
+8, basicDisplayBox(java.awt.Point java.awt.Point ) void, drawFrame(java.awt.Graphics ) void, read(CH.ifa.draw.util.StorableInput ) void, basicMoveBy(int int ) void, displayBox() java.awt.Rectangle, drawBackground(java.awt.Graphics ) void, write(CH.ifa.draw.util.StorableOutput ) void, handles() java.util.Vector, 
+Family, TextFigure, 2, 4.5, 2.1213203435596424, PureOverrider, 0.5, 3
+0, 
+Family, AbstractConnector, 3, 4.0, 1.7320508075688772, Overrider, 1.0, 1
+2, findStart(CH.ifa.draw.framework.ConnectionFigure ) java.awt.Point, findEnd(CH.ifa.draw.framework.ConnectionFigure ) java.awt.Point, 
+Family, LocatorHandle, 12, 1.75, 1.764549903980152, PureOverrider, 0.9166667, 2
+1, invokeStep(int int int int CH.ifa.draw.framework.DrawingView ) void, 

@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JCT
+Bundle-SymbolicName: JCT
+Bundle-Version: 1.0.0
+Export-Package: jct.kernel
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Automatic-Module-Name: JCT

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="verfilesystem.snapshooterClassDiagram" id="{UMLID=_-tbdUPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter}" metadata="uml2-1.0" initialized="true" zoom="0.75" scrolledX="181" scrolledY="308" tag="100" key="32303037303632392074616E746572696A2D70726F6772616D2D6A6176612D4A43565356616375756D">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.16/@sourceConnections.1" name="SnapshotIterator" location="1399,-295" size="180,214" timstampe="510" stereotype="" id="{UMLID=__kzKMPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/SnapshotIterator}" runTimeClassModel="index,remove(),iterateSs,hasNext(),hasPrevious(),previous(),current(),SnapshotIterator(Lverfilesystem.snapshooter.ISnapshooter;),next()">
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:AttributeEditModel" name="iterateSs" size="65,21" id="{UMLID=_rgWUQPk_Ed2ZJb78HLo-VQ}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="index" size="55,16" id="{UMLID=_tNHioPlAEd2ZJb78HLo-VQ}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="75,54">
+      <children xsi:type="editmodel:MethodEditModel" name="hasNext" size="75,16" id="{UMLID=__lOA8Pi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/SnapshotIterator#hasNext()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="next" size="58,16" id="{UMLID=__lP2Ifi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/SnapshotIterator#next()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="SnapshotIterator" size="115,16" id="{UMLID=_IFcscPlAEd2ZJb78HLo-VQ,JavaID=verfilesystem.snapshooter/SnapshotIterator#SnapshotIterator(Lverfilesystem.snapshooter.ISnapshooter;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="remove" size="73,16" id="{UMLID=_US1Z4PlBEd2ZJb78HLo-VQ,JavaID=verfilesystem.snapshooter/SnapshotIterator#remove()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hasPrevious" size="90,16" id="{UMLID=_rf-ZcPlCEd2ZJb78HLo-VQ,JavaID=verfilesystem.snapshooter/SnapshotIterator#hasPrevious()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="previous" size="77,16" id="{UMLID=_1W4NIflCEd2ZJb78HLo-VQ,JavaID=verfilesystem.snapshooter/SnapshotIterator#previous()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="current" size="71,16" id="{UMLID=_AkbDoPlDEd2ZJb78HLo-VQ,JavaID=verfilesystem.snapshooter/SnapshotIterator#current()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" description="usage" autoLocated="true" id="{UMLID=_jHiNcPi2Ed2e-tHVYbDvvA}" source="//@children.0" target="//@children.3" targetEnd="//@children.0/@sourceConnections.0/@children.1" label="//@children.0/@sourceConnections.0/@children.2" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="180,108" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,262"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.16/@sourceConnections.2" name="ISnapshooterListener" location="483,-350" size="180,96" timstampe="139" id="{UMLID=__nCl4Pi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/ISnapshooterListener}" runTimeClassModel="snapshotCountChanged(Lverfilesystem.snapshooter.ISnapshooter;II),snapshotContentChanged(Lverfilesystem.snapshooter.ISnapshooter;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="159,36">
+      <children xsi:type="editmodel:MethodEditModel" name="snapshotCountChanged" size="150,16" id="{UMLID=_BVJtgPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="snapshotContentChanged" size="159,16" id="{UMLID=_BVOmAPi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.10/@sourceConnections.1" name="SystemState" location="111,11" size="139,340" timstampe="1336" stereotype="" id="{UMLID=__s_c4Pi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/SystemState}" runTimeClassModel="getState(),getFileState(Lverfilesystem.flag.IVerFsFile;),setFileSate(Lverfilesystem.flag.IVerFsFile;Lverfilesystem.snapshooter.SystemState.FileState;),SystemState(),period,systemSate,getFiles(),containsFile(Lverfilesystem.IVerFsSimpleRevision;),verfilesystem.snapshooter.SystemState.FileState,addFileIfNotExist(Lverfilesystem.flag.IVerFsFile;),getPeriod(),containsFile(Lverfilesystem.flag.IVerFsFile;),addFile(Lverfilesystem.flag.IVerFsFile;),setPeriod(Ljava.util.Date;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="88,46">
+      <children xsi:type="editmodel:AttributeEditModel" name="systemSate" size="88,21" id="{UMLID=_A40W0Pi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="period" size="65,21" id="{UMLID=_A4xTgPi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="118,208">
+      <children xsi:type="editmodel:MethodEditModel" name="SystemState" size="97,16" id="{UMLID=_A5QbsPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getState" size="78,16" id="{UMLID=_A5DnYPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPeriod" size="88,21" id="{UMLID=_A46dcPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPeriod" size="90,21" id="{UMLID=_A5ByMPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="containsFile" size="96,16" id="{UMLID=_A5LjMfi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="containsFile" size="96,16" id="{UMLID=_A4-H0Pi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addFile" size="74,16" id="{UMLID=_A48SoPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addFileIfNotExist" size="118,16" id="{UMLID=_A5JuAPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFileSate" size="91,16" id="{UMLID=_A5GDoPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileState" size="96,16" id="{UMLID=_A42zEfi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFiles" size="75,16" id="{UMLID=_A5OmgPi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="97,29">
+      <children xsi:type="editmodel:ClassEditModel" name="FileState" size="97,47" timstampe="1336" stereotype="" id="{UMLID=__uOL8Pi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/SystemState$FileState}" shortShow="true" runTimeClassModel="fileState,addBranch(Lverfilesystem.flag.IVerFsBranch;),getFileSate(),setBranchSate(Lverfilesystem.flag.IVerFsBranch;LCollection;),getBranches(),containsBranch(Lverfilesystem.flag.IVerFsBranch;),FileState(),addBranchIfNotExist(Lverfilesystem.flag.IVerFsBranch;),addRevision(Lverfilesystem.IVerFsSimpleRevision;),addRevision(Lverfilesystem.IVerFsSimpleRevision;Lverfilesystem.flag.IVerFsBranch;),getBranchState(Lverfilesystem.flag.IVerFsBranch;)">
+        <children xsi:type="editmodel:CompartmentEditModel" size="75,23">
+          <children xsi:type="editmodel:AttributeEditModel" name="fileState" size="75,21" id="{UMLID=_A8qVAPi1Ed2e-tHVYbDvvA}"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel" size="134,180">
+          <children xsi:type="editmodel:MethodEditModel" name="FileState" size="81,16" id="{UMLID=_A86MoPi1Ed2e-tHVYbDvvA}"/>
+          <children xsi:type="editmodel:MethodEditModel" name="getFileSate" size="93,16" id="{UMLID=_A88o4Pi1Ed2e-tHVYbDvvA}"/>
+          <children xsi:type="editmodel:MethodEditModel" name="containsBranch" size="112,16" id="{UMLID=_A9A6UPi1Ed2e-tHVYbDvvA}"/>
+          <children xsi:type="editmodel:MethodEditModel" name="addBranch" size="90,16" id="{UMLID=_A86zsPi1Ed2e-tHVYbDvvA}"/>
+          <children xsi:type="editmodel:MethodEditModel" name="addBranchIfNotExist" size="134,16" id="{UMLID=_A83wYPi1Ed2e-tHVYbDvvA}"/>
+          <children xsi:type="editmodel:MethodEditModel" name="addRevision" size="96,16" id="{UMLID=_A8ze8Pi1Ed2e-tHVYbDvvA}"/>
+          <children xsi:type="editmodel:MethodEditModel" name="addRevision" size="96,16" id="{UMLID=_A893Afi1Ed2e-tHVYbDvvA}"/>
+          <children xsi:type="editmodel:MethodEditModel" name="getBranches" size="97,16" id="{UMLID=_A8vNgPi1Ed2e-tHVYbDvvA}"/>
+          <children xsi:type="editmodel:MethodEditModel" name="getBranchState" size="112,16" id="{UMLID=_A8xCsPi1Ed2e-tHVYbDvvA}"/>
+          <children xsi:type="editmodel:MethodEditModel" name="setBranchSate" size="107,16" id="{UMLID=_A8sxQPi1Ed2e-tHVYbDvvA}"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+      </children>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.16/@sourceConnections.0 //@children.0/@sourceConnections.0" name="Snapshot" location="1680,-449" size="170,550" timstampe="261" stereotype="" id="{UMLID=__lREQPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot}" runTimeClassModel="Snapshot(LCollection;Ljava.util.Date;),coveredCommit,getFilesRev(Lverfilesystem.flag.IVerFsFile;),getCoveredCommits(),getSnapshotPeriod(),addAllCoveredCommits(LCollection;),setSnapshotStartTime(Ljava.util.Date;),addCoveredCommit(Lverfilesystem.flag.IVerFsCommit;),systemState,addAll(LCollection;),snapshotPeriod,setSnapshotEndTime(Ljava.util.Date;),getFilesRev(),Snapshot(),Snapshot(LCollection;),getSnapshotStartTime(),dataDiff(Lverfilesystem.snapshooter.Snapshot;),filesRevDiff(Lverfilesystem.snapshooter.Snapshot;),getFiles(),INFINITE_TIME,setSnapshotPeriod(Ljava.util.Date;Ljava.util.Date;),add(Lverfilesystem.IVerFsSimpleRevision;),filesDiff(Lverfilesystem.snapshooter.Snapshot;),containsFile(Lverfilesystem.flag.IVerFsFile;),setSnapshotPeriod(Ljava.util.Date;),getSnapshotEndTime()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="110,87">
+      <children xsi:type="editmodel:AttributeEditModel" name="INFINITE_TIME" size="104,16" id="{UMLID=_AwikkPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="systemState" size="91,21" id="{UMLID=_AworMfi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="snapshotPeriod" size="107,21" id="{UMLID=_AwqgYPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="coveredCommit" size="110,21" id="{UMLID=_AwjysPi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="149,416">
+      <children xsi:type="editmodel:MethodEditModel" name="Snapshot" size="82,16" id="{UMLID=_AwzqUPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#Snapshot()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addAllCoveredCommits" size="149,16" id="{UMLID=_AxNS8fi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#addAllCoveredCommits(LCollection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSnapshotPeriod" size="82,16" id="{UMLID=_AxQWQPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#setSnapshotPeriod(Ljava.util.Date;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSnapshotStartTime" size="142,16" id="{UMLID=_AxV10fi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#setSnapshotStartTime(Ljava.util.Date;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshotStartTime" size="144,16" id="{UMLID=_AxUnsPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#getSnapshotStartTime()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSnapshotEndTime" size="139,16" id="{UMLID=_AxaHQPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#setSnapshotEndTime(Ljava.util.Date;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshotEndTime" size="141,16" id="{UMLID=_AxbVYPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#getSnapshotEndTime()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshotPeriod" size="134,21" id="{UMLID=_AxHMUfi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#getSnapshotPeriod()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSnapshotPeriod" size="132,21" id="{UMLID=_AxSLcPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#setSnapshotPeriod(Ljava.util.Date;Ljava.util.Date;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Snapshot" size="132,21" id="{UMLID=_Axe_wPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#Snapshot(LCollection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFilesRev" size="93,16" id="{UMLID=_Aw80QPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#getFilesRev()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFilesRev" size="93,16" id="{UMLID=_Awux0Pi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#getFilesRev(Lverfilesystem.flag.IVerFsFile;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFiles" size="75,16" id="{UMLID=_Aw0RYPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#getFiles()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addCoveredCommit" size="138,21" id="{UMLID=_Aw6_EPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#addCoveredCommit(Lverfilesystem.flag.IVerFsCommit;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addAll" size="149,21" id="{UMLID=_AwrugPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#addAll(LCollection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCoveredCommits" size="133,16" id="{UMLID=_Aw2GkPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#getCoveredCommits()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="add" size="56,16" id="{UMLID=_Aw3Usfi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#add(Lverfilesystem.IVerFsSimpleRevision;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Snapshot" size="69,16" id="{UMLID=_AxdKkPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#Snapshot(LCollection;Ljava.util.Date;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="containsFile" size="96,16" id="{UMLID=_AxXrAPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#containsFile(Lverfilesystem.flag.IVerFsFile;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="filesRevDiff" size="91,16" id="{UMLID=_Aw-CYfi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#filesRevDiff(Lverfilesystem.snapshooter.Snapshot;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="filesDiff" size="73,16" id="{UMLID=_AxEJAPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#filesDiff(Lverfilesystem.snapshooter.Snapshot;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="dataDiff" size="75,16" id="{UMLID=_AxJBgfi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/Snapshot#dataDiff(Lverfilesystem.snapshooter.Snapshot;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DataDiffSnapshooterExtender" location="1475,351" size="227,173" timstampe="5" stereotype="" id="{UMLID=_BBgYwPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/DataDiffSnapshooterExtender}" runTimeClassModel="DataDiffSnapshooterExtender(Lverfilesystem.snapshooter.ISnapshooter;),diffList,init(),getPeriodBounds(Ljava.util.Date;Ljava.util.Date;),getSnapshotCount(),getSnapshotIndex(Ljava.util.Date;),getSnapshot(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="60,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="diffList" size="60,16" id="{UMLID=_BNrMgPi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="177,108">
+      <children xsi:type="editmodel:MethodEditModel" name="DataDiffSnapshooterExtender" size="177,16" id="{UMLID=_BN-HcPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" size="53,16" id="{UMLID=_BN52APi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPeriodBounds" size="119,16" id="{UMLID=_BNx6MPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshot" size="97,16" id="{UMLID=_BN7rMfi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshotCount" size="125,16" id="{UMLID=_BN6dEPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshotIndex" size="123,16" id="{UMLID=_BNtBsfi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_BNke0Pi1Ed2e-tHVYbDvvA}" source="//@children.4" target="//@children.7/@sourceConnections.0" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="113,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="59,273"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.7/@sourceConnections.0" name="AbstractSnapshooterExtender" location="1204,28" size="228,273" timstampe="149" stereotype="" id="{UMLID=_BBX14Pi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractSnapshooterExtender}" runTimeClassModel="getListeners(),listeners,getManager(),addListener(Lverfilesystem.snapshooter.ISnapshooterListener;),setManager(Lverfilesystem.VerFsManager;),getExtendedSnapshooter(),removeListener(Lverfilesystem.snapshooter.ISnapshooterListener;),extendedSnapshooter,getSnapshot(Ljava.util.Date;),iterator(),seExtendedSnapshooter(Lverfilesystem.snapshooter.ISnapshooter;),AbstractSnapshooterExtender(Lverfilesystem.snapshooter.ISnapshooter;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="138,41">
+      <children xsi:type="editmodel:AttributeEditModel" name="extendedSnapshooter" size="138,21" id="{UMLID=_BB-S0Pi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="listeners" size="67,16" id="{UMLID=_BB8doPi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="177,185">
+      <children xsi:type="editmodel:MethodEditModel" name="AbstractSnapshooterExtender" size="177,16" id="{UMLID=_BCU4IPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractSnapshooterExtender#AbstractSnapshooterExtender(Lverfilesystem.snapshooter.ISnapshooter;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setManager" size="93,16" id="{UMLID=_BCOKcPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractSnapshooterExtender#setManager(Lverfilesystem.VerFsManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getManager" size="95,16" id="{UMLID=_BCFAgPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractSnapshooterExtender#getManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshot" size="97,16" id="{UMLID=_BCZJkPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractSnapshooterExtender#getSnapshot(Ljava.util.Date;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="iterator" size="71,16" id="{UMLID=_BCSb4Pi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractSnapshooterExtender#iterator()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getExtendedSnapshooter" size="163,21" id="{UMLID=_BCMVQfi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractSnapshooterExtender#getExtendedSnapshooter()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="seExtendedSnapshooter" size="152,16" id="{UMLID=_BCWtUPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractSnapshooterExtender#seExtendedSnapshooter(Lverfilesystem.snapshooter.ISnapshooter;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addListener" size="93,16" id="{UMLID=_BCG1sfi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractSnapshooterExtender#addListener(Lverfilesystem.snapshooter.ISnapshooterListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListeners" size="94,16" id="{UMLID=_BCJ5APi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractSnapshooterExtender#getListeners()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeListener" size="110,16" id="{UMLID=_BCQmsPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractSnapshooterExtender#removeListener(Lverfilesystem.snapshooter.ISnapshooterListener;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:RealizationEditModel" size="2,1" description="Realization" autoLocated="true" id="{UMLID=_-7LI8Pi1Ed2e-tHVYbDvvA}" source="//@children.5" target="//@children.15" targetEnd="//@children.5/@sourceConnections.0/@children.1" label="//@children.5/@sourceConnections.0/@children.2" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,18" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="136,97"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="StructureDiffSnapshooterExtender" location="1189,351" size="256,173" timstampe="640" stereotype="" id="{UMLID=_BBfKoPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/StructureDiffSnapshooterExtender}" runTimeClassModel="diffList,init(),getPeriodBounds(Ljava.util.Date;Ljava.util.Date;),getSnapshotCount(),getSnapshotIndex(Ljava.util.Date;),StructureDiffSnapshooterExtender(Lverfilesystem.snapshooter.ISnapshooter;),getSnapshot(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="60,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="diffList" size="60,16" id="{UMLID=_BJKf8Pi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="198,108">
+      <children xsi:type="editmodel:MethodEditModel" name="StructureDiffSnapshooterExtender" size="198,16" id="{UMLID=_BJgeMPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="init" size="53,16" id="{UMLID=_BJTC0Pi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPeriodBounds" size="119,16" id="{UMLID=_BJTp4Pi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshot" size="97,16" id="{UMLID=_BJM8Mfi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshotCount" size="125,16" id="{UMLID=_BJfQEPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshotIndex" size="123,16" id="{UMLID=_BJOxYfi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_BJDyQPi1Ed2e-tHVYbDvvA}" source="//@children.6" target="//@children.7/@sourceConnections.0" targetEnd="//@children.6/@sourceConnections.0/@children.1" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="128,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,263"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="PeriodSnapshooterExtender" location="940,351" size="219,178" timstampe="6" stereotype="" id="{UMLID=_BBd8gPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/PeriodSnapshooterExtender}" runTimeClassModel="PeriodSnapshooterExtender(Lverfilesystem.snapshooter.ISnapshooter;),getSnapshotCount(),getPeriodBounds(Ljava.util.Date;Ljava.util.Date;),getSnapshotIndex(Ljava.util.Date;),setShotPeriod(Ljava.util.Date;Ljava.util.Date;),period,getSnapshot(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="65,23">
+      <children xsi:type="editmodel:AttributeEditModel" name="period" size="65,21" id="{UMLID=_BFpR4Pi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="170,108">
+      <children xsi:type="editmodel:MethodEditModel" name="PeriodSnapshooterExtender" size="170,16" id="{UMLID=_BFs8QPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setShotPeriod" size="104,16" id="{UMLID=_BF9a8Pi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPeriodBounds" size="119,16" id="{UMLID=_BF5wkPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshot" size="97,16" id="{UMLID=_BFx0wPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshotCount" size="125,16" id="{UMLID=_BFv_kfi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshotIndex" size="123,16" id="{UMLID=_BF1fIPi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.6/@sourceConnections.0 //@children.4/@sourceConnections.0" size="2,1" autoLocated="true" id="{UMLID=_BFikMPi1Ed2e-tHVYbDvvA}" source="//@children.7" target="//@children.5" targetEnd="//@children.7/@sourceConnections.0/@children.1" sourceEnd="//@children.7/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="109,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="114,273" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MainTrunkSnapshooter" location="194,708" size="187,65" timstampe="7" stereotype="" id="{UMLID=_A_N5wPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/MainTrunkSnapshooter}" runTimeClassModel="MainTrunkSnapshooter(Lverfilesystem.VerFsManager;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="147,18">
+      <children xsi:type="editmodel:MethodEditModel" name="MainTrunkSnapshooter" size="147,16" id="{UMLID=_A_SyQPi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_A_Q9EPi1Ed2e-tHVYbDvvA}" source="//@children.8" target="//@children.13" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="135,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="51,106"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MainMultiBranchPrioSnapshooter" location="411,708" size="253,101" timstampe="93" stereotype="" id="{UMLID=__8ss0Pi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/MainMultiBranchPrioSnapshooter}" runTimeClassModel="MainMultiBranchPrioSnapshooter(Lverfilesystem.VerFsManager;),MainMultiBranchPrioSnapshooter(Lverfilesystem.VerFsManager;Lverfilesystem.flag.IVerFsBranch;),getSnapshot(I)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="198,54">
+      <children xsi:type="editmodel:MethodEditModel" name="MainMultiBranchPrioSnapshooter" size="198,16" id="{UMLID=_Apzqcfi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="MainMultiBranchPrioSnapshooter" size="198,16" id="{UMLID=_AporUPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshot" size="97,16" id="{UMLID=_Apx1QPi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.12/@sourceConnections.0" size="2,1" autoLocated="true" id="{UMLID=_Apjy0Pi1Ed2e-tHVYbDvvA}" source="//@children.9" target="//@children.11" targetEnd="//@children.9/@sourceConnections.0/@children.1" sourceEnd="//@children.9/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="126,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="136,201" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.13/@sourceConnections.0" name="AbstractMainSnapshooter" location="438,-2" size="202,409" timstampe="237" stereotype="" id="{UMLID=__rxU4Pi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter}" runTimeClassModel="getManager(),listeners,generateNextSystemState(Lverfilesystem.flag.IVerFsCommit;Lverfilesystem.snapshooter.SystemState;),manager,addListener(Lverfilesystem.snapshooter.ISnapshooterListener;),AbstractMainSnapshooter(Lverfilesystem.VerFsManager;),initCommitsMap(),getSystemSate(I),getSnapshotCount(),getPeriodBounds(Ljava.util.Date;Ljava.util.Date;),getSnapshotIndex(Ljava.util.Date;),getSnapshot(Ljava.util.Date;),iterator(),getSystemStatePeriodValidity(I),getListeners(),setManager(Lverfilesystem.VerFsManager;),removeListener(Lverfilesystem.snapshooter.ISnapshooterListener;),systemStates,getCommit(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="95,64">
+      <children xsi:type="editmodel:AttributeEditModel" name="manager" size="77,21" id="{UMLID=__s8Zk_i0Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="listeners" size="67,16" id="{UMLID=__s4IIPi0Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="systemStates" size="95,21" id="{UMLID=__s9nsPi0Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="179,298">
+      <children xsi:type="editmodel:MethodEditModel" name="AbstractMainSnapshooter" size="159,16" id="{UMLID=__tkEofi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#AbstractMainSnapshooter(Lverfilesystem.VerFsManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initCommitsMap" size="115,16" id="{UMLID=__t2_kfi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#initCommitsMap()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setManager" size="99,21" id="{UMLID=__tX3Yfi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#setManager(Lverfilesystem.VerFsManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getManager" size="101,21" id="{UMLID=__uAJgPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#getManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCommit" size="90,16" id="{UMLID=__t9tQPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#getCommit(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshotIndex" size="123,16" id="{UMLID=__taToPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#getSnapshotIndex(Ljava.util.Date;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPeriodBounds" size="119,16" id="{UMLID=__tnvAfi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#getPeriodBounds(Ljava.util.Date;Ljava.util.Date;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSystemStatePeriodValidity" size="179,16" id="{UMLID=__t0jUPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#getSystemStatePeriodValidity(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="generateNextSystemState" size="160,16" id="{UMLID=__t4NsPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#generateNextSystemState(Lverfilesystem.flag.IVerFsCommit;Lverfilesystem.snapshooter.SystemState;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSystemSate" size="109,16" id="{UMLID=__tlSwfi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#getSystemSate(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshot" size="97,16" id="{UMLID=__tgaQPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#getSnapshot(Ljava.util.Date;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshotCount" size="125,16" id="{UMLID=__tWpQfi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#getSnapshotCount()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="iterator" size="71,16" id="{UMLID=__tArAPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#iterator()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addListener" size="93,16" id="{UMLID=__tyuIPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#addListener(Lverfilesystem.snapshooter.ISnapshooterListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListeners" size="94,16" id="{UMLID=__tiPcfi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#getListeners()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeListener" size="110,16" id="{UMLID=__t74EPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainSnapshooter#removeListener(Lverfilesystem.snapshooter.ISnapshooterListener;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:RealizationEditModel" size="2,1" description="Realization" autoLocated="true" id="{UMLID=_88Wr0Pi1Ed2e-tHVYbDvvA}" source="//@children.10" target="//@children.14" targetEnd="//@children.10/@sourceConnections.0/@children.1" label="//@children.10/@sourceConnections.0/@children.2" sourceEnd="//@children.10/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="202,102" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="38,79"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" description="Create" autoLocated="true" id="{UMLID=_nnw3YPi2Ed2e-tHVYbDvvA}" source="//@children.10" target="//@children.2" targetEnd="//@children.10/@sourceConnections.1/@children.1" label="//@children.10/@sourceConnections.1/@children.2" sourceEnd="//@children.10/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,182" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="139,169"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="52,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.9/@sourceConnections.0" name="AbstractMainBranchPrioSnapshooter" location="545,457" size="273,201" timstampe="14" stereotype="" id="{UMLID=__sOA0Pi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainBranchPrioSnapshooter}" runTimeClassModel="branchesByPriority,AbstractMainBranchPrioSnapshooter(Lverfilesystem.VerFsManager;),setBranchPriority(LCollection;),getBranchPriority(),addBranchHighestPriority(Lverfilesystem.flag.IVerFsBranch;),AbstractMainBranchPrioSnapshooter(Lverfilesystem.VerFsManager;Lverfilesystem.flag.IVerFsBranch;),defaultBranch,addBranchLowestPriority(Lverfilesystem.flag.IVerFsBranch;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="123,46">
+      <children xsi:type="editmodel:AttributeEditModel" name="branchesByPriority" size="123,21" id="{UMLID=__6JIEPi0Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="defaultBranch" size="102,21" id="{UMLID=__6MycPi0Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="212,108">
+      <children xsi:type="editmodel:MethodEditModel" name="AbstractMainBranchPrioSnapshooter" size="212,16" id="{UMLID=__6SSAPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainBranchPrioSnapshooter#AbstractMainBranchPrioSnapshooter(Lverfilesystem.VerFsManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="AbstractMainBranchPrioSnapshooter" size="212,16" id="{UMLID=__6YYoPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainBranchPrioSnapshooter#AbstractMainBranchPrioSnapshooter(Lverfilesystem.VerFsManager;Lverfilesystem.flag.IVerFsBranch;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setBranchPriority" size="118,16" id="{UMLID=__6Wjcfi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainBranchPrioSnapshooter#setBranchPriority(LCollection;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addBranchHighestPriority" size="158,16" id="{UMLID=__6POsfi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainBranchPrioSnapshooter#addBranchHighestPriority(Lverfilesystem.flag.IVerFsBranch;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addBranchLowestPriority" size="155,16" id="{UMLID=__6RD4Pi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainBranchPrioSnapshooter#addBranchLowestPriority(Lverfilesystem.flag.IVerFsBranch;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBranchPriority" size="120,16" id="{UMLID=__6OAkPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/AbstractMainBranchPrioSnapshooter#getBranchPriority()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=__54pYPi0Ed2e-tHVYbDvvA}" source="//@children.11" target="//@children.13/@sourceConnections.0" targetEnd="//@children.11/@sourceConnections.0/@children.1" sourceEnd="//@children.11/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="136,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="143,409"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MainSingleBranchPrioSnapshooter" location="694,708" size="263,101" timstampe="108" stereotype="" id="{UMLID=__8t68Pi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/MainSingleBranchPrioSnapshooter}" runTimeClassModel="MainSingleBranchPrioSnapshooter(Lverfilesystem.VerFsManager;Lverfilesystem.flag.IVerFsBranch;),getSnapshot(I),MainSingleBranchPrioSnapshooter(Lverfilesystem.VerFsManager;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="205,54">
+      <children xsi:type="editmodel:MethodEditModel" name="MainSingleBranchPrioSnapshooter" size="205,16" id="{UMLID=_AtB9kPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="MainSingleBranchPrioSnapshooter" size="205,16" id="{UMLID=_AtGPAfi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshot" size="97,16" id="{UMLID=_As_hUPi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_As6BwPi1Ed2e-tHVYbDvvA}" source="//@children.12" target="//@children.9/@sourceConnections.0" targetEnd="//@children.12/@sourceConnections.0/@children.1" sourceEnd="//@children.12/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="131,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="112,201"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.8/@sourceConnections.0" name="MainSingleBranchSnapshooter" location="278,457" size="237,106" timstampe="90" stereotype="" id="{UMLID=__r20cPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/MainSingleBranchSnapshooter}" runTimeClassModel="MainSingleBranchSnapshooter(Lverfilesystem.VerFsManager;Lverfilesystem.flag.IVerFsBranch;),branch,getSnapshot(I)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="68,23">
+      <children xsi:type="editmodel:AttributeEditModel" name="branch" size="68,21" id="{UMLID=__3FNAPi0Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="186,36">
+      <children xsi:type="editmodel:MethodEditModel" name="MainSingleBranchSnapshooter" size="186,16" id="{UMLID=__3GbIPi0Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshot" size="97,16" id="{UMLID=__3L6sfi0Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.11/@sourceConnections.0" size="2,1" autoLocated="true" id="{UMLID=__25m0Pi0Ed2e-tHVYbDvvA}" source="//@children.13" target="//@children.10" targetEnd="//@children.13/@sourceConnections.0/@children.1" sourceEnd="//@children.13/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="118,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="101,409" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.10/@sourceConnections.0" name="IMainSnapshooter" location="779,-158" size="155,78" timstampe="9" id="{UMLID=__rCVEPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/IMainSnapshooter}" runTimeClassModel="getCommit(I)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="90,18">
+      <children xsi:type="editmodel:MethodEditModel" name="getCommit" size="90,16" id="{UMLID=__rMGEPi0Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.15/@sourceConnections.0" size="2,1" autoLocated="true" id="{UMLID=__rJp0Pi0Ed2e-tHVYbDvvA}" source="//@children.14" target="//@children.16" targetEnd="//@children.14/@sourceConnections.0/@children.1" sourceEnd="//@children.14/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,240" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.5/@sourceConnections.0" name="ISnapshooterExtender" location="964,-158" size="181,96" timstampe="5" id="{UMLID=_BAbasPi1Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/ISnapshooterExtender}" runTimeClassModel="getExtendedSnapshooter(),seExtendedSnapshooter(Lverfilesystem.snapshooter.ISnapshooter;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="157,36">
+      <children xsi:type="editmodel:MethodEditModel" name="getExtendedSnapshooter" size="157,16" id="{UMLID=_BAtHgPi1Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="seExtendedSnapshooter" size="152,16" id="{UMLID=_BArSUPi1Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_BAo2EPi1Ed2e-tHVYbDvvA}" source="//@children.15" target="//@children.14/@sourceConnections.0" targetEnd="//@children.15/@sourceConnections.0/@children.1" sourceEnd="//@children.15/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="90,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,222"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.14/@sourceConnections.0" name="ISnapshooter" location="882,-448" size="146,240" timstampe="129" id="{UMLID=__mgaYPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/ISnapshooter}" runTimeClassModel="getListeners(),getManager(),addListener(Lverfilesystem.snapshooter.ISnapshooterListener;),setManager(Lverfilesystem.VerFsManager;),removeListener(Lverfilesystem.snapshooter.ISnapshooterListener;),getSnapshotCount(),getPeriodBounds(Ljava.util.Date;Ljava.util.Date;),getSnapshotIndex(Ljava.util.Date;),getSnapshot(Ljava.util.Date;),getSnapshot(I)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="125,180">
+      <children xsi:type="editmodel:MethodEditModel" name="getManager" size="95,16" id="{UMLID=__n3FQfi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/ISnapshooter#getManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setManager" size="93,16" id="{UMLID=__nOMEfi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/ISnapshooter#setManager(Lverfilesystem.VerFsManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshot" size="97,16" id="{UMLID=__nGQQPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/ISnapshooter#getSnapshot(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshot" size="97,16" id="{UMLID=__m8fQPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/ISnapshooter#getSnapshot(Ljava.util.Date;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshotCount" size="125,16" id="{UMLID=__nKhsPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/ISnapshooter#getSnapshotCount()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSnapshotIndex" size="123,16" id="{UMLID=__nMW4Pi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/ISnapshooter#getSnapshotIndex(Ljava.util.Date;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPeriodBounds" size="119,16" id="{UMLID=__nWH4Pi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/ISnapshooter#getPeriodBounds(Ljava.util.Date;Ljava.util.Date;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addListener" size="93,16" id="{UMLID=__nEbEfi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/ISnapshooter#addListener(Lverfilesystem.snapshooter.ISnapshooterListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeListener" size="110,16" id="{UMLID=__nIsgPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/ISnapshooter#removeListener(Lverfilesystem.snapshooter.ISnapshooterListener;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getListeners" size="94,16" id="{UMLID=__nBXwPi0Ed2e-tHVYbDvvA,JavaID=verfilesystem.snapshooter/ISnapshooter#getListeners()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" description="Create" autoLocated="true" id="{UMLID=_MY_Y8Pi2Ed2e-tHVYbDvvA}" source="//@children.16" target="//@children.3" targetEnd="//@children.16/@sourceConnections.0/@children.1" label="//@children.16/@sourceConnections.0/@children.2" sourceEnd="//@children.16/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="146,121" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,122"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="52,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" description="Create" autoLocated="true" id="{UMLID=_cXF0YPi2Ed2e-tHVYbDvvA}" source="//@children.16" target="//@children.0" targetEnd="//@children.16/@sourceConnections.1/@children.1" label="//@children.16/@sourceConnections.1/@children.2" sourceEnd="//@children.16/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="146,197" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,44"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="52,26" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" description="Manifestation" autoLocated="true" id="{UMLID=_HlLvcPkpEd2GFa-7LzU_iQ}" source="//@children.16" target="//@children.1" targetEnd="//@children.16/@sourceConnections.2/@children.1" label="//@children.16/@sourceConnections.2/@children.2" sourceEnd="//@children.16/@sourceConnections.2/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,146" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="180,48"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="1638,574" rulerUnit="cm" gridShow="true">
+    <leftRuler/>
+    <topRuler>
+      <guides position="452"/>
+      <guides position="1752"/>
+    </topRuler>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Naturel" methodSorter="Naturel" shortPackageNameFormat="true" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showMethods="true" showAttributes="true" showLiterlas="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>

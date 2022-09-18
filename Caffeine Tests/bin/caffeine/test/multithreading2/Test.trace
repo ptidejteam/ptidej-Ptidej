@@ -1,0 +1,8 @@
+No source name|-1|classLoad0|caffeine.test.multithreading2.MultiThreading|-1|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|main|-1|-1|caffeine.test.multithreading2.MultiThreading|void
+MultiThreading.java|27|constructorEntry0|caffeine.test.multithreading2.MultiThreading|1000|-1|No comment|void
+MultiThreading.java|27|constructorExit0|caffeine.test.multithreading2.MultiThreading|1000|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|methodExit0|main|-1|-1|caffeine.test.multithreading2.MultiThreading|void
+Thread.java|536|methodEntry0|run|-1|1000|caffeine.test.multithreading2.MultiThreading|void
+Thread.java|536|methodExit0|run|-1|1000|caffeine.test.multithreading2.MultiThreading|void
+No source name|-1|programEnd0|programEnd0|-1|-1|MultiThreading's son|void

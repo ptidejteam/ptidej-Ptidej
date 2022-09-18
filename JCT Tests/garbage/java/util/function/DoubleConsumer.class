@@ -1,0 +1,15 @@
+package java.util.function;
+abstract public interface DoubleConsumer
+{
+abstract public void accept(java.lang.Object arg0)
+{
+
+}
+
+public java.util.function.DoubleConsumer andThen(java.lang.Object arg0)
+{
+
+}
+
+
+}

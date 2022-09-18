@@ -1,0 +1,71 @@
+package sun.security.util;
+public class Debug
+{
+private java.lang.Object prefix;
+
+private static java.lang.Object args;
+
+final private static java.lang.Object hexDigits;
+
+public void <init>()
+{
+
+}
+
+public static void Help()
+{
+
+}
+
+public static sun.security.util.Debug getInstance(java.lang.Object arg0)
+{
+
+}
+
+public static sun.security.util.Debug getInstance(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static boolean isOn(java.lang.Object arg0)
+{
+
+}
+
+public void println(java.lang.Object arg0)
+{
+
+}
+
+public void println()
+{
+
+}
+
+public static void println(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.lang.String toHexString(java.lang.Object arg0)
+{
+
+}
+
+private static java.lang.String marshal(java.lang.Object arg0)
+{
+
+}
+
+public static java.lang.String toString(java.lang.Object arg0)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

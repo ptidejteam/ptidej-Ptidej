@@ -1,0 +1,1 @@
+java -Xmx4096M -classpath "../CPL/bin";"../CPL/lib/commons-lang-2.4.jar";"../CPL/lib/cfparse.jar";"../CPL/lib/bcel.jar";"../PADL/bin";"../PADL Analyses/bin";"../PADL Creator ClassFile/bin";"../PADL Generator PageRank/bin" padl.pagerank.helper.PageRankCaller 

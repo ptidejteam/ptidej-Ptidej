@@ -1,0 +1,2 @@
+Java -Xmx2048M -classpath "..\CPL\bin";"..\CPL\cfparse.jar";"..\CPL\bcel-5.2.jar";"..\CPL\lib\trove-3.0.0a3.jar";"..\JChoco\bin";"..\JUnit\bin";"..\PADL\bin";"..\PADL Analyses\bin";"..\PADL Creator AOL\bin";"..\PADL Creator ClassFile\bin";"..\PADL Design Motifs\bin";"..\Ptidej\bin";"..\Ptidej Solver 4\bin";".\bin" ptidej.solver.test.CallDesignMotifIdentification
+Pause

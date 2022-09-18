@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: POM
+Bundle-SymbolicName: POM;singleton:=true
+Bundle-Version: 1.0.0
+Export-Package: pom.metrics,
+ pom.metrics.repository,
+ pom.operators,
+ pom.primitives
+Require-Bundle: CPL,
+ PADL,
+ PADL_Statements
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Automatic-Module-Name: POM

@@ -1,0 +1,43 @@
+package java.lang;
+abstract public class Number
+implements java.io.Serializable
+{
+final private static java.lang.Object serialVersionUID;
+
+public void <init>()
+{
+
+}
+
+abstract public int intValue()
+{
+
+}
+
+abstract public long longValue()
+{
+
+}
+
+abstract public float floatValue()
+{
+
+}
+
+abstract public double doubleValue()
+{
+
+}
+
+public byte byteValue()
+{
+
+}
+
+public short shortValue()
+{
+
+}
+
+
+}

@@ -1,0 +1,20 @@
+package sun.misc;
+class JavaSecurityProtectionDomainAccess
+{
+abstract public static interface ProtectionDomainCache
+{
+abstract public void put(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+abstract public java.security.PermissionCollection get(java.lang.Object arg0)
+{
+
+}
+
+
+}
+
+
+}

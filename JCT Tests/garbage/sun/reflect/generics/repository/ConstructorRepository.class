@@ -1,0 +1,35 @@
+package sun.reflect.generics.repository;
+public class ConstructorRepository
+extends sun.reflect.generics.repository.GenericDeclRepository
+{
+private java.lang.Object paramTypes;
+
+private java.lang.Object exceptionTypes;
+
+protected void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+protected sun.reflect.generics.tree.MethodTypeSignature parse(java.lang.Object arg0)
+{
+
+}
+
+public static sun.reflect.generics.repository.ConstructorRepository make(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.reflect.Type[] getParameterTypes()
+{
+
+}
+
+public java.lang.reflect.Type[] getExceptionTypes()
+{
+
+}
+
+
+}

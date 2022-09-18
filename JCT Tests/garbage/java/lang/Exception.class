@@ -1,0 +1,33 @@
+package java.lang;
+public class Exception
+extends java.lang.Throwable
+{
+final static java.lang.Object serialVersionUID;
+
+public void <init>()
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+protected void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+
+}

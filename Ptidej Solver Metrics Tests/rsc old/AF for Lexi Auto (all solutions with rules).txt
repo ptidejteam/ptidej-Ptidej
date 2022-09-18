@@ -1,0 +1,490 @@
+# Micro-architecture 20 similar at 100% with unknown pattern
+20.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+20.100.abstractproduct = com.jmonkey.office.lexi.support.ActionManager
+20.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+20.100.product = com.jmonkey.office.lexi.support.EditorActionManager
+20.100.XCommand = No source transformation needed
+
+# Micro-architecture 22 similar at 100% with unknown pattern
+22.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+22.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$AlignmentAction
+22.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+22.100.product = com.jmonkey.office.lexi.support.EditorActionManager$AlignmentAction
+22.100.XCommand = No source transformation needed
+
+# Micro-architecture 25 similar at 100% with unknown pattern
+25.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+25.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$AttributeTracker
+25.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+25.100.product = com.jmonkey.office.lexi.support.EditorActionManager$AttributeTracker
+25.100.XCommand = No source transformation needed
+
+# Micro-architecture 14 similar at 100% with unknown pattern
+14.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+14.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$BeepAction
+14.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+14.100.product = com.jmonkey.office.lexi.support.EditorActionManager$BeepAction
+14.100.XCommand = No source transformation needed
+
+# Micro-architecture 32 similar at 100% with unknown pattern
+32.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+32.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$BoldAction
+32.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+32.100.product = com.jmonkey.office.lexi.support.EditorActionManager$BoldAction
+32.100.XCommand = No source transformation needed
+
+# Micro-architecture 10 similar at 100% with unknown pattern
+10.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+10.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$ColourChooserAction
+10.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+10.100.product = com.jmonkey.office.lexi.support.EditorActionManager$ColourChooserAction
+10.100.XCommand = No source transformation needed
+
+# Micro-architecture 28 similar at 100% with unknown pattern
+28.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+28.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$CopyAction
+28.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+28.100.product = com.jmonkey.office.lexi.support.EditorActionManager$CopyAction
+28.100.XCommand = No source transformation needed
+
+# Micro-architecture 4 similar at 100% with unknown pattern
+4.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+4.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$CutAction
+4.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+4.100.product = com.jmonkey.office.lexi.support.EditorActionManager$CutAction
+4.100.XCommand = No source transformation needed
+
+# Micro-architecture 18 similar at 100% with unknown pattern
+18.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+18.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$FontChooserAction
+18.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+18.100.product = com.jmonkey.office.lexi.support.EditorActionManager$FontChooserAction
+18.100.XCommand = No source transformation needed
+
+# Micro-architecture 31 similar at 100% with unknown pattern
+31.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+31.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$FontFamilyAction
+31.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+31.100.product = com.jmonkey.office.lexi.support.EditorActionManager$FontFamilyAction
+31.100.XCommand = No source transformation needed
+
+# Micro-architecture 12 similar at 100% with unknown pattern
+12.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+12.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$FontSizeAction
+12.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+12.100.product = com.jmonkey.office.lexi.support.EditorActionManager$FontSizeAction
+12.100.XCommand = No source transformation needed
+
+# Micro-architecture 5 similar at 100% with unknown pattern
+5.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+5.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$ForegroundAction
+5.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+5.100.product = com.jmonkey.office.lexi.support.EditorActionManager$ForegroundAction
+5.100.XCommand = No source transformation needed
+
+# Micro-architecture 29 similar at 100% with unknown pattern
+29.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+29.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$ItalicAction
+29.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+29.100.product = com.jmonkey.office.lexi.support.EditorActionManager$ItalicAction
+29.100.XCommand = No source transformation needed
+
+# Micro-architecture 3 similar at 100% with unknown pattern
+3.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+3.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$NewAction
+3.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+3.100.product = com.jmonkey.office.lexi.support.EditorActionManager$NewAction
+3.100.XCommand = No source transformation needed
+
+# Micro-architecture 27 similar at 100% with unknown pattern
+27.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+27.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$OpenAction
+27.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+27.100.product = com.jmonkey.office.lexi.support.EditorActionManager$OpenAction
+27.100.XCommand = No source transformation needed
+
+# Micro-architecture 8 similar at 100% with unknown pattern
+8.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+8.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$OpenAsAction
+8.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+8.100.product = com.jmonkey.office.lexi.support.EditorActionManager$OpenAsAction
+8.100.XCommand = No source transformation needed
+
+# Micro-architecture 6 similar at 100% with unknown pattern
+6.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+6.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$PasteAction
+6.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+6.100.product = com.jmonkey.office.lexi.support.EditorActionManager$PasteAction
+6.100.XCommand = No source transformation needed
+
+# Micro-architecture 1 similar at 100% with unknown pattern
+1.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+1.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$RedoAction
+1.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+1.100.product = com.jmonkey.office.lexi.support.EditorActionManager$RedoAction
+1.100.XCommand = No source transformation needed
+
+# Micro-architecture 23 similar at 100% with unknown pattern
+23.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+23.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$RevertAction
+23.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+23.100.product = com.jmonkey.office.lexi.support.EditorActionManager$RevertAction
+23.100.XCommand = No source transformation needed
+
+# Micro-architecture 19 similar at 100% with unknown pattern
+19.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+19.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$SaveAction
+19.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+19.100.product = com.jmonkey.office.lexi.support.EditorActionManager$SaveAction
+19.100.XCommand = No source transformation needed
+
+# Micro-architecture 11 similar at 100% with unknown pattern
+11.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+11.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$SaveAsAction
+11.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+11.100.product = com.jmonkey.office.lexi.support.EditorActionManager$SaveAsAction
+11.100.XCommand = No source transformation needed
+
+# Micro-architecture 17 similar at 100% with unknown pattern
+17.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+17.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$SaveCopyAction
+17.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+17.100.product = com.jmonkey.office.lexi.support.EditorActionManager$SaveCopyAction
+17.100.XCommand = No source transformation needed
+
+# Micro-architecture 16 similar at 100% with unknown pattern
+16.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+16.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$SelectAllAction
+16.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+16.100.product = com.jmonkey.office.lexi.support.EditorActionManager$SelectAllAction
+16.100.XCommand = No source transformation needed
+
+# Micro-architecture 9 similar at 100% with unknown pattern
+9.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+9.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$SelectNoneAction
+9.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+9.100.product = com.jmonkey.office.lexi.support.EditorActionManager$SelectNoneAction
+9.100.XCommand = No source transformation needed
+
+# Micro-architecture 7 similar at 100% with unknown pattern
+7.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+7.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$StrikeThroughAction
+7.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+7.100.product = com.jmonkey.office.lexi.support.EditorActionManager$StrikeThroughAction
+7.100.XCommand = No source transformation needed
+
+# Micro-architecture 30 similar at 100% with unknown pattern
+30.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+30.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$UnderlineAction
+30.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+30.100.product = com.jmonkey.office.lexi.support.EditorActionManager$UnderlineAction
+30.100.XCommand = No source transformation needed
+
+# Micro-architecture 2 similar at 100% with unknown pattern
+2.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+2.100.abstractproduct = com.jmonkey.office.lexi.support.EditorActionManager$UndoAction
+2.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+2.100.product = com.jmonkey.office.lexi.support.EditorActionManager$UndoAction
+2.100.XCommand = No source transformation needed
+
+# Micro-architecture 26 similar at 100% with unknown pattern
+26.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+26.100.abstractproduct = java.lang.IllegalArgumentException
+26.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+26.100.product = java.lang.IllegalArgumentException
+26.100.XCommand = No source transformation needed
+
+# Micro-architecture 21 similar at 100% with unknown pattern
+21.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+21.100.abstractproduct = java.lang.Object
+21.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+21.100.product = com.jmonkey.office.lexi.support.EditorActionManager
+21.100.XCommand = No source transformation needed
+
+# Micro-architecture 13 similar at 100% with unknown pattern
+13.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+13.100.abstractproduct = java.lang.Thread
+13.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+13.100.product = java.lang.Thread
+13.100.XCommand = No source transformation needed
+
+# Micro-architecture 24 similar at 100% with unknown pattern
+24.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+24.100.abstractproduct = java.util.HashMap
+24.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+24.100.product = java.util.HashMap
+24.100.XCommand = No source transformation needed
+
+# Micro-architecture 15 similar at 100% with unknown pattern
+15.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
+15.100.abstractproduct = javax.swing.Action
+15.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
+15.100.product = javax.swing.Action
+15.100.XCommand = No source transformation needed
+
+# Micro-architecture 50 similar at 100% with unknown pattern
+50.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+50.100.abstractproduct = com.jmonkey.office.lexi.support.Editor$1
+50.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+50.100.product = com.jmonkey.office.lexi.support.Editor$1
+50.100.XCommand = No source transformation needed
+
+# Micro-architecture 49 similar at 100% with unknown pattern
+49.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+49.100.abstractproduct = com.jmonkey.office.lexi.support.Editor$2
+49.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+49.100.product = com.jmonkey.office.lexi.support.Editor$2
+49.100.XCommand = No source transformation needed
+
+# Micro-architecture 62 similar at 100% with unknown pattern
+62.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+62.100.abstractproduct = com.jmonkey.office.lexi.support.editors.HTMLEditor$1
+62.100.concretefactory = com.jmonkey.office.lexi.support.editors.HTMLEditor
+62.100.product = com.jmonkey.office.lexi.support.editors.HTMLEditor$1
+62.100.XCommand = No source transformation needed
+
+# Micro-architecture 56 similar at 100% with unknown pattern
+56.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+56.100.abstractproduct = com.jmonkey.office.lexi.support.editors.HTMLEditor$2
+56.100.concretefactory = com.jmonkey.office.lexi.support.editors.HTMLEditor
+56.100.product = com.jmonkey.office.lexi.support.editors.HTMLEditor$2
+56.100.XCommand = No source transformation needed
+
+# Micro-architecture 58 similar at 100% with unknown pattern
+58.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+58.100.abstractproduct = com.jmonkey.office.lexi.support.editors.HTMLEditor$3
+58.100.concretefactory = com.jmonkey.office.lexi.support.editors.HTMLEditor
+58.100.product = com.jmonkey.office.lexi.support.editors.HTMLEditor$3
+58.100.XCommand = No source transformation needed
+
+# Micro-architecture 60 similar at 100% with unknown pattern
+60.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+60.100.abstractproduct = com.jmonkey.office.lexi.support.editors.HTMLEditor$4
+60.100.concretefactory = com.jmonkey.office.lexi.support.editors.HTMLEditor
+60.100.product = com.jmonkey.office.lexi.support.editors.HTMLEditor$4
+60.100.XCommand = No source transformation needed
+
+# Micro-architecture 55 similar at 100% with unknown pattern
+55.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+55.100.abstractproduct = com.jmonkey.office.lexi.support.editors.HTMLEditor$E
+55.100.concretefactory = com.jmonkey.office.lexi.support.editors.HTMLEditor
+55.100.product = com.jmonkey.office.lexi.support.editors.HTMLEditor$E
+55.100.XCommand = No source transformation needed
+
+# Micro-architecture 36 similar at 100% with unknown pattern
+36.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+36.100.abstractproduct = com.jmonkey.office.lexi.support.editors.RTFEditor$1
+36.100.concretefactory = com.jmonkey.office.lexi.support.editors.RTFEditor
+36.100.product = com.jmonkey.office.lexi.support.editors.RTFEditor$1
+36.100.XCommand = No source transformation needed
+
+# Micro-architecture 34 similar at 100% with unknown pattern
+34.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+34.100.abstractproduct = com.jmonkey.office.lexi.support.editors.RTFEditor$2
+34.100.concretefactory = com.jmonkey.office.lexi.support.editors.RTFEditor
+34.100.product = com.jmonkey.office.lexi.support.editors.RTFEditor$2
+34.100.XCommand = No source transformation needed
+
+# Micro-architecture 37 similar at 100% with unknown pattern
+37.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+37.100.abstractproduct = com.jmonkey.office.lexi.support.editors.RTFEditor$3
+37.100.concretefactory = com.jmonkey.office.lexi.support.editors.RTFEditor
+37.100.product = com.jmonkey.office.lexi.support.editors.RTFEditor$3
+37.100.XCommand = No source transformation needed
+
+# Micro-architecture 39 similar at 100% with unknown pattern
+39.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+39.100.abstractproduct = com.jmonkey.office.lexi.support.editors.RTFEditor$4
+39.100.concretefactory = com.jmonkey.office.lexi.support.editors.RTFEditor
+39.100.product = com.jmonkey.office.lexi.support.editors.RTFEditor$4
+39.100.XCommand = No source transformation needed
+
+# Micro-architecture 40 similar at 100% with unknown pattern
+40.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+40.100.abstractproduct = com.jmonkey.office.lexi.support.editors.RTFEditor$E
+40.100.concretefactory = com.jmonkey.office.lexi.support.editors.RTFEditor
+40.100.product = com.jmonkey.office.lexi.support.editors.RTFEditor$E
+40.100.XCommand = No source transformation needed
+
+# Micro-architecture 63 similar at 100% with unknown pattern
+63.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+63.100.abstractproduct = com.jmonkey.office.lexi.support.editors.TEXTEditor$1
+63.100.concretefactory = com.jmonkey.office.lexi.support.editors.TEXTEditor
+63.100.product = com.jmonkey.office.lexi.support.editors.TEXTEditor$1
+63.100.XCommand = No source transformation needed
+
+# Micro-architecture 68 similar at 100% with unknown pattern
+68.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+68.100.abstractproduct = com.jmonkey.office.lexi.support.editors.TEXTEditor$2
+68.100.concretefactory = com.jmonkey.office.lexi.support.editors.TEXTEditor
+68.100.product = com.jmonkey.office.lexi.support.editors.TEXTEditor$2
+68.100.XCommand = No source transformation needed
+
+# Micro-architecture 66 similar at 100% with unknown pattern
+66.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+66.100.abstractproduct = com.jmonkey.office.lexi.support.editors.TEXTEditor$3
+66.100.concretefactory = com.jmonkey.office.lexi.support.editors.TEXTEditor
+66.100.product = com.jmonkey.office.lexi.support.editors.TEXTEditor$3
+66.100.XCommand = No source transformation needed
+
+# Micro-architecture 69 similar at 100% with unknown pattern
+69.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+69.100.abstractproduct = com.jmonkey.office.lexi.support.editors.TEXTEditor$4
+69.100.concretefactory = com.jmonkey.office.lexi.support.editors.TEXTEditor
+69.100.product = com.jmonkey.office.lexi.support.editors.TEXTEditor$4
+69.100.XCommand = No source transformation needed
+
+# Micro-architecture 65 similar at 100% with unknown pattern
+65.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+65.100.abstractproduct = com.jmonkey.office.lexi.support.editors.TEXTEditor$E
+65.100.concretefactory = com.jmonkey.office.lexi.support.editors.TEXTEditor
+65.100.product = com.jmonkey.office.lexi.support.editors.TEXTEditor$E
+65.100.XCommand = No source transformation needed
+
+# Micro-architecture 59 similar at 100% with unknown pattern
+59.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+59.100.abstractproduct = java.awt.BorderLayout
+59.100.concretefactory = com.jmonkey.office.lexi.support.editors.HTMLEditor
+59.100.product = java.awt.BorderLayout
+59.100.XCommand = No source transformation needed
+
+# Micro-architecture 35 similar at 100% with unknown pattern
+35.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+35.100.abstractproduct = java.awt.BorderLayout
+35.100.concretefactory = com.jmonkey.office.lexi.support.editors.RTFEditor
+35.100.product = java.awt.BorderLayout
+35.100.XCommand = No source transformation needed
+
+# Micro-architecture 67 similar at 100% with unknown pattern
+67.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+67.100.abstractproduct = java.awt.BorderLayout
+67.100.concretefactory = com.jmonkey.office.lexi.support.editors.TEXTEditor
+67.100.product = java.awt.BorderLayout
+67.100.XCommand = No source transformation needed
+
+# Micro-architecture 52 similar at 100% with unknown pattern
+52.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+52.100.abstractproduct = java.awt.event.KeyListener
+52.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+52.100.product = com.jmonkey.office.lexi.support.editors.HTMLEditor
+52.100.XCommand = No source transformation needed
+
+# Micro-architecture 51 similar at 100% with unknown pattern
+51.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+51.100.abstractproduct = java.awt.event.KeyListener
+51.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+51.100.product = com.jmonkey.office.lexi.support.editors.RTFEditor
+51.100.XCommand = No source transformation needed
+
+# Micro-architecture 53 similar at 100% with unknown pattern
+53.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+53.100.abstractproduct = java.awt.event.KeyListener
+53.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+53.100.product = com.jmonkey.office.lexi.support.editors.TEXTEditor
+53.100.XCommand = No source transformation needed
+
+# Micro-architecture 43 similar at 100% with unknown pattern
+43.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+43.100.abstractproduct = java.awt.event.MouseListener
+43.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+43.100.product = com.jmonkey.office.lexi.support.editors.HTMLEditor
+43.100.XCommand = No source transformation needed
+
+# Micro-architecture 42 similar at 100% with unknown pattern
+42.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+42.100.abstractproduct = java.awt.event.MouseListener
+42.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+42.100.product = com.jmonkey.office.lexi.support.editors.RTFEditor
+42.100.XCommand = No source transformation needed
+
+# Micro-architecture 44 similar at 100% with unknown pattern
+44.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+44.100.abstractproduct = java.awt.event.MouseListener
+44.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+44.100.product = com.jmonkey.office.lexi.support.editors.TEXTEditor
+44.100.XCommand = No source transformation needed
+
+# Micro-architecture 41 similar at 100% with unknown pattern
+41.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+41.100.abstractproduct = javax.swing.JMenuItem
+41.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+41.100.product = javax.swing.JMenuItem
+41.100.XCommand = No source transformation needed
+
+# Micro-architecture 47 similar at 100% with unknown pattern
+47.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+47.100.abstractproduct = javax.swing.JPanel
+47.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+47.100.product = com.jmonkey.office.lexi.support.editors.HTMLEditor
+47.100.XCommand = No source transformation needed
+
+# Micro-architecture 46 similar at 100% with unknown pattern
+46.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+46.100.abstractproduct = javax.swing.JPanel
+46.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+46.100.product = com.jmonkey.office.lexi.support.editors.RTFEditor
+46.100.XCommand = No source transformation needed
+
+# Micro-architecture 48 similar at 100% with unknown pattern
+48.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+48.100.abstractproduct = javax.swing.JPanel
+48.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+48.100.product = com.jmonkey.office.lexi.support.editors.TEXTEditor
+48.100.XCommand = No source transformation needed
+
+# Micro-architecture 45 similar at 100% with unknown pattern
+45.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+45.100.abstractproduct = javax.swing.JPopupMenu
+45.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+45.100.product = javax.swing.JPopupMenu
+45.100.XCommand = No source transformation needed
+
+# Micro-architecture 57 similar at 100% with unknown pattern
+57.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+57.100.abstractproduct = javax.swing.JScrollPane
+57.100.concretefactory = com.jmonkey.office.lexi.support.editors.HTMLEditor
+57.100.product = javax.swing.JScrollPane
+57.100.XCommand = No source transformation needed
+
+# Micro-architecture 33 similar at 100% with unknown pattern
+33.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+33.100.abstractproduct = javax.swing.JScrollPane
+33.100.concretefactory = com.jmonkey.office.lexi.support.editors.RTFEditor
+33.100.product = javax.swing.JScrollPane
+33.100.XCommand = No source transformation needed
+
+# Micro-architecture 64 similar at 100% with unknown pattern
+64.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+64.100.abstractproduct = javax.swing.JScrollPane
+64.100.concretefactory = com.jmonkey.office.lexi.support.editors.TEXTEditor
+64.100.product = javax.swing.JScrollPane
+64.100.XCommand = No source transformation needed
+
+# Micro-architecture 61 similar at 100% with unknown pattern
+61.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+61.100.abstractproduct = javax.swing.JTextPane
+61.100.concretefactory = com.jmonkey.office.lexi.support.editors.HTMLEditor
+61.100.product = javax.swing.JTextPane
+61.100.XCommand = No source transformation needed
+
+# Micro-architecture 38 similar at 100% with unknown pattern
+38.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+38.100.abstractproduct = javax.swing.JTextPane
+38.100.concretefactory = com.jmonkey.office.lexi.support.editors.RTFEditor
+38.100.product = javax.swing.JTextPane
+38.100.XCommand = No source transformation needed
+
+# Micro-architecture 70 similar at 100% with unknown pattern
+70.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+70.100.abstractproduct = javax.swing.JTextPane
+70.100.concretefactory = com.jmonkey.office.lexi.support.editors.TEXTEditor
+70.100.product = javax.swing.JTextPane
+70.100.XCommand = No source transformation needed
+
+# Micro-architecture 54 similar at 100% with unknown pattern
+54.100.abstractfactory = com.jmonkey.office.lexi.support.Editor
+54.100.abstractproduct = javax.swing.undo.UndoManager
+54.100.concretefactory = com.jmonkey.office.lexi.support.Editor
+54.100.product = javax.swing.undo.UndoManager
+54.100.XCommand = No source transformation needed
+

@@ -1,0 +1,5 @@
+[ExtraInformation]
+
+Relation7 = convertAggregationInComposition(junit.framework.TestResult, junit.framework.TestFailure)
+Relation8 = convertAggregationInComposition(junit.awtui.TestRunner,     java.lang.Throwable)
+Relation9 = convertAggregationInComposition(junit.swingui.TestRunner,   junit.swingui.TestRunView)

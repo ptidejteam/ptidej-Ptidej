@@ -1,0 +1,359 @@
+package sun.misc;
+public class URLClassPath
+{
+private static class FileLoader
+extends sun.misc.URLClassPath.Loader
+{
+private java.lang.Object dir;
+
+void <init>(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+java.net.URL findResource(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+sun.misc.Resource getResource(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+
+}
+
+static class JarLoader
+extends sun.misc.URLClassPath.Loader
+{
+private java.lang.Object jar;
+
+final private java.lang.Object csu;
+
+private java.lang.Object index;
+
+private java.lang.Object metaIndex;
+
+private java.lang.Object handler;
+
+final private java.lang.Object lmap;
+
+final private java.lang.Object acc;
+
+private java.lang.Object closed;
+
+final private static java.lang.Object zipAccess;
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3) throws java.io.IOException
+{
+
+}
+
+public void close() throws java.io.IOException
+{
+
+}
+
+java.util.jar.JarFile getJarFile()
+{
+
+}
+
+private boolean isOptimizable(java.lang.Object arg0)
+{
+
+}
+
+private void ensureOpen() throws java.io.IOException
+{
+
+}
+
+static java.util.jar.JarFile checkJar(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+private java.util.jar.JarFile getJarFile(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+sun.misc.JarIndex getIndex()
+{
+
+}
+
+sun.misc.Resource checkResource(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+boolean validIndex(java.lang.Object arg0)
+{
+
+}
+
+java.net.URL findResource(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+sun.misc.Resource getResource(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+sun.misc.Resource getResource(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+java.net.URL[] getClassPath() throws java.io.IOException
+{
+
+}
+
+private void parseExtensionsDependencies() throws java.io.IOException
+{
+
+}
+
+private java.net.URL[] parseClassPath(java.lang.Object arg0, java.lang.Object arg1) throws java.net.MalformedURLException
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}
+
+private static class Loader
+implements java.io.Closeable
+{
+final private java.lang.Object base;
+
+private java.lang.Object jarfile;
+
+void <init>(java.lang.Object arg0)
+{
+
+}
+
+java.net.URL getBaseURL()
+{
+
+}
+
+java.net.URL findResource(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+sun.misc.Resource getResource(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+sun.misc.Resource getResource(java.lang.Object arg0)
+{
+
+}
+
+public void close() throws java.io.IOException
+{
+
+}
+
+java.net.URL[] getClassPath() throws java.io.IOException
+{
+
+}
+
+
+}
+
+final static java.lang.Object USER_AGENT_JAVA_VERSION;
+
+final static java.lang.Object JAVA_VERSION;
+
+final private static java.lang.Object DEBUG;
+
+final private static java.lang.Object DEBUG_LOOKUP_CACHE;
+
+final private static java.lang.Object DISABLE_JAR_CHECKING;
+
+final private static java.lang.Object DISABLE_ACC_CHECKING;
+
+private java.lang.Object path;
+
+java.lang.Object urls;
+
+java.lang.Object loaders;
+
+java.lang.Object lmap;
+
+private java.lang.Object jarHandler;
+
+private java.lang.Object closed;
+
+final private java.lang.Object acc;
+
+private static volatile java.lang.Object lookupCacheEnabled;
+
+private java.lang.Object lookupCacheURLs;
+
+private java.lang.Object lookupCacheLoader;
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public synchronized java.util.List closeLoaders()
+{
+
+}
+
+public synchronized void addURL(java.lang.Object arg0)
+{
+
+}
+
+public java.net.URL[] getURLs()
+{
+
+}
+
+public java.net.URL findResource(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public sun.misc.Resource getResource(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.util.Enumeration findResources(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public sun.misc.Resource getResource(java.lang.Object arg0)
+{
+
+}
+
+public java.util.Enumeration getResources(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.util.Enumeration getResources(java.lang.Object arg0)
+{
+
+}
+
+synchronized void initLookupCache(java.lang.Object arg0)
+{
+
+}
+
+static void disableAllLookupCaches()
+{
+
+}
+
+native private static java.net.URL[] getLookupCacheURLs(java.lang.Object arg0)
+{
+
+}
+
+native private static int[] getLookupCacheForClassLoader(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+native private static boolean knownToNotExist0(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+synchronized boolean knownToNotExist(java.lang.Object arg0)
+{
+
+}
+
+private synchronized int[] getLookupCache(java.lang.Object arg0)
+{
+
+}
+
+private boolean ensureLoaderOpened(java.lang.Object arg0)
+{
+
+}
+
+private synchronized void validateLookupCache(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private synchronized sun.misc.URLClassPath.Loader getNextLoader(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private synchronized sun.misc.URLClassPath.Loader getLoader(java.lang.Object arg0)
+{
+
+}
+
+private sun.misc.URLClassPath.Loader getLoader(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+private void push(java.lang.Object arg0)
+{
+
+}
+
+public static java.net.URL[] pathToURLs(java.lang.Object arg0)
+{
+
+}
+
+public java.net.URL checkURL(java.lang.Object arg0)
+{
+
+}
+
+static void check(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

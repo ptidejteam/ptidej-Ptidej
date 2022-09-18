@@ -1,0 +1,39 @@
+A for Juzzle Auto
+
+null
+
+With rules
+	Problem creation: 0'0
+	Solving: 0'21
+	Total: 0'21
+	Total number of solutions: 851
+	Number of solutions with Ghosts: 848
+	Number of solutions without Ghosts: 3
+
+Without rule
+	Problem creation: 0'0
+	Solving: 0'21
+	Total: 0'21
+	Total number of solutions: 851
+	Number of solutions with Ghosts: 848
+	Number of solutions without Ghosts: 3
+
+Variable "target"
+	Domain size without rule: 99
+	Domain size with rules: 9
+	Domain reduction: 90.9090909090909%
+Variable "adapter"
+	Domain size without rule: 99
+	Domain size with rules: 99
+	Domain reduction: 0.0%
+Variable "adpatee"
+	Domain size without rule: 99
+	Domain size with rules: 99
+	Domain reduction: 0.0%
+Variable "client"
+	Domain size without rule: 99
+	Domain size with rules: 99
+	Domain reduction: 0.0%
+
+Inclusion:
+3 solutions included of 3

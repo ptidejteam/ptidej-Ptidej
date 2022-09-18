@@ -1,0 +1,59 @@
+package java.util;
+public class IntSummaryStatistics
+implements java.util.function.IntConsumer
+{
+private java.lang.Object count;
+
+private java.lang.Object sum;
+
+private java.lang.Object min;
+
+private java.lang.Object max;
+
+public void <init>()
+{
+
+}
+
+public void accept(java.lang.Object arg0)
+{
+
+}
+
+public void combine(java.lang.Object arg0)
+{
+
+}
+
+final public long getCount()
+{
+
+}
+
+final public long getSum()
+{
+
+}
+
+final public int getMin()
+{
+
+}
+
+final public int getMax()
+{
+
+}
+
+final public double getAverage()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+
+}

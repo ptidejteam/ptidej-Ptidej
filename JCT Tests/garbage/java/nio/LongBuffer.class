@@ -1,0 +1,158 @@
+package java.nio;
+abstract public class LongBuffer
+extends java.nio.Buffer
+implements java.lang.Comparable
+{
+final java.lang.Object hb;
+
+final java.lang.Object offset;
+
+java.lang.Object isReadOnly;
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+public static java.nio.LongBuffer allocate(java.lang.Object arg0)
+{
+
+}
+
+public static java.nio.LongBuffer wrap(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public static java.nio.LongBuffer wrap(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.nio.LongBuffer slice()
+{
+
+}
+
+abstract public java.nio.LongBuffer duplicate()
+{
+
+}
+
+abstract public java.nio.LongBuffer asReadOnlyBuffer()
+{
+
+}
+
+abstract public long get()
+{
+
+}
+
+abstract public java.nio.LongBuffer put(java.lang.Object arg0)
+{
+
+}
+
+abstract public long get(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.nio.LongBuffer put(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.nio.LongBuffer get(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public java.nio.LongBuffer get(java.lang.Object arg0)
+{
+
+}
+
+public java.nio.LongBuffer put(java.lang.Object arg0)
+{
+
+}
+
+public java.nio.LongBuffer put(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+final public java.nio.LongBuffer put(java.lang.Object arg0)
+{
+
+}
+
+final public boolean hasArray()
+{
+
+}
+
+final public long[] array()
+{
+
+}
+
+final public int arrayOffset()
+{
+
+}
+
+abstract public java.nio.LongBuffer compact()
+{
+
+}
+
+abstract public boolean isDirect()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+private static boolean equals(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public int compareTo(java.lang.Object arg0)
+{
+
+}
+
+private static int compare(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+abstract public java.nio.ByteOrder order()
+{
+
+}
+
+
+}

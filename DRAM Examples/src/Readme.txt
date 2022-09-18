@@ -1,0 +1,1 @@
+A simple architecture that implements a distorted composite design pattern.

@@ -1,0 +1,2 @@
+(allChocoTests(),
+ exit(0))

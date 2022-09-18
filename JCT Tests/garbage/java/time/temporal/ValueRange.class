@@ -1,0 +1,111 @@
+package java.time.temporal;
+final public class ValueRange
+implements java.io.Serializable
+{
+final private static java.lang.Object serialVersionUID;
+
+final private java.lang.Object minSmallest;
+
+final private java.lang.Object minLargest;
+
+final private java.lang.Object maxSmallest;
+
+final private java.lang.Object maxLargest;
+
+public static java.time.temporal.ValueRange of(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.time.temporal.ValueRange of(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public static java.time.temporal.ValueRange of(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+public boolean isFixed()
+{
+
+}
+
+public long getMinimum()
+{
+
+}
+
+public long getLargestMinimum()
+{
+
+}
+
+public long getSmallestMaximum()
+{
+
+}
+
+public long getMaximum()
+{
+
+}
+
+public boolean isIntValue()
+{
+
+}
+
+public boolean isValidValue(java.lang.Object arg0)
+{
+
+}
+
+public boolean isValidIntValue(java.lang.Object arg0)
+{
+
+}
+
+public long checkValidValue(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public int checkValidIntValue(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.lang.String genInvalidFieldMessage(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.IOException, java.io.InvalidObjectException, java.lang.ClassNotFoundException
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+
+}

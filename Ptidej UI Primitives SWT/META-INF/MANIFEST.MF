@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ptidej UI Primitives SWT
+Bundle-SymbolicName: Ptidej_UI_Primitives_SWT
+Bundle-Version: 1.0.0
+Export-Package: ptidej.ui.occurrence.swt,
+ ptidej.ui.primitive.swt,
+ ptidej.ui.swt
+Require-Bundle: CPL,
+ PADL,
+ Ptidej,
+ Ptidej_UI,
+ org.eclipse.swt
+Automatic-Module-Name: Ptidej.UI.Primitives.SWT

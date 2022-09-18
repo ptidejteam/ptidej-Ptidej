@@ -1,0 +1,39 @@
+A for jTans Auto
+
+null
+
+With rules
+	Problem creation: 0'0
+	Solving: 0'52
+	Total: 0'53
+	Total number of solutions: 739
+	Number of solutions with Ghosts: 737
+	Number of solutions without Ghosts: 2
+
+Without rule
+	Problem creation: 0'0
+	Solving: 24'1
+	Total: 24'1
+	Total number of solutions: 8086
+	Number of solutions with Ghosts: 7958
+	Number of solutions without Ghosts: 128
+
+Variable "target"
+	Domain size without rule: 206
+	Domain size with rules: 6
+	Domain reduction: 97.0873786407767%
+Variable "adapter"
+	Domain size without rule: 206
+	Domain size with rules: 206
+	Domain reduction: 0.0%
+Variable "adpatee"
+	Domain size without rule: 206
+	Domain size with rules: 206
+	Domain reduction: 0.0%
+Variable "client"
+	Domain size without rule: 206
+	Domain size with rules: 206
+	Domain reduction: 0.0%
+
+Inclusion:
+2 solutions included of 2

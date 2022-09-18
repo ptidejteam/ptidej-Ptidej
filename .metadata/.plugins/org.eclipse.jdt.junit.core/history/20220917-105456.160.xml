@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestJOSSerialiser" project="PADL Serialiser JOS Tests" tests="8" started="8" failures="0" errors="0" ignored="0">
+  <testsuite name="TestSuite with 8 tests [example: padl.serialiser.test.TestComposite]" time="1.306">
+    <testsuite name="padl.serialiser.test.TestComposite" time="0.32">
+      <testcase name="testComparator" classname="padl.serialiser.test.TestComposite" time="0.319"/>
+      <testcase name="testNames" classname="padl.serialiser.test.TestComposite" time="0.001"/>
+    </testsuite>
+    <testsuite name="padl.serialiser.test.TestJHotDraw" time="0.933">
+      <testcase name="testComparator" classname="padl.serialiser.test.TestJHotDraw" time="0.932"/>
+      <testcase name="testNames" classname="padl.serialiser.test.TestJHotDraw" time="0.0"/>
+    </testsuite>
+    <testsuite name="padl.serialiser.test.TestArgoUML0198" time="0.029">
+      <testcase name="testComparator" classname="padl.serialiser.test.TestArgoUML0198" time="0.027"/>
+      <testcase name="testNames" classname="padl.serialiser.test.TestArgoUML0198" time="0.0"/>
+    </testsuite>
+    <testsuite name="padl.serialiser.test.TestArgoUML020" time="0.023">
+      <testcase name="testComparator" classname="padl.serialiser.test.TestArgoUML020" time="0.022"/>
+      <testcase name="testNames" classname="padl.serialiser.test.TestArgoUML020" time="0.001"/>
+    </testsuite>
+  </testsuite>
+</testrun>

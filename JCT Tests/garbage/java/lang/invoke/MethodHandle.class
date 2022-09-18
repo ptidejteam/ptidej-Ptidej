@@ -1,0 +1,236 @@
+package java.lang.invoke;
+abstract public class MethodHandle
+{
+abstract static interface PolymorphicSignature
+extends java.lang.annotation.Annotation
+{
+
+}
+
+final private java.lang.Object type;
+
+final java.lang.Object form;
+
+java.lang.Object asTypeCache;
+
+java.lang.Object customizationCount;
+
+final private static java.lang.Object FORM_OFFSET;
+
+public java.lang.invoke.MethodType type()
+{
+
+}
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+final native public java.lang.Object invokeExact(java.lang.Object arg0) throws java.lang.Throwable
+{
+
+}
+
+final native public java.lang.Object invoke(java.lang.Object arg0) throws java.lang.Throwable
+{
+
+}
+
+final native java.lang.Object invokeBasic(java.lang.Object arg0) throws java.lang.Throwable
+{
+
+}
+
+native static java.lang.Object linkToVirtual(java.lang.Object arg0) throws java.lang.Throwable
+{
+
+}
+
+native static java.lang.Object linkToStatic(java.lang.Object arg0) throws java.lang.Throwable
+{
+
+}
+
+native static java.lang.Object linkToSpecial(java.lang.Object arg0) throws java.lang.Throwable
+{
+
+}
+
+native static java.lang.Object linkToInterface(java.lang.Object arg0) throws java.lang.Throwable
+{
+
+}
+
+public java.lang.Object invokeWithArguments(java.lang.Object arg0) throws java.lang.Throwable
+{
+
+}
+
+public java.lang.Object invokeWithArguments(java.lang.Object arg0) throws java.lang.Throwable
+{
+
+}
+
+public java.lang.invoke.MethodHandle asType(java.lang.Object arg0)
+{
+
+}
+
+private java.lang.invoke.MethodHandle asTypeCached(java.lang.Object arg0)
+{
+
+}
+
+java.lang.invoke.MethodHandle asTypeUncached(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.invoke.MethodHandle asSpreader(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.lang.invoke.MethodType asSpreaderChecks(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private void spreadArrayChecks(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.invoke.MethodHandle asCollector(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+boolean asCollectorChecks(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.invoke.MethodHandle asVarargsCollector(java.lang.Object arg0)
+{
+
+}
+
+public boolean isVarargsCollector()
+{
+
+}
+
+public java.lang.invoke.MethodHandle asFixedArity()
+{
+
+}
+
+public java.lang.invoke.MethodHandle bindTo(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+java.lang.String standardString()
+{
+
+}
+
+java.lang.String debugString()
+{
+
+}
+
+java.lang.invoke.BoundMethodHandle bindArgumentL(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.lang.invoke.MethodHandle setVarargs(java.lang.Object arg0) throws java.lang.IllegalAccessException
+{
+
+}
+
+java.lang.invoke.MethodHandle viewAsType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+boolean viewAsTypeChecks(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.lang.invoke.LambdaForm internalForm()
+{
+
+}
+
+java.lang.invoke.MemberName internalMemberName()
+{
+
+}
+
+java.lang.Class internalCallerClass()
+{
+
+}
+
+java.lang.invoke.MethodHandleImpl.Intrinsic intrinsicName()
+{
+
+}
+
+java.lang.invoke.MethodHandle withInternalMemberName(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+boolean isInvokeSpecial()
+{
+
+}
+
+java.lang.Object internalValues()
+{
+
+}
+
+java.lang.Object internalProperties()
+{
+
+}
+
+abstract java.lang.invoke.MethodHandle copyWith(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+abstract java.lang.invoke.BoundMethodHandle rebind()
+{
+
+}
+
+void updateForm(java.lang.Object arg0)
+{
+
+}
+
+void customize()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

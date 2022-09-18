@@ -1,0 +1,35 @@
+C for JUnit(test)
+
+null
+
+With rules
+	Problem creation: 0'22
+	Solving: 0'56
+	Total: 1'18
+	Total number of solutions: 2025
+	Number of solutions with Ghosts: 1977
+	Number of solutions without Ghosts: 48
+
+Without rule
+	Problem creation: 0'0
+	Solving: 1'5
+	Total: 1'5
+	Total number of solutions: 2349
+	Number of solutions with Ghosts: 2301
+	Number of solutions without Ghosts: 48
+
+Variable "leaf"
+	Domain size without rule: 83
+	Domain size with rules: 23
+	Domain reduction: 72.28915662650603%
+Variable "composite"
+	Domain size without rule: 83
+	Domain size with rules: 83
+	Domain reduction: 0.0%
+Variable "component"
+	Domain size without rule: 83
+	Domain size with rules: 83
+	Domain reduction: 0.0%
+
+Inclusion:
+48 solutions included of 48

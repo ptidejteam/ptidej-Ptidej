@@ -1,0 +1,11 @@
+package sun.reflect.generics.tree;
+abstract public interface TypeTree
+extends sun.reflect.generics.tree.Tree
+{
+abstract public void accept(java.lang.Object arg0)
+{
+
+}
+
+
+}

@@ -1,0 +1,611 @@
+String Creation Time:106
+--------------------------------------------------
+
+NONE
+Solution Computation Time:3
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1
+Solution Computation Time:4
+Number of Solutions With and Without Ghosts:6
+Number of Solutions Without Ghosts:6
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 16 similar at 100% with Composite
+16.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+16.100.Leaf = junit.swingui.TestSuitePanel
+16.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 17 similar at 100% with Composite
+17.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+17.100.Leaf = junit.tests.TestListenerTest
+17.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 18 similar at 100% with Composite
+18.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+18.100.Leaf = EPI_Abstract_junit.runner.BaseTestRunner
+18.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 19 similar at 100% with Composite
+19.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+19.100.Leaf = EPI_Abstract_junit.framework.TestCase
+19.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 20 similar at 100% with Composite
+20.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+20.100.Leaf = junit.extensions.TestDecorator
+20.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 21 similar at 100% with Composite
+21.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+21.100.Leaf = junit.framework.TestSuite
+21.100.Composite = junit.extensions.TestDecorator
+
+---------------------------------------------
+2
+Solution Computation Time:3
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3
+Solution Computation Time:3
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+4
+Solution Computation Time:6
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2
+Solution Computation Time:4
+Number of Solutions With and Without Ghosts:39
+Number of Solutions Without Ghosts:39
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 40 similar at 100% with Composite
+40.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+40.100.Leaf = junit.swingui.TestSuitePanel
+40.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 41 similar at 100% with Composite
+41.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+41.100.Leaf = junit.textui.TestRunner
+41.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 42 similar at 100% with Composite
+42.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+42.100.Leaf = junit.awtui.TestRunner
+42.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 43 similar at 100% with Composite
+43.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+43.100.Leaf = junit.swingui.TestRunner
+43.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 44 similar at 100% with Composite
+44.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+44.100.Leaf = junit.tests.TestListenerTest
+44.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 45 similar at 100% with Composite
+45.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+45.100.Leaf = EPI_Abstract_junit.runner.BaseTestRunner
+45.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 46 similar at 100% with Composite
+46.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+46.100.Leaf = junit.swingui.TestSuitePanel
+46.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 47 similar at 100% with Composite
+47.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+47.100.Leaf = junit.textui.TestRunner
+47.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 48 similar at 100% with Composite
+48.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+48.100.Leaf = junit.awtui.TestRunner
+48.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 49 similar at 100% with Composite
+49.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+49.100.Leaf = junit.swingui.TestRunner
+49.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 50 similar at 100% with Composite
+50.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+50.100.Leaf = junit.tests.TestListenerTest
+50.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 51 similar at 100% with Composite
+51.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+51.100.Leaf = EPI_Abstract_junit.runner.BaseTestRunner
+51.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 52 similar at 100% with Composite
+52.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+52.100.Leaf = EPI_Abstract_junit.framework.TestCase
+52.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 53 similar at 100% with Composite
+53.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+53.100.Leaf = junit.tests.AssertTest
+53.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 54 similar at 100% with Composite
+54.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+54.100.Leaf = junit.tests.SuiteTest
+54.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 55 similar at 100% with Composite
+55.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+55.100.Leaf = junit.samples.money.MoneyTest
+55.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 56 similar at 100% with Composite
+56.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+56.100.Leaf = junit.tests.NoTestCases
+56.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 57 similar at 100% with Composite
+57.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+57.100.Leaf = junit.tests.TextRunnerTest
+57.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 58 similar at 100% with Composite
+58.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+58.100.Leaf = junit.tests.ExtensionTest
+58.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 59 similar at 100% with Composite
+59.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+59.100.Leaf = junit.tests.Failure
+59.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 60 similar at 100% with Composite
+60.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+60.100.Leaf = junit.tests.WasRun
+60.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 61 similar at 100% with Composite
+61.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+61.100.Leaf = junit.tests.NotVoidTestCase
+61.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 62 similar at 100% with Composite
+62.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+62.100.Leaf = junit.samples.VectorTest
+62.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 63 similar at 100% with Composite
+63.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+63.100.Leaf = junit.samples.SimpleTest
+63.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 64 similar at 100% with Composite
+64.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+64.100.Leaf = junit.tests.NotPublicTestCase
+64.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 65 similar at 100% with Composite
+65.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+65.100.Leaf = junit.tests.RepeatedTestTest
+65.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 66 similar at 100% with Composite
+66.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+66.100.Leaf = junit.tests.Success
+66.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 67 similar at 100% with Composite
+67.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+67.100.Leaf = junit.tests.TestListenerTest
+67.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 68 similar at 100% with Composite
+68.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+68.100.Leaf = junit.tests.TestImplementorTest
+68.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 69 similar at 100% with Composite
+69.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+69.100.Leaf = junit.tests.ActiveTestTest
+69.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 70 similar at 100% with Composite
+70.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+70.100.Leaf = junit.tests.ExceptionTestCaseTest
+70.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 71 similar at 100% with Composite
+71.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+71.100.Leaf = junit.extensions.ExceptionTestCase
+71.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 72 similar at 100% with Composite
+72.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+72.100.Leaf = junit.tests.StackFilterTest
+72.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 73 similar at 100% with Composite
+73.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+73.100.Leaf = junit.tests.OneTestCase
+73.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 74 similar at 100% with Composite
+74.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+74.100.Leaf = junit.tests.TestCaseTest
+74.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 75 similar at 100% with Composite
+75.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+75.100.Leaf = junit.tests.TestCaseClassLoaderTest
+75.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 76 similar at 100% with Composite
+76.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+76.100.Leaf = junit.tests.SorterTest
+76.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 77 similar at 100% with Composite
+77.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+77.100.Leaf = junit.extensions.TestDecorator
+77.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 78 similar at 100% with Composite
+78.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+78.100.Leaf = junit.framework.TestSuite
+78.100.Composite = junit.extensions.TestDecorator
+
+---------------------------------------------
+1 and 3
+Solution Computation Time:4
+Number of Solutions With and Without Ghosts:6
+Number of Solutions Without Ghosts:6
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 181 similar at 100% with Composite
+181.100.Component = EPI_Abstract_junit.framework.TestListener
+181.100.Leaf = junit.swingui.TestSuitePanel
+181.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 182 similar at 100% with Composite
+182.100.Component = EPI_Abstract_junit.framework.TestListener
+182.100.Leaf = junit.tests.TestListenerTest
+182.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 183 similar at 100% with Composite
+183.100.Component = EPI_Abstract_junit.framework.TestListener
+183.100.Leaf = EPI_Abstract_junit.runner.BaseTestRunner
+183.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 184 similar at 100% with Composite
+184.100.Component = EPI_Abstract_junit.framework.Test
+184.100.Leaf = EPI_Abstract_junit.framework.TestCase
+184.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 185 similar at 100% with Composite
+185.100.Component = EPI_Abstract_junit.framework.Test
+185.100.Leaf = junit.extensions.TestDecorator
+185.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 186 similar at 100% with Composite
+186.100.Component = EPI_Abstract_junit.framework.Test
+186.100.Leaf = junit.framework.TestSuite
+186.100.Composite = junit.extensions.TestDecorator
+
+---------------------------------------------
+1 and 4
+Solution Computation Time:7
+Number of Solutions With and Without Ghosts:2
+Number of Solutions Without Ghosts:2
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 199 similar at 100% with Composite
+199.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.TestListener
+199.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 200 similar at 100% with Composite
+200.100.EPI_Abstract_Component = EPI_Abstract_junit.framework.Test
+200.100.Composite = junit.extensions.TestDecorator
+
+---------------------------------------------
+2 and 3
+Solution Computation Time:3
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 4
+Solution Computation Time:6
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3 and 4
+Solution Computation Time:6
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2 and 3
+Solution Computation Time:94
+Number of Solutions With and Without Ghosts:46
+Number of Solutions Without Ghosts:46
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 6603 similar at 100% with Composite
+6603.100.Component = EPI_Abstract_junit.framework.Test
+6603.100.Leaf = EPI_Abstract_junit.framework.TestCase
+6603.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6604 similar at 100% with Composite
+6604.100.Component = EPI_Abstract_junit.framework.Test
+6604.100.Leaf = junit.extensions.ActiveTestSuite
+6604.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6605 similar at 100% with Composite
+6605.100.Component = EPI_Abstract_junit.framework.Test
+6605.100.Leaf = junit.extensions.TestSetup
+6605.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6606 similar at 100% with Composite
+6606.100.Component = EPI_Abstract_junit.framework.Test
+6606.100.Leaf = junit.extensions.RepeatedTest
+6606.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6607 similar at 100% with Composite
+6607.100.Component = EPI_Abstract_junit.framework.Test
+6607.100.Leaf = junit.tests.AssertTest
+6607.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6608 similar at 100% with Composite
+6608.100.Component = EPI_Abstract_junit.framework.Test
+6608.100.Leaf = junit.tests.SuiteTest
+6608.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6609 similar at 100% with Composite
+6609.100.Component = EPI_Abstract_junit.framework.Test
+6609.100.Leaf = junit.samples.money.MoneyTest
+6609.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6610 similar at 100% with Composite
+6610.100.Component = EPI_Abstract_junit.framework.Test
+6610.100.Leaf = junit.tests.NoTestCases
+6610.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6611 similar at 100% with Composite
+6611.100.Component = EPI_Abstract_junit.framework.Test
+6611.100.Leaf = junit.tests.TextRunnerTest
+6611.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6612 similar at 100% with Composite
+6612.100.Component = EPI_Abstract_junit.framework.Test
+6612.100.Leaf = junit.tests.ExtensionTest
+6612.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6613 similar at 100% with Composite
+6613.100.Component = EPI_Abstract_junit.framework.Test
+6613.100.Leaf = junit.tests.Failure
+6613.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6614 similar at 100% with Composite
+6614.100.Component = EPI_Abstract_junit.framework.Test
+6614.100.Leaf = junit.tests.WasRun
+6614.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6615 similar at 100% with Composite
+6615.100.Component = EPI_Abstract_junit.framework.Test
+6615.100.Leaf = junit.tests.NotVoidTestCase
+6615.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6616 similar at 100% with Composite
+6616.100.Component = EPI_Abstract_junit.framework.Test
+6616.100.Leaf = junit.samples.VectorTest
+6616.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6617 similar at 100% with Composite
+6617.100.Component = EPI_Abstract_junit.framework.Test
+6617.100.Leaf = junit.samples.SimpleTest
+6617.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6618 similar at 100% with Composite
+6618.100.Component = EPI_Abstract_junit.framework.Test
+6618.100.Leaf = junit.tests.NotPublicTestCase
+6618.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6619 similar at 100% with Composite
+6619.100.Component = EPI_Abstract_junit.framework.Test
+6619.100.Leaf = junit.tests.RepeatedTestTest
+6619.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6620 similar at 100% with Composite
+6620.100.Component = EPI_Abstract_junit.framework.Test
+6620.100.Leaf = junit.tests.Success
+6620.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6621 similar at 100% with Composite
+6621.100.Component = EPI_Abstract_junit.framework.Test
+6621.100.Leaf = junit.tests.TestListenerTest
+6621.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6622 similar at 100% with Composite
+6622.100.Component = EPI_Abstract_junit.framework.Test
+6622.100.Leaf = junit.tests.TestImplementorTest
+6622.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6623 similar at 100% with Composite
+6623.100.Component = EPI_Abstract_junit.framework.Test
+6623.100.Leaf = junit.tests.ActiveTestTest
+6623.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6624 similar at 100% with Composite
+6624.100.Component = EPI_Abstract_junit.framework.Test
+6624.100.Leaf = junit.tests.ExceptionTestCaseTest
+6624.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6625 similar at 100% with Composite
+6625.100.Component = EPI_Abstract_junit.framework.Test
+6625.100.Leaf = junit.extensions.ExceptionTestCase
+6625.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6626 similar at 100% with Composite
+6626.100.Component = EPI_Abstract_junit.framework.Test
+6626.100.Leaf = junit.tests.StackFilterTest
+6626.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6627 similar at 100% with Composite
+6627.100.Component = EPI_Abstract_junit.framework.Test
+6627.100.Leaf = junit.tests.OneTestCase
+6627.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6628 similar at 100% with Composite
+6628.100.Component = EPI_Abstract_junit.framework.Test
+6628.100.Leaf = junit.tests.TestCaseTest
+6628.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6629 similar at 100% with Composite
+6629.100.Component = EPI_Abstract_junit.framework.Test
+6629.100.Leaf = junit.tests.TestCaseClassLoaderTest
+6629.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6630 similar at 100% with Composite
+6630.100.Component = EPI_Abstract_junit.framework.Test
+6630.100.Leaf = junit.tests.InheritedTestCase
+6630.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6631 similar at 100% with Composite
+6631.100.Component = EPI_Abstract_junit.framework.Test
+6631.100.Leaf = junit.tests.OverrideTestCase
+6631.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6632 similar at 100% with Composite
+6632.100.Component = EPI_Abstract_junit.framework.Test
+6632.100.Leaf = junit.tests.SorterTest
+6632.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6633 similar at 100% with Composite
+6633.100.Component = EPI_Abstract_junit.framework.TestListener
+6633.100.Leaf = junit.swingui.TestSuitePanel
+6633.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 6634 similar at 100% with Composite
+6634.100.Component = EPI_Abstract_junit.framework.TestListener
+6634.100.Leaf = junit.swingui.TestSuitePanel
+6634.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 6635 similar at 100% with Composite
+6635.100.Component = EPI_Abstract_junit.framework.TestListener
+6635.100.Leaf = junit.textui.TestRunner
+6635.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 6636 similar at 100% with Composite
+6636.100.Component = EPI_Abstract_junit.framework.TestListener
+6636.100.Leaf = junit.textui.TestRunner
+6636.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 6637 similar at 100% with Composite
+6637.100.Component = EPI_Abstract_junit.framework.TestListener
+6637.100.Leaf = junit.awtui.TestRunner
+6637.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 6638 similar at 100% with Composite
+6638.100.Component = EPI_Abstract_junit.framework.TestListener
+6638.100.Leaf = junit.awtui.TestRunner
+6638.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 6639 similar at 100% with Composite
+6639.100.Component = EPI_Abstract_junit.framework.TestListener
+6639.100.Leaf = junit.ui.TestRunner
+6639.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 6640 similar at 100% with Composite
+6640.100.Component = EPI_Abstract_junit.framework.TestListener
+6640.100.Leaf = junit.ui.TestRunner
+6640.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 6641 similar at 100% with Composite
+6641.100.Component = EPI_Abstract_junit.framework.TestListener
+6641.100.Leaf = junit.swingui.TestRunner
+6641.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 6642 similar at 100% with Composite
+6642.100.Component = EPI_Abstract_junit.framework.TestListener
+6642.100.Leaf = junit.swingui.TestRunner
+6642.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 6643 similar at 100% with Composite
+6643.100.Component = EPI_Abstract_junit.framework.Test
+6643.100.Leaf = junit.extensions.TestDecorator
+6643.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6644 similar at 100% with Composite
+6644.100.Component = EPI_Abstract_junit.framework.TestListener
+6644.100.Leaf = junit.tests.TestListenerTest
+6644.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 6645 similar at 100% with Composite
+6645.100.Component = EPI_Abstract_junit.framework.TestListener
+6645.100.Leaf = junit.tests.TestListenerTest
+6645.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 6646 similar at 100% with Composite
+6646.100.Component = EPI_Abstract_junit.framework.Test
+6646.100.Leaf = junit.framework.TestSuite
+6646.100.Composite = junit.extensions.TestDecorator
+
+# Micro-architecture 6647 similar at 100% with Composite
+6647.100.Component = EPI_Abstract_junit.framework.TestListener
+6647.100.Leaf = EPI_Abstract_junit.runner.BaseTestRunner
+6647.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 6648 similar at 100% with Composite
+6648.100.Component = EPI_Abstract_junit.framework.TestListener
+6648.100.Leaf = EPI_Abstract_junit.runner.BaseTestRunner
+6648.100.Composite = junit.tests.TestListenerTest
+
+---------------------------------------------
+ALL
+Solution Computation Time:7
+Number of Solutions With and Without Ghosts:3
+Number of Solutions Without Ghosts:3
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 6749 similar at 100% with Composite
+6749.100.Component = EPI_Abstract_junit.framework.TestListener
+6749.100.Composite = junit.swingui.TestRunner
+
+# Micro-architecture 6750 similar at 100% with Composite
+6750.100.Component = EPI_Abstract_junit.framework.TestListener
+6750.100.Composite = junit.tests.TestListenerTest
+
+# Micro-architecture 6751 similar at 100% with Composite
+6751.100.Component = EPI_Abstract_junit.framework.Test
+6751.100.Composite = junit.extensions.TestDecorator
+

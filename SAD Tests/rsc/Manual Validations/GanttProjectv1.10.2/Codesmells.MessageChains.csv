@@ -1,0 +1,8 @@
+net.sourceforge.ganttproject.GanttTree
+net.sourceforge.ganttproject.io.GanttXMLOpen
+net.sourceforge.ganttproject.io.GanttXMLSaver
+net.sourceforge.ganttproject.gui.taskproperties.TaskAllocationsPanel
+net.sourceforge.ganttproject.gui.taskproperties.TaskDependenciesPanel
+net.sourceforge.ganttproject.task.algorithm.RecalculateTaskScheduleAlgorithm
+net.sourceforge.ganttproject.GanttGraphicArea
+net.sourceforge.ganttproject.GanttOptions

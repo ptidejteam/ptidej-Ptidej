@@ -1,0 +1,13 @@
+Rhino,1.6R5
+BaseClassShouldBeAbstract,[org.mozilla.javascript.tools.shell.Main]
+TraditionBreaker,[org.mozilla.javascript.Synchronizer, org.mozilla.javascript.BaseFunction, org.mozilla.javascript.Arguments, org.mozilla.javascript.NativeJavaArray, org.mozilla.javascript.NativeError, org.mozilla.javascript.ImporterTopLevel, org.mozilla.javascript.NativeArray, org.mozilla.javascript.NativeJavaClass, org.mozilla.javascript.IdScriptableObject, org.mozilla.javascript.NativeJavaPackage, org.mozilla.javascript.ScriptableObject]
+LargeClass,[AntiSingleton]
+Blob,[]
+SpaghettiCode,[]
+ClassDataShouldBePrivate,[]
+BaseClassKnowsDerivedClass,[org.mozilla.javascript.regexp.CompilerState, org.mozilla.javascript.EvaluatorException, org.mozilla.javascript.CompilerEnvirons, org.mozilla.javascript.ScriptOrFnNode, org.mozilla.javascript.regexp.SubString]
+AntiSingleton,[]
+ManyFieldAttributesButNotComplex,[org.mozilla.javascript.NativeString, org.mozilla.javascript.regexp.NativeRegExp, org.mozilla.javascript.IRFactory, org.mozilla.javascript.NativeJavaObject, org.mozilla.javascript.ScriptRuntime, org.mozilla.javascript.Interpreter, org.mozilla.javascript.Parser, org.mozilla.javascript.TokenStream, org.mozilla.javascript.NativeDate, org.mozilla.javascript.NativeArray, org.mozilla.javascript.Node, org.mozilla.javascript.Token, org.mozilla.javascript.Context, org.mozilla.javascript.ScriptableObject]
+FunctionalDecomposition,[]
+SwissArmyKnife,[]
+

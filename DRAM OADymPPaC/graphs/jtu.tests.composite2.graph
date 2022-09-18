@@ -1,0 +1,16 @@
+jtu.tests.composite2.IndentedParagraph jtu.tests.composite2.Paragraph 2
+jtu.tests.composite2.Document jtu.tests.composite2.Element 9
+jtu.tests.composite2.AbstractDocument java.io.PrintStream 2
+jtu.tests.composite2.Main java.lang.String 1
+jtu.tests.composite2.Main jtu.tests.composite2.Title 2
+jtu.tests.composite2.Main java.lang.Object 2
+jtu.tests.composite2.Document java.lang.System 1
+jtu.tests.composite2.Document java.lang.Object 2
+jtu.tests.composite2.Title jtu.tests.composite2.Element 2
+jtu.tests.composite2.Main jtu.tests.composite2.IndentedParagraph 2
+jtu.tests.composite2.Main jtu.tests.composite2.Document 2
+jtu.tests.composite2.Element jtu.tests.composite2.AbstractDocument 2
+jtu.tests.composite2.AbstractDocument java.lang.Object 4
+jtu.tests.composite2.Main jtu.tests.composite2.Paragraph 2
+jtu.tests.composite2.Paragraph jtu.tests.composite2.Element 2
+jtu.tests.composite2.Document java.awt.Composite 1

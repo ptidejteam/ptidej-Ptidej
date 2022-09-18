@@ -1,0 +1,10 @@
+package java.io;
+abstract public interface Flushable
+{
+abstract public void flush() throws java.io.IOException
+{
+
+}
+
+
+}

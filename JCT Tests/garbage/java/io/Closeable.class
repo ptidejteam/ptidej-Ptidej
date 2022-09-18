@@ -1,0 +1,11 @@
+package java.io;
+abstract public interface Closeable
+extends java.lang.AutoCloseable
+{
+abstract public void close() throws java.io.IOException
+{
+
+}
+
+
+}

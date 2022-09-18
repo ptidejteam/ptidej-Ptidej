@@ -1,0 +1,51 @@
+
+The following lists the changes between the Ogre3D C++ API and its 
+corresponding Java API.
+
+
+1) Ogre::FrameListener
+virtual bool frameStarted (const FrameEvent &evt) has been changed to
+bool frameStarted(float timeSinceLastEvent, float timeSinceLastFrame)
+
+virtual bool frameEnded (const FrameEvent &evt) has been changed to
+bool frameEnded (float timeSinceLastEvent, float timeSinceLastFrame)
+
+This way, a FrameEvent does not have to be created every frame.
+
+2) Ogre::FrameEvent
+This class no longer exists.  See (1).
+
+3) Ogre::NameValuePairList 
+This class no longer exists.  Use any class that implements the Java Map 
+interface.
+
+4) Ogre::ParameterList
+This class no longer exists.  It has been replaced by Vector<ParameterDef>.
+
+5) Ogre::ResourceHandle
+This class no longer exists.  Use a int as its replacement.
+(previous definition: typedef unsigned long Ogre::ResourceHandle)
+
+6) Ogre::MovablePlane
+This class extends MovableObject only, not MovableObject and Plane.  This is
+because there is no multiple inheritance in java.
+
+7) Ogre::FogMode 
+The constants in this enumeration are placed in Common.
+
+8) Ogre::ParameterType
+The constants in this enumeration are placed in ParameterDef.
+
+9) Ogre::SceneManager::SpecialCaseRenderQueueMode 
+The constants in this enumeration are placed in SceneManager.
+
+10) Ogre::RenderQueueGroupID 
+The constants in this enumeration are placed in RenderQueue.
+
+11) Ogre::Node::TransformSpace 
+The constants in this enumeration are placed in Node.
+
+The following classes found in the Ogre3D C++ API are implemented entirely in
+Java.
+Vector3
+Plane

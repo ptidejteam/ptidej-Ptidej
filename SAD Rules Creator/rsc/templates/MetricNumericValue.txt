@@ -1,0 +1,33 @@
+final Set classes<CODESMELL> = new HashSet();
+		
+		final Iterator iter = anAbstractLevelModel.getIteratorOnTopLevelEntities();
+		while (iter.hasNext()) {
+			final IEntity entity = (IEntity) iter.next();
+			if (entity instanceof IClass) {
+				final IClass aClass = (IClass) entity;
+				final double <METRIC> = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("<METRIC>")).compute(anAbstractLevelModel, aClass);
+				
+				if (<METRIC> <COMPARISON_OPERATOR> <NUMERIC_VALUE>) {
+					try {
+						CodeSmell dc = new CodeSmell(
+							"<CODESMELL>", "", 
+							new ClassProperty(aClass));
+						
+						HashMap thresholdMap = new HashMap();
+						thresholdMap.put("<METRIC>", new Double(<NUMERIC_VALUE>));
+						
+						dc.getClassProperty().addProperty(new MetricProperty("<METRIC>", 
+							((IUnaryMetric) MetricsRepository.getInstance().getMetric("<METRIC>")).compute(anAbstractLevelModel, aClass), thresholdMap));
+						
+						classes<CODESMELL>.add(dc);
+					}
+					catch (final Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+					}
+				}
+			}
+		}
+
+		this.setSetOfSmells(classes<CODESMELL>);
+		// return classes<CODESMELL>;

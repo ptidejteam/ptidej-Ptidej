@@ -1,0 +1,11 @@
+<iReportPlugin 	
+	name="JRXMLDataSourcePlugin"
+	class="it.businesslogic.ireport.plugin.jrx.JRXMLDataSourcePlugin"
+	loadOnStartup="true"
+	hide = "true"
+	configurable = "false">
+	
+	<IconFile>/it/businesslogic/ireport/icons/menu/new.gif</IconFile>
+	<Description>This plugin enable the xpath2 language and connection editor</Description>
+
+</iReportPlugin>

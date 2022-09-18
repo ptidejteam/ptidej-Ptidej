@@ -1,0 +1,33 @@
+//
+//                                  SugiBib
+//
+//                                Example.uml
+
+UMLscript VERSION 1 MINOR 14 { *ApplyPackages }
+DIAGRAM 
+  STEREOTYPE ASSOC newAssocStereo |isTrue| {*color = blue , test} END
+  STEREOTYPE IS-A << newAssocStereo >> complete |isFalse| {*color = brown, ntest} END
+  PACKAGE << packstereo >> {*allcolor = black} outerpackage 
+  SUB DIAGRAM 
+    PACKAGE {*allcolor = black} package
+      SUB DIAGRAM
+        CLASS GObject
+          ATTRIBUTES selected:boolean, position:coordinate
+          OPERATIONS draw()
+          RELATIONS
+            << genStereo >> {*realize} GENERALIZE 'outerpackage::package::Polygon im Polygon<T0,T1:int>' USE AS 'MyPoly'
+            << depStereo >> {prop} |constr| DEPENDS dependency ON 'outerpackage::package::Point'
+            ASSOC |sconstr| [1 .. *] composite ROLE start > Ich > 
+              TO |econstr| [2 .. 5] ROLE end > 'MyPoly'
+            // QUALIFIER Konto:long, Konto2:int
+          END
+        CLASS Point 
+          ATTRIBUTES color
+          OPERATIONS draw()
+        TEMPLATE < T0 , T1 : int > CLASS << interface >> { *Color = green,*root,bla,isLeaf } |constr| `Polygon im Polygon` 
+          ATTRIBUTES {*Color = blue}+fillcolor:Color=black, textures:array [0 .. 1 , 2 .. *] of INTEGER
+          OPERATIONS << stereo >> {*Color = pink,abstract} |allesOk| #draw(in g:Graphics=null,out test),+$isCool():boolean         
+      END DIAGRAM 
+  END DIAGRAM 
+  CLUSTER { *allColor = blue } |clConstr| testCluster MEMBERS { 'Point' 'assoc' } 
+END DIAGRAM

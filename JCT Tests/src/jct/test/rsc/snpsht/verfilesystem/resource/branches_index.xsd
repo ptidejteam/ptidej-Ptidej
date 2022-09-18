@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="branches">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="branch"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="branch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="branch_name"/>
+        <xs:element ref="update_time" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="revisions"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="branch_name" type="xs:string"/>
+  <xs:element name="revisions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="file_rev" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="file_rev">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="update_time"/>
+        <xs:element ref="file_meta_info_path"/>
+        <xs:element ref="file_rev_path"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="file_meta_info_path" type="xs:string"/>
+  <xs:element name="file_rev_path" type="xs:string"/>
+  <xs:element name="update_time">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="time"/>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="start_time"/>
+          <xs:element ref="end_time"/>
+        </xs:sequence>
+      </xs:sequence>
+      <xs:attribute name="type" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="time" type="xs:long"/>
+  <xs:element name="start_time" type="xs:long"/>
+  <xs:element name="end_time" type="xs:long"/>
+</xs:schema>

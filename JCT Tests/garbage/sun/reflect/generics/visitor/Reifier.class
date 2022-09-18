@@ -1,0 +1,120 @@
+package sun.reflect.generics.visitor;
+public class Reifier
+implements sun.reflect.generics.visitor.TypeTreeVisitor
+{
+private java.lang.Object resultType;
+
+private java.lang.Object factory;
+
+private void <init>(java.lang.Object arg0)
+{
+
+}
+
+private sun.reflect.generics.factory.GenericsFactory getFactory()
+{
+
+}
+
+public static sun.reflect.generics.visitor.Reifier make(java.lang.Object arg0)
+{
+
+}
+
+private java.lang.reflect.Type[] reifyTypeArguments(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.reflect.Type getResult()
+{
+
+}
+
+public void visitFormalTypeParameter(java.lang.Object arg0)
+{
+
+}
+
+public void visitClassTypeSignature(java.lang.Object arg0)
+{
+
+}
+
+public void visitArrayTypeSignature(java.lang.Object arg0)
+{
+
+}
+
+public void visitTypeVariableSignature(java.lang.Object arg0)
+{
+
+}
+
+public void visitWildcard(java.lang.Object arg0)
+{
+
+}
+
+public void visitSimpleClassTypeSignature(java.lang.Object arg0)
+{
+
+}
+
+public void visitBottomSignature(java.lang.Object arg0)
+{
+
+}
+
+public void visitByteSignature(java.lang.Object arg0)
+{
+
+}
+
+public void visitBooleanSignature(java.lang.Object arg0)
+{
+
+}
+
+public void visitShortSignature(java.lang.Object arg0)
+{
+
+}
+
+public void visitCharSignature(java.lang.Object arg0)
+{
+
+}
+
+public void visitIntSignature(java.lang.Object arg0)
+{
+
+}
+
+public void visitLongSignature(java.lang.Object arg0)
+{
+
+}
+
+public void visitFloatSignature(java.lang.Object arg0)
+{
+
+}
+
+public void visitDoubleSignature(java.lang.Object arg0)
+{
+
+}
+
+public void visitVoidDescriptor(java.lang.Object arg0)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

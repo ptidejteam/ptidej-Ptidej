@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<xmitransformations version="2.0">
+<xmitransformation modelelement="sdmetricsbase" xmipattern="base" recurse="true">
+<!-- reflist trigger with unknown element type 'state' -->
+<trigger name="state" type="reflist" attr="xmi.idref" src="UML:State"/>
+</xmitransformation>
+</xmitransformations>

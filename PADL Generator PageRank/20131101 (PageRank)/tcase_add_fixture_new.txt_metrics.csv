@@ -1,0 +1,21 @@
+#statement;statement;PageRank value;Rank;All Edges;Incoming Edges;Outgoing Edges
+0;Statement0;0.0052356;19;1;0;1
+1;Statement1;0.052356;4;2;1;1
+2;Statement2;0.052356;4;3;1;2
+3;Statement3;0.0287958;13;3;1;2
+4;Statement4;0.0287958;13;2;1;1
+5;Statement5;0.052356;4;2;1;1
+6;Statement6;0.0287958;13;2;1;1
+7;Statement7;0.052356;4;2;1;1
+8;Statement8;0.0994764;0;3;2;1
+9;Statement9;0.052356;4;2;1;1
+10;Statement10;0.0759162;2;3;2;1
+11;Statement11;0.052356;4;3;1;2
+12;Statement12;0.0287958;13;3;1;2
+13;Statement13;0.0287958;13;2;1;1
+14;Statement14;0.052356;4;2;1;1
+15;Statement15;0.0287958;13;2;1;1
+16;Statement16;0.052356;4;2;1;1
+17;Statement17;0.0994764;0;3;2;1
+18;Statement18;0.052356;4;2;1;1
+19;Statement19;0.0759162;2;2;2;0

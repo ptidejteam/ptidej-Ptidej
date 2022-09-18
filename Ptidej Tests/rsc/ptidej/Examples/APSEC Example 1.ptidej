@@ -1,0 +1,3 @@
+[Ptidej Project]
+Name = APSEC Example 1
+JavaCode = ../../../bin/ptidej/example/apsec/A.class;../../../bin/ptidej/example/apsec/Example1.class

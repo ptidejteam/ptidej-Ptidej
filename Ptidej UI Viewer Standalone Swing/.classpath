@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry including="images/|texts/" kind="src" path="rsc"/>
+	<classpathentry kind="src" path="/CPL"/>
+	<classpathentry kind="src" path="/InfoVis"/>
+	<classpathentry kind="src" path="/JChoco"/>
+	<classpathentry kind="src" path="/Ptidej Solver Metrics"/>
+	<classpathentry kind="src" path="/PADL"/>
+	<classpathentry kind="src" path="/PADL Creator AOL"/>
+	<classpathentry kind="src" path="/PADL Analyses"/>
+	<classpathentry kind="src" path="/PADL Creator ClassFile"/>
+	<classpathentry kind="src" path="/Ptidej"/>
+	<classpathentry kind="src" path="/Ptidej Solver 4"/>
+	<classpathentry kind="src" path="/Ptidej UI"/>
+	<classpathentry kind="src" path="/Ptidej UI Analyses"/>
+	<classpathentry kind="src" path="/Ptidej UI Primitives AWT"/>
+	<classpathentry kind="src" path="/Ptidej UI Primitives SWT"/>
+	<classpathentry kind="src" path="/Ptidej UI Viewer"/>
+	<classpathentry kind="src" path="/Ptidej UI Viewer Extensions"/>
+	<classpathentry kind="src" path="/Ptidej UI C++"/>
+	<classpathentry kind="src" path="/POM"/>
+	<classpathentry kind="src" path="/SAD"/>
+	<classpathentry kind="src" path="/SAD Rules Creator"/>
+	<classpathentry kind="src" path="/Ptidej UI Viewer AWT"/>
+	<classpathentry kind="src" path="/EPI"/>
+	<classpathentry kind="src" path="/PADL Micro-pattern Analysis"/>
+	<classpathentry kind="src" path="/PADL Design Motifs"/>
+	<classpathentry kind="src" path="/Ptidej UI Layouts"/>
+	<classpathentry kind="src" path="/PADL Creator MSE"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Generator"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator C++ (Eclipse)"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SQUAD"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator AspectJ"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Ptidej UI AspectJ"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/batik-anim.jar"/>
+	<classpathentry kind="lib" path="lib/batik-awt-util.jar"/>
+	<classpathentry kind="lib" path="lib/batik-bridge.jar"/>
+	<classpathentry kind="lib" path="lib/batik-codec.jar"/>
+	<classpathentry kind="lib" path="lib/batik-css.jar"/>
+	<classpathentry kind="lib" path="lib/batik-dom.jar"/>
+	<classpathentry kind="lib" path="lib/batik-extension.jar"/>
+	<classpathentry kind="lib" path="lib/batik-gui-util.jar"/>
+	<classpathentry kind="lib" path="lib/batik-gvt.jar"/>
+	<classpathentry kind="lib" path="lib/batik-parser.jar"/>
+	<classpathentry kind="lib" path="lib/batik-script.jar"/>
+	<classpathentry kind="lib" path="lib/batik-svg-dom.jar"/>
+	<classpathentry kind="lib" path="lib/batik-svggen.jar"/>
+	<classpathentry kind="lib" path="lib/batik-swing.jar"/>
+	<classpathentry kind="lib" path="lib/batik-transcoder.jar"/>
+	<classpathentry kind="lib" path="lib/batik-util.jar"/>
+	<classpathentry kind="lib" path="lib/batik-xml.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

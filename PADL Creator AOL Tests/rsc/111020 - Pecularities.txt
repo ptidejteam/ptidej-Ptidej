@@ -1,0 +1,143 @@
+PUBLIC bind_blob(int index, std::vector<unsignedchar>* blob):int,
+
+PUBLIC  FileDescriptorWatcher:class,
+
+CONST_UnboundMethod<ObserverType-@Method-@Params>& method
+
+The @... (solved in the grammar though)
+
+
+
+AGGREGATION NAME operator= CONTAINER CLASS ScopedComPtr::using
+scoped_refptr MULT UNDEFINED
+
+The space in after CLASS (solved in the grammar though)
+
+
+
+PUBLIC
+ScopedCOMInitializer::~ScopedCOMInitializer():ScopedCOMInitializer::ScopedCOMInitializer,
+
+The first :: in the method name before the ~ (solved in the grammar
+though)
+
+
+
+PROTECTED  stack_data_:typename Allocator::Source,
+
+The "typename" (solved in the grammar though)
+
+
+
+	OPERATIONS
+		PUBLIC StackVector():StackVector,
+		PUBLIC StackVector(CONST_StackVector<T_stack_capacity>&
+other):StackVector,
+      CONST_StackVector<T_stack_capacity>& other):StackVector<T,
+stack_capacity>&,
+		PUBLIC operator_[](size_t i):T&,
+		PUBLIC operator_[](size_t i):CONST_T&
+		;
+
+The fourth line, starting with
+"CONST_StackVector<T_stack_capacity>&" does not seem to be an
+operation declaration. (COULD NOT SOLVE WITH THE GRAMMAR)
+
+
+
+PUBLIC Tuple1(typename TupleTraits<A>::ParamType a):explicit
+
+The "typename" (solved in the grammar though)
+
+
+
+#ClassTemplate Tuple8 template class A, class B, class C, class D,
+class E, class F, class G,
+          class H
+
+For some reason, the comment "class H" goes on the next line and
+break the parser. (COULD NOT SOLVE WITH THE GRAMMAR)
+
+
+
+PUBLIC <void(BaseMixin::*):template,
+
+Open brace without closing brace and also used as operation name...
+(COULD NOT SOLVE WITH THE GRAMMAR)
+
+
+
+PUBLIC SHARED Check(Helper<&C::AddRef>*):template <typename C>No&,
+
+The pointer reference "&" in front of C (solved in the grammar
+though)
+
+
+
+PUBLIC SHARED Check(VARARGS TYPE):template <typename>Yes&,
+
+	There is no typname... (solved in the grammar though)
+
+
+
+PUBLIC COMPILE_ASSERT(sizeof > sizeof,
+unexpected_type_width):COMPILE_ASSERT,
+
+	What kind of operation could that be?
+
+
+
+PUBLIC
+STLElementDeleter<STLContainer>(STLContainer*ptr):STLElementDeleter<STLContainer>,
+
+	A templated constructor??? (solved in the grammar though)
+
+
+
+PUBLIC NewCallback( void ()):typename Callback0::Type*,
+
+	A function as parameter??? (solved in the grammar though)
+
+
+PUBLIC NewCallback( void):template <typename Arg1> typename
+Callback1<Arg1>::Type*,
+
+	Randome templatisation  There are some braces missing...
+
+
+
+// See line 3088 of the original Chrome 15.0.837.0
+this.replace(buffer, "* >", "*>");
+
+// See line 3088 of the original Chrome 15.0.837.0
+this.replace(buffer, "%", "::");
+
+// See line 3175 of the original Chrome 15.0.837.0
+this.replace(buffer, ":: ", " ");
+
+// See line 12243 of the original Chrome 15.0.837.0
+this.replace(buffer, "\\constcmd::nameargs)", "constcmd");
+
+// See line 13427 of the original Chrome 15.0.837.0
+this.replace(buffer, " ::", " ");
+
+// See line 13429 of the original Chrome 15.0.837.0
+this.replace(buffer, "(::", "(");
+
+// See line 13480 of the original Chrome 15.0.837.0
+this.replace(buffer, "PRIVATE base::Callback<void(int32):base::Callback<void\n", "");
+
+// See line 13748 of the original Chrome 15.0.837.0
+this.replace(buffer, "GLES2DecoderTestBase testing::StrictMock", "GLES2DecoderTestBase::StrictMock");
+
+// See line 14425 of the original Chrome 15.0.837.0
+this.replace(buffer, "char unsigned", "unsigned char");
+
+// See line 15658 of the original Chrome 15.0.837.0
+this.replace(buffer, "CONST_StackVector<T_stack_capacity>& other):StackVector<T, stack_capacity>&,\n", "");
+
+// See line 16251 of the original Chrome 15.0.837.0
+this.replace(buffer, "PUBLIC <void(BaseMixin::*):template,\n", "");
+
+// See line 16251 of the original Chrome 15.0.837.0
+this.replace(buffer, "PUBLIC COMPILE_ASSERT(sizeof > sizeof, unexpected_type_width):COMPILE_ASSERT,\n", "");

@@ -1,0 +1,10 @@
+/*
+ * Writen in CLAIRE by
+ * @author Yann-Gaël Guéhéneuc
+ * Translated and adapted from CLAIRE version to JAVA by
+ * @author Iyadh Sidhom
+ * @author Salim Bensemmane
+ * @author Fayçal Skhiri
+ *
+ * (c) Copyright $$$
+ */

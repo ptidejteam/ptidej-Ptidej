@@ -1,0 +1,85 @@
+package java.util.zip;
+abstract interface ZipConstants
+{
+final public static java.lang.Object LOCSIG;
+
+final public static java.lang.Object EXTSIG;
+
+final public static java.lang.Object CENSIG;
+
+final public static java.lang.Object ENDSIG;
+
+final public static java.lang.Object LOCHDR;
+
+final public static java.lang.Object EXTHDR;
+
+final public static java.lang.Object CENHDR;
+
+final public static java.lang.Object ENDHDR;
+
+final public static java.lang.Object LOCVER;
+
+final public static java.lang.Object LOCFLG;
+
+final public static java.lang.Object LOCHOW;
+
+final public static java.lang.Object LOCTIM;
+
+final public static java.lang.Object LOCCRC;
+
+final public static java.lang.Object LOCSIZ;
+
+final public static java.lang.Object LOCLEN;
+
+final public static java.lang.Object LOCNAM;
+
+final public static java.lang.Object LOCEXT;
+
+final public static java.lang.Object EXTCRC;
+
+final public static java.lang.Object EXTSIZ;
+
+final public static java.lang.Object EXTLEN;
+
+final public static java.lang.Object CENVEM;
+
+final public static java.lang.Object CENVER;
+
+final public static java.lang.Object CENFLG;
+
+final public static java.lang.Object CENHOW;
+
+final public static java.lang.Object CENTIM;
+
+final public static java.lang.Object CENCRC;
+
+final public static java.lang.Object CENSIZ;
+
+final public static java.lang.Object CENLEN;
+
+final public static java.lang.Object CENNAM;
+
+final public static java.lang.Object CENEXT;
+
+final public static java.lang.Object CENCOM;
+
+final public static java.lang.Object CENDSK;
+
+final public static java.lang.Object CENATT;
+
+final public static java.lang.Object CENATX;
+
+final public static java.lang.Object CENOFF;
+
+final public static java.lang.Object ENDSUB;
+
+final public static java.lang.Object ENDTOT;
+
+final public static java.lang.Object ENDSIZ;
+
+final public static java.lang.Object ENDOFF;
+
+final public static java.lang.Object ENDCOM;
+
+
+}

@@ -1,0 +1,3 @@
+[Ptidej Project]
+Name = Ptidej UI Viewer Standalone
+JavaCode = ../../../../Ptidej UI Viewer Standalone/bin/ptidej/viewer/;../../../../Ptidej UI Viewer Standalone/bin/ptidej/viewer/core/;../../../../Ptidej UI Viewer Standalone/bin/ptidej/viewer/event/;../../../../Ptidej UI Viewer Standalone/bin/ptidej/viewer/layout/

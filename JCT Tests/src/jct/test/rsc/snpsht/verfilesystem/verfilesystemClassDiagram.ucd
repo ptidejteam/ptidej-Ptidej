@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="verfilesystemClassDiagram" id="{UMLID=_56ORAPiIEd2ksNkvZNBqug,JavaID=verfilesystem}" metadata="uml2-1.0" initialized="true" zoom="0.75" scrolledX="87" scrolledY="-523" tag="100" key="32303037303632392074616E746572696A2D70726F6772616D2D6A6176612D4A43565356616375756D">
+  <children xsi:type="editmodel:InterfaceEditModel" name="IVerFsManager" location="378,1568" size="170,636" timstampe="47" id="{UMLID=_-u_AgPiIEd2ksNkvZNBqug,JavaID=verfilesystem/IVerFsManager}" runTimeClassModel="isValidPath(Ljava.lang.String;),getElement(Ljava.lang.String;),getRevmlVersion(),setSource(Ljava.io.File;),getAllComments(),getAllTags(),getAllFiles(),getBranch(Ljava.lang.String;),getDescription(),toFullPath(Ljava.lang.String;),getTrunk(),getAction(Ljava.lang.String;),getAllRevIDs(),getSimpleRevision(Ljava.lang.String;),getFileName(Ljava.lang.String;),getAllSimplesRevisions(),getSourceManager(),getAuthor(Ljava.lang.String;),getRevID(Ljava.lang.String;),getAction(Lverfilesystem.flag.action.IVerFsAction;),getAllActions(),getFile(Ljava.lang.String;),getTag(Ljava.lang.String;),makeRoot(Ljava.lang.String;),toRelativePath(Ljava.lang.String;),getComment(Ljava.lang.String;),getAllCommits(),getAllAuthors(),getAllBranches(),getUpdateDate(),getRoot(),getAllFilesNames()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="148,576">
+      <children xsi:type="editmodel:MethodEditModel" name="makeRoot" size="85,16" id="{UMLID=_-v4YYPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRoot" size="75,16" id="{UMLID=_-vhzEPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRevmlVersion" size="118,16" id="{UMLID=_-v3KQPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDescription" size="106,16" id="{UMLID=_-waj4PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getUpdateDate" size="109,16" id="{UMLID=_-vldcPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getElement" size="93,16" id="{UMLID=_-wNIgPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSimpleRevision" size="127,16" id="{UMLID=_-wbyAfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllSimplesRevisions" size="148,16" id="{UMLID=_-wLTUfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toFullPath" size="87,16" id="{UMLID=_-wYHoPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toRelativePath" size="108,16" id="{UMLID=_-vfW0PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isValidPath" size="92,16" id="{UMLID=_-vmrkPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllComments" size="116,16" id="{UMLID=_-wRZ8PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getComment" size="99,16" id="{UMLID=_-wI3EPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllActions" size="101,16" id="{UMLID=_-vpH0PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAction" size="84,16" id="{UMLID=_-vjBMPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllAuthors" size="101,16" id="{UMLID=_-wWScPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAuthor" size="84,16" id="{UMLID=_-wO9sfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllBranches" size="110,16" id="{UMLID=_-wTPIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBranch" size="87,16" id="{UMLID=_-v8CwfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTrunk" size="79,16" id="{UMLID=_-wVEUPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllFilesNames" size="120,16" id="{UMLID=_-v60oPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileName" size="99,16" id="{UMLID=_-vsLIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllRevIDs" size="98,16" id="{UMLID=_-v1VEPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRevID" size="81,16" id="{UMLID=_-wCwcPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllFiles" size="88,16" id="{UMLID=_-wA7QPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFile" size="71,16" id="{UMLID=_-v-fAPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllTags" size="89,16" id="{UMLID=_-wgqgPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTag" size="72,16" id="{UMLID=_-vcTgPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllCommits" size="107,16" id="{UMLID=_-vunYPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSourceManager" size="129,16" id="{UMLID=_-weOQfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSource" size="85,16" id="{UMLID=_-wElofiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAction" size="84,16" id="{UMLID=_l4-QwPiqEd2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="CvsFsManager" location="1765,1327" size="188,293" timstampe="71" stereotype="" id="{UMLID=_-07QcPiIEd2ksNkvZNBqug,JavaID=verfilesystem.cvsimpl/CvsFsManager}" runTimeClassModel="cvsRoot,addConstraint(Lverfilesystem.cvsimpl.ICvsFsCommitConstraint;),addConstraint(Ljava.lang.String;[[Ljava.lang.String;),setCvsRoot(LcvsUtils.CVSRoot;),setConstraints([Lverfilesystem.cvsimpl.ICvsFsCommitConstraint;),getConstraints(),constraints,getCvsRoot(),CvsFsManager(LcvsUtils.CVSRoot;),BRANCHER_USER_NAME,CvsFsManager(),addConstraint(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="155,64">
+      <children xsi:type="editmodel:AttributeEditModel" name="constraints" size="85,21" id="{UMLID=__WLjYfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="cvsRoot" size="72,21" id="{UMLID=__WJHIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="BRANCHER_USER_NAME" size="155,16" id="{UMLID=__WPNwPiIEd2ksNkvZNBqug}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="110,182">
+      <children xsi:type="editmodel:MethodEditModel" name="CvsFsManager" size="106,16" id="{UMLID=__WQb4PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="CvsFsManager" size="106,16" id="{UMLID=__WUtUfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addConstraint" size="108,21" id="{UMLID=__WS4IfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addConstraint" size="103,16" id="{UMLID=__WRC8PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setConstraints" size="108,21" id="{UMLID=__WZl0PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addConstraint" size="103,16" id="{UMLID=__WcpIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getConstraints" size="110,21" id="{UMLID=__WWigPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCvsRoot" size="95,21" id="{UMLID=__WYXsPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCvsRoot" size="97,21" id="{UMLID=__WeeUPiIEd2ksNkvZNBqug}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=__V52kPiIEd2ksNkvZNBqug}" source="//@children.1" target="//@children.2" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="50,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="122,1490"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0" name="VerFsManager" location="1693,-672" size="174,1490" timstampe="875" stereotype="" description="UML" id="{UMLID=_-00iwPiIEd2ksNkvZNBqug}" runTimeClassModel="isValidPath(Ljava.lang.String;),getElement(Ljava.lang.String;),root,getAllFiles(),fileManager,setFileLocation(LcvsUtils.FsFileEntity;Lverfilesystem.flag.VerFsFile;),getBranch(Ljava.lang.String;),setAction(Ljava.lang.String;Lverfilesystem.VerFsFileRev;),getDescription(),addNextRevision(Lverfilesystem.VerFsFileRev;Lverfilesystem.VerFsFileRev;),removeFileFromFlag(Lverfilesystem.VerFsFileRev;Lverfilesystem.flag.AbstractVerFsFlag;),addToFile(Ljava.lang.String;Lverfilesystem.VerFsFileRev;),description,getAction(Ljava.lang.String;),tagsMap,getSimpleRevision(Ljava.lang.String;),revIDMap,fileNameMap,setAsFile([Lverfilesystem.VerFsFileRev;),getAction(Lverfilesystem.flag.action.IVerFsAction;),getFile(Ljava.lang.String;),makeRoot(Ljava.lang.String;),branchMap,setPrevRevision(Lverfilesystem.VerFsFileRev;Lverfilesystem.VerFsFileRev;),setComment(Ljava.lang.String;Lverfilesystem.VerFsFileRev;),getAllCommits(),getAllAuthors(),getAllBranches(),setUpdateDate(Ljava.util.Date;),addSimpleRevision(Ljava.lang.String;Ljava.lang.String;),getFileNewIdFromName(Ljava.lang.String;),getUpdateDate(),setAsCommit([Lverfilesystem.VerFsFileRev;),setUpdateTime(Ljava.util.Date;Lverfilesystem.VerFsFileRev;),addComplexElement(Lverfilesystem.VerFsRepository;Ljava.lang.String;),commitSet,getRevmlVersion(),setRevmlVersion(Ljava.lang.String;),setSource(Ljava.io.File;),setBranch(Ljava.lang.String;Lverfilesystem.VerFsFileRev;),getAllComments(),getAllTags(),setAction(Lverfilesystem.flag.action.IVerFsAction;Lverfilesystem.VerFsFileRev;),revmlVersion,authorMap,addSimpleRevision(Lverfilesystem.VerFsRepository;Ljava.lang.String;Ljava.lang.String;),toFullPath(Ljava.lang.String;),getTrunk(),setFileName(Ljava.lang.String;Lverfilesystem.VerFsFileRev;),getAllRevIDs(),getAllSimplesRevisions(),addTag(Ljava.lang.String;Lverfilesystem.VerFsFileRev;),getFileName(Ljava.lang.String;),getSourceManager(),getAuthor(Ljava.lang.String;),getRevID(Ljava.lang.String;),getAllActions(),getTag(Ljava.lang.String;),setRevID(Ljava.lang.String;Lverfilesystem.VerFsFileRev;),toRelativePath(Ljava.lang.String;),setDescription(Ljava.lang.String;),getComment(Ljava.lang.String;),updateDate,commentMap,fileMap,filesRevMap,setFileRevLocation(LcvsUtils.FsFileEntity;Lverfilesystem.VerFsFileRev;),getRoot(),setAuthor(Ljava.lang.String;Lverfilesystem.VerFsFileRev;),VerFsManager(),setAsFile([Lverfilesystem.VerFsFileRev;Ljava.lang.String;),removeNextRevision(Lverfilesystem.VerFsFileRev;Lverfilesystem.VerFsFileRev;),getAllFilesNames(),actions">
+    <children xsi:type="editmodel:CompartmentEditModel" size="139,376">
+      <children xsi:type="editmodel:AttributeEditModel" name="fileManager" size="92,21" id="{UMLID=_-3YukPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="root" size="53,21" id="{UMLID=_-3PkoPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="revmlVersion" size="90,16" id="{UMLID=_-3ZVoPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="description" size="81,16" id="{UMLID=_-3rpgPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="updateDate" size="84,16" id="{UMLID=_-3cY8PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="filesRevMap" size="93,21" id="{UMLID=_-3p0UfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fileMap" size="71,21" id="{UMLID=_-3n_IPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="commentMap" size="101,21" id="{UMLID=_-3mJ8PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="authorMap" size="86,21" id="{UMLID=_-3ajwPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="branchMap" size="89,21" id="{UMLID=_-3TPAPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fileNameMap" size="99,21" id="{UMLID=_-3yXMPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="revIDMap" size="80,21" id="{UMLID=_-3vT4fiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tagsMap" size="75,21" id="{UMLID=_-3tesPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="actions" size="69,21" id="{UMLID=_1f50QPioEd2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="VerFsFileRev" size="97,21" id="{UMLID=_UqAvwPi9Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="commitSet" size="87,21" id="{UMLID=_-30MYfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="AbstractVerFsElement" size="139,21" id="{UMLID=_r5wz4Pi9Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="152,1067">
+      <children xsi:type="editmodel:MethodEditModel" name="VerFsManager" size="106,16" id="{UMLID=_-4StgPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="makeRoot" size="85,16" id="{UMLID=_-37hIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRoot" size="81,21" id="{UMLID=_-405APiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRevmlVersion" size="118,16" id="{UMLID=_-5MFYPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setRevmlVersion" size="116,16" id="{UMLID=_-4gv8PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDescription" size="106,16" id="{UMLID=_-6XxIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDescription" size="104,16" id="{UMLID=_-5bV8PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getUpdateDate" size="109,16" id="{UMLID=_-5PIsPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setUpdateDate" size="107,16" id="{UMLID=_-5DigPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getElement" size="93,16" id="{UMLID=_-6BL0PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSimpleRevision" size="127,16" id="{UMLID=_-5fAUfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllSimplesRevisions" size="148,16" id="{UMLID=_-4OcEfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toFullPath" size="87,16" id="{UMLID=_-5V2YPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toRelativePath" size="108,16" id="{UMLID=_-399YPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isValidPath" size="92,16" id="{UMLID=_-4sWIfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addComplexElement" size="138,16" id="{UMLID=_-5kf4PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addSimpleRevision" size="130,16" id="{UMLID=_-4ilIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addSimpleRevision" size="130,16" id="{UMLID=_-5EwoPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeFileFromFlag" size="136,16" id="{UMLID=_-54B4fiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFileRevLocation" size="129,16" id="{UMLID=_-44jYPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFileLocation" size="111,16" id="{UMLID=_-5njMPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setComment" size="97,16" id="{UMLID=_-6JusPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllComments" size="116,16" id="{UMLID=_-4HHUPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getComment" size="99,16" id="{UMLID=_-6QcYPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAction" size="82,16" id="{UMLID=_-4m2kPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllActions" size="101,16" id="{UMLID=_-5Hz8fiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAction" size="84,16" id="{UMLID=_-4AZoPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAuthor" size="82,16" id="{UMLID=_-6NZEPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllAuthors" size="101,16" id="{UMLID=_-4_4IPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAuthor" size="84,16" id="{UMLID=_-5dLIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setBranch" size="85,16" id="{UMLID=_-5YSoPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllBranches" size="110,16" id="{UMLID=_-5BtUPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBranch" size="87,16" id="{UMLID=_-5zJYPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTrunk" size="79,16" id="{UMLID=_-6S4ofiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFileName" size="97,16" id="{UMLID=_-4xOoPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllFilesNames" size="120,16" id="{UMLID=_-6DoEPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileName" size="99,16" id="{UMLID=_-5JpIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setUpdateTime" size="110,16" id="{UMLID=_-50-kfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setRevID" size="79,16" id="{UMLID=_-6UGwfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllRevIDs" size="98,16" id="{UMLID=_-35r8PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRevID" size="81,16" id="{UMLID=_-6HScPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAction" size="84,16" id="{UMLID=_pOlhsPiqEd2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAsFile" size="80,16" id="{UMLID=_-5vfAfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileNewIdFromName" size="152,16" id="{UMLID=_-42HIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addToFile" size="87,16" id="{UMLID=_-5p_cPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllFiles" size="88,16" id="{UMLID=_-4ErEPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFile" size="71,16" id="{UMLID=_-4QRQPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addTag" size="75,16" id="{UMLID=_-4pS0fiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllTags" size="89,16" id="{UMLID=_-4e6wPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTag" size="72,16" id="{UMLID=_-32ooPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPrevRevision" size="112,16" id="{UMLID=_-5iDoPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addNextRevision" size="117,16" id="{UMLID=_-4uyYfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeNextRevision" size="134,16" id="{UMLID=_-5tp0PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllCommits" size="107,16" id="{UMLID=_-6FdQPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSourceManager" size="129,16" id="{UMLID=_-5NTgfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSource" size="85,16" id="{UMLID=_-4TUkPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAction" size="82,16" id="{UMLID=_VhLi8PiqEd2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAsFile" size="84,16" id="{UMLID=_u103APiqEd2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAsCommit" size="99,16" id="{UMLID=_y7P0QfiqEd2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" description="usage" autoLocated="true" id="{UMLID=_vNiRwPi9Ed2e-tHVYbDvvA}" source="//@children.2" target="//@children.3" targetEnd="//@children.2/@sourceConnections.0/@children.1" label="//@children.2/@sourceConnections.0/@children.2" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,940" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="159,550"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.5/@sourceConnections.0 //@children.2/@sourceConnections.0" name="VerFsFileRev" location="1130,-282" size="159,1104" timstampe="52" stereotype="" id="{UMLID=_9l7twPiIEd2ksNkvZNBqug,JavaID=verfilesystem/VerFsFileRev}" runTimeClassModel="getFileRevMinDate(Lverfilesystem.VerFsFileRev;),getFile(),setRevID(Lverfilesystem.flag.VerFsRevID;),getTags(),setFileRevLocation(LcvsUtils.FsFileEntity;),prettyPrint(),getCommit(),addTag(Lverfilesystem.flag.VerFsTag;),setFile(Lverfilesystem.flag.VerFsFile;),commit,file,action,getFileRevMaxDate(Lverfilesystem.VerFsFileRev;),setAuthor(Lverfilesystem.flag.VerFsAuthor;),setUpdateTime(Lverfilesystem.attribute.VerFsUpdateTime;),getAuthor(),prevRevision,setCommit(Lverfilesystem.flag.IVerFsCommit;),getComment(),getFileName(),getId(),getAction(),getPrevRevision(),fileName,branch,removeNextRevision(Lverfilesystem.VerFsFileRev;),getFileRevLocation(),comment,revID,getBranch(),fileRevLocation,setPrevRevision(Lverfilesystem.VerFsFileRev;),id,VerFsFileRev(Ljava.lang.String;Ljava.lang.String;Lverfilesystem.VerFsRepository;),author,getRevID(),getUpdateTime(),getFileRevMaxDate(),nextRevisions,addNextRevision(Lverfilesystem.VerFsFileRev;),tags,getFileRevMinDate(),compUpdatePeriod(),updateDate,getNextRevisions(),setFileName(Lverfilesystem.flag.VerFsFileName;),setBranch(Lverfilesystem.flag.IVerFsBranch;),setComment(Lverfilesystem.flag.VerFsComment;),setAction(Lverfilesystem.flag.action.AbstractVerFsAction;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="110,317">
+      <children xsi:type="editmodel:AttributeEditModel" name="id" size="38,16" id="{UMLID=_91jeIviIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="comment" size="80,21" id="{UMLID=_91wScfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="action" size="65,21" id="{UMLID=_91pkwviIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="author" size="65,21" id="{UMLID=_91kFMfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="branch" size="68,21" id="{UMLID=_91tPIfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="updateDate" size="90,21" id="{UMLID=_91ZtIfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fileName" size="78,21" id="{UMLID=_91rZ8fiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="revID" size="59,21" id="{UMLID=_91XQ4PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="tags" size="54,21" id="{UMLID=_91QjMPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="commit" size="71,21" id="{UMLID=_91mhcPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="file" size="50,21" id="{UMLID=_91oWofiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fileRevLocation" size="110,21" id="{UMLID=_91cwcviIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="prevRevision" size="95,21" id="{UMLID=_91ZGEPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="nextRevisions" size="99,21" id="{UMLID=_91udQviIEd2ksNkvZNBqug}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,740">
+      <children xsi:type="editmodel:MethodEditModel" name="VerFsFileRev" size="100,16" id="{UMLID=_911yAPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" size="62,16" id="{UMLID=_92WIUPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="prettyPrint" size="86,16" id="{UMLID=_92jjsfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFileRevLocation" size="135,21" id="{UMLID=_9213kPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileRevLocation" size="137,21" id="{UMLID=_92ddEPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getComment" size="105,21" id="{UMLID=_92LwQPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setComment" size="103,21" id="{UMLID=_920CYfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAuthor" size="90,21" id="{UMLID=_923swPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAuthor" size="88,21" id="{UMLID=_92X9gPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAction" size="90,21" id="{UMLID=_92G3wfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAction" size="88,21" id="{UMLID=_92PaoPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBranch" size="93,21" id="{UMLID=_925h8PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setBranch" size="91,21" id="{UMLID=_91z80PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileName" size="105,21" id="{UMLID=_92erMfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFileName" size="103,21" id="{UMLID=_92wYAPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRevID" size="87,21" id="{UMLID=_92lY4PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setRevID" size="85,21" id="{UMLID=_92QowPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTags" size="82,21" id="{UMLID=_92ZysPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addTag" size="75,16" id="{UMLID=_92tUsfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCommit" size="96,21" id="{UMLID=_92ocMPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCommit" size="94,21" id="{UMLID=_92J7EPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFile" size="77,21" id="{UMLID=_92rfgfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFile" size="75,21" id="{UMLID=_91yHofiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getUpdateTime" size="112,16" id="{UMLID=_92FpoPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="compUpdatePeriod" size="130,16" id="{UMLID=_92Sd8PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileRevMinDate" size="129,16" id="{UMLID=_92AxIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileRevMinDate" size="129,16" id="{UMLID=_92DNYPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileRevMaxDate" size="131,16" id="{UMLID=_92qRYPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileRevMaxDate" size="131,16" id="{UMLID=_92xmIfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setUpdateTime" size="110,16" id="{UMLID=_92bn4PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNextRevisions" size="124,21" id="{UMLID=_92nOEPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPrevRevision" size="120,21" id="{UMLID=_92Is8PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPrevRevision" size="118,21" id="{UMLID=_92ggYPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addNextRevision" size="117,16" id="{UMLID=_92M-YfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeNextRevision" size="134,16" id="{UMLID=_92iVkPiIEd2ksNkvZNBqug}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.7/@sourceConnections.0" size="2,1" autoLocated="true" id="{UMLID=_9zYT4PiIEd2ksNkvZNBqug}" source="//@children.3" target="//@children.6" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="79,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="89,224" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" size="2,1" description="Interface Realization" autoLocated="true" id="{UMLID=_9zeagfiIEd2ksNkvZNBqug}" source="//@children.3" target="//@children.8" targetEnd="//@children.3/@sourceConnections.1/@children.1" label="//@children.3/@sourceConnections.1/@children.2" sourceEnd="//@children.3/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,120" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="179,175"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="VerFsRootRepository" location="784,644" size="172,83" timstampe="31" stereotype="" id="{UMLID=_U_sMMPi6Ed2e-tHVYbDvvA,JavaID=verfilesystem/VerFsRootRepository}" runTimeClassModel="VerFsRootRepository(Ljava.lang.String;LCollection;),VerFsRootRepository(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="135,36">
+      <children xsi:type="editmodel:MethodEditModel" name="VerFsRootRepository" size="135,16" id="{UMLID=_ZrhpMfi6Ed2e-tHVYbDvvA}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="VerFsRootRepository" size="135,16" id="{UMLID=_ZrcJoPi6Ed2e-tHVYbDvvA}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_ZrX4MPi6Ed2e-tHVYbDvvA}" source="//@children.4" target="//@children.7" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="85,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="71,378"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" size="2,1" description="Interface Realization" autoLocated="true" id="{UMLID=_Zra7gfi6Ed2e-tHVYbDvvA}" source="//@children.4" target="//@children.12" targetEnd="//@children.4/@sourceConnections.1/@children.2" label="//@children.4/@sourceConnections.1/@children.0" sourceEnd="//@children.4/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,10" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="151,60"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="VerFsNullRev" location="1050,991" size="213,214" timstampe="12" stereotype="" id="{UMLID=_-Q7LgPiIEd2ksNkvZNBqug,JavaID=verfilesystem/VerFsNullRev}" runTimeClassModel="getName(),VerFsNullRev(Lverfilesystem.VerFsFileRev;Lverfilesystem.VerFsFileRev;),getId(),FIRST_REV_DEFAULT_ID_NAME,firstRev,VerFsNullRev(Lverfilesystem.VerFsFileRev;),addNextRevision(Lverfilesystem.VerFsFileRev;),getNextRevision(),getNextRevisions()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="191,41">
+      <children xsi:type="editmodel:AttributeEditModel" name="FIRST_REV_DEFAULT_ID_NAME" size="191,16" id="{UMLID=_-pNIoPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="firstRev" size="69,21" id="{UMLID=_-pNvsfiIEd2ksNkvZNBqug}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="118,126">
+      <children xsi:type="editmodel:MethodEditModel" name="VerFsNullRev" size="101,16" id="{UMLID=_-pYu0PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="VerFsNullRev" size="101,16" id="{UMLID=_-pT2UPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" size="62,16" id="{UMLID=_-pVrgfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getName" size="81,16" id="{UMLID=_-pSBIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addNextRevision" size="117,16" id="{UMLID=_-pQL8fiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNextRevisions" size="118,16" id="{UMLID=_-pO90PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNextRevision" size="114,16" id="{UMLID=_-pXgsPiIEd2ksNkvZNBqug}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_-o-fIPiIEd2ksNkvZNBqug}" source="//@children.5" target="//@children.3" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="146,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="66,1104"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" size="2,1" description="Interface Realization" autoLocated="true" id="{UMLID=_-o_GMPiIEd2ksNkvZNBqug}" source="//@children.5" target="//@children.10" targetEnd="//@children.5/@sourceConnections.1/@children.1" label="//@children.5/@sourceConnections.1/@children.2" sourceEnd="//@children.5/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,10" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="149,60"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0" name="AbstractVerFsElement" location="952,-672" size="179,224" timstampe="32" stereotype="" id="{UMLID=_9l4qcPiIEd2ksNkvZNBqug,JavaID=verfilesystem/AbstractVerFsElement}" runTimeClassModel="getName(),setParent(Lverfilesystem.IVerFsComplexElement;),setName(Ljava.lang.String;),getPath(),name,getParent(),parent,accept(Lverfilesystem.visitor.IVerFsVisitor;),AbstractVerFsElement(Ljava.lang.String;Lverfilesystem.IVerFsComplexElement;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="65,41">
+      <children xsi:type="editmodel:AttributeEditModel" name="parent" size="65,21" id="{UMLID=_9md5QPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" size="56,16" id="{UMLID=_9mcEEPiIEd2ksNkvZNBqug}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="142,136">
+      <children xsi:type="editmodel:MethodEditModel" name="AbstractVerFsElement" size="142,16" id="{UMLID=_9mj_4PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPath" size="75,16" id="{UMLID=_9mxbQfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getName" size="81,16" id="{UMLID=_9mixwPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getParent" size="90,21" id="{UMLID=_9mwNIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setName" size="79,16" id="{UMLID=_9mzQcPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setParent" size="88,21" id="{UMLID=_9mmcIPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="accept" size="71,16" id="{UMLID=_9mfHYPiIEd2ksNkvZNBqug}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" size="2,1" description="Interface Realization" autoLocated="true" id="{UMLID=_9mRsAPiIEd2ksNkvZNBqug}" source="//@children.6" target="//@children.11" targetEnd="//@children.6/@sourceConnections.0/@children.1" label="//@children.6/@sourceConnections.0/@children.2" sourceEnd="//@children.6/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,77" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="132,92"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.0" name="VerFsRepository" location="798,182" size="143,378" timstampe="25" stereotype="" id="{UMLID=_9l8U0fiIEd2ksNkvZNBqug,JavaID=verfilesystem/VerFsRepository}" runTimeClassModel="getChildId(Ljava.lang.String;),addChildren(LCollection;),containsChildId(Ljava.lang.String;),children,removeChildren(LCollection;),containsChild(Lverfilesystem.IVerFsElement;),setChildren(LCollection;),getChildren(),prettyPrint(),addChild(Lverfilesystem.IVerFsElement;),containsChild(Ljava.lang.String;),getChild(Ljava.lang.String;),getId(),VerFsRepository(Ljava.lang.String;Lverfilesystem.IVerFsComplexElement;),VerFsRepository(Ljava.lang.String;Lverfilesystem.IVerFsComplexElement;LCollection;),removeChild(Lverfilesystem.IVerFsElement;),accept(Lverfilesystem.visitor.IVerFsVisitor;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="74,23">
+      <children xsi:type="editmodel:AttributeEditModel" name="children" size="74,21" id="{UMLID=_-L4TcPiIEd2ksNkvZNBqug}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="119,308">
+      <children xsi:type="editmodel:MethodEditModel" name="VerFsRepository" size="113,16" id="{UMLID=_-MTKMPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addChildren" size="113,21" id="{UMLID=_-MCEcPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getChildren" size="99,21" id="{UMLID=_-MAPQPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setChildren" size="97,21" id="{UMLID=_-MYCsPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeChildren" size="119,21" id="{UMLID=_-L790PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addChild" size="81,16" id="{UMLID=_-MW0kPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="VerFsRepository" size="119,21" id="{UMLID=_-MZ34PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeChild" size="98,16" id="{UMLID=_-MR8EPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="containsChild" size="103,16" id="{UMLID=_-MJZMfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" size="62,16" id="{UMLID=_-MU_YfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="containsChildId" size="112,16" id="{UMLID=_-Mc7MPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getChildId" size="87,16" id="{UMLID=_-MNqofiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="containsChild" size="103,16" id="{UMLID=_-MHkAPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getChild" size="78,16" id="{UMLID=_-ML1cPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="prettyPrint" size="86,16" id="{UMLID=_-MQG4fiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="accept" size="71,16" id="{UMLID=_-MD5oPiIEd2ksNkvZNBqug}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_-LsGMPiIEd2ksNkvZNBqug}" source="//@children.7" target="//@children.3/@sourceConnections.0" targetEnd="//@children.7/@sourceConnections.0/@children.1" sourceEnd="//@children.7/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="71,0" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="54,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:InterfaceRealizationEditModel" size="2,1" description="Interface Realization" autoLocated="true" id="{UMLID=_-LstQPiIEd2ksNkvZNBqug}" source="//@children.7" target="//@children.9" targetEnd="//@children.7/@sourceConnections.1/@children.1" label="//@children.7/@sourceConnections.1/@children.2" sourceEnd="//@children.7/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,10" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="179,168"/>
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,13" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <bendpoints secondRelativeDimension="257,-160" firstRelativeDimension="-95,-160"/>
+      <bendpoints secondRelativeDimension="75,-186" firstRelativeDimension="-277,-186"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.10/@sourceConnections.0 //@children.3/@sourceConnections.1" name="IVerFsSimpleRevision" location="434,-337" size="179,294" timstampe="80" id="{UMLID=_9zdzcPiIEd2ksNkvZNBqug,JavaID=verfilesystem/IVerFsSimpleRevision}" runTimeClassModel="getFile(),getTags(),getBranch(),getAuthor(),getComment(),getFileName(),getNextRevisions(),getCommit(),getRevID(),getAction(),getPrevRevision(),getUpdateTime(),getFileRevLocation()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="131,234">
+      <children xsi:type="editmodel:MethodEditModel" name="getFileRevLocation" size="131,16" id="{UMLID=_-RYegPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFile" size="71,16" id="{UMLID=_-RdXAPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getComment" size="99,16" id="{UMLID=_-Rbh0PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAuthor" size="84,16" id="{UMLID=_-RRw0PiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBranch" size="87,16" id="{UMLID=_-RhBYfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getFileName" size="99,16" id="{UMLID=_-RnvEPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAction" size="84,16" id="{UMLID=_-RZsoPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getUpdateTime" size="112,16" id="{UMLID=_-Rl54fiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRevID" size="81,16" id="{UMLID=_-RkEsPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCommit" size="90,16" id="{UMLID=_-RWpUfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTags" size="76,16" id="{UMLID=_-RTmAPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPrevRevision" size="114,16" id="{UMLID=_-Ri2kPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNextRevisions" size="118,16" id="{UMLID=_-RfMMfiIEd2ksNkvZNBqug}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_-Q9nwPiIEd2ksNkvZNBqug}" source="//@children.8" target="//@children.11" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="30,1" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="101,169" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.12/@sourceConnections.0 //@children.7/@sourceConnections.1" name="IVerFsComplexElement" location="140,-338" size="189,168" timstampe="19" id="{UMLID=_9gwS0PiIEd2ksNkvZNBqug,JavaID=verfilesystem/IVerFsComplexElement}" runTimeClassModel="getChildren(),getChildId(Ljava.lang.String;),getChild(Ljava.lang.String;),containsChild(Ljava.lang.String;),containsChildId(Ljava.lang.String;),containsChild(Lverfilesystem.IVerFsElement;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="112,108">
+      <children xsi:type="editmodel:MethodEditModel" name="getChildren" size="93,16" id="{UMLID=_-sxaAPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="containsChild" size="103,16" id="{UMLID=_-snpAPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="containsChildId" size="112,16" id="{UMLID=_-sklsPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getChildId" size="87,16" id="{UMLID=_-suWsfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="containsChild" size="103,16" id="{UMLID=_-sg7UPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getChild" size="78,16" id="{UMLID=_-sr6cPiIEd2ksNkvZNBqug}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_-scp4PiIEd2ksNkvZNBqug}" source="//@children.9" target="//@children.11" targetEnd="//@children.9/@sourceConnections.0/@children.1" sourceEnd="//@children.9/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="141,1" anchorKind="FixedAtEdge" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="19,169" anchorKind="FixedAtEdge"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.5/@sourceConnections.1" name="IVerFsNullRevision" location="434,-1" size="159,60" timstampe="193" id="{UMLID=_93XcAPiIEd2ksNkvZNBqug,JavaID=verfilesystem/IVerFsNullRevision}" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_-otZYPiIEd2ksNkvZNBqug}" source="//@children.10" target="//@children.8" targetEnd="//@children.10/@sourceConnections.0/@children.1" sourceEnd="//@children.10/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="79,1" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="79,295"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.6/@sourceConnections.0 //@children.8/@sourceConnections.0 //@children.9/@sourceConnections.0" name="IVerFsElement" location="363,-687" size="132,168" timstampe="29" id="{UMLID=_9fUIYPiIEd2ksNkvZNBqug,JavaID=verfilesystem/IVerFsElement}" runTimeClassModel="getName(),prettyPrint(),getId(),getPath(),getParent(),accept(Lverfilesystem.visitor.IVerFsVisitor;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="86,108">
+      <children xsi:type="editmodel:MethodEditModel" name="getParent" size="84,16" id="{UMLID=_9gvEsfiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getName" size="81,16" id="{UMLID=_9gFkcPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getId" size="62,16" id="{UMLID=_9hAxgPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPath" size="75,16" id="{UMLID=_9hCmsPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="prettyPrint" size="86,16" id="{UMLID=_9gtPgPiIEd2ksNkvZNBqug}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="accept" size="71,16" id="{UMLID=_9g4OoPiIEd2ksNkvZNBqug}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.4/@sourceConnections.1" name="IVerFsRootElement" location="126,-14" size="161,60" timstampe="7" id="{UMLID=_ZraUcPi6Ed2e-tHVYbDvvA,JavaID=verfilesystem/IVerFsRootElement}" runTimeClassModel="">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" size="2,1" autoLocated="true" id="{UMLID=_3C06YPi6Ed2e-tHVYbDvvA}" source="//@children.12" target="//@children.9" targetEnd="//@children.12/@sourceConnections.0/@children.1" sourceEnd="//@children.12/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="87,1" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,169"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Naturel" methodSorter="Naturel" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true" ShowInnerEntity="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="14,14" gridOrigin="1050,-574" rulerUnit="cm" gridShow="true">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Naturel" methodSorter="Naturel" shortPackageNameFormat="true" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Naturel" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showMethods="true" showAttributes="true" showLiterlas="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>

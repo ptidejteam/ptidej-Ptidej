@@ -1,0 +1,189 @@
+# Micro-architecture 132 similar at 100% with unknown pattern
+132.100.abstractfactory = com.holub.database.ConcreteTable
+132.100.abstractproduct = com.holub.database.ConcreteTable
+132.100.concretefactory = com.holub.database.ConcreteTable
+132.100.product = com.holub.database.ConcreteTable
+132.100.XCommand = No source transformation needed
+
+# Micro-architecture 128 similar at 100% with unknown pattern
+128.100.abstractfactory = com.holub.database.ConcreteTable
+128.100.abstractproduct = com.holub.database.Cursor
+128.100.concretefactory = com.holub.database.ConcreteTable
+128.100.product = com.holub.database.Cursor
+128.100.XCommand = No source transformation needed
+
+# Micro-architecture 131 similar at 100% with unknown pattern
+131.100.abstractfactory = com.holub.database.ConcreteTable
+131.100.abstractproduct = com.holub.database.Table
+131.100.concretefactory = com.holub.database.ConcreteTable
+131.100.product = com.holub.database.ConcreteTable
+131.100.XCommand = No source transformation needed
+
+# Micro-architecture 126 similar at 100% with unknown pattern
+126.100.abstractfactory = com.holub.database.ConcreteTable
+126.100.abstractproduct = com.holub.database.Table
+126.100.concretefactory = com.holub.database.ConcreteTable
+126.100.product = com.holub.database.Table
+126.100.XCommand = No source transformation needed
+
+# Micro-architecture 136 similar at 100% with unknown pattern
+136.100.abstractfactory = com.holub.database.ConcreteTable
+136.100.abstractproduct = com.holub.database.Table
+136.100.concretefactory = com.holub.database.ConcreteTable
+136.100.product = com.holub.database.UnmodifiableTable
+136.100.XCommand = No source transformation needed
+
+# Micro-architecture 137 similar at 100% with unknown pattern
+137.100.abstractfactory = com.holub.database.ConcreteTable
+137.100.abstractproduct = com.holub.database.UnmodifiableTable
+137.100.concretefactory = com.holub.database.ConcreteTable
+137.100.product = com.holub.database.UnmodifiableTable
+137.100.XCommand = No source transformation needed
+
+# Micro-architecture 304 similar at 100% with unknown pattern
+304.100.abstractfactory = com.holub.database.Database
+304.100.abstractproduct = com.holub.database.CSVExporter
+304.100.concretefactory = com.holub.database.Database
+304.100.product = com.holub.database.CSVExporter
+304.100.XCommand = No source transformation needed
+
+# Micro-architecture 302 similar at 100% with unknown pattern
+302.100.abstractfactory = com.holub.database.Database
+302.100.abstractproduct = com.holub.database.Table$Exporter
+302.100.concretefactory = com.holub.database.Database
+302.100.product = com.holub.database.CSVExporter
+302.100.XCommand = No source transformation needed
+
+# Micro-architecture 333 similar at 100% with unknown pattern
+333.100.abstractfactory = com.holub.database.TableFactory
+333.100.abstractproduct = com.holub.database.CSVImporter
+333.100.concretefactory = com.holub.database.TableFactory
+333.100.product = com.holub.database.CSVImporter
+333.100.XCommand = No source transformation needed
+
+# Micro-architecture 325 similar at 100% with unknown pattern
+325.100.abstractfactory = com.holub.database.TableFactory
+325.100.abstractproduct = com.holub.database.ConcreteTable
+325.100.concretefactory = com.holub.database.TableFactory
+325.100.product = com.holub.database.ConcreteTable
+325.100.XCommand = No source transformation needed
+
+# Micro-architecture 334 similar at 100% with unknown pattern
+334.100.abstractfactory = com.holub.database.TableFactory
+334.100.abstractproduct = com.holub.database.Table$Importer
+334.100.concretefactory = com.holub.database.TableFactory
+334.100.product = com.holub.database.CSVImporter
+334.100.XCommand = No source transformation needed
+
+# Micro-architecture 324 similar at 100% with unknown pattern
+324.100.abstractfactory = com.holub.database.TableFactory
+324.100.abstractproduct = com.holub.database.Table
+324.100.concretefactory = com.holub.database.TableFactory
+324.100.product = com.holub.database.ConcreteTable
+324.100.XCommand = No source transformation needed
+
+# Micro-architecture 107 similar at 100% with unknown pattern
+107.100.abstractfactory = com.holub.database.Table
+107.100.abstractproduct = com.holub.database.ConcreteTable
+107.100.concretefactory = com.holub.database.ConcreteTable
+107.100.product = com.holub.database.ConcreteTable
+107.100.XCommand = No source transformation needed
+
+# Micro-architecture 112 similar at 100% with unknown pattern
+112.100.abstractfactory = com.holub.database.Table
+112.100.abstractproduct = com.holub.database.UnmodifiableTable
+112.100.concretefactory = com.holub.database.ConcreteTable
+112.100.product = com.holub.database.UnmodifiableTable
+112.100.XCommand = No source transformation needed
+
+# Micro-architecture 19 similar at 100% with unknown pattern
+19.100.abstractfactory = com.holub.database.jdbc.Console
+19.100.abstractproduct = com.holub.database.jdbc.Console
+19.100.concretefactory = com.holub.database.jdbc.Console
+19.100.product = com.holub.database.jdbc.Console
+19.100.XCommand = No source transformation needed
+
+# Micro-architecture 244 similar at 100% with unknown pattern
+244.100.abstractfactory = com.holub.database.jdbc.JDBCConnection
+244.100.abstractproduct = com.holub.database.Database
+244.100.concretefactory = com.holub.database.jdbc.JDBCConnection
+244.100.product = com.holub.database.Database
+244.100.XCommand = No source transformation needed
+
+# Micro-architecture 236 similar at 100% with unknown pattern
+236.100.abstractfactory = com.holub.database.jdbc.JDBCConnection
+236.100.abstractproduct = com.holub.database.jdbc.JDBCStatement
+236.100.concretefactory = com.holub.database.jdbc.JDBCConnection
+236.100.product = com.holub.database.jdbc.JDBCStatement
+236.100.XCommand = No source transformation needed
+
+# Micro-architecture 237 similar at 100% with unknown pattern
+237.100.abstractfactory = com.holub.database.jdbc.JDBCConnection
+237.100.abstractproduct = com.holub.database.jdbc.adapters.StatementAdapter
+237.100.concretefactory = com.holub.database.jdbc.JDBCConnection
+237.100.product = com.holub.database.jdbc.JDBCStatement
+237.100.XCommand = No source transformation needed
+
+# Micro-architecture 257 similar at 100% with unknown pattern
+257.100.abstractfactory = com.holub.database.jdbc.JDBCDriver
+257.100.abstractproduct = com.holub.database.jdbc.JDBCConnection
+257.100.concretefactory = com.holub.database.jdbc.JDBCDriver
+257.100.product = com.holub.database.jdbc.JDBCConnection
+257.100.XCommand = No source transformation needed
+
+# Micro-architecture 254 similar at 100% with unknown pattern
+254.100.abstractfactory = com.holub.database.jdbc.JDBCDriver
+254.100.abstractproduct = com.holub.database.jdbc.adapters.ConnectionAdapter
+254.100.concretefactory = com.holub.database.jdbc.JDBCDriver
+254.100.product = com.holub.database.jdbc.JDBCConnection
+254.100.XCommand = No source transformation needed
+
+# Micro-architecture 55 similar at 100% with unknown pattern
+55.100.abstractfactory = com.holub.database.jdbc.JDBCResultSet
+55.100.abstractproduct = com.holub.database.jdbc.JDBCResultSetMetaData
+55.100.concretefactory = com.holub.database.jdbc.JDBCResultSet
+55.100.product = com.holub.database.jdbc.JDBCResultSetMetaData
+55.100.XCommand = No source transformation needed
+
+# Micro-architecture 56 similar at 100% with unknown pattern
+56.100.abstractfactory = com.holub.database.jdbc.JDBCResultSet
+56.100.abstractproduct = com.holub.database.jdbc.adapters.ResultSetMetaDataAdapter
+56.100.concretefactory = com.holub.database.jdbc.JDBCResultSet
+56.100.product = com.holub.database.jdbc.JDBCResultSetMetaData
+56.100.XCommand = No source transformation needed
+
+# Micro-architecture 2 similar at 100% with unknown pattern
+2.100.abstractfactory = com.holub.database.jdbc.JDBCStatement
+2.100.abstractproduct = com.holub.database.jdbc.JDBCResultSet
+2.100.concretefactory = com.holub.database.jdbc.JDBCStatement
+2.100.product = com.holub.database.jdbc.JDBCResultSet
+2.100.XCommand = No source transformation needed
+
+# Micro-architecture 4 similar at 100% with unknown pattern
+4.100.abstractfactory = com.holub.database.jdbc.JDBCStatement
+4.100.abstractproduct = com.holub.database.jdbc.adapters.ResultSetAdapter
+4.100.concretefactory = com.holub.database.jdbc.JDBCStatement
+4.100.product = com.holub.database.jdbc.JDBCResultSet
+4.100.XCommand = No source transformation needed
+
+# Micro-architecture 214 similar at 100% with unknown pattern
+214.100.abstractfactory = com.holub.database.jdbc.adapters.ConnectionAdapter
+214.100.abstractproduct = com.holub.database.Database
+214.100.concretefactory = com.holub.database.jdbc.JDBCConnection
+214.100.product = com.holub.database.Database
+214.100.XCommand = No source transformation needed
+
+# Micro-architecture 206 similar at 100% with unknown pattern
+206.100.abstractfactory = com.holub.database.jdbc.adapters.ConnectionAdapter
+206.100.abstractproduct = com.holub.database.jdbc.JDBCStatement
+206.100.concretefactory = com.holub.database.jdbc.JDBCConnection
+206.100.product = com.holub.database.jdbc.JDBCStatement
+206.100.XCommand = No source transformation needed
+
+# Micro-architecture 63 similar at 100% with unknown pattern
+63.100.abstractfactory = com.holub.database.jdbc.adapters.ResultSetAdapter
+63.100.abstractproduct = com.holub.database.jdbc.JDBCResultSetMetaData
+63.100.concretefactory = com.holub.database.jdbc.JDBCResultSet
+63.100.product = com.holub.database.jdbc.JDBCResultSetMetaData
+63.100.XCommand = No source transformation needed
+

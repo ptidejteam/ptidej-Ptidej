@@ -1,0 +1,18 @@
+JTans_pack_calc
+
+null
+Step	ProblemCreation	Solver	Total
+Ruled	0'0	0'0	0'0
+No Rule	0'0	0'8	0'8
+
+Var	DomainNoRule	DomainRuled	Reduction
+leaf	35	0	100%
+composite	35	35	0%
+component	35	35	0%
+
+Solutions	Total	Ghosted	Valabe
+Ruled	0	0	0
+No rule	891	741	150
+
+Inclusion:
+0 solutions included of 0

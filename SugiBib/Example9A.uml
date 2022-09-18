@@ -1,0 +1,31 @@
+//
+//                                   SugiBib
+//
+//                                 Example9A.uml
+//
+//                             nested and inner classes
+
+UMLscript VERSION 1 MINOR 14
+DIAGRAM
+   CLASS ActionListener
+   RELATIONS
+     GENERALIZE 'TestClass::TestListener'
+     GENERALIZE 'TestClass1::TestListener'
+   END
+   CLASS TestClass 
+     ATTRIBUTES
+      -id : int
+     OPERATIONS
+      + TestClass ( )
+     NESTED CLASSES
+       CLASS TestListener
+     END
+   CLASS TestClass1
+     ATTRIBUTES
+      -id : int
+     OPERATIONS
+      + TestClass1 ( )
+     NESTED CLASSES
+       CLASS TestListener
+     END
+END DIAGRAM

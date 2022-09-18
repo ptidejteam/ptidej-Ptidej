@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <title>README</title>
+    <meta name="generator" content="muse.el">
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8">
+    <style type="text/css">
+body {
+  background: white; color: black;
+  margin-left: 3%; margin-right: 7%;
+}
+
+p { margin-top: 1% }
+p.verse { margin-left: 3% }
+
+.example { margin-left: 3% }
+
+h2 {
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+h3 { margin-bottom: 0px; }
+    </style>
+  </head>
+  <body>
+    <h1>README</h1>
+    <!-- Page published by Emacs Muse begins here -->
+<h2>JCT README</h2>
+
+<h3>Dependence</h3>
+
+<p class="first">You need a few utilities in order to generate the documentation, the version are
+informative only, it should works with any later version and probably some
+earlier also:</p>
+
+<ul>
+<li>Apache Ant: <a href="http://ant.apache.org/">http://ant.apache.org/</a> [1.7.1]</li>
+<li>Javadoc: <a href="http://java.sun.com/j2se/javadoc/">http://java.sun.com/j2se/javadoc/</a> [the one included with the Sun JDK
+1.6.0.12] (usualy included within all JDK distribution)</li>
+<li>UML Graph: <a href="http://www.umlgraph.org/">http://www.umlgraph.org/</a> [5.2]</li>
+</ul>
+
+<p>Download and install each of them.</p>
+
+
+<h3>Fetching the source code</h3>
+
+<p class="first">This file intends to provide an access to the JCT documentation.</p>
+
+<p>JCT is composed of 4 Eclipse projects:</p>
+
+<ul>
+<li>JCT-Utils</li>
+<li>JCT</li>
+<li>JCT-Impl</li>
+<li>JCT-Tools</li>
+</ul>
+
+<p>You should first download them from the Ptidej SVN, with the names:</p>
+
+<ul>
+<li>JCT Utils</li>
+<li>JCT</li>
+<li>JCT Impl</li>
+<li>JCT Tools</li>
+</ul>
+
+
+<h3>Updating the configuration to reflect local filesystem</h3>
+
+<p class="first">In the JCT Project, you will find a directory named &quot;rsc&quot;, in which there is
+this README file, another directory named &quot;doc&quot; and some other miscellaneous
+files dans directories.</p>
+
+<p>Open the file named rsc/doc/build.xml, on lines 34 to 40, you will find the
+following tags:</p>
+
+<pre class="example">
+&lt;property name=&quot;root_dir&quot; value=&quot;/home/swoog/docs/boulot/UdeM/Maitrise&quot;/&gt;
+&lt;property name=&quot;util_dir&quot; value=&quot;${root_dir}/JCT-Utils&quot;/&gt;
+&lt;property name=&quot;interface_dir&quot; value=&quot;${root_dir}/JCT&quot;/&gt;
+&lt;property name=&quot;impl_dir&quot; value=&quot;${root_dir}/JCT-Impl&quot;/&gt;
+&lt;property name=&quot;tools_dir&quot; value=&quot;${root_dir}/JCT-Tools&quot;/&gt;
+&lt;property name=&quot;doc_dir&quot; value=&quot;${interface_dir}/doc&quot;/&gt;
+&lt;property name=&quot;umlgraph_jar&quot; value=&quot;/usr/share/UMLGraph/lib/UmlGraph.jar&quot;/&gt;
+</pre>
+
+<p>The first line (root_dir) should contains the path to the directory in which you
+checked out the project from the SVN.</p>
+
+<p>The four following lines (util_dir, interface_dir, impl_dir, tools_dir) should
+contains the name of the directories in which you checked out each project.</p>
+
+<p>The sixth line (doc_dir) should contains the path to the directory in which you
+want the documentation to be stored.</p>
+
+<p>The last list (umlgraph_jar) should contains the path to the UMLGraph jar you
+generated to install UMLGraph.</p>
+
+
+<h3>Generate and browse the documentation</h3>
+
+<p class="first">Once each variable has been set to an adequate value, spawn a new shell in the
+rsc/doc directory and simply run ant (ant and javadoc need to be in your PATH).</p>
+
+<p>The documentation will be generated, There are five entry points to the Javadoc:</p>
+
+<ul>
+<li>${doc_dir}/util/index.html</li>
+<li>${doc_dir}/jct/util/index.html</li>
+<li>${doc_dir}/jct/kernel/index.html</li>
+<li>${doc_dir}/jct/impl/index.html</li>
+<li>${doc_dir}/jct/tools/index.html</li>
+</ul>
+
+<p>The two main entry points being jct/kernel and jct/impl.</p>
+
+
+<h3>Online version</h3>
+
+<p class="first">There is an online version which may not be up-to-date, you are strongly
+encourage to generate your own version of the JavaDoc from the source code:</p>
+
+<ul>
+<li><a href="https://web.soccerlab.polymtl.ca/rptidej/ptidejlab/Software/Ptidej%205%20Workspace/JCT%20Doc/util/index.html">util</a></li>
+<li><a href="https://web.soccerlab.polymtl.ca/rptidej/ptidejlab/Software/Ptidej%205%20Workspace/JCT%20Doc/jct/util/index.html">jct.util</a></li>
+<li><a href="https://web.soccerlab.polymtl.ca/rptidej/ptidejlab/Software/Ptidej%205%20Workspace/JCT%20Doc/jct/kernel/index.html">jct.kernel</a></li>
+<li><a href="https://web.soccerlab.polymtl.ca/rptidej/ptidejlab/Software/Ptidej%205%20Workspace/JCT%20Doc/jct/impl/index.html">jct.impl</a></li>
+<li><a href="https://web.soccerlab.polymtl.ca/rptidej/ptidejlab/Software/Ptidej%205%20Workspace/JCT%20Doc/jct/tools/index.html">jct.tools</a></li>
+</ul>
+
+
+<h3>Miscellaneous</h3>
+
+<p class="first">If there are some more information you need, you still may look at the code or
+contact directly the author, Mathieu Lemoine, at <a href="mailto:lemoinem@iro.umontreal.ca">lemoinem@iro.umontreal.ca</a></p>
+
+
+<h3>License</h3>
+
+<p class="first">Licensed under 3-clause BSD License:
+Copyright © 2009, Mathieu Lemoine
+All rights reserved.</p>
+
+<p>Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:</p>
+
+<ul>
+<li>Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.</li>
+<li>Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.</li>
+<li>Neither the name of Mathieu Lemoine nor the
+names of contributors may be used to endorse or promote products
+derived from this software without specific prior written permission.</li>
+</ul>
+
+<p>THIS SOFTWARE IS PROVIDED BY Mathieu Lemoine ''AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL Mathieu Lemoine BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+
+
+
+<!-- Page published by Emacs Muse ends here -->
+  </body>
+</html>

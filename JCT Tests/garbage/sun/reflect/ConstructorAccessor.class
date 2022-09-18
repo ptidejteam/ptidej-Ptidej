@@ -1,0 +1,10 @@
+package sun.reflect;
+abstract public interface ConstructorAccessor
+{
+abstract public java.lang.Object newInstance(java.lang.Object arg0) throws java.lang.IllegalArgumentException, java.lang.InstantiationException, java.lang.reflect.InvocationTargetException
+{
+
+}
+
+
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE Library  SYSTEM "http://www.sdmetrics.com/acceptablefood.dtd">
+<test>
+
+<fishy value="halibut"></fishy>
+
+<unsuspicious value="chicken"></unsuspicious>
+
+</test>

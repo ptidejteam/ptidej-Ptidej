@@ -1,0 +1,40 @@
+# Micro-architecture 16 similar at 100% with unknown pattern
+16.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+16.100.concreteProduct = org.game.Juzzle.ControlPanel
+16.100.XCommand = No source transformation needed
+
+# Micro-architecture 29 similar at 100% with unknown pattern
+29.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+29.100.concreteProduct = org.game.Juzzle.ImageDescription
+29.100.XCommand = No source transformation needed
+
+# Micro-architecture 27 similar at 100% with unknown pattern
+27.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+27.100.concreteProduct = org.game.Juzzle.PuzzlePanel
+27.100.XCommand = No source transformation needed
+
+# Micro-architecture 20 similar at 100% with unknown pattern
+20.100.concreteCreator = org.game.Juzzle.JuzzlePanel
+20.100.concreteProduct = org.game.Juzzle.StartDialog
+20.100.XCommand = No source transformation needed
+
+# Micro-architecture 70 similar at 100% with unknown pattern
+70.100.concreteCreator = org.game.Juzzle.MainFrame
+70.100.concreteProduct = org.game.Juzzle.JuzzlePanel
+70.100.XCommand = No source transformation needed
+
+# Micro-architecture 68 similar at 100% with unknown pattern
+68.100.concreteCreator = org.game.Juzzle.PuzzlePanel
+68.100.concreteProduct = org.game.Juzzle.DummyPuzzlePartList
+68.100.XCommand = No source transformation needed
+
+# Micro-architecture 63 similar at 100% with unknown pattern
+63.100.concreteCreator = org.game.Juzzle.PuzzlePanel
+63.100.concreteProduct = org.game.Juzzle.PuzzlePartList
+63.100.XCommand = No source transformation needed
+
+# Micro-architecture 6 similar at 100% with unknown pattern
+6.100.concreteCreator = org.game.Juzzle.main
+6.100.concreteProduct = org.game.Juzzle.MainFrame
+6.100.XCommand = No source transformation needed
+

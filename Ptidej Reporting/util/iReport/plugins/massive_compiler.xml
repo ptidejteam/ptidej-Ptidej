@@ -1,0 +1,4 @@
+<iReportPlugin 	name="Massive compiler"	class="it.businesslogic.ireport.plugin.massivecompiler.MassiveCompiler">
+	<IconFile>/it/businesslogic/ireport/icons/menu/win_cascade.gif</IconFile>
+	<Description>Massive compiler tool</Description>
+</iReportPlugin>

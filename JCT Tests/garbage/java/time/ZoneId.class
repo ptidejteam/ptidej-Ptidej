@@ -1,0 +1,115 @@
+package java.time;
+abstract public class ZoneId
+implements java.io.Serializable
+{
+final public static java.lang.Object SHORT_IDS;
+
+final private static java.lang.Object serialVersionUID;
+
+public static java.time.ZoneId systemDefault()
+{
+
+}
+
+public static java.util.Set getAvailableZoneIds()
+{
+
+}
+
+public static java.time.ZoneId of(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.time.ZoneId of(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.ZoneId ofOffset(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static java.time.ZoneId of(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static java.time.ZoneId ofWithPrefix(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public static java.time.ZoneId from(java.lang.Object arg0)
+{
+
+}
+
+void <init>()
+{
+
+}
+
+abstract public java.lang.String getId()
+{
+
+}
+
+public java.lang.String getDisplayName(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.time.temporal.TemporalAccessor toTemporal()
+{
+
+}
+
+abstract public java.time.zone.ZoneRules getRules()
+{
+
+}
+
+public java.time.ZoneId normalized()
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.InvalidObjectException
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+private java.lang.Object writeReplace()
+{
+
+}
+
+abstract void write(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

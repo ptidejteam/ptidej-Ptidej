@@ -1,0 +1,2471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="TestAllPtidej" project="All Ptidej Tests" tests="716" started="716" failures="4" errors="30" ignored="0">
+  <testsuite name="ptidej.test.all.TestAllPtidej" time="580.376">
+    <testsuite name="epi.test.TestEPI" time="184.482">
+      <testsuite name="epi.test.java.JavaAWTTest" time="118.963">
+        <testcase name="testNumberOfSolutions" classname="epi.test.java.JavaAWTTest" time="118.963"/>
+      </testsuite>
+      <testsuite name="epi.test.java.JavaSwingTest" time="65.519">
+        <testcase name="testNumberOfSolutions" classname="epi.test.java.JavaSwingTest" time="65.519"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="ptidej.solver.test.java.fingerprint.TestMetricalPtidejSolver" time="0.176">
+      <testsuite name="ptidej.solver.test.java.fingerprint.Composition" time="0.158">
+        <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.fingerprint.Composition" time="0.158"/>
+        <testcase name="testSolution1" classname="ptidej.solver.test.java.fingerprint.Composition" time="0.0"/>
+        <testcase name="testSolution2" classname="ptidej.solver.test.java.fingerprint.Composition" time="0.0"/>
+        <testcase name="testSolutionPercentage" classname="ptidej.solver.test.java.fingerprint.Composition" time="0.0"/>
+      </testsuite>
+      <testsuite name="ptidej.solver.test.java.fingerprint.Composition2" time="0.006">
+        <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.fingerprint.Composition2" time="0.006"/>
+        <testcase name="testSolutionPercentage" classname="ptidej.solver.test.java.fingerprint.Composition2" time="0.0"/>
+      </testsuite>
+      <testsuite name="ptidej.solver.test.java.fingerprint.Composition3" time="0.005">
+        <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.fingerprint.Composition3" time="0.005"/>
+        <testcase name="testSolutionPercentage" classname="ptidej.solver.test.java.fingerprint.Composition3" time="0.0"/>
+        <testcase name="testSolution" classname="ptidej.solver.test.java.fingerprint.Composition3" time="0.0"/>
+      </testsuite>
+      <testsuite name="ptidej.solver.test.java.fingerprint.Composition4" time="0.007">
+        <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.fingerprint.Composition4" time="0.007"/>
+        <testcase name="testSolution1" classname="ptidej.solver.test.java.fingerprint.Composition4" time="0.0"/>
+        <testcase name="testSolution2" classname="ptidej.solver.test.java.fingerprint.Composition4" time="0.0"/>
+        <testcase name="testSolutionPercentage" classname="ptidej.solver.test.java.fingerprint.Composition4" time="0.0"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="padl.analysis.test.TestPADLAnalyses" time="0.042">
+      <testsuite name="padl.analysis.aac.test.TestAACAnalyses" time="0.005">
+        <testsuite name="padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.005">
+          <testcase name="testAggregation" classname="padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.004"/>
+          <testcase name="testAssociation" classname="padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testConstructor" classname="padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testFooAssociation" classname="padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testUseRelationship" classname="padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testMethod" classname="padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testStaticField" classname="padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="padl.analysis.packagebuilder.test.TestPackageBuilder" time="0.037">
+        <testsuite name="padl.analysis.packagebuilder.test.Test1" time="0.037">
+          <testcase name="testNumberOfPackages" classname="padl.analysis.packagebuilder.test.Test1" time="0.036"/>
+          <testcase name="testNumberOfJavaLangEntities" classname="padl.analysis.packagebuilder.test.Test1" time="0.0"/>
+          <testcase name="testNumberOfJavaUtilEntities" classname="padl.analysis.packagebuilder.test.Test1" time="0.0"/>
+          <testcase name="testNumberOfDataEntities" classname="padl.analysis.packagebuilder.test.Test1" time="0.0"/>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestCreatorAOL" time="0.096">
+      <testsuite name="padl.creator.test.Test1" time="0.072">
+        <testcase name="testClasses" classname="padl.creator.test.Test1" time="0.072"/>
+      </testsuite>
+      <testsuite name="padl.creator.test.Test2" time="0.024">
+        <testcase name="testClasses" classname="padl.creator.test.Test2" time="0.024"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestCreatorAspectJ" time="3.671">
+      <testsuite name="padl.creator.test.aspect.TestOO" time="0.059">
+        <testcase name="testCreation" classname="padl.creator.test.aspect.TestOO" time="0.027"/>
+        <testcase name="testConstituentCreation" classname="padl.creator.test.aspect.TestOO" time="0.032"/>
+      </testsuite>
+      <testsuite name="padl.creator.test.aspect.TestAO" time="3.15">
+        <testcase name="testConstituentCreation" classname="padl.creator.test.aspect.TestAO" time="2.123"/>
+        <testcase name="testImportCreation" classname="padl.creator.test.aspect.TestAO" time="0.562">
+          <failure>junit.framework.AssertionFailedError: Test mapping of import exemple.figureElement.core.Point
+	at junit.framework.Assert.fail(Assert.java:51)
+	at junit.framework.Assert.assertTrue(Assert.java:38)
+	at padl.creator.test.aspect.TestAO.testImportCreation(TestAO.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:142)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+        </testcase>
+        <testcase name="testLstExist" classname="padl.creator.test.aspect.TestAO" time="0.465"/>
+      </testsuite>
+      <testsuite name="padl.creator.test.aspect.TestModelCreation" time="0.39">
+        <testcase name="testCreation" classname="padl.creator.test.aspect.TestModelCreation" time="0.39"/>
+      </testsuite>
+      <testsuite name="ptidej.ui.kernel.builder.test.TestBuilder" time="0.072">
+        <testcase name="testTypematching" classname="ptidej.ui.kernel.builder.test.TestBuilder" time="0.072"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="padl.creator.test.TestCreatorCpp" time="0.08">
+      <testsuite name="padl.creator.test.cpp.TestCPPCreator" time="0.08">
+        <testsuite name="padl.creator.test.cpp.TestWorld" time="0.063">
+          <testcase name="testClass" classname="padl.creator.test.cpp.TestWorld" time="0.05">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestWorld.setUp(TestWorld.java:63)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testEnum" classname="padl.creator.test.cpp.TestWorld" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.function_direct_declarator(CPPParser.java:2336)
+	at padl.creator.parser.CPPParser.function_declarator(CPPParser.java:2262)
+	at padl.creator.parser.CPPParser.function_definition(CPPParser.java:2301)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2154)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestWorld.setUp(TestWorld.java:63)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testStruc" classname="padl.creator.test.cpp.TestWorld" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.function_direct_declarator(CPPParser.java:2336)
+	at padl.creator.parser.CPPParser.function_declarator(CPPParser.java:2262)
+	at padl.creator.parser.CPPParser.function_definition(CPPParser.java:2301)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2154)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestWorld.setUp(TestWorld.java:63)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testGlobalField" classname="padl.creator.test.cpp.TestWorld" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.function_direct_declarator(CPPParser.java:2336)
+	at padl.creator.parser.CPPParser.function_declarator(CPPParser.java:2262)
+	at padl.creator.parser.CPPParser.function_definition(CPPParser.java:2301)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2154)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestWorld.setUp(TestWorld.java:63)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassGameConstructor" classname="padl.creator.test.cpp.TestWorld" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.function_direct_declarator(CPPParser.java:2336)
+	at padl.creator.parser.CPPParser.function_declarator(CPPParser.java:2262)
+	at padl.creator.parser.CPPParser.function_definition(CPPParser.java:2301)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2154)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestWorld.setUp(TestWorld.java:63)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassGameMethod" classname="padl.creator.test.cpp.TestWorld" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.function_direct_declarator(CPPParser.java:2336)
+	at padl.creator.parser.CPPParser.function_declarator(CPPParser.java:2262)
+	at padl.creator.parser.CPPParser.function_definition(CPPParser.java:2301)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2154)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestWorld.setUp(TestWorld.java:63)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassGameField" classname="padl.creator.test.cpp.TestWorld" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.function_direct_declarator(CPPParser.java:2336)
+	at padl.creator.parser.CPPParser.function_declarator(CPPParser.java:2262)
+	at padl.creator.parser.CPPParser.function_definition(CPPParser.java:2301)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2154)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestWorld.setUp(TestWorld.java:63)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassGameUseRelationship" classname="padl.creator.test.cpp.TestWorld" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.function_direct_declarator(CPPParser.java:2336)
+	at padl.creator.parser.CPPParser.function_declarator(CPPParser.java:2262)
+	at padl.creator.parser.CPPParser.function_definition(CPPParser.java:2301)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2154)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestWorld.setUp(TestWorld.java:63)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassTeamConstructor" classname="padl.creator.test.cpp.TestWorld" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.function_direct_declarator(CPPParser.java:2336)
+	at padl.creator.parser.CPPParser.function_declarator(CPPParser.java:2262)
+	at padl.creator.parser.CPPParser.function_definition(CPPParser.java:2301)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2154)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestWorld.setUp(TestWorld.java:63)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassTeamField" classname="padl.creator.test.cpp.TestWorld" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.function_direct_declarator(CPPParser.java:2336)
+	at padl.creator.parser.CPPParser.function_declarator(CPPParser.java:2262)
+	at padl.creator.parser.CPPParser.function_definition(CPPParser.java:2301)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2154)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestWorld.setUp(TestWorld.java:63)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassTeamMethod" classname="padl.creator.test.cpp.TestWorld" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.function_direct_declarator(CPPParser.java:2336)
+	at padl.creator.parser.CPPParser.function_declarator(CPPParser.java:2262)
+	at padl.creator.parser.CPPParser.function_definition(CPPParser.java:2301)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2154)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestWorld.setUp(TestWorld.java:63)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassTeamDestructor" classname="padl.creator.test.cpp.TestWorld" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.function_direct_declarator(CPPParser.java:2336)
+	at padl.creator.parser.CPPParser.function_declarator(CPPParser.java:2262)
+	at padl.creator.parser.CPPParser.function_definition(CPPParser.java:2301)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2154)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestWorld.setUp(TestWorld.java:63)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassTeamUseRelationship" classname="padl.creator.test.cpp.TestWorld" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.function_direct_declarator(CPPParser.java:2336)
+	at padl.creator.parser.CPPParser.function_declarator(CPPParser.java:2262)
+	at padl.creator.parser.CPPParser.function_definition(CPPParser.java:2301)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2154)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestWorld.setUp(TestWorld.java:63)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+        </testsuite>
+        <testsuite name="padl.creator.test.cpp.TestInheritance" time="0.007">
+          <testcase name="testClass" classname="padl.creator.test.cpp.TestInheritance" time="0.002">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestInheritance.setUp(TestInheritance.java:62)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testGhost" classname="padl.creator.test.cpp.TestInheritance" time="0.002">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestInheritance.setUp(TestInheritance.java:62)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testInheritedEntities" classname="padl.creator.test.cpp.TestInheritance" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestInheritance.setUp(TestInheritance.java:62)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testInheritingEntities" classname="padl.creator.test.cpp.TestInheritance" time="0.002">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestInheritance.setUp(TestInheritance.java:62)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+        </testsuite>
+        <testsuite name="padl.creator.test.cpp.TestCpoint" time="0.004">
+          <testcase name="testClass" classname="padl.creator.test.cpp.TestCpoint" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestCpoint.setUp(TestCpoint.java:55)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassCpointConstructor" classname="padl.creator.test.cpp.TestCpoint" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestCpoint.setUp(TestCpoint.java:55)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassCpointMethod" classname="padl.creator.test.cpp.TestCpoint" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestCpoint.setUp(TestCpoint.java:55)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassCpointField" classname="padl.creator.test.cpp.TestCpoint" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestCpoint.setUp(TestCpoint.java:55)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+        </testsuite>
+        <testsuite name="padl.creator.test.cpp.TestCsegment2" time="0.006">
+          <testcase name="testClass" classname="padl.creator.test.cpp.TestCsegment2" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestCsegment2.setUp(TestCsegment2.java:58)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testGhost" classname="padl.creator.test.cpp.TestCsegment2" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestCsegment2.setUp(TestCsegment2.java:58)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassCpointMethod" classname="padl.creator.test.cpp.TestCsegment2" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestCsegment2.setUp(TestCsegment2.java:58)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassCpointField" classname="padl.creator.test.cpp.TestCsegment2" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestCsegment2.setUp(TestCsegment2.java:58)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassCsegmentConstructor" classname="padl.creator.test.cpp.TestCsegment2" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestCsegment2.setUp(TestCsegment2.java:58)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+          <testcase name="testClassCpointRelationship" classname="padl.creator.test.cpp.TestCsegment2" time="0.001">
+            <error>java.lang.NullPointerException
+	at padl.kernel.impl.Parameter.getTypeName(Parameter.java:94)
+	at padl.kernel.impl.Parameter.setNameFromType(Parameter.java:102)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:47)
+	at padl.kernel.impl.Parameter.&lt;init&gt;(Parameter.java:40)
+	at padl.kernel.impl.Factory.createParameter(Factory.java:304)
+	at padl.creator.parser.CPPParser.parameter_declaration(CPPParser.java:11883)
+	at padl.creator.parser.CPPParser.parameter_declaration_list(CPPParser.java:11904)
+	at padl.creator.parser.CPPParser.parameter_list(CPPParser.java:11921)
+	at padl.creator.parser.CPPParser.ctor_declarator(CPPParser.java:1238)
+	at padl.creator.parser.CPPParser.ctor_definition(CPPParser.java:1316)
+	at padl.creator.parser.CPPParser.member_declaration(CPPParser.java:11374)
+	at padl.creator.parser.CPPParser.class_specifier(CPPParser.java:803)
+	at padl.creator.parser.CPPParser.declaration_specifiers(CPPParser.java:1577)
+	at padl.creator.parser.CPPParser.declaration(CPPParser.java:1409)
+	at padl.creator.parser.CPPParser.external_declaration(CPPParser.java:2126)
+	at padl.creator.parser.CPPParser.translation_unit(CPPParser.java:12911)
+	at padl.creator.parser.CPPParser.parse(CPPParser.java:11988)
+	at padl.creator.CppCreator.create(CppCreator.java:59)
+	at padl.kernel.impl.CodeLevelModel.create(CodeLevelModel.java:48)
+	at padl.creator.test.cpp.TestCsegment2.setUp(TestCsegment2.java:58)
+	at junit.framework.TestCase.runBare(TestCase.java:140)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+          </testcase>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+    <testsuite name="padl.creator.test.TestCreatorClassFile" time="22.196">
+      <testsuite name="padl.creator.test.classfile.example.TestClassFileCompleteCreator" time="0.4">
+        <testsuite name="padl.creator.test.classfile.example.Aggregation1" time="0.005">
+          <testcase name="testAssociation" classname="padl.creator.test.classfile.example.Aggregation1" time="0.004"/>
+          <testcase name="testConstructor" classname="padl.creator.test.classfile.example.Aggregation1" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.test.classfile.example.Aggregation1" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.test.classfile.example.Aggregation1" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.Aggregation1" time="0.0"/>
+          <testcase name="testAddMethod" classname="padl.creator.test.classfile.example.Aggregation1" time="0.0"/>
+          <testcase name="testContainerAggregation" classname="padl.creator.test.classfile.example.Aggregation1" time="0.0"/>
+          <testcase name="testField" classname="padl.creator.test.classfile.example.Aggregation1" time="0.0"/>
+          <testcase name="testGetUseRelationship" classname="padl.creator.test.classfile.example.Aggregation1" time="0.001"/>
+          <testcase name="testRemoveMethod" classname="padl.creator.test.classfile.example.Aggregation1" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.Aggregation10" time="0.005">
+          <testcase name="testAggregation" classname="padl.creator.test.classfile.example.Aggregation10" time="0.004"/>
+          <testcase name="testConstructor" classname="padl.creator.test.classfile.example.Aggregation10" time="0.001"/>
+          <testcase name="testUseRelationship" classname="padl.creator.test.classfile.example.Aggregation10" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.test.classfile.example.Aggregation10" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.test.classfile.example.Aggregation10" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.Aggregation10" time="0.0"/>
+          <testcase name="testStaticField" classname="padl.creator.test.classfile.example.Aggregation10" time="0.0"/>
+          <testcase name="testAddAMethod" classname="padl.creator.test.classfile.example.Aggregation10" time="0.0"/>
+          <testcase name="testAssociationLink" classname="padl.creator.test.classfile.example.Aggregation10" time="0.0"/>
+          <testcase name="testConstructorAssociation" classname="padl.creator.test.classfile.example.Aggregation10" time="0.0"/>
+          <testcase name="testRemoveAMethod" classname="padl.creator.test.classfile.example.Aggregation10" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.Aggregation11" time="0.009">
+          <testcase name="testConstructor" classname="padl.creator.test.classfile.example.Aggregation11" time="0.009"/>
+          <testcase name="testMainEntityName" classname="padl.creator.test.classfile.example.Aggregation11" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.test.classfile.example.Aggregation11" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.Aggregation11" time="0.0"/>
+          <testcase name="testStaticField" classname="padl.creator.test.classfile.example.Aggregation11" time="0.0"/>
+          <testcase name="testContainerAggregation" classname="padl.creator.test.classfile.example.Aggregation11" time="0.0"/>
+          <testcase name="testAddAMethod" classname="padl.creator.test.classfile.example.Aggregation11" time="0.0"/>
+          <testcase name="testConstructorAssociation" classname="padl.creator.test.classfile.example.Aggregation11" time="0.0"/>
+          <testcase name="testRemoveAMethod" classname="padl.creator.test.classfile.example.Aggregation11" time="0.0"/>
+          <testcase name="testAddAggregation" classname="padl.creator.test.classfile.example.Aggregation11" time="0.0"/>
+          <testcase name="testAddUseRelationship" classname="padl.creator.test.classfile.example.Aggregation11" time="0.0"/>
+          <testcase name="testAssociation1" classname="padl.creator.test.classfile.example.Aggregation11" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.Aggregation13" time="0.013">
+          <testcase name="testConstructor" classname="padl.creator.test.classfile.example.Aggregation13" time="0.013"/>
+          <testcase name="testMainEntityName" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+          <testcase name="testAddAMethod" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+          <testcase name="testConstructorAssociation" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+          <testcase name="testRemoveAMethod" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+          <testcase name="testAddAAggregation" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+          <testcase name="testAddAnotherA" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+          <testcase name="testContainerAggregation0" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+          <testcase name="testContainerAggregation1" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+          <testcase name="testGetAMethod" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+          <testcase name="testGetAnotherAMethod" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+          <testcase name="testInstanceField" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+          <testcase name="testRemoveAnotherAMethod" classname="padl.creator.test.classfile.example.Aggregation13" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.Aggregations" time="0.034">
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.Aggregations" time="0.032"/>
+          <testcase name="testAggregation12" classname="padl.creator.test.classfile.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation2" classname="padl.creator.test.classfile.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation3" classname="padl.creator.test.classfile.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation4" classname="padl.creator.test.classfile.example.Aggregations" time="0.001"/>
+          <testcase name="testAggregation5" classname="padl.creator.test.classfile.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation6" classname="padl.creator.test.classfile.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation7" classname="padl.creator.test.classfile.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation8" classname="padl.creator.test.classfile.example.Aggregations" time="0.001"/>
+          <testcase name="testAggregation9" classname="padl.creator.test.classfile.example.Aggregations" time="0.0"/>
+          <testcase name="testEntity1" classname="padl.creator.test.classfile.example.Aggregations" time="0.0"/>
+          <testcase name="testEntity2" classname="padl.creator.test.classfile.example.Aggregations" time="0.0"/>
+          <testcase name="testEntity3" classname="padl.creator.test.classfile.example.Aggregations" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.01">
+          <testcase name="testAggregation" classname="padl.creator.test.classfile.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.008"/>
+          <testcase name="testAssociation" classname="padl.creator.test.classfile.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testConstructor" classname="padl.creator.test.classfile.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testFooAssociation" classname="padl.creator.test.classfile.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.001"/>
+          <testcase name="testUseRelationship" classname="padl.creator.test.classfile.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.test.classfile.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testMethod" classname="padl.creator.test.classfile.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.001"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.test.classfile.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testStaticField" classname="padl.creator.test.classfile.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.Association_INSTANCE_INSTANCE_2" time="0.006">
+          <testcase name="testAssociation" classname="padl.creator.test.classfile.example.Association_INSTANCE_INSTANCE_2" time="0.004"/>
+          <testcase name="testConstructor" classname="padl.creator.test.classfile.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+          <testcase name="testFooAssociation" classname="padl.creator.test.classfile.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+          <testcase name="testUseRelationship" classname="padl.creator.test.classfile.example.Association_INSTANCE_INSTANCE_2" time="0.001"/>
+          <testcase name="testMainEntityName" classname="padl.creator.test.classfile.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+          <testcase name="testMethod" classname="padl.creator.test.classfile.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.test.classfile.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.Association_INSTANCE_INSTANCE_2" time="0.001"/>
+          <testcase name="testConstructorAssociation" classname="padl.creator.test.classfile.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.ChainOfMessages" time="0.004">
+          <testcase name="testConstructor" classname="padl.creator.test.classfile.example.ChainOfMessages" time="0.003"/>
+          <testcase name="testMethod" classname="padl.creator.test.classfile.example.ChainOfMessages" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.test.classfile.example.ChainOfMessages" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.ChainOfMessages" time="0.0"/>
+          <testcase name="testAssociation1" classname="padl.creator.test.classfile.example.ChainOfMessages" time="0.001"/>
+          <testcase name="testAssociation0" classname="padl.creator.test.classfile.example.ChainOfMessages" time="0.0"/>
+          <testcase name="testAssociation2" classname="padl.creator.test.classfile.example.ChainOfMessages" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.Composite1" time="0.015">
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.Composite1" time="0.012"/>
+          <testcase name="testDocument" classname="padl.creator.test.classfile.example.Composite1" time="0.0"/>
+          <testcase name="testIndentedParagraph" classname="padl.creator.test.classfile.example.Composite1" time="0.001"/>
+          <testcase name="testMain" classname="padl.creator.test.classfile.example.Composite1" time="0.0"/>
+          <testcase name="testParagraph" classname="padl.creator.test.classfile.example.Composite1" time="0.0"/>
+          <testcase name="testTitle" classname="padl.creator.test.classfile.example.Composite1" time="0.001"/>
+          <testcase name="testAbstractDocument" classname="padl.creator.test.classfile.example.Composite1" time="0.001"/>
+          <testcase name="testElement" classname="padl.creator.test.classfile.example.Composite1" time="0.0"/>
+          <testcase name="testGhosts" classname="padl.creator.test.classfile.example.Composite1" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.Composite4AbstractDocument" time="0.009">
+          <testcase name="testConstructor" classname="padl.creator.test.classfile.example.Composite4AbstractDocument" time="0.006"/>
+          <testcase name="testMethod" classname="padl.creator.test.classfile.example.Composite4AbstractDocument" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.test.classfile.example.Composite4AbstractDocument" time="0.001"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.Composite4AbstractDocument" time="0.0"/>
+          <testcase name="testAssociation1" classname="padl.creator.test.classfile.example.Composite4AbstractDocument" time="0.001"/>
+          <testcase name="testAssociation2" classname="padl.creator.test.classfile.example.Composite4AbstractDocument" time="0.0"/>
+          <testcase name="testUseRelationship1" classname="padl.creator.test.classfile.example.Composite4AbstractDocument" time="0.0"/>
+          <testcase name="testUseRelationship2" classname="padl.creator.test.classfile.example.Composite4AbstractDocument" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_1" time="0.007">
+          <testcase name="testAssociation" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_1" time="0.003"/>
+          <testcase name="testConstructor" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_1" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_1" time="0.001"/>
+          <testcase name="testMethod" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_1" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_1" time="0.001"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_1" time="0.0"/>
+          <testcase name="testCreationLink" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_1" time="0.001"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_3" time="0.029">
+          <testcase name="testConstructor" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_3" time="0.005"/>
+          <testcase name="testMainEntityName" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+          <testcase name="testMethod" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_3" time="0.001"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_3" time="0.001"/>
+          <testcase name="testAssociation1" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+          <testcase name="testAssociation2" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_3" time="0.001"/>
+          <testcase name="testUseRelationship1" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+          <testcase name="testUseRelationship2" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+          <testcase name="testCreationLink" classname="padl.creator.test.classfile.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.Interfaces" time="0.0">
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.Interfaces" time="0.0"/>
+          <testcase name="testAbstractDocument" classname="padl.creator.test.classfile.example.Interfaces" time="0.0"/>
+          <testcase name="testElement" classname="padl.creator.test.classfile.example.Interfaces" time="0.0"/>
+          <testcase name="testIAdaptable" classname="padl.creator.test.classfile.example.Interfaces" time="0.0"/>
+          <testcase name="testIJavaElement" classname="padl.creator.test.classfile.example.Interfaces" time="0.0"/>
+          <testcase name="testSimple" classname="padl.creator.test.classfile.example.Interfaces" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_1" time="0.0">
+          <testcase name="testConstructor" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testUseRelationship" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testMethod" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testAssociation1" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testAssociation2" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_3" time="0.0">
+          <testcase name="testAssociation" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_3" time="0.0"/>
+          <testcase name="testConstructor" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_3" time="0.0"/>
+          <testcase name="testUseRelationship" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_3" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_3" time="0.0"/>
+          <testcase name="testMethod" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_3" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_3" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.UseRelationship_CLASS_CLASS_3" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.Relationships" time="0.043">
+          <testcase name="testEntity1" classname="padl.creator.test.classfile.example.Relationships" time="0.041"/>
+          <testcase name="testEntity3" classname="padl.creator.test.classfile.example.Relationships" time="0.0"/>
+          <testcase name="testCreationLink_INSTANCE_CREATION_2" classname="padl.creator.test.classfile.example.Relationships" time="0.0"/>
+          <testcase name="testEntity4" classname="padl.creator.test.classfile.example.Relationships" time="0.001"/>
+          <testcase name="testEntity5" classname="padl.creator.test.classfile.example.Relationships" time="0.0"/>
+          <testcase name="testEntity6" classname="padl.creator.test.classfile.example.Relationships" time="0.0"/>
+          <testcase name="testEntity7" classname="padl.creator.test.classfile.example.Relationships" time="0.0"/>
+          <testcase name="testEntity8" classname="padl.creator.test.classfile.example.Relationships" time="0.0"/>
+          <testcase name="testEntity9" classname="padl.creator.test.classfile.example.Relationships" time="0.0"/>
+          <testcase name="testJavaLangObject" classname="padl.creator.test.classfile.example.Relationships" time="0.001"/>
+          <testcase name="testUseRelationship_CLASS_CLASS_2" classname="padl.creator.test.classfile.example.Relationships" time="0.0"/>
+          <testcase name="testUseRelationship_INSTANCE_CLASS_1" classname="padl.creator.test.classfile.example.Relationships" time="0.0"/>
+          <testcase name="testUseRelationship_INSTANCE_CLASS_2" classname="padl.creator.test.classfile.example.Relationships" time="0.0"/>
+          <testcase name="testUseRelationship_INSTANCE_CLASS_3" classname="padl.creator.test.classfile.example.Relationships" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.SuperEntitiesConnection" time="0.012">
+          <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.example.SuperEntitiesConnection" time="0.011"/>
+          <testcase name="testDocument" classname="padl.creator.test.classfile.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testIndentedParagraph" classname="padl.creator.test.classfile.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testMain" classname="padl.creator.test.classfile.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testParagraph" classname="padl.creator.test.classfile.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testTitle" classname="padl.creator.test.classfile.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testAbstractDocument" classname="padl.creator.test.classfile.example.SuperEntitiesConnection" time="0.001"/>
+          <testcase name="testElement" classname="padl.creator.test.classfile.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testObject" classname="padl.creator.test.classfile.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testVector" classname="padl.creator.test.classfile.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testEnumeration" classname="padl.creator.test.classfile.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testString" classname="padl.creator.test.classfile.example.SuperEntitiesConnection" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.Ghost" time="0.009">
+          <testcase name="testGhost" classname="padl.creator.test.classfile.example.Ghost" time="0.009"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.TestDup" time="0.167">
+          <testcase name="testAnalyzeDup" classname="padl.creator.test.classfile.example.TestDup" time="0.015"/>
+          <testcase name="testControlIfWhileForSwitch" classname="padl.creator.test.classfile.example.TestDup" time="0.015"/>
+          <testcase name="testDetectOperators" classname="padl.creator.test.classfile.example.TestDup" time="0.016"/>
+          <testcase name="testDynamicMethod" classname="padl.creator.test.classfile.example.TestDup" time="0.016"/>
+          <testcase name="testInstanceOf" classname="padl.creator.test.classfile.example.TestDup" time="0.017"/>
+          <testcase name="testLoadAndStoreInArray" classname="padl.creator.test.classfile.example.TestDup" time="0.016"/>
+          <testcase name="testMethod3aryOperator" classname="padl.creator.test.classfile.example.TestDup" time="0.017"/>
+          <testcase name="testMethodPrintln" classname="padl.creator.test.classfile.example.TestDup" time="0.018"/>
+          <testcase name="testStaticInvocations" classname="padl.creator.test.classfile.example.TestDup" time="0.017"/>
+          <testcase name="testStoreToField" classname="padl.creator.test.classfile.example.TestDup" time="0.019"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.example.TestNew" time="0.023">
+          <testcase name="testFooDup" classname="padl.creator.test.classfile.example.TestNew" time="0.023"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="padl.creator.test.classfile.visitor.TestVisitor" time="0.016">
+        <testsuite name="padl.creator.test.classfile.visitor.Composite1" time="0.016">
+          <testcase name="testVisitor" classname="padl.creator.test.classfile.visitor.Composite1" time="0.016"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="padl.creator.test.classfile.innerclasses.TestInnerAndMembreClasses" time="11.288">
+        <testsuite name="padl.creator.test.classfile.innerclasses.TestInnerClasses" time="0.067">
+          <testcase name="testMemberClass" classname="padl.creator.test.classfile.innerclasses.TestInnerClasses" time="0.067"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.innerclasses.TestMemberClasses" time="0.004">
+          <testcase name="testClasses" classname="padl.creator.test.classfile.innerclasses.TestMemberClasses" time="0.004"/>
+          <testcase name="testMemberClass" classname="padl.creator.test.classfile.innerclasses.TestMemberClasses" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.innerclasses.TestMemberClasses2" time="11.118">
+          <testcase name="testMemberEntities" classname="padl.creator.test.classfile.innerclasses.TestMemberClasses2" time="11.118"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.innerclasses.TestMemberClasses3" time="0.067">
+          <testcase name="testMemberEntities" classname="padl.creator.test.classfile.innerclasses.TestMemberClasses3" time="0.067"/>
+          <testcase name="testMemberEntitiesInheritance" classname="padl.creator.test.classfile.innerclasses.TestMemberClasses3" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.innerclasses.TestMemberClasses4" time="0.001">
+          <testcase name="testMemberEntities" classname="padl.creator.test.classfile.innerclasses.TestMemberClasses4" time="0.001"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.innerclasses.TestMemberClasses5" time="0.0">
+          <testcase name="testMemberEntities" classname="padl.creator.test.classfile.innerclasses.TestMemberClasses5" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.innerclasses.TestMemberEntities" time="0.02">
+          <testcase name="testMemberEntities" classname="padl.creator.test.classfile.innerclasses.TestMemberEntities" time="0.02"/>
+        </testsuite>
+        <testsuite name="padl.creator.test.classfile.innerclasses.TestMemberInterfaces" time="0.011">
+          <testcase name="testClasses" classname="padl.creator.test.classfile.innerclasses.TestMemberInterfaces" time="0.011"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="padl.creator.test.classfile.method.TestMethodInclusion" time="0.026">
+        <testcase name="testInclusionCompiledIn1p3" classname="padl.creator.test.classfile.method.TestMethodInclusion" time="0.009"/>
+        <testcase name="testInclusionCompiledIn1p4" classname="padl.creator.test.classfile.method.TestMethodInclusion" time="0.0"/>
+        <testcase name="testInclusionCompiledIn1p4with1p1classfile" classname="padl.creator.test.classfile.method.TestMethodInclusion" time="0.003"/>
+        <testcase name="testInclusionCompiledIn1p4with1p2classfile" classname="padl.creator.test.classfile.method.TestMethodInclusion" time="0.014"/>
+        <testcase name="testInclusionCompiledIn1p4with1p3classfile" classname="padl.creator.test.classfile.method.TestMethodInclusion" time="0.0"/>
+      </testsuite>
+      <testsuite name="padl.creator.test.classfile.inheritance.TestInheritance" time="0.0">
+        <testcase name="warning" classname="junit.framework.TestSuite.1" time="0.0">
+          <failure>junit.framework.AssertionFailedError: No tests found in padl.creator.test.classfile.inheritance.TestInheritance
+	at junit.framework.Assert.fail(Assert.java:51)
+	at junit.framework.TestSuite$1.runTest(TestSuite.java:228)
+	at junit.framework.TestCase.runBare(TestCase.java:142)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+        </testcase>
+      </testsuite>
+      <testsuite name="padl.creator.test.classfile.method.TestPrivateConstructor" time="0.0">
+        <testcase name="testNumberOfEntities" classname="padl.creator.test.classfile.method.TestPrivateConstructor" time="0.0"/>
+        <testcase name="testElementsOfRestrictedCreation" classname="padl.creator.test.classfile.method.TestPrivateConstructor" time="0.0"/>
+      </testsuite>
+      <testsuite name="padl.creator.test.classfile.real.path.TestPath" time="10.466">
+        <testsuite name="padl.creator.test.classfile.real.path.TestPathArgoUML" time="10.466">
+          <testcase name="testPath1" classname="padl.creator.test.classfile.real.path.TestPathArgoUML" time="10.465"/>
+          <testcase name="testPath2" classname="padl.creator.test.classfile.real.path.TestPathArgoUML" time="0.0"/>
+          <testcase name="testPath3" classname="padl.creator.test.classfile.real.path.TestPathArgoUML" time="0.0"/>
+          <testcase name="testPath4" classname="padl.creator.test.classfile.real.path.TestPathArgoUML" time="0.0"/>
+          <testcase name="testPath5" classname="padl.creator.test.classfile.real.path.TestPathArgoUML" time="0.0"/>
+          <testcase name="testPath6" classname="padl.creator.test.classfile.real.path.TestPathArgoUML" time="0.001"/>
+          <testcase name="testPath7" classname="padl.creator.test.classfile.real.path.TestPathArgoUML" time="0.0"/>
+          <testcase name="testPath8" classname="padl.creator.test.classfile.real.path.TestPathArgoUML" time="0.0"/>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+    <testsuite name="junit.framework.TestSuite" time="23.58">
+      <testsuite name="jct.test.JCTDTUsingJCT" time="5.493">
+        <testcase name="testCreatorAndPrettyPrinter" classname="jct.test.JCTDTUsingJCT" time="5.493"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTFactoryInitializer" time="0.031">
+        <testcase name="testFactoryInitializer" classname="jct.test.JCTFactoryInitializer" time="0.028"/>
+        <testcase name="testFactoryInitializerWithPath" classname="jct.test.JCTFactoryInitializer" time="0.003"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTTComments" time="1.037">
+        <testcase name="testComments" classname="jct.test.JCTTComments" time="1.036"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTCFSCSTMisc" time="4.984">
+        <testcase name="testArrayLiterals" classname="jct.test.JCTCFSCSTMisc" time="1.97"/>
+        <testcase name="testAnnonymousClasses" classname="jct.test.JCTCFSCSTMisc" time="1.538"/>
+        <testcase name="testSelectors" classname="jct.test.JCTCFSCSTMisc" time="1.476"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTDTMisc" time="3.398">
+        <testcase name="testArrayLiterals" classname="jct.test.JCTDTMisc" time="1.202"/>
+        <testcase name="testAnnonymousClasses" classname="jct.test.JCTDTMisc" time="1.15"/>
+        <testcase name="testSelectors" classname="jct.test.JCTDTMisc" time="1.046"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTDTUsingSnpSht" time="8.636">
+        <testcase name="testCreatorAndPrettyPrinter" classname="jct.test.JCTDTUsingSnpSht" time="4.678"/>
+        <testcase name="testPADLCreatorFromJCT" classname="jct.test.JCTDTUsingSnpSht" time="3.958">
+          <error>java.lang.NullPointerException
+	at padl.creator.util.JCTtoPADLTranslator.visitCompilationUnit(JCTtoPADLTranslator.java:392)
+	at padl.creator.util.JCTtoPADLTranslator.visitCompilationUnit(JCTtoPADLTranslator.java:1)
+	at jct.kernel.impl.JCTCompilationUnit.accept(JCTCompilationUnit.java:205)
+	at padl.creator.util.JCTtoPADLTranslator.visitPackage(JCTtoPADLTranslator.java:927)
+	at padl.creator.util.JCTtoPADLTranslator.visitPackage(JCTtoPADLTranslator.java:1)
+	at jct.kernel.impl.JCTPackage.accept(JCTPackage.java:198)
+	at padl.creator.util.JCTtoPADLTranslator.visitRootNode(JCTtoPADLTranslator.java:1053)
+	at padl.creator.util.JCTtoPADLTranslator.visitRootNode(JCTtoPADLTranslator.java:1)
+	at jct.kernel.impl.JCTRootNode.accept(JCTRootNode.java:246)
+	at padl.creator.JCTCreator.create(JCTCreator.java:62)
+	at jct.test.JCTDTUsingSnpSht.testPADLCreatorFromJCT(JCTDTUsingSnpSht.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:142)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Test for padl.creator.test.javafile" time="0.768">
+      <testsuite name="padl.creator.test.javafile.simple.Test1" time="0.768">
+        <testcase name="testA" classname="padl.creator.test.javafile.simple.Test1" time="0.766">
+          <failure>junit.framework.AssertionFailedError: Number of classes expected:&lt;1&gt; but was:&lt;0&gt;
+	at junit.framework.Assert.fail(Assert.java:51)
+	at junit.framework.Assert.failNotEquals(Assert.java:234)
+	at junit.framework.Assert.assertEquals(Assert.java:68)
+	at junit.framework.Assert.assertEquals(Assert.java:181)
+	at padl.creator.test.javafile.simple.Test1.testA(Test1.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:142)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+        </testcase>
+        <testcase name="testB" classname="padl.creator.test.javafile.simple.Test1" time="0.001">
+          <failure>junit.framework.AssertionFailedError: Class CreatorJava exists
+	at junit.framework.Assert.fail(Assert.java:51)
+	at junit.framework.Assert.assertTrue(Assert.java:38)
+	at junit.framework.Assert.assertNotNull(Assert.java:199)
+	at padl.creator.test.javafile.simple.Test1.testB(Test1.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:142)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+        </testcase>
+        <testcase name="testC" classname="padl.creator.test.javafile.simple.Test1" time="0.0">
+          <error>java.lang.NullPointerException
+	at padl.creator.test.javafile.simple.Test1.testC(Test1.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:142)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
+    <testsuite name="padl.creator.test.TestCreatorJavaFilevsClassFile" time="1.874">
+      <testsuite name="padl.creator.test.javafile.comparison.Composite1" time="1.874">
+        <testcase name="testCompare" classname="padl.creator.test.javafile.comparison.Composite1" time="1.874">
+          <error>java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at padl.kernel.impl.Constituent.accept(Constituent.java:139)
+	at padl.kernel.impl.Constructor.accept(Constructor.java:91)
+	at padl.kernel.impl.FirstClassEntity.accept(FirstClassEntity.java:69)
+	at padl.kernel.impl.Package.accept(Package.java:55)
+	at padl.kernel.impl.Package.accept(Package.java:55)
+	at padl.kernel.impl.AbstractLevelModel.walk(AbstractLevelModel.java:316)
+	at padl.creator.test.javafile.comparison.Composite1.testCompare(Composite1.java:81)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:142)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:133)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)
+	at junit.framework.TestSuite.run(TestSuite.java:171)
+	at org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference.run(JUnit3TestReference.java:130)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at padl.kernel.impl.Constituent.accept(Constituent.java:116)
+	... 28 more
+Caused by: junit.framework.AssertionFailedError: Another constituent should not be null
+	at junit.framework.Assert.fail(Assert.java:51)
+	at junit.framework.Assert.assertTrue(Assert.java:38)
+	at junit.framework.Assert.assertNotNull(Assert.java:199)
+	at padl.test.helper.ModelComparator.compare(ModelComparator.java:125)
+	at padl.test.helper.ModelComparator.open(ModelComparator.java:203)
+	at padl.test.helper.ModelComparator.open(ModelComparator.java:245)
+	... 33 more
+
+</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
+    <testsuite name="junit.framework.TestSuite" time="0.178">
+      <testsuite name="ptidej.micropatterns.test.TestDesignator" time="0.079">
+        <testcase name="testDesignator" classname="ptidej.micropatterns.test.TestDesignator" time="0.079"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestTaxonormy" time="0.005">
+        <testcase name="testTaxonormy" classname="ptidej.micropatterns.test.TestTaxonormy" time="0.005"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestJoiner" time="0.005">
+        <testcase name="testJoiner" classname="ptidej.micropatterns.test.TestJoiner" time="0.004"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestPool" time="0.002">
+        <testcase name="testPool" classname="ptidej.micropatterns.test.TestPool" time="0.002"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestFunctionPointer" time="0.003">
+        <testcase name="testFonctionPointer" classname="ptidej.micropatterns.test.TestFunctionPointer" time="0.003"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestFunctionObject" time="0.003">
+        <testcase name="testFonctionObject" classname="ptidej.micropatterns.test.TestFunctionObject" time="0.003"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestCobolLike" time="0.002">
+        <testcase name="testCobolLike" classname="ptidej.micropatterns.test.TestCobolLike" time="0.002"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestStateless" time="0.002">
+        <testcase name="testStateless" classname="ptidej.micropatterns.test.TestStateless" time="0.002"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestCommonState" time="0.003">
+        <testcase name="testCommonState" classname="ptidej.micropatterns.test.TestCommonState" time="0.003"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestImmutable" time="0.003">
+        <testcase name="testImmutable" classname="ptidej.micropatterns.test.TestImmutable" time="0.003"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestRestrictedCreation" time="0.003">
+        <testcase name="testRestrictedCreation" classname="ptidej.micropatterns.test.TestRestrictedCreation" time="0.003"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestSampler" time="0.003">
+        <testcase name="testSampler" classname="ptidej.micropatterns.test.TestSampler" time="0.003"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestBox" time="0.003">
+        <testcase name="testBox" classname="ptidej.micropatterns.test.TestBox" time="0.003"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestCanopy" time="0.004">
+        <testcase name="testCanopy" classname="ptidej.micropatterns.test.TestCanopy" time="0.004"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestCompoundBox" time="0.005">
+        <testcase name="testCompoundBox" classname="ptidej.micropatterns.test.TestCompoundBox" time="0.005"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestRecord" time="0.007">
+        <testcase name="testRecord" classname="ptidej.micropatterns.test.TestRecord" time="0.007"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestDataManager" time="0.006">
+        <testcase name="testDataManager" classname="ptidej.micropatterns.test.TestDataManager" time="0.006"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestSink" time="0.008">
+        <testcase name="testSink" classname="ptidej.micropatterns.test.TestSink" time="0.008"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestOutline" time="0.003">
+        <testcase name="testOutline" classname="ptidej.micropatterns.test.TestOutline" time="0.003"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestTrait" time="0.003">
+        <testcase name="testTrait" classname="ptidej.micropatterns.test.TestTrait" time="0.003"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestStateMachine" time="0.002">
+        <testcase name="testStateMachine" classname="ptidej.micropatterns.test.TestStateMachine" time="0.002"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestPureType" time="0.002">
+        <testcase name="testPureType" classname="ptidej.micropatterns.test.TestPureType" time="0.002"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestAugmentedType" time="0.005">
+        <testcase name="testAugmentedType" classname="ptidej.micropatterns.test.TestAugmentedType" time="0.005"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestPseudoClass" time="0.002">
+        <testcase name="testPseudoClass" classname="ptidej.micropatterns.test.TestPseudoClass" time="0.002"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestImplementor" time="0.004">
+        <testcase name="testImplementor" classname="ptidej.micropatterns.test.TestImplementor" time="0.004"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestOverrider" time="0.004">
+        <testcase name="testOverrider" classname="ptidej.micropatterns.test.TestOverrider" time="0.004"/>
+      </testsuite>
+      <testsuite name="ptidej.micropatterns.test.TestExtender" time="0.005">
+        <testcase name="testExtender" classname="ptidej.micropatterns.test.TestExtender" time="0.005"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="padl.refactoring.test.TestRefactorings" time="12.008">
+      <testsuite name="padl.refactoring.test.method.RefactoringMoveMethodTest" time="3.206">
+        <testcase name="testMoveMethod" classname="padl.refactoring.test.method.RefactoringMoveMethodTest" time="1.166"/>
+        <testcase name="testMoveMethod2" classname="padl.refactoring.test.method.RefactoringMoveMethodTest" time="1.018"/>
+        <testcase name="testMoveMethod3" classname="padl.refactoring.test.method.RefactoringMoveMethodTest" time="1.022"/>
+      </testsuite>
+      <testsuite name="padl.refactoring.test.method.RefactoringPullUpMethodTest" time="0.005">
+        <testcase name="testPullUpMethod" classname="padl.refactoring.test.method.RefactoringPullUpMethodTest" time="0.005"/>
+      </testsuite>
+      <testsuite name="padl.refactoring.test.method.RefactoringPushDownMethodTest" time="0.006">
+        <testcase name="testPushDownMethod" classname="padl.refactoring.test.method.RefactoringPushDownMethodTest" time="0.005"/>
+        <testcase name="testPushDownMethodAcceptOverloading" classname="padl.refactoring.test.method.RefactoringPushDownMethodTest" time="0.0"/>
+        <testcase name="testPushDownMethod2" classname="padl.refactoring.test.method.RefactoringPushDownMethodTest" time="0.001"/>
+      </testsuite>
+      <testsuite name="padl.refactoring.test.method.RefactoringRenameMethodTest" time="8.791">
+        <testcase name="testRenameMethod" classname="padl.refactoring.test.method.RefactoringRenameMethodTest" time="1.023"/>
+        <testcase name="testRenameMethod2" classname="padl.refactoring.test.method.RefactoringRenameMethodTest" time="1.013"/>
+        <testcase name="testRenameMethodAcceptOverloading" classname="padl.refactoring.test.method.RefactoringRenameMethodTest" time="1.004"/>
+        <testcase name="testRenameMethodWithPropagationToHierarchy" classname="padl.refactoring.test.method.RefactoringRenameMethodTest" time="0.975"/>
+        <testcase name="testRenameMethodWithPropagationToHierarchy2" classname="padl.refactoring.test.method.RefactoringRenameMethodTest" time="0.901"/>
+        <testcase name="testrenameMethodWithPropagationToHierarchyAcceptOverloading" classname="padl.refactoring.test.method.RefactoringRenameMethodTest" time="1.01"/>
+        <testcase name="testrenameMethodWithPropagationToInterface" classname="padl.refactoring.test.method.RefactoringRenameMethodTest" time="0.982"/>
+        <testcase name="testrenameMethodWithPropagationToInterface2" classname="padl.refactoring.test.method.RefactoringRenameMethodTest" time="0.959"/>
+        <testcase name="testrenameMethodWithPropagationToInterfaceAcceptOverloading" classname="padl.refactoring.test.method.RefactoringRenameMethodTest" time="0.924"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="padl.test.TestPADL" time="0.022">
+      <testsuite name="padl.kernel.impl.AbstractContainerTest" time="0.004">
+        <testcase name="testAddEntity" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testAddEntitySameType" classname="padl.kernel.impl.AbstractContainerTest" time="0.001"/>
+        <testcase name="testAddEqualEntity" classname="padl.kernel.impl.AbstractContainerTest" time="0.002"/>
+        <testcase name="testAddEqualEntity2" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testAddEqualEntity3" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testGetIteratorOnEntities" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testGetIteratorOnEntitiesClass" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testRemoveAllEntities" classname="padl.kernel.impl.AbstractContainerTest" time="0.001"/>
+        <testcase name="testRemoveAllEntities2" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testRemoveEntityFromID" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testRemoveEntityFromID2" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testResetListOfEntities" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+      </testsuite>
+      <testsuite name="padl.kernel.impl.MethodInvocationTest" time="0.002">
+        <testcase name="testEqualsIMethodInvocation" classname="padl.kernel.impl.MethodInvocationTest" time="0.002"/>
+      </testsuite>
+      <testsuite name="padl.test.clone.TestCloning" time="0.011">
+        <testsuite name="padl.test.clone.Clone" time="0.011">
+          <testcase name="testElements" classname="padl.test.clone.Clone" time="0.01"/>
+          <testcase name="testEntities" classname="padl.test.clone.Clone" time="0.0"/>
+          <testcase name="testInheritance" classname="padl.test.clone.Clone" time="0.001"/>
+          <testcase name="testPatterns" classname="padl.test.clone.Clone" time="0.0"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="padl.test.setter.TestGetterAndSetter" time="0.001">
+        <testsuite name="padl.test.setter.TestSetter" time="0.001">
+          <testcase name="testClass" classname="padl.test.setter.TestSetter" time="0.0"/>
+          <testcase name="testMethods" classname="padl.test.setter.TestSetter" time="0.001"/>
+          <testcase name="testParameters" classname="padl.test.setter.TestSetter" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.test.setter.TestGetter" time="0.0">
+          <testcase name="testClass" classname="padl.test.setter.TestGetter" time="0.0"/>
+          <testcase name="testMethods" classname="padl.test.setter.TestGetter" time="0.0"/>
+          <testcase name="testParameters" classname="padl.test.setter.TestGetter" time="0.0"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="padl.test.path.TestPath" time="0.002">
+        <testcase name="testClass" classname="padl.test.path.TestPath" time="0.001"/>
+        <testcase name="testMethods" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testParameters" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testPath" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testRemoveAddContainerAggregation" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testRemoveAddMethod" classname="padl.test.path.TestPath" time="0.001"/>
+        <testcase name="testRemoveAddParameter" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testAddRemoveClass1" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testAddRemoveClass2" classname="padl.test.path.TestPath" time="0.0"/>
+      </testsuite>
+      <testsuite name="padl.test.defaultpackage.TestDefaultPackage" time="0.002">
+        <testcase name="testCreationOfDefaultPackage" classname="padl.test.defaultpackage.TestDefaultPackage" time="0.001"/>
+        <testcase name="testRetrieveDefaultPackageByName" classname="padl.test.defaultpackage.TestDefaultPackage" time="0.001"/>
+        <testcase name="testRetrieveDefaultPackageByID" classname="padl.test.defaultpackage.TestDefaultPackage" time="0.0"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="junit.framework.TestSuite" time="7.841">
+      <testsuite name="pom.test.specific.TestCache" time="0.732">
+        <testcase name="testCachingOfCBOValues" classname="pom.test.specific.TestCache" time="0.73"/>
+        <testcase name="testCachingOfCBOinValues" classname="pom.test.specific.TestCache" time="0.0"/>
+        <testcase name="testCachingOfCBOoutValues" classname="pom.test.specific.TestCache" time="0.0"/>
+        <testcase name="testCachingOfReversedCBOValues" classname="pom.test.specific.TestCache" time="0.0"/>
+        <testcase name="testCBOinAndOut" classname="pom.test.specific.TestCache" time="0.002"/>
+      </testsuite>
+      <testsuite name="pom.test.TestClassPrimitives" time="0.34">
+        <testcase name="testParents" classname="pom.test.TestClassPrimitives" time="0.338"/>
+        <testcase name="testChildren" classname="pom.test.TestClassPrimitives" time="0.0"/>
+        <testcase name="testAncestor" classname="pom.test.TestClassPrimitives" time="0.001"/>
+        <testcase name="testDescendents" classname="pom.test.TestClassPrimitives" time="0.0"/>
+        <testcase name="testAllMethods" classname="pom.test.TestClassPrimitives" time="0.0"/>
+        <testcase name="testDeclaredMethods" classname="pom.test.TestClassPrimitives" time="0.0"/>
+        <testcase name="testImplementedMethods" classname="pom.test.TestClassPrimitives" time="0.001"/>
+        <testcase name="testNewMethods" classname="pom.test.TestClassPrimitives" time="0.0"/>
+        <testcase name="testOverloadedMethods" classname="pom.test.TestClassPrimitives" time="0.0"/>
+        <testcase name="testInheritedMethods" classname="pom.test.TestClassPrimitives" time="0.0"/>
+      </testsuite>
+      <testsuite name="pom.test.TestCouplingCohesionMetrics" time="0.769">
+        <testcase name="testACAIC" classname="pom.test.TestCouplingCohesionMetrics" time="0.754"/>
+        <testcase name="testACMIC" classname="pom.test.TestCouplingCohesionMetrics" time="0.0"/>
+        <testcase name="testCBO" classname="pom.test.TestCouplingCohesionMetrics" time="0.001"/>
+        <testcase name="testCohesionAttributes" classname="pom.test.TestCouplingCohesionMetrics" time="0.0"/>
+        <testcase name="testConnectivity" classname="pom.test.TestCouplingCohesionMetrics" time="0.008"/>
+        <testcase name="testDCAEC" classname="pom.test.TestCouplingCohesionMetrics" time="0.001"/>
+        <testcase name="testDCMEC" classname="pom.test.TestCouplingCohesionMetrics" time="0.0"/>
+        <testcase name="testICH" classname="pom.test.TestCouplingCohesionMetrics" time="0.002"/>
+        <testcase name="testLCOM2" classname="pom.test.TestCouplingCohesionMetrics" time="0.001"/>
+        <testcase name="testLCOM5" classname="pom.test.TestCouplingCohesionMetrics" time="0.0"/>
+        <testcase name="testWMCforAClass" classname="pom.test.TestCouplingCohesionMetrics" time="0.001"/>
+      </testsuite>
+      <testsuite name="pom.test.TestMethodPrimitives" time="0.154">
+        <testcase name="testHandledFieldsBy" classname="pom.test.TestMethodPrimitives" time="0.049"/>
+        <testcase name="testMI" classname="pom.test.TestMethodPrimitives" time="0.058"/>
+        <testcase name="testInvokedMethods" classname="pom.test.TestMethodPrimitives" time="0.047"/>
+      </testsuite>
+      <testsuite name="pom.test.TestMetricRepository" time="0.818">
+        <testcase name="testUnarymetricList" classname="pom.test.TestMetricRepository" time="0.818"/>
+      </testsuite>
+      <testsuite name="pom.test.TestOperators" time="0.001">
+        <testcase name="testUnion" classname="pom.test.TestOperators" time="0.0"/>
+        <testcase name="testIntersection" classname="pom.test.TestOperators" time="0.0"/>
+        <testcase name="testDifference" classname="pom.test.TestOperators" time="0.001"/>
+        <testcase name="testSize" classname="pom.test.TestOperators" time="0.0"/>
+        <testcase name="testEquals" classname="pom.test.TestOperators" time="0.0"/>
+        <testcase name="testDifferent" classname="pom.test.TestOperators" time="0.0"/>
+        <testcase name="testBelongTo" classname="pom.test.TestOperators" time="0.0"/>
+        <testcase name="testIncludeOrEqual" classname="pom.test.TestOperators" time="0.0"/>
+        <testcase name="testInclude" classname="pom.test.TestOperators" time="0.0"/>
+      </testsuite>
+      <testsuite name="pom.test.TestUnaryMetrics" time="0.784">
+        <testcase name="testAID" classname="pom.test.TestUnaryMetrics" time="0.783"/>
+        <testcase name="testCLD" classname="pom.test.TestUnaryMetrics" time="0.0"/>
+        <testcase name="testNMA" classname="pom.test.TestUnaryMetrics" time="0.0"/>
+        <testcase name="testNMO" classname="pom.test.TestUnaryMetrics" time="0.001"/>
+        <testcase name="testSIX" classname="pom.test.TestUnaryMetrics" time="0.0"/>
+      </testsuite>
+      <testsuite name="pom.test.specific.TestAID" time="0.568">
+        <testcase name="testRef" classname="pom.test.specific.TestAID" time="0.568"/>
+        <testcase name="testAncestorExtend01" classname="pom.test.specific.TestAID" time="0.0"/>
+        <testcase name="testAncestorImplement01" classname="pom.test.specific.TestAID" time="0.0"/>
+        <testcase name="testAncestorExtendImplement01" classname="pom.test.specific.TestAID" time="0.0"/>
+      </testsuite>
+      <testsuite name="pom.test.specific.TestCBO" time="0.555">
+        <testcase name="testRefClass" classname="pom.test.specific.TestCBO" time="0.552"/>
+        <testcase name="testRefInterface" classname="pom.test.specific.TestCBO" time="0.0"/>
+        <testcase name="testAboutGetVar" classname="pom.test.specific.TestCBO" time="0.001"/>
+        <testcase name="testAboutSetVar" classname="pom.test.specific.TestCBO" time="0.0"/>
+        <testcase name="testAboutSetVarIn" classname="pom.test.specific.TestCBO" time="0.0"/>
+        <testcase name="testAboutSetVarOut" classname="pom.test.specific.TestCBO" time="0.0"/>
+        <testcase name="testAboutFunct" classname="pom.test.specific.TestCBO" time="0.001"/>
+        <testcase name="testAboutFunctIn" classname="pom.test.specific.TestCBO" time="0.0"/>
+        <testcase name="testAboutFunctOut" classname="pom.test.specific.TestCBO" time="0.001"/>
+      </testsuite>
+      <testsuite name="pom.test.specific.TestDIT" time="0.611">
+        <testcase name="testRefClass" classname="pom.test.specific.TestDIT" time="0.61"/>
+        <testcase name="testRefInterface" classname="pom.test.specific.TestDIT" time="0.0"/>
+        <testcase name="testInheritanceOnClass" classname="pom.test.specific.TestDIT" time="0.0"/>
+        <testcase name="testInheritanceOnInterface01" classname="pom.test.specific.TestDIT" time="0.001"/>
+        <testcase name="testInheritanceOnInterface02" classname="pom.test.specific.TestDIT" time="0.0"/>
+      </testsuite>
+      <testsuite name="pom.test.specific.TestNMI" time="0.641">
+        <testcase name="testConstructor" classname="pom.test.specific.TestNMI" time="0.641"/>
+        <testcase name="testDifMethods" classname="pom.test.specific.TestNMI" time="0.0"/>
+        <testcase name="testSameMethods" classname="pom.test.specific.TestNMI" time="0.0"/>
+        <testcase name="testDiffSignature" classname="pom.test.specific.TestNMI" time="0.0"/>
+      </testsuite>
+      <testsuite name="pom.test.specific.TestNOC" time="0.666">
+        <testcase name="testRefClass" classname="pom.test.specific.TestNOC" time="0.666"/>
+        <testcase name="testRefInterface" classname="pom.test.specific.TestNOC" time="0.0"/>
+        <testcase name="test01" classname="pom.test.specific.TestNOC" time="0.0"/>
+        <testcase name="test02" classname="pom.test.specific.TestNOC" time="0.0"/>
+      </testsuite>
+      <testsuite name="pom.test.specific.TestUnaryCBO" time="0.004">
+        <testcase name="testNoCoupling" classname="pom.test.specific.TestUnaryCBO" time="0.003"/>
+        <testcase name="testInheritence" classname="pom.test.specific.TestUnaryCBO" time="0.0"/>
+        <testcase name="testNotUsedField" classname="pom.test.specific.TestUnaryCBO" time="0.0"/>
+        <testcase name="testUsedFieldByMethod" classname="pom.test.specific.TestUnaryCBO" time="0.001"/>
+      </testsuite>
+      <testsuite name="pom.test.specific.TestWMC" time="0.65">
+        <testcase name="testRefClass" classname="pom.test.specific.TestWMC" time="0.65"/>
+        <testcase name="testRefInterface" classname="pom.test.specific.TestWMC" time="0.0"/>
+        <testcase name="test01" classname="pom.test.specific.TestWMC" time="0.0"/>
+        <testcase name="test02" classname="pom.test.specific.TestWMC" time="0.0"/>
+      </testsuite>
+      <testsuite name="pom.test.specific.TestWMC1" time="0.548">
+        <testcase name="testRefClass" classname="pom.test.specific.TestWMC1" time="0.548"/>
+        <testcase name="testRefInterface" classname="pom.test.specific.TestWMC1" time="0.0"/>
+        <testcase name="test01" classname="pom.test.specific.TestWMC1" time="0.0"/>
+        <testcase name="test02" classname="pom.test.specific.TestWMC1" time="0.0"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="ptidej.solver.test.TestPtidejSolver" time="2.944">
+      <testsuite name="ptidej.solver.domain.test.Manager" time="0.081">
+        <testcase name="testLoader" classname="ptidej.solver.domain.test.Manager" time="0.081"/>
+      </testsuite>
+      <testsuite name="ptidej.solver.test.claire.TestClairePtidejSolver" time="2.695">
+        <testsuite name="ptidej.solver.test.claire.defect.TestSuite" time="0.16">
+          <testsuite name="ptidej.solver.test.claire.defect.AssociationDistance" time="0.075">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.defect.AssociationDistance" time="0.074"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.claire.defect.AssociationDistance" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.claire.defect.AssociationDistance" time="0.0"/>
+            <testcase name="testSolution3" classname="ptidej.solver.test.claire.defect.AssociationDistance" time="0.0"/>
+            <testcase name="testSolution4" classname="ptidej.solver.test.claire.defect.AssociationDistance" time="0.001"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.defect.InheritanceTreeDepth" time="0.085">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.defect.InheritanceTreeDepth" time="0.084"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.claire.defect.InheritanceTreeDepth" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.claire.defect.InheritanceTreeDepth" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.claire.defect.InheritanceTreeDepth" time="0.0"/>
+            <testcase name="testSolution3" classname="ptidej.solver.test.claire.defect.InheritanceTreeDepth" time="0.0"/>
+            <testcase name="testSolution4" classname="ptidej.solver.test.claire.defect.InheritanceTreeDepth" time="0.001"/>
+          </testsuite>
+        </testsuite>
+        <testsuite name="ptidej.solver.test.claire.approximate.TestSuite" time="0.579">
+          <testsuite name="ptidej.solver.test.claire.approximate.BadComposition" time="0.058">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.approximate.BadComposition" time="0.058"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.approximate.BadInheritance" time="0.113">
+            <testcase name="testAC4Solution1" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.11"/>
+            <testcase name="testAC4Solution2" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.001"/>
+            <testcase name="testAC4Solution3" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.0"/>
+            <testcase name="testAC4Solution4" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.0"/>
+            <testcase name="testAC4Solution5" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.0"/>
+            <testcase name="testAC4Solution6" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.0"/>
+            <testcase name="testCustomSolutions1" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.001"/>
+            <testcase name="testCustomSolutions2" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.0"/>
+            <testcase name="testCustomSolutions3" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.0"/>
+            <testcase name="testCustomSolutions4" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.0"/>
+            <testcase name="testCustomSolutions5" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.0"/>
+            <testcase name="testCustomSolutions6" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.0"/>
+            <testcase name="testNumberOfAC4Solutions" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.001"/>
+            <testcase name="testNumberOfCustomSolutions" classname="ptidej.solver.test.claire.approximate.BadInheritance" time="0.0"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.approximate.Composite" time="0.158">
+            <testcase name="testCompositeDesignPattern1" classname="ptidej.solver.test.claire.approximate.Composite" time="0.093"/>
+            <testcase name="testCompositeDesignPattern2" classname="ptidej.solver.test.claire.approximate.Composite" time="0.065"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.approximate.Facade" time="0.099">
+            <testcase name="testFacadeDesignPattern1" classname="ptidej.solver.test.claire.approximate.Facade" time="0.046"/>
+            <testcase name="testFacadeDesignPattern2" classname="ptidej.solver.test.claire.approximate.Facade" time="0.053"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.approximate.FactoryMethod" time="0.102">
+            <testcase name="testFactoryMethodDesignPattern1" classname="ptidej.solver.test.claire.approximate.FactoryMethod" time="0.055"/>
+            <testcase name="testFactoryMethodDesignPattern2" classname="ptidej.solver.test.claire.approximate.FactoryMethod" time="0.047"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.approximate.Mediator" time="0.049">
+            <testcase name="testMediatorDesignPattern1" classname="ptidej.solver.test.claire.approximate.Mediator" time="0.049"/>
+          </testsuite>
+        </testsuite>
+        <testsuite name="ptidej.solver.test.claire.approximate.combinatorial.TestSuite" time="0.164">
+          <testsuite name="ptidej.solver.test.claire.approximate.combinatorial.BadComposition1" time="0.053">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.approximate.combinatorial.BadComposition1" time="0.052"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.claire.approximate.combinatorial.BadComposition1" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.claire.approximate.combinatorial.BadComposition1" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.claire.approximate.combinatorial.BadComposition1" time="0.001"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.approximate.combinatorial.BadComposition2" time="0.048">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.approximate.combinatorial.BadComposition2" time="0.047"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.claire.approximate.combinatorial.BadComposition2" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.claire.approximate.combinatorial.BadComposition2" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.claire.approximate.combinatorial.BadComposition2" time="0.001"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.approximate.combinatorial.BadComposition3" time="0.063">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.approximate.combinatorial.BadComposition3" time="0.062"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.claire.approximate.combinatorial.BadComposition3" time="0.001"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.claire.approximate.combinatorial.BadComposition3" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.claire.approximate.combinatorial.BadComposition3" time="0.0"/>
+          </testsuite>
+        </testsuite>
+        <testsuite name="ptidej.solver.test.claire.example.TestSuite" time="0.479">
+          <testsuite name="ptidej.solver.test.claire.example.Composite1" time="0.129">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.example.Composite1" time="0.128"/>
+            <testcase name="testSolutions" classname="ptidej.solver.test.claire.example.Composite1" time="0.001"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.example.Composite2" time="0.092">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.example.Composite2" time="0.091"/>
+            <testcase name="testSolutions" classname="ptidej.solver.test.claire.example.Composite2" time="0.001"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.example.Composite3" time="0.093">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.example.Composite3" time="0.093"/>
+            <testcase name="testSolutions" classname="ptidej.solver.test.claire.example.Composite3" time="0.0"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.example.Composite4" time="0.086">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.example.Composite4" time="0.085"/>
+            <testcase name="testSolutions" classname="ptidej.solver.test.claire.example.Composite4" time="0.001"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.example.Composite5" time="0.079">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.example.Composite5" time="0.078"/>
+            <testcase name="testSolutions" classname="ptidej.solver.test.claire.example.Composite5" time="0.001"/>
+          </testsuite>
+        </testsuite>
+        <testsuite name="ptidej.solver.test.claire.roundtrip.TestSuite" time="0.855">
+          <testsuite name="ptidej.solver.test.claire.roundtrip.CompleteRoundtrip" time="0.414">
+            <testcase name="testCompositeDesignPattern1" classname="ptidej.solver.test.claire.roundtrip.CompleteRoundtrip" time="0.06"/>
+            <testcase name="testCompositeDesignPattern2" classname="ptidej.solver.test.claire.roundtrip.CompleteRoundtrip" time="0.049"/>
+            <testcase name="testFacadeDesignPattern1" classname="ptidej.solver.test.claire.roundtrip.CompleteRoundtrip" time="0.051"/>
+            <testcase name="testFacadeDesignPattern2" classname="ptidej.solver.test.claire.roundtrip.CompleteRoundtrip" time="0.049"/>
+            <testcase name="testFactoryMethodDesignPattern1" classname="ptidej.solver.test.claire.roundtrip.CompleteRoundtrip" time="0.05"/>
+            <testcase name="testFactoryMethodDesignPattern2" classname="ptidej.solver.test.claire.roundtrip.CompleteRoundtrip" time="0.054"/>
+            <testcase name="testMediatorDesignPattern1" classname="ptidej.solver.test.claire.roundtrip.CompleteRoundtrip" time="0.051"/>
+            <testcase name="testMediatorDesignPattern2" classname="ptidej.solver.test.claire.roundtrip.CompleteRoundtrip" time="0.05"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.roundtrip.HalfRoundtrip" time="0.441">
+            <testcase name="testCompositeDesignPattern1" classname="ptidej.solver.test.claire.roundtrip.HalfRoundtrip" time="0.054"/>
+            <testcase name="testCompositeDesignPattern2" classname="ptidej.solver.test.claire.roundtrip.HalfRoundtrip" time="0.052"/>
+            <testcase name="testFacadeDesignPattern1" classname="ptidej.solver.test.claire.roundtrip.HalfRoundtrip" time="0.069"/>
+            <testcase name="testFacadeDesignPattern2" classname="ptidej.solver.test.claire.roundtrip.HalfRoundtrip" time="0.05"/>
+            <testcase name="testFactoryMethodDesignPattern1" classname="ptidej.solver.test.claire.roundtrip.HalfRoundtrip" time="0.051"/>
+            <testcase name="testFactoryMethodDesignPattern2" classname="ptidej.solver.test.claire.roundtrip.HalfRoundtrip" time="0.048"/>
+            <testcase name="testMediatorDesignPattern1" classname="ptidej.solver.test.claire.roundtrip.HalfRoundtrip" time="0.066"/>
+            <testcase name="testMediatorDesignPattern2" classname="ptidej.solver.test.claire.roundtrip.HalfRoundtrip" time="0.051"/>
+          </testsuite>
+        </testsuite>
+        <testsuite name="ptidej.solver.test.claire.simple.TestSuite" time="0.458">
+          <testsuite name="ptidej.solver.test.claire.simple.Composition" time="0.051">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.simple.Composition" time="0.05"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.claire.simple.Composition" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.claire.simple.Composition" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.claire.simple.Composition" time="0.001"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.simple.Creation" time="0.049">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.simple.Creation" time="0.049"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.claire.simple.Creation" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.claire.simple.Creation" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.claire.simple.Creation" time="0.0"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.simple.GoodInheritance" time="0.066">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.061"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.001"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution3" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution4" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution5" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.001"/>
+            <testcase name="testSolution6" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution10" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.001"/>
+            <testcase name="testSolution11" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution12" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution13" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.001"/>
+            <testcase name="testSolution7" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.001"/>
+            <testcase name="testSolution8" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution9" classname="ptidej.solver.test.claire.simple.GoodInheritance" time="0.0"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.simple.Ignorance" time="0.069">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.simple.Ignorance" time="0.067"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.claire.simple.Ignorance" time="0.001"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.claire.simple.Ignorance" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.claire.simple.Ignorance" time="0.0"/>
+            <testcase name="testSolution3" classname="ptidej.solver.test.claire.simple.Ignorance" time="0.0"/>
+            <testcase name="testSolution4" classname="ptidej.solver.test.claire.simple.Ignorance" time="0.001"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.simple.Inheritance" time="0.053">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.051"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution3" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution4" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution5" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution6" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution10" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution11" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution12" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution13" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution7" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.001"/>
+            <testcase name="testSolution8" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution9" classname="ptidej.solver.test.claire.simple.Inheritance" time="0.0"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.simple.InheritancePath" time="0.054">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.simple.InheritancePath" time="0.052"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.claire.simple.InheritancePath" time="0.001"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.claire.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.claire.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolution3" classname="ptidej.solver.test.claire.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolution4" classname="ptidej.solver.test.claire.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolution5" classname="ptidej.solver.test.claire.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolution6" classname="ptidej.solver.test.claire.simple.InheritancePath" time="0.001"/>
+            <testcase name="testSolution10" classname="ptidej.solver.test.claire.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolution7" classname="ptidej.solver.test.claire.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolution8" classname="ptidej.solver.test.claire.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolution9" classname="ptidej.solver.test.claire.simple.InheritancePath" time="0.0"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.simple.Use" time="0.05">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.simple.Use" time="0.051"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.claire.simple.Use" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.claire.simple.Use" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.claire.simple.Use" time="0.0"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.claire.simple.StrictInheritance" time="0.065">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.claire.simple.StrictInheritance" time="0.062"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.claire.simple.StrictInheritance" time="0.001"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.claire.simple.StrictInheritance" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.claire.simple.StrictInheritance" time="0.001"/>
+            <testcase name="testSolution3" classname="ptidej.solver.test.claire.simple.StrictInheritance" time="0.0"/>
+            <testcase name="testSolution4" classname="ptidej.solver.test.claire.simple.StrictInheritance" time="0.0"/>
+            <testcase name="testSolution5" classname="ptidej.solver.test.claire.simple.StrictInheritance" time="0.001"/>
+            <testcase name="testSolution6" classname="ptidej.solver.test.claire.simple.StrictInheritance" time="0.0"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+      <testsuite name="ptidej.solver.test.java.TestJavaPtidejSolver" time="0.168">
+        <testsuite name="ptidej.solver.test.java.combinatorial.TestSuite" time="0.016">
+          <testsuite name="ptidej.solver.test.java.combinatorial.CompositionAndInheritance" time="0.016">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.combinatorial.CompositionAndInheritance" time="0.016"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.java.combinatorial.CompositionAndInheritance" time="0.0"/>
+            <testcase name="testSolution" classname="ptidej.solver.test.java.combinatorial.CompositionAndInheritance" time="0.0"/>
+          </testsuite>
+        </testsuite>
+        <testsuite name="ptidej.solver.test.java.example.TestSuite" time="0.033">
+          <testsuite name="ptidej.solver.test.java.example.Composite1" time="0.033">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.example.Composite1" time="0.033"/>
+            <testcase name="testSolutions" classname="ptidej.solver.test.java.example.Composite1" time="0.0"/>
+          </testsuite>
+        </testsuite>
+        <testsuite name="ptidej.solver.test.java.simple.TestSuite" time="0.119">
+          <testsuite name="ptidej.solver.test.java.simple.Composition" time="0.006">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.simple.Composition" time="0.005"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.java.simple.Composition" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.java.simple.Composition" time="0.001"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.java.simple.Composition" time="0.0"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.java.simple.Creation" time="0.007">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.simple.Creation" time="0.006"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.java.simple.Creation" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.java.simple.Creation" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.java.simple.Creation" time="0.001"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.java.simple.GoodInheritance" time="0.025">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.023"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution3" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution4" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution5" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.001"/>
+            <testcase name="testSolution6" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution10" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution11" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution12" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution13" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution7" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.001"/>
+            <testcase name="testSolution8" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.0"/>
+            <testcase name="testSolution9" classname="ptidej.solver.test.java.simple.GoodInheritance" time="0.0"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.java.simple.Ignorance" time="0.01">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.simple.Ignorance" time="0.009"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.java.simple.Ignorance" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.java.simple.Ignorance" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.java.simple.Ignorance" time="0.0"/>
+            <testcase name="testSolution3" classname="ptidej.solver.test.java.simple.Ignorance" time="0.0"/>
+            <testcase name="testSolution4" classname="ptidej.solver.test.java.simple.Ignorance" time="0.0"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.java.simple.Inheritance" time="0.021">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.simple.Inheritance" time="0.019"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.java.simple.Inheritance" time="0.001"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.java.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.java.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution3" classname="ptidej.solver.test.java.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution4" classname="ptidej.solver.test.java.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution5" classname="ptidej.solver.test.java.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution6" classname="ptidej.solver.test.java.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution10" classname="ptidej.solver.test.java.simple.Inheritance" time="0.001"/>
+            <testcase name="testSolution11" classname="ptidej.solver.test.java.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution12" classname="ptidej.solver.test.java.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution13" classname="ptidej.solver.test.java.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution7" classname="ptidej.solver.test.java.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution8" classname="ptidej.solver.test.java.simple.Inheritance" time="0.0"/>
+            <testcase name="testSolution9" classname="ptidej.solver.test.java.simple.Inheritance" time="0.0"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.java.simple.InheritancePath" time="0.028">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.simple.InheritancePath" time="0.024"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.java.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.java.simple.InheritancePath" time="0.001"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.java.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolution3" classname="ptidej.solver.test.java.simple.InheritancePath" time="0.001"/>
+            <testcase name="testSolution4" classname="ptidej.solver.test.java.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolution5" classname="ptidej.solver.test.java.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolution6" classname="ptidej.solver.test.java.simple.InheritancePath" time="0.001"/>
+            <testcase name="testSolution10" classname="ptidej.solver.test.java.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolution7" classname="ptidej.solver.test.java.simple.InheritancePath" time="0.0"/>
+            <testcase name="testSolution8" classname="ptidej.solver.test.java.simple.InheritancePath" time="0.001"/>
+            <testcase name="testSolution9" classname="ptidej.solver.test.java.simple.InheritancePath" time="0.0"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.java.simple.Use" time="0.01">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.simple.Use" time="0.009"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.java.simple.Use" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.java.simple.Use" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.java.simple.Use" time="0.0"/>
+          </testsuite>
+          <testsuite name="ptidej.solver.test.java.simple.StrictInheritance" time="0.012">
+            <testcase name="testNumberOfSolutions" classname="ptidej.solver.test.java.simple.StrictInheritance" time="0.012"/>
+            <testcase name="testSolution1" classname="ptidej.solver.test.java.simple.StrictInheritance" time="0.0"/>
+            <testcase name="testSolution2" classname="ptidej.solver.test.java.simple.StrictInheritance" time="0.0"/>
+            <testcase name="testSolutionPercentage" classname="ptidej.solver.test.java.simple.StrictInheritance" time="0.0"/>
+            <testcase name="testSolution3" classname="ptidej.solver.test.java.simple.StrictInheritance" time="0.0"/>
+            <testcase name="testSolution4" classname="ptidej.solver.test.java.simple.StrictInheritance" time="0.0"/>
+            <testcase name="testSolution5" classname="ptidej.solver.test.java.simple.StrictInheritance" time="0.0"/>
+            <testcase name="testSolution6" classname="ptidej.solver.test.java.simple.StrictInheritance" time="0.0"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+    <testsuite name="sad.detection.test.TestSAD" time="179.31">
+      <testsuite name="sad.detection.test.generic.BoxPlotTest" time="0.012">
+        <testcase name="testCurrentUpperQuartile" classname="sad.detection.test.generic.BoxPlotTest" time="0.005"/>
+        <testcase name="testCurrentHigherValue" classname="sad.detection.test.generic.BoxPlotTest" time="0.0"/>
+        <testcase name="testCurrentHigherValue2" classname="sad.detection.test.generic.BoxPlotTest" time="0.001"/>
+        <testcase name="testCurrentHighValues" classname="sad.detection.test.generic.BoxPlotTest" time="0.0"/>
+        <testcase name="testCurrentNormalValues" classname="sad.detection.test.generic.BoxPlotTest" time="0.0"/>
+        <testcase name="testCurrentIQR" classname="sad.detection.test.generic.BoxPlotTest" time="0.0"/>
+        <testcase name="testCurrentLowerQuartile" classname="sad.detection.test.generic.BoxPlotTest" time="0.001"/>
+        <testcase name="testCurrentLowerValue" classname="sad.detection.test.generic.BoxPlotTest" time="0.0"/>
+        <testcase name="testCurrentLowValues" classname="sad.detection.test.generic.BoxPlotTest" time="0.001"/>
+        <testcase name="testCurrentMaxBound" classname="sad.detection.test.generic.BoxPlotTest" time="0.0"/>
+        <testcase name="testCurrentMedian" classname="sad.detection.test.generic.BoxPlotTest" time="0.001"/>
+        <testcase name="testCurrentMinBound" classname="sad.detection.test.generic.BoxPlotTest" time="0.001"/>
+        <testcase name="testCurrentOutliers" classname="sad.detection.test.generic.BoxPlotTest" time="0.0"/>
+        <testcase name="testCurrentOutliers2" classname="sad.detection.test.generic.BoxPlotTest" time="0.001"/>
+        <testcase name="testEmptyData" classname="sad.detection.test.generic.BoxPlotTest" time="0.0"/>
+      </testsuite>
+      <testsuite name="sad.detection.test.xerces.SpaghettiCodeTest" time="20.668">
+        <testcase name="testSpaghettiCode" classname="sad.detection.test.xerces.SpaghettiCodeTest" time="20.638"/>
+        <testcase name="testLongMethod" classname="sad.detection.test.xerces.SpaghettiCodeTest" time="0.014"/>
+        <testcase name="testMethodWithNoParameter" classname="sad.detection.test.xerces.SpaghettiCodeTest" time="0.016"/>
+      </testsuite>
+      <testsuite name="sad.detection.test.generic.DetectionCodeSmellTest" time="5.477">
+        <testcase name="testDetectAllClassGlobalVariable" classname="sad.detection.test.generic.DetectionCodeSmellTest" time="3.267"/>
+        <testcase name="testDetectAllClassOneMethod" classname="sad.detection.test.generic.DetectionCodeSmellTest" time="0.041"/>
+        <testcase name="testDetectAllControllerClass" classname="sad.detection.test.generic.DetectionCodeSmellTest" time="0.632"/>
+        <testcase name="testDetectAllDataClass" classname="sad.detection.test.generic.DetectionCodeSmellTest" time="0.025"/>
+        <testcase name="testDetectAllFunctionClass" classname="sad.detection.test.generic.DetectionCodeSmellTest" time="0.004"/>
+        <testcase name="testDetectAllLargeClass" classname="sad.detection.test.generic.DetectionCodeSmellTest" time="0.008"/>
+        <testcase name="testDetectAllLongMethods" classname="sad.detection.test.generic.DetectionCodeSmellTest" time="0.006"/>
+        <testcase name="testDetectAllLowCohesion" classname="sad.detection.test.generic.DetectionCodeSmellTest" time="1.442"/>
+        <testcase name="testDetectAllMethodsNoParameter" classname="sad.detection.test.generic.DetectionCodeSmellTest" time="0.017"/>
+        <testcase name="testDetectAllMultipleInterface" classname="sad.detection.test.generic.DetectionCodeSmellTest" time="0.008"/>
+        <testcase name="testDetectAllClassNoInheritance" classname="sad.detection.test.generic.DetectionCodeSmellTest" time="0.016"/>
+        <testcase name="testDetectAllClassNoPolymorphism" classname="sad.detection.test.generic.DetectionCodeSmellTest" time="0.01"/>
+      </testsuite>
+      <testsuite name="sad.detection.test.swt.DetectionAntipatternSWTTest" time="126.452">
+        <testcase name="testDetectBlobs" classname="sad.detection.test.swt.DetectionAntipatternSWTTest" time="126.43"/>
+        <testcase name="testDetectFunctionalDecompositions" classname="sad.detection.test.swt.DetectionAntipatternSWTTest" time="0.012"/>
+        <testcase name="testDetectSpaghettiCodes" classname="sad.detection.test.swt.DetectionAntipatternSWTTest" time="0.006"/>
+        <testcase name="testDetectSwissArmyKnives" classname="sad.detection.test.swt.DetectionAntipatternSWTTest" time="0.004"/>
+      </testsuite>
+      <testsuite name="sad.detection.test.xerces.BlobTest" time="4.391">
+        <testcase name="testDetectBlobs" classname="sad.detection.test.xerces.BlobTest" time="4.391"/>
+      </testsuite>
+      <testsuite name="sad.detection.test.helper.xerces.SpaghettiCodeTest" time="22.31">
+        <testcase name="testSpaghettiCode" classname="sad.detection.test.helper.xerces.SpaghettiCodeTest" time="22.31"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestDB4OSerialiser" time="78.725">
+      <testsuite name="padl.serialiser.test.TestDB4OSerialiserSanity" time="1.813">
+        <testcase name="testElements" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="1.425"/>
+        <testcase name="testEntities" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="0.089"/>
+        <testcase name="testInheritance" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="0.087"/>
+        <testcase name="testPatterns" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="0.084"/>
+        <testcase name="testNames" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="0.128"/>
+      </testsuite>
+      <testsuite name="padl.serialiser.test.TestDB4OSerialiserJHotDraw51" time="0.128">
+        <testcase name="testElements" classname="padl.serialiser.test.TestDB4OSerialiserJHotDraw51" time="0.126"/>
+        <testcase name="testEntities" classname="padl.serialiser.test.TestDB4OSerialiserJHotDraw51" time="0.001"/>
+        <testcase name="testInheritance" classname="padl.serialiser.test.TestDB4OSerialiserJHotDraw51" time="0.0"/>
+        <testcase name="testNames" classname="padl.serialiser.test.TestDB4OSerialiserJHotDraw51" time="0.001"/>
+      </testsuite>
+      <testsuite name="padl.serialiser.test.TestDB4OSerialiserArgoUML020" time="76.784">
+        <testcase name="testNames" classname="padl.serialiser.test.TestDB4OSerialiserArgoUML020" time="75.0"/>
+        <testcase name="testComparator" classname="padl.serialiser.test.TestDB4OSerialiserArgoUML020" time="1.784"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestJOSSerialiser" time="62.382">
+      <testsuite name="padl.serialiser.test.TestComposite" time="0.046">
+        <testcase name="testNames" classname="padl.serialiser.test.TestComposite" time="0.045"/>
+        <testcase name="testComparator" classname="padl.serialiser.test.TestComposite" time="0.001"/>
+      </testsuite>
+      <testsuite name="padl.serialiser.test.TestJHotDraw" time="3.829">
+        <testcase name="testNames" classname="padl.serialiser.test.TestJHotDraw" time="3.688"/>
+        <testcase name="testComparator" classname="padl.serialiser.test.TestJHotDraw" time="0.141"/>
+      </testsuite>
+      <testsuite name="padl.serialiser.test.TestArgoUML0198" time="32.574">
+        <testcase name="testNames" classname="padl.serialiser.test.TestArgoUML0198" time="32.245"/>
+        <testcase name="testComparator" classname="padl.serialiser.test.TestArgoUML0198" time="0.329"/>
+      </testsuite>
+      <testsuite name="padl.serialiser.test.TestArgoUML020" time="25.933">
+        <testcase name="testNames" classname="padl.serialiser.test.TestArgoUML020" time="25.565"/>
+        <testcase name="testComparator" classname="padl.serialiser.test.TestArgoUML020" time="0.368"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

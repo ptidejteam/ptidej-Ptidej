@@ -1,0 +1,6 @@
+2,3
+s,0,mcoh.Mcoh
+s,1,mcoh.ProducteurTest
+r,1,1,1
+r,1,1,1
+r,0,0,1

@@ -1,0 +1,599 @@
+
+
+---------------------------------
+Ptidej run on 2018-09-05 12:10:10
+---------------------------------
+
+util.repository.impl.FileRepositoryFactory has for running path: /D:/Shared/Dropbox/Ptidej Workspaces/v5.2/CPL/bin/
+util.repository.impl.FileRepositoryFactory is creating a ClassFileRepository for: util.repository.impl.FileFolderRepository
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/PADL Design Motifs/bin/padl/motif
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/Ptidej UI Layouts/bin/ptidej/ui/layout
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/PADL Analyses/bin/padl/analysis
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/Ptidej UI Analyses/bin/ptidej/ui/analysis
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/Ptidej UI Viewer Extensions/bin/ptidej/viewer/extension
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/SAD/bin/sad/codesmell/detection
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/SAD/bin/sad/designsmell/detection
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/PADL Micro-pattern Analysis/bin/padl/micropattern
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/PADL/bin/padl/visitor
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/PADL Design Motifs/bin/padl/motif/visitor
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/POM/bin/pom/metrics
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/SQUAD/bin/squad/quality/pqmod
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/SQUAD/bin/squad/quality/qmood
+Loading class files in: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/Caffeine/bin/caffeine/ui\
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared/Dropbox/Ptidej Workspaces/v5.2/PADL/bin/padl/kernel/impl
+Entities		Expendability
+PrologListener		N
+Simple		N
+VirtualMachine		N
+BorderLayout		N
+Container		G
+Frame		N
+Window		G
+AbstractButton		N
+JButton		N
+JFrame		G
+OutputMonitor		N
+Entities		Generality
+PrologListener		N
+Simple		N
+VirtualMachine		N
+BorderLayout		N
+Container		N
+Frame		N
+Window		N
+AbstractButton		N
+JButton		N
+JFrame		G
+OutputMonitor		N
+Entities		Expendability
+PrologListener		N
+Simple		N
+VirtualMachine		N
+BorderLayout		N
+Container		G
+Frame		N
+Window		G
+AbstractButton		N
+JButton		N
+JFrame		G
+OutputMonitor		N
+Entities		Functionality
+PrologListener		2.64
+Simple		2.8600000000000003
+VirtualMachine		2.64
+BorderLayout		2.8600000000000003
+Container		3.08
+Frame		2.8600000000000003
+Window		3.52
+AbstractButton		2.8600000000000003
+JButton		2.8600000000000003
+JFrame		3.08
+OutputMonitor		2.64
+Entities		Understandability
+PrologListener		-3.9600000000000004
+Simple		-3.9600000000000004
+VirtualMachine		-3.9600000000000004
+BorderLayout		-4.29
+Container		-4.62
+Frame		-4.29
+Window		-5.28
+AbstractButton		-4.29
+JButton		-4.29
+JFrame		-4.62
+OutputMonitor		-3.9600000000000004
+
+
+---------------------------------
+Ptidej run on 2020-01-13 21:44:18
+---------------------------------
+
+util.repository.impl.FileRepositoryFactory has for running path: /D:/Shared Backup/Software/Ptidej Workspaces/v5.2/CPL/bin/
+util.repository.impl.FileRepositoryFactory is creating a ClassFileRepository for: util.repository.impl.FileFolderRepository
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Design Motifs/bin/padl/motif
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej UI Layouts/bin/ptidej/ui/layout
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Analyses/bin/padl/analysis
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej UI Analyses/bin/ptidej/ui/analysis
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej UI Viewer Extensions/bin/ptidej/viewer/extension
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SAD/bin/sad/codesmell/detection
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SAD/bin/sad/designsmell/detection
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Micro-pattern Analysis/bin/padl/micropattern
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL/bin/padl/visitor
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Design Motifs/bin/padl/motif/visitor
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/POM/bin/pom/metrics
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SQUAD/bin/squad/quality/pqmod
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SQUAD/bin/squad/quality/qmood
+Loading class files in: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej Tests/rsc/ptidej/Examples/../../../bin/ptidej/example/composite2/
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL/bin/padl/kernel/impl
+Composite Code Smell has no main class.
+Composite Code Smell has no main class.
+Composite Code Smell has no main class.
+util.io.ProxyDisk reports that "../Temp/RefusedParentBequest.ini already exists ("D:\Shared Backup\Software\Ptidej Workspaces\v5.2\Ptidej UI Viewer Standalone Swing\..\Temp\RefusedParentBequest.ini")
+
+
+---------------------------------
+Ptidej run on 2020-02-05 23:03:18
+---------------------------------
+
+util.repository.impl.FileRepositoryFactory has for running path: /D:/Shared Backup/Software/Ptidej Workspaces/v5.2/CPL/bin/
+util.repository.impl.FileRepositoryFactory is creating a ClassFileRepository for: util.repository.impl.FileFolderRepository
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Design Motifs/bin/padl/motif
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej UI Layouts/bin/ptidej/ui/layout
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Analyses/bin/padl/analysis
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej UI Analyses/bin/ptidej/ui/analysis
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej UI Viewer Extensions/bin/ptidej/viewer/extension
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SAD/bin/sad/codesmell/detection
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SAD/bin/sad/designsmell/detection
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Micro-pattern Analysis/bin/padl/micropattern
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL/bin/padl/visitor
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Design Motifs/bin/padl/motif/visitor
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/POM/bin/pom/metrics
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SQUAD/bin/squad/quality/pqmod
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SQUAD/bin/squad/quality/qmood
+Loading class files in: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej Tests/rsc/ptidej/Examples/../../../bin/ptidej/example/composite2/
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL/bin/padl/kernel/impl
+
+
+---------------------------------
+Ptidej run on 2020-02-13 07:32:04
+---------------------------------
+
+util.repository.impl.FileRepositoryFactory has for running path: /D:/Shared Backup/Software/Ptidej Workspaces/v5.2/CPL/bin/
+util.repository.impl.FileRepositoryFactory is creating a ClassFileRepository for: util.repository.impl.FileFolderRepository
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Design Motifs/bin/padl/motif
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej UI Layouts/bin/ptidej/ui/layout
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Analyses/bin/padl/analysis
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej UI Analyses/bin/ptidej/ui/analysis
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej UI Viewer Extensions/bin/ptidej/viewer/extension
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SAD/bin/sad/codesmell/detection
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SAD/bin/sad/designsmell/detection
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Micro-pattern Analysis/bin/padl/micropattern
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL/bin/padl/visitor
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Design Motifs/bin/padl/motif/visitor
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/POM/bin/pom/metrics
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SQUAD/bin/squad/quality/pqmod
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SQUAD/bin/squad/quality/qmood
+Loading class files in: D:/Documents/Teaching\
+Loader: No files found into D:/Documents/Teaching\1998\DEA\
+Loader: No files found into D:/Documents/Teaching\1998\
+Loader: No files found into D:/Documents/Teaching\2000-2001\Emoose\Spec-Train\
+Loader: No files found into D:/Documents/Teaching\2000-2001\Emoose\
+Loader: No files found into D:/Documents/Teaching\2000-2001\TP-TD Java\
+Loader: No files found into D:/Documents/Teaching\2000-2001\
+Loader: No files found into D:/Documents/Teaching\2001-2002\Architecture Logicielle\
+Loader: No files found into D:/Documents/Teaching\2001-2002\COOLIE-1\
+Loader: No files found into D:/Documents/Teaching\2001-2002\EMOOSE\Capita-Selecta\Aline-Lucia Baroni\
+Loader: No files found into D:/Documents/Teaching\2001-2002\EMOOSE\Capita-Selecta\Michael Zhang\
+Loader: No files found into D:/Documents/Teaching\2001-2002\EMOOSE\Capita-Selecta\Rhodrigo Meza\
+Loader: No files found into D:/Documents/Teaching\2001-2002\EMOOSE\Capita-Selecta\
+Loader: No files found into D:/Documents/Teaching\2001-2002\EMOOSE\Course on VMs\
+Loader: No files found into D:/Documents/Teaching\2001-2002\EMOOSE\Spec-Training\Boris Meijas\
+Loader: No files found into D:/Documents/Teaching\2001-2002\EMOOSE\Spec-Training\
+Loader: No files found into D:/Documents/Teaching\2001-2002\EMOOSE\TP Reflection Course\
+Loader: No files found into D:/Documents/Teaching\2001-2002\EMOOSE\
+Loader: No files found into D:/Documents/Teaching\2001-2002\Lecture Notes on VMs\
+Loader: No files found into D:/Documents/Teaching\2001-2002\Page WEB EMOOSE\
+Loader: No files found into D:/Documents/Teaching\2001-2002\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Architecture Logicielle\La machine virtuelle Java\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Architecture Logicielle\Mini-projets\1 - Eclipse multi-workspace + JiveLint\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Architecture Logicielle\Mini-projets\2 - Portée des variables\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Architecture Logicielle\Mini-projets\3 - IRClipse\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Architecture Logicielle\Mini-projets\4 - Variables modifiées\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Architecture Logicielle\Mini-projets\5 - Wiki\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Architecture Logicielle\Mini-projets\6 - BibTeX\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Architecture Logicielle\Mini-projets\7 - Ptidej\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Architecture Logicielle\Mini-projets\8 - EAOP\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Architecture Logicielle\Mini-projets\9 - Fermeture transitive\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Architecture Logicielle\Mini-projets\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Architecture Logicielle\
+Loader: No files found into D:/Documents/Teaching\2002-2003\COOL\
+Loader: No files found into D:/Documents/Teaching\2002-2003\EMOOSE\Course on Design Patterns\
+Loader: No files found into D:/Documents/Teaching\2002-2003\EMOOSE\Course on Eclipse\
+Loader: No files found into D:/Documents/Teaching\2002-2003\EMOOSE\Course on VMs\
+Loader: No files found into D:/Documents/Teaching\2002-2003\EMOOSE\Spec-Training\
+Loader: No files found into D:/Documents/Teaching\2002-2003\EMOOSE\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Lecture Notes on VMs\
+Loader: No files found into D:/Documents/Teaching\2002-2003\OSE FI-3\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Programmation Par Objets\TD6\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Programmation Par Objets\TP2\
+Loader: No files found into D:/Documents/Teaching\2002-2003\Programmation Par Objets\
+Loader: No files found into D:/Documents/Teaching\2002-2003\
+Loader: No files found into D:/Documents/Teaching\2003\Fall\
+Loader: No files found into D:/Documents/Teaching\2003\
+Loader: No files found into D:/Documents/Teaching\2004\Fall\
+Loader: No files found into D:/Documents/Teaching\2004\Summer\IFT3051\
+Loader: No files found into D:/Documents/Teaching\2004\Summer\
+Loader: No files found into D:/Documents/Teaching\2004\Winter\IFT3051\BibTeXPlugin\
+Loader: No files found into D:/Documents/Teaching\2004\Winter\IFT3051\EclipsedPtidej\
+Loader: No files found into D:/Documents/Teaching\2004\Winter\IFT3051\FastReliableCppParser\
+Loader: No files found into D:/Documents/Teaching\2004\Winter\IFT3051\JPtidejSolver\
+Loader: No files found into D:/Documents/Teaching\2004\Winter\IFT3051\PADLv2\
+Loader: No files found into D:/Documents/Teaching\2004\Winter\IFT3051\PatternedPrograms\
+Loader: No files found into D:/Documents/Teaching\2004\Winter\IFT3051\PIL\
+Loader: No files found into D:/Documents/Teaching\2004\Winter\IFT3051\SugiyamaVisulisation\
+Loader: No files found into D:/Documents/Teaching\2004\Winter\IFT3051\
+Loader: No files found into D:/Documents/Teaching\2004\Winter\IFT3880\
+Loader: No files found into D:/Documents/Teaching\2004\Winter\IFT6251\Course on Design Patterns\
+Loader: No files found into D:/Documents/Teaching\2004\Winter\IFT6251\
+Loader: No files found into D:/Documents/Teaching\2004\Winter\
+Loader: No files found into D:/Documents/Teaching\2004\
+Loader: No files found into D:/Documents/Teaching\2005\Fall\IFT3051\AntiPatterns\
+Loader: No files found into D:/Documents/Teaching\2005\Fall\IFT3051\GraphManipulations\
+Loader: No files found into D:/Documents/Teaching\2005\Fall\IFT3051\PatternedPrograms\
+Loader: No files found into D:/Documents/Teaching\2005\Fall\IFT3051\PVVIH\
+Loader: No files found into D:/Documents/Teaching\2005\Fall\IFT3051\
+Loader: No files found into D:/Documents/Teaching\2005\Fall\
+Loader: No files found into D:/Documents/Teaching\2005\Winter\IFT3051\AntiPatternedPrograms\
+Loader: No files found into D:/Documents/Teaching\2005\Winter\IFT3051\GraphManipulations\
+Loader: No files found into D:/Documents/Teaching\2005\Winter\IFT3051\PatternedPrograms\
+Loader: No files found into D:/Documents/Teaching\2005\Winter\IFT3051\
+Loader: No files found into D:/Documents/Teaching\2005\Winter\IFT6261\
+Loader: No files found into D:/Documents/Teaching\2005\Winter\
+Loader: No files found into D:/Documents/Teaching\2005\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\IFT3051\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\IFT3902\Examens\Final\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\IFT3902\Examens\Intra\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\IFT3902\Examens\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\IFT3902\Notes de cours\Cours\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\IFT3902\Notes de cours\Résumés\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\IFT3902\Notes de cours\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\IFT3902\Projets\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\IFT3902\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\IFT6251\Examens\Final\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\IFT6251\Examens\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\IFT6251\Presentations\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\IFT6251\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\Prédoc\
+Loader: No files found into D:/Documents/Teaching\2006\Fall\
+Loader: No files found into D:/Documents/Teaching\2006\Summer\IFT3051\Micro-patterns\
+Loader: No files found into D:/Documents/Teaching\2006\Summer\IFT3051\ORAlgorithms\
+Loader: No files found into D:/Documents/Teaching\2006\Summer\IFT3051\Sugiyama\
+Loader: No files found into D:/Documents/Teaching\2006\Summer\IFT3051\
+Loader: No files found into D:/Documents/Teaching\2006\Summer\
+Loader: No files found into D:/Documents/Teaching\2006\Winter\IFT2251\
+Loader: No files found into D:/Documents/Teaching\2006\Winter\IFT3051\MicroPatterns\
+Loader: No files found into D:/Documents/Teaching\2006\Winter\IFT3051\TSEPatternedPrograms\
+Loader: No files found into D:/Documents/Teaching\2006\Winter\IFT3051\
+Loader: No files found into D:/Documents/Teaching\2006\Winter\Prédoc\
+Loader: No files found into D:/Documents/Teaching\2006\Winter\
+Loader: No files found into D:/Documents/Teaching\2006\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3150\PalmBibDB\EM\Docs\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3150\PalmBibDB\EM\Scripting\Perl\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3150\PalmBibDB\EM\Scripting\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3150\PalmBibDB\EM\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3150\PalmBibDB\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3150\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\giulio-slides\lexical-analysis\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\giulio-slides\parsing\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\giulio-slides\pattern-match\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\giulio-slides\progr-unders\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\giulio-slides\reverse-eng\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\giulio-slides\softw-evolution\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\giulio-slides\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\paolo-slides\slicing\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\paolo-slides\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\1\esercizio\bugged\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\1\esercizio\cross-ref\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\1\esercizio\ext\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\1\esercizio\orig\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\1\esercizio\proto\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\1\esercizio\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\1\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\2\stack\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\2\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\3\lex\first-part\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\3\lex\orig\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\3\lex\second-part\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\3\lex\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\3\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\flow-an\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\parsing\arit\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\parsing\boolean\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\parsing\postfix\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\parsing\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\pract-slicing\Gallagher\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\pract-slicing\Mandel\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\pract-slicing\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\TXL\Txl\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\TXL\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\roberto-slides\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\tests\extra-test\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\tests\final-test\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\tests\first-test\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\tests\inter-test\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\tests\second-test\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\tests\third-test\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\tests\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\work-pakages\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\reengineering\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Giulio\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\Kim\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Archives\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Examens\CVS\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Examens\Final\CVS\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Examens\Final\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Examens\Intra\CVS\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Examens\Intra\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Examens\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Notes de cours\Cours\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Notes de cours\CVS\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Notes de cours\Résumés\CVS\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Notes de cours\Résumés\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Notes de cours\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Projets\CVS\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Projets\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\Seminaires\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\TP\TP 1, analyse syntaxique\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\TP\TP 2, graphe d'appels\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\TP\TP 3, analyse des fonctionnalités\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\TP\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\IFT3912\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\Prédoc\
+Loader: No files found into D:/Documents/Teaching\2007\Fall\
+Loader: No files found into D:/Documents/Teaching\2007\Winter\IFT3051\
+Loader: No files found into D:/Documents/Teaching\2007\Winter\Prédoc\
+Loader: No files found into D:/Documents/Teaching\2007\Winter\
+Loader: No files found into D:/Documents/Teaching\2007\
+Loader: No files found into D:/Documents/Teaching\2008\Fall\Reunions avec les représentants de classes\
+Loader: No files found into D:/Documents/Teaching\2008\Fall\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Archives\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Demonstrations\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Examens\Final\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Examens\Intra\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Examens\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Projet\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Transparents\Chapitre 1 - Introduction\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Transparents\Chapitre 2 - Les activités du logiciel\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Transparents\Chapitre 3 - Analyse\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Transparents\Chapitre 4 - Conception\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Transparents\Chapitre 5 - Modelisation\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Transparents\Chapitre 6 - Modelisation formelle\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Transparents\Qualité\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\Transparents\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\IFT2255\
+Loader: No files found into D:/Documents/Teaching\2008\Summer\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Articles\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Examens\Final\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Examens\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\GSI - Patrons de conception\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Plan du cours\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Criteria and Reading Notes\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\060911\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\060918\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080116\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080123\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080128\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080130\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080204\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080206\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080211\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080213\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080218\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080220\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080225\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080227\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080310\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080312\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080317\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080319\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080326\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\080331\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\Presentations\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\Presentations\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\IFT6310\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\Prédoc\
+Loader: No files found into D:/Documents/Teaching\2008\Winter\
+Loader: No files found into D:/Documents/Teaching\2008\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Analyse\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Archives\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Criteria and Reading Notes\Example\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Criteria and Reading Notes\Laleh's\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Criteria and Reading Notes\Venera's\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Criteria and Reading Notes\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Examens\Extra\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Examens\Final\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Examens\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Plan de cours\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Projects\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Transparents\Cours 1\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Transparents\Cours 2\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Transparents\Cours 3\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Transparents\Cours 4\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Transparents\Cours 5\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Transparents\Cours 6\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Transparents\Cours 7\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Transparents\Cours 8\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Transparents\Cours 9\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\Transparents\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\INF6306\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Examens\Final\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Examens\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\1 - Architectures\Evaluations\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\1 - Architectures\Reponses\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\1 - Architectures\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\2 - Bibliothèques et le chargement de composantes dynamiques\Evaluations\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\2 - Bibliothèques et le chargement de composantes dynamiques\Reponses\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\2 - Bibliothèques et le chargement de composantes dynamiques\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\3 - Cadres de référence et plugiciels\Evaluations\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\3 - Cadres de référence et plugiciels\Reponses\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\3 - Cadres de référence et plugiciels\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\4 - Composition et les architectures par composants\Evaluations\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\4 - Composition et les architectures par composants\Reponses\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\4 - Composition et les architectures par composants\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\5 - Patrons pour la conception d’applications\Evaluations\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\5 - Patrons pour la conception d’applications\Reponses\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\5 - Patrons pour la conception d’applications\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\6 - Application de base de la conception orientée aspect  surveillance, traçage et profilage\Evaluation\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\6 - Application de base de la conception orientée aspect  surveillance, traçage et profilage\Reponses\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\6 - Application de base de la conception orientée aspect  surveillance, traçage et profilage\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Exercices\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\Transparents\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\LOG4430\
+Loader: No files found into D:/Documents/Teaching\2009\Fall\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG2410\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Cours de gestion de projet\Automne 08\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Cours de gestion de projet\Hiver 09\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Cours de gestion de projet\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Plainte\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Projet\Automne 08\gestionProjet\Avancement\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Projet\Automne 08\gestionProjet\Contrat\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Projet\Automne 08\gestionProjet\Direction\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Projet\Automne 08\gestionProjet\Images\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Projet\Automne 08\gestionProjet\Leadership\discours_fichiers\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Projet\Automne 08\gestionProjet\Leadership\speech_fichiers\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Projet\Automne 08\gestionProjet\Leadership\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Projet\Automne 08\gestionProjet\Planification\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Projet\Automne 08\gestionProjet\RH\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Projet\Automne 08\gestionProjet\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Projet\Automne 08\inf3300\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Projet\Automne 08\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\Projet\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG3900\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Archives\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Examens\Final\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Examens\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\1 - Architectures\Evaluations\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\1 - Architectures\Reponses\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\1 - Architectures\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\2 - Bibliothèques et le chargement de composantes dynamiques\Evaluations\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\2 - Bibliothèques et le chargement de composantes dynamiques\Reponses\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\2 - Bibliothèques et le chargement de composantes dynamiques\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\3 - Cadres de référence et plugiciels\Evaluations\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\3 - Cadres de référence et plugiciels\Reponses\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\3 - Cadres de référence et plugiciels\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\4 - Composition et les architectures par composants\Evaluations\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\4 - Composition et les architectures par composants\Reponses\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\4 - Composition et les architectures par composants\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\5 - Patrons pour la conception d’applications\Evaluations\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\5 - Patrons pour la conception d’applications\Reponses\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\5 - Patrons pour la conception d’applications\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\6 - Application de base de la conception orientée aspect  surveillance, traçage et profilage\Evaluation\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\6 - Application de base de la conception orientée aspect  surveillance, traçage et profilage\Reponses\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\6 - Application de base de la conception orientée aspect  surveillance, traçage et profilage\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Exercices\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\Transparents\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\LOG4430\
+Loader: No files found into D:/Documents/Teaching\2009\Winter\
+Loader: No files found into D:/Documents/Teaching\2009\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Analyse\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Archives\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Examens\Extra\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Examens\Final\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Examens\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Plan de cours\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP1\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\.settings\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\META-INF\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\bool\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\branch\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\integer\constraints\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\integer\search\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\integer\var\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\integer\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\mem\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\model\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\palm\explain\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\palm\integer\constraints\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\palm\integer\explain\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\palm\integer\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\palm\prop\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\palm\search\pathrepair\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\palm\search\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\palm\test\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\palm\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\prop\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\real\constraint\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\real\exp\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\real\search\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\real\var\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\real\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\search\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\test\integer\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\test\mem\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\test\search\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\test\util\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\test\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\util\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\choco\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\src\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\JChoco\temp.folder\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\.settings\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\lib\bcel\META-INF\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\lib\cfparse\META-INF\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\META-INF\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\com\ibm\toad\cfparse\attributes\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\com\ibm\toad\cfparse\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\com\ibm\toad\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\com\ibm\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\com\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\awt\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\help\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\io\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\lang\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\multilingual\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\parser\java\v14\nodes\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\parser\java\v14\visitors\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\parser\java\v14\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\parser\java\v15\nodes\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\parser\java\v15\visitors\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\parser\java\v15\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\parser\java\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\parser\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\process\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\reference\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\xml\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\util\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\src\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\CPL\temp.folder\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\.settings\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\META-INF\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\padl\analysis\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\padl\event\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\padl\kernel\exception\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\padl\kernel\impl\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\padl\kernel\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\padl\path\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\padl\util\adapter\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\padl\util\repository\constituent\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\padl\util\repository\file\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\padl\util\repository\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\padl\util\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\padl\visitor\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\padl\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\src\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL\temp.folder\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL_TEST\.settings\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL_TEST\src\padl\kernel\impl\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL_TEST\src\padl\kernel\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL_TEST\src\padl\test\clone\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL_TEST\src\padl\test\defaultPackage\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL_TEST\src\padl\test\helper\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL_TEST\src\padl\test\path\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL_TEST\src\padl\test\setter\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL_TEST\src\padl\test\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL_TEST\src\padl\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL\PADL_TEST\src\
+Loader: No files found into D:/Documents/Teaching\2010\Fall\INF6306\Projects\TP2\Guy and Neset\dependencies\PADL Analyses\.settings\
+
+
+---------------------------------
+Ptidej run on 2020-02-13 07:33:20
+---------------------------------
+
+util.repository.impl.FileRepositoryFactory has for running path: /D:/Shared Backup/Software/Ptidej Workspaces/v5.2/CPL/bin/
+util.repository.impl.FileRepositoryFactory is creating a ClassFileRepository for: util.repository.impl.FileFolderRepository
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Design Motifs/bin/padl/motif
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej UI Layouts/bin/ptidej/ui/layout
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Analyses/bin/padl/analysis
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej UI Analyses/bin/ptidej/ui/analysis
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/Ptidej UI Viewer Extensions/bin/ptidej/viewer/extension
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SAD/bin/sad/codesmell/detection
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SAD/bin/sad/designsmell/detection
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Micro-pattern Analysis/bin/padl/micropattern
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL/bin/padl/visitor
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL Design Motifs/bin/padl/motif/visitor
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/POM/bin/pom/metrics
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SQUAD/bin/squad/quality/pqmod
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/SQUAD/bin/squad/quality/qmood
+Loading class files in: D:/Software/Courses Workspace/SOEN6461 W20 - Exercise 1 (Inheritance, Typing) (Solution 1)/bin\
+util.repository.impl.FileFolderRepository is the current repository on: D:/Shared Backup/Software/Ptidej Workspaces/v5.2/PADL/bin/padl/kernel/impl
+Loading class files in: D:/Software/Courses Workspace/SOEN6461 W20 - Exercise 1 (Inheritance, Typing) (Solution 2)/bin\

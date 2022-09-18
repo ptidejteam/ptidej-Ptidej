@@ -1,0 +1,46 @@
+package java.util.stream;
+abstract public interface BaseStream
+extends java.lang.AutoCloseable
+{
+abstract public java.util.Iterator iterator()
+{
+
+}
+
+abstract public java.util.Spliterator spliterator()
+{
+
+}
+
+abstract public boolean isParallel()
+{
+
+}
+
+abstract public java.util.stream.BaseStream sequential()
+{
+
+}
+
+abstract public java.util.stream.BaseStream parallel()
+{
+
+}
+
+abstract public java.util.stream.BaseStream unordered()
+{
+
+}
+
+abstract public java.util.stream.BaseStream onClose(java.lang.Object arg0)
+{
+
+}
+
+abstract public void close()
+{
+
+}
+
+
+}

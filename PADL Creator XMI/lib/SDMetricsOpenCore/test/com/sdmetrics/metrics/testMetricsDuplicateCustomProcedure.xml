@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<sdmetrics version="2.2">
+
+<setprocedure name="myclone" class="com.sdmetrics.metrics.SetProcedureProjection" />
+<setprocedure name="myclone" class="com.sdmetrics.metrics.SetProcedureCompare" />
+
+</sdmetrics>

@@ -1,0 +1,427 @@
+# Micro-architecture 63 similar at 16% with Adapter Design Motif
+63.16.adapter = com.holub.database.CSVExporter
+63.16.adpatee = java.lang.Object
+63.16.client = com.holub.database.ConcreteTable
+63.16.Name = Adapter Design Motif
+63.16.target = com.holub.database.Table$Exporter
+63.16.XCommand = command
+
+# Micro-architecture 71 similar at 16% with Adapter Design Motif
+71.16.adapter = com.holub.database.CSVImporter
+71.16.adpatee = java.lang.Object
+71.16.client = com.holub.database.ConcreteTable
+71.16.Name = Adapter Design Motif
+71.16.target = com.holub.database.Table$Importer
+71.16.XCommand = command
+
+# Micro-architecture 69 similar at 16% with Adapter Design Motif
+69.16.adapter = com.holub.database.CSVImporter
+69.16.adpatee = java.lang.String
+69.16.client = com.holub.database.ConcreteTable
+69.16.Name = Adapter Design Motif
+69.16.target = com.holub.database.Table$Importer
+69.16.XCommand = command
+
+# Micro-architecture 66 similar at 16% with Adapter Design Motif
+66.16.adapter = com.holub.database.JTableExporter
+66.16.adpatee = java.lang.Object
+66.16.client = com.holub.database.ConcreteTable
+66.16.Name = Adapter Design Motif
+66.16.target = com.holub.database.Table$Exporter
+66.16.XCommand = command
+
+# Micro-architecture 74 similar at 16% with Adapter Design Motif
+74.16.adapter = com.holub.database.jdbc.JDBCConnection
+74.16.adpatee = com.holub.database.jdbc.adapters.ConnectionAdapter
+74.16.client = com.holub.database.jdbc.JDBCConnection
+74.16.Name = Adapter Design Motif
+74.16.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+74.16.XCommand = command
+
+# Micro-architecture 76 similar at 16% with Adapter Design Motif
+76.16.adapter = com.holub.database.jdbc.JDBCConnection
+76.16.adpatee = java.lang.String
+76.16.client = com.holub.database.jdbc.JDBCConnection
+76.16.Name = Adapter Design Motif
+76.16.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+76.16.XCommand = command
+
+# Micro-architecture 78 similar at 16% with Adapter Design Motif
+78.16.adapter = com.holub.database.jdbc.JDBCConnection
+78.16.adpatee = java.sql.SQLException
+78.16.client = com.holub.database.jdbc.JDBCConnection
+78.16.Name = Adapter Design Motif
+78.16.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+78.16.XCommand = command
+
+# Micro-architecture 51 similar at 16% with Adapter Design Motif
+51.16.adapter = com.holub.database.jdbc.JDBCResultSetMetaData
+51.16.adpatee = com.holub.database.jdbc.adapters.ResultSetMetaDataAdapter
+51.16.client = com.holub.database.jdbc.JDBCResultSetMetaData
+51.16.Name = Adapter Design Motif
+51.16.target = com.holub.database.jdbc.adapters.ResultSetMetaDataAdapter
+51.16.XCommand = command
+
+# Micro-architecture 59 similar at 16% with Adapter Design Motif
+59.16.adapter = com.holub.database.jdbc.JDBCResultSet
+59.16.adpatee = com.holub.database.jdbc.adapters.ResultSetAdapter
+59.16.client = com.holub.database.jdbc.JDBCResultSet
+59.16.Name = Adapter Design Motif
+59.16.target = com.holub.database.jdbc.adapters.ResultSetAdapter
+59.16.XCommand = command
+
+# Micro-architecture 57 similar at 16% with Adapter Design Motif
+57.16.adapter = com.holub.database.jdbc.JDBCResultSet
+57.16.adpatee = java.lang.Object
+57.16.client = com.holub.database.jdbc.JDBCResultSet
+57.16.Name = Adapter Design Motif
+57.16.target = com.holub.database.jdbc.adapters.ResultSetAdapter
+57.16.XCommand = command
+
+# Micro-architecture 56 similar at 16% with Adapter Design Motif
+56.16.adapter = com.holub.database.jdbc.JDBCResultSet
+56.16.adpatee = java.lang.String
+56.16.client = com.holub.database.jdbc.JDBCResultSet
+56.16.Name = Adapter Design Motif
+56.16.target = com.holub.database.jdbc.adapters.ResultSetAdapter
+56.16.XCommand = command
+
+# Micro-architecture 47 similar at 16% with Adapter Design Motif
+47.16.adapter = com.holub.database.jdbc.JDBCStatement
+47.16.adpatee = com.holub.database.jdbc.adapters.StatementAdapter
+47.16.client = com.holub.database.jdbc.JDBCStatement
+47.16.Name = Adapter Design Motif
+47.16.target = com.holub.database.jdbc.adapters.StatementAdapter
+47.16.XCommand = command
+
+# Micro-architecture 48 similar at 16% with Adapter Design Motif
+48.16.adapter = com.holub.database.jdbc.JDBCStatement
+48.16.adpatee = java.lang.String
+48.16.client = com.holub.database.jdbc.JDBCStatement
+48.16.Name = Adapter Design Motif
+48.16.target = com.holub.database.jdbc.adapters.StatementAdapter
+48.16.XCommand = command
+
+# Micro-architecture 84 similar at 16% with Adapter Design Motif
+84.16.adapter = com.holub.text.BeginToken
+84.16.adpatee = java.lang.Object
+84.16.client = com.holub.text.Scanner
+84.16.Name = Adapter Design Motif
+84.16.target = com.holub.text.Token
+84.16.XCommand = command
+
+# Micro-architecture 92 similar at 16% with Adapter Design Motif
+92.16.adapter = com.holub.text.RegexToken
+92.16.adpatee = java.lang.Object
+92.16.client = com.holub.text.Scanner
+92.16.Name = Adapter Design Motif
+92.16.target = com.holub.text.Token
+92.16.XCommand = command
+
+# Micro-architecture 91 similar at 16% with Adapter Design Motif
+91.16.adapter = com.holub.text.RegexToken
+91.16.adpatee = java.lang.String
+91.16.client = com.holub.text.Scanner
+91.16.Name = Adapter Design Motif
+91.16.target = com.holub.text.Token
+91.16.XCommand = command
+
+# Micro-architecture 86 similar at 16% with Adapter Design Motif
+86.16.adapter = com.holub.text.SimpleToken
+86.16.adpatee = java.lang.Object
+86.16.client = com.holub.text.Scanner
+86.16.Name = Adapter Design Motif
+86.16.target = com.holub.text.Token
+86.16.XCommand = command
+
+# Micro-architecture 85 similar at 16% with Adapter Design Motif
+85.16.adapter = com.holub.text.SimpleToken
+85.16.adpatee = java.lang.String
+85.16.client = com.holub.text.Scanner
+85.16.Name = Adapter Design Motif
+85.16.target = com.holub.text.Token
+85.16.XCommand = command
+
+# Micro-architecture 89 similar at 16% with Adapter Design Motif
+89.16.adapter = com.holub.text.WordToken
+89.16.adpatee = java.lang.Object
+89.16.client = com.holub.text.Scanner
+89.16.Name = Adapter Design Motif
+89.16.target = com.holub.text.Token
+89.16.XCommand = command
+
+# Micro-architecture 88 similar at 16% with Adapter Design Motif
+88.16.adapter = com.holub.text.WordToken
+88.16.adpatee = java.lang.String
+88.16.client = com.holub.text.Scanner
+88.16.Name = Adapter Design Motif
+88.16.target = com.holub.text.Token
+88.16.XCommand = command
+
+# Micro-architecture 72 similar at 16% with Adapter Design Motif
+72.16.adapter = com.holub.tools.ThrowableContainer
+72.16.adpatee = java.lang.RuntimeException
+72.16.client = com.holub.tools.ThrowableContainer
+72.16.Name = Adapter Design Motif
+72.16.target = java.lang.RuntimeException
+72.16.XCommand = command
+
+# Micro-architecture 28 similar at 23% with Adapter Design Motif
+28.23.adapter = com.holub.database.CSVExporter
+28.23.adpatee = java.util.Iterator
+28.23.client = com.holub.database.ConcreteTable
+28.23.Name = Adapter Design Motif
+28.23.target = com.holub.database.Table$Exporter
+28.23.XCommand = command
+
+# Micro-architecture 32 similar at 23% with Adapter Design Motif
+32.23.adapter = com.holub.database.CSVImporter
+32.23.adpatee = com.holub.tools.ArrayIterator
+32.23.client = com.holub.database.ConcreteTable
+32.23.Name = Adapter Design Motif
+32.23.target = com.holub.database.Table$Importer
+32.23.XCommand = command
+
+# Micro-architecture 30 similar at 23% with Adapter Design Motif
+30.23.adapter = com.holub.database.JTableExporter
+30.23.adpatee = java.util.Iterator
+30.23.client = com.holub.database.ConcreteTable
+30.23.Name = Adapter Design Motif
+30.23.target = com.holub.database.Table$Exporter
+30.23.XCommand = command
+
+# Micro-architecture 40 similar at 23% with Adapter Design Motif
+40.23.adapter = com.holub.database.jdbc.JDBCConnection
+40.23.adpatee = com.holub.database.Database
+40.23.client = com.holub.database.jdbc.JDBCConnection
+40.23.Name = Adapter Design Motif
+40.23.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+40.23.XCommand = command
+
+# Micro-architecture 41 similar at 23% with Adapter Design Motif
+41.23.adapter = com.holub.database.jdbc.JDBCConnection
+41.23.adpatee = com.holub.database.jdbc.JDBCConnection$1
+41.23.client = com.holub.database.jdbc.JDBCConnection
+41.23.Name = Adapter Design Motif
+41.23.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+41.23.XCommand = command
+
+# Micro-architecture 39 similar at 23% with Adapter Design Motif
+39.23.adapter = com.holub.database.jdbc.JDBCConnection
+39.23.adpatee = com.holub.database.jdbc.JDBCConnection$2
+39.23.client = com.holub.database.jdbc.JDBCConnection
+39.23.Name = Adapter Design Motif
+39.23.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+39.23.XCommand = command
+
+# Micro-architecture 37 similar at 23% with Adapter Design Motif
+37.23.adapter = com.holub.database.jdbc.JDBCConnection
+37.23.adpatee = com.holub.database.jdbc.JDBCConnection$AutoCommitBehavior
+37.23.client = com.holub.database.jdbc.JDBCConnection
+37.23.Name = Adapter Design Motif
+37.23.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+37.23.XCommand = command
+
+# Micro-architecture 38 similar at 23% with Adapter Design Motif
+38.23.adapter = com.holub.database.jdbc.JDBCConnection
+38.23.adpatee = com.holub.database.jdbc.JDBCConnection
+38.23.client = com.holub.database.jdbc.JDBCConnection
+38.23.Name = Adapter Design Motif
+38.23.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+38.23.XCommand = command
+
+# Micro-architecture 34 similar at 23% with Adapter Design Motif
+34.23.adapter = com.holub.database.jdbc.JDBCConnection
+34.23.adpatee = com.holub.database.jdbc.JDBCStatement
+34.23.client = com.holub.database.jdbc.JDBCConnection
+34.23.Name = Adapter Design Motif
+34.23.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+34.23.XCommand = command
+
+# Micro-architecture 35 similar at 23% with Adapter Design Motif
+35.23.adapter = com.holub.database.jdbc.JDBCConnection
+35.23.adpatee = java.io.IOException
+35.23.client = com.holub.database.jdbc.JDBCConnection
+35.23.Name = Adapter Design Motif
+35.23.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+35.23.XCommand = command
+
+# Micro-architecture 36 similar at 23% with Adapter Design Motif
+36.23.adapter = com.holub.database.jdbc.JDBCConnection
+36.23.adpatee = java.net.URI
+36.23.client = com.holub.database.jdbc.JDBCConnection
+36.23.Name = Adapter Design Motif
+36.23.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+36.23.XCommand = command
+
+# Micro-architecture 20 similar at 23% with Adapter Design Motif
+20.23.adapter = com.holub.database.jdbc.JDBCResultSetMetaData
+20.23.adpatee = com.holub.database.Cursor
+20.23.client = com.holub.database.jdbc.JDBCResultSetMetaData
+20.23.Name = Adapter Design Motif
+20.23.target = com.holub.database.jdbc.adapters.ResultSetMetaDataAdapter
+20.23.XCommand = command
+
+# Micro-architecture 23 similar at 23% with Adapter Design Motif
+23.23.adapter = com.holub.database.jdbc.JDBCResultSet
+23.23.adpatee = com.holub.database.Cursor
+23.23.client = com.holub.database.jdbc.JDBCResultSet
+23.23.Name = Adapter Design Motif
+23.23.target = com.holub.database.jdbc.adapters.ResultSetAdapter
+23.23.XCommand = command
+
+# Micro-architecture 21 similar at 23% with Adapter Design Motif
+21.23.adapter = com.holub.database.jdbc.JDBCResultSet
+21.23.adpatee = com.holub.database.jdbc.JDBCResultSetMetaData
+21.23.client = com.holub.database.jdbc.JDBCResultSet
+21.23.Name = Adapter Design Motif
+21.23.target = com.holub.database.jdbc.adapters.ResultSetAdapter
+21.23.XCommand = command
+
+# Micro-architecture 22 similar at 23% with Adapter Design Motif
+22.23.adapter = com.holub.database.jdbc.JDBCResultSet
+22.23.adpatee = com.holub.database.jdbc.JDBCResultSet
+22.23.client = com.holub.database.jdbc.JDBCResultSet
+22.23.Name = Adapter Design Motif
+22.23.target = com.holub.database.jdbc.adapters.ResultSetAdapter
+22.23.XCommand = command
+
+# Micro-architecture 24 similar at 23% with Adapter Design Motif
+24.23.adapter = com.holub.database.jdbc.JDBCResultSet
+24.23.adpatee = java.lang.Number
+24.23.client = com.holub.database.jdbc.JDBCResultSet
+24.23.Name = Adapter Design Motif
+24.23.target = com.holub.database.jdbc.adapters.ResultSetAdapter
+24.23.XCommand = command
+
+# Micro-architecture 25 similar at 23% with Adapter Design Motif
+25.23.adapter = com.holub.database.jdbc.JDBCResultSet
+25.23.adpatee = java.lang.StringBuffer
+25.23.client = com.holub.database.jdbc.JDBCResultSet
+25.23.Name = Adapter Design Motif
+25.23.target = com.holub.database.jdbc.adapters.ResultSetAdapter
+25.23.XCommand = command
+
+# Micro-architecture 26 similar at 23% with Adapter Design Motif
+26.23.adapter = com.holub.database.jdbc.JDBCResultSet
+26.23.adpatee = java.text.NumberFormat
+26.23.client = com.holub.database.jdbc.JDBCResultSet
+26.23.Name = Adapter Design Motif
+26.23.target = com.holub.database.jdbc.adapters.ResultSetAdapter
+26.23.XCommand = command
+
+# Micro-architecture 19 similar at 23% with Adapter Design Motif
+19.23.adapter = com.holub.database.jdbc.JDBCStatement
+19.23.adpatee = com.holub.database.Database
+19.23.client = com.holub.database.jdbc.JDBCStatement
+19.23.Name = Adapter Design Motif
+19.23.target = com.holub.database.jdbc.adapters.StatementAdapter
+19.23.XCommand = command
+
+# Micro-architecture 18 similar at 23% with Adapter Design Motif
+18.23.adapter = com.holub.database.jdbc.JDBCStatement
+18.23.adpatee = com.holub.database.Table
+18.23.client = com.holub.database.jdbc.JDBCStatement
+18.23.Name = Adapter Design Motif
+18.23.target = com.holub.database.jdbc.adapters.StatementAdapter
+18.23.XCommand = command
+
+# Micro-architecture 17 similar at 23% with Adapter Design Motif
+17.23.adapter = com.holub.database.jdbc.JDBCStatement
+17.23.adpatee = com.holub.database.jdbc.JDBCResultSet
+17.23.client = com.holub.database.jdbc.JDBCStatement
+17.23.Name = Adapter Design Motif
+17.23.target = com.holub.database.jdbc.adapters.StatementAdapter
+17.23.XCommand = command
+
+# Micro-architecture 42 similar at 23% with Adapter Design Motif
+42.23.adapter = com.holub.text.WordToken
+42.23.adpatee = java.lang.Character
+42.23.client = com.holub.text.Scanner
+42.23.Name = Adapter Design Motif
+42.23.target = com.holub.text.Token
+42.23.XCommand = command
+
+# Micro-architecture 12 similar at 34% with Adapter Design Motif
+12.34.adapter = com.holub.database.CSVExporter
+12.34.adpatee = com.holub.database.CSVExporter
+12.34.client = com.holub.database.ConcreteTable
+12.34.Name = Adapter Design Motif
+12.34.target = com.holub.database.Table$Exporter
+12.34.XCommand = command
+
+# Micro-architecture 6 similar at 49% with Adapter Design Motif
+6.49.adapter = com.holub.database.CSVExporter
+6.49.adpatee = java.io.Writer
+6.49.client = com.holub.database.ConcreteTable
+6.49.Name = Adapter Design Motif
+6.49.target = com.holub.database.Table$Exporter
+6.49.XCommand = command
+
+# Micro-architecture 8 similar at 49% with Adapter Design Motif
+8.49.adapter = com.holub.database.CSVImporter
+8.49.adpatee = java.io.BufferedReader
+8.49.client = com.holub.database.ConcreteTable
+8.49.Name = Adapter Design Motif
+8.49.target = com.holub.database.Table$Importer
+8.49.XCommand = command
+
+# Micro-architecture 7 similar at 49% with Adapter Design Motif
+7.49.adapter = com.holub.database.JTableExporter
+7.49.adpatee = javax.swing.JTable
+7.49.client = com.holub.database.ConcreteTable
+7.49.Name = Adapter Design Motif
+7.49.target = com.holub.database.Table$Exporter
+7.49.XCommand = command
+
+# Micro-architecture 10 similar at 49% with Adapter Design Motif
+10.49.adapter = com.holub.text.RegexToken
+10.49.adpatee = java.util.regex.Matcher
+10.49.client = com.holub.text.Scanner
+10.49.Name = Adapter Design Motif
+10.49.target = com.holub.text.Token
+10.49.XCommand = command
+
+# Micro-architecture 9 similar at 49% with Adapter Design Motif
+9.49.adapter = com.holub.text.RegexToken
+9.49.adpatee = java.util.regex.Pattern
+9.49.client = com.holub.text.Scanner
+9.49.Name = Adapter Design Motif
+9.49.target = com.holub.text.Token
+9.49.XCommand = command
+
+# Micro-architecture 1 similar at 70% with unknown pattern
+1.70.adapter = com.holub.database.CSVExporter
+1.70.adpatee = java.io.Writer
+1.70.client = com.holub.database.ConcreteTable
+1.70.target = com.holub.database.Table$Exporter
+1.70.XCommand = No source transformation needed
+
+# Micro-architecture 3 similar at 70% with unknown pattern
+3.70.adapter = com.holub.database.CSVImporter
+3.70.adpatee = java.io.BufferedReader
+3.70.client = com.holub.database.ConcreteTable
+3.70.target = com.holub.database.Table$Importer
+3.70.XCommand = No source transformation needed
+
+# Micro-architecture 2 similar at 70% with unknown pattern
+2.70.adapter = com.holub.database.JTableExporter
+2.70.adpatee = javax.swing.JTable
+2.70.client = com.holub.database.ConcreteTable
+2.70.target = com.holub.database.Table$Exporter
+2.70.XCommand = No source transformation needed
+
+# Micro-architecture 5 similar at 70% with unknown pattern
+5.70.adapter = com.holub.text.RegexToken
+5.70.adpatee = java.util.regex.Matcher
+5.70.client = com.holub.text.Scanner
+5.70.target = com.holub.text.Token
+5.70.XCommand = No source transformation needed
+
+# Micro-architecture 4 similar at 70% with unknown pattern
+4.70.adapter = com.holub.text.RegexToken
+4.70.adpatee = java.util.regex.Pattern
+4.70.client = com.holub.text.Scanner
+4.70.target = com.holub.text.Token
+4.70.XCommand = No source transformation needed
+

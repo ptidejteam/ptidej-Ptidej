@@ -1,0 +1,20 @@
+package sun.util.spi;
+abstract public class XmlPropertiesProvider
+{
+protected void <init>()
+{
+
+}
+
+abstract public void load(java.lang.Object arg0, java.lang.Object arg1) throws java.io.IOException, java.util.InvalidPropertiesFormatException
+{
+
+}
+
+abstract public void store(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3) throws java.io.IOException
+{
+
+}
+
+
+}

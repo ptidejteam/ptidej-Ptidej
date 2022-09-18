@@ -1,0 +1,88 @@
+package java.security;
+public class CodeSource
+implements java.io.Serializable
+{
+final private static java.lang.Object serialVersionUID;
+
+private java.lang.Object location;
+
+private transient java.lang.Object signers;
+
+private transient java.lang.Object certs;
+
+private transient java.lang.Object sp;
+
+private transient java.lang.Object factory;
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+final public java.net.URL getLocation()
+{
+
+}
+
+final public java.security.cert.Certificate[] getCertificates()
+{
+
+}
+
+final public java.security.CodeSigner[] getCodeSigners()
+{
+
+}
+
+public boolean implies(java.lang.Object arg0)
+{
+
+}
+
+private boolean matchCerts(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private boolean matchLocation(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+private void writeObject(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.IOException, java.lang.ClassNotFoundException
+{
+
+}
+
+private java.security.CodeSigner[] convertCertArrayToSignerArray(java.lang.Object arg0)
+{
+
+}
+
+
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Generator"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CPL"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator C++ (Eclipse)"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator ClassFile"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Analyses"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator AOL"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

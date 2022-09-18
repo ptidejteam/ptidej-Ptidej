@@ -1,0 +1,7 @@
+<iReportPlugin 	
+        name="Translation Status" 
+        class="it.businesslogic.ireport.plugin.locale.TranslationStatus"
+	configurable="true">
+        <IconFile>/it/businesslogic/ireport/icons/menu/locale.png</IconFile>
+	<Description>Translation status</Description>
+</iReportPlugin>

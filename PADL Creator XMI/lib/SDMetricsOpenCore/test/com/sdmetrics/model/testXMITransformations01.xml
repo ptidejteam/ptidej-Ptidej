@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xmitransformations version="2.0">
+
+<xmitransformation modelelement="sdmetricsbase" xmipattern="base" recurse="true">
+<trigger name="id" type="attrval" attr="xmi.id" />
+<trigger name="stereotypes" type="gcattrval" src="UML:ModelElement.stereotype"
+				 attr="xmi.idref" linkbackattr="extendedelements" />
+</xmitransformation>
+
+<xmitransformation modelelement="class" xmipattern="UML:Class" requirexmiid="true">
+<trigger name="visibility" type="attrval" attr="visibility"/>
+<trigger name="visibility" type="cattrval" src="UML:ModelElement.visibility" attr="xmi.value"/>
+<trigger name="operation" type="reflist" attr="xmi.idref" src="Operation"/>
+</xmitransformation>
+
+<xmitransformation modelelement="component" xmipattern="UML:Component" requirexmiid="false">
+<trigger name="visibility" type="constant" attr="public"/>
+<trigger name="providedinterfaces" type="attrval" attr="if"/>
+</xmitransformation>
+
+<xmitransformation modelelement="task" xmipattern="Task" />
+
+</xmitransformations>

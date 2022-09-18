@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<xmitransformations version="2.0">
+<!-- XMI transformation with a malformed condition expression -->
+<xmitransformation modelelement="sdmetricsbase" 
+	xmipattern="base" condition="a=)"/>
+</xmitransformations>

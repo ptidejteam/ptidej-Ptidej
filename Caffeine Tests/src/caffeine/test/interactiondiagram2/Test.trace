@@ -1,0 +1,14 @@
+NativeMethodAccessorImpl.java|-1|methodEntry0|main|-1|-1|caffeine.test.interactiondiagram2.Main|void
+Main.java|26|methodEntry0|foo|-1|1000|caffeine.test.interactiondiagram2.A|void
+A.java|27|methodEntry0|bar|1000|1000|caffeine.test.interactiondiagram2.A|void
+A.java|27|methodExit0|bar|1000|1000|caffeine.test.interactiondiagram2.A|void
+A.java|28|methodEntry0|zorg|1000|1000|caffeine.test.interactiondiagram2.A|void
+A.java|28|methodExit0|zorg|1000|1000|caffeine.test.interactiondiagram2.A|void
+Main.java|26|methodExit0|foo|-1|1000|caffeine.test.interactiondiagram2.A|void
+Main.java|27|methodEntry0|foo|-1|1000|caffeine.test.interactiondiagram2.A|void
+A.java|27|methodEntry0|bar|1000|1000|caffeine.test.interactiondiagram2.A|void
+A.java|27|methodExit0|bar|1000|1000|caffeine.test.interactiondiagram2.A|void
+A.java|28|methodEntry0|zorg|1000|1000|caffeine.test.interactiondiagram2.A|void
+A.java|28|methodExit0|zorg|1000|1000|caffeine.test.interactiondiagram2.A|void
+Main.java|27|methodExit0|foo|-1|1000|caffeine.test.interactiondiagram2.A|void
+NativeMethodAccessorImpl.java|-1|methodExit0|main|-1|-1|caffeine.test.interactiondiagram2.Main|void

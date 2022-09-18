@@ -1,0 +1,17 @@
+# 04/12/08 11:56:03 EST PM
+# Eclipse Java Compiler 0.883_R34x, 3.4.1 release, Copyright IBM Corp 2000, 2008. All rights reserved.
+----------
+1. WARNING in D:\Software\Ptidej Workspace 4\Metrical Ptidej Solver\src\ptidej\solver\fingerprint\MetricUnknownException.java (at line 28)
+	public class MetricUnknownException extends Exception {
+	             ^^^^^^^^^^^^^^^^^^^^^^
+The serializable class MetricUnknownException does not declare a static final serialVersionUID field of type long
+----------
+----------
+2. WARNING in D:\Software\Ptidej Workspace 4\Metrical Ptidej Solver\src\ptidej\solver\fingerprint\ReducedDomainBuilder.java (at line 137)
+	finally {
+			return newCodeLevelModel;
+		}
+	        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+finally block does not complete normally
+----------
+2 problems (2 warnings)

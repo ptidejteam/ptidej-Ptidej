@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<xmitransformations version="2.0">
+<xmitransformation modelelement="sdmetricsbase" xmipattern="sdmetricsbase" recurse="true">
+<desc>Description tags are not allowed here.</desc>
+</xmitransformation>
+</xmitransformations>

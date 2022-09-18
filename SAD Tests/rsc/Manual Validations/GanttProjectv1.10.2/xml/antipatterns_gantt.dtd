@@ -1,0 +1,32 @@
+<!ELEMENT antipatterns  ( program )>
+
+<!ELEMENT program  ( name | location | antipattern )*>
+<!ATTLIST program type CDATA #REQUIRED>
+
+<!ELEMENT name  ( #PCDATA )>
+<!ELEMENT location  ( #PCDATA )>
+
+<!ELEMENT antipattern  ( microArchitectures )*>
+<!ATTLIST antipattern name CDATA #REQUIRED>
+
+<!ELEMENT microArchitectures  ( microArchitecture )*>
+
+<!ELEMENT microArchitecture  ( roles )*>
+<!ATTLIST microArchitecture number CDATA #REQUIRED>
+
+<!ELEMENT roles  ( swissArmyKnives | functionalDecompositions | blobs | spaghettiCodes )*>
+
+<!ELEMENT swissArmyKnives  ( swissArmyKnife )>
+<!ELEMENT swissArmyKnife  ( entity | comment)*>
+
+<!ELEMENT functionalDecompositions  ( functionalDecomposition )>
+<!ELEMENT functionalDecomposition  ( entity | comment )*>
+
+<!ELEMENT blobs (blob) >
+<!ELEMENT blob ( entity | comment)*>
+
+<!ELEMENT spaghettiCodes (spaghettiCode)>
+<!ELEMENT spaghettiCode (entity | comment)*>
+
+<!ELEMENT entity  ( #PCDATA )>
+<!ELEMENT comment  ( #PCDATA )>

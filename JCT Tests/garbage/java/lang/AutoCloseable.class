@@ -1,0 +1,10 @@
+package java.lang;
+abstract public interface AutoCloseable
+{
+abstract public void close() throws java.lang.Exception
+{
+
+}
+
+
+}

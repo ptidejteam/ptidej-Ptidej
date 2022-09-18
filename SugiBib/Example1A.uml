@@ -1,0 +1,36 @@
+//
+//                                    SugiBib
+//
+//                                 Example1.uml
+
+UMLscript VERSION 1 MINOR 14 { *ApplyPackages }
+DIAGRAM 
+  STEREOTYPE ASSOC newAssocStereo |isTrue| {*color = blue , test} END
+  STEREOTYPE IS-A << newAssocStereo >> complete |isFalse| {*color = brown, ntest} END
+  PACKAGE << packstereo >> {*allcolor = black} outerpackage 
+  SUB DIAGRAM
+    PACKAGE {*allcolor = black} package
+      SUB DIAGRAM
+        TEMPLATE < T0 , T1 : int > CLASS << interface >> {*Color = green,*root} |constr| `Polygon im Polygon`
+          ATTRIBUTES {*Color = blue}+fillcolor:Color=black, textures:array [0 .. 1 , 2 .. *] of INTEGER
+          OPERATIONS << stereo >> |allesOk| #draw(in g:Graphics=null,out test), {*Color = pink,abstract} +$isCool():boolean
+        CLASS Point 
+          ATTRIBUTES color
+          OPERATIONS draw()
+        CLASS GObject
+          ATTRIBUTES selected:boolean, position:coordinate
+          OPERATIONS draw()
+          RELATIONS
+            << genStereo >> {*realize} GENERALIZE 'outerpackage::package::Polygon im Polygon<T0,T1:int>' USE AS 'MyPoly'
+            << depStereo >> {prop} |constr| DEPENDS dependency ON 'outerpackage::package::Point'
+            ASSOC |sconstr| [1 .. *] composite ROLE start > Ich < 
+              ASSOC-CLASS CLASS assoc
+                ATTRIBUTES HeadlineStereotype attributs, attrib
+                OPERATIONS HeadlineStereotype constructors, Polygon(), HeadlineStereotype methods, method()
+              TO |econstr| [2 .. 5] ROLE end > 'MyPoly'
+            // QUALIFIER Konto:long, Konto2:int
+          END
+      END DIAGRAM 
+  END DIAGRAM 
+  CLUSTER { *allColor = blue } |clConstr| testCluster MEMBERS { 'Point' 'assoc' } 
+END DIAGRAM

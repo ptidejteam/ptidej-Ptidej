@@ -1,0 +1,1 @@
+main(0, [composition(caffeine.test.composition2.A, caffeine.test.composition2.B, true)])

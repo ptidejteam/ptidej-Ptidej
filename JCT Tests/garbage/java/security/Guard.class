@@ -1,0 +1,10 @@
+package java.security;
+abstract public interface Guard
+{
+abstract public void checkGuard(java.lang.Object arg0) throws java.lang.SecurityException
+{
+
+}
+
+
+}

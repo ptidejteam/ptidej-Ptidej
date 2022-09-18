@@ -1,0 +1,243 @@
+package java.lang.reflect;
+abstract public class Executable
+extends java.lang.reflect.AccessibleObject
+implements java.lang.reflect.GenericDeclaration, java.lang.reflect.Member
+{
+private transient volatile java.lang.Object hasRealParameterData;
+
+private transient volatile java.lang.Object parameters;
+
+private transient java.lang.Object declaredAnnotations;
+
+void <init>()
+{
+
+}
+
+abstract byte[] getAnnotationBytes()
+{
+
+}
+
+abstract java.lang.reflect.Executable getRoot()
+{
+
+}
+
+abstract boolean hasGenericInformation()
+{
+
+}
+
+abstract sun.reflect.generics.repository.ConstructorRepository getGenericInfo()
+{
+
+}
+
+boolean equalParamTypes(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.lang.annotation.Annotation[][] parseParameterAnnotations(java.lang.Object arg0)
+{
+
+}
+
+void separateWithCommas(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+void printModifiersIfNonzero(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+java.lang.String sharedToString(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+abstract void specificToStringHeader(java.lang.Object arg0)
+{
+
+}
+
+java.lang.String sharedToGenericString(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+abstract void specificToGenericStringHeader(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.lang.Class getDeclaringClass()
+{
+
+}
+
+abstract public java.lang.String getName()
+{
+
+}
+
+abstract public int getModifiers()
+{
+
+}
+
+abstract public java.lang.reflect.TypeVariable[] getTypeParameters()
+{
+
+}
+
+abstract public java.lang.Class[] getParameterTypes()
+{
+
+}
+
+public int getParameterCount()
+{
+
+}
+
+public java.lang.reflect.Type[] getGenericParameterTypes()
+{
+
+}
+
+java.lang.reflect.Type[] getAllGenericParameterTypes()
+{
+
+}
+
+public java.lang.reflect.Parameter[] getParameters()
+{
+
+}
+
+private java.lang.reflect.Parameter[] synthesizeAllParams()
+{
+
+}
+
+private void verifyParameters(java.lang.Object arg0)
+{
+
+}
+
+private java.lang.reflect.Parameter[] privateGetParameters()
+{
+
+}
+
+boolean hasRealParameterData()
+{
+
+}
+
+native private java.lang.reflect.Parameter[] getParameters0()
+{
+
+}
+
+native byte[] getTypeAnnotationBytes0()
+{
+
+}
+
+byte[] getTypeAnnotationBytes()
+{
+
+}
+
+abstract public java.lang.Class[] getExceptionTypes()
+{
+
+}
+
+public java.lang.reflect.Type[] getGenericExceptionTypes()
+{
+
+}
+
+abstract public java.lang.String toGenericString()
+{
+
+}
+
+public boolean isVarArgs()
+{
+
+}
+
+public boolean isSynthetic()
+{
+
+}
+
+abstract public java.lang.annotation.Annotation[][] getParameterAnnotations()
+{
+
+}
+
+java.lang.annotation.Annotation[][] sharedGetParameterAnnotations(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+abstract void handleParameterNumberMismatch(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.annotation.Annotation getAnnotation(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.annotation.Annotation[] getAnnotationsByType(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.annotation.Annotation[] getDeclaredAnnotations()
+{
+
+}
+
+private synchronized java.util.Map declaredAnnotations()
+{
+
+}
+
+abstract public java.lang.reflect.AnnotatedType getAnnotatedReturnType()
+{
+
+}
+
+java.lang.reflect.AnnotatedType getAnnotatedReturnType0(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.reflect.AnnotatedType getAnnotatedReceiverType()
+{
+
+}
+
+public java.lang.reflect.AnnotatedType[] getAnnotatedParameterTypes()
+{
+
+}
+
+public java.lang.reflect.AnnotatedType[] getAnnotatedExceptionTypes()
+{
+
+}
+
+
+}

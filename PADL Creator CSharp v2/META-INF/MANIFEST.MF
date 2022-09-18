@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PADL Creator C# v2
+Bundle-SymbolicName: PADL_Creator_CSharp_v2
+Bundle-Version: 1.5.0
+Bundle-ClassPath: libs/antlr-runtime-3.2.jar
+Export-Package: org.antlr.runtime,
+ org.antlr.runtime.debug,
+ org.antlr.runtime.misc,
+ org.antlr.runtime.tree,
+ padl.creator.csharpfile.v2,
+ padl.creator.csharpfile.v2.parser,
+ padl.creator.csharpfile.v2.parser.builder,
+ padl.creator.csharpfile.v2.parser.builder.impl,
+ padl.creator.csharpfile.v2.parser.exceptions
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: CPL;bundle-version="1.5.0",
+ PADL;bundle-version="1.5.0"
+Automatic-Module-Name: PADL.Creator.CSharp.v2

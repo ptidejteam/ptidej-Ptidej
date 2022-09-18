@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator C# v2 Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator C# v2"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator C# v1 Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator C# v1"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JCT Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CPL"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CPL Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/EPI"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/EPI Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JChoco"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Ptidej Solver Metrics"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Ptidej Solver Metrics Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Analyses"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Analyses Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator AOL"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator AOL Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator ClassFile"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator ClassFile Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator MSE"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Design Motifs"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Micro-pattern Analysis"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Micro-pattern Analysis Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Refactorings"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Refactorings Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Statements"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Statements Creator AOL"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Statements Creator ClassFile"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/POM"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/POM Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Ptidej"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Ptidej Solver 4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Ptidej Solver Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Ptidej Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SAD"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SAD Rules Creator"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SAD Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Caffeine"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Caffeine Analyses"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Caffeine Examples"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Caffeine Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator JavaFile (JavaC)"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator JavaFile (JavaC) Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Serialiser JOS"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Serialiser JOS Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Serialiser DB4O"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Serialiser DB4O Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Serialiser Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JCT"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JCT Impl"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JCT Tools"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JCT Utils"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator JavaFile-ClassFile Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Java Parser"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Java Parser Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Java Parser Data Extractor"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator JavaFile (Eclipse)"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator JavaFile (Eclipse) Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Bytecode Instrumentation"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Bytecode Instrumentation Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Invoker"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Metamodel"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Solver"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Solver Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator C++ (Eclipse) Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator C++ (Eclipse)"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Generator PageRank Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Generator Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator AspectJ"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator AspectJ Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Ptidej UI AspectJ"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Ptidej UI AspectJ Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Ptidej UI Primitives AWT"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL JNI"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL JNI Tests"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,103 @@
+			 The InfoVis Toolkit
+	 by Jean-Daniel Fekete (Jean-Daniel.Fekete@inria.fr)
+
+The InfoVis Toolkit is a Interactive Graphics Toolkit written in Java
+to ease the development of Information Visualization applications and
+components.
+
+The main characteristics of the InfoVis Toolkit are:
+    
+Unified data structure 
+	The base data structure is a table of columns.  Columns
+	contain objects of homogeneous types, such as integers or
+	strings.  Trees and Graphs are derived from Tables.
+
+Rich set of data structures and visualizations
+	Support is already provided for tables, trees and graphs.
+	Visualizations include time series and scatter plots for
+	tables, node-link diagrams and treemap for trees, node-link
+	diagrams and adjacency matrices for graphs.
+
+Unified set of interactive components
+	Interactive filtering (a.k.a. dynamic queries) can be
+	performed with the same control objects and components
+	regardless of the data structure, simplifying the reuse of
+	existing components and the design of generic ones.
+
+Small memory footprint
+	Using homogeneous columns instead of compound types improves
+	dramatically the memory required to store large tables, trees
+	or graphs, and generally the time to manage them.
+
+Fast
+
+	The InfoVis Toolkit can use accelerated graphics provided by
+	Agile2D (http://www.cs.umd.edu/hcil/agile2d/index.shtml), an
+	implementations of Java2D based on the OpenGL API for hardware
+	accelerated graphics.  On machine with hardware acceleration,
+	some visualizations redisplay 100 times faster than with the
+	standard Java2D implementation.
+
+Extensible
+	The InfoVis Toolkit is meant to incorporate new information
+	visualization techniques and is distributed with the full
+	sources and with a very liberal licence.  It could be a base
+	for student projects, reseach projects or commercial products.
+
+
+* DOWNLOADING
+
+The InfoVis Toolkit is distributed under the Open Source Q Public
+License and is available at http://www.lri.fr/~fekete/InfovisToolkit.
+
+* COMPILING
+
+The InfoVis Toolkit is configured to be compiled by "ant", the Apache
+building tool, available at http://ant.apache.org/.  See the file
+build.xml for instructions.
+
+* RUNNING
+
+The InfoVis Toolkit provides several programs to run, the simplest
+being to run the library itself as follows:
+java -jar infovis.jar
+
+The InfoVis toolkit requires several libraries to be present in the
+"lib" directory, distributed with the Toolkit.  If you run the program
+outside of the distribution library, it will complain that it cannot
+find required jar files.  For graph visualization using node-link
+diagrams, the free GraphiViz programs are also required
+(www.graphviz.org).
+
+Several data sets are available in the "data" library.  The infovis
+program will read them correctly but you should provide the right
+kinds of files to example programs.  The data files can be recognized
+from their file extesion usually, except XML files that can contain
+trees or graphs.  Table files have TQD or CSV extension.  Tree files
+have TM3 or XML extension.  Graph files have XML or DOT extension.
+
+You can also read a directory as a table or tree.
+
+* THE Q PUBLIC LICENCE (QPL), VERSION 1.0 AND GPL-COVERED PROGRAMS
+
+Here is what the GNU licence page says about the QPL, instantiated for
+the infovis library (see http://www.gnu.org/licenses/license-list.html
+for details):
+
+Since the QPL is incompatible with the GNU GPL, you cannot take a
+GPL-covered program and QPL-covered program and link them together, no
+matter how.
+
+if you have written a program that uses QPL-covered library (called
+infovis), and you want to release your program under the GNU
+GPL, you can easily do that. You can resolve the conflict for your
+program by adding a notice like this to it:
+
+  As a special exception, you have permission to link this program
+  with the infovis library and distribute executables, as long as you
+  follow the requirements of the GNU GPL in regard to all of the
+  software in the executable aside from infovis.
+
+You can do this, legally, if you are the copyright holder for the
+program. Add it in the source files, after the notice that says the
+program is covered by the GNU GPL.

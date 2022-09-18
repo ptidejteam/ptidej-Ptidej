@@ -1,0 +1,308 @@
+package java.lang;
+final public class Long
+extends java.lang.Number
+implements java.lang.Comparable
+{
+private static class LongCache
+{
+final static java.lang.Object cache;
+
+private void <init>()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}
+
+final public static java.lang.Object MIN_VALUE;
+
+final public static java.lang.Object MAX_VALUE;
+
+final public static java.lang.Object TYPE;
+
+final private java.lang.Object value;
+
+final public static java.lang.Object SIZE;
+
+final public static java.lang.Object BYTES;
+
+final private static java.lang.Object serialVersionUID;
+
+public static java.lang.String toString(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.lang.String toUnsignedString(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static java.math.BigInteger toUnsignedBigInteger(java.lang.Object arg0)
+{
+
+}
+
+public static java.lang.String toHexString(java.lang.Object arg0)
+{
+
+}
+
+public static java.lang.String toOctalString(java.lang.Object arg0)
+{
+
+}
+
+public static java.lang.String toBinaryString(java.lang.Object arg0)
+{
+
+}
+
+static java.lang.String toUnsignedString0(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static int formatUnsignedLong(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+public static java.lang.String toString(java.lang.Object arg0)
+{
+
+}
+
+public static java.lang.String toUnsignedString(java.lang.Object arg0)
+{
+
+}
+
+static void getChars(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+static int stringSize(java.lang.Object arg0)
+{
+
+}
+
+public static long parseLong(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.NumberFormatException
+{
+
+}
+
+public static long parseLong(java.lang.Object arg0) throws java.lang.NumberFormatException
+{
+
+}
+
+public static long parseUnsignedLong(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.NumberFormatException
+{
+
+}
+
+public static long parseUnsignedLong(java.lang.Object arg0) throws java.lang.NumberFormatException
+{
+
+}
+
+public static java.lang.Long valueOf(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.NumberFormatException
+{
+
+}
+
+public static java.lang.Long valueOf(java.lang.Object arg0) throws java.lang.NumberFormatException
+{
+
+}
+
+public static java.lang.Long valueOf(java.lang.Object arg0)
+{
+
+}
+
+public static java.lang.Long decode(java.lang.Object arg0) throws java.lang.NumberFormatException
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0) throws java.lang.NumberFormatException
+{
+
+}
+
+public byte byteValue()
+{
+
+}
+
+public short shortValue()
+{
+
+}
+
+public int intValue()
+{
+
+}
+
+public long longValue()
+{
+
+}
+
+public float floatValue()
+{
+
+}
+
+public double doubleValue()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public static int hashCode(java.lang.Object arg0)
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public static java.lang.Long getLong(java.lang.Object arg0)
+{
+
+}
+
+public static java.lang.Long getLong(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.lang.Long getLong(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public int compareTo(java.lang.Object arg0)
+{
+
+}
+
+public static int compare(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static int compareUnsigned(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static long divideUnsigned(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static long remainderUnsigned(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static long highestOneBit(java.lang.Object arg0)
+{
+
+}
+
+public static long lowestOneBit(java.lang.Object arg0)
+{
+
+}
+
+public static int numberOfLeadingZeros(java.lang.Object arg0)
+{
+
+}
+
+public static int numberOfTrailingZeros(java.lang.Object arg0)
+{
+
+}
+
+public static int bitCount(java.lang.Object arg0)
+{
+
+}
+
+public static long rotateLeft(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static long rotateRight(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static long reverse(java.lang.Object arg0)
+{
+
+}
+
+public static int signum(java.lang.Object arg0)
+{
+
+}
+
+public static long reverseBytes(java.lang.Object arg0)
+{
+
+}
+
+public static long sum(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static long max(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static long min(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

@@ -1,0 +1,460 @@
+package java.lang.invoke;
+final public class MethodType
+implements java.io.Serializable
+{
+private static class ConcurrentWeakInternSet
+{
+private static class WeakEntry
+extends java.lang.ref.WeakReference
+{
+final public java.lang.Object hashcode;
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+
+}
+
+final private java.lang.Object map;
+
+final private java.lang.Object stale;
+
+public void <init>()
+{
+
+}
+
+public java.lang.Object get(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Object add(java.lang.Object arg0)
+{
+
+}
+
+private void expungeStaleElements()
+{
+
+}
+
+
+}
+
+final private static java.lang.Object serialVersionUID;
+
+final private java.lang.Object rtype;
+
+final private java.lang.Object ptypes;
+
+private java.lang.Object form;
+
+private java.lang.Object wrapAlt;
+
+private java.lang.Object invokers;
+
+private java.lang.Object methodDescriptor;
+
+final static java.lang.Object MAX_JVM_ARITY;
+
+final static java.lang.Object MAX_MH_ARITY;
+
+final static java.lang.Object MAX_MH_INVOKER_ARITY;
+
+final static java.lang.Object internTable;
+
+final static java.lang.Object NO_PTYPES;
+
+final private static java.lang.Object objectOnlyTypes;
+
+final private static java.lang.Object serialPersistentFields;
+
+final private static java.lang.Object rtypeOffset;
+
+final private static java.lang.Object ptypesOffset;
+
+private void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.lang.invoke.MethodTypeForm form()
+{
+
+}
+
+java.lang.Class rtype()
+{
+
+}
+
+java.lang.Class[] ptypes()
+{
+
+}
+
+void setForm(java.lang.Object arg0)
+{
+
+}
+
+private static void checkRtype(java.lang.Object arg0)
+{
+
+}
+
+private static void checkPtype(java.lang.Object arg0)
+{
+
+}
+
+private static int checkPtypes(java.lang.Object arg0)
+{
+
+}
+
+static void checkSlotCount(java.lang.Object arg0)
+{
+
+}
+
+private static java.lang.IndexOutOfBoundsException newIndexOutOfBoundsException(java.lang.Object arg0)
+{
+
+}
+
+public static java.lang.invoke.MethodType methodType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.lang.invoke.MethodType methodType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static java.lang.Class[] listToArray(java.lang.Object arg0)
+{
+
+}
+
+public static java.lang.invoke.MethodType methodType(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public static java.lang.invoke.MethodType methodType(java.lang.Object arg0)
+{
+
+}
+
+public static java.lang.invoke.MethodType methodType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.lang.invoke.MethodType methodType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static java.lang.invoke.MethodType makeImpl(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public static java.lang.invoke.MethodType genericMethodType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.lang.invoke.MethodType genericMethodType(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.invoke.MethodType changeParameterType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.invoke.MethodType insertParameterTypes(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.invoke.MethodType appendParameterTypes(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.invoke.MethodType insertParameterTypes(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.invoke.MethodType appendParameterTypes(java.lang.Object arg0)
+{
+
+}
+
+java.lang.invoke.MethodType replaceParameterTypes(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+java.lang.invoke.MethodType asSpreaderType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+java.lang.Class leadingReferenceParameter()
+{
+
+}
+
+java.lang.invoke.MethodType asCollectorType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.invoke.MethodType dropParameterTypes(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.invoke.MethodType changeReturnType(java.lang.Object arg0)
+{
+
+}
+
+public boolean hasPrimitives()
+{
+
+}
+
+public boolean hasWrappers()
+{
+
+}
+
+public java.lang.invoke.MethodType erase()
+{
+
+}
+
+java.lang.invoke.MethodType basicType()
+{
+
+}
+
+java.lang.invoke.MethodType invokerType()
+{
+
+}
+
+public java.lang.invoke.MethodType generic()
+{
+
+}
+
+boolean isGeneric()
+{
+
+}
+
+public java.lang.invoke.MethodType wrap()
+{
+
+}
+
+public java.lang.invoke.MethodType unwrap()
+{
+
+}
+
+private static java.lang.invoke.MethodType wrapWithPrims(java.lang.Object arg0)
+{
+
+}
+
+private static java.lang.invoke.MethodType unwrapWithNoPrims(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Class parameterType(java.lang.Object arg0)
+{
+
+}
+
+public int parameterCount()
+{
+
+}
+
+public java.lang.Class returnType()
+{
+
+}
+
+public java.util.List parameterList()
+{
+
+}
+
+java.lang.Class lastParameterType()
+{
+
+}
+
+public java.lang.Class[] parameterArray()
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+private boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+boolean isViewableAs(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+boolean parametersAreViewableAs(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+boolean isConvertibleTo(java.lang.Object arg0)
+{
+
+}
+
+boolean explicitCastEquivalentToAsType(java.lang.Object arg0)
+{
+
+}
+
+private static boolean explicitCastEquivalentToAsType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private boolean canConvertParameters(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static boolean canConvert(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+int parameterSlotCount()
+{
+
+}
+
+java.lang.invoke.Invokers invokers()
+{
+
+}
+
+int parameterSlotDepth(java.lang.Object arg0)
+{
+
+}
+
+int returnSlotCount()
+{
+
+}
+
+public static java.lang.invoke.MethodType fromMethodDescriptorString(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalArgumentException, java.lang.TypeNotPresentException
+{
+
+}
+
+public java.lang.String toMethodDescriptorString()
+{
+
+}
+
+static java.lang.String toFieldDescriptorString(java.lang.Object arg0)
+{
+
+}
+
+private void writeObject(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.IOException, java.lang.ClassNotFoundException
+{
+
+}
+
+private void <init>()
+{
+
+}
+
+private void MethodType_init(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.lang.Object readResolve()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

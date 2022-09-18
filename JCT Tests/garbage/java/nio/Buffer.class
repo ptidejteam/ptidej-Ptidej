@@ -1,0 +1,157 @@
+package java.nio;
+abstract public class Buffer
+{
+final static java.lang.Object SPLITERATOR_CHARACTERISTICS;
+
+private java.lang.Object mark;
+
+private java.lang.Object position;
+
+private java.lang.Object limit;
+
+private java.lang.Object capacity;
+
+java.lang.Object address;
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+final public int capacity()
+{
+
+}
+
+final public int position()
+{
+
+}
+
+final public java.nio.Buffer position(java.lang.Object arg0)
+{
+
+}
+
+final public int limit()
+{
+
+}
+
+final public java.nio.Buffer limit(java.lang.Object arg0)
+{
+
+}
+
+final public java.nio.Buffer mark()
+{
+
+}
+
+final public java.nio.Buffer reset()
+{
+
+}
+
+final public java.nio.Buffer clear()
+{
+
+}
+
+final public java.nio.Buffer flip()
+{
+
+}
+
+final public java.nio.Buffer rewind()
+{
+
+}
+
+final public int remaining()
+{
+
+}
+
+final public boolean hasRemaining()
+{
+
+}
+
+abstract public boolean isReadOnly()
+{
+
+}
+
+abstract public boolean hasArray()
+{
+
+}
+
+abstract public java.lang.Object array()
+{
+
+}
+
+abstract public int arrayOffset()
+{
+
+}
+
+abstract public boolean isDirect()
+{
+
+}
+
+final int nextGetIndex()
+{
+
+}
+
+final int nextGetIndex(java.lang.Object arg0)
+{
+
+}
+
+final int nextPutIndex()
+{
+
+}
+
+final int nextPutIndex(java.lang.Object arg0)
+{
+
+}
+
+final int checkIndex(java.lang.Object arg0)
+{
+
+}
+
+final int checkIndex(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+final int markValue()
+{
+
+}
+
+final void truncate()
+{
+
+}
+
+final void discardMark()
+{
+
+}
+
+static void checkBounds(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+
+}

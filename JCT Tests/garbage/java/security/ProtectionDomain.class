@@ -1,0 +1,192 @@
+package java.security;
+public class ProtectionDomain
+{
+private static class JavaSecurityAccessImpl
+implements sun.misc.JavaSecurityAccess
+{
+private void <init>()
+{
+
+}
+
+public java.lang.Object doIntersectionPrivilege(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public java.lang.Object doIntersectionPrivilege(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static java.security.AccessControlContext getCombinedACC(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+
+}
+
+final static class Key
+{
+void <init>()
+{
+
+}
+
+
+}
+
+private static class PDCache
+implements sun.misc.JavaSecurityProtectionDomainAccess.ProtectionDomainCache
+{
+final private java.lang.Object pdMap;
+
+final private java.lang.Object queue;
+
+private void <init>()
+{
+
+}
+
+public void put(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.security.PermissionCollection get(java.lang.Object arg0)
+{
+
+}
+
+private static void processQueue(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+
+}
+
+private static class WeakProtectionDomainKey
+extends java.lang.ref.WeakReference
+{
+final private java.lang.Object hash;
+
+final private static java.lang.Object NULL_KEY;
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+void <init>(java.lang.Object arg0)
+{
+
+}
+
+private void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private void <init>(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}
+
+private java.lang.Object codesource;
+
+private java.lang.Object classloader;
+
+private java.lang.Object principals;
+
+private java.lang.Object permissions;
+
+private java.lang.Object hasAllPerm;
+
+private java.lang.Object staticPermissions;
+
+final java.lang.Object key;
+
+final private static java.lang.Object debug;
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+final public java.security.CodeSource getCodeSource()
+{
+
+}
+
+final public java.lang.ClassLoader getClassLoader()
+{
+
+}
+
+final public java.security.Principal[] getPrincipals()
+{
+
+}
+
+final public java.security.PermissionCollection getPermissions()
+{
+
+}
+
+public boolean implies(java.lang.Object arg0)
+{
+
+}
+
+boolean impliesCreateAccessControlContext()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+private static boolean seeAllp()
+{
+
+}
+
+private java.security.PermissionCollection mergePermissions()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

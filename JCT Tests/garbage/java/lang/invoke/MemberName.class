@@ -1,0 +1,536 @@
+package java.lang.invoke;
+final class MemberName
+implements java.lang.Cloneable, java.lang.reflect.Member
+{
+static class Factory
+{
+static java.lang.Object INSTANCE;
+
+private static java.lang.Object ALLOWED_FLAGS;
+
+private void <init>()
+{
+
+}
+
+java.util.List getMembers(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+private java.lang.invoke.MemberName resolve(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public java.lang.invoke.MemberName resolveOrFail(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3) throws java.lang.IllegalAccessException, java.lang.ReflectiveOperationException
+{
+
+}
+
+public java.lang.invoke.MemberName resolveOrNull(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public java.util.List getMethods(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public java.util.List getMethods(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+public java.util.List getConstructors(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.util.List getFields(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public java.util.List getFields(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+public java.util.List getNestedTypes(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private static java.lang.invoke.MemberName[] newMemberBuffer(java.lang.Object arg0)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}
+
+private java.lang.Object clazz;
+
+private java.lang.Object name;
+
+private java.lang.Object type;
+
+private java.lang.Object flags;
+
+private java.lang.Object resolution;
+
+final private static java.lang.Object MH_INVOKE_MODS;
+
+final static java.lang.Object BRIDGE;
+
+final static java.lang.Object VARARGS;
+
+final static java.lang.Object SYNTHETIC;
+
+final static java.lang.Object ANNOTATION;
+
+final static java.lang.Object ENUM;
+
+final static java.lang.Object CONSTRUCTOR_NAME;
+
+final static java.lang.Object RECOGNIZED_MODIFIERS;
+
+final static java.lang.Object IS_METHOD;
+
+final static java.lang.Object IS_CONSTRUCTOR;
+
+final static java.lang.Object IS_FIELD;
+
+final static java.lang.Object IS_TYPE;
+
+final static java.lang.Object CALLER_SENSITIVE;
+
+final static java.lang.Object ALL_ACCESS;
+
+final static java.lang.Object ALL_KINDS;
+
+final static java.lang.Object IS_INVOCABLE;
+
+final static java.lang.Object IS_FIELD_OR_METHOD;
+
+final static java.lang.Object SEARCH_ALL_SUPERS;
+
+public java.lang.Class getDeclaringClass()
+{
+
+}
+
+public java.lang.ClassLoader getClassLoader()
+{
+
+}
+
+public java.lang.String getName()
+{
+
+}
+
+public java.lang.invoke.MethodType getMethodOrFieldType()
+{
+
+}
+
+public java.lang.invoke.MethodType getMethodType()
+{
+
+}
+
+public java.lang.invoke.MethodType getInvocationType()
+{
+
+}
+
+public java.lang.Class[] getParameterTypes()
+{
+
+}
+
+public java.lang.Class getReturnType()
+{
+
+}
+
+public java.lang.Class getFieldType()
+{
+
+}
+
+public java.lang.Object getType()
+{
+
+}
+
+public java.lang.String getSignature()
+{
+
+}
+
+public int getModifiers()
+{
+
+}
+
+public byte getReferenceKind()
+{
+
+}
+
+private boolean referenceKindIsConsistent()
+{
+
+}
+
+private boolean isObjectPublicMethod()
+{
+
+}
+
+boolean referenceKindIsConsistentWith(java.lang.Object arg0)
+{
+
+}
+
+private boolean staticIsConsistent()
+{
+
+}
+
+private boolean vminfoIsConsistent()
+{
+
+}
+
+private java.lang.invoke.MemberName changeReferenceKind(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private boolean testFlags(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private boolean testAllFlags(java.lang.Object arg0)
+{
+
+}
+
+private boolean testAnyFlags(java.lang.Object arg0)
+{
+
+}
+
+public boolean isMethodHandleInvoke()
+{
+
+}
+
+public static boolean isMethodHandleInvokeName(java.lang.Object arg0)
+{
+
+}
+
+public boolean isStatic()
+{
+
+}
+
+public boolean isPublic()
+{
+
+}
+
+public boolean isPrivate()
+{
+
+}
+
+public boolean isProtected()
+{
+
+}
+
+public boolean isFinal()
+{
+
+}
+
+public boolean canBeStaticallyBound()
+{
+
+}
+
+public boolean isVolatile()
+{
+
+}
+
+public boolean isAbstract()
+{
+
+}
+
+public boolean isNative()
+{
+
+}
+
+public boolean isBridge()
+{
+
+}
+
+public boolean isVarargs()
+{
+
+}
+
+public boolean isSynthetic()
+{
+
+}
+
+public boolean isInvocable()
+{
+
+}
+
+public boolean isFieldOrMethod()
+{
+
+}
+
+public boolean isMethod()
+{
+
+}
+
+public boolean isConstructor()
+{
+
+}
+
+public boolean isField()
+{
+
+}
+
+public boolean isType()
+{
+
+}
+
+public boolean isPackage()
+{
+
+}
+
+public boolean isCallerSensitive()
+{
+
+}
+
+public boolean isAccessibleFrom(java.lang.Object arg0)
+{
+
+}
+
+private void init(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private void expandFromVM()
+{
+
+}
+
+private static int flagsMods(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.invoke.MemberName asSpecial()
+{
+
+}
+
+public java.lang.invoke.MemberName asConstructor()
+{
+
+}
+
+public java.lang.invoke.MemberName asNormalOriginal()
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public boolean isGetter()
+{
+
+}
+
+public boolean isSetter()
+{
+
+}
+
+public java.lang.invoke.MemberName asSetter()
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+static java.lang.invoke.MemberName makeMethodHandleInvoke(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static java.lang.invoke.MemberName makeMethodHandleInvoke(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+void <init>()
+{
+
+}
+
+protected java.lang.invoke.MemberName clone()
+{
+
+}
+
+public java.lang.invoke.MemberName getDefinition()
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+public boolean hasReceiverTypeDispatch()
+{
+
+}
+
+public boolean isResolved()
+{
+
+}
+
+private void initResolved(java.lang.Object arg0)
+{
+
+}
+
+void checkForTypeAlias(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+private static java.lang.String getName(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.IllegalAccessException makeAccessException(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.lang.String message()
+{
+
+}
+
+public java.lang.ReflectiveOperationException makeAccessException()
+{
+
+}
+
+static java.lang.invoke.MemberName.Factory getFactory()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

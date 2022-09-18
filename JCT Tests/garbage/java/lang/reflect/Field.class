@@ -1,0 +1,251 @@
+package java.lang.reflect;
+final public class Field
+extends java.lang.reflect.AccessibleObject
+implements java.lang.reflect.Member
+{
+private java.lang.Object clazz;
+
+private java.lang.Object slot;
+
+private java.lang.Object name;
+
+private java.lang.Object type;
+
+private java.lang.Object modifiers;
+
+private transient java.lang.Object signature;
+
+private transient java.lang.Object genericInfo;
+
+private java.lang.Object annotations;
+
+private java.lang.Object fieldAccessor;
+
+private java.lang.Object overrideFieldAccessor;
+
+private java.lang.Object root;
+
+private transient java.lang.Object declaredAnnotations;
+
+private java.lang.String getGenericSignature()
+{
+
+}
+
+private sun.reflect.generics.factory.GenericsFactory getFactory()
+{
+
+}
+
+private sun.reflect.generics.repository.FieldRepository getGenericInfo()
+{
+
+}
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5, java.lang.Object arg6)
+{
+
+}
+
+java.lang.reflect.Field copy()
+{
+
+}
+
+public java.lang.Class getDeclaringClass()
+{
+
+}
+
+public java.lang.String getName()
+{
+
+}
+
+public int getModifiers()
+{
+
+}
+
+public boolean isEnumConstant()
+{
+
+}
+
+public boolean isSynthetic()
+{
+
+}
+
+public java.lang.Class getType()
+{
+
+}
+
+public java.lang.reflect.Type getGenericType()
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+public java.lang.String toGenericString()
+{
+
+}
+
+public java.lang.Object get(java.lang.Object arg0) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public boolean getBoolean(java.lang.Object arg0) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public byte getByte(java.lang.Object arg0) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public char getChar(java.lang.Object arg0) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public short getShort(java.lang.Object arg0) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public int getInt(java.lang.Object arg0) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public long getLong(java.lang.Object arg0) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public float getFloat(java.lang.Object arg0) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public double getDouble(java.lang.Object arg0) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public void set(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public void setBoolean(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public void setByte(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public void setChar(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public void setShort(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public void setInt(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public void setLong(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public void setFloat(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+public void setDouble(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+private sun.reflect.FieldAccessor getFieldAccessor(java.lang.Object arg0) throws java.lang.IllegalAccessException
+{
+
+}
+
+private sun.reflect.FieldAccessor acquireFieldAccessor(java.lang.Object arg0)
+{
+
+}
+
+private sun.reflect.FieldAccessor getFieldAccessor(java.lang.Object arg0)
+{
+
+}
+
+private void setFieldAccessor(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.annotation.Annotation getAnnotation(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.annotation.Annotation[] getAnnotationsByType(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.annotation.Annotation[] getDeclaredAnnotations()
+{
+
+}
+
+private synchronized java.util.Map declaredAnnotations()
+{
+
+}
+
+native private byte[] getTypeAnnotationBytes0()
+{
+
+}
+
+public java.lang.reflect.AnnotatedType getAnnotatedType()
+{
+
+}
+
+
+}

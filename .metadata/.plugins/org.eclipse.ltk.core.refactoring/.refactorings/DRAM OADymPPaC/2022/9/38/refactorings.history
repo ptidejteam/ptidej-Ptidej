@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;DRAM OADymPPaC&apos;&#x0D;&#x0A;- Original project: &apos;DRAM OADymPPaC&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     gl4java.jar&#x0D;&#x0A;     gl4java-glffonts.jar&#x0D;&#x0A;     gl4java-glutfonts.jar" description="Delete elements" element1="libraries/gl4java.jar" element2="libraries/gl4java-glffonts.jar" element3="libraries/gl4java-glutfonts.jar" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="3" stamp="1663271604872" subPackages="false" version="1.0"/>
+</session>

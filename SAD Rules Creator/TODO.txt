@@ -1,0 +1,13 @@
+GhostVisitor doit tendre SampleVisitor
+Ou alors il faut supprimer Sample Visitor car ne sert  rien.
+
+/////////////////////////////////////////////////////
+
+Yann propose de rcrire les rglles de cette facon:
+TOTO : ClassGlobalVariable {(METRIC: CLASS, NM, HIGH) };
+
+Integrer les valeurs numriques pour les rgles
+
+TODO : Make the CodeSmell more generic, maybe using cointainer
+
+TODO : Change "Attribute" for "Property" in the BNF Grammar

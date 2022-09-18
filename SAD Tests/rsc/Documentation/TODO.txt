@@ -1,0 +1,16 @@
+Anonymous classes included in ArgoUML?!
+
+
+
+# ------>SwissArmyKnife num: 21
+
+21.100.Name = SwissArmyKnife
+
+#MultipleInterface
+21.100.MultipleInterface-0 = org.apache.nutch.searcher.NutchBean
+21.100.MultipleInterface-0.InterfaceName-0 = org.apache.nutch.searcher.HitSummarizer
+21.100.MultipleInterface-0.InterfaceName-1 = org.apache.nutch.searcher.Searcher
+21.100.MultipleInterface-0.InterfaceName-2 = org.apache.nutch.searcher.HitDetailer
+21.100.MultipleInterface-0.InterfaceName-3 = org.apache.nutch.searcher.HitContent
+21.100.MultipleInterface-0.InterfaceName-4 = Protocol
+

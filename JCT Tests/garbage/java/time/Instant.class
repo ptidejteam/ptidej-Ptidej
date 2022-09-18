@@ -1,0 +1,267 @@
+package java.time;
+final public class Instant
+implements java.io.Serializable, java.lang.Comparable, java.time.temporal.Temporal, java.time.temporal.TemporalAdjuster
+{
+final public static java.lang.Object EPOCH;
+
+final private static java.lang.Object MIN_SECOND;
+
+final private static java.lang.Object MAX_SECOND;
+
+final public static java.lang.Object MIN;
+
+final public static java.lang.Object MAX;
+
+final private static java.lang.Object serialVersionUID;
+
+final private java.lang.Object seconds;
+
+final private java.lang.Object nanos;
+
+public static java.time.Instant now()
+{
+
+}
+
+public static java.time.Instant now(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.Instant ofEpochSecond(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.Instant ofEpochSecond(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static java.time.Instant ofEpochMilli(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.Instant from(java.lang.Object arg0)
+{
+
+}
+
+public static java.time.Instant parse(java.lang.Object arg0)
+{
+
+}
+
+private static java.time.Instant create(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public boolean isSupported(java.lang.Object arg0)
+{
+
+}
+
+public boolean isSupported(java.lang.Object arg0)
+{
+
+}
+
+public java.time.temporal.ValueRange range(java.lang.Object arg0)
+{
+
+}
+
+public int get(java.lang.Object arg0)
+{
+
+}
+
+public long getLong(java.lang.Object arg0)
+{
+
+}
+
+public long getEpochSecond()
+{
+
+}
+
+public int getNano()
+{
+
+}
+
+public java.time.Instant with(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Instant with(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.Instant truncatedTo(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Instant plus(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Instant plus(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.Instant plusSeconds(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Instant plusMillis(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Instant plusNanos(java.lang.Object arg0)
+{
+
+}
+
+private java.time.Instant plus(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.Instant minus(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Instant minus(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.Instant minusSeconds(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Instant minusMillis(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Instant minusNanos(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Object query(java.lang.Object arg0)
+{
+
+}
+
+public java.time.temporal.Temporal adjustInto(java.lang.Object arg0)
+{
+
+}
+
+public long until(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private long nanosUntil(java.lang.Object arg0)
+{
+
+}
+
+private long secondsUntil(java.lang.Object arg0)
+{
+
+}
+
+public java.time.OffsetDateTime atOffset(java.lang.Object arg0)
+{
+
+}
+
+public java.time.ZonedDateTime atZone(java.lang.Object arg0)
+{
+
+}
+
+public long toEpochMilli()
+{
+
+}
+
+public int compareTo(java.lang.Object arg0)
+{
+
+}
+
+public boolean isAfter(java.lang.Object arg0)
+{
+
+}
+
+public boolean isBefore(java.lang.Object arg0)
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+private java.lang.Object writeReplace()
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.InvalidObjectException
+{
+
+}
+
+void writeExternal(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static java.time.Instant readExternal(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

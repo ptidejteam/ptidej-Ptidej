@@ -1,0 +1,18 @@
+<project name="neodatis-odb-tutorial" basedir="." default="main">
+
+	<property file="ant/build.properties"/>
+		
+	<target name="main">
+		<delete dir="build" />
+		<mkdir dir="build" />
+		<javac srcdir="src" destdir="build" classpath="../neodatis-odb.jar;lib/neodatis-odb.jar" />
+		<jar destfile="tutorial.jar" basedir="build" />
+		<delete dir="build" />
+
+	</target>
+
+	<target name="share">
+		<copy todir="../ODBDist/lib" file="tutorial.jar" verbose="true" />
+	</target>
+
+</project>

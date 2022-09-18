@@ -1,0 +1,8 @@
+Composition.java|27|constructorEntry0|caffeine.test.composition6.counterexample.A|1000|-1|No comment|void
+Composition.java|28|constructorEntry0|caffeine.test.composition6.counterexample.B|1001|-1|No comment|void
+Composition.java|28|fieldModification0|b|1000|1001|caffeine.test.composition6.counterexample.A|caffeine.test.composition6.counterexample.B
+Finalizer.java|-1|finalizerEntry0|caffeine.test.composition6.counterexample.A|1000|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|caffeine.test.composition6.counterexample.A|1000|-1|No comment|void
+No source name|-1|programEnd0|programEnd0|-1|-1|main|void
+Finalizer.java|-1|finalizerEntry0|caffeine.test.composition6.counterexample.B|1001|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|caffeine.test.composition6.counterexample.B|1001|-1|No comment|void

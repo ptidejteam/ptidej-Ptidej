@@ -1,0 +1,11 @@
+- Debug Selector getSourceCode, notam in case of access to static vars and
+Class.class.getResource(...)
+
+- Debug constructor and initializer getSourceCode
+
+- Debug method in interface getSourceCode or when abstract
+
+- Debug String Literal getSourceCode (insert escape sequence and replace
+  out-of-ascii other char)
+
+- Debug method invocation getSourceCode, notam this.fsm.getContext ===> this.getContext

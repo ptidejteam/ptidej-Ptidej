@@ -1,0 +1,1393 @@
+No source name|-1|classLoad0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|main|-1|-1|junit.samples.money.MoneyTest|void
+NativeConstructorAccessorImpl.java|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+NativeConstructorAccessorImpl.java|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+NativeConstructorAccessorImpl.java|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+NativeConstructorAccessorImpl.java|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+NativeConstructorAccessorImpl.java|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+NativeConstructorAccessorImpl.java|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+NativeConstructorAccessorImpl.java|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+NativeConstructorAccessorImpl.java|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+NativeConstructorAccessorImpl.java|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+NativeConstructorAccessorImpl.java|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+NativeConstructorAccessorImpl.java|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+NativeConstructorAccessorImpl.java|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+No source name|-1|constructorExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+No source name|-1|classLoad0|junit.samples.money.MoneyBag|-1|-1|No comment|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1004|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1004|1004|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1004|1004|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1004|1004|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1004|1004|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1004|1004|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1004|1004|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1004|1004|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1004|1004|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1004|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1004|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1005|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1005|1005|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1005|1005|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1005|1005|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1005|1005|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1005|1005|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1005|1005|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1005|1005|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1005|1005|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1005|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1005|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testBagMultiply|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|32|constructorEntry0|junit.samples.money.MoneyBag|1008|-1|No comment|void
+MoneyBag.java|24|methodEntry0|appendMoney|1008|1008|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1008|1008|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1008|1008|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1008|1008|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodEntry0|appendMoney|1008|1008|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1008|1008|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1008|1008|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1008|1008|junit.samples.money.MoneyBag|void
+MoneyTest.java|32|constructorExit0|junit.samples.money.MoneyBag|1008|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|33|methodEntry0|multiply|-1|1004|junit.samples.money.MoneyBag|void
+MoneyBag.java|107|constructorEntry0|junit.samples.money.MoneyBag|1009|-1|No comment|void
+MoneyBag.java|107|constructorExit0|junit.samples.money.MoneyBag|1009|-1|No comment|void
+MoneyBag.java|111|methodEntry0|appendMoney|1004|1009|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1009|1009|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1009|1009|junit.samples.money.MoneyBag|void
+MoneyBag.java|111|methodExit0|appendMoney|1004|1009|junit.samples.money.MoneyBag|void
+MoneyBag.java|111|methodEntry0|appendMoney|1004|1009|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1009|1009|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1009|1009|junit.samples.money.MoneyBag|void
+MoneyBag.java|111|methodExit0|appendMoney|1004|1009|junit.samples.money.MoneyBag|void
+MoneyTest.java|33|methodExit0|multiply|-1|1004|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1009
+Assert.java|66|methodEntry0|equals|-1|1008|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1008|1008|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1008|1008|junit.samples.money.MoneyBag|0
+MoneyBag.java|80|methodEntry0|contains|1008|1009|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1009|1009|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1009|1009|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|80|methodExit0|contains|1008|1009|junit.samples.money.MoneyBag|24
+MoneyBag.java|80|methodEntry0|contains|1008|1009|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1009|1009|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1009|1009|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|80|methodExit0|contains|1008|1009|junit.samples.money.MoneyBag|14
+Assert.java|66|methodExit0|equals|-1|1008|junit.samples.money.MoneyBag|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|34|methodEntry0|multiply|-1|1004|junit.samples.money.MoneyBag|void
+MoneyBag.java|107|constructorEntry0|junit.samples.money.MoneyBag|1012|-1|No comment|void
+MoneyBag.java|107|constructorExit0|junit.samples.money.MoneyBag|1012|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1009|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1009|-1|No comment|void
+MoneyBag.java|111|methodEntry0|appendMoney|1004|1012|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1012|1012|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1012|1012|junit.samples.money.MoneyBag|void
+MoneyBag.java|111|methodExit0|appendMoney|1004|1012|junit.samples.money.MoneyBag|void
+MoneyBag.java|111|methodEntry0|appendMoney|1004|1012|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1012|1012|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1012|1012|junit.samples.money.MoneyBag|void
+MoneyBag.java|111|methodExit0|appendMoney|1004|1012|junit.samples.money.MoneyBag|void
+MoneyTest.java|34|methodExit0|multiply|-1|1004|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1012
+Assert.java|66|methodEntry0|equals|-1|1004|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1004|1004|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1004|1004|junit.samples.money.MoneyBag|0
+MoneyBag.java|80|methodEntry0|contains|1004|1012|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1012|1012|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1012|1012|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|80|methodExit0|contains|1004|1012|junit.samples.money.MoneyBag|12
+MoneyBag.java|80|methodEntry0|contains|1004|1012|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1012|1012|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1012|1012|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|80|methodExit0|contains|1004|1012|junit.samples.money.MoneyBag|7
+Assert.java|66|methodExit0|equals|-1|1004|junit.samples.money.MoneyBag|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|35|methodEntry0|multiply|-1|1004|junit.samples.money.MoneyBag|void
+MoneyBag.java|107|constructorEntry0|junit.samples.money.MoneyBag|1015|-1|No comment|void
+MoneyBag.java|107|constructorExit0|junit.samples.money.MoneyBag|1015|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1012|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1012|-1|No comment|void
+MoneyTest.java|35|methodExit0|multiply|-1|1004|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1015
+MoneyTest.java|35|methodEntry0|isZero|-1|1015|junit.samples.money.MoneyBag|void
+MoneyTest.java|35|methodExit0|isZero|-1|1015|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1015|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1015|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testBagMultiply|-1|-1|junit.samples.money.MoneyTest|void
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1020|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1020|1020|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1008|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1008|-1|No comment|void
+MoneyBag.java|53|methodEntry0|findMoney|1020|1020|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1020|1020|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1020|1020|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1020|1020|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1020|1020|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1020|1020|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1020|1020|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1020|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1020|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1021|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1021|1021|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1021|1021|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1021|1021|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1021|1021|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1021|1021|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1021|1021|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1021|1021|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1021|1021|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1021|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1021|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testBagNegate|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|40|constructorEntry0|junit.samples.money.MoneyBag|1024|-1|No comment|void
+MoneyBag.java|24|methodEntry0|appendMoney|1024|1024|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1024|1024|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1024|1024|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1024|1024|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodEntry0|appendMoney|1024|1024|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1024|1024|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1024|1024|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1024|1024|junit.samples.money.MoneyBag|void
+MoneyTest.java|40|constructorExit0|junit.samples.money.MoneyBag|1024|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|41|methodEntry0|negate|-1|1020|junit.samples.money.MoneyBag|void
+MoneyBag.java|117|constructorEntry0|junit.samples.money.MoneyBag|1025|-1|No comment|void
+MoneyBag.java|117|constructorExit0|junit.samples.money.MoneyBag|1025|-1|No comment|void
+MoneyBag.java|120|methodEntry0|appendMoney|1020|1025|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1025|1025|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1025|1025|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodExit0|appendMoney|1020|1025|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodEntry0|appendMoney|1020|1025|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1025|1025|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1025|1025|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodExit0|appendMoney|1020|1025|junit.samples.money.MoneyBag|void
+MoneyTest.java|41|methodExit0|negate|-1|1020|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1025
+Assert.java|66|methodEntry0|equals|-1|1024|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1024|1024|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1024|1024|junit.samples.money.MoneyBag|0
+MoneyBag.java|80|methodEntry0|contains|1024|1025|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1025|1025|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1025|1025|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|80|methodExit0|contains|1024|1025|junit.samples.money.MoneyBag|-12
+MoneyBag.java|80|methodEntry0|contains|1024|1025|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1025|1025|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1025|1025|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|80|methodExit0|contains|1024|1025|junit.samples.money.MoneyBag|-7
+Assert.java|66|methodExit0|equals|-1|1024|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1025|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1025|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testBagNegate|-1|-1|junit.samples.money.MoneyTest|void
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1032|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1032|1032|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1024|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1024|-1|No comment|void
+MoneyBag.java|53|methodEntry0|findMoney|1032|1032|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1032|1032|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1032|1032|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1032|1032|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1032|1032|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1032|1032|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1032|1032|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1032|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1032|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1033|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1033|1033|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1033|1033|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1033|1033|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1033|1033|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1033|1033|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1033|1033|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1033|1033|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1033|1033|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1033|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1033|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testBagSimpleAdd|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|46|constructorEntry0|junit.samples.money.MoneyBag|1036|-1|No comment|void
+MoneyBag.java|24|methodEntry0|appendMoney|1036|1036|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1036|1036|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1036|1036|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1036|1036|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodEntry0|appendMoney|1036|1036|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1036|1036|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1036|1036|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1036|1036|junit.samples.money.MoneyBag|void
+MoneyTest.java|46|constructorExit0|junit.samples.money.MoneyBag|1036|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|47|methodEntry0|add|-1|1032|junit.samples.money.MoneyBag|void
+Money.java|31|methodEntry0|addMoney|1029|1032|junit.samples.money.MoneyBag|void
+MoneyBag.java|43|constructorEntry0|junit.samples.money.MoneyBag|1037|-1|No comment|void
+MoneyBag.java|32|methodEntry0|appendMoney|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|32|methodExit0|appendMoney|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|33|methodEntry0|appendBag|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1037|1037|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|50|methodExit0|appendMoney|1037|1037|junit.samples.money.MoneyBag|0
+MoneyBag.java|50|methodEntry0|appendMoney|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodExit0|appendMoney|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|33|methodExit0|appendBag|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|43|constructorExit0|junit.samples.money.MoneyBag|1037|-1|No comment|void
+MoneyBag.java|43|methodEntry0|simplify|1032|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|43|methodExit0|simplify|1032|1037|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1037
+Money.java|31|methodExit0|addMoney|1029|1032|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1037
+MoneyTest.java|47|methodExit0|add|-1|1032|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1037
+Assert.java|66|methodEntry0|equals|-1|1036|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1036|1036|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1036|1036|junit.samples.money.MoneyBag|0
+MoneyBag.java|80|methodEntry0|contains|1036|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1037|1037|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|80|methodExit0|contains|1036|1037|junit.samples.money.MoneyBag|26
+MoneyBag.java|80|methodEntry0|contains|1036|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1037|1037|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1037|1037|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|80|methodExit0|contains|1036|1037|junit.samples.money.MoneyBag|7
+Assert.java|66|methodExit0|equals|-1|1036|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1037|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1037|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testBagSimpleAdd|-1|-1|junit.samples.money.MoneyTest|void
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1043|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1043|1043|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1036|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1036|-1|No comment|void
+MoneyBag.java|53|methodEntry0|findMoney|1043|1043|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1043|1043|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1043|1043|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1043|1043|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1043|1043|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1043|1043|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1043|1043|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1043|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1043|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1044|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1044|1044|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1044|1044|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1044|1044|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1044|1044|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1044|1044|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1044|1044|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1044|1044|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1044|1044|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1044|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1044|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testBagSubtract|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|52|constructorEntry0|junit.samples.money.MoneyBag|1047|-1|No comment|void
+MoneyBag.java|24|methodEntry0|appendMoney|1047|1047|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1047|1047|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1047|1047|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1047|1047|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodEntry0|appendMoney|1047|1047|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1047|1047|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1047|1047|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1047|1047|junit.samples.money.MoneyBag|void
+MoneyTest.java|52|constructorExit0|junit.samples.money.MoneyBag|1047|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB2|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|53|methodEntry0|subtract|-1|1043|junit.samples.money.MoneyBag|void
+MoneyBag.java|130|methodEntry0|negate|1043|1044|junit.samples.money.MoneyBag|void
+MoneyBag.java|117|constructorEntry0|junit.samples.money.MoneyBag|1048|-1|No comment|void
+MoneyBag.java|117|constructorExit0|junit.samples.money.MoneyBag|1048|-1|No comment|void
+MoneyBag.java|120|methodEntry0|appendMoney|1044|1048|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1048|1048|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1048|1048|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodExit0|appendMoney|1044|1048|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodEntry0|appendMoney|1044|1048|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1048|1048|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1048|1048|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodExit0|appendMoney|1044|1048|junit.samples.money.MoneyBag|void
+MoneyBag.java|130|methodExit0|negate|1043|1044|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1048
+MoneyBag.java|130|methodEntry0|add|1043|1043|junit.samples.money.MoneyBag|void
+MoneyBag.java|40|methodEntry0|addMoneyBag|1043|1048|junit.samples.money.MoneyBag|void
+MoneyBag.java|46|constructorEntry0|junit.samples.money.MoneyBag|1051|-1|No comment|void
+MoneyBag.java|36|methodEntry0|appendBag|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodExit0|appendMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodExit0|appendMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|36|methodExit0|appendBag|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|37|methodEntry0|appendBag|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1051|1051|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|50|methodExit0|appendMoney|1051|1051|junit.samples.money.MoneyBag|0
+MoneyBag.java|50|methodEntry0|appendMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1051|1051|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|50|methodExit0|appendMoney|1051|1051|junit.samples.money.MoneyBag|0
+MoneyBag.java|37|methodExit0|appendBag|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|46|constructorExit0|junit.samples.money.MoneyBag|1051|-1|No comment|void
+MoneyBag.java|46|methodEntry0|simplify|1048|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|46|methodExit0|simplify|1048|1051|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1051
+MoneyBag.java|40|methodExit0|addMoneyBag|1043|1048|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1051
+MoneyBag.java|130|methodExit0|add|1043|1043|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1051
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1048|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1048|-1|No comment|void
+MoneyTest.java|53|methodExit0|subtract|-1|1043|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1051
+Assert.java|66|methodEntry0|equals|-1|1047|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1047|1047|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1047|1047|junit.samples.money.MoneyBag|0
+MoneyBag.java|80|methodEntry0|contains|1047|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1051|1051|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|80|methodExit0|contains|1047|1051|junit.samples.money.MoneyBag|-2
+MoneyBag.java|80|methodEntry0|contains|1047|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1051|1051|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1051|1051|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|80|methodExit0|contains|1047|1051|junit.samples.money.MoneyBag|-14
+Assert.java|66|methodExit0|equals|-1|1047|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1051|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1051|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testBagSubtract|-1|-1|junit.samples.money.MoneyTest|void
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1058|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1058|1058|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1047|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1047|-1|No comment|void
+MoneyBag.java|53|methodEntry0|findMoney|1058|1058|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1058|1058|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1058|1058|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1058|1058|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1058|1058|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1058|1058|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1058|1058|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1058|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1058|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1059|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1059|1059|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1059|1059|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1059|1059|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1059|1059|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1059|1059|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1059|1059|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1059|1059|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1059|1059|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1059|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1059|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testBagSumAdd|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|58|constructorEntry0|junit.samples.money.MoneyBag|1062|-1|No comment|void
+MoneyBag.java|24|methodEntry0|appendMoney|1062|1062|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1062|1062|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1062|1062|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1062|1062|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodEntry0|appendMoney|1062|1062|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1062|1062|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1062|1062|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1062|1062|junit.samples.money.MoneyBag|void
+MoneyTest.java|58|constructorExit0|junit.samples.money.MoneyBag|1062|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB2|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|59|methodEntry0|add|-1|1058|junit.samples.money.MoneyBag|void
+MoneyBag.java|40|methodEntry0|addMoneyBag|1058|1059|junit.samples.money.MoneyBag|void
+MoneyBag.java|46|constructorEntry0|junit.samples.money.MoneyBag|1063|-1|No comment|void
+MoneyBag.java|36|methodEntry0|appendBag|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodExit0|appendMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodExit0|appendMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|36|methodExit0|appendBag|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|37|methodEntry0|appendBag|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1063|1063|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|50|methodExit0|appendMoney|1063|1063|junit.samples.money.MoneyBag|0
+MoneyBag.java|50|methodEntry0|appendMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1063|1063|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|50|methodExit0|appendMoney|1063|1063|junit.samples.money.MoneyBag|0
+MoneyBag.java|37|methodExit0|appendBag|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|46|constructorExit0|junit.samples.money.MoneyBag|1063|-1|No comment|void
+MoneyBag.java|46|methodEntry0|simplify|1059|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|46|methodExit0|simplify|1059|1063|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1063
+MoneyBag.java|40|methodExit0|addMoneyBag|1058|1059|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1063
+MoneyTest.java|59|methodExit0|add|-1|1058|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1063
+Assert.java|66|methodEntry0|equals|-1|1062|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1062|1062|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1062|1062|junit.samples.money.MoneyBag|0
+MoneyBag.java|80|methodEntry0|contains|1062|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1063|1063|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|80|methodExit0|contains|1062|1063|junit.samples.money.MoneyBag|26
+MoneyBag.java|80|methodEntry0|contains|1062|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1063|1063|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1063|1063|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|80|methodExit0|contains|1062|1063|junit.samples.money.MoneyBag|28
+Assert.java|66|methodExit0|equals|-1|1062|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1063|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1063|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testBagSumAdd|-1|-1|junit.samples.money.MoneyTest|void
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1070|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1070|1070|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1062|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1062|-1|No comment|void
+MoneyBag.java|53|methodEntry0|findMoney|1070|1070|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1070|1070|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1070|1070|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1070|1070|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1070|1070|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1070|1070|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1070|1070|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1070|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1070|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1071|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1071|1071|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1071|1071|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1071|1071|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1071|1071|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1071|1071|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1071|1071|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1071|1071|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1071|1071|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1071|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1071|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testIsZero|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|62|methodEntry0|subtract|-1|1070|junit.samples.money.MoneyBag|void
+MoneyBag.java|130|methodEntry0|negate|1070|1070|junit.samples.money.MoneyBag|void
+MoneyBag.java|117|constructorEntry0|junit.samples.money.MoneyBag|1072|-1|No comment|void
+MoneyBag.java|117|constructorExit0|junit.samples.money.MoneyBag|1072|-1|No comment|void
+MoneyBag.java|120|methodEntry0|appendMoney|1070|1072|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1072|1072|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1072|1072|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodExit0|appendMoney|1070|1072|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodEntry0|appendMoney|1070|1072|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1072|1072|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1072|1072|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodExit0|appendMoney|1070|1072|junit.samples.money.MoneyBag|void
+MoneyBag.java|130|methodExit0|negate|1070|1070|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1072
+MoneyBag.java|130|methodEntry0|add|1070|1070|junit.samples.money.MoneyBag|void
+MoneyBag.java|40|methodEntry0|addMoneyBag|1070|1072|junit.samples.money.MoneyBag|void
+MoneyBag.java|46|constructorEntry0|junit.samples.money.MoneyBag|1075|-1|No comment|void
+MoneyBag.java|36|methodEntry0|appendBag|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodExit0|appendMoney|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodExit0|appendMoney|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|36|methodExit0|appendBag|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|37|methodEntry0|appendBag|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1075|1075|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|50|methodExit0|appendMoney|1075|1075|junit.samples.money.MoneyBag|0
+MoneyBag.java|50|methodEntry0|appendMoney|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1075|1075|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|50|methodExit0|appendMoney|1075|1075|junit.samples.money.MoneyBag|0
+MoneyBag.java|37|methodExit0|appendBag|1075|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|46|constructorExit0|junit.samples.money.MoneyBag|1075|-1|No comment|void
+MoneyBag.java|46|methodEntry0|simplify|1072|1075|junit.samples.money.MoneyBag|void
+MoneyBag.java|46|methodExit0|simplify|1072|1075|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1075
+MoneyBag.java|40|methodExit0|addMoneyBag|1070|1072|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1075
+MoneyBag.java|130|methodExit0|add|1070|1070|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1075
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1072|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1072|-1|No comment|void
+MoneyTest.java|62|methodExit0|subtract|-1|1070|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1075
+MoneyTest.java|62|methodEntry0|isZero|-1|1075|junit.samples.money.MoneyBag|void
+MoneyTest.java|62|methodExit0|isZero|-1|1075|junit.samples.money.MoneyBag|void
+MoneyTest.java|65|constructorEntry0|junit.samples.money.MoneyBag|1080|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1075|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1075|-1|No comment|void
+MoneyTest.java|65|constructorExit0|junit.samples.money.MoneyBag|1080|-1|No comment|void
+MoneyTest.java|65|methodEntry0|isZero|-1|1080|junit.samples.money.MoneyBag|void
+MoneyTest.java|65|methodExit0|isZero|-1|1080|junit.samples.money.MoneyBag|0
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1080|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1080|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testIsZero|-1|-1|junit.samples.money.MoneyTest|void
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1085|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1085|1085|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1085|1085|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1085|1085|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1085|1085|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1085|1085|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1085|1085|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1085|1085|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1085|1085|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1085|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1085|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1086|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1086|1086|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1086|1086|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1086|1086|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1086|1086|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1086|1086|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1086|1086|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1086|1086|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1086|1086|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1086|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1086|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testMixedSimpleAdd|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|70|constructorEntry0|junit.samples.money.MoneyBag|1087|-1|No comment|void
+MoneyBag.java|24|methodEntry0|appendMoney|1087|1087|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1087|1087|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1087|1087|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1087|1087|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodEntry0|appendMoney|1087|1087|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1087|1087|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1087|1087|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1087|1087|junit.samples.money.MoneyBag|void
+MoneyTest.java|70|constructorExit0|junit.samples.money.MoneyBag|1087|-1|No comment|void
+Money.java|28|constructorEntry0|junit.samples.money.MoneyBag|1088|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1088|1088|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1088|1088|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1088|1088|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1088|1088|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1088|1088|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1088|1088|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1088|1088|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1088|1088|junit.samples.money.MoneyBag|void
+Money.java|28|constructorExit0|junit.samples.money.MoneyBag|1088|-1|No comment|void
+Assert.java|66|methodEntry0|equals|-1|1087|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1087|1087|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1087|1087|junit.samples.money.MoneyBag|0
+MoneyBag.java|80|methodEntry0|contains|1087|1088|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1088|1088|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1088|1088|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|80|methodExit0|contains|1087|1088|junit.samples.money.MoneyBag|12
+MoneyBag.java|80|methodEntry0|contains|1087|1088|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1088|1088|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1088|1088|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|80|methodExit0|contains|1087|1088|junit.samples.money.MoneyBag|7
+Assert.java|66|methodExit0|equals|-1|1087|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1088|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1088|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testMixedSimpleAdd|-1|-1|junit.samples.money.MoneyTest|void
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1093|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1093|1093|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1087|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1087|-1|No comment|void
+MoneyBag.java|53|methodEntry0|findMoney|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1093|1093|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1093|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1093|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1094|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1094|1094|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1094|1094|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1094|1094|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1094|1094|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1094|1094|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1094|1094|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1094|1094|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1094|1094|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1094|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1094|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testMoneyBagEquals|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|74|methodEntry0|equals|-1|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1093|1093|junit.samples.money.MoneyBag|0
+MoneyTest.java|74|methodExit0|equals|-1|1093|junit.samples.money.MoneyBag|0
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+Assert.java|66|methodEntry0|equals|-1|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1093|1093|junit.samples.money.MoneyBag|0
+MoneyBag.java|80|methodEntry0|contains|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1093|1093|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|80|methodExit0|contains|1093|1093|junit.samples.money.MoneyBag|12
+MoneyBag.java|80|methodEntry0|contains|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1093|1093|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|80|methodExit0|contains|1093|1093|junit.samples.money.MoneyBag|7
+Assert.java|66|methodExit0|equals|-1|1093|junit.samples.money.MoneyBag|void
+MoneyTest.java|78|constructorEntry0|junit.samples.money.MoneyBag|1097|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1097|1097|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1097|1097|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1097|1097|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1097|1097|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1097|1097|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1097|1097|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1097|1097|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1097|1097|junit.samples.money.MoneyBag|void
+MoneyTest.java|78|constructorExit0|junit.samples.money.MoneyBag|1097|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|79|methodEntry0|equals|-1|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1093|1093|junit.samples.money.MoneyBag|0
+MoneyBag.java|80|methodEntry0|contains|1093|1097|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1097|1097|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1097|1097|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|80|methodExit0|contains|1093|1097|junit.samples.money.MoneyBag|12
+MoneyBag.java|80|methodEntry0|contains|1093|1097|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1097|1097|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1097|1097|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|80|methodExit0|contains|1093|1097|junit.samples.money.MoneyBag|7
+MoneyTest.java|79|methodExit0|equals|-1|1093|junit.samples.money.MoneyBag|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|80|methodEntry0|equals|-1|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1093|1093|junit.samples.money.MoneyBag|0
+MoneyTest.java|80|methodExit0|equals|-1|1093|junit.samples.money.MoneyBag|0
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB2|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|82|methodEntry0|equals|-1|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1093|1093|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1093|1093|junit.samples.money.MoneyBag|0
+MoneyBag.java|80|methodEntry0|contains|1093|1094|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1094|1094|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1094|1094|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|80|methodExit0|contains|1093|1094|junit.samples.money.MoneyBag|0
+MoneyTest.java|82|methodExit0|equals|-1|1093|junit.samples.money.MoneyBag|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testMoneyBagEquals|-1|-1|junit.samples.money.MoneyTest|void
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1102|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1102|1102|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1097|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1097|-1|No comment|void
+MoneyBag.java|53|methodEntry0|findMoney|1102|1102|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1102|1102|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1102|1102|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1102|1102|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1102|1102|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1102|1102|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1102|1102|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1102|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1102|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1103|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1103|1103|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1103|1103|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1103|1103|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1103|1103|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1103|1103|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1103|1103|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1103|1103|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1103|1103|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1103|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1103|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testMoneyBagHash|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|86|constructorEntry0|junit.samples.money.MoneyBag|1106|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1106|1106|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1106|1106|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1106|1106|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1106|1106|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1106|1106|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1106|1106|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1106|1106|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1106|1106|junit.samples.money.MoneyBag|void
+MoneyTest.java|86|constructorExit0|junit.samples.money.MoneyBag|1106|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|87|methodEntry0|hashCode|-1|1102|junit.samples.money.MoneyBag|void
+MoneyTest.java|87|methodExit0|hashCode|-1|1102|junit.samples.money.MoneyBag|19936
+MoneyTest.java|87|methodEntry0|hashCode|-1|1106|junit.samples.money.MoneyBag|void
+MoneyTest.java|87|methodExit0|hashCode|-1|1106|junit.samples.money.MoneyBag|19936
+NativeMethodAccessorImpl.java|-1|methodExit0|testMoneyBagHash|-1|-1|junit.samples.money.MoneyTest|void
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1111|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1111|1111|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1106|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1106|-1|No comment|void
+MoneyBag.java|53|methodEntry0|findMoney|1111|1111|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1111|1111|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1111|1111|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1111|1111|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1111|1111|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1111|1111|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1111|1111|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1111|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1111|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1112|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1112|1112|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1112|1112|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1112|1112|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1112|1112|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1112|1112|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1112|1112|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1112|1112|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1112|1112|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1112|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1112|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testMoneyEquals|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testMoneyEquals|-1|-1|junit.samples.money.MoneyTest|14
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1118|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1118|1118|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1118|1118|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1118|1118|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1118|1118|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1118|1118|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1118|1118|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1118|1118|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1118|1118|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1118|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1118|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1119|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1119|1119|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1119|1119|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1119|1119|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1119|1119|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1119|1119|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1119|1119|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1119|1119|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1119|1119|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1119|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1119|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testMoneyHash|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testMoneyHash|-1|-1|junit.samples.money.MoneyTest|66701
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1125|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1125|1125|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1125|1125|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1125|1125|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1125|1125|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1125|1125|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1125|1125|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1125|1125|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1125|1125|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1125|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1125|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1126|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1126|1126|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1126|1126|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1126|1126|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1126|1126|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1126|1126|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1126|1126|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1126|1126|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1126|1126|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1126|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1126|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testNormalize|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|105|constructorEntry0|junit.samples.money.MoneyBag|1130|-1|No comment|void
+MoneyBag.java|24|methodEntry0|appendMoney|1130|1130|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1130|1130|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1130|1130|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1130|1130|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodEntry0|appendMoney|1130|1130|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1130|1130|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1130|1130|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|24|methodExit0|appendMoney|1130|1130|junit.samples.money.MoneyBag|0
+MoneyBag.java|24|methodEntry0|appendMoney|1130|1130|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1130|1130|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1130|1130|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|24|methodExit0|appendMoney|1130|1130|junit.samples.money.MoneyBag|0
+MoneyTest.java|105|constructorExit0|junit.samples.money.MoneyBag|1130|-1|No comment|void
+MoneyTest.java|108|constructorEntry0|junit.samples.money.MoneyBag|1134|-1|No comment|void
+MoneyBag.java|24|methodEntry0|appendMoney|1134|1134|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1134|1134|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1134|1134|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1134|1134|junit.samples.money.MoneyBag|void
+MoneyTest.java|108|constructorExit0|junit.samples.money.MoneyBag|1134|-1|No comment|void
+Assert.java|66|methodEntry0|equals|-1|1134|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1134|1134|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1134|1134|junit.samples.money.MoneyBag|0
+MoneyBag.java|80|methodEntry0|contains|1134|1130|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1130|1130|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1130|1130|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|80|methodExit0|contains|1134|1130|junit.samples.money.MoneyBag|60
+Assert.java|66|methodExit0|equals|-1|1134|junit.samples.money.MoneyBag|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testNormalize|-1|-1|junit.samples.money.MoneyTest|void
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1139|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1139|1139|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1130|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1130|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1134|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1134|-1|No comment|void
+MoneyBag.java|53|methodEntry0|findMoney|1139|1139|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1139|1139|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1139|1139|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1139|1139|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1139|1139|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1139|1139|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1139|1139|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1139|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1139|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1140|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1140|1140|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1140|1140|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1140|1140|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1140|1140|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1140|1140|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1140|1140|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1140|1140|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1140|1140|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1140|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1140|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testNormalize2|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|114|methodEntry0|subtract|-1|1139|junit.samples.money.MoneyBag|void
+MoneyBag.java|130|methodEntry0|add|1139|1139|junit.samples.money.MoneyBag|void
+Money.java|31|methodEntry0|addMoney|1142|1139|junit.samples.money.MoneyBag|void
+MoneyBag.java|43|constructorEntry0|junit.samples.money.MoneyBag|1143|-1|No comment|void
+MoneyBag.java|32|methodEntry0|appendMoney|1143|1143|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1143|1143|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1143|1143|junit.samples.money.MoneyBag|void
+MoneyBag.java|32|methodExit0|appendMoney|1143|1143|junit.samples.money.MoneyBag|void
+MoneyBag.java|33|methodEntry0|appendBag|1143|1143|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1143|1143|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1143|1143|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1143|1143|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|50|methodExit0|appendMoney|1143|1143|junit.samples.money.MoneyBag|0
+MoneyBag.java|50|methodEntry0|appendMoney|1143|1143|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1143|1143|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1143|1143|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodExit0|appendMoney|1143|1143|junit.samples.money.MoneyBag|void
+MoneyBag.java|33|methodExit0|appendBag|1143|1143|junit.samples.money.MoneyBag|void
+MoneyBag.java|43|constructorExit0|junit.samples.money.MoneyBag|1143|-1|No comment|void
+MoneyBag.java|43|methodEntry0|simplify|1139|1143|junit.samples.money.MoneyBag|void
+MoneyBag.java|43|methodExit0|simplify|1139|1143|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1143|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1143|-1|No comment|void
+Money.java|31|methodExit0|addMoney|1142|1139|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1137
+MoneyBag.java|130|methodExit0|add|1139|1139|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1137
+MoneyTest.java|114|methodExit0|subtract|-1|1139|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1137
+NativeMethodAccessorImpl.java|-1|methodExit0|testNormalize2|-1|-1|junit.samples.money.MoneyTest|7
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1149|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1149|1149|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1149|1149|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1149|1149|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1149|1149|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1149|1149|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1149|1149|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1149|1149|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1149|1149|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1149|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1149|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1150|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1150|1150|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1150|1150|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1150|1150|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1150|1150|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1150|1150|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1150|1150|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1150|1150|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1150|1150|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1150|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1150|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testNormalize3|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|119|constructorEntry0|junit.samples.money.MoneyBag|1153|-1|No comment|void
+MoneyBag.java|24|methodEntry0|appendMoney|1153|1153|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1153|1153|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1153|1153|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1153|1153|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodEntry0|appendMoney|1153|1153|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1153|1153|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1153|1153|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1153|1153|junit.samples.money.MoneyBag|void
+MoneyTest.java|119|constructorExit0|junit.samples.money.MoneyBag|1153|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|121|methodEntry0|subtract|-1|1149|junit.samples.money.MoneyBag|void
+MoneyBag.java|130|methodEntry0|negate|1149|1153|junit.samples.money.MoneyBag|void
+MoneyBag.java|117|constructorEntry0|junit.samples.money.MoneyBag|1155|-1|No comment|void
+MoneyBag.java|117|constructorExit0|junit.samples.money.MoneyBag|1155|-1|No comment|void
+MoneyBag.java|120|methodEntry0|appendMoney|1153|1155|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1155|1155|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1155|1155|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodExit0|appendMoney|1153|1155|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodEntry0|appendMoney|1153|1155|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1155|1155|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1155|1155|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodExit0|appendMoney|1153|1155|junit.samples.money.MoneyBag|void
+MoneyBag.java|130|methodExit0|negate|1149|1153|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1155
+MoneyBag.java|130|methodEntry0|add|1149|1149|junit.samples.money.MoneyBag|void
+MoneyBag.java|40|methodEntry0|addMoneyBag|1149|1155|junit.samples.money.MoneyBag|void
+MoneyBag.java|46|constructorEntry0|junit.samples.money.MoneyBag|1158|-1|No comment|void
+MoneyBag.java|36|methodEntry0|appendBag|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodExit0|appendMoney|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodExit0|appendMoney|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|36|methodExit0|appendBag|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|37|methodEntry0|appendBag|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1158|1158|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|50|methodExit0|appendMoney|1158|1158|junit.samples.money.MoneyBag|0
+MoneyBag.java|50|methodEntry0|appendMoney|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1158|1158|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|50|methodExit0|appendMoney|1158|1158|junit.samples.money.MoneyBag|0
+MoneyBag.java|37|methodExit0|appendBag|1158|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|46|constructorExit0|junit.samples.money.MoneyBag|1158|-1|No comment|void
+MoneyBag.java|46|methodEntry0|simplify|1155|1158|junit.samples.money.MoneyBag|void
+MoneyBag.java|46|methodExit0|simplify|1155|1158|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1158|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1158|-1|No comment|void
+MoneyBag.java|40|methodExit0|addMoneyBag|1149|1155|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1160
+MoneyBag.java|130|methodExit0|add|1149|1149|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1160
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1155|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1155|-1|No comment|void
+MoneyTest.java|121|methodExit0|subtract|-1|1149|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1160
+NativeMethodAccessorImpl.java|-1|methodExit0|testNormalize3|-1|-1|junit.samples.money.MoneyTest|4
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1165|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1165|1165|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1153|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1153|-1|No comment|void
+MoneyBag.java|53|methodEntry0|findMoney|1165|1165|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1165|1165|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1165|1165|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1165|1165|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1165|1165|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1165|1165|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1165|1165|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1165|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1165|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1166|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1166|1166|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1166|1166|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1166|1166|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1166|1166|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1166|1166|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1166|1166|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1166|1166|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1166|1166|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1166|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1166|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testNormalize4|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|126|constructorEntry0|junit.samples.money.MoneyBag|1169|-1|No comment|void
+MoneyBag.java|24|methodEntry0|appendMoney|1169|1169|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1169|1169|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1169|1169|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1169|1169|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodEntry0|appendMoney|1169|1169|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1169|1169|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1169|1169|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1169|1169|junit.samples.money.MoneyBag|void
+MoneyTest.java|126|constructorExit0|junit.samples.money.MoneyBag|1169|-1|No comment|void
+Money.java|63|methodEntry0|negate|1161|1169|junit.samples.money.MoneyBag|void
+MoneyBag.java|117|constructorEntry0|junit.samples.money.MoneyBag|1171|-1|No comment|void
+MoneyBag.java|117|constructorExit0|junit.samples.money.MoneyBag|1171|-1|No comment|void
+MoneyBag.java|120|methodEntry0|appendMoney|1169|1171|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1171|1171|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1171|1171|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodExit0|appendMoney|1169|1171|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodEntry0|appendMoney|1169|1171|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1171|1171|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1171|1171|junit.samples.money.MoneyBag|void
+MoneyBag.java|120|methodExit0|appendMoney|1169|1171|junit.samples.money.MoneyBag|void
+Money.java|63|methodExit0|negate|1161|1169|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1171
+Money.java|23|methodEntry0|addMoney|1161|1171|junit.samples.money.MoneyBag|void
+MoneyBag.java|43|constructorEntry0|junit.samples.money.MoneyBag|1174|-1|No comment|void
+MoneyBag.java|32|methodEntry0|appendMoney|1174|1174|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1174|1174|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1174|1174|junit.samples.money.MoneyBag|void
+MoneyBag.java|32|methodExit0|appendMoney|1174|1174|junit.samples.money.MoneyBag|void
+MoneyBag.java|33|methodEntry0|appendBag|1174|1174|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1174|1174|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1174|1174|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1174|1174|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|50|methodExit0|appendMoney|1174|1174|junit.samples.money.MoneyBag|0
+MoneyBag.java|50|methodEntry0|appendMoney|1174|1174|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1174|1174|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1174|1174|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodExit0|appendMoney|1174|1174|junit.samples.money.MoneyBag|void
+MoneyBag.java|33|methodExit0|appendBag|1174|1174|junit.samples.money.MoneyBag|void
+MoneyBag.java|43|constructorExit0|junit.samples.money.MoneyBag|1174|-1|No comment|void
+MoneyBag.java|43|methodEntry0|simplify|1171|1174|junit.samples.money.MoneyBag|void
+MoneyBag.java|43|methodExit0|simplify|1171|1174|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1174|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1174|-1|No comment|void
+Money.java|23|methodExit0|addMoney|1161|1171|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1173
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1171|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1171|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testNormalize4|-1|-1|junit.samples.money.MoneyTest|-3
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1180|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1180|1180|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1169|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1169|-1|No comment|void
+MoneyBag.java|53|methodEntry0|findMoney|1180|1180|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1180|1180|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1180|1180|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1180|1180|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1180|1180|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1180|1180|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1180|1180|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1180|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1180|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1181|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1181|1181|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1181|1181|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1181|1181|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1181|1181|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1181|1181|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1181|1181|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1181|1181|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1181|1181|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1181|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1181|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testPrint|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testPrint|-1|-1|junit.samples.money.MoneyTest|"[12 CHF]"
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1186|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1186|1186|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1186|1186|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1186|1186|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1186|1186|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1186|1186|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1186|1186|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1186|1186|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1186|1186|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1186|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1186|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1187|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1187|1187|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1187|1187|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1187|1187|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1187|1187|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1187|1187|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1187|1187|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1187|1187|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1187|1187|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1187|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1187|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testSimpleAdd|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testSimpleAdd|-1|-1|junit.samples.money.MoneyTest|26
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1194|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1194|1194|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1194|1194|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1194|1194|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1194|1194|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1194|1194|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1194|1194|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1194|1194|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1194|1194|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1194|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1194|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1195|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1195|1195|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1195|1195|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1195|1195|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1195|1195|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1195|1195|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1195|1195|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1195|1195|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1195|1195|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1195|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1195|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testSimpleBagAdd|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|141|constructorEntry0|junit.samples.money.MoneyBag|1198|-1|No comment|void
+MoneyBag.java|24|methodEntry0|appendMoney|1198|1198|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1198|1198|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1198|1198|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1198|1198|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodEntry0|appendMoney|1198|1198|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1198|1198|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1198|1198|junit.samples.money.MoneyBag|void
+MoneyBag.java|24|methodExit0|appendMoney|1198|1198|junit.samples.money.MoneyBag|void
+MoneyTest.java|141|constructorExit0|junit.samples.money.MoneyBag|1198|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|fieldAccess0|fMB1|-1|-1|junit.samples.money.MoneyTest|void
+Money.java|23|methodEntry0|addMoney|1191|1194|junit.samples.money.MoneyBag|void
+MoneyBag.java|43|constructorEntry0|junit.samples.money.MoneyBag|1199|-1|No comment|void
+MoneyBag.java|32|methodEntry0|appendMoney|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|32|methodExit0|appendMoney|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|33|methodEntry0|appendBag|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodEntry0|appendMoney|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1199|1199|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|50|methodExit0|appendMoney|1199|1199|junit.samples.money.MoneyBag|0
+MoneyBag.java|50|methodEntry0|appendMoney|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|50|methodExit0|appendMoney|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|33|methodExit0|appendBag|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|43|constructorExit0|junit.samples.money.MoneyBag|1199|-1|No comment|void
+MoneyBag.java|43|methodEntry0|simplify|1194|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|43|methodExit0|simplify|1194|1199|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1199
+Money.java|23|methodExit0|addMoney|1191|1194|junit.samples.money.MoneyBag|com.sun.tools.jdi.ObjectReferenceImpl@1199
+Assert.java|66|methodEntry0|equals|-1|1198|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodEntry0|isZero|1198|1198|junit.samples.money.MoneyBag|void
+MoneyBag.java|69|methodExit0|isZero|1198|1198|junit.samples.money.MoneyBag|0
+MoneyBag.java|80|methodEntry0|contains|1198|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1199|1199|junit.samples.money.MoneyBag|"CHF"
+MoneyBag.java|80|methodExit0|contains|1198|1199|junit.samples.money.MoneyBag|26
+MoneyBag.java|80|methodEntry0|contains|1198|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodEntry0|findMoney|1199|1199|junit.samples.money.MoneyBag|void
+MoneyBag.java|65|methodExit0|findMoney|1199|1199|junit.samples.money.MoneyBag|"USD"
+MoneyBag.java|80|methodExit0|contains|1198|1199|junit.samples.money.MoneyBag|7
+Assert.java|66|methodExit0|equals|-1|1198|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1199|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1199|-1|No comment|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testSimpleBagAdd|-1|-1|junit.samples.money.MoneyTest|void
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1205|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1205|1205|junit.samples.money.MoneyBag|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1198|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1198|-1|No comment|void
+MoneyBag.java|53|methodEntry0|findMoney|1205|1205|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1205|1205|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1205|1205|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1205|1205|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1205|1205|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1205|1205|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1205|1205|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1205|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1205|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1206|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1206|1206|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1206|1206|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1206|1206|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1206|1206|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1206|1206|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1206|1206|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1206|1206|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1206|1206|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1206|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1206|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testSimpleMultiply|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testSimpleMultiply|-1|-1|junit.samples.money.MoneyTest|28
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1213|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1213|1213|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1213|1213|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1213|1213|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1213|1213|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1213|1213|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1213|1213|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1213|1213|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1213|1213|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1213|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1213|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1214|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1214|1214|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1214|1214|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1214|1214|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1214|1214|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1214|1214|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1214|1214|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1214|1214|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1214|1214|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1214|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1214|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testSimpleNegate|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testSimpleNegate|-1|-1|junit.samples.money.MoneyTest|-14
+TestCase.java|138|methodEntry0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+MoneyTest.java|26|constructorEntry0|junit.samples.money.MoneyBag|1221|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1221|1221|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1221|1221|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1221|1221|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1221|1221|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1221|1221|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1221|1221|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1221|1221|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1221|1221|junit.samples.money.MoneyBag|void
+MoneyTest.java|26|constructorExit0|junit.samples.money.MoneyBag|1221|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB1|-1|1221|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+MoneyTest.java|27|constructorEntry0|junit.samples.money.MoneyBag|1222|-1|No comment|void
+MoneyBag.java|28|methodEntry0|appendMoney|1222|1222|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1222|1222|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1222|1222|junit.samples.money.MoneyBag|void
+MoneyBag.java|28|methodExit0|appendMoney|1222|1222|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodEntry0|appendMoney|1222|1222|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodEntry0|findMoney|1222|1222|junit.samples.money.MoneyBag|void
+MoneyBag.java|53|methodExit0|findMoney|1222|1222|junit.samples.money.MoneyBag|void
+MoneyBag.java|29|methodExit0|appendMoney|1222|1222|junit.samples.money.MoneyBag|void
+MoneyTest.java|27|constructorExit0|junit.samples.money.MoneyBag|1222|-1|No comment|void
+TestCase.java|138|fieldModification0|fMB2|-1|1222|junit.samples.money.MoneyTest|junit.samples.money.MoneyBag
+TestCase.java|138|methodExit0|setUp|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodEntry0|testSimpleSubtract|-1|-1|junit.samples.money.MoneyTest|void
+NativeMethodAccessorImpl.java|-1|methodExit0|testSimpleSubtract|-1|-1|junit.samples.money.MoneyTest|2
+NativeMethodAccessorImpl.java|-1|methodExit0|main|-1|-1|junit.samples.money.MoneyTest|void
+No source name|-1|programEnd0|programEnd0|-1|-1|main|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1004|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1004|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1005|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1005|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1020|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1021|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1020|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1021|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1032|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1032|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1033|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1043|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1033|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1043|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1044|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1044|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1058|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1059|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1059|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1058|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1070|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1070|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1071|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1085|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1071|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyTest|-1|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1085|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1086|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1093|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1093|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1086|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1094|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1094|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1102|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1103|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1103|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1102|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1111|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1111|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1112|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1118|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1118|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1112|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1119|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1119|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1125|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1125|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1126|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1139|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1139|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1126|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1140|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1140|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1149|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1149|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1150|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1165|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1150|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1165|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1166|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1166|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1180|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1181|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1180|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1181|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1186|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1186|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1187|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1194|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1187|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1194|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1195|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1195|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1205|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1206|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1205|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1206|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1213|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1213|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1214|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1221|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1214|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1221|-1|No comment|void
+Finalizer.java|-1|finalizerEntry0|junit.samples.money.MoneyBag|1222|-1|No comment|void
+Finalizer.java|-1|finalizerExit0|junit.samples.money.MoneyBag|1222|-1|No comment|void

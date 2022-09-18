@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ogre4J", "Ogre4J.vcproj", "{A8CD78D8-FF97-4F25-B522-16A0D84B072A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		DLL_Debug = DLL_Debug
+		DLL_Release = DLL_Release
+		LIB_Debug = LIB_Debug
+		LIB_Release = LIB_Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A8CD78D8-FF97-4F25-B522-16A0D84B072A}.DLL_Debug.ActiveCfg = DLL_Debug|Win32
+		{A8CD78D8-FF97-4F25-B522-16A0D84B072A}.DLL_Debug.Build.0 = DLL_Debug|Win32
+		{A8CD78D8-FF97-4F25-B522-16A0D84B072A}.DLL_Release.ActiveCfg = DLL_Release|Win32
+		{A8CD78D8-FF97-4F25-B522-16A0D84B072A}.DLL_Release.Build.0 = DLL_Release|Win32
+		{A8CD78D8-FF97-4F25-B522-16A0D84B072A}.LIB_Debug.ActiveCfg = LIB_Debug|Win32
+		{A8CD78D8-FF97-4F25-B522-16A0D84B072A}.LIB_Debug.Build.0 = LIB_Debug|Win32
+		{A8CD78D8-FF97-4F25-B522-16A0D84B072A}.LIB_Release.ActiveCfg = LIB_Release|Win32
+		{A8CD78D8-FF97-4F25-B522-16A0D84B072A}.LIB_Release.Build.0 = LIB_Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,35 @@
+package sun.reflect.generics.tree;
+public class FormalTypeParameter
+implements sun.reflect.generics.tree.TypeTree
+{
+final private java.lang.Object name;
+
+final private java.lang.Object bounds;
+
+private void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static sun.reflect.generics.tree.FormalTypeParameter make(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public sun.reflect.generics.tree.FieldTypeSignature[] getBounds()
+{
+
+}
+
+public java.lang.String getName()
+{
+
+}
+
+public void accept(java.lang.Object arg0)
+{
+
+}
+
+
+}

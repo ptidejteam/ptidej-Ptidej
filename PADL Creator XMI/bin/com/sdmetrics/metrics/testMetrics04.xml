@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<!DOCTYPE sdmetrics SYSTEM 'metrics.dtd'>
+
+<sdmetrics version="2.0" ruleexemption="taggedvalue" exemptiontag="value">
+
+<metric name="NumAttr" domain="class" category="Size">
+<projection relation="context" target="attribute" />
+</metric>
+
+<metric name="NumOps" domain="class" internal="true">
+<projection relation="context" target="operation" />
+</metric>
+
+<metric name="FaultyMetric" domain="class" internal="true">
+<count value="5" />
+</metric>
+
+<set name="AttrSet" domain="class" multiset="true">
+<projection relation="context" target="attribute" />
+</set>
+
+<set name="OpSet" domain="class">
+<projection relation="context" target="operation" />
+</set>
+
+<set name="FaultySet" domain="class">
+<compoundset term="size(AttrSet)" />
+</set>
+
+<metric name="ChildrenWithoutOps" domain="class">
+<projection relation="genparent" target="generalization" element="genchild" eltype="class" condition="NumOps=0"/>
+</metric>
+
+<metric name="DepLevel" domain="class">
+<projection relation="depsupplier" target="dependency" element="depclient" nesting="true"/>
+</metric>
+
+<metric name="RecDepLevel" domain="class">
+<projection relation="depclient" target="dependency" element="depsupplier" recurse="true"/>
+</metric>
+
+
+<set name="IncomingDependencies" domain="class">
+<projection relation="depsupplier" target="dependency" />
+</set>
+
+<set name="OutgoingDependencies" domain="class">
+<projection relation="depclient" target="dependency" />
+</set>
+
+<set name="DependentElements" domain="class">
+<projection relation="depclient" target="dependency" element="depsupplier"/>
+</set>
+
+<set name="DependentElementsTC" domain="class">
+<projection relation="depclient" target="dependency" element="depsupplier" recurse="true"/>
+</set>
+
+<set name="DependingClassesTC" domain="class">
+<compoundset set="DependentElementsTC" target="class" />
+</set>
+
+<set name="DependingClasses" domain="class" multiset="true">
+<projection relation="depsupplier" target="dependency" element="depclient" eltype="class"/>
+</set>
+
+<set name="AttrNameSet" domain="class">
+<projection relation="context" target="attribute" valueset="name" />
+</set>
+
+<set name="OpNameSet" domain="class" multiset="true">
+<projection relation="context" target="operation" valueset="name" />
+</set>
+
+<metric name="ClientsWithNameAttribute" domain="class">
+<count term="'name'" set="IncomingDependencies" element="depclient" eltype="class" relset="AttrNameSet" />
+</metric>
+
+<metric name="ClientName" domain="class">
+<filtervalue relation="depsupplier" target="dependency" element="depclient" eltype="class" value="name" />
+</metric>
+
+<metric name="ClientElement" domain="class">
+<filtervalue relation="depsupplier" target="dependency" element="depclient" eltype="class" />
+</metric>
+
+<metric name="NameAttributes" domain="class">
+<count term="'name'" set="AttrNameSet" />
+</metric>
+
+<metric name="ClientSignature" domain="class">
+<signature set="IncomingDependencies" element="depclient" eltype="class"/>
+</metric>
+
+<metric name="SupplierSignature" domain="class">
+<signature set="OutgoingDependencies" element="depsupplier" />
+</metric>
+
+<metric name="CustomSignature" domain="class">
+<signature prologue="name+'&lt;(['" set="OutgoingDependencies" element="depsupplier" 
+	value="name" separator="'/'" epilogue="'])&gt;'+name"/>
+</metric>
+
+<set name="Descendents" domain="class">
+<projection relation="genparent" target="generalization" element="genchild" eltype="class" recurse="true"/>
+</set>
+
+<metric name="ParentCount" domain="class" internal="true">
+<projection relation="genchild" target="generalization" eltype="class" />
+</metric>
+
+<metric name="DescWithLongerNames" domain="class">
+<projection relset="Descendents" condition="length(_principal.name) lt length(name)" />
+</metric>
+
+<set name="Classes" domain="package">
+<projection relation="context" target="class" />
+</set>
+
+<metric name="Classes_tc" domain="package" inheritable="true" internal="true">
+<projection relation="context" target="class" recurse="true"/>
+</metric>
+
+<metric name="NameLength" domain="package">
+<compoundmetric term="length(name)" />
+</metric>
+
+<metric name="Nesting" domain="package">
+<nesting relation="context" />
+</metric>
+
+<metric name="ClassCount" domain="package" internal="true">
+<projection relation="context" target="class" />
+</metric>
+
+<metric name="RecClassCount" domain="package">
+<description>The number of classes in this package and all its subpackages.</description>
+<subelements target="class" />
+</metric>
+
+<set name="Subclasses" domain="package">
+<subelements target="class" />
+</set>
+
+<metric name="Nesting" domain="model">
+<nesting relation="context" />
+</metric>
+
+<metric name="Classes_tc2" domain="model" inheritable="true">
+<projection relation="context" target="class" recurse="true"/>
+</metric>
+
+<matrix name="DepElemMatrix" from_row_type="class" to_col_type="class">
+<description>Shows UML dependencies between classes.</description>
+<setoperation set="DependentElements"/>
+</matrix>
+
+<matrix name="PackageToEvent" from_row_type="package" to_col_type="event">
+<projection relation="context" target="event" />
+</matrix>
+
+<matrix name="ClassOps" from_row_type="class" to_col_type="operation"
+	row_condition="ParentCount!=0" col_condition="name!='derail'">
+<projection relation="context" target="operation" />
+</matrix>
+
+
+<rule name="NoOps" domain="class" disabled="true">
+<violation condition="NumOps=0" />
+</rule>
+
+<rule name="NameTooLong" domain="class" applies_to="analysis,design">
+<violation condition="length(name) gt 8" value="name" />
+</rule>
+
+<rule name="GodClass" domain="class">
+<violation condition="NumAttr gt 100" />
+</rule>
+
+<rule name="OpOverriding" domain="class" applies_to="analysis"> 
+<valueset set="OpNameSet" mincnt="2" /> 
+</rule>
+
+<rule name="HasAttributes" domain="class" applies_to="analysis"> 
+<valueset set="AttrNameSet" /> 
+</rule>
+
+<rule name="LeavesWithOps" domain="class" applies_to="analysis">
+<projection precondition="ParentCount!=0" relation="context" target="operation" value="name"/>
+</rule>
+
+<rule name="ChildHasMoreOps" domain="class" applies_to="analysis">
+<compare term="NumOps" set="Descendents" with="NumOps" comp="term lt with" value="name" />
+</rule>
+
+<rule name="DepCycle" domain="class" applies_to="analysis">
+<cycle nodes="DependentElements" />
+</rule>
+
+<rule name="DepCycle2" domain="class" applies_to="analysis">
+<cycle nodes="DependentElements" minnodes="2"/>
+</rule>
+
+<rule name="NestDepth" domain="package" category="Test" severity="Mostly harmless">
+<description>Package nesting depth is three or more.</description>
+<violation condition="Nesting gt 2" value="'Nested '+Nesting" />
+</rule>
+
+<rule name="NoBaseElement" domain="generalization">
+<violation condition="genparent=''" />
+</rule>
+
+<rule name="NoNameEvent" domain="event">
+<violation condition="name=''" />
+</rule>
+
+<wordlist name="Java">
+	<entry word="public"/>
+	<entry word="static"/>
+	<entry word="void"/>
+</wordlist>
+
+<metricprocedure name="pairwise" 
+	class="com.sdmetrics.test.MetricProcedurePairwise" />
+<setprocedure name="conditionalset" 
+	class="com.sdmetrics.test.SetProcedureCondition" />
+<ruleprocedure name="verbobject" 
+	class="com.sdmetrics.test.RuleProcedureVerbObject" />
+
+<scalaroperationdefinition name="maximum" 
+	class="com.sdmetrics.test.ScalarOperationMax" />
+<setoperationdefinition name="symmdiff" 
+	class="com.sdmetrics.test.SetOperationSymmDiff" />
+<booleanoperationdefinition name="xor" 
+	class="com.sdmetrics.test.BooleanOperationXOR" />
+
+<metric name="ClsPairLength1" domain="package">
+<pairwise relation="context" target="class" paircondition="length(_first.name+_second.name) lt 10" />
+</metric>
+
+<metric name="ClsPairLength2" domain="package" internal="true">
+<pairwise relation="context" target="class" withself="true" paircondition="length(_first.name+_second.name) lt 10" />
+</metric>
+
+<metric name="ClsPairLength3" domain="package" internal="true">
+<pairwise relation="context" target="class" tuples="true" paircondition="length(_first.name+_second.name) lt 10" />
+</metric>
+
+<metric name="ClsPair" domain="package" internal="true">
+<pairwise relation="context" target="class" />
+</metric>
+
+<metric name="MaxTestMetric" domain="class">
+<compoundmetric term="maximum(NumAttr,NumOps,DepLevel,RecDepLevel)"/>
+</metric>
+
+<metric name="ExclusiveCls" domain="class">
+<compoundmetric condition="xor(NumAttr!=0,NumOps!=0)"/>
+</metric>
+
+<metric name="NumOps2" domain="class">
+<compoundmetric term="NumOps"/>
+</metric>
+
+<set name="Majority" domain="class">
+<conditionalset condition="NumAttr gt NumOps" set="AttrSet" alt="OpSet" />
+</set>
+
+<rule name="ActionNames" domain="action" disabled="true">
+<verbobject term="name" condition="!(_verb onlist VerbList) or !(_object onlist ObjectList)" value="'Illegal name: '+name"/>
+</rule>
+
+
+<wordlist name="VerbList">
+	<entry word="create"/>
+	<entry word="read"/>
+	<entry word="update"/>
+	<entry word="delete"/>
+</wordlist>
+
+<wordlist name="ObjectList">
+	<entry word="bank account"/>
+	<entry word="customer"/>
+	<entry word="contract"/>
+</wordlist>
+
+
+
+<metric name="SubStrFirst" domain="class">
+<substring source="'206, 320, 69, 13'" separator="','" position="0"/>
+</metric>
+
+<metric name="SubLast" domain="class">
+<substring source="'206, 320, 69, 13'" separator="','" />
+</metric>
+
+<metric name="SubStrLastWithFunction" domain="class">
+<substring source="'206, 320, 69, 13'" separator="','" position="3" result="parsenumber(_value)"/>
+</metric>
+
+<metric name="SubStrLimit" domain="class">
+<substring source="'206, 320, 69, 13'" separator="','" limit="3"/>
+</metric>
+
+<metric name="SubStrLastButOne" domain="class">
+<substring source="'206, 320, 69, 13'" separator="','" position="-2"/>
+</metric>
+
+<metric name="SubStrEndSep1" domain="class">
+<substring source="'Left=620;Top=743;Right=732;Bottom=783;'" separator="'Left='" endseparator="';'"/>
+</metric>
+
+<metric name="SubStrEndSep2" domain="class">
+<substring source="'Left=620 ; Top=743 ; Right=732 ; Bottom=783 ;'" separator="'Bottom='" endseparator="';'"/>
+</metric>
+
+<metric name="SubStrEndSepNotFound" domain="class">
+<substring source="'Left=620 ; Top=743 ; Right=732 ; Bottom=783 ;'" separator="'Right='" endseparator="','"/>
+</metric>
+
+</sdmetrics>

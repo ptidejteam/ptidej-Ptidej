@@ -1,0 +1,136 @@
+package java.time.chrono;
+abstract public interface ChronoLocalDateTime
+extends java.lang.Comparable, java.time.temporal.Temporal, java.time.temporal.TemporalAdjuster
+{
+public static java.util.Comparator timeLineOrder()
+{
+
+}
+
+public static java.time.chrono.ChronoLocalDateTime from(java.lang.Object arg0)
+{
+
+}
+
+public java.time.chrono.Chronology getChronology()
+{
+
+}
+
+abstract public java.time.chrono.ChronoLocalDate toLocalDate()
+{
+
+}
+
+abstract public java.time.LocalTime toLocalTime()
+{
+
+}
+
+abstract public boolean isSupported(java.lang.Object arg0)
+{
+
+}
+
+public boolean isSupported(java.lang.Object arg0)
+{
+
+}
+
+public java.time.chrono.ChronoLocalDateTime with(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.time.chrono.ChronoLocalDateTime with(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.chrono.ChronoLocalDateTime plus(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.time.chrono.ChronoLocalDateTime plus(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.time.chrono.ChronoLocalDateTime minus(java.lang.Object arg0)
+{
+
+}
+
+public java.time.chrono.ChronoLocalDateTime minus(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.Object query(java.lang.Object arg0)
+{
+
+}
+
+public java.time.temporal.Temporal adjustInto(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.String format(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.time.chrono.ChronoZonedDateTime atZone(java.lang.Object arg0)
+{
+
+}
+
+public java.time.Instant toInstant(java.lang.Object arg0)
+{
+
+}
+
+public long toEpochSecond(java.lang.Object arg0)
+{
+
+}
+
+public int compareTo(java.lang.Object arg0)
+{
+
+}
+
+public boolean isAfter(java.lang.Object arg0)
+{
+
+}
+
+public boolean isBefore(java.lang.Object arg0)
+{
+
+}
+
+public boolean isEqual(java.lang.Object arg0)
+{
+
+}
+
+abstract public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+abstract public int hashCode()
+{
+
+}
+
+abstract public java.lang.String toString()
+{
+
+}
+
+
+}

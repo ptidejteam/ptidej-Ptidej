@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CPL"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Analyses"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator ClassFile"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/POM"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SAD"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Statements"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Statements Creator ClassFile"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JCT"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JCT Impl"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JCT Tools"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JCT Utils"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator JavaFile (JavaC)"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

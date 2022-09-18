@@ -1,0 +1,432 @@
+
+--------------------------------------------------
+Creating model...
+Accessing repository /u/guehene/Ptidej Workspace/EPI Tests/../PADL/bin/
+Loading class files in: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/ControlPanel$TimeCounterListener.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/ControlPanel.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/DummyPuzzlePartList.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/ImageDescription.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/images/JuzzleImages.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/IPuzzlePartList.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/JuzzlePanel$ImageFileFilter.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/JuzzlePanel$JuzzlePanelResizer.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/JuzzlePanel$MenuListener.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/JuzzlePanel.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/main.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/MainFrame.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/PuzzlePaint.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/PuzzlePanel.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/PuzzlePartList$PuzzlePart.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/PuzzlePartList.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/StartDialog$ImageListRenderer.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/StartDialog.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/UseRelationship.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Specialisation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Setter.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Relationship.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Parameter.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Package.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MotifModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MethodInvocation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Method.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MemberInterface.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MemberGhost.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MemberClass.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Interface.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Implementation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/IdiomLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Ghost.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Getter.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Generalisation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Field.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Factory.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Entity.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Element.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/DesignLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/DelegatingMethod.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Creation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/ContainerComposition.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/ContainerAggregation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Constructor.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Constituent.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Composition.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/CodeLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Class.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Attribute.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Association.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Aggregation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/AbstractSubject.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/AbstractLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/AbstractContainer.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/UseRelationship.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Specialisation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Setter.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Relationship.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Parameter.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Package.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MotifModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MethodInvocation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Method.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MemberInterface.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MemberGhost.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MemberClass.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Interface.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Implementation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/IdiomLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Ghost.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Getter.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Generalisation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Field.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Factory.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Entity.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Element.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/DesignLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/DelegatingMethod.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Creation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/ContainerComposition.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/ContainerAggregation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Constructor.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Constituent.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Composition.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/CodeLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Class.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Attribute.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Association.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Aggregation.class
+
+--------------------------------------------------
+Analysing the model...
+
+--------------------------------------------------
+Creating string...
+Adding dummy relationship between java.awt.GridLayout and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.Component and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.lang.Integer and org.game.Juzzle.ControlPanel
+Adding dummy relationship between org.game.Juzzle.DummyPuzzlePartList and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.Dimension and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.lang.System and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.Graphics and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.event.ActionListener and org.game.Juzzle.ControlPanel
+Adding dummy relationship between javax.swing.border.Border and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.event.ActionEvent and org.game.Juzzle.ControlPanel
+Adding dummy relationship between javax.swing.JDesktopPane and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.Color and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.Color and java.awt.event.MouseMotionListener
+Adding dummy relationship between java.awt.Color and org.game.Juzzle.PuzzlePaint
+Adding dummy relationship between java.awt.Container and org.game.Juzzle.PuzzlePaint
+Adding dummy relationship between javax.swing.ImageIcon and org.game.Juzzle.PuzzlePaint
+Adding dummy relationship between javax.swing.ImageIcon and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.awt.geom.Dimension2D and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.awt.image.BufferedImage and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.util.Vector and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.awt.image.ImageObserver and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.lang.Object and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.lang.Class and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.awt.Rectangle and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.awt.Rectangle and org.game.Juzzle.MainFrame
+Adding dummy relationship between java.awt.Rectangle and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.awt.RenderingHints and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.util.Random and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.lang.Boolean and org.game.Juzzle.StartDialog
+Adding dummy relationship between javax.swing.JInternalFrame and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.awt.Point and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.io.IOException and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.io.File and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.awt.Toolkit and org.game.Juzzle.StartDialog
+Adding dummy relationship between javax.swing.JScrollPane and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.awt.image.ColorModel and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.awt.geom.GeneralPath and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between javax.swing.Icon and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.awt.Graphics2D and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.awt.event.ComponentAdapter and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.awt.geom.AffineTransform and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.lang.Throwable and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between javax.swing.border.CompoundBorder and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.io.LineNumberReader and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between javax.swing.JCheckBoxMenuItem and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.awt.image.WritableRaster and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.awt.image.WritableRaster and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.JFileChooser and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.Image and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.geom.Area and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between org.game.Juzzle.ImageDescription and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.image.Raster and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.JOptionPane and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.lang.NoClassDefFoundError and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.BorderLayout and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.border.EtchedBorder and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.JPanel and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.Cursor and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.Stroke and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.border.EmptyBorder and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.event.MouseEvent and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.JMenuBar and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.Font and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.lang.StringBuffer and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.io.InputStreamReader and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.event.ComponentEvent and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.filechooser.FileFilter and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.filechooser.FileFilter and org.game.Juzzle.main
+Adding dummy relationship between javax.swing.JLabel and org.game.Juzzle.main
+Adding dummy relationship between javax.swing.JLabel and java.awt.event.MouseListener
+Adding dummy relationship between javax.swing.JLabel and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.JMenuItem and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between java.lang.String and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between java.awt.BasicStroke and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between java.awt.geom.Rectangle2D and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.Timer and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.JTextField and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.JViewport and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.JList and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between java.awt.FlowLayout and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.border.LineBorder and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.JMenu and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.border.BevelBorder and org.game.Juzzle.PuzzlePanel
+Remove: java.awt.GridBagConstraints
+Remove: java.io.InputStream
+Remove: java.net.URL
+Remove: javax.swing.ListCellRenderer
+String Creation Time: 12
+String Length in Tokens: 3611
+--------------------------------------------------
+
+
+--------------------------------------------------
+Computing solutions...
+NONE
+Invoker aggregation EPI_Abstract_Command inheritance ConcreteCommand association Receiver ignorance Invoker ignorance ConcreteCommand dummyRelationship Receiver ignorance EPI_Abstract_Command dummyRelationship Receiver ignorance ConcreteCommand
+Solution Computation Time:5
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1
+Invoker aggregation EPI_Abstract_Command inheritance ConcreteCommand association Receiver ignorance Invoker ignorance ConcreteCommand dummyRelationship Receiver ignorance EPI_Abstract_Command dummyRelationship Receiver ignorance ConcreteCommand
+Solution Computation Time:5
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2
+Invoker aggregation EPI_Abstract_Command inheritance ConcreteCommand association Receiver ignorance Invoker ignorance ConcreteCommand dummyRelationship Receiver ignorance EPI_Abstract_Command dummyRelationship Receiver ignorance ConcreteCommand
+Solution Computation Time:5
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3
+Invoker aggregation Command inheritance ConcreteCommand association Receiver ignorance Invoker ignorance ConcreteCommand dummyRelationship Receiver ignorance Command dummyRelationship Receiver ignorance ConcreteCommand
+Solution Computation Time:7
+Number of Solutions With and Without Ghosts:5
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:5
+
+
+# Micro-architecture 87 similar at 100% with Command
+87.100.Command = java.awt.Paint
+87.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+87.100.Invoker = org.game.Juzzle.PuzzlePanel
+87.100.Receiver = java.awt.image.BufferedImage
+
+# Micro-architecture 89 similar at 100% with Command
+89.100.Command = java.awt.Paint
+89.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+89.100.Invoker = org.game.Juzzle.PuzzlePanel
+89.100.Receiver = java.awt.Rectangle
+
+# Micro-architecture 90 similar at 100% with Command
+90.100.Command = java.awt.Paint
+90.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+90.100.Invoker = org.game.Juzzle.PuzzlePanel
+90.100.Receiver = java.awt.image.ColorModel
+
+# Micro-architecture 91 similar at 100% with Command
+91.100.Command = java.awt.Paint
+91.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+91.100.Invoker = org.game.Juzzle.PuzzlePanel
+91.100.Receiver = java.awt.image.WritableRaster
+
+# Micro-architecture 92 similar at 100% with Command
+92.100.Command = java.awt.Paint
+92.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+92.100.Invoker = org.game.Juzzle.PuzzlePanel
+92.100.Receiver = java.awt.image.Raster
+
+---------------------------------------------
+4
+
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2
+Invoker aggregation EPI_Abstract_Command inheritance ConcreteCommand association Receiver ignorance Invoker ignorance ConcreteCommand dummyRelationship Receiver ignorance EPI_Abstract_Command dummyRelationship Receiver ignorance ConcreteCommand
+Solution Computation Time:5
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 3
+Invoker aggregation Command inheritance ConcreteCommand association Receiver ignorance Invoker ignorance ConcreteCommand dummyRelationship Receiver ignorance Command dummyRelationship Receiver ignorance ConcreteCommand
+Solution Computation Time:7
+Number of Solutions With and Without Ghosts:5
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:5
+
+
+# Micro-architecture 161 similar at 100% with Command
+161.100.Command = java.awt.Paint
+161.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+161.100.Invoker = org.game.Juzzle.PuzzlePanel
+161.100.Receiver = java.awt.image.BufferedImage
+
+# Micro-architecture 163 similar at 100% with Command
+163.100.Command = java.awt.Paint
+163.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+163.100.Invoker = org.game.Juzzle.PuzzlePanel
+163.100.Receiver = java.awt.Rectangle
+
+# Micro-architecture 164 similar at 100% with Command
+164.100.Command = java.awt.Paint
+164.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+164.100.Invoker = org.game.Juzzle.PuzzlePanel
+164.100.Receiver = java.awt.image.ColorModel
+
+# Micro-architecture 165 similar at 100% with Command
+165.100.Command = java.awt.Paint
+165.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+165.100.Invoker = org.game.Juzzle.PuzzlePanel
+165.100.Receiver = java.awt.image.WritableRaster
+
+# Micro-architecture 166 similar at 100% with Command
+166.100.Command = java.awt.Paint
+166.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+166.100.Invoker = org.game.Juzzle.PuzzlePanel
+166.100.Receiver = java.awt.image.Raster
+
+---------------------------------------------
+1 and 4
+
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 3
+Invoker aggregation Command inheritance ConcreteCommand association Receiver ignorance Invoker ignorance ConcreteCommand dummyRelationship Receiver ignorance Command dummyRelationship Receiver ignorance ConcreteCommand
+Solution Computation Time:7
+Number of Solutions With and Without Ghosts:5
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:5
+
+
+# Micro-architecture 220 similar at 100% with Command
+220.100.Command = java.awt.Paint
+220.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+220.100.Invoker = org.game.Juzzle.PuzzlePanel
+220.100.Receiver = java.awt.image.BufferedImage
+
+# Micro-architecture 222 similar at 100% with Command
+222.100.Command = java.awt.Paint
+222.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+222.100.Invoker = org.game.Juzzle.PuzzlePanel
+222.100.Receiver = java.awt.Rectangle
+
+# Micro-architecture 223 similar at 100% with Command
+223.100.Command = java.awt.Paint
+223.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+223.100.Invoker = org.game.Juzzle.PuzzlePanel
+223.100.Receiver = java.awt.image.ColorModel
+
+# Micro-architecture 224 similar at 100% with Command
+224.100.Command = java.awt.Paint
+224.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+224.100.Invoker = org.game.Juzzle.PuzzlePanel
+224.100.Receiver = java.awt.image.WritableRaster
+
+# Micro-architecture 225 similar at 100% with Command
+225.100.Command = java.awt.Paint
+225.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+225.100.Invoker = org.game.Juzzle.PuzzlePanel
+225.100.Receiver = java.awt.image.Raster
+
+---------------------------------------------
+2 and 4
+
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3 and 4
+
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2 and 3
+Invoker aggregation Command inheritance ConcreteCommand association Receiver ignorance Invoker ignorance ConcreteCommand dummyRelationship Receiver ignorance Command dummyRelationship Receiver ignorance ConcreteCommand
+Solution Computation Time:7
+Number of Solutions With and Without Ghosts:5
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:5
+
+
+# Micro-architecture 279 similar at 100% with Command
+279.100.Command = java.awt.Paint
+279.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+279.100.Invoker = org.game.Juzzle.PuzzlePanel
+279.100.Receiver = java.awt.image.BufferedImage
+
+# Micro-architecture 281 similar at 100% with Command
+281.100.Command = java.awt.Paint
+281.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+281.100.Invoker = org.game.Juzzle.PuzzlePanel
+281.100.Receiver = java.awt.Rectangle
+
+# Micro-architecture 282 similar at 100% with Command
+282.100.Command = java.awt.Paint
+282.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+282.100.Invoker = org.game.Juzzle.PuzzlePanel
+282.100.Receiver = java.awt.image.ColorModel
+
+# Micro-architecture 283 similar at 100% with Command
+283.100.Command = java.awt.Paint
+283.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+283.100.Invoker = org.game.Juzzle.PuzzlePanel
+283.100.Receiver = java.awt.image.WritableRaster
+
+# Micro-architecture 284 similar at 100% with Command
+284.100.Command = java.awt.Paint
+284.100.ConcreteCommand = org.game.Juzzle.PuzzlePaint
+284.100.Invoker = org.game.Juzzle.PuzzlePanel
+284.100.Receiver = java.awt.image.Raster
+
+---------------------------------------------
+ALL
+
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+

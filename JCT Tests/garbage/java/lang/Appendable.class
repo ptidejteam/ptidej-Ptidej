@@ -1,0 +1,20 @@
+package java.lang;
+abstract public interface Appendable
+{
+abstract public java.lang.Appendable append(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+abstract public java.lang.Appendable append(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.io.IOException
+{
+
+}
+
+abstract public java.lang.Appendable append(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+
+}

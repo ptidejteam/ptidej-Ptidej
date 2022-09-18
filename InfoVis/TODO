@@ -1,0 +1,75 @@
+List of things to do for the Infovis Toolkit
+Jean-Daniel Fekete (Jean-Daniel.Fekete@inria.fr)
+
+$Revision: 1.15 $
+
+Global
+	Add save
+	Add global menus
+	Check removing of controls (listeners not removed)
+	Cleanup Columns classes / create a template.
+	Add references to Algorithms.
+	Add general string search
+	Thread safety policy for monitoring
+	Add a demo with all the visualizations
+	Diffentiate internal columns and synthetic columns
+		Use metadata / sync with IO to not save them
+	Check desallocation of visualizations (listeners prevent it)
+
+Tables
+	Visualization of axis tick bars (rulers)
+	Embed axis range sliders (create vertical rs)
+	Parallel Coordinate Visualization
+
+Trees
+	Structural fisheyes (DOI)
+	Treemaps
+		Visualization of thumbnails in TM
+		Overlaying of graph links
+
+Graphs
+	Finish searches
+
+Panels
+	Other dynamic query components
+		Radio buttons
+		Check boxes
+	Range sliders
+		String range-slider
+		Overlaying of information on range sliders
+		(1) display of values on both sides
+
+IO
+	Cleanup Readers and Writers
+		Move Table{Reader,Writer} in table/io
+		Provide an AbstractWriter
+	Manage metadata in Writers/Readers
+	Guess column types after loading them as strings to guess right
+	When loading XML trees, don't leave the ROOT without attributes
+
+Components
+	Color editors for Color Visualizations
+	Create sparse columns for loading XML/HTML files.
+	
+Graphics
+	Stroked fonts
+	GL vertex arrays as shapes (with Agile2D)
+	HVC color management
+
+Visualization
+	Allow several visualizations in a Panel, for rulers, sliders etc.
+	Add "rulers" for scales and so.
+	
+Excentric Labels
+	Manage labels near the edges
+	Allow selection through labels by freezing them with shift
+
+Fisheyes
+	Create multi-foci fisheyes
+
+Politics
+	Check for licence acceptance
+
+BUGS
+	Selected items table does not grow horizontally
+	Range slider disappear under the scroll bar when it appears

@@ -1,0 +1,28 @@
+package java.util;
+public class InvalidPropertiesFormatException
+extends java.io.IOException
+{
+final private static java.lang.Object serialVersionUID;
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+private void writeObject(java.lang.Object arg0) throws java.io.NotSerializableException
+{
+
+}
+
+private void readObject(java.lang.Object arg0) throws java.io.NotSerializableException
+{
+
+}
+
+
+}

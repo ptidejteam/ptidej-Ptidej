@@ -1,0 +1,32 @@
+On line 1545:
+    GENERALIZATION nsStr
+            SUBCLASSES nsString
+        ;
+the class "nsStr" does not exist.
+
+On line 54567:
+    PUBLIC ()():String,
+I commented the line.
+
+On line 54705:
+    AGGREGATION NAME TOKENS CONTAINER CLASS ExprLexer::nsCOMPtr MULT UNDEFINED
+            PARTS
+            CLASS   TokenCONST_MULT UNDEFINED
+        ;
+I guess should be:
+    AGGREGATION NAME TOKENS CONTAINER CLASS ExprLexer::nsCOMPtr MULT UNDEFINED
+            PARTS
+            CLASS   TokenCONST MULT UNDEFINED
+        ;
+
+On line 58562 (and other places):
+        PRIVATE  currentItem:StringList::StringListItem,
+I guess should be:
+        PRIVATE  currentItem:StringList,
+(What is the purpose of the ::StringListItem?)
+
+On line 197687:
+        PROTECTED mObservers[PRInt32(eHTMLTag_text - 1):nsVoidArray*
+I commented the line.
+
+On line 177 of 

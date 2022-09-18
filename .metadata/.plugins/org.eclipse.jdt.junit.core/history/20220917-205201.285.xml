@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestDB4OSerialiser" project="PADL Serialiser DB4O Tests" tests="11" started="11" failures="0" errors="0" ignored="0">
+  <testsuite name="TestSuite with 11 tests [example: padl.serialiser.test.TestDB4OSerialiserSanity]" time="12.85">
+    <testsuite name="padl.serialiser.test.TestDB4OSerialiserSanity" time="2.126">
+      <testcase name="testEntities" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="1.109"/>
+      <testcase name="testNames" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="0.27"/>
+      <testcase name="testElements" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="0.323"/>
+      <testcase name="testModels" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="0.214"/>
+      <testcase name="testInheritance" classname="padl.serialiser.test.TestDB4OSerialiserSanity" time="0.208"/>
+    </testsuite>
+    <testsuite name="padl.serialiser.test.TestDB4OSerialiserJHotDraw51" time="10.616">
+      <testcase name="testEntities" classname="padl.serialiser.test.TestDB4OSerialiserJHotDraw51" time="10.614"/>
+      <testcase name="testNames" classname="padl.serialiser.test.TestDB4OSerialiserJHotDraw51" time="0.0"/>
+      <testcase name="testElements" classname="padl.serialiser.test.TestDB4OSerialiserJHotDraw51" time="0.001"/>
+      <testcase name="testInheritance" classname="padl.serialiser.test.TestDB4OSerialiserJHotDraw51" time="0.001"/>
+    </testsuite>
+    <testsuite name="padl.serialiser.test.TestDB4OSerialiserArgoUML020" time="0.107">
+      <testcase name="testComparator" classname="padl.serialiser.test.TestDB4OSerialiserArgoUML020" time="0.106"/>
+      <testcase name="testNames" classname="padl.serialiser.test.TestDB4OSerialiserArgoUML020" time="0.001"/>
+    </testsuite>
+  </testsuite>
+</testrun>

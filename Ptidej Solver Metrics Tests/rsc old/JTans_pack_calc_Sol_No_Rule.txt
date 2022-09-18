@@ -1,0 +1,1050 @@
+# Micro-architecture 1831 similar at 0% with Composite Design Motif
+1831.0.component = net.phbwt.jtans.calc.CalcPiece
+1831.0.composite = net.phbwt.jtans.calc.CalcFigure
+1831.0.leaf = net.phbwt.jtans.calc.CalcPieceC
+1831.0.Name = Composite Design Motif
+1831.0.XCommand = command
+
+# Micro-architecture 1699 similar at 0% with Composite Design Motif
+1699.0.component = net.phbwt.jtans.calc.CalcPiece
+1699.0.composite = net.phbwt.jtans.calc.CalcFigure
+1699.0.leaf = net.phbwt.jtans.calc.CalcPieceGT
+1699.0.Name = Composite Design Motif
+1699.0.XCommand = command
+
+# Micro-architecture 1765 similar at 0% with Composite Design Motif
+1765.0.component = net.phbwt.jtans.calc.CalcPiece
+1765.0.composite = net.phbwt.jtans.calc.CalcFigure
+1765.0.leaf = net.phbwt.jtans.calc.CalcPieceMT
+1765.0.Name = Composite Design Motif
+1765.0.XCommand = command
+
+# Micro-architecture 1798 similar at 0% with Composite Design Motif
+1798.0.component = net.phbwt.jtans.calc.CalcPiece
+1798.0.composite = net.phbwt.jtans.calc.CalcFigure
+1798.0.leaf = net.phbwt.jtans.calc.CalcPiecePT
+1798.0.Name = Composite Design Motif
+1798.0.XCommand = command
+
+# Micro-architecture 1732 similar at 0% with Composite Design Motif
+1732.0.component = net.phbwt.jtans.calc.CalcPiece
+1732.0.composite = net.phbwt.jtans.calc.CalcFigure
+1732.0.leaf = net.phbwt.jtans.calc.CalcPieceT
+1732.0.Name = Composite Design Motif
+1732.0.XCommand = command
+
+# Micro-architecture 1808 similar at 0% with Composite Design Motif
+1808.0.component = net.phbwt.jtans.calc.CalcPiece
+1808.0.composite = net.phbwt.jtans.calc.CalcPolyPoints
+1808.0.leaf = net.phbwt.jtans.calc.CalcPieceC
+1808.0.Name = Composite Design Motif
+1808.0.XCommand = command
+
+# Micro-architecture 1676 similar at 0% with Composite Design Motif
+1676.0.component = net.phbwt.jtans.calc.CalcPiece
+1676.0.composite = net.phbwt.jtans.calc.CalcPolyPoints
+1676.0.leaf = net.phbwt.jtans.calc.CalcPieceGT
+1676.0.Name = Composite Design Motif
+1676.0.XCommand = command
+
+# Micro-architecture 1742 similar at 0% with Composite Design Motif
+1742.0.component = net.phbwt.jtans.calc.CalcPiece
+1742.0.composite = net.phbwt.jtans.calc.CalcPolyPoints
+1742.0.leaf = net.phbwt.jtans.calc.CalcPieceMT
+1742.0.Name = Composite Design Motif
+1742.0.XCommand = command
+
+# Micro-architecture 1775 similar at 0% with Composite Design Motif
+1775.0.component = net.phbwt.jtans.calc.CalcPiece
+1775.0.composite = net.phbwt.jtans.calc.CalcPolyPoints
+1775.0.leaf = net.phbwt.jtans.calc.CalcPiecePT
+1775.0.Name = Composite Design Motif
+1775.0.XCommand = command
+
+# Micro-architecture 1709 similar at 0% with Composite Design Motif
+1709.0.component = net.phbwt.jtans.calc.CalcPiece
+1709.0.composite = net.phbwt.jtans.calc.CalcPolyPoints
+1709.0.leaf = net.phbwt.jtans.calc.CalcPieceT
+1709.0.Name = Composite Design Motif
+1709.0.XCommand = command
+
+# Micro-architecture 1666 similar at 0% with Composite Design Motif
+1666.0.component = net.phbwt.jtans.calc.PixelFigure
+1666.0.composite = net.phbwt.jtans.calc.CalcFigure
+1666.0.leaf = net.phbwt.jtans.calc.DisplayFigure
+1666.0.Name = Composite Design Motif
+1666.0.XCommand = command
+
+# Micro-architecture 1633 similar at 0% with Composite Design Motif
+1633.0.component = net.phbwt.jtans.calc.PixelFigure
+1633.0.composite = net.phbwt.jtans.calc.CalcFigure
+1633.0.leaf = net.phbwt.jtans.calc.EditableFigure
+1633.0.Name = Composite Design Motif
+1633.0.XCommand = command
+
+# Micro-architecture 1615 similar at 0% with Composite Design Motif
+1615.0.component = net.phbwt.jtans.calc.PixelFigure
+1615.0.composite = net.phbwt.jtans.calc.CalcPiece
+1615.0.leaf = net.phbwt.jtans.calc.EditableFigure
+1615.0.Name = Composite Design Motif
+1615.0.XCommand = command
+
+# Micro-architecture 1643 similar at 0% with Composite Design Motif
+1643.0.component = net.phbwt.jtans.calc.PixelFigure
+1643.0.composite = net.phbwt.jtans.calc.CalcPolyPoints
+1643.0.leaf = net.phbwt.jtans.calc.DisplayFigure
+1643.0.Name = Composite Design Motif
+1643.0.XCommand = command
+
+# Micro-architecture 1662 similar at 0% with Composite Design Motif
+1662.0.component = net.phbwt.jtans.calc.PixelFigure
+1662.0.composite = net.phbwt.jtans.calc.PixelPiece
+1662.0.leaf = net.phbwt.jtans.calc.DisplayFigure
+1662.0.Name = Composite Design Motif
+1662.0.XCommand = command
+
+# Micro-architecture 1629 similar at 0% with Composite Design Motif
+1629.0.component = net.phbwt.jtans.calc.PixelFigure
+1629.0.composite = net.phbwt.jtans.calc.PixelPiece
+1629.0.leaf = net.phbwt.jtans.calc.EditableFigure
+1629.0.Name = Composite Design Motif
+1629.0.XCommand = command
+
+# Micro-architecture 1644 similar at 0% with Composite Design Motif
+1644.0.component = net.phbwt.jtans.calc.PixelFigure
+1644.0.composite = net.phbwt.jtans.calc.PixelPolygon
+1644.0.leaf = net.phbwt.jtans.calc.DisplayFigure
+1644.0.Name = Composite Design Motif
+1644.0.XCommand = command
+
+# Micro-architecture 1611 similar at 0% with Composite Design Motif
+1611.0.component = net.phbwt.jtans.calc.PixelFigure
+1611.0.composite = net.phbwt.jtans.calc.PixelPolygon
+1611.0.leaf = net.phbwt.jtans.calc.EditableFigure
+1611.0.Name = Composite Design Motif
+1611.0.XCommand = command
+
+# Micro-architecture 1560 similar at 0% with Composite Design Motif
+1560.0.component = net.phbwt.jtans.calc.PixelPolygon
+1560.0.composite = net.phbwt.jtans.calc.CalcOutlinePolygon
+1560.0.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+1560.0.Name = Composite Design Motif
+1560.0.XCommand = command
+
+# Micro-architecture 1583 similar at 0% with Composite Design Motif
+1583.0.component = net.phbwt.jtans.calc.PixelPolygon
+1583.0.composite = net.phbwt.jtans.calc.CalcPiece
+1583.0.leaf = net.phbwt.jtans.calc.PixelPiece
+1583.0.Name = Composite Design Motif
+1583.0.XCommand = command
+
+# Micro-architecture 1544 similar at 0% with Composite Design Motif
+1544.0.component = net.phbwt.jtans.calc.PixelPolygon
+1544.0.composite = net.phbwt.jtans.calc.CalcPolyPoints
+1544.0.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+1544.0.Name = Composite Design Motif
+1544.0.XCommand = command
+
+# Micro-architecture 1577 similar at 0% with Composite Design Motif
+1577.0.component = net.phbwt.jtans.calc.PixelPolygon
+1577.0.composite = net.phbwt.jtans.calc.CalcPolyPoints
+1577.0.leaf = net.phbwt.jtans.calc.PixelPiece
+1577.0.Name = Composite Design Motif
+1577.0.XCommand = command
+
+# Micro-architecture 656 similar at 8% with Composite Design Motif
+656.8.component = net.phbwt.jtans.calc.CalcPiece
+656.8.composite = net.phbwt.jtans.calc.CalcOutlinePolygon
+656.8.leaf = net.phbwt.jtans.calc.CalcPieceC
+656.8.Name = Composite Design Motif
+656.8.XCommand = command
+
+# Micro-architecture 535 similar at 8% with Composite Design Motif
+535.8.component = net.phbwt.jtans.calc.CalcPiece
+535.8.composite = net.phbwt.jtans.calc.CalcOutlinePolygon
+535.8.leaf = net.phbwt.jtans.calc.CalcPieceGT
+535.8.Name = Composite Design Motif
+535.8.XCommand = command
+
+# Micro-architecture 595 similar at 8% with Composite Design Motif
+595.8.component = net.phbwt.jtans.calc.CalcPiece
+595.8.composite = net.phbwt.jtans.calc.CalcOutlinePolygon
+595.8.leaf = net.phbwt.jtans.calc.CalcPieceMT
+595.8.Name = Composite Design Motif
+595.8.XCommand = command
+
+# Micro-architecture 625 similar at 8% with Composite Design Motif
+625.8.component = net.phbwt.jtans.calc.CalcPiece
+625.8.composite = net.phbwt.jtans.calc.CalcOutlinePolygon
+625.8.leaf = net.phbwt.jtans.calc.CalcPiecePT
+625.8.Name = Composite Design Motif
+625.8.XCommand = command
+
+# Micro-architecture 565 similar at 8% with Composite Design Motif
+565.8.component = net.phbwt.jtans.calc.CalcPiece
+565.8.composite = net.phbwt.jtans.calc.CalcOutlinePolygon
+565.8.leaf = net.phbwt.jtans.calc.CalcPieceT
+565.8.Name = Composite Design Motif
+565.8.XCommand = command
+
+# Micro-architecture 541 similar at 8% with Composite Design Motif
+541.8.component = net.phbwt.jtans.calc.CalcPiece
+541.8.composite = net.phbwt.jtans.calc.CalcPieceC
+541.8.leaf = net.phbwt.jtans.calc.CalcPieceGT
+541.8.Name = Composite Design Motif
+541.8.XCommand = command
+
+# Micro-architecture 601 similar at 8% with Composite Design Motif
+601.8.component = net.phbwt.jtans.calc.CalcPiece
+601.8.composite = net.phbwt.jtans.calc.CalcPieceC
+601.8.leaf = net.phbwt.jtans.calc.CalcPieceMT
+601.8.Name = Composite Design Motif
+601.8.XCommand = command
+
+# Micro-architecture 631 similar at 8% with Composite Design Motif
+631.8.component = net.phbwt.jtans.calc.CalcPiece
+631.8.composite = net.phbwt.jtans.calc.CalcPieceC
+631.8.leaf = net.phbwt.jtans.calc.CalcPiecePT
+631.8.Name = Composite Design Motif
+631.8.XCommand = command
+
+# Micro-architecture 571 similar at 8% with Composite Design Motif
+571.8.component = net.phbwt.jtans.calc.CalcPiece
+571.8.composite = net.phbwt.jtans.calc.CalcPieceC
+571.8.leaf = net.phbwt.jtans.calc.CalcPieceT
+571.8.Name = Composite Design Motif
+571.8.XCommand = command
+
+# Micro-architecture 643 similar at 8% with Composite Design Motif
+643.8.component = net.phbwt.jtans.calc.CalcPiece
+643.8.composite = net.phbwt.jtans.calc.CalcPieceGT
+643.8.leaf = net.phbwt.jtans.calc.CalcPieceC
+643.8.Name = Composite Design Motif
+643.8.XCommand = command
+
+# Micro-architecture 583 similar at 8% with Composite Design Motif
+583.8.component = net.phbwt.jtans.calc.CalcPiece
+583.8.composite = net.phbwt.jtans.calc.CalcPieceGT
+583.8.leaf = net.phbwt.jtans.calc.CalcPieceMT
+583.8.Name = Composite Design Motif
+583.8.XCommand = command
+
+# Micro-architecture 613 similar at 8% with Composite Design Motif
+613.8.component = net.phbwt.jtans.calc.CalcPiece
+613.8.composite = net.phbwt.jtans.calc.CalcPieceGT
+613.8.leaf = net.phbwt.jtans.calc.CalcPiecePT
+613.8.Name = Composite Design Motif
+613.8.XCommand = command
+
+# Micro-architecture 553 similar at 8% with Composite Design Motif
+553.8.component = net.phbwt.jtans.calc.CalcPiece
+553.8.composite = net.phbwt.jtans.calc.CalcPieceGT
+553.8.leaf = net.phbwt.jtans.calc.CalcPieceT
+553.8.Name = Composite Design Motif
+553.8.XCommand = command
+
+# Micro-architecture 651 similar at 8% with Composite Design Motif
+651.8.component = net.phbwt.jtans.calc.CalcPiece
+651.8.composite = net.phbwt.jtans.calc.CalcPieceMT
+651.8.leaf = net.phbwt.jtans.calc.CalcPieceC
+651.8.Name = Composite Design Motif
+651.8.XCommand = command
+
+# Micro-architecture 530 similar at 8% with Composite Design Motif
+530.8.component = net.phbwt.jtans.calc.CalcPiece
+530.8.composite = net.phbwt.jtans.calc.CalcPieceMT
+530.8.leaf = net.phbwt.jtans.calc.CalcPieceGT
+530.8.Name = Composite Design Motif
+530.8.XCommand = command
+
+# Micro-architecture 621 similar at 8% with Composite Design Motif
+621.8.component = net.phbwt.jtans.calc.CalcPiece
+621.8.composite = net.phbwt.jtans.calc.CalcPieceMT
+621.8.leaf = net.phbwt.jtans.calc.CalcPiecePT
+621.8.Name = Composite Design Motif
+621.8.XCommand = command
+
+# Micro-architecture 560 similar at 8% with Composite Design Motif
+560.8.component = net.phbwt.jtans.calc.CalcPiece
+560.8.composite = net.phbwt.jtans.calc.CalcPieceMT
+560.8.leaf = net.phbwt.jtans.calc.CalcPieceT
+560.8.Name = Composite Design Motif
+560.8.XCommand = command
+
+# Micro-architecture 652 similar at 8% with Composite Design Motif
+652.8.component = net.phbwt.jtans.calc.CalcPiece
+652.8.composite = net.phbwt.jtans.calc.CalcPiecePT
+652.8.leaf = net.phbwt.jtans.calc.CalcPieceC
+652.8.Name = Composite Design Motif
+652.8.XCommand = command
+
+# Micro-architecture 531 similar at 8% with Composite Design Motif
+531.8.component = net.phbwt.jtans.calc.CalcPiece
+531.8.composite = net.phbwt.jtans.calc.CalcPiecePT
+531.8.leaf = net.phbwt.jtans.calc.CalcPieceGT
+531.8.Name = Composite Design Motif
+531.8.XCommand = command
+
+# Micro-architecture 591 similar at 8% with Composite Design Motif
+591.8.component = net.phbwt.jtans.calc.CalcPiece
+591.8.composite = net.phbwt.jtans.calc.CalcPiecePT
+591.8.leaf = net.phbwt.jtans.calc.CalcPieceMT
+591.8.Name = Composite Design Motif
+591.8.XCommand = command
+
+# Micro-architecture 561 similar at 8% with Composite Design Motif
+561.8.component = net.phbwt.jtans.calc.CalcPiece
+561.8.composite = net.phbwt.jtans.calc.CalcPiecePT
+561.8.leaf = net.phbwt.jtans.calc.CalcPieceT
+561.8.Name = Composite Design Motif
+561.8.XCommand = command
+
+# Micro-architecture 650 similar at 8% with Composite Design Motif
+650.8.component = net.phbwt.jtans.calc.CalcPiece
+650.8.composite = net.phbwt.jtans.calc.CalcPieceT
+650.8.leaf = net.phbwt.jtans.calc.CalcPieceC
+650.8.Name = Composite Design Motif
+650.8.XCommand = command
+
+# Micro-architecture 529 similar at 8% with Composite Design Motif
+529.8.component = net.phbwt.jtans.calc.CalcPiece
+529.8.composite = net.phbwt.jtans.calc.CalcPieceT
+529.8.leaf = net.phbwt.jtans.calc.CalcPieceGT
+529.8.Name = Composite Design Motif
+529.8.XCommand = command
+
+# Micro-architecture 590 similar at 8% with Composite Design Motif
+590.8.component = net.phbwt.jtans.calc.CalcPiece
+590.8.composite = net.phbwt.jtans.calc.CalcPieceT
+590.8.leaf = net.phbwt.jtans.calc.CalcPieceMT
+590.8.Name = Composite Design Motif
+590.8.XCommand = command
+
+# Micro-architecture 620 similar at 8% with Composite Design Motif
+620.8.component = net.phbwt.jtans.calc.CalcPiece
+620.8.composite = net.phbwt.jtans.calc.CalcPieceT
+620.8.leaf = net.phbwt.jtans.calc.CalcPiecePT
+620.8.Name = Composite Design Motif
+620.8.XCommand = command
+
+# Micro-architecture 661 similar at 8% with Composite Design Motif
+661.8.component = net.phbwt.jtans.calc.CalcPiece
+661.8.composite = net.phbwt.jtans.calc.CalcPolyTriangles
+661.8.leaf = net.phbwt.jtans.calc.CalcPieceC
+661.8.Name = Composite Design Motif
+661.8.XCommand = command
+
+# Micro-architecture 540 similar at 8% with Composite Design Motif
+540.8.component = net.phbwt.jtans.calc.CalcPiece
+540.8.composite = net.phbwt.jtans.calc.CalcPolyTriangles
+540.8.leaf = net.phbwt.jtans.calc.CalcPieceGT
+540.8.Name = Composite Design Motif
+540.8.XCommand = command
+
+# Micro-architecture 600 similar at 8% with Composite Design Motif
+600.8.component = net.phbwt.jtans.calc.CalcPiece
+600.8.composite = net.phbwt.jtans.calc.CalcPolyTriangles
+600.8.leaf = net.phbwt.jtans.calc.CalcPieceMT
+600.8.Name = Composite Design Motif
+600.8.XCommand = command
+
+# Micro-architecture 630 similar at 8% with Composite Design Motif
+630.8.component = net.phbwt.jtans.calc.CalcPiece
+630.8.composite = net.phbwt.jtans.calc.CalcPolyTriangles
+630.8.leaf = net.phbwt.jtans.calc.CalcPiecePT
+630.8.Name = Composite Design Motif
+630.8.XCommand = command
+
+# Micro-architecture 570 similar at 8% with Composite Design Motif
+570.8.component = net.phbwt.jtans.calc.CalcPiece
+570.8.composite = net.phbwt.jtans.calc.CalcPolyTriangles
+570.8.leaf = net.phbwt.jtans.calc.CalcPieceT
+570.8.Name = Composite Design Motif
+570.8.XCommand = command
+
+# Micro-architecture 657 similar at 8% with Composite Design Motif
+657.8.component = net.phbwt.jtans.calc.CalcPiece
+657.8.composite = net.phbwt.jtans.calc.DisplayFigure
+657.8.leaf = net.phbwt.jtans.calc.CalcPieceC
+657.8.Name = Composite Design Motif
+657.8.XCommand = command
+
+# Micro-architecture 536 similar at 8% with Composite Design Motif
+536.8.component = net.phbwt.jtans.calc.CalcPiece
+536.8.composite = net.phbwt.jtans.calc.DisplayFigure
+536.8.leaf = net.phbwt.jtans.calc.CalcPieceGT
+536.8.Name = Composite Design Motif
+536.8.XCommand = command
+
+# Micro-architecture 596 similar at 8% with Composite Design Motif
+596.8.component = net.phbwt.jtans.calc.CalcPiece
+596.8.composite = net.phbwt.jtans.calc.DisplayFigure
+596.8.leaf = net.phbwt.jtans.calc.CalcPieceMT
+596.8.Name = Composite Design Motif
+596.8.XCommand = command
+
+# Micro-architecture 626 similar at 8% with Composite Design Motif
+626.8.component = net.phbwt.jtans.calc.CalcPiece
+626.8.composite = net.phbwt.jtans.calc.DisplayFigure
+626.8.leaf = net.phbwt.jtans.calc.CalcPiecePT
+626.8.Name = Composite Design Motif
+626.8.XCommand = command
+
+# Micro-architecture 566 similar at 8% with Composite Design Motif
+566.8.component = net.phbwt.jtans.calc.CalcPiece
+566.8.composite = net.phbwt.jtans.calc.DisplayFigure
+566.8.leaf = net.phbwt.jtans.calc.CalcPieceT
+566.8.Name = Composite Design Motif
+566.8.XCommand = command
+
+# Micro-architecture 642 similar at 8% with Composite Design Motif
+642.8.component = net.phbwt.jtans.calc.CalcPiece
+642.8.composite = net.phbwt.jtans.calc.EditableFigure
+642.8.leaf = net.phbwt.jtans.calc.CalcPieceC
+642.8.Name = Composite Design Motif
+642.8.XCommand = command
+
+# Micro-architecture 522 similar at 8% with Composite Design Motif
+522.8.component = net.phbwt.jtans.calc.CalcPiece
+522.8.composite = net.phbwt.jtans.calc.EditableFigure
+522.8.leaf = net.phbwt.jtans.calc.CalcPieceGT
+522.8.Name = Composite Design Motif
+522.8.XCommand = command
+
+# Micro-architecture 582 similar at 8% with Composite Design Motif
+582.8.component = net.phbwt.jtans.calc.CalcPiece
+582.8.composite = net.phbwt.jtans.calc.EditableFigure
+582.8.leaf = net.phbwt.jtans.calc.CalcPieceMT
+582.8.Name = Composite Design Motif
+582.8.XCommand = command
+
+# Micro-architecture 612 similar at 8% with Composite Design Motif
+612.8.component = net.phbwt.jtans.calc.CalcPiece
+612.8.composite = net.phbwt.jtans.calc.EditableFigure
+612.8.leaf = net.phbwt.jtans.calc.CalcPiecePT
+612.8.Name = Composite Design Motif
+612.8.XCommand = command
+
+# Micro-architecture 552 similar at 8% with Composite Design Motif
+552.8.component = net.phbwt.jtans.calc.CalcPiece
+552.8.composite = net.phbwt.jtans.calc.EditableFigure
+552.8.leaf = net.phbwt.jtans.calc.CalcPieceT
+552.8.Name = Composite Design Motif
+552.8.XCommand = command
+
+# Micro-architecture 645 similar at 8% with Composite Design Motif
+645.8.component = net.phbwt.jtans.calc.CalcPiece
+645.8.composite = net.phbwt.jtans.calc.PixelFigure
+645.8.leaf = net.phbwt.jtans.calc.CalcPieceC
+645.8.Name = Composite Design Motif
+645.8.XCommand = command
+
+# Micro-architecture 524 similar at 8% with Composite Design Motif
+524.8.component = net.phbwt.jtans.calc.CalcPiece
+524.8.composite = net.phbwt.jtans.calc.PixelFigure
+524.8.leaf = net.phbwt.jtans.calc.CalcPieceGT
+524.8.Name = Composite Design Motif
+524.8.XCommand = command
+
+# Micro-architecture 585 similar at 8% with Composite Design Motif
+585.8.component = net.phbwt.jtans.calc.CalcPiece
+585.8.composite = net.phbwt.jtans.calc.PixelFigure
+585.8.leaf = net.phbwt.jtans.calc.CalcPieceMT
+585.8.Name = Composite Design Motif
+585.8.XCommand = command
+
+# Micro-architecture 615 similar at 8% with Composite Design Motif
+615.8.component = net.phbwt.jtans.calc.CalcPiece
+615.8.composite = net.phbwt.jtans.calc.PixelFigure
+615.8.leaf = net.phbwt.jtans.calc.CalcPiecePT
+615.8.Name = Composite Design Motif
+615.8.XCommand = command
+
+# Micro-architecture 555 similar at 8% with Composite Design Motif
+555.8.component = net.phbwt.jtans.calc.CalcPiece
+555.8.composite = net.phbwt.jtans.calc.PixelFigure
+555.8.leaf = net.phbwt.jtans.calc.CalcPieceT
+555.8.Name = Composite Design Motif
+555.8.XCommand = command
+
+# Micro-architecture 641 similar at 8% with Composite Design Motif
+641.8.component = net.phbwt.jtans.calc.CalcPiece
+641.8.composite = net.phbwt.jtans.calc.PixelOutlinePolygon
+641.8.leaf = net.phbwt.jtans.calc.CalcPieceC
+641.8.Name = Composite Design Motif
+641.8.XCommand = command
+
+# Micro-architecture 521 similar at 8% with Composite Design Motif
+521.8.component = net.phbwt.jtans.calc.CalcPiece
+521.8.composite = net.phbwt.jtans.calc.PixelOutlinePolygon
+521.8.leaf = net.phbwt.jtans.calc.CalcPieceGT
+521.8.Name = Composite Design Motif
+521.8.XCommand = command
+
+# Micro-architecture 581 similar at 8% with Composite Design Motif
+581.8.component = net.phbwt.jtans.calc.CalcPiece
+581.8.composite = net.phbwt.jtans.calc.PixelOutlinePolygon
+581.8.leaf = net.phbwt.jtans.calc.CalcPieceMT
+581.8.Name = Composite Design Motif
+581.8.XCommand = command
+
+# Micro-architecture 611 similar at 8% with Composite Design Motif
+611.8.component = net.phbwt.jtans.calc.CalcPiece
+611.8.composite = net.phbwt.jtans.calc.PixelOutlinePolygon
+611.8.leaf = net.phbwt.jtans.calc.CalcPiecePT
+611.8.Name = Composite Design Motif
+611.8.XCommand = command
+
+# Micro-architecture 551 similar at 8% with Composite Design Motif
+551.8.component = net.phbwt.jtans.calc.CalcPiece
+551.8.composite = net.phbwt.jtans.calc.PixelOutlinePolygon
+551.8.leaf = net.phbwt.jtans.calc.CalcPieceT
+551.8.Name = Composite Design Motif
+551.8.XCommand = command
+
+# Micro-architecture 659 similar at 8% with Composite Design Motif
+659.8.component = net.phbwt.jtans.calc.CalcPiece
+659.8.composite = net.phbwt.jtans.calc.PixelPiece
+659.8.leaf = net.phbwt.jtans.calc.CalcPieceC
+659.8.Name = Composite Design Motif
+659.8.XCommand = command
+
+# Micro-architecture 538 similar at 8% with Composite Design Motif
+538.8.component = net.phbwt.jtans.calc.CalcPiece
+538.8.composite = net.phbwt.jtans.calc.PixelPiece
+538.8.leaf = net.phbwt.jtans.calc.CalcPieceGT
+538.8.Name = Composite Design Motif
+538.8.XCommand = command
+
+# Micro-architecture 598 similar at 8% with Composite Design Motif
+598.8.component = net.phbwt.jtans.calc.CalcPiece
+598.8.composite = net.phbwt.jtans.calc.PixelPiece
+598.8.leaf = net.phbwt.jtans.calc.CalcPieceMT
+598.8.Name = Composite Design Motif
+598.8.XCommand = command
+
+# Micro-architecture 628 similar at 8% with Composite Design Motif
+628.8.component = net.phbwt.jtans.calc.CalcPiece
+628.8.composite = net.phbwt.jtans.calc.PixelPiece
+628.8.leaf = net.phbwt.jtans.calc.CalcPiecePT
+628.8.Name = Composite Design Motif
+628.8.XCommand = command
+
+# Micro-architecture 568 similar at 8% with Composite Design Motif
+568.8.component = net.phbwt.jtans.calc.CalcPiece
+568.8.composite = net.phbwt.jtans.calc.PixelPiece
+568.8.leaf = net.phbwt.jtans.calc.CalcPieceT
+568.8.Name = Composite Design Motif
+568.8.XCommand = command
+
+# Micro-architecture 640 similar at 8% with Composite Design Motif
+640.8.component = net.phbwt.jtans.calc.CalcPiece
+640.8.composite = net.phbwt.jtans.calc.PixelPolygon
+640.8.leaf = net.phbwt.jtans.calc.CalcPieceC
+640.8.Name = Composite Design Motif
+640.8.XCommand = command
+
+# Micro-architecture 520 similar at 8% with Composite Design Motif
+520.8.component = net.phbwt.jtans.calc.CalcPiece
+520.8.composite = net.phbwt.jtans.calc.PixelPolygon
+520.8.leaf = net.phbwt.jtans.calc.CalcPieceGT
+520.8.Name = Composite Design Motif
+520.8.XCommand = command
+
+# Micro-architecture 580 similar at 8% with Composite Design Motif
+580.8.component = net.phbwt.jtans.calc.CalcPiece
+580.8.composite = net.phbwt.jtans.calc.PixelPolygon
+580.8.leaf = net.phbwt.jtans.calc.CalcPieceMT
+580.8.Name = Composite Design Motif
+580.8.XCommand = command
+
+# Micro-architecture 610 similar at 8% with Composite Design Motif
+610.8.component = net.phbwt.jtans.calc.CalcPiece
+610.8.composite = net.phbwt.jtans.calc.PixelPolygon
+610.8.leaf = net.phbwt.jtans.calc.CalcPiecePT
+610.8.Name = Composite Design Motif
+610.8.XCommand = command
+
+# Micro-architecture 550 similar at 8% with Composite Design Motif
+550.8.component = net.phbwt.jtans.calc.CalcPiece
+550.8.composite = net.phbwt.jtans.calc.PixelPolygon
+550.8.leaf = net.phbwt.jtans.calc.CalcPieceT
+550.8.Name = Composite Design Motif
+550.8.XCommand = command
+
+# Micro-architecture 667 similar at 8% with Composite Design Motif
+667.8.component = net.phbwt.jtans.calc.CalcPiece
+667.8.composite = net.phbwt.jtans.calc.StaticCalcOutline
+667.8.leaf = net.phbwt.jtans.calc.CalcPieceC
+667.8.Name = Composite Design Motif
+667.8.XCommand = command
+
+# Micro-architecture 547 similar at 8% with Composite Design Motif
+547.8.component = net.phbwt.jtans.calc.CalcPiece
+547.8.composite = net.phbwt.jtans.calc.StaticCalcOutline
+547.8.leaf = net.phbwt.jtans.calc.CalcPieceGT
+547.8.Name = Composite Design Motif
+547.8.XCommand = command
+
+# Micro-architecture 607 similar at 8% with Composite Design Motif
+607.8.component = net.phbwt.jtans.calc.CalcPiece
+607.8.composite = net.phbwt.jtans.calc.StaticCalcOutline
+607.8.leaf = net.phbwt.jtans.calc.CalcPieceMT
+607.8.Name = Composite Design Motif
+607.8.XCommand = command
+
+# Micro-architecture 637 similar at 8% with Composite Design Motif
+637.8.component = net.phbwt.jtans.calc.CalcPiece
+637.8.composite = net.phbwt.jtans.calc.StaticCalcOutline
+637.8.leaf = net.phbwt.jtans.calc.CalcPiecePT
+637.8.Name = Composite Design Motif
+637.8.XCommand = command
+
+# Micro-architecture 577 similar at 8% with Composite Design Motif
+577.8.component = net.phbwt.jtans.calc.CalcPiece
+577.8.composite = net.phbwt.jtans.calc.StaticCalcOutline
+577.8.leaf = net.phbwt.jtans.calc.CalcPieceT
+577.8.Name = Composite Design Motif
+577.8.XCommand = command
+
+# Micro-architecture 402 similar at 8% with Composite Design Motif
+402.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+402.8.composite = net.phbwt.jtans.calc.CalcFigure
+402.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+402.8.Name = Composite Design Motif
+402.8.XCommand = command
+
+# Micro-architecture 401 similar at 8% with Composite Design Motif
+401.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+401.8.composite = net.phbwt.jtans.calc.CalcPieceC
+401.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+401.8.Name = Composite Design Motif
+401.8.XCommand = command
+
+# Micro-architecture 382 similar at 8% with Composite Design Motif
+382.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+382.8.composite = net.phbwt.jtans.calc.CalcPieceGT
+382.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+382.8.Name = Composite Design Motif
+382.8.XCommand = command
+
+# Micro-architecture 391 similar at 8% with Composite Design Motif
+391.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+391.8.composite = net.phbwt.jtans.calc.CalcPieceMT
+391.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+391.8.Name = Composite Design Motif
+391.8.XCommand = command
+
+# Micro-architecture 392 similar at 8% with Composite Design Motif
+392.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+392.8.composite = net.phbwt.jtans.calc.CalcPiecePT
+392.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+392.8.Name = Composite Design Motif
+392.8.XCommand = command
+
+# Micro-architecture 390 similar at 8% with Composite Design Motif
+390.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+390.8.composite = net.phbwt.jtans.calc.CalcPieceT
+390.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+390.8.Name = Composite Design Motif
+390.8.XCommand = command
+
+# Micro-architecture 385 similar at 8% with Composite Design Motif
+385.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+385.8.composite = net.phbwt.jtans.calc.CalcPiece
+385.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+385.8.Name = Composite Design Motif
+385.8.XCommand = command
+
+# Micro-architecture 400 similar at 8% with Composite Design Motif
+400.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+400.8.composite = net.phbwt.jtans.calc.CalcPolyTriangles
+400.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+400.8.Name = Composite Design Motif
+400.8.XCommand = command
+
+# Micro-architecture 396 similar at 8% with Composite Design Motif
+396.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+396.8.composite = net.phbwt.jtans.calc.DisplayFigure
+396.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+396.8.Name = Composite Design Motif
+396.8.XCommand = command
+
+# Micro-architecture 381 similar at 8% with Composite Design Motif
+381.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+381.8.composite = net.phbwt.jtans.calc.EditableFigure
+381.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+381.8.Name = Composite Design Motif
+381.8.XCommand = command
+
+# Micro-architecture 384 similar at 8% with Composite Design Motif
+384.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+384.8.composite = net.phbwt.jtans.calc.PixelFigure
+384.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+384.8.Name = Composite Design Motif
+384.8.XCommand = command
+
+# Micro-architecture 380 similar at 8% with Composite Design Motif
+380.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+380.8.composite = net.phbwt.jtans.calc.PixelOutlinePolygon
+380.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+380.8.Name = Composite Design Motif
+380.8.XCommand = command
+
+# Micro-architecture 398 similar at 8% with Composite Design Motif
+398.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+398.8.composite = net.phbwt.jtans.calc.PixelPiece
+398.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+398.8.Name = Composite Design Motif
+398.8.XCommand = command
+
+# Micro-architecture 379 similar at 8% with Composite Design Motif
+379.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+379.8.composite = net.phbwt.jtans.calc.PixelPolygon
+379.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+379.8.Name = Composite Design Motif
+379.8.XCommand = command
+
+# Micro-architecture 409 similar at 8% with Composite Design Motif
+409.8.component = net.phbwt.jtans.calc.CalcPolyPoints
+409.8.composite = net.phbwt.jtans.calc.StaticCalcOutline
+409.8.leaf = net.phbwt.jtans.calc.CalcOutlinePolygon
+409.8.Name = Composite Design Motif
+409.8.XCommand = command
+
+# Micro-architecture 510 similar at 8% with Composite Design Motif
+510.8.component = net.phbwt.jtans.calc.PixelFigure
+510.8.composite = net.phbwt.jtans.calc.CalcOutlinePolygon
+510.8.leaf = net.phbwt.jtans.calc.DisplayFigure
+510.8.Name = Composite Design Motif
+510.8.XCommand = command
+
+# Micro-architecture 485 similar at 8% with Composite Design Motif
+485.8.component = net.phbwt.jtans.calc.PixelFigure
+485.8.composite = net.phbwt.jtans.calc.CalcOutlinePolygon
+485.8.leaf = net.phbwt.jtans.calc.EditableFigure
+485.8.Name = Composite Design Motif
+485.8.XCommand = command
+
+# Micro-architecture 514 similar at 8% with Composite Design Motif
+514.8.component = net.phbwt.jtans.calc.PixelFigure
+514.8.composite = net.phbwt.jtans.calc.CalcPieceC
+514.8.leaf = net.phbwt.jtans.calc.DisplayFigure
+514.8.Name = Composite Design Motif
+514.8.XCommand = command
+
+# Micro-architecture 490 similar at 8% with Composite Design Motif
+490.8.component = net.phbwt.jtans.calc.PixelFigure
+490.8.composite = net.phbwt.jtans.calc.CalcPieceC
+490.8.leaf = net.phbwt.jtans.calc.EditableFigure
+490.8.Name = Composite Design Motif
+490.8.XCommand = command
+
+# Micro-architecture 498 similar at 8% with Composite Design Motif
+498.8.component = net.phbwt.jtans.calc.PixelFigure
+498.8.composite = net.phbwt.jtans.calc.CalcPieceGT
+498.8.leaf = net.phbwt.jtans.calc.DisplayFigure
+498.8.Name = Composite Design Motif
+498.8.XCommand = command
+
+# Micro-architecture 475 similar at 8% with Composite Design Motif
+475.8.component = net.phbwt.jtans.calc.PixelFigure
+475.8.composite = net.phbwt.jtans.calc.CalcPieceGT
+475.8.leaf = net.phbwt.jtans.calc.EditableFigure
+475.8.Name = Composite Design Motif
+475.8.XCommand = command
+
+# Micro-architecture 506 similar at 8% with Composite Design Motif
+506.8.component = net.phbwt.jtans.calc.PixelFigure
+506.8.composite = net.phbwt.jtans.calc.CalcPieceMT
+506.8.leaf = net.phbwt.jtans.calc.DisplayFigure
+506.8.Name = Composite Design Motif
+506.8.XCommand = command
+
+# Micro-architecture 481 similar at 8% with Composite Design Motif
+481.8.component = net.phbwt.jtans.calc.PixelFigure
+481.8.composite = net.phbwt.jtans.calc.CalcPieceMT
+481.8.leaf = net.phbwt.jtans.calc.EditableFigure
+481.8.Name = Composite Design Motif
+481.8.XCommand = command
+
+# Micro-architecture 507 similar at 8% with Composite Design Motif
+507.8.component = net.phbwt.jtans.calc.PixelFigure
+507.8.composite = net.phbwt.jtans.calc.CalcPiecePT
+507.8.leaf = net.phbwt.jtans.calc.DisplayFigure
+507.8.Name = Composite Design Motif
+507.8.XCommand = command
+
+# Micro-architecture 482 similar at 8% with Composite Design Motif
+482.8.component = net.phbwt.jtans.calc.PixelFigure
+482.8.composite = net.phbwt.jtans.calc.CalcPiecePT
+482.8.leaf = net.phbwt.jtans.calc.EditableFigure
+482.8.Name = Composite Design Motif
+482.8.XCommand = command
+
+# Micro-architecture 505 similar at 8% with Composite Design Motif
+505.8.component = net.phbwt.jtans.calc.PixelFigure
+505.8.composite = net.phbwt.jtans.calc.CalcPieceT
+505.8.leaf = net.phbwt.jtans.calc.DisplayFigure
+505.8.Name = Composite Design Motif
+505.8.XCommand = command
+
+# Micro-architecture 480 similar at 8% with Composite Design Motif
+480.8.component = net.phbwt.jtans.calc.PixelFigure
+480.8.composite = net.phbwt.jtans.calc.CalcPieceT
+480.8.leaf = net.phbwt.jtans.calc.EditableFigure
+480.8.Name = Composite Design Motif
+480.8.XCommand = command
+
+# Micro-architecture 500 similar at 8% with Composite Design Motif
+500.8.component = net.phbwt.jtans.calc.PixelFigure
+500.8.composite = net.phbwt.jtans.calc.CalcPiece
+500.8.leaf = net.phbwt.jtans.calc.DisplayFigure
+500.8.Name = Composite Design Motif
+500.8.XCommand = command
+
+# Micro-architecture 473 similar at 8% with Composite Design Motif
+473.8.component = net.phbwt.jtans.calc.PixelFigure
+473.8.composite = net.phbwt.jtans.calc.CalcPolyPoints
+473.8.leaf = net.phbwt.jtans.calc.EditableFigure
+473.8.Name = Composite Design Motif
+473.8.XCommand = command
+
+# Micro-architecture 513 similar at 8% with Composite Design Motif
+513.8.component = net.phbwt.jtans.calc.PixelFigure
+513.8.composite = net.phbwt.jtans.calc.CalcPolyTriangles
+513.8.leaf = net.phbwt.jtans.calc.DisplayFigure
+513.8.Name = Composite Design Motif
+513.8.XCommand = command
+
+# Micro-architecture 489 similar at 8% with Composite Design Motif
+489.8.component = net.phbwt.jtans.calc.PixelFigure
+489.8.composite = net.phbwt.jtans.calc.CalcPolyTriangles
+489.8.leaf = net.phbwt.jtans.calc.EditableFigure
+489.8.Name = Composite Design Motif
+489.8.XCommand = command
+
+# Micro-architecture 486 similar at 8% with Composite Design Motif
+486.8.component = net.phbwt.jtans.calc.PixelFigure
+486.8.composite = net.phbwt.jtans.calc.DisplayFigure
+486.8.leaf = net.phbwt.jtans.calc.EditableFigure
+486.8.Name = Composite Design Motif
+486.8.XCommand = command
+
+# Micro-architecture 497 similar at 8% with Composite Design Motif
+497.8.component = net.phbwt.jtans.calc.PixelFigure
+497.8.composite = net.phbwt.jtans.calc.EditableFigure
+497.8.leaf = net.phbwt.jtans.calc.DisplayFigure
+497.8.Name = Composite Design Motif
+497.8.XCommand = command
+
+# Micro-architecture 496 similar at 8% with Composite Design Motif
+496.8.component = net.phbwt.jtans.calc.PixelFigure
+496.8.composite = net.phbwt.jtans.calc.PixelOutlinePolygon
+496.8.leaf = net.phbwt.jtans.calc.DisplayFigure
+496.8.Name = Composite Design Motif
+496.8.XCommand = command
+
+# Micro-architecture 474 similar at 8% with Composite Design Motif
+474.8.component = net.phbwt.jtans.calc.PixelFigure
+474.8.composite = net.phbwt.jtans.calc.PixelOutlinePolygon
+474.8.leaf = net.phbwt.jtans.calc.EditableFigure
+474.8.Name = Composite Design Motif
+474.8.XCommand = command
+
+# Micro-architecture 517 similar at 8% with Composite Design Motif
+517.8.component = net.phbwt.jtans.calc.PixelFigure
+517.8.composite = net.phbwt.jtans.calc.StaticCalcOutline
+517.8.leaf = net.phbwt.jtans.calc.DisplayFigure
+517.8.Name = Composite Design Motif
+517.8.XCommand = command
+
+# Micro-architecture 493 similar at 8% with Composite Design Motif
+493.8.component = net.phbwt.jtans.calc.PixelFigure
+493.8.composite = net.phbwt.jtans.calc.StaticCalcOutline
+493.8.leaf = net.phbwt.jtans.calc.EditableFigure
+493.8.Name = Composite Design Motif
+493.8.XCommand = command
+
+# Micro-architecture 433 similar at 8% with Composite Design Motif
+433.8.component = net.phbwt.jtans.calc.PixelPolygon
+433.8.composite = net.phbwt.jtans.calc.CalcFigure
+433.8.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+433.8.Name = Composite Design Motif
+433.8.XCommand = command
+
+# Micro-architecture 463 similar at 8% with Composite Design Motif
+463.8.component = net.phbwt.jtans.calc.PixelPolygon
+463.8.composite = net.phbwt.jtans.calc.CalcFigure
+463.8.leaf = net.phbwt.jtans.calc.PixelPiece
+463.8.Name = Composite Design Motif
+463.8.XCommand = command
+
+# Micro-architecture 457 similar at 8% with Composite Design Motif
+457.8.component = net.phbwt.jtans.calc.PixelPolygon
+457.8.composite = net.phbwt.jtans.calc.CalcOutlinePolygon
+457.8.leaf = net.phbwt.jtans.calc.PixelPiece
+457.8.Name = Composite Design Motif
+457.8.XCommand = command
+
+# Micro-architecture 432 similar at 8% with Composite Design Motif
+432.8.component = net.phbwt.jtans.calc.PixelPolygon
+432.8.composite = net.phbwt.jtans.calc.CalcPieceC
+432.8.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+432.8.Name = Composite Design Motif
+432.8.XCommand = command
+
+# Micro-architecture 462 similar at 8% with Composite Design Motif
+462.8.component = net.phbwt.jtans.calc.PixelPolygon
+462.8.composite = net.phbwt.jtans.calc.CalcPieceC
+462.8.leaf = net.phbwt.jtans.calc.PixelPiece
+462.8.Name = Composite Design Motif
+462.8.XCommand = command
+
+# Micro-architecture 413 similar at 8% with Composite Design Motif
+413.8.component = net.phbwt.jtans.calc.PixelPolygon
+413.8.composite = net.phbwt.jtans.calc.CalcPieceGT
+413.8.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+413.8.Name = Composite Design Motif
+413.8.XCommand = command
+
+# Micro-architecture 445 similar at 8% with Composite Design Motif
+445.8.component = net.phbwt.jtans.calc.PixelPolygon
+445.8.composite = net.phbwt.jtans.calc.CalcPieceGT
+445.8.leaf = net.phbwt.jtans.calc.PixelPiece
+445.8.Name = Composite Design Motif
+445.8.XCommand = command
+
+# Micro-architecture 422 similar at 8% with Composite Design Motif
+422.8.component = net.phbwt.jtans.calc.PixelPolygon
+422.8.composite = net.phbwt.jtans.calc.CalcPieceMT
+422.8.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+422.8.Name = Composite Design Motif
+422.8.XCommand = command
+
+# Micro-architecture 452 similar at 8% with Composite Design Motif
+452.8.component = net.phbwt.jtans.calc.PixelPolygon
+452.8.composite = net.phbwt.jtans.calc.CalcPieceMT
+452.8.leaf = net.phbwt.jtans.calc.PixelPiece
+452.8.Name = Composite Design Motif
+452.8.XCommand = command
+
+# Micro-architecture 423 similar at 8% with Composite Design Motif
+423.8.component = net.phbwt.jtans.calc.PixelPolygon
+423.8.composite = net.phbwt.jtans.calc.CalcPiecePT
+423.8.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+423.8.Name = Composite Design Motif
+423.8.XCommand = command
+
+# Micro-architecture 453 similar at 8% with Composite Design Motif
+453.8.component = net.phbwt.jtans.calc.PixelPolygon
+453.8.composite = net.phbwt.jtans.calc.CalcPiecePT
+453.8.leaf = net.phbwt.jtans.calc.PixelPiece
+453.8.Name = Composite Design Motif
+453.8.XCommand = command
+
+# Micro-architecture 421 similar at 8% with Composite Design Motif
+421.8.component = net.phbwt.jtans.calc.PixelPolygon
+421.8.composite = net.phbwt.jtans.calc.CalcPieceT
+421.8.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+421.8.Name = Composite Design Motif
+421.8.XCommand = command
+
+# Micro-architecture 451 similar at 8% with Composite Design Motif
+451.8.component = net.phbwt.jtans.calc.PixelPolygon
+451.8.composite = net.phbwt.jtans.calc.CalcPieceT
+451.8.leaf = net.phbwt.jtans.calc.PixelPiece
+451.8.Name = Composite Design Motif
+451.8.XCommand = command
+
+# Micro-architecture 416 similar at 8% with Composite Design Motif
+416.8.component = net.phbwt.jtans.calc.PixelPolygon
+416.8.composite = net.phbwt.jtans.calc.CalcPiece
+416.8.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+416.8.Name = Composite Design Motif
+416.8.XCommand = command
+
+# Micro-architecture 431 similar at 8% with Composite Design Motif
+431.8.component = net.phbwt.jtans.calc.PixelPolygon
+431.8.composite = net.phbwt.jtans.calc.CalcPolyTriangles
+431.8.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+431.8.Name = Composite Design Motif
+431.8.XCommand = command
+
+# Micro-architecture 461 similar at 8% with Composite Design Motif
+461.8.component = net.phbwt.jtans.calc.PixelPolygon
+461.8.composite = net.phbwt.jtans.calc.CalcPolyTriangles
+461.8.leaf = net.phbwt.jtans.calc.PixelPiece
+461.8.Name = Composite Design Motif
+461.8.XCommand = command
+
+# Micro-architecture 427 similar at 8% with Composite Design Motif
+427.8.component = net.phbwt.jtans.calc.PixelPolygon
+427.8.composite = net.phbwt.jtans.calc.DisplayFigure
+427.8.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+427.8.Name = Composite Design Motif
+427.8.XCommand = command
+
+# Micro-architecture 458 similar at 8% with Composite Design Motif
+458.8.component = net.phbwt.jtans.calc.PixelPolygon
+458.8.composite = net.phbwt.jtans.calc.DisplayFigure
+458.8.leaf = net.phbwt.jtans.calc.PixelPiece
+458.8.Name = Composite Design Motif
+458.8.XCommand = command
+
+# Micro-architecture 412 similar at 8% with Composite Design Motif
+412.8.component = net.phbwt.jtans.calc.PixelPolygon
+412.8.composite = net.phbwt.jtans.calc.EditableFigure
+412.8.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+412.8.Name = Composite Design Motif
+412.8.XCommand = command
+
+# Micro-architecture 444 similar at 8% with Composite Design Motif
+444.8.component = net.phbwt.jtans.calc.PixelPolygon
+444.8.composite = net.phbwt.jtans.calc.EditableFigure
+444.8.leaf = net.phbwt.jtans.calc.PixelPiece
+444.8.Name = Composite Design Motif
+444.8.XCommand = command
+
+# Micro-architecture 415 similar at 8% with Composite Design Motif
+415.8.component = net.phbwt.jtans.calc.PixelPolygon
+415.8.composite = net.phbwt.jtans.calc.PixelFigure
+415.8.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+415.8.Name = Composite Design Motif
+415.8.XCommand = command
+
+# Micro-architecture 447 similar at 8% with Composite Design Motif
+447.8.component = net.phbwt.jtans.calc.PixelPolygon
+447.8.composite = net.phbwt.jtans.calc.PixelFigure
+447.8.leaf = net.phbwt.jtans.calc.PixelPiece
+447.8.Name = Composite Design Motif
+447.8.XCommand = command
+
+# Micro-architecture 443 similar at 8% with Composite Design Motif
+443.8.component = net.phbwt.jtans.calc.PixelPolygon
+443.8.composite = net.phbwt.jtans.calc.PixelOutlinePolygon
+443.8.leaf = net.phbwt.jtans.calc.PixelPiece
+443.8.Name = Composite Design Motif
+443.8.XCommand = command
+
+# Micro-architecture 429 similar at 8% with Composite Design Motif
+429.8.component = net.phbwt.jtans.calc.PixelPolygon
+429.8.composite = net.phbwt.jtans.calc.PixelPiece
+429.8.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+429.8.Name = Composite Design Motif
+429.8.XCommand = command
+
+# Micro-architecture 440 similar at 8% with Composite Design Motif
+440.8.component = net.phbwt.jtans.calc.PixelPolygon
+440.8.composite = net.phbwt.jtans.calc.StaticCalcOutline
+440.8.leaf = net.phbwt.jtans.calc.PixelOutlinePolygon
+440.8.Name = Composite Design Motif
+440.8.XCommand = command
+
+# Micro-architecture 470 similar at 8% with Composite Design Motif
+470.8.component = net.phbwt.jtans.calc.PixelPolygon
+470.8.composite = net.phbwt.jtans.calc.StaticCalcOutline
+470.8.leaf = net.phbwt.jtans.calc.PixelPiece
+470.8.Name = Composite Design Motif
+470.8.XCommand = command
+

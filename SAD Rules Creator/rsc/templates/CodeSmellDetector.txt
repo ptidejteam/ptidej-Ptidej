@@ -1,0 +1,16 @@
+<HEADER>
+
+public class <CODESMELL> extends AbstractCodeSmellDetection implements ICodeSmellDetection {
+
+	<LOCAL_VARS>
+	
+	public String getName() {
+		return "<CODESMELL>";
+	}
+
+	public void detect(final IAbstractLevelModel anAbstractLevelModel) {
+		<DETECT_METHOD>
+	}
+	
+	<UTILS_METHOD>
+}

@@ -1,0 +1,17 @@
+org.mozilla.javascript.DToA
+org.mozilla.javascript.Decompiler
+org.mozilla.javascript.Interpreter
+org.mozilla.javascript.JavaMembers
+org.mozilla.javascript.NativeDate
+org.mozilla.javascript.NativeGlobal
+org.mozilla.javascript.NativeJavaMethod
+org.mozilla.javascript.NativeJavaObject
+org.mozilla.javascript.NativeMath
+org.mozilla.javascript.NativeString
+org.mozilla.javascript.NodeTransformer
+org.mozilla.javascript.Parser
+org.mozilla.javascript.ScriptRuntime
+org.mozilla.javascript.ScriptableObject
+org.mozilla.javascript.TokenStream
+org.mozilla.javascript.regexp.NativeRegExp
+org.mozilla.javascript.tools.shell.Global

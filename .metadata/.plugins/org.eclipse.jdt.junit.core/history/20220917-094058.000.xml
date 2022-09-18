@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestCreatorJavaFileUsingEclipse" project="PADL Creator JavaFile (Eclipse) Tests" tests="102" started="102" failures="0" errors="0" ignored="0">
+  <testsuite name="TestSuite with 102 tests [example: padl.creator.javafile.eclipse.test.advanced.TestAdvanced@26f67b76]" time="73.504">
+    <testsuite name="TestSuite with 12 tests [example: padl.creator.javafile.eclipse.test.advanced.DuplicationTest]" time="6.806">
+      <testsuite name="padl.creator.javafile.eclipse.test.advanced.DuplicationTest" time="5.354">
+        <testcase name="testClassesDuplication" classname="padl.creator.javafile.eclipse.test.advanced.DuplicationTest" time="2.31"/>
+        <testcase name="testPackageWithClasseDuplication1" classname="padl.creator.javafile.eclipse.test.advanced.DuplicationTest" time="0.05"/>
+        <testcase name="testClassesDuplication2" classname="padl.creator.javafile.eclipse.test.advanced.DuplicationTest" time="0.885"/>
+        <testcase name="testClassesDuplication3" classname="padl.creator.javafile.eclipse.test.advanced.DuplicationTest" time="0.645"/>
+        <testcase name="testClassesDuplication4" classname="padl.creator.javafile.eclipse.test.advanced.DuplicationTest" time="0.127"/>
+        <testcase name="testMemberClassesDuplication" classname="padl.creator.javafile.eclipse.test.advanced.DuplicationTest" time="1.135"/>
+        <testcase name="testMethodsAndFieldsDuplication" classname="padl.creator.javafile.eclipse.test.advanced.DuplicationTest" time="0.06"/>
+        <testcase name="testMemberClassesDuplication1" classname="padl.creator.javafile.eclipse.test.advanced.DuplicationTest" time="0.14"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.advanced.EssaiTest" time="0.051">
+        <testcase name="testClassesDuplication" classname="padl.creator.javafile.eclipse.test.advanced.EssaiTest" time="0.051"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.advanced.ExclusionTest" time="0.0">
+        <testcase name="test1" classname="padl.creator.javafile.eclipse.test.advanced.ExclusionTest" time="0.0"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.advanced.FieldsAndReturnTypesTest" time="1.185">
+        <testcase name="testFieldsAndReturnTypes" classname="padl.creator.javafile.eclipse.test.advanced.FieldsAndReturnTypesTest" time="1.185"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.advanced.WeirdTest" time="0.216">
+        <testcase name="testWeirdClass" classname="padl.creator.javafile.eclipse.test.advanced.WeirdTest" time="0.216"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 4 tests [example: padl.creator.javafile.eclipse.test.annotator.ConditionalModelAnnotatorTest]" time="2.577">
+      <testsuite name="padl.creator.javafile.eclipse.test.annotator.ConditionalModelAnnotatorTest" time="0.571">
+        <testcase name="testLoc" classname="padl.creator.javafile.eclipse.test.annotator.ConditionalModelAnnotatorTest" time="0.571"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.annotator.LOCModelAnnotatorTest" time="2.005">
+        <testcase name="testLoc" classname="padl.creator.javafile.eclipse.test.annotator.LOCModelAnnotatorTest" time="0.746"/>
+        <testcase name="testLocAbstractClass" classname="padl.creator.javafile.eclipse.test.annotator.LOCModelAnnotatorTest" time="0.627"/>
+        <testcase name="testLocInterface" classname="padl.creator.javafile.eclipse.test.annotator.LOCModelAnnotatorTest" time="0.631"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 40 tests [example: padl.creator.javafile.eclipse.test.basic.ClassTest]" time="8.586">
+      <testsuite name="padl.creator.javafile.eclipse.test.basic.ClassTest" time="1.554">
+        <testcase name="testDefaultConstructorAddedAutomatically" classname="padl.creator.javafile.eclipse.test.basic.ClassTest" time="0.23"/>
+        <testcase name="testDefaultPackages" classname="padl.creator.javafile.eclipse.test.basic.ClassTest" time="0.208"/>
+        <testcase name="testmethods" classname="padl.creator.javafile.eclipse.test.basic.ClassTest" time="0.234"/>
+        <testcase name="testmethodParameters" classname="padl.creator.javafile.eclipse.test.basic.ClassTest" time="0.16"/>
+        <testcase name="testConstructors" classname="padl.creator.javafile.eclipse.test.basic.ClassTest" time="0.118"/>
+        <testcase name="testClasses" classname="padl.creator.javafile.eclipse.test.basic.ClassTest" time="0.161"/>
+        <testcase name="testFields" classname="padl.creator.javafile.eclipse.test.basic.ClassTest" time="0.146"/>
+        <testcase name="testGhosts" classname="padl.creator.javafile.eclipse.test.basic.ClassTest" time="0.138"/>
+        <testcase name="testClassMembers" classname="padl.creator.javafile.eclipse.test.basic.ClassTest" time="0.158"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.basic.InterfaceTest" time="0.293">
+        <testcase name="testInterfaceNoDefaultConstructor" classname="padl.creator.javafile.eclipse.test.basic.InterfaceTest" time="0.214"/>
+        <testcase name="testInterface1" classname="padl.creator.javafile.eclipse.test.basic.InterfaceTest" time="0.079"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.basic.LightModelCreatorTest" time="2.808">
+        <testcase name="testCreateModelFromJavaFilesList" classname="padl.creator.javafile.eclipse.test.basic.LightModelCreatorTest" time="0.199"/>
+        <testcase name="testCreateModelFromJavaSourceCode" classname="padl.creator.javafile.eclipse.test.basic.LightModelCreatorTest" time="2.609"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="1.046">
+        <testcase name="testInheritanceGhost1" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.02"/>
+        <testcase name="testInheritanceGhost2" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.03"/>
+        <testcase name="testInheritanceGhost3" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.091"/>
+        <testcase name="testInheritanceGhost4" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.094"/>
+        <testcase name="testInheritanceGhost5" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.037"/>
+        <testcase name="testInheritanceGhost6" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.022"/>
+        <testcase name="testInheritanceGhost7" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.03"/>
+        <testcase name="testInheritanceGhost8" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.069"/>
+        <testcase name="testInheritanceGhost9" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.035"/>
+        <testcase name="testInheritanceGhost10" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.03"/>
+        <testcase name="testGhostMember1" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.048"/>
+        <testcase name="testGhostMember2" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.08"/>
+        <testcase name="testGhostMember3" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.056"/>
+        <testcase name="testGhostMember4" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.031"/>
+        <testcase name="testGhostMember5" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.085"/>
+        <testcase name="testInheritanceGhost3bis" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.055"/>
+        <testcase name="testInheritanceGhost4bis" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.021"/>
+        <testcase name="testInheritanceGhost9bis" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.021"/>
+        <testcase name="testInheritanceGhost10bis" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.04"/>
+        <testcase name="testGhostMember2bis" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.044"/>
+        <testcase name="testGhostMember5bis" classname="padl.creator.javafile.eclipse.test.basic.MemberGhostTest" time="0.095"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.basic.ManyClassesInOneFileTest" time="0.028">
+        <testcase name="testManyClassesInOneFile" classname="padl.creator.javafile.eclipse.test.basic.ManyClassesInOneFileTest" time="0.028"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.basic.PackagesTest" time="0.259">
+        <testcase name="testDefaultPackages" classname="padl.creator.javafile.eclipse.test.basic.PackagesTest" time="0.158"/>
+        <testcase name="testPackageIncludedInAnotherPackage1" classname="padl.creator.javafile.eclipse.test.basic.PackagesTest" time="0.101"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.basic.ParametrizedTypesTest" time="0.034">
+        <testcase name="testParametrizedType" classname="padl.creator.javafile.eclipse.test.basic.ParametrizedTypesTest" time="0.034"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.basic.IndirectSourcePathTest" time="2.559">
+        <testcase name="testSourcePathIndirect1" classname="padl.creator.javafile.eclipse.test.basic.IndirectSourcePathTest" time="0.08"/>
+        <testcase name="testSourcePathIndirect" classname="padl.creator.javafile.eclipse.test.basic.IndirectSourcePathTest" time="2.479"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 7 tests [example: padl.creator.javafile.eclipse.test.comparator.LightModelsWithStatisticVisitor]" time="5.105">
+      <testsuite name="padl.creator.javafile.eclipse.test.comparator.LightModelsWithStatisticVisitor" time="3.28">
+        <testcase name="testCompareSourceFolder" classname="padl.creator.javafile.eclipse.test.comparator.LightModelsWithStatisticVisitor" time="3.153"/>
+        <testcase name="testCompareSomeFiles" classname="padl.creator.javafile.eclipse.test.comparator.LightModelsWithStatisticVisitor" time="0.127"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.comparator.ModelsDifferencesReporter" time="1.585">
+        <testcase name="testComparison" classname="padl.creator.javafile.eclipse.test.comparator.ModelsDifferencesReporter" time="1.585"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.comparator.ClassAndFileConventionTest" time="0.087">
+        <testcase name="testUseOfFileClassNameConvention" classname="padl.creator.javafile.eclipse.test.comparator.ClassAndFileConventionTest" time="0.041"/>
+        <testcase name="testUseOfFileClassNameConvention2" classname="padl.creator.javafile.eclipse.test.comparator.ClassAndFileConventionTest" time="0.045"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.comparator.LightModelsWithModelComparatorTest" time="0.151">
+        <testcase name="testModelsFromOneFileComparison2" classname="padl.creator.javafile.eclipse.test.comparator.LightModelsWithModelComparatorTest" time="0.079"/>
+        <testcase name="testModelsFromOneFileComparison" classname="padl.creator.javafile.eclipse.test.comparator.LightModelsWithModelComparatorTest" time="0.071"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 34 tests [example: padl.creator.javafile.eclipse.test.methodinvocation.JavaFilesModelMethodInvocationExplorer]" time="4.298">
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.JavaFilesModelMethodInvocationExplorer" time="0.044">
+        <testcase name="testMethodInvocationInPadl" classname="padl.creator.javafile.eclipse.test.methodinvocation.JavaFilesModelMethodInvocationExplorer" time="0.044"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.MethodInvocationExplorer" time="0.032">
+        <testcase name="testMethodInvocationInPadl" classname="padl.creator.javafile.eclipse.test.methodinvocation.MethodInvocationExplorer" time="0.032"/>
+      </testsuite>
+      <testsuite name="padl.kernel.impl.MethodInvocationTest" time="0.005">
+        <testcase name="testEqualsIMethodInvocation" classname="padl.kernel.impl.MethodInvocationTest" time="0.005"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.others.CompleteCreatorTest" incomplete="true">
+        <testcase name="testCompleteCreatorTest1" classname="padl.creator.javafile.eclipse.test.others.CompleteCreatorTest" incomplete="true"/>
+        <testcase name="testCompleteCreatorTest2" classname="padl.creator.javafile.eclipse.test.others.CompleteCreatorTest" incomplete="true"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.MI_ChainOfMessagesTest" time="0.028">
+        <testcase name="testChainOfMessages" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_ChainOfMessagesTest" time="0.028"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassClassTest1" time="0.369">
+        <testcase name="testCLASS_CLASS1" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassClassTest1" time="0.158"/>
+        <testcase name="testCLASS_CLASS2" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassClassTest1" time="0.212"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassClassTest" time="0.067">
+        <testcase name="testCLASS_CLASS_1" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassClassTest" time="0.033"/>
+        <testcase name="testCLASS_CLASS_2" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassClassTest" time="0.034"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassInstanceFieldTest" time="0.078">
+        <testcase name="testCLASS_INSTANCE_FROM_FIELD1" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassInstanceFieldTest" time="0.041"/>
+        <testcase name="testCLASS_INSTANCE_FROM_FIELD2" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassInstanceFieldTest" time="0.037"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassInstanceTest" time="0.118">
+        <testcase name="testCLASS_INSTANCE_1" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassInstanceTest" time="0.072"/>
+        <testcase name="testCLASS_INSTANCE_2" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassInstanceTest" time="0.046"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.MI_Composite4AbstractDocumentTest" time="0.071">
+        <testcase name="testCLASS_INSTANCE_FROM_FIELD1" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_Composite4AbstractDocumentTest" time="0.04"/>
+        <testcase name="testCLASS_INSTANCE_FROM_FIELD2" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_Composite4AbstractDocumentTest" time="0.031"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.MI_FieldAccessTest" time="0.371">
+        <testcase name="testFieldAccess_CLASS_CLASS" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_FieldAccessTest" time="0.082"/>
+        <testcase name="testFieldAccess_INSTANCE_INSTANCE" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_FieldAccessTest" time="0.143"/>
+        <testcase name="testFieldAccess_INSTANCE_CLASS" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_FieldAccessTest" time="0.144"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceClassTest2" time="0.331">
+        <testcase name="testINSTANCE_CLASS1" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceClassTest2" time="0.158"/>
+        <testcase name="testINSTANCE_CLASS2" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceClassTest2" time="0.173"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceClassTest" time="0.267">
+        <testcase name="testINSTANCE_CLASS_1" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceClassTest" time="0.035"/>
+        <testcase name="testINSTANCE_CLASS_2" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceClassTest" time="0.036"/>
+        <testcase name="testINSTANCE_CLASS_3" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceClassTest" time="0.161"/>
+        <testcase name="testINSTANCE_CLASS_4" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceClassTest" time="0.032"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceCreationTest" time="0.547">
+        <testcase name="testINSTANCE_CREATION_1" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceCreationTest" time="0.033"/>
+        <testcase name="testINSTANCE_CREATION_2" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceCreationTest" time="0.08"/>
+        <testcase name="testINSTANCE_CREATION_3" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceCreationTest" time="0.281"/>
+        <testcase name="testINSTANCE_CREATION_4" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceCreationTest" time="0.152"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceInstanceFieldTest" time="0.076">
+        <testcase name="testINSTANCE_INSTANCE_FROM_FIELD1" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceInstanceFieldTest" time="0.04"/>
+        <testcase name="testINSTANCE_INSTANCE_FROM_FIELD2" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceInstanceFieldTest" time="0.036"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceInstanceTest" time="0.08">
+        <testcase name="testINSTANCE_INSTANCE_1" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceInstanceTest" time="0.049"/>
+        <testcase name="testINSTANCE_INSTANCE_2" classname="padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceInstanceTest" time="0.031"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.methodinvocation.PooyaTest" time="0.119">
+        <testcase name="test1" classname="padl.creator.javafile.eclipse.test.methodinvocation.PooyaTest" time="0.119"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 5 tests [example: padl.creator.javafile.eclipse.test.others.CompleteCreatorTest]" time="50.346">
+      <testsuite name="padl.creator.javafile.eclipse.test.others.CompleteCreatorTest" time="1.691">
+        <testcase name="testCompleteCreatorTest1" classname="padl.creator.javafile.eclipse.test.others.CompleteCreatorTest" time="0.125"/>
+        <testcase name="testCompleteCreatorTest2" classname="padl.creator.javafile.eclipse.test.others.CompleteCreatorTest" time="1.519"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.others.EclipseSnapshotTest" time="0.004">
+        <testcase name="testSourcePathIndirect" classname="padl.creator.javafile.eclipse.test.others.EclipseSnapshotTest" time="0.004"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.others.PADLParserUtilsTest" time="7.084">
+        <testcase name="testGetTypeName" classname="padl.creator.javafile.eclipse.test.others.PADLParserUtilsTest" time="7.084"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.others.ArgoUMLTest" time="37.396">
+        <testcase name="testArgouml" classname="padl.creator.javafile.eclipse.test.others.ArgoUMLTest" time="37.396"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

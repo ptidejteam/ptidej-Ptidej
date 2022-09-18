@@ -1,0 +1,12 @@
+<iReportPlugin 	
+	name="Check for iReport updates..."
+	class="it.businesslogic.ireport.plugin.checkupdate.CheckUpdate"
+	loadOnStartup="true"
+	hide = "false"
+	configurable = "true">
+	
+	<IconFile>/it/businesslogic/ireport/icons/upgrade.png</IconFile>
+	
+	<Description>Check for new iReport versions on iReport site.	</Description>
+
+</iReportPlugin>

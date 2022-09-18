@@ -1,0 +1,49 @@
+/* 
+General comments : 
+
+- UNION and INTERSECTION operation are done on set of classes only.
+*/
+
+RULE_CARD : SwissArmyKnife { 
+   RULE : MultipleInterface {(STRUCT: MULTIPLE_INTERFACE, 2) };
+};
+
+RULE_CARD : Blob { 
+   RULE : Blob {ASSOC: associated FROM: mainClass ONE TO: DataClass MANY } ; 
+   RULE : mainClass {UNION LargeClassLowCohesion ControllerClass } ; 
+   RULE : LargeClassLowCohesion {UNION LargeClass LowCohesion } ; 
+   RULE : LargeClass { (METRIC: NMD + NAD, VERY_HIGH, 0) } ; 
+   RULE : LowCohesion { (METRIC: LCOM5, VERY_HIGH, 0) } ;
+   RULE : ControllerClass {UNION (SEMANTIC: METHODNAME, {Process, Control, Ctrl, Command, Cmd, Process, Proc, UI, Manage, Drive}) 
+                                               (SEMANTIC: CLASSNAME,  {Process, Control, Ctrl, Command, Cmd, Process, Proc, UI, Manage, Drive, System, Subsystem})} ;
+   RULE : DataClass {(STRUCT: METHOD_ACCESSOR, 100) } ;
+} ;
+
+RULE_CARD : SpaghettiCode { 
+   RULE : SpaghettiCode {INTER NoInheritanceClassGlobalVariable LongMethodMethodNoParameter };
+   RULE : LongMethodMethodNoParameter {INTER LongMethod MethodNoParameter }; /* intersection of classes with a long method 
+                                                                                                                                and a method without parameter.  The method does not
+                                                                                                                                have to be the same according to the intersection code */
+   RULE : LongMethod { (METRIC: METHOD_LOC, VERY_HIGH, 0) };
+   RULE : MethodNoParameter {(STRUCT: METHOD_NO_PARAM) };
+   RULE : NoInheritanceClassGlobalVariable {INTER NoInheritance ClassGlobalVariable };
+   RULE : NoInheritance {(METRIC: DIT, 1, 0) };
+   RULE : ClassGlobalVariable {(STRUCT: GLOBAL_VARIABLE) };
+};
+
+RULE_CARD : FunctionalDecomposition { 
+   RULE : FunctionalDecomposition {ASSOC: associated FROM: mainClass ONE TO: aClass MANY };
+   RULE : mainClass {UNION NoInheritPoly FunctionClass};
+   RULE : NoInheritPoly {INTER NoInheritance NoPolymorphism};
+   RULE : NoInheritance {(METRIC: DIT, 1, 0) };
+   RULE : NoPolymorphism { (STRUCT: DIFFERENT_PARAMETER) };
+   RULE : FunctionClass {(SEMANTIC: CLASSNAME, {Make, Create, Creator, Execute, Exec, Compute, Display, Calculate}) } ; 
+   RULE : aClass {INTER ClassOneMethod FieldPrivate};
+   RULE : ClassOneMethod {(STRUCT: ONE_METHOD)};
+   RULE : FieldPrivate {(STRUCT: PRIVATE_FIELD, 100) };
+};
+
+
+RULE_CARD : DummyRuleCard { 
+   RULE : MultipleInterface2 {(STRUCT: MULTIPLE_INTERFACE, 2) };
+};

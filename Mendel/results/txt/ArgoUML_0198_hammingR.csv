@@ -1,0 +1,206 @@
+Family, XMLTokenTableBase, PureOverrider, 1.0, 2, 0
+1, setupTokens() void, 
+Family, AbstractUmlModelFactoryMDR, PureExtender, 1.0, 10, 312
+0, 
+Family, CodePiece, PureOverrider, 0.33333334, 3, 3
+5, getEndPosition() int, getStartPosition() int, getStartLine() int, getText() java.lang.StringBuffer, getEndLine() int, 
+Family, AbstractUmlModelFactory, PureExtender, 1.0, 10, 304
+0, 
+Family, UMLDiagram, Extender, 0.85714287, 7, 99
+11, getActionComposition() javax.swing.Action, isRelocationAllowed(java.lang.Object ) boolean, getNewDiagramName() java.lang.String, relocate(java.lang.Object ) boolean, getUmlActions() java.lang.Object[], getActionAssociation() javax.swing.Action, getActionUniAggregation() javax.swing.Action, getActionUniAssociation() javax.swing.Action, setNamespace(java.lang.Object ) void, getActionUniComposition() javax.swing.Action, getLabelName() java.lang.String, 
+Family, ModelElementNameNotation, Extender, 1.0, 2, 0
+5, generateVisibility() java.lang.String, toString() java.lang.String, getParsingHelp() java.lang.String, generatePath() java.lang.String, parse(java.lang.String ) java.lang.String, 
+Family, AbstractActionAddModelElement, PureOverrider, 1.0, 10, 0
+4, getDialogTitle() java.lang.String, getChoices() java.util.Vector, getSelected() java.util.Vector, doIt(java.util.Vector ) void, 
+Family, MemberFilePersister, PureOverrider, 1.0, 3, 0
+3, getMainTag() java.lang.String, load(org.argouml.kernel.Project java.io.InputStream ) void, save(org.argouml.kernel.ProjectMember java.io.Writer java.lang.Integer ) void, 
+Family, SelectionNodeClarifiers, PureOverrider, 0.71428573, 14, 29
+8, getNewNode(int ) java.lang.Object, createEdgeUnder(org.tigris.gef.graph.MutableGraphModel java.lang.Object ) java.lang.Object, dragHandle(int int int int org.tigris.gef.presentation.Handle ) void, createEdgeRight(org.tigris.gef.graph.MutableGraphModel java.lang.Object ) java.lang.Object, hitHandle(java.awt.Rectangle org.tigris.gef.presentation.Handle ) void, paintButtons(java.awt.Graphics ) void, createEdgeAbove(org.tigris.gef.graph.MutableGraphModel java.lang.Object ) java.lang.Object, createEdgeLeft(org.tigris.gef.graph.MutableGraphModel java.lang.Object ) java.lang.Object, 
+Family, PropPanelFeature, PureExtender, 0.6666667, 3, 8
+0, 
+Family, ActionNewAction, PureOverrider, 1.0, 7, 0
+1, createAction() java.lang.Object, 
+Family, FigClassifierBox, Overrider, 1.0, 2, 20
+19, textEdited(org.tigris.gef.presentation.FigText ) void, makeSelection() org.tigris.gef.base.Selection, clone() java.lang.Object, getLineWidth() int, getPopUpActions(java.awt.event.MouseEvent ) java.util.Vector, modelChanged(java.beans.PropertyChangeEvent ) void, updateStereotypeText() void, translate(int int ) void, getMinimumSize() java.awt.Dimension, classNameAndBounds() java.lang.String, textEditStarted(org.tigris.gef.presentation.FigText ) void, renderingChanged() void, placeString() java.lang.String, setLineWidth(int ) void, setOperationsVisible(boolean ) void, updateOperations() void, setBoundsImpl(int int int int ) void, setEnclosingFig(org.tigris.gef.presentation.Fig ) void, keyPressed(java.awt.event.KeyEvent ) void, 
+Family, CrUML, PureOverrider, 0.7303371, 89, 116
+1, predicate2(java.lang.Object org.argouml.cognitive.Designer ) boolean, 
+Family, AbstractSection, Other, 1.0, 2, 0
+0, 
+Family, CmdCreateNode, PureOverrider, 1.0, 2, 0
+1, makeNode() java.lang.Object, 
+Family, PropPanelModelElement, PureExtender, 0.4642857, 28, 53
+0, 
+Family, UMLComboBoxModel2, PureOverrider, 1.0, 15, 7
+3, isValidElement(java.lang.Object ) boolean, buildModelList() void, getSelectedModelElement() java.lang.Object, 
+Family, PropPanelPackage, Other, 0.5, 2, 1
+0, 
+Family, ToDoPerspective, PureExtender, 1.0, 6, 0
+4, toDoListChanged(org.argouml.cognitive.ToDoListEvent ) void, toDoItemsRemoved(org.argouml.cognitive.ToDoListEvent ) void, toDoItemsChanged(org.argouml.cognitive.ToDoListEvent ) void, toDoItemsAdded(org.argouml.cognitive.ToDoListEvent ) void, 
+Family, UMLModelElementListModel2, PureOverrider, 0.989899, 99, 7
+2, isValidElement(java.lang.Object ) boolean, buildModelList() void, 
+Family, Context, PureOverrider, 1.0, 3, 0
+2, getInterface(java.lang.String ) java.lang.Object, get(java.lang.String ) java.lang.Object, 
+Family, AbstractActionRadioMenuItem, PureOverrider, 1.0, 3, 0
+2, toggleValueOfTarget(java.lang.Object ) void, valueOfTarget(java.lang.Object ) java.lang.Object, 
+Family, ModelMemento, PureOverrider, 1.0, 4, 0
+2, redo() void, undo() void, 
+Family, UMLAction, PureOverrider, 0.83168316, 101, 76
+1, actionPerformed(java.awt.event.ActionEvent ) void, 
+Family, ArgoDialog, PureOverrider, 0.35714287, 14, 36
+1, actionPerformed(java.awt.event.ActionEvent ) void, 
+Family, NamedCodePiece, PureOverrider, 1.0, 7, 0
+6, write(java.io.BufferedReader java.io.BufferedWriter java.util.Stack ) void, getEndPosition() int, getStartPosition() int, getStartLine() int, getText() java.lang.StringBuffer, getEndLine() int, 
+Family, UMLComboBox2, PureOverrider, 0.6666667, 3, 4
+1, doIt(java.awt.event.ActionEvent ) void, 
+Family, AbstractPerspectiveRule, Overrider, 1.0, 68, 2
+3, getRuleName() java.lang.String, getDependencies(java.lang.Object ) java.util.Set, getChildren(java.lang.Object ) java.util.Collection, 
+Family, AbstractCrTooMany, PureOverrider, 1.0, 6, 0
+1, predicate2(java.lang.Object org.argouml.cognitive.Designer ) boolean, 
+Family, FigPackage, PureOverrider, 1.0, 2, 0
+2, placeString() java.lang.String, setBoundsImpl(int int int int ) void, 
+Family, CmdSetMode, Other, 1.0, 4, 0
+0, 
+Family, PropPanelAction, Other, 1.0, 7, 0
+0, 
+Family, AbstractActionNewModelElement, PureOverrider, 0.94736844, 38, 3
+1, actionPerformed(java.awt.event.ActionEvent ) void, 
+Family, FigDependency, Other, 1.0, 2, 0
+0, 
+Family, ModelerImpl$XtorModeler, PureExtender, 1.0, 2, 2
+0, 
+Family, AbstractProjectMember, Overrider, 1.0, 3, 6
+2, getType() java.lang.String, getZipFileExtension() java.lang.String, 
+Family, UMLMultiplicityComboBoxModel, PureOverrider, 1.0, 4, 0
+1, getSelectedModelElement() java.lang.Object, 
+Family, UMLCheckBox2, PureOverrider, 1.0, 13, 0
+1, buildModel() void, 
+Family, FigNodeModelElement, Overrider, 0.47619048, 21, 285
+15, makeSelection() org.tigris.gef.base.Selection, clone() java.lang.Object, getLineWidth() int, setFillColor(java.awt.Color ) void, getLineColor() java.awt.Color, modelChanged(java.beans.PropertyChangeEvent ) void, getMinimumSize() java.awt.Dimension, getFillColor() java.awt.Color, setFilled(boolean ) void, getFilled() boolean, textEditStarted(org.tigris.gef.presentation.FigText ) void, setLineWidth(int ) void, placeString() java.lang.String, setBoundsImpl(int int int int ) void, setLineColor(java.awt.Color ) void, 
+Family, AbstractActionRemoveElement, PureOverrider, 1.0, 3, 1
+1, actionPerformed(java.awt.event.ActionEvent ) void, 
+Family, ToDoItemAction, PureOverrider, 1.0, 3, 1
+1, actionPerformed(java.awt.event.ActionEvent ) void, 
+Family, TransitionNotation, Extender, 1.0, 2, 0
+3, toString() java.lang.String, getParsingHelp() java.lang.String, parse(java.lang.String ) java.lang.String, 
+Family, ActionSetMultiplicity, PureOverrider, 1.0, 4, 0
+1, setSelectedItem(java.lang.Object java.lang.Object ) void, 
+Family, PropPanelEvent, PureOverrider, 1.0, 4, 0
+1, initialize() void, 
+Family, PersistenceException, Other, 0.5, 2, 3
+0, 
+Family, ActionNewEvent, PureOverrider, 1.0, 4, 0
+1, createEvent(java.lang.Object ) java.lang.Object, 
+Family, FileImportSupport, Extender, 0.75, 4, 15
+5, getModuleName() java.lang.String, getModuleDescription() java.lang.String, parseFile(org.argouml.kernel.Project java.lang.Object org.argouml.uml.reveng.DiagramInterface org.argouml.uml.reveng.Import ) void, getModuleKey() java.lang.String, getSuffixFilters() org.argouml.util.SuffixFilter[], 
+Family, AbstractCrUnconventionalName, PureOverrider, 0.5, 4, 8
+5, initWizard(org.argouml.cognitive.ui.Wizard ) void, getClarifier() javax.swing.Icon, computeSuggestion(java.lang.String ) java.lang.String, getWizardClass(org.argouml.cognitive.ToDoItem ) java.lang.Class, predicate2(java.lang.Object org.argouml.cognitive.Designer ) boolean, 
+Family, AbstractFilePersister, PureOverrider, 0.5, 2, 5
+5, doSave(org.argouml.kernel.Project java.io.File ) void, getDesc() java.lang.String, getExtension() java.lang.String, doLoad(java.io.File ) org.argouml.kernel.Project, getMemberFilePersister(org.argouml.kernel.ProjectMember ) org.argouml.persistence.MemberFilePersister, 
+Family, Critic, Overrider, 1.0, 2, 21
+2, toDoItem(java.lang.Object org.argouml.cognitive.Designer ) org.argouml.cognitive.ToDoItem, expand(java.lang.String org.argouml.cognitive.ListSet ) java.lang.String, 
+Family, AssociationChangeEvent, Other, 1.0, 2, 0
+0, 
+Family, PropPanelRelationship, PureExtender, 0.6666667, 3, 3
+0, 
+Family, AbstractModelEventPump, Extender, 0.5, 2, 5
+10, removeClassModelEventListener(java.beans.PropertyChangeListener java.lang.Object java.lang.String[] ) void, reallyFlushModelEvents() void, stopPumpingEvents() void, removeModelEventListener(java.beans.PropertyChangeListener java.lang.Object java.lang.String[] ) void, addModelEventListener(java.beans.PropertyChangeListener java.lang.Object ) void, addModelEventListener(java.beans.PropertyChangeListener java.lang.Object java.lang.String[] ) void, addClassModelEventListener(java.beans.PropertyChangeListener java.lang.Object java.lang.String[] ) void, removeModelEventListener(java.beans.PropertyChangeListener java.lang.Object ) void, flushModelEvents() void, startPumpingEvents() void, 
+Family, AbstractActionNavigate, PureOverrider, 1.0, 9, 3
+1, navigateTo(java.lang.Object ) java.lang.Object, 
+Family, UMLMutableGraphSupport, Overrider, 1.0, 6, 16
+11, addNodeRelatedEdges(java.lang.Object ) void, getPorts(java.lang.Object ) java.util.List, addEdge(java.lang.Object ) void, getInEdges(java.lang.Object ) java.util.List, addNode(java.lang.Object ) void, vetoableChange(java.beans.PropertyChangeEvent ) void, getOwner(java.lang.Object ) java.lang.Object, canAddEdge(java.lang.Object ) boolean, getOutEdges(java.lang.Object ) java.util.List, canConnect(java.lang.Object java.lang.Object ) boolean, canAddNode(java.lang.Object ) boolean, 
+Family, CompositeCM, PureExtender, 1.0, 2, 0
+1, isRelevant(org.argouml.cognitive.critics.Critic org.argouml.cognitive.Designer ) boolean, 
+Family, UMLSearchableComboBox, PureOverrider, 1.0, 2, 2
+0, 
+Family, Generator2, Overrider, 0.8, 5, 53
+28, getModuleName() java.lang.String, generateSubmachine(java.lang.Object ) java.lang.String, generateTaggedValue(java.lang.Object ) java.lang.String, generateTransition(java.lang.Object ) java.lang.String, generateVisibility(java.lang.Object ) java.lang.String, getModuleDescription() java.lang.String, generateMultiplicity(java.lang.Object ) java.lang.String, generateObjectFlowState(java.lang.Object ) java.lang.String, generateActionState(java.lang.Object ) java.lang.String, getModuleKey() java.lang.String, generateFile2(java.lang.Object java.lang.String ) java.lang.String, generateStateBody(java.lang.Object ) java.lang.String, generateClassifier(java.lang.Object ) java.lang.String, generateAssociationRole(java.lang.Object ) java.lang.String, generateAttribute(java.lang.Object boolean ) java.lang.String, generateAssociationEnd(java.lang.Object ) java.lang.String, generateAction(java.lang.Object ) java.lang.String, generateEvent(java.lang.Object ) java.lang.String, generateMessage(java.lang.Object ) java.lang.String, generatePackage(java.lang.Object ) java.lang.String, generateExtensionPoint(java.lang.Object ) java.lang.String, getModuleAuthor() java.lang.String, generateGuard(java.lang.Object ) java.lang.String, generateOperation(java.lang.Object boolean ) java.lang.String, generateParameter(java.lang.Object ) java.lang.String, generateState(java.lang.Object ) java.lang.String, generateAssociation(java.lang.Object ) java.lang.String, getModuleVersion() java.lang.String, 
+Family, UMLWizard, Overrider, 0.9, 10, 25
+3, setInstructions(java.lang.String ) void, makePanel(int ) javax.swing.JPanel, doAction(int ) void, 
+Family, UMLModelElementOrderedListModel2, PureOverrider, 1.0, 10, 0
+3, isValidElement(java.lang.Object ) boolean, swap(int int ) void, buildModelList() void, 
+Family, UMLMutableLinkedList, PureOverrider, 1.0, 8, 0
+1, getPopupMenu() javax.swing.JPopupMenu, 
+Family, FigMessage, Other, 0.5, 4, 2
+0, 
+Family, ArgoEvent, PureOverrider, 1.0, 3, 0
+1, getEventStartRange() int, 
+Family, PropPanelNamespace, Other, 0.33333334, 3, 21
+2, getSpecializationScroll() javax.swing.JScrollPane, getGeneralizationScroll() javax.swing.JScrollPane, 
+Family, ActionAddDiagram, PureOverrider, 1.0, 6, 3
+2, createDiagram(java.lang.Object ) org.argouml.uml.diagram.ui.UMLDiagram, isValidNamespace(java.lang.Object ) boolean, 
+Family, SettingsTabHelper, PureExtender, 1.0, 8, 0
+9, handleSettingsTabSave() void, getTabKey() java.lang.String, getModuleName() java.lang.String, handleSettingsTabRefresh() void, getModuleDescription() java.lang.String, getModuleAuthor() java.lang.String, getModuleKey() java.lang.String, handleSettingsTabCancel() void, getModuleVersion() java.lang.String, 
+Family, UMLRadioButtonPanel, PureOverrider, 1.0, 6, 0
+1, buildModel() void, 
+Family, PropPanelDiagram, Other, 1.0, 7, 0
+0, 
+Family, PHPDocumentor$Tag, Overrider, 0.6, 5, 8
+2, getContent() java.lang.String, setContent(java.lang.String ) boolean, 
+Family, PHPDocumentor$BooleanTag, Other, 1.0, 3, 0
+0, 
+Family, ClassdiagramInheritanceEdge, Other, 1.0, 2, 0
+0, 
+Family, PropPanelStateVertex, Other, 0.5, 4, 9
+0, 
+Family, ActionBaseDelete, PureOverrider, 1.0, 2, 0
+1, getTargets() java.lang.Object[], 
+Family, PropPanelInstance, Other, 1.0, 3, 0
+0, 
+Family, UMLStructuralFeatureTypeComboBoxModel, PureOverrider, 1.0, 2, 0
+1, getSelectedModelElement() java.lang.Object, 
+Family, CustomSeparator, PureOverrider, 1.0, 3, 2
+4, reset() void, tokenLength() int, hasFreePart() boolean, endChar(char ) boolean, 
+Family, UmlChangeEvent, Other, 0.75, 4, 1
+0, 
+Family, PropPanelClassifier, PureExtender, 0.5555556, 9, 10
+0, 
+Family, ClassdiagramEdge, PureOverrider, 0.6666667, 3, 6
+1, layout() void, 
+Family, ArgoDiagram, Extender, 0.5, 2, 40
+0, 
+Family, UMLExpressionModel2, PureOverrider, 1.0, 5, 0
+3, setExpression(java.lang.Object ) void, newExpression() java.lang.Object, getExpression() java.lang.Object, 
+Family, StylePanelFigNodeModelElement, PureOverrider, 0.8, 5, 2
+2, itemStateChanged(java.awt.event.ItemEvent ) void, refresh() void, 
+Family, FigHistoryState, PureOverrider, 1.0, 2, 0
+1, getH() java.lang.String, 
+Family, PropPanelDependency, Other, 1.0, 3, 0
+0, 
+Family, AbstractPropPanelState, Other, 0.6, 5, 4
+0, 
+Family, NSUMLEventListener, PureOverrider, 1.0, 2, 0
+1, delete() void, 
+Family, FigAssociation, Overrider, 1.0, 2, 7
+1, removeFromDiagram() void, 
+Family, UmlDiagramRenderer, PureExtender, 0.8333333, 6, 1
+2, getFigNodeFor(org.tigris.gef.graph.GraphModel org.tigris.gef.base.Layer java.lang.Object java.util.Map ) org.tigris.gef.presentation.FigNode, getFigEdgeFor(org.tigris.gef.graph.GraphModel org.tigris.gef.base.Layer java.lang.Object java.util.Map ) org.tigris.gef.presentation.FigEdge, 
+Family, SAXParserBase, Extender, 1.0, 2, 25
+3, handleEndElement(org.argouml.persistence.XMLElement ) void, handleDescription(org.argouml.persistence.XMLElement ) void, handleStartElement(org.argouml.persistence.XMLElement ) void, 
+Family, AbstractActionCheckBoxMenuItem, PureOverrider, 1.0, 4, 0
+2, toggleValueOfTarget(java.lang.Object ) void, valueOfTarget(java.lang.Object ) boolean, 
+Family, FigEdgeModelElement, PureOverrider, 0.6666667, 12, 65
+4, paint(java.awt.Graphics ) void, setFig(org.tigris.gef.presentation.Fig ) void, modelChanged(java.beans.PropertyChangeEvent ) void, canEdit(org.tigris.gef.presentation.Fig ) boolean, 
+Family, FigState, PureOverrider, 0.5, 4, 18
+17, getInitialHeight() int, clone() java.lang.Object, getLineWidth() int, getInitialY() int, setFillColor(java.awt.Color ) void, getInitialX() int, getLineColor() java.awt.Color, modelChanged(java.beans.PropertyChangeEvent ) void, getMinimumSize() java.awt.Dimension, getFillColor() java.awt.Color, getInitialWidth() int, setFilled(boolean ) void, getFilled() boolean, setLineWidth(int ) void, getUseTrapRect() boolean, setBoundsImpl(int int int int ) void, setLineColor(java.awt.Color ) void, 
+Family, FigFeaturesCompartment, PureOverrider, 1.0, 2, 0
+2, createFeature() void, populate() void, 
+Family, ValueHandler, Other, 0.6666667, 6, 4
+3, toString() java.lang.String, getParsingHelp() java.lang.String, parse(java.lang.String ) java.lang.String, 
+Family, AbstractArgoJPanel, PureExtender, 0.6666667, 12, 123
+7, targetRemoved(org.argouml.ui.targetmanager.TargetEvent ) void, setTarget(java.lang.Object ) void, targetAdded(org.argouml.ui.targetmanager.TargetEvent ) void, shouldBeEnabled(java.lang.Object ) boolean, getTarget() java.lang.Object, targetSet(org.argouml.ui.targetmanager.TargetEvent ) void, refresh() void, 
+Family, AbstractGoList, PureExtender, 1.0, 6, 4
+7, valueForPathChanged(javax.swing.tree.TreePath java.lang.Object ) void, getIndexOfChild(java.lang.Object java.lang.Object ) int, getChildCount(java.lang.Object ) int, getChild(java.lang.Object int ) java.lang.Object, isLeaf(java.lang.Object ) boolean, addTreeModelListener(javax.swing.event.TreeModelListener ) void, removeTreeModelListener(javax.swing.event.TreeModelListener ) void, 
+Family, FigStateVertex, PureOverrider, 0.75, 12, 60
+12, setFilled(boolean ) void, getFilled() boolean, mouseClicked(java.awt.event.MouseEvent ) void, getLineWidth() int, clone() java.lang.Object, setFillColor(java.awt.Color ) void, setLineWidth(int ) void, isResizable() boolean, getLineColor() java.awt.Color, keyPressed(java.awt.event.KeyEvent ) void, setLineColor(java.awt.Color ) void, getFillColor() java.awt.Color, 
+Family, UMLPlainTextDocument, PureOverrider, 1.0, 11, 1
+2, setProperty(java.lang.String ) void, getProperty() java.lang.String, 
+Family, PHPDocumentor$SimpleTag, Other, 1.0, 7, 0
+0, 
+Family, PropPanel, PureExtender, 0.5, 4, 24
+0, 
+Family, FigCompartment, Overrider, 1.0, 2, 8
+2, populate() void, setBoundsImpl(int int int int ) void, 
+Family, StylePanelFig, Overrider, 0.5, 4, 13
+1, refresh() void, 
+Family, WizStep, Other, 0.33333334, 6, 5
+0, 

@@ -1,0 +1,3 @@
+rsc/D1/SearchProgressMonitor_1.1.java
+rsc/D1/org.eclipse.jdt.core/antadapter/JDTCompilerAdapter_1.1.java
+rsc/D1/org.eclipse.jdt.core/antadapter/JDTCompilerAdapter_1.2.java

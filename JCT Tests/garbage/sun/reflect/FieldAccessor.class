@@ -1,0 +1,95 @@
+package sun.reflect;
+abstract public interface FieldAccessor
+{
+abstract public java.lang.Object get(java.lang.Object arg0) throws java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public boolean getBoolean(java.lang.Object arg0) throws java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public byte getByte(java.lang.Object arg0) throws java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public char getChar(java.lang.Object arg0) throws java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public short getShort(java.lang.Object arg0) throws java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public int getInt(java.lang.Object arg0) throws java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public long getLong(java.lang.Object arg0) throws java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public float getFloat(java.lang.Object arg0) throws java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public double getDouble(java.lang.Object arg0) throws java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public void set(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public void setBoolean(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public void setByte(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public void setChar(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public void setShort(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public void setInt(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public void setLong(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public void setFloat(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+abstract public void setDouble(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.IllegalAccessException, java.lang.IllegalArgumentException
+{
+
+}
+
+
+}

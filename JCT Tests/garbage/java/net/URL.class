@@ -1,0 +1,256 @@
+package java.net;
+final public class URL
+implements java.io.Serializable
+{
+final static java.lang.Object BUILTIN_HANDLERS_PREFIX;
+
+final static java.lang.Object serialVersionUID;
+
+final private static java.lang.Object protocolPathProp;
+
+private java.lang.Object protocol;
+
+private java.lang.Object host;
+
+private java.lang.Object port;
+
+private java.lang.Object file;
+
+private transient java.lang.Object query;
+
+private java.lang.Object authority;
+
+private transient java.lang.Object path;
+
+private transient java.lang.Object userInfo;
+
+private java.lang.Object ref;
+
+transient java.lang.Object hostAddress;
+
+transient java.lang.Object handler;
+
+private java.lang.Object hashCode;
+
+private transient java.lang.Object tempState;
+
+static java.lang.Object factory;
+
+static java.lang.Object handlers;
+
+private static java.lang.Object streamHandlerLock;
+
+final private static java.lang.Object serialPersistentFields;
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3) throws java.net.MalformedURLException
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.net.MalformedURLException
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4) throws java.net.MalformedURLException
+{
+
+}
+
+public void <init>(java.lang.Object arg0) throws java.net.MalformedURLException
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1) throws java.net.MalformedURLException
+{
+
+}
+
+public void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.net.MalformedURLException
+{
+
+}
+
+private boolean isValidProtocol(java.lang.Object arg0)
+{
+
+}
+
+private void checkSpecifyHandler(java.lang.Object arg0)
+{
+
+}
+
+void set(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4)
+{
+
+}
+
+void set(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5, java.lang.Object arg6, java.lang.Object arg7)
+{
+
+}
+
+public java.lang.String getQuery()
+{
+
+}
+
+public java.lang.String getPath()
+{
+
+}
+
+public java.lang.String getUserInfo()
+{
+
+}
+
+public java.lang.String getAuthority()
+{
+
+}
+
+public int getPort()
+{
+
+}
+
+public int getDefaultPort()
+{
+
+}
+
+public java.lang.String getProtocol()
+{
+
+}
+
+public java.lang.String getHost()
+{
+
+}
+
+public java.lang.String getFile()
+{
+
+}
+
+public java.lang.String getRef()
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public synchronized int hashCode()
+{
+
+}
+
+public boolean sameFile(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+public java.lang.String toExternalForm()
+{
+
+}
+
+public java.net.URI toURI() throws java.net.URISyntaxException
+{
+
+}
+
+public java.net.URLConnection openConnection() throws java.io.IOException
+{
+
+}
+
+public java.net.URLConnection openConnection(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+final public java.io.InputStream openStream() throws java.io.IOException
+{
+
+}
+
+final public java.lang.Object getContent() throws java.io.IOException
+{
+
+}
+
+final public java.lang.Object getContent(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+public static void setURLStreamHandlerFactory(java.lang.Object arg0)
+{
+
+}
+
+static java.net.URLStreamHandler getURLStreamHandler(java.lang.Object arg0)
+{
+
+}
+
+private synchronized void writeObject(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+private synchronized void readObject(java.lang.Object arg0) throws java.io.IOException, java.lang.ClassNotFoundException
+{
+
+}
+
+private java.lang.Object readResolve() throws java.io.ObjectStreamException
+{
+
+}
+
+private java.net.URL setDeserializedFields(java.lang.Object arg0)
+{
+
+}
+
+private java.net.URL fabricateNewURL() throws java.io.InvalidObjectException
+{
+
+}
+
+private boolean isBuiltinStreamHandler(java.lang.Object arg0)
+{
+
+}
+
+private void resetState()
+{
+
+}
+
+private void setSerializedHashCode(java.lang.Object arg0)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

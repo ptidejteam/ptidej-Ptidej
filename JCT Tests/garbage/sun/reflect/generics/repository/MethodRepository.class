@@ -1,0 +1,23 @@
+package sun.reflect.generics.repository;
+public class MethodRepository
+extends sun.reflect.generics.repository.ConstructorRepository
+{
+private java.lang.Object returnType;
+
+private void <init>(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static sun.reflect.generics.repository.MethodRepository make(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public java.lang.reflect.Type getReturnType()
+{
+
+}
+
+
+}

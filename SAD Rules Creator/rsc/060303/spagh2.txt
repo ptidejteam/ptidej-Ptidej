@@ -1,0 +1,27 @@
+RULE_CARD : SpaghettiCode2 { 
+
+RULE : SpaghettiCode {AGGREG: is-composed-of FROM: NoInheritanceNoPolymorphism ONE TO: ClassProcessGlobalVariableLongMethodMethodNoParameter ONE_OR_MANY };
+
+RULE : NoInheritanceNoPolymorphism {UNION NoInheritance NoPolymorphism};
+
+RULE : NoInheritance;
+
+RULE : NoPolymorphism;
+
+RULE : ClassProcessGlobalVariableLongMethodMethodNoParameter {INTER ClassProcessGlobalVariable LongMethodMethodNoParameter };
+
+RULE : LongMethodMethodNoParameter {INTER LongMethod MethodNoParameter };
+
+RULE : LongMethod;
+
+RULE : MethodNoParameter;
+
+RULE : ClassProcessClassGlobalVariable {UNION ClassProcess ClassGlobalVariable };
+
+RULE : ClassProcess; 
+
+RULE : ClassGlobalVariable;
+
+};
+
+

@@ -1,0 +1,23 @@
+package java.lang;
+public class NumberFormatException
+extends java.lang.IllegalArgumentException
+{
+final static java.lang.Object serialVersionUID;
+
+public void <init>()
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+static java.lang.NumberFormatException forInputString(java.lang.Object arg0)
+{
+
+}
+
+
+}

@@ -1,0 +1,91 @@
+/*******************************************************************************
+ * Copyright (c) 2000, 2003 IBM Corporation and others.
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Common Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/cpl-v10.html
+ * 
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *******************************************************************************/
+package org.eclipse.help.internal.search;
+
+import java.util.*;
+
+import org.apache.lucene.search.*;
+import org.eclipse.core.runtime.*;
+import org.eclipse.help.internal.*;
+import org.eclipse.help.internal.util.*;
+
+/**
+ * Progress monitor for search
+ * @since 2.0
+ */
+public class SearchProgressMonitor implements IProgressMonitor {
+
+	// sorter is an attribute which is wired
+	private Sorter sorter = new Sorter() { //this commennt is for Sorter
+
+		// method comapre belongs to Sorter
+		// it has two params
+		public boolean compare(Object o1, Object o2) { //method compare has ten line
+
+			Collator collator = Collator.getInstance(); //4
+			/*
+			this comment is for String s1 in compare method
+			*/
+			String s1 = ((IEditorDescriptor)o1).getLabel(); //5
+			String s2 = ((IEditorDescriptor)o2).getLabel(); //5
+			//Return true if elementTwo is 'greater than' elementOne
+			return collator.compare(s2, s1) > 0; //4
+		}
+		// this comment shows the end of class  sorter
+
+	};
+
+	static {
+		private String totbnhjygt; //comment one for this static block
+		ISearchHitCollector dummy_collector = new ISearchHitCollector() { //comment two for this static block
+			public void addHits(Hits h, String s) { //comment three for this static block
+				int jojo=0;
+			}
+		};
+
+	}
+	
+   // comments for s1, s2
+	String s1, // comment for s1
+		   s2, s3; // commnets for s2
+				// comments two for s2
+	private Image getImage(IEditorDescriptor editorDesc) { //the method getImage belongs to class SearchProgressMonitor
+		// a varibale inside method getImage
+		ImageDescriptor imageDesc = getImageDescriptor(editorDesc); 
+		if (imageDesc == null) {
+			return null;
+		}
+		Image image = (Image) imageCache.get(imageDesc); 
+		if (image == null) {
+			image = imageDesc.createImage(); 
+			imageCache.put(imageDesc, image); 
+		}
+
+
+		/*
+		the class toto
+		belongs to method getImage
+		*/
+		TOTO tot=new TOTO(){ // a comment for calss TOTO
+			public void mymethod(){ 
+				/*
+				this comment is for variable proj
+				*/
+				int proj=3; 
+			}
+			// this is end of class TOTO
+		};
+
+		return lastword; 
+	}
+	
+
+}

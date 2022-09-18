@@ -1,0 +1,10 @@
+package java.security;
+abstract public interface PrivilegedAction
+{
+abstract public java.lang.Object run()
+{
+
+}
+
+
+}

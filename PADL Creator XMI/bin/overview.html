@@ -1,0 +1,57 @@
+<html><body>
+SDMetrics - the design measurement tool for the UML&trade;.
+
+<p>Where to get started:</p>
+
+<b>To integrate SDMetrics's measurement capabilities in your
+application:</b><p>
+<ul>
+<li>Read Section 4 of the SDMetrics 
+<a href="http://www.sdmetrics.com/manual/">User Manual</a> to become
+familiar with basic SDMetrics concepts (project files, filter settings,
+metric data tables, design rule checking,
+relation matrices, data export).
+<li>The XMI parser is provided in package {@link com.sdmetrics.model}.
+The description of that package contains a tutorial how to read
+an XMI file and access the model elements.
+<li>To calculate metrics and check design rules, use the classes
+in package {@link com.sdmetrics.metrics}. The tutorial for the
+package shows you how.
+<li>The classes in package {@link com.sdmetrics.app} further automate
+the calculation/checking of all design metrics/rules for a model, and
+summarize the results in data tables. The tutorial for that package
+ shows how to create and access the tables.
+<li>Package {@link com.sdmetrics.output} provides data export for the
+data tables to CSV, HTML, or as spreadsheets for OpenOffice.org or
+Excel.
+<li>The command line utility in package {@link com.sdmetrics.cmdline}  
+ties the SDMetrics core functionality together in one simple application.
+</ul>
+
+<b>To add new metrics (or rules or relation matrices):</b><p>
+<ul>
+<li>Read Chapters 7 and 8 of the SDMetrics 
+<a href="http://www.sdmetrics.com/manual/">User Manual</a> to become
+familiar with SDMetrics project file formats for metamodel
+definitions, XMI transformations, and the SDMetricsML to write
+metric definition files.
+
+<li>Most of the time, you can just add the definition of the new metric
+to the metric definition file, without having to change anything else.
+
+<li>If your new metric requires information that is currently not
+contained in SDMetrics' UML metamodel
+<ul><li> extend the metamodel definition file with the new metamodel
+elements or attributes that you needed,
+<li>add XMI transformations and triggers for the new metamodel
+elements and attributes to the XMI transformation files.
+<li>Add the metrics to the metric definition files, using the new
+element types and/or attributes.<br>
+</ul>
+
+<li>If your new metrics cannot be expressed using the capabilities of the
+SDMetricsML, an extension of the metrics engine
+is required. The overall procedure is described in Chapter 9 of the
+SDMetrics <a href="http://www.sdmetrics.com/manual/">user manual</a>.
+</ul>
+</body>

@@ -1,0 +1,70 @@
+package java.net;
+abstract public class URLStreamHandler
+{
+public void <init>()
+{
+
+}
+
+abstract protected java.net.URLConnection openConnection(java.lang.Object arg0) throws java.io.IOException
+{
+
+}
+
+protected java.net.URLConnection openConnection(java.lang.Object arg0, java.lang.Object arg1) throws java.io.IOException
+{
+
+}
+
+protected void parseURL(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+protected int getDefaultPort()
+{
+
+}
+
+protected boolean equals(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+protected int hashCode(java.lang.Object arg0)
+{
+
+}
+
+protected boolean sameFile(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+protected synchronized java.net.InetAddress getHostAddress(java.lang.Object arg0)
+{
+
+}
+
+protected boolean hostsEqual(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+protected java.lang.String toExternalForm(java.lang.Object arg0)
+{
+
+}
+
+protected void setURL(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5, java.lang.Object arg6, java.lang.Object arg7, java.lang.Object arg8)
+{
+
+}
+
+protected void setURL(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3, java.lang.Object arg4, java.lang.Object arg5)
+{
+
+}
+
+
+}

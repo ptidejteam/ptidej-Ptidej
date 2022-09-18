@@ -1,0 +1,17 @@
+FM_Juzzle
+
+null
+Step	ProblemCreation	Solver	Total
+Ruled	0'0	0'0	0'0
+No Rule	0'0	0'0	0'0
+
+Var	DomainNoRule	DomainRuled	Reduction
+concreteCreator	99	1	98%
+concreteProduct	99	0	100%
+
+Solutions	Total	Ghosted	Valabe
+Ruled	0	0	0
+No rule	70	62	8
+
+Inclusion:
+0 solutions included of 0

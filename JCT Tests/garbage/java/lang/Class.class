@@ -1,0 +1,919 @@
+package java.lang;
+final public class Class
+implements java.io.Serializable, java.lang.reflect.AnnotatedElement, java.lang.reflect.GenericDeclaration, java.lang.reflect.Type
+{
+private static class AnnotationData
+{
+final java.lang.Object annotations;
+
+final java.lang.Object declaredAnnotations;
+
+final java.lang.Object redefinedCount;
+
+void <init>(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+
+}
+
+private static class Atomic
+{
+final private static java.lang.Object unsafe;
+
+final private static java.lang.Object reflectionDataOffset;
+
+final private static java.lang.Object annotationTypeOffset;
+
+final private static java.lang.Object annotationDataOffset;
+
+private void <init>()
+{
+
+}
+
+private static long objectFieldOffset(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static boolean casReflectionData(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+static boolean casAnnotationType(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+static boolean casAnnotationData(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}
+
+final private static class EnclosingMethodInfo
+{
+private java.lang.Object enclosingClass;
+
+private java.lang.Object name;
+
+private java.lang.Object descriptor;
+
+private void <init>(java.lang.Object arg0)
+{
+
+}
+
+boolean isPartial()
+{
+
+}
+
+boolean isConstructor()
+{
+
+}
+
+boolean isMethod()
+{
+
+}
+
+java.lang.Class getEnclosingClass()
+{
+
+}
+
+java.lang.String getName()
+{
+
+}
+
+java.lang.String getDescriptor()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}
+
+static class MethodArray
+{
+private java.lang.Object methods;
+
+private java.lang.Object length;
+
+private java.lang.Object defaults;
+
+void <init>()
+{
+
+}
+
+void <init>(java.lang.Object arg0)
+{
+
+}
+
+boolean hasDefaults()
+{
+
+}
+
+void add(java.lang.Object arg0)
+{
+
+}
+
+void addAll(java.lang.Object arg0)
+{
+
+}
+
+void addAll(java.lang.Object arg0)
+{
+
+}
+
+void addIfNotPresent(java.lang.Object arg0)
+{
+
+}
+
+void addAllIfNotPresent(java.lang.Object arg0)
+{
+
+}
+
+void addInterfaceMethods(java.lang.Object arg0)
+{
+
+}
+
+int length()
+{
+
+}
+
+java.lang.reflect.Method get(java.lang.Object arg0)
+{
+
+}
+
+java.lang.reflect.Method getFirst()
+{
+
+}
+
+void removeByNameAndDescriptor(java.lang.Object arg0)
+{
+
+}
+
+private void remove(java.lang.Object arg0)
+{
+
+}
+
+private boolean matchesNameAndDescriptor(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+void compactAndTrim()
+{
+
+}
+
+void removeLessSpecifics()
+{
+
+}
+
+java.lang.reflect.Method[] getArray()
+{
+
+}
+
+static boolean hasMoreSpecificClass(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+
+}
+
+private static class ReflectionData
+{
+volatile java.lang.Object declaredFields;
+
+volatile java.lang.Object publicFields;
+
+volatile java.lang.Object declaredMethods;
+
+volatile java.lang.Object publicMethods;
+
+volatile java.lang.Object declaredConstructors;
+
+volatile java.lang.Object publicConstructors;
+
+volatile java.lang.Object declaredPublicFields;
+
+volatile java.lang.Object declaredPublicMethods;
+
+volatile java.lang.Object interfaces;
+
+final java.lang.Object redefinedCount;
+
+void <init>(java.lang.Object arg0)
+{
+
+}
+
+
+}
+
+final private static java.lang.Object ANNOTATION;
+
+final private static java.lang.Object ENUM;
+
+final private static java.lang.Object SYNTHETIC;
+
+private transient volatile java.lang.Object cachedConstructor;
+
+private transient volatile java.lang.Object newInstanceCallerCache;
+
+private transient java.lang.Object name;
+
+final private java.lang.Object classLoader;
+
+private static java.lang.Object allPermDomain;
+
+private static java.lang.Object useCaches;
+
+private transient volatile java.lang.Object reflectionData;
+
+private transient volatile java.lang.Object classRedefinedCount;
+
+private transient volatile java.lang.Object genericInfo;
+
+final private static java.lang.Object serialVersionUID;
+
+final private static java.lang.Object serialPersistentFields;
+
+private static java.lang.Object reflectionFactory;
+
+private static java.lang.Object initted;
+
+private transient volatile java.lang.Object enumConstants;
+
+private transient volatile java.lang.Object enumConstantDirectory;
+
+private transient volatile java.lang.Object annotationData;
+
+private transient volatile java.lang.Object annotationType;
+
+transient java.lang.Object classValueMap;
+
+native private static void registerNatives()
+{
+
+}
+
+private void <init>(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+public java.lang.String toGenericString()
+{
+
+}
+
+public static java.lang.Class forName(java.lang.Object arg0) throws java.lang.ClassNotFoundException
+{
+
+}
+
+public static java.lang.Class forName(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2) throws java.lang.ClassNotFoundException
+{
+
+}
+
+native private static java.lang.Class forName0(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3) throws java.lang.ClassNotFoundException
+{
+
+}
+
+public java.lang.Object newInstance() throws java.lang.IllegalAccessException, java.lang.InstantiationException
+{
+
+}
+
+native public boolean isInstance(java.lang.Object arg0)
+{
+
+}
+
+native public boolean isAssignableFrom(java.lang.Object arg0)
+{
+
+}
+
+native public boolean isInterface()
+{
+
+}
+
+native public boolean isArray()
+{
+
+}
+
+native public boolean isPrimitive()
+{
+
+}
+
+public boolean isAnnotation()
+{
+
+}
+
+public boolean isSynthetic()
+{
+
+}
+
+public java.lang.String getName()
+{
+
+}
+
+native private java.lang.String getName0()
+{
+
+}
+
+public java.lang.ClassLoader getClassLoader()
+{
+
+}
+
+java.lang.ClassLoader getClassLoader0()
+{
+
+}
+
+public java.lang.reflect.TypeVariable[] getTypeParameters()
+{
+
+}
+
+native public java.lang.Class getSuperclass()
+{
+
+}
+
+public java.lang.reflect.Type getGenericSuperclass()
+{
+
+}
+
+public java.lang.Package getPackage()
+{
+
+}
+
+public java.lang.Class[] getInterfaces()
+{
+
+}
+
+native private java.lang.Class[] getInterfaces0()
+{
+
+}
+
+public java.lang.reflect.Type[] getGenericInterfaces()
+{
+
+}
+
+native public java.lang.Class getComponentType()
+{
+
+}
+
+native public int getModifiers()
+{
+
+}
+
+native public java.lang.Object[] getSigners()
+{
+
+}
+
+native void setSigners(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.reflect.Method getEnclosingMethod() throws java.lang.SecurityException
+{
+
+}
+
+native private java.lang.Object[] getEnclosingMethod0()
+{
+
+}
+
+private java.lang.Class.EnclosingMethodInfo getEnclosingMethodInfo()
+{
+
+}
+
+private static java.lang.Class toClass(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.reflect.Constructor getEnclosingConstructor() throws java.lang.SecurityException
+{
+
+}
+
+public java.lang.Class getDeclaringClass() throws java.lang.SecurityException
+{
+
+}
+
+native private java.lang.Class getDeclaringClass0()
+{
+
+}
+
+public java.lang.Class getEnclosingClass() throws java.lang.SecurityException
+{
+
+}
+
+public java.lang.String getSimpleName()
+{
+
+}
+
+public java.lang.String getTypeName()
+{
+
+}
+
+private static boolean isAsciiDigit(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.String getCanonicalName()
+{
+
+}
+
+public boolean isAnonymousClass()
+{
+
+}
+
+public boolean isLocalClass()
+{
+
+}
+
+public boolean isMemberClass()
+{
+
+}
+
+private java.lang.String getSimpleBinaryName()
+{
+
+}
+
+private boolean isLocalOrAnonymousClass()
+{
+
+}
+
+public java.lang.Class[] getClasses()
+{
+
+}
+
+public java.lang.reflect.Field[] getFields() throws java.lang.SecurityException
+{
+
+}
+
+public java.lang.reflect.Method[] getMethods() throws java.lang.SecurityException
+{
+
+}
+
+public java.lang.reflect.Constructor[] getConstructors() throws java.lang.SecurityException
+{
+
+}
+
+public java.lang.reflect.Field getField(java.lang.Object arg0) throws java.lang.NoSuchFieldException, java.lang.SecurityException
+{
+
+}
+
+public java.lang.reflect.Method getMethod(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.NoSuchMethodException, java.lang.SecurityException
+{
+
+}
+
+public java.lang.reflect.Constructor getConstructor(java.lang.Object arg0) throws java.lang.NoSuchMethodException, java.lang.SecurityException
+{
+
+}
+
+public java.lang.Class[] getDeclaredClasses() throws java.lang.SecurityException
+{
+
+}
+
+public java.lang.reflect.Field[] getDeclaredFields() throws java.lang.SecurityException
+{
+
+}
+
+public java.lang.reflect.Method[] getDeclaredMethods() throws java.lang.SecurityException
+{
+
+}
+
+public java.lang.reflect.Constructor[] getDeclaredConstructors() throws java.lang.SecurityException
+{
+
+}
+
+public java.lang.reflect.Field getDeclaredField(java.lang.Object arg0) throws java.lang.NoSuchFieldException, java.lang.SecurityException
+{
+
+}
+
+public java.lang.reflect.Method getDeclaredMethod(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.NoSuchMethodException, java.lang.SecurityException
+{
+
+}
+
+public java.lang.reflect.Constructor getDeclaredConstructor(java.lang.Object arg0) throws java.lang.NoSuchMethodException, java.lang.SecurityException
+{
+
+}
+
+public java.io.InputStream getResourceAsStream(java.lang.Object arg0)
+{
+
+}
+
+public java.net.URL getResource(java.lang.Object arg0)
+{
+
+}
+
+public java.security.ProtectionDomain getProtectionDomain()
+{
+
+}
+
+native private java.security.ProtectionDomain getProtectionDomain0()
+{
+
+}
+
+native static java.lang.Class getPrimitiveClass(java.lang.Object arg0)
+{
+
+}
+
+private void checkMemberAccess(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private void checkPackageAccess(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.lang.String resolveName(java.lang.Object arg0)
+{
+
+}
+
+private java.lang.Class.ReflectionData reflectionData()
+{
+
+}
+
+private java.lang.Class.ReflectionData newReflectionData(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+native private java.lang.String getGenericSignature0()
+{
+
+}
+
+private sun.reflect.generics.factory.GenericsFactory getFactory()
+{
+
+}
+
+private sun.reflect.generics.repository.ClassRepository getGenericInfo()
+{
+
+}
+
+native byte[] getRawAnnotations()
+{
+
+}
+
+native byte[] getRawTypeAnnotations()
+{
+
+}
+
+static byte[] getExecutableTypeAnnotationBytes(java.lang.Object arg0)
+{
+
+}
+
+native sun.reflect.ConstantPool getConstantPool()
+{
+
+}
+
+private java.lang.reflect.Field[] privateGetDeclaredFields(java.lang.Object arg0)
+{
+
+}
+
+private java.lang.reflect.Field[] privateGetPublicFields(java.lang.Object arg0)
+{
+
+}
+
+private static void addAll(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.lang.reflect.Constructor[] privateGetDeclaredConstructors(java.lang.Object arg0)
+{
+
+}
+
+private java.lang.reflect.Method[] privateGetDeclaredMethods(java.lang.Object arg0)
+{
+
+}
+
+private java.lang.reflect.Method[] privateGetPublicMethods()
+{
+
+}
+
+private static java.lang.reflect.Field searchFields(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private java.lang.reflect.Field getField0(java.lang.Object arg0) throws java.lang.NoSuchFieldException
+{
+
+}
+
+private static java.lang.reflect.Method searchMethods(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private java.lang.reflect.Method getMethod0(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2)
+{
+
+}
+
+private java.lang.reflect.Method privateGetMethodRecursive(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3)
+{
+
+}
+
+private java.lang.reflect.Constructor getConstructor0(java.lang.Object arg0, java.lang.Object arg1) throws java.lang.NoSuchMethodException
+{
+
+}
+
+private static boolean arrayContentsEq(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+private static java.lang.reflect.Field[] copyFields(java.lang.Object arg0)
+{
+
+}
+
+private static java.lang.reflect.Method[] copyMethods(java.lang.Object arg0)
+{
+
+}
+
+private static java.lang.reflect.Constructor[] copyConstructors(java.lang.Object arg0)
+{
+
+}
+
+native private java.lang.reflect.Field[] getDeclaredFields0(java.lang.Object arg0)
+{
+
+}
+
+native private java.lang.reflect.Method[] getDeclaredMethods0(java.lang.Object arg0)
+{
+
+}
+
+native private java.lang.reflect.Constructor[] getDeclaredConstructors0(java.lang.Object arg0)
+{
+
+}
+
+native private java.lang.Class[] getDeclaredClasses0()
+{
+
+}
+
+private static java.lang.String argumentTypesToString(java.lang.Object arg0)
+{
+
+}
+
+public boolean desiredAssertionStatus()
+{
+
+}
+
+native private static boolean desiredAssertionStatus0(java.lang.Object arg0)
+{
+
+}
+
+public boolean isEnum()
+{
+
+}
+
+private static sun.reflect.ReflectionFactory getReflectionFactory()
+{
+
+}
+
+private static void checkInitted()
+{
+
+}
+
+public java.lang.Object[] getEnumConstants()
+{
+
+}
+
+java.lang.Object[] getEnumConstantsShared()
+{
+
+}
+
+java.util.Map enumConstantDirectory()
+{
+
+}
+
+public java.lang.Object cast(java.lang.Object arg0)
+{
+
+}
+
+private java.lang.String cannotCastMsg(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.Class asSubclass(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.annotation.Annotation getAnnotation(java.lang.Object arg0)
+{
+
+}
+
+public boolean isAnnotationPresent(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.annotation.Annotation[] getAnnotationsByType(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.annotation.Annotation[] getAnnotations()
+{
+
+}
+
+public java.lang.annotation.Annotation getDeclaredAnnotation(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.annotation.Annotation[] getDeclaredAnnotationsByType(java.lang.Object arg0)
+{
+
+}
+
+public java.lang.annotation.Annotation[] getDeclaredAnnotations()
+{
+
+}
+
+private java.lang.Class.AnnotationData annotationData()
+{
+
+}
+
+private java.lang.Class.AnnotationData createAnnotationData(java.lang.Object arg0)
+{
+
+}
+
+boolean casAnnotationType(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+sun.reflect.annotation.AnnotationType getAnnotationType()
+{
+
+}
+
+java.util.Map getDeclaredAnnotationMap()
+{
+
+}
+
+public java.lang.reflect.AnnotatedType getAnnotatedSuperclass()
+{
+
+}
+
+public java.lang.reflect.AnnotatedType[] getAnnotatedInterfaces()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

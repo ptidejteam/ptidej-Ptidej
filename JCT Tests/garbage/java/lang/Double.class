@@ -1,0 +1,188 @@
+package java.lang;
+final public class Double
+extends java.lang.Number
+implements java.lang.Comparable
+{
+final public static java.lang.Object POSITIVE_INFINITY;
+
+final public static java.lang.Object NEGATIVE_INFINITY;
+
+final public static java.lang.Object NaN;
+
+final public static java.lang.Object MAX_VALUE;
+
+final public static java.lang.Object MIN_NORMAL;
+
+final public static java.lang.Object MIN_VALUE;
+
+final public static java.lang.Object MAX_EXPONENT;
+
+final public static java.lang.Object MIN_EXPONENT;
+
+final public static java.lang.Object SIZE;
+
+final public static java.lang.Object BYTES;
+
+final public static java.lang.Object TYPE;
+
+final private java.lang.Object value;
+
+final private static java.lang.Object serialVersionUID;
+
+public static java.lang.String toString(java.lang.Object arg0)
+{
+
+}
+
+public static java.lang.String toHexString(java.lang.Object arg0)
+{
+
+}
+
+public static java.lang.Double valueOf(java.lang.Object arg0) throws java.lang.NumberFormatException
+{
+
+}
+
+public static java.lang.Double valueOf(java.lang.Object arg0)
+{
+
+}
+
+public static double parseDouble(java.lang.Object arg0) throws java.lang.NumberFormatException
+{
+
+}
+
+public static boolean isNaN(java.lang.Object arg0)
+{
+
+}
+
+public static boolean isInfinite(java.lang.Object arg0)
+{
+
+}
+
+public static boolean isFinite(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0)
+{
+
+}
+
+public void <init>(java.lang.Object arg0) throws java.lang.NumberFormatException
+{
+
+}
+
+public boolean isNaN()
+{
+
+}
+
+public boolean isInfinite()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+public byte byteValue()
+{
+
+}
+
+public short shortValue()
+{
+
+}
+
+public int intValue()
+{
+
+}
+
+public long longValue()
+{
+
+}
+
+public float floatValue()
+{
+
+}
+
+public double doubleValue()
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public static int hashCode(java.lang.Object arg0)
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public static long doubleToLongBits(java.lang.Object arg0)
+{
+
+}
+
+native public static long doubleToRawLongBits(java.lang.Object arg0)
+{
+
+}
+
+native public static double longBitsToDouble(java.lang.Object arg0)
+{
+
+}
+
+public int compareTo(java.lang.Object arg0)
+{
+
+}
+
+public static int compare(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static double sum(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static double max(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+public static double min(java.lang.Object arg0, java.lang.Object arg1)
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

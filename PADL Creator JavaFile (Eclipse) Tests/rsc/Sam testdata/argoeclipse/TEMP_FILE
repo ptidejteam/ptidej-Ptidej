@@ -1,0 +1,59 @@
+
+--------- Original GoF Patterns ----------
+
+
+
+Flyweight Pattern.
+LRU is a flyweight factory.
+IMPORT_SOURCES_FILESYSTEM_PATH is a flyweight object (declared public-static-final).
+File location: trunk/argoeclipse/core/src/org/argouml/argoeclipse/internal/core/model/LRU.java
+
+Factory Method pattern.
+UniqueSelection is a Factory Method class.
+UniqueSelectionImportSetting is a concrete Factory Method class.
+getOptions is a factory method returns  ArrayList
+ which extends List
+File Location: trunk/argouml/src/org/argouml/uml/reveng/UniqueSelectionImportSetting.java
+
+
+------------------------------------------
+
+Pattern Instance Statistics:
+
+Creational Patterns
+==============================
+Abstract Factory            1
+Factory Method              1
+Singleton                   0
+------------------------------
+Structural Patterns
+==============================
+Adapter                     0
+Bridge                      0
+Composite                   0
+Decorator                   0
+Facade                      0
+Flyweight                   1
+Proxy                       0
+------------------------------
+Behavioral Patterns
+==============================
+Chain of Responsibility     0
+Mediator                    0
+Observer                    0
+State                       0
+Strategy                    0
+Template Method             0
+Visitor                     0
+------------------------------
+
+Number of classes processed: 14
+Number of files processed: 105
+Size of DelegationTable: 10
+Size of concrete class nodes: 8
+Size of undirected invocation edges: 3
+
+
+nMediatorFacadeDual/nMediator = 0/0
+nImmutable/nFlyweight = 0/1
+nFlyweightGoFVersion = 0

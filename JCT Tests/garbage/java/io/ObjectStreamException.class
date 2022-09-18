@@ -1,0 +1,18 @@
+package java.io;
+abstract public class ObjectStreamException
+extends java.io.IOException
+{
+final private static java.lang.Object serialVersionUID;
+
+protected void <init>(java.lang.Object arg0)
+{
+
+}
+
+protected void <init>()
+{
+
+}
+
+
+}

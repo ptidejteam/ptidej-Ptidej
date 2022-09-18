@@ -1,0 +1,35 @@
+package java.net;
+abstract interface InetAddressImpl
+{
+abstract public java.lang.String getLocalHostName() throws java.net.UnknownHostException
+{
+
+}
+
+abstract public java.net.InetAddress[] lookupAllHostAddr(java.lang.Object arg0) throws java.net.UnknownHostException
+{
+
+}
+
+abstract public java.lang.String getHostByAddr(java.lang.Object arg0) throws java.net.UnknownHostException
+{
+
+}
+
+abstract public java.net.InetAddress anyLocalAddress()
+{
+
+}
+
+abstract public java.net.InetAddress loopbackAddress()
+{
+
+}
+
+abstract public boolean isReachable(java.lang.Object arg0, java.lang.Object arg1, java.lang.Object arg2, java.lang.Object arg3) throws java.io.IOException
+{
+
+}
+
+
+}

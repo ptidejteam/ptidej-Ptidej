@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<sdmetrics version="2.0">
+
+<matrix name="ClassImpl" from_row_type="class" to_col_type="interface"
+  row_condition="NumOps>">
+<description>Matrix with a faulty row condition.</description>
+<projection relset="interfacerealizations"/>
+</matrix>
+</sdmetrics>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestPOM" project="POM Tests" tests="91" started="91" failures="0" errors="0" ignored="0">
+  <testsuite name="TestSuite with 91 tests [example: pom.test.classfile.specific.TestCache]">
+    <testsuite name="pom.test.classfile.specific.TestCache" incomplete="true">
+      <testcase name="testCachingOfCBOValues" classname="pom.test.classfile.specific.TestCache" incomplete="true"/>
+      <testcase name="testCBOinAndOut" classname="pom.test.classfile.specific.TestCache" incomplete="true"/>
+      <testcase name="testCachingOfCBOoutValues" classname="pom.test.classfile.specific.TestCache" incomplete="true"/>
+      <testcase name="testCachingOfReversedCBOValues" classname="pom.test.classfile.specific.TestCache" incomplete="true"/>
+      <testcase name="testCachingOfCBOinValues" classname="pom.test.classfile.specific.TestCache" incomplete="true"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.general.TestClassPrimitives" time="0.782">
+      <testcase name="testDeclaredMethods" classname="pom.test.classfile.general.TestClassPrimitives" time="0.762"/>
+      <testcase name="testChildren" classname="pom.test.classfile.general.TestClassPrimitives" time="0.006"/>
+      <testcase name="testInheritedMethods" classname="pom.test.classfile.general.TestClassPrimitives" time="0.001"/>
+      <testcase name="testParents" classname="pom.test.classfile.general.TestClassPrimitives" time="0.001"/>
+      <testcase name="testDescendents" classname="pom.test.classfile.general.TestClassPrimitives" time="0.001"/>
+      <testcase name="testOverloadedMethods" classname="pom.test.classfile.general.TestClassPrimitives" time="0.001"/>
+      <testcase name="testAncestor" classname="pom.test.classfile.general.TestClassPrimitives" time="0.0"/>
+      <testcase name="testNewMethods" classname="pom.test.classfile.general.TestClassPrimitives" time="0.0"/>
+      <testcase name="testImplementedMethods" classname="pom.test.classfile.general.TestClassPrimitives" time="0.003"/>
+      <testcase name="testAllMethods" classname="pom.test.classfile.general.TestClassPrimitives" time="0.001"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.general.TestCouplingCohesionMetrics" time="0.133">
+      <testcase name="testWMCforAClass" classname="pom.test.classfile.general.TestCouplingCohesionMetrics" time="0.087"/>
+      <testcase name="testCBO" classname="pom.test.classfile.general.TestCouplingCohesionMetrics" time="0.002"/>
+      <testcase name="testICH" classname="pom.test.classfile.general.TestCouplingCohesionMetrics" time="0.001"/>
+      <testcase name="testConnectivity" classname="pom.test.classfile.general.TestCouplingCohesionMetrics" time="0.016"/>
+      <testcase name="testACAIC" classname="pom.test.classfile.general.TestCouplingCohesionMetrics" time="0.0"/>
+      <testcase name="testACMIC" classname="pom.test.classfile.general.TestCouplingCohesionMetrics" time="0.001"/>
+      <testcase name="testDCAEC" classname="pom.test.classfile.general.TestCouplingCohesionMetrics" time="0.0"/>
+      <testcase name="testDCMEC" classname="pom.test.classfile.general.TestCouplingCohesionMetrics" time="0.0"/>
+      <testcase name="testLCOM2" classname="pom.test.classfile.general.TestCouplingCohesionMetrics" time="0.001"/>
+      <testcase name="testLCOM5" classname="pom.test.classfile.general.TestCouplingCohesionMetrics" time="0.016"/>
+      <testcase name="testCohesionAttributes" classname="pom.test.classfile.general.TestCouplingCohesionMetrics" time="0.001"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.general.TestLoadJDK10" time="4.416">
+      <testcase name="testTimeExecution" classname="pom.test.classfile.general.TestLoadJDK10" time="4.416"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.general.TestMethodPrimitives" time="0.21">
+      <testcase name="testInvokedMethods" classname="pom.test.classfile.general.TestMethodPrimitives" time="0.073"/>
+      <testcase name="testMI" classname="pom.test.classfile.general.TestMethodPrimitives" time="0.08"/>
+      <testcase name="testHandledFieldsBy" classname="pom.test.classfile.general.TestMethodPrimitives" time="0.056"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.general.TestMetricRepository" time="0.327">
+      <testcase name="testUnarymetricList" classname="pom.test.classfile.general.TestMetricRepository" time="0.325"/>
+      <testcase name="testRuntimeDeprecation" classname="pom.test.classfile.general.TestMetricRepository" time="0.001"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.general.TestNMIandNMOwithPattern4J" time="1.267">
+      <testcase name="testNMOforPatternDescriptor" classname="pom.test.classfile.general.TestNMIandNMOwithPattern4J" time="1.266"/>
+      <testcase name="testNMIforPatternDescriptor" classname="pom.test.classfile.general.TestNMIandNMOwithPattern4J" time="0.001"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.general.TestOperators" time="0.005">
+      <testcase name="testBelongTo" classname="pom.test.classfile.general.TestOperators" time="0.001"/>
+      <testcase name="testUnion" classname="pom.test.classfile.general.TestOperators" time="0.0"/>
+      <testcase name="testSize" classname="pom.test.classfile.general.TestOperators" time="0.0"/>
+      <testcase name="testDifference" classname="pom.test.classfile.general.TestOperators" time="0.001"/>
+      <testcase name="testIncludeOrEqual" classname="pom.test.classfile.general.TestOperators" time="0.0"/>
+      <testcase name="testIntersection" classname="pom.test.classfile.general.TestOperators" time="0.0"/>
+      <testcase name="testEquals" classname="pom.test.classfile.general.TestOperators" time="0.0"/>
+      <testcase name="testInclude" classname="pom.test.classfile.general.TestOperators" time="0.0"/>
+      <testcase name="testDifferent" classname="pom.test.classfile.general.TestOperators" time="0.0"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.general.TestUnaryMetrics" time="0.431">
+      <testcase name="testAID" classname="pom.test.classfile.general.TestUnaryMetrics" time="0.43"/>
+      <testcase name="testCLD" classname="pom.test.classfile.general.TestUnaryMetrics" time="0.0"/>
+      <testcase name="testNMA" classname="pom.test.classfile.general.TestUnaryMetrics" time="0.0"/>
+      <testcase name="testNMO" classname="pom.test.classfile.general.TestUnaryMetrics" time="0.0"/>
+      <testcase name="testSIX" classname="pom.test.classfile.general.TestUnaryMetrics" time="0.0"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.specific.TestAID" time="0.021">
+      <testcase name="testAncestorImplement01" classname="pom.test.classfile.specific.TestAID" time="0.019"/>
+      <testcase name="testRef" classname="pom.test.classfile.specific.TestAID" time="0.0"/>
+      <testcase name="testAncestorExtend01" classname="pom.test.classfile.specific.TestAID" time="0.0"/>
+      <testcase name="testAncestorExtendImplement01" classname="pom.test.classfile.specific.TestAID" time="0.001"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.specific.TestCache" time="2.354">
+      <testcase name="testCachingOfCBOValues" classname="pom.test.classfile.specific.TestCache" time="0.0"/>
+      <testcase name="testCBOinAndOut" classname="pom.test.classfile.specific.TestCache" time="0.001"/>
+      <testcase name="testCachingOfCBOoutValues" classname="pom.test.classfile.specific.TestCache" time="0.0"/>
+      <testcase name="testCachingOfReversedCBOValues" classname="pom.test.classfile.specific.TestCache" time="0.0"/>
+      <testcase name="testCachingOfCBOinValues" classname="pom.test.classfile.specific.TestCache" time="0.0"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.specific.TestCBO" time="0.03">
+      <testcase name="testRefClass" classname="pom.test.classfile.specific.TestCBO" time="0.027"/>
+      <testcase name="testAboutGetVar" classname="pom.test.classfile.specific.TestCBO" time="0.0"/>
+      <testcase name="testAboutSetVar" classname="pom.test.classfile.specific.TestCBO" time="0.0"/>
+      <testcase name="testAboutFunct" classname="pom.test.classfile.specific.TestCBO" time="0.001"/>
+      <testcase name="testAboutFunctIn" classname="pom.test.classfile.specific.TestCBO" time="0.0"/>
+      <testcase name="testAboutSetVarOut" classname="pom.test.classfile.specific.TestCBO" time="0.001"/>
+      <testcase name="testRefInterface" classname="pom.test.classfile.specific.TestCBO" time="0.0"/>
+      <testcase name="testAboutFunctOut" classname="pom.test.classfile.specific.TestCBO" time="0.0"/>
+      <testcase name="testAboutSetVarIn" classname="pom.test.classfile.specific.TestCBO" time="0.0"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.specific.TestDIT" time="0.021">
+      <testcase name="testInheritanceOnInterface01" classname="pom.test.classfile.specific.TestDIT" time="0.018"/>
+      <testcase name="testInheritanceOnInterface02" classname="pom.test.classfile.specific.TestDIT" time="0.0"/>
+      <testcase name="testInheritanceOnClass" classname="pom.test.classfile.specific.TestDIT" time="0.001"/>
+      <testcase name="testRefClass" classname="pom.test.classfile.specific.TestDIT" time="0.0"/>
+      <testcase name="testRefInterface" classname="pom.test.classfile.specific.TestDIT" time="0.0"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.specific.TestNMI" time="0.048">
+      <testcase name="testSameMethods" classname="pom.test.classfile.specific.TestNMI" time="0.043"/>
+      <testcase name="testDifMethods" classname="pom.test.classfile.specific.TestNMI" time="0.001"/>
+      <testcase name="testDiffSignature" classname="pom.test.classfile.specific.TestNMI" time="0.0"/>
+      <testcase name="testConstructor" classname="pom.test.classfile.specific.TestNMI" time="0.001"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.specific.TestNOC" time="0.02">
+      <testcase name="test01" classname="pom.test.classfile.specific.TestNOC" time="0.017"/>
+      <testcase name="test02" classname="pom.test.classfile.specific.TestNOC" time="0.001"/>
+      <testcase name="testRefClass" classname="pom.test.classfile.specific.TestNOC" time="0.0"/>
+      <testcase name="testRefInterface" classname="pom.test.classfile.specific.TestNOC" time="0.001"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.specific.TestUnaryCBO" time="0.002">
+      <testcase name="testUsedFieldByMethod" classname="pom.test.classfile.specific.TestUnaryCBO" time="0.001"/>
+      <testcase name="testNoCoupling" classname="pom.test.classfile.specific.TestUnaryCBO" time="0.0"/>
+      <testcase name="testNotUsedField" classname="pom.test.classfile.specific.TestUnaryCBO" time="0.0"/>
+      <testcase name="testInheritence" classname="pom.test.classfile.specific.TestUnaryCBO" time="0.0"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.specific.TestWMC" time="0.061">
+      <testcase name="test01" classname="pom.test.classfile.specific.TestWMC" time="0.059"/>
+      <testcase name="test02" classname="pom.test.classfile.specific.TestWMC" time="0.001"/>
+      <testcase name="testRefClass" classname="pom.test.classfile.specific.TestWMC" time="0.001"/>
+      <testcase name="testRefInterface" classname="pom.test.classfile.specific.TestWMC" time="0.0"/>
+    </testsuite>
+    <testsuite name="pom.test.classfile.specific.TestWMC1" time="0.008">
+      <testcase name="test01" classname="pom.test.classfile.specific.TestWMC1" time="0.007"/>
+      <testcase name="test02" classname="pom.test.classfile.specific.TestWMC1" time="0.0"/>
+      <testcase name="testRefClass" classname="pom.test.classfile.specific.TestWMC1" time="0.0"/>
+      <testcase name="testRefInterface" classname="pom.test.classfile.specific.TestWMC1" time="0.0"/>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SAD Rules
+Bundle-SymbolicName: SAD_Rules_Creator
+Bundle-Version: 1.0.0
+Export-Package: 
+ sad.rule.creator,
+ sad.rule.creator.javacup,
+ sad.rule.creator.javacup.runtime,
+ sad.rule.creator.jlex,
+ sad.rule.creator.misc,
+ sad.rule.creator.model,
+ sad.rule.creator.model.impl,
+ sad.rule.creator.sample,
+ sad.rule.creator.ui,
+ sad.rule.creator.ui.metaModel,
+ sad.rule.creator.utils,
+ sad.rule.creator.visitor
+Require-Bundle: CPL,
+ PADL
+Automatic-Module-Name: SAD.Rules.Creator

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>EPI</name>
+	<comment></comment>
+	<projects>
+		<project>CPL</project>
+		<project>Metrical Ptidej Solver</project>
+		<project>PADL</project>
+		<project>PADL Analyses</project>
+		<project>PADL Creator ClassFile</project>
+		<project>PADL Design Motifs</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+</projectDescription>

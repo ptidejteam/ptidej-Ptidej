@@ -1,0 +1,10 @@
+driver = mendel.Driver
+
+parts = mendel.part.EntitySelection,mendel.part.tool.MetricsTool,mendel.part.output.VersoHierarchyOutput
+
+filters=mendel.filter.ClassFilter,mendel.filter.AnonymousFilter,mendel.filter.PackageFilter
+
+metrics=mendel.metric.entity.EntityName,mendel.metric.branch.NoveltyIndex,mendel.metric.entity.LocalGroupCount,mendel.metric.branch.NoveltyScore,mendel.metric.branch.DIT,mendel.metric.branch.NOC
+
+qualifier=results/xml/
+suffix=H.xml

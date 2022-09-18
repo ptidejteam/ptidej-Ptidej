@@ -1,0 +1,448 @@
+digraph JHotDraw5_2 {
+node [fontname=Helvetica, shape=record, color=grey, fontcolor=grey]
+
+CH_ifa_draw_figures_PolyLineHandle [label="{CH.ifa.draw.figures.PolyLineHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_PolyLineHandle -> CH_ifa_draw_standard_LocatorHandle [arrowhead=normal]
+
+CH_ifa_draw_figures_InsertImageCommand [label="{CH.ifa.draw.figures.InsertImageCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_InsertImageCommand -> CH_ifa_draw_util_Command [arrowhead=normal]
+
+CH_ifa_draw_standard_CompositeFigure [label="{CH.ifa.draw.standard.CompositeFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_CompositeFigure -> CH_ifa_draw_standard_AbstractFigure [arrowhead=normal]
+
+CH_ifa_draw_samples_javadraw_URLTool [label="{CH.ifa.draw.samples.javadraw.URLTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_javadraw_URLTool -> CH_ifa_draw_standard_AbstractTool [arrowhead=normal]
+
+CH_ifa_draw_samples_javadraw_Animator [label="{CH.ifa.draw.samples.javadraw.Animator}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_javadraw_Animator -> java_lang_Thread [arrowhead=normal]
+
+CH_ifa_draw_figures_ConnectedTextTool [label="{CH.ifa.draw.figures.ConnectedTextTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_ConnectedTextTool -> CH_ifa_draw_figures_TextTool [arrowhead=normal]
+
+CH_ifa_draw_samples_javadraw_BouncingDrawing [label="{CH.ifa.draw.samples.javadraw.BouncingDrawing}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_javadraw_BouncingDrawing -> CH_ifa_draw_standard_StandardDrawing [arrowhead=normal]
+
+CH_ifa_draw_standard_ActionTool [label="{CH.ifa.draw.standard.ActionTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_ActionTool -> CH_ifa_draw_standard_AbstractTool [arrowhead=normal]
+
+CH_ifa_draw_contrib_CustomToolBar [label="{CH.ifa.draw.contrib.CustomToolBar}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_CustomToolBar -> javax_swing_JToolBar [arrowhead=normal]
+
+CH_ifa_draw_standard_BufferedUpdateStrategy [label="{CH.ifa.draw.standard.BufferedUpdateStrategy}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_BufferedUpdateStrategy -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_contrib_PolygonFigure [label="{CH.ifa.draw.contrib.PolygonFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_PolygonFigure -> CH_ifa_draw_figures_AttributeFigure [arrowhead=normal]
+
+CH_ifa_draw_standard_ConnectionHandle [label="{CH.ifa.draw.standard.ConnectionHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_ConnectionHandle -> CH_ifa_draw_standard_LocatorHandle [arrowhead=normal]
+
+CH_ifa_draw_standard_NorthEastHandle [label="{CH.ifa.draw.standard.NorthEastHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_NorthEastHandle -> CH_ifa_draw_standard_LocatorHandle [arrowhead=normal]
+
+CH_ifa_draw_standard_RelativeLocator [label="{CH.ifa.draw.standard.RelativeLocator}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_RelativeLocator -> CH_ifa_draw_standard_AbstractLocator [arrowhead=normal]
+
+CH_ifa_draw_figures_RadiusHandle [label="{CH.ifa.draw.figures.RadiusHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_RadiusHandle -> CH_ifa_draw_standard_AbstractHandle [arrowhead=normal]
+
+CH_ifa_draw_application_DrawApplication [label="{CH.ifa.draw.application.DrawApplication}", color="black", fontcolor="black" ]
+	CH_ifa_draw_application_DrawApplication -> javax_swing_JFrame [arrowhead=normal]
+
+CH_ifa_draw_util_ReverseVectorEnumerator [label="{CH.ifa.draw.util.ReverseVectorEnumerator}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_ReverseVectorEnumerator -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_standard_SendToBackCommand [label="{CH.ifa.draw.standard.SendToBackCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_SendToBackCommand -> CH_ifa_draw_util_Command [arrowhead=normal]
+
+CH_ifa_draw_util_StorableOutput [label="{CH.ifa.draw.util.StorableOutput}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_StorableOutput -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_standard_ChopBoxConnector [label="{CH.ifa.draw.standard.ChopBoxConnector}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_ChopBoxConnector -> CH_ifa_draw_standard_AbstractConnector [arrowhead=normal]
+
+CH_ifa_draw_standard_ToggleGridCommand [label="{CH.ifa.draw.standard.ToggleGridCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_ToggleGridCommand -> CH_ifa_draw_util_Command [arrowhead=normal]
+
+CH_ifa_draw_figures_BorderDecorator [label="{CH.ifa.draw.figures.BorderDecorator}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_BorderDecorator -> CH_ifa_draw_standard_DecoratorFigure [arrowhead=normal]
+
+CH_ifa_draw_contrib_PolygonTool [label="{CH.ifa.draw.contrib.PolygonTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_PolygonTool -> CH_ifa_draw_standard_AbstractTool [arrowhead=normal]
+
+CH_ifa_draw_standard_FigureTransferCommand [label="{CH.ifa.draw.standard.FigureTransferCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_FigureTransferCommand -> CH_ifa_draw_util_Command [arrowhead=normal]
+
+CH_ifa_draw_contrib_GraphicalCompositeFigure [label="{CH.ifa.draw.contrib.GraphicalCompositeFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_GraphicalCompositeFigure -> CH_ifa_draw_standard_CompositeFigure [arrowhead=normal]
+
+CH_ifa_draw_samples_net_NetApp [label="{CH.ifa.draw.samples.net.NetApp}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_net_NetApp -> CH_ifa_draw_application_DrawApplication [arrowhead=normal]
+
+CH_ifa_draw_samples_javadraw_AnimationDecorator [label="{CH.ifa.draw.samples.javadraw.AnimationDecorator}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_javadraw_AnimationDecorator -> CH_ifa_draw_standard_DecoratorFigure [arrowhead=normal]
+
+CH_ifa_draw_samples_javadraw_MySelectionTool [label="{CH.ifa.draw.samples.javadraw.MySelectionTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_javadraw_MySelectionTool -> CH_ifa_draw_standard_SelectionTool [arrowhead=normal]
+
+CH_ifa_draw_figures_BorderTool [label="{CH.ifa.draw.figures.BorderTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_BorderTool -> CH_ifa_draw_standard_ActionTool [arrowhead=normal]
+
+CH_ifa_draw_standard_OffsetLocator [label="{CH.ifa.draw.standard.OffsetLocator}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_OffsetLocator -> CH_ifa_draw_standard_AbstractLocator [arrowhead=normal]
+
+CH_ifa_draw_figures_ImageFigure [label="{CH.ifa.draw.figures.ImageFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_ImageFigure -> CH_ifa_draw_figures_AttributeFigure [arrowhead=normal]
+
+CH_ifa_draw_contrib_MDI_DrawApplication [label="{CH.ifa.draw.contrib.MDI_DrawApplication}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_MDI_DrawApplication -> CH_ifa_draw_application_DrawApplication [arrowhead=normal]
+
+CH_ifa_draw_standard_NorthWestHandle [label="{CH.ifa.draw.standard.NorthWestHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_NorthWestHandle -> CH_ifa_draw_standard_LocatorHandle [arrowhead=normal]
+
+CH_ifa_draw_standard_CutCommand [label="{CH.ifa.draw.standard.CutCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_CutCommand -> CH_ifa_draw_standard_FigureTransferCommand [arrowhead=normal]
+
+CH_ifa_draw_samples_net_NodeFigure [label="{CH.ifa.draw.samples.net.NodeFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_net_NodeFigure -> CH_ifa_draw_figures_TextFigure [arrowhead=normal]
+
+CH_ifa_draw_standard_FigureEnumerator [label="{CH.ifa.draw.standard.FigureEnumerator}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_FigureEnumerator -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_standard_AlignCommand [label="{CH.ifa.draw.standard.AlignCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_AlignCommand -> CH_ifa_draw_util_Command [arrowhead=normal]
+
+CH_ifa_draw_util_PaletteButton [label="{CH.ifa.draw.util.PaletteButton}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_PaletteButton -> javax_swing_JButton [arrowhead=normal]
+
+CH_ifa_draw_util_StorableInput [label="{CH.ifa.draw.util.StorableInput}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_StorableInput -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_util_Iconkit [label="{CH.ifa.draw.util.Iconkit}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_Iconkit -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_util_Clipboard [label="{CH.ifa.draw.util.Clipboard}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_Clipboard -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_figures_AbstractLineDecoration [label="{CH.ifa.draw.figures.AbstractLineDecoration}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_AbstractLineDecoration -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_standard_AbstractTool [label="{CH.ifa.draw.standard.AbstractTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_AbstractTool -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_figures_AttributeFigure [label="{CH.ifa.draw.figures.AttributeFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_AttributeFigure -> CH_ifa_draw_standard_AbstractFigure [arrowhead=normal]
+
+CH_ifa_draw_figures_UngroupCommand [label="{CH.ifa.draw.figures.UngroupCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_UngroupCommand -> CH_ifa_draw_util_Command [arrowhead=normal]
+
+CH_ifa_draw_standard_SimpleUpdateStrategy [label="{CH.ifa.draw.standard.SimpleUpdateStrategy}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_SimpleUpdateStrategy -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_samples_javadraw_PatternPainter [label="{CH.ifa.draw.samples.javadraw.PatternPainter}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_javadraw_PatternPainter -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_util_Filler [label="{CH.ifa.draw.util.Filler}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_Filler -> javax_swing_JPanel [arrowhead=normal]
+
+CH_ifa_draw_standard_ChangeAttributeCommand [label="{CH.ifa.draw.standard.ChangeAttributeCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_ChangeAttributeCommand -> CH_ifa_draw_util_Command [arrowhead=normal]
+
+CH_ifa_draw_util_ColorMap [label="{CH.ifa.draw.util.ColorMap}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_ColorMap -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_samples_nothing_NothingApp [label="{CH.ifa.draw.samples.nothing.NothingApp}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_nothing_NothingApp -> CH_ifa_draw_application_DrawApplication [arrowhead=normal]
+
+CH_ifa_draw_util_CommandMenu [label="{CH.ifa.draw.util.CommandMenu}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_CommandMenu -> javax_swing_JMenu [arrowhead=normal]
+
+CH_ifa_draw_standard_CopyCommand [label="{CH.ifa.draw.standard.CopyCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_CopyCommand -> CH_ifa_draw_standard_FigureTransferCommand [arrowhead=normal]
+
+CH_ifa_draw_framework_HJDError [label="{CH.ifa.draw.framework.HJDError}", color="black", fontcolor="black" ]
+	CH_ifa_draw_framework_HJDError -> java_lang_Error [arrowhead=normal]
+
+CH_ifa_draw_figures_FigureAttributes [label="{CH.ifa.draw.figures.FigureAttributes}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_FigureAttributes -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_figures_ChopEllipseConnector [label="{CH.ifa.draw.figures.ChopEllipseConnector}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_ChopEllipseConnector -> CH_ifa_draw_standard_ChopBoxConnector [arrowhead=normal]
+
+CH_ifa_draw_standard_ToolButton [label="{CH.ifa.draw.standard.ToolButton}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_ToolButton -> CH_ifa_draw_util_PaletteButton [arrowhead=normal]
+
+CH_ifa_draw_samples_pert_PertApplet [label="{CH.ifa.draw.samples.pert.PertApplet}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_pert_PertApplet -> CH_ifa_draw_applet_DrawApplet [arrowhead=normal]
+
+CH_ifa_draw_applet_SleeperThread [label="{CH.ifa.draw.applet.SleeperThread}", color="black", fontcolor="black" ]
+	CH_ifa_draw_applet_SleeperThread -> java_lang_Thread [arrowhead=normal]
+
+CH_ifa_draw_figures_LineFigure [label="{CH.ifa.draw.figures.LineFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_LineFigure -> CH_ifa_draw_figures_PolyLineFigure [arrowhead=normal]
+
+CH_ifa_draw_figures_RectangleFigure [label="{CH.ifa.draw.figures.RectangleFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_RectangleFigure -> CH_ifa_draw_figures_AttributeFigure [arrowhead=normal]
+
+CH_ifa_draw_standard_DecoratorFigure [label="{CH.ifa.draw.standard.DecoratorFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_DecoratorFigure -> CH_ifa_draw_standard_AbstractFigure [arrowhead=normal]
+
+CH_ifa_draw_standard_ChangeConnectionStartHandle [label="{CH.ifa.draw.standard.ChangeConnectionStartHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_ChangeConnectionStartHandle -> CH_ifa_draw_standard_ChangeConnectionHandle [arrowhead=normal]
+
+CH_ifa_draw_standard_SelectAreaTracker [label="{CH.ifa.draw.standard.SelectAreaTracker}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_SelectAreaTracker -> CH_ifa_draw_standard_AbstractTool [arrowhead=normal]
+
+CH_ifa_draw_contrib_MDI_InternalFrame [label="{CH.ifa.draw.contrib.MDI_InternalFrame}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_MDI_InternalFrame -> javax_swing_JInternalFrame [arrowhead=normal]
+
+CH_ifa_draw_figures_PolyLineFigure [label="{CH.ifa.draw.figures.PolyLineFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_PolyLineFigure -> CH_ifa_draw_standard_AbstractFigure [arrowhead=normal]
+
+CH_ifa_draw_standard_SouthHandle [label="{CH.ifa.draw.standard.SouthHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_SouthHandle -> CH_ifa_draw_standard_LocatorHandle [arrowhead=normal]
+
+CH_ifa_draw_standard_PasteCommand [label="{CH.ifa.draw.standard.PasteCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_PasteCommand -> CH_ifa_draw_standard_FigureTransferCommand [arrowhead=normal]
+
+CH_ifa_draw_standard_StandardDrawingView [label="{CH.ifa.draw.standard.StandardDrawingView}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_StandardDrawingView -> javax_swing_JPanel [arrowhead=normal]
+
+CH_ifa_draw_figures_FontSizeHandle [label="{CH.ifa.draw.figures.FontSizeHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_FontSizeHandle -> CH_ifa_draw_standard_LocatorHandle [arrowhead=normal]
+
+CH_ifa_draw_standard_StandardDrawing [label="{CH.ifa.draw.standard.StandardDrawing}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_StandardDrawing -> CH_ifa_draw_standard_CompositeFigure [arrowhead=normal]
+
+CH_ifa_draw_standard_SouthEastHandle [label="{CH.ifa.draw.standard.SouthEastHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_SouthEastHandle -> CH_ifa_draw_standard_LocatorHandle [arrowhead=normal]
+
+CH_ifa_draw_standard_FigureChangeAdapter [label="{CH.ifa.draw.standard.FigureChangeAdapter}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_FigureChangeAdapter -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_standard_NullHandle [label="{CH.ifa.draw.standard.NullHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_NullHandle -> CH_ifa_draw_standard_LocatorHandle [arrowhead=normal]
+
+CH_ifa_draw_samples_pert_PertDependency [label="{CH.ifa.draw.samples.pert.PertDependency}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_pert_PertDependency -> CH_ifa_draw_figures_LineConnection [arrowhead=normal]
+
+CH_ifa_draw_util_PaletteLayout [label="{CH.ifa.draw.util.PaletteLayout}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_PaletteLayout -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_applet_DrawApplet [label="{CH.ifa.draw.applet.DrawApplet}", color="black", fontcolor="black" ]
+	CH_ifa_draw_applet_DrawApplet -> javax_swing_JApplet [arrowhead=normal]
+
+CH_ifa_draw_samples_javadraw_JavaDrawViewer [label="{CH.ifa.draw.samples.javadraw.JavaDrawViewer}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_javadraw_JavaDrawViewer -> javax_swing_JApplet [arrowhead=normal]
+
+CH_ifa_draw_standard_NorthHandle [label="{CH.ifa.draw.standard.NorthHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_NorthHandle -> CH_ifa_draw_standard_LocatorHandle [arrowhead=normal]
+
+CH_ifa_draw_figures_NumberTextFigure [label="{CH.ifa.draw.figures.NumberTextFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_NumberTextFigure -> CH_ifa_draw_figures_TextFigure [arrowhead=normal]
+
+CH_ifa_draw_standard_LocatorHandle [label="{CH.ifa.draw.standard.LocatorHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_LocatorHandle -> CH_ifa_draw_standard_AbstractHandle [arrowhead=normal]
+
+CH_ifa_draw_figures_TextTool [label="{CH.ifa.draw.figures.TextTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_TextTool -> CH_ifa_draw_standard_CreationTool [arrowhead=normal]
+
+CH_ifa_draw_contrib_ChopPolygonConnector [label="{CH.ifa.draw.contrib.ChopPolygonConnector}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_ChopPolygonConnector -> CH_ifa_draw_standard_ChopBoxConnector [arrowhead=normal]
+
+CH_ifa_draw_framework_FigureChangeEvent [label="{CH.ifa.draw.framework.FigureChangeEvent}", color="black", fontcolor="black" ]
+	CH_ifa_draw_framework_FigureChangeEvent -> java_util_EventObject [arrowhead=normal]
+
+CH_ifa_draw_standard_BringToFrontCommand [label="{CH.ifa.draw.standard.BringToFrontCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_BringToFrontCommand -> CH_ifa_draw_util_Command [arrowhead=normal]
+
+CH_ifa_draw_util_SerializationStorageFormat [label="{CH.ifa.draw.util.SerializationStorageFormat}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_SerializationStorageFormat -> CH_ifa_draw_util_StandardStorageFormat [arrowhead=normal]
+
+CH_ifa_draw_standard_ReverseFigureEnumerator [label="{CH.ifa.draw.standard.ReverseFigureEnumerator}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_ReverseFigureEnumerator -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_standard_AbstractHandle [label="{CH.ifa.draw.standard.AbstractHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_AbstractHandle -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_figures_EllipseFigure [label="{CH.ifa.draw.figures.EllipseFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_EllipseFigure -> CH_ifa_draw_figures_AttributeFigure [arrowhead=normal]
+
+CH_ifa_draw_figures_PolyLineLocator [label="{CH.ifa.draw.figures.PolyLineLocator}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_PolyLineLocator -> CH_ifa_draw_standard_AbstractLocator [arrowhead=normal]
+
+CH_ifa_draw_framework_FigureSelection [label="{CH.ifa.draw.framework.FigureSelection}", color="black", fontcolor="black" ]
+	CH_ifa_draw_framework_FigureSelection -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_util_CommandChoice [label="{CH.ifa.draw.util.CommandChoice}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_CommandChoice -> javax_swing_JComboBox [arrowhead=normal]
+
+CH_ifa_draw_standard_DeleteCommand [label="{CH.ifa.draw.standard.DeleteCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_DeleteCommand -> CH_ifa_draw_standard_FigureTransferCommand [arrowhead=normal]
+
+CH_ifa_draw_samples_pert_PertApplication [label="{CH.ifa.draw.samples.pert.PertApplication}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_pert_PertApplication -> CH_ifa_draw_application_DrawApplication [arrowhead=normal]
+
+CH_ifa_draw_figures_ScribbleTool [label="{CH.ifa.draw.figures.ScribbleTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_ScribbleTool -> CH_ifa_draw_standard_AbstractTool [arrowhead=normal]
+
+CH_ifa_draw_contrib_SplitPaneDrawApplication [label="{CH.ifa.draw.contrib.SplitPaneDrawApplication}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_SplitPaneDrawApplication -> CH_ifa_draw_application_DrawApplication [arrowhead=normal]
+
+CH_ifa_draw_util_Command [label="{CH.ifa.draw.util.Command}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_Command -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_figures_GroupHandle [label="{CH.ifa.draw.figures.GroupHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_GroupHandle -> CH_ifa_draw_standard_NullHandle [arrowhead=normal]
+
+CH_ifa_draw_samples_nothing_NothingApplet [label="{CH.ifa.draw.samples.nothing.NothingApplet}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_nothing_NothingApplet -> CH_ifa_draw_applet_DrawApplet [arrowhead=normal]
+
+CH_ifa_draw_util_StorageFormatManager [label="{CH.ifa.draw.util.StorageFormatManager}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_StorageFormatManager -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_figures_GroupFigure [label="{CH.ifa.draw.figures.GroupFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_GroupFigure -> CH_ifa_draw_standard_CompositeFigure [arrowhead=normal]
+
+CH_ifa_draw_figures_PolyLineConnector [label="{CH.ifa.draw.figures.PolyLineConnector}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_PolyLineConnector -> CH_ifa_draw_standard_ChopBoxConnector [arrowhead=normal]
+
+CH_ifa_draw_standard_EastHandle [label="{CH.ifa.draw.standard.EastHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_EastHandle -> CH_ifa_draw_standard_LocatorHandle [arrowhead=normal]
+
+CH_ifa_draw_standard_ConnectionTool [label="{CH.ifa.draw.standard.ConnectionTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_ConnectionTool -> CH_ifa_draw_standard_AbstractTool [arrowhead=normal]
+
+CH_ifa_draw_contrib_StandardLayouter [label="{CH.ifa.draw.contrib.StandardLayouter}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_StandardLayouter -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_standard_DuplicateCommand [label="{CH.ifa.draw.standard.DuplicateCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_DuplicateCommand -> CH_ifa_draw_standard_FigureTransferCommand [arrowhead=normal]
+
+CH_ifa_draw_standard_LocatorConnector [label="{CH.ifa.draw.standard.LocatorConnector}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_LocatorConnector -> CH_ifa_draw_standard_AbstractConnector [arrowhead=normal]
+
+CH_ifa_draw_standard_ChangeConnectionEndHandle [label="{CH.ifa.draw.standard.ChangeConnectionEndHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_ChangeConnectionEndHandle -> CH_ifa_draw_standard_ChangeConnectionHandle [arrowhead=normal]
+
+CH_ifa_draw_contrib_TriangleRotationHandle [label="{CH.ifa.draw.contrib.TriangleRotationHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_TriangleRotationHandle -> CH_ifa_draw_standard_AbstractHandle [arrowhead=normal]
+
+CH_ifa_draw_samples_javadraw_JavaDrawApp [label="{CH.ifa.draw.samples.javadraw.JavaDrawApp}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_javadraw_JavaDrawApp -> CH_ifa_draw_contrib_MDI_DrawApplication [arrowhead=normal]
+
+CH_ifa_draw_standard_AbstractConnector [label="{CH.ifa.draw.standard.AbstractConnector}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_AbstractConnector -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_samples_javadraw_JavaDrawApplet [label="{CH.ifa.draw.samples.javadraw.JavaDrawApplet}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_javadraw_JavaDrawApplet -> CH_ifa_draw_applet_DrawApplet [arrowhead=normal]
+
+CH_ifa_draw_util_StandardStorageFormat [label="{CH.ifa.draw.util.StandardStorageFormat}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_StandardStorageFormat -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_standard_AbstractFigure [label="{CH.ifa.draw.standard.AbstractFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_AbstractFigure -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_contrib_CustomSelectionTool [label="{CH.ifa.draw.contrib.CustomSelectionTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_CustomSelectionTool -> CH_ifa_draw_standard_SelectionTool [arrowhead=normal]
+
+CH_ifa_draw_standard_DragTracker [label="{CH.ifa.draw.standard.DragTracker}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_DragTracker -> CH_ifa_draw_standard_AbstractTool [arrowhead=normal]
+
+CH_ifa_draw_standard_FigureChangeEventMulticaster [label="{CH.ifa.draw.standard.FigureChangeEventMulticaster}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_FigureChangeEventMulticaster -> java_awt_AWTEventMulticaster [arrowhead=normal]
+
+CH_ifa_draw_figures_RoundRectangleFigure [label="{CH.ifa.draw.figures.RoundRectangleFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_RoundRectangleFigure -> CH_ifa_draw_figures_AttributeFigure [arrowhead=normal]
+
+CH_ifa_draw_figures_ElbowTextLocator [label="{CH.ifa.draw.figures.ElbowTextLocator}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_ElbowTextLocator -> CH_ifa_draw_standard_AbstractLocator [arrowhead=normal]
+
+CH_ifa_draw_figures_TextFigure [label="{CH.ifa.draw.figures.TextFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_TextFigure -> CH_ifa_draw_figures_AttributeFigure [arrowhead=normal]
+
+CH_ifa_draw_standard_WestHandle [label="{CH.ifa.draw.standard.WestHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_WestHandle -> CH_ifa_draw_standard_LocatorHandle [arrowhead=normal]
+
+CH_ifa_draw_standard_HandleTracker [label="{CH.ifa.draw.standard.HandleTracker}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_HandleTracker -> CH_ifa_draw_standard_AbstractTool [arrowhead=normal]
+
+CH_ifa_draw_figures_ArrowTip [label="{CH.ifa.draw.figures.ArrowTip}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_ArrowTip -> CH_ifa_draw_figures_AbstractLineDecoration [arrowhead=normal]
+
+CH_ifa_draw_contrib_DiamondFigure [label="{CH.ifa.draw.contrib.DiamondFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_DiamondFigure -> CH_ifa_draw_figures_RectangleFigure [arrowhead=normal]
+
+CH_ifa_draw_contrib_TriangleFigure [label="{CH.ifa.draw.contrib.TriangleFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_TriangleFigure -> CH_ifa_draw_figures_RectangleFigure [arrowhead=normal]
+
+CH_ifa_draw_figures_GroupCommand [label="{CH.ifa.draw.figures.GroupCommand}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_GroupCommand -> CH_ifa_draw_util_Command [arrowhead=normal]
+
+CH_ifa_draw_framework_DrawingChangeEvent [label="{CH.ifa.draw.framework.DrawingChangeEvent}", color="black", fontcolor="black" ]
+	CH_ifa_draw_framework_DrawingChangeEvent -> java_util_EventObject [arrowhead=normal]
+
+CH_ifa_draw_util_Geom [label="{CH.ifa.draw.util.Geom}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_Geom -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_figures_ElbowConnection [label="{CH.ifa.draw.figures.ElbowConnection}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_ElbowConnection -> CH_ifa_draw_figures_LineConnection [arrowhead=normal]
+
+CH_ifa_draw_standard_BoxHandleKit [label="{CH.ifa.draw.standard.BoxHandleKit}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_BoxHandleKit -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_contrib_PolygonHandle [label="{CH.ifa.draw.contrib.PolygonHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_PolygonHandle -> CH_ifa_draw_standard_AbstractHandle [arrowhead=normal]
+
+CH_ifa_draw_standard_SelectionTool [label="{CH.ifa.draw.standard.SelectionTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_SelectionTool -> CH_ifa_draw_standard_AbstractTool [arrowhead=normal]
+
+CH_ifa_draw_standard_CreationTool [label="{CH.ifa.draw.standard.CreationTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_CreationTool -> CH_ifa_draw_standard_AbstractTool [arrowhead=normal]
+
+CH_ifa_draw_util_PaletteIcon [label="{CH.ifa.draw.util.PaletteIcon}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_PaletteIcon -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_util_ColorEntry [label="{CH.ifa.draw.util.ColorEntry}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_ColorEntry -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_figures_LineConnection [label="{CH.ifa.draw.figures.LineConnection}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_LineConnection -> CH_ifa_draw_figures_PolyLineFigure [arrowhead=normal]
+
+CH_ifa_draw_standard_AbstractLocator [label="{CH.ifa.draw.standard.AbstractLocator}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_AbstractLocator -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_samples_javadraw_FollowURLTool [label="{CH.ifa.draw.samples.javadraw.FollowURLTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_javadraw_FollowURLTool -> CH_ifa_draw_standard_AbstractTool [arrowhead=normal]
+
+CH_ifa_draw_util_FloatingTextField [label="{CH.ifa.draw.util.FloatingTextField}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_FloatingTextField -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_standard_SouthWestHandle [label="{CH.ifa.draw.standard.SouthWestHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_SouthWestHandle -> CH_ifa_draw_standard_LocatorHandle [arrowhead=normal]
+
+CH_ifa_draw_samples_pert_PertFigureCreationTool [label="{CH.ifa.draw.samples.pert.PertFigureCreationTool}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_pert_PertFigureCreationTool -> CH_ifa_draw_standard_CreationTool [arrowhead=normal]
+
+CH_ifa_draw_util_CommandButton [label="{CH.ifa.draw.util.CommandButton}", color="black", fontcolor="black" ]
+	CH_ifa_draw_util_CommandButton -> javax_swing_JButton [arrowhead=normal]
+
+CH_ifa_draw_samples_pert_PertFigure [label="{CH.ifa.draw.samples.pert.PertFigure}", color="black", fontcolor="black" ]
+	CH_ifa_draw_samples_pert_PertFigure -> CH_ifa_draw_standard_CompositeFigure [arrowhead=normal]
+
+CH_ifa_draw_figures_ElbowHandle [label="{CH.ifa.draw.figures.ElbowHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_ElbowHandle -> CH_ifa_draw_standard_AbstractHandle [arrowhead=normal]
+
+CH_ifa_draw_figures_ShortestDistanceConnector [label="{CH.ifa.draw.figures.ShortestDistanceConnector}", color="black", fontcolor="black" ]
+	CH_ifa_draw_figures_ShortestDistanceConnector -> CH_ifa_draw_standard_AbstractConnector [arrowhead=normal]
+
+CH_ifa_draw_contrib_PolygonScaleHandle [label="{CH.ifa.draw.contrib.PolygonScaleHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_contrib_PolygonScaleHandle -> CH_ifa_draw_standard_AbstractHandle [arrowhead=normal]
+
+CH_ifa_draw_standard_GridConstrainer [label="{CH.ifa.draw.standard.GridConstrainer}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_GridConstrainer -> java_lang_Object [arrowhead=normal]
+
+CH_ifa_draw_standard_ChangeConnectionHandle [label="{CH.ifa.draw.standard.ChangeConnectionHandle}", color="black", fontcolor="black" ]
+	CH_ifa_draw_standard_ChangeConnectionHandle -> CH_ifa_draw_standard_AbstractHandle [arrowhead=normal]
+
+}

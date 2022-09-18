@@ -1,0 +1,141 @@
+package java.util;
+abstract public interface Deque
+extends java.util.Queue
+{
+abstract public void addFirst(java.lang.Object arg0)
+{
+
+}
+
+abstract public void addLast(java.lang.Object arg0)
+{
+
+}
+
+abstract public boolean offerFirst(java.lang.Object arg0)
+{
+
+}
+
+abstract public boolean offerLast(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.lang.Object removeFirst()
+{
+
+}
+
+abstract public java.lang.Object removeLast()
+{
+
+}
+
+abstract public java.lang.Object pollFirst()
+{
+
+}
+
+abstract public java.lang.Object pollLast()
+{
+
+}
+
+abstract public java.lang.Object getFirst()
+{
+
+}
+
+abstract public java.lang.Object getLast()
+{
+
+}
+
+abstract public java.lang.Object peekFirst()
+{
+
+}
+
+abstract public java.lang.Object peekLast()
+{
+
+}
+
+abstract public boolean removeFirstOccurrence(java.lang.Object arg0)
+{
+
+}
+
+abstract public boolean removeLastOccurrence(java.lang.Object arg0)
+{
+
+}
+
+abstract public boolean add(java.lang.Object arg0)
+{
+
+}
+
+abstract public boolean offer(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.lang.Object remove()
+{
+
+}
+
+abstract public java.lang.Object poll()
+{
+
+}
+
+abstract public java.lang.Object element()
+{
+
+}
+
+abstract public java.lang.Object peek()
+{
+
+}
+
+abstract public void push(java.lang.Object arg0)
+{
+
+}
+
+abstract public java.lang.Object pop()
+{
+
+}
+
+abstract public boolean remove(java.lang.Object arg0)
+{
+
+}
+
+abstract public boolean contains(java.lang.Object arg0)
+{
+
+}
+
+abstract public int size()
+{
+
+}
+
+abstract public java.util.Iterator iterator()
+{
+
+}
+
+abstract public java.util.Iterator descendingIterator()
+{
+
+}
+
+
+}

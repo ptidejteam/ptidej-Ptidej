@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestAllCreators" project="All Ptidej Tests" tests="364" started="364" failures="0" errors="2" ignored="0">
+  <testsuite name="TestSuite with 364 tests [example: padl.creator.aol.test.TestCreatorAOL@4a8b88bd]" time="195.398">
+    <testsuite name="TestSuite with 2 tests [example: padl.creator.aol.test.Test1]" time="0.234">
+      <testsuite name="padl.creator.aol.test.Test1" time="0.202">
+        <testcase name="testClasses" classname="padl.creator.aol.test.Test1" time="0.202"/>
+      </testsuite>
+      <testsuite name="padl.creator.aol.test.Test2" time="0.032">
+        <testcase name="testClasses" classname="padl.creator.aol.test.Test2" time="0.032"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 7 tests [example: padl.creator.aspectj.test.TestOO]" time="6.525">
+      <testsuite name="padl.creator.aspectj.test.TestOO" time="1.187">
+        <testcase name="testCreation" classname="padl.creator.aspectj.test.TestOO" time="1.14"/>
+        <testcase name="testConstituentCreation" classname="padl.creator.aspectj.test.TestOO" time="0.047"/>
+      </testsuite>
+      <testsuite name="padl.creator.aspectj.test.TestAO" time="4.432">
+        <testcase name="testLstExist" classname="padl.creator.aspectj.test.TestAO" time="2.995"/>
+        <testcase name="testConstituentCreation" classname="padl.creator.aspectj.test.TestAO" time="0.766"/>
+        <testcase name="testImportCreation" classname="padl.creator.aspectj.test.TestAO" time="0.671"/>
+      </testsuite>
+      <testsuite name="padl.creator.aspectj.test.TestModelCreation" time="0.797">
+        <testcase name="testCreation" classname="padl.creator.aspectj.test.TestModelCreation" time="0.797"/>
+      </testsuite>
+      <testsuite name="ptidej.ui.kernel.builder.test.TestBuilder" time="0.109">
+        <testcase name="testTypematching" classname="ptidej.ui.kernel.builder.test.TestBuilder" time="0.109"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="padl.creator.test.csharpfile.v1.TestCreatorCSharpV1" time="1.14">
+      <testcase name="testParser" classname="padl.creator.test.csharpfile.v1.TestCreatorCSharpV1" time="1.14"/>
+    </testsuite>
+    <testsuite name="padl.creator.test.csharpfile.v2.TestCreatorCSharpv2" time="0.655">
+      <testcase name="testParser" classname="padl.creator.test.csharpfile.v2.TestCreatorCSharpv2" time="0.655"/>
+    </testsuite>
+    <testsuite name="TestSuite with 3 tests [example: padl.creator.cppfile.eclipse.test.simple.TestSimple]" time="11.629">
+      <testsuite name="padl.creator.cppfile.eclipse.test.simple.TestSimple" time="6.273">
+        <testcase name="test1" classname="padl.creator.cppfile.eclipse.test.simple.TestSimple" time="6.273"/>
+      </testsuite>
+      <testsuite name="padl.creator.cppfile.eclipse.test.qt.TestQMake" time="2.67">
+        <testcase name="test1" classname="padl.creator.cppfile.eclipse.test.qt.TestQMake" time="2.67">
+          <error>junit.framework.AssertionFailedError: expected:&lt;70&gt; but was:&lt;4&gt;&#13;
+	at junit.framework.Assert.fail(Assert.java:51)&#13;
+	at junit.framework.Assert.failNotEquals(Assert.java:234)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:68)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:181)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:187)&#13;
+	at padl.creator.cppfile.eclipse.test.qt.TestQMake.test1(TestQMake.java:36)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:168)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:142)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:106)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:124)&#13;
+	at junit.framework.TestResult.run(TestResult.java:109)&#13;
+	at junit.framework.TestCase.run(TestCase.java:133)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:171)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:171)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:171)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="padl.creator.cppfile.eclipse.test.qt.TestQT" time="2.686">
+        <testcase name="test1" classname="padl.creator.cppfile.eclipse.test.qt.TestQT" time="2.686">
+          <error>junit.framework.AssertionFailedError: expected:&lt;70&gt; but was:&lt;4&gt;&#13;
+	at junit.framework.Assert.fail(Assert.java:51)&#13;
+	at junit.framework.Assert.failNotEquals(Assert.java:234)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:68)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:181)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:187)&#13;
+	at padl.creator.cppfile.eclipse.test.qt.TestQT.test1(TestQT.java:36)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at junit.framework.TestCase.runTest(TestCase.java:168)&#13;
+	at junit.framework.TestCase.runBare(TestCase.java:142)&#13;
+	at junit.framework.TestResult$1.protect(TestResult.java:106)&#13;
+	at junit.framework.TestResult.runProtected(TestResult.java:124)&#13;
+	at junit.framework.TestResult.run(TestResult.java:109)&#13;
+	at junit.framework.TestCase.run(TestCase.java:133)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:171)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:171)&#13;
+	at junit.framework.TestSuite.runTest(TestSuite.java:176)&#13;
+	at junit.framework.TestSuite.run(TestSuite.java:171)&#13;
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)&#13;
+&#13;
+</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 27 tests [example: padl.creator.cppfile.antlr.test.all.TestCPPCreator@5d363c50]" time="0.289">
+      <testsuite name="TestSuite with 27 tests [example: padl.creator.cppfile.antlr.test.all.TestWorld]" time="0.289">
+        <testsuite name="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.258">
+          <testcase name="testStruc" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.242"/>
+          <testcase name="testEnum" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+          <testcase name="testClass" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+          <testcase name="testGlobalField" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+          <testcase name="testClassGameConstructor" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+          <testcase name="testClassGameMethod" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.016"/>
+          <testcase name="testClassGameField" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+          <testcase name="testClassGameUseRelationship" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+          <testcase name="testClassTeamConstructor" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+          <testcase name="testClassTeamField" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+          <testcase name="testClassTeamMethod" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+          <testcase name="testClassTeamDestructor" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+          <testcase name="testClassTeamUseRelationship" classname="padl.creator.cppfile.antlr.test.all.TestWorld" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.cppfile.antlr.test.all.TestInheritance" time="0.0">
+          <testcase name="testGhost" classname="padl.creator.cppfile.antlr.test.all.TestInheritance" time="0.0"/>
+          <testcase name="testClass" classname="padl.creator.cppfile.antlr.test.all.TestInheritance" time="0.0"/>
+          <testcase name="testInheritedEntities" classname="padl.creator.cppfile.antlr.test.all.TestInheritance" time="0.0"/>
+          <testcase name="testInheritingEntities" classname="padl.creator.cppfile.antlr.test.all.TestInheritance" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.cppfile.antlr.test.all.TestCpoint" time="0.016">
+          <testcase name="testClass" classname="padl.creator.cppfile.antlr.test.all.TestCpoint" time="0.016"/>
+          <testcase name="testClassCpointField" classname="padl.creator.cppfile.antlr.test.all.TestCpoint" time="0.0"/>
+          <testcase name="testClassCpointMethod" classname="padl.creator.cppfile.antlr.test.all.TestCpoint" time="0.0"/>
+          <testcase name="testClassCpointConstructor" classname="padl.creator.cppfile.antlr.test.all.TestCpoint" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.015">
+          <testcase name="testGhost" classname="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.0"/>
+          <testcase name="testClass" classname="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.0"/>
+          <testcase name="testClassCpointField" classname="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.0"/>
+          <testcase name="testClassCpointMethod" classname="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.0"/>
+          <testcase name="testClassCpointRelationship" classname="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.0"/>
+          <testcase name="testClassCsegmentConstructor" classname="padl.creator.cppfile.antlr.test.all.TestCsegment2" time="0.015"/>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 214 tests [example: padl.creator.classfile.test.example.TestClassFileCompleteCreator@13b1d7ff]" time="79.496">
+      <testsuite name="TestSuite with 180 tests [example: padl.creator.classfile.test.example.Aggregation1]" time="0.969">
+        <testsuite name="padl.creator.classfile.test.example.Aggregation1" time="0.0">
+          <testcase name="testField" classname="padl.creator.classfile.test.example.Aggregation1" time="0.0"/>
+          <testcase name="testContainerAggregation" classname="padl.creator.classfile.test.example.Aggregation1" time="0.0"/>
+          <testcase name="testConstructor" classname="padl.creator.classfile.test.example.Aggregation1" time="0.0"/>
+          <testcase name="testAssociation" classname="padl.creator.classfile.test.example.Aggregation1" time="0.0"/>
+          <testcase name="testAddMethod" classname="padl.creator.classfile.test.example.Aggregation1" time="0.0"/>
+          <testcase name="testGetUseRelationship" classname="padl.creator.classfile.test.example.Aggregation1" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.classfile.test.example.Aggregation1" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.classfile.test.example.Aggregation1" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.Aggregation1" time="0.0"/>
+          <testcase name="testRemoveMethod" classname="padl.creator.classfile.test.example.Aggregation1" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.Aggregation10" time="0.031">
+          <testcase name="testConstructor" classname="padl.creator.classfile.test.example.Aggregation10" time="0.016"/>
+          <testcase name="testMainEntityName" classname="padl.creator.classfile.test.example.Aggregation10" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.classfile.test.example.Aggregation10" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.Aggregation10" time="0.0"/>
+          <testcase name="testAssociationLink" classname="padl.creator.classfile.test.example.Aggregation10" time="0.015"/>
+          <testcase name="testAggregation" classname="padl.creator.classfile.test.example.Aggregation10" time="0.0"/>
+          <testcase name="testAddAMethod" classname="padl.creator.classfile.test.example.Aggregation10" time="0.0"/>
+          <testcase name="testConstructorAssociation" classname="padl.creator.classfile.test.example.Aggregation10" time="0.0"/>
+          <testcase name="testUseRelationship" classname="padl.creator.classfile.test.example.Aggregation10" time="0.0"/>
+          <testcase name="testRemoveAMethod" classname="padl.creator.classfile.test.example.Aggregation10" time="0.0"/>
+          <testcase name="testStaticField" classname="padl.creator.classfile.test.example.Aggregation10" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.Aggregation11" time="0.016">
+          <testcase name="testContainerAggregation" classname="padl.creator.classfile.test.example.Aggregation11" time="0.016"/>
+          <testcase name="testConstructor" classname="padl.creator.classfile.test.example.Aggregation11" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.classfile.test.example.Aggregation11" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.classfile.test.example.Aggregation11" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.Aggregation11" time="0.0"/>
+          <testcase name="testAddAMethod" classname="padl.creator.classfile.test.example.Aggregation11" time="0.0"/>
+          <testcase name="testConstructorAssociation" classname="padl.creator.classfile.test.example.Aggregation11" time="0.0"/>
+          <testcase name="testRemoveAMethod" classname="padl.creator.classfile.test.example.Aggregation11" time="0.0"/>
+          <testcase name="testStaticField" classname="padl.creator.classfile.test.example.Aggregation11" time="0.0"/>
+          <testcase name="testAssociation1" classname="padl.creator.classfile.test.example.Aggregation11" time="0.0"/>
+          <testcase name="testAddUseRelationship" classname="padl.creator.classfile.test.example.Aggregation11" time="0.0"/>
+          <testcase name="testAddAggregation" classname="padl.creator.classfile.test.example.Aggregation11" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.Aggregation13" time="0.016">
+          <testcase name="testConstructor" classname="padl.creator.classfile.test.example.Aggregation13" time="0.016"/>
+          <testcase name="testMainEntityName" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+          <testcase name="testAddAMethod" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+          <testcase name="testConstructorAssociation" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+          <testcase name="testRemoveAMethod" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+          <testcase name="testContainerAggregation0" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+          <testcase name="testContainerAggregation1" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+          <testcase name="testGetAMethod" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+          <testcase name="testAddAnotherA" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+          <testcase name="testAddAAggregation" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+          <testcase name="testGetAnotherAMethod" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+          <testcase name="testInstanceField" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+          <testcase name="testRemoveAnotherAMethod" classname="padl.creator.classfile.test.example.Aggregation13" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.Aggregations" time="0.109">
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.Aggregations" time="0.093"/>
+          <testcase name="testAggregation3" classname="padl.creator.classfile.test.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation2" classname="padl.creator.classfile.test.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation12" classname="padl.creator.classfile.test.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation4" classname="padl.creator.classfile.test.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation5" classname="padl.creator.classfile.test.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation6" classname="padl.creator.classfile.test.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation7" classname="padl.creator.classfile.test.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation8" classname="padl.creator.classfile.test.example.Aggregations" time="0.0"/>
+          <testcase name="testAggregation9" classname="padl.creator.classfile.test.example.Aggregations" time="0.0"/>
+          <testcase name="testEntity2" classname="padl.creator.classfile.test.example.Aggregations" time="0.016"/>
+          <testcase name="testEntity1" classname="padl.creator.classfile.test.example.Aggregations" time="0.0"/>
+          <testcase name="testEntity3" classname="padl.creator.classfile.test.example.Aggregations" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.015">
+          <testcase name="testMethod" classname="padl.creator.classfile.test.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.015"/>
+          <testcase name="testConstructor" classname="padl.creator.classfile.test.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testAssociation" classname="padl.creator.classfile.test.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.classfile.test.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.classfile.test.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testAggregation" classname="padl.creator.classfile.test.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testUseRelationship" classname="padl.creator.classfile.test.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testStaticField" classname="padl.creator.classfile.test.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+          <testcase name="testFooAssociation" classname="padl.creator.classfile.test.example.Aggregation_CLASS_INSTANCE_FROM_FIELD_1" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.Association_INSTANCE_INSTANCE_2" time="0.0">
+          <testcase name="testMethod" classname="padl.creator.classfile.test.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+          <testcase name="testConstructor" classname="padl.creator.classfile.test.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+          <testcase name="testAssociation" classname="padl.creator.classfile.test.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.classfile.test.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.classfile.test.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+          <testcase name="testConstructorAssociation" classname="padl.creator.classfile.test.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+          <testcase name="testUseRelationship" classname="padl.creator.classfile.test.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+          <testcase name="testFooAssociation" classname="padl.creator.classfile.test.example.Association_INSTANCE_INSTANCE_2" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.ChainOfMessages" time="0.016">
+          <testcase name="testMethod" classname="padl.creator.classfile.test.example.ChainOfMessages" time="0.016"/>
+          <testcase name="testConstructor" classname="padl.creator.classfile.test.example.ChainOfMessages" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.classfile.test.example.ChainOfMessages" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.ChainOfMessages" time="0.0"/>
+          <testcase name="testAssociation1" classname="padl.creator.classfile.test.example.ChainOfMessages" time="0.0"/>
+          <testcase name="testAssociation2" classname="padl.creator.classfile.test.example.ChainOfMessages" time="0.0"/>
+          <testcase name="testAssociation0" classname="padl.creator.classfile.test.example.ChainOfMessages" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.Composite1" time="0.031">
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.Composite1" time="0.031"/>
+          <testcase name="testIndentedParagraph" classname="padl.creator.classfile.test.example.Composite1" time="0.0"/>
+          <testcase name="testParagraph" classname="padl.creator.classfile.test.example.Composite1" time="0.0"/>
+          <testcase name="testAbstractDocument" classname="padl.creator.classfile.test.example.Composite1" time="0.0"/>
+          <testcase name="testDocument" classname="padl.creator.classfile.test.example.Composite1" time="0.0"/>
+          <testcase name="testMain" classname="padl.creator.classfile.test.example.Composite1" time="0.0"/>
+          <testcase name="testTitle" classname="padl.creator.classfile.test.example.Composite1" time="0.0"/>
+          <testcase name="testElement" classname="padl.creator.classfile.test.example.Composite1" time="0.0"/>
+          <testcase name="testGhosts" classname="padl.creator.classfile.test.example.Composite1" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.Composite4AbstractDocument" time="0.031">
+          <testcase name="testMethod" classname="padl.creator.classfile.test.example.Composite4AbstractDocument" time="0.031"/>
+          <testcase name="testConstructor" classname="padl.creator.classfile.test.example.Composite4AbstractDocument" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.classfile.test.example.Composite4AbstractDocument" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.Composite4AbstractDocument" time="0.0"/>
+          <testcase name="testAssociation1" classname="padl.creator.classfile.test.example.Composite4AbstractDocument" time="0.0"/>
+          <testcase name="testAssociation2" classname="padl.creator.classfile.test.example.Composite4AbstractDocument" time="0.0"/>
+          <testcase name="testUseRelationship2" classname="padl.creator.classfile.test.example.Composite4AbstractDocument" time="0.0"/>
+          <testcase name="testUseRelationship1" classname="padl.creator.classfile.test.example.Composite4AbstractDocument" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_1" time="0.0">
+          <testcase name="testMethod" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_1" time="0.0"/>
+          <testcase name="testConstructor" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_1" time="0.0"/>
+          <testcase name="testAssociation" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_1" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_1" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_1" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_1" time="0.0"/>
+          <testcase name="testCreationLink" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_1" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_3" time="0.016">
+          <testcase name="testMethod" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_3" time="0.016"/>
+          <testcase name="testConstructor" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+          <testcase name="testAssociation1" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+          <testcase name="testAssociation2" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+          <testcase name="testUseRelationship2" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+          <testcase name="testUseRelationship1" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+          <testcase name="testCreationLink" classname="padl.creator.classfile.test.example.CreationLink_INSTANCE_CREATION_3" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.Interfaces" time="0.016">
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.Interfaces" time="0.016"/>
+          <testcase name="testAbstractDocument" classname="padl.creator.classfile.test.example.Interfaces" time="0.0"/>
+          <testcase name="testIJavaElement" classname="padl.creator.classfile.test.example.Interfaces" time="0.0"/>
+          <testcase name="testIAdaptable" classname="padl.creator.classfile.test.example.Interfaces" time="0.0"/>
+          <testcase name="testElement" classname="padl.creator.classfile.test.example.Interfaces" time="0.0"/>
+          <testcase name="testSimple" classname="padl.creator.classfile.test.example.Interfaces" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_1" time="0.0">
+          <testcase name="testMethod" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testConstructor" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testUseRelationship" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testAssociation1" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+          <testcase name="testAssociation2" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_1" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_3" time="0.015">
+          <testcase name="testMethod" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_3" time="0.015"/>
+          <testcase name="testConstructor" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_3" time="0.0"/>
+          <testcase name="testAssociation" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_3" time="0.0"/>
+          <testcase name="testMainEntityName" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_3" time="0.0"/>
+          <testcase name="testNumberOfElements" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_3" time="0.0"/>
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_3" time="0.0"/>
+          <testcase name="testUseRelationship" classname="padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_3" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.Relationships" time="0.109">
+          <testcase name="testJavaLangObject" classname="padl.creator.classfile.test.example.Relationships" time="0.109"/>
+          <testcase name="testEntity1" classname="padl.creator.classfile.test.example.Relationships" time="0.0"/>
+          <testcase name="testEntity3" classname="padl.creator.classfile.test.example.Relationships" time="0.0"/>
+          <testcase name="testEntity6" classname="padl.creator.classfile.test.example.Relationships" time="0.0"/>
+          <testcase name="testEntity5" classname="padl.creator.classfile.test.example.Relationships" time="0.0"/>
+          <testcase name="testEntity4" classname="padl.creator.classfile.test.example.Relationships" time="0.0"/>
+          <testcase name="testEntity7" classname="padl.creator.classfile.test.example.Relationships" time="0.0"/>
+          <testcase name="testEntity8" classname="padl.creator.classfile.test.example.Relationships" time="0.0"/>
+          <testcase name="testEntity9" classname="padl.creator.classfile.test.example.Relationships" time="0.0"/>
+          <testcase name="testCreationLink_INSTANCE_CREATION_2" classname="padl.creator.classfile.test.example.Relationships" time="0.0"/>
+          <testcase name="testUseRelationship_CLASS_CLASS_2" classname="padl.creator.classfile.test.example.Relationships" time="0.0"/>
+          <testcase name="testUseRelationship_INSTANCE_CLASS_1" classname="padl.creator.classfile.test.example.Relationships" time="0.0"/>
+          <testcase name="testUseRelationship_INSTANCE_CLASS_2" classname="padl.creator.classfile.test.example.Relationships" time="0.0"/>
+          <testcase name="testUseRelationship_INSTANCE_CLASS_3" classname="padl.creator.classfile.test.example.Relationships" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.SuperEntitiesConnection" time="0.032">
+          <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.example.SuperEntitiesConnection" time="0.032"/>
+          <testcase name="testIndentedParagraph" classname="padl.creator.classfile.test.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testParagraph" classname="padl.creator.classfile.test.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testAbstractDocument" classname="padl.creator.classfile.test.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testEnumeration" classname="padl.creator.classfile.test.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testDocument" classname="padl.creator.classfile.test.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testMain" classname="padl.creator.classfile.test.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testTitle" classname="padl.creator.classfile.test.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testElement" classname="padl.creator.classfile.test.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testString" classname="padl.creator.classfile.test.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testVector" classname="padl.creator.classfile.test.example.SuperEntitiesConnection" time="0.0"/>
+          <testcase name="testObject" classname="padl.creator.classfile.test.example.SuperEntitiesConnection" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.Ghost" time="0.015">
+          <testcase name="testGhost" classname="padl.creator.classfile.test.example.Ghost" time="0.015"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.TestDup" time="0.486">
+          <testcase name="testDetectOperators" classname="padl.creator.classfile.test.example.TestDup" time="0.047"/>
+          <testcase name="testControlIfWhileForSwitch" classname="padl.creator.classfile.test.example.TestDup" time="0.078"/>
+          <testcase name="testAnalyzeDup" classname="padl.creator.classfile.test.example.TestDup" time="0.047"/>
+          <testcase name="testDynamicMethod" classname="padl.creator.classfile.test.example.TestDup" time="0.048"/>
+          <testcase name="testInstanceOf" classname="padl.creator.classfile.test.example.TestDup" time="0.046"/>
+          <testcase name="testLoadAndStoreInArray" classname="padl.creator.classfile.test.example.TestDup" time="0.047"/>
+          <testcase name="testMethod3aryOperator" classname="padl.creator.classfile.test.example.TestDup" time="0.063"/>
+          <testcase name="testMethodPrintln" classname="padl.creator.classfile.test.example.TestDup" time="0.032"/>
+          <testcase name="testStaticInvocations" classname="padl.creator.classfile.test.example.TestDup" time="0.047"/>
+          <testcase name="testStoreToField" classname="padl.creator.classfile.test.example.TestDup" time="0.031"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.example.TestNew" time="0.015">
+          <testcase name="testFooDup" classname="padl.creator.classfile.test.example.TestNew" time="0.015"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="TestSuite with 1 tests [example: padl.creator.classfile.test.visitor.Composite1]" time="0.032">
+        <testsuite name="padl.creator.classfile.test.visitor.Composite1" time="0.032">
+          <testcase name="testVisitor" classname="padl.creator.classfile.test.visitor.Composite1" time="0.032"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="TestSuite with 10 tests [example: padl.creator.classfile.test.innerclasses.TestInnerClasses]" time="10.205">
+        <testsuite name="padl.creator.classfile.test.innerclasses.TestInnerClasses" time="0.249">
+          <testcase name="testMemberClass" classname="padl.creator.classfile.test.innerclasses.TestInnerClasses" time="0.249"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.innerclasses.TestMemberClasses" time="0.016">
+          <testcase name="testClasses" classname="padl.creator.classfile.test.innerclasses.TestMemberClasses" time="0.016"/>
+          <testcase name="testMemberClass" classname="padl.creator.classfile.test.innerclasses.TestMemberClasses" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.innerclasses.TestMemberClasses2" time="9.751">
+          <testcase name="testMemberEntities" classname="padl.creator.classfile.test.innerclasses.TestMemberClasses2" time="9.751"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.innerclasses.TestMemberClasses3" time="0.11">
+          <testcase name="testMemberEntitiesInheritance" classname="padl.creator.classfile.test.innerclasses.TestMemberClasses3" time="0.11"/>
+          <testcase name="testMemberEntities" classname="padl.creator.classfile.test.innerclasses.TestMemberClasses3" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.innerclasses.TestMemberClasses4" time="0.0">
+          <testcase name="testMemberEntities" classname="padl.creator.classfile.test.innerclasses.TestMemberClasses4" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.innerclasses.TestMemberClasses5" time="0.0">
+          <testcase name="testMemberEntities" classname="padl.creator.classfile.test.innerclasses.TestMemberClasses5" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.innerclasses.TestMemberEntities" time="0.048">
+          <testcase name="testMemberEntities" classname="padl.creator.classfile.test.innerclasses.TestMemberEntities" time="0.048"/>
+        </testsuite>
+        <testsuite name="padl.creator.classfile.test.innerclasses.TestMemberInterfaces" time="0.031">
+          <testcase name="testClasses" classname="padl.creator.classfile.test.innerclasses.TestMemberInterfaces" time="0.031"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="padl.creator.classfile.test.method.TestMethodInclusion" time="0.016">
+        <testcase name="testInclusionCompiledIn1p4with1p1classfile" classname="padl.creator.classfile.test.method.TestMethodInclusion" time="0.0"/>
+        <testcase name="testInclusionCompiledIn1p4with1p2classfile" classname="padl.creator.classfile.test.method.TestMethodInclusion" time="0.0"/>
+        <testcase name="testInclusionCompiledIn1p4with1p3classfile" classname="padl.creator.classfile.test.method.TestMethodInclusion" time="0.016"/>
+        <testcase name="testInclusionCompiledIn1p3" classname="padl.creator.classfile.test.method.TestMethodInclusion" time="0.0"/>
+        <testcase name="testInclusionCompiledIn1p4" classname="padl.creator.classfile.test.method.TestMethodInclusion" time="0.0"/>
+      </testsuite>
+      <testsuite name="TestSuite with 1 tests [example: padl.creator.classfile.test.inheritance.Inheritance]" time="3.323">
+        <testsuite name="padl.creator.classfile.test.inheritance.Inheritance" time="3.323">
+          <testcase name="testFieldAccess" classname="padl.creator.classfile.test.inheritance.Inheritance" time="3.323"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="padl.creator.classfile.test.method.TestPrivateConstructor" time="0.016">
+        <testcase name="testElementsOfRestrictedCreation" classname="padl.creator.classfile.test.method.TestPrivateConstructor" time="0.016"/>
+        <testcase name="testNumberOfEntities" classname="padl.creator.classfile.test.method.TestPrivateConstructor" time="0.0"/>
+      </testsuite>
+      <testsuite name="TestSuite with 8 tests [example: padl.creator.classfile.test.path.TestPathArgoUML]" time="6.464">
+        <testsuite name="padl.creator.classfile.test.path.TestPathArgoUML" time="6.464">
+          <testcase name="testPath2" classname="padl.creator.classfile.test.path.TestPathArgoUML" time="6.464"/>
+          <testcase name="testPath1" classname="padl.creator.classfile.test.path.TestPathArgoUML" time="0.0"/>
+          <testcase name="testPath7" classname="padl.creator.classfile.test.path.TestPathArgoUML" time="0.0"/>
+          <testcase name="testPath6" classname="padl.creator.classfile.test.path.TestPathArgoUML" time="0.0"/>
+          <testcase name="testPath5" classname="padl.creator.classfile.test.path.TestPathArgoUML" time="0.0"/>
+          <testcase name="testPath8" classname="padl.creator.classfile.test.path.TestPathArgoUML" time="0.0"/>
+          <testcase name="testPath4" classname="padl.creator.classfile.test.path.TestPathArgoUML" time="0.0"/>
+          <testcase name="testPath3" classname="padl.creator.classfile.test.path.TestPathArgoUML" time="0.0"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="padl.creator.classfile.test.methodInvocation.MethodInvocationMissingtest" time="0.174">
+        <testcase name="testMethodInvocationMissingConfig3" classname="padl.creator.classfile.test.methodInvocation.MethodInvocationMissingtest" time="0.033"/>
+        <testcase name="testMethodInvocationMissingConfig4" classname="padl.creator.classfile.test.methodInvocation.MethodInvocationMissingtest" time="0.0"/>
+        <testcase name="testMethodInvocationMissingConfig2" classname="padl.creator.classfile.test.methodInvocation.MethodInvocationMissingtest" time="0.079"/>
+        <testcase name="testMethodInvocationMissingConfig1" classname="padl.creator.classfile.test.methodInvocation.MethodInvocationMissingtest" time="0.062"/>
+      </testsuite>
+      <testsuite name="padl.creator.classfile.test.topLevelEntity.TopLevelEntityTest" time="58.297">
+        <testcase name="testClassMemberIsTopLevelEntity1" classname="padl.creator.classfile.test.topLevelEntity.TopLevelEntityTest" time="8.007"/>
+        <testcase name="testClassMemberIsTopLevelEntity2" classname="padl.creator.classfile.test.topLevelEntity.TopLevelEntityTest" time="42.502"/>
+        <testcase name="testClassMemberInAnonymousIsTopLevelEntity" classname="padl.creator.classfile.test.topLevelEntity.TopLevelEntityTest" time="7.788"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 40 tests [example: padl.creator.javafile.eclipse.test.javafile.ClassTest]" time="42.611">
+      <testsuite name="padl.creator.javafile.eclipse.test.javafile.ClassTest" time="6.594">
+        <testcase name="testClasses" classname="padl.creator.javafile.eclipse.test.javafile.ClassTest" time="2.845"/>
+        <testcase name="testDefaultConstructorAddedAutomatically" classname="padl.creator.javafile.eclipse.test.javafile.ClassTest" time="0.469"/>
+        <testcase name="testGhosts" classname="padl.creator.javafile.eclipse.test.javafile.ClassTest" time="0.485"/>
+        <testcase name="testFields" classname="padl.creator.javafile.eclipse.test.javafile.ClassTest" time="0.452"/>
+        <testcase name="testmethods" classname="padl.creator.javafile.eclipse.test.javafile.ClassTest" time="0.408"/>
+        <testcase name="testClassMembers" classname="padl.creator.javafile.eclipse.test.javafile.ClassTest" time="0.452"/>
+        <testcase name="testConstructors" classname="padl.creator.javafile.eclipse.test.javafile.ClassTest" time="0.453"/>
+        <testcase name="testDefaultPackages" classname="padl.creator.javafile.eclipse.test.javafile.ClassTest" time="0.703"/>
+        <testcase name="testmethodParameters" classname="padl.creator.javafile.eclipse.test.javafile.ClassTest" time="0.327"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.javafile.InterfaceTest" time="1.08">
+        <testcase name="testInterfaceNoDefaultConstructor" classname="padl.creator.javafile.eclipse.test.javafile.InterfaceTest" time="0.58"/>
+        <testcase name="testInterface1" classname="padl.creator.javafile.eclipse.test.javafile.InterfaceTest" time="0.5"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.javafile.LightModelCreatorTest" time="17.507">
+        <testcase name="testCreateModelFromJavaFilesList" classname="padl.creator.javafile.eclipse.test.javafile.LightModelCreatorTest" time="0.702"/>
+        <testcase name="testCreateModelFromJavaSourceCode" classname="padl.creator.javafile.eclipse.test.javafile.LightModelCreatorTest" time="16.805"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="5.625">
+        <testcase name="testGhostMember1" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.141"/>
+        <testcase name="testGhostMember2" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.343"/>
+        <testcase name="testGhostMember2bis" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.187"/>
+        <testcase name="testGhostMember3" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.328"/>
+        <testcase name="testGhostMember4" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.141"/>
+        <testcase name="testGhostMember5" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.469"/>
+        <testcase name="testGhostMember5bis" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.219"/>
+        <testcase name="testInheritanceGhost1" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.171"/>
+        <testcase name="testInheritanceGhost10" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.173"/>
+        <testcase name="testInheritanceGhost10bis" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.406"/>
+        <testcase name="testInheritanceGhost2" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.203"/>
+        <testcase name="testInheritanceGhost3" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.579"/>
+        <testcase name="testInheritanceGhost3bis" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.204"/>
+        <testcase name="testInheritanceGhost4" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.406"/>
+        <testcase name="testInheritanceGhost4bis" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.187"/>
+        <testcase name="testInheritanceGhost5" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.248"/>
+        <testcase name="testInheritanceGhost6" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.173"/>
+        <testcase name="testInheritanceGhost7" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.187"/>
+        <testcase name="testInheritanceGhost8" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.343"/>
+        <testcase name="testInheritanceGhost9" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.344"/>
+        <testcase name="testInheritanceGhost9bis" classname="padl.creator.javafile.eclipse.test.javafile.MemberGhostTest" time="0.157"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.javafile.ManyClassesInOneFileTest" time="0.203">
+        <testcase name="testManyClassesInOneFile" classname="padl.creator.javafile.eclipse.test.javafile.ManyClassesInOneFileTest" time="0.203"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.javafile.PackagesTest" time="0.923">
+        <testcase name="testPackageIncludedInAnotherPackage1" classname="padl.creator.javafile.eclipse.test.javafile.PackagesTest" time="0.58"/>
+        <testcase name="testDefaultPackages" classname="padl.creator.javafile.eclipse.test.javafile.PackagesTest" time="0.343"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.javafile.ParametrizedTypesTest" time="0.173">
+        <testcase name="testParametrizedType" classname="padl.creator.javafile.eclipse.test.javafile.ParametrizedTypesTest" time="0.173"/>
+      </testsuite>
+      <testsuite name="padl.creator.javafile.eclipse.test.javafile.TestIndirectSourcePath" time="10.506">
+        <testcase name="testSourcePathIndirect" classname="padl.creator.javafile.eclipse.test.javafile.TestIndirectSourcePath" time="10.115"/>
+        <testcase name="testSourcePathIndirect1" classname="padl.creator.javafile.eclipse.test.javafile.TestIndirectSourcePath" time="0.391"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 3 tests [example: padl.creator.javafile.javac.test.simple.Test1]" time="5.134">
+      <testsuite name="padl.creator.javafile.javac.test.simple.Test1" time="5.134">
+        <testcase name="testB" classname="padl.creator.javafile.javac.test.simple.Test1" time="5.119"/>
+        <testcase name="testA" classname="padl.creator.javafile.javac.test.simple.Test1" time="0.015"/>
+        <testcase name="testC" classname="padl.creator.javafile.javac.test.simple.Test1" time="0.0"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 3 tests [example: padl.creator.test.comparison.jct.Composite1]" time="6.855">
+      <testsuite name="padl.creator.test.comparison.jct.Composite1" time="1.891">
+        <testcase name="testCompare" classname="padl.creator.test.comparison.jct.Composite1" time="1.891"/>
+      </testsuite>
+      <testsuite name="padl.creator.test.comparison.eclipse.Composite1" time="1.996">
+        <testcase name="testCompare" classname="padl.creator.test.comparison.eclipse.Composite1" time="1.996"/>
+      </testsuite>
+      <testsuite name="padl.creator.test.relationships.RelationshipsTest" time="2.968">
+        <testcase name="testRelationships" classname="padl.creator.test.relationships.RelationshipsTest" time="2.968"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 9 tests [example: jct.test.JCTFactoryInitializer]" incomplete="true">
+      <testsuite name="jct.test.JCTFactoryInitializer" incomplete="true">
+        <testcase name="testFactoryInitializerWithPath" classname="jct.test.JCTFactoryInitializer" incomplete="true"/>
+        <testcase name="testFactoryInitializer" classname="jct.test.JCTFactoryInitializer" incomplete="true"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTTComments" incomplete="true">
+        <testcase name="testComments" classname="jct.test.JCTTComments" incomplete="true"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTDTMisc" incomplete="true">
+        <testcase name="testArrayLiterals" classname="jct.test.JCTDTMisc" incomplete="true"/>
+        <testcase name="testAnnonymousClasses" classname="jct.test.JCTDTMisc" incomplete="true"/>
+        <testcase name="testSelectors" classname="jct.test.JCTDTMisc" incomplete="true"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTDTUsingSnpSht" incomplete="true">
+        <testcase name="testCreatorAndPrettyPrinter" classname="jct.test.JCTDTUsingSnpSht" incomplete="true"/>
+        <testcase name="testPADLCreatorFromJCT" classname="jct.test.JCTDTUsingSnpSht" incomplete="true"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTDTUsingJCT" incomplete="true">
+        <testcase name="testCreatorAndPrettyPrinter" classname="jct.test.JCTDTUsingJCT" incomplete="true"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 12 tests [example: jct.test.JCTDTUsingJCT]" time="4.93">
+      <testsuite name="jct.test.JCTDTUsingJCT" time="4.93">
+        <testcase name="testCreatorAndPrettyPrinter" classname="jct.test.JCTDTUsingJCT" time="4.399"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTFactoryInitializer" time="0.015">
+        <testcase name="testFactoryInitializerWithPath" classname="jct.test.JCTFactoryInitializer" time="0.0"/>
+        <testcase name="testFactoryInitializer" classname="jct.test.JCTFactoryInitializer" time="0.016"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTTComments" time="0.251">
+        <testcase name="testComments" classname="jct.test.JCTTComments" time="0.298"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTCFSCSTMisc" time="4.105">
+        <testcase name="testArrayLiterals" classname="jct.test.JCTCFSCSTMisc" time="1.482"/>
+        <testcase name="testAnnonymousClasses" classname="jct.test.JCTCFSCSTMisc" time="1.436"/>
+        <testcase name="testSelectors" classname="jct.test.JCTCFSCSTMisc" time="1.187"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTDTMisc" time="5.054">
+        <testcase name="testArrayLiterals" classname="jct.test.JCTDTMisc" time="1.513"/>
+        <testcase name="testAnnonymousClasses" classname="jct.test.JCTDTMisc" time="1.092"/>
+        <testcase name="testSelectors" classname="jct.test.JCTDTMisc" time="1.154"/>
+      </testsuite>
+      <testsuite name="jct.test.JCTDTUsingSnpSht" time="9.329">
+        <testcase name="testCreatorAndPrettyPrinter" classname="jct.test.JCTDTUsingSnpSht" time="4.79"/>
+        <testcase name="testPADLCreatorFromJCT" classname="jct.test.JCTDTUsingSnpSht" time="3.806"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="TestSuite with 42 tests [example: padl.kernel.impl.AbstractContainerTest]" time="0.078">
+      <testsuite name="padl.kernel.impl.AbstractContainerTest" time="0.016">
+        <testcase name="testGetIteratorOnEntitiesClass" classname="padl.kernel.impl.AbstractContainerTest" time="0.016"/>
+        <testcase name="testAddEntity" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testAddEntitySameType" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testAddEqualEntity" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testAddEqualEntity2" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testAddEqualEntity3" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testGetIteratorOnEntities" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testRemoveAllEntities" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testRemoveAllEntities2" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testRemoveEntityFromID" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testRemoveEntityFromID2" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+        <testcase name="testResetListOfEntities" classname="padl.kernel.impl.AbstractContainerTest" time="0.0"/>
+      </testsuite>
+      <testsuite name="padl.kernel.impl.MethodInvocationTest" time="0.015">
+        <testcase name="testEqualsIMethodInvocation" classname="padl.kernel.impl.MethodInvocationTest" time="0.015"/>
+      </testsuite>
+      <testsuite name="TestSuite with 4 tests [example: padl.test.clone.Clone]" time="0.016">
+        <testsuite name="padl.test.clone.Clone" time="0.016">
+          <testcase name="testElements" classname="padl.test.clone.Clone" time="0.016"/>
+          <testcase name="testPatterns" classname="padl.test.clone.Clone" time="0.0"/>
+          <testcase name="testEntities" classname="padl.test.clone.Clone" time="0.0"/>
+          <testcase name="testInheritance" classname="padl.test.clone.Clone" time="0.0"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="TestSuite with 7 tests [example: padl.test.remove.Remove]" time="0.015">
+        <testsuite name="padl.test.remove.Remove" time="0.015">
+          <testcase name="test1" classname="padl.test.remove.Remove" time="0.015"/>
+          <testcase name="test2" classname="padl.test.remove.Remove" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.test.remove.ConstituentRemove" time="0.0">
+          <testcase name="testRemoveTopLevelClass3" classname="padl.test.remove.ConstituentRemove" time="0.0"/>
+          <testcase name="testRemoveTopLevelClass1" classname="padl.test.remove.ConstituentRemove" time="0.0"/>
+          <testcase name="testRemoveTopLevelClass2" classname="padl.test.remove.ConstituentRemove" time="0.0"/>
+          <testcase name="testRemoveConstitiuent" classname="padl.test.remove.ConstituentRemove" time="0.0"/>
+          <testcase name="testRemoveClassFromPackage" classname="padl.test.remove.ConstituentRemove" time="0.0"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="TestSuite with 6 tests [example: padl.test.setter.TestSetter]" time="0.0">
+        <testsuite name="padl.test.setter.TestSetter" time="0.0">
+          <testcase name="testClass" classname="padl.test.setter.TestSetter" time="0.0"/>
+          <testcase name="testMethods" classname="padl.test.setter.TestSetter" time="0.0"/>
+          <testcase name="testParameters" classname="padl.test.setter.TestSetter" time="0.0"/>
+        </testsuite>
+        <testsuite name="padl.test.setter.TestGetter" time="0.0">
+          <testcase name="testClass" classname="padl.test.setter.TestGetter" time="0.0"/>
+          <testcase name="testMethods" classname="padl.test.setter.TestGetter" time="0.0"/>
+          <testcase name="testParameters" classname="padl.test.setter.TestGetter" time="0.0"/>
+        </testsuite>
+      </testsuite>
+      <testsuite name="padl.test.path.TestPath" time="0.0">
+        <testcase name="testClass" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testMethods" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testPath" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testRemoveAddContainerAggregation" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testParameters" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testRemoveAddParameter" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testAddRemoveClass1" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testRemoveAddMethod" classname="padl.test.path.TestPath" time="0.0"/>
+        <testcase name="testAddRemoveClass2" classname="padl.test.path.TestPath" time="0.0"/>
+      </testsuite>
+      <testsuite name="padl.test.defaultpackage.TestDefaultPackage" time="0.016">
+        <testcase name="testRetrieveDefaultPackageByName" classname="padl.test.defaultpackage.TestDefaultPackage" time="0.016"/>
+        <testcase name="testRetrieveDefaultPackageByID" classname="padl.test.defaultpackage.TestDefaultPackage" time="0.0"/>
+        <testcase name="testCreationOfDefaultPackage" classname="padl.test.defaultpackage.TestDefaultPackage" time="0.0"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<xmitransformations version="2.0">
+<!-- XMI transformation does not define a model element type -->
+<xmitransformation xmipattern="sdm:sdmetricsbase" recurse="true" />
+</xmitransformations>

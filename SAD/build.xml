@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SAD" default="build.jars" basedir=".">
+
+	<property name="basews" value="${ws}"/>
+	<property name="baseos" value="${os}"/>
+	<property name="basearch" value="${arch}"/>
+	<property name="basenl" value="${nl}"/>
+	<property name="bundleId" value="SAD"/>
+	<property name="bundleVersion" value="1.0.0"/>
+
+	<!-- Compiler settings. -->
+	<property name="javacFailOnError" value="false"/>
+	<property name="javacDebugInfo" value="on"/>
+	<property name="javacVerbose" value="false"/>
+	<property name="logExtension" value=".log"/>
+	<property name="compilerArg" value=""/>
+	<property name="javacSource" value="1.3"/>
+	<property name="javacTarget" value="1.2"/>
+	<condition property="dir_bootclasspath" value="${java.home}/../Classes">
+		<os family="mac"/>
+	</condition>
+	<property name="dir_bootclasspath" value="${java.home}/lib"/>
+	<path id="path_bootclasspath">
+		<fileset dir="${dir_bootclasspath}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	<property name="bootclasspath" refid="path_bootclasspath"/>
+	<property name="bundleJavacSource" value="${javacSource}"/>
+	<property name="bundleJavacTarget" value="${javacTarget}"/>
+	<property name="bundleBootClasspath" value="${bootclasspath}"/>
+
+	<target name="init" depends="properties">
+		<condition property="pluginTemp" value="${buildTempFolder}/plugins">
+			<isset property="buildTempFolder"/>
+		</condition>
+		<property name="pluginTemp" value="${basedir}"/>
+		<condition property="build.result.folder" value="${pluginTemp}/SAD_1.0.0">
+			<isset property="buildTempFolder"/>
+		</condition>
+		<property name="build.result.folder" value="${basedir}"/>
+		<property name="temp.folder" value="${basedir}/temp.folder"/>
+		<property name="plugin.destination" value="${basedir}"/>
+	</target>
+
+	<target name="properties" if="eclipse.running">
+		<property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+
+	</target>
+
+	<target name="build.update.jar" depends="init" description="Build the plug-in: SAD for an update site.">
+		<delete dir="${temp.folder}"/>
+		<mkdir dir="${temp.folder}"/>
+		<antcall target="build.jars"/>
+		<antcall target="gather.bin.parts">
+			<param name="destination.temp.folder" value="${temp.folder}/"/>
+		</antcall>
+		<jar destfile="${plugin.destination}/SAD_1.0.0.jar" basedir="${temp.folder}/SAD_1.0.0" filesetmanifest="merge"/>
+		<delete dir="${temp.folder}"/>
+	</target>
+
+	<target name="SAD.jar" depends="init" unless="SAD.jar" description="Create jar: SAD SAD.jar.">
+		<delete dir="${temp.folder}/SAD.jar.bin"/>
+		<mkdir dir="${temp.folder}/SAD.jar.bin"/>
+		<path id="SAD.jar.classpath">
+			<pathelement path="../CPL/bin"/>
+			<pathelement path="../CPL/CPL.jar"/>
+			<pathelement path="../CPL/tools.jar"/>
+			<pathelement path="../CPL/batik-awt-util.jar"/>
+			<pathelement path="../CPL/batik-dom.jar"/>
+			<pathelement path="../CPL/batik-svggen.jar"/>
+			<pathelement path="../CPL/batik-util.jar"/>
+			<pathelement path="../CPL/batik-xml.jar"/>
+			<pathelement path="../CPL/xalan-2.6.0.jar"/>
+			<pathelement path="../CPL/xerces_2_5_0.jar"/>
+			<pathelement path="../CPL/xml-apis.jar"/>
+			<pathelement path="../CPL/xml-apis-ext.jar"/>
+			<pathelement path="../CPL/cfparse.jar"/>
+			<pathelement path="../CPL/bcel-5.2.jar"/>
+			<pathelement path="../PADL/bin"/>
+			<pathelement path="../PADL/@dot"/>
+			<pathelement path="../POM/bin"/>
+			<pathelement path="../POM/@dot"/>
+			<pathelement path="../SAD Rules/bin"/>
+			<pathelement path="../SAD Rules/@dot"/>
+		</path>
+		<!-- compile the source code -->
+		<javac destdir="${temp.folder}/SAD.jar.bin" failonerror="${javacFailOnError}" verbose="${javacVerbose}" debug="${javacDebugInfo}" includeAntRuntime="no" bootclasspath="${bundleBootClasspath}" source="${bundleJavacSource}" target="${bundleJavacTarget}"		>
+			<compilerarg line="${compilerArg}" compiler="${build.compiler}"/>
+			<classpath refid="SAD.jar.classpath" />
+			<src path="src/"			/>
+			<compilerarg value="@${basedir}/javaCompiler.SAD.jar.args" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+			<compilerarg line="-log '${temp.folder}/SAD.jar.bin${logExtension}'" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+		</javac>
+		<!-- Copy necessary resources -->
+		<copy todir="${temp.folder}/SAD.jar.bin" failonerror="true" overwrite="false">
+			<fileset dir="src/">
+				<exclude name="**/*.java"/>
+				<exclude name="**/package.htm*"/>
+			</fileset>
+		</copy>
+		<mkdir dir="${build.result.folder}"/>
+		<jar destfile="${build.result.folder}/SAD.jar" basedir="${temp.folder}/SAD.jar.bin"/>
+		<delete dir="${temp.folder}/SAD.jar.bin"/>
+	</target>
+
+	<target name="SADsrc.zip" depends="init" unless="SADsrc.zip">
+		<mkdir dir="${build.result.folder}"/>
+		<zip destfile="${build.result.folder}/SADsrc.zip" filesonly="false" whenempty="skip" update="false">
+			<fileset dir="src/">
+				<include name="**/*.java"/>
+			</fileset>
+		</zip>
+	</target>
+
+	<target name="@dot" depends="init" unless="@dot" description="Create jar: SAD @dot.">
+		<delete dir="${temp.folder}/@dot.bin"/>
+		<mkdir dir="${temp.folder}/@dot.bin"/>
+		<path id="@dot.classpath">
+			<pathelement path="../CPL/bin"/>
+			<pathelement path="../CPL/CPL.jar"/>
+			<pathelement path="../CPL/tools.jar"/>
+			<pathelement path="../CPL/batik-awt-util.jar"/>
+			<pathelement path="../CPL/batik-dom.jar"/>
+			<pathelement path="../CPL/batik-svggen.jar"/>
+			<pathelement path="../CPL/batik-util.jar"/>
+			<pathelement path="../CPL/batik-xml.jar"/>
+			<pathelement path="../CPL/xalan-2.6.0.jar"/>
+			<pathelement path="../CPL/xerces_2_5_0.jar"/>
+			<pathelement path="../CPL/xml-apis.jar"/>
+			<pathelement path="../CPL/xml-apis-ext.jar"/>
+			<pathelement path="../CPL/cfparse.jar"/>
+			<pathelement path="../CPL/bcel-5.2.jar"/>
+			<pathelement path="../PADL/bin"/>
+			<pathelement path="../PADL/@dot"/>
+			<pathelement path="../POM/bin"/>
+			<pathelement path="../POM/@dot"/>
+			<pathelement path="../SAD Rules/bin"/>
+			<pathelement path="../SAD Rules/@dot"/>
+			<pathelement path="${build.result.folder}/bin/"/>
+			<pathelement path="${build.result.folder}/../SAD_1.0.0/bin/"/>
+			<pathelement path="${build.result.folder}/SAD.jar"/>
+			<pathelement path="${build.result.folder}/../SAD_1.0.0/SAD.jar"/>
+		</path>
+		<!-- compile the source code -->
+		<javac destdir="${temp.folder}/@dot.bin" failonerror="${javacFailOnError}" verbose="${javacVerbose}" debug="${javacDebugInfo}" includeAntRuntime="no" bootclasspath="${bundleBootClasspath}" source="${bundleJavacSource}" target="${bundleJavacTarget}"		>
+			<compilerarg line="${compilerArg}" compiler="${build.compiler}"/>
+			<classpath refid="@dot.classpath" />
+			<src path="src/"			/>
+			<compilerarg value="@${basedir}/javaCompiler...args" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+			<compilerarg line="-log '${temp.folder}/@dot.bin${logExtension}'" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+		</javac>
+		<!-- Copy necessary resources -->
+		<copy todir="${temp.folder}/@dot.bin" failonerror="true" overwrite="false">
+			<fileset dir="src/">
+				<exclude name="**/*.java"/>
+				<exclude name="**/package.htm*"/>
+			</fileset>
+		</copy>
+		<mkdir dir="${build.result.folder}"/>
+		<copy todir="${build.result.folder}/@dot" failonerror="true" overwrite="false">
+			<fileset dir="${temp.folder}/@dot.bin">
+			</fileset>
+		</copy>
+		<delete dir="${temp.folder}/@dot.bin"/>
+	</target>
+
+	<target name="src.zip" depends="init" unless="src.zip">
+		<mkdir dir="${build.result.folder}"/>
+		<zip destfile="${build.result.folder}/src.zip" filesonly="false" whenempty="skip" update="false">
+			<fileset dir="src/">
+				<include name="**/*.java"/>
+			</fileset>
+		</zip>
+	</target>
+
+	<target name="build.jars" depends="init" description="Compile classes and build nested jars for the plug-in: SAD.">
+		<available property="SAD.jar" file="${build.result.folder}/SAD.jar"/>
+		<antcall target="SAD.jar"/>
+		<available property="@dot" file="${build.result.folder}/@dot"/>
+		<antcall target="@dot"/>
+	</target>
+
+	<target name="build.sources" depends="init">
+		<available property="SADsrc.zip" file="${build.result.folder}/SADsrc.zip"/>
+		<antcall target="SADsrc.zip"/>
+		<available property="src.zip" file="${build.result.folder}/src.zip"/>
+		<antcall target="src.zip"/>
+	</target>
+
+	<target name="gather.bin.parts" depends="init" if="destination.temp.folder">
+		<mkdir dir="${destination.temp.folder}/SAD_1.0.0"/>
+		<copy todir="${destination.temp.folder}/SAD_1.0.0" failonerror="true" overwrite="false">
+			<fileset dir="${build.result.folder}">
+				<include name="SAD.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="${destination.temp.folder}/SAD_1.0.0" failonerror="true" overwrite="false">
+			<fileset dir="${build.result.folder}/@dot">
+				<include name="**"/>
+			</fileset>
+		</copy>
+		<copy todir="${destination.temp.folder}/SAD_1.0.0" failonerror="true" overwrite="false">
+			<fileset dir="${basedir}">
+				<include name="META-INF/"/>
+				<include name="SAD.jar"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="build.zips" depends="init">
+	</target>
+
+	<target name="gather.sources" depends="init" if="destination.temp.folder">
+		<mkdir dir="${destination.temp.folder}/SAD_1.0.0"/>
+		<copy file="${build.result.folder}/src.zip" todir="${destination.temp.folder}/SAD_1.0.0" failonerror="false" overwrite="false"/>
+		<copy file="${build.result.folder}/SADsrc.zip" todir="${destination.temp.folder}/SAD_1.0.0" failonerror="false" overwrite="false"/>
+	</target>
+
+	<target name="gather.logs" depends="init" if="destination.temp.folder">
+		<mkdir dir="${destination.temp.folder}/SAD_1.0.0"/>
+		<copy todir="${destination.temp.folder}/SAD_1.0.0" failonerror="false" overwrite="false">
+			<fileset dir="${temp.folder}">
+				<include name="@dot.bin${logExtension}"/>
+			</fileset>
+		</copy>
+		<copy todir="${destination.temp.folder}/SAD_1.0.0" failonerror="false" overwrite="false">
+			<fileset dir="${temp.folder}">
+				<include name="SAD.jar.bin${logExtension}"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="clean" depends="init" description="Clean the plug-in: SAD of all the zips, jars and logs created.">
+		<delete dir="${build.result.folder}/@dot"/>
+		<delete file="${build.result.folder}/src.zip"/>
+		<delete file="${build.result.folder}/SAD.jar"/>
+		<delete file="${build.result.folder}/SADsrc.zip"/>
+		<delete file="${plugin.destination}/SAD_1.0.0.jar"/>
+		<delete file="${plugin.destination}/SAD_1.0.0.zip"/>
+		<delete dir="${temp.folder}"/>
+	</target>
+
+	<target name="refresh" depends="init" if="eclipse.running" description="Refresh this folder.">
+		<eclipse.convertPath fileSystemPath="D:/Software/Ptidej Workspace 3/SAD" property="resourcePath"/>
+		<eclipse.refreshLocal resource="${resourcePath}" depth="infinite"/>
+	</target>
+
+	<target name="zip.plugin" depends="init" description="Create a zip containing all the elements for the plug-in: SAD.">
+		<delete dir="${temp.folder}"/>
+		<mkdir dir="${temp.folder}"/>
+		<antcall target="build.jars"/>
+		<antcall target="build.sources"/>
+		<antcall target="gather.bin.parts">
+			<param name="destination.temp.folder" value="${temp.folder}/"/>
+		</antcall>
+		<antcall target="gather.sources">
+			<param name="destination.temp.folder" value="${temp.folder}/"/>
+		</antcall>
+		<delete>
+			<fileset dir="${temp.folder}">
+				<include name="**/*.bin${logExtension}"/>
+			</fileset>
+		</delete>
+		<zip destfile="${plugin.destination}/SAD_1.0.0.zip" basedir="${temp.folder}" filesonly="true" whenempty="skip" update="false"/>
+		<delete dir="${temp.folder}"/>
+	</target>
+
+</project>

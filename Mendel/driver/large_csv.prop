@@ -1,0 +1,13 @@
+driver = mendel.Driver
+
+parts = mendel.part.EntitySelection,mendel.part.tool.MetricsTool,mendel.part.tool.ThresholdTool,mendel.part.output.CsvOutput
+
+filters=mendel.filter.ClassFilter,mendel.filter.AnonymousFilter,mendel.filter.PackageFilter
+
+metrics=mendel.metric.entity.PackageName,mendel.metric.entity.BaseName,mendel.metric.branch.DIT,mendel.metric.branch.NoveltyIndex,mendel.metric.entity.LocalGroupCount,mendel.metric.branch.NoveltyScore,mendel.metric.entity.NewCount,mendel.metric.entity.OverGroupCount,mendel.metric.entity.InhCount,mendel.family.RoleTag,mendel.family.OvrRoleTag
+
+key = Local G Count
+tag = Large Class
+
+qualifier=results/csv/
+suffix=_large.csv

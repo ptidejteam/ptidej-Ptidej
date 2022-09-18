@@ -1,0 +1,17 @@
+RULE_CARD : SpaghettiCode { 
+
+RULE : SpaghettiCode {INTER NoInheritanceClassGlobalVariable LongMethodMethodNoParameter };
+
+RULE : LongMethodMethodNoParameter {INTER LongMethod MethodNoParameter };
+
+RULE : LongMethod { (METRIC: LOC, HIGH) };
+
+RULE : MethodNoParameter {(STRUCT: PARAMETER, No) };
+
+RULE : NoInheritanceClassGlobalVariable {INTER NoInheritance ClassGlobalVariable };
+
+RULE : NoInheritance {(METRIC: DIT, 1.1) };
+
+RULE : ClassGlobalVariable {(STRUCT: FIELD, CLASS_GLOBAL_VAR) };
+
+};

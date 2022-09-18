@@ -1,0 +1,6 @@
+package sun.reflect.generics.tree;
+abstract public interface FieldTypeSignature
+extends sun.reflect.generics.tree.BaseType, sun.reflect.generics.tree.TypeArgument, sun.reflect.generics.tree.TypeSignature
+{
+
+}

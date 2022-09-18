@@ -1,0 +1,9 @@
+driver = mendel.Driver
+
+parts = mendel.part.EntitySelection,mendel.part.tool.MetricsTool,mendel.part.output.VersoOutput
+
+filters=mendel.filter.ClassFilter,mendel.filter.AnonymousFilter,mendel.filter.PackageFilter
+
+metrics=mendel.metric.entity.EntityName,mendel.metric.branch.NoveltyIndex,mendel.metric.entity.LocalGroupCount,mendel.metric.branch.NoveltyScore
+
+qualifier=results/xml/

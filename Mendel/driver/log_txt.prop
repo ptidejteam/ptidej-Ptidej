@@ -1,0 +1,7 @@
+driver = mendel.Driver
+
+parts = mendel.part.EntitySelection,mendel.part.output.FileOutput
+
+filters=mendel.filter.AnonymousFilter
+
+qualifier=results/txt/

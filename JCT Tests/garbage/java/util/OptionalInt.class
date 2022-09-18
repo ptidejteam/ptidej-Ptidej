@@ -1,0 +1,81 @@
+package java.util;
+final public class OptionalInt
+{
+final private static java.lang.Object EMPTY;
+
+final private java.lang.Object isPresent;
+
+final private java.lang.Object value;
+
+private void <init>()
+{
+
+}
+
+public static java.util.OptionalInt empty()
+{
+
+}
+
+private void <init>(java.lang.Object arg0)
+{
+
+}
+
+public static java.util.OptionalInt of(java.lang.Object arg0)
+{
+
+}
+
+public int getAsInt()
+{
+
+}
+
+public boolean isPresent()
+{
+
+}
+
+public void ifPresent(java.lang.Object arg0)
+{
+
+}
+
+public int orElse(java.lang.Object arg0)
+{
+
+}
+
+public int orElseGet(java.lang.Object arg0)
+{
+
+}
+
+public int orElseThrow(java.lang.Object arg0) throws java.lang.Throwable
+{
+
+}
+
+public boolean equals(java.lang.Object arg0)
+{
+
+}
+
+public int hashCode()
+{
+
+}
+
+public java.lang.String toString()
+{
+
+}
+
+static void <clinit>()
+{
+
+}
+
+
+}

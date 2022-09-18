@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<sdmetrics version="2.0">
+
+<metric domain="class" category="Size">
+<description>This metric has no name.</description>
+<projection relset="ownedoperations" />
+</metric>
+
+</sdmetrics>

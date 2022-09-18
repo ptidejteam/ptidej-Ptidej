@@ -1,0 +1,5 @@
+// File: helloWorld.bsh
+print("Loading helloWorld().");
+helloWorld2() { 
+    print("Hello World! (bis)");
+}
