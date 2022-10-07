@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestCreatorCSharpv2" project="PADL Creator C# v2 Tests" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="padl.creator.test.csharpfile.v2.TestCreatorCSharpv2" time="0.403">
-    <testcase name="testParser" classname="padl.creator.test.csharpfile.v2.TestCreatorCSharpv2" time="0.403"/>
-  </testsuite>
-</testrun>

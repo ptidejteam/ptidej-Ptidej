@@ -1,9 +1,0 @@
-eclipse.preferences.version=1
-repositories/http\:__download.eclipse.org_tools_orbit_downloads_drops_R20150519210750_repository/enabled=true
-repositories/http\:__download.eclipse.org_tools_orbit_downloads_drops_R20150519210750_repository/isSystem=false
-repositories/http\:__download.eclipse.org_tools_orbit_downloads_drops_R20150519210750_repository/name=Orbit-R20150519210750
-repositories/http\:__download.eclipse.org_tools_orbit_downloads_drops_R20150519210750_repository/nickname=Orbit-R20150519210750
-repositories/http\:__download.eclipse.org_tools_orbit_downloads_drops_R20150519210750_repository/suffix=content.xml.xz
-repositories/http\:__download.eclipse.org_tools_orbit_downloads_drops_R20150519210750_repository/type=org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository
-repositories/http\:__download.eclipse.org_tools_orbit_downloads_drops_R20150519210750_repository/uri=http\://download.eclipse.org/tools/orbit/downloads/drops/R20150519210750/repository/
-repositories/http\:__download.eclipse.org_tools_orbit_downloads_drops_R20150519210750_repository/version=1.0.0

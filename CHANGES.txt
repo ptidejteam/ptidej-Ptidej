@@ -1,7 +1,7 @@
 Version 5.9
 -------------
 
-Moved to new repository v5.3 (formely v5.2).
+Moved to new repository v5.3 (formerly v5.2).
 Adapted all the code to JDK 17.
 Broke the Eclipse CDT-based C++ parser.
 

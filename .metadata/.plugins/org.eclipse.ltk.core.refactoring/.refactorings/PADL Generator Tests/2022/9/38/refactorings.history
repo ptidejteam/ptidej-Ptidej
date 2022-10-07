@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;TestPADLGenerator.java&apos; to &apos;PADL JNI Tests/src/padl.creator.cppfile.eclipse.test.big&apos;&#x0D;&#x0A;- Original project: &apos;PADL Generator Tests&apos;&#x0D;&#x0A;- Destination element: &apos;PADL JNI Tests/src/padl.creator.cppfile.eclipse.test.big&apos;&#x0D;&#x0A;- Original element: &apos;padl.generator.test.TestPADLGenerator.java&apos;" description="Copy compilation unit" destination="=PADL JNI Tests/src&lt;padl.creator.cppfile.eclipse.test.big" element1="/src&lt;padl.generator.test{TestPADLGenerator.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1663444097932" units="1" version="1.0"/>
-</session>
