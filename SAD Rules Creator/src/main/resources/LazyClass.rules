@@ -1,0 +1,5 @@
+RULE_CARD : LazyClass { 
+      RULE : LazyClass { INTER NotComplexClass FewMethods };
+      RULE : NotComplexClass { (METRIC: WMC, VERY_LOW, 20) };
+      RULE : FewMethods { (METRIC: NMD + NAD, VERY_LOW ,5) };
+};

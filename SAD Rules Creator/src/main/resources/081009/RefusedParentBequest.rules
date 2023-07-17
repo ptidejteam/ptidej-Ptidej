@@ -1,0 +1,5 @@
+RULE_CARD : RefusedParentBequest { 
+	  RULE : RefusedParentBequest {INHERIT: inherited FROM: ParentClassProvidesProtected ONE TO: RareOverriding ONE } ; 
+      RULE : ParentClassProvidesProtected { (METRIC: USELESS, EQ, 1,0) } ; 
+      RULE : RareOverriding { (METRIC: IR, VERY_LOW, 0)};
+};

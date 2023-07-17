@@ -1,0 +1,3 @@
+RULE_CARD : LongMethod { 
+   RULE : LongMethodClass { (METRIC: METHOD_LOC, HIGH, 8) };
+};

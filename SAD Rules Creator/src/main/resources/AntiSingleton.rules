@@ -1,0 +1,5 @@
+RULE_CARD : AntiSingleton { 
+   RULE : NotClassGlobalVariable { (STRUCT: GLOBAL_VARIABLE, 1) };
+};
+
+

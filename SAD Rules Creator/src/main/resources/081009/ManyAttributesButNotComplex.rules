@@ -1,0 +1,7 @@
+RULE_CARD : ManyFieldAttributesButNotComplex { 
+   RULE : ManyFieldAttributesButNotComplex { INTER ManyAttributes NotComplex } ; 
+   RULE : ManyFieldAttributes { (METRIC: NAD, VERY_HIGH, 10) } ; 
+   RULE : FieldPublic {(STRUCT: PUBLIC_FIELD, 1) };
+   RULE : NotComplex {(METRIC: WMC, VERY_LOW, 10) };
+};
+

@@ -1,0 +1,5 @@
+RULE_CARD : LargeClass { 
+   RULE : LargeClass { INTER LargeClassOnly LowCohesionOnly } ; 
+   RULE : LargeClassOnly { (METRIC: NMD + NAD, VERY_HIGH, 0) } ; 
+   RULE : LowCohesionOnly { (METRIC: LCOM5, VERY_HIGH, 20) } ;
+};

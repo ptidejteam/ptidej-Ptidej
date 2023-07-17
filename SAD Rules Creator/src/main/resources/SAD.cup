@@ -1,0 +1,534 @@
+package rule.creator;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import rule.creator.model.IConstituent;
+import rule.creator.model.IAssociation;
+import rule.creator.model.IAttribute;
+import rule.creator.model.IInheritance;
+import rule.creator.model.IRule;
+import rule.creator.model.IMetric;
+import rule.creator.model.ISemantic;
+import rule.creator.model.IStruct;
+import rule.creator.model.IOperator;
+import rule.creator.model.IRuleCard;
+import rule.creator.model.IRuleGhost;
+import rule.creator.model.impl.Factory;
+import rule.creator.utils.Constants;
+import rule.creator.visitor.GhostRuleCleaner;
+import rule.creator.model.IVisitor;
+import util.io.ProxyConsole;
+
+import rule.creator.javacup.runtime.*;
+
+parser code {:
+    // Create an instance of SetRules
+    private final List rulesSet = new ArrayList();
+    private List listOfElements = new ArrayList();
+    private List listOfRules = new ArrayList();
+    private List listOfSemanticElements = new ArrayList();
+    private List ListOfAttributes = new ArrayList();
+    protected String tokenInError;
+    protected boolean hasError;
+
+    public List getRulesSet() {
+    	return this.rulesSet;
+    }
+    public List getListOfRules() {
+        return this.listOfRules;
+    }
+    public void addToListOfRules(final IRule aConstituent) {
+        this.listOfRules.add(aConstituent);
+    }
+    public void resetListOfRules() {
+        this.listOfRules.clear();
+    }
+    public List getListOfElements() {
+        return this.listOfElements;
+    }
+    public void addToListOfElements(final IConstituent aConstituent) {
+        this.listOfElements.add(aConstituent);
+    }
+    public void resetListOfElements() {
+        this.listOfElements.clear();
+    }
+    public List getListOfSemanticElements() {
+        return this.listOfSemanticElements;
+    }
+    public void addToListOfSemanticElements(final String aValue) {
+        this.listOfSemanticElements.add(aValue);
+    }
+    public void resetListOfSemanticElements() {
+        this.listOfSemanticElements.clear();
+    }
+    public List getListOfAttributes() {
+        return this.ListOfAttributes;
+    }
+    public void addToListOfAttributes(final IAttribute anAttribute) {
+        this.ListOfAttributes.add(anAttribute);
+    }
+    public void resetListOfAttributes() {
+        this.ListOfAttributes.clear();
+	}
+    public boolean hasError() {
+    	return this.hasError;
+	}
+    public void syntax_error(final Symbol cur_token) {
+    	this.tokenInError = cur_token.value.toString();
+	}
+:}
+
+terminal SEMI, LPAREN, RPAREN, LBRACE, RBRACE, COLON;
+terminal INTER, UNION, DIFF, INCL, NEG;
+terminal java.lang.String IDENTIFIER;
+
+terminal TWO_DOT;
+terminal METRIC, SEMANTIC, STRUCT;
+terminal VERY_HIGH, HIGH, MEDIUM, LOW, VERY_LOW, NONE;
+terminal CLASSNAME, METHODNAME, FIELDNAME;
+
+/* terminal CLASS, INTERFACE, METHOD, FIELD, PARAMETER, COMMENTS; */
+terminal METHOD_ACCESSOR, METHOD_NO_PARAM, GLOBAL_VARIABLE, IS_ABSTRACT, 
+		 DIFFERENT_PARAMETER, ONE_METHOD, PRIVATE_FIELD, PUBLIC_FIELD, MULTIPLE_INTERFACE;
+
+terminal FROM, TO;
+terminal ASSOC, AGGREG, COMPOS, INHERIT;
+terminal ONE, MANY, ONE_OR_MANY, OPTIONNALY_ONE;
+terminal RULE_CARD, RULE;
+terminal PLUS, MINUS;
+terminal INF, INF_EQ, EQ, SUP, SUP_EQ, NOT_EQ;
+
+non terminal set_rules, rule_card, list_rules,
+             rule, content_rule, operator, list_attributes, 
+             attribute, id_metric, value_ordi, comparison_operator, fuzziness, id_semantic, value_semantic,
+             cont_value_semantic, id_struct_param, id_struct_noparam,
+             list_relationships, relationship, name_relation, cardinality;
+             
+non terminal String string;
+
+precedence left PLUS, MINUS;
+
+/* --------- RULES --------- */
+set_rules       ::= rule_card | set_rules rule_card;
+rule_card       ::= RULE_CARD TWO_DOT string:name LBRACE list_rules RBRACE SEMI
+					{:
+						//System.out.println ("Rule_Card : " + name);
+						final IRuleCard ruleCard = Factory.getInstance().createRuleCard(name);
+						
+					 	final Iterator iterator = this.parser.getListOfRules().iterator();
+                        while (iterator.hasNext()) {
+                            ruleCard.addActor((IConstituent) iterator.next());
+                        }
+                        
+                        this.parser.resetListOfRules();
+                        
+                        // Now that we have all Rules loaded we can try to substitute
+                        // all ruleghost entity that was not found.  This is due to the fact 
+                        // that some Rule reffer to other Rule that was not created yet.
+                        ruleCard.accept(new GhostRuleCleaner());
+						this.parser.getRulesSet().add(ruleCard);
+					:};
+					
+list_rules      ::= rule | list_rules rule;
+rule            ::= RULE TWO_DOT string:ruleName LBRACE content_rule RBRACE SEMI
+					{:
+						//System.out.println ("Rule : " + ruleName);
+						final IRule rule = Factory.getInstance().createRule(ruleName);
+						
+					 	Iterator iterator = this.parser.getListOfElements().iterator();
+                        while (iterator.hasNext()) {
+                            rule.addActor((IConstituent) iterator.next());
+                        }
+                        
+                        iterator = this.parser.getListOfAttributes().iterator();
+                        while (iterator.hasNext()) {
+                            rule.addActor((IConstituent) iterator.next());
+                        }
+                        
+                        this.parser.resetListOfAttributes();
+                        this.parser.resetListOfElements();
+                        this.parser.addToListOfRules(rule);
+					:}
+					| RULE TWO_DOT string:ruleName SEMI
+					{:
+						//System.out.println ("Rule : " + ruleName);
+						final IRule rule = Factory.getInstance().createRule(ruleName);
+                        this.parser.addToListOfRules(rule);
+					:}
+					| RULE TWO_DOT string:ruleName LBRACE error RBRACE SEMI
+					{:
+						ProxyConsole
+							.getInstance()
+							.errorOutput()
+							.print("Syntax error near \"");
+						ProxyConsole
+							.getInstance()
+							.errorOutput()
+							.print(this.parser.tokenInError);
+						ProxyConsole
+							.getInstance()
+							.errorOutput()
+							.print("\" on rule \"");
+						ProxyConsole
+							.getInstance()
+							.errorOutput()
+							.print(ruleName);
+						ProxyConsole
+							.getInstance()
+							.errorOutput()
+							.println("\"");
+						this.parser.hasError = true;
+					:};
+
+content_rule    ::= operator:op string:op1 string:op2
+					{:
+						IConstituent operator1 = null; //this.parser.getRulesSet().getActorFromName(op1);
+						IConstituent operator2 = null; //this.parser.getRulesSet().getActorFromName(op2);
+						
+						// Create a temporary RuleGhost if the operator constituent does not exist
+						if (operator1 == null) {
+							operator1 = Factory.getInstance().createRuleGhost(op1);
+						}
+						
+						// Create a temporary RuleGhost if the operator constituent does not exist
+						if (operator2 == null) {
+							operator2 = Factory.getInstance().createRuleGhost(op2);
+						}
+						
+						final IOperator operator = Factory.getInstance().createOperator("OPERATOR." + Math.random(), ((Integer)op).intValue(), operator1, operator2);
+						this.parser.addToListOfElements(operator);
+					:}
+					| list_relationships | list_attributes;
+
+operator        ::= INTER
+					 {:
+						RESULT = new Integer(Constants.OPERATOR_INTER);
+					:}
+					 | UNION
+					 {:
+						RESULT = new Integer(Constants.OPERATOR_UNION);
+					:}
+					 | DIFF
+					 {:
+						RESULT = new Integer(Constants.OPERATOR_DIFF);
+					 :}
+					 | INCL
+					 {:
+						RESULT = new Integer(Constants.OPERATOR_INCL);
+					 :}
+					 | NEG
+					 {:
+						RESULT = new Integer(Constants.OPERATOR_NEG);
+					 :};
+
+/* --------- ATTRIBUTES --------- */
+list_attributes     ::= attribute 
+					| operator:op attribute attribute
+					{:
+					    // Ouf, this is a dangerous thing  :-(
+					    
+						// Once we are here we can assume that "ListOfAttributes" contains the two operand of the operation
+						final IAttribute operand1 = (IAttribute) this.parser.getListOfAttributes().get(0);
+						final IAttribute operand2 = (IAttribute) this.parser.getListOfAttributes().get(1);
+						
+						final IOperator operator = Factory.getInstance().createOperator("OPERATOR." + Math.random(), ((Integer)op).intValue(), operand1, operand2);
+						this.parser.addToListOfElements(operator);
+						
+					 	this.parser.resetListOfAttributes();
+					:};
+					
+attribute           ::= LPAREN METRIC TWO_DOT id_metric:newMetric COLON comparison_operator:co COLON value_ordi:vo COLON fuzziness:fuzz RPAREN
+						{:
+							//IMetric metric;
+							
+						 	if (vo instanceof Integer) {
+								((IMetric)newMetric).setOrdinalValue (((Integer)vo).intValue());
+							}
+							else {
+								((IMetric)newMetric).setNumericValue (((Double)vo).doubleValue());
+							}
+							
+							((IMetric)newMetric).setFuzziness (((Double)fuzz).doubleValue());
+							
+							((IMetric)newMetric).setComparisonOperator (((Integer)co).intValue());
+							
+							this.parser.addToListOfAttributes((IMetric)newMetric);
+						:}
+						| LPAREN METRIC TWO_DOT id_metric:newMetric COLON value_ordi:vo COLON fuzziness:fuzz RPAREN
+						{:
+							//IMetric metric;
+							
+						 	if (vo instanceof Integer) {
+								((IMetric)newMetric).setOrdinalValue (((Integer)vo).intValue());
+							}
+							else {
+								((IMetric)newMetric).setNumericValue (((Double)vo).doubleValue());
+							}
+							
+							((IMetric)newMetric).setFuzziness (((Double)fuzz).doubleValue());
+							
+							this.parser.addToListOfAttributes((IMetric)newMetric);
+						:}
+						| LPAREN SEMANTIC TWO_DOT id_semantic:sy COLON value_semantic RPAREN
+						{:
+							//System.out.println ("Semantic : " + sy);
+							final ISemantic semantic = Factory.getInstance().createSemantic(
+												"SEMANTIC." + Math.random(),
+												((Integer)sy).intValue(),
+												this.parser.getListOfSemanticElements());
+												
+							this.parser.resetListOfSemanticElements();
+							this.parser.addToListOfAttributes(semantic);
+						:}
+						| LPAREN STRUCT TWO_DOT id_struct_param:st COLON string:val RPAREN
+	                    {:
+	                    	final IStruct struct = Factory.getInstance().createStruct("STRUCT." + Math.random(), ((Integer)st).intValue(), new Integer(val).intValue());
+							this.parser.addToListOfAttributes(struct);
+    	                :}
+    	                | LPAREN STRUCT TWO_DOT id_struct_noparam:st RPAREN 
+    	                {:
+    	                	final IStruct struct = Factory.getInstance().createStruct("STRUCT." + Math.random(), ((Integer)st).intValue());
+							this.parser.addToListOfAttributes(struct);
+    	                :};
+    	                
+
+id_metric           ::= id_metric:op1 PLUS id_metric:op2 
+                     {:
+						final IMetric operator = 
+								Factory.getInstance().createMetric(op1.toString() + "+" + op2.toString(), Constants.PLUS, (IMetric) op1, (IMetric) op2);
+								
+						RESULT = operator;
+					:}
+					 | id_metric:op1 MINUS id_metric:op2 
+					 {:
+						final IMetric operator = 
+								Factory.getInstance().createMetric(op1.toString() + "+" + op2.toString(), Constants.MINUS, (IMetric) op1, (IMetric) op2);
+								
+						RESULT = operator;
+					:}
+					 | string:idMetric
+					 {:
+						RESULT = Factory.getInstance().createMetric(idMetric.toString(), 0, 0);
+					:};
+					  
+value_ordi          ::= VERY_HIGH
+					 {:
+						RESULT = new Integer(Constants.VERY_HIGH);
+					:}
+					 | HIGH
+					 {: 
+						RESULT = new Integer(Constants.HIGH);
+					:}
+					 | MEDIUM
+					 {:
+						RESULT = new Integer(Constants.MEDIUM);
+					:} 
+					 | LOW
+					 {:
+						RESULT = new Integer(Constants.LOW);
+					:}
+					 | VERY_LOW
+					 {:
+						RESULT = new Integer(Constants.VERY_LOW);
+					:}
+					 | NONE
+					 {:
+						RESULT = new Integer(Constants.NONE);
+					:}
+					| string:dv
+					 {:
+					 	RESULT = new Double(dv);
+					 :} ;
+
+comparison_operator ::= INF
+					 {:
+						RESULT = new Integer(Constants.INF);
+					:}
+					 | INF_EQ
+					 {: 
+						RESULT = new Integer(Constants.INF_EQ);
+					:}
+					 | EQ
+					 {:
+						RESULT = new Integer(Constants.EQ);
+					:} 
+					 | SUP
+					 {:
+						RESULT = new Integer(Constants.SUP);
+					:}
+					 | SUP_EQ
+					 {:
+						RESULT = new Integer(Constants.SUP_EQ);
+					:}
+					 | NOT_EQ
+					 {:
+						RESULT = new Integer(Constants.NOT_EQ);
+					 :} ;
+		
+fuzziness			::= string:value
+					 {:
+						RESULT = new Double(value);
+					:} ;
+					
+								
+id_semantic         ::= CLASSNAME
+					 {:
+						RESULT = new Integer(Constants.CLASS_NAME);
+					:}
+					 | METHODNAME:sy
+					 {:
+						RESULT = new Integer(Constants.METHOD_NAME);
+					:}
+					 | FIELDNAME:sy
+					 {:
+						RESULT = new Integer(Constants.FIELD_NAME);;
+					 :};
+					
+value_semantic      ::= LBRACE cont_value_semantic RBRACE;
+cont_value_semantic ::= string:value_semantic
+					{:
+						this.parser.addToListOfSemanticElements(value_semantic);
+					:}
+					| string:value_semantic COLON cont_value_semantic
+					{:
+						this.parser.addToListOfSemanticElements(value_semantic);
+					:};
+								
+id_struct_param		::= METHOD_ACCESSOR
+					{:
+						RESULT = new Integer(Constants.METHOD_ACCESSOR);
+					:}
+					| PRIVATE_FIELD
+					{:
+						RESULT = new Integer(Constants.PRIVATE_FIELD);
+					:}
+					| PUBLIC_FIELD
+					{:
+						RESULT = new Integer(Constants.PUBLIC_FIELD);
+					:}
+					| MULTIPLE_INTERFACE
+					{:
+						RESULT = new Integer(Constants.MULTIPLE_INTERFACE);
+					:}
+					| GLOBAL_VARIABLE
+					{:
+						RESULT = new Integer(Constants.GLOBAL_VARIABLE);
+					:}
+					| IS_ABSTRACT
+					{:
+						RESULT = new Integer(Constants.IS_ABSTRACT);
+					:};
+
+/*value_struct	    ::= string:value
+					 {:
+						RESULT = new Integer(value);
+					:};*/
+	
+					
+id_struct_noparam	::= METHOD_NO_PARAM
+					{:
+						RESULT = new Integer(Constants.METHOD_NO_PARAM);
+					:}
+					| DIFFERENT_PARAMETER
+					{:
+						RESULT = new Integer(Constants.DIFFERENT_PARAMETER);
+					:}
+					| ONE_METHOD
+					{:
+						RESULT = new Integer(Constants.ONE_METHOD);
+					:};
+
+/* --------- RELATIONSHIPS --------- */
+list_relationships  ::= relationship | relationship list_relationships;
+relationship        ::= name_relation:nr TWO_DOT string:name FROM TWO_DOT string:from cardinality:sourceCardinality 
+															 TO TWO_DOT string:to cardinality:targetCardinality
+					{:
+						//System.out.println ("Association : " + nr.toString());
+						IAssociation association = null;
+						IInheritance inheritance = null;
+						
+						IConstituent sourceConstituent = null; //this.parser.getRulesSet().getActorFromName(from);
+						IConstituent targetConstituent = null; //this.parser.getRulesSet().getActorFromName(to);
+
+						// Create a temporary RuleGhost if the source constituent does not exist
+						if (sourceConstituent == null) {
+							sourceConstituent = Factory.getInstance().createRuleGhost(from);
+						}
+						
+						// Create a temporary RuleGhost if the target constituent does not exist
+						if (targetConstituent == null) {
+							targetConstituent = Factory.getInstance().createRuleGhost(to);
+						}
+						
+						if (((Integer)nr).intValue() == Constants.RELATION_ASSOC) {
+							association = Factory.getInstance().createAssociationRelationship(
+									name, sourceConstituent, targetConstituent,
+									((Integer)sourceCardinality).intValue(), 
+									((Integer)targetCardinality).intValue());
+							this.parser.addToListOfElements(association);
+						}
+						else if (((Integer)nr).intValue() == Constants.RELATION_AGGREG) {
+							association = Factory.getInstance().createAssociationRelationship(
+									name, sourceConstituent, targetConstituent,
+									((Integer)sourceCardinality).intValue(), 
+									((Integer)targetCardinality).intValue());
+							this.parser.addToListOfElements(association);
+						}
+						else if (((Integer)nr).intValue() == Constants.RELATION_COMPOS) {
+							association = Factory.getInstance().createAssociationRelationship(
+									name, sourceConstituent, targetConstituent,
+									((Integer)sourceCardinality).intValue(), 
+									((Integer)targetCardinality).intValue());
+							this.parser.addToListOfElements(association);
+						}
+						else if (((Integer)nr).intValue() == Constants.RELATION_INHERIT) {
+							inheritance = Factory.getInstance().createInheritanceRelationship(
+									name, sourceConstituent, targetConstituent,
+									((Integer)sourceCardinality).intValue(), 
+									((Integer)targetCardinality).intValue());
+							this.parser.addToListOfElements(inheritance);
+						}
+						
+					:};
+name_relation       ::= ASSOC
+					{:
+                    	RESULT = new Integer(Constants.RELATION_ASSOC);
+                    :}
+                       | AGGREG
+                    {:
+                    	RESULT = new Integer(Constants.RELATION_AGGREG);
+                    :}
+                      | COMPOS
+                    {:
+                    	RESULT = new Integer(Constants.RELATION_COMPOS);
+                    :}
+                      | INHERIT
+                    {:
+                    	RESULT = new Integer(Constants.RELATION_INHERIT);
+                    :};
+                    
+cardinality         ::= ONE
+					{:
+						RESULT = new Integer(Constants.CARDINALITY_ONE);
+					:} 
+					| MANY 
+					{:
+						RESULT = new Integer(Constants.CARDINALITY_MANY);
+					:}
+					| ONE_OR_MANY 
+					{:
+						RESULT = new Integer(Constants.CARDINALITY_ONE_OR_MANY);
+					:}
+					| OPTIONNALY_ONE
+					{:
+						RESULT = new Integer(Constants.CARDINALITY_OPTIONNALY_ONE);
+					:};
+
+/*-------------------------- STRINGS ------------------------*/
+
+string              ::= IDENTIFIER:n
+                    {:
+                    	RESULT = n;
+                    :};

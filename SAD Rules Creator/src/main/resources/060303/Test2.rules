@@ -1,0 +1,7 @@
+RULE_CARD : BaseClassShouldBeAbstract { 
+   RULE : BaseClassShouldBeAbstract {INTER BaseClass NotAbstract};
+   RULE : NotAbstract { (STRUCT: IS_ABSTRACT, 0) };
+   RULE : BaseClass {INTER NoInheritance HasChildren };
+   RULE : NoInheritance {(METRIC: DIT, EQ, 1, 0) };
+   RULE : HasChildren {(METRIC: NOC, SUP_EQ, 1, 0) };
+};

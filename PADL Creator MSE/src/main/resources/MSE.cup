@@ -1,0 +1,326 @@
+/*
+ * (c) Copyright 2001-2007 Yann-Gaël Guéhéneuc,
+ * University of Montréal.
+ *
+ * Use and copying of this software and preparation of derivative works
+ * based upon this software are permitted. Any copy of this software or
+ * of any derivative work must include the above copyright notice of
+ * the author, this paragraph and the one after it.
+ *
+ * This software is made available AS IS, and THE AUTHOR DISCLAIMS
+ * ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE, AND NOT WITHSTANDING ANY OTHER PROVISION CONTAINED HEREIN,
+ * ANY LIABILITY FOR DAMAGES RESULTING FROM THE SOFTWARE OR ITS USE IS
+ * EXPRESSLY DISCLAIMED, WHETHER ARISING IN CONTRACT, TORT (INCLUDING
+ * NEGLIGENCE) OR STRICT LIABILITY, EVEN IF THE AUTHOR IS ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGES.
+ *
+ * All Rights Reserved.
+ */
+package padl.creator;
+
+import java.io.FileInputStream;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+
+import padl.kernel.Constants;
+import padl.kernel.IAssociation;
+import padl.kernel.IContainerAggregation;
+import padl.kernel.IElement;
+import padl.kernel.IEntity;
+import padl.kernel.IField;
+import padl.kernel.ICodeLevelModel;
+import padl.kernel.IMethod;
+import padl.kernel.IParameter;
+import padl.kernel.exception.ModelDeclarationException;
+import padl.kernel.impl.Factory;
+
+import padl.creator.misc.Attribute;
+import padl.creator.misc.Element;
+import padl.creator.misc.Utils;
+import padl.creator.misc.Value;
+
+import util.lang.Modifier;
+import util.multilingual.MultilingualManager;
+
+parser code {:
+	public static final boolean DEBUG = false;
+    public static void main(final String args[]) throws Exception {
+        new MSEParser(new MSELexer(new FileInputStream(""))).parse();
+    }
+
+	public List attributes = new ArrayList();
+	public List elements = new ArrayList();
+	public List values = new ArrayList();
+
+    public void syntax_error(padl.creator.javacup.runtime.Symbol current) {
+		report_error(
+			MultilingualManager.getString(
+				"SYN_ERR",
+				MSEParser.class,
+				new Object[] { new Integer(current.sym)}),
+			current);
+    }
+    public void report_error(String message, padl.creator.javacup.runtime.Symbol info) {
+        ((MSELexer) this.getScanner()).reportErrorMessage(message, info);
+    }
+:}
+
+/* Terminals (tokens returned by the scanner) */
+terminal String COLON;
+terminal String ID, IDREF, PRIMITIVE, VALUE, PATH;
+terminal String TRUE, FALSE, STAR;
+terminal String LPAREN, RPAREN;
+terminal String STRING, NAME;
+terminal String INTEGER;
+
+/* Non terminals */
+non terminal Element[] root;
+non terminal String elementNode, elementNodes, attributeNode, attributeNodes;
+non terminal String attributeName, valueNode, valueNodes;
+non terminal String primitive;
+non terminal String uniqueIDCommand, referenceCommand;
+non terminal String uniqueID;
+non terminal String primitiveCommand, primitiveName;
+non terminal String valueCommand;
+non terminal String expression;
+non terminal String pathCommand;
+non terminal String typeName;
+non terminal String className;
+
+
+
+root 				::= elementNode
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("elementNode"); }
+							final Element[] elements = new Element[this.parser.elements.size()];
+					  		this.parser.elements.toArray(elements);
+					  		RESULT = elements;
+					  	:} 
+					  | LPAREN elementNodes RPAREN
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("LPAREN elementNodes RPAREN"); }
+					  	:}
+					  ; 
+elementNodes		::= elementNode 
+					  | elementNode elementNodes;
+
+elementNode 		::= LPAREN typeName:type uniqueIDCommand:id attributeNodes RPAREN
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("LPAREN typeName uniqueIDCommand attributeNodes RPAREN"); }
+					  		this.parser.attributes.add(new Attribute("id", new Value[] { new Value("primitive", id) }));
+							final Attribute[] attributes = new Attribute[this.parser.attributes.size()];
+					  		this.parser.attributes.toArray(attributes);
+					  		this.parser.attributes.clear();
+							this.parser.elements.add(new Element(type, attributes));
+					  	:}
+					  |
+					    LPAREN typeName:type uniqueIDCommand:id RPAREN
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("LPAREN typeName uniqueIDCommand RPAREN"); }
+					  		this.parser.attributes.add(new Attribute("id", new Value[] { new Value("primitive", id) }));
+							final Attribute[] attributes = new Attribute[this.parser.attributes.size()];
+					  		this.parser.attributes.toArray(attributes);
+					  		this.parser.attributes.clear();
+							this.parser.elements.add(new Element(type, attributes));
+					  	:}
+					  ;
+attributeNodes		::= attributeNode 
+					  | attributeNode attributeNodes;
+
+
+attributeNode		::= LPAREN attributeName:name RPAREN
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("valueNode ::= primitive"); }
+							this.parser.attributes.add(new Attribute(name));
+					  	:}
+					  | LPAREN attributeName:name valueNodes RPAREN
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("valueNode ::= primitive"); }
+							final Value[] values = new Value[this.parser.values.size()];
+					  		this.parser.values.toArray(values);
+					  		this.parser.values.clear();
+							this.parser.attributes.add(new Attribute(name, values));
+					  	:}
+					  | LPAREN attributeName:name uniqueIDCommand:id valueNodes RPAREN
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("valueNode ::= primitive"); }
+					  		this.parser.values.add(new Value("id", id));
+							final Value[] values = new Value[this.parser.values.size()];
+					  		this.parser.values.toArray(values);
+					  		this.parser.values.clear();
+							this.parser.attributes.add(new Attribute(name, values));
+					  	:}
+					  ;
+valueNodes			::= valueNode
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("valueNodes ::= valueNode"); }
+					  	:}
+					  | valueNode valueNodes
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("valueNodes ::= valueNode valueNodes"); }
+					  	:}
+					  ;
+
+valueNode			::= primitive:p
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("valueNode ::= primitive"); }
+							this.parser.values.add(new Value("primitive", p));
+					  	:}
+					  | primitive:p COLON
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("valueNode ::= primitive COLON"); }
+							this.parser.values.add(new Value("primitive", p + ':'));
+					  	:}
+					   
+					  | referenceCommand:id
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("valueNode ::= referenceCommand"); }
+							this.parser.values.add(new Value("idref", id));
+					  	:}
+					  
+					  | primitiveCommand:pc
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("valueNode ::= primitiveCommand"); }
+							this.parser.values.add(new Value("primitiveCommand", pc));
+					  	:}
+					  
+					  | valueCommand:vc
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("valueNode ::= valueCommand"); }
+							this.parser.values.add(new Value("value", vc));
+					  	:}
+					  
+					  | pathCommand:pc
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("valueNode ::= pathCommand"); }
+							this.parser.values.add(new Value("path", pc));
+					  	:}
+					  
+					  | elementNode
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("valueNode ::= elementNode"); }
+					  	:}
+					  ;
+primitive			::= NAME:name
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("NAME (" + name + ')'); }
+					  		RESULT = name;
+					  	:} 
+					  | STRING:string
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("STRING (" + string + ')'); }
+					  		RESULT = string;
+					  	:}
+					  | INTEGER:integer
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("INTEGER (" + integer + ')'); }
+					  		RESULT = integer;
+					  	:}
+					  | TRUE
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("TRUE"); }
+					  		RESULT = "true";
+					  	:}
+					  | FALSE
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("FALSE"); }
+					  		RESULT = "false";
+					  	:}
+					  | ID
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("id"); }
+					  		RESULT = "id";
+					  	:}
+					  | VALUE
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("value"); }
+					  		RESULT = "value";
+					  	:}
+					  | PATH
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("path"); }
+					  		RESULT = "path";
+					  	:}
+					  | PRIMITIVE
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("primitive"); }
+					  		RESULT = "primitive";
+					  	:}
+					  | STAR
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("*"); }
+					  		RESULT = "*";
+					  	:}
+					  ;
+uniqueIDCommand 	::= LPAREN ID COLON uniqueID:id RPAREN
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("uniqueIDCommand ::= LPAREN ID uniqueID RPAREN"); }
+					  		RESULT = id;
+					  	:}
+					  ;
+referenceCommand	::= LPAREN IDREF COLON uniqueID:id RPAREN
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("referenceCommand ::= LPAREN IDREF uniqueID RPAREN"); }
+					  		RESULT = id;
+					  	:}
+					  ;
+primitiveCommand	::= LPAREN PRIMITIVE COLON primitiveName:name RPAREN
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("primitiveCommand ::= LPAREN PRIMITIVE primitiveName RPAREN"); }
+					  		RESULT = name;
+					  	:}
+					  ;
+valueCommand		::= LPAREN VALUE COLON expression:expr RPAREN
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("valueCommand ::= LPAREN VALUE expression RPAREN"); }
+							RESULT = expr;
+					  	:}
+					  ;
+pathCommand			::= LPAREN PATH COLON className:name RPAREN
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("pathCommand ::= LPAREN PATH className RPAREN"); }
+							RESULT = name;
+					  	:}
+					  ;
+
+expression			::= STRING:string
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("expression ::= STRING (" + string + ')'); }
+							RESULT = string;
+					  	:}
+					  ;
+typeName 			::= NAME:name
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("typeName ::= NAME (" + name + ')'); }
+					  		RESULT = name;
+					  	:}
+					  ;
+className 			::= NAME:name
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("className ::= NAME"); }
+							RESULT = name;
+					  	:}
+					  ;
+attributeName		::= NAME:name
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("attributeName ::= NAME (" + name + ')'); }
+							RESULT = name;
+					  	:}
+					  ;
+primitiveName		::= NAME:name
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("primitiveName ::= NAME"); }
+							RESULT = name;
+					  	:}
+					  ;
+uniqueID 			::= INTEGER:id
+					  	{:
+					  		if (MSEParser.DEBUG) { System.err.println("uniqueID ::= INTEGER"); }
+					  		RESULT = id;
+					  	:}
+					  ;

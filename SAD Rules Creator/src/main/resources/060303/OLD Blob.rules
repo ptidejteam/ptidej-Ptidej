@@ -1,0 +1,10 @@
+RULE_CARD : Blob { 
+   RULE : Blob {ASSOC: associated FROM: mainClass ONE TO: DataClass MANY } ; 
+   RULE : mainClass {UNION LargeClassLowCohesion ControllerClass } ; 
+   RULE : LargeClassLowCohesion {UNION LargeClass LowCohesion } ; 
+   RULE : LargeClass { (METRIC: NMD + NAD, VERY_HIGH, 20) } ; 
+   RULE : LowCohesion { (METRIC: LCOM5, VERY_HIGH, 20) } ;
+   RULE : ControllerClass {UNION (SEMANTIC: METHODNAME, {Process, Control, Ctrl, Command, Cmd, Process, Proc, UI, Manage, Drive}) 
+                                               (SEMANTIC: CLASSNAME,  {Process, Control, Ctrl, Command, Cmd, Process, Proc, UI, Manage, Drive, System, Subsystem})} ;
+   RULE : DataClass {(STRUCT: METHOD_ACCESSOR, 90) } ;
+} ;

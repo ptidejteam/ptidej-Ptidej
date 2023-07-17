@@ -1,0 +1,3 @@
+RULE_CARD : Test { 
+   RULE : Titi {(STRUCT: MULTIPLE_INTERFACE, 5) };
+};
