@@ -61,6 +61,11 @@ local.properties
 # Typically, this file would be tracked if it contains build/dependency configurations:
 #.project
 
+# IntelliJ IDEA
+**/*.iml
+**/.idea
+**/target/**
+
 # Specific to Ptidej
 Configuration\ Area
 Temp/

@@ -1,1 +1,0 @@
-Copy here tools.jar from your JDK.

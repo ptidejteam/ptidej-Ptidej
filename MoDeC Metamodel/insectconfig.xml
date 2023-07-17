@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<insectconfig>
-<settings verbose="true" dump="true" dumpdir="R:\DIRO Maitrise\InstrumentedClassFile"/>
-<probe class="edu.gatech.cc.rtinsect.inserters.MethodCallProbeInserter" monitor="edu.gatech.cc.rtinsect.monitor.concrete.ConcreteMethodCallMonitor" arguments=""/>
-<instrument>HelloWorld
-HelloWorld main( String[])
-</instrument>
-</insectconfig>

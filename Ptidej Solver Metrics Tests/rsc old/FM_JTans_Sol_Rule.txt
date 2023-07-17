@@ -1,3 +1,0 @@
-# Micro-architecture 1 similar at 100% with unknown pattern
-1.100.XCommand = No source transformation needed
-

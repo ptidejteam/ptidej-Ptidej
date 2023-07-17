@@ -1,7 +1,0 @@
-RULE_CARD : Codesmells { 
-      RULE : LargeClass { (METRIC: NMD + NAD, VERY_HIGH, 0) } ; 
-	  RULE : LongMethod { (METRIC: METHOD_LOC, VERY_HIGH, 8) } ;
-      RULE : LongParameterList { (METRIC: NOParam, VERY_HIGH, 20) } ; 
-      RULE : MessageChains{ (METRIC: NOTI, SUP_EQ, 4, 0) }; 
-      RULE : AntiSingleton {(STRUCT: GLOBAL_VARIABLE, 1) };
-};

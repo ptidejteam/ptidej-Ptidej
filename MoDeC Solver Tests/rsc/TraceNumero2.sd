@@ -1,9 +1,0 @@
-<OPERATION> public void actionPerformed (java.awt.event.ActionEvent e) CALLEE OBSERVER.ReportManager$ButtonHandler 31332340 CALLER 
-<OPERATION> static javax.swing.JComboBox access$0 (OBSERVER.ReportManager .reportmanager) CALLEE OBSERVER.ReportManager -2 CALLER OBSERVER.ReportManager$ButtonHandler 31332340
-<OPERATION> public void setDepartment (String dept) CALLEE OBSERVER.ReportManager 32946703 CALLER OBSERVER.ReportManager$ButtonHandler 31332340
-<OPERATION> public void notifyObservers () CALLEE OBSERVER.ReportManager 32946703 CALLER OBSERVER.ReportManager$ButtonHandler 31332340
-<OPERATION> public void refreshData (OBSERVER.Observable subject) CALLEE OBSERVER.MonthlyReport 30308427 CALLER OBSERVER.ReportManager 32946703
-<OPERATION> public String getDepartment () CALLEE OBSERVER.ReportManager 32946703 CALLER OBSERVER.MonthlyReport 30308427
-<OPERATION> private java.util.Vector getCurrentMonthTransactions (String department) CALLEE OBSERVER.MonthlyReport 30308427 CALLER OBSERVER.MonthlyReport 30308427
-<CREATE> public void <init> () CALLEE OBSERVER.FileUtil 10050169 CALLER OBSERVER.MonthlyReport 30308427
-<OPERATION> public java.util.Vector fileToVector (String fileName) CALLEE OBSERVER.FileUtil 10050169 CALLER OBSERVER.MonthlyReport 30308427

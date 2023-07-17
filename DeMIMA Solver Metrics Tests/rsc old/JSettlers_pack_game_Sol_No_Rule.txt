@@ -1,0 +1,490 @@
+# Micro-architecture 1127 similar at 0% with Composite Design Motif
+1127.0.component = soc.game.SOCDevCardConstants
+1127.0.composite = soc.game.SOCBoard
+1127.0.leaf = soc.game.SOCPlayer
+1127.0.Name = Composite Design Motif
+1127.0.XCommand = command
+
+# Micro-architecture 1139 similar at 0% with Composite Design Motif
+1139.0.component = soc.game.SOCDevCardConstants
+1139.0.composite = soc.game.SOCCity
+1139.0.leaf = soc.game.SOCPlayer
+1139.0.Name = Composite Design Motif
+1139.0.XCommand = command
+
+# Micro-architecture 1112 similar at 0% with Composite Design Motif
+1112.0.component = soc.game.SOCDevCardConstants
+1112.0.composite = soc.game.SOCDevCardSet
+1112.0.leaf = soc.game.SOCPlayer
+1112.0.Name = Composite Design Motif
+1112.0.XCommand = command
+
+# Micro-architecture 1124 similar at 0% with Composite Design Motif
+1124.0.component = soc.game.SOCDevCardConstants
+1124.0.composite = soc.game.SOCGame
+1124.0.leaf = soc.game.SOCPlayer
+1124.0.Name = Composite Design Motif
+1124.0.XCommand = command
+
+# Micro-architecture 1137 similar at 0% with Composite Design Motif
+1137.0.component = soc.game.SOCDevCardConstants
+1137.0.composite = soc.game.SOCLRPathData
+1137.0.leaf = soc.game.SOCPlayer
+1137.0.Name = Composite Design Motif
+1137.0.XCommand = command
+
+# Micro-architecture 1107 similar at 0% with Composite Design Motif
+1107.0.component = soc.game.SOCDevCardConstants
+1107.0.composite = soc.game.SOCPlayerNumbers
+1107.0.leaf = soc.game.SOCPlayer
+1107.0.Name = Composite Design Motif
+1107.0.XCommand = command
+
+# Micro-architecture 1126 similar at 0% with Composite Design Motif
+1126.0.component = soc.game.SOCDevCardConstants
+1126.0.composite = soc.game.SOCPlayingPiece
+1126.0.leaf = soc.game.SOCPlayer
+1126.0.Name = Composite Design Motif
+1126.0.XCommand = command
+
+# Micro-architecture 1123 similar at 0% with Composite Design Motif
+1123.0.component = soc.game.SOCDevCardConstants
+1123.0.composite = soc.game.SOCResourceConstants
+1123.0.leaf = soc.game.SOCPlayer
+1123.0.Name = Composite Design Motif
+1123.0.XCommand = command
+
+# Micro-architecture 1122 similar at 0% with Composite Design Motif
+1122.0.component = soc.game.SOCDevCardConstants
+1122.0.composite = soc.game.SOCResourceSet
+1122.0.leaf = soc.game.SOCPlayer
+1122.0.Name = Composite Design Motif
+1122.0.XCommand = command
+
+# Micro-architecture 1134 similar at 0% with Composite Design Motif
+1134.0.component = soc.game.SOCDevCardConstants
+1134.0.composite = soc.game.SOCRoad
+1134.0.leaf = soc.game.SOCPlayer
+1134.0.Name = Composite Design Motif
+1134.0.XCommand = command
+
+# Micro-architecture 1138 similar at 0% with Composite Design Motif
+1138.0.component = soc.game.SOCDevCardConstants
+1138.0.composite = soc.game.SOCSettlement
+1138.0.leaf = soc.game.SOCPlayer
+1138.0.Name = Composite Design Motif
+1138.0.XCommand = command
+
+# Micro-architecture 1114 similar at 0% with Composite Design Motif
+1114.0.component = soc.game.SOCDevCardConstants
+1114.0.composite = soc.game.SOCTradeOffer
+1114.0.leaf = soc.game.SOCPlayer
+1114.0.Name = Composite Design Motif
+1114.0.XCommand = command
+
+# Micro-architecture 2448 similar at 0% with Composite Design Motif
+2448.0.component = soc.game.SOCPlayingPiece
+2448.0.composite = soc.game.SOCBoard
+2448.0.leaf = soc.game.SOCCity
+2448.0.Name = Composite Design Motif
+2448.0.XCommand = command
+
+# Micro-architecture 2382 similar at 0% with Composite Design Motif
+2382.0.component = soc.game.SOCPlayingPiece
+2382.0.composite = soc.game.SOCBoard
+2382.0.leaf = soc.game.SOCRoad
+2382.0.Name = Composite Design Motif
+2382.0.XCommand = command
+
+# Micro-architecture 2415 similar at 0% with Composite Design Motif
+2415.0.component = soc.game.SOCPlayingPiece
+2415.0.composite = soc.game.SOCBoard
+2415.0.leaf = soc.game.SOCSettlement
+2415.0.Name = Composite Design Motif
+2415.0.XCommand = command
+
+# Micro-architecture 2428 similar at 0% with Composite Design Motif
+2428.0.component = soc.game.SOCPlayingPiece
+2428.0.composite = soc.game.SOCPlayer
+2428.0.leaf = soc.game.SOCCity
+2428.0.Name = Composite Design Motif
+2428.0.XCommand = command
+
+# Micro-architecture 2348 similar at 0% with Composite Design Motif
+2348.0.component = soc.game.SOCResourceConstants
+2348.0.composite = soc.game.SOCBoard
+2348.0.leaf = soc.game.SOCPlayer
+2348.0.Name = Composite Design Motif
+2348.0.XCommand = command
+
+# Micro-architecture 2360 similar at 0% with Composite Design Motif
+2360.0.component = soc.game.SOCResourceConstants
+2360.0.composite = soc.game.SOCCity
+2360.0.leaf = soc.game.SOCPlayer
+2360.0.Name = Composite Design Motif
+2360.0.XCommand = command
+
+# Micro-architecture 2328 similar at 0% with Composite Design Motif
+2328.0.component = soc.game.SOCResourceConstants
+2328.0.composite = soc.game.SOCDevCardConstants
+2328.0.leaf = soc.game.SOCPlayer
+2328.0.Name = Composite Design Motif
+2328.0.XCommand = command
+
+# Micro-architecture 2334 similar at 0% with Composite Design Motif
+2334.0.component = soc.game.SOCResourceConstants
+2334.0.composite = soc.game.SOCDevCardSet
+2334.0.leaf = soc.game.SOCPlayer
+2334.0.Name = Composite Design Motif
+2334.0.XCommand = command
+
+# Micro-architecture 2345 similar at 0% with Composite Design Motif
+2345.0.component = soc.game.SOCResourceConstants
+2345.0.composite = soc.game.SOCGame
+2345.0.leaf = soc.game.SOCPlayer
+2345.0.Name = Composite Design Motif
+2345.0.XCommand = command
+
+# Micro-architecture 2358 similar at 0% with Composite Design Motif
+2358.0.component = soc.game.SOCResourceConstants
+2358.0.composite = soc.game.SOCLRPathData
+2358.0.leaf = soc.game.SOCPlayer
+2358.0.Name = Composite Design Motif
+2358.0.XCommand = command
+
+# Micro-architecture 2329 similar at 0% with Composite Design Motif
+2329.0.component = soc.game.SOCResourceConstants
+2329.0.composite = soc.game.SOCPlayerNumbers
+2329.0.leaf = soc.game.SOCPlayer
+2329.0.Name = Composite Design Motif
+2329.0.XCommand = command
+
+# Micro-architecture 2347 similar at 0% with Composite Design Motif
+2347.0.component = soc.game.SOCResourceConstants
+2347.0.composite = soc.game.SOCPlayingPiece
+2347.0.leaf = soc.game.SOCPlayer
+2347.0.Name = Composite Design Motif
+2347.0.XCommand = command
+
+# Micro-architecture 2344 similar at 0% with Composite Design Motif
+2344.0.component = soc.game.SOCResourceConstants
+2344.0.composite = soc.game.SOCResourceSet
+2344.0.leaf = soc.game.SOCPlayer
+2344.0.Name = Composite Design Motif
+2344.0.XCommand = command
+
+# Micro-architecture 2355 similar at 0% with Composite Design Motif
+2355.0.component = soc.game.SOCResourceConstants
+2355.0.composite = soc.game.SOCRoad
+2355.0.leaf = soc.game.SOCPlayer
+2355.0.Name = Composite Design Motif
+2355.0.XCommand = command
+
+# Micro-architecture 2359 similar at 0% with Composite Design Motif
+2359.0.component = soc.game.SOCResourceConstants
+2359.0.composite = soc.game.SOCSettlement
+2359.0.leaf = soc.game.SOCPlayer
+2359.0.Name = Composite Design Motif
+2359.0.XCommand = command
+
+# Micro-architecture 2336 similar at 0% with Composite Design Motif
+2336.0.component = soc.game.SOCResourceConstants
+2336.0.composite = soc.game.SOCTradeOffer
+2336.0.leaf = soc.game.SOCPlayer
+2336.0.Name = Composite Design Motif
+2336.0.XCommand = command
+
+# Micro-architecture 3 similar at 8% with Composite Design Motif
+3.8.component = soc.game.SOCDevCardConstants
+3.8.composite = soc.game.SOCMoveRobberResult
+3.8.leaf = soc.game.SOCPlayer
+3.8.Name = Composite Design Motif
+3.8.XCommand = command
+
+# Micro-architecture 8 similar at 8% with Composite Design Motif
+8.8.component = soc.game.SOCDevCardConstants
+8.8.composite = soc.game.SOCOldLRStats
+8.8.leaf = soc.game.SOCPlayer
+8.8.Name = Composite Design Motif
+8.8.XCommand = command
+
+# Micro-architecture 953 similar at 8% with Composite Design Motif
+953.8.component = soc.game.SOCPlayingPiece
+953.8.composite = soc.game.SOCCity
+953.8.leaf = soc.game.SOCRoad
+953.8.Name = Composite Design Motif
+953.8.XCommand = command
+
+# Micro-architecture 984 similar at 8% with Composite Design Motif
+984.8.component = soc.game.SOCPlayingPiece
+984.8.composite = soc.game.SOCCity
+984.8.leaf = soc.game.SOCSettlement
+984.8.Name = Composite Design Motif
+984.8.XCommand = command
+
+# Micro-architecture 985 similar at 8% with Composite Design Motif
+985.8.component = soc.game.SOCPlayingPiece
+985.8.composite = soc.game.SOCDevCardConstants
+985.8.leaf = soc.game.SOCCity
+985.8.Name = Composite Design Motif
+985.8.XCommand = command
+
+# Micro-architecture 923 similar at 8% with Composite Design Motif
+923.8.component = soc.game.SOCPlayingPiece
+923.8.composite = soc.game.SOCDevCardConstants
+923.8.leaf = soc.game.SOCRoad
+923.8.Name = Composite Design Motif
+923.8.XCommand = command
+
+# Micro-architecture 954 similar at 8% with Composite Design Motif
+954.8.component = soc.game.SOCPlayingPiece
+954.8.composite = soc.game.SOCDevCardConstants
+954.8.leaf = soc.game.SOCSettlement
+954.8.Name = Composite Design Motif
+954.8.XCommand = command
+
+# Micro-architecture 991 similar at 8% with Composite Design Motif
+991.8.component = soc.game.SOCPlayingPiece
+991.8.composite = soc.game.SOCDevCardSet
+991.8.leaf = soc.game.SOCCity
+991.8.Name = Composite Design Motif
+991.8.XCommand = command
+
+# Micro-architecture 930 similar at 8% with Composite Design Motif
+930.8.component = soc.game.SOCPlayingPiece
+930.8.composite = soc.game.SOCDevCardSet
+930.8.leaf = soc.game.SOCRoad
+930.8.Name = Composite Design Motif
+930.8.XCommand = command
+
+# Micro-architecture 961 similar at 8% with Composite Design Motif
+961.8.component = soc.game.SOCPlayingPiece
+961.8.composite = soc.game.SOCDevCardSet
+961.8.leaf = soc.game.SOCSettlement
+961.8.Name = Composite Design Motif
+961.8.XCommand = command
+
+# Micro-architecture 1002 similar at 8% with Composite Design Motif
+1002.8.component = soc.game.SOCPlayingPiece
+1002.8.composite = soc.game.SOCGame
+1002.8.leaf = soc.game.SOCCity
+1002.8.Name = Composite Design Motif
+1002.8.XCommand = command
+
+# Micro-architecture 941 similar at 8% with Composite Design Motif
+941.8.component = soc.game.SOCPlayingPiece
+941.8.composite = soc.game.SOCGame
+941.8.leaf = soc.game.SOCRoad
+941.8.Name = Composite Design Motif
+941.8.XCommand = command
+
+# Micro-architecture 972 similar at 8% with Composite Design Motif
+972.8.component = soc.game.SOCPlayingPiece
+972.8.composite = soc.game.SOCGame
+972.8.leaf = soc.game.SOCSettlement
+972.8.Name = Composite Design Motif
+972.8.XCommand = command
+
+# Micro-architecture 1013 similar at 8% with Composite Design Motif
+1013.8.component = soc.game.SOCPlayingPiece
+1013.8.composite = soc.game.SOCLRPathData
+1013.8.leaf = soc.game.SOCCity
+1013.8.Name = Composite Design Motif
+1013.8.XCommand = command
+
+# Micro-architecture 951 similar at 8% with Composite Design Motif
+951.8.component = soc.game.SOCPlayingPiece
+951.8.composite = soc.game.SOCLRPathData
+951.8.leaf = soc.game.SOCRoad
+951.8.Name = Composite Design Motif
+951.8.XCommand = command
+
+# Micro-architecture 983 similar at 8% with Composite Design Motif
+983.8.component = soc.game.SOCPlayingPiece
+983.8.composite = soc.game.SOCLRPathData
+983.8.leaf = soc.game.SOCSettlement
+983.8.Name = Composite Design Motif
+983.8.XCommand = command
+
+# Micro-architecture 992 similar at 8% with Composite Design Motif
+992.8.component = soc.game.SOCPlayingPiece
+992.8.composite = soc.game.SOCMoveRobberResult
+992.8.leaf = soc.game.SOCCity
+992.8.Name = Composite Design Motif
+992.8.XCommand = command
+
+# Micro-architecture 931 similar at 8% with Composite Design Motif
+931.8.component = soc.game.SOCPlayingPiece
+931.8.composite = soc.game.SOCMoveRobberResult
+931.8.leaf = soc.game.SOCRoad
+931.8.Name = Composite Design Motif
+931.8.XCommand = command
+
+# Micro-architecture 962 similar at 8% with Composite Design Motif
+962.8.component = soc.game.SOCPlayingPiece
+962.8.composite = soc.game.SOCMoveRobberResult
+962.8.leaf = soc.game.SOCSettlement
+962.8.Name = Composite Design Motif
+962.8.XCommand = command
+
+# Micro-architecture 1007 similar at 8% with Composite Design Motif
+1007.8.component = soc.game.SOCPlayingPiece
+1007.8.composite = soc.game.SOCOldLRStats
+1007.8.leaf = soc.game.SOCCity
+1007.8.Name = Composite Design Motif
+1007.8.XCommand = command
+
+# Micro-architecture 946 similar at 8% with Composite Design Motif
+946.8.component = soc.game.SOCPlayingPiece
+946.8.composite = soc.game.SOCOldLRStats
+946.8.leaf = soc.game.SOCRoad
+946.8.Name = Composite Design Motif
+946.8.XCommand = command
+
+# Micro-architecture 977 similar at 8% with Composite Design Motif
+977.8.component = soc.game.SOCPlayingPiece
+977.8.composite = soc.game.SOCOldLRStats
+977.8.leaf = soc.game.SOCSettlement
+977.8.Name = Composite Design Motif
+977.8.XCommand = command
+
+# Micro-architecture 986 similar at 8% with Composite Design Motif
+986.8.component = soc.game.SOCPlayingPiece
+986.8.composite = soc.game.SOCPlayerNumbers
+986.8.leaf = soc.game.SOCCity
+986.8.Name = Composite Design Motif
+986.8.XCommand = command
+
+# Micro-architecture 925 similar at 8% with Composite Design Motif
+925.8.component = soc.game.SOCPlayingPiece
+925.8.composite = soc.game.SOCPlayerNumbers
+925.8.leaf = soc.game.SOCRoad
+925.8.Name = Composite Design Motif
+925.8.XCommand = command
+
+# Micro-architecture 956 similar at 8% with Composite Design Motif
+956.8.component = soc.game.SOCPlayingPiece
+956.8.composite = soc.game.SOCPlayerNumbers
+956.8.leaf = soc.game.SOCSettlement
+956.8.Name = Composite Design Motif
+956.8.XCommand = command
+
+# Micro-architecture 924 similar at 8% with Composite Design Motif
+924.8.component = soc.game.SOCPlayingPiece
+924.8.composite = soc.game.SOCPlayer
+924.8.leaf = soc.game.SOCRoad
+924.8.Name = Composite Design Motif
+924.8.XCommand = command
+
+# Micro-architecture 955 similar at 8% with Composite Design Motif
+955.8.component = soc.game.SOCPlayingPiece
+955.8.composite = soc.game.SOCPlayer
+955.8.leaf = soc.game.SOCSettlement
+955.8.Name = Composite Design Motif
+955.8.XCommand = command
+
+# Micro-architecture 1001 similar at 8% with Composite Design Motif
+1001.8.component = soc.game.SOCPlayingPiece
+1001.8.composite = soc.game.SOCResourceConstants
+1001.8.leaf = soc.game.SOCCity
+1001.8.Name = Composite Design Motif
+1001.8.XCommand = command
+
+# Micro-architecture 940 similar at 8% with Composite Design Motif
+940.8.component = soc.game.SOCPlayingPiece
+940.8.composite = soc.game.SOCResourceConstants
+940.8.leaf = soc.game.SOCRoad
+940.8.Name = Composite Design Motif
+940.8.XCommand = command
+
+# Micro-architecture 971 similar at 8% with Composite Design Motif
+971.8.component = soc.game.SOCPlayingPiece
+971.8.composite = soc.game.SOCResourceConstants
+971.8.leaf = soc.game.SOCSettlement
+971.8.Name = Composite Design Motif
+971.8.XCommand = command
+
+# Micro-architecture 1000 similar at 8% with Composite Design Motif
+1000.8.component = soc.game.SOCPlayingPiece
+1000.8.composite = soc.game.SOCResourceSet
+1000.8.leaf = soc.game.SOCCity
+1000.8.Name = Composite Design Motif
+1000.8.XCommand = command
+
+# Micro-architecture 939 similar at 8% with Composite Design Motif
+939.8.component = soc.game.SOCPlayingPiece
+939.8.composite = soc.game.SOCResourceSet
+939.8.leaf = soc.game.SOCRoad
+939.8.Name = Composite Design Motif
+939.8.XCommand = command
+
+# Micro-architecture 970 similar at 8% with Composite Design Motif
+970.8.component = soc.game.SOCPlayingPiece
+970.8.composite = soc.game.SOCResourceSet
+970.8.leaf = soc.game.SOCSettlement
+970.8.Name = Composite Design Motif
+970.8.XCommand = command
+
+# Micro-architecture 1010 similar at 8% with Composite Design Motif
+1010.8.component = soc.game.SOCPlayingPiece
+1010.8.composite = soc.game.SOCRoad
+1010.8.leaf = soc.game.SOCCity
+1010.8.Name = Composite Design Motif
+1010.8.XCommand = command
+
+# Micro-architecture 980 similar at 8% with Composite Design Motif
+980.8.component = soc.game.SOCPlayingPiece
+980.8.composite = soc.game.SOCRoad
+980.8.leaf = soc.game.SOCSettlement
+980.8.Name = Composite Design Motif
+980.8.XCommand = command
+
+# Micro-architecture 1014 similar at 8% with Composite Design Motif
+1014.8.component = soc.game.SOCPlayingPiece
+1014.8.composite = soc.game.SOCSettlement
+1014.8.leaf = soc.game.SOCCity
+1014.8.Name = Composite Design Motif
+1014.8.XCommand = command
+
+# Micro-architecture 952 similar at 8% with Composite Design Motif
+952.8.component = soc.game.SOCPlayingPiece
+952.8.composite = soc.game.SOCSettlement
+952.8.leaf = soc.game.SOCRoad
+952.8.Name = Composite Design Motif
+952.8.XCommand = command
+
+# Micro-architecture 993 similar at 8% with Composite Design Motif
+993.8.component = soc.game.SOCPlayingPiece
+993.8.composite = soc.game.SOCTradeOffer
+993.8.leaf = soc.game.SOCCity
+993.8.Name = Composite Design Motif
+993.8.XCommand = command
+
+# Micro-architecture 932 similar at 8% with Composite Design Motif
+932.8.component = soc.game.SOCPlayingPiece
+932.8.composite = soc.game.SOCTradeOffer
+932.8.leaf = soc.game.SOCRoad
+932.8.Name = Composite Design Motif
+932.8.XCommand = command
+
+# Micro-architecture 963 similar at 8% with Composite Design Motif
+963.8.component = soc.game.SOCPlayingPiece
+963.8.composite = soc.game.SOCTradeOffer
+963.8.leaf = soc.game.SOCSettlement
+963.8.Name = Composite Design Motif
+963.8.XCommand = command
+
+# Micro-architecture 916 similar at 8% with Composite Design Motif
+916.8.component = soc.game.SOCResourceConstants
+916.8.composite = soc.game.SOCMoveRobberResult
+916.8.leaf = soc.game.SOCPlayer
+916.8.Name = Composite Design Motif
+916.8.XCommand = command
+
+# Micro-architecture 921 similar at 8% with Composite Design Motif
+921.8.component = soc.game.SOCResourceConstants
+921.8.composite = soc.game.SOCOldLRStats
+921.8.leaf = soc.game.SOCPlayer
+921.8.Name = Composite Design Motif
+921.8.XCommand = command
+

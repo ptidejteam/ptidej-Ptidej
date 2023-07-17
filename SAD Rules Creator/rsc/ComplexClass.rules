@@ -1,5 +1,0 @@
-RULE_CARD : ComplexClass { 
-   RULE : ComplexClass { UNION LargeClassOnly ComplexClassOnly } ; 
-   RULE : LargeClassOnly { (METRIC: NMD + NAD, VERY_HIGH, 0) } ; 
-   RULE : ComplexClassOnly { (METRIC: McCabe, VERY_HIGH, 20) } ;
-};

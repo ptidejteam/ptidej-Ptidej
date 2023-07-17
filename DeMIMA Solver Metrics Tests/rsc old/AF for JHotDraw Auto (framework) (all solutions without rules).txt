@@ -1,0 +1,84 @@
+# Micro-architecture 12 similar at 100% with unknown pattern
+12.100.abstractfactory = CH.ifa.draw.framework.FigureChangeEvent
+12.100.abstractproduct = java.awt.Rectangle
+12.100.concretefactory = CH.ifa.draw.framework.FigureChangeEvent
+12.100.product = java.awt.Rectangle
+12.100.XCommand = No source transformation needed
+
+# Micro-architecture 6 similar at 100% with unknown pattern
+6.100.abstractfactory = CH.ifa.draw.framework.FigureSelection
+6.100.abstractproduct = CH.ifa.draw.util.StorableInput
+6.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+6.100.product = CH.ifa.draw.util.StorableInput
+6.100.XCommand = No source transformation needed
+
+# Micro-architecture 7 similar at 100% with unknown pattern
+7.100.abstractfactory = CH.ifa.draw.framework.FigureSelection
+7.100.abstractproduct = CH.ifa.draw.util.StorableOutput
+7.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+7.100.product = CH.ifa.draw.util.StorableOutput
+7.100.XCommand = No source transformation needed
+
+# Micro-architecture 9 similar at 100% with unknown pattern
+9.100.abstractfactory = CH.ifa.draw.framework.FigureSelection
+9.100.abstractproduct = java.io.ByteArrayInputStream
+9.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+9.100.product = java.io.ByteArrayInputStream
+9.100.XCommand = No source transformation needed
+
+# Micro-architecture 10 similar at 100% with unknown pattern
+10.100.abstractfactory = CH.ifa.draw.framework.FigureSelection
+10.100.abstractproduct = java.io.ByteArrayOutputStream
+10.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+10.100.product = java.io.ByteArrayOutputStream
+10.100.XCommand = No source transformation needed
+
+# Micro-architecture 8 similar at 100% with unknown pattern
+8.100.abstractfactory = CH.ifa.draw.framework.FigureSelection
+8.100.abstractproduct = java.util.Vector
+8.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+8.100.product = java.util.Vector
+8.100.XCommand = No source transformation needed
+
+# Micro-architecture 1 similar at 100% with unknown pattern
+1.100.abstractfactory = java.lang.Object
+1.100.abstractproduct = CH.ifa.draw.util.StorableInput
+1.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+1.100.product = CH.ifa.draw.util.StorableInput
+1.100.XCommand = No source transformation needed
+
+# Micro-architecture 2 similar at 100% with unknown pattern
+2.100.abstractfactory = java.lang.Object
+2.100.abstractproduct = CH.ifa.draw.util.StorableOutput
+2.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+2.100.product = CH.ifa.draw.util.StorableOutput
+2.100.XCommand = No source transformation needed
+
+# Micro-architecture 4 similar at 100% with unknown pattern
+4.100.abstractfactory = java.lang.Object
+4.100.abstractproduct = java.io.ByteArrayInputStream
+4.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+4.100.product = java.io.ByteArrayInputStream
+4.100.XCommand = No source transformation needed
+
+# Micro-architecture 5 similar at 100% with unknown pattern
+5.100.abstractfactory = java.lang.Object
+5.100.abstractproduct = java.io.ByteArrayOutputStream
+5.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+5.100.product = java.io.ByteArrayOutputStream
+5.100.XCommand = No source transformation needed
+
+# Micro-architecture 3 similar at 100% with unknown pattern
+3.100.abstractfactory = java.lang.Object
+3.100.abstractproduct = java.util.Vector
+3.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+3.100.product = java.util.Vector
+3.100.XCommand = No source transformation needed
+
+# Micro-architecture 11 similar at 100% with unknown pattern
+11.100.abstractfactory = java.util.EventObject
+11.100.abstractproduct = java.awt.Rectangle
+11.100.concretefactory = CH.ifa.draw.framework.FigureChangeEvent
+11.100.product = java.awt.Rectangle
+11.100.XCommand = No source transformation needed
+

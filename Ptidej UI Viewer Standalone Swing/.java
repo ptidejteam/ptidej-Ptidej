@@ -1,1 +1,0 @@
-sad.antipattern.detection.autogen.

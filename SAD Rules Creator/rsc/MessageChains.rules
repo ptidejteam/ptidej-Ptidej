@@ -1,3 +1,0 @@
-RULE_CARD : MessageChains { 
-      RULE : MessageChainsClass { (METRIC: NOTI, SUP_EQ, 4, 0) } ; 
-};

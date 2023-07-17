@@ -1,0 +1,128 @@
+Domain reduction for GanttProject
+Original domain size: 616
+Reduced domain size for leaf: 0 (100.0% of reduction)
+Reduced domain size for composite: 616 (0.0% of reduction)
+Reduced domain size for component: 616 (0.0% of reduction)
+--------------------------------------------------
+
+Domain reduction for HolubSQL
+Original domain size: 146
+Reduced domain size for leaf: 0 (100.0% of reduction)
+Reduced domain size for composite: 146 (0.0% of reduction)
+Reduced domain size for component: 146 (0.0% of reduction)
+--------------------------------------------------
+
+Domain reduction for JHotDraw ( limited )
+Original domain size: 166
+Reduced domain size for leaf: 12 (92.7710843373494% of reduction)
+	Entity: CH.ifa.draw.figures.LineConnection
+	Entity: CH.ifa.draw.figures.ElbowConnection
+	Entity: CH.ifa.draw.figures.LineFigure
+	Entity: CH.ifa.draw.figures.ImageFigure
+	Entity: CH.ifa.draw.figures.BorderDecorator
+	Entity: CH.ifa.draw.figures.RectangleFigure
+	Entity: CH.ifa.draw.figures.GroupFigure
+	Entity: CH.ifa.draw.figures.NumberTextFigure
+	Entity: CH.ifa.draw.standard.StandardDrawing
+	Entity: CH.ifa.draw.figures.EllipseFigure
+	Entity: CH.ifa.draw.figures.TextFigure
+	Entity: CH.ifa.draw.figures.RoundRectangleFigure
+Reduced domain size for composite: 166 (0.0% of reduction)
+Reduced domain size for component: 166 (0.0% of reduction)
+--------------------------------------------------
+
+Domain reduction for JSettler( soc.robot )
+Original domain size: 112
+Reduced domain size for leaf: 4 (96.42857142857143% of reduction)
+	Entity: soc.robot.SOCPossibleRoad
+	Entity: soc.robot.SOCPossibleCard
+	Entity: soc.robot.SOCPossibleCity
+	Entity: soc.robot.SOCPossibleSettlement
+Reduced domain size for composite: 112 (0.0% of reduction)
+Reduced domain size for component: 112 (0.0% of reduction)
+--------------------------------------------------
+
+Domain reduction for jTans
+Original domain size: 0
+Reduced domain size for leaf: 0 (NaN% of reduction)
+Reduced domain size for composite: 0 (NaN% of reduction)
+Reduced domain size for component: 0 (NaN% of reduction)
+--------------------------------------------------
+
+Domain reduction for JUnit
+Original domain size: 289
+Reduced domain size for leaf: 29 (89.96539792387543% of reduction)
+	Entity: junit.tests.NotPublicTestCase
+	Entity: junit.tests.Success
+	Entity: junit.tests.AssertTest
+	Entity: junit.tests.Failure
+	Entity: junit.extensions.ExceptionTestCase
+	Entity: junit.samples.VectorTest
+	Entity: junit.tests.OneTestCase
+	Entity: junit.tests.NoTestCases
+	Entity: junit.tests.ActiveTestTest
+	Entity: junit.tests.TextRunnerTest
+	Entity: junit.tests.OverrideTestCase
+	Entity: junit.tests.ExtensionTest
+	Entity: junit.ui.TestRunner
+	Entity: junit.tests.SuiteTest
+	Entity: junit.tests.TestImplementorTest
+	Entity: junit.samples.money.MoneyTest
+	Entity: junit.tests.SorterTest
+	Entity: junit.tests.ExceptionTestCaseTest
+	Entity: junit.tests.InheritedTestCase
+	Entity: junit.extensions.TestSetup
+	Entity: junit.tests.WasRun
+	Entity: junit.tests.TestCaseClassLoaderTest
+	Entity: junit.tests.StackFilterTest
+	Entity: junit.tests.RepeatedTestTest
+	Entity: junit.tests.LoadedFromJar
+	Entity: junit.samples.SimpleTest
+	Entity: junit.tests.NotVoidTestCase
+	Entity: junit.tests.TestCaseTest
+	Entity: junit.tests.ClassLoaderTest
+Reduced domain size for composite: 289 (0.0% of reduction)
+Reduced domain size for component: 289 (0.0% of reduction)
+--------------------------------------------------
+
+Domain reduction for Juzzle
+Original domain size: 99
+Reduced domain size for leaf: 0 (100.0% of reduction)
+Reduced domain size for composite: 99 (0.0% of reduction)
+Reduced domain size for component: 99 (0.0% of reduction)
+--------------------------------------------------
+
+Domain reduction for Lexi
+Original domain size: 216
+Reduced domain size for leaf: 0 (100.0% of reduction)
+Reduced domain size for composite: 216 (0.0% of reduction)
+Reduced domain size for component: 216 (0.0% of reduction)
+--------------------------------------------------
+
+Domain reduction for QuickUML
+Original domain size: 373
+Reduced domain size for leaf: 13 (96.51474530831099% of reduction)
+	Entity: uml.diagram.ClassRendererComponent
+	Entity: uml.ui.CompositionTool
+	Entity: uml.diagram.ClassEditorComponent
+	Entity: uml.diagram.InterfaceRenderer
+	Entity: uml.ui.AssociationTool
+	Entity: diagram.Diagram
+	Entity: uml.ui.GeneralizationTool
+	Entity: uml.diagram.ClassRenderer
+	Entity: uml.ui.DependencyTool
+	Entity: uml.diagram.NoteComponent
+	Entity: uml.diagram.NoteRenderer
+	Entity: uml.ui.RealizationTool
+	Entity: uml.builder.MetaConstructor
+Reduced domain size for composite: 373 (0.0% of reduction)
+Reduced domain size for component: 373 (0.0% of reduction)
+--------------------------------------------------
+
+Domain reduction for Risk
+Original domain size: 256
+Reduced domain size for leaf: 0 (100.0% of reduction)
+Reduced domain size for composite: 256 (0.0% of reduction)
+Reduced domain size for component: 256 (0.0% of reduction)
+--------------------------------------------------
+

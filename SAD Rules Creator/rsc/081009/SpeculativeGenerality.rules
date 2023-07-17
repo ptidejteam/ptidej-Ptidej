@@ -1,5 +1,0 @@
-RULE_CARD : SpeculativeGenerality {  
-      RULE : SpeculativeGenerality { INTER AbstractClass OneChildClass }; 
-	  RULE : AbstractClass  {(STRUCT: IS_ABSTRACT, 1) };
-	  RULE : OneChildClass { (METRIC: NOC, EQ, 1, 0) }; 
-};

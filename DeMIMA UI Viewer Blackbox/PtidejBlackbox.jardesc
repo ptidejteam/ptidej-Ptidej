@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="WINDOWS-1252"?>
+<jardesc>
+<jar path="Ptidej UI Viewer Blackbox/PtidejBlackbox.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/Ptidej UI Viewer Blackbox/PtidejBlackbox.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+<storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+<selectedProjects/>
+<manifest generateManifest="false" mainClassHandleIdentifier="=Ptidej UI Viewer Blackbox/src&lt;ptidej.viewer{Main.java[Main" manifestLocation="/Ptidej UI Viewer Blackbox/Manifest.mf" manifestVersion="1.0" reuseManifest="false" saveManifest="true" usesManifest="true">
+<sealing sealJar="true">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<javaElement handleIdentifier="=CPL/lib\/cfparse&lt;com.ibm.toad.cfparse.attributes"/>
+<javaElement handleIdentifier="=Ptidej UI Analyses/src"/>
+<javaElement handleIdentifier="=SAD/src"/>
+<javaElement handleIdentifier="=PADL Creator ClassFile/src"/>
+<javaElement handleIdentifier="=CPL/src&lt;util.multilingual"/>
+<javaElement handleIdentifier="=CPL/src&lt;util"/>
+<javaElement handleIdentifier="=CPL/lib\/cfparse&lt;com.ibm.toad.utils"/>
+<javaElement handleIdentifier="=PADL Statements/src"/>
+<javaElement handleIdentifier="=POM/src"/>
+<javaElement handleIdentifier="=CPL/src&lt;util.awt"/>
+<javaElement handleIdentifier="=Ptidej UI Viewer/src"/>
+<javaElement handleIdentifier="=JCT Utils/src"/>
+<javaElement handleIdentifier="=CPL/lib\/bcel&lt;org.apache.bcel.verifier"/>
+<javaElement handleIdentifier="=Ptidej UI Viewer Blackbox/src"/>
+<javaElement handleIdentifier="=CPL/lib\/bcel&lt;org.apache.bcel.verifier.statics"/>
+<javaElement handleIdentifier="=CPL/lib\/bcel&lt;org.apache.bcel"/>
+<javaElement handleIdentifier="=CPL/src&lt;util.parser.java.v15.visitors"/>
+<javaElement handleIdentifier="=PADL Analyses/src"/>
+<javaElement handleIdentifier="=JCT Impl/src"/>
+<javaElement handleIdentifier="=CPL/src&lt;util.parser.java.v14"/>
+<javaElement handleIdentifier="=CPL/lib\/bcel&lt;org.apache.bcel.classfile"/>
+<javaElement handleIdentifier="=CPL/src&lt;util.parser.java.v14.visitors"/>
+<javaElement handleIdentifier="=CPL/lib\/bcel&lt;org.apache.bcel.util"/>
+<javaElement handleIdentifier="=JCT/src"/>
+<javaElement handleIdentifier="=PADL/src"/>
+<javaElement handleIdentifier="=CPL/lib\/bcel&lt;org.apache.bcel.verifier.exc"/>
+<javaElement handleIdentifier="=CPL/lib\/bcel&lt;org.apache.bcel.generic"/>
+<javaElement handleIdentifier="=CPL/src&lt;util.lang"/>
+<javaElement handleIdentifier="=CPL/src&lt;util.help"/>
+<javaElement handleIdentifier="=Ptidej UI/src"/>
+<javaElement handleIdentifier="=CPL/src&lt;util.io"/>
+<javaElement handleIdentifier="=Ptidej UI Viewer Extensions/src"/>
+<javaElement handleIdentifier="=CPL/src&lt;util.parser.java.v14.nodes"/>
+<javaElement handleIdentifier="=CPL/lib\/cfparse&lt;com.ibm.toad.cfparse.instruction"/>
+<javaElement handleIdentifier="=CPL/src&lt;util.parser.java.v15.nodes"/>
+<javaElement handleIdentifier="=CPL/lib\/cfparse&lt;com.ibm.toad.cfparse.utils"/>
+<javaElement handleIdentifier="=JCT Tools/src"/>
+<javaElement handleIdentifier="=PADL Statements Creator ClassFile/src"/>
+<javaElement handleIdentifier="=CPL/lib\/bcel&lt;org.apache.bcel.verifier.structurals"/>
+<javaElement handleIdentifier="=CPL/src&lt;util.xml"/>
+<javaElement handleIdentifier="=PADL Creator JavaFile/src"/>
+<javaElement handleIdentifier="=CPL/src&lt;util.parser.java.v15"/>
+<javaElement handleIdentifier="=CPL/lib\/cfparse&lt;com.ibm.toad.cfparse"/>
+</selectedElements>
+</jardesc>

@@ -1,8 +1,0 @@
-[ExtraInformation]
-
-Relation1 = addAggregationRelationship(junit.framework.TestResult,  newRelation1, junit.framework.TestFailure, 2)
-Relation2 = addAggregationRelationship(junit.awtui.TestRunner,      newRelation2, java.lang.Throwable,         2)
-Relation3 = addAggregationRelationship(junit.swingui.TestRunner,    newRelation3, junit.swingui.TestRunView,   2)
-Relation4 = addAggregationRelationship(junit.framework.TestSuite,   newRelation4, junit.framework.Test,        2)
-Relation5 = addAggregationRelationship(junit.awtui.TestRunner,      newRelation5, junit.framework.Test,        2)
-Relation6 = addAggregationRelationship(junit.swingui.TestTreeModel, newRelation6, junit.framework.Test,        2)

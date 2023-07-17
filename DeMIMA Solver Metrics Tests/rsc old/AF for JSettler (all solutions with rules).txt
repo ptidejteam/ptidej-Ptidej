@@ -1,0 +1,2079 @@
+# Micro-architecture 24 similar at 100% with unknown pattern
+24.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+24.100.abstractproduct = java.io.DataOutputStream
+24.100.concretefactory = soc.robot.SOCRobotClient
+24.100.product = java.io.DataOutputStream
+24.100.XCommand = No source transformation needed
+
+# Micro-architecture 12 similar at 100% with unknown pattern
+12.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+12.100.abstractproduct = java.io.Serializable
+12.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+12.100.product = soc.game.SOCCity
+12.100.XCommand = No source transformation needed
+
+# Micro-architecture 10 similar at 100% with unknown pattern
+10.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+10.100.abstractproduct = java.io.Serializable
+10.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+10.100.product = soc.game.SOCGame
+10.100.XCommand = No source transformation needed
+
+# Micro-architecture 11 similar at 100% with unknown pattern
+11.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+11.100.abstractproduct = java.io.Serializable
+11.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+11.100.product = soc.game.SOCRoad
+11.100.XCommand = No source transformation needed
+
+# Micro-architecture 9 similar at 100% with unknown pattern
+9.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+9.100.abstractproduct = java.io.Serializable
+9.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+9.100.product = soc.game.SOCSettlement
+9.100.XCommand = No source transformation needed
+
+# Micro-architecture 8 similar at 100% with unknown pattern
+8.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+8.100.abstractproduct = java.io.Serializable
+8.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+8.100.product = soc.message.SOCLeaveAll
+8.100.XCommand = No source transformation needed
+
+# Micro-architecture 19 similar at 100% with unknown pattern
+19.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+19.100.abstractproduct = java.io.Serializable
+19.100.concretefactory = soc.robot.SOCRobotClient
+19.100.product = soc.game.SOCGame
+19.100.XCommand = No source transformation needed
+
+# Micro-architecture 15 similar at 100% with unknown pattern
+15.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+15.100.abstractproduct = java.io.Serializable
+15.100.concretefactory = soc.robot.SOCRobotClient
+15.100.product = soc.message.SOCLeaveAll
+15.100.XCommand = No source transformation needed
+
+# Micro-architecture 6 similar at 100% with unknown pattern
+6.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+6.100.abstractproduct = java.lang.Cloneable
+6.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+6.100.product = soc.game.SOCCity
+6.100.XCommand = No source transformation needed
+
+# Micro-architecture 4 similar at 100% with unknown pattern
+4.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+4.100.abstractproduct = java.lang.Cloneable
+4.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+4.100.product = soc.game.SOCGame
+4.100.XCommand = No source transformation needed
+
+# Micro-architecture 5 similar at 100% with unknown pattern
+5.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+5.100.abstractproduct = java.lang.Cloneable
+5.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+5.100.product = soc.game.SOCRoad
+5.100.XCommand = No source transformation needed
+
+# Micro-architecture 3 similar at 100% with unknown pattern
+3.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+3.100.abstractproduct = java.lang.Cloneable
+3.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+3.100.product = soc.game.SOCSettlement
+3.100.XCommand = No source transformation needed
+
+# Micro-architecture 2 similar at 100% with unknown pattern
+2.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+2.100.abstractproduct = java.lang.Cloneable
+2.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+2.100.product = soc.message.SOCLeaveAll
+2.100.XCommand = No source transformation needed
+
+# Micro-architecture 17 similar at 100% with unknown pattern
+17.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+17.100.abstractproduct = java.lang.Cloneable
+17.100.concretefactory = soc.robot.SOCRobotClient
+17.100.product = soc.game.SOCGame
+17.100.XCommand = No source transformation needed
+
+# Micro-architecture 14 similar at 100% with unknown pattern
+14.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+14.100.abstractproduct = java.lang.Cloneable
+14.100.concretefactory = soc.robot.SOCRobotClient
+14.100.product = soc.message.SOCLeaveAll
+14.100.XCommand = No source transformation needed
+
+# Micro-architecture 13 similar at 100% with unknown pattern
+13.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+13.100.abstractproduct = java.lang.Runnable
+13.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+13.100.product = soc.client.SOCDisplaylessPlayerClient
+13.100.XCommand = No source transformation needed
+
+# Micro-architecture 26 similar at 100% with unknown pattern
+26.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+26.100.abstractproduct = java.lang.Runnable
+26.100.concretefactory = soc.robot.SOCRobotClient
+26.100.product = soc.robot.SOCRobotClient
+26.100.XCommand = No source transformation needed
+
+# Micro-architecture 20 similar at 100% with unknown pattern
+20.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+20.100.abstractproduct = java.lang.Thread
+20.100.concretefactory = soc.robot.SOCRobotClient
+20.100.product = java.lang.Thread
+20.100.XCommand = No source transformation needed
+
+# Micro-architecture 16 similar at 100% with unknown pattern
+16.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+16.100.abstractproduct = java.lang.Thread
+16.100.concretefactory = soc.robot.SOCRobotClient
+16.100.product = soc.robot.SOCRobotBrain
+16.100.XCommand = No source transformation needed
+
+# Micro-architecture 21 similar at 100% with unknown pattern
+21.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+21.100.abstractproduct = java.net.Socket
+21.100.concretefactory = soc.robot.SOCRobotClient
+21.100.product = java.net.Socket
+21.100.XCommand = No source transformation needed
+
+# Micro-architecture 1 similar at 100% with unknown pattern
+1.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+1.100.abstractproduct = soc.client.SOCDisplaylessPlayerClient
+1.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+1.100.product = soc.client.SOCDisplaylessPlayerClient
+1.100.XCommand = No source transformation needed
+
+# Micro-architecture 25 similar at 100% with unknown pattern
+25.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+25.100.abstractproduct = soc.client.SOCDisplaylessPlayerClient
+25.100.concretefactory = soc.robot.SOCRobotClient
+25.100.product = soc.robot.SOCRobotClient
+25.100.XCommand = No source transformation needed
+
+# Micro-architecture 7 similar at 100% with unknown pattern
+7.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+7.100.abstractproduct = soc.game.SOCGame
+7.100.concretefactory = soc.client.SOCDisplaylessPlayerClient
+7.100.product = soc.game.SOCGame
+7.100.XCommand = No source transformation needed
+
+# Micro-architecture 18 similar at 100% with unknown pattern
+18.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+18.100.abstractproduct = soc.game.SOCGame
+18.100.concretefactory = soc.robot.SOCRobotClient
+18.100.product = soc.game.SOCGame
+18.100.XCommand = No source transformation needed
+
+# Micro-architecture 27 similar at 100% with unknown pattern
+27.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+27.100.abstractproduct = soc.robot.SOCRobotClient
+27.100.concretefactory = soc.robot.SOCRobotClient
+27.100.product = soc.robot.SOCRobotClient
+27.100.XCommand = No source transformation needed
+
+# Micro-architecture 23 similar at 100% with unknown pattern
+23.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+23.100.abstractproduct = soc.util.CappedQueue
+23.100.concretefactory = soc.robot.SOCRobotClient
+23.100.product = soc.util.CappedQueue
+23.100.XCommand = No source transformation needed
+
+# Micro-architecture 22 similar at 100% with unknown pattern
+22.100.abstractfactory = soc.client.SOCDisplaylessPlayerClient
+22.100.abstractproduct = soc.util.SOCRobotParameters
+22.100.concretefactory = soc.robot.SOCRobotClient
+22.100.product = soc.util.SOCRobotParameters
+22.100.XCommand = No source transformation needed
+
+# Micro-architecture 43 similar at 100% with unknown pattern
+43.100.abstractfactory = soc.game.SOCDevCardConstants
+43.100.abstractproduct = java.io.Serializable
+43.100.concretefactory = soc.game.SOCPlayer
+43.100.product = soc.game.SOCCity
+43.100.XCommand = No source transformation needed
+
+# Micro-architecture 41 similar at 100% with unknown pattern
+41.100.abstractfactory = soc.game.SOCDevCardConstants
+41.100.abstractproduct = java.io.Serializable
+41.100.concretefactory = soc.game.SOCPlayer
+41.100.product = soc.game.SOCDevCardSet
+41.100.XCommand = No source transformation needed
+
+# Micro-architecture 44 similar at 100% with unknown pattern
+44.100.abstractfactory = soc.game.SOCDevCardConstants
+44.100.abstractproduct = java.io.Serializable
+44.100.concretefactory = soc.game.SOCPlayer
+44.100.product = soc.game.SOCPlayer
+44.100.XCommand = No source transformation needed
+
+# Micro-architecture 39 similar at 100% with unknown pattern
+39.100.abstractfactory = soc.game.SOCDevCardConstants
+39.100.abstractproduct = java.io.Serializable
+39.100.concretefactory = soc.game.SOCPlayer
+39.100.product = soc.game.SOCResourceSet
+39.100.XCommand = No source transformation needed
+
+# Micro-architecture 42 similar at 100% with unknown pattern
+42.100.abstractfactory = soc.game.SOCDevCardConstants
+42.100.abstractproduct = java.io.Serializable
+42.100.concretefactory = soc.game.SOCPlayer
+42.100.product = soc.game.SOCRoad
+42.100.XCommand = No source transformation needed
+
+# Micro-architecture 38 similar at 100% with unknown pattern
+38.100.abstractfactory = soc.game.SOCDevCardConstants
+38.100.abstractproduct = java.io.Serializable
+38.100.concretefactory = soc.game.SOCPlayer
+38.100.product = soc.game.SOCSettlement
+38.100.XCommand = No source transformation needed
+
+# Micro-architecture 40 similar at 100% with unknown pattern
+40.100.abstractfactory = soc.game.SOCDevCardConstants
+40.100.abstractproduct = java.io.Serializable
+40.100.concretefactory = soc.game.SOCPlayer
+40.100.product = soc.game.SOCTradeOffer
+40.100.XCommand = No source transformation needed
+
+# Micro-architecture 33 similar at 100% with unknown pattern
+33.100.abstractfactory = soc.game.SOCDevCardConstants
+33.100.abstractproduct = java.lang.Cloneable
+33.100.concretefactory = soc.game.SOCPlayer
+33.100.product = soc.game.SOCCity
+33.100.XCommand = No source transformation needed
+
+# Micro-architecture 31 similar at 100% with unknown pattern
+31.100.abstractfactory = soc.game.SOCDevCardConstants
+31.100.abstractproduct = java.lang.Cloneable
+31.100.concretefactory = soc.game.SOCPlayer
+31.100.product = soc.game.SOCDevCardSet
+31.100.XCommand = No source transformation needed
+
+# Micro-architecture 34 similar at 100% with unknown pattern
+34.100.abstractfactory = soc.game.SOCDevCardConstants
+34.100.abstractproduct = java.lang.Cloneable
+34.100.concretefactory = soc.game.SOCPlayer
+34.100.product = soc.game.SOCPlayer
+34.100.XCommand = No source transformation needed
+
+# Micro-architecture 29 similar at 100% with unknown pattern
+29.100.abstractfactory = soc.game.SOCDevCardConstants
+29.100.abstractproduct = java.lang.Cloneable
+29.100.concretefactory = soc.game.SOCPlayer
+29.100.product = soc.game.SOCResourceSet
+29.100.XCommand = No source transformation needed
+
+# Micro-architecture 32 similar at 100% with unknown pattern
+32.100.abstractfactory = soc.game.SOCDevCardConstants
+32.100.abstractproduct = java.lang.Cloneable
+32.100.concretefactory = soc.game.SOCPlayer
+32.100.product = soc.game.SOCRoad
+32.100.XCommand = No source transformation needed
+
+# Micro-architecture 28 similar at 100% with unknown pattern
+28.100.abstractfactory = soc.game.SOCDevCardConstants
+28.100.abstractproduct = java.lang.Cloneable
+28.100.concretefactory = soc.game.SOCPlayer
+28.100.product = soc.game.SOCSettlement
+28.100.XCommand = No source transformation needed
+
+# Micro-architecture 30 similar at 100% with unknown pattern
+30.100.abstractfactory = soc.game.SOCDevCardConstants
+30.100.abstractproduct = java.lang.Cloneable
+30.100.concretefactory = soc.game.SOCPlayer
+30.100.product = soc.game.SOCTradeOffer
+30.100.XCommand = No source transformation needed
+
+# Micro-architecture 35 similar at 100% with unknown pattern
+35.100.abstractfactory = soc.game.SOCDevCardConstants
+35.100.abstractproduct = java.util.Stack
+35.100.concretefactory = soc.game.SOCPlayer
+35.100.product = java.util.Stack
+35.100.XCommand = No source transformation needed
+
+# Micro-architecture 37 similar at 100% with unknown pattern
+37.100.abstractfactory = soc.game.SOCDevCardConstants
+37.100.abstractproduct = soc.game.SOCDevCardConstants
+37.100.concretefactory = soc.game.SOCPlayer
+37.100.product = soc.game.SOCPlayer
+37.100.XCommand = No source transformation needed
+
+# Micro-architecture 36 similar at 100% with unknown pattern
+36.100.abstractfactory = soc.game.SOCDevCardConstants
+36.100.abstractproduct = soc.game.SOCLRPathData
+36.100.concretefactory = soc.game.SOCPlayer
+36.100.product = soc.game.SOCLRPathData
+36.100.XCommand = No source transformation needed
+
+# Micro-architecture 46 similar at 100% with unknown pattern
+46.100.abstractfactory = soc.game.SOCDevCardConstants
+46.100.abstractproduct = soc.game.SOCPlayer
+46.100.concretefactory = soc.game.SOCPlayer
+46.100.product = soc.game.SOCPlayer
+46.100.XCommand = No source transformation needed
+
+# Micro-architecture 45 similar at 100% with unknown pattern
+45.100.abstractfactory = soc.game.SOCDevCardConstants
+45.100.abstractproduct = soc.util.NodeLenVis
+45.100.concretefactory = soc.game.SOCPlayer
+45.100.product = soc.util.NodeLenVis
+45.100.XCommand = No source transformation needed
+
+# Micro-architecture 64 similar at 100% with unknown pattern
+64.100.abstractfactory = soc.game.SOCResourceConstants
+64.100.abstractproduct = java.io.Serializable
+64.100.concretefactory = soc.game.SOCPlayer
+64.100.product = soc.game.SOCCity
+64.100.XCommand = No source transformation needed
+
+# Micro-architecture 62 similar at 100% with unknown pattern
+62.100.abstractfactory = soc.game.SOCResourceConstants
+62.100.abstractproduct = java.io.Serializable
+62.100.concretefactory = soc.game.SOCPlayer
+62.100.product = soc.game.SOCDevCardSet
+62.100.XCommand = No source transformation needed
+
+# Micro-architecture 65 similar at 100% with unknown pattern
+65.100.abstractfactory = soc.game.SOCResourceConstants
+65.100.abstractproduct = java.io.Serializable
+65.100.concretefactory = soc.game.SOCPlayer
+65.100.product = soc.game.SOCPlayer
+65.100.XCommand = No source transformation needed
+
+# Micro-architecture 60 similar at 100% with unknown pattern
+60.100.abstractfactory = soc.game.SOCResourceConstants
+60.100.abstractproduct = java.io.Serializable
+60.100.concretefactory = soc.game.SOCPlayer
+60.100.product = soc.game.SOCResourceSet
+60.100.XCommand = No source transformation needed
+
+# Micro-architecture 63 similar at 100% with unknown pattern
+63.100.abstractfactory = soc.game.SOCResourceConstants
+63.100.abstractproduct = java.io.Serializable
+63.100.concretefactory = soc.game.SOCPlayer
+63.100.product = soc.game.SOCRoad
+63.100.XCommand = No source transformation needed
+
+# Micro-architecture 59 similar at 100% with unknown pattern
+59.100.abstractfactory = soc.game.SOCResourceConstants
+59.100.abstractproduct = java.io.Serializable
+59.100.concretefactory = soc.game.SOCPlayer
+59.100.product = soc.game.SOCSettlement
+59.100.XCommand = No source transformation needed
+
+# Micro-architecture 61 similar at 100% with unknown pattern
+61.100.abstractfactory = soc.game.SOCResourceConstants
+61.100.abstractproduct = java.io.Serializable
+61.100.concretefactory = soc.game.SOCPlayer
+61.100.product = soc.game.SOCTradeOffer
+61.100.XCommand = No source transformation needed
+
+# Micro-architecture 54 similar at 100% with unknown pattern
+54.100.abstractfactory = soc.game.SOCResourceConstants
+54.100.abstractproduct = java.lang.Cloneable
+54.100.concretefactory = soc.game.SOCPlayer
+54.100.product = soc.game.SOCCity
+54.100.XCommand = No source transformation needed
+
+# Micro-architecture 52 similar at 100% with unknown pattern
+52.100.abstractfactory = soc.game.SOCResourceConstants
+52.100.abstractproduct = java.lang.Cloneable
+52.100.concretefactory = soc.game.SOCPlayer
+52.100.product = soc.game.SOCDevCardSet
+52.100.XCommand = No source transformation needed
+
+# Micro-architecture 55 similar at 100% with unknown pattern
+55.100.abstractfactory = soc.game.SOCResourceConstants
+55.100.abstractproduct = java.lang.Cloneable
+55.100.concretefactory = soc.game.SOCPlayer
+55.100.product = soc.game.SOCPlayer
+55.100.XCommand = No source transformation needed
+
+# Micro-architecture 50 similar at 100% with unknown pattern
+50.100.abstractfactory = soc.game.SOCResourceConstants
+50.100.abstractproduct = java.lang.Cloneable
+50.100.concretefactory = soc.game.SOCPlayer
+50.100.product = soc.game.SOCResourceSet
+50.100.XCommand = No source transformation needed
+
+# Micro-architecture 53 similar at 100% with unknown pattern
+53.100.abstractfactory = soc.game.SOCResourceConstants
+53.100.abstractproduct = java.lang.Cloneable
+53.100.concretefactory = soc.game.SOCPlayer
+53.100.product = soc.game.SOCRoad
+53.100.XCommand = No source transformation needed
+
+# Micro-architecture 49 similar at 100% with unknown pattern
+49.100.abstractfactory = soc.game.SOCResourceConstants
+49.100.abstractproduct = java.lang.Cloneable
+49.100.concretefactory = soc.game.SOCPlayer
+49.100.product = soc.game.SOCSettlement
+49.100.XCommand = No source transformation needed
+
+# Micro-architecture 51 similar at 100% with unknown pattern
+51.100.abstractfactory = soc.game.SOCResourceConstants
+51.100.abstractproduct = java.lang.Cloneable
+51.100.concretefactory = soc.game.SOCPlayer
+51.100.product = soc.game.SOCTradeOffer
+51.100.XCommand = No source transformation needed
+
+# Micro-architecture 56 similar at 100% with unknown pattern
+56.100.abstractfactory = soc.game.SOCResourceConstants
+56.100.abstractproduct = java.util.Stack
+56.100.concretefactory = soc.game.SOCPlayer
+56.100.product = java.util.Stack
+56.100.XCommand = No source transformation needed
+
+# Micro-architecture 58 similar at 100% with unknown pattern
+58.100.abstractfactory = soc.game.SOCResourceConstants
+58.100.abstractproduct = soc.game.SOCDevCardConstants
+58.100.concretefactory = soc.game.SOCPlayer
+58.100.product = soc.game.SOCPlayer
+58.100.XCommand = No source transformation needed
+
+# Micro-architecture 57 similar at 100% with unknown pattern
+57.100.abstractfactory = soc.game.SOCResourceConstants
+57.100.abstractproduct = soc.game.SOCLRPathData
+57.100.concretefactory = soc.game.SOCPlayer
+57.100.product = soc.game.SOCLRPathData
+57.100.XCommand = No source transformation needed
+
+# Micro-architecture 67 similar at 100% with unknown pattern
+67.100.abstractfactory = soc.game.SOCResourceConstants
+67.100.abstractproduct = soc.game.SOCPlayer
+67.100.concretefactory = soc.game.SOCPlayer
+67.100.product = soc.game.SOCPlayer
+67.100.XCommand = No source transformation needed
+
+# Micro-architecture 66 similar at 100% with unknown pattern
+66.100.abstractfactory = soc.game.SOCResourceConstants
+66.100.abstractproduct = soc.util.NodeLenVis
+66.100.concretefactory = soc.game.SOCPlayer
+66.100.product = soc.util.NodeLenVis
+66.100.XCommand = No source transformation needed
+
+# Micro-architecture 150 similar at 100% with unknown pattern
+150.100.abstractfactory = soc.message.SOCMessage
+150.100.abstractproduct = java.io.Serializable
+150.100.concretefactory = soc.message.SOCAcceptOffer
+150.100.product = soc.message.SOCAcceptOffer
+150.100.XCommand = No source transformation needed
+
+# Micro-architecture 189 similar at 100% with unknown pattern
+189.100.abstractfactory = soc.message.SOCMessage
+189.100.abstractproduct = java.io.Serializable
+189.100.concretefactory = soc.message.SOCAdminPing
+189.100.product = soc.message.SOCAdminPing
+189.100.XCommand = No source transformation needed
+
+# Micro-architecture 167 similar at 100% with unknown pattern
+167.100.abstractfactory = soc.message.SOCMessage
+167.100.abstractproduct = java.io.Serializable
+167.100.concretefactory = soc.message.SOCBCastTextMsg
+167.100.product = soc.message.SOCBCastTextMsg
+167.100.XCommand = No source transformation needed
+
+# Micro-architecture 193 similar at 100% with unknown pattern
+193.100.abstractfactory = soc.message.SOCMessage
+193.100.abstractproduct = java.io.Serializable
+193.100.concretefactory = soc.message.SOCBankTrade
+193.100.product = soc.game.SOCResourceSet
+193.100.XCommand = No source transformation needed
+
+# Micro-architecture 194 similar at 100% with unknown pattern
+194.100.abstractfactory = soc.message.SOCMessage
+194.100.abstractproduct = java.io.Serializable
+194.100.concretefactory = soc.message.SOCBankTrade
+194.100.product = soc.message.SOCBankTrade
+194.100.XCommand = No source transformation needed
+
+# Micro-architecture 141 similar at 100% with unknown pattern
+141.100.abstractfactory = soc.message.SOCMessage
+141.100.abstractproduct = java.io.Serializable
+141.100.concretefactory = soc.message.SOCBoardLayout
+141.100.product = soc.message.SOCBoardLayout
+141.100.XCommand = No source transformation needed
+
+# Micro-architecture 203 similar at 100% with unknown pattern
+203.100.abstractfactory = soc.message.SOCMessage
+203.100.abstractproduct = java.io.Serializable
+203.100.concretefactory = soc.message.SOCBuildRequest
+203.100.product = soc.message.SOCBuildRequest
+203.100.XCommand = No source transformation needed
+
+# Micro-architecture 149 similar at 100% with unknown pattern
+149.100.abstractfactory = soc.message.SOCMessage
+149.100.abstractproduct = java.io.Serializable
+149.100.concretefactory = soc.message.SOCBuyCardRequest
+149.100.product = soc.message.SOCBuyCardRequest
+149.100.XCommand = No source transformation needed
+
+# Micro-architecture 147 similar at 100% with unknown pattern
+147.100.abstractfactory = soc.message.SOCMessage
+147.100.abstractproduct = java.io.Serializable
+147.100.concretefactory = soc.message.SOCCancelBuildRequest
+147.100.product = soc.message.SOCCancelBuildRequest
+147.100.XCommand = No source transformation needed
+
+# Micro-architecture 213 similar at 100% with unknown pattern
+213.100.abstractfactory = soc.message.SOCMessage
+213.100.abstractproduct = java.io.Serializable
+213.100.concretefactory = soc.message.SOCChangeFace
+213.100.product = soc.message.SOCChangeFace
+213.100.XCommand = No source transformation needed
+
+# Micro-architecture 171 similar at 100% with unknown pattern
+171.100.abstractfactory = soc.message.SOCMessage
+171.100.abstractproduct = java.io.Serializable
+171.100.concretefactory = soc.message.SOCChannels
+171.100.product = soc.message.SOCChannels
+171.100.XCommand = No source transformation needed
+
+# Micro-architecture 198 similar at 100% with unknown pattern
+198.100.abstractfactory = soc.message.SOCMessage
+198.100.abstractproduct = java.io.Serializable
+198.100.concretefactory = soc.message.SOCChoosePlayerRequest
+198.100.product = soc.message.SOCChoosePlayerRequest
+198.100.XCommand = No source transformation needed
+
+# Micro-architecture 143 similar at 100% with unknown pattern
+143.100.abstractfactory = soc.message.SOCMessage
+143.100.abstractproduct = java.io.Serializable
+143.100.concretefactory = soc.message.SOCChoosePlayer
+143.100.product = soc.message.SOCChoosePlayer
+143.100.XCommand = No source transformation needed
+
+# Micro-architecture 205 similar at 100% with unknown pattern
+205.100.abstractfactory = soc.message.SOCMessage
+205.100.abstractproduct = java.io.Serializable
+205.100.concretefactory = soc.message.SOCClearOffer
+205.100.product = soc.message.SOCClearOffer
+205.100.XCommand = No source transformation needed
+
+# Micro-architecture 190 similar at 100% with unknown pattern
+190.100.abstractfactory = soc.message.SOCMessage
+190.100.abstractproduct = java.io.Serializable
+190.100.concretefactory = soc.message.SOCClearTradeMsg
+190.100.product = soc.message.SOCClearTradeMsg
+190.100.XCommand = No source transformation needed
+
+# Micro-architecture 152 similar at 100% with unknown pattern
+152.100.abstractfactory = soc.message.SOCMessage
+152.100.abstractproduct = java.io.Serializable
+152.100.concretefactory = soc.message.SOCCreateAccount
+152.100.product = soc.message.SOCCreateAccount
+152.100.XCommand = No source transformation needed
+
+# Micro-architecture 169 similar at 100% with unknown pattern
+169.100.abstractfactory = soc.message.SOCMessage
+169.100.abstractproduct = java.io.Serializable
+169.100.concretefactory = soc.message.SOCDeleteChannel
+169.100.product = soc.message.SOCDeleteChannel
+169.100.XCommand = No source transformation needed
+
+# Micro-architecture 197 similar at 100% with unknown pattern
+197.100.abstractfactory = soc.message.SOCMessage
+197.100.abstractproduct = java.io.Serializable
+197.100.concretefactory = soc.message.SOCDeleteGame
+197.100.product = soc.message.SOCDeleteGame
+197.100.XCommand = No source transformation needed
+
+# Micro-architecture 199 similar at 100% with unknown pattern
+199.100.abstractfactory = soc.message.SOCMessage
+199.100.abstractproduct = java.io.Serializable
+199.100.concretefactory = soc.message.SOCDevCardCount
+199.100.product = soc.message.SOCDevCardCount
+199.100.XCommand = No source transformation needed
+
+# Micro-architecture 151 similar at 100% with unknown pattern
+151.100.abstractfactory = soc.message.SOCMessage
+151.100.abstractproduct = java.io.Serializable
+151.100.concretefactory = soc.message.SOCDevCard
+151.100.product = soc.message.SOCDevCard
+151.100.XCommand = No source transformation needed
+
+# Micro-architecture 165 similar at 100% with unknown pattern
+165.100.abstractfactory = soc.message.SOCMessage
+165.100.abstractproduct = java.io.Serializable
+165.100.concretefactory = soc.message.SOCDiceResult
+165.100.product = soc.message.SOCDiceResult
+165.100.XCommand = No source transformation needed
+
+# Micro-architecture 206 similar at 100% with unknown pattern
+206.100.abstractfactory = soc.message.SOCMessage
+206.100.abstractproduct = java.io.Serializable
+206.100.concretefactory = soc.message.SOCDiscardRequest
+206.100.product = soc.message.SOCDiscardRequest
+206.100.XCommand = No source transformation needed
+
+# Micro-architecture 183 similar at 100% with unknown pattern
+183.100.abstractfactory = soc.message.SOCMessage
+183.100.abstractproduct = java.io.Serializable
+183.100.concretefactory = soc.message.SOCDiscard
+183.100.product = soc.game.SOCResourceSet
+183.100.XCommand = No source transformation needed
+
+# Micro-architecture 184 similar at 100% with unknown pattern
+184.100.abstractfactory = soc.message.SOCMessage
+184.100.abstractproduct = java.io.Serializable
+184.100.concretefactory = soc.message.SOCDiscard
+184.100.product = soc.message.SOCDiscard
+184.100.XCommand = No source transformation needed
+
+# Micro-architecture 145 similar at 100% with unknown pattern
+145.100.abstractfactory = soc.message.SOCMessage
+145.100.abstractproduct = java.io.Serializable
+145.100.concretefactory = soc.message.SOCDiscoveryPick
+145.100.product = soc.game.SOCResourceSet
+145.100.XCommand = No source transformation needed
+
+# Micro-architecture 144 similar at 100% with unknown pattern
+144.100.abstractfactory = soc.message.SOCMessage
+144.100.abstractproduct = java.io.Serializable
+144.100.concretefactory = soc.message.SOCDiscoveryPick
+144.100.product = soc.message.SOCDiscoveryPick
+144.100.XCommand = No source transformation needed
+
+# Micro-architecture 164 similar at 100% with unknown pattern
+164.100.abstractfactory = soc.message.SOCMessage
+164.100.abstractproduct = java.io.Serializable
+164.100.concretefactory = soc.message.SOCEndTurn
+164.100.product = soc.message.SOCEndTurn
+164.100.XCommand = No source transformation needed
+
+# Micro-architecture 174 similar at 100% with unknown pattern
+174.100.abstractfactory = soc.message.SOCMessage
+174.100.abstractproduct = java.io.Serializable
+174.100.concretefactory = soc.message.SOCFirstPlayer
+174.100.product = soc.message.SOCFirstPlayer
+174.100.XCommand = No source transformation needed
+
+# Micro-architecture 195 similar at 100% with unknown pattern
+195.100.abstractfactory = soc.message.SOCMessage
+195.100.abstractproduct = java.io.Serializable
+195.100.concretefactory = soc.message.SOCGameMembers
+195.100.product = soc.message.SOCGameMembers
+195.100.XCommand = No source transformation needed
+
+# Micro-architecture 201 similar at 100% with unknown pattern
+201.100.abstractfactory = soc.message.SOCMessage
+201.100.abstractproduct = java.io.Serializable
+201.100.concretefactory = soc.message.SOCGameState
+201.100.product = soc.message.SOCGameState
+201.100.XCommand = No source transformation needed
+
+# Micro-architecture 200 similar at 100% with unknown pattern
+200.100.abstractfactory = soc.message.SOCMessage
+200.100.abstractproduct = java.io.Serializable
+200.100.concretefactory = soc.message.SOCGameStats
+200.100.product = soc.message.SOCGameStats
+200.100.XCommand = No source transformation needed
+
+# Micro-architecture 210 similar at 100% with unknown pattern
+210.100.abstractfactory = soc.message.SOCMessage
+210.100.abstractproduct = java.io.Serializable
+210.100.concretefactory = soc.message.SOCGameTextMsg
+210.100.product = soc.message.SOCGameTextMsg
+210.100.XCommand = No source transformation needed
+
+# Micro-architecture 207 similar at 100% with unknown pattern
+207.100.abstractfactory = soc.message.SOCMessage
+207.100.abstractproduct = java.io.Serializable
+207.100.concretefactory = soc.message.SOCGames
+207.100.product = soc.message.SOCGames
+207.100.XCommand = No source transformation needed
+
+# Micro-architecture 166 similar at 100% with unknown pattern
+166.100.abstractfactory = soc.message.SOCMessage
+166.100.abstractproduct = java.io.Serializable
+166.100.concretefactory = soc.message.SOCImARobot
+166.100.product = soc.message.SOCImARobot
+166.100.XCommand = No source transformation needed
+
+# Micro-architecture 211 similar at 100% with unknown pattern
+211.100.abstractfactory = soc.message.SOCMessage
+211.100.abstractproduct = java.io.Serializable
+211.100.concretefactory = soc.message.SOCJoinAuth
+211.100.product = soc.message.SOCJoinAuth
+211.100.XCommand = No source transformation needed
+
+# Micro-architecture 148 similar at 100% with unknown pattern
+148.100.abstractfactory = soc.message.SOCMessage
+148.100.abstractproduct = java.io.Serializable
+148.100.concretefactory = soc.message.SOCJoinGameAuth
+148.100.product = soc.message.SOCJoinGameAuth
+148.100.XCommand = No source transformation needed
+
+# Micro-architecture 202 similar at 100% with unknown pattern
+202.100.abstractfactory = soc.message.SOCMessage
+202.100.abstractproduct = java.io.Serializable
+202.100.concretefactory = soc.message.SOCJoinGameRequest
+202.100.product = soc.message.SOCJoinGameRequest
+202.100.XCommand = No source transformation needed
+
+# Micro-architecture 146 similar at 100% with unknown pattern
+146.100.abstractfactory = soc.message.SOCMessage
+146.100.abstractproduct = java.io.Serializable
+146.100.concretefactory = soc.message.SOCJoinGame
+146.100.product = soc.message.SOCJoinGame
+146.100.XCommand = No source transformation needed
+
+# Micro-architecture 179 similar at 100% with unknown pattern
+179.100.abstractfactory = soc.message.SOCMessage
+179.100.abstractproduct = java.io.Serializable
+179.100.concretefactory = soc.message.SOCJoin
+179.100.product = soc.message.SOCJoin
+179.100.XCommand = No source transformation needed
+
+# Micro-architecture 181 similar at 100% with unknown pattern
+181.100.abstractfactory = soc.message.SOCMessage
+181.100.abstractproduct = java.io.Serializable
+181.100.concretefactory = soc.message.SOCLargestArmy
+181.100.product = soc.message.SOCLargestArmy
+181.100.XCommand = No source transformation needed
+
+# Micro-architecture 212 similar at 100% with unknown pattern
+212.100.abstractfactory = soc.message.SOCMessage
+212.100.abstractproduct = java.io.Serializable
+212.100.concretefactory = soc.message.SOCLastSettlement
+212.100.product = soc.message.SOCLastSettlement
+212.100.XCommand = No source transformation needed
+
+# Micro-architecture 180 similar at 100% with unknown pattern
+180.100.abstractfactory = soc.message.SOCMessage
+180.100.abstractproduct = java.io.Serializable
+180.100.concretefactory = soc.message.SOCLeaveGame
+180.100.product = soc.message.SOCLeaveGame
+180.100.XCommand = No source transformation needed
+
+# Micro-architecture 177 similar at 100% with unknown pattern
+177.100.abstractfactory = soc.message.SOCMessage
+177.100.abstractproduct = java.io.Serializable
+177.100.concretefactory = soc.message.SOCLeave
+177.100.product = soc.message.SOCLeave
+177.100.XCommand = No source transformation needed
+
+# Micro-architecture 159 similar at 100% with unknown pattern
+159.100.abstractfactory = soc.message.SOCMessage
+159.100.abstractproduct = java.io.Serializable
+159.100.concretefactory = soc.message.SOCLongestRoad
+159.100.product = soc.message.SOCLongestRoad
+159.100.XCommand = No source transformation needed
+
+# Micro-architecture 156 similar at 100% with unknown pattern
+156.100.abstractfactory = soc.message.SOCMessage
+156.100.abstractproduct = java.io.Serializable
+156.100.concretefactory = soc.message.SOCMakeOffer
+156.100.product = soc.game.SOCResourceSet
+156.100.XCommand = No source transformation needed
+
+# Micro-architecture 157 similar at 100% with unknown pattern
+157.100.abstractfactory = soc.message.SOCMessage
+157.100.abstractproduct = java.io.Serializable
+157.100.concretefactory = soc.message.SOCMakeOffer
+157.100.product = soc.game.SOCTradeOffer
+157.100.XCommand = No source transformation needed
+
+# Micro-architecture 155 similar at 100% with unknown pattern
+155.100.abstractfactory = soc.message.SOCMessage
+155.100.abstractproduct = java.io.Serializable
+155.100.concretefactory = soc.message.SOCMakeOffer
+155.100.product = soc.message.SOCMakeOffer
+155.100.XCommand = No source transformation needed
+
+# Micro-architecture 182 similar at 100% with unknown pattern
+182.100.abstractfactory = soc.message.SOCMessage
+182.100.abstractproduct = java.io.Serializable
+182.100.concretefactory = soc.message.SOCMembers
+182.100.product = soc.message.SOCMembers
+182.100.XCommand = No source transformation needed
+
+# Micro-architecture 161 similar at 100% with unknown pattern
+161.100.abstractfactory = soc.message.SOCMessage
+161.100.abstractproduct = java.io.Serializable
+161.100.concretefactory = soc.message.SOCMonopolyPick
+161.100.product = soc.message.SOCMonopolyPick
+161.100.XCommand = No source transformation needed
+
+# Micro-architecture 208 similar at 100% with unknown pattern
+208.100.abstractfactory = soc.message.SOCMessage
+208.100.abstractproduct = java.io.Serializable
+208.100.concretefactory = soc.message.SOCMoveRobber
+208.100.product = soc.message.SOCMoveRobber
+208.100.XCommand = No source transformation needed
+
+# Micro-architecture 162 similar at 100% with unknown pattern
+162.100.abstractfactory = soc.message.SOCMessage
+162.100.abstractproduct = java.io.Serializable
+162.100.concretefactory = soc.message.SOCNewChannel
+162.100.product = soc.message.SOCNewChannel
+162.100.XCommand = No source transformation needed
+
+# Micro-architecture 173 similar at 100% with unknown pattern
+173.100.abstractfactory = soc.message.SOCMessage
+173.100.abstractproduct = java.io.Serializable
+173.100.concretefactory = soc.message.SOCNewGame
+173.100.product = soc.message.SOCNewGame
+173.100.XCommand = No source transformation needed
+
+# Micro-architecture 172 similar at 100% with unknown pattern
+172.100.abstractfactory = soc.message.SOCMessage
+172.100.abstractproduct = java.io.Serializable
+172.100.concretefactory = soc.message.SOCPlayDevCardRequest
+172.100.product = soc.message.SOCPlayDevCardRequest
+172.100.XCommand = No source transformation needed
+
+# Micro-architecture 191 similar at 100% with unknown pattern
+191.100.abstractfactory = soc.message.SOCMessage
+191.100.abstractproduct = java.io.Serializable
+191.100.concretefactory = soc.message.SOCPlayerElement
+191.100.product = soc.message.SOCPlayerElement
+191.100.XCommand = No source transformation needed
+
+# Micro-architecture 160 similar at 100% with unknown pattern
+160.100.abstractfactory = soc.message.SOCMessage
+160.100.abstractproduct = java.io.Serializable
+160.100.concretefactory = soc.message.SOCPotentialSettlements
+160.100.product = soc.message.SOCPotentialSettlements
+160.100.XCommand = No source transformation needed
+
+# Micro-architecture 154 similar at 100% with unknown pattern
+154.100.abstractfactory = soc.message.SOCMessage
+154.100.abstractproduct = java.io.Serializable
+154.100.concretefactory = soc.message.SOCPutPiece
+154.100.product = soc.message.SOCPutPiece
+154.100.XCommand = No source transformation needed
+
+# Micro-architecture 186 similar at 100% with unknown pattern
+186.100.abstractfactory = soc.message.SOCMessage
+186.100.abstractproduct = java.io.Serializable
+186.100.concretefactory = soc.message.SOCRejectConnection
+186.100.product = soc.message.SOCRejectConnection
+186.100.XCommand = No source transformation needed
+
+# Micro-architecture 204 similar at 100% with unknown pattern
+204.100.abstractfactory = soc.message.SOCMessage
+204.100.abstractproduct = java.io.Serializable
+204.100.concretefactory = soc.message.SOCRejectOffer
+204.100.product = soc.message.SOCRejectOffer
+204.100.XCommand = No source transformation needed
+
+# Micro-architecture 170 similar at 100% with unknown pattern
+170.100.abstractfactory = soc.message.SOCMessage
+170.100.abstractproduct = java.io.Serializable
+170.100.concretefactory = soc.message.SOCResourceCount
+170.100.product = soc.message.SOCResourceCount
+170.100.XCommand = No source transformation needed
+
+# Micro-architecture 158 similar at 100% with unknown pattern
+158.100.abstractfactory = soc.message.SOCMessage
+158.100.abstractproduct = java.io.Serializable
+158.100.concretefactory = soc.message.SOCRobotDismiss
+158.100.product = soc.message.SOCRobotDismiss
+158.100.XCommand = No source transformation needed
+
+# Micro-architecture 188 similar at 100% with unknown pattern
+188.100.abstractfactory = soc.message.SOCMessage
+188.100.abstractproduct = java.io.Serializable
+188.100.concretefactory = soc.message.SOCRollDiceRequest
+188.100.product = soc.message.SOCRollDiceRequest
+188.100.XCommand = No source transformation needed
+
+# Micro-architecture 209 similar at 100% with unknown pattern
+209.100.abstractfactory = soc.message.SOCMessage
+209.100.abstractproduct = java.io.Serializable
+209.100.concretefactory = soc.message.SOCRollDice
+209.100.product = soc.message.SOCRollDice
+209.100.XCommand = No source transformation needed
+
+# Micro-architecture 178 similar at 100% with unknown pattern
+178.100.abstractfactory = soc.message.SOCMessage
+178.100.abstractproduct = java.io.Serializable
+178.100.concretefactory = soc.message.SOCServerPing
+178.100.product = soc.message.SOCServerPing
+178.100.XCommand = No source transformation needed
+
+# Micro-architecture 163 similar at 100% with unknown pattern
+163.100.abstractfactory = soc.message.SOCMessage
+163.100.abstractproduct = java.io.Serializable
+163.100.concretefactory = soc.message.SOCSetPlayedDevCard
+163.100.product = soc.message.SOCSetPlayedDevCard
+163.100.XCommand = No source transformation needed
+
+# Micro-architecture 153 similar at 100% with unknown pattern
+153.100.abstractfactory = soc.message.SOCMessage
+153.100.abstractproduct = java.io.Serializable
+153.100.concretefactory = soc.message.SOCSetSeatLock
+153.100.product = soc.message.SOCSetSeatLock
+153.100.XCommand = No source transformation needed
+
+# Micro-architecture 192 similar at 100% with unknown pattern
+192.100.abstractfactory = soc.message.SOCMessage
+192.100.abstractproduct = java.io.Serializable
+192.100.concretefactory = soc.message.SOCSetTurn
+192.100.product = soc.message.SOCSetTurn
+192.100.XCommand = No source transformation needed
+
+# Micro-architecture 196 similar at 100% with unknown pattern
+196.100.abstractfactory = soc.message.SOCMessage
+196.100.abstractproduct = java.io.Serializable
+196.100.concretefactory = soc.message.SOCSetupDone
+196.100.product = soc.message.SOCSetupDone
+196.100.XCommand = No source transformation needed
+
+# Micro-architecture 175 similar at 100% with unknown pattern
+175.100.abstractfactory = soc.message.SOCMessage
+175.100.abstractproduct = java.io.Serializable
+175.100.concretefactory = soc.message.SOCSitDown
+175.100.product = soc.message.SOCSitDown
+175.100.XCommand = No source transformation needed
+
+# Micro-architecture 142 similar at 100% with unknown pattern
+142.100.abstractfactory = soc.message.SOCMessage
+142.100.abstractproduct = java.io.Serializable
+142.100.concretefactory = soc.message.SOCStartGame
+142.100.product = soc.message.SOCStartGame
+142.100.XCommand = No source transformation needed
+
+# Micro-architecture 187 similar at 100% with unknown pattern
+187.100.abstractfactory = soc.message.SOCMessage
+187.100.abstractproduct = java.io.Serializable
+187.100.concretefactory = soc.message.SOCStatusMessage
+187.100.product = soc.message.SOCStatusMessage
+187.100.XCommand = No source transformation needed
+
+# Micro-architecture 168 similar at 100% with unknown pattern
+168.100.abstractfactory = soc.message.SOCMessage
+168.100.abstractproduct = java.io.Serializable
+168.100.concretefactory = soc.message.SOCTextMsg
+168.100.product = soc.message.SOCTextMsg
+168.100.XCommand = No source transformation needed
+
+# Micro-architecture 185 similar at 100% with unknown pattern
+185.100.abstractfactory = soc.message.SOCMessage
+185.100.abstractproduct = java.io.Serializable
+185.100.concretefactory = soc.message.SOCTurn
+185.100.product = soc.message.SOCTurn
+185.100.XCommand = No source transformation needed
+
+# Micro-architecture 176 similar at 100% with unknown pattern
+176.100.abstractfactory = soc.message.SOCMessage
+176.100.abstractproduct = java.io.Serializable
+176.100.concretefactory = soc.message.SOCUpdateRobotParams
+176.100.product = soc.message.SOCUpdateRobotParams
+176.100.XCommand = No source transformation needed
+
+# Micro-architecture 77 similar at 100% with unknown pattern
+77.100.abstractfactory = soc.message.SOCMessage
+77.100.abstractproduct = java.lang.Cloneable
+77.100.concretefactory = soc.message.SOCAcceptOffer
+77.100.product = soc.message.SOCAcceptOffer
+77.100.XCommand = No source transformation needed
+
+# Micro-architecture 116 similar at 100% with unknown pattern
+116.100.abstractfactory = soc.message.SOCMessage
+116.100.abstractproduct = java.lang.Cloneable
+116.100.concretefactory = soc.message.SOCAdminPing
+116.100.product = soc.message.SOCAdminPing
+116.100.XCommand = No source transformation needed
+
+# Micro-architecture 94 similar at 100% with unknown pattern
+94.100.abstractfactory = soc.message.SOCMessage
+94.100.abstractproduct = java.lang.Cloneable
+94.100.concretefactory = soc.message.SOCBCastTextMsg
+94.100.product = soc.message.SOCBCastTextMsg
+94.100.XCommand = No source transformation needed
+
+# Micro-architecture 120 similar at 100% with unknown pattern
+120.100.abstractfactory = soc.message.SOCMessage
+120.100.abstractproduct = java.lang.Cloneable
+120.100.concretefactory = soc.message.SOCBankTrade
+120.100.product = soc.game.SOCResourceSet
+120.100.XCommand = No source transformation needed
+
+# Micro-architecture 121 similar at 100% with unknown pattern
+121.100.abstractfactory = soc.message.SOCMessage
+121.100.abstractproduct = java.lang.Cloneable
+121.100.concretefactory = soc.message.SOCBankTrade
+121.100.product = soc.message.SOCBankTrade
+121.100.XCommand = No source transformation needed
+
+# Micro-architecture 68 similar at 100% with unknown pattern
+68.100.abstractfactory = soc.message.SOCMessage
+68.100.abstractproduct = java.lang.Cloneable
+68.100.concretefactory = soc.message.SOCBoardLayout
+68.100.product = soc.message.SOCBoardLayout
+68.100.XCommand = No source transformation needed
+
+# Micro-architecture 130 similar at 100% with unknown pattern
+130.100.abstractfactory = soc.message.SOCMessage
+130.100.abstractproduct = java.lang.Cloneable
+130.100.concretefactory = soc.message.SOCBuildRequest
+130.100.product = soc.message.SOCBuildRequest
+130.100.XCommand = No source transformation needed
+
+# Micro-architecture 76 similar at 100% with unknown pattern
+76.100.abstractfactory = soc.message.SOCMessage
+76.100.abstractproduct = java.lang.Cloneable
+76.100.concretefactory = soc.message.SOCBuyCardRequest
+76.100.product = soc.message.SOCBuyCardRequest
+76.100.XCommand = No source transformation needed
+
+# Micro-architecture 74 similar at 100% with unknown pattern
+74.100.abstractfactory = soc.message.SOCMessage
+74.100.abstractproduct = java.lang.Cloneable
+74.100.concretefactory = soc.message.SOCCancelBuildRequest
+74.100.product = soc.message.SOCCancelBuildRequest
+74.100.XCommand = No source transformation needed
+
+# Micro-architecture 140 similar at 100% with unknown pattern
+140.100.abstractfactory = soc.message.SOCMessage
+140.100.abstractproduct = java.lang.Cloneable
+140.100.concretefactory = soc.message.SOCChangeFace
+140.100.product = soc.message.SOCChangeFace
+140.100.XCommand = No source transformation needed
+
+# Micro-architecture 98 similar at 100% with unknown pattern
+98.100.abstractfactory = soc.message.SOCMessage
+98.100.abstractproduct = java.lang.Cloneable
+98.100.concretefactory = soc.message.SOCChannels
+98.100.product = soc.message.SOCChannels
+98.100.XCommand = No source transformation needed
+
+# Micro-architecture 125 similar at 100% with unknown pattern
+125.100.abstractfactory = soc.message.SOCMessage
+125.100.abstractproduct = java.lang.Cloneable
+125.100.concretefactory = soc.message.SOCChoosePlayerRequest
+125.100.product = soc.message.SOCChoosePlayerRequest
+125.100.XCommand = No source transformation needed
+
+# Micro-architecture 70 similar at 100% with unknown pattern
+70.100.abstractfactory = soc.message.SOCMessage
+70.100.abstractproduct = java.lang.Cloneable
+70.100.concretefactory = soc.message.SOCChoosePlayer
+70.100.product = soc.message.SOCChoosePlayer
+70.100.XCommand = No source transformation needed
+
+# Micro-architecture 132 similar at 100% with unknown pattern
+132.100.abstractfactory = soc.message.SOCMessage
+132.100.abstractproduct = java.lang.Cloneable
+132.100.concretefactory = soc.message.SOCClearOffer
+132.100.product = soc.message.SOCClearOffer
+132.100.XCommand = No source transformation needed
+
+# Micro-architecture 117 similar at 100% with unknown pattern
+117.100.abstractfactory = soc.message.SOCMessage
+117.100.abstractproduct = java.lang.Cloneable
+117.100.concretefactory = soc.message.SOCClearTradeMsg
+117.100.product = soc.message.SOCClearTradeMsg
+117.100.XCommand = No source transformation needed
+
+# Micro-architecture 79 similar at 100% with unknown pattern
+79.100.abstractfactory = soc.message.SOCMessage
+79.100.abstractproduct = java.lang.Cloneable
+79.100.concretefactory = soc.message.SOCCreateAccount
+79.100.product = soc.message.SOCCreateAccount
+79.100.XCommand = No source transformation needed
+
+# Micro-architecture 96 similar at 100% with unknown pattern
+96.100.abstractfactory = soc.message.SOCMessage
+96.100.abstractproduct = java.lang.Cloneable
+96.100.concretefactory = soc.message.SOCDeleteChannel
+96.100.product = soc.message.SOCDeleteChannel
+96.100.XCommand = No source transformation needed
+
+# Micro-architecture 124 similar at 100% with unknown pattern
+124.100.abstractfactory = soc.message.SOCMessage
+124.100.abstractproduct = java.lang.Cloneable
+124.100.concretefactory = soc.message.SOCDeleteGame
+124.100.product = soc.message.SOCDeleteGame
+124.100.XCommand = No source transformation needed
+
+# Micro-architecture 126 similar at 100% with unknown pattern
+126.100.abstractfactory = soc.message.SOCMessage
+126.100.abstractproduct = java.lang.Cloneable
+126.100.concretefactory = soc.message.SOCDevCardCount
+126.100.product = soc.message.SOCDevCardCount
+126.100.XCommand = No source transformation needed
+
+# Micro-architecture 78 similar at 100% with unknown pattern
+78.100.abstractfactory = soc.message.SOCMessage
+78.100.abstractproduct = java.lang.Cloneable
+78.100.concretefactory = soc.message.SOCDevCard
+78.100.product = soc.message.SOCDevCard
+78.100.XCommand = No source transformation needed
+
+# Micro-architecture 92 similar at 100% with unknown pattern
+92.100.abstractfactory = soc.message.SOCMessage
+92.100.abstractproduct = java.lang.Cloneable
+92.100.concretefactory = soc.message.SOCDiceResult
+92.100.product = soc.message.SOCDiceResult
+92.100.XCommand = No source transformation needed
+
+# Micro-architecture 133 similar at 100% with unknown pattern
+133.100.abstractfactory = soc.message.SOCMessage
+133.100.abstractproduct = java.lang.Cloneable
+133.100.concretefactory = soc.message.SOCDiscardRequest
+133.100.product = soc.message.SOCDiscardRequest
+133.100.XCommand = No source transformation needed
+
+# Micro-architecture 110 similar at 100% with unknown pattern
+110.100.abstractfactory = soc.message.SOCMessage
+110.100.abstractproduct = java.lang.Cloneable
+110.100.concretefactory = soc.message.SOCDiscard
+110.100.product = soc.game.SOCResourceSet
+110.100.XCommand = No source transformation needed
+
+# Micro-architecture 111 similar at 100% with unknown pattern
+111.100.abstractfactory = soc.message.SOCMessage
+111.100.abstractproduct = java.lang.Cloneable
+111.100.concretefactory = soc.message.SOCDiscard
+111.100.product = soc.message.SOCDiscard
+111.100.XCommand = No source transformation needed
+
+# Micro-architecture 72 similar at 100% with unknown pattern
+72.100.abstractfactory = soc.message.SOCMessage
+72.100.abstractproduct = java.lang.Cloneable
+72.100.concretefactory = soc.message.SOCDiscoveryPick
+72.100.product = soc.game.SOCResourceSet
+72.100.XCommand = No source transformation needed
+
+# Micro-architecture 71 similar at 100% with unknown pattern
+71.100.abstractfactory = soc.message.SOCMessage
+71.100.abstractproduct = java.lang.Cloneable
+71.100.concretefactory = soc.message.SOCDiscoveryPick
+71.100.product = soc.message.SOCDiscoveryPick
+71.100.XCommand = No source transformation needed
+
+# Micro-architecture 91 similar at 100% with unknown pattern
+91.100.abstractfactory = soc.message.SOCMessage
+91.100.abstractproduct = java.lang.Cloneable
+91.100.concretefactory = soc.message.SOCEndTurn
+91.100.product = soc.message.SOCEndTurn
+91.100.XCommand = No source transformation needed
+
+# Micro-architecture 101 similar at 100% with unknown pattern
+101.100.abstractfactory = soc.message.SOCMessage
+101.100.abstractproduct = java.lang.Cloneable
+101.100.concretefactory = soc.message.SOCFirstPlayer
+101.100.product = soc.message.SOCFirstPlayer
+101.100.XCommand = No source transformation needed
+
+# Micro-architecture 122 similar at 100% with unknown pattern
+122.100.abstractfactory = soc.message.SOCMessage
+122.100.abstractproduct = java.lang.Cloneable
+122.100.concretefactory = soc.message.SOCGameMembers
+122.100.product = soc.message.SOCGameMembers
+122.100.XCommand = No source transformation needed
+
+# Micro-architecture 128 similar at 100% with unknown pattern
+128.100.abstractfactory = soc.message.SOCMessage
+128.100.abstractproduct = java.lang.Cloneable
+128.100.concretefactory = soc.message.SOCGameState
+128.100.product = soc.message.SOCGameState
+128.100.XCommand = No source transformation needed
+
+# Micro-architecture 127 similar at 100% with unknown pattern
+127.100.abstractfactory = soc.message.SOCMessage
+127.100.abstractproduct = java.lang.Cloneable
+127.100.concretefactory = soc.message.SOCGameStats
+127.100.product = soc.message.SOCGameStats
+127.100.XCommand = No source transformation needed
+
+# Micro-architecture 137 similar at 100% with unknown pattern
+137.100.abstractfactory = soc.message.SOCMessage
+137.100.abstractproduct = java.lang.Cloneable
+137.100.concretefactory = soc.message.SOCGameTextMsg
+137.100.product = soc.message.SOCGameTextMsg
+137.100.XCommand = No source transformation needed
+
+# Micro-architecture 134 similar at 100% with unknown pattern
+134.100.abstractfactory = soc.message.SOCMessage
+134.100.abstractproduct = java.lang.Cloneable
+134.100.concretefactory = soc.message.SOCGames
+134.100.product = soc.message.SOCGames
+134.100.XCommand = No source transformation needed
+
+# Micro-architecture 93 similar at 100% with unknown pattern
+93.100.abstractfactory = soc.message.SOCMessage
+93.100.abstractproduct = java.lang.Cloneable
+93.100.concretefactory = soc.message.SOCImARobot
+93.100.product = soc.message.SOCImARobot
+93.100.XCommand = No source transformation needed
+
+# Micro-architecture 138 similar at 100% with unknown pattern
+138.100.abstractfactory = soc.message.SOCMessage
+138.100.abstractproduct = java.lang.Cloneable
+138.100.concretefactory = soc.message.SOCJoinAuth
+138.100.product = soc.message.SOCJoinAuth
+138.100.XCommand = No source transformation needed
+
+# Micro-architecture 75 similar at 100% with unknown pattern
+75.100.abstractfactory = soc.message.SOCMessage
+75.100.abstractproduct = java.lang.Cloneable
+75.100.concretefactory = soc.message.SOCJoinGameAuth
+75.100.product = soc.message.SOCJoinGameAuth
+75.100.XCommand = No source transformation needed
+
+# Micro-architecture 129 similar at 100% with unknown pattern
+129.100.abstractfactory = soc.message.SOCMessage
+129.100.abstractproduct = java.lang.Cloneable
+129.100.concretefactory = soc.message.SOCJoinGameRequest
+129.100.product = soc.message.SOCJoinGameRequest
+129.100.XCommand = No source transformation needed
+
+# Micro-architecture 73 similar at 100% with unknown pattern
+73.100.abstractfactory = soc.message.SOCMessage
+73.100.abstractproduct = java.lang.Cloneable
+73.100.concretefactory = soc.message.SOCJoinGame
+73.100.product = soc.message.SOCJoinGame
+73.100.XCommand = No source transformation needed
+
+# Micro-architecture 106 similar at 100% with unknown pattern
+106.100.abstractfactory = soc.message.SOCMessage
+106.100.abstractproduct = java.lang.Cloneable
+106.100.concretefactory = soc.message.SOCJoin
+106.100.product = soc.message.SOCJoin
+106.100.XCommand = No source transformation needed
+
+# Micro-architecture 108 similar at 100% with unknown pattern
+108.100.abstractfactory = soc.message.SOCMessage
+108.100.abstractproduct = java.lang.Cloneable
+108.100.concretefactory = soc.message.SOCLargestArmy
+108.100.product = soc.message.SOCLargestArmy
+108.100.XCommand = No source transformation needed
+
+# Micro-architecture 139 similar at 100% with unknown pattern
+139.100.abstractfactory = soc.message.SOCMessage
+139.100.abstractproduct = java.lang.Cloneable
+139.100.concretefactory = soc.message.SOCLastSettlement
+139.100.product = soc.message.SOCLastSettlement
+139.100.XCommand = No source transformation needed
+
+# Micro-architecture 107 similar at 100% with unknown pattern
+107.100.abstractfactory = soc.message.SOCMessage
+107.100.abstractproduct = java.lang.Cloneable
+107.100.concretefactory = soc.message.SOCLeaveGame
+107.100.product = soc.message.SOCLeaveGame
+107.100.XCommand = No source transformation needed
+
+# Micro-architecture 104 similar at 100% with unknown pattern
+104.100.abstractfactory = soc.message.SOCMessage
+104.100.abstractproduct = java.lang.Cloneable
+104.100.concretefactory = soc.message.SOCLeave
+104.100.product = soc.message.SOCLeave
+104.100.XCommand = No source transformation needed
+
+# Micro-architecture 86 similar at 100% with unknown pattern
+86.100.abstractfactory = soc.message.SOCMessage
+86.100.abstractproduct = java.lang.Cloneable
+86.100.concretefactory = soc.message.SOCLongestRoad
+86.100.product = soc.message.SOCLongestRoad
+86.100.XCommand = No source transformation needed
+
+# Micro-architecture 83 similar at 100% with unknown pattern
+83.100.abstractfactory = soc.message.SOCMessage
+83.100.abstractproduct = java.lang.Cloneable
+83.100.concretefactory = soc.message.SOCMakeOffer
+83.100.product = soc.game.SOCResourceSet
+83.100.XCommand = No source transformation needed
+
+# Micro-architecture 84 similar at 100% with unknown pattern
+84.100.abstractfactory = soc.message.SOCMessage
+84.100.abstractproduct = java.lang.Cloneable
+84.100.concretefactory = soc.message.SOCMakeOffer
+84.100.product = soc.game.SOCTradeOffer
+84.100.XCommand = No source transformation needed
+
+# Micro-architecture 82 similar at 100% with unknown pattern
+82.100.abstractfactory = soc.message.SOCMessage
+82.100.abstractproduct = java.lang.Cloneable
+82.100.concretefactory = soc.message.SOCMakeOffer
+82.100.product = soc.message.SOCMakeOffer
+82.100.XCommand = No source transformation needed
+
+# Micro-architecture 109 similar at 100% with unknown pattern
+109.100.abstractfactory = soc.message.SOCMessage
+109.100.abstractproduct = java.lang.Cloneable
+109.100.concretefactory = soc.message.SOCMembers
+109.100.product = soc.message.SOCMembers
+109.100.XCommand = No source transformation needed
+
+# Micro-architecture 88 similar at 100% with unknown pattern
+88.100.abstractfactory = soc.message.SOCMessage
+88.100.abstractproduct = java.lang.Cloneable
+88.100.concretefactory = soc.message.SOCMonopolyPick
+88.100.product = soc.message.SOCMonopolyPick
+88.100.XCommand = No source transformation needed
+
+# Micro-architecture 135 similar at 100% with unknown pattern
+135.100.abstractfactory = soc.message.SOCMessage
+135.100.abstractproduct = java.lang.Cloneable
+135.100.concretefactory = soc.message.SOCMoveRobber
+135.100.product = soc.message.SOCMoveRobber
+135.100.XCommand = No source transformation needed
+
+# Micro-architecture 89 similar at 100% with unknown pattern
+89.100.abstractfactory = soc.message.SOCMessage
+89.100.abstractproduct = java.lang.Cloneable
+89.100.concretefactory = soc.message.SOCNewChannel
+89.100.product = soc.message.SOCNewChannel
+89.100.XCommand = No source transformation needed
+
+# Micro-architecture 100 similar at 100% with unknown pattern
+100.100.abstractfactory = soc.message.SOCMessage
+100.100.abstractproduct = java.lang.Cloneable
+100.100.concretefactory = soc.message.SOCNewGame
+100.100.product = soc.message.SOCNewGame
+100.100.XCommand = No source transformation needed
+
+# Micro-architecture 99 similar at 100% with unknown pattern
+99.100.abstractfactory = soc.message.SOCMessage
+99.100.abstractproduct = java.lang.Cloneable
+99.100.concretefactory = soc.message.SOCPlayDevCardRequest
+99.100.product = soc.message.SOCPlayDevCardRequest
+99.100.XCommand = No source transformation needed
+
+# Micro-architecture 118 similar at 100% with unknown pattern
+118.100.abstractfactory = soc.message.SOCMessage
+118.100.abstractproduct = java.lang.Cloneable
+118.100.concretefactory = soc.message.SOCPlayerElement
+118.100.product = soc.message.SOCPlayerElement
+118.100.XCommand = No source transformation needed
+
+# Micro-architecture 87 similar at 100% with unknown pattern
+87.100.abstractfactory = soc.message.SOCMessage
+87.100.abstractproduct = java.lang.Cloneable
+87.100.concretefactory = soc.message.SOCPotentialSettlements
+87.100.product = soc.message.SOCPotentialSettlements
+87.100.XCommand = No source transformation needed
+
+# Micro-architecture 81 similar at 100% with unknown pattern
+81.100.abstractfactory = soc.message.SOCMessage
+81.100.abstractproduct = java.lang.Cloneable
+81.100.concretefactory = soc.message.SOCPutPiece
+81.100.product = soc.message.SOCPutPiece
+81.100.XCommand = No source transformation needed
+
+# Micro-architecture 113 similar at 100% with unknown pattern
+113.100.abstractfactory = soc.message.SOCMessage
+113.100.abstractproduct = java.lang.Cloneable
+113.100.concretefactory = soc.message.SOCRejectConnection
+113.100.product = soc.message.SOCRejectConnection
+113.100.XCommand = No source transformation needed
+
+# Micro-architecture 131 similar at 100% with unknown pattern
+131.100.abstractfactory = soc.message.SOCMessage
+131.100.abstractproduct = java.lang.Cloneable
+131.100.concretefactory = soc.message.SOCRejectOffer
+131.100.product = soc.message.SOCRejectOffer
+131.100.XCommand = No source transformation needed
+
+# Micro-architecture 97 similar at 100% with unknown pattern
+97.100.abstractfactory = soc.message.SOCMessage
+97.100.abstractproduct = java.lang.Cloneable
+97.100.concretefactory = soc.message.SOCResourceCount
+97.100.product = soc.message.SOCResourceCount
+97.100.XCommand = No source transformation needed
+
+# Micro-architecture 85 similar at 100% with unknown pattern
+85.100.abstractfactory = soc.message.SOCMessage
+85.100.abstractproduct = java.lang.Cloneable
+85.100.concretefactory = soc.message.SOCRobotDismiss
+85.100.product = soc.message.SOCRobotDismiss
+85.100.XCommand = No source transformation needed
+
+# Micro-architecture 115 similar at 100% with unknown pattern
+115.100.abstractfactory = soc.message.SOCMessage
+115.100.abstractproduct = java.lang.Cloneable
+115.100.concretefactory = soc.message.SOCRollDiceRequest
+115.100.product = soc.message.SOCRollDiceRequest
+115.100.XCommand = No source transformation needed
+
+# Micro-architecture 136 similar at 100% with unknown pattern
+136.100.abstractfactory = soc.message.SOCMessage
+136.100.abstractproduct = java.lang.Cloneable
+136.100.concretefactory = soc.message.SOCRollDice
+136.100.product = soc.message.SOCRollDice
+136.100.XCommand = No source transformation needed
+
+# Micro-architecture 105 similar at 100% with unknown pattern
+105.100.abstractfactory = soc.message.SOCMessage
+105.100.abstractproduct = java.lang.Cloneable
+105.100.concretefactory = soc.message.SOCServerPing
+105.100.product = soc.message.SOCServerPing
+105.100.XCommand = No source transformation needed
+
+# Micro-architecture 90 similar at 100% with unknown pattern
+90.100.abstractfactory = soc.message.SOCMessage
+90.100.abstractproduct = java.lang.Cloneable
+90.100.concretefactory = soc.message.SOCSetPlayedDevCard
+90.100.product = soc.message.SOCSetPlayedDevCard
+90.100.XCommand = No source transformation needed
+
+# Micro-architecture 80 similar at 100% with unknown pattern
+80.100.abstractfactory = soc.message.SOCMessage
+80.100.abstractproduct = java.lang.Cloneable
+80.100.concretefactory = soc.message.SOCSetSeatLock
+80.100.product = soc.message.SOCSetSeatLock
+80.100.XCommand = No source transformation needed
+
+# Micro-architecture 119 similar at 100% with unknown pattern
+119.100.abstractfactory = soc.message.SOCMessage
+119.100.abstractproduct = java.lang.Cloneable
+119.100.concretefactory = soc.message.SOCSetTurn
+119.100.product = soc.message.SOCSetTurn
+119.100.XCommand = No source transformation needed
+
+# Micro-architecture 123 similar at 100% with unknown pattern
+123.100.abstractfactory = soc.message.SOCMessage
+123.100.abstractproduct = java.lang.Cloneable
+123.100.concretefactory = soc.message.SOCSetupDone
+123.100.product = soc.message.SOCSetupDone
+123.100.XCommand = No source transformation needed
+
+# Micro-architecture 102 similar at 100% with unknown pattern
+102.100.abstractfactory = soc.message.SOCMessage
+102.100.abstractproduct = java.lang.Cloneable
+102.100.concretefactory = soc.message.SOCSitDown
+102.100.product = soc.message.SOCSitDown
+102.100.XCommand = No source transformation needed
+
+# Micro-architecture 69 similar at 100% with unknown pattern
+69.100.abstractfactory = soc.message.SOCMessage
+69.100.abstractproduct = java.lang.Cloneable
+69.100.concretefactory = soc.message.SOCStartGame
+69.100.product = soc.message.SOCStartGame
+69.100.XCommand = No source transformation needed
+
+# Micro-architecture 114 similar at 100% with unknown pattern
+114.100.abstractfactory = soc.message.SOCMessage
+114.100.abstractproduct = java.lang.Cloneable
+114.100.concretefactory = soc.message.SOCStatusMessage
+114.100.product = soc.message.SOCStatusMessage
+114.100.XCommand = No source transformation needed
+
+# Micro-architecture 95 similar at 100% with unknown pattern
+95.100.abstractfactory = soc.message.SOCMessage
+95.100.abstractproduct = java.lang.Cloneable
+95.100.concretefactory = soc.message.SOCTextMsg
+95.100.product = soc.message.SOCTextMsg
+95.100.XCommand = No source transformation needed
+
+# Micro-architecture 112 similar at 100% with unknown pattern
+112.100.abstractfactory = soc.message.SOCMessage
+112.100.abstractproduct = java.lang.Cloneable
+112.100.concretefactory = soc.message.SOCTurn
+112.100.product = soc.message.SOCTurn
+112.100.XCommand = No source transformation needed
+
+# Micro-architecture 103 similar at 100% with unknown pattern
+103.100.abstractfactory = soc.message.SOCMessage
+103.100.abstractproduct = java.lang.Cloneable
+103.100.concretefactory = soc.message.SOCUpdateRobotParams
+103.100.product = soc.message.SOCUpdateRobotParams
+103.100.XCommand = No source transformation needed
+
+# Micro-architecture 214 similar at 100% with unknown pattern
+214.100.abstractfactory = soc.message.SOCMessage
+214.100.abstractproduct = soc.util.SOCRobotParameters
+214.100.concretefactory = soc.message.SOCUpdateRobotParams
+214.100.product = soc.util.SOCRobotParameters
+214.100.XCommand = No source transformation needed
+
+# Micro-architecture 48 similar at 100% with unknown pattern
+48.100.abstractfactory = soc.robot.SOCPossiblePiece
+48.100.abstractproduct = java.io.Serializable
+48.100.concretefactory = soc.robot.SOCPossibleCity
+48.100.product = soc.game.SOCCity
+48.100.XCommand = No source transformation needed
+
+# Micro-architecture 47 similar at 100% with unknown pattern
+47.100.abstractfactory = soc.robot.SOCPossiblePiece
+47.100.abstractproduct = java.lang.Cloneable
+47.100.concretefactory = soc.robot.SOCPossibleCity
+47.100.product = soc.game.SOCCity
+47.100.XCommand = No source transformation needed
+
+# Micro-architecture 283 similar at 100% with unknown pattern
+283.100.abstractfactory = soc.server.genericServer.Server
+283.100.abstractproduct = java.io.Serializable
+283.100.concretefactory = soc.server.SOCServer
+283.100.product = soc.game.SOCCity
+283.100.XCommand = No source transformation needed
+
+# Micro-architecture 281 similar at 100% with unknown pattern
+281.100.abstractfactory = soc.server.genericServer.Server
+281.100.abstractproduct = java.io.Serializable
+281.100.concretefactory = soc.server.SOCServer
+281.100.product = soc.game.SOCRoad
+281.100.XCommand = No source transformation needed
+
+# Micro-architecture 261 similar at 100% with unknown pattern
+261.100.abstractfactory = soc.server.genericServer.Server
+261.100.abstractproduct = java.io.Serializable
+261.100.concretefactory = soc.server.SOCServer
+261.100.product = soc.game.SOCSettlement
+261.100.XCommand = No source transformation needed
+
+# Micro-architecture 266 similar at 100% with unknown pattern
+266.100.abstractfactory = soc.server.genericServer.Server
+266.100.abstractproduct = java.io.Serializable
+266.100.concretefactory = soc.server.SOCServer
+266.100.product = soc.game.SOCTradeOffer
+266.100.XCommand = No source transformation needed
+
+# Micro-architecture 275 similar at 100% with unknown pattern
+275.100.abstractfactory = soc.server.genericServer.Server
+275.100.abstractproduct = java.io.Serializable
+275.100.concretefactory = soc.server.SOCServer
+275.100.product = soc.message.SOCAdminReset
+275.100.XCommand = No source transformation needed
+
+# Micro-architecture 254 similar at 100% with unknown pattern
+254.100.abstractfactory = soc.server.genericServer.Server
+254.100.abstractproduct = java.io.Serializable
+254.100.concretefactory = soc.server.SOCServer
+254.100.product = soc.message.SOCBoardLayout
+254.100.XCommand = No source transformation needed
+
+# Micro-architecture 286 similar at 100% with unknown pattern
+286.100.abstractfactory = soc.server.genericServer.Server
+286.100.abstractproduct = java.io.Serializable
+286.100.concretefactory = soc.server.SOCServer
+286.100.product = soc.message.SOCChangeFace
+286.100.XCommand = No source transformation needed
+
+# Micro-architecture 280 similar at 100% with unknown pattern
+280.100.abstractfactory = soc.server.genericServer.Server
+280.100.abstractproduct = java.io.Serializable
+280.100.concretefactory = soc.server.SOCServer
+280.100.product = soc.message.SOCClearOffer
+280.100.XCommand = No source transformation needed
+
+# Micro-architecture 273 similar at 100% with unknown pattern
+273.100.abstractfactory = soc.server.genericServer.Server
+273.100.abstractproduct = java.io.Serializable
+273.100.concretefactory = soc.server.SOCServer
+273.100.product = soc.message.SOCClearTradeMsg
+273.100.XCommand = No source transformation needed
+
+# Micro-architecture 276 similar at 100% with unknown pattern
+276.100.abstractfactory = soc.server.genericServer.Server
+276.100.abstractproduct = java.io.Serializable
+276.100.concretefactory = soc.server.SOCServer
+276.100.product = soc.message.SOCDevCardCount
+276.100.XCommand = No source transformation needed
+
+# Micro-architecture 257 similar at 100% with unknown pattern
+257.100.abstractfactory = soc.server.genericServer.Server
+257.100.abstractproduct = java.io.Serializable
+257.100.concretefactory = soc.server.SOCServer
+257.100.product = soc.message.SOCDevCard
+257.100.XCommand = No source transformation needed
+
+# Micro-architecture 263 similar at 100% with unknown pattern
+263.100.abstractfactory = soc.server.genericServer.Server
+263.100.abstractproduct = java.io.Serializable
+263.100.concretefactory = soc.server.SOCServer
+263.100.product = soc.message.SOCDiceResult
+263.100.XCommand = No source transformation needed
+
+# Micro-architecture 282 similar at 100% with unknown pattern
+282.100.abstractfactory = soc.server.genericServer.Server
+282.100.abstractproduct = java.io.Serializable
+282.100.concretefactory = soc.server.SOCServer
+282.100.product = soc.message.SOCDiscardRequest
+282.100.XCommand = No source transformation needed
+
+# Micro-architecture 277 similar at 100% with unknown pattern
+277.100.abstractfactory = soc.server.genericServer.Server
+277.100.abstractproduct = java.io.Serializable
+277.100.concretefactory = soc.server.SOCServer
+277.100.product = soc.message.SOCGameState
+277.100.XCommand = No source transformation needed
+
+# Micro-architecture 285 similar at 100% with unknown pattern
+285.100.abstractfactory = soc.server.genericServer.Server
+285.100.abstractproduct = java.io.Serializable
+285.100.concretefactory = soc.server.SOCServer
+285.100.product = soc.message.SOCGameTextMsg
+285.100.XCommand = No source transformation needed
+
+# Micro-architecture 256 similar at 100% with unknown pattern
+256.100.abstractfactory = soc.server.genericServer.Server
+256.100.abstractproduct = java.io.Serializable
+256.100.concretefactory = soc.server.SOCServer
+256.100.product = soc.message.SOCJoinGame
+256.100.XCommand = No source transformation needed
+
+# Micro-architecture 269 similar at 100% with unknown pattern
+269.100.abstractfactory = soc.server.genericServer.Server
+269.100.abstractproduct = java.io.Serializable
+269.100.concretefactory = soc.server.SOCServer
+269.100.product = soc.message.SOCJoin
+269.100.XCommand = No source transformation needed
+
+# Micro-architecture 270 similar at 100% with unknown pattern
+270.100.abstractfactory = soc.server.genericServer.Server
+270.100.abstractproduct = java.io.Serializable
+270.100.concretefactory = soc.server.SOCServer
+270.100.product = soc.message.SOCLeaveGame
+270.100.XCommand = No source transformation needed
+
+# Micro-architecture 268 similar at 100% with unknown pattern
+268.100.abstractfactory = soc.server.genericServer.Server
+268.100.abstractproduct = java.io.Serializable
+268.100.concretefactory = soc.server.SOCServer
+268.100.product = soc.message.SOCLeave
+268.100.XCommand = No source transformation needed
+
+# Micro-architecture 260 similar at 100% with unknown pattern
+260.100.abstractfactory = soc.server.genericServer.Server
+260.100.abstractproduct = java.io.Serializable
+260.100.concretefactory = soc.server.SOCServer
+260.100.product = soc.message.SOCMakeOffer
+260.100.XCommand = No source transformation needed
+
+# Micro-architecture 284 similar at 100% with unknown pattern
+284.100.abstractfactory = soc.server.genericServer.Server
+284.100.abstractproduct = java.io.Serializable
+284.100.concretefactory = soc.server.SOCServer
+284.100.product = soc.message.SOCMoveRobber
+284.100.XCommand = No source transformation needed
+
+# Micro-architecture 274 similar at 100% with unknown pattern
+274.100.abstractfactory = soc.server.genericServer.Server
+274.100.abstractproduct = java.io.Serializable
+274.100.concretefactory = soc.server.SOCServer
+274.100.product = soc.message.SOCPlayerElement
+274.100.XCommand = No source transformation needed
+
+# Micro-architecture 259 similar at 100% with unknown pattern
+259.100.abstractfactory = soc.server.genericServer.Server
+259.100.abstractproduct = java.io.Serializable
+259.100.concretefactory = soc.server.SOCServer
+259.100.product = soc.message.SOCPutPiece
+259.100.XCommand = No source transformation needed
+
+# Micro-architecture 272 similar at 100% with unknown pattern
+272.100.abstractfactory = soc.server.genericServer.Server
+272.100.abstractproduct = java.io.Serializable
+272.100.concretefactory = soc.server.SOCServer
+272.100.product = soc.message.SOCRejectConnection
+272.100.XCommand = No source transformation needed
+
+# Micro-architecture 279 similar at 100% with unknown pattern
+279.100.abstractfactory = soc.server.genericServer.Server
+279.100.abstractproduct = java.io.Serializable
+279.100.concretefactory = soc.server.SOCServer
+279.100.product = soc.message.SOCRejectOffer
+279.100.XCommand = No source transformation needed
+
+# Micro-architecture 265 similar at 100% with unknown pattern
+265.100.abstractfactory = soc.server.genericServer.Server
+265.100.abstractproduct = java.io.Serializable
+265.100.concretefactory = soc.server.SOCServer
+265.100.product = soc.message.SOCResourceCount
+265.100.XCommand = No source transformation needed
+
+# Micro-architecture 262 similar at 100% with unknown pattern
+262.100.abstractfactory = soc.server.genericServer.Server
+262.100.abstractproduct = java.io.Serializable
+262.100.concretefactory = soc.server.SOCServer
+262.100.product = soc.message.SOCSetPlayedDevCard
+262.100.XCommand = No source transformation needed
+
+# Micro-architecture 258 similar at 100% with unknown pattern
+258.100.abstractfactory = soc.server.genericServer.Server
+258.100.abstractproduct = java.io.Serializable
+258.100.concretefactory = soc.server.SOCServer
+258.100.product = soc.message.SOCSetSeatLock
+258.100.XCommand = No source transformation needed
+
+# Micro-architecture 267 similar at 100% with unknown pattern
+267.100.abstractfactory = soc.server.genericServer.Server
+267.100.abstractproduct = java.io.Serializable
+267.100.concretefactory = soc.server.SOCServer
+267.100.product = soc.message.SOCSitDown
+267.100.XCommand = No source transformation needed
+
+# Micro-architecture 255 similar at 100% with unknown pattern
+255.100.abstractfactory = soc.server.genericServer.Server
+255.100.abstractproduct = java.io.Serializable
+255.100.concretefactory = soc.server.SOCServer
+255.100.product = soc.message.SOCStartGame
+255.100.XCommand = No source transformation needed
+
+# Micro-architecture 264 similar at 100% with unknown pattern
+264.100.abstractfactory = soc.server.genericServer.Server
+264.100.abstractproduct = java.io.Serializable
+264.100.concretefactory = soc.server.SOCServer
+264.100.product = soc.message.SOCTextMsg
+264.100.XCommand = No source transformation needed
+
+# Micro-architecture 271 similar at 100% with unknown pattern
+271.100.abstractfactory = soc.server.genericServer.Server
+271.100.abstractproduct = java.io.Serializable
+271.100.concretefactory = soc.server.SOCServer
+271.100.product = soc.message.SOCTurn
+271.100.XCommand = No source transformation needed
+
+# Micro-architecture 278 similar at 100% with unknown pattern
+278.100.abstractfactory = soc.server.genericServer.Server
+278.100.abstractproduct = java.io.Serializable
+278.100.concretefactory = soc.server.SOCServer
+278.100.product = soc.server.SOCServer
+278.100.XCommand = No source transformation needed
+
+# Micro-architecture 292 similar at 100% with unknown pattern
+292.100.abstractfactory = soc.server.genericServer.Server
+292.100.abstractproduct = java.io.Serializable
+292.100.concretefactory = soc.server.genericServer.Server
+292.100.product = soc.server.genericServer.Connection
+292.100.XCommand = No source transformation needed
+
+# Micro-architecture 244 similar at 100% with unknown pattern
+244.100.abstractfactory = soc.server.genericServer.Server
+244.100.abstractproduct = java.lang.Cloneable
+244.100.concretefactory = soc.server.SOCServer
+244.100.product = soc.game.SOCCity
+244.100.XCommand = No source transformation needed
+
+# Micro-architecture 242 similar at 100% with unknown pattern
+242.100.abstractfactory = soc.server.genericServer.Server
+242.100.abstractproduct = java.lang.Cloneable
+242.100.concretefactory = soc.server.SOCServer
+242.100.product = soc.game.SOCRoad
+242.100.XCommand = No source transformation needed
+
+# Micro-architecture 222 similar at 100% with unknown pattern
+222.100.abstractfactory = soc.server.genericServer.Server
+222.100.abstractproduct = java.lang.Cloneable
+222.100.concretefactory = soc.server.SOCServer
+222.100.product = soc.game.SOCSettlement
+222.100.XCommand = No source transformation needed
+
+# Micro-architecture 227 similar at 100% with unknown pattern
+227.100.abstractfactory = soc.server.genericServer.Server
+227.100.abstractproduct = java.lang.Cloneable
+227.100.concretefactory = soc.server.SOCServer
+227.100.product = soc.game.SOCTradeOffer
+227.100.XCommand = No source transformation needed
+
+# Micro-architecture 236 similar at 100% with unknown pattern
+236.100.abstractfactory = soc.server.genericServer.Server
+236.100.abstractproduct = java.lang.Cloneable
+236.100.concretefactory = soc.server.SOCServer
+236.100.product = soc.message.SOCAdminReset
+236.100.XCommand = No source transformation needed
+
+# Micro-architecture 215 similar at 100% with unknown pattern
+215.100.abstractfactory = soc.server.genericServer.Server
+215.100.abstractproduct = java.lang.Cloneable
+215.100.concretefactory = soc.server.SOCServer
+215.100.product = soc.message.SOCBoardLayout
+215.100.XCommand = No source transformation needed
+
+# Micro-architecture 247 similar at 100% with unknown pattern
+247.100.abstractfactory = soc.server.genericServer.Server
+247.100.abstractproduct = java.lang.Cloneable
+247.100.concretefactory = soc.server.SOCServer
+247.100.product = soc.message.SOCChangeFace
+247.100.XCommand = No source transformation needed
+
+# Micro-architecture 241 similar at 100% with unknown pattern
+241.100.abstractfactory = soc.server.genericServer.Server
+241.100.abstractproduct = java.lang.Cloneable
+241.100.concretefactory = soc.server.SOCServer
+241.100.product = soc.message.SOCClearOffer
+241.100.XCommand = No source transformation needed
+
+# Micro-architecture 234 similar at 100% with unknown pattern
+234.100.abstractfactory = soc.server.genericServer.Server
+234.100.abstractproduct = java.lang.Cloneable
+234.100.concretefactory = soc.server.SOCServer
+234.100.product = soc.message.SOCClearTradeMsg
+234.100.XCommand = No source transformation needed
+
+# Micro-architecture 237 similar at 100% with unknown pattern
+237.100.abstractfactory = soc.server.genericServer.Server
+237.100.abstractproduct = java.lang.Cloneable
+237.100.concretefactory = soc.server.SOCServer
+237.100.product = soc.message.SOCDevCardCount
+237.100.XCommand = No source transformation needed
+
+# Micro-architecture 218 similar at 100% with unknown pattern
+218.100.abstractfactory = soc.server.genericServer.Server
+218.100.abstractproduct = java.lang.Cloneable
+218.100.concretefactory = soc.server.SOCServer
+218.100.product = soc.message.SOCDevCard
+218.100.XCommand = No source transformation needed
+
+# Micro-architecture 224 similar at 100% with unknown pattern
+224.100.abstractfactory = soc.server.genericServer.Server
+224.100.abstractproduct = java.lang.Cloneable
+224.100.concretefactory = soc.server.SOCServer
+224.100.product = soc.message.SOCDiceResult
+224.100.XCommand = No source transformation needed
+
+# Micro-architecture 243 similar at 100% with unknown pattern
+243.100.abstractfactory = soc.server.genericServer.Server
+243.100.abstractproduct = java.lang.Cloneable
+243.100.concretefactory = soc.server.SOCServer
+243.100.product = soc.message.SOCDiscardRequest
+243.100.XCommand = No source transformation needed
+
+# Micro-architecture 238 similar at 100% with unknown pattern
+238.100.abstractfactory = soc.server.genericServer.Server
+238.100.abstractproduct = java.lang.Cloneable
+238.100.concretefactory = soc.server.SOCServer
+238.100.product = soc.message.SOCGameState
+238.100.XCommand = No source transformation needed
+
+# Micro-architecture 246 similar at 100% with unknown pattern
+246.100.abstractfactory = soc.server.genericServer.Server
+246.100.abstractproduct = java.lang.Cloneable
+246.100.concretefactory = soc.server.SOCServer
+246.100.product = soc.message.SOCGameTextMsg
+246.100.XCommand = No source transformation needed
+
+# Micro-architecture 217 similar at 100% with unknown pattern
+217.100.abstractfactory = soc.server.genericServer.Server
+217.100.abstractproduct = java.lang.Cloneable
+217.100.concretefactory = soc.server.SOCServer
+217.100.product = soc.message.SOCJoinGame
+217.100.XCommand = No source transformation needed
+
+# Micro-architecture 230 similar at 100% with unknown pattern
+230.100.abstractfactory = soc.server.genericServer.Server
+230.100.abstractproduct = java.lang.Cloneable
+230.100.concretefactory = soc.server.SOCServer
+230.100.product = soc.message.SOCJoin
+230.100.XCommand = No source transformation needed
+
+# Micro-architecture 231 similar at 100% with unknown pattern
+231.100.abstractfactory = soc.server.genericServer.Server
+231.100.abstractproduct = java.lang.Cloneable
+231.100.concretefactory = soc.server.SOCServer
+231.100.product = soc.message.SOCLeaveGame
+231.100.XCommand = No source transformation needed
+
+# Micro-architecture 229 similar at 100% with unknown pattern
+229.100.abstractfactory = soc.server.genericServer.Server
+229.100.abstractproduct = java.lang.Cloneable
+229.100.concretefactory = soc.server.SOCServer
+229.100.product = soc.message.SOCLeave
+229.100.XCommand = No source transformation needed
+
+# Micro-architecture 221 similar at 100% with unknown pattern
+221.100.abstractfactory = soc.server.genericServer.Server
+221.100.abstractproduct = java.lang.Cloneable
+221.100.concretefactory = soc.server.SOCServer
+221.100.product = soc.message.SOCMakeOffer
+221.100.XCommand = No source transformation needed
+
+# Micro-architecture 245 similar at 100% with unknown pattern
+245.100.abstractfactory = soc.server.genericServer.Server
+245.100.abstractproduct = java.lang.Cloneable
+245.100.concretefactory = soc.server.SOCServer
+245.100.product = soc.message.SOCMoveRobber
+245.100.XCommand = No source transformation needed
+
+# Micro-architecture 235 similar at 100% with unknown pattern
+235.100.abstractfactory = soc.server.genericServer.Server
+235.100.abstractproduct = java.lang.Cloneable
+235.100.concretefactory = soc.server.SOCServer
+235.100.product = soc.message.SOCPlayerElement
+235.100.XCommand = No source transformation needed
+
+# Micro-architecture 220 similar at 100% with unknown pattern
+220.100.abstractfactory = soc.server.genericServer.Server
+220.100.abstractproduct = java.lang.Cloneable
+220.100.concretefactory = soc.server.SOCServer
+220.100.product = soc.message.SOCPutPiece
+220.100.XCommand = No source transformation needed
+
+# Micro-architecture 233 similar at 100% with unknown pattern
+233.100.abstractfactory = soc.server.genericServer.Server
+233.100.abstractproduct = java.lang.Cloneable
+233.100.concretefactory = soc.server.SOCServer
+233.100.product = soc.message.SOCRejectConnection
+233.100.XCommand = No source transformation needed
+
+# Micro-architecture 240 similar at 100% with unknown pattern
+240.100.abstractfactory = soc.server.genericServer.Server
+240.100.abstractproduct = java.lang.Cloneable
+240.100.concretefactory = soc.server.SOCServer
+240.100.product = soc.message.SOCRejectOffer
+240.100.XCommand = No source transformation needed
+
+# Micro-architecture 226 similar at 100% with unknown pattern
+226.100.abstractfactory = soc.server.genericServer.Server
+226.100.abstractproduct = java.lang.Cloneable
+226.100.concretefactory = soc.server.SOCServer
+226.100.product = soc.message.SOCResourceCount
+226.100.XCommand = No source transformation needed
+
+# Micro-architecture 223 similar at 100% with unknown pattern
+223.100.abstractfactory = soc.server.genericServer.Server
+223.100.abstractproduct = java.lang.Cloneable
+223.100.concretefactory = soc.server.SOCServer
+223.100.product = soc.message.SOCSetPlayedDevCard
+223.100.XCommand = No source transformation needed
+
+# Micro-architecture 219 similar at 100% with unknown pattern
+219.100.abstractfactory = soc.server.genericServer.Server
+219.100.abstractproduct = java.lang.Cloneable
+219.100.concretefactory = soc.server.SOCServer
+219.100.product = soc.message.SOCSetSeatLock
+219.100.XCommand = No source transformation needed
+
+# Micro-architecture 228 similar at 100% with unknown pattern
+228.100.abstractfactory = soc.server.genericServer.Server
+228.100.abstractproduct = java.lang.Cloneable
+228.100.concretefactory = soc.server.SOCServer
+228.100.product = soc.message.SOCSitDown
+228.100.XCommand = No source transformation needed
+
+# Micro-architecture 216 similar at 100% with unknown pattern
+216.100.abstractfactory = soc.server.genericServer.Server
+216.100.abstractproduct = java.lang.Cloneable
+216.100.concretefactory = soc.server.SOCServer
+216.100.product = soc.message.SOCStartGame
+216.100.XCommand = No source transformation needed
+
+# Micro-architecture 225 similar at 100% with unknown pattern
+225.100.abstractfactory = soc.server.genericServer.Server
+225.100.abstractproduct = java.lang.Cloneable
+225.100.concretefactory = soc.server.SOCServer
+225.100.product = soc.message.SOCTextMsg
+225.100.XCommand = No source transformation needed
+
+# Micro-architecture 232 similar at 100% with unknown pattern
+232.100.abstractfactory = soc.server.genericServer.Server
+232.100.abstractproduct = java.lang.Cloneable
+232.100.concretefactory = soc.server.SOCServer
+232.100.product = soc.message.SOCTurn
+232.100.XCommand = No source transformation needed
+
+# Micro-architecture 239 similar at 100% with unknown pattern
+239.100.abstractfactory = soc.server.genericServer.Server
+239.100.abstractproduct = java.lang.Cloneable
+239.100.concretefactory = soc.server.SOCServer
+239.100.product = soc.server.SOCServer
+239.100.XCommand = No source transformation needed
+
+# Micro-architecture 290 similar at 100% with unknown pattern
+290.100.abstractfactory = soc.server.genericServer.Server
+290.100.abstractproduct = java.lang.Cloneable
+290.100.concretefactory = soc.server.genericServer.Server
+290.100.product = soc.server.genericServer.Connection
+290.100.XCommand = No source transformation needed
+
+# Micro-architecture 293 similar at 100% with unknown pattern
+293.100.abstractfactory = soc.server.genericServer.Server
+293.100.abstractproduct = java.lang.Runnable
+293.100.concretefactory = soc.server.genericServer.Server
+293.100.product = soc.server.genericServer.Connection
+293.100.XCommand = No source transformation needed
+
+# Micro-architecture 251 similar at 100% with unknown pattern
+251.100.abstractfactory = soc.server.genericServer.Server
+251.100.abstractproduct = java.lang.Thread
+251.100.concretefactory = soc.server.SOCServer
+251.100.product = soc.server.SOCGameTimeoutChecker
+251.100.XCommand = No source transformation needed
+
+# Micro-architecture 252 similar at 100% with unknown pattern
+252.100.abstractfactory = soc.server.genericServer.Server
+252.100.abstractproduct = java.lang.Thread
+252.100.concretefactory = soc.server.SOCServer
+252.100.product = soc.server.SOCServer
+252.100.XCommand = No source transformation needed
+
+# Micro-architecture 250 similar at 100% with unknown pattern
+250.100.abstractfactory = soc.server.genericServer.Server
+250.100.abstractproduct = java.lang.Thread
+250.100.concretefactory = soc.server.SOCServer
+250.100.product = soc.server.SOCServerRobotPinger
+250.100.XCommand = No source transformation needed
+
+# Micro-architecture 291 similar at 100% with unknown pattern
+291.100.abstractfactory = soc.server.genericServer.Server
+291.100.abstractproduct = java.lang.Thread
+291.100.concretefactory = soc.server.genericServer.Server
+291.100.product = soc.server.genericServer.Connection
+291.100.XCommand = No source transformation needed
+
+# Micro-architecture 296 similar at 100% with unknown pattern
+296.100.abstractfactory = soc.server.genericServer.Server
+296.100.abstractproduct = java.net.ServerSocket
+296.100.concretefactory = soc.server.genericServer.Server
+296.100.product = java.net.ServerSocket
+296.100.XCommand = No source transformation needed
+
+# Micro-architecture 289 similar at 100% with unknown pattern
+289.100.abstractfactory = soc.server.genericServer.Server
+289.100.abstractproduct = java.util.Date
+289.100.concretefactory = soc.server.SOCServer
+289.100.product = java.util.Date
+289.100.XCommand = No source transformation needed
+
+# Micro-architecture 297 similar at 100% with unknown pattern
+297.100.abstractfactory = soc.server.genericServer.Server
+297.100.abstractproduct = java.util.Date
+297.100.concretefactory = soc.server.genericServer.Server
+297.100.product = java.util.Date
+297.100.XCommand = No source transformation needed
+
+# Micro-architecture 248 similar at 100% with unknown pattern
+248.100.abstractfactory = soc.server.genericServer.Server
+248.100.abstractproduct = java.util.Random
+248.100.concretefactory = soc.server.SOCServer
+248.100.product = java.util.Random
+248.100.XCommand = No source transformation needed
+
+# Micro-architecture 249 similar at 100% with unknown pattern
+249.100.abstractfactory = soc.server.genericServer.Server
+249.100.abstractproduct = soc.server.SOCGameTimeoutChecker
+249.100.concretefactory = soc.server.SOCServer
+249.100.product = soc.server.SOCGameTimeoutChecker
+249.100.XCommand = No source transformation needed
+
+# Micro-architecture 253 similar at 100% with unknown pattern
+253.100.abstractfactory = soc.server.genericServer.Server
+253.100.abstractproduct = soc.server.SOCReplaceRequest
+253.100.concretefactory = soc.server.SOCServer
+253.100.product = soc.server.SOCReplaceRequest
+253.100.XCommand = No source transformation needed
+
+# Micro-architecture 288 similar at 100% with unknown pattern
+288.100.abstractfactory = soc.server.genericServer.Server
+288.100.abstractproduct = soc.server.SOCServer
+288.100.concretefactory = soc.server.SOCServer
+288.100.product = soc.server.SOCServer
+288.100.XCommand = No source transformation needed
+
+# Micro-architecture 295 similar at 100% with unknown pattern
+295.100.abstractfactory = soc.server.genericServer.Server
+295.100.abstractproduct = soc.server.genericServer.Server$Command
+295.100.concretefactory = soc.server.genericServer.Server
+295.100.product = soc.server.genericServer.Server$Command
+295.100.XCommand = No source transformation needed
+
+# Micro-architecture 294 similar at 100% with unknown pattern
+294.100.abstractfactory = soc.server.genericServer.Server
+294.100.abstractproduct = soc.server.genericServer.Server$Treater
+294.100.concretefactory = soc.server.genericServer.Server
+294.100.product = soc.server.genericServer.Server$Treater
+294.100.XCommand = No source transformation needed
+
+# Micro-architecture 287 similar at 100% with unknown pattern
+287.100.abstractfactory = soc.server.genericServer.Server
+287.100.abstractproduct = soc.util.SOCRobotParameters
+287.100.concretefactory = soc.server.SOCServer
+287.100.product = soc.util.SOCRobotParameters
+287.100.XCommand = No source transformation needed
+

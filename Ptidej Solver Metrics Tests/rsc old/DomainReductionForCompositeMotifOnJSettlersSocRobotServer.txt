@@ -1,9 +1,0 @@
-Domain reduction for JSettlersSocRobotServer
-Original domain size: 173
-Reduced domain size for leaf: 4 (97.6878612716763% of reduction)
-	Entity: soc.robot.SOCPossibleRoad
-	Entity: soc.robot.SOCPossibleCard
-	Entity: soc.robot.SOCPossibleCity
-	Entity: soc.robot.SOCPossibleSettlement
-Reduced domain size for composite: 173 (0.0% of reduction)
-Reduced domain size for component: 173 (0.0% of reduction)

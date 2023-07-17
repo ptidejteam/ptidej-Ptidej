@@ -1,8 +1,0 @@
-driver = mendel.Driver
-
-parts = mendel.part.EntitySelection,mendel.part.tool.FamilyTool,mendel.part.tool.SetPrototypeTool,mendel.part.output.FamilyInterfaceOutput,mendel.part.output.FileOutput
-
-filters=mendel.filter.ClassFilter,mendel.filter.AnonymousFilter,mendel.filter.PackageFilter
-
-qualifier=results/fam/
-suffix = _families.csv

@@ -1,3 +1,0 @@
-RULE_CARD : SwissArmyKnife { 
-   RULE : MultipleInterface {(STRUCT: MULTIPLE_INTERFACE, 3) };
-};

@@ -1,4 +1,0 @@
-<iReportPlugin 	name="Text Wizard"	class="it.businesslogic.ireport.plugin.textwizard.TextWizard">
-	<IconFile>/it/businesslogic/ireport/icons/menu/win_cascade.gif</IconFile>
-	<Description>Text Wizard</Description>
-</iReportPlugin>

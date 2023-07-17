@@ -1,3 +1,0 @@
-Package,Base name,Inh Depth,NVI,Local G Count,NVS,New Count,Overriden G Count,Inh Count,Tag,Ovr Tag,Name
-org.apache.log4j.lf5.viewer,LogBrokerMonitor,1,9.454545,104,983.2727,104,0,11,PureExtender,NoOvr,Blooming Class
-org.apache.log4j,Category,1,4.090909,45,184.09091,45,0,11,PureExtender,NoOvr,Blooming Class

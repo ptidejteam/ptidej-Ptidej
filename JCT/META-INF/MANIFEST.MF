@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: JCT
-Bundle-SymbolicName: JCT
-Bundle-Version: 1.0.0
-Export-Package: jct.kernel
-Automatic-Module-Name: JCT

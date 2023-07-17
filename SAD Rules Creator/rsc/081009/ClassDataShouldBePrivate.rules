@@ -1,3 +1,0 @@
-RULE_CARD : ClassDataShouldBePrivate { 
-   RULE : FieldPublic {(STRUCT: PUBLIC_FIELD, 1) };
-};

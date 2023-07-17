@@ -1,0 +1,83 @@
+# Micro-architecture 1462 similar at 34% with Adapter Design Motif
+1462.34.adapter = FlashGUI.FlashRiskAdapter
+1462.34.adpatee = FlashGUI.MainMenu
+1462.34.client = risk.RiskController
+1462.34.Name = Adapter Design Motif
+1462.34.target = risk.RiskListener
+1462.34.XCommand = command
+
+# Micro-architecture 953 similar at 49% with Adapter Design Motif
+953.49.adapter = FlashGUI.FlashRiskAdapter
+953.49.adpatee = FlashGUI.BattleDialog
+953.49.client = risk.RiskController
+953.49.Name = Adapter Design Motif
+953.49.target = risk.RiskListener
+953.49.XCommand = command
+
+# Micro-architecture 961 similar at 49% with Adapter Design Motif
+961.49.adapter = FlashGUI.FlashRiskAdapter
+961.49.adpatee = FlashGUI.GameFrame
+961.49.client = risk.RiskController
+961.49.Name = Adapter Design Motif
+961.49.target = risk.RiskListener
+961.49.XCommand = command
+
+# Micro-architecture 955 similar at 49% with Adapter Design Motif
+955.49.adapter = FlashGUI.FlashRiskAdapter
+955.49.adpatee = FlashGUI.NewGameFrame
+955.49.client = risk.RiskController
+955.49.Name = Adapter Design Motif
+955.49.target = risk.RiskListener
+955.49.XCommand = command
+
+# Micro-architecture 960 similar at 49% with Adapter Design Motif
+960.49.adapter = FlashGUI.FlashRiskAdapter
+960.49.adpatee = risk.PicturePanel
+960.49.client = risk.RiskController
+960.49.Name = Adapter Design Motif
+960.49.target = risk.RiskListener
+960.49.XCommand = command
+
+# Micro-architecture 962 similar at 49% with Adapter Design Motif
+962.49.adapter = FlashGUI.FlashRiskAdapter
+962.49.adpatee = risk.Risk
+962.49.client = risk.RiskController
+962.49.Name = Adapter Design Motif
+962.49.target = risk.RiskListener
+962.49.XCommand = command
+
+# Micro-architecture 472 similar at 70% with unknown pattern
+472.70.adapter = FlashGUI.FlashRiskAdapter
+472.70.adpatee = FlashGUI.BattleDialog
+472.70.client = risk.RiskController
+472.70.target = risk.RiskListener
+472.70.XCommand = No source transformation needed
+
+# Micro-architecture 480 similar at 70% with unknown pattern
+480.70.adapter = FlashGUI.FlashRiskAdapter
+480.70.adpatee = FlashGUI.GameFrame
+480.70.client = risk.RiskController
+480.70.target = risk.RiskListener
+480.70.XCommand = No source transformation needed
+
+# Micro-architecture 474 similar at 70% with unknown pattern
+474.70.adapter = FlashGUI.FlashRiskAdapter
+474.70.adpatee = FlashGUI.NewGameFrame
+474.70.client = risk.RiskController
+474.70.target = risk.RiskListener
+474.70.XCommand = No source transformation needed
+
+# Micro-architecture 479 similar at 70% with unknown pattern
+479.70.adapter = FlashGUI.FlashRiskAdapter
+479.70.adpatee = risk.PicturePanel
+479.70.client = risk.RiskController
+479.70.target = risk.RiskListener
+479.70.XCommand = No source transformation needed
+
+# Micro-architecture 481 similar at 70% with unknown pattern
+481.70.adapter = FlashGUI.FlashRiskAdapter
+481.70.adpatee = risk.Risk
+481.70.client = risk.RiskController
+481.70.target = risk.RiskListener
+481.70.XCommand = No source transformation needed
+

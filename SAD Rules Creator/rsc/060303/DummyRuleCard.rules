@@ -1,3 +1,0 @@
-RULE_CARD : DummyRuleCard { 
-   RULE : MultipleInterface2 {(STRUCT: MULTIPLE_INTERFACE, 2) };
-};

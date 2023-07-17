@@ -1,0 +1,120 @@
+<html>
+<head>
+</head>
+<body>
+
+<h2>DISCLAMER</h2>
+
+(c) Copyright 2001-2013 Yann-Gaël Guéhéneuc and 
+Polytechnique Montréal.
+<br>
+<br>
+Use and copying of this software and preparation of derivative works
+based upon this software are NOT permitted. This software is available
+for evaluation purposes only. This application may not be legally used 
+in a business, commercial, government, or institutional environment.
+<br>
+<br>
+This software is made available AS IS, and THE AUTHOR DISCLAIMS
+ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE, AND NOT WITHSTANDING ANY OTHER PROVISION CONTAINED HEREIN,
+ANY LIABILITY FOR DAMAGES RESULTING FROM THE SOFTWARE OR ITS USE IS
+EXPRESSLY DISCLAIMED, WHETHER ARISING IN CONTRACT, TORT (INCLUDING
+NEGLIGENCE) OR STRICT LIABILITY, EVEN IF THE AUTHOR IS ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES.
+<br>
+<br>
+All Rights Reserved.
+
+
+
+<br>
+<h2>Introduction</h2>
+
+<p align="LEFT">The Ptidej project (Pattern Trace Identification, Detection, and
+Enhancement in Java) has for objectives to design algorithms and to
+implement tools to improve the quality of software systems by
+promoting the use of patterns at the code-, design-, and
+architectural-level.
+
+<p align="LEFT">The research results of the Ptidej project are embodied in the
+Ptidej tool suite, this software system. In its current version, the
+Ptidej tool allows reverse-engineering object-oriented software
+systems and defining and identifying various design patterns, code smells,
+and antipatterns. It also allows various quality analyses.</p>
+
+<br>
+<center>More general information at <a href="www.ptidej.net">www.ptidej.net</a>.</center>
+<center>More information on this tool at <a href="wiki.ptidej.net">wiki.ptidej.net</a>.</center>
+<center>Send questions or comments at to <a href="info@ptidej.net">info@ptidej.net</a>.</center>
+
+<br>
+<h2>Basic Usage</h2>
+
+<p align="LEFT">You can import Java class files or source files from 
+different programming languages (C#, C++, Java...), either
+individually, or in a entitre directory, or in the form of a Ptidej file, which declares a list
+of files, then reverse-engineer these files and display
+their UML-like models, and call the various analyses.
+
+<ol>
+<li> Create a Ptidej file, with extension ".ptidej". The Ptidej file
+has the following format:
+
+<pre>
+    [Ptidej Project]
+    Name = &lt;A name&gt;
+    JavaCode = &lt;A directory&gt;;&lt;A directory&gt;;...
+</pre>
+
+where:
+
+<ul>
+<li> &lt;A name&gt; is a string naming the system to reverse-engineer. </li>
+<li> &lt;A directory&gt; is a path (absolute or relative) pointing on
+     a directory containing some class files to reverse-engineer.
+    The path MUST END with a trailing '/'.
+</li>
+</ul>
+
+For example:
+
+<pre>
+    [Ptidej Project]
+    Name = Applet of JHotDraw v5.1
+    JavaCode = ../../../JHotDraw v5.1/bin/CH/ifa/draw/applet/
+</pre>
+</li>
+
+<li> Load the Ptidej file into the Ptidej tool by clicking on the
+"Load Project" button and selecting a ".ptidej" file. This will open
+a window with a UML-like model of the reverse-engineered class
+files. 
+</li>
+
+<li> Annotate with the instructions the model of the 
+reverse-engineered class files by clicking the "Model Annotator with
+Instructions" button in the "Tools" panel.
+</li>
+
+<li> Infer the relationships among classes (association, aggregation,
+and composition) and accessors to create an idiom-level model of the
+class files by clicking "AAC Relationships" in the "Tools" Panel.
+You can control the level of details of the display through
+the checkboxes available in the "Viewer Options" tab, on the
+right-hand side.
+</li>
+
+<li> Select an antipattern to detect in the reverse-engineered model
+by selecting the "Anti Patterns" tab, checking the appropriate
+checkbox(es), and clicking "Detect Anti Patterns".
+</li>
+
+<li> Display the antipatterns found in the model either has red boxes
+marking the appropriate classes or by selecting the "View Options"
+tab and clicking the "List Similar Micro-architectures" button.
+</li>
+
+</body>
+</html>

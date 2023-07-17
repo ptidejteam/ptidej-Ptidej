@@ -1,6 +1,0 @@
-/*
- * Cr le $$$
- *
- * TODO Pour changer le modle de ce fichier gnr, allez  :
- * Fentre - Prfrences - Java - Style de code - Modles de code
- */

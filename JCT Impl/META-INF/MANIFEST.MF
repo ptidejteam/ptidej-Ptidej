@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: JCT_Impl
-Bundle-SymbolicName: JCT_Impl
-Bundle-Version: 1.0.0
-Export-Package: jct.kernel.impl
-Require-Bundle: JCT;bundle-version="1.0.0",
- JCT_Utils;bundle-version="1.0.0"
-Automatic-Module-Name: JCT.Impl

@@ -1,3 +1,0 @@
-RULE_CARD : LongParameterList { 
-      RULE : LongParameterListClass { (METRIC: NOParam, VERY_HIGH, 20) } ; 
-};

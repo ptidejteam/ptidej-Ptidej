@@ -1,0 +1,3 @@
+[Ptidej Project]
+Name = Ptidej UI
+JavaCode = ../../../../Ptidej/bin/ptidej/occurrences/;../../../../Ptidej/bin/ptidej/solver/;../../../../Ptidej UI/bin/ptidej/ui/;;../../../../Ptidej UI Primitives AWT/bin/ptidej/ui/primitive/awt/;../../../../Ptidej UI Primitives AWT/bin/ptidej/ui/solution/awt/;../../../../Ptidej UI Viewer Standalone/bin/ptidej/viewer/;

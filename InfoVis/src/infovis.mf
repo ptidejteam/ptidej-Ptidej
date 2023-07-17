@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: infovis.panel.MainFrameDecorator
-Class-Path: lib/antlrall.jar lib/agile2d.jar agile2d_opengl.jar lib/gl4java.jar lib/xml-writer.jar
-Created-By: Jean-Daniel Fekete
