@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<sdmetrics version="2.0">
-
-<rule name="Undefined" domain="class" category="Pathological" severity="1-high">
-<description>This rule is missing its calculation definition.</description>
-</rule>
-
-</sdmetrics>

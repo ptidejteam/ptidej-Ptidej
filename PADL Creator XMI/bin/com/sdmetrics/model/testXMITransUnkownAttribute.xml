@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<xmitransformations version="2.0">
-<xmitransformation modelelement="sdmetricsbase" xmipattern="sdmetricsbase" recurse="true">
-<!-- trigger for an unknown attribute 'ownedOperations' -->
-<trigger name="ownedOperations" type="attrval" attr="xmi.id" />
-</xmitransformation>
-</xmitransformations>

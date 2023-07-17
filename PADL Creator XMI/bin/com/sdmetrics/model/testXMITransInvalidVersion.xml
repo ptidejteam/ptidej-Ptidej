@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<xmitransformations version="2002">
-<xmitransformation modelelement="sdmetricsbase" xmipattern="sdmetricsbase" recurse="true">
-<trigger name="id" type="attrval" attr="xmi.id" />
-</xmitransformation>
-</xmitransformations>

@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<xmitransformations version="2.0">
-<!-- XMI transformation defines an unknown model element type "process" -->
-<xmitransformation modelelement="process" xmipattern="SYSML:Process" recurse="true" />
-</xmitransformations>

@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<sdmetrics version="2.2">
-
-<metricprocedure name="elusive" class="sdmetrics.metrics.MetricProcedureSquaringTheCircle" />
-
-</sdmetrics>

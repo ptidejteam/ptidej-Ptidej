@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<xmitransformations version="2.0">
-<xmitransformation modelelement="sdmetricsbase" xmipattern="base" recurse="true">
-<trigger name="id" type="attrval" attr="xmi.id" />
-</xmitransformation>
-<!-- trigger not inside of an XMI transformation -->
-<trigger name="visibility" type="attrval" attr="visibility"/>
-</xmitransformations>
