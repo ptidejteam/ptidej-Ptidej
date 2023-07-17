@@ -1,0 +1,136 @@
+# Micro-architecture 74 similar at 16% with Adapter Design Motif
+74.16.adapter = com.holub.database.jdbc.JDBCConnection
+74.16.adpatee = com.holub.database.jdbc.adapters.ConnectionAdapter
+74.16.client = com.holub.database.jdbc.JDBCConnection
+74.16.Name = Adapter Design Motif
+74.16.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+74.16.XCommand = command
+
+# Micro-architecture 51 similar at 16% with Adapter Design Motif
+51.16.adapter = com.holub.database.jdbc.JDBCResultSetMetaData
+51.16.adpatee = com.holub.database.jdbc.adapters.ResultSetMetaDataAdapter
+51.16.client = com.holub.database.jdbc.JDBCResultSetMetaData
+51.16.Name = Adapter Design Motif
+51.16.target = com.holub.database.jdbc.adapters.ResultSetMetaDataAdapter
+51.16.XCommand = command
+
+# Micro-architecture 59 similar at 16% with Adapter Design Motif
+59.16.adapter = com.holub.database.jdbc.JDBCResultSet
+59.16.adpatee = com.holub.database.jdbc.adapters.ResultSetAdapter
+59.16.client = com.holub.database.jdbc.JDBCResultSet
+59.16.Name = Adapter Design Motif
+59.16.target = com.holub.database.jdbc.adapters.ResultSetAdapter
+59.16.XCommand = command
+
+# Micro-architecture 47 similar at 16% with Adapter Design Motif
+47.16.adapter = com.holub.database.jdbc.JDBCStatement
+47.16.adpatee = com.holub.database.jdbc.adapters.StatementAdapter
+47.16.client = com.holub.database.jdbc.JDBCStatement
+47.16.Name = Adapter Design Motif
+47.16.target = com.holub.database.jdbc.adapters.StatementAdapter
+47.16.XCommand = command
+
+# Micro-architecture 32 similar at 23% with Adapter Design Motif
+32.23.adapter = com.holub.database.CSVImporter
+32.23.adpatee = com.holub.tools.ArrayIterator
+32.23.client = com.holub.database.ConcreteTable
+32.23.Name = Adapter Design Motif
+32.23.target = com.holub.database.Table$Importer
+32.23.XCommand = command
+
+# Micro-architecture 40 similar at 23% with Adapter Design Motif
+40.23.adapter = com.holub.database.jdbc.JDBCConnection
+40.23.adpatee = com.holub.database.Database
+40.23.client = com.holub.database.jdbc.JDBCConnection
+40.23.Name = Adapter Design Motif
+40.23.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+40.23.XCommand = command
+
+# Micro-architecture 37 similar at 23% with Adapter Design Motif
+37.23.adapter = com.holub.database.jdbc.JDBCConnection
+37.23.adpatee = com.holub.database.jdbc.JDBCConnection$AutoCommitBehavior
+37.23.client = com.holub.database.jdbc.JDBCConnection
+37.23.Name = Adapter Design Motif
+37.23.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+37.23.XCommand = command
+
+# Micro-architecture 38 similar at 23% with Adapter Design Motif
+38.23.adapter = com.holub.database.jdbc.JDBCConnection
+38.23.adpatee = com.holub.database.jdbc.JDBCConnection
+38.23.client = com.holub.database.jdbc.JDBCConnection
+38.23.Name = Adapter Design Motif
+38.23.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+38.23.XCommand = command
+
+# Micro-architecture 34 similar at 23% with Adapter Design Motif
+34.23.adapter = com.holub.database.jdbc.JDBCConnection
+34.23.adpatee = com.holub.database.jdbc.JDBCStatement
+34.23.client = com.holub.database.jdbc.JDBCConnection
+34.23.Name = Adapter Design Motif
+34.23.target = com.holub.database.jdbc.adapters.ConnectionAdapter
+34.23.XCommand = command
+
+# Micro-architecture 20 similar at 23% with Adapter Design Motif
+20.23.adapter = com.holub.database.jdbc.JDBCResultSetMetaData
+20.23.adpatee = com.holub.database.Cursor
+20.23.client = com.holub.database.jdbc.JDBCResultSetMetaData
+20.23.Name = Adapter Design Motif
+20.23.target = com.holub.database.jdbc.adapters.ResultSetMetaDataAdapter
+20.23.XCommand = command
+
+# Micro-architecture 23 similar at 23% with Adapter Design Motif
+23.23.adapter = com.holub.database.jdbc.JDBCResultSet
+23.23.adpatee = com.holub.database.Cursor
+23.23.client = com.holub.database.jdbc.JDBCResultSet
+23.23.Name = Adapter Design Motif
+23.23.target = com.holub.database.jdbc.adapters.ResultSetAdapter
+23.23.XCommand = command
+
+# Micro-architecture 21 similar at 23% with Adapter Design Motif
+21.23.adapter = com.holub.database.jdbc.JDBCResultSet
+21.23.adpatee = com.holub.database.jdbc.JDBCResultSetMetaData
+21.23.client = com.holub.database.jdbc.JDBCResultSet
+21.23.Name = Adapter Design Motif
+21.23.target = com.holub.database.jdbc.adapters.ResultSetAdapter
+21.23.XCommand = command
+
+# Micro-architecture 22 similar at 23% with Adapter Design Motif
+22.23.adapter = com.holub.database.jdbc.JDBCResultSet
+22.23.adpatee = com.holub.database.jdbc.JDBCResultSet
+22.23.client = com.holub.database.jdbc.JDBCResultSet
+22.23.Name = Adapter Design Motif
+22.23.target = com.holub.database.jdbc.adapters.ResultSetAdapter
+22.23.XCommand = command
+
+# Micro-architecture 19 similar at 23% with Adapter Design Motif
+19.23.adapter = com.holub.database.jdbc.JDBCStatement
+19.23.adpatee = com.holub.database.Database
+19.23.client = com.holub.database.jdbc.JDBCStatement
+19.23.Name = Adapter Design Motif
+19.23.target = com.holub.database.jdbc.adapters.StatementAdapter
+19.23.XCommand = command
+
+# Micro-architecture 18 similar at 23% with Adapter Design Motif
+18.23.adapter = com.holub.database.jdbc.JDBCStatement
+18.23.adpatee = com.holub.database.Table
+18.23.client = com.holub.database.jdbc.JDBCStatement
+18.23.Name = Adapter Design Motif
+18.23.target = com.holub.database.jdbc.adapters.StatementAdapter
+18.23.XCommand = command
+
+# Micro-architecture 17 similar at 23% with Adapter Design Motif
+17.23.adapter = com.holub.database.jdbc.JDBCStatement
+17.23.adpatee = com.holub.database.jdbc.JDBCResultSet
+17.23.client = com.holub.database.jdbc.JDBCStatement
+17.23.Name = Adapter Design Motif
+17.23.target = com.holub.database.jdbc.adapters.StatementAdapter
+17.23.XCommand = command
+
+# Micro-architecture 12 similar at 34% with Adapter Design Motif
+12.34.adapter = com.holub.database.CSVExporter
+12.34.adpatee = com.holub.database.CSVExporter
+12.34.client = com.holub.database.ConcreteTable
+12.34.Name = Adapter Design Motif
+12.34.target = com.holub.database.Table$Exporter
+12.34.XCommand = command
+

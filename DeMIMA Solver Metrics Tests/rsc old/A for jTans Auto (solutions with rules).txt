@@ -1,0 +1,16 @@
+# Micro-architecture 1071 similar at 23% with Adapter Design Motif
+1071.23.adapter = net.phbwt.jtans.guicommon.FigureGroup
+1071.23.adpatee = net.phbwt.jtans.guicommon.FigureGroup
+1071.23.client = net.phbwt.jtans.guicommon.Config
+1071.23.Name = Adapter Design Motif
+1071.23.target = net.phbwt.jtans.guicommon.Config$ConfigItem
+1071.23.XCommand = command
+
+# Micro-architecture 1043 similar at 23% with Adapter Design Motif
+1043.23.adapter = net.phbwt.jtans.guicommon.Surface
+1043.23.adpatee = net.phbwt.jtans.guicommon.Surface
+1043.23.client = net.phbwt.jtans.guicommon.Config
+1043.23.Name = Adapter Design Motif
+1043.23.target = net.phbwt.jtans.guicommon.Config$ConfigItem
+1043.23.XCommand = command
+

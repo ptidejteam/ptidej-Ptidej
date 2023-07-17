@@ -1,0 +1,385 @@
+# Micro-architecture 43 similar at 100% with unknown pattern
+43.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+43.100.abstractproduct = java.io.BufferedInputStream
+43.100.concretefactory = net.phbwt.jtans.jTansApplication
+43.100.product = java.io.BufferedInputStream
+43.100.XCommand = No source transformation needed
+
+# Micro-architecture 23 similar at 100% with unknown pattern
+23.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+23.100.abstractproduct = java.io.BufferedInputStream
+23.100.concretefactory = net.phbwt.jtans.jTansWebstart
+23.100.product = java.io.BufferedInputStream
+23.100.XCommand = No source transformation needed
+
+# Micro-architecture 46 similar at 100% with unknown pattern
+46.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+46.100.abstractproduct = java.io.BufferedOutputStream
+46.100.concretefactory = net.phbwt.jtans.jTansApplication
+46.100.product = java.io.BufferedOutputStream
+46.100.XCommand = No source transformation needed
+
+# Micro-architecture 28 similar at 100% with unknown pattern
+28.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+28.100.abstractproduct = java.io.BufferedOutputStream
+28.100.concretefactory = net.phbwt.jtans.jTansWebstart
+28.100.product = java.io.BufferedOutputStream
+28.100.XCommand = No source transformation needed
+
+# Micro-architecture 42 similar at 100% with unknown pattern
+42.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+42.100.abstractproduct = java.io.FileInputStream
+42.100.concretefactory = net.phbwt.jtans.jTansApplication
+42.100.product = java.io.FileInputStream
+42.100.XCommand = No source transformation needed
+
+# Micro-architecture 41 similar at 100% with unknown pattern
+41.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+41.100.abstractproduct = java.io.FileOutputStream
+41.100.concretefactory = net.phbwt.jtans.jTansApplication
+41.100.product = java.io.FileOutputStream
+41.100.XCommand = No source transformation needed
+
+# Micro-architecture 44 similar at 100% with unknown pattern
+44.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+44.100.abstractproduct = java.io.ObjectInputStream
+44.100.concretefactory = net.phbwt.jtans.jTansApplication
+44.100.product = java.io.ObjectInputStream
+44.100.XCommand = No source transformation needed
+
+# Micro-architecture 26 similar at 100% with unknown pattern
+26.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+26.100.abstractproduct = java.io.ObjectInputStream
+26.100.concretefactory = net.phbwt.jtans.jTansWebstart
+26.100.product = java.io.ObjectInputStream
+26.100.XCommand = No source transformation needed
+
+# Micro-architecture 39 similar at 100% with unknown pattern
+39.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+39.100.abstractproduct = java.io.ObjectOutputStream
+39.100.concretefactory = net.phbwt.jtans.jTansApplication
+39.100.product = java.io.ObjectOutputStream
+39.100.XCommand = No source transformation needed
+
+# Micro-architecture 21 similar at 100% with unknown pattern
+21.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+21.100.abstractproduct = java.io.ObjectOutputStream
+21.100.concretefactory = net.phbwt.jtans.jTansWebstart
+21.100.product = java.io.ObjectOutputStream
+21.100.XCommand = No source transformation needed
+
+# Micro-architecture 32 similar at 100% with unknown pattern
+32.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+32.100.abstractproduct = java.lang.Object
+32.100.concretefactory = net.phbwt.jtans.AbstractApplication
+32.100.product = net.phbwt.jtans.guiconfig.ConfigWindow
+32.100.XCommand = No source transformation needed
+
+# Micro-architecture 31 similar at 100% with unknown pattern
+31.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+31.100.abstractproduct = java.lang.Object
+31.100.concretefactory = net.phbwt.jtans.AbstractApplication
+31.100.product = net.phbwt.jtans.guiinfo.InfoWindowController
+31.100.XCommand = No source transformation needed
+
+# Micro-architecture 24 similar at 100% with unknown pattern
+24.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+24.100.abstractproduct = java.lang.RuntimeException
+24.100.concretefactory = net.phbwt.jtans.jTansWebstart
+24.100.product = java.lang.RuntimeException
+24.100.XCommand = No source transformation needed
+
+# Micro-architecture 25 similar at 100% with unknown pattern
+25.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+25.100.abstractproduct = java.net.URL
+25.100.concretefactory = net.phbwt.jtans.jTansWebstart
+25.100.product = java.net.URL
+25.100.XCommand = No source transformation needed
+
+# Micro-architecture 29 similar at 100% with unknown pattern
+29.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+29.100.abstractproduct = java.util.Observable
+29.100.concretefactory = net.phbwt.jtans.AbstractApplication
+29.100.product = net.phbwt.jtans.guimain.MainWindow
+29.100.XCommand = No source transformation needed
+
+# Micro-architecture 30 similar at 100% with unknown pattern
+30.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+30.100.abstractproduct = java.util.Observer
+30.100.concretefactory = net.phbwt.jtans.AbstractApplication
+30.100.product = net.phbwt.jtans.guimain.MainWindow
+30.100.XCommand = No source transformation needed
+
+# Micro-architecture 45 similar at 100% with unknown pattern
+45.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+45.100.abstractproduct = java.util.zip.GZIPInputStream
+45.100.concretefactory = net.phbwt.jtans.jTansApplication
+45.100.product = java.util.zip.GZIPInputStream
+45.100.XCommand = No source transformation needed
+
+# Micro-architecture 27 similar at 100% with unknown pattern
+27.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+27.100.abstractproduct = java.util.zip.GZIPInputStream
+27.100.concretefactory = net.phbwt.jtans.jTansWebstart
+27.100.product = java.util.zip.GZIPInputStream
+27.100.XCommand = No source transformation needed
+
+# Micro-architecture 40 similar at 100% with unknown pattern
+40.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+40.100.abstractproduct = java.util.zip.GZIPOutputStream
+40.100.concretefactory = net.phbwt.jtans.jTansApplication
+40.100.product = java.util.zip.GZIPOutputStream
+40.100.XCommand = No source transformation needed
+
+# Micro-architecture 22 similar at 100% with unknown pattern
+22.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+22.100.abstractproduct = java.util.zip.GZIPOutputStream
+22.100.concretefactory = net.phbwt.jtans.jTansWebstart
+22.100.product = java.util.zip.GZIPOutputStream
+22.100.XCommand = No source transformation needed
+
+# Micro-architecture 34 similar at 100% with unknown pattern
+34.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+34.100.abstractproduct = javax.swing.JFrame
+34.100.concretefactory = net.phbwt.jtans.AbstractApplication
+34.100.product = javax.swing.JFrame
+34.100.XCommand = No source transformation needed
+
+# Micro-architecture 37 similar at 100% with unknown pattern
+37.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+37.100.abstractproduct = javax.swing.JMenuBar
+37.100.concretefactory = net.phbwt.jtans.AbstractApplication
+37.100.product = javax.swing.JMenuBar
+37.100.XCommand = No source transformation needed
+
+# Micro-architecture 38 similar at 100% with unknown pattern
+38.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+38.100.abstractproduct = javax.swing.JMenu
+38.100.concretefactory = net.phbwt.jtans.AbstractApplication
+38.100.product = javax.swing.JMenu
+38.100.XCommand = No source transformation needed
+
+# Micro-architecture 35 similar at 100% with unknown pattern
+35.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+35.100.abstractproduct = net.phbwt.jtans.AbstractApplication$1
+35.100.concretefactory = net.phbwt.jtans.AbstractApplication
+35.100.product = net.phbwt.jtans.AbstractApplication$1
+35.100.XCommand = No source transformation needed
+
+# Micro-architecture 36 similar at 100% with unknown pattern
+36.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+36.100.abstractproduct = net.phbwt.jtans.AbstractApplication$2
+36.100.concretefactory = net.phbwt.jtans.AbstractApplication
+36.100.product = net.phbwt.jtans.AbstractApplication$2
+36.100.XCommand = No source transformation needed
+
+# Micro-architecture 33 similar at 100% with unknown pattern
+33.100.abstractfactory = net.phbwt.jtans.AbstractApplication
+33.100.abstractproduct = net.phbwt.jtans.AbstractApplication$3
+33.100.concretefactory = net.phbwt.jtans.AbstractApplication
+33.100.product = net.phbwt.jtans.AbstractApplication$3
+33.100.XCommand = No source transformation needed
+
+# Micro-architecture 55 similar at 100% with unknown pattern
+55.100.abstractfactory = net.phbwt.jtans.calc.CalcPiece
+55.100.abstractproduct = java.lang.Object
+55.100.concretefactory = net.phbwt.jtans.calc.CalcPiece
+55.100.product = net.phbwt.jtans.calc.CalcPolyPoints
+55.100.XCommand = No source transformation needed
+
+# Micro-architecture 54 similar at 100% with unknown pattern
+54.100.abstractfactory = net.phbwt.jtans.calc.CalcPiece
+54.100.abstractproduct = net.phbwt.jtans.calc.CalcPiece$StoredPiece
+54.100.concretefactory = net.phbwt.jtans.calc.CalcPiece
+54.100.product = net.phbwt.jtans.calc.CalcPiece$StoredPiece
+54.100.XCommand = No source transformation needed
+
+# Micro-architecture 47 similar at 100% with unknown pattern
+47.100.abstractfactory = net.phbwt.jtans.calc.PixelFigure
+47.100.abstractproduct = java.awt.Point
+47.100.concretefactory = net.phbwt.jtans.calc.EditableFigure
+47.100.product = java.awt.Point
+47.100.XCommand = No source transformation needed
+
+# Micro-architecture 51 similar at 100% with unknown pattern
+51.100.abstractfactory = net.phbwt.jtans.calc.PixelFigure
+51.100.abstractproduct = java.awt.Polygon
+51.100.concretefactory = net.phbwt.jtans.calc.DisplayFigure
+51.100.product = net.phbwt.jtans.calc.PixelPiece
+51.100.XCommand = No source transformation needed
+
+# Micro-architecture 48 similar at 100% with unknown pattern
+48.100.abstractfactory = net.phbwt.jtans.calc.PixelFigure
+48.100.abstractproduct = java.awt.Polygon
+48.100.concretefactory = net.phbwt.jtans.calc.EditableFigure
+48.100.product = net.phbwt.jtans.calc.PixelPiece
+48.100.XCommand = No source transformation needed
+
+# Micro-architecture 52 similar at 100% with unknown pattern
+52.100.abstractfactory = net.phbwt.jtans.calc.PixelFigure
+52.100.abstractproduct = java.awt.Polygon
+52.100.concretefactory = net.phbwt.jtans.calc.PixelFigure
+52.100.product = net.phbwt.jtans.calc.PixelOutlinePolygon
+52.100.XCommand = No source transformation needed
+
+# Micro-architecture 49 similar at 100% with unknown pattern
+49.100.abstractfactory = net.phbwt.jtans.calc.PixelFigure
+49.100.abstractproduct = java.util.ArrayList
+49.100.concretefactory = net.phbwt.jtans.calc.EditableFigure
+49.100.product = java.util.ArrayList
+49.100.XCommand = No source transformation needed
+
+# Micro-architecture 53 similar at 100% with unknown pattern
+53.100.abstractfactory = net.phbwt.jtans.calc.PixelFigure
+53.100.abstractproduct = java.util.ArrayList
+53.100.concretefactory = net.phbwt.jtans.calc.PixelFigure
+53.100.product = java.util.ArrayList
+53.100.XCommand = No source transformation needed
+
+# Micro-architecture 50 similar at 100% with unknown pattern
+50.100.abstractfactory = net.phbwt.jtans.calc.PixelFigure
+50.100.abstractproduct = net.phbwt.jtans.calc.EditableFigure$1
+50.100.concretefactory = net.phbwt.jtans.calc.EditableFigure
+50.100.product = net.phbwt.jtans.calc.EditableFigure$1
+50.100.XCommand = No source transformation needed
+
+# Micro-architecture 20 similar at 100% with unknown pattern
+20.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+20.100.abstractproduct = java.awt.BasicStroke
+20.100.concretefactory = net.phbwt.jtans.guicommon.Trait
+20.100.product = java.awt.BasicStroke
+20.100.XCommand = No source transformation needed
+
+# Micro-architecture 1 similar at 100% with unknown pattern
+1.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+1.100.abstractproduct = java.awt.Rectangle
+1.100.concretefactory = net.phbwt.jtans.guicommon.Surface
+1.100.product = java.awt.Rectangle
+1.100.XCommand = No source transformation needed
+
+# Micro-architecture 3 similar at 100% with unknown pattern
+3.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+3.100.abstractproduct = java.awt.TexturePaint
+3.100.concretefactory = net.phbwt.jtans.guicommon.Surface
+3.100.product = java.awt.TexturePaint
+3.100.XCommand = No source transformation needed
+
+# Micro-architecture 10 similar at 100% with unknown pattern
+10.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+10.100.abstractproduct = java.awt.image.RescaleOp
+10.100.concretefactory = net.phbwt.jtans.guicommon.Surface
+10.100.product = java.awt.image.RescaleOp
+10.100.XCommand = No source transformation needed
+
+# Micro-architecture 13 similar at 100% with unknown pattern
+13.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+13.100.abstractproduct = java.io.BufferedReader
+13.100.concretefactory = net.phbwt.jtans.guicommon.FigureGroup
+13.100.product = java.io.BufferedReader
+13.100.XCommand = No source transformation needed
+
+# Micro-architecture 4 similar at 100% with unknown pattern
+4.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+4.100.abstractproduct = java.io.BufferedReader
+4.100.concretefactory = net.phbwt.jtans.guicommon.Surface
+4.100.product = java.io.BufferedReader
+4.100.XCommand = No source transformation needed
+
+# Micro-architecture 18 similar at 100% with unknown pattern
+18.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+18.100.abstractproduct = java.io.File
+18.100.concretefactory = net.phbwt.jtans.guicommon.FigureGroup
+18.100.product = java.io.File
+18.100.XCommand = No source transformation needed
+
+# Micro-architecture 8 similar at 100% with unknown pattern
+8.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+8.100.abstractproduct = java.io.File
+8.100.concretefactory = net.phbwt.jtans.guicommon.Surface
+8.100.product = java.io.File
+8.100.XCommand = No source transformation needed
+
+# Micro-architecture 11 similar at 100% with unknown pattern
+11.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+11.100.abstractproduct = java.io.InputStreamReader
+11.100.concretefactory = net.phbwt.jtans.guicommon.FigureGroup
+11.100.product = java.io.InputStreamReader
+11.100.XCommand = No source transformation needed
+
+# Micro-architecture 2 similar at 100% with unknown pattern
+2.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+2.100.abstractproduct = java.io.InputStreamReader
+2.100.concretefactory = net.phbwt.jtans.guicommon.Surface
+2.100.product = java.io.InputStreamReader
+2.100.XCommand = No source transformation needed
+
+# Micro-architecture 12 similar at 100% with unknown pattern
+12.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+12.100.abstractproduct = java.io.StreamTokenizer
+12.100.concretefactory = net.phbwt.jtans.guicommon.FigureGroup
+12.100.product = java.io.StreamTokenizer
+12.100.XCommand = No source transformation needed
+
+# Micro-architecture 19 similar at 100% with unknown pattern
+19.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+19.100.abstractproduct = java.lang.NoClassDefFoundError
+19.100.concretefactory = net.phbwt.jtans.guicommon.FigureGroup
+19.100.product = java.lang.NoClassDefFoundError
+19.100.XCommand = No source transformation needed
+
+# Micro-architecture 9 similar at 100% with unknown pattern
+9.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+9.100.abstractproduct = java.lang.NoClassDefFoundError
+9.100.concretefactory = net.phbwt.jtans.guicommon.Surface
+9.100.product = java.lang.NoClassDefFoundError
+9.100.XCommand = No source transformation needed
+
+# Micro-architecture 14 similar at 100% with unknown pattern
+14.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+14.100.abstractproduct = java.lang.RuntimeException
+14.100.concretefactory = net.phbwt.jtans.guicommon.FigureGroup
+14.100.product = java.lang.RuntimeException
+14.100.XCommand = No source transformation needed
+
+# Micro-architecture 5 similar at 100% with unknown pattern
+5.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+5.100.abstractproduct = java.lang.RuntimeException
+5.100.concretefactory = net.phbwt.jtans.guicommon.Surface
+5.100.product = java.lang.RuntimeException
+5.100.XCommand = No source transformation needed
+
+# Micro-architecture 15 similar at 100% with unknown pattern
+15.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+15.100.abstractproduct = java.util.ArrayList
+15.100.concretefactory = net.phbwt.jtans.guicommon.FigureGroup
+15.100.product = java.util.ArrayList
+15.100.XCommand = No source transformation needed
+
+# Micro-architecture 17 similar at 100% with unknown pattern
+17.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+17.100.abstractproduct = java.util.TreeSet
+17.100.concretefactory = net.phbwt.jtans.guicommon.FigureGroup
+17.100.product = java.util.TreeSet
+17.100.XCommand = No source transformation needed
+
+# Micro-architecture 7 similar at 100% with unknown pattern
+7.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+7.100.abstractproduct = java.util.TreeSet
+7.100.concretefactory = net.phbwt.jtans.guicommon.Surface
+7.100.product = java.util.TreeSet
+7.100.XCommand = No source transformation needed
+
+# Micro-architecture 6 similar at 100% with unknown pattern
+6.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+6.100.abstractproduct = javax.swing.ImageIcon
+6.100.concretefactory = net.phbwt.jtans.guicommon.Surface
+6.100.product = javax.swing.ImageIcon
+6.100.XCommand = No source transformation needed
+
+# Micro-architecture 16 similar at 100% with unknown pattern
+16.100.abstractfactory = net.phbwt.jtans.guicommon.Config$ConfigItem
+16.100.abstractproduct = net.phbwt.jtans.calc.CalcFigure$StoredFigure
+16.100.concretefactory = net.phbwt.jtans.guicommon.FigureGroup
+16.100.product = net.phbwt.jtans.calc.CalcFigure$StoredFigure
+16.100.XCommand = No source transformation needed
+

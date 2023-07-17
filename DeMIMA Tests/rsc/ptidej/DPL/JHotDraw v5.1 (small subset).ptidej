@@ -1,0 +1,3 @@
+[Ptidej Project]
+Name = JHotDraw v5.1 (small subset)
+JavaCode = ../../../../P-MARt Workspace/JHotDraw v5.1/bin/CH/ifa/draw/framework/Drawing.class;../../../../P-MARt Workspace/JHotDraw v5.1/bin/CH/ifa/draw/framework/Figure.class;../../../../P-MARt Workspace/JHotDraw v5.1/bin/CH/ifa/draw/standard/AbstractFigure.class;../../../../P-MARt Workspace/JHotDraw v5.1/bin/CH/ifa/draw/standard/CompositeFigure.class;../../../../P-MARt Workspace/JHotDraw v5.1/bin/CH/ifa/draw/figures/AttributeFigure.class;../../../../P-MARt Workspace/JHotDraw v5.1/bin/CH/ifa/draw/figures/PolyLineFigure.class;../../../../P-MARt Workspace/JHotDraw v5.1/bin/CH/ifa/draw/standard/DecoratorFigure.class

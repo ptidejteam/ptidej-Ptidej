@@ -1,0 +1,18 @@
+JSettlers_pack_game
+
+null
+Step	ProblemCreation	Solver	Total
+Ruled	0'0	0'0	0'1
+No Rule	0'0	0'12	0'12
+
+Var	DomainNoRule	DomainRuled	Reduction
+leaf	35	0	100%
+composite	35	35	0%
+component	35	35	0%
+
+Solutions	Total	Ghosted	Valabe
+Ruled	0	0	0
+No rule	1353	1283	70
+
+Inclusion:
+0 solutions included of 0

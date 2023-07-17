@@ -1,0 +1,4 @@
+[Extra Behavioral Information]
+
+Relation1 = addAggregationRelationship(ptidej.example.composite2.Paragraph, newRelation1, ptidej.example.composite2.IndentedParagraph, 2)
+Relation1 = addCompositionRelationship(ptidej.example.composite2.Document, newRelation2, ptidej.example.composite2.Main, 1)

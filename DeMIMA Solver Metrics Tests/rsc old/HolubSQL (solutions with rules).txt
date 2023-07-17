@@ -1,0 +1,80 @@
+# Micro-architecture 30 similar at 100% with Factory method Design Motif
+30.100.abstractfactory = com.holub.database.Table$Importer
+30.100.abstractproduct = com.holub.tools.ArrayIterator
+30.100.concretefactory = com.holub.database.CSVImporter
+30.100.Name = Factory method Design Motif
+30.100.product = com.holub.tools.ArrayIterator
+30.100.XCommand = System.out.println("No transformation required.");
+
+# Micro-architecture 18 similar at 100% with Factory method Design Motif
+18.100.abstractfactory = com.holub.database.Table
+18.100.abstractproduct = com.holub.database.Cursor
+18.100.concretefactory = com.holub.database.ConcreteTable
+18.100.Name = Factory method Design Motif
+18.100.product = com.holub.database.Cursor
+18.100.XCommand = System.out.println("No transformation required.");
+
+# Micro-architecture 16 similar at 100% with Factory method Design Motif
+16.100.abstractfactory = com.holub.database.Table
+16.100.abstractproduct = com.holub.database.Table
+16.100.concretefactory = com.holub.database.ConcreteTable
+16.100.Name = Factory method Design Motif
+16.100.product = com.holub.database.ConcreteTable
+16.100.XCommand = System.out.println("No transformation required.");
+
+# Micro-architecture 15 similar at 100% with Factory method Design Motif
+15.100.abstractfactory = com.holub.database.Table
+15.100.abstractproduct = com.holub.database.Table
+15.100.concretefactory = com.holub.database.ConcreteTable
+15.100.Name = Factory method Design Motif
+15.100.product = com.holub.database.Table
+15.100.XCommand = System.out.println("No transformation required.");
+
+# Micro-architecture 17 similar at 100% with Factory method Design Motif
+17.100.abstractfactory = com.holub.database.Table
+17.100.abstractproduct = com.holub.database.Table
+17.100.concretefactory = com.holub.database.ConcreteTable
+17.100.Name = Factory method Design Motif
+17.100.product = com.holub.database.UnmodifiableTable
+17.100.XCommand = System.out.println("No transformation required.");
+
+# Micro-architecture 14 similar at 100% with Factory method Design Motif
+14.100.abstractfactory = com.holub.database.Table
+14.100.abstractproduct = com.holub.tools.ArrayIterator
+14.100.concretefactory = com.holub.database.ConcreteTable
+14.100.Name = Factory method Design Motif
+14.100.product = com.holub.tools.ArrayIterator
+14.100.XCommand = System.out.println("No transformation required.");
+
+# Micro-architecture 1 similar at 100% with Factory method Design Motif
+1.100.abstractfactory = com.holub.database.jdbc.adapters.ConnectionAdapter
+1.100.abstractproduct = com.holub.database.jdbc.adapters.StatementAdapter
+1.100.concretefactory = com.holub.database.jdbc.JDBCConnection
+1.100.Name = Factory method Design Motif
+1.100.product = com.holub.database.jdbc.JDBCStatement
+1.100.XCommand = System.out.println("No transformation required.");
+
+# Micro-architecture 28 similar at 100% with Factory method Design Motif
+28.100.abstractfactory = com.holub.database.jdbc.adapters.ResultSetAdapter
+28.100.abstractproduct = com.holub.database.jdbc.adapters.ResultSetMetaDataAdapter
+28.100.concretefactory = com.holub.database.jdbc.JDBCResultSet
+28.100.Name = Factory method Design Motif
+28.100.product = com.holub.database.jdbc.JDBCResultSetMetaData
+28.100.XCommand = System.out.println("No transformation required.");
+
+# Micro-architecture 26 similar at 100% with Factory method Design Motif
+26.100.abstractfactory = com.holub.database.jdbc.adapters.StatementAdapter
+26.100.abstractproduct = com.holub.database.jdbc.JDBCResultSet
+26.100.concretefactory = com.holub.database.jdbc.JDBCStatement
+26.100.Name = Factory method Design Motif
+26.100.product = com.holub.database.jdbc.JDBCResultSet
+26.100.XCommand = System.out.println("No transformation required.");
+
+# Micro-architecture 27 similar at 100% with Factory method Design Motif
+27.100.abstractfactory = com.holub.database.jdbc.adapters.StatementAdapter
+27.100.abstractproduct = com.holub.database.jdbc.adapters.ResultSetAdapter
+27.100.concretefactory = com.holub.database.jdbc.JDBCStatement
+27.100.Name = Factory method Design Motif
+27.100.product = com.holub.database.jdbc.JDBCResultSet
+27.100.XCommand = System.out.println("No transformation required.");
+

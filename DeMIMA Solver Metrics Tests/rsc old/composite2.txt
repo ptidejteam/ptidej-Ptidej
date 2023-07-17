@@ -1,0 +1,18 @@
+composite2
+
+null
+Step	ProblemCreation	Solver	Total
+Ruled	0'0	0'0	0'1
+No Rule	0'0	0'2	0'2
+
+Var	DomainNoRule	DomainRuled	Reduction
+leaf	13	1	92%
+composite	13	13	0%
+component	13	13	0%
+
+Solutions	Total	Ghosted	Valabe
+Ruled	44	29	15
+No rule	165	125	40
+
+Inclusion:
+15 solutions included of 15

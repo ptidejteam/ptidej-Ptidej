@@ -1,0 +1,3 @@
+[Ptidej Project]
+Name = JUnit v3.7
+JavaCode = ../../../../P-MARt Workspace/JUnit v3.7/bin/junit/awtui/;../../../../P-MARt Workspace/JUnit v3.7/bin/junit/extensions/;../../../../P-MARt Workspace/JUnit v3.7/bin/junit/framework/;../../../../P-MARt Workspace/JUnit v3.7/bin/junit/runner/;../../../../P-MARt Workspace/JUnit v3.7/bin/junit/swingui/;../../../../P-MARt Workspace/JUnit v3.7/bin/junit/tests/;../../../../P-MARt Workspace/JUnit v3.7/bin/junit/textui/;../../../../P-MARt Workspace/JUnit v3.7/bin/junit/ui/

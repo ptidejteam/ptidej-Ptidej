@@ -1,0 +1,39 @@
+AF for JHotDraw Auto (fig,frame)
+
+null
+
+With rules
+	Problem creation: 0'6
+	Solving: 0'0
+	Total: 0'6
+	Total number of solutions: 0
+	Number of solutions with Ghosts: 0
+	Number of solutions without Ghosts: 0
+
+Without rule
+	Problem creation: 0'0
+	Solving: 0'7
+	Total: 0'7
+	Total number of solutions: 481
+	Number of solutions with Ghosts: 429
+	Number of solutions without Ghosts: 52
+
+Variable "abstractfactory"
+	Domain size without rule: 114
+	Domain size with rules: 21
+	Domain reduction: 81.57894736842105%
+Variable "abstractproduct"
+	Domain size without rule: 114
+	Domain size with rules: 14
+	Domain reduction: 87.71929824561403%
+Variable "product"
+	Domain size without rule: 114
+	Domain size with rules: 114
+	Domain reduction: 0.0%
+Variable "concretefactory"
+	Domain size without rule: 114
+	Domain size with rules: 114
+	Domain reduction: 0.0%
+
+Inclusion:
+0 solutions included of 0

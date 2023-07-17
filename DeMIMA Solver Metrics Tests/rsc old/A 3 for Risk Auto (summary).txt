@@ -1,0 +1,39 @@
+A 3 for Risk Auto
+
+null
+
+With rules
+	Problem creation: 0'0
+	Solving: 2'13
+	Total: 2'14
+	Total number of solutions: 1514
+	Number of solutions with Ghosts: 1503
+	Number of solutions without Ghosts: 11
+
+Without rule
+	Problem creation: 0'0
+	Solving: 40'5
+	Total: 40'5
+	Total number of solutions: 10709
+	Number of solutions with Ghosts: 10698
+	Number of solutions without Ghosts: 11
+
+Variable "target"
+	Domain size without rule: 256
+	Domain size with rules: 8
+	Domain reduction: 96.875%
+Variable "adapter"
+	Domain size without rule: 256
+	Domain size with rules: 256
+	Domain reduction: 0.0%
+Variable "adpatee"
+	Domain size without rule: 256
+	Domain size with rules: 256
+	Domain reduction: 0.0%
+Variable "client"
+	Domain size without rule: 256
+	Domain size with rules: 256
+	Domain reduction: 0.0%
+
+Inclusion:
+11 solutions included of 11

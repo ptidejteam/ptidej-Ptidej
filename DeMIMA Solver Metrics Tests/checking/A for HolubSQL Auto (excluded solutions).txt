@@ -1,0 +1,415 @@
+# Micro-architecture 10927 similar at 16% with Adapter Design Motif
+10927.16.adapter = com.holub.database.ConcreteTable
+10927.16.adpatee = com.holub.database.Cursor
+10927.16.client = com.holub.database.ConcreteTable
+10927.16.Name = Adapter Design Motif
+10927.16.target = com.holub.database.Table
+10927.16.XCommand = command
+
+# Micro-architecture 10979 similar at 16% with Adapter Design Motif
+10979.16.adapter = com.holub.database.ConcreteTable
+10979.16.adpatee = com.holub.database.Cursor
+10979.16.client = com.holub.database.Database
+10979.16.Name = Adapter Design Motif
+10979.16.target = com.holub.database.Table
+10979.16.XCommand = command
+
+# Micro-architecture 10953 similar at 16% with Adapter Design Motif
+10953.16.adapter = com.holub.database.ConcreteTable
+10953.16.adpatee = com.holub.database.Cursor
+10953.16.client = com.holub.database.UnmodifiableTable
+10953.16.Name = Adapter Design Motif
+10953.16.target = com.holub.database.Table
+10953.16.XCommand = command
+
+# Micro-architecture 10901 similar at 16% with Adapter Design Motif
+10901.16.adapter = com.holub.database.ConcreteTable
+10901.16.adpatee = com.holub.database.Cursor
+10901.16.client = com.holub.database.jdbc.JDBCStatement
+10901.16.Name = Adapter Design Motif
+10901.16.target = com.holub.database.Table
+10901.16.XCommand = command
+
+# Micro-architecture 10919 similar at 16% with Adapter Design Motif
+10919.16.adapter = com.holub.database.ConcreteTable
+10919.16.adpatee = com.holub.database.Selector
+10919.16.client = com.holub.database.ConcreteTable
+10919.16.Name = Adapter Design Motif
+10919.16.target = com.holub.database.Table
+10919.16.XCommand = command
+
+# Micro-architecture 10971 similar at 16% with Adapter Design Motif
+10971.16.adapter = com.holub.database.ConcreteTable
+10971.16.adpatee = com.holub.database.Selector
+10971.16.client = com.holub.database.Database
+10971.16.Name = Adapter Design Motif
+10971.16.target = com.holub.database.Table
+10971.16.XCommand = command
+
+# Micro-architecture 10945 similar at 16% with Adapter Design Motif
+10945.16.adapter = com.holub.database.ConcreteTable
+10945.16.adpatee = com.holub.database.Selector
+10945.16.client = com.holub.database.UnmodifiableTable
+10945.16.Name = Adapter Design Motif
+10945.16.target = com.holub.database.Table
+10945.16.XCommand = command
+
+# Micro-architecture 10893 similar at 16% with Adapter Design Motif
+10893.16.adapter = com.holub.database.ConcreteTable
+10893.16.adpatee = com.holub.database.Selector
+10893.16.client = com.holub.database.jdbc.JDBCStatement
+10893.16.Name = Adapter Design Motif
+10893.16.target = com.holub.database.Table
+10893.16.XCommand = command
+
+# Micro-architecture 10926 similar at 16% with Adapter Design Motif
+10926.16.adapter = com.holub.database.ConcreteTable
+10926.16.adpatee = com.holub.database.Table
+10926.16.client = com.holub.database.ConcreteTable
+10926.16.Name = Adapter Design Motif
+10926.16.target = com.holub.database.Table
+10926.16.XCommand = command
+
+# Micro-architecture 10978 similar at 16% with Adapter Design Motif
+10978.16.adapter = com.holub.database.ConcreteTable
+10978.16.adpatee = com.holub.database.Table
+10978.16.client = com.holub.database.Database
+10978.16.Name = Adapter Design Motif
+10978.16.target = com.holub.database.Table
+10978.16.XCommand = command
+
+# Micro-architecture 10952 similar at 16% with Adapter Design Motif
+10952.16.adapter = com.holub.database.ConcreteTable
+10952.16.adpatee = com.holub.database.Table
+10952.16.client = com.holub.database.UnmodifiableTable
+10952.16.Name = Adapter Design Motif
+10952.16.target = com.holub.database.Table
+10952.16.XCommand = command
+
+# Micro-architecture 10900 similar at 16% with Adapter Design Motif
+10900.16.adapter = com.holub.database.ConcreteTable
+10900.16.adpatee = com.holub.database.Table
+10900.16.client = com.holub.database.jdbc.JDBCStatement
+10900.16.Name = Adapter Design Motif
+10900.16.target = com.holub.database.Table
+10900.16.XCommand = command
+
+# Micro-architecture 10996 similar at 16% with Adapter Design Motif
+10996.16.adapter = com.holub.database.UnmodifiableTable
+10996.16.adpatee = com.holub.database.Table
+10996.16.client = com.holub.database.ConcreteTable
+10996.16.Name = Adapter Design Motif
+10996.16.target = com.holub.database.Table
+10996.16.XCommand = command
+
+# Micro-architecture 10998 similar at 16% with Adapter Design Motif
+10998.16.adapter = com.holub.database.UnmodifiableTable
+10998.16.adpatee = com.holub.database.Table
+10998.16.client = com.holub.database.Database
+10998.16.Name = Adapter Design Motif
+10998.16.target = com.holub.database.Table
+10998.16.XCommand = command
+
+# Micro-architecture 10997 similar at 16% with Adapter Design Motif
+10997.16.adapter = com.holub.database.UnmodifiableTable
+10997.16.adpatee = com.holub.database.Table
+10997.16.client = com.holub.database.UnmodifiableTable
+10997.16.Name = Adapter Design Motif
+10997.16.target = com.holub.database.Table
+10997.16.XCommand = command
+
+# Micro-architecture 10995 similar at 16% with Adapter Design Motif
+10995.16.adapter = com.holub.database.UnmodifiableTable
+10995.16.adpatee = com.holub.database.Table
+10995.16.client = com.holub.database.jdbc.JDBCStatement
+10995.16.Name = Adapter Design Motif
+10995.16.target = com.holub.database.Table
+10995.16.XCommand = command
+
+# Micro-architecture 7745 similar at 23% with Adapter Design Motif
+7745.23.adapter = com.holub.database.ConcreteTable
+7745.23.adpatee = com.holub.database.ConcreteTable$Undo
+7745.23.client = com.holub.database.ConcreteTable
+7745.23.Name = Adapter Design Motif
+7745.23.target = com.holub.database.Table
+7745.23.XCommand = command
+
+# Micro-architecture 7750 similar at 23% with Adapter Design Motif
+7750.23.adapter = com.holub.database.ConcreteTable
+7750.23.adpatee = com.holub.database.ConcreteTable
+7750.23.client = com.holub.database.ConcreteTable
+7750.23.Name = Adapter Design Motif
+7750.23.target = com.holub.database.Table
+7750.23.XCommand = command
+
+# Micro-architecture 7749 similar at 23% with Adapter Design Motif
+7749.23.adapter = com.holub.database.ConcreteTable
+7749.23.adpatee = com.holub.database.Table$Exporter
+7749.23.client = com.holub.database.ConcreteTable
+7749.23.Name = Adapter Design Motif
+7749.23.target = com.holub.database.Table
+7749.23.XCommand = command
+
+# Micro-architecture 7769 similar at 23% with Adapter Design Motif
+7769.23.adapter = com.holub.database.ConcreteTable
+7769.23.adpatee = com.holub.database.Table$Exporter
+7769.23.client = com.holub.database.UnmodifiableTable
+7769.23.Name = Adapter Design Motif
+7769.23.target = com.holub.database.Table
+7769.23.XCommand = command
+
+# Micro-architecture 7760 similar at 23% with Adapter Design Motif
+7760.23.adapter = com.holub.database.ConcreteTable
+7760.23.adpatee = com.holub.database.Table$Importer
+7760.23.client = com.holub.database.ConcreteTable
+7760.23.Name = Adapter Design Motif
+7760.23.target = com.holub.database.Table
+7760.23.XCommand = command
+
+# Micro-architecture 7751 similar at 23% with Adapter Design Motif
+7751.23.adapter = com.holub.database.ConcreteTable
+7751.23.adpatee = com.holub.database.UnmodifiableTable
+7751.23.client = com.holub.database.ConcreteTable
+7751.23.Name = Adapter Design Motif
+7751.23.target = com.holub.database.Table
+7751.23.XCommand = command
+
+# Micro-architecture 7791 similar at 23% with Adapter Design Motif
+7791.23.adapter = com.holub.database.ConcreteTable
+7791.23.adpatee = com.holub.database.UnmodifiableTable
+7791.23.client = com.holub.database.Database
+7791.23.Name = Adapter Design Motif
+7791.23.target = com.holub.database.Table
+7791.23.XCommand = command
+
+# Micro-architecture 7771 similar at 23% with Adapter Design Motif
+7771.23.adapter = com.holub.database.ConcreteTable
+7771.23.adpatee = com.holub.database.UnmodifiableTable
+7771.23.client = com.holub.database.UnmodifiableTable
+7771.23.Name = Adapter Design Motif
+7771.23.target = com.holub.database.Table
+7771.23.XCommand = command
+
+# Micro-architecture 7748 similar at 23% with Adapter Design Motif
+7748.23.adapter = com.holub.database.ConcreteTable
+7748.23.adpatee = com.holub.tools.ArrayIterator
+7748.23.client = com.holub.database.ConcreteTable
+7748.23.Name = Adapter Design Motif
+7748.23.target = com.holub.database.Table
+7748.23.XCommand = command
+
+# Micro-architecture 7804 similar at 23% with Adapter Design Motif
+7804.23.adapter = com.holub.database.UnmodifiableTable
+7804.23.adpatee = com.holub.database.UnmodifiableTable
+7804.23.client = com.holub.database.ConcreteTable
+7804.23.Name = Adapter Design Motif
+7804.23.target = com.holub.database.Table
+7804.23.XCommand = command
+
+# Micro-architecture 7806 similar at 23% with Adapter Design Motif
+7806.23.adapter = com.holub.database.UnmodifiableTable
+7806.23.adpatee = com.holub.database.UnmodifiableTable
+7806.23.client = com.holub.database.Database
+7806.23.Name = Adapter Design Motif
+7806.23.target = com.holub.database.Table
+7806.23.XCommand = command
+
+# Micro-architecture 7805 similar at 23% with Adapter Design Motif
+7805.23.adapter = com.holub.database.UnmodifiableTable
+7805.23.adpatee = com.holub.database.UnmodifiableTable
+7805.23.client = com.holub.database.UnmodifiableTable
+7805.23.Name = Adapter Design Motif
+7805.23.target = com.holub.database.Table
+7805.23.XCommand = command
+
+# Micro-architecture 5012 similar at 34% with Adapter Design Motif
+5012.34.adapter = com.holub.database.ConcreteTable
+5012.34.adpatee = com.holub.database.ConcreteTable
+5012.34.client = com.holub.database.Database
+5012.34.Name = Adapter Design Motif
+5012.34.target = com.holub.database.Table
+5012.34.XCommand = command
+
+# Micro-architecture 4995 similar at 34% with Adapter Design Motif
+4995.34.adapter = com.holub.database.ConcreteTable
+4995.34.adpatee = com.holub.database.ConcreteTable
+4995.34.client = com.holub.database.UnmodifiableTable
+4995.34.Name = Adapter Design Motif
+4995.34.target = com.holub.database.Table
+4995.34.XCommand = command
+
+# Micro-architecture 4976 similar at 34% with Adapter Design Motif
+4976.34.adapter = com.holub.database.ConcreteTable
+4976.34.adpatee = com.holub.database.ConcreteTable
+4976.34.client = com.holub.database.jdbc.JDBCStatement
+4976.34.Name = Adapter Design Motif
+4976.34.target = com.holub.database.Table
+4976.34.XCommand = command
+
+# Micro-architecture 5018 similar at 34% with Adapter Design Motif
+5018.34.adapter = com.holub.database.UnmodifiableTable
+5018.34.adpatee = com.holub.database.UnmodifiableTable
+5018.34.client = com.holub.database.jdbc.JDBCStatement
+5018.34.Name = Adapter Design Motif
+5018.34.target = com.holub.database.Table
+5018.34.XCommand = command
+
+# Micro-architecture 2391 similar at 49% with Adapter Design Motif
+2391.49.adapter = com.holub.database.ConcreteTable
+2391.49.adpatee = com.holub.database.ConcreteTable$Undo
+2391.49.client = com.holub.database.Database
+2391.49.Name = Adapter Design Motif
+2391.49.target = com.holub.database.Table
+2391.49.XCommand = command
+
+# Micro-architecture 2375 similar at 49% with Adapter Design Motif
+2375.49.adapter = com.holub.database.ConcreteTable
+2375.49.adpatee = com.holub.database.ConcreteTable$Undo
+2375.49.client = com.holub.database.UnmodifiableTable
+2375.49.Name = Adapter Design Motif
+2375.49.target = com.holub.database.Table
+2375.49.XCommand = command
+
+# Micro-architecture 2356 similar at 49% with Adapter Design Motif
+2356.49.adapter = com.holub.database.ConcreteTable
+2356.49.adpatee = com.holub.database.ConcreteTable$Undo
+2356.49.client = com.holub.database.jdbc.JDBCStatement
+2356.49.Name = Adapter Design Motif
+2356.49.target = com.holub.database.Table
+2356.49.XCommand = command
+
+# Micro-architecture 2394 similar at 49% with Adapter Design Motif
+2394.49.adapter = com.holub.database.ConcreteTable
+2394.49.adpatee = com.holub.database.Table$Exporter
+2394.49.client = com.holub.database.Database
+2394.49.Name = Adapter Design Motif
+2394.49.target = com.holub.database.Table
+2394.49.XCommand = command
+
+# Micro-architecture 2360 similar at 49% with Adapter Design Motif
+2360.49.adapter = com.holub.database.ConcreteTable
+2360.49.adpatee = com.holub.database.Table$Exporter
+2360.49.client = com.holub.database.jdbc.JDBCStatement
+2360.49.Name = Adapter Design Motif
+2360.49.target = com.holub.database.Table
+2360.49.XCommand = command
+
+# Micro-architecture 2399 similar at 49% with Adapter Design Motif
+2399.49.adapter = com.holub.database.ConcreteTable
+2399.49.adpatee = com.holub.database.Table$Importer
+2399.49.client = com.holub.database.Database
+2399.49.Name = Adapter Design Motif
+2399.49.target = com.holub.database.Table
+2399.49.XCommand = command
+
+# Micro-architecture 2387 similar at 49% with Adapter Design Motif
+2387.49.adapter = com.holub.database.ConcreteTable
+2387.49.adpatee = com.holub.database.Table$Importer
+2387.49.client = com.holub.database.UnmodifiableTable
+2387.49.Name = Adapter Design Motif
+2387.49.target = com.holub.database.Table
+2387.49.XCommand = command
+
+# Micro-architecture 2370 similar at 49% with Adapter Design Motif
+2370.49.adapter = com.holub.database.ConcreteTable
+2370.49.adpatee = com.holub.database.Table$Importer
+2370.49.client = com.holub.database.jdbc.JDBCStatement
+2370.49.Name = Adapter Design Motif
+2370.49.target = com.holub.database.Table
+2370.49.XCommand = command
+
+# Micro-architecture 2361 similar at 49% with Adapter Design Motif
+2361.49.adapter = com.holub.database.ConcreteTable
+2361.49.adpatee = com.holub.database.UnmodifiableTable
+2361.49.client = com.holub.database.jdbc.JDBCStatement
+2361.49.Name = Adapter Design Motif
+2361.49.target = com.holub.database.Table
+2361.49.XCommand = command
+
+# Micro-architecture 2393 similar at 49% with Adapter Design Motif
+2393.49.adapter = com.holub.database.ConcreteTable
+2393.49.adpatee = com.holub.tools.ArrayIterator
+2393.49.client = com.holub.database.Database
+2393.49.Name = Adapter Design Motif
+2393.49.target = com.holub.database.Table
+2393.49.XCommand = command
+
+# Micro-architecture 2378 similar at 49% with Adapter Design Motif
+2378.49.adapter = com.holub.database.ConcreteTable
+2378.49.adpatee = com.holub.tools.ArrayIterator
+2378.49.client = com.holub.database.UnmodifiableTable
+2378.49.Name = Adapter Design Motif
+2378.49.target = com.holub.database.Table
+2378.49.XCommand = command
+
+# Micro-architecture 2359 similar at 49% with Adapter Design Motif
+2359.49.adapter = com.holub.database.ConcreteTable
+2359.49.adpatee = com.holub.tools.ArrayIterator
+2359.49.client = com.holub.database.jdbc.JDBCStatement
+2359.49.Name = Adapter Design Motif
+2359.49.target = com.holub.database.Table
+2359.49.XCommand = command
+
+# Micro-architecture 23 similar at 70% with unknown pattern
+23.70.adapter = com.holub.database.ConcreteTable
+23.70.adpatee = com.holub.database.ConcreteTable$Undo
+23.70.client = com.holub.database.Database
+23.70.target = com.holub.database.Table
+23.70.XCommand = No source transformation needed
+
+# Micro-architecture 5 similar at 70% with unknown pattern
+5.70.adapter = com.holub.database.ConcreteTable
+5.70.adpatee = com.holub.database.ConcreteTable$Undo
+5.70.client = com.holub.database.jdbc.JDBCStatement
+5.70.target = com.holub.database.Table
+5.70.XCommand = No source transformation needed
+
+# Micro-architecture 26 similar at 70% with unknown pattern
+26.70.adapter = com.holub.database.ConcreteTable
+26.70.adpatee = com.holub.database.Table$Exporter
+26.70.client = com.holub.database.Database
+26.70.target = com.holub.database.Table
+26.70.XCommand = No source transformation needed
+
+# Micro-architecture 9 similar at 70% with unknown pattern
+9.70.adapter = com.holub.database.ConcreteTable
+9.70.adpatee = com.holub.database.Table$Exporter
+9.70.client = com.holub.database.jdbc.JDBCStatement
+9.70.target = com.holub.database.Table
+9.70.XCommand = No source transformation needed
+
+# Micro-architecture 31 similar at 70% with unknown pattern
+31.70.adapter = com.holub.database.ConcreteTable
+31.70.adpatee = com.holub.database.Table$Importer
+31.70.client = com.holub.database.Database
+31.70.target = com.holub.database.Table
+31.70.XCommand = No source transformation needed
+
+# Micro-architecture 19 similar at 70% with unknown pattern
+19.70.adapter = com.holub.database.ConcreteTable
+19.70.adpatee = com.holub.database.Table$Importer
+19.70.client = com.holub.database.jdbc.JDBCStatement
+19.70.target = com.holub.database.Table
+19.70.XCommand = No source transformation needed
+
+# Micro-architecture 10 similar at 70% with unknown pattern
+10.70.adapter = com.holub.database.ConcreteTable
+10.70.adpatee = com.holub.database.UnmodifiableTable
+10.70.client = com.holub.database.jdbc.JDBCStatement
+10.70.target = com.holub.database.Table
+10.70.XCommand = No source transformation needed
+
+# Micro-architecture 25 similar at 70% with unknown pattern
+25.70.adapter = com.holub.database.ConcreteTable
+25.70.adpatee = com.holub.tools.ArrayIterator
+25.70.client = com.holub.database.Database
+25.70.target = com.holub.database.Table
+25.70.XCommand = No source transformation needed
+
+# Micro-architecture 8 similar at 70% with unknown pattern
+8.70.adapter = com.holub.database.ConcreteTable
+8.70.adpatee = com.holub.tools.ArrayIterator
+8.70.client = com.holub.database.jdbc.JDBCStatement
+8.70.target = com.holub.database.Table
+8.70.XCommand = No source transformation needed
+

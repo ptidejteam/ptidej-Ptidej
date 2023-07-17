@@ -1,0 +1,18 @@
+Risk
+
+null
+Step	ProblemCreation	Solver	Total
+Ruled	0'10	0'0	0'11
+No Rule	0'0	55'0	55'0
+
+Var	DomainNoRule	DomainRuled	Reduction
+leaf	256	0	100%
+composite	256	256	0%
+component	256	256	0%
+
+Solutions	Total	Ghosted	Valabe
+Ruled	0	0	0
+No rule	14478	14406	72
+
+Inclusion:
+0 solutions included of 0

@@ -1,0 +1,504 @@
+# Micro-architecture 2665 similar at 2% with Composite Design Motif
+2665.2.component = soc.robot.SOCPossiblePiece
+2665.2.composite = soc.robot.SOCBuildingSpeedEstimate
+2665.2.leaf = soc.robot.SOCPossibleCity
+2665.2.Name = Composite Design Motif
+2665.2.XCommand = command
+
+# Micro-architecture 194 similar at 8% with Composite Design Motif
+194.8.component = soc.robot.SOCPossiblePiece
+194.8.composite = soc.robot.BoardNodeScorePair
+194.8.leaf = soc.robot.SOCPossibleCard
+194.8.Name = Composite Design Motif
+194.8.XCommand = command
+
+# Micro-architecture 299 similar at 8% with Composite Design Motif
+299.8.component = soc.robot.SOCPossiblePiece
+299.8.composite = soc.robot.BoardNodeScorePair
+299.8.leaf = soc.robot.SOCPossibleCity
+299.8.Name = Composite Design Motif
+299.8.XCommand = command
+
+# Micro-architecture 85 similar at 8% with Composite Design Motif
+85.8.component = soc.robot.SOCPossiblePiece
+85.8.composite = soc.robot.BoardNodeScorePair
+85.8.leaf = soc.robot.SOCPossibleRoad
+85.8.Name = Composite Design Motif
+85.8.XCommand = command
+
+# Micro-architecture 404 similar at 8% with Composite Design Motif
+404.8.component = soc.robot.SOCPossiblePiece
+404.8.composite = soc.robot.BoardNodeScorePair
+404.8.leaf = soc.robot.SOCPossibleSettlement
+404.8.Name = Composite Design Motif
+404.8.XCommand = command
+
+# Micro-architecture 183 similar at 8% with Composite Design Motif
+183.8.component = soc.robot.SOCPossiblePiece
+183.8.composite = soc.robot.SOCBuildPossibility
+183.8.leaf = soc.robot.SOCPossibleCard
+183.8.Name = Composite Design Motif
+183.8.XCommand = command
+
+# Micro-architecture 288 similar at 8% with Composite Design Motif
+288.8.component = soc.robot.SOCPossiblePiece
+288.8.composite = soc.robot.SOCBuildPossibility
+288.8.leaf = soc.robot.SOCPossibleCity
+288.8.Name = Composite Design Motif
+288.8.XCommand = command
+
+# Micro-architecture 75 similar at 8% with Composite Design Motif
+75.8.component = soc.robot.SOCPossiblePiece
+75.8.composite = soc.robot.SOCBuildPossibility
+75.8.leaf = soc.robot.SOCPossibleRoad
+75.8.Name = Composite Design Motif
+75.8.XCommand = command
+
+# Micro-architecture 393 similar at 8% with Composite Design Motif
+393.8.component = soc.robot.SOCPossiblePiece
+393.8.composite = soc.robot.SOCBuildPossibility
+393.8.leaf = soc.robot.SOCPossibleSettlement
+393.8.Name = Composite Design Motif
+393.8.XCommand = command
+
+# Micro-architecture 153 similar at 8% with Composite Design Motif
+153.8.component = soc.robot.SOCPossiblePiece
+153.8.composite = soc.robot.SOCBuildingSpeedEstimate
+153.8.leaf = soc.robot.SOCPossibleCard
+153.8.Name = Composite Design Motif
+153.8.XCommand = command
+
+# Micro-architecture 45 similar at 8% with Composite Design Motif
+45.8.component = soc.robot.SOCPossiblePiece
+45.8.composite = soc.robot.SOCBuildingSpeedEstimate
+45.8.leaf = soc.robot.SOCPossibleRoad
+45.8.Name = Composite Design Motif
+45.8.XCommand = command
+
+# Micro-architecture 364 similar at 8% with Composite Design Motif
+364.8.component = soc.robot.SOCPossiblePiece
+364.8.composite = soc.robot.SOCBuildingSpeedEstimate
+364.8.leaf = soc.robot.SOCPossibleSettlement
+364.8.Name = Composite Design Motif
+364.8.XCommand = command
+
+# Micro-architecture 242 similar at 8% with Composite Design Motif
+242.8.component = soc.robot.SOCPossiblePiece
+242.8.composite = soc.robot.SOCNumberProbabilities
+242.8.leaf = soc.robot.SOCPossibleCard
+242.8.Name = Composite Design Motif
+242.8.XCommand = command
+
+# Micro-architecture 346 similar at 8% with Composite Design Motif
+346.8.component = soc.robot.SOCPossiblePiece
+346.8.composite = soc.robot.SOCNumberProbabilities
+346.8.leaf = soc.robot.SOCPossibleCity
+346.8.Name = Composite Design Motif
+346.8.XCommand = command
+
+# Micro-architecture 134 similar at 8% with Composite Design Motif
+134.8.component = soc.robot.SOCPossiblePiece
+134.8.composite = soc.robot.SOCNumberProbabilities
+134.8.leaf = soc.robot.SOCPossibleRoad
+134.8.Name = Composite Design Motif
+134.8.XCommand = command
+
+# Micro-architecture 453 similar at 8% with Composite Design Motif
+453.8.component = soc.robot.SOCPossiblePiece
+453.8.composite = soc.robot.SOCNumberProbabilities
+453.8.leaf = soc.robot.SOCPossibleSettlement
+453.8.Name = Composite Design Motif
+453.8.XCommand = command
+
+# Micro-architecture 233 similar at 8% with Composite Design Motif
+233.8.component = soc.robot.SOCPossiblePiece
+233.8.composite = soc.robot.SOCPlayerAction
+233.8.leaf = soc.robot.SOCPossibleCard
+233.8.Name = Composite Design Motif
+233.8.XCommand = command
+
+# Micro-architecture 339 similar at 8% with Composite Design Motif
+339.8.component = soc.robot.SOCPossiblePiece
+339.8.composite = soc.robot.SOCPlayerAction
+339.8.leaf = soc.robot.SOCPossibleCity
+339.8.Name = Composite Design Motif
+339.8.XCommand = command
+
+# Micro-architecture 125 similar at 8% with Composite Design Motif
+125.8.component = soc.robot.SOCPossiblePiece
+125.8.composite = soc.robot.SOCPlayerAction
+125.8.leaf = soc.robot.SOCPossibleRoad
+125.8.Name = Composite Design Motif
+125.8.XCommand = command
+
+# Micro-architecture 444 similar at 8% with Composite Design Motif
+444.8.component = soc.robot.SOCPossiblePiece
+444.8.composite = soc.robot.SOCPlayerAction
+444.8.leaf = soc.robot.SOCPossibleSettlement
+444.8.Name = Composite Design Motif
+444.8.XCommand = command
+
+# Micro-architecture 256 similar at 8% with Composite Design Motif
+256.8.component = soc.robot.SOCPossiblePiece
+256.8.composite = soc.robot.SOCPlayerTracker
+256.8.leaf = soc.robot.SOCPossibleCard
+256.8.Name = Composite Design Motif
+256.8.XCommand = command
+
+# Micro-architecture 359 similar at 8% with Composite Design Motif
+359.8.component = soc.robot.SOCPossiblePiece
+359.8.composite = soc.robot.SOCPlayerTracker
+359.8.leaf = soc.robot.SOCPossibleCity
+359.8.Name = Composite Design Motif
+359.8.XCommand = command
+
+# Micro-architecture 148 similar at 8% with Composite Design Motif
+148.8.component = soc.robot.SOCPossiblePiece
+148.8.composite = soc.robot.SOCPlayerTracker
+148.8.leaf = soc.robot.SOCPossibleRoad
+148.8.Name = Composite Design Motif
+148.8.XCommand = command
+
+# Micro-architecture 466 similar at 8% with Composite Design Motif
+466.8.component = soc.robot.SOCPossiblePiece
+466.8.composite = soc.robot.SOCPlayerTracker
+466.8.leaf = soc.robot.SOCPossibleSettlement
+466.8.Name = Composite Design Motif
+466.8.XCommand = command
+
+# Micro-architecture 307 similar at 8% with Composite Design Motif
+307.8.component = soc.robot.SOCPossiblePiece
+307.8.composite = soc.robot.SOCPossibleCard
+307.8.leaf = soc.robot.SOCPossibleCity
+307.8.Name = Composite Design Motif
+307.8.XCommand = command
+
+# Micro-architecture 93 similar at 8% with Composite Design Motif
+93.8.component = soc.robot.SOCPossiblePiece
+93.8.composite = soc.robot.SOCPossibleCard
+93.8.leaf = soc.robot.SOCPossibleRoad
+93.8.Name = Composite Design Motif
+93.8.XCommand = command
+
+# Micro-architecture 412 similar at 8% with Composite Design Motif
+412.8.component = soc.robot.SOCPossiblePiece
+412.8.composite = soc.robot.SOCPossibleCard
+412.8.leaf = soc.robot.SOCPossibleSettlement
+412.8.Name = Composite Design Motif
+412.8.XCommand = command
+
+# Micro-architecture 238 similar at 8% with Composite Design Motif
+238.8.component = soc.robot.SOCPossiblePiece
+238.8.composite = soc.robot.SOCPossibleCity
+238.8.leaf = soc.robot.SOCPossibleCard
+238.8.Name = Composite Design Motif
+238.8.XCommand = command
+
+# Micro-architecture 130 similar at 8% with Composite Design Motif
+130.8.component = soc.robot.SOCPossiblePiece
+130.8.composite = soc.robot.SOCPossibleCity
+130.8.leaf = soc.robot.SOCPossibleRoad
+130.8.Name = Composite Design Motif
+130.8.XCommand = command
+
+# Micro-architecture 449 similar at 8% with Composite Design Motif
+449.8.component = soc.robot.SOCPossiblePiece
+449.8.composite = soc.robot.SOCPossibleCity
+449.8.leaf = soc.robot.SOCPossibleSettlement
+449.8.Name = Composite Design Motif
+449.8.XCommand = command
+
+# Micro-architecture 188 similar at 8% with Composite Design Motif
+188.8.component = soc.robot.SOCPossiblePiece
+188.8.composite = soc.robot.SOCPossibleRoad
+188.8.leaf = soc.robot.SOCPossibleCard
+188.8.Name = Composite Design Motif
+188.8.XCommand = command
+
+# Micro-architecture 293 similar at 8% with Composite Design Motif
+293.8.component = soc.robot.SOCPossiblePiece
+293.8.composite = soc.robot.SOCPossibleRoad
+293.8.leaf = soc.robot.SOCPossibleCity
+293.8.Name = Composite Design Motif
+293.8.XCommand = command
+
+# Micro-architecture 398 similar at 8% with Composite Design Motif
+398.8.component = soc.robot.SOCPossiblePiece
+398.8.composite = soc.robot.SOCPossibleRoad
+398.8.leaf = soc.robot.SOCPossibleSettlement
+398.8.Name = Composite Design Motif
+398.8.XCommand = command
+
+# Micro-architecture 250 similar at 8% with Composite Design Motif
+250.8.component = soc.robot.SOCPossiblePiece
+250.8.composite = soc.robot.SOCPossibleSettlement
+250.8.leaf = soc.robot.SOCPossibleCard
+250.8.Name = Composite Design Motif
+250.8.XCommand = command
+
+# Micro-architecture 353 similar at 8% with Composite Design Motif
+353.8.component = soc.robot.SOCPossiblePiece
+353.8.composite = soc.robot.SOCPossibleSettlement
+353.8.leaf = soc.robot.SOCPossibleCity
+353.8.Name = Composite Design Motif
+353.8.XCommand = command
+
+# Micro-architecture 142 similar at 8% with Composite Design Motif
+142.8.component = soc.robot.SOCPossiblePiece
+142.8.composite = soc.robot.SOCPossibleSettlement
+142.8.leaf = soc.robot.SOCPossibleRoad
+142.8.Name = Composite Design Motif
+142.8.XCommand = command
+
+# Micro-architecture 222 similar at 8% with Composite Design Motif
+222.8.component = soc.robot.SOCPossiblePiece
+222.8.composite = soc.robot.SOCResSetBuildTimePair
+222.8.leaf = soc.robot.SOCPossibleCard
+222.8.Name = Composite Design Motif
+222.8.XCommand = command
+
+# Micro-architecture 328 similar at 8% with Composite Design Motif
+328.8.component = soc.robot.SOCPossiblePiece
+328.8.composite = soc.robot.SOCResSetBuildTimePair
+328.8.leaf = soc.robot.SOCPossibleCity
+328.8.Name = Composite Design Motif
+328.8.XCommand = command
+
+# Micro-architecture 114 similar at 8% with Composite Design Motif
+114.8.component = soc.robot.SOCPossiblePiece
+114.8.composite = soc.robot.SOCResSetBuildTimePair
+114.8.leaf = soc.robot.SOCPossibleRoad
+114.8.Name = Composite Design Motif
+114.8.XCommand = command
+
+# Micro-architecture 433 similar at 8% with Composite Design Motif
+433.8.component = soc.robot.SOCPossiblePiece
+433.8.composite = soc.robot.SOCResSetBuildTimePair
+433.8.leaf = soc.robot.SOCPossibleSettlement
+433.8.Name = Composite Design Motif
+433.8.XCommand = command
+
+# Micro-architecture 202 similar at 8% with Composite Design Motif
+202.8.component = soc.robot.SOCPossiblePiece
+202.8.composite = soc.robot.SOCResSetBuildTypePair
+202.8.leaf = soc.robot.SOCPossibleCard
+202.8.Name = Composite Design Motif
+202.8.XCommand = command
+
+# Micro-architecture 308 similar at 8% with Composite Design Motif
+308.8.component = soc.robot.SOCPossiblePiece
+308.8.composite = soc.robot.SOCResSetBuildTypePair
+308.8.leaf = soc.robot.SOCPossibleCity
+308.8.Name = Composite Design Motif
+308.8.XCommand = command
+
+# Micro-architecture 94 similar at 8% with Composite Design Motif
+94.8.component = soc.robot.SOCPossiblePiece
+94.8.composite = soc.robot.SOCResSetBuildTypePair
+94.8.leaf = soc.robot.SOCPossibleRoad
+94.8.Name = Composite Design Motif
+94.8.XCommand = command
+
+# Micro-architecture 413 similar at 8% with Composite Design Motif
+413.8.component = soc.robot.SOCPossiblePiece
+413.8.composite = soc.robot.SOCResSetBuildTypePair
+413.8.leaf = soc.robot.SOCPossibleSettlement
+413.8.Name = Composite Design Motif
+413.8.XCommand = command
+
+# Micro-architecture 218 similar at 8% with Composite Design Motif
+218.8.component = soc.robot.SOCPossiblePiece
+218.8.composite = soc.robot.SOCRobotBrain
+218.8.leaf = soc.robot.SOCPossibleCard
+218.8.Name = Composite Design Motif
+218.8.XCommand = command
+
+# Micro-architecture 324 similar at 8% with Composite Design Motif
+324.8.component = soc.robot.SOCPossiblePiece
+324.8.composite = soc.robot.SOCRobotBrain
+324.8.leaf = soc.robot.SOCPossibleCity
+324.8.Name = Composite Design Motif
+324.8.XCommand = command
+
+# Micro-architecture 110 similar at 8% with Composite Design Motif
+110.8.component = soc.robot.SOCPossiblePiece
+110.8.composite = soc.robot.SOCRobotBrain
+110.8.leaf = soc.robot.SOCPossibleRoad
+110.8.Name = Composite Design Motif
+110.8.XCommand = command
+
+# Micro-architecture 429 similar at 8% with Composite Design Motif
+429.8.component = soc.robot.SOCPossiblePiece
+429.8.composite = soc.robot.SOCRobotBrain
+429.8.leaf = soc.robot.SOCPossibleSettlement
+429.8.Name = Composite Design Motif
+429.8.XCommand = command
+
+# Micro-architecture 248 similar at 8% with Composite Design Motif
+248.8.component = soc.robot.SOCPossiblePiece
+248.8.composite = soc.robot.SOCRobotClient
+248.8.leaf = soc.robot.SOCPossibleCard
+248.8.Name = Composite Design Motif
+248.8.XCommand = command
+
+# Micro-architecture 351 similar at 8% with Composite Design Motif
+351.8.component = soc.robot.SOCPossiblePiece
+351.8.composite = soc.robot.SOCRobotClient
+351.8.leaf = soc.robot.SOCPossibleCity
+351.8.Name = Composite Design Motif
+351.8.XCommand = command
+
+# Micro-architecture 140 similar at 8% with Composite Design Motif
+140.8.component = soc.robot.SOCPossiblePiece
+140.8.composite = soc.robot.SOCRobotClient
+140.8.leaf = soc.robot.SOCPossibleRoad
+140.8.Name = Composite Design Motif
+140.8.XCommand = command
+
+# Micro-architecture 459 similar at 8% with Composite Design Motif
+459.8.component = soc.robot.SOCPossiblePiece
+459.8.composite = soc.robot.SOCRobotClient
+459.8.leaf = soc.robot.SOCPossibleSettlement
+459.8.Name = Composite Design Motif
+459.8.XCommand = command
+
+# Micro-architecture 151 similar at 8% with Composite Design Motif
+151.8.component = soc.robot.SOCPossiblePiece
+151.8.composite = soc.robot.SOCRobotDM
+151.8.leaf = soc.robot.SOCPossibleCard
+151.8.Name = Composite Design Motif
+151.8.XCommand = command
+
+# Micro-architecture 259 similar at 8% with Composite Design Motif
+259.8.component = soc.robot.SOCPossiblePiece
+259.8.composite = soc.robot.SOCRobotDM
+259.8.leaf = soc.robot.SOCPossibleCity
+259.8.Name = Composite Design Motif
+259.8.XCommand = command
+
+# Micro-architecture 43 similar at 8% with Composite Design Motif
+43.8.component = soc.robot.SOCPossiblePiece
+43.8.composite = soc.robot.SOCRobotDM
+43.8.leaf = soc.robot.SOCPossibleRoad
+43.8.Name = Composite Design Motif
+43.8.XCommand = command
+
+# Micro-architecture 362 similar at 8% with Composite Design Motif
+362.8.component = soc.robot.SOCPossiblePiece
+362.8.composite = soc.robot.SOCRobotDM
+362.8.leaf = soc.robot.SOCPossibleSettlement
+362.8.Name = Composite Design Motif
+362.8.XCommand = command
+
+# Micro-architecture 185 similar at 8% with Composite Design Motif
+185.8.component = soc.robot.SOCPossiblePiece
+185.8.composite = soc.robot.SOCRobotNegotiator
+185.8.leaf = soc.robot.SOCPossibleCard
+185.8.Name = Composite Design Motif
+185.8.XCommand = command
+
+# Micro-architecture 290 similar at 8% with Composite Design Motif
+290.8.component = soc.robot.SOCPossiblePiece
+290.8.composite = soc.robot.SOCRobotNegotiator
+290.8.leaf = soc.robot.SOCPossibleCity
+290.8.Name = Composite Design Motif
+290.8.XCommand = command
+
+# Micro-architecture 77 similar at 8% with Composite Design Motif
+77.8.component = soc.robot.SOCPossiblePiece
+77.8.composite = soc.robot.SOCRobotNegotiator
+77.8.leaf = soc.robot.SOCPossibleRoad
+77.8.Name = Composite Design Motif
+77.8.XCommand = command
+
+# Micro-architecture 395 similar at 8% with Composite Design Motif
+395.8.component = soc.robot.SOCPossiblePiece
+395.8.composite = soc.robot.SOCRobotNegotiator
+395.8.leaf = soc.robot.SOCPossibleSettlement
+395.8.Name = Composite Design Motif
+395.8.XCommand = command
+
+# Micro-architecture 208 similar at 8% with Composite Design Motif
+208.8.component = soc.robot.SOCPossiblePiece
+208.8.composite = soc.robot.SOCRobotPinger
+208.8.leaf = soc.robot.SOCPossibleCard
+208.8.Name = Composite Design Motif
+208.8.XCommand = command
+
+# Micro-architecture 314 similar at 8% with Composite Design Motif
+314.8.component = soc.robot.SOCPossiblePiece
+314.8.composite = soc.robot.SOCRobotPinger
+314.8.leaf = soc.robot.SOCPossibleCity
+314.8.Name = Composite Design Motif
+314.8.XCommand = command
+
+# Micro-architecture 100 similar at 8% with Composite Design Motif
+100.8.component = soc.robot.SOCPossiblePiece
+100.8.composite = soc.robot.SOCRobotPinger
+100.8.leaf = soc.robot.SOCPossibleRoad
+100.8.Name = Composite Design Motif
+100.8.XCommand = command
+
+# Micro-architecture 419 similar at 8% with Composite Design Motif
+419.8.component = soc.robot.SOCPossiblePiece
+419.8.composite = soc.robot.SOCRobotPinger
+419.8.leaf = soc.robot.SOCPossibleSettlement
+419.8.Name = Composite Design Motif
+419.8.XCommand = command
+
+# Micro-architecture 258 similar at 8% with Composite Design Motif
+258.8.component = soc.robot.SOCPossiblePiece
+258.8.composite = soc.robot.SOCRobotResetThread
+258.8.leaf = soc.robot.SOCPossibleCard
+258.8.Name = Composite Design Motif
+258.8.XCommand = command
+
+# Micro-architecture 361 similar at 8% with Composite Design Motif
+361.8.component = soc.robot.SOCPossiblePiece
+361.8.composite = soc.robot.SOCRobotResetThread
+361.8.leaf = soc.robot.SOCPossibleCity
+361.8.Name = Composite Design Motif
+361.8.XCommand = command
+
+# Micro-architecture 150 similar at 8% with Composite Design Motif
+150.8.component = soc.robot.SOCPossiblePiece
+150.8.composite = soc.robot.SOCRobotResetThread
+150.8.leaf = soc.robot.SOCPossibleRoad
+150.8.Name = Composite Design Motif
+150.8.XCommand = command
+
+# Micro-architecture 468 similar at 8% with Composite Design Motif
+468.8.component = soc.robot.SOCPossiblePiece
+468.8.composite = soc.robot.SOCRobotResetThread
+468.8.leaf = soc.robot.SOCPossibleSettlement
+468.8.Name = Composite Design Motif
+468.8.XCommand = command
+
+# Micro-architecture 166 similar at 8% with Composite Design Motif
+166.8.component = soc.robot.SOCPossiblePiece
+166.8.composite = soc.robot.SOCTradeTree
+166.8.leaf = soc.robot.SOCPossibleCard
+166.8.Name = Composite Design Motif
+166.8.XCommand = command
+
+# Micro-architecture 272 similar at 8% with Composite Design Motif
+272.8.component = soc.robot.SOCPossiblePiece
+272.8.composite = soc.robot.SOCTradeTree
+272.8.leaf = soc.robot.SOCPossibleCity
+272.8.Name = Composite Design Motif
+272.8.XCommand = command
+
+# Micro-architecture 58 similar at 8% with Composite Design Motif
+58.8.component = soc.robot.SOCPossiblePiece
+58.8.composite = soc.robot.SOCTradeTree
+58.8.leaf = soc.robot.SOCPossibleRoad
+58.8.Name = Composite Design Motif
+58.8.XCommand = command
+
+# Micro-architecture 377 similar at 8% with Composite Design Motif
+377.8.component = soc.robot.SOCPossiblePiece
+377.8.composite = soc.robot.SOCTradeTree
+377.8.leaf = soc.robot.SOCPossibleSettlement
+377.8.Name = Composite Design Motif
+377.8.XCommand = command
+

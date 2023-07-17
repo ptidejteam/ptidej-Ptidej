@@ -1,0 +1,301 @@
+# Micro-architecture 353 similar at 100% with unknown pattern
+353.100.abstractfactory = CommandLine.CommandText
+353.100.abstractproduct = CommandLine.CommandText
+353.100.concretefactory = CommandLine.CommandText
+353.100.product = CommandLine.CommandText
+353.100.XCommand = No source transformation needed
+
+# Micro-architecture 358 similar at 100% with unknown pattern
+358.100.abstractfactory = CommandLine.CommandText
+358.100.abstractproduct = risk.Risk
+358.100.concretefactory = CommandLine.CommandText
+358.100.product = risk.Risk
+358.100.XCommand = No source transformation needed
+
+# Micro-architecture 724 similar at 100% with unknown pattern
+724.100.abstractfactory = FlashGUI.FlashRiskAdapter
+724.100.abstractproduct = FlashGUI.BattleDialog
+724.100.concretefactory = FlashGUI.FlashRiskAdapter
+724.100.product = FlashGUI.BattleDialog
+724.100.XCommand = No source transformation needed
+
+# Micro-architecture 736 similar at 100% with unknown pattern
+736.100.abstractfactory = FlashGUI.FlashRiskAdapter
+736.100.abstractproduct = FlashGUI.GameFrame
+736.100.concretefactory = FlashGUI.FlashRiskAdapter
+736.100.product = FlashGUI.GameFrame
+736.100.XCommand = No source transformation needed
+
+# Micro-architecture 730 similar at 100% with unknown pattern
+730.100.abstractfactory = FlashGUI.FlashRiskAdapter
+730.100.abstractproduct = FlashGUI.NewGameFrame
+730.100.concretefactory = FlashGUI.FlashRiskAdapter
+730.100.product = FlashGUI.NewGameFrame
+730.100.XCommand = No source transformation needed
+
+# Micro-architecture 733 similar at 100% with unknown pattern
+733.100.abstractfactory = FlashGUI.FlashRiskAdapter
+733.100.abstractproduct = risk.PicturePanel
+733.100.concretefactory = FlashGUI.FlashRiskAdapter
+733.100.product = risk.PicturePanel
+733.100.XCommand = No source transformation needed
+
+# Micro-architecture 898 similar at 100% with unknown pattern
+898.100.abstractfactory = FlashGUI.GameFrame
+898.100.abstractproduct = FlashGUI.MoveDialog
+898.100.concretefactory = FlashGUI.GameFrame
+898.100.product = FlashGUI.MoveDialog
+898.100.XCommand = No source transformation needed
+
+# Micro-architecture 295 similar at 100% with unknown pattern
+295.100.abstractfactory = FlashGUI.MainMenu
+295.100.abstractproduct = FlashGUI.FlashRiskAdapter
+295.100.concretefactory = FlashGUI.MainMenu
+295.100.product = FlashGUI.FlashRiskAdapter
+295.100.XCommand = No source transformation needed
+
+# Micro-architecture 307 similar at 100% with unknown pattern
+307.100.abstractfactory = FlashGUI.MainMenu
+307.100.abstractproduct = FlashGUI.JoinDialog
+307.100.concretefactory = FlashGUI.MainMenu
+307.100.product = FlashGUI.JoinDialog
+307.100.XCommand = No source transformation needed
+
+# Micro-architecture 289 similar at 100% with unknown pattern
+289.100.abstractfactory = FlashGUI.MainMenu
+289.100.abstractproduct = FlashGUI.MainMenu
+289.100.concretefactory = FlashGUI.MainMenu
+289.100.product = FlashGUI.MainMenu
+289.100.XCommand = No source transformation needed
+
+# Micro-architecture 300 similar at 100% with unknown pattern
+300.100.abstractfactory = FlashGUI.MainMenu
+300.100.abstractproduct = risk.AboutDialog
+300.100.concretefactory = FlashGUI.MainMenu
+300.100.product = risk.AboutDialog
+300.100.XCommand = No source transformation needed
+
+# Micro-architecture 298 similar at 100% with unknown pattern
+298.100.abstractfactory = FlashGUI.MainMenu
+298.100.abstractproduct = risk.RiskFileFilter
+298.100.concretefactory = FlashGUI.MainMenu
+298.100.product = risk.RiskFileFilter
+298.100.XCommand = No source transformation needed
+
+# Micro-architecture 303 similar at 100% with unknown pattern
+303.100.abstractfactory = FlashGUI.MainMenu
+303.100.abstractproduct = risk.Risk
+303.100.concretefactory = FlashGUI.MainMenu
+303.100.product = risk.Risk
+303.100.XCommand = No source transformation needed
+
+# Micro-architecture 296 similar at 100% with unknown pattern
+296.100.abstractfactory = FlashGUI.MainMenu
+296.100.abstractproduct = risk.RiskListener
+296.100.concretefactory = FlashGUI.MainMenu
+296.100.product = FlashGUI.FlashRiskAdapter
+296.100.XCommand = No source transformation needed
+
+# Micro-architecture 499 similar at 100% with unknown pattern
+499.100.abstractfactory = FlashGUI.NewGameFrame
+499.100.abstractproduct = risk.RiskFileFilter
+499.100.concretefactory = FlashGUI.NewGameFrame
+499.100.product = risk.RiskFileFilter
+499.100.XCommand = No source transformation needed
+
+# Micro-architecture 689 similar at 100% with unknown pattern
+689.100.abstractfactory = Increment1GUI.Increment1Frame
+689.100.abstractproduct = Increment1GUI.Increment1Frame
+689.100.concretefactory = Increment1GUI.Increment1Frame
+689.100.product = Increment1GUI.Increment1Frame
+689.100.XCommand = No source transformation needed
+
+# Micro-architecture 692 similar at 100% with unknown pattern
+692.100.abstractfactory = Increment1GUI.Increment1Frame
+692.100.abstractproduct = risk.AboutDialog
+692.100.concretefactory = Increment1GUI.Increment1Frame
+692.100.product = risk.AboutDialog
+692.100.XCommand = No source transformation needed
+
+# Micro-architecture 708 similar at 100% with unknown pattern
+708.100.abstractfactory = Increment1GUI.Increment1Frame
+708.100.abstractproduct = risk.Risk
+708.100.concretefactory = Increment1GUI.Increment1Frame
+708.100.product = risk.Risk
+708.100.XCommand = No source transformation needed
+
+# Micro-architecture 613 similar at 100% with unknown pattern
+613.100.abstractfactory = SimpleGUI.RiskGUI
+613.100.abstractproduct = SimpleGUI.RiskGUI
+613.100.concretefactory = SimpleGUI.RiskGUI
+613.100.product = SimpleGUI.RiskGUI
+613.100.XCommand = No source transformation needed
+
+# Micro-architecture 618 similar at 100% with unknown pattern
+618.100.abstractfactory = SimpleGUI.RiskGUI
+618.100.abstractproduct = risk.AboutDialog
+618.100.concretefactory = SimpleGUI.RiskGUI
+618.100.product = risk.AboutDialog
+618.100.XCommand = No source transformation needed
+
+# Micro-architecture 630 similar at 100% with unknown pattern
+630.100.abstractfactory = SimpleGUI.RiskGUI
+630.100.abstractproduct = risk.PicturePanel
+630.100.concretefactory = SimpleGUI.RiskGUI
+630.100.product = risk.PicturePanel
+630.100.XCommand = No source transformation needed
+
+# Micro-architecture 632 similar at 100% with unknown pattern
+632.100.abstractfactory = SimpleGUI.RiskGUI
+632.100.abstractproduct = risk.Risk
+632.100.concretefactory = SimpleGUI.RiskGUI
+632.100.product = risk.Risk
+632.100.XCommand = No source transformation needed
+
+# Micro-architecture 7 similar at 100% with unknown pattern
+7.100.abstractfactory = SwingGUI.SwingGUIFrame
+7.100.abstractproduct = SwingGUI.CardsDialog
+7.100.concretefactory = SwingGUI.SwingGUIFrame
+7.100.product = SwingGUI.CardsDialog
+7.100.XCommand = No source transformation needed
+
+# Micro-architecture 5 similar at 100% with unknown pattern
+5.100.abstractfactory = SwingGUI.SwingGUIFrame
+5.100.abstractproduct = SwingGUI.SwingGUIFrame
+5.100.concretefactory = SwingGUI.SwingGUIFrame
+5.100.product = SwingGUI.SwingGUIFrame
+5.100.XCommand = No source transformation needed
+
+# Micro-architecture 37 similar at 100% with unknown pattern
+37.100.abstractfactory = SwingGUI.SwingGUIFrame
+37.100.abstractproduct = risk.AboutDialog
+37.100.concretefactory = SwingGUI.SwingGUIFrame
+37.100.product = risk.AboutDialog
+37.100.XCommand = No source transformation needed
+
+# Micro-architecture 56 similar at 100% with unknown pattern
+56.100.abstractfactory = SwingGUI.SwingGUIFrame
+56.100.abstractproduct = risk.Risk
+56.100.concretefactory = SwingGUI.SwingGUIFrame
+56.100.product = risk.Risk
+56.100.XCommand = No source transformation needed
+
+# Micro-architecture 48 similar at 100% with unknown pattern
+48.100.abstractfactory = SwingGUI.SwingGUIFrame
+48.100.abstractproduct = risk.StatsPanel
+48.100.concretefactory = SwingGUI.SwingGUIFrame
+48.100.product = risk.StatsPanel
+48.100.XCommand = No source transformation needed
+
+# Micro-architecture 910 similar at 100% with unknown pattern
+910.100.abstractfactory = risk.API.Player
+910.100.abstractproduct = risk.API.Statistic
+910.100.concretefactory = risk.API.Player
+910.100.product = risk.API.Statistic
+910.100.XCommand = No source transformation needed
+
+# Micro-architecture 160 similar at 100% with unknown pattern
+160.100.abstractfactory = risk.API.RiskGame
+160.100.abstractproduct = risk.API.Card
+160.100.concretefactory = risk.API.RiskGame
+160.100.product = risk.API.Card
+160.100.XCommand = No source transformation needed
+
+# Micro-architecture 168 similar at 100% with unknown pattern
+168.100.abstractfactory = risk.API.RiskGame
+168.100.abstractproduct = risk.API.Continent
+168.100.concretefactory = risk.API.RiskGame
+168.100.product = risk.API.Continent
+168.100.XCommand = No source transformation needed
+
+# Micro-architecture 165 similar at 100% with unknown pattern
+165.100.abstractfactory = risk.API.RiskGame
+165.100.abstractproduct = risk.API.Country
+165.100.concretefactory = risk.API.RiskGame
+165.100.product = risk.API.Country
+165.100.XCommand = No source transformation needed
+
+# Micro-architecture 173 similar at 100% with unknown pattern
+173.100.abstractfactory = risk.API.RiskGame
+173.100.abstractproduct = risk.API.Mission
+173.100.concretefactory = risk.API.RiskGame
+173.100.product = risk.API.Mission
+173.100.XCommand = No source transformation needed
+
+# Micro-architecture 178 similar at 100% with unknown pattern
+178.100.abstractfactory = risk.API.RiskGame
+178.100.abstractproduct = risk.API.Player
+178.100.concretefactory = risk.API.RiskGame
+178.100.product = risk.API.Player
+178.100.XCommand = No source transformation needed
+
+# Micro-architecture 151 similar at 100% with unknown pattern
+151.100.abstractfactory = risk.API.RiskGame
+151.100.abstractproduct = risk.API.RiskGame
+151.100.concretefactory = risk.API.RiskGame
+151.100.product = risk.API.RiskGame
+151.100.XCommand = No source transformation needed
+
+# Micro-architecture 780 similar at 100% with unknown pattern
+780.100.abstractfactory = risk.ChatArea
+780.100.abstractproduct = risk.Chat
+780.100.concretefactory = risk.ChatArea
+780.100.product = risk.Chat
+780.100.XCommand = No source transformation needed
+
+# Micro-architecture 371 similar at 100% with unknown pattern
+371.100.abstractfactory = risk.ChatServerThread
+371.100.abstractproduct = risk.ChatReader
+371.100.concretefactory = risk.ChatServerThread
+371.100.product = risk.ChatReader
+371.100.XCommand = No source transformation needed
+
+# Micro-architecture 767 similar at 100% with unknown pattern
+767.100.abstractfactory = risk.ChatServer
+767.100.abstractproduct = risk.ChatArea
+767.100.concretefactory = risk.ChatServer
+767.100.product = risk.ChatArea
+767.100.XCommand = No source transformation needed
+
+# Micro-architecture 763 similar at 100% with unknown pattern
+763.100.abstractfactory = risk.ChatServer
+763.100.abstractproduct = risk.ChatServerThread
+763.100.concretefactory = risk.ChatServer
+763.100.product = risk.ChatServerThread
+763.100.XCommand = No source transformation needed
+
+# Micro-architecture 761 similar at 100% with unknown pattern
+761.100.abstractfactory = risk.ChatServer
+761.100.abstractproduct = risk.Chat
+761.100.concretefactory = risk.ChatServer
+761.100.product = risk.Chat
+761.100.XCommand = No source transformation needed
+
+# Micro-architecture 737 similar at 100% with unknown pattern
+737.100.abstractfactory = risk.RiskListener
+737.100.abstractproduct = FlashGUI.BattleDialog
+737.100.concretefactory = FlashGUI.FlashRiskAdapter
+737.100.product = FlashGUI.BattleDialog
+737.100.XCommand = No source transformation needed
+
+# Micro-architecture 749 similar at 100% with unknown pattern
+749.100.abstractfactory = risk.RiskListener
+749.100.abstractproduct = FlashGUI.GameFrame
+749.100.concretefactory = FlashGUI.FlashRiskAdapter
+749.100.product = FlashGUI.GameFrame
+749.100.XCommand = No source transformation needed
+
+# Micro-architecture 743 similar at 100% with unknown pattern
+743.100.abstractfactory = risk.RiskListener
+743.100.abstractproduct = FlashGUI.NewGameFrame
+743.100.concretefactory = FlashGUI.FlashRiskAdapter
+743.100.product = FlashGUI.NewGameFrame
+743.100.XCommand = No source transformation needed
+
+# Micro-architecture 746 similar at 100% with unknown pattern
+746.100.abstractfactory = risk.RiskListener
+746.100.abstractproduct = risk.PicturePanel
+746.100.concretefactory = FlashGUI.FlashRiskAdapter
+746.100.product = risk.PicturePanel
+746.100.XCommand = No source transformation needed
+

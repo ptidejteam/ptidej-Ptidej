@@ -1,0 +1,3367 @@
+# Micro-architecture 1 similar at 100% with unknown pattern
+1.100.abstractfactory = CH.ifa.draw.figures.ArrowTip
+1.100.abstractproduct = java.awt.Polygon
+1.100.concretefactory = CH.ifa.draw.figures.ArrowTip
+1.100.product = java.awt.Polygon
+1.100.XCommand = No source transformation needed
+
+# Micro-architecture 327 similar at 100% with unknown pattern
+327.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+327.100.abstractproduct = CH.ifa.draw.figures.ChopEllipseConnector
+327.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+327.100.product = CH.ifa.draw.figures.ChopEllipseConnector
+327.100.XCommand = No source transformation needed
+
+# Micro-architecture 347 similar at 100% with unknown pattern
+347.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+347.100.abstractproduct = CH.ifa.draw.figures.FigureAttributes
+347.100.concretefactory = CH.ifa.draw.figures.AttributeFigure
+347.100.product = CH.ifa.draw.figures.FigureAttributes
+347.100.XCommand = No source transformation needed
+
+# Micro-architecture 420 similar at 100% with unknown pattern
+420.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+420.100.abstractproduct = CH.ifa.draw.figures.FontSizeHandle
+420.100.concretefactory = CH.ifa.draw.figures.TextFigure
+420.100.product = CH.ifa.draw.figures.FontSizeHandle
+420.100.XCommand = No source transformation needed
+
+# Micro-architecture 445 similar at 100% with unknown pattern
+445.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+445.100.abstractproduct = CH.ifa.draw.figures.RadiusHandle
+445.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+445.100.product = CH.ifa.draw.figures.RadiusHandle
+445.100.XCommand = No source transformation needed
+
+# Micro-architecture 442 similar at 100% with unknown pattern
+442.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+442.100.abstractproduct = CH.ifa.draw.figures.ShortestDistanceConnector
+442.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+442.100.product = CH.ifa.draw.figures.ShortestDistanceConnector
+442.100.XCommand = No source transformation needed
+
+# Micro-architecture 241 similar at 100% with unknown pattern
+241.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+241.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+241.100.concretefactory = CH.ifa.draw.figures.ImageFigure
+241.100.product = CH.ifa.draw.framework.FigureChangeEvent
+241.100.XCommand = No source transformation needed
+
+# Micro-architecture 416 similar at 100% with unknown pattern
+416.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+416.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+416.100.concretefactory = CH.ifa.draw.figures.TextFigure
+416.100.product = CH.ifa.draw.framework.FigureChangeEvent
+416.100.XCommand = No source transformation needed
+
+# Micro-architecture 443 similar at 100% with unknown pattern
+443.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+443.100.abstractproduct = CH.ifa.draw.standard.AbstractConnector
+443.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+443.100.product = CH.ifa.draw.figures.ShortestDistanceConnector
+443.100.XCommand = No source transformation needed
+
+# Micro-architecture 446 similar at 100% with unknown pattern
+446.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+446.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+446.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+446.100.product = CH.ifa.draw.figures.RadiusHandle
+446.100.XCommand = No source transformation needed
+
+# Micro-architecture 326 similar at 100% with unknown pattern
+326.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+326.100.abstractproduct = CH.ifa.draw.standard.ChopBoxConnector
+326.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+326.100.product = CH.ifa.draw.figures.ChopEllipseConnector
+326.100.XCommand = No source transformation needed
+
+# Micro-architecture 421 similar at 100% with unknown pattern
+421.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+421.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+421.100.concretefactory = CH.ifa.draw.figures.TextFigure
+421.100.product = CH.ifa.draw.figures.FontSizeHandle
+421.100.XCommand = No source transformation needed
+
+# Micro-architecture 411 similar at 100% with unknown pattern
+411.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+411.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+411.100.concretefactory = CH.ifa.draw.figures.TextFigure
+411.100.product = CH.ifa.draw.standard.NullHandle
+411.100.XCommand = No source transformation needed
+
+# Micro-architecture 414 similar at 100% with unknown pattern
+414.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+414.100.abstractproduct = CH.ifa.draw.standard.OffsetLocator
+414.100.concretefactory = CH.ifa.draw.figures.TextFigure
+414.100.product = CH.ifa.draw.standard.OffsetLocator
+414.100.XCommand = No source transformation needed
+
+# Micro-architecture 343 similar at 100% with unknown pattern
+343.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+343.100.abstractproduct = java.awt.Color
+343.100.concretefactory = CH.ifa.draw.figures.AttributeFigure
+343.100.product = java.awt.Color
+343.100.XCommand = No source transformation needed
+
+# Micro-architecture 419 similar at 100% with unknown pattern
+419.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+419.100.abstractproduct = java.awt.Dimension
+419.100.concretefactory = CH.ifa.draw.figures.TextFigure
+419.100.product = java.awt.Dimension
+419.100.XCommand = No source transformation needed
+
+# Micro-architecture 413 similar at 100% with unknown pattern
+413.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+413.100.abstractproduct = java.awt.Font
+413.100.concretefactory = CH.ifa.draw.figures.TextFigure
+413.100.product = java.awt.Font
+413.100.XCommand = No source transformation needed
+
+# Micro-architecture 329 similar at 100% with unknown pattern
+329.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+329.100.abstractproduct = java.awt.Insets
+329.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+329.100.product = java.awt.Insets
+329.100.XCommand = No source transformation needed
+
+# Micro-architecture 448 similar at 100% with unknown pattern
+448.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+448.100.abstractproduct = java.awt.Insets
+448.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+448.100.product = java.awt.Insets
+448.100.XCommand = No source transformation needed
+
+# Micro-architecture 328 similar at 100% with unknown pattern
+328.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+328.100.abstractproduct = java.awt.Point
+328.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+328.100.product = java.awt.Point
+328.100.XCommand = No source transformation needed
+
+# Micro-architecture 260 similar at 100% with unknown pattern
+260.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+260.100.abstractproduct = java.awt.Point
+260.100.concretefactory = CH.ifa.draw.figures.RectangleFigure
+260.100.product = java.awt.Point
+260.100.XCommand = No source transformation needed
+
+# Micro-architecture 447 similar at 100% with unknown pattern
+447.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+447.100.abstractproduct = java.awt.Point
+447.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+447.100.product = java.awt.Point
+447.100.XCommand = No source transformation needed
+
+# Micro-architecture 325 similar at 100% with unknown pattern
+325.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+325.100.abstractproduct = java.awt.Rectangle
+325.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+325.100.product = java.awt.Rectangle
+325.100.XCommand = No source transformation needed
+
+# Micro-architecture 237 similar at 100% with unknown pattern
+237.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+237.100.abstractproduct = java.awt.Rectangle
+237.100.concretefactory = CH.ifa.draw.figures.ImageFigure
+237.100.product = java.awt.Rectangle
+237.100.XCommand = No source transformation needed
+
+# Micro-architecture 257 similar at 100% with unknown pattern
+257.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+257.100.abstractproduct = java.awt.Rectangle
+257.100.concretefactory = CH.ifa.draw.figures.RectangleFigure
+257.100.product = java.awt.Rectangle
+257.100.XCommand = No source transformation needed
+
+# Micro-architecture 444 similar at 100% with unknown pattern
+444.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+444.100.abstractproduct = java.awt.Rectangle
+444.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+444.100.product = java.awt.Rectangle
+444.100.XCommand = No source transformation needed
+
+# Micro-architecture 410 similar at 100% with unknown pattern
+410.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+410.100.abstractproduct = java.awt.Rectangle
+410.100.concretefactory = CH.ifa.draw.figures.TextFigure
+410.100.product = java.awt.Rectangle
+410.100.XCommand = No source transformation needed
+
+# Micro-architecture 345 similar at 100% with unknown pattern
+345.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+345.100.abstractproduct = java.io.Serializable
+345.100.concretefactory = CH.ifa.draw.figures.AttributeFigure
+345.100.product = CH.ifa.draw.figures.FigureAttributes
+345.100.XCommand = No source transformation needed
+
+# Micro-architecture 344 similar at 100% with unknown pattern
+344.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+344.100.abstractproduct = java.lang.Cloneable
+344.100.concretefactory = CH.ifa.draw.figures.AttributeFigure
+344.100.product = CH.ifa.draw.figures.FigureAttributes
+344.100.XCommand = No source transformation needed
+
+# Micro-architecture 342 similar at 100% with unknown pattern
+342.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+342.100.abstractproduct = java.lang.Integer
+342.100.concretefactory = CH.ifa.draw.figures.AttributeFigure
+342.100.product = java.lang.Integer
+342.100.XCommand = No source transformation needed
+
+# Micro-architecture 412 similar at 100% with unknown pattern
+412.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+412.100.abstractproduct = java.lang.Integer
+412.100.concretefactory = CH.ifa.draw.figures.TextFigure
+412.100.product = java.lang.Integer
+412.100.XCommand = No source transformation needed
+
+# Micro-architecture 346 similar at 100% with unknown pattern
+346.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+346.100.abstractproduct = java.lang.Object
+346.100.concretefactory = CH.ifa.draw.figures.AttributeFigure
+346.100.product = CH.ifa.draw.figures.FigureAttributes
+346.100.XCommand = No source transformation needed
+
+# Micro-architecture 415 similar at 100% with unknown pattern
+415.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+415.100.abstractproduct = java.lang.String
+415.100.concretefactory = CH.ifa.draw.figures.TextFigure
+415.100.product = java.lang.String
+415.100.XCommand = No source transformation needed
+
+# Micro-architecture 245 similar at 100% with unknown pattern
+245.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+245.100.abstractproduct = java.util.EventObject
+245.100.concretefactory = CH.ifa.draw.figures.ImageFigure
+245.100.product = CH.ifa.draw.framework.FigureChangeEvent
+245.100.XCommand = No source transformation needed
+
+# Micro-architecture 417 similar at 100% with unknown pattern
+417.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+417.100.abstractproduct = java.util.EventObject
+417.100.concretefactory = CH.ifa.draw.figures.TextFigure
+417.100.product = CH.ifa.draw.framework.FigureChangeEvent
+417.100.XCommand = No source transformation needed
+
+# Micro-architecture 449 similar at 100% with unknown pattern
+449.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+449.100.abstractproduct = java.util.Vector
+449.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+449.100.product = java.util.Vector
+449.100.XCommand = No source transformation needed
+
+# Micro-architecture 418 similar at 100% with unknown pattern
+418.100.abstractfactory = CH.ifa.draw.figures.AttributeFigure
+418.100.abstractproduct = java.util.Vector
+418.100.concretefactory = CH.ifa.draw.figures.TextFigure
+418.100.product = java.util.Vector
+418.100.XCommand = No source transformation needed
+
+# Micro-architecture 251 similar at 100% with unknown pattern
+251.100.abstractfactory = CH.ifa.draw.figures.BorderDecorator
+251.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+251.100.concretefactory = CH.ifa.draw.figures.BorderDecorator
+251.100.product = CH.ifa.draw.framework.FigureChangeEvent
+251.100.XCommand = No source transformation needed
+
+# Micro-architecture 250 similar at 100% with unknown pattern
+250.100.abstractfactory = CH.ifa.draw.figures.BorderDecorator
+250.100.abstractproduct = java.awt.Point
+250.100.concretefactory = CH.ifa.draw.figures.BorderDecorator
+250.100.product = java.awt.Point
+250.100.XCommand = No source transformation needed
+
+# Micro-architecture 252 similar at 100% with unknown pattern
+252.100.abstractfactory = CH.ifa.draw.figures.BorderDecorator
+252.100.abstractproduct = java.util.EventObject
+252.100.concretefactory = CH.ifa.draw.figures.BorderDecorator
+252.100.product = CH.ifa.draw.framework.FigureChangeEvent
+252.100.XCommand = No source transformation needed
+
+# Micro-architecture 335 similar at 100% with unknown pattern
+335.100.abstractfactory = CH.ifa.draw.figures.BorderTool
+335.100.abstractproduct = CH.ifa.draw.figures.BorderDecorator
+335.100.concretefactory = CH.ifa.draw.figures.BorderTool
+335.100.product = CH.ifa.draw.figures.BorderDecorator
+335.100.XCommand = No source transformation needed
+
+# Micro-architecture 334 similar at 100% with unknown pattern
+334.100.abstractfactory = CH.ifa.draw.figures.BorderTool
+334.100.abstractproduct = CH.ifa.draw.standard.DecoratorFigure
+334.100.concretefactory = CH.ifa.draw.figures.BorderTool
+334.100.product = CH.ifa.draw.figures.BorderDecorator
+334.100.XCommand = No source transformation needed
+
+# Micro-architecture 217 similar at 100% with unknown pattern
+217.100.abstractfactory = CH.ifa.draw.figures.ElbowConnection
+217.100.abstractproduct = CH.ifa.draw.figures.ElbowHandle
+217.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+217.100.product = CH.ifa.draw.figures.ElbowHandle
+217.100.XCommand = No source transformation needed
+
+# Micro-architecture 206 similar at 100% with unknown pattern
+206.100.abstractfactory = CH.ifa.draw.figures.ElbowConnection
+206.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+206.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+206.100.product = CH.ifa.draw.figures.ElbowHandle
+206.100.XCommand = No source transformation needed
+
+# Micro-architecture 184 similar at 100% with unknown pattern
+184.100.abstractfactory = CH.ifa.draw.figures.ElbowConnection
+184.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+184.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+184.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+184.100.XCommand = No source transformation needed
+
+# Micro-architecture 151 similar at 100% with unknown pattern
+151.100.abstractfactory = CH.ifa.draw.figures.ElbowConnection
+151.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+151.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+151.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+151.100.XCommand = No source transformation needed
+
+# Micro-architecture 162 similar at 100% with unknown pattern
+162.100.abstractfactory = CH.ifa.draw.figures.ElbowConnection
+162.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+162.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+162.100.product = CH.ifa.draw.standard.NullHandle
+162.100.XCommand = No source transformation needed
+
+# Micro-architecture 173 similar at 100% with unknown pattern
+173.100.abstractfactory = CH.ifa.draw.figures.ElbowConnection
+173.100.abstractproduct = java.awt.Point
+173.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+173.100.product = java.awt.Point
+173.100.XCommand = No source transformation needed
+
+# Micro-architecture 195 similar at 100% with unknown pattern
+195.100.abstractfactory = CH.ifa.draw.figures.ElbowConnection
+195.100.abstractproduct = java.util.Vector
+195.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+195.100.product = java.util.Vector
+195.100.XCommand = No source transformation needed
+
+# Micro-architecture 459 similar at 100% with unknown pattern
+459.100.abstractfactory = CH.ifa.draw.figures.ElbowHandle
+459.100.abstractproduct = java.awt.Point
+459.100.concretefactory = CH.ifa.draw.figures.ElbowHandle
+459.100.product = java.awt.Point
+459.100.XCommand = No source transformation needed
+
+# Micro-architecture 262 similar at 100% with unknown pattern
+262.100.abstractfactory = CH.ifa.draw.figures.ElbowTextLocator
+262.100.abstractproduct = java.awt.Point
+262.100.concretefactory = CH.ifa.draw.figures.ElbowTextLocator
+262.100.product = java.awt.Point
+262.100.XCommand = No source transformation needed
+
+# Micro-architecture 322 similar at 100% with unknown pattern
+322.100.abstractfactory = CH.ifa.draw.figures.EllipseFigure
+322.100.abstractproduct = CH.ifa.draw.figures.ChopEllipseConnector
+322.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+322.100.product = CH.ifa.draw.figures.ChopEllipseConnector
+322.100.XCommand = No source transformation needed
+
+# Micro-architecture 321 similar at 100% with unknown pattern
+321.100.abstractfactory = CH.ifa.draw.figures.EllipseFigure
+321.100.abstractproduct = CH.ifa.draw.standard.ChopBoxConnector
+321.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+321.100.product = CH.ifa.draw.figures.ChopEllipseConnector
+321.100.XCommand = No source transformation needed
+
+# Micro-architecture 324 similar at 100% with unknown pattern
+324.100.abstractfactory = CH.ifa.draw.figures.EllipseFigure
+324.100.abstractproduct = java.awt.Insets
+324.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+324.100.product = java.awt.Insets
+324.100.XCommand = No source transformation needed
+
+# Micro-architecture 323 similar at 100% with unknown pattern
+323.100.abstractfactory = CH.ifa.draw.figures.EllipseFigure
+323.100.abstractproduct = java.awt.Point
+323.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+323.100.product = java.awt.Point
+323.100.XCommand = No source transformation needed
+
+# Micro-architecture 320 similar at 100% with unknown pattern
+320.100.abstractfactory = CH.ifa.draw.figures.EllipseFigure
+320.100.abstractproduct = java.awt.Rectangle
+320.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+320.100.product = java.awt.Rectangle
+320.100.XCommand = No source transformation needed
+
+# Micro-architecture 480 similar at 100% with unknown pattern
+480.100.abstractfactory = CH.ifa.draw.figures.FigureAttributes
+480.100.abstractproduct = java.awt.Color
+480.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+480.100.product = java.awt.Color
+480.100.XCommand = No source transformation needed
+
+# Micro-architecture 478 similar at 100% with unknown pattern
+478.100.abstractfactory = CH.ifa.draw.figures.FigureAttributes
+478.100.abstractproduct = java.io.IOException
+478.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+478.100.product = java.io.IOException
+478.100.XCommand = No source transformation needed
+
+# Micro-architecture 481 similar at 100% with unknown pattern
+481.100.abstractfactory = CH.ifa.draw.figures.FigureAttributes
+481.100.abstractproduct = java.lang.Boolean
+481.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+481.100.product = java.lang.Boolean
+481.100.XCommand = No source transformation needed
+
+# Micro-architecture 477 similar at 100% with unknown pattern
+477.100.abstractfactory = CH.ifa.draw.figures.FigureAttributes
+477.100.abstractproduct = java.lang.Integer
+477.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+477.100.product = java.lang.Integer
+477.100.XCommand = No source transformation needed
+
+# Micro-architecture 479 similar at 100% with unknown pattern
+479.100.abstractfactory = CH.ifa.draw.figures.FigureAttributes
+479.100.abstractproduct = java.util.Hashtable
+479.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+479.100.product = java.util.Hashtable
+479.100.XCommand = No source transformation needed
+
+# Micro-architecture 460 similar at 100% with unknown pattern
+460.100.abstractfactory = CH.ifa.draw.figures.FontSizeHandle
+460.100.abstractproduct = java.awt.Font
+460.100.concretefactory = CH.ifa.draw.figures.FontSizeHandle
+460.100.product = java.awt.Font
+460.100.XCommand = No source transformation needed
+
+# Micro-architecture 272 similar at 100% with unknown pattern
+272.100.abstractfactory = CH.ifa.draw.figures.GroupFigure
+272.100.abstractproduct = CH.ifa.draw.figures.GroupHandle
+272.100.concretefactory = CH.ifa.draw.figures.GroupFigure
+272.100.product = CH.ifa.draw.figures.GroupHandle
+272.100.XCommand = No source transformation needed
+
+# Micro-architecture 273 similar at 100% with unknown pattern
+273.100.abstractfactory = CH.ifa.draw.figures.GroupFigure
+273.100.abstractproduct = CH.ifa.draw.standard.FigureEnumerator
+273.100.concretefactory = CH.ifa.draw.figures.GroupFigure
+273.100.product = CH.ifa.draw.standard.FigureEnumerator
+273.100.XCommand = No source transformation needed
+
+# Micro-architecture 271 similar at 100% with unknown pattern
+271.100.abstractfactory = CH.ifa.draw.figures.GroupFigure
+271.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+271.100.concretefactory = CH.ifa.draw.figures.GroupFigure
+271.100.product = CH.ifa.draw.figures.GroupHandle
+271.100.XCommand = No source transformation needed
+
+# Micro-architecture 274 similar at 100% with unknown pattern
+274.100.abstractfactory = CH.ifa.draw.figures.GroupFigure
+274.100.abstractproduct = java.util.Vector
+274.100.concretefactory = CH.ifa.draw.figures.GroupFigure
+274.100.product = java.util.Vector
+274.100.XCommand = No source transformation needed
+
+# Micro-architecture 239 similar at 100% with unknown pattern
+239.100.abstractfactory = CH.ifa.draw.figures.ImageFigure
+239.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+239.100.concretefactory = CH.ifa.draw.figures.ImageFigure
+239.100.product = CH.ifa.draw.framework.FigureChangeEvent
+239.100.XCommand = No source transformation needed
+
+# Micro-architecture 235 similar at 100% with unknown pattern
+235.100.abstractfactory = CH.ifa.draw.figures.ImageFigure
+235.100.abstractproduct = java.awt.Rectangle
+235.100.concretefactory = CH.ifa.draw.figures.ImageFigure
+235.100.product = java.awt.Rectangle
+235.100.XCommand = No source transformation needed
+
+# Micro-architecture 243 similar at 100% with unknown pattern
+243.100.abstractfactory = CH.ifa.draw.figures.ImageFigure
+243.100.abstractproduct = java.util.EventObject
+243.100.concretefactory = CH.ifa.draw.figures.ImageFigure
+243.100.product = CH.ifa.draw.framework.FigureChangeEvent
+243.100.XCommand = No source transformation needed
+
+# Micro-architecture 269 similar at 100% with unknown pattern
+269.100.abstractfactory = CH.ifa.draw.figures.InsertImageCommand
+269.100.abstractproduct = CH.ifa.draw.figures.AttributeFigure
+269.100.concretefactory = CH.ifa.draw.figures.InsertImageCommand
+269.100.product = CH.ifa.draw.figures.ImageFigure
+269.100.XCommand = No source transformation needed
+
+# Micro-architecture 267 similar at 100% with unknown pattern
+267.100.abstractfactory = CH.ifa.draw.figures.InsertImageCommand
+267.100.abstractproduct = CH.ifa.draw.figures.ImageFigure
+267.100.concretefactory = CH.ifa.draw.figures.InsertImageCommand
+267.100.product = CH.ifa.draw.figures.ImageFigure
+267.100.XCommand = No source transformation needed
+
+# Micro-architecture 268 similar at 100% with unknown pattern
+268.100.abstractfactory = CH.ifa.draw.figures.InsertImageCommand
+268.100.abstractproduct = CH.ifa.draw.standard.AbstractFigure
+268.100.concretefactory = CH.ifa.draw.figures.InsertImageCommand
+268.100.product = CH.ifa.draw.figures.ImageFigure
+268.100.XCommand = No source transformation needed
+
+# Micro-architecture 270 similar at 100% with unknown pattern
+270.100.abstractfactory = CH.ifa.draw.figures.InsertImageCommand
+270.100.abstractproduct = java.awt.image.ImageObserver
+270.100.concretefactory = CH.ifa.draw.figures.InsertImageCommand
+270.100.product = CH.ifa.draw.figures.ImageFigure
+270.100.XCommand = No source transformation needed
+
+# Micro-architecture 10 similar at 100% with unknown pattern
+10.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+10.100.abstractproduct = CH.ifa.draw.figures.ArrowTip
+10.100.concretefactory = CH.ifa.draw.figures.LineConnection
+10.100.product = CH.ifa.draw.figures.ArrowTip
+10.100.XCommand = No source transformation needed
+
+# Micro-architecture 216 similar at 100% with unknown pattern
+216.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+216.100.abstractproduct = CH.ifa.draw.figures.ElbowHandle
+216.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+216.100.product = CH.ifa.draw.figures.ElbowHandle
+216.100.XCommand = No source transformation needed
+
+# Micro-architecture 60 similar at 100% with unknown pattern
+60.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+60.100.abstractproduct = CH.ifa.draw.figures.LineDecoration
+60.100.concretefactory = CH.ifa.draw.figures.LineConnection
+60.100.product = CH.ifa.draw.figures.ArrowTip
+60.100.XCommand = No source transformation needed
+
+# Micro-architecture 120 similar at 100% with unknown pattern
+120.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+120.100.abstractproduct = CH.ifa.draw.figures.PolyLineHandle
+120.100.concretefactory = CH.ifa.draw.figures.LineConnection
+120.100.product = CH.ifa.draw.figures.PolyLineHandle
+120.100.XCommand = No source transformation needed
+
+# Micro-architecture 90 similar at 100% with unknown pattern
+90.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+90.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+90.100.concretefactory = CH.ifa.draw.figures.LineConnection
+90.100.product = CH.ifa.draw.framework.FigureChangeEvent
+90.100.XCommand = No source transformation needed
+
+# Micro-architecture 205 similar at 100% with unknown pattern
+205.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+205.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+205.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+205.100.product = CH.ifa.draw.figures.ElbowHandle
+205.100.XCommand = No source transformation needed
+
+# Micro-architecture 183 similar at 100% with unknown pattern
+183.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+183.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+183.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+183.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+183.100.XCommand = No source transformation needed
+
+# Micro-architecture 110 similar at 100% with unknown pattern
+110.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+110.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+110.100.concretefactory = CH.ifa.draw.figures.LineConnection
+110.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+110.100.XCommand = No source transformation needed
+
+# Micro-architecture 150 similar at 100% with unknown pattern
+150.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+150.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+150.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+150.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+150.100.XCommand = No source transformation needed
+
+# Micro-architecture 70 similar at 100% with unknown pattern
+70.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+70.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+70.100.concretefactory = CH.ifa.draw.figures.LineConnection
+70.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+70.100.XCommand = No source transformation needed
+
+# Micro-architecture 130 similar at 100% with unknown pattern
+130.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+130.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+130.100.concretefactory = CH.ifa.draw.figures.LineConnection
+130.100.product = CH.ifa.draw.figures.PolyLineHandle
+130.100.XCommand = No source transformation needed
+
+# Micro-architecture 161 similar at 100% with unknown pattern
+161.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+161.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+161.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+161.100.product = CH.ifa.draw.standard.NullHandle
+161.100.XCommand = No source transformation needed
+
+# Micro-architecture 30 similar at 100% with unknown pattern
+30.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+30.100.abstractproduct = CH.ifa.draw.util.Storable
+30.100.concretefactory = CH.ifa.draw.figures.LineConnection
+30.100.product = CH.ifa.draw.figures.ArrowTip
+30.100.XCommand = No source transformation needed
+
+# Micro-architecture 172 similar at 100% with unknown pattern
+172.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+172.100.abstractproduct = java.awt.Point
+172.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+172.100.product = java.awt.Point
+172.100.XCommand = No source transformation needed
+
+# Micro-architecture 80 similar at 100% with unknown pattern
+80.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+80.100.abstractproduct = java.awt.Point
+80.100.concretefactory = CH.ifa.draw.figures.LineConnection
+80.100.product = java.awt.Point
+80.100.XCommand = No source transformation needed
+
+# Micro-architecture 40 similar at 100% with unknown pattern
+40.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+40.100.abstractproduct = java.io.Serializable
+40.100.concretefactory = CH.ifa.draw.figures.LineConnection
+40.100.product = CH.ifa.draw.figures.ArrowTip
+40.100.XCommand = No source transformation needed
+
+# Micro-architecture 20 similar at 100% with unknown pattern
+20.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+20.100.abstractproduct = java.lang.Cloneable
+20.100.concretefactory = CH.ifa.draw.figures.LineConnection
+20.100.product = CH.ifa.draw.figures.ArrowTip
+20.100.XCommand = No source transformation needed
+
+# Micro-architecture 50 similar at 100% with unknown pattern
+50.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+50.100.abstractproduct = java.lang.Object
+50.100.concretefactory = CH.ifa.draw.figures.LineConnection
+50.100.product = CH.ifa.draw.figures.ArrowTip
+50.100.XCommand = No source transformation needed
+
+# Micro-architecture 100 similar at 100% with unknown pattern
+100.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+100.100.abstractproduct = java.util.EventObject
+100.100.concretefactory = CH.ifa.draw.figures.LineConnection
+100.100.product = CH.ifa.draw.framework.FigureChangeEvent
+100.100.XCommand = No source transformation needed
+
+# Micro-architecture 194 similar at 100% with unknown pattern
+194.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+194.100.abstractproduct = java.util.Vector
+194.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+194.100.product = java.util.Vector
+194.100.XCommand = No source transformation needed
+
+# Micro-architecture 140 similar at 100% with unknown pattern
+140.100.abstractfactory = CH.ifa.draw.figures.LineConnection
+140.100.abstractproduct = java.util.Vector
+140.100.concretefactory = CH.ifa.draw.figures.LineConnection
+140.100.product = java.util.Vector
+140.100.XCommand = No source transformation needed
+
+# Micro-architecture 6 similar at 100% with unknown pattern
+6.100.abstractfactory = CH.ifa.draw.figures.LineDecoration
+6.100.abstractproduct = java.awt.Polygon
+6.100.concretefactory = CH.ifa.draw.figures.ArrowTip
+6.100.product = java.awt.Polygon
+6.100.XCommand = No source transformation needed
+
+# Micro-architecture 228 similar at 100% with unknown pattern
+228.100.abstractfactory = CH.ifa.draw.figures.LineFigure
+228.100.abstractproduct = java.awt.Point
+228.100.concretefactory = CH.ifa.draw.figures.LineFigure
+228.100.product = java.awt.Point
+228.100.XCommand = No source transformation needed
+
+# Micro-architecture 254 similar at 100% with unknown pattern
+254.100.abstractfactory = CH.ifa.draw.figures.PolyLineConnector
+254.100.abstractproduct = java.awt.Point
+254.100.concretefactory = CH.ifa.draw.figures.PolyLineConnector
+254.100.product = java.awt.Point
+254.100.XCommand = No source transformation needed
+
+# Micro-architecture 16 similar at 100% with unknown pattern
+16.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+16.100.abstractproduct = CH.ifa.draw.figures.ArrowTip
+16.100.concretefactory = CH.ifa.draw.figures.LineConnection
+16.100.product = CH.ifa.draw.figures.ArrowTip
+16.100.XCommand = No source transformation needed
+
+# Micro-architecture 299 similar at 100% with unknown pattern
+299.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+299.100.abstractproduct = CH.ifa.draw.figures.ArrowTip
+299.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+299.100.product = CH.ifa.draw.figures.ArrowTip
+299.100.XCommand = No source transformation needed
+
+# Micro-architecture 223 similar at 100% with unknown pattern
+223.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+223.100.abstractproduct = CH.ifa.draw.figures.ElbowHandle
+223.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+223.100.product = CH.ifa.draw.figures.ElbowHandle
+223.100.XCommand = No source transformation needed
+
+# Micro-architecture 66 similar at 100% with unknown pattern
+66.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+66.100.abstractproduct = CH.ifa.draw.figures.LineDecoration
+66.100.concretefactory = CH.ifa.draw.figures.LineConnection
+66.100.product = CH.ifa.draw.figures.ArrowTip
+66.100.XCommand = No source transformation needed
+
+# Micro-architecture 304 similar at 100% with unknown pattern
+304.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+304.100.abstractproduct = CH.ifa.draw.figures.LineDecoration
+304.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+304.100.product = CH.ifa.draw.figures.ArrowTip
+304.100.XCommand = No source transformation needed
+
+# Micro-architecture 311 similar at 100% with unknown pattern
+311.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+311.100.abstractproduct = CH.ifa.draw.figures.PolyLineConnector
+311.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+311.100.product = CH.ifa.draw.figures.PolyLineConnector
+311.100.XCommand = No source transformation needed
+
+# Micro-architecture 126 similar at 100% with unknown pattern
+126.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+126.100.abstractproduct = CH.ifa.draw.figures.PolyLineHandle
+126.100.concretefactory = CH.ifa.draw.figures.LineConnection
+126.100.product = CH.ifa.draw.figures.PolyLineHandle
+126.100.XCommand = No source transformation needed
+
+# Micro-architecture 312 similar at 100% with unknown pattern
+312.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+312.100.abstractproduct = CH.ifa.draw.figures.PolyLineHandle
+312.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+312.100.product = CH.ifa.draw.figures.PolyLineHandle
+312.100.XCommand = No source transformation needed
+
+# Micro-architecture 308 similar at 100% with unknown pattern
+308.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+308.100.abstractproduct = CH.ifa.draw.figures.PolyLineLocator
+308.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+308.100.product = CH.ifa.draw.figures.PolyLineLocator
+308.100.XCommand = No source transformation needed
+
+# Micro-architecture 96 similar at 100% with unknown pattern
+96.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+96.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+96.100.concretefactory = CH.ifa.draw.figures.LineConnection
+96.100.product = CH.ifa.draw.framework.FigureChangeEvent
+96.100.XCommand = No source transformation needed
+
+# Micro-architecture 212 similar at 100% with unknown pattern
+212.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+212.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+212.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+212.100.product = CH.ifa.draw.figures.ElbowHandle
+212.100.XCommand = No source transformation needed
+
+# Micro-architecture 309 similar at 100% with unknown pattern
+309.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+309.100.abstractproduct = CH.ifa.draw.standard.AbstractLocator
+309.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+309.100.product = CH.ifa.draw.figures.PolyLineLocator
+309.100.XCommand = No source transformation needed
+
+# Micro-architecture 190 similar at 100% with unknown pattern
+190.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+190.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+190.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+190.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+190.100.XCommand = No source transformation needed
+
+# Micro-architecture 116 similar at 100% with unknown pattern
+116.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+116.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+116.100.concretefactory = CH.ifa.draw.figures.LineConnection
+116.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+116.100.XCommand = No source transformation needed
+
+# Micro-architecture 157 similar at 100% with unknown pattern
+157.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+157.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+157.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+157.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+157.100.XCommand = No source transformation needed
+
+# Micro-architecture 76 similar at 100% with unknown pattern
+76.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+76.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+76.100.concretefactory = CH.ifa.draw.figures.LineConnection
+76.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+76.100.XCommand = No source transformation needed
+
+# Micro-architecture 310 similar at 100% with unknown pattern
+310.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+310.100.abstractproduct = CH.ifa.draw.standard.ChopBoxConnector
+310.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+310.100.product = CH.ifa.draw.figures.PolyLineConnector
+310.100.XCommand = No source transformation needed
+
+# Micro-architecture 136 similar at 100% with unknown pattern
+136.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+136.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+136.100.concretefactory = CH.ifa.draw.figures.LineConnection
+136.100.product = CH.ifa.draw.figures.PolyLineHandle
+136.100.XCommand = No source transformation needed
+
+# Micro-architecture 313 similar at 100% with unknown pattern
+313.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+313.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+313.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+313.100.product = CH.ifa.draw.figures.PolyLineHandle
+313.100.XCommand = No source transformation needed
+
+# Micro-architecture 168 similar at 100% with unknown pattern
+168.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+168.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+168.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+168.100.product = CH.ifa.draw.standard.NullHandle
+168.100.XCommand = No source transformation needed
+
+# Micro-architecture 36 similar at 100% with unknown pattern
+36.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+36.100.abstractproduct = CH.ifa.draw.util.Storable
+36.100.concretefactory = CH.ifa.draw.figures.LineConnection
+36.100.product = CH.ifa.draw.figures.ArrowTip
+36.100.XCommand = No source transformation needed
+
+# Micro-architecture 301 similar at 100% with unknown pattern
+301.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+301.100.abstractproduct = CH.ifa.draw.util.Storable
+301.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+301.100.product = CH.ifa.draw.figures.ArrowTip
+301.100.XCommand = No source transformation needed
+
+# Micro-architecture 179 similar at 100% with unknown pattern
+179.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+179.100.abstractproduct = java.awt.Point
+179.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+179.100.product = java.awt.Point
+179.100.XCommand = No source transformation needed
+
+# Micro-architecture 86 similar at 100% with unknown pattern
+86.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+86.100.abstractproduct = java.awt.Point
+86.100.concretefactory = CH.ifa.draw.figures.LineConnection
+86.100.product = java.awt.Point
+86.100.XCommand = No source transformation needed
+
+# Micro-architecture 230 similar at 100% with unknown pattern
+230.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+230.100.abstractproduct = java.awt.Point
+230.100.concretefactory = CH.ifa.draw.figures.LineFigure
+230.100.product = java.awt.Point
+230.100.XCommand = No source transformation needed
+
+# Micro-architecture 307 similar at 100% with unknown pattern
+307.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+307.100.abstractproduct = java.awt.Point
+307.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+307.100.product = java.awt.Point
+307.100.XCommand = No source transformation needed
+
+# Micro-architecture 305 similar at 100% with unknown pattern
+305.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+305.100.abstractproduct = java.awt.Rectangle
+305.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+305.100.product = java.awt.Rectangle
+305.100.XCommand = No source transformation needed
+
+# Micro-architecture 46 similar at 100% with unknown pattern
+46.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+46.100.abstractproduct = java.io.Serializable
+46.100.concretefactory = CH.ifa.draw.figures.LineConnection
+46.100.product = CH.ifa.draw.figures.ArrowTip
+46.100.XCommand = No source transformation needed
+
+# Micro-architecture 302 similar at 100% with unknown pattern
+302.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+302.100.abstractproduct = java.io.Serializable
+302.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+302.100.product = CH.ifa.draw.figures.ArrowTip
+302.100.XCommand = No source transformation needed
+
+# Micro-architecture 26 similar at 100% with unknown pattern
+26.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+26.100.abstractproduct = java.lang.Cloneable
+26.100.concretefactory = CH.ifa.draw.figures.LineConnection
+26.100.product = CH.ifa.draw.figures.ArrowTip
+26.100.XCommand = No source transformation needed
+
+# Micro-architecture 300 similar at 100% with unknown pattern
+300.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+300.100.abstractproduct = java.lang.Cloneable
+300.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+300.100.product = CH.ifa.draw.figures.ArrowTip
+300.100.XCommand = No source transformation needed
+
+# Micro-architecture 306 similar at 100% with unknown pattern
+306.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+306.100.abstractproduct = java.lang.Integer
+306.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+306.100.product = java.lang.Integer
+306.100.XCommand = No source transformation needed
+
+# Micro-architecture 56 similar at 100% with unknown pattern
+56.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+56.100.abstractproduct = java.lang.Object
+56.100.concretefactory = CH.ifa.draw.figures.LineConnection
+56.100.product = CH.ifa.draw.figures.ArrowTip
+56.100.XCommand = No source transformation needed
+
+# Micro-architecture 303 similar at 100% with unknown pattern
+303.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+303.100.abstractproduct = java.lang.Object
+303.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+303.100.product = CH.ifa.draw.figures.ArrowTip
+303.100.XCommand = No source transformation needed
+
+# Micro-architecture 106 similar at 100% with unknown pattern
+106.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+106.100.abstractproduct = java.util.EventObject
+106.100.concretefactory = CH.ifa.draw.figures.LineConnection
+106.100.product = CH.ifa.draw.framework.FigureChangeEvent
+106.100.XCommand = No source transformation needed
+
+# Micro-architecture 201 similar at 100% with unknown pattern
+201.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+201.100.abstractproduct = java.util.Vector
+201.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+201.100.product = java.util.Vector
+201.100.XCommand = No source transformation needed
+
+# Micro-architecture 146 similar at 100% with unknown pattern
+146.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+146.100.abstractproduct = java.util.Vector
+146.100.concretefactory = CH.ifa.draw.figures.LineConnection
+146.100.product = java.util.Vector
+146.100.XCommand = No source transformation needed
+
+# Micro-architecture 314 similar at 100% with unknown pattern
+314.100.abstractfactory = CH.ifa.draw.figures.PolyLineFigure
+314.100.abstractproduct = java.util.Vector
+314.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+314.100.product = java.util.Vector
+314.100.XCommand = No source transformation needed
+
+# Micro-architecture 330 similar at 100% with unknown pattern
+330.100.abstractfactory = CH.ifa.draw.figures.PolyLineHandle
+330.100.abstractproduct = java.awt.Point
+330.100.concretefactory = CH.ifa.draw.figures.PolyLineHandle
+330.100.product = java.awt.Point
+330.100.XCommand = No source transformation needed
+
+# Micro-architecture 231 similar at 100% with unknown pattern
+231.100.abstractfactory = CH.ifa.draw.figures.PolyLineLocator
+231.100.abstractproduct = java.awt.Point
+231.100.concretefactory = CH.ifa.draw.figures.PolyLineLocator
+231.100.product = java.awt.Point
+231.100.XCommand = No source transformation needed
+
+# Micro-architecture 226 similar at 100% with unknown pattern
+226.100.abstractfactory = CH.ifa.draw.figures.RadiusHandle
+226.100.abstractproduct = java.awt.Point
+226.100.concretefactory = CH.ifa.draw.figures.RadiusHandle
+226.100.product = java.awt.Point
+226.100.XCommand = No source transformation needed
+
+# Micro-architecture 258 similar at 100% with unknown pattern
+258.100.abstractfactory = CH.ifa.draw.figures.RectangleFigure
+258.100.abstractproduct = java.awt.Point
+258.100.concretefactory = CH.ifa.draw.figures.RectangleFigure
+258.100.product = java.awt.Point
+258.100.XCommand = No source transformation needed
+
+# Micro-architecture 255 similar at 100% with unknown pattern
+255.100.abstractfactory = CH.ifa.draw.figures.RectangleFigure
+255.100.abstractproduct = java.awt.Rectangle
+255.100.concretefactory = CH.ifa.draw.figures.RectangleFigure
+255.100.product = java.awt.Rectangle
+255.100.XCommand = No source transformation needed
+
+# Micro-architecture 453 similar at 100% with unknown pattern
+453.100.abstractfactory = CH.ifa.draw.figures.RoundRectangleFigure
+453.100.abstractproduct = CH.ifa.draw.figures.RadiusHandle
+453.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+453.100.product = CH.ifa.draw.figures.RadiusHandle
+453.100.XCommand = No source transformation needed
+
+# Micro-architecture 450 similar at 100% with unknown pattern
+450.100.abstractfactory = CH.ifa.draw.figures.RoundRectangleFigure
+450.100.abstractproduct = CH.ifa.draw.figures.ShortestDistanceConnector
+450.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+450.100.product = CH.ifa.draw.figures.ShortestDistanceConnector
+450.100.XCommand = No source transformation needed
+
+# Micro-architecture 451 similar at 100% with unknown pattern
+451.100.abstractfactory = CH.ifa.draw.figures.RoundRectangleFigure
+451.100.abstractproduct = CH.ifa.draw.standard.AbstractConnector
+451.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+451.100.product = CH.ifa.draw.figures.ShortestDistanceConnector
+451.100.XCommand = No source transformation needed
+
+# Micro-architecture 454 similar at 100% with unknown pattern
+454.100.abstractfactory = CH.ifa.draw.figures.RoundRectangleFigure
+454.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+454.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+454.100.product = CH.ifa.draw.figures.RadiusHandle
+454.100.XCommand = No source transformation needed
+
+# Micro-architecture 456 similar at 100% with unknown pattern
+456.100.abstractfactory = CH.ifa.draw.figures.RoundRectangleFigure
+456.100.abstractproduct = java.awt.Insets
+456.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+456.100.product = java.awt.Insets
+456.100.XCommand = No source transformation needed
+
+# Micro-architecture 455 similar at 100% with unknown pattern
+455.100.abstractfactory = CH.ifa.draw.figures.RoundRectangleFigure
+455.100.abstractproduct = java.awt.Point
+455.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+455.100.product = java.awt.Point
+455.100.XCommand = No source transformation needed
+
+# Micro-architecture 452 similar at 100% with unknown pattern
+452.100.abstractfactory = CH.ifa.draw.figures.RoundRectangleFigure
+452.100.abstractproduct = java.awt.Rectangle
+452.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+452.100.product = java.awt.Rectangle
+452.100.XCommand = No source transformation needed
+
+# Micro-architecture 457 similar at 100% with unknown pattern
+457.100.abstractfactory = CH.ifa.draw.figures.RoundRectangleFigure
+457.100.abstractproduct = java.util.Vector
+457.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+457.100.product = java.util.Vector
+457.100.XCommand = No source transformation needed
+
+# Micro-architecture 282 similar at 100% with unknown pattern
+282.100.abstractfactory = CH.ifa.draw.figures.ScribbleTool
+282.100.abstractproduct = CH.ifa.draw.figures.PolyLineFigure
+282.100.concretefactory = CH.ifa.draw.figures.ScribbleTool
+282.100.product = CH.ifa.draw.figures.PolyLineFigure
+282.100.XCommand = No source transformation needed
+
+# Micro-architecture 281 similar at 100% with unknown pattern
+281.100.abstractfactory = CH.ifa.draw.figures.ScribbleTool
+281.100.abstractproduct = CH.ifa.draw.standard.AbstractFigure
+281.100.concretefactory = CH.ifa.draw.figures.ScribbleTool
+281.100.product = CH.ifa.draw.figures.PolyLineFigure
+281.100.XCommand = No source transformation needed
+
+# Micro-architecture 7 similar at 100% with unknown pattern
+7.100.abstractfactory = CH.ifa.draw.figures.ShortestDistanceConnector
+7.100.abstractproduct = java.awt.Point
+7.100.concretefactory = CH.ifa.draw.figures.ShortestDistanceConnector
+7.100.product = java.awt.Point
+7.100.XCommand = No source transformation needed
+
+# Micro-architecture 432 similar at 100% with unknown pattern
+432.100.abstractfactory = CH.ifa.draw.figures.TextFigure
+432.100.abstractproduct = CH.ifa.draw.figures.FontSizeHandle
+432.100.concretefactory = CH.ifa.draw.figures.TextFigure
+432.100.product = CH.ifa.draw.figures.FontSizeHandle
+432.100.XCommand = No source transformation needed
+
+# Micro-architecture 428 similar at 100% with unknown pattern
+428.100.abstractfactory = CH.ifa.draw.figures.TextFigure
+428.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+428.100.concretefactory = CH.ifa.draw.figures.TextFigure
+428.100.product = CH.ifa.draw.framework.FigureChangeEvent
+428.100.XCommand = No source transformation needed
+
+# Micro-architecture 433 similar at 100% with unknown pattern
+433.100.abstractfactory = CH.ifa.draw.figures.TextFigure
+433.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+433.100.concretefactory = CH.ifa.draw.figures.TextFigure
+433.100.product = CH.ifa.draw.figures.FontSizeHandle
+433.100.XCommand = No source transformation needed
+
+# Micro-architecture 423 similar at 100% with unknown pattern
+423.100.abstractfactory = CH.ifa.draw.figures.TextFigure
+423.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+423.100.concretefactory = CH.ifa.draw.figures.TextFigure
+423.100.product = CH.ifa.draw.standard.NullHandle
+423.100.XCommand = No source transformation needed
+
+# Micro-architecture 426 similar at 100% with unknown pattern
+426.100.abstractfactory = CH.ifa.draw.figures.TextFigure
+426.100.abstractproduct = CH.ifa.draw.standard.OffsetLocator
+426.100.concretefactory = CH.ifa.draw.figures.TextFigure
+426.100.product = CH.ifa.draw.standard.OffsetLocator
+426.100.XCommand = No source transformation needed
+
+# Micro-architecture 431 similar at 100% with unknown pattern
+431.100.abstractfactory = CH.ifa.draw.figures.TextFigure
+431.100.abstractproduct = java.awt.Dimension
+431.100.concretefactory = CH.ifa.draw.figures.TextFigure
+431.100.product = java.awt.Dimension
+431.100.XCommand = No source transformation needed
+
+# Micro-architecture 425 similar at 100% with unknown pattern
+425.100.abstractfactory = CH.ifa.draw.figures.TextFigure
+425.100.abstractproduct = java.awt.Font
+425.100.concretefactory = CH.ifa.draw.figures.TextFigure
+425.100.product = java.awt.Font
+425.100.XCommand = No source transformation needed
+
+# Micro-architecture 422 similar at 100% with unknown pattern
+422.100.abstractfactory = CH.ifa.draw.figures.TextFigure
+422.100.abstractproduct = java.awt.Rectangle
+422.100.concretefactory = CH.ifa.draw.figures.TextFigure
+422.100.product = java.awt.Rectangle
+422.100.XCommand = No source transformation needed
+
+# Micro-architecture 424 similar at 100% with unknown pattern
+424.100.abstractfactory = CH.ifa.draw.figures.TextFigure
+424.100.abstractproduct = java.lang.Integer
+424.100.concretefactory = CH.ifa.draw.figures.TextFigure
+424.100.product = java.lang.Integer
+424.100.XCommand = No source transformation needed
+
+# Micro-architecture 427 similar at 100% with unknown pattern
+427.100.abstractfactory = CH.ifa.draw.figures.TextFigure
+427.100.abstractproduct = java.lang.String
+427.100.concretefactory = CH.ifa.draw.figures.TextFigure
+427.100.product = java.lang.String
+427.100.XCommand = No source transformation needed
+
+# Micro-architecture 429 similar at 100% with unknown pattern
+429.100.abstractfactory = CH.ifa.draw.figures.TextFigure
+429.100.abstractproduct = java.util.EventObject
+429.100.concretefactory = CH.ifa.draw.figures.TextFigure
+429.100.product = CH.ifa.draw.framework.FigureChangeEvent
+429.100.XCommand = No source transformation needed
+
+# Micro-architecture 430 similar at 100% with unknown pattern
+430.100.abstractfactory = CH.ifa.draw.figures.TextFigure
+430.100.abstractproduct = java.util.Vector
+430.100.concretefactory = CH.ifa.draw.figures.TextFigure
+430.100.product = java.util.Vector
+430.100.XCommand = No source transformation needed
+
+# Micro-architecture 351 similar at 100% with unknown pattern
+351.100.abstractfactory = CH.ifa.draw.figures.TextTool
+351.100.abstractproduct = CH.ifa.draw.util.FloatingTextField
+351.100.concretefactory = CH.ifa.draw.figures.TextTool
+351.100.product = CH.ifa.draw.util.FloatingTextField
+351.100.XCommand = No source transformation needed
+
+# Micro-architecture 350 similar at 100% with unknown pattern
+350.100.abstractfactory = CH.ifa.draw.figures.TextTool
+350.100.abstractproduct = java.awt.Rectangle
+350.100.concretefactory = CH.ifa.draw.figures.TextTool
+350.100.product = java.awt.Rectangle
+350.100.XCommand = No source transformation needed
+
+# Micro-architecture 17 similar at 100% with unknown pattern
+17.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+17.100.abstractproduct = CH.ifa.draw.figures.ArrowTip
+17.100.concretefactory = CH.ifa.draw.figures.LineConnection
+17.100.product = CH.ifa.draw.figures.ArrowTip
+17.100.XCommand = No source transformation needed
+
+# Micro-architecture 224 similar at 100% with unknown pattern
+224.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+224.100.abstractproduct = CH.ifa.draw.figures.ElbowHandle
+224.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+224.100.product = CH.ifa.draw.figures.ElbowHandle
+224.100.XCommand = No source transformation needed
+
+# Micro-architecture 67 similar at 100% with unknown pattern
+67.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+67.100.abstractproduct = CH.ifa.draw.figures.LineDecoration
+67.100.concretefactory = CH.ifa.draw.figures.LineConnection
+67.100.product = CH.ifa.draw.figures.ArrowTip
+67.100.XCommand = No source transformation needed
+
+# Micro-architecture 127 similar at 100% with unknown pattern
+127.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+127.100.abstractproduct = CH.ifa.draw.figures.PolyLineHandle
+127.100.concretefactory = CH.ifa.draw.figures.LineConnection
+127.100.product = CH.ifa.draw.figures.PolyLineHandle
+127.100.XCommand = No source transformation needed
+
+# Micro-architecture 97 similar at 100% with unknown pattern
+97.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+97.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+97.100.concretefactory = CH.ifa.draw.figures.LineConnection
+97.100.product = CH.ifa.draw.framework.FigureChangeEvent
+97.100.XCommand = No source transformation needed
+
+# Micro-architecture 213 similar at 100% with unknown pattern
+213.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+213.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+213.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+213.100.product = CH.ifa.draw.figures.ElbowHandle
+213.100.XCommand = No source transformation needed
+
+# Micro-architecture 191 similar at 100% with unknown pattern
+191.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+191.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+191.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+191.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+191.100.XCommand = No source transformation needed
+
+# Micro-architecture 117 similar at 100% with unknown pattern
+117.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+117.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+117.100.concretefactory = CH.ifa.draw.figures.LineConnection
+117.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+117.100.XCommand = No source transformation needed
+
+# Micro-architecture 158 similar at 100% with unknown pattern
+158.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+158.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+158.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+158.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+158.100.XCommand = No source transformation needed
+
+# Micro-architecture 77 similar at 100% with unknown pattern
+77.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+77.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+77.100.concretefactory = CH.ifa.draw.figures.LineConnection
+77.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+77.100.XCommand = No source transformation needed
+
+# Micro-architecture 137 similar at 100% with unknown pattern
+137.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+137.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+137.100.concretefactory = CH.ifa.draw.figures.LineConnection
+137.100.product = CH.ifa.draw.figures.PolyLineHandle
+137.100.XCommand = No source transformation needed
+
+# Micro-architecture 169 similar at 100% with unknown pattern
+169.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+169.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+169.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+169.100.product = CH.ifa.draw.standard.NullHandle
+169.100.XCommand = No source transformation needed
+
+# Micro-architecture 37 similar at 100% with unknown pattern
+37.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+37.100.abstractproduct = CH.ifa.draw.util.Storable
+37.100.concretefactory = CH.ifa.draw.figures.LineConnection
+37.100.product = CH.ifa.draw.figures.ArrowTip
+37.100.XCommand = No source transformation needed
+
+# Micro-architecture 180 similar at 100% with unknown pattern
+180.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+180.100.abstractproduct = java.awt.Point
+180.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+180.100.product = java.awt.Point
+180.100.XCommand = No source transformation needed
+
+# Micro-architecture 87 similar at 100% with unknown pattern
+87.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+87.100.abstractproduct = java.awt.Point
+87.100.concretefactory = CH.ifa.draw.figures.LineConnection
+87.100.product = java.awt.Point
+87.100.XCommand = No source transformation needed
+
+# Micro-architecture 47 similar at 100% with unknown pattern
+47.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+47.100.abstractproduct = java.io.Serializable
+47.100.concretefactory = CH.ifa.draw.figures.LineConnection
+47.100.product = CH.ifa.draw.figures.ArrowTip
+47.100.XCommand = No source transformation needed
+
+# Micro-architecture 27 similar at 100% with unknown pattern
+27.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+27.100.abstractproduct = java.lang.Cloneable
+27.100.concretefactory = CH.ifa.draw.figures.LineConnection
+27.100.product = CH.ifa.draw.figures.ArrowTip
+27.100.XCommand = No source transformation needed
+
+# Micro-architecture 57 similar at 100% with unknown pattern
+57.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+57.100.abstractproduct = java.lang.Object
+57.100.concretefactory = CH.ifa.draw.figures.LineConnection
+57.100.product = CH.ifa.draw.figures.ArrowTip
+57.100.XCommand = No source transformation needed
+
+# Micro-architecture 107 similar at 100% with unknown pattern
+107.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+107.100.abstractproduct = java.util.EventObject
+107.100.concretefactory = CH.ifa.draw.figures.LineConnection
+107.100.product = CH.ifa.draw.framework.FigureChangeEvent
+107.100.XCommand = No source transformation needed
+
+# Micro-architecture 202 similar at 100% with unknown pattern
+202.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+202.100.abstractproduct = java.util.Vector
+202.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+202.100.product = java.util.Vector
+202.100.XCommand = No source transformation needed
+
+# Micro-architecture 147 similar at 100% with unknown pattern
+147.100.abstractfactory = CH.ifa.draw.framework.ConnectionFigure
+147.100.abstractproduct = java.util.Vector
+147.100.concretefactory = CH.ifa.draw.figures.LineConnection
+147.100.product = java.util.Vector
+147.100.XCommand = No source transformation needed
+
+# Micro-architecture 18 similar at 100% with unknown pattern
+18.100.abstractfactory = CH.ifa.draw.framework.Figure
+18.100.abstractproduct = CH.ifa.draw.figures.ArrowTip
+18.100.concretefactory = CH.ifa.draw.figures.LineConnection
+18.100.product = CH.ifa.draw.figures.ArrowTip
+18.100.XCommand = No source transformation needed
+
+# Micro-architecture 225 similar at 100% with unknown pattern
+225.100.abstractfactory = CH.ifa.draw.framework.Figure
+225.100.abstractproduct = CH.ifa.draw.figures.ElbowHandle
+225.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+225.100.product = CH.ifa.draw.figures.ElbowHandle
+225.100.XCommand = No source transformation needed
+
+# Micro-architecture 68 similar at 100% with unknown pattern
+68.100.abstractfactory = CH.ifa.draw.framework.Figure
+68.100.abstractproduct = CH.ifa.draw.figures.LineDecoration
+68.100.concretefactory = CH.ifa.draw.figures.LineConnection
+68.100.product = CH.ifa.draw.figures.ArrowTip
+68.100.XCommand = No source transformation needed
+
+# Micro-architecture 128 similar at 100% with unknown pattern
+128.100.abstractfactory = CH.ifa.draw.framework.Figure
+128.100.abstractproduct = CH.ifa.draw.figures.PolyLineHandle
+128.100.concretefactory = CH.ifa.draw.figures.LineConnection
+128.100.product = CH.ifa.draw.figures.PolyLineHandle
+128.100.XCommand = No source transformation needed
+
+# Micro-architecture 98 similar at 100% with unknown pattern
+98.100.abstractfactory = CH.ifa.draw.framework.Figure
+98.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+98.100.concretefactory = CH.ifa.draw.figures.LineConnection
+98.100.product = CH.ifa.draw.framework.FigureChangeEvent
+98.100.XCommand = No source transformation needed
+
+# Micro-architecture 214 similar at 100% with unknown pattern
+214.100.abstractfactory = CH.ifa.draw.framework.Figure
+214.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+214.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+214.100.product = CH.ifa.draw.figures.ElbowHandle
+214.100.XCommand = No source transformation needed
+
+# Micro-architecture 192 similar at 100% with unknown pattern
+192.100.abstractfactory = CH.ifa.draw.framework.Figure
+192.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+192.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+192.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+192.100.XCommand = No source transformation needed
+
+# Micro-architecture 118 similar at 100% with unknown pattern
+118.100.abstractfactory = CH.ifa.draw.framework.Figure
+118.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+118.100.concretefactory = CH.ifa.draw.figures.LineConnection
+118.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+118.100.XCommand = No source transformation needed
+
+# Micro-architecture 159 similar at 100% with unknown pattern
+159.100.abstractfactory = CH.ifa.draw.framework.Figure
+159.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+159.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+159.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+159.100.XCommand = No source transformation needed
+
+# Micro-architecture 78 similar at 100% with unknown pattern
+78.100.abstractfactory = CH.ifa.draw.framework.Figure
+78.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+78.100.concretefactory = CH.ifa.draw.figures.LineConnection
+78.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+78.100.XCommand = No source transformation needed
+
+# Micro-architecture 138 similar at 100% with unknown pattern
+138.100.abstractfactory = CH.ifa.draw.framework.Figure
+138.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+138.100.concretefactory = CH.ifa.draw.figures.LineConnection
+138.100.product = CH.ifa.draw.figures.PolyLineHandle
+138.100.XCommand = No source transformation needed
+
+# Micro-architecture 170 similar at 100% with unknown pattern
+170.100.abstractfactory = CH.ifa.draw.framework.Figure
+170.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+170.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+170.100.product = CH.ifa.draw.standard.NullHandle
+170.100.XCommand = No source transformation needed
+
+# Micro-architecture 38 similar at 100% with unknown pattern
+38.100.abstractfactory = CH.ifa.draw.framework.Figure
+38.100.abstractproduct = CH.ifa.draw.util.Storable
+38.100.concretefactory = CH.ifa.draw.figures.LineConnection
+38.100.product = CH.ifa.draw.figures.ArrowTip
+38.100.XCommand = No source transformation needed
+
+# Micro-architecture 233 similar at 100% with unknown pattern
+233.100.abstractfactory = CH.ifa.draw.framework.FigureChangeEvent
+233.100.abstractproduct = java.awt.Rectangle
+233.100.concretefactory = CH.ifa.draw.framework.FigureChangeEvent
+233.100.product = java.awt.Rectangle
+233.100.XCommand = No source transformation needed
+
+# Micro-architecture 13 similar at 100% with unknown pattern
+13.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+13.100.abstractproduct = CH.ifa.draw.figures.ArrowTip
+13.100.concretefactory = CH.ifa.draw.figures.LineConnection
+13.100.product = CH.ifa.draw.figures.ArrowTip
+13.100.XCommand = No source transformation needed
+
+# Micro-architecture 220 similar at 100% with unknown pattern
+220.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+220.100.abstractproduct = CH.ifa.draw.figures.ElbowHandle
+220.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+220.100.product = CH.ifa.draw.figures.ElbowHandle
+220.100.XCommand = No source transformation needed
+
+# Micro-architecture 384 similar at 100% with unknown pattern
+384.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+384.100.abstractproduct = CH.ifa.draw.figures.FontSizeHandle
+384.100.concretefactory = CH.ifa.draw.figures.TextFigure
+384.100.product = CH.ifa.draw.figures.FontSizeHandle
+384.100.XCommand = No source transformation needed
+
+# Micro-architecture 63 similar at 100% with unknown pattern
+63.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+63.100.abstractproduct = CH.ifa.draw.figures.LineDecoration
+63.100.concretefactory = CH.ifa.draw.figures.LineConnection
+63.100.product = CH.ifa.draw.figures.ArrowTip
+63.100.XCommand = No source transformation needed
+
+# Micro-architecture 123 similar at 100% with unknown pattern
+123.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+123.100.abstractproduct = CH.ifa.draw.figures.PolyLineHandle
+123.100.concretefactory = CH.ifa.draw.figures.LineConnection
+123.100.product = CH.ifa.draw.figures.PolyLineHandle
+123.100.XCommand = No source transformation needed
+
+# Micro-architecture 93 similar at 100% with unknown pattern
+93.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+93.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+93.100.concretefactory = CH.ifa.draw.figures.LineConnection
+93.100.product = CH.ifa.draw.framework.FigureChangeEvent
+93.100.XCommand = No source transformation needed
+
+# Micro-architecture 380 similar at 100% with unknown pattern
+380.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+380.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+380.100.concretefactory = CH.ifa.draw.figures.TextFigure
+380.100.product = CH.ifa.draw.framework.FigureChangeEvent
+380.100.XCommand = No source transformation needed
+
+# Micro-architecture 209 similar at 100% with unknown pattern
+209.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+209.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+209.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+209.100.product = CH.ifa.draw.figures.ElbowHandle
+209.100.XCommand = No source transformation needed
+
+# Micro-architecture 187 similar at 100% with unknown pattern
+187.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+187.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+187.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+187.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+187.100.XCommand = No source transformation needed
+
+# Micro-architecture 113 similar at 100% with unknown pattern
+113.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+113.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+113.100.concretefactory = CH.ifa.draw.figures.LineConnection
+113.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+113.100.XCommand = No source transformation needed
+
+# Micro-architecture 154 similar at 100% with unknown pattern
+154.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+154.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+154.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+154.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+154.100.XCommand = No source transformation needed
+
+# Micro-architecture 73 similar at 100% with unknown pattern
+73.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+73.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+73.100.concretefactory = CH.ifa.draw.figures.LineConnection
+73.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+73.100.XCommand = No source transformation needed
+
+# Micro-architecture 133 similar at 100% with unknown pattern
+133.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+133.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+133.100.concretefactory = CH.ifa.draw.figures.LineConnection
+133.100.product = CH.ifa.draw.figures.PolyLineHandle
+133.100.XCommand = No source transformation needed
+
+# Micro-architecture 385 similar at 100% with unknown pattern
+385.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+385.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+385.100.concretefactory = CH.ifa.draw.figures.TextFigure
+385.100.product = CH.ifa.draw.figures.FontSizeHandle
+385.100.XCommand = No source transformation needed
+
+# Micro-architecture 165 similar at 100% with unknown pattern
+165.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+165.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+165.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+165.100.product = CH.ifa.draw.standard.NullHandle
+165.100.XCommand = No source transformation needed
+
+# Micro-architecture 375 similar at 100% with unknown pattern
+375.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+375.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+375.100.concretefactory = CH.ifa.draw.figures.TextFigure
+375.100.product = CH.ifa.draw.standard.NullHandle
+375.100.XCommand = No source transformation needed
+
+# Micro-architecture 378 similar at 100% with unknown pattern
+378.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+378.100.abstractproduct = CH.ifa.draw.standard.OffsetLocator
+378.100.concretefactory = CH.ifa.draw.figures.TextFigure
+378.100.product = CH.ifa.draw.standard.OffsetLocator
+378.100.XCommand = No source transformation needed
+
+# Micro-architecture 33 similar at 100% with unknown pattern
+33.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+33.100.abstractproduct = CH.ifa.draw.util.Storable
+33.100.concretefactory = CH.ifa.draw.figures.LineConnection
+33.100.product = CH.ifa.draw.figures.ArrowTip
+33.100.XCommand = No source transformation needed
+
+# Micro-architecture 383 similar at 100% with unknown pattern
+383.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+383.100.abstractproduct = java.awt.Dimension
+383.100.concretefactory = CH.ifa.draw.figures.TextFigure
+383.100.product = java.awt.Dimension
+383.100.XCommand = No source transformation needed
+
+# Micro-architecture 377 similar at 100% with unknown pattern
+377.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+377.100.abstractproduct = java.awt.Font
+377.100.concretefactory = CH.ifa.draw.figures.TextFigure
+377.100.product = java.awt.Font
+377.100.XCommand = No source transformation needed
+
+# Micro-architecture 176 similar at 100% with unknown pattern
+176.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+176.100.abstractproduct = java.awt.Point
+176.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+176.100.product = java.awt.Point
+176.100.XCommand = No source transformation needed
+
+# Micro-architecture 83 similar at 100% with unknown pattern
+83.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+83.100.abstractproduct = java.awt.Point
+83.100.concretefactory = CH.ifa.draw.figures.LineConnection
+83.100.product = java.awt.Point
+83.100.XCommand = No source transformation needed
+
+# Micro-architecture 374 similar at 100% with unknown pattern
+374.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+374.100.abstractproduct = java.awt.Rectangle
+374.100.concretefactory = CH.ifa.draw.figures.TextFigure
+374.100.product = java.awt.Rectangle
+374.100.XCommand = No source transformation needed
+
+# Micro-architecture 43 similar at 100% with unknown pattern
+43.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+43.100.abstractproduct = java.io.Serializable
+43.100.concretefactory = CH.ifa.draw.figures.LineConnection
+43.100.product = CH.ifa.draw.figures.ArrowTip
+43.100.XCommand = No source transformation needed
+
+# Micro-architecture 23 similar at 100% with unknown pattern
+23.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+23.100.abstractproduct = java.lang.Cloneable
+23.100.concretefactory = CH.ifa.draw.figures.LineConnection
+23.100.product = CH.ifa.draw.figures.ArrowTip
+23.100.XCommand = No source transformation needed
+
+# Micro-architecture 376 similar at 100% with unknown pattern
+376.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+376.100.abstractproduct = java.lang.Integer
+376.100.concretefactory = CH.ifa.draw.figures.TextFigure
+376.100.product = java.lang.Integer
+376.100.XCommand = No source transformation needed
+
+# Micro-architecture 53 similar at 100% with unknown pattern
+53.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+53.100.abstractproduct = java.lang.Object
+53.100.concretefactory = CH.ifa.draw.figures.LineConnection
+53.100.product = CH.ifa.draw.figures.ArrowTip
+53.100.XCommand = No source transformation needed
+
+# Micro-architecture 379 similar at 100% with unknown pattern
+379.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+379.100.abstractproduct = java.lang.String
+379.100.concretefactory = CH.ifa.draw.figures.TextFigure
+379.100.product = java.lang.String
+379.100.XCommand = No source transformation needed
+
+# Micro-architecture 103 similar at 100% with unknown pattern
+103.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+103.100.abstractproduct = java.util.EventObject
+103.100.concretefactory = CH.ifa.draw.figures.LineConnection
+103.100.product = CH.ifa.draw.framework.FigureChangeEvent
+103.100.XCommand = No source transformation needed
+
+# Micro-architecture 381 similar at 100% with unknown pattern
+381.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+381.100.abstractproduct = java.util.EventObject
+381.100.concretefactory = CH.ifa.draw.figures.TextFigure
+381.100.product = CH.ifa.draw.framework.FigureChangeEvent
+381.100.XCommand = No source transformation needed
+
+# Micro-architecture 198 similar at 100% with unknown pattern
+198.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+198.100.abstractproduct = java.util.Vector
+198.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+198.100.product = java.util.Vector
+198.100.XCommand = No source transformation needed
+
+# Micro-architecture 143 similar at 100% with unknown pattern
+143.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+143.100.abstractproduct = java.util.Vector
+143.100.concretefactory = CH.ifa.draw.figures.LineConnection
+143.100.product = java.util.Vector
+143.100.XCommand = No source transformation needed
+
+# Micro-architecture 382 similar at 100% with unknown pattern
+382.100.abstractfactory = CH.ifa.draw.framework.FigureChangeListener
+382.100.abstractproduct = java.util.Vector
+382.100.concretefactory = CH.ifa.draw.figures.TextFigure
+382.100.product = java.util.Vector
+382.100.XCommand = No source transformation needed
+
+# Micro-architecture 359 similar at 100% with unknown pattern
+359.100.abstractfactory = CH.ifa.draw.framework.FigureSelection
+359.100.abstractproduct = CH.ifa.draw.util.StorableInput
+359.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+359.100.product = CH.ifa.draw.util.StorableInput
+359.100.XCommand = No source transformation needed
+
+# Micro-architecture 360 similar at 100% with unknown pattern
+360.100.abstractfactory = CH.ifa.draw.framework.FigureSelection
+360.100.abstractproduct = CH.ifa.draw.util.StorableOutput
+360.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+360.100.product = CH.ifa.draw.util.StorableOutput
+360.100.XCommand = No source transformation needed
+
+# Micro-architecture 357 similar at 100% with unknown pattern
+357.100.abstractfactory = CH.ifa.draw.framework.FigureSelection
+357.100.abstractproduct = java.io.ByteArrayInputStream
+357.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+357.100.product = java.io.ByteArrayInputStream
+357.100.XCommand = No source transformation needed
+
+# Micro-architecture 358 similar at 100% with unknown pattern
+358.100.abstractfactory = CH.ifa.draw.framework.FigureSelection
+358.100.abstractproduct = java.io.ByteArrayOutputStream
+358.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+358.100.product = java.io.ByteArrayOutputStream
+358.100.XCommand = No source transformation needed
+
+# Micro-architecture 361 similar at 100% with unknown pattern
+361.100.abstractfactory = CH.ifa.draw.framework.FigureSelection
+361.100.abstractproduct = java.util.Vector
+361.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+361.100.product = java.util.Vector
+361.100.XCommand = No source transformation needed
+
+# Micro-architecture 181 similar at 100% with unknown pattern
+181.100.abstractfactory = CH.ifa.draw.framework.Figure
+181.100.abstractproduct = java.awt.Point
+181.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+181.100.product = java.awt.Point
+181.100.XCommand = No source transformation needed
+
+# Micro-architecture 88 similar at 100% with unknown pattern
+88.100.abstractfactory = CH.ifa.draw.framework.Figure
+88.100.abstractproduct = java.awt.Point
+88.100.concretefactory = CH.ifa.draw.figures.LineConnection
+88.100.product = java.awt.Point
+88.100.XCommand = No source transformation needed
+
+# Micro-architecture 48 similar at 100% with unknown pattern
+48.100.abstractfactory = CH.ifa.draw.framework.Figure
+48.100.abstractproduct = java.io.Serializable
+48.100.concretefactory = CH.ifa.draw.figures.LineConnection
+48.100.product = CH.ifa.draw.figures.ArrowTip
+48.100.XCommand = No source transformation needed
+
+# Micro-architecture 28 similar at 100% with unknown pattern
+28.100.abstractfactory = CH.ifa.draw.framework.Figure
+28.100.abstractproduct = java.lang.Cloneable
+28.100.concretefactory = CH.ifa.draw.figures.LineConnection
+28.100.product = CH.ifa.draw.figures.ArrowTip
+28.100.XCommand = No source transformation needed
+
+# Micro-architecture 58 similar at 100% with unknown pattern
+58.100.abstractfactory = CH.ifa.draw.framework.Figure
+58.100.abstractproduct = java.lang.Object
+58.100.concretefactory = CH.ifa.draw.figures.LineConnection
+58.100.product = CH.ifa.draw.figures.ArrowTip
+58.100.XCommand = No source transformation needed
+
+# Micro-architecture 108 similar at 100% with unknown pattern
+108.100.abstractfactory = CH.ifa.draw.framework.Figure
+108.100.abstractproduct = java.util.EventObject
+108.100.concretefactory = CH.ifa.draw.figures.LineConnection
+108.100.product = CH.ifa.draw.framework.FigureChangeEvent
+108.100.XCommand = No source transformation needed
+
+# Micro-architecture 203 similar at 100% with unknown pattern
+203.100.abstractfactory = CH.ifa.draw.framework.Figure
+203.100.abstractproduct = java.util.Vector
+203.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+203.100.product = java.util.Vector
+203.100.XCommand = No source transformation needed
+
+# Micro-architecture 148 similar at 100% with unknown pattern
+148.100.abstractfactory = CH.ifa.draw.framework.Figure
+148.100.abstractproduct = java.util.Vector
+148.100.concretefactory = CH.ifa.draw.figures.LineConnection
+148.100.product = java.util.Vector
+148.100.XCommand = No source transformation needed
+
+# Micro-architecture 8 similar at 100% with unknown pattern
+8.100.abstractfactory = CH.ifa.draw.standard.AbstractConnector
+8.100.abstractproduct = java.awt.Point
+8.100.concretefactory = CH.ifa.draw.figures.ShortestDistanceConnector
+8.100.product = java.awt.Point
+8.100.XCommand = No source transformation needed
+
+# Micro-architecture 14 similar at 100% with unknown pattern
+14.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+14.100.abstractproduct = CH.ifa.draw.figures.ArrowTip
+14.100.concretefactory = CH.ifa.draw.figures.LineConnection
+14.100.product = CH.ifa.draw.figures.ArrowTip
+14.100.XCommand = No source transformation needed
+
+# Micro-architecture 283 similar at 100% with unknown pattern
+283.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+283.100.abstractproduct = CH.ifa.draw.figures.ArrowTip
+283.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+283.100.product = CH.ifa.draw.figures.ArrowTip
+283.100.XCommand = No source transformation needed
+
+# Micro-architecture 317 similar at 100% with unknown pattern
+317.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+317.100.abstractproduct = CH.ifa.draw.figures.ChopEllipseConnector
+317.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+317.100.product = CH.ifa.draw.figures.ChopEllipseConnector
+317.100.XCommand = No source transformation needed
+
+# Micro-architecture 221 similar at 100% with unknown pattern
+221.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+221.100.abstractproduct = CH.ifa.draw.figures.ElbowHandle
+221.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+221.100.product = CH.ifa.draw.figures.ElbowHandle
+221.100.XCommand = No source transformation needed
+
+# Micro-architecture 341 similar at 100% with unknown pattern
+341.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+341.100.abstractproduct = CH.ifa.draw.figures.FigureAttributes
+341.100.concretefactory = CH.ifa.draw.figures.AttributeFigure
+341.100.product = CH.ifa.draw.figures.FigureAttributes
+341.100.XCommand = No source transformation needed
+
+# Micro-architecture 396 similar at 100% with unknown pattern
+396.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+396.100.abstractproduct = CH.ifa.draw.figures.FontSizeHandle
+396.100.concretefactory = CH.ifa.draw.figures.TextFigure
+396.100.product = CH.ifa.draw.figures.FontSizeHandle
+396.100.XCommand = No source transformation needed
+
+# Micro-architecture 64 similar at 100% with unknown pattern
+64.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+64.100.abstractproduct = CH.ifa.draw.figures.LineDecoration
+64.100.concretefactory = CH.ifa.draw.figures.LineConnection
+64.100.product = CH.ifa.draw.figures.ArrowTip
+64.100.XCommand = No source transformation needed
+
+# Micro-architecture 288 similar at 100% with unknown pattern
+288.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+288.100.abstractproduct = CH.ifa.draw.figures.LineDecoration
+288.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+288.100.product = CH.ifa.draw.figures.ArrowTip
+288.100.XCommand = No source transformation needed
+
+# Micro-architecture 295 similar at 100% with unknown pattern
+295.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+295.100.abstractproduct = CH.ifa.draw.figures.PolyLineConnector
+295.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+295.100.product = CH.ifa.draw.figures.PolyLineConnector
+295.100.XCommand = No source transformation needed
+
+# Micro-architecture 124 similar at 100% with unknown pattern
+124.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+124.100.abstractproduct = CH.ifa.draw.figures.PolyLineHandle
+124.100.concretefactory = CH.ifa.draw.figures.LineConnection
+124.100.product = CH.ifa.draw.figures.PolyLineHandle
+124.100.XCommand = No source transformation needed
+
+# Micro-architecture 296 similar at 100% with unknown pattern
+296.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+296.100.abstractproduct = CH.ifa.draw.figures.PolyLineHandle
+296.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+296.100.product = CH.ifa.draw.figures.PolyLineHandle
+296.100.XCommand = No source transformation needed
+
+# Micro-architecture 292 similar at 100% with unknown pattern
+292.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+292.100.abstractproduct = CH.ifa.draw.figures.PolyLineLocator
+292.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+292.100.product = CH.ifa.draw.figures.PolyLineLocator
+292.100.XCommand = No source transformation needed
+
+# Micro-architecture 437 similar at 100% with unknown pattern
+437.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+437.100.abstractproduct = CH.ifa.draw.figures.RadiusHandle
+437.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+437.100.product = CH.ifa.draw.figures.RadiusHandle
+437.100.XCommand = No source transformation needed
+
+# Micro-architecture 434 similar at 100% with unknown pattern
+434.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+434.100.abstractproduct = CH.ifa.draw.figures.ShortestDistanceConnector
+434.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+434.100.product = CH.ifa.draw.figures.ShortestDistanceConnector
+434.100.XCommand = No source transformation needed
+
+# Micro-architecture 240 similar at 100% with unknown pattern
+240.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+240.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+240.100.concretefactory = CH.ifa.draw.figures.ImageFigure
+240.100.product = CH.ifa.draw.framework.FigureChangeEvent
+240.100.XCommand = No source transformation needed
+
+# Micro-architecture 94 similar at 100% with unknown pattern
+94.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+94.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+94.100.concretefactory = CH.ifa.draw.figures.LineConnection
+94.100.product = CH.ifa.draw.framework.FigureChangeEvent
+94.100.XCommand = No source transformation needed
+
+# Micro-architecture 392 similar at 100% with unknown pattern
+392.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+392.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+392.100.concretefactory = CH.ifa.draw.figures.TextFigure
+392.100.product = CH.ifa.draw.framework.FigureChangeEvent
+392.100.XCommand = No source transformation needed
+
+# Micro-architecture 435 similar at 100% with unknown pattern
+435.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+435.100.abstractproduct = CH.ifa.draw.standard.AbstractConnector
+435.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+435.100.product = CH.ifa.draw.figures.ShortestDistanceConnector
+435.100.XCommand = No source transformation needed
+
+# Micro-architecture 210 similar at 100% with unknown pattern
+210.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+210.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+210.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+210.100.product = CH.ifa.draw.figures.ElbowHandle
+210.100.XCommand = No source transformation needed
+
+# Micro-architecture 438 similar at 100% with unknown pattern
+438.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+438.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+438.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+438.100.product = CH.ifa.draw.figures.RadiusHandle
+438.100.XCommand = No source transformation needed
+
+# Micro-architecture 293 similar at 100% with unknown pattern
+293.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+293.100.abstractproduct = CH.ifa.draw.standard.AbstractLocator
+293.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+293.100.product = CH.ifa.draw.figures.PolyLineLocator
+293.100.XCommand = No source transformation needed
+
+# Micro-architecture 188 similar at 100% with unknown pattern
+188.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+188.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+188.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+188.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+188.100.XCommand = No source transformation needed
+
+# Micro-architecture 114 similar at 100% with unknown pattern
+114.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+114.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+114.100.concretefactory = CH.ifa.draw.figures.LineConnection
+114.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+114.100.XCommand = No source transformation needed
+
+# Micro-architecture 155 similar at 100% with unknown pattern
+155.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+155.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+155.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+155.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+155.100.XCommand = No source transformation needed
+
+# Micro-architecture 74 similar at 100% with unknown pattern
+74.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+74.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+74.100.concretefactory = CH.ifa.draw.figures.LineConnection
+74.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+74.100.XCommand = No source transformation needed
+
+# Micro-architecture 316 similar at 100% with unknown pattern
+316.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+316.100.abstractproduct = CH.ifa.draw.standard.ChopBoxConnector
+316.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+316.100.product = CH.ifa.draw.figures.ChopEllipseConnector
+316.100.XCommand = No source transformation needed
+
+# Micro-architecture 294 similar at 100% with unknown pattern
+294.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+294.100.abstractproduct = CH.ifa.draw.standard.ChopBoxConnector
+294.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+294.100.product = CH.ifa.draw.figures.PolyLineConnector
+294.100.XCommand = No source transformation needed
+
+# Micro-architecture 134 similar at 100% with unknown pattern
+134.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+134.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+134.100.concretefactory = CH.ifa.draw.figures.LineConnection
+134.100.product = CH.ifa.draw.figures.PolyLineHandle
+134.100.XCommand = No source transformation needed
+
+# Micro-architecture 297 similar at 100% with unknown pattern
+297.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+297.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+297.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+297.100.product = CH.ifa.draw.figures.PolyLineHandle
+297.100.XCommand = No source transformation needed
+
+# Micro-architecture 397 similar at 100% with unknown pattern
+397.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+397.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+397.100.concretefactory = CH.ifa.draw.figures.TextFigure
+397.100.product = CH.ifa.draw.figures.FontSizeHandle
+397.100.XCommand = No source transformation needed
+
+# Micro-architecture 166 similar at 100% with unknown pattern
+166.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+166.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+166.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+166.100.product = CH.ifa.draw.standard.NullHandle
+166.100.XCommand = No source transformation needed
+
+# Micro-architecture 387 similar at 100% with unknown pattern
+387.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+387.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+387.100.concretefactory = CH.ifa.draw.figures.TextFigure
+387.100.product = CH.ifa.draw.standard.NullHandle
+387.100.XCommand = No source transformation needed
+
+# Micro-architecture 390 similar at 100% with unknown pattern
+390.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+390.100.abstractproduct = CH.ifa.draw.standard.OffsetLocator
+390.100.concretefactory = CH.ifa.draw.figures.TextFigure
+390.100.product = CH.ifa.draw.standard.OffsetLocator
+390.100.XCommand = No source transformation needed
+
+# Micro-architecture 34 similar at 100% with unknown pattern
+34.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+34.100.abstractproduct = CH.ifa.draw.util.Storable
+34.100.concretefactory = CH.ifa.draw.figures.LineConnection
+34.100.product = CH.ifa.draw.figures.ArrowTip
+34.100.XCommand = No source transformation needed
+
+# Micro-architecture 285 similar at 100% with unknown pattern
+285.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+285.100.abstractproduct = CH.ifa.draw.util.Storable
+285.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+285.100.product = CH.ifa.draw.figures.ArrowTip
+285.100.XCommand = No source transformation needed
+
+# Micro-architecture 337 similar at 100% with unknown pattern
+337.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+337.100.abstractproduct = java.awt.Color
+337.100.concretefactory = CH.ifa.draw.figures.AttributeFigure
+337.100.product = java.awt.Color
+337.100.XCommand = No source transformation needed
+
+# Micro-architecture 395 similar at 100% with unknown pattern
+395.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+395.100.abstractproduct = java.awt.Dimension
+395.100.concretefactory = CH.ifa.draw.figures.TextFigure
+395.100.product = java.awt.Dimension
+395.100.XCommand = No source transformation needed
+
+# Micro-architecture 389 similar at 100% with unknown pattern
+389.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+389.100.abstractproduct = java.awt.Font
+389.100.concretefactory = CH.ifa.draw.figures.TextFigure
+389.100.product = java.awt.Font
+389.100.XCommand = No source transformation needed
+
+# Micro-architecture 319 similar at 100% with unknown pattern
+319.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+319.100.abstractproduct = java.awt.Insets
+319.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+319.100.product = java.awt.Insets
+319.100.XCommand = No source transformation needed
+
+# Micro-architecture 440 similar at 100% with unknown pattern
+440.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+440.100.abstractproduct = java.awt.Insets
+440.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+440.100.product = java.awt.Insets
+440.100.XCommand = No source transformation needed
+
+# Micro-architecture 177 similar at 100% with unknown pattern
+177.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+177.100.abstractproduct = java.awt.Point
+177.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+177.100.product = java.awt.Point
+177.100.XCommand = No source transformation needed
+
+# Micro-architecture 318 similar at 100% with unknown pattern
+318.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+318.100.abstractproduct = java.awt.Point
+318.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+318.100.product = java.awt.Point
+318.100.XCommand = No source transformation needed
+
+# Micro-architecture 84 similar at 100% with unknown pattern
+84.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+84.100.abstractproduct = java.awt.Point
+84.100.concretefactory = CH.ifa.draw.figures.LineConnection
+84.100.product = java.awt.Point
+84.100.XCommand = No source transformation needed
+
+# Micro-architecture 229 similar at 100% with unknown pattern
+229.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+229.100.abstractproduct = java.awt.Point
+229.100.concretefactory = CH.ifa.draw.figures.LineFigure
+229.100.product = java.awt.Point
+229.100.XCommand = No source transformation needed
+
+# Micro-architecture 291 similar at 100% with unknown pattern
+291.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+291.100.abstractproduct = java.awt.Point
+291.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+291.100.product = java.awt.Point
+291.100.XCommand = No source transformation needed
+
+# Micro-architecture 259 similar at 100% with unknown pattern
+259.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+259.100.abstractproduct = java.awt.Point
+259.100.concretefactory = CH.ifa.draw.figures.RectangleFigure
+259.100.product = java.awt.Point
+259.100.XCommand = No source transformation needed
+
+# Micro-architecture 439 similar at 100% with unknown pattern
+439.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+439.100.abstractproduct = java.awt.Point
+439.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+439.100.product = java.awt.Point
+439.100.XCommand = No source transformation needed
+
+# Micro-architecture 315 similar at 100% with unknown pattern
+315.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+315.100.abstractproduct = java.awt.Rectangle
+315.100.concretefactory = CH.ifa.draw.figures.EllipseFigure
+315.100.product = java.awt.Rectangle
+315.100.XCommand = No source transformation needed
+
+# Micro-architecture 236 similar at 100% with unknown pattern
+236.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+236.100.abstractproduct = java.awt.Rectangle
+236.100.concretefactory = CH.ifa.draw.figures.ImageFigure
+236.100.product = java.awt.Rectangle
+236.100.XCommand = No source transformation needed
+
+# Micro-architecture 289 similar at 100% with unknown pattern
+289.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+289.100.abstractproduct = java.awt.Rectangle
+289.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+289.100.product = java.awt.Rectangle
+289.100.XCommand = No source transformation needed
+
+# Micro-architecture 256 similar at 100% with unknown pattern
+256.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+256.100.abstractproduct = java.awt.Rectangle
+256.100.concretefactory = CH.ifa.draw.figures.RectangleFigure
+256.100.product = java.awt.Rectangle
+256.100.XCommand = No source transformation needed
+
+# Micro-architecture 436 similar at 100% with unknown pattern
+436.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+436.100.abstractproduct = java.awt.Rectangle
+436.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+436.100.product = java.awt.Rectangle
+436.100.XCommand = No source transformation needed
+
+# Micro-architecture 386 similar at 100% with unknown pattern
+386.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+386.100.abstractproduct = java.awt.Rectangle
+386.100.concretefactory = CH.ifa.draw.figures.TextFigure
+386.100.product = java.awt.Rectangle
+386.100.XCommand = No source transformation needed
+
+# Micro-architecture 339 similar at 100% with unknown pattern
+339.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+339.100.abstractproduct = java.io.Serializable
+339.100.concretefactory = CH.ifa.draw.figures.AttributeFigure
+339.100.product = CH.ifa.draw.figures.FigureAttributes
+339.100.XCommand = No source transformation needed
+
+# Micro-architecture 44 similar at 100% with unknown pattern
+44.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+44.100.abstractproduct = java.io.Serializable
+44.100.concretefactory = CH.ifa.draw.figures.LineConnection
+44.100.product = CH.ifa.draw.figures.ArrowTip
+44.100.XCommand = No source transformation needed
+
+# Micro-architecture 286 similar at 100% with unknown pattern
+286.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+286.100.abstractproduct = java.io.Serializable
+286.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+286.100.product = CH.ifa.draw.figures.ArrowTip
+286.100.XCommand = No source transformation needed
+
+# Micro-architecture 338 similar at 100% with unknown pattern
+338.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+338.100.abstractproduct = java.lang.Cloneable
+338.100.concretefactory = CH.ifa.draw.figures.AttributeFigure
+338.100.product = CH.ifa.draw.figures.FigureAttributes
+338.100.XCommand = No source transformation needed
+
+# Micro-architecture 24 similar at 100% with unknown pattern
+24.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+24.100.abstractproduct = java.lang.Cloneable
+24.100.concretefactory = CH.ifa.draw.figures.LineConnection
+24.100.product = CH.ifa.draw.figures.ArrowTip
+24.100.XCommand = No source transformation needed
+
+# Micro-architecture 284 similar at 100% with unknown pattern
+284.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+284.100.abstractproduct = java.lang.Cloneable
+284.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+284.100.product = CH.ifa.draw.figures.ArrowTip
+284.100.XCommand = No source transformation needed
+
+# Micro-architecture 336 similar at 100% with unknown pattern
+336.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+336.100.abstractproduct = java.lang.Integer
+336.100.concretefactory = CH.ifa.draw.figures.AttributeFigure
+336.100.product = java.lang.Integer
+336.100.XCommand = No source transformation needed
+
+# Micro-architecture 290 similar at 100% with unknown pattern
+290.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+290.100.abstractproduct = java.lang.Integer
+290.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+290.100.product = java.lang.Integer
+290.100.XCommand = No source transformation needed
+
+# Micro-architecture 388 similar at 100% with unknown pattern
+388.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+388.100.abstractproduct = java.lang.Integer
+388.100.concretefactory = CH.ifa.draw.figures.TextFigure
+388.100.product = java.lang.Integer
+388.100.XCommand = No source transformation needed
+
+# Micro-architecture 340 similar at 100% with unknown pattern
+340.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+340.100.abstractproduct = java.lang.Object
+340.100.concretefactory = CH.ifa.draw.figures.AttributeFigure
+340.100.product = CH.ifa.draw.figures.FigureAttributes
+340.100.XCommand = No source transformation needed
+
+# Micro-architecture 54 similar at 100% with unknown pattern
+54.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+54.100.abstractproduct = java.lang.Object
+54.100.concretefactory = CH.ifa.draw.figures.LineConnection
+54.100.product = CH.ifa.draw.figures.ArrowTip
+54.100.XCommand = No source transformation needed
+
+# Micro-architecture 287 similar at 100% with unknown pattern
+287.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+287.100.abstractproduct = java.lang.Object
+287.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+287.100.product = CH.ifa.draw.figures.ArrowTip
+287.100.XCommand = No source transformation needed
+
+# Micro-architecture 391 similar at 100% with unknown pattern
+391.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+391.100.abstractproduct = java.lang.String
+391.100.concretefactory = CH.ifa.draw.figures.TextFigure
+391.100.product = java.lang.String
+391.100.XCommand = No source transformation needed
+
+# Micro-architecture 244 similar at 100% with unknown pattern
+244.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+244.100.abstractproduct = java.util.EventObject
+244.100.concretefactory = CH.ifa.draw.figures.ImageFigure
+244.100.product = CH.ifa.draw.framework.FigureChangeEvent
+244.100.XCommand = No source transformation needed
+
+# Micro-architecture 104 similar at 100% with unknown pattern
+104.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+104.100.abstractproduct = java.util.EventObject
+104.100.concretefactory = CH.ifa.draw.figures.LineConnection
+104.100.product = CH.ifa.draw.framework.FigureChangeEvent
+104.100.XCommand = No source transformation needed
+
+# Micro-architecture 393 similar at 100% with unknown pattern
+393.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+393.100.abstractproduct = java.util.EventObject
+393.100.concretefactory = CH.ifa.draw.figures.TextFigure
+393.100.product = CH.ifa.draw.framework.FigureChangeEvent
+393.100.XCommand = No source transformation needed
+
+# Micro-architecture 199 similar at 100% with unknown pattern
+199.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+199.100.abstractproduct = java.util.Vector
+199.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+199.100.product = java.util.Vector
+199.100.XCommand = No source transformation needed
+
+# Micro-architecture 144 similar at 100% with unknown pattern
+144.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+144.100.abstractproduct = java.util.Vector
+144.100.concretefactory = CH.ifa.draw.figures.LineConnection
+144.100.product = java.util.Vector
+144.100.XCommand = No source transformation needed
+
+# Micro-architecture 298 similar at 100% with unknown pattern
+298.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+298.100.abstractproduct = java.util.Vector
+298.100.concretefactory = CH.ifa.draw.figures.PolyLineFigure
+298.100.product = java.util.Vector
+298.100.XCommand = No source transformation needed
+
+# Micro-architecture 441 similar at 100% with unknown pattern
+441.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+441.100.abstractproduct = java.util.Vector
+441.100.concretefactory = CH.ifa.draw.figures.RoundRectangleFigure
+441.100.product = java.util.Vector
+441.100.XCommand = No source transformation needed
+
+# Micro-architecture 394 similar at 100% with unknown pattern
+394.100.abstractfactory = CH.ifa.draw.standard.AbstractFigure
+394.100.abstractproduct = java.util.Vector
+394.100.concretefactory = CH.ifa.draw.figures.TextFigure
+394.100.product = java.util.Vector
+394.100.XCommand = No source transformation needed
+
+# Micro-architecture 458 similar at 100% with unknown pattern
+458.100.abstractfactory = CH.ifa.draw.standard.AbstractHandle
+458.100.abstractproduct = java.awt.Point
+458.100.concretefactory = CH.ifa.draw.figures.ElbowHandle
+458.100.product = java.awt.Point
+458.100.XCommand = No source transformation needed
+
+# Micro-architecture 227 similar at 100% with unknown pattern
+227.100.abstractfactory = CH.ifa.draw.standard.AbstractHandle
+227.100.abstractproduct = java.awt.Point
+227.100.concretefactory = CH.ifa.draw.figures.RadiusHandle
+227.100.product = java.awt.Point
+227.100.XCommand = No source transformation needed
+
+# Micro-architecture 261 similar at 100% with unknown pattern
+261.100.abstractfactory = CH.ifa.draw.standard.AbstractLocator
+261.100.abstractproduct = java.awt.Point
+261.100.concretefactory = CH.ifa.draw.figures.ElbowTextLocator
+261.100.product = java.awt.Point
+261.100.XCommand = No source transformation needed
+
+# Micro-architecture 232 similar at 100% with unknown pattern
+232.100.abstractfactory = CH.ifa.draw.standard.AbstractLocator
+232.100.abstractproduct = java.awt.Point
+232.100.concretefactory = CH.ifa.draw.figures.PolyLineLocator
+232.100.product = java.awt.Point
+232.100.XCommand = No source transformation needed
+
+# Micro-architecture 280 similar at 100% with unknown pattern
+280.100.abstractfactory = CH.ifa.draw.standard.AbstractTool
+280.100.abstractproduct = CH.ifa.draw.figures.PolyLineFigure
+280.100.concretefactory = CH.ifa.draw.figures.ScribbleTool
+280.100.product = CH.ifa.draw.figures.PolyLineFigure
+280.100.XCommand = No source transformation needed
+
+# Micro-architecture 279 similar at 100% with unknown pattern
+279.100.abstractfactory = CH.ifa.draw.standard.AbstractTool
+279.100.abstractproduct = CH.ifa.draw.standard.AbstractFigure
+279.100.concretefactory = CH.ifa.draw.figures.ScribbleTool
+279.100.product = CH.ifa.draw.figures.PolyLineFigure
+279.100.XCommand = No source transformation needed
+
+# Micro-architecture 333 similar at 100% with unknown pattern
+333.100.abstractfactory = CH.ifa.draw.standard.ActionTool
+333.100.abstractproduct = CH.ifa.draw.figures.BorderDecorator
+333.100.concretefactory = CH.ifa.draw.figures.BorderTool
+333.100.product = CH.ifa.draw.figures.BorderDecorator
+333.100.XCommand = No source transformation needed
+
+# Micro-architecture 332 similar at 100% with unknown pattern
+332.100.abstractfactory = CH.ifa.draw.standard.ActionTool
+332.100.abstractproduct = CH.ifa.draw.standard.DecoratorFigure
+332.100.concretefactory = CH.ifa.draw.figures.BorderTool
+332.100.product = CH.ifa.draw.figures.BorderDecorator
+332.100.XCommand = No source transformation needed
+
+# Micro-architecture 253 similar at 100% with unknown pattern
+253.100.abstractfactory = CH.ifa.draw.standard.ChopBoxConnector
+253.100.abstractproduct = java.awt.Point
+253.100.concretefactory = CH.ifa.draw.figures.PolyLineConnector
+253.100.product = java.awt.Point
+253.100.XCommand = No source transformation needed
+
+# Micro-architecture 276 similar at 100% with unknown pattern
+276.100.abstractfactory = CH.ifa.draw.standard.CompositeFigure
+276.100.abstractproduct = CH.ifa.draw.figures.GroupHandle
+276.100.concretefactory = CH.ifa.draw.figures.GroupFigure
+276.100.product = CH.ifa.draw.figures.GroupHandle
+276.100.XCommand = No source transformation needed
+
+# Micro-architecture 277 similar at 100% with unknown pattern
+277.100.abstractfactory = CH.ifa.draw.standard.CompositeFigure
+277.100.abstractproduct = CH.ifa.draw.standard.FigureEnumerator
+277.100.concretefactory = CH.ifa.draw.figures.GroupFigure
+277.100.product = CH.ifa.draw.standard.FigureEnumerator
+277.100.XCommand = No source transformation needed
+
+# Micro-architecture 275 similar at 100% with unknown pattern
+275.100.abstractfactory = CH.ifa.draw.standard.CompositeFigure
+275.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+275.100.concretefactory = CH.ifa.draw.figures.GroupFigure
+275.100.product = CH.ifa.draw.figures.GroupHandle
+275.100.XCommand = No source transformation needed
+
+# Micro-architecture 278 similar at 100% with unknown pattern
+278.100.abstractfactory = CH.ifa.draw.standard.CompositeFigure
+278.100.abstractproduct = java.util.Vector
+278.100.concretefactory = CH.ifa.draw.figures.GroupFigure
+278.100.product = java.util.Vector
+278.100.XCommand = No source transformation needed
+
+# Micro-architecture 349 similar at 100% with unknown pattern
+349.100.abstractfactory = CH.ifa.draw.standard.CreationTool
+349.100.abstractproduct = CH.ifa.draw.util.FloatingTextField
+349.100.concretefactory = CH.ifa.draw.figures.TextTool
+349.100.product = CH.ifa.draw.util.FloatingTextField
+349.100.XCommand = No source transformation needed
+
+# Micro-architecture 348 similar at 100% with unknown pattern
+348.100.abstractfactory = CH.ifa.draw.standard.CreationTool
+348.100.abstractproduct = java.awt.Rectangle
+348.100.concretefactory = CH.ifa.draw.figures.TextTool
+348.100.product = java.awt.Rectangle
+348.100.XCommand = No source transformation needed
+
+# Micro-architecture 248 similar at 100% with unknown pattern
+248.100.abstractfactory = CH.ifa.draw.standard.DecoratorFigure
+248.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+248.100.concretefactory = CH.ifa.draw.figures.BorderDecorator
+248.100.product = CH.ifa.draw.framework.FigureChangeEvent
+248.100.XCommand = No source transformation needed
+
+# Micro-architecture 247 similar at 100% with unknown pattern
+247.100.abstractfactory = CH.ifa.draw.standard.DecoratorFigure
+247.100.abstractproduct = java.awt.Point
+247.100.concretefactory = CH.ifa.draw.figures.BorderDecorator
+247.100.product = java.awt.Point
+247.100.XCommand = No source transformation needed
+
+# Micro-architecture 249 similar at 100% with unknown pattern
+249.100.abstractfactory = CH.ifa.draw.standard.DecoratorFigure
+249.100.abstractproduct = java.util.EventObject
+249.100.concretefactory = CH.ifa.draw.figures.BorderDecorator
+249.100.product = CH.ifa.draw.framework.FigureChangeEvent
+249.100.XCommand = No source transformation needed
+
+# Micro-architecture 461 similar at 100% with unknown pattern
+461.100.abstractfactory = CH.ifa.draw.standard.LocatorHandle
+461.100.abstractproduct = java.awt.Font
+461.100.concretefactory = CH.ifa.draw.figures.FontSizeHandle
+461.100.product = java.awt.Font
+461.100.XCommand = No source transformation needed
+
+# Micro-architecture 331 similar at 100% with unknown pattern
+331.100.abstractfactory = CH.ifa.draw.standard.LocatorHandle
+331.100.abstractproduct = java.awt.Point
+331.100.concretefactory = CH.ifa.draw.figures.PolyLineHandle
+331.100.product = java.awt.Point
+331.100.XCommand = No source transformation needed
+
+# Micro-architecture 372 similar at 100% with unknown pattern
+372.100.abstractfactory = CH.ifa.draw.standard.TextHolder
+372.100.abstractproduct = CH.ifa.draw.figures.FontSizeHandle
+372.100.concretefactory = CH.ifa.draw.figures.TextFigure
+372.100.product = CH.ifa.draw.figures.FontSizeHandle
+372.100.XCommand = No source transformation needed
+
+# Micro-architecture 368 similar at 100% with unknown pattern
+368.100.abstractfactory = CH.ifa.draw.standard.TextHolder
+368.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+368.100.concretefactory = CH.ifa.draw.figures.TextFigure
+368.100.product = CH.ifa.draw.framework.FigureChangeEvent
+368.100.XCommand = No source transformation needed
+
+# Micro-architecture 373 similar at 100% with unknown pattern
+373.100.abstractfactory = CH.ifa.draw.standard.TextHolder
+373.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+373.100.concretefactory = CH.ifa.draw.figures.TextFigure
+373.100.product = CH.ifa.draw.figures.FontSizeHandle
+373.100.XCommand = No source transformation needed
+
+# Micro-architecture 363 similar at 100% with unknown pattern
+363.100.abstractfactory = CH.ifa.draw.standard.TextHolder
+363.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+363.100.concretefactory = CH.ifa.draw.figures.TextFigure
+363.100.product = CH.ifa.draw.standard.NullHandle
+363.100.XCommand = No source transformation needed
+
+# Micro-architecture 366 similar at 100% with unknown pattern
+366.100.abstractfactory = CH.ifa.draw.standard.TextHolder
+366.100.abstractproduct = CH.ifa.draw.standard.OffsetLocator
+366.100.concretefactory = CH.ifa.draw.figures.TextFigure
+366.100.product = CH.ifa.draw.standard.OffsetLocator
+366.100.XCommand = No source transformation needed
+
+# Micro-architecture 371 similar at 100% with unknown pattern
+371.100.abstractfactory = CH.ifa.draw.standard.TextHolder
+371.100.abstractproduct = java.awt.Dimension
+371.100.concretefactory = CH.ifa.draw.figures.TextFigure
+371.100.product = java.awt.Dimension
+371.100.XCommand = No source transformation needed
+
+# Micro-architecture 365 similar at 100% with unknown pattern
+365.100.abstractfactory = CH.ifa.draw.standard.TextHolder
+365.100.abstractproduct = java.awt.Font
+365.100.concretefactory = CH.ifa.draw.figures.TextFigure
+365.100.product = java.awt.Font
+365.100.XCommand = No source transformation needed
+
+# Micro-architecture 362 similar at 100% with unknown pattern
+362.100.abstractfactory = CH.ifa.draw.standard.TextHolder
+362.100.abstractproduct = java.awt.Rectangle
+362.100.concretefactory = CH.ifa.draw.figures.TextFigure
+362.100.product = java.awt.Rectangle
+362.100.XCommand = No source transformation needed
+
+# Micro-architecture 364 similar at 100% with unknown pattern
+364.100.abstractfactory = CH.ifa.draw.standard.TextHolder
+364.100.abstractproduct = java.lang.Integer
+364.100.concretefactory = CH.ifa.draw.figures.TextFigure
+364.100.product = java.lang.Integer
+364.100.XCommand = No source transformation needed
+
+# Micro-architecture 367 similar at 100% with unknown pattern
+367.100.abstractfactory = CH.ifa.draw.standard.TextHolder
+367.100.abstractproduct = java.lang.String
+367.100.concretefactory = CH.ifa.draw.figures.TextFigure
+367.100.product = java.lang.String
+367.100.XCommand = No source transformation needed
+
+# Micro-architecture 369 similar at 100% with unknown pattern
+369.100.abstractfactory = CH.ifa.draw.standard.TextHolder
+369.100.abstractproduct = java.util.EventObject
+369.100.concretefactory = CH.ifa.draw.figures.TextFigure
+369.100.product = CH.ifa.draw.framework.FigureChangeEvent
+369.100.XCommand = No source transformation needed
+
+# Micro-architecture 370 similar at 100% with unknown pattern
+370.100.abstractfactory = CH.ifa.draw.standard.TextHolder
+370.100.abstractproduct = java.util.Vector
+370.100.concretefactory = CH.ifa.draw.figures.TextFigure
+370.100.product = java.util.Vector
+370.100.XCommand = No source transformation needed
+
+# Micro-architecture 265 similar at 100% with unknown pattern
+265.100.abstractfactory = CH.ifa.draw.util.Command
+265.100.abstractproduct = CH.ifa.draw.figures.AttributeFigure
+265.100.concretefactory = CH.ifa.draw.figures.InsertImageCommand
+265.100.product = CH.ifa.draw.figures.ImageFigure
+265.100.XCommand = No source transformation needed
+
+# Micro-architecture 263 similar at 100% with unknown pattern
+263.100.abstractfactory = CH.ifa.draw.util.Command
+263.100.abstractproduct = CH.ifa.draw.figures.ImageFigure
+263.100.concretefactory = CH.ifa.draw.figures.InsertImageCommand
+263.100.product = CH.ifa.draw.figures.ImageFigure
+263.100.XCommand = No source transformation needed
+
+# Micro-architecture 264 similar at 100% with unknown pattern
+264.100.abstractfactory = CH.ifa.draw.util.Command
+264.100.abstractproduct = CH.ifa.draw.standard.AbstractFigure
+264.100.concretefactory = CH.ifa.draw.figures.InsertImageCommand
+264.100.product = CH.ifa.draw.figures.ImageFigure
+264.100.XCommand = No source transformation needed
+
+# Micro-architecture 266 similar at 100% with unknown pattern
+266.100.abstractfactory = CH.ifa.draw.util.Command
+266.100.abstractproduct = java.awt.image.ImageObserver
+266.100.concretefactory = CH.ifa.draw.figures.InsertImageCommand
+266.100.product = CH.ifa.draw.figures.ImageFigure
+266.100.XCommand = No source transformation needed
+
+# Micro-architecture 11 similar at 100% with unknown pattern
+11.100.abstractfactory = CH.ifa.draw.util.Storable
+11.100.abstractproduct = CH.ifa.draw.figures.ArrowTip
+11.100.concretefactory = CH.ifa.draw.figures.LineConnection
+11.100.product = CH.ifa.draw.figures.ArrowTip
+11.100.XCommand = No source transformation needed
+
+# Micro-architecture 218 similar at 100% with unknown pattern
+218.100.abstractfactory = CH.ifa.draw.util.Storable
+218.100.abstractproduct = CH.ifa.draw.figures.ElbowHandle
+218.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+218.100.product = CH.ifa.draw.figures.ElbowHandle
+218.100.XCommand = No source transformation needed
+
+# Micro-architecture 61 similar at 100% with unknown pattern
+61.100.abstractfactory = CH.ifa.draw.util.Storable
+61.100.abstractproduct = CH.ifa.draw.figures.LineDecoration
+61.100.concretefactory = CH.ifa.draw.figures.LineConnection
+61.100.product = CH.ifa.draw.figures.ArrowTip
+61.100.XCommand = No source transformation needed
+
+# Micro-architecture 121 similar at 100% with unknown pattern
+121.100.abstractfactory = CH.ifa.draw.util.Storable
+121.100.abstractproduct = CH.ifa.draw.figures.PolyLineHandle
+121.100.concretefactory = CH.ifa.draw.figures.LineConnection
+121.100.product = CH.ifa.draw.figures.PolyLineHandle
+121.100.XCommand = No source transformation needed
+
+# Micro-architecture 91 similar at 100% with unknown pattern
+91.100.abstractfactory = CH.ifa.draw.util.Storable
+91.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+91.100.concretefactory = CH.ifa.draw.figures.LineConnection
+91.100.product = CH.ifa.draw.framework.FigureChangeEvent
+91.100.XCommand = No source transformation needed
+
+# Micro-architecture 207 similar at 100% with unknown pattern
+207.100.abstractfactory = CH.ifa.draw.util.Storable
+207.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+207.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+207.100.product = CH.ifa.draw.figures.ElbowHandle
+207.100.XCommand = No source transformation needed
+
+# Micro-architecture 185 similar at 100% with unknown pattern
+185.100.abstractfactory = CH.ifa.draw.util.Storable
+185.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+185.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+185.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+185.100.XCommand = No source transformation needed
+
+# Micro-architecture 111 similar at 100% with unknown pattern
+111.100.abstractfactory = CH.ifa.draw.util.Storable
+111.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+111.100.concretefactory = CH.ifa.draw.figures.LineConnection
+111.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+111.100.XCommand = No source transformation needed
+
+# Micro-architecture 152 similar at 100% with unknown pattern
+152.100.abstractfactory = CH.ifa.draw.util.Storable
+152.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+152.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+152.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+152.100.XCommand = No source transformation needed
+
+# Micro-architecture 71 similar at 100% with unknown pattern
+71.100.abstractfactory = CH.ifa.draw.util.Storable
+71.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+71.100.concretefactory = CH.ifa.draw.figures.LineConnection
+71.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+71.100.XCommand = No source transformation needed
+
+# Micro-architecture 131 similar at 100% with unknown pattern
+131.100.abstractfactory = CH.ifa.draw.util.Storable
+131.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+131.100.concretefactory = CH.ifa.draw.figures.LineConnection
+131.100.product = CH.ifa.draw.figures.PolyLineHandle
+131.100.XCommand = No source transformation needed
+
+# Micro-architecture 163 similar at 100% with unknown pattern
+163.100.abstractfactory = CH.ifa.draw.util.Storable
+163.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+163.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+163.100.product = CH.ifa.draw.standard.NullHandle
+163.100.XCommand = No source transformation needed
+
+# Micro-architecture 31 similar at 100% with unknown pattern
+31.100.abstractfactory = CH.ifa.draw.util.Storable
+31.100.abstractproduct = CH.ifa.draw.util.Storable
+31.100.concretefactory = CH.ifa.draw.figures.LineConnection
+31.100.product = CH.ifa.draw.figures.ArrowTip
+31.100.XCommand = No source transformation needed
+
+# Micro-architecture 174 similar at 100% with unknown pattern
+174.100.abstractfactory = CH.ifa.draw.util.Storable
+174.100.abstractproduct = java.awt.Point
+174.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+174.100.product = java.awt.Point
+174.100.XCommand = No source transformation needed
+
+# Micro-architecture 81 similar at 100% with unknown pattern
+81.100.abstractfactory = CH.ifa.draw.util.Storable
+81.100.abstractproduct = java.awt.Point
+81.100.concretefactory = CH.ifa.draw.figures.LineConnection
+81.100.product = java.awt.Point
+81.100.XCommand = No source transformation needed
+
+# Micro-architecture 3 similar at 100% with unknown pattern
+3.100.abstractfactory = CH.ifa.draw.util.Storable
+3.100.abstractproduct = java.awt.Polygon
+3.100.concretefactory = CH.ifa.draw.figures.ArrowTip
+3.100.product = java.awt.Polygon
+3.100.XCommand = No source transformation needed
+
+# Micro-architecture 41 similar at 100% with unknown pattern
+41.100.abstractfactory = CH.ifa.draw.util.Storable
+41.100.abstractproduct = java.io.Serializable
+41.100.concretefactory = CH.ifa.draw.figures.LineConnection
+41.100.product = CH.ifa.draw.figures.ArrowTip
+41.100.XCommand = No source transformation needed
+
+# Micro-architecture 21 similar at 100% with unknown pattern
+21.100.abstractfactory = CH.ifa.draw.util.Storable
+21.100.abstractproduct = java.lang.Cloneable
+21.100.concretefactory = CH.ifa.draw.figures.LineConnection
+21.100.product = CH.ifa.draw.figures.ArrowTip
+21.100.XCommand = No source transformation needed
+
+# Micro-architecture 51 similar at 100% with unknown pattern
+51.100.abstractfactory = CH.ifa.draw.util.Storable
+51.100.abstractproduct = java.lang.Object
+51.100.concretefactory = CH.ifa.draw.figures.LineConnection
+51.100.product = CH.ifa.draw.figures.ArrowTip
+51.100.XCommand = No source transformation needed
+
+# Micro-architecture 101 similar at 100% with unknown pattern
+101.100.abstractfactory = CH.ifa.draw.util.Storable
+101.100.abstractproduct = java.util.EventObject
+101.100.concretefactory = CH.ifa.draw.figures.LineConnection
+101.100.product = CH.ifa.draw.framework.FigureChangeEvent
+101.100.XCommand = No source transformation needed
+
+# Micro-architecture 196 similar at 100% with unknown pattern
+196.100.abstractfactory = CH.ifa.draw.util.Storable
+196.100.abstractproduct = java.util.Vector
+196.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+196.100.product = java.util.Vector
+196.100.XCommand = No source transformation needed
+
+# Micro-architecture 141 similar at 100% with unknown pattern
+141.100.abstractfactory = CH.ifa.draw.util.Storable
+141.100.abstractproduct = java.util.Vector
+141.100.concretefactory = CH.ifa.draw.figures.LineConnection
+141.100.product = java.util.Vector
+141.100.XCommand = No source transformation needed
+
+# Micro-architecture 242 similar at 100% with unknown pattern
+242.100.abstractfactory = java.awt.image.ImageObserver
+242.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+242.100.concretefactory = CH.ifa.draw.figures.ImageFigure
+242.100.product = CH.ifa.draw.framework.FigureChangeEvent
+242.100.XCommand = No source transformation needed
+
+# Micro-architecture 238 similar at 100% with unknown pattern
+238.100.abstractfactory = java.awt.image.ImageObserver
+238.100.abstractproduct = java.awt.Rectangle
+238.100.concretefactory = CH.ifa.draw.figures.ImageFigure
+238.100.product = java.awt.Rectangle
+238.100.XCommand = No source transformation needed
+
+# Micro-architecture 246 similar at 100% with unknown pattern
+246.100.abstractfactory = java.awt.image.ImageObserver
+246.100.abstractproduct = java.util.EventObject
+246.100.concretefactory = CH.ifa.draw.figures.ImageFigure
+246.100.product = CH.ifa.draw.framework.FigureChangeEvent
+246.100.XCommand = No source transformation needed
+
+# Micro-architecture 12 similar at 100% with unknown pattern
+12.100.abstractfactory = java.io.Serializable
+12.100.abstractproduct = CH.ifa.draw.figures.ArrowTip
+12.100.concretefactory = CH.ifa.draw.figures.LineConnection
+12.100.product = CH.ifa.draw.figures.ArrowTip
+12.100.XCommand = No source transformation needed
+
+# Micro-architecture 219 similar at 100% with unknown pattern
+219.100.abstractfactory = java.io.Serializable
+219.100.abstractproduct = CH.ifa.draw.figures.ElbowHandle
+219.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+219.100.product = CH.ifa.draw.figures.ElbowHandle
+219.100.XCommand = No source transformation needed
+
+# Micro-architecture 62 similar at 100% with unknown pattern
+62.100.abstractfactory = java.io.Serializable
+62.100.abstractproduct = CH.ifa.draw.figures.LineDecoration
+62.100.concretefactory = CH.ifa.draw.figures.LineConnection
+62.100.product = CH.ifa.draw.figures.ArrowTip
+62.100.XCommand = No source transformation needed
+
+# Micro-architecture 122 similar at 100% with unknown pattern
+122.100.abstractfactory = java.io.Serializable
+122.100.abstractproduct = CH.ifa.draw.figures.PolyLineHandle
+122.100.concretefactory = CH.ifa.draw.figures.LineConnection
+122.100.product = CH.ifa.draw.figures.PolyLineHandle
+122.100.XCommand = No source transformation needed
+
+# Micro-architecture 92 similar at 100% with unknown pattern
+92.100.abstractfactory = java.io.Serializable
+92.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+92.100.concretefactory = CH.ifa.draw.figures.LineConnection
+92.100.product = CH.ifa.draw.framework.FigureChangeEvent
+92.100.XCommand = No source transformation needed
+
+# Micro-architecture 208 similar at 100% with unknown pattern
+208.100.abstractfactory = java.io.Serializable
+208.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+208.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+208.100.product = CH.ifa.draw.figures.ElbowHandle
+208.100.XCommand = No source transformation needed
+
+# Micro-architecture 186 similar at 100% with unknown pattern
+186.100.abstractfactory = java.io.Serializable
+186.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+186.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+186.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+186.100.XCommand = No source transformation needed
+
+# Micro-architecture 112 similar at 100% with unknown pattern
+112.100.abstractfactory = java.io.Serializable
+112.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+112.100.concretefactory = CH.ifa.draw.figures.LineConnection
+112.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+112.100.XCommand = No source transformation needed
+
+# Micro-architecture 153 similar at 100% with unknown pattern
+153.100.abstractfactory = java.io.Serializable
+153.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+153.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+153.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+153.100.XCommand = No source transformation needed
+
+# Micro-architecture 72 similar at 100% with unknown pattern
+72.100.abstractfactory = java.io.Serializable
+72.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+72.100.concretefactory = CH.ifa.draw.figures.LineConnection
+72.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+72.100.XCommand = No source transformation needed
+
+# Micro-architecture 132 similar at 100% with unknown pattern
+132.100.abstractfactory = java.io.Serializable
+132.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+132.100.concretefactory = CH.ifa.draw.figures.LineConnection
+132.100.product = CH.ifa.draw.figures.PolyLineHandle
+132.100.XCommand = No source transformation needed
+
+# Micro-architecture 164 similar at 100% with unknown pattern
+164.100.abstractfactory = java.io.Serializable
+164.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+164.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+164.100.product = CH.ifa.draw.standard.NullHandle
+164.100.XCommand = No source transformation needed
+
+# Micro-architecture 32 similar at 100% with unknown pattern
+32.100.abstractfactory = java.io.Serializable
+32.100.abstractproduct = CH.ifa.draw.util.Storable
+32.100.concretefactory = CH.ifa.draw.figures.LineConnection
+32.100.product = CH.ifa.draw.figures.ArrowTip
+32.100.XCommand = No source transformation needed
+
+# Micro-architecture 470 similar at 100% with unknown pattern
+470.100.abstractfactory = java.io.Serializable
+470.100.abstractproduct = java.awt.Color
+470.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+470.100.product = java.awt.Color
+470.100.XCommand = No source transformation needed
+
+# Micro-architecture 175 similar at 100% with unknown pattern
+175.100.abstractfactory = java.io.Serializable
+175.100.abstractproduct = java.awt.Point
+175.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+175.100.product = java.awt.Point
+175.100.XCommand = No source transformation needed
+
+# Micro-architecture 82 similar at 100% with unknown pattern
+82.100.abstractfactory = java.io.Serializable
+82.100.abstractproduct = java.awt.Point
+82.100.concretefactory = CH.ifa.draw.figures.LineConnection
+82.100.product = java.awt.Point
+82.100.XCommand = No source transformation needed
+
+# Micro-architecture 4 similar at 100% with unknown pattern
+4.100.abstractfactory = java.io.Serializable
+4.100.abstractproduct = java.awt.Polygon
+4.100.concretefactory = CH.ifa.draw.figures.ArrowTip
+4.100.product = java.awt.Polygon
+4.100.XCommand = No source transformation needed
+
+# Micro-architecture 468 similar at 100% with unknown pattern
+468.100.abstractfactory = java.io.Serializable
+468.100.abstractproduct = java.io.IOException
+468.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+468.100.product = java.io.IOException
+468.100.XCommand = No source transformation needed
+
+# Micro-architecture 42 similar at 100% with unknown pattern
+42.100.abstractfactory = java.io.Serializable
+42.100.abstractproduct = java.io.Serializable
+42.100.concretefactory = CH.ifa.draw.figures.LineConnection
+42.100.product = CH.ifa.draw.figures.ArrowTip
+42.100.XCommand = No source transformation needed
+
+# Micro-architecture 471 similar at 100% with unknown pattern
+471.100.abstractfactory = java.io.Serializable
+471.100.abstractproduct = java.lang.Boolean
+471.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+471.100.product = java.lang.Boolean
+471.100.XCommand = No source transformation needed
+
+# Micro-architecture 22 similar at 100% with unknown pattern
+22.100.abstractfactory = java.io.Serializable
+22.100.abstractproduct = java.lang.Cloneable
+22.100.concretefactory = CH.ifa.draw.figures.LineConnection
+22.100.product = CH.ifa.draw.figures.ArrowTip
+22.100.XCommand = No source transformation needed
+
+# Micro-architecture 467 similar at 100% with unknown pattern
+467.100.abstractfactory = java.io.Serializable
+467.100.abstractproduct = java.lang.Integer
+467.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+467.100.product = java.lang.Integer
+467.100.XCommand = No source transformation needed
+
+# Micro-architecture 52 similar at 100% with unknown pattern
+52.100.abstractfactory = java.io.Serializable
+52.100.abstractproduct = java.lang.Object
+52.100.concretefactory = CH.ifa.draw.figures.LineConnection
+52.100.product = CH.ifa.draw.figures.ArrowTip
+52.100.XCommand = No source transformation needed
+
+# Micro-architecture 102 similar at 100% with unknown pattern
+102.100.abstractfactory = java.io.Serializable
+102.100.abstractproduct = java.util.EventObject
+102.100.concretefactory = CH.ifa.draw.figures.LineConnection
+102.100.product = CH.ifa.draw.framework.FigureChangeEvent
+102.100.XCommand = No source transformation needed
+
+# Micro-architecture 469 similar at 100% with unknown pattern
+469.100.abstractfactory = java.io.Serializable
+469.100.abstractproduct = java.util.Hashtable
+469.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+469.100.product = java.util.Hashtable
+469.100.XCommand = No source transformation needed
+
+# Micro-architecture 197 similar at 100% with unknown pattern
+197.100.abstractfactory = java.io.Serializable
+197.100.abstractproduct = java.util.Vector
+197.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+197.100.product = java.util.Vector
+197.100.XCommand = No source transformation needed
+
+# Micro-architecture 142 similar at 100% with unknown pattern
+142.100.abstractfactory = java.io.Serializable
+142.100.abstractproduct = java.util.Vector
+142.100.concretefactory = CH.ifa.draw.figures.LineConnection
+142.100.product = java.util.Vector
+142.100.XCommand = No source transformation needed
+
+# Micro-architecture 9 similar at 100% with unknown pattern
+9.100.abstractfactory = java.lang.Cloneable
+9.100.abstractproduct = CH.ifa.draw.figures.ArrowTip
+9.100.concretefactory = CH.ifa.draw.figures.LineConnection
+9.100.product = CH.ifa.draw.figures.ArrowTip
+9.100.XCommand = No source transformation needed
+
+# Micro-architecture 215 similar at 100% with unknown pattern
+215.100.abstractfactory = java.lang.Cloneable
+215.100.abstractproduct = CH.ifa.draw.figures.ElbowHandle
+215.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+215.100.product = CH.ifa.draw.figures.ElbowHandle
+215.100.XCommand = No source transformation needed
+
+# Micro-architecture 59 similar at 100% with unknown pattern
+59.100.abstractfactory = java.lang.Cloneable
+59.100.abstractproduct = CH.ifa.draw.figures.LineDecoration
+59.100.concretefactory = CH.ifa.draw.figures.LineConnection
+59.100.product = CH.ifa.draw.figures.ArrowTip
+59.100.XCommand = No source transformation needed
+
+# Micro-architecture 119 similar at 100% with unknown pattern
+119.100.abstractfactory = java.lang.Cloneable
+119.100.abstractproduct = CH.ifa.draw.figures.PolyLineHandle
+119.100.concretefactory = CH.ifa.draw.figures.LineConnection
+119.100.product = CH.ifa.draw.figures.PolyLineHandle
+119.100.XCommand = No source transformation needed
+
+# Micro-architecture 89 similar at 100% with unknown pattern
+89.100.abstractfactory = java.lang.Cloneable
+89.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+89.100.concretefactory = CH.ifa.draw.figures.LineConnection
+89.100.product = CH.ifa.draw.framework.FigureChangeEvent
+89.100.XCommand = No source transformation needed
+
+# Micro-architecture 204 similar at 100% with unknown pattern
+204.100.abstractfactory = java.lang.Cloneable
+204.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+204.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+204.100.product = CH.ifa.draw.figures.ElbowHandle
+204.100.XCommand = No source transformation needed
+
+# Micro-architecture 182 similar at 100% with unknown pattern
+182.100.abstractfactory = java.lang.Cloneable
+182.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+182.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+182.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+182.100.XCommand = No source transformation needed
+
+# Micro-architecture 109 similar at 100% with unknown pattern
+109.100.abstractfactory = java.lang.Cloneable
+109.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+109.100.concretefactory = CH.ifa.draw.figures.LineConnection
+109.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+109.100.XCommand = No source transformation needed
+
+# Micro-architecture 149 similar at 100% with unknown pattern
+149.100.abstractfactory = java.lang.Cloneable
+149.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+149.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+149.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+149.100.XCommand = No source transformation needed
+
+# Micro-architecture 69 similar at 100% with unknown pattern
+69.100.abstractfactory = java.lang.Cloneable
+69.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+69.100.concretefactory = CH.ifa.draw.figures.LineConnection
+69.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+69.100.XCommand = No source transformation needed
+
+# Micro-architecture 129 similar at 100% with unknown pattern
+129.100.abstractfactory = java.lang.Cloneable
+129.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+129.100.concretefactory = CH.ifa.draw.figures.LineConnection
+129.100.product = CH.ifa.draw.figures.PolyLineHandle
+129.100.XCommand = No source transformation needed
+
+# Micro-architecture 160 similar at 100% with unknown pattern
+160.100.abstractfactory = java.lang.Cloneable
+160.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+160.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+160.100.product = CH.ifa.draw.standard.NullHandle
+160.100.XCommand = No source transformation needed
+
+# Micro-architecture 29 similar at 100% with unknown pattern
+29.100.abstractfactory = java.lang.Cloneable
+29.100.abstractproduct = CH.ifa.draw.util.Storable
+29.100.concretefactory = CH.ifa.draw.figures.LineConnection
+29.100.product = CH.ifa.draw.figures.ArrowTip
+29.100.XCommand = No source transformation needed
+
+# Micro-architecture 465 similar at 100% with unknown pattern
+465.100.abstractfactory = java.lang.Cloneable
+465.100.abstractproduct = java.awt.Color
+465.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+465.100.product = java.awt.Color
+465.100.XCommand = No source transformation needed
+
+# Micro-architecture 171 similar at 100% with unknown pattern
+171.100.abstractfactory = java.lang.Cloneable
+171.100.abstractproduct = java.awt.Point
+171.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+171.100.product = java.awt.Point
+171.100.XCommand = No source transformation needed
+
+# Micro-architecture 79 similar at 100% with unknown pattern
+79.100.abstractfactory = java.lang.Cloneable
+79.100.abstractproduct = java.awt.Point
+79.100.concretefactory = CH.ifa.draw.figures.LineConnection
+79.100.product = java.awt.Point
+79.100.XCommand = No source transformation needed
+
+# Micro-architecture 2 similar at 100% with unknown pattern
+2.100.abstractfactory = java.lang.Cloneable
+2.100.abstractproduct = java.awt.Polygon
+2.100.concretefactory = CH.ifa.draw.figures.ArrowTip
+2.100.product = java.awt.Polygon
+2.100.XCommand = No source transformation needed
+
+# Micro-architecture 463 similar at 100% with unknown pattern
+463.100.abstractfactory = java.lang.Cloneable
+463.100.abstractproduct = java.io.IOException
+463.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+463.100.product = java.io.IOException
+463.100.XCommand = No source transformation needed
+
+# Micro-architecture 39 similar at 100% with unknown pattern
+39.100.abstractfactory = java.lang.Cloneable
+39.100.abstractproduct = java.io.Serializable
+39.100.concretefactory = CH.ifa.draw.figures.LineConnection
+39.100.product = CH.ifa.draw.figures.ArrowTip
+39.100.XCommand = No source transformation needed
+
+# Micro-architecture 466 similar at 100% with unknown pattern
+466.100.abstractfactory = java.lang.Cloneable
+466.100.abstractproduct = java.lang.Boolean
+466.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+466.100.product = java.lang.Boolean
+466.100.XCommand = No source transformation needed
+
+# Micro-architecture 19 similar at 100% with unknown pattern
+19.100.abstractfactory = java.lang.Cloneable
+19.100.abstractproduct = java.lang.Cloneable
+19.100.concretefactory = CH.ifa.draw.figures.LineConnection
+19.100.product = CH.ifa.draw.figures.ArrowTip
+19.100.XCommand = No source transformation needed
+
+# Micro-architecture 462 similar at 100% with unknown pattern
+462.100.abstractfactory = java.lang.Cloneable
+462.100.abstractproduct = java.lang.Integer
+462.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+462.100.product = java.lang.Integer
+462.100.XCommand = No source transformation needed
+
+# Micro-architecture 49 similar at 100% with unknown pattern
+49.100.abstractfactory = java.lang.Cloneable
+49.100.abstractproduct = java.lang.Object
+49.100.concretefactory = CH.ifa.draw.figures.LineConnection
+49.100.product = CH.ifa.draw.figures.ArrowTip
+49.100.XCommand = No source transformation needed
+
+# Micro-architecture 99 similar at 100% with unknown pattern
+99.100.abstractfactory = java.lang.Cloneable
+99.100.abstractproduct = java.util.EventObject
+99.100.concretefactory = CH.ifa.draw.figures.LineConnection
+99.100.product = CH.ifa.draw.framework.FigureChangeEvent
+99.100.XCommand = No source transformation needed
+
+# Micro-architecture 464 similar at 100% with unknown pattern
+464.100.abstractfactory = java.lang.Cloneable
+464.100.abstractproduct = java.util.Hashtable
+464.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+464.100.product = java.util.Hashtable
+464.100.XCommand = No source transformation needed
+
+# Micro-architecture 193 similar at 100% with unknown pattern
+193.100.abstractfactory = java.lang.Cloneable
+193.100.abstractproduct = java.util.Vector
+193.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+193.100.product = java.util.Vector
+193.100.XCommand = No source transformation needed
+
+# Micro-architecture 139 similar at 100% with unknown pattern
+139.100.abstractfactory = java.lang.Cloneable
+139.100.abstractproduct = java.util.Vector
+139.100.concretefactory = CH.ifa.draw.figures.LineConnection
+139.100.product = java.util.Vector
+139.100.XCommand = No source transformation needed
+
+# Micro-architecture 354 similar at 100% with unknown pattern
+354.100.abstractfactory = java.lang.Object
+354.100.abstractproduct = CH.ifa.draw.util.StorableInput
+354.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+354.100.product = CH.ifa.draw.util.StorableInput
+354.100.XCommand = No source transformation needed
+
+# Micro-architecture 355 similar at 100% with unknown pattern
+355.100.abstractfactory = java.lang.Object
+355.100.abstractproduct = CH.ifa.draw.util.StorableOutput
+355.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+355.100.product = CH.ifa.draw.util.StorableOutput
+355.100.XCommand = No source transformation needed
+
+# Micro-architecture 475 similar at 100% with unknown pattern
+475.100.abstractfactory = java.lang.Object
+475.100.abstractproduct = java.awt.Color
+475.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+475.100.product = java.awt.Color
+475.100.XCommand = No source transformation needed
+
+# Micro-architecture 5 similar at 100% with unknown pattern
+5.100.abstractfactory = java.lang.Object
+5.100.abstractproduct = java.awt.Polygon
+5.100.concretefactory = CH.ifa.draw.figures.ArrowTip
+5.100.product = java.awt.Polygon
+5.100.XCommand = No source transformation needed
+
+# Micro-architecture 352 similar at 100% with unknown pattern
+352.100.abstractfactory = java.lang.Object
+352.100.abstractproduct = java.io.ByteArrayInputStream
+352.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+352.100.product = java.io.ByteArrayInputStream
+352.100.XCommand = No source transformation needed
+
+# Micro-architecture 353 similar at 100% with unknown pattern
+353.100.abstractfactory = java.lang.Object
+353.100.abstractproduct = java.io.ByteArrayOutputStream
+353.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+353.100.product = java.io.ByteArrayOutputStream
+353.100.XCommand = No source transformation needed
+
+# Micro-architecture 473 similar at 100% with unknown pattern
+473.100.abstractfactory = java.lang.Object
+473.100.abstractproduct = java.io.IOException
+473.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+473.100.product = java.io.IOException
+473.100.XCommand = No source transformation needed
+
+# Micro-architecture 476 similar at 100% with unknown pattern
+476.100.abstractfactory = java.lang.Object
+476.100.abstractproduct = java.lang.Boolean
+476.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+476.100.product = java.lang.Boolean
+476.100.XCommand = No source transformation needed
+
+# Micro-architecture 472 similar at 100% with unknown pattern
+472.100.abstractfactory = java.lang.Object
+472.100.abstractproduct = java.lang.Integer
+472.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+472.100.product = java.lang.Integer
+472.100.XCommand = No source transformation needed
+
+# Micro-architecture 474 similar at 100% with unknown pattern
+474.100.abstractfactory = java.lang.Object
+474.100.abstractproduct = java.util.Hashtable
+474.100.concretefactory = CH.ifa.draw.figures.FigureAttributes
+474.100.product = java.util.Hashtable
+474.100.XCommand = No source transformation needed
+
+# Micro-architecture 356 similar at 100% with unknown pattern
+356.100.abstractfactory = java.lang.Object
+356.100.abstractproduct = java.util.Vector
+356.100.concretefactory = CH.ifa.draw.framework.FigureSelection
+356.100.product = java.util.Vector
+356.100.XCommand = No source transformation needed
+
+# Micro-architecture 15 similar at 100% with unknown pattern
+15.100.abstractfactory = java.util.EventListener
+15.100.abstractproduct = CH.ifa.draw.figures.ArrowTip
+15.100.concretefactory = CH.ifa.draw.figures.LineConnection
+15.100.product = CH.ifa.draw.figures.ArrowTip
+15.100.XCommand = No source transformation needed
+
+# Micro-architecture 222 similar at 100% with unknown pattern
+222.100.abstractfactory = java.util.EventListener
+222.100.abstractproduct = CH.ifa.draw.figures.ElbowHandle
+222.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+222.100.product = CH.ifa.draw.figures.ElbowHandle
+222.100.XCommand = No source transformation needed
+
+# Micro-architecture 408 similar at 100% with unknown pattern
+408.100.abstractfactory = java.util.EventListener
+408.100.abstractproduct = CH.ifa.draw.figures.FontSizeHandle
+408.100.concretefactory = CH.ifa.draw.figures.TextFigure
+408.100.product = CH.ifa.draw.figures.FontSizeHandle
+408.100.XCommand = No source transformation needed
+
+# Micro-architecture 65 similar at 100% with unknown pattern
+65.100.abstractfactory = java.util.EventListener
+65.100.abstractproduct = CH.ifa.draw.figures.LineDecoration
+65.100.concretefactory = CH.ifa.draw.figures.LineConnection
+65.100.product = CH.ifa.draw.figures.ArrowTip
+65.100.XCommand = No source transformation needed
+
+# Micro-architecture 125 similar at 100% with unknown pattern
+125.100.abstractfactory = java.util.EventListener
+125.100.abstractproduct = CH.ifa.draw.figures.PolyLineHandle
+125.100.concretefactory = CH.ifa.draw.figures.LineConnection
+125.100.product = CH.ifa.draw.figures.PolyLineHandle
+125.100.XCommand = No source transformation needed
+
+# Micro-architecture 95 similar at 100% with unknown pattern
+95.100.abstractfactory = java.util.EventListener
+95.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+95.100.concretefactory = CH.ifa.draw.figures.LineConnection
+95.100.product = CH.ifa.draw.framework.FigureChangeEvent
+95.100.XCommand = No source transformation needed
+
+# Micro-architecture 404 similar at 100% with unknown pattern
+404.100.abstractfactory = java.util.EventListener
+404.100.abstractproduct = CH.ifa.draw.framework.FigureChangeEvent
+404.100.concretefactory = CH.ifa.draw.figures.TextFigure
+404.100.product = CH.ifa.draw.framework.FigureChangeEvent
+404.100.XCommand = No source transformation needed
+
+# Micro-architecture 211 similar at 100% with unknown pattern
+211.100.abstractfactory = java.util.EventListener
+211.100.abstractproduct = CH.ifa.draw.standard.AbstractHandle
+211.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+211.100.product = CH.ifa.draw.figures.ElbowHandle
+211.100.XCommand = No source transformation needed
+
+# Micro-architecture 189 similar at 100% with unknown pattern
+189.100.abstractfactory = java.util.EventListener
+189.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+189.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+189.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+189.100.XCommand = No source transformation needed
+
+# Micro-architecture 115 similar at 100% with unknown pattern
+115.100.abstractfactory = java.util.EventListener
+115.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionEndHandle
+115.100.concretefactory = CH.ifa.draw.figures.LineConnection
+115.100.product = CH.ifa.draw.standard.ChangeConnectionEndHandle
+115.100.XCommand = No source transformation needed
+
+# Micro-architecture 156 similar at 100% with unknown pattern
+156.100.abstractfactory = java.util.EventListener
+156.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+156.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+156.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+156.100.XCommand = No source transformation needed
+
+# Micro-architecture 75 similar at 100% with unknown pattern
+75.100.abstractfactory = java.util.EventListener
+75.100.abstractproduct = CH.ifa.draw.standard.ChangeConnectionStartHandle
+75.100.concretefactory = CH.ifa.draw.figures.LineConnection
+75.100.product = CH.ifa.draw.standard.ChangeConnectionStartHandle
+75.100.XCommand = No source transformation needed
+
+# Micro-architecture 135 similar at 100% with unknown pattern
+135.100.abstractfactory = java.util.EventListener
+135.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+135.100.concretefactory = CH.ifa.draw.figures.LineConnection
+135.100.product = CH.ifa.draw.figures.PolyLineHandle
+135.100.XCommand = No source transformation needed
+
+# Micro-architecture 409 similar at 100% with unknown pattern
+409.100.abstractfactory = java.util.EventListener
+409.100.abstractproduct = CH.ifa.draw.standard.LocatorHandle
+409.100.concretefactory = CH.ifa.draw.figures.TextFigure
+409.100.product = CH.ifa.draw.figures.FontSizeHandle
+409.100.XCommand = No source transformation needed
+
+# Micro-architecture 167 similar at 100% with unknown pattern
+167.100.abstractfactory = java.util.EventListener
+167.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+167.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+167.100.product = CH.ifa.draw.standard.NullHandle
+167.100.XCommand = No source transformation needed
+
+# Micro-architecture 399 similar at 100% with unknown pattern
+399.100.abstractfactory = java.util.EventListener
+399.100.abstractproduct = CH.ifa.draw.standard.NullHandle
+399.100.concretefactory = CH.ifa.draw.figures.TextFigure
+399.100.product = CH.ifa.draw.standard.NullHandle
+399.100.XCommand = No source transformation needed
+
+# Micro-architecture 402 similar at 100% with unknown pattern
+402.100.abstractfactory = java.util.EventListener
+402.100.abstractproduct = CH.ifa.draw.standard.OffsetLocator
+402.100.concretefactory = CH.ifa.draw.figures.TextFigure
+402.100.product = CH.ifa.draw.standard.OffsetLocator
+402.100.XCommand = No source transformation needed
+
+# Micro-architecture 35 similar at 100% with unknown pattern
+35.100.abstractfactory = java.util.EventListener
+35.100.abstractproduct = CH.ifa.draw.util.Storable
+35.100.concretefactory = CH.ifa.draw.figures.LineConnection
+35.100.product = CH.ifa.draw.figures.ArrowTip
+35.100.XCommand = No source transformation needed
+
+# Micro-architecture 407 similar at 100% with unknown pattern
+407.100.abstractfactory = java.util.EventListener
+407.100.abstractproduct = java.awt.Dimension
+407.100.concretefactory = CH.ifa.draw.figures.TextFigure
+407.100.product = java.awt.Dimension
+407.100.XCommand = No source transformation needed
+
+# Micro-architecture 401 similar at 100% with unknown pattern
+401.100.abstractfactory = java.util.EventListener
+401.100.abstractproduct = java.awt.Font
+401.100.concretefactory = CH.ifa.draw.figures.TextFigure
+401.100.product = java.awt.Font
+401.100.XCommand = No source transformation needed
+
+# Micro-architecture 178 similar at 100% with unknown pattern
+178.100.abstractfactory = java.util.EventListener
+178.100.abstractproduct = java.awt.Point
+178.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+178.100.product = java.awt.Point
+178.100.XCommand = No source transformation needed
+
+# Micro-architecture 85 similar at 100% with unknown pattern
+85.100.abstractfactory = java.util.EventListener
+85.100.abstractproduct = java.awt.Point
+85.100.concretefactory = CH.ifa.draw.figures.LineConnection
+85.100.product = java.awt.Point
+85.100.XCommand = No source transformation needed
+
+# Micro-architecture 398 similar at 100% with unknown pattern
+398.100.abstractfactory = java.util.EventListener
+398.100.abstractproduct = java.awt.Rectangle
+398.100.concretefactory = CH.ifa.draw.figures.TextFigure
+398.100.product = java.awt.Rectangle
+398.100.XCommand = No source transformation needed
+
+# Micro-architecture 45 similar at 100% with unknown pattern
+45.100.abstractfactory = java.util.EventListener
+45.100.abstractproduct = java.io.Serializable
+45.100.concretefactory = CH.ifa.draw.figures.LineConnection
+45.100.product = CH.ifa.draw.figures.ArrowTip
+45.100.XCommand = No source transformation needed
+
+# Micro-architecture 25 similar at 100% with unknown pattern
+25.100.abstractfactory = java.util.EventListener
+25.100.abstractproduct = java.lang.Cloneable
+25.100.concretefactory = CH.ifa.draw.figures.LineConnection
+25.100.product = CH.ifa.draw.figures.ArrowTip
+25.100.XCommand = No source transformation needed
+
+# Micro-architecture 400 similar at 100% with unknown pattern
+400.100.abstractfactory = java.util.EventListener
+400.100.abstractproduct = java.lang.Integer
+400.100.concretefactory = CH.ifa.draw.figures.TextFigure
+400.100.product = java.lang.Integer
+400.100.XCommand = No source transformation needed
+
+# Micro-architecture 55 similar at 100% with unknown pattern
+55.100.abstractfactory = java.util.EventListener
+55.100.abstractproduct = java.lang.Object
+55.100.concretefactory = CH.ifa.draw.figures.LineConnection
+55.100.product = CH.ifa.draw.figures.ArrowTip
+55.100.XCommand = No source transformation needed
+
+# Micro-architecture 403 similar at 100% with unknown pattern
+403.100.abstractfactory = java.util.EventListener
+403.100.abstractproduct = java.lang.String
+403.100.concretefactory = CH.ifa.draw.figures.TextFigure
+403.100.product = java.lang.String
+403.100.XCommand = No source transformation needed
+
+# Micro-architecture 105 similar at 100% with unknown pattern
+105.100.abstractfactory = java.util.EventListener
+105.100.abstractproduct = java.util.EventObject
+105.100.concretefactory = CH.ifa.draw.figures.LineConnection
+105.100.product = CH.ifa.draw.framework.FigureChangeEvent
+105.100.XCommand = No source transformation needed
+
+# Micro-architecture 405 similar at 100% with unknown pattern
+405.100.abstractfactory = java.util.EventListener
+405.100.abstractproduct = java.util.EventObject
+405.100.concretefactory = CH.ifa.draw.figures.TextFigure
+405.100.product = CH.ifa.draw.framework.FigureChangeEvent
+405.100.XCommand = No source transformation needed
+
+# Micro-architecture 200 similar at 100% with unknown pattern
+200.100.abstractfactory = java.util.EventListener
+200.100.abstractproduct = java.util.Vector
+200.100.concretefactory = CH.ifa.draw.figures.ElbowConnection
+200.100.product = java.util.Vector
+200.100.XCommand = No source transformation needed
+
+# Micro-architecture 145 similar at 100% with unknown pattern
+145.100.abstractfactory = java.util.EventListener
+145.100.abstractproduct = java.util.Vector
+145.100.concretefactory = CH.ifa.draw.figures.LineConnection
+145.100.product = java.util.Vector
+145.100.XCommand = No source transformation needed
+
+# Micro-architecture 406 similar at 100% with unknown pattern
+406.100.abstractfactory = java.util.EventListener
+406.100.abstractproduct = java.util.Vector
+406.100.concretefactory = CH.ifa.draw.figures.TextFigure
+406.100.product = java.util.Vector
+406.100.XCommand = No source transformation needed
+
+# Micro-architecture 234 similar at 100% with unknown pattern
+234.100.abstractfactory = java.util.EventObject
+234.100.abstractproduct = java.awt.Rectangle
+234.100.concretefactory = CH.ifa.draw.framework.FigureChangeEvent
+234.100.product = java.awt.Rectangle
+234.100.XCommand = No source transformation needed
+

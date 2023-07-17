@@ -1,0 +1,84 @@
+Solutions for : JHotDraw_Sol_No_Rule
+
+Micro-architecture 49 similar at 100% with Factory method Design Motif
+	concreteCreator = CH.ifa.draw.figures.BorderTool
+	concreteProduct = CH.ifa.draw.figures.BorderDecorator
+	creator = CH.ifa.draw.standard.ActionTool
+	Name = Factory method Design Motif
+	product = CH.ifa.draw.framework.Figure
+	XCommand = System.out.println("No transformation required.");
+
+Micro-architecture 26 similar at 100% with Factory method Design Motif
+	concreteCreator = CH.ifa.draw.samples.javadraw.BouncingDrawing
+	concreteProduct = CH.ifa.draw.samples.javadraw.AnimationDecorator
+	creator = CH.ifa.draw.standard.CompositeFigure
+	Name = Factory method Design Motif
+	product-1 = CH.ifa.draw.framework.FigureChangeListener
+	product-2 = CH.ifa.draw.standard.AbstractFigure
+	product-3 = CH.ifa.draw.framework.Figure
+	XCommand = System.out.println("No transformation required.");
+
+Micro-architecture 19 similar at 100% with Factory method Design Motif
+	concreteCreator = CH.ifa.draw.samples.net.NetApp
+	concreteProduct-1 = CH.ifa.draw.standard.CreationTool
+	concreteProduct-2 = CH.ifa.draw.figures.TextTool
+	concreteProduct-3 = CH.ifa.draw.standard.ConnectionTool
+	creator = CH.ifa.draw.application.DrawApplication
+	Name = Factory method Design Motif
+	product = CH.ifa.draw.framework.Tool
+	XCommand = System.out.println("No transformation required.");
+
+Micro-architecture 23 similar at 100% with Factory method Design Motif
+	concreteCreator = CH.ifa.draw.samples.net.NodeFigure
+	concreteProduct = CH.ifa.draw.figures.LineConnection
+	creator = CH.ifa.draw.figures.AttributeFigure
+	Name = Factory method Design Motif
+	product = CH.ifa.draw.standard.AbstractFigure
+	XCommand = System.out.println("No transformation required.");
+
+Micro-architecture 12 similar at 100% with Factory method Design Motif
+	concreteCreator = CH.ifa.draw.samples.nothing.NothingApp
+	concreteProduct-1 = CH.ifa.draw.standard.CreationTool
+	concreteProduct-2 = CH.ifa.draw.contrib.PolygonTool
+	concreteProduct-3 = CH.ifa.draw.figures.TextTool
+	concreteProduct-4 = CH.ifa.draw.standard.ConnectionTool
+	creator = CH.ifa.draw.application.DrawApplication
+	Name = Factory method Design Motif
+	product = CH.ifa.draw.framework.Tool
+	XCommand = System.out.println("No transformation required.");
+
+Micro-architecture 43 similar at 100% with Factory method Design Motif
+	concreteCreator = CH.ifa.draw.samples.pert.PertApplication
+	concreteProduct-1 = CH.ifa.draw.samples.pert.PertFigureCreationTool
+	concreteProduct-2 = CH.ifa.draw.standard.CreationTool
+	concreteProduct-3 = CH.ifa.draw.figures.TextTool
+	concreteProduct-4 = CH.ifa.draw.standard.ConnectionTool
+	creator = CH.ifa.draw.application.DrawApplication
+	Name = Factory method Design Motif
+	product = CH.ifa.draw.framework.Tool
+	XCommand = System.out.println("No transformation required.");
+
+Micro-architecture 8 similar at 100% with Factory method Design Motif
+	concreteCreator = CH.ifa.draw.samples.pert.PertDependency
+	concreteProduct = CH.ifa.draw.figures.ArrowTip
+	creator = CH.ifa.draw.figures.LineConnection
+	Name = Factory method Design Motif
+	product = CH.ifa.draw.figures.LineDecoration
+	XCommand = System.out.println("No transformation required.");
+
+Micro-architecture 10 similar at 100% with Factory method Design Motif
+	concreteCreator = CH.ifa.draw.samples.pert.PertDependency
+	concreteProduct = CH.ifa.draw.figures.ArrowTip
+	creator = CH.ifa.draw.figures.PolyLineFigure
+	Name = Factory method Design Motif
+	product = CH.ifa.draw.figures.LineDecoration
+	XCommand = System.out.println("No transformation required.");
+
+Micro-architecture 15 similar at 100% with Factory method Design Motif
+	concreteCreator = CH.ifa.draw.samples.pert.PertFigureCreationTool
+	concreteProduct = CH.ifa.draw.samples.pert.PertFigure
+	creator = CH.ifa.draw.standard.CreationTool
+	Name = Factory method Design Motif
+	product = CH.ifa.draw.framework.Figure
+	XCommand = System.out.println("No transformation required.");
+

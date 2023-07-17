@@ -1,0 +1,1003 @@
+# Micro-architecture 18945 similar at 16% with Adapter Design Motif
+18945.16.adapter = net.phbwt.jtans.calc.CalcOutlinePolygon
+18945.16.adpatee = net.phbwt.jtans.calc.CalcPolyPoints
+18945.16.client = net.phbwt.jtans.calc.CalcFigure
+18945.16.Name = Adapter Design Motif
+18945.16.target = net.phbwt.jtans.calc.CalcPolyPoints
+18945.16.XCommand = command
+
+# Micro-architecture 18946 similar at 16% with Adapter Design Motif
+18946.16.adapter = net.phbwt.jtans.calc.CalcOutlinePolygon
+18946.16.adpatee = net.phbwt.jtans.calc.CalcPolyPoints
+18946.16.client = net.phbwt.jtans.calc.CalcOutlinePolygon
+18946.16.Name = Adapter Design Motif
+18946.16.target = net.phbwt.jtans.calc.CalcPolyPoints
+18946.16.XCommand = command
+
+# Micro-architecture 18950 similar at 16% with Adapter Design Motif
+18950.16.adapter = net.phbwt.jtans.calc.CalcOutlinePolygon
+18950.16.adpatee = net.phbwt.jtans.calc.CalcPolyPoints
+18950.16.client = net.phbwt.jtans.calc.CalcPiece
+18950.16.Name = Adapter Design Motif
+18950.16.target = net.phbwt.jtans.calc.CalcPolyPoints
+18950.16.XCommand = command
+
+# Micro-architecture 18947 similar at 16% with Adapter Design Motif
+18947.16.adapter = net.phbwt.jtans.calc.CalcOutlinePolygon
+18947.16.adpatee = net.phbwt.jtans.calc.CalcPolyPoints
+18947.16.client = net.phbwt.jtans.calc.PixelPiece
+18947.16.Name = Adapter Design Motif
+18947.16.target = net.phbwt.jtans.calc.CalcPolyPoints
+18947.16.XCommand = command
+
+# Micro-architecture 18948 similar at 16% with Adapter Design Motif
+18948.16.adapter = net.phbwt.jtans.calc.CalcOutlinePolygon
+18948.16.adpatee = net.phbwt.jtans.calc.CalcPolyPoints
+18948.16.client = net.phbwt.jtans.calc.PixelPolygon
+18948.16.Name = Adapter Design Motif
+18948.16.target = net.phbwt.jtans.calc.CalcPolyPoints
+18948.16.XCommand = command
+
+# Micro-architecture 18949 similar at 16% with Adapter Design Motif
+18949.16.adapter = net.phbwt.jtans.calc.CalcOutlinePolygon
+18949.16.adpatee = net.phbwt.jtans.calc.CalcPolyPoints
+18949.16.client = net.phbwt.jtans.calc.StaticCalcOutline
+18949.16.Name = Adapter Design Motif
+18949.16.target = net.phbwt.jtans.calc.CalcPolyPoints
+18949.16.XCommand = command
+
+# Micro-architecture 19585 similar at 16% with Adapter Design Motif
+19585.16.adapter = net.phbwt.jtans.calc.CalcPieceC
+19585.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19585.16.client = net.phbwt.jtans.calc.CalcFigure
+19585.16.Name = Adapter Design Motif
+19585.16.target = net.phbwt.jtans.calc.CalcPiece
+19585.16.XCommand = command
+
+# Micro-architecture 19593 similar at 16% with Adapter Design Motif
+19593.16.adapter = net.phbwt.jtans.calc.CalcPieceC
+19593.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19593.16.client = net.phbwt.jtans.calc.CalcPiece
+19593.16.Name = Adapter Design Motif
+19593.16.target = net.phbwt.jtans.calc.CalcPiece
+19593.16.XCommand = command
+
+# Micro-architecture 19590 similar at 16% with Adapter Design Motif
+19590.16.adapter = net.phbwt.jtans.calc.CalcPieceC
+19590.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19590.16.client = net.phbwt.jtans.calc.CalcPieceC
+19590.16.Name = Adapter Design Motif
+19590.16.target = net.phbwt.jtans.calc.CalcPiece
+19590.16.XCommand = command
+
+# Micro-architecture 19591 similar at 16% with Adapter Design Motif
+19591.16.adapter = net.phbwt.jtans.calc.CalcPieceC
+19591.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19591.16.client = net.phbwt.jtans.calc.CalcPieceGT
+19591.16.Name = Adapter Design Motif
+19591.16.target = net.phbwt.jtans.calc.CalcPiece
+19591.16.XCommand = command
+
+# Micro-architecture 19587 similar at 16% with Adapter Design Motif
+19587.16.adapter = net.phbwt.jtans.calc.CalcPieceC
+19587.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19587.16.client = net.phbwt.jtans.calc.CalcPieceMT
+19587.16.Name = Adapter Design Motif
+19587.16.target = net.phbwt.jtans.calc.CalcPiece
+19587.16.XCommand = command
+
+# Micro-architecture 19588 similar at 16% with Adapter Design Motif
+19588.16.adapter = net.phbwt.jtans.calc.CalcPieceC
+19588.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19588.16.client = net.phbwt.jtans.calc.CalcPiecePT
+19588.16.Name = Adapter Design Motif
+19588.16.target = net.phbwt.jtans.calc.CalcPiece
+19588.16.XCommand = command
+
+# Micro-architecture 19586 similar at 16% with Adapter Design Motif
+19586.16.adapter = net.phbwt.jtans.calc.CalcPieceC
+19586.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19586.16.client = net.phbwt.jtans.calc.CalcPieceT
+19586.16.Name = Adapter Design Motif
+19586.16.target = net.phbwt.jtans.calc.CalcPiece
+19586.16.XCommand = command
+
+# Micro-architecture 19589 similar at 16% with Adapter Design Motif
+19589.16.adapter = net.phbwt.jtans.calc.CalcPieceC
+19589.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19589.16.client = net.phbwt.jtans.calc.PixelPiece
+19589.16.Name = Adapter Design Motif
+19589.16.target = net.phbwt.jtans.calc.CalcPiece
+19589.16.XCommand = command
+
+# Micro-architecture 19592 similar at 16% with Adapter Design Motif
+19592.16.adapter = net.phbwt.jtans.calc.CalcPieceC
+19592.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19592.16.client = net.phbwt.jtans.calc.StaticCalcOutline
+19592.16.Name = Adapter Design Motif
+19592.16.target = net.phbwt.jtans.calc.CalcPiece
+19592.16.XCommand = command
+
+# Micro-architecture 19594 similar at 16% with Adapter Design Motif
+19594.16.adapter = net.phbwt.jtans.calc.CalcPieceGT
+19594.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19594.16.client = net.phbwt.jtans.calc.CalcFigure
+19594.16.Name = Adapter Design Motif
+19594.16.target = net.phbwt.jtans.calc.CalcPiece
+19594.16.XCommand = command
+
+# Micro-architecture 19602 similar at 16% with Adapter Design Motif
+19602.16.adapter = net.phbwt.jtans.calc.CalcPieceGT
+19602.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19602.16.client = net.phbwt.jtans.calc.CalcPiece
+19602.16.Name = Adapter Design Motif
+19602.16.target = net.phbwt.jtans.calc.CalcPiece
+19602.16.XCommand = command
+
+# Micro-architecture 19599 similar at 16% with Adapter Design Motif
+19599.16.adapter = net.phbwt.jtans.calc.CalcPieceGT
+19599.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19599.16.client = net.phbwt.jtans.calc.CalcPieceC
+19599.16.Name = Adapter Design Motif
+19599.16.target = net.phbwt.jtans.calc.CalcPiece
+19599.16.XCommand = command
+
+# Micro-architecture 19600 similar at 16% with Adapter Design Motif
+19600.16.adapter = net.phbwt.jtans.calc.CalcPieceGT
+19600.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19600.16.client = net.phbwt.jtans.calc.CalcPieceGT
+19600.16.Name = Adapter Design Motif
+19600.16.target = net.phbwt.jtans.calc.CalcPiece
+19600.16.XCommand = command
+
+# Micro-architecture 19596 similar at 16% with Adapter Design Motif
+19596.16.adapter = net.phbwt.jtans.calc.CalcPieceGT
+19596.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19596.16.client = net.phbwt.jtans.calc.CalcPieceMT
+19596.16.Name = Adapter Design Motif
+19596.16.target = net.phbwt.jtans.calc.CalcPiece
+19596.16.XCommand = command
+
+# Micro-architecture 19597 similar at 16% with Adapter Design Motif
+19597.16.adapter = net.phbwt.jtans.calc.CalcPieceGT
+19597.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19597.16.client = net.phbwt.jtans.calc.CalcPiecePT
+19597.16.Name = Adapter Design Motif
+19597.16.target = net.phbwt.jtans.calc.CalcPiece
+19597.16.XCommand = command
+
+# Micro-architecture 19595 similar at 16% with Adapter Design Motif
+19595.16.adapter = net.phbwt.jtans.calc.CalcPieceGT
+19595.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19595.16.client = net.phbwt.jtans.calc.CalcPieceT
+19595.16.Name = Adapter Design Motif
+19595.16.target = net.phbwt.jtans.calc.CalcPiece
+19595.16.XCommand = command
+
+# Micro-architecture 19598 similar at 16% with Adapter Design Motif
+19598.16.adapter = net.phbwt.jtans.calc.CalcPieceGT
+19598.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19598.16.client = net.phbwt.jtans.calc.PixelPiece
+19598.16.Name = Adapter Design Motif
+19598.16.target = net.phbwt.jtans.calc.CalcPiece
+19598.16.XCommand = command
+
+# Micro-architecture 19601 similar at 16% with Adapter Design Motif
+19601.16.adapter = net.phbwt.jtans.calc.CalcPieceGT
+19601.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19601.16.client = net.phbwt.jtans.calc.StaticCalcOutline
+19601.16.Name = Adapter Design Motif
+19601.16.target = net.phbwt.jtans.calc.CalcPiece
+19601.16.XCommand = command
+
+# Micro-architecture 19567 similar at 16% with Adapter Design Motif
+19567.16.adapter = net.phbwt.jtans.calc.CalcPieceMT
+19567.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19567.16.client = net.phbwt.jtans.calc.CalcFigure
+19567.16.Name = Adapter Design Motif
+19567.16.target = net.phbwt.jtans.calc.CalcPiece
+19567.16.XCommand = command
+
+# Micro-architecture 19575 similar at 16% with Adapter Design Motif
+19575.16.adapter = net.phbwt.jtans.calc.CalcPieceMT
+19575.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19575.16.client = net.phbwt.jtans.calc.CalcPiece
+19575.16.Name = Adapter Design Motif
+19575.16.target = net.phbwt.jtans.calc.CalcPiece
+19575.16.XCommand = command
+
+# Micro-architecture 19572 similar at 16% with Adapter Design Motif
+19572.16.adapter = net.phbwt.jtans.calc.CalcPieceMT
+19572.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19572.16.client = net.phbwt.jtans.calc.CalcPieceC
+19572.16.Name = Adapter Design Motif
+19572.16.target = net.phbwt.jtans.calc.CalcPiece
+19572.16.XCommand = command
+
+# Micro-architecture 19573 similar at 16% with Adapter Design Motif
+19573.16.adapter = net.phbwt.jtans.calc.CalcPieceMT
+19573.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19573.16.client = net.phbwt.jtans.calc.CalcPieceGT
+19573.16.Name = Adapter Design Motif
+19573.16.target = net.phbwt.jtans.calc.CalcPiece
+19573.16.XCommand = command
+
+# Micro-architecture 19569 similar at 16% with Adapter Design Motif
+19569.16.adapter = net.phbwt.jtans.calc.CalcPieceMT
+19569.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19569.16.client = net.phbwt.jtans.calc.CalcPieceMT
+19569.16.Name = Adapter Design Motif
+19569.16.target = net.phbwt.jtans.calc.CalcPiece
+19569.16.XCommand = command
+
+# Micro-architecture 19570 similar at 16% with Adapter Design Motif
+19570.16.adapter = net.phbwt.jtans.calc.CalcPieceMT
+19570.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19570.16.client = net.phbwt.jtans.calc.CalcPiecePT
+19570.16.Name = Adapter Design Motif
+19570.16.target = net.phbwt.jtans.calc.CalcPiece
+19570.16.XCommand = command
+
+# Micro-architecture 19568 similar at 16% with Adapter Design Motif
+19568.16.adapter = net.phbwt.jtans.calc.CalcPieceMT
+19568.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19568.16.client = net.phbwt.jtans.calc.CalcPieceT
+19568.16.Name = Adapter Design Motif
+19568.16.target = net.phbwt.jtans.calc.CalcPiece
+19568.16.XCommand = command
+
+# Micro-architecture 19571 similar at 16% with Adapter Design Motif
+19571.16.adapter = net.phbwt.jtans.calc.CalcPieceMT
+19571.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19571.16.client = net.phbwt.jtans.calc.PixelPiece
+19571.16.Name = Adapter Design Motif
+19571.16.target = net.phbwt.jtans.calc.CalcPiece
+19571.16.XCommand = command
+
+# Micro-architecture 19574 similar at 16% with Adapter Design Motif
+19574.16.adapter = net.phbwt.jtans.calc.CalcPieceMT
+19574.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19574.16.client = net.phbwt.jtans.calc.StaticCalcOutline
+19574.16.Name = Adapter Design Motif
+19574.16.target = net.phbwt.jtans.calc.CalcPiece
+19574.16.XCommand = command
+
+# Micro-architecture 19576 similar at 16% with Adapter Design Motif
+19576.16.adapter = net.phbwt.jtans.calc.CalcPiecePT
+19576.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19576.16.client = net.phbwt.jtans.calc.CalcFigure
+19576.16.Name = Adapter Design Motif
+19576.16.target = net.phbwt.jtans.calc.CalcPiece
+19576.16.XCommand = command
+
+# Micro-architecture 19584 similar at 16% with Adapter Design Motif
+19584.16.adapter = net.phbwt.jtans.calc.CalcPiecePT
+19584.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19584.16.client = net.phbwt.jtans.calc.CalcPiece
+19584.16.Name = Adapter Design Motif
+19584.16.target = net.phbwt.jtans.calc.CalcPiece
+19584.16.XCommand = command
+
+# Micro-architecture 19581 similar at 16% with Adapter Design Motif
+19581.16.adapter = net.phbwt.jtans.calc.CalcPiecePT
+19581.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19581.16.client = net.phbwt.jtans.calc.CalcPieceC
+19581.16.Name = Adapter Design Motif
+19581.16.target = net.phbwt.jtans.calc.CalcPiece
+19581.16.XCommand = command
+
+# Micro-architecture 19582 similar at 16% with Adapter Design Motif
+19582.16.adapter = net.phbwt.jtans.calc.CalcPiecePT
+19582.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19582.16.client = net.phbwt.jtans.calc.CalcPieceGT
+19582.16.Name = Adapter Design Motif
+19582.16.target = net.phbwt.jtans.calc.CalcPiece
+19582.16.XCommand = command
+
+# Micro-architecture 19578 similar at 16% with Adapter Design Motif
+19578.16.adapter = net.phbwt.jtans.calc.CalcPiecePT
+19578.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19578.16.client = net.phbwt.jtans.calc.CalcPieceMT
+19578.16.Name = Adapter Design Motif
+19578.16.target = net.phbwt.jtans.calc.CalcPiece
+19578.16.XCommand = command
+
+# Micro-architecture 19579 similar at 16% with Adapter Design Motif
+19579.16.adapter = net.phbwt.jtans.calc.CalcPiecePT
+19579.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19579.16.client = net.phbwt.jtans.calc.CalcPiecePT
+19579.16.Name = Adapter Design Motif
+19579.16.target = net.phbwt.jtans.calc.CalcPiece
+19579.16.XCommand = command
+
+# Micro-architecture 19577 similar at 16% with Adapter Design Motif
+19577.16.adapter = net.phbwt.jtans.calc.CalcPiecePT
+19577.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19577.16.client = net.phbwt.jtans.calc.CalcPieceT
+19577.16.Name = Adapter Design Motif
+19577.16.target = net.phbwt.jtans.calc.CalcPiece
+19577.16.XCommand = command
+
+# Micro-architecture 19580 similar at 16% with Adapter Design Motif
+19580.16.adapter = net.phbwt.jtans.calc.CalcPiecePT
+19580.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19580.16.client = net.phbwt.jtans.calc.PixelPiece
+19580.16.Name = Adapter Design Motif
+19580.16.target = net.phbwt.jtans.calc.CalcPiece
+19580.16.XCommand = command
+
+# Micro-architecture 19583 similar at 16% with Adapter Design Motif
+19583.16.adapter = net.phbwt.jtans.calc.CalcPiecePT
+19583.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19583.16.client = net.phbwt.jtans.calc.StaticCalcOutline
+19583.16.Name = Adapter Design Motif
+19583.16.target = net.phbwt.jtans.calc.CalcPiece
+19583.16.XCommand = command
+
+# Micro-architecture 19558 similar at 16% with Adapter Design Motif
+19558.16.adapter = net.phbwt.jtans.calc.CalcPieceT
+19558.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19558.16.client = net.phbwt.jtans.calc.CalcFigure
+19558.16.Name = Adapter Design Motif
+19558.16.target = net.phbwt.jtans.calc.CalcPiece
+19558.16.XCommand = command
+
+# Micro-architecture 19566 similar at 16% with Adapter Design Motif
+19566.16.adapter = net.phbwt.jtans.calc.CalcPieceT
+19566.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19566.16.client = net.phbwt.jtans.calc.CalcPiece
+19566.16.Name = Adapter Design Motif
+19566.16.target = net.phbwt.jtans.calc.CalcPiece
+19566.16.XCommand = command
+
+# Micro-architecture 19563 similar at 16% with Adapter Design Motif
+19563.16.adapter = net.phbwt.jtans.calc.CalcPieceT
+19563.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19563.16.client = net.phbwt.jtans.calc.CalcPieceC
+19563.16.Name = Adapter Design Motif
+19563.16.target = net.phbwt.jtans.calc.CalcPiece
+19563.16.XCommand = command
+
+# Micro-architecture 19564 similar at 16% with Adapter Design Motif
+19564.16.adapter = net.phbwt.jtans.calc.CalcPieceT
+19564.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19564.16.client = net.phbwt.jtans.calc.CalcPieceGT
+19564.16.Name = Adapter Design Motif
+19564.16.target = net.phbwt.jtans.calc.CalcPiece
+19564.16.XCommand = command
+
+# Micro-architecture 19560 similar at 16% with Adapter Design Motif
+19560.16.adapter = net.phbwt.jtans.calc.CalcPieceT
+19560.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19560.16.client = net.phbwt.jtans.calc.CalcPieceMT
+19560.16.Name = Adapter Design Motif
+19560.16.target = net.phbwt.jtans.calc.CalcPiece
+19560.16.XCommand = command
+
+# Micro-architecture 19561 similar at 16% with Adapter Design Motif
+19561.16.adapter = net.phbwt.jtans.calc.CalcPieceT
+19561.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19561.16.client = net.phbwt.jtans.calc.CalcPiecePT
+19561.16.Name = Adapter Design Motif
+19561.16.target = net.phbwt.jtans.calc.CalcPiece
+19561.16.XCommand = command
+
+# Micro-architecture 19559 similar at 16% with Adapter Design Motif
+19559.16.adapter = net.phbwt.jtans.calc.CalcPieceT
+19559.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19559.16.client = net.phbwt.jtans.calc.CalcPieceT
+19559.16.Name = Adapter Design Motif
+19559.16.target = net.phbwt.jtans.calc.CalcPiece
+19559.16.XCommand = command
+
+# Micro-architecture 19562 similar at 16% with Adapter Design Motif
+19562.16.adapter = net.phbwt.jtans.calc.CalcPieceT
+19562.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19562.16.client = net.phbwt.jtans.calc.PixelPiece
+19562.16.Name = Adapter Design Motif
+19562.16.target = net.phbwt.jtans.calc.CalcPiece
+19562.16.XCommand = command
+
+# Micro-architecture 19565 similar at 16% with Adapter Design Motif
+19565.16.adapter = net.phbwt.jtans.calc.CalcPieceT
+19565.16.adpatee = net.phbwt.jtans.calc.CalcPiece
+19565.16.client = net.phbwt.jtans.calc.StaticCalcOutline
+19565.16.Name = Adapter Design Motif
+19565.16.target = net.phbwt.jtans.calc.CalcPiece
+19565.16.XCommand = command
+
+# Micro-architecture 19505 similar at 16% with Adapter Design Motif
+19505.16.adapter = net.phbwt.jtans.calc.DisplayFigure
+19505.16.adpatee = net.phbwt.jtans.calc.CalcFigure
+19505.16.client = net.phbwt.jtans.calc.DisplayFigure
+19505.16.Name = Adapter Design Motif
+19505.16.target = net.phbwt.jtans.calc.PixelFigure
+19505.16.XCommand = command
+
+# Micro-architecture 19481 similar at 16% with Adapter Design Motif
+19481.16.adapter = net.phbwt.jtans.calc.DisplayFigure
+19481.16.adpatee = net.phbwt.jtans.calc.CalcFigure
+19481.16.client = net.phbwt.jtans.calc.EditableFigure
+19481.16.Name = Adapter Design Motif
+19481.16.target = net.phbwt.jtans.calc.PixelFigure
+19481.16.XCommand = command
+
+# Micro-architecture 19489 similar at 16% with Adapter Design Motif
+19489.16.adapter = net.phbwt.jtans.calc.DisplayFigure
+19489.16.adpatee = net.phbwt.jtans.calc.CalcFigure
+19489.16.client = net.phbwt.jtans.guimain.DisplayFigureComponent
+19489.16.Name = Adapter Design Motif
+19489.16.target = net.phbwt.jtans.calc.PixelFigure
+19489.16.XCommand = command
+
+# Micro-architecture 19497 similar at 16% with Adapter Design Motif
+19497.16.adapter = net.phbwt.jtans.calc.DisplayFigure
+19497.16.adpatee = net.phbwt.jtans.calc.CalcFigure
+19497.16.client = net.phbwt.jtans.guimain.EditableFigureComponent
+19497.16.Name = Adapter Design Motif
+19497.16.target = net.phbwt.jtans.calc.PixelFigure
+19497.16.XCommand = command
+
+# Micro-architecture 19511 similar at 16% with Adapter Design Motif
+19511.16.adapter = net.phbwt.jtans.calc.DisplayFigure
+19511.16.adpatee = net.phbwt.jtans.calc.PixelFigure
+19511.16.client = net.phbwt.jtans.calc.DisplayFigure
+19511.16.Name = Adapter Design Motif
+19511.16.target = net.phbwt.jtans.calc.PixelFigure
+19511.16.XCommand = command
+
+# Micro-architecture 19487 similar at 16% with Adapter Design Motif
+19487.16.adapter = net.phbwt.jtans.calc.DisplayFigure
+19487.16.adpatee = net.phbwt.jtans.calc.PixelFigure
+19487.16.client = net.phbwt.jtans.calc.EditableFigure
+19487.16.Name = Adapter Design Motif
+19487.16.target = net.phbwt.jtans.calc.PixelFigure
+19487.16.XCommand = command
+
+# Micro-architecture 19495 similar at 16% with Adapter Design Motif
+19495.16.adapter = net.phbwt.jtans.calc.DisplayFigure
+19495.16.adpatee = net.phbwt.jtans.calc.PixelFigure
+19495.16.client = net.phbwt.jtans.guimain.DisplayFigureComponent
+19495.16.Name = Adapter Design Motif
+19495.16.target = net.phbwt.jtans.calc.PixelFigure
+19495.16.XCommand = command
+
+# Micro-architecture 19503 similar at 16% with Adapter Design Motif
+19503.16.adapter = net.phbwt.jtans.calc.DisplayFigure
+19503.16.adpatee = net.phbwt.jtans.calc.PixelFigure
+19503.16.client = net.phbwt.jtans.guimain.EditableFigureComponent
+19503.16.Name = Adapter Design Motif
+19503.16.target = net.phbwt.jtans.calc.PixelFigure
+19503.16.XCommand = command
+
+# Micro-architecture 19510 similar at 16% with Adapter Design Motif
+19510.16.adapter = net.phbwt.jtans.calc.DisplayFigure
+19510.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19510.16.client = net.phbwt.jtans.calc.DisplayFigure
+19510.16.Name = Adapter Design Motif
+19510.16.target = net.phbwt.jtans.calc.PixelFigure
+19510.16.XCommand = command
+
+# Micro-architecture 19486 similar at 16% with Adapter Design Motif
+19486.16.adapter = net.phbwt.jtans.calc.DisplayFigure
+19486.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19486.16.client = net.phbwt.jtans.calc.EditableFigure
+19486.16.Name = Adapter Design Motif
+19486.16.target = net.phbwt.jtans.calc.PixelFigure
+19486.16.XCommand = command
+
+# Micro-architecture 19494 similar at 16% with Adapter Design Motif
+19494.16.adapter = net.phbwt.jtans.calc.DisplayFigure
+19494.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19494.16.client = net.phbwt.jtans.guimain.DisplayFigureComponent
+19494.16.Name = Adapter Design Motif
+19494.16.target = net.phbwt.jtans.calc.PixelFigure
+19494.16.XCommand = command
+
+# Micro-architecture 19502 similar at 16% with Adapter Design Motif
+19502.16.adapter = net.phbwt.jtans.calc.DisplayFigure
+19502.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19502.16.client = net.phbwt.jtans.guimain.EditableFigureComponent
+19502.16.Name = Adapter Design Motif
+19502.16.target = net.phbwt.jtans.calc.PixelFigure
+19502.16.XCommand = command
+
+# Micro-architecture 19470 similar at 16% with Adapter Design Motif
+19470.16.adapter = net.phbwt.jtans.calc.EditableFigure
+19470.16.adpatee = net.phbwt.jtans.calc.CalcFigure
+19470.16.client = net.phbwt.jtans.calc.DisplayFigure
+19470.16.Name = Adapter Design Motif
+19470.16.target = net.phbwt.jtans.calc.PixelFigure
+19470.16.XCommand = command
+
+# Micro-architecture 19437 similar at 16% with Adapter Design Motif
+19437.16.adapter = net.phbwt.jtans.calc.EditableFigure
+19437.16.adpatee = net.phbwt.jtans.calc.CalcFigure
+19437.16.client = net.phbwt.jtans.calc.EditableFigure
+19437.16.Name = Adapter Design Motif
+19437.16.target = net.phbwt.jtans.calc.PixelFigure
+19437.16.XCommand = command
+
+# Micro-architecture 19448 similar at 16% with Adapter Design Motif
+19448.16.adapter = net.phbwt.jtans.calc.EditableFigure
+19448.16.adpatee = net.phbwt.jtans.calc.CalcFigure
+19448.16.client = net.phbwt.jtans.guimain.DisplayFigureComponent
+19448.16.Name = Adapter Design Motif
+19448.16.target = net.phbwt.jtans.calc.PixelFigure
+19448.16.XCommand = command
+
+# Micro-architecture 19459 similar at 16% with Adapter Design Motif
+19459.16.adapter = net.phbwt.jtans.calc.EditableFigure
+19459.16.adpatee = net.phbwt.jtans.calc.CalcFigure
+19459.16.client = net.phbwt.jtans.guimain.EditableFigureComponent
+19459.16.Name = Adapter Design Motif
+19459.16.target = net.phbwt.jtans.calc.PixelFigure
+19459.16.XCommand = command
+
+# Micro-architecture 19478 similar at 16% with Adapter Design Motif
+19478.16.adapter = net.phbwt.jtans.calc.EditableFigure
+19478.16.adpatee = net.phbwt.jtans.calc.PixelFigure
+19478.16.client = net.phbwt.jtans.calc.DisplayFigure
+19478.16.Name = Adapter Design Motif
+19478.16.target = net.phbwt.jtans.calc.PixelFigure
+19478.16.XCommand = command
+
+# Micro-architecture 19445 similar at 16% with Adapter Design Motif
+19445.16.adapter = net.phbwt.jtans.calc.EditableFigure
+19445.16.adpatee = net.phbwt.jtans.calc.PixelFigure
+19445.16.client = net.phbwt.jtans.calc.EditableFigure
+19445.16.Name = Adapter Design Motif
+19445.16.target = net.phbwt.jtans.calc.PixelFigure
+19445.16.XCommand = command
+
+# Micro-architecture 19456 similar at 16% with Adapter Design Motif
+19456.16.adapter = net.phbwt.jtans.calc.EditableFigure
+19456.16.adpatee = net.phbwt.jtans.calc.PixelFigure
+19456.16.client = net.phbwt.jtans.guimain.DisplayFigureComponent
+19456.16.Name = Adapter Design Motif
+19456.16.target = net.phbwt.jtans.calc.PixelFigure
+19456.16.XCommand = command
+
+# Micro-architecture 19467 similar at 16% with Adapter Design Motif
+19467.16.adapter = net.phbwt.jtans.calc.EditableFigure
+19467.16.adpatee = net.phbwt.jtans.calc.PixelFigure
+19467.16.client = net.phbwt.jtans.guimain.EditableFigureComponent
+19467.16.Name = Adapter Design Motif
+19467.16.target = net.phbwt.jtans.calc.PixelFigure
+19467.16.XCommand = command
+
+# Micro-architecture 19477 similar at 16% with Adapter Design Motif
+19477.16.adapter = net.phbwt.jtans.calc.EditableFigure
+19477.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19477.16.client = net.phbwt.jtans.calc.DisplayFigure
+19477.16.Name = Adapter Design Motif
+19477.16.target = net.phbwt.jtans.calc.PixelFigure
+19477.16.XCommand = command
+
+# Micro-architecture 19444 similar at 16% with Adapter Design Motif
+19444.16.adapter = net.phbwt.jtans.calc.EditableFigure
+19444.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19444.16.client = net.phbwt.jtans.calc.EditableFigure
+19444.16.Name = Adapter Design Motif
+19444.16.target = net.phbwt.jtans.calc.PixelFigure
+19444.16.XCommand = command
+
+# Micro-architecture 19455 similar at 16% with Adapter Design Motif
+19455.16.adapter = net.phbwt.jtans.calc.EditableFigure
+19455.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19455.16.client = net.phbwt.jtans.guimain.DisplayFigureComponent
+19455.16.Name = Adapter Design Motif
+19455.16.target = net.phbwt.jtans.calc.PixelFigure
+19455.16.XCommand = command
+
+# Micro-architecture 19466 similar at 16% with Adapter Design Motif
+19466.16.adapter = net.phbwt.jtans.calc.EditableFigure
+19466.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19466.16.client = net.phbwt.jtans.guimain.EditableFigureComponent
+19466.16.Name = Adapter Design Motif
+19466.16.target = net.phbwt.jtans.calc.PixelFigure
+19466.16.XCommand = command
+
+# Micro-architecture 19436 similar at 16% with Adapter Design Motif
+19436.16.adapter = net.phbwt.jtans.calc.PixelOutlinePolygon
+19436.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19436.16.client = net.phbwt.jtans.calc.DisplayFigure
+19436.16.Name = Adapter Design Motif
+19436.16.target = net.phbwt.jtans.calc.PixelPolygon
+19436.16.XCommand = command
+
+# Micro-architecture 19431 similar at 16% with Adapter Design Motif
+19431.16.adapter = net.phbwt.jtans.calc.PixelOutlinePolygon
+19431.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19431.16.client = net.phbwt.jtans.calc.EditableFigure
+19431.16.Name = Adapter Design Motif
+19431.16.target = net.phbwt.jtans.calc.PixelPolygon
+19431.16.XCommand = command
+
+# Micro-architecture 19435 similar at 16% with Adapter Design Motif
+19435.16.adapter = net.phbwt.jtans.calc.PixelOutlinePolygon
+19435.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19435.16.client = net.phbwt.jtans.calc.PixelFigure
+19435.16.Name = Adapter Design Motif
+19435.16.target = net.phbwt.jtans.calc.PixelPolygon
+19435.16.XCommand = command
+
+# Micro-architecture 19434 similar at 16% with Adapter Design Motif
+19434.16.adapter = net.phbwt.jtans.calc.PixelOutlinePolygon
+19434.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19434.16.client = net.phbwt.jtans.calc.PixelOutlinePolygon
+19434.16.Name = Adapter Design Motif
+19434.16.target = net.phbwt.jtans.calc.PixelPolygon
+19434.16.XCommand = command
+
+# Micro-architecture 19432 similar at 16% with Adapter Design Motif
+19432.16.adapter = net.phbwt.jtans.calc.PixelOutlinePolygon
+19432.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19432.16.client = net.phbwt.jtans.calc.PixelPiece
+19432.16.Name = Adapter Design Motif
+19432.16.target = net.phbwt.jtans.calc.PixelPolygon
+19432.16.XCommand = command
+
+# Micro-architecture 19433 similar at 16% with Adapter Design Motif
+19433.16.adapter = net.phbwt.jtans.calc.PixelOutlinePolygon
+19433.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19433.16.client = net.phbwt.jtans.calc.PixelPolygon
+19433.16.Name = Adapter Design Motif
+19433.16.target = net.phbwt.jtans.calc.PixelPolygon
+19433.16.XCommand = command
+
+# Micro-architecture 19418 similar at 16% with Adapter Design Motif
+19418.16.adapter = net.phbwt.jtans.calc.PixelPiece
+19418.16.adpatee = net.phbwt.jtans.calc.CalcPolyPoints
+19418.16.client = net.phbwt.jtans.calc.DisplayFigure
+19418.16.Name = Adapter Design Motif
+19418.16.target = net.phbwt.jtans.calc.PixelPolygon
+19418.16.XCommand = command
+
+# Micro-architecture 19413 similar at 16% with Adapter Design Motif
+19413.16.adapter = net.phbwt.jtans.calc.PixelPiece
+19413.16.adpatee = net.phbwt.jtans.calc.CalcPolyPoints
+19413.16.client = net.phbwt.jtans.calc.EditableFigure
+19413.16.Name = Adapter Design Motif
+19413.16.target = net.phbwt.jtans.calc.PixelPolygon
+19413.16.XCommand = command
+
+# Micro-architecture 19417 similar at 16% with Adapter Design Motif
+19417.16.adapter = net.phbwt.jtans.calc.PixelPiece
+19417.16.adpatee = net.phbwt.jtans.calc.CalcPolyPoints
+19417.16.client = net.phbwt.jtans.calc.PixelFigure
+19417.16.Name = Adapter Design Motif
+19417.16.target = net.phbwt.jtans.calc.PixelPolygon
+19417.16.XCommand = command
+
+# Micro-architecture 19416 similar at 16% with Adapter Design Motif
+19416.16.adapter = net.phbwt.jtans.calc.PixelPiece
+19416.16.adpatee = net.phbwt.jtans.calc.CalcPolyPoints
+19416.16.client = net.phbwt.jtans.calc.PixelOutlinePolygon
+19416.16.Name = Adapter Design Motif
+19416.16.target = net.phbwt.jtans.calc.PixelPolygon
+19416.16.XCommand = command
+
+# Micro-architecture 19414 similar at 16% with Adapter Design Motif
+19414.16.adapter = net.phbwt.jtans.calc.PixelPiece
+19414.16.adpatee = net.phbwt.jtans.calc.CalcPolyPoints
+19414.16.client = net.phbwt.jtans.calc.PixelPiece
+19414.16.Name = Adapter Design Motif
+19414.16.target = net.phbwt.jtans.calc.PixelPolygon
+19414.16.XCommand = command
+
+# Micro-architecture 19415 similar at 16% with Adapter Design Motif
+19415.16.adapter = net.phbwt.jtans.calc.PixelPiece
+19415.16.adpatee = net.phbwt.jtans.calc.CalcPolyPoints
+19415.16.client = net.phbwt.jtans.calc.PixelPolygon
+19415.16.Name = Adapter Design Motif
+19415.16.target = net.phbwt.jtans.calc.PixelPolygon
+19415.16.XCommand = command
+
+# Micro-architecture 19424 similar at 16% with Adapter Design Motif
+19424.16.adapter = net.phbwt.jtans.calc.PixelPiece
+19424.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19424.16.client = net.phbwt.jtans.calc.DisplayFigure
+19424.16.Name = Adapter Design Motif
+19424.16.target = net.phbwt.jtans.calc.PixelPolygon
+19424.16.XCommand = command
+
+# Micro-architecture 19419 similar at 16% with Adapter Design Motif
+19419.16.adapter = net.phbwt.jtans.calc.PixelPiece
+19419.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19419.16.client = net.phbwt.jtans.calc.EditableFigure
+19419.16.Name = Adapter Design Motif
+19419.16.target = net.phbwt.jtans.calc.PixelPolygon
+19419.16.XCommand = command
+
+# Micro-architecture 19423 similar at 16% with Adapter Design Motif
+19423.16.adapter = net.phbwt.jtans.calc.PixelPiece
+19423.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19423.16.client = net.phbwt.jtans.calc.PixelFigure
+19423.16.Name = Adapter Design Motif
+19423.16.target = net.phbwt.jtans.calc.PixelPolygon
+19423.16.XCommand = command
+
+# Micro-architecture 19422 similar at 16% with Adapter Design Motif
+19422.16.adapter = net.phbwt.jtans.calc.PixelPiece
+19422.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19422.16.client = net.phbwt.jtans.calc.PixelOutlinePolygon
+19422.16.Name = Adapter Design Motif
+19422.16.target = net.phbwt.jtans.calc.PixelPolygon
+19422.16.XCommand = command
+
+# Micro-architecture 19420 similar at 16% with Adapter Design Motif
+19420.16.adapter = net.phbwt.jtans.calc.PixelPiece
+19420.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19420.16.client = net.phbwt.jtans.calc.PixelPiece
+19420.16.Name = Adapter Design Motif
+19420.16.target = net.phbwt.jtans.calc.PixelPolygon
+19420.16.XCommand = command
+
+# Micro-architecture 19421 similar at 16% with Adapter Design Motif
+19421.16.adapter = net.phbwt.jtans.calc.PixelPiece
+19421.16.adpatee = net.phbwt.jtans.calc.PixelPolygon
+19421.16.client = net.phbwt.jtans.calc.PixelPolygon
+19421.16.Name = Adapter Design Motif
+19421.16.target = net.phbwt.jtans.calc.PixelPolygon
+19421.16.XCommand = command
+
+# Micro-architecture 19388 similar at 16% with Adapter Design Motif
+19388.16.adapter = net.phbwt.jtans.jTansApplication
+19388.16.adpatee = net.phbwt.jtans.AbstractApplication
+19388.16.client = net.phbwt.jtans.AbstractApplication
+19388.16.Name = Adapter Design Motif
+19388.16.target = net.phbwt.jtans.AbstractApplication
+19388.16.XCommand = command
+
+# Micro-architecture 19402 similar at 16% with Adapter Design Motif
+19402.16.adapter = net.phbwt.jtans.jTansApplication
+19402.16.adpatee = net.phbwt.jtans.AbstractApplication
+19402.16.client = net.phbwt.jtans.jTansApplication
+19402.16.Name = Adapter Design Motif
+19402.16.target = net.phbwt.jtans.AbstractApplication
+19402.16.XCommand = command
+
+# Micro-architecture 19374 similar at 16% with Adapter Design Motif
+19374.16.adapter = net.phbwt.jtans.jTansApplication
+19374.16.adpatee = net.phbwt.jtans.AbstractApplication
+19374.16.client = net.phbwt.jtans.jTansWebstart
+19374.16.Name = Adapter Design Motif
+19374.16.target = net.phbwt.jtans.AbstractApplication
+19374.16.XCommand = command
+
+# Micro-architecture 19342 similar at 16% with Adapter Design Motif
+19342.16.adapter = net.phbwt.jtans.jTansWebstart
+19342.16.adpatee = net.phbwt.jtans.AbstractApplication
+19342.16.client = net.phbwt.jtans.AbstractApplication
+19342.16.Name = Adapter Design Motif
+19342.16.target = net.phbwt.jtans.AbstractApplication
+19342.16.XCommand = command
+
+# Micro-architecture 19359 similar at 16% with Adapter Design Motif
+19359.16.adapter = net.phbwt.jtans.jTansWebstart
+19359.16.adpatee = net.phbwt.jtans.AbstractApplication
+19359.16.client = net.phbwt.jtans.jTansApplication
+19359.16.Name = Adapter Design Motif
+19359.16.target = net.phbwt.jtans.AbstractApplication
+19359.16.XCommand = command
+
+# Micro-architecture 19325 similar at 16% with Adapter Design Motif
+19325.16.adapter = net.phbwt.jtans.jTansWebstart
+19325.16.adpatee = net.phbwt.jtans.AbstractApplication
+19325.16.client = net.phbwt.jtans.jTansWebstart
+19325.16.Name = Adapter Design Motif
+19325.16.target = net.phbwt.jtans.AbstractApplication
+19325.16.XCommand = command
+
+# Micro-architecture 14255 similar at 23% with Adapter Design Motif
+14255.23.adapter = net.phbwt.jtans.calc.DisplayFigure
+14255.23.adpatee = net.phbwt.jtans.calc.DisplayFigure
+14255.23.client = net.phbwt.jtans.calc.DisplayFigure
+14255.23.Name = Adapter Design Motif
+14255.23.target = net.phbwt.jtans.calc.PixelFigure
+14255.23.XCommand = command
+
+# Micro-architecture 14253 similar at 23% with Adapter Design Motif
+14253.23.adapter = net.phbwt.jtans.calc.DisplayFigure
+14253.23.adpatee = net.phbwt.jtans.calc.DisplayFigure
+14253.23.client = net.phbwt.jtans.guimain.DisplayFigureComponent
+14253.23.Name = Adapter Design Motif
+14253.23.target = net.phbwt.jtans.calc.PixelFigure
+14253.23.XCommand = command
+
+# Micro-architecture 14254 similar at 23% with Adapter Design Motif
+14254.23.adapter = net.phbwt.jtans.calc.DisplayFigure
+14254.23.adpatee = net.phbwt.jtans.calc.DisplayFigure
+14254.23.client = net.phbwt.jtans.guimain.EditableFigureComponent
+14254.23.Name = Adapter Design Motif
+14254.23.target = net.phbwt.jtans.calc.PixelFigure
+14254.23.XCommand = command
+
+# Micro-architecture 14251 similar at 23% with Adapter Design Motif
+14251.23.adapter = net.phbwt.jtans.calc.DisplayFigure
+14251.23.adpatee = net.phbwt.jtans.calc.PixelPiece
+14251.23.client = net.phbwt.jtans.calc.DisplayFigure
+14251.23.Name = Adapter Design Motif
+14251.23.target = net.phbwt.jtans.calc.PixelFigure
+14251.23.XCommand = command
+
+# Micro-architecture 14248 similar at 23% with Adapter Design Motif
+14248.23.adapter = net.phbwt.jtans.calc.DisplayFigure
+14248.23.adpatee = net.phbwt.jtans.calc.PixelPiece
+14248.23.client = net.phbwt.jtans.calc.EditableFigure
+14248.23.Name = Adapter Design Motif
+14248.23.target = net.phbwt.jtans.calc.PixelFigure
+14248.23.XCommand = command
+
+# Micro-architecture 14250 similar at 23% with Adapter Design Motif
+14250.23.adapter = net.phbwt.jtans.calc.DisplayFigure
+14250.23.adpatee = net.phbwt.jtans.calc.PixelPiece
+14250.23.client = net.phbwt.jtans.guimain.EditableFigureComponent
+14250.23.Name = Adapter Design Motif
+14250.23.target = net.phbwt.jtans.calc.PixelFigure
+14250.23.XCommand = command
+
+# Micro-architecture 14222 similar at 23% with Adapter Design Motif
+14222.23.adapter = net.phbwt.jtans.calc.EditableFigure
+14222.23.adpatee = net.phbwt.jtans.calc.EditableFigure
+14222.23.client = net.phbwt.jtans.calc.EditableFigure
+14222.23.Name = Adapter Design Motif
+14222.23.target = net.phbwt.jtans.calc.PixelFigure
+14222.23.XCommand = command
+
+# Micro-architecture 14232 similar at 23% with Adapter Design Motif
+14232.23.adapter = net.phbwt.jtans.calc.EditableFigure
+14232.23.adpatee = net.phbwt.jtans.calc.EditableFigure
+14232.23.client = net.phbwt.jtans.guimain.EditableFigureComponent
+14232.23.Name = Adapter Design Motif
+14232.23.target = net.phbwt.jtans.calc.PixelFigure
+14232.23.XCommand = command
+
+# Micro-architecture 14238 similar at 23% with Adapter Design Motif
+14238.23.adapter = net.phbwt.jtans.calc.EditableFigure
+14238.23.adpatee = net.phbwt.jtans.calc.PixelPiece
+14238.23.client = net.phbwt.jtans.calc.DisplayFigure
+14238.23.Name = Adapter Design Motif
+14238.23.target = net.phbwt.jtans.calc.PixelFigure
+14238.23.XCommand = command
+
+# Micro-architecture 14223 similar at 23% with Adapter Design Motif
+14223.23.adapter = net.phbwt.jtans.calc.EditableFigure
+14223.23.adpatee = net.phbwt.jtans.calc.PixelPiece
+14223.23.client = net.phbwt.jtans.calc.EditableFigure
+14223.23.Name = Adapter Design Motif
+14223.23.target = net.phbwt.jtans.calc.PixelFigure
+14223.23.XCommand = command
+
+# Micro-architecture 14233 similar at 23% with Adapter Design Motif
+14233.23.adapter = net.phbwt.jtans.calc.EditableFigure
+14233.23.adpatee = net.phbwt.jtans.calc.PixelPiece
+14233.23.client = net.phbwt.jtans.guimain.EditableFigureComponent
+14233.23.Name = Adapter Design Motif
+14233.23.target = net.phbwt.jtans.calc.PixelFigure
+14233.23.XCommand = command
+
+# Micro-architecture 14214 similar at 23% with Adapter Design Motif
+14214.23.adapter = net.phbwt.jtans.calc.PixelPiece
+14214.23.adpatee = net.phbwt.jtans.calc.CalcPiece
+14214.23.client = net.phbwt.jtans.calc.EditableFigure
+14214.23.Name = Adapter Design Motif
+14214.23.target = net.phbwt.jtans.calc.PixelPolygon
+14214.23.XCommand = command
+
+# Micro-architecture 14215 similar at 23% with Adapter Design Motif
+14215.23.adapter = net.phbwt.jtans.calc.PixelPiece
+14215.23.adpatee = net.phbwt.jtans.calc.CalcPiece
+14215.23.client = net.phbwt.jtans.calc.PixelPiece
+14215.23.Name = Adapter Design Motif
+14215.23.target = net.phbwt.jtans.calc.PixelPolygon
+14215.23.XCommand = command
+
+# Micro-architecture 9445 similar at 34% with Adapter Design Motif
+9445.34.adapter = net.phbwt.jtans.calc.DisplayFigure
+9445.34.adpatee = net.phbwt.jtans.calc.DisplayFigure
+9445.34.client = net.phbwt.jtans.calc.EditableFigure
+9445.34.Name = Adapter Design Motif
+9445.34.target = net.phbwt.jtans.calc.PixelFigure
+9445.34.XCommand = command
+
+# Micro-architecture 9442 similar at 34% with Adapter Design Motif
+9442.34.adapter = net.phbwt.jtans.calc.EditableFigure
+9442.34.adpatee = net.phbwt.jtans.calc.EditableFigure
+9442.34.client = net.phbwt.jtans.calc.DisplayFigure
+9442.34.Name = Adapter Design Motif
+9442.34.target = net.phbwt.jtans.calc.PixelFigure
+9442.34.XCommand = command
+
+# Micro-architecture 9435 similar at 34% with Adapter Design Motif
+9435.34.adapter = net.phbwt.jtans.calc.EditableFigure
+9435.34.adpatee = net.phbwt.jtans.calc.EditableFigure
+9435.34.client = net.phbwt.jtans.guimain.DisplayFigureComponent
+9435.34.Name = Adapter Design Motif
+9435.34.target = net.phbwt.jtans.calc.PixelFigure
+9435.34.XCommand = command
+
+# Micro-architecture 5953 similar at 49% with Adapter Design Motif
+5953.49.adapter = net.phbwt.jtans.calc.DisplayFigure
+5953.49.adpatee = net.phbwt.jtans.calc.PixelPiece
+5953.49.client = net.phbwt.jtans.guimain.DisplayFigureComponent
+5953.49.Name = Adapter Design Motif
+5953.49.target = net.phbwt.jtans.calc.PixelFigure
+5953.49.XCommand = command
+
+# Micro-architecture 5941 similar at 49% with Adapter Design Motif
+5941.49.adapter = net.phbwt.jtans.calc.EditableFigure
+5941.49.adpatee = net.phbwt.jtans.calc.PixelPiece
+5941.49.client = net.phbwt.jtans.guimain.DisplayFigureComponent
+5941.49.Name = Adapter Design Motif
+5941.49.target = net.phbwt.jtans.calc.PixelFigure
+5941.49.XCommand = command
+
+# Micro-architecture 5938 similar at 49% with Adapter Design Motif
+5938.49.adapter = net.phbwt.jtans.calc.PixelPiece
+5938.49.adpatee = net.phbwt.jtans.calc.CalcPiece
+5938.49.client = net.phbwt.jtans.calc.DisplayFigure
+5938.49.Name = Adapter Design Motif
+5938.49.target = net.phbwt.jtans.calc.PixelPolygon
+5938.49.XCommand = command
+
+# Micro-architecture 5937 similar at 49% with Adapter Design Motif
+5937.49.adapter = net.phbwt.jtans.calc.PixelPiece
+5937.49.adpatee = net.phbwt.jtans.calc.CalcPiece
+5937.49.client = net.phbwt.jtans.calc.PixelFigure
+5937.49.Name = Adapter Design Motif
+5937.49.target = net.phbwt.jtans.calc.PixelPolygon
+5937.49.XCommand = command
+
+# Micro-architecture 5936 similar at 49% with Adapter Design Motif
+5936.49.adapter = net.phbwt.jtans.calc.PixelPiece
+5936.49.adpatee = net.phbwt.jtans.calc.CalcPiece
+5936.49.client = net.phbwt.jtans.calc.PixelOutlinePolygon
+5936.49.Name = Adapter Design Motif
+5936.49.target = net.phbwt.jtans.calc.PixelPolygon
+5936.49.XCommand = command
+
+# Micro-architecture 5935 similar at 49% with Adapter Design Motif
+5935.49.adapter = net.phbwt.jtans.calc.PixelPiece
+5935.49.adpatee = net.phbwt.jtans.calc.CalcPiece
+5935.49.client = net.phbwt.jtans.calc.PixelPolygon
+5935.49.Name = Adapter Design Motif
+5935.49.target = net.phbwt.jtans.calc.PixelPolygon
+5935.49.XCommand = command
+
+# Micro-architecture 2739 similar at 70% with unknown pattern
+2739.70.adapter = net.phbwt.jtans.calc.DisplayFigure
+2739.70.adpatee = net.phbwt.jtans.calc.PixelPiece
+2739.70.client = net.phbwt.jtans.guimain.DisplayFigureComponent
+2739.70.target = net.phbwt.jtans.calc.PixelFigure
+2739.70.XCommand = No source transformation needed
+
+# Micro-architecture 2727 similar at 70% with unknown pattern
+2727.70.adapter = net.phbwt.jtans.calc.EditableFigure
+2727.70.adpatee = net.phbwt.jtans.calc.PixelPiece
+2727.70.client = net.phbwt.jtans.guimain.DisplayFigureComponent
+2727.70.target = net.phbwt.jtans.calc.PixelFigure
+2727.70.XCommand = No source transformation needed
+
+# Micro-architecture 2724 similar at 70% with unknown pattern
+2724.70.adapter = net.phbwt.jtans.calc.PixelPiece
+2724.70.adpatee = net.phbwt.jtans.calc.CalcPiece
+2724.70.client = net.phbwt.jtans.calc.DisplayFigure
+2724.70.target = net.phbwt.jtans.calc.PixelPolygon
+2724.70.XCommand = No source transformation needed
+
+# Micro-architecture 2723 similar at 70% with unknown pattern
+2723.70.adapter = net.phbwt.jtans.calc.PixelPiece
+2723.70.adpatee = net.phbwt.jtans.calc.CalcPiece
+2723.70.client = net.phbwt.jtans.calc.PixelFigure
+2723.70.target = net.phbwt.jtans.calc.PixelPolygon
+2723.70.XCommand = No source transformation needed
+
+# Micro-architecture 2722 similar at 70% with unknown pattern
+2722.70.adapter = net.phbwt.jtans.calc.PixelPiece
+2722.70.adpatee = net.phbwt.jtans.calc.CalcPiece
+2722.70.client = net.phbwt.jtans.calc.PixelOutlinePolygon
+2722.70.target = net.phbwt.jtans.calc.PixelPolygon
+2722.70.XCommand = No source transformation needed
+

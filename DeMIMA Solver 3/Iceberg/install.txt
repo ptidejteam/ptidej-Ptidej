@@ -1,0 +1,75 @@
+A few notes on how to install CHOCO:
+
+0) First, you should install Claire v3.2.32 properly. 
+   Then, you should install Choco v1.3.18 or above properly
+
+1) A sound directory organization is the following
+
+.../choco/
+         /v1.318
+         /benchs
+         /test
+.../iceberg/
+           /v0.5
+           /test
+           /init.cl
+
+2) edit the Claire configuration file (init.cl) and change 
+the directory on the line defining the CHOCO module, in case the version 
+number is not correct. 
+choco :: module(source = ChocoInstallationDir / "v1.318",  //this version number can be upgraded
+by
+choco :: module(source = ChocoInstallationDir / "v1.322",  
+in case you use version 1.322 (no yet coded at the time when this explanation was written).
+
+3) run Claire from the XXX directory with the following shell command
+
+claire -s 3 3 -m ice
+
+you get the interpreter prompt and you can now run choco/iceberg programs
+ice>
+
+From there, you can either type-in  your own programs or load some of the benchmarks. 
+For instance, you can load the benchmarks modeling the queens problem
+with
+  choco> load("test" / "t_match")
+  eval[0]> ---- [load CLAIRE file: test\t_match]
+and solve a sample problem with the all different constraint
+  choco> testAllDiff1(6)
+Be sure to adjust the verbosity to the desired level before solving problems:
+  choco> system.verbose := 0
+will print out little information, while
+  choco> system.verbose := 5
+will output much tracing information
+
+For code examples, look at the functions defined in the test/*.cl files
+
+In order to run all benchmark examples in interpreted mode, you can load the icetest module:
+
+claire -s 4 4 -m icetest
+icetest> allIceTestsInterpreted()
+and the benchmarks suite will go
+
+
+4) In order to have a faster CHOCO/ICEBERG interpreter (which is much nicer for larger problems), you should compile the library.
+In order to do so, type at the shell prompt
+  claire -s 4 4 -cm ice
+You are compiling the Claire module to C++. This should produce a run-time program containing all the CHOCO/ICEBERG primitives
+linked with a Claire interpreter.
+
+5) In order to run the benchmark suite as fast as possible, first
+compile ice, then compile icetest
+In order to do so, type at the shell prompt
+  claire -s 4 4 -cm icetest
+
+This will produce an executable called icetest. When you run
+  icetest -s 5 5
+you get a prompt
+  icetest>
+just type in
+  icetest> allIceTests()
+and the benchmarks suite will run
+
+For all installation problems, use the OCRE Yahoo club www.yahoo.clubs/ocre
+
+François 

@@ -1,0 +1,336 @@
+# Micro-architecture 1910 similar at 8% with Composite Design Motif
+1910.8.component = junit.tests.OneTestCase
+1910.8.composite = junit.tests.ActiveTestTest
+1910.8.leaf = junit.tests.InheritedTestCase
+1910.8.Name = Composite Design Motif
+1910.8.XCommand = command
+
+# Micro-architecture 1830 similar at 8% with Composite Design Motif
+1830.8.component = junit.tests.OneTestCase
+1830.8.composite = junit.tests.ActiveTestTest
+1830.8.leaf = junit.tests.OverrideTestCase
+1830.8.Name = Composite Design Motif
+1830.8.XCommand = command
+
+# Micro-architecture 1846 similar at 8% with Composite Design Motif
+1846.8.component = junit.tests.OneTestCase
+1846.8.composite = junit.tests.AllTests
+1846.8.leaf = junit.tests.InheritedTestCase
+1846.8.Name = Composite Design Motif
+1846.8.XCommand = command
+
+# Micro-architecture 1766 similar at 8% with Composite Design Motif
+1766.8.component = junit.tests.OneTestCase
+1766.8.composite = junit.tests.AllTests
+1766.8.leaf = junit.tests.OverrideTestCase
+1766.8.Name = Composite Design Motif
+1766.8.XCommand = command
+
+# Micro-architecture 1839 similar at 8% with Composite Design Motif
+1839.8.component = junit.tests.OneTestCase
+1839.8.composite = junit.tests.AssertTest
+1839.8.leaf = junit.tests.InheritedTestCase
+1839.8.Name = Composite Design Motif
+1839.8.XCommand = command
+
+# Micro-architecture 1759 similar at 8% with Composite Design Motif
+1759.8.component = junit.tests.OneTestCase
+1759.8.composite = junit.tests.AssertTest
+1759.8.leaf = junit.tests.OverrideTestCase
+1759.8.Name = Composite Design Motif
+1759.8.XCommand = command
+
+# Micro-architecture 1909 similar at 8% with Composite Design Motif
+1909.8.component = junit.tests.OneTestCase
+1909.8.composite = junit.tests.ClassLoaderTest
+1909.8.leaf = junit.tests.InheritedTestCase
+1909.8.Name = Composite Design Motif
+1909.8.XCommand = command
+
+# Micro-architecture 1829 similar at 8% with Composite Design Motif
+1829.8.component = junit.tests.OneTestCase
+1829.8.composite = junit.tests.ClassLoaderTest
+1829.8.leaf = junit.tests.OverrideTestCase
+1829.8.Name = Composite Design Motif
+1829.8.XCommand = command
+
+# Micro-architecture 1864 similar at 8% with Composite Design Motif
+1864.8.component = junit.tests.OneTestCase
+1864.8.composite = junit.tests.ExceptionTestCaseTest
+1864.8.leaf = junit.tests.InheritedTestCase
+1864.8.Name = Composite Design Motif
+1864.8.XCommand = command
+
+# Micro-architecture 1783 similar at 8% with Composite Design Motif
+1783.8.component = junit.tests.OneTestCase
+1783.8.composite = junit.tests.ExceptionTestCaseTest
+1783.8.leaf = junit.tests.OverrideTestCase
+1783.8.Name = Composite Design Motif
+1783.8.XCommand = command
+
+# Micro-architecture 1888 similar at 8% with Composite Design Motif
+1888.8.component = junit.tests.OneTestCase
+1888.8.composite = junit.tests.ExtensionTest
+1888.8.leaf = junit.tests.InheritedTestCase
+1888.8.Name = Composite Design Motif
+1888.8.XCommand = command
+
+# Micro-architecture 1808 similar at 8% with Composite Design Motif
+1808.8.component = junit.tests.OneTestCase
+1808.8.composite = junit.tests.ExtensionTest
+1808.8.leaf = junit.tests.OverrideTestCase
+1808.8.Name = Composite Design Motif
+1808.8.XCommand = command
+
+# Micro-architecture 1842 similar at 8% with Composite Design Motif
+1842.8.component = junit.tests.OneTestCase
+1842.8.composite = junit.tests.Failure
+1842.8.leaf = junit.tests.InheritedTestCase
+1842.8.Name = Composite Design Motif
+1842.8.XCommand = command
+
+# Micro-architecture 1762 similar at 8% with Composite Design Motif
+1762.8.component = junit.tests.OneTestCase
+1762.8.composite = junit.tests.Failure
+1762.8.leaf = junit.tests.OverrideTestCase
+1762.8.Name = Composite Design Motif
+1762.8.XCommand = command
+
+# Micro-architecture 1792 similar at 8% with Composite Design Motif
+1792.8.component = junit.tests.OneTestCase
+1792.8.composite = junit.tests.InheritedTestCase
+1792.8.leaf = junit.tests.OverrideTestCase
+1792.8.Name = Composite Design Motif
+1792.8.XCommand = command
+
+# Micro-architecture 1879 similar at 8% with Composite Design Motif
+1879.8.component = junit.tests.OneTestCase
+1879.8.composite = junit.tests.LoadedFromJar
+1879.8.leaf = junit.tests.InheritedTestCase
+1879.8.Name = Composite Design Motif
+1879.8.XCommand = command
+
+# Micro-architecture 1799 similar at 8% with Composite Design Motif
+1799.8.component = junit.tests.OneTestCase
+1799.8.composite = junit.tests.LoadedFromJar
+1799.8.leaf = junit.tests.OverrideTestCase
+1799.8.Name = Composite Design Motif
+1799.8.XCommand = command
+
+# Micro-architecture 1906 similar at 8% with Composite Design Motif
+1906.8.component = junit.tests.OneTestCase
+1906.8.composite = junit.tests.NoTestCaseClass
+1906.8.leaf = junit.tests.InheritedTestCase
+1906.8.Name = Composite Design Motif
+1906.8.XCommand = command
+
+# Micro-architecture 1826 similar at 8% with Composite Design Motif
+1826.8.component = junit.tests.OneTestCase
+1826.8.composite = junit.tests.NoTestCaseClass
+1826.8.leaf = junit.tests.OverrideTestCase
+1826.8.Name = Composite Design Motif
+1826.8.XCommand = command
+
+# Micro-architecture 1878 similar at 8% with Composite Design Motif
+1878.8.component = junit.tests.OneTestCase
+1878.8.composite = junit.tests.NoTestCases
+1878.8.leaf = junit.tests.InheritedTestCase
+1878.8.Name = Composite Design Motif
+1878.8.XCommand = command
+
+# Micro-architecture 1798 similar at 8% with Composite Design Motif
+1798.8.component = junit.tests.OneTestCase
+1798.8.composite = junit.tests.NoTestCases
+1798.8.leaf = junit.tests.OverrideTestCase
+1798.8.Name = Composite Design Motif
+1798.8.XCommand = command
+
+# Micro-architecture 1831 similar at 8% with Composite Design Motif
+1831.8.component = junit.tests.OneTestCase
+1831.8.composite = junit.tests.NotPublicTestCase
+1831.8.leaf = junit.tests.InheritedTestCase
+1831.8.Name = Composite Design Motif
+1831.8.XCommand = command
+
+# Micro-architecture 1751 similar at 8% with Composite Design Motif
+1751.8.component = junit.tests.OneTestCase
+1751.8.composite = junit.tests.NotPublicTestCase
+1751.8.leaf = junit.tests.OverrideTestCase
+1751.8.Name = Composite Design Motif
+1751.8.XCommand = command
+
+# Micro-architecture 1890 similar at 8% with Composite Design Motif
+1890.8.component = junit.tests.OneTestCase
+1890.8.composite = junit.tests.NotVoidTestCase
+1890.8.leaf = junit.tests.InheritedTestCase
+1890.8.Name = Composite Design Motif
+1890.8.XCommand = command
+
+# Micro-architecture 1810 similar at 8% with Composite Design Motif
+1810.8.component = junit.tests.OneTestCase
+1810.8.composite = junit.tests.NotVoidTestCase
+1810.8.leaf = junit.tests.OverrideTestCase
+1810.8.Name = Composite Design Motif
+1810.8.XCommand = command
+
+# Micro-architecture 1861 similar at 8% with Composite Design Motif
+1861.8.component = junit.tests.OneTestCase
+1861.8.composite = junit.tests.OverrideTestCase
+1861.8.leaf = junit.tests.InheritedTestCase
+1861.8.Name = Composite Design Motif
+1861.8.XCommand = command
+
+# Micro-architecture 1874 similar at 8% with Composite Design Motif
+1874.8.component = junit.tests.OneTestCase
+1874.8.composite = junit.tests.RepeatedTestTest
+1874.8.leaf = junit.tests.InheritedTestCase
+1874.8.Name = Composite Design Motif
+1874.8.XCommand = command
+
+# Micro-architecture 1794 similar at 8% with Composite Design Motif
+1794.8.component = junit.tests.OneTestCase
+1794.8.composite = junit.tests.RepeatedTestTest
+1794.8.leaf = junit.tests.OverrideTestCase
+1794.8.Name = Composite Design Motif
+1794.8.XCommand = command
+
+# Micro-architecture 1847 similar at 8% with Composite Design Motif
+1847.8.component = junit.tests.OneTestCase
+1847.8.composite = junit.tests.SorterTest
+1847.8.leaf = junit.tests.InheritedTestCase
+1847.8.Name = Composite Design Motif
+1847.8.XCommand = command
+
+# Micro-architecture 1767 similar at 8% with Composite Design Motif
+1767.8.component = junit.tests.OneTestCase
+1767.8.composite = junit.tests.SorterTest
+1767.8.leaf = junit.tests.OverrideTestCase
+1767.8.Name = Composite Design Motif
+1767.8.XCommand = command
+
+# Micro-architecture 1855 similar at 8% with Composite Design Motif
+1855.8.component = junit.tests.OneTestCase
+1855.8.composite = junit.tests.StackFilterTest
+1855.8.leaf = junit.tests.InheritedTestCase
+1855.8.Name = Composite Design Motif
+1855.8.XCommand = command
+
+# Micro-architecture 1775 similar at 8% with Composite Design Motif
+1775.8.component = junit.tests.OneTestCase
+1775.8.composite = junit.tests.StackFilterTest
+1775.8.leaf = junit.tests.OverrideTestCase
+1775.8.Name = Composite Design Motif
+1775.8.XCommand = command
+
+# Micro-architecture 1838 similar at 8% with Composite Design Motif
+1838.8.component = junit.tests.OneTestCase
+1838.8.composite = junit.tests.Success
+1838.8.leaf = junit.tests.InheritedTestCase
+1838.8.Name = Composite Design Motif
+1838.8.XCommand = command
+
+# Micro-architecture 1758 similar at 8% with Composite Design Motif
+1758.8.component = junit.tests.OneTestCase
+1758.8.composite = junit.tests.Success
+1758.8.leaf = junit.tests.OverrideTestCase
+1758.8.Name = Composite Design Motif
+1758.8.XCommand = command
+
+# Micro-architecture 1903 similar at 8% with Composite Design Motif
+1903.8.component = junit.tests.OneTestCase
+1903.8.composite = junit.tests.SuiteTest
+1903.8.leaf = junit.tests.InheritedTestCase
+1903.8.Name = Composite Design Motif
+1903.8.XCommand = command
+
+# Micro-architecture 1823 similar at 8% with Composite Design Motif
+1823.8.component = junit.tests.OneTestCase
+1823.8.composite = junit.tests.SuiteTest
+1823.8.leaf = junit.tests.OverrideTestCase
+1823.8.Name = Composite Design Motif
+1823.8.XCommand = command
+
+# Micro-architecture 1897 similar at 8% with Composite Design Motif
+1897.8.component = junit.tests.OneTestCase
+1897.8.composite = junit.tests.TestCaseClassLoaderTest
+1897.8.leaf = junit.tests.InheritedTestCase
+1897.8.Name = Composite Design Motif
+1897.8.XCommand = command
+
+# Micro-architecture 1817 similar at 8% with Composite Design Motif
+1817.8.component = junit.tests.OneTestCase
+1817.8.composite = junit.tests.TestCaseClassLoaderTest
+1817.8.leaf = junit.tests.OverrideTestCase
+1817.8.Name = Composite Design Motif
+1817.8.XCommand = command
+
+# Micro-architecture 1905 similar at 8% with Composite Design Motif
+1905.8.component = junit.tests.OneTestCase
+1905.8.composite = junit.tests.TestCaseTest
+1905.8.leaf = junit.tests.InheritedTestCase
+1905.8.Name = Composite Design Motif
+1905.8.XCommand = command
+
+# Micro-architecture 1825 similar at 8% with Composite Design Motif
+1825.8.component = junit.tests.OneTestCase
+1825.8.composite = junit.tests.TestCaseTest
+1825.8.leaf = junit.tests.OverrideTestCase
+1825.8.Name = Composite Design Motif
+1825.8.XCommand = command
+
+# Micro-architecture 1908 similar at 8% with Composite Design Motif
+1908.8.component = junit.tests.OneTestCase
+1908.8.composite = junit.tests.TestImplementorTest
+1908.8.leaf = junit.tests.InheritedTestCase
+1908.8.Name = Composite Design Motif
+1908.8.XCommand = command
+
+# Micro-architecture 1828 similar at 8% with Composite Design Motif
+1828.8.component = junit.tests.OneTestCase
+1828.8.composite = junit.tests.TestImplementorTest
+1828.8.leaf = junit.tests.OverrideTestCase
+1828.8.Name = Composite Design Motif
+1828.8.XCommand = command
+
+# Micro-architecture 1860 similar at 8% with Composite Design Motif
+1860.8.component = junit.tests.OneTestCase
+1860.8.composite = junit.tests.TestListenerTest
+1860.8.leaf = junit.tests.InheritedTestCase
+1860.8.Name = Composite Design Motif
+1860.8.XCommand = command
+
+# Micro-architecture 1780 similar at 8% with Composite Design Motif
+1780.8.component = junit.tests.OneTestCase
+1780.8.composite = junit.tests.TestListenerTest
+1780.8.leaf = junit.tests.OverrideTestCase
+1780.8.Name = Composite Design Motif
+1780.8.XCommand = command
+
+# Micro-architecture 1845 similar at 8% with Composite Design Motif
+1845.8.component = junit.tests.OneTestCase
+1845.8.composite = junit.tests.TextRunnerTest
+1845.8.leaf = junit.tests.InheritedTestCase
+1845.8.Name = Composite Design Motif
+1845.8.XCommand = command
+
+# Micro-architecture 1765 similar at 8% with Composite Design Motif
+1765.8.component = junit.tests.OneTestCase
+1765.8.composite = junit.tests.TextRunnerTest
+1765.8.leaf = junit.tests.OverrideTestCase
+1765.8.Name = Composite Design Motif
+1765.8.XCommand = command
+
+# Micro-architecture 1894 similar at 8% with Composite Design Motif
+1894.8.component = junit.tests.OneTestCase
+1894.8.composite = junit.tests.WasRun
+1894.8.leaf = junit.tests.InheritedTestCase
+1894.8.Name = Composite Design Motif
+1894.8.XCommand = command
+
+# Micro-architecture 1814 similar at 8% with Composite Design Motif
+1814.8.component = junit.tests.OneTestCase
+1814.8.composite = junit.tests.WasRun
+1814.8.leaf = junit.tests.OverrideTestCase
+1814.8.Name = Composite Design Motif
+1814.8.XCommand = command
+

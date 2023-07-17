@@ -1,0 +1,3 @@
+[Ptidej Project]
+Name = PADL
+JavaCode = ../../../../PADL/bin/padl/kernel/;../../../../PADL Design Motifs/bin/padl/kernel/;../../../../PADL Design Motifs/bin/padl/motif/;

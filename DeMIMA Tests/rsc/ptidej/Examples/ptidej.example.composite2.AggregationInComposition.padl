@@ -1,0 +1,3 @@
+[Extra Behavioral Information]
+Relation1 = convertAggregationInComposition(ptidej.example.composite2.Document, ptidej.example.composite2.Element)
+Relation2 = convertAggregationInComposition(ptidej.example.composite2.Document, java.util.Vector)

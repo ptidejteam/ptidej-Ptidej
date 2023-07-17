@@ -1,0 +1,63 @@
+# Micro-architecture 56 similar at 100% with unknown pattern
+56.100.abstractfactory = org.game.Juzzle.JuzzlePanel
+56.100.abstractproduct = org.game.Juzzle.ControlPanel
+56.100.concretefactory = org.game.Juzzle.JuzzlePanel
+56.100.product = org.game.Juzzle.ControlPanel
+56.100.XCommand = No source transformation needed
+
+# Micro-architecture 75 similar at 100% with unknown pattern
+75.100.abstractfactory = org.game.Juzzle.JuzzlePanel
+75.100.abstractproduct = org.game.Juzzle.ImageDescription
+75.100.concretefactory = org.game.Juzzle.JuzzlePanel
+75.100.product = org.game.Juzzle.ImageDescription
+75.100.XCommand = No source transformation needed
+
+# Micro-architecture 72 similar at 100% with unknown pattern
+72.100.abstractfactory = org.game.Juzzle.JuzzlePanel
+72.100.abstractproduct = org.game.Juzzle.PuzzlePanel
+72.100.concretefactory = org.game.Juzzle.JuzzlePanel
+72.100.product = org.game.Juzzle.PuzzlePanel
+72.100.XCommand = No source transformation needed
+
+# Micro-architecture 61 similar at 100% with unknown pattern
+61.100.abstractfactory = org.game.Juzzle.JuzzlePanel
+61.100.abstractproduct = org.game.Juzzle.StartDialog
+61.100.concretefactory = org.game.Juzzle.JuzzlePanel
+61.100.product = org.game.Juzzle.StartDialog
+61.100.XCommand = No source transformation needed
+
+# Micro-architecture 188 similar at 100% with unknown pattern
+188.100.abstractfactory = org.game.Juzzle.MainFrame
+188.100.abstractproduct = org.game.Juzzle.JuzzlePanel
+188.100.concretefactory = org.game.Juzzle.MainFrame
+188.100.product = org.game.Juzzle.JuzzlePanel
+188.100.XCommand = No source transformation needed
+
+# Micro-architecture 180 similar at 100% with unknown pattern
+180.100.abstractfactory = org.game.Juzzle.PuzzlePanel
+180.100.abstractproduct = org.game.Juzzle.DummyPuzzlePartList
+180.100.concretefactory = org.game.Juzzle.PuzzlePanel
+180.100.product = org.game.Juzzle.DummyPuzzlePartList
+180.100.XCommand = No source transformation needed
+
+# Micro-architecture 179 similar at 100% with unknown pattern
+179.100.abstractfactory = org.game.Juzzle.PuzzlePanel
+179.100.abstractproduct = org.game.Juzzle.IPuzzlePartList
+179.100.concretefactory = org.game.Juzzle.PuzzlePanel
+179.100.product = org.game.Juzzle.DummyPuzzlePartList
+179.100.XCommand = No source transformation needed
+
+# Micro-architecture 173 similar at 100% with unknown pattern
+173.100.abstractfactory = org.game.Juzzle.PuzzlePanel
+173.100.abstractproduct = org.game.Juzzle.IPuzzlePartList
+173.100.concretefactory = org.game.Juzzle.PuzzlePanel
+173.100.product = org.game.Juzzle.PuzzlePartList
+173.100.XCommand = No source transformation needed
+
+# Micro-architecture 171 similar at 100% with unknown pattern
+171.100.abstractfactory = org.game.Juzzle.PuzzlePanel
+171.100.abstractproduct = org.game.Juzzle.PuzzlePartList
+171.100.concretefactory = org.game.Juzzle.PuzzlePanel
+171.100.product = org.game.Juzzle.PuzzlePartList
+171.100.XCommand = No source transformation needed
+

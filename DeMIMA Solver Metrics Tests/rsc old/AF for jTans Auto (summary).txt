@@ -1,0 +1,39 @@
+AF for jTans Auto
+
+null
+
+With rules
+	Problem creation: 0'4
+	Solving: 0'1
+	Total: 0'5
+	Total number of solutions: 55
+	Number of solutions with Ghosts: 55
+	Number of solutions without Ghosts: 0
+
+Without rule
+	Problem creation: 0'0
+	Solving: 0'25
+	Total: 0'25
+	Total number of solutions: 746
+	Number of solutions with Ghosts: 695
+	Number of solutions without Ghosts: 51
+
+Variable "abstractfactory"
+	Domain size without rule: 206
+	Domain size with rules: 6
+	Domain reduction: 97.0873786407767%
+Variable "abstractproduct"
+	Domain size without rule: 206
+	Domain size with rules: 166
+	Domain reduction: 19.41747572815534%
+Variable "product"
+	Domain size without rule: 206
+	Domain size with rules: 206
+	Domain reduction: 0.0%
+Variable "concretefactory"
+	Domain size without rule: 206
+	Domain size with rules: 206
+	Domain reduction: 0.0%
+
+Inclusion:
+0 solutions included of 0

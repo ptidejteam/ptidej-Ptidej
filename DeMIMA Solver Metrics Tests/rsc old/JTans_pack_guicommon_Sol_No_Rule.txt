@@ -1,0 +1,63 @@
+# Micro-architecture 947 similar at 2% with Composite Design Motif
+947.2.component = net.phbwt.jtans.guicommon.Config$ConfigItem
+947.2.composite = net.phbwt.jtans.guicommon.Config
+947.2.leaf = net.phbwt.jtans.guicommon.FigureGroup
+947.2.Name = Composite Design Motif
+947.2.XCommand = command
+
+# Micro-architecture 398 similar at 2% with Composite Design Motif
+398.2.component = net.phbwt.jtans.guicommon.Config$ConfigItem
+398.2.composite = net.phbwt.jtans.guicommon.Config
+398.2.leaf = net.phbwt.jtans.guicommon.Surface
+398.2.Name = Composite Design Motif
+398.2.XCommand = command
+
+# Micro-architecture 642 similar at 2% with Composite Design Motif
+642.2.component = net.phbwt.jtans.guicommon.Config$ConfigItem
+642.2.composite = net.phbwt.jtans.guicommon.Config
+642.2.leaf = net.phbwt.jtans.guicommon.Trait
+642.2.Name = Composite Design Motif
+642.2.XCommand = command
+
+# Micro-architecture 423 similar at 2% with Composite Design Motif
+423.2.component = net.phbwt.jtans.guicommon.Config$ConfigItem
+423.2.composite = net.phbwt.jtans.guicommon.FigureGroup
+423.2.leaf = net.phbwt.jtans.guicommon.Surface
+423.2.Name = Composite Design Motif
+423.2.XCommand = command
+
+# Micro-architecture 667 similar at 2% with Composite Design Motif
+667.2.component = net.phbwt.jtans.guicommon.Config$ConfigItem
+667.2.composite = net.phbwt.jtans.guicommon.FigureGroup
+667.2.leaf = net.phbwt.jtans.guicommon.Trait
+667.2.Name = Composite Design Motif
+667.2.XCommand = command
+
+# Micro-architecture 953 similar at 2% with Composite Design Motif
+953.2.component = net.phbwt.jtans.guicommon.Config$ConfigItem
+953.2.composite = net.phbwt.jtans.guicommon.Surface
+953.2.leaf = net.phbwt.jtans.guicommon.FigureGroup
+953.2.Name = Composite Design Motif
+953.2.XCommand = command
+
+# Micro-architecture 648 similar at 2% with Composite Design Motif
+648.2.component = net.phbwt.jtans.guicommon.Config$ConfigItem
+648.2.composite = net.phbwt.jtans.guicommon.Surface
+648.2.leaf = net.phbwt.jtans.guicommon.Trait
+648.2.Name = Composite Design Motif
+648.2.XCommand = command
+
+# Micro-architecture 954 similar at 2% with Composite Design Motif
+954.2.component = net.phbwt.jtans.guicommon.Config$ConfigItem
+954.2.composite = net.phbwt.jtans.guicommon.Trait
+954.2.leaf = net.phbwt.jtans.guicommon.FigureGroup
+954.2.Name = Composite Design Motif
+954.2.XCommand = command
+
+# Micro-architecture 404 similar at 2% with Composite Design Motif
+404.2.component = net.phbwt.jtans.guicommon.Config$ConfigItem
+404.2.composite = net.phbwt.jtans.guicommon.Trait
+404.2.leaf = net.phbwt.jtans.guicommon.Surface
+404.2.Name = Composite Design Motif
+404.2.XCommand = command
+
