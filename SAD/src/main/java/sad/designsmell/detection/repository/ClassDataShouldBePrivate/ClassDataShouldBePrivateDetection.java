@@ -48,7 +48,7 @@ public class ClassDataShouldBePrivateDetection extends AbstractDesignSmellDetect
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/ClassDataShouldBePrivate.rules";
+		return "../SAD Rules Creator/src/main/resources/ClassDataShouldBePrivate.rules";
 	}
 
 	

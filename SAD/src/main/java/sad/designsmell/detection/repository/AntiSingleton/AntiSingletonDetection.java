@@ -48,7 +48,7 @@ public class AntiSingletonDetection extends AbstractDesignSmellDetection impleme
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/AntiSingleton.rules";
+		return "../SAD Rules Creator/src/main/resources/AntiSingleton.rules";
 	}
 
 	

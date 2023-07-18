@@ -48,7 +48,7 @@ public class LargeClassDetection extends AbstractDesignSmellDetection implements
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/LargeClass.rules";
+		return "../SAD Rules Creator/src/main/resources/LargeClass.rules";
 	}
 
 	

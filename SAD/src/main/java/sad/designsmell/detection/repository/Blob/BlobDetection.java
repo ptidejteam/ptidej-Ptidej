@@ -48,7 +48,7 @@ public class BlobDetection extends AbstractDesignSmellDetection implements IDesi
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/Blob.rules";
+		return "../SAD Rules Creator/src/main/resources/Blob.rules";
 	}
 
 	

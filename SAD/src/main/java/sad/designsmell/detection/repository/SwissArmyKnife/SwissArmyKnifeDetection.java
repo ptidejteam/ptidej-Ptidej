@@ -48,7 +48,7 @@ public class SwissArmyKnifeDetection extends AbstractDesignSmellDetection implem
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/SwissArmyKnife.rules";
+		return "../SAD Rules Creator/src/main/resources/SwissArmyKnife.rules";
 	}
 
 	

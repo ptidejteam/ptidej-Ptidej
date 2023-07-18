@@ -48,7 +48,7 @@ public class MessageChainsDetection extends AbstractDesignSmellDetection impleme
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/MessageChains.rules";
+		return "../SAD Rules Creator/src/main/resources/MessageChains.rules";
 	}
 
 	

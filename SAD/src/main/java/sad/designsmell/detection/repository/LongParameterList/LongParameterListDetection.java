@@ -48,7 +48,7 @@ public class LongParameterListDetection extends AbstractDesignSmellDetection imp
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/LongParameterList.rules";
+		return "../SAD Rules Creator/src/main/resources/LongParameterList.rules";
 	}
 
 	

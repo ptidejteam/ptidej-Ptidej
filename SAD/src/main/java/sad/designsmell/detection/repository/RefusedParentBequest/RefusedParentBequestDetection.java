@@ -48,7 +48,7 @@ public class RefusedParentBequestDetection extends AbstractDesignSmellDetection 
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/RefusedParentBequest.rules";
+		return "../SAD Rules Creator/src/main/resources/RefusedParentBequest.rules";
 	}
 
 	

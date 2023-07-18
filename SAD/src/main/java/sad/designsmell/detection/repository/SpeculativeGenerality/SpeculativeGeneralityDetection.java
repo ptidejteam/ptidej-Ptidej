@@ -48,7 +48,7 @@ public class SpeculativeGeneralityDetection extends AbstractDesignSmellDetection
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/SpeculativeGenerality.rules";
+		return "../SAD Rules Creator/src/main/resources/SpeculativeGenerality.rules";
 	}
 
 	

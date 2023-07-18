@@ -48,7 +48,7 @@ public class TraditionBreakerDetection extends AbstractDesignSmellDetection impl
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/TraditionBreaker.rules";
+		return "../SAD Rules Creator/src/main/resources/TraditionBreaker.rules";
 	}
 
 	

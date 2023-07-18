@@ -48,7 +48,7 @@ public class BaseClassShouldBeAbstractDetection extends AbstractDesignSmellDetec
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/BaseClassShouldBeAbstract.rules";
+		return "../SAD Rules Creator/src/main/resources/BaseClassShouldBeAbstract.rules";
 	}
 
 	

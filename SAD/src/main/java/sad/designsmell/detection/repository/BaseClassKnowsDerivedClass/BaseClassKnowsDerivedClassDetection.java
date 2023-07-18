@@ -48,7 +48,7 @@ public class BaseClassKnowsDerivedClassDetection extends AbstractDesignSmellDete
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/BaseClassKnowsDerivedClass.rules";
+		return "../SAD Rules Creator/src/main/resources/BaseClassKnowsDerivedClass.rules";
 	}
 
 	

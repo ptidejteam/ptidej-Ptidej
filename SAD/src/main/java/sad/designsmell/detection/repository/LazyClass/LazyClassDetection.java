@@ -48,7 +48,7 @@ public class LazyClassDetection extends AbstractDesignSmellDetection implements 
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/LazyClass.rules";
+		return "../SAD Rules Creator/src/main/resources/LazyClass.rules";
 	}
 
 	

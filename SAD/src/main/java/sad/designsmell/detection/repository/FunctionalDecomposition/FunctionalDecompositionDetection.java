@@ -48,7 +48,7 @@ public class FunctionalDecompositionDetection extends AbstractDesignSmellDetecti
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/FunctionalDecomposition.rules";
+		return "../SAD Rules Creator/src/main/resources/FunctionalDecomposition.rules";
 	}
 
 	

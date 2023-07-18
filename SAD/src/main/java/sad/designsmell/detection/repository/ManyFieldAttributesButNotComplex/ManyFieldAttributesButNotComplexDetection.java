@@ -48,7 +48,7 @@ public class ManyFieldAttributesButNotComplexDetection extends AbstractDesignSme
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/ManyFieldAttributesButNotComplex.rules";
+		return "../SAD Rules Creator/src/main/resources/ManyFieldAttributesButNotComplex.rules";
 	}
 
 	

@@ -48,7 +48,7 @@ public class SpaghettiCodeDetection extends AbstractDesignSmellDetection impleme
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/SpaghettiCode.rules";
+		return "../SAD Rules Creator/src/main/resources/SpaghettiCode.rules";
 	}
 
 	

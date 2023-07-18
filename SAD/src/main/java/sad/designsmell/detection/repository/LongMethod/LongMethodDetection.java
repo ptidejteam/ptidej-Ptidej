@@ -48,7 +48,7 @@ public class LongMethodDetection extends AbstractDesignSmellDetection implements
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/LongMethod.rules";
+		return "../SAD Rules Creator/src/main/resources/LongMethod.rules";
 	}
 
 	

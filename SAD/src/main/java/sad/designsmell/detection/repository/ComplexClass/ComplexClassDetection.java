@@ -48,7 +48,7 @@ public class ComplexClassDetection extends AbstractDesignSmellDetection implemen
 	}
 
 	public String getRuleCardFile() {
-		return "../SAD Rules Creator/rsc/ComplexClass.rules";
+		return "../SAD Rules Creator/src/main/resources/ComplexClass.rules";
 	}
 
 	
