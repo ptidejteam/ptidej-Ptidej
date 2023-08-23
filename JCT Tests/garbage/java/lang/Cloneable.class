@@ -1,5 +1,0 @@
-package java.lang;
-abstract public interface Cloneable
-{
-
-}

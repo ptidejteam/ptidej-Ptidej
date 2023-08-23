@@ -23,7 +23,7 @@
         <module>DeMIMA UI Primitives AWT</module>
         <module>DeMIMA UI Viewer</module>
         <module>DeMIMA UI Viewer AWT</module>
-        <!--<module>DeMIMA UI Viewer Extensions</module>-->
+<!--        <module>DeMIMA UI Viewer Extensions</module>-->
         <module>DeMIMA UI Viewer Standalone Swing</module>
         <module>EPI</module>
         <module>Java Parser</module>
@@ -32,6 +32,7 @@
         <module>JCT Impl</module>
         <module>JCT Tools</module>
         <module>JCT Utils</module>
+        <module>JCT Tests</module>
         <module>PADL</module>
         <module>PADL Analyses</module>
         <module>PADL Creator AOL</module>

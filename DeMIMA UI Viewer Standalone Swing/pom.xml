@@ -7,7 +7,7 @@
     <groupId>net.ptidej.demima</groupId>
     <artifactId>demima-ui-viewer-swing</artifactId>
     <version>1.0.0</version>
-    <name>DeMIMA UI Primitives AWT</name>
+    <name>DeMIMA UI Viewer Swing</name>
 
     <parent>
         <groupId>net.ptidej</groupId>
@@ -42,6 +42,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -50,13 +51,6 @@
                             <mainClass>ptidej.viewer.ProjectViewer</mainClass>
                         </manifest>
                     </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <includeSystemScope>true</includeSystemScope>
                 </configuration>
             </plugin>
             <plugin>
@@ -82,6 +76,268 @@
                     </descriptorRefs>
                 </configuration>
             </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-install-plugin</artifactId>-->
+<!--                <version>2.4</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-anim</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-anim.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-anim</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-awt-util</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-awt-util.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-awt-util</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-bridge</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-bridge.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-bridge</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-codec</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-codec.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-codec</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-css</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-css.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-css</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-dom</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-dom.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-dom</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-ext</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-ext.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-ext</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-extension</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-extension.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-extension</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-gui-util</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-gui-util.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-gui-util</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-gvt</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-gvt.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-gvt</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-parser</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-parser.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-parser</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-script</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-script.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-script</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-svggen</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-svggen.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-svggen</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-swing</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-swing.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-swing</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-transcoder</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-transcoder.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-transcoder</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-util</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-util.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-util</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                    <execution>-->
+<!--                        <id>install-batik-xml</id>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>install-file</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <file>src/main/resources/lib/batik-xml.jar</file>-->
+<!--                            <groupId>org.apache.xmlgraphics</groupId>-->
+<!--                            <artifactId>batik-xml</artifactId>-->
+<!--                            <version>1.16</version>-->
+<!--                            <packaging>jar</packaging>-->
+<!--                            <generatePom>true</generatePom>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
@@ -153,11 +409,11 @@
             <version>1.0.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>net.ptidej.demima</groupId>
-            <artifactId>demima-ui-viewer-extensions</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>net.ptidej.demima</groupId>-->
+<!--            <artifactId>demima-ui-viewer-extensions</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>net.ptidej.demima</groupId>

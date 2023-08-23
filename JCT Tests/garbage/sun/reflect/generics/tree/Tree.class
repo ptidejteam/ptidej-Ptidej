@@ -1,5 +1,0 @@
-package sun.reflect.generics.tree;
-abstract public interface Tree
-{
-
-}

@@ -1,8 +1,0 @@
-package java.security;
-abstract public interface PublicKey
-extends java.security.Key
-{
-final public static java.lang.Object serialVersionUID;
-
-
-}

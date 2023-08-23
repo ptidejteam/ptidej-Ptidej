@@ -1,5 +1,0 @@
-package java.io;
-abstract public interface Serializable
-{
-
-}
