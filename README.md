@@ -11,6 +11,11 @@ Since December 10th, 2004, the runnable versions of the Ptidej Tool Suite are av
 * Ptidej 
 * http://wiki.ptidej.net/
 
+## Prerequisites
+
+- Get JDK version 17 - [Download Archive](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+- Get Maven version 3 - [Installation](https://maven.apache.org/install.html)
+
 ## How do I get set up?
 
 To build the whole project, use : 
@@ -40,6 +45,8 @@ Currently, the project is not functional because it uses the `cfparse` library, 
 - Migrate the use of the `cfparse` library to the [`bcel` library](https://mvnrepository.com/artifact/org.apache.bcel/bcel)
 - Fix unit tests and adapt old tests with Maven (see _Java Parser_ or _JCT Tests_)
 - Find an alternative to using the `com.sun.tools.javac` library, which is internal to the JDK.
+- Change the encoding from **windows-1252** to **UTF-8**
+- Refactoring the code to make full use of java 17
 
 ## Contribution guidelines
 
