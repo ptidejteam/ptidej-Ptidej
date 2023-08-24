@@ -1,6 +1,16 @@
-# README
+# Ptidej
 
-In the Ptidej Team (Pattern Trace Identification, Detection, and Enhancement in Java), we aim at developing theories, methods, and tools, to evaluate and to improve the quality of object-oriented programs by promoting the use of idioms, design patterns, and architectural patterns. We want to formalise patterns, to identify occurrences of patterns, and to improve the identified occurrences. We also want to evaluate experimentally the impact of patterns on the quality of object-oriented programs. We develop various tools, most notably the Ptidej tool suite and Taupe, to evaluate and to enhance the quality of object-oriented programs, promoting the use of patterns, either at the language-, design-, or architectural-levels.
+[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
+
+In the Ptidej Team (Pattern Trace Identification, Detection, and Enhancement in Java), we aim at developing theories, methods, 
+and tools, to evaluate and to improve the quality of object-oriented programs by promoting the use of idioms, design patterns, 
+and architectural patterns. We want to formalise patterns, to identify occurrences of patterns, and to improve the identified 
+occurrences. We also want to evaluate experimentally the impact of patterns on the quality of object-oriented programs. We 
+develop various tools, most notably the Ptidej tool suite and Taupe, to evaluate and to enhance the quality of object-oriented 
+programs, promoting the use of patterns, either at the language-, design-, or architectural-levels.
 
 Since October 10th, 2014, the source code of the Ptidej Tool Suite is open and released under the GNU Public License v2.
 
@@ -13,8 +23,8 @@ Since December 10th, 2004, the runnable versions of the Ptidej Tool Suite are av
 
 ## Prerequisites
 
-- Get JDK version 17 - [Download Archive](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 - Get Maven version 3 - [Installation](https://maven.apache.org/install.html)
+- Configure Maven using Java 17 - [Download JDK](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) - [Set Java Version of Maven](https://stackoverflow.com/a/19654699)
 
 ## How do I get set up?
 
