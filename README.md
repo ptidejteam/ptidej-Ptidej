@@ -12,9 +12,7 @@ occurrences. We also want to evaluate experimentally the impact of patterns on t
 develop various tools, most notably the Ptidej tool suite and Taupe, to evaluate and to enhance the quality of object-oriented 
 programs, promoting the use of patterns, either at the language-, design-, or architectural-levels.
 
-Since October 10th, 2014, the source code of the Ptidej Tool Suite is open and released under the GNU Public License v2.
-
-Since December 10th, 2004, the runnable versions of the Ptidej Tool Suite are available at http://www.ptidej.net/downloads/tools/ptidejtoolsuite.
+The source code of the Ptidej Tool Suite is open and released under the GNU Public License v2.
 
 ## What is this repository for?
 
