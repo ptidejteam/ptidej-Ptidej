@@ -7,6 +7,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="var" path="P2_REPO/plugins/org.eclipse.jdt.core_3.30.0.v20220524-1333.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/eclipse/jdt/org.eclipse.jdt.core/3.34.0/org.eclipse.jdt.core-3.34.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

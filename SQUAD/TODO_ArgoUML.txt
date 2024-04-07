@@ -1,1 +1,0 @@
-Pour ArgoUML, pour la construction du modele, il faut prendre en compte les jars:  argouml.jar, nsuml.jar, et ocl-argo.jar  

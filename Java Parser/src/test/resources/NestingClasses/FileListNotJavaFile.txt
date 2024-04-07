@@ -1,3 +1,0 @@
-../Java Parser Tests/resources/NestingClasses/src/edu/poly/ptidej/sample/GrandKid.jav
-../Java Parser Tests/resources/NestingClasses/src/edu/poly/ptidej/sample/Kid.jav
-../Java Parser Tests/resources/NestingClasses/src/edu/poly/ptidej/sample/Root.jav
