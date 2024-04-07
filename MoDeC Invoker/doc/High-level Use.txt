@@ -1,0 +1,59 @@
+MoDeC: an instrumentor, invoker, and meta-model to collect and model
+execution traces of Java programs.
+
+
+MoDeC Architecture/Decomposition in Projects
+--------------------------------------------
+
+Projects:
+
+- "MoDeC Bytecode Instrumentation" (and "MoDeC Bytecode
+Instrumentation Tests") deals with the instrumentation of the
+bytecodes of the Java programs of which a user wants to collect
+execution traces (called target Java program).
+
+- "MoDeC Invoker" allows the user to simply calls the instrumented
+Java program (i.e., to run the instrumented bytecodes of the target
+Java program.
+
+- "MoDeC Metamodel" declares a meta-model of the execution traces
+produced by the "MoDeC Bytecode Instrumentation" and provides a
+parser to instantiate the MoDeC meta-model to obtain a model of a
+given execution trace.
+
+- "MoDeC Solver" (and "MoDeC Solver Tests) defines constaints and
+problems to identify occurrences of behavioural and creational
+design motifs in models of execution traces.
+
+
+
+MoDeC Basic Uses
+----------------
+
+Steps to gather execution traces of some target program.
+
+(1) Instrument the bytecode of the target program, using
+"modec.util.Instrumentor.instrumentClasses(String)", see examples in
+"modec.util.Instrumentor.main(String[])". The input of the
+"instrumentClasses" method is a file describing:
+    - The path to the byecode classes of the target program.
+    - The path to the folder where to store the instrumented bytecodes.
+    - The path to the libraries required by the target program (if any).
+    - The name of the file of the execution traces.
+    - The fully qualified name of the "main" class of the target program.
+    - A list of paths to the Java class files to instrument, relative to the first path above.
+See for a complete example "MoDeC Bytecode Instrumentation
+Tests/Input Files/Evaluation of ArgoUML v0.19.8.txt".
+
+The list of paths to the Java class files to instrument can be
+generated using
+"modec.tool.helper.ClassFileListGenerator.main(String[])".
+
+(2) Execute the instrumented target program, using
+"modec.tool.Invoker.invokeMainClass(String)", see examples in
+"modec.tool.Invoker.main(String[])". Running the "Invoker" will
+launch the instrumented target program and open a new window. The
+new window shows only one button and a text field, used to insert
+marks (also called tags) at any user-chosen appropriate moment in
+the collected execution traces, for example before and after
+executing some particular feature.

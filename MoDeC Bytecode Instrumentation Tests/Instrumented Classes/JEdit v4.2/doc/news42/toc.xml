@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<TOC xmlns="http://www.w3.org/TR/xhtml1/transitional">
+  <ENTRY HREF="index.html">
+    <TITLE>What's New in jEdit 4.2</TITLE>
+    <ENTRY HREF="user-changes.html">
+      <TITLE>User-Visible Changes</TITLE>
+      <ENTRY HREF="incompatible.html">
+        <TITLE>Removed Features</TITLE>
+      </ENTRY>
+      <ENTRY HREF="plugin-manager.html">
+        <TITLE>Plugin Manager</TITLE>
+      </ENTRY>
+      <ENTRY HREF="interface.html">
+        <TITLE>User Interface</TITLE>
+      </ENTRY>
+      <ENTRY HREF="editing.html">
+        <TITLE>Text Editing</TITLE>
+      </ENTRY>
+      <ENTRY HREF="rect.html">
+        <TITLE>Rectangular Editing</TITLE>
+      </ENTRY>
+      <ENTRY HREF="syntax.html">
+        <TITLE>Syntax Highlighting</TITLE>
+      </ENTRY>
+      <ENTRY HREF="search.html">
+        <TITLE>Search and Replace</TITLE>
+      </ENTRY>
+      <ENTRY HREF="files.html">
+        <TITLE>File Management</TITLE>
+      </ENTRY>
+      <ENTRY HREF="encodings.html">
+        <TITLE>Handling of Multiple Encodings</TITLE>
+      </ENTRY>
+      <ENTRY HREF="vfs.browser.html">
+        <TITLE>File System Browser</TITLE>
+      </ENTRY>
+      <ENTRY HREF="bundled-macros.html">
+        <TITLE>Bundled Macros</TITLE>
+      </ENTRY>
+    </ENTRY>
+    <ENTRY HREF="api-changes.html">
+      <TITLE>API Changes</TITLE>
+      <ENTRY HREF="beanshell.html">
+        <TITLE>BeanShell</TITLE>
+      </ENTRY>
+      <ENTRY HREF="plugin-api.html">
+        <TITLE>Dynamic Plugin Loading</TITLE>
+      </ENTRY>
+      <ENTRY HREF="class-editplugin.html">
+        <TITLE>EditPlugin Class Changes</TITLE>
+      </ENTRY>
+      <ENTRY HREF="actions.html">
+        <TITLE>Actions</TITLE>
+      </ENTRY>
+      <ENTRY HREF="dockables.html">
+        <TITLE>Dockable Windows</TITLE>
+      </ENTRY>
+      <ENTRY HREF="services.html">
+        <TITLE>Services</TITLE>
+      </ENTRY>
+      <ENTRY HREF="vfs.html">
+        <TITLE>Virtual File Systems</TITLE>
+      </ENTRY>
+      <ENTRY HREF="extensions.html">
+        <TITLE>Text Area Extensions</TITLE>
+      </ENTRY>
+      <ENTRY HREF="syntax-api.html">
+        <TITLE>Syntax Highlighting</TITLE>
+      </ENTRY>
+      <ENTRY HREF="textarea-api.html">
+        <TITLE>Text Area and Folding</TITLE>
+      </ENTRY>
+      <ENTRY HREF="misc-api-changes.html">
+        <TITLE>Miscellaneous API Changes</TITLE>
+      </ENTRY>
+    </ENTRY>
+  </ENTRY>
+</TOC>

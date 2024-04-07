@@ -136,6 +136,16 @@ public class FileRepositoryFactory {
 
 		if (tryFailed) {
 			try {
+				this.tryFlatJar(cl);
+				tryFailed = false;
+			}
+			catch (final Exception e) {
+				tryFailed = true;
+			}
+		}
+
+		if (tryFailed) {
+			try {
 				this.tryFoldersAndFiles(cl);
 				tryFailed = false;
 			}

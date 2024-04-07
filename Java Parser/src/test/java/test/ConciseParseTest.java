@@ -31,10 +31,10 @@ public class ConciseParseTest extends AbstractParseTest {
         super(aName);
 
         final String[] classpathEntries = new String[]{
-                "src/test/resources/CodeAnalyser/libs/jaxb-api.jar",
-                "src/test/resources/CodeAnalyser/libs/tools.jar"};
+                "target/test-classes/CodeAnalyser/libs/jaxb-api.jar",
+                "target/test-classes/CodeAnalyser/libs/tools.jar"};
 
-        final String sourcePathEntry = "src/test/resources/CodeAnalyser/src";
+        final String sourcePathEntry = "target/test-classes/CodeAnalyser/src";
         final String[] sourcePathEntries = new String[]{sourcePathEntry};
 
         final String resultFilePath = "log_concise.txt";
@@ -45,7 +45,7 @@ public class ConciseParseTest extends AbstractParseTest {
         final WrapperClientWithLog parserClient = new WrapperClientWithLog(javaProject, resultFilePath)
                 .setVerbose(false);
 
-        final String oracleFilePath = "src/test/resources/CodeAnalyser/log/log_oracle_concise.txt";
+        final String oracleFilePath = "target/test-classes/CodeAnalyser/log/log_oracle_concise.txt";
 
         final String testCaseName = "CodeAnalyser concise Test Case";
 

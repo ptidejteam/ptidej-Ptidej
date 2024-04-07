@@ -9,7 +9,6 @@
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Java Parser"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/PADL Tests"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator JavaFile (Eclipse)"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL Generator"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator JavaFile (JavaC)"/>

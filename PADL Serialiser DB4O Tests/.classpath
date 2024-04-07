@@ -9,8 +9,11 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL Analyses"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL Serialiser Tests"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL Generator"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/PADL Tests"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

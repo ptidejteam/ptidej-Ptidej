@@ -219,7 +219,7 @@ java.util.List
 demo/codeanalyzer/common/util/CodeAnalyzerUtil.java
 Pb(572) Class is a raw type. References to generic type Class<T> should be parameterized at 35
 demo/codeanalyzer/common/util/CodeAnalyzerUtil.java
-Pb(103) The method newInstance() from the type Class is deprecated at 40
+Pb(531) Type safety: The method getDeclaredConstructor(Class...) belongs to the raw type Class. References to generic type Class<T> should be parameterized at 40
 demo/codeanalyzer/common/util/CodeAnalyzerUtil.java
 Pb(545) Type safety: Unchecked cast from Object to JavaCodeRule<TypeElement> at 41
 demo/codeanalyzer/common/util/CodeAnalyzerUtil.java

@@ -183,7 +183,7 @@ public class AspectWalker extends HierarchyWalker {
 		while (ite_param_type.hasNext()) {
 			// Yann 2009/05/02: Parameters!
 			// Parameters do not use String anymore :-)
-			final String paramType = (String) ite_param_type.next();
+			final String paramType = String.valueOf(ite_param_type.next());
 			IEntity entity =
 				this.codeLevelModel.getTopLevelEntityFromID(paramType);
 			if (entity == null) {

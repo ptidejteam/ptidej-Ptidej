@@ -1,0 +1,24 @@
+1
+OPERATION [intermediateCreateBuilder]: <OPERATION> public BUILDER.UIBuilder getUIBuilder (String str) CALLEE BUILDER.BuilderFactory 20914447 CALLER BUILDER.buttonHandler 15055830
+OPERATION [newConcreteBuilder]: <CREATE> void <init> () CALLEE BUILDER.CandSrchBuilder 8728760 CALLER BUILDER.BuilderFactory 20914447
+OPERATION [newDirector]: <CREATE> public void <init> (BUILDER.UIBuilder bldr) CALLEE BUILDER.UIDirector 26750913 CALLER BUILDER.buttonHandler 15055830
+OPERATION [construct]: <OPERATION> public void build () CALLEE BUILDER.UIDirector 26750913 CALLER BUILDER.buttonHandler 15055830
+OPERATION [buildPart]: <OPERATION> public void addUIControls () CALLEE BUILDER.CandSrchBuilder 8728760 CALLER BUILDER.UIDirector 26750913
+OPERATION [getResult]: <OPERATION> public javax.swing.JPanel getSearchUI () CALLEE BUILDER.CandSrchBuilder 8728760 CALLER BUILDER.buttonHandler 15055830
+PARTICIPANT [anIntermediateClient]: BUILDER.buttonHandler 15055830
+PARTICIPANT [aClient]: BUILDER.BuilderFactory 20914447
+PARTICIPANT [aDirector]: BUILDER.UIDirector 26750913
+PARTICIPANT [aConcreteBuidler]: BUILDER.CandSrchBuilder 8728760
+
+2
+OPERATION [intermediateCreateBuilder]: <OPERATION> public BUILDER.UIBuilder getUIBuilder (String str) CALLEE BUILDER.BuilderFactory 20914447 CALLER BUILDER.buttonHandler 15055830
+OPERATION [newConcreteBuilder]: <CREATE> void <init> () CALLEE BUILDER.CandSrchBuilder 8728760 CALLER BUILDER.BuilderFactory 20914447
+OPERATION [newDirector]: <CREATE> public void <init> (BUILDER.UIBuilder bldr) CALLEE BUILDER.UIDirector 26750913 CALLER BUILDER.buttonHandler 15055830
+OPERATION [construct]: <OPERATION> public void build () CALLEE BUILDER.UIDirector 26750913 CALLER BUILDER.buttonHandler 15055830
+OPERATION [buildPart]: <OPERATION> public void addUIControls () CALLEE BUILDER.CandSrchBuilder 8728760 CALLER BUILDER.UIDirector 26750913
+OPERATION [getResult]: <OPERATION> public String getSQL () CALLEE BUILDER.CandSrchBuilder 8728760 CALLER BUILDER.buttonHandler 15055830
+PARTICIPANT [anIntermediateClient]: BUILDER.buttonHandler 15055830
+PARTICIPANT [aClient]: BUILDER.BuilderFactory 20914447
+PARTICIPANT [aDirector]: BUILDER.UIDirector 26750913
+PARTICIPANT [aConcreteBuidler]: BUILDER.CandSrchBuilder 8728760
+

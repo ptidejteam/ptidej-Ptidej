@@ -1,57 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>net.ptidej.padl</groupId>
-    <artifactId>padl-creator-javafile-javac</artifactId>
-    <name>PADL Creator JavaFile JavaC</name>
+	<groupId>net.ptidej.padl</groupId>
+	<artifactId>padl-creator-javafile-javac</artifactId>
+	<name>PADL Creator JavaFile JavaC</name>
 
-    <parent>
-        <groupId>net.ptidej</groupId>
-        <artifactId>all-ptidej</artifactId>
-        <version>1.0.0</version>
-    </parent>
+	<parent>
+		<groupId>net.ptidej</groupId>
+		<artifactId>all-ptidej</artifactId>
+		<version>1.0.0</version>
+	</parent>
 
-    <dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
-        <dependency>
-            <groupId>net.ptidej.cpl</groupId>
-            <artifactId>cpl-core</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+	<dependencies>
 
-        <dependency>
-            <groupId>net.ptidej.jct</groupId>
-            <artifactId>jct-core</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+		<!-- Main dependencies -->
+		<dependency>
+			<groupId>net.ptidej.cpl</groupId>
+			<artifactId>cpl-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
-        <dependency>
-            <groupId>net.ptidej.jct</groupId>
-            <artifactId>jct-tools</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+		<dependency>
+			<groupId>net.ptidej.jct</groupId>
+			<artifactId>jct-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
-        <dependency>
-            <groupId>net.ptidej.jct</groupId>
-            <artifactId>jct-utils</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+		<dependency>
+			<groupId>net.ptidej.jct</groupId>
+			<artifactId>jct-tools</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
-        <dependency>
-            <groupId>net.ptidej.padl</groupId>
-            <artifactId>padl-core</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+		<dependency>
+			<groupId>net.ptidej.jct</groupId>
+			<artifactId>jct-utils</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
-        <dependency>
-            <groupId>net.ptidej.padl</groupId>
-            <artifactId>padl-statements</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
-    </dependencies>
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-statements</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<!-- Test dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
 
 </project>

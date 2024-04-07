@@ -43,8 +43,8 @@ public class AspectCreator implements ICodeLevelModelCreator {
 		File tmp = null;
 		File lst = null;
 		File ddir = null;
-		File[] classpath = new File[] { new File("../PADL Creator AspectJ/lib/rt_v1.4.2_11.jar"),
-				new File("../PADL Creator AspectJ/lib/aspectjrt.jar") };
+		File[] classpath = new File[] { new File("../PADL Creator AspectJ/target/classes/rt_v1.4.2_11.jar"),
+				new File("../PADL Creator AspectJ/target/classes/aspectjrt.jar") };
 
 		try {
 			tmp = File.createTempFile("foo", ".txt");

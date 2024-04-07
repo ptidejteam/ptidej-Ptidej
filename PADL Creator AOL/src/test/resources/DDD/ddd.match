@@ -1,0 +1,4549 @@
+
+CLASS-NAME: regex
+
+ATTRIBUTES:
+	rxmatchproc matcher
+	void data
+OPERATIONS:
+	regex (rxmatchproc p, void* data)
+	~regex ()
+	match (CONST_char* s, int len, int pos)
+	search (CONST_char* s, int len, int& matchlen, int startpos)
+	OK ()
+	regex (CONST_regex&)
+	operator_= (CONST_regex&)
+
+CLASS-NAME: subString
+
+ATTRIBUTES:
+	unsigned pos
+	unsigned len
+OPERATIONS:
+	assign (strRep* , CONST_char* , int)
+	subString (string& x, int p, int l)
+	subString (CONST_string& x, int p, int l)
+	subString (CONST_subString& x)
+	~subString ()
+	operator_= (CONST_string& y)
+	operator_= (CONST_subString& y)
+	operator_= (CONST_char* t)
+	operator_= (char* t)
+	operator_= (char c)
+	contains (char c)
+	contains (CONST_string& y)
+	contains (CONST_subString& y)
+	contains (CONST_char* t)
+	contains (char* t)
+	contains (CONST_regex& r)
+	matches (CONST_regex& r)
+	length ()
+	empty ()
+	chars ()
+	OK ()
+ASSOCIATION S
+	subString
+	string
+ASSOCIATION 
+	subString
+	string
+
+CLASS-NAME: string
+
+ATTRIBUTES:
+	strRep rep
+OPERATIONS:
+	search (int, int, CONST_char* , int)
+	search (int, int, char)
+	match (int, int, int, CONST_char* , int)
+	_gsub (CONST_char* , int, CONST_char* ,int)
+	_gsub (CONST_regex& , CONST_char* , int)
+	_substr (int, int)
+	_substr (int, int)
+	string (int)
+	operator_= (int)
+	string ()
+	string (CONST_string& x)
+	string (CONST_subString&  x)
+	string (CONST_char* t)
+	string (CONST_char* t, int len)
+	string (char c)
+	string (ostrstream& os)
+	~string ()
+	operator_= (CONST_string& y)
+	operator_= (CONST_char* y)
+	operator_= (char* y)
+	operator_= (char c)
+	operator_= (CONST_subString& y)
+	operator_= (ostrstream& os)
+	operator_+= (CONST_string& y)
+	operator_+= (CONST_subString& y)
+	operator_+= (CONST_char* t)
+	operator_+= (char* t)
+	operator_+= (char c)
+	prepend (CONST_string& y)
+	prepend (CONST_subString& y)
+	prepend (CONST_char* t)
+	prepend (char* t)
+	prepend (char c)
+	index (char c, int startpos)
+	index (CONST_string& y, int startpos)
+	index (CONST_subString& y, int startpos)
+	index (CONST_char* t, int startpos)
+	index (char* t, int startpos)
+	index (CONST_regex& r, int startpos)
+	contains (char c)
+	contains (CONST_string& y)
+	contains (CONST_subString& y)
+	contains (CONST_char* t)
+	contains (char* t)
+	contains (CONST_regex& r)
+	contains (char c, int pos)
+	contains (CONST_string& y, int pos)
+	contains (CONST_subString& y, int pos)
+	contains (CONST_char* t, int pos)
+	contains (char* t, int pos)
+	contains (CONST_regex& r, int pos)
+	matches (char c, int pos)
+	matches (CONST_string& y, int pos)
+	matches (CONST_subString& y, int pos)
+	matches (CONST_char* t, int pos)
+	matches (char* t, int pos)
+	matches (CONST_regex& r, int pos)
+	freq (char c)
+	freq (CONST_string& y)
+	freq (CONST_subString& y)
+	freq (CONST_char* t)
+	freq (char* t)
+	at (int pos, int len)
+	operator ()
+	at (CONST_string& x, int startpos)
+	at (CONST_subString& x, int startpos)
+	at (CONST_char* t, int startpos)
+	at (char* t, int startpos)
+	at (char c, int startpos)
+	at (CONST_regex& r, int startpos)
+	before (int pos)
+	before (CONST_string& x, int startpos)
+	before (CONST_subString& x, int startpos)
+	before (CONST_char* t, int startpos)
+	before (char* t, int startpos)
+	before (char c, int startpos)
+	before (CONST_regex& r, int startpos)
+	through (int pos)
+	through (CONST_string& x, int startpos)
+	through (CONST_subString& x, int startpos)
+	through (CONST_char* t, int startpos)
+	through (char* t, int startpos)
+	through (char c, int startpos)
+	through (CONST_regex& r, int startpos)
+	from (int pos)
+	from (CONST_string& x, int startpos)
+	from (CONST_subString& x, int startpos)
+	from (CONST_char* t, int startpos)
+	from (char* t, int startpos)
+	from (char c, int startpos)
+	from (CONST_regex& r, int startpos)
+	after (int pos)
+	after (CONST_string& x, int startpos)
+	after (CONST_subString& x, int startpos)
+	after (CONST_char* t, int startpos)
+	after (char* t, int startpos)
+	after (char c, int startpos)
+	after (CONST_regex& r, int startpos)
+	at (int pos, int len)
+	operator ()
+	at (CONST_string& x, int startpos)
+	at (CONST_subString& x, int startpos)
+	at (CONST_char* t, int startpos)
+	at (char* t, int startpos)
+	at (char c, int startpos)
+	at (CONST_regex& r, int startpos)
+	before (int pos)
+	before (CONST_string& x, int startpos)
+	before (CONST_subString& x, int startpos)
+	before (CONST_char* t, int startpos)
+	before (char* t, int startpos)
+	before (char c, int startpos)
+	before (CONST_regex& r, int startpos)
+	through (int pos)
+	through (CONST_string& x, int startpos)
+	through (CONST_subString& x, int startpos)
+	through (CONST_char* t, int startpos)
+	through (char* t, int startpos)
+	through (char c, int startpos)
+	through (CONST_regex& r, int startpos)
+	from (int pos)
+	from (CONST_string& x, int startpos)
+	from (CONST_subString& x, int startpos)
+	from (CONST_char* t, int startpos)
+	from (char* t, int startpos)
+	from (char c, int startpos)
+	from (CONST_regex& r, int startpos)
+	after (int pos)
+	after (CONST_string& x, int startpos)
+	after (CONST_subString& x, int startpos)
+	after (CONST_char* t, int startpos)
+	after (char* t, int startpos)
+	after (char c, int startpos)
+	after (CONST_regex& r, int startpos)
+	del (int pos, int len)
+	del (CONST_string& y, int startpos)
+	del (CONST_subString& y, int startpos)
+	del (CONST_char* t, int startpos)
+	del (char* t, int startpos)
+	del (char c, int startpos)
+	del (CONST_regex& r, int startpos)
+	gsub (CONST_string& pat, CONST_string& repl)
+	gsub (CONST_subString& pat, CONST_string& repl)
+	gsub (CONST_char* pat, CONST_string& repl)
+	gsub (CONST_char* pat, CONST_char* repl)
+	gsub (CONST_char* pat, char* repl)
+	gsub (char* pat, CONST_string& repl)
+	gsub (char* pat, CONST_char* repl)
+	gsub (char* pat, char* repl)
+	gsub (CONST_regex& pat, CONST_string& repl)
+	reverse ()
+	upcase ()
+	downcase ()
+	capitalize ()
+	operator_[] (char i)
+	operator_[] (short i)
+	operator_[] (ushort i)
+	operator_[] (int i)
+	operator_[] (uint i)
+	operator_[] (long i)
+	operator_[] (ulong i)
+	operator_[] (char i)
+	operator_[] (ushort i)
+	operator_[] (short i)
+	operator_[] (int i)
+	operator_[] (uint i)
+	operator_[] (long i)
+	operator_[] (ulong i)
+	elem (int i)
+	firstchar ()
+	lastchar ()
+	char* ()
+	operator_char* ()
+	chars ()
+	length ()
+	empty ()
+	alloc (int newsize)
+	allocation ()
+	error (CONST_char* msg)
+	OK ()
+
+CLASS-NAME: SignalBlocker
+
+ATTRIBUTES:
+	sigset_t old_set
+OPERATIONS:
+	operator_= (CONST_SignalBlocker&)
+	SignalBlocker (CONST_SignalBlocker& sb)
+	SignalBlocker (int signum)
+	SignalBlocker ()
+	~SignalBlocker ()
+
+CLASS-NAME: UniqueId
+
+ATTRIBUTES:
+	unsigned _id
+	unsigned tics
+	unsigned ids
+	bool debug
+OPERATIONS:
+	UniqueId ()
+	~UniqueId ()
+	long ()
+	inUse ()
+
+CLASS-NAME: MemCheckHeader
+
+ATTRIBUTES:
+OPERATIONS:
+	init ()
+
+CLASS-NAME: MemCheck
+
+ATTRIBUTES:
+	unsigned tics
+	unsigned freeBytes
+	unsigned allocBytes
+	int log
+OPERATIONS:
+	morecore (unsigned nunits)
+	_free (MemCheckHeader *bp)
+	validate (MemCheckHeader* bp, char* src)
+	init ()
+	alloc (unsigned nbytes)
+	free (void *p)
+	map (ostream& os, unsigned start , char* prefix)
+	tic ()
+	in_free ()
+	in_alloc ()
+	OK ()
+ASSOCIATION freep
+	MemCheck
+	MemCheckHeader
+ASSOCIATION allocp
+	MemCheck
+	MemCheckHeader
+AGGREGATION freebase
+	CONTAINER MemCheck
+	CONTAINED MemCheckHeader
+AGGREGATION allocbase
+	CONTAINER MemCheck
+	CONTAINED MemCheckHeader
+ASSOCIATION 
+	MemCheck
+	MemCheckHeader
+
+CLASS-NAME: MemChecker
+
+ATTRIBUTES:
+	unsigned start
+OPERATIONS:
+	MemChecker (char *pfx)
+	~MemChecker ()
+AGGREGATION prefix
+	CONTAINER MemChecker
+	CONTAINED string
+
+CLASS-NAME: AssocRec
+
+ATTRIBUTES:
+	K key
+	V value
+OPERATIONS:
+	AssocRec (CONST_K& k, CONST_V& v)
+	AssocRec (CONST_K& k)
+	AssocRec (CONST_AssocRec<K_V>& x)
+	operator_= (CONST_AssocRec<K_V>&)
+AGGREGATION next
+	CONTAINER AssocRec
+	CONTAINED K
+
+CLASS-NAME: _Assoc
+
+ATTRIBUTES:
+OPERATIONS:
+	lookup (CONST_K& key)
+	insert (CONST_K& key)
+	_Assoc ()
+	~_Assoc ()
+	operator_[] (CONST_K& key)
+	operator_[] (CONST_K& key)
+	add (CONST_K& key)
+	has (CONST_K& key)
+	remove (CONST_K& key, int n)
+	_Assoc (CONST__Assoc<K_V>& m)
+	operator_= (CONST__Assoc<K_V>& m)
+AGGREGATION entries
+	CONTAINER _Assoc
+	CONTAINED K
+
+CLASS-NAME: AssocMark
+
+ATTRIBUTES:
+OPERATIONS:
+	AssocMark (AssocRec<K_V> *ptr)
+	AssocMark (CONST_Assoc<K_V>& assoc)
+	AssocMark (CONST_AssocMark<K_V>& mark)
+	operator_= (CONST_Assoc<K_V>& assoc)
+	operator_= (CONST_AssocMark<K_V>& mark)
+AGGREGATION rec
+	CONTAINER AssocMark
+	CONTAINED K
+
+CLASS-NAME: AssocIter
+
+ATTRIBUTES:
+OPERATIONS:
+	AssocIter (AssocRec<K_V> *ptr)
+	AssocIter (CONST_Assoc<K_V>& assoc)
+	AssocIter (CONST_AssocIter<K_V>& iter)
+	operator_= (CONST_Assoc<K_V>& assoc)
+	operator_= (CONST_AssocIter<K_V>& iter)
+	key ()
+	value ()
+	value ()
+	ok ()
+	next ()
+	operator_++ ()
+	operator_++ (int)
+
+GENERALIZATION AssocMark
+SUBCLASSES AssocIter
+
+CLASS-NAME: Assoc
+
+ATTRIBUTES:
+OPERATIONS:
+	lookup (CONST_K& key)
+	insert (CONST_K& key)
+	release (CONST_AssocMark<K_V>& mark)
+
+GENERALIZATION _Assoc
+SUBCLASSES Assoc
+
+CLASS-NAME: DynArray
+
+ATTRIBUTES:
+	int _allocated_size
+	T _values
+OPERATIONS:
+	max (int a, int b)
+	grow (int new_size_min)
+	value (int i)
+	_value (int i)
+	size ()
+	operator_[] (int i)
+	operator_[] (int i)
+	values ()
+	T* ()
+	operator_T* ()
+	DynArray (int initial_size)
+	DynArray (T* v, int n)
+	DynArray (CONST_DynArray<T>& m)
+	~DynArray ()
+	operator_= (CONST_DynArray<T>& m)
+
+CLASS-NAME: VarArray
+
+ATTRIBUTES:
+	int _size
+OPERATIONS:
+	size ()
+	add (CONST_T& v)
+	_remove (int n)
+	remove (CONST_T& v)
+	VarArray (int initial_size)
+	VarArray (T* v, int n)
+	VarArray (CONST_VarArray<T>& m)
+	~VarArray ()
+	operator_= (CONST_VarArray<T>& m)
+	operator_+= (CONST_T& value)
+	operator_-= (CONST_T& value)
+	operator_[] (int i)
+	operator_[] (int i)
+
+GENERALIZATION DynArray
+SUBCLASSES VarArray
+
+CLASS-NAME: AgentManager
+
+ATTRIBUTES:
+	SignalProc old_pipe_handler
+	SignalProc old_chld_handler
+OPERATIONS:
+	operator_+= (Agent *key)
+	operator_-= (Agent *key)
+	AgentManager (CONST_AgentManager&)
+	operator_= (CONST_AgentManager&)
+	AgentManager (SignalProc new_chld_handler)
+	~AgentManager ()
+	search (int pid)
+	childStatusChange ()
+	commit ()
+ASSOCIATION first
+	AgentManager
+	Agent
+ASSOCIATION 
+	AgentManager
+	Agent
+
+CLASS-NAME: HandlerList
+
+ATTRIBUTES:
+	HandlerProc proc
+	void client_data
+	HandlerRec next
+	bool remove_me
+	unsigned _nTypes
+	HandlerRec *handlers
+	int active
+OPERATIONS:
+	HandlerRec (HandlerProc p, void* c, HandlerRec* n)
+	HandlerRec (CONST_HandlerRec&)
+	operator_= (CONST_HandlerRec&)
+	compare (CONST_HandlerRec& l1, CONST_HandlerRec& l2)
+	processRemovals (unsigned type)
+	operator_= (CONST_HandlerList&)
+	HandlerList (unsigned n)
+	HandlerList (CONST_HandlerList& l)
+	compare (CONST_HandlerList& l)
+	nTypes ()
+	add (unsigned type, HandlerProc proc, void* client_data)
+	add (CONST_HandlerList& l)
+	remove (unsigned type, HandlerProc proc, void* client_data)
+	removeAll (unsigned type)
+	removeAll ()
+	call (unsigned type, void* CONST_source , void* CONST_call_data)
+	has (unsigned type)
+	~HandlerList ()
+
+CLASS-NAME: Agent
+
+ATTRIBUTES:
+	public _pid
+	FILE _inputfp
+	FILE _outputfp
+	FILE _errorfp
+	bool _running
+	bool _beingTerminated
+	int _lastStatus
+	int _terminateTimeOut
+	int _hangupTimeOut
+	int _killTimeOut
+	int to_child
+	int to_parent
+	int to_parent_error
+OPERATIONS:
+	operator_= (CONST_Agent&)
+	callHandlers (int type, void* call_data)
+	callHandlersWhenIdle (int type, void* call_data)
+	checkIfDead ()
+	setRunning ()
+	unsetRunning ()
+	startChildProcess ()
+	childStatusChange (int sig)
+	_raise (string msg, int handler, bool system_error, bool check_if_running)
+	_raiseMsg (string msg)
+	_raiseWarning (string msg)
+	_raiseIOMsg (string msg)
+	_raiseIOWarning (string msg)
+	raiseMsg (string msg)
+	raiseWarning (string msg)
+	raiseIOMsg (string msg)
+	raiseIOWarning (string msg)
+	waitToTerminate ()
+	abort ()
+	defaultHandler (Agent* source, void* client_data, void* call_data)
+	addDefaultHandler (unsigned type)
+	restoreParentIO ()
+	activateIO ()
+	deactivateIO ()
+	setupCommunication ()
+	setupChildCommunication ()
+	setupParentCommunication ()
+	executeChild ()
+	closeChannel (FILE *fp)
+	inputEOF ()
+	errorEOF ()
+	inputIsTerminal ()
+	outputIsTerminal ()
+	onTerminal ()
+	Agent (string pth, unsigned nTypes)
+	Agent (FILE* in , FILE* out , FILE* err , unsigned nTypes)
+	Agent (bool, unsigned nTypes)
+	Agent (CONST_Agent& c)
+	dup ()
+	~Agent ()
+	start ()
+	inputfp ()
+	outputfp ()
+	errorfp ()
+	shutdown ()
+	wait ()
+	terminate (bool onExit)
+	_kill (int sig)
+	_hangup ()
+	_terminate ()
+	handlerChange ()
+	addHandler (unsigned type, AgentHandlerProc proc, void* client_data)
+	addHandler (CONST_Agent& a)
+	removeHandler (unsigned type, AgentHandlerProc proc, void* client_data)
+	removeAllHandlers (unsigned type)
+	removeAllHandlers ()
+	hasHandler (unsigned type)
+	hasNewStatus (int status)
+	path ()
+	pid ()
+	terminateTimeOut ()
+	hangupTimeOut ()
+	killTimeOut ()
+	terminateTimeOut ()
+	hangupTimeOut ()
+	killTimeOut ()
+	beingTerminated ()
+	lastStatus ()
+	name ()
+	running ()
+	commit ()
+	OK ()
+AGGREGATION handlers
+	CONTAINER Agent
+	CONTAINED HandlerList
+ASSOCIATION next
+	Agent
+	Agent
+AGGREGATION _path
+	CONTAINER Agent
+	CONTAINED string
+AGGREGATION runningAgents
+	CONTAINER Agent
+	CONTAINED AgentManager
+ASSOCIATION 
+	Agent
+	string
+
+CLASS-NAME: ChunkQueue
+
+ATTRIBUTES:
+	public _length
+	int _size
+	char _data
+OPERATIONS:
+	grow (int newSize)
+	ChunkQueue (CONST_ChunkQueue&)
+	operator_= (CONST_ChunkQueue&)
+	ChunkQueue (int initialSize)
+	~ChunkQueue ()
+	append (char* dta, int len)
+	discard (int len)
+	discard ()
+	data ()
+	length ()
+
+CLASS-NAME: AsyncAgent
+
+ATTRIBUTES:
+	public _appContext
+	AsyncAgentHandler _handlers
+	XtInputId _ids
+	AsyncAgentWorkProc workProcs
+	int new_status
+OPERATIONS:
+	dispatch (int* fid, XtInputId* id)
+	initHandlers ()
+	addDeathOfChildHandler ()
+	deleteWorkProc (AsyncAgentWorkProcInfo* info, bool remove)
+	deleteAllWorkProcs ()
+	somethingHappened (XtPointer client_data, int* fid, XtInputId* id)
+	_childStatusChange (XtPointer client_data, XtIntervalId* iid)
+	childStatusChange (Agent* agent, void* client_data, void* call_data)
+	callTheHandlers (XtPointer client_data)
+	callTheHandlersIfIdle (XtPointer client_data, XtIntervalId* id)
+	terminateProcess (XtPointer, XtIntervalId*)
+	hangupProcess (XtPointer, XtIntervalId*)
+	killProcess (XtPointer, XtIntervalId*)
+	setHandler (unsigned type, AsyncAgentHandler handler)
+	clearHandlers ()
+	id (unsigned type)
+	handler (unsigned type)
+	waitToTerminate ()
+	callHandlersWhenIdle (int type, void* call_data)
+	isIdle ()
+	closeChannel (FILE *fp)
+	removeInput (unsigned type)
+	operator_= (CONST_AsyncAgent&)
+	appContext ()
+	AsyncAgent (XtAppContext app_context, string pth, unsigned nTypes)
+	AsyncAgent (XtAppContext app_context, FILE* in , FILE* out , FILE* err , unsigned nTypes)
+	AsyncAgent (XtAppContext app_context, bool dummy, unsigned nTypes)
+	AsyncAgent (CONST_AsyncAgent& c)
+	dup ()
+	~AsyncAgent ()
+	abort ()
+	terminate (bool onExit)
+
+GENERALIZATION Agent
+SUBCLASSES AsyncAgent
+ASSOCIATION 
+	AsyncAgent
+	Agent
+ASSOCIATION 
+	AsyncAgent
+	string
+
+CLASS-NAME: LiterateAgent
+
+ATTRIBUTES:
+	public activeIO
+	bool _block_tty_input
+OPERATIONS:
+	_activateIO ()
+	_deactivateIO ()
+	activateIO ()
+	deactivateIO ()
+	_read (char* & data, FILE* fp)
+	_readNonBlocking (char* data, int size, FILE* fp)
+	outputReady (AsyncAgent *c)
+	inputReady (AsyncAgent *c)
+	errorReady (AsyncAgent *c)
+	default_block_tty_input ()
+	block_tty_input ()
+	block_tty_input (bool state)
+	readInput (char*& data)
+	_readInput (char *& data)
+	readAndDispatchInput (bool expectEOF)
+	readError (char*& data)
+	_readError (char *& data)
+	readAndDispatchError (bool expectEOF)
+	dispatch (int type, char* data, int length)
+	handlerChange ()
+	blocking_tty (FILE *fp)
+	LiterateAgent (XtAppContext app_context, string pth, unsigned nTypes)
+	LiterateAgent (XtAppContext app_context, FILE* in , FILE* out , FILE* err , unsigned nTypes)
+	LiterateAgent (XtAppContext app_context, bool dummy, unsigned nTypes)
+	LiterateAgent (CONST_LiterateAgent& lit)
+	dup ()
+	write (CONST_char* data, int length)
+	flush ()
+	start ()
+	abort ()
+
+GENERALIZATION AsyncAgent
+SUBCLASSES LiterateAgent
+ASSOCIATION 
+	LiterateAgent
+	AsyncAgent
+ASSOCIATION 
+	LiterateAgent
+	string
+
+CLASS-NAME: TTYAgent
+
+ATTRIBUTES:
+	int master
+	int slave
+	bool push
+OPERATIONS:
+	open_master ()
+	open_slave ()
+	setupCommunication ()
+	setupChildCommunication ()
+	setupParentCommunication ()
+	open_tty (CONST_char* tty, int flags)
+	tty_ok (CONST_char *tty)
+	TTYAgent (XtAppContext app_context, string pth, unsigned nTypes)
+	TTYAgent (XtAppContext app_context, FILE* in , FILE* out , FILE* err , unsigned nTypes)
+	TTYAgent (XtAppContext app_context, bool dummy, unsigned nTypes)
+	TTYAgent (CONST_TTYAgent& tty)
+	dup ()
+	master_tty ()
+	slave_tty ()
+
+GENERALIZATION LiterateAgent
+SUBCLASSES TTYAgent
+AGGREGATION _master_tty
+	CONTAINER TTYAgent
+	CONTAINED public
+AGGREGATION _slave_tty
+	CONTAINER TTYAgent
+	CONTAINED string
+ASSOCIATION 
+	TTYAgent
+	string
+
+CLASS-NAME: MString
+
+ATTRIBUTES:
+	XmString _mstring
+OPERATIONS:
+	MString (char* text , XmStringCharSet charset)
+	MString (CONST_char* text, XmStringCharSet charset)
+	MString (CONST_string& text, XmStringCharSet charset)
+	MString (XmString text, bool)
+	MString (CONST_MString& m)
+	~MString ()
+	baseline (XmFontList fontlist)
+	isEmpty ()
+	lineCount ()
+	extent (Dimension& x, Dimension& y, XmFontList fontlist)
+	height (XmFontList fontlist)
+	width (XmFontList fontlist)
+	length ()
+	str (XmStringCharSet charset)
+	operator_= (CONST_MString& m)
+	operator_+= (CONST_MString& m)
+	prepend (CONST_MString& m)
+	operator_== (CONST_MString& m)
+	operator_!= (CONST_MString& m)
+	operator_XmString ()
+	operator_XmString ()
+	xmstring ()
+	isNull ()
+	contains (CONST_MString& m)
+	OK ()
+
+CLASS-NAME: BoxPoint
+
+ATTRIBUTES:
+	BoxCoordinate point
+OPERATIONS:
+	BoxPoint (BoxCoordinate x, BoxCoordinate y)
+	BoxPoint (BoxCoordinate c)
+	BoxPoint ()
+	BoxPoint (CONST_BoxPoint& p)
+	isValid ()
+	operator_+ (CONST_BoxPoint& p)
+	operator_- (CONST_BoxPoint& p)
+	operator_* (CONST_BoxPoint& p)
+	operator_/ (CONST_BoxPoint& p)
+	operator_% (CONST_BoxPoint& p)
+	operator_+= (CONST_BoxPoint& p)
+	operator_-= (CONST_BoxPoint& p)
+	operator_*= (CONST_BoxPoint& p)
+	operator_/= (CONST_BoxPoint& p)
+	operator_%= (CONST_BoxPoint& p)
+	operator_[] (CONST_BoxDimension& dimension)
+	operator_[] (CONST_BoxDimension& dimension)
+
+CLASS-NAME: BoxSize
+
+ATTRIBUTES:
+OPERATIONS:
+	BoxSize (BoxCoordinate x_size, BoxCoordinate y_size)
+	BoxSize (BoxCoordinate c)
+	BoxSize ()
+	BoxSize (CONST_BoxPoint& p)
+	operator_& (CONST_BoxSize& s)
+	operator_| (CONST_BoxSize& s)
+	operator_^ (CONST_BoxSize& s)
+	operator_&= (CONST_BoxSize& s)
+	operator_|= (CONST_BoxSize& s)
+	operator_^= (CONST_BoxSize& s)
+
+GENERALIZATION BoxPoint
+SUBCLASSES BoxSize
+
+CLASS-NAME: _Delay
+
+ATTRIBUTES:
+	public widget
+	Cursor old_cursor
+	Cursor current_cursor
+	Cursor hourglass_cache
+OPERATIONS:
+	_Delay (CONST__Delay&)
+	operator_= (CONST__Delay&)
+	DestroyCB (Widget, XtPointer, XtPointer)
+	hourglass_cursor ()
+	_Delay (Widget w)
+	~_Delay ()
+
+CLASS-NAME: Delay
+
+ATTRIBUTES:
+	public delay_count
+	WidgetArray _shells
+	DelayArray delays
+OPERATIONS:
+	DestroyCB (Widget, XtPointer, XtPointer)
+	Delay (Widget w)
+	~Delay ()
+	register_shell (Widget w)
+	shells ()
+	SHARED (*shell_registered)()
+
+GENERALIZATION _Delay
+SUBCLASSES Delay
+
+CLASS-NAME: BoxRegion
+
+ATTRIBUTES:
+OPERATIONS:
+	BoxRegion (CONST_BoxPoint& o, CONST_BoxSize& s)
+	BoxRegion (CONST_BoxPoint& o)
+	BoxRegion ()
+	BoxRegion (CONST_BoxRegion& r)
+	origin ()
+	origin (BoxDimension d)
+	space ()
+	space (BoxDimension d)
+	origin ()
+	origin (BoxDimension d)
+	space ()
+	space (BoxDimension d)
+	operator_== (CONST_BoxRegion& r)
+	operator_!= (CONST_BoxRegion& r)
+	operator_<= (CONST_BoxRegion& r)
+	operator_& (CONST_BoxRegion& r)
+	operator_| (CONST_BoxRegion& r)
+	isEmpty ()
+AGGREGATION _origin
+	CONTAINER BoxRegion
+	CONTAINED BoxPoint
+AGGREGATION _space
+	CONTAINER BoxRegion
+	CONTAINED BoxSize
+
+CLASS-NAME: BoxExtend
+
+ATTRIBUTES:
+OPERATIONS:
+	BoxExtend (BoxCoordinate x_extend, BoxCoordinate y_extend)
+	BoxExtend (BoxCoordinate c)
+	BoxExtend ()
+	BoxExtend (CONST_BoxPoint& p)
+	operator_& (CONST_BoxExtend& e)
+	operator_| (CONST_BoxExtend& e)
+	operator_^ (CONST_BoxExtend& e)
+	operator_&= (CONST_BoxExtend& e)
+	operator_|= (CONST_BoxExtend& e)
+	operator_^= (CONST_BoxExtend& e)
+	fix (BoxDimension dimension)
+
+GENERALIZATION BoxPoint
+SUBCLASSES BoxExtend
+
+CLASS-NAME: Box
+
+ATTRIBUTES:
+	char _type
+	int _links
+OPERATIONS:
+	epsHeader (ostream& os, CONST_BoxRegion& region, CONST_BoxPostScriptGC& gc)
+	operator_= (CONST_Box&)
+	thesize ()
+	theextend ()
+	thesize ()
+	theextend ()
+	Box (CONST_Box& box)
+	matches (CONST_Box& b, CONST_Box* callbackArg)
+	_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	dump (ostream& s)
+	Box (BoxSize s , BoxExtend e , char* t)
+	~Box ()
+	link ()
+	dup ()
+	dup0 ()
+	unlink ()
+	id ()
+	type ()
+	extend ()
+	size ()
+	extend (BoxDimension dimension)
+	size (BoxDimension dimension)
+	str ()
+	corner ()
+	resize ()
+	newFont (CONST_string&)
+	draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed , GC gc , bool context_selected)
+	_print (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+	_printHeader (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+	_printTrailer (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+	print (ostream& os , BoxRegion region , CONST_BoxPrintGC& gc)
+	operator_== (CONST_Box& b)
+	operator_!= (CONST_Box& b)
+	isStringBox ()
+	isListBox ()
+	isDummyBox ()
+	tag (Data* data, DataLink* dl)
+	region (BoxPoint p)
+	data (BoxPoint p)
+	name (BoxPoint p)
+	selected (BoxPoint p)
+	info (BoxPoint p)
+	matchMe ()
+	countMatchBoxes (int[])
+	findTag (CONST_BoxPoint&)
+	findTag ()
+	OK ()
+AGGREGATION _id
+	CONTAINER Box
+	CONTAINED public
+AGGREGATION _size
+	CONTAINER Box
+	CONTAINED BoxSize
+AGGREGATION _extend
+	CONTAINER Box
+	CONTAINED BoxExtend
+ASSOCIATION 
+	Box
+	BoxSize
+ASSOCIATION 
+	Box
+	BoxExtend
+ASSOCIATION 
+	Box
+	BoxRegion
+ASSOCIATION 
+	Box
+	BoxPoint
+
+CLASS-NAME: CompositeBox
+
+ATTRIBUTES:
+	public _size
+	int _nchildren
+OPERATIONS:
+	grow ()
+	operator_= (CONST_CompositeBox&)
+	addChild (Box *b)
+	_child (int nchild)
+	_child (int nchild)
+	CompositeBox (CONST_CompositeBox& box)
+	dumpComposite (ostream& s, char* sep , char* head , char* tail)
+	matches (CONST_Box& , CONST_Box*)
+	findTag (CONST_BoxPoint&)
+	CompositeBox (unsigned initialSize , char* t)
+	~CompositeBox ()
+	str ()
+	resize ()
+	newFont (CONST_string& font)
+	nchildren ()
+	operator_[] (int nchild)
+	operator_[] (int nchild)
+	countMatchBoxes (int instances[])
+	OK ()
+
+GENERALIZATION Box
+SUBCLASSES CompositeBox
+ASSOCIATION boxes
+	CompositeBox
+	Box
+ASSOCIATION 
+	CompositeBox
+	Box
+
+CLASS-NAME: AlignBox
+
+ATTRIBUTES:
+OPERATIONS:
+	AlignBox (CONST_AlignBox& box)
+	setSize (Box *b)
+	addSize (Box *b)
+	resize ()
+	addChild (Box *b)
+	drawAlign (Widget w, CONST_BoxRegion& r, CONST_BoxRegion& exposed, GC gc, bool context_selected, BoxDimension dimen)
+	AlignBox (unsigned initialSize , char* t)
+	corner ()
+	operator_+= (Box *b)
+
+GENERALIZATION CompositeBox
+SUBCLASSES AlignBox
+AGGREGATION _corner
+	CONTAINER AlignBox
+	CONTAINED public
+ASSOCIATION 
+	AlignBox
+	Box
+
+CLASS-NAME: HAlignBox
+
+ATTRIBUTES:
+OPERATIONS:
+	HAlignBox (CONST_HAlignBox& box)
+	dump (ostream& s)
+	_draw (Widget w, CONST_BoxRegion& r, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	HAlignBox (unsigned initialSize , char* t)
+	dup ()
+	dup0 ()
+	addSize (Box *b)
+	_print (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+	operator_&= (Box *b)
+
+GENERALIZATION AlignBox
+SUBCLASSES HAlignBox
+ASSOCIATION 
+	HAlignBox
+	Box
+
+CLASS-NAME: VAlignBox
+
+ATTRIBUTES:
+OPERATIONS:
+	_draw (Widget w, CONST_BoxRegion& r, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	VAlignBox (CONST_VAlignBox& box)
+	dump (ostream& s)
+	VAlignBox (unsigned initialSize , char* t)
+	dup ()
+	dup0 ()
+	addSize (Box *b)
+	_print (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+	operator_|= (Box *b)
+
+GENERALIZATION AlignBox
+SUBCLASSES VAlignBox
+ASSOCIATION 
+	VAlignBox
+	Box
+
+CLASS-NAME: UAlignBox
+
+ATTRIBUTES:
+OPERATIONS:
+	_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	UAlignBox (CONST_UAlignBox& box)
+	dump (ostream& s)
+	UAlignBox (unsigned initialSize , char* t)
+	dup ()
+	dup0 ()
+	addSize (Box *b)
+	_print (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+	operator_^= (Box *b)
+
+GENERALIZATION AlignBox
+SUBCLASSES UAlignBox
+ASSOCIATION 
+	UAlignBox
+	Box
+
+CLASS-NAME: TAlignBox
+
+ATTRIBUTES:
+OPERATIONS:
+	_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	TAlignBox (CONST_TAlignBox& box)
+	dump (ostream& s)
+	TAlignBox (unsigned initialSize , char* t)
+	dup ()
+	dup0 ()
+	addSize (Box *b)
+	_print (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+	operator_&= (Box *b)
+
+GENERALIZATION AlignBox
+SUBCLASSES TAlignBox
+ASSOCIATION 
+	TAlignBox
+	Box
+
+CLASS-NAME: PrimitiveBox
+
+ATTRIBUTES:
+OPERATIONS:
+	PrimitiveBox (CONST_PrimitiveBox& box)
+	PrimitiveBox (BoxSize s , BoxExtend e , char* t)
+
+GENERALIZATION Box
+SUBCLASSES PrimitiveBox
+ASSOCIATION 
+	PrimitiveBox
+	BoxSize
+ASSOCIATION 
+	PrimitiveBox
+	BoxExtend
+
+CLASS-NAME: RuleBox
+
+ATTRIBUTES:
+OPERATIONS:
+	_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	RuleBox (CONST_RuleBox& box)
+	dump (ostream& s)
+	RuleBox (BoxSize s , BoxExtend e , char* t)
+	dup ()
+	_print (ostream& os, CONST_BoxRegion& r, CONST_BoxPrintGC& gc)
+
+GENERALIZATION PrimitiveBox
+SUBCLASSES RuleBox
+ASSOCIATION 
+	RuleBox
+	BoxSize
+ASSOCIATION 
+	RuleBox
+	BoxExtend
+
+CLASS-NAME: EmptyBox
+
+ATTRIBUTES:
+OPERATIONS:
+	_draw (Widget, CONST_BoxRegion& , CONST_BoxRegion& , GC, bool)
+	EmptyBox (CONST_EmptyBox& box)
+	_print (ostream& , CONST_BoxRegion& , CONST_BoxPrintGC&)
+	EmptyBox (BoxSize s , BoxExtend e , char* t)
+
+GENERALIZATION PrimitiveBox
+SUBCLASSES EmptyBox
+ASSOCIATION 
+	EmptyBox
+	BoxSize
+ASSOCIATION 
+	EmptyBox
+	BoxExtend
+
+CLASS-NAME: FillBox
+
+ATTRIBUTES:
+OPERATIONS:
+	FillBox (CONST_FillBox& box)
+	dump (ostream& s)
+	FillBox (BoxSize s , BoxExtend e)
+	dup ()
+
+GENERALIZATION EmptyBox
+SUBCLASSES FillBox
+ASSOCIATION 
+	FillBox
+	BoxSize
+ASSOCIATION 
+	FillBox
+	BoxExtend
+
+CLASS-NAME: SpaceBox
+
+ATTRIBUTES:
+OPERATIONS:
+	SpaceBox (CONST_SpaceBox& box)
+	dump (ostream& s)
+	SpaceBox (BoxSize s)
+	dup ()
+
+GENERALIZATION EmptyBox
+SUBCLASSES SpaceBox
+ASSOCIATION 
+	SpaceBox
+	BoxSize
+
+CLASS-NAME: SquareBox
+
+ATTRIBUTES:
+OPERATIONS:
+	SquareBox (CONST_SquareBox& box)
+	dump (ostream& s)
+	SquareBox (BoxCoordinate s)
+	dup ()
+
+GENERALIZATION SpaceBox
+SUBCLASSES SquareBox
+
+CLASS-NAME: LineBox
+
+ATTRIBUTES:
+	public _linethickness
+OPERATIONS:
+	LineBox (CONST_LineBox& box)
+	matches (CONST_Box& b, CONST_Box*)
+	_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	__draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	LineBox (BoxCoordinate linethickness , char* t)
+	linethickness ()
+
+GENERALIZATION PrimitiveBox
+SUBCLASSES LineBox
+
+CLASS-NAME: ArcBox
+
+ATTRIBUTES:
+	public _start
+	BoxDegrees _length
+OPERATIONS:
+	__draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	_printPS (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+	_printFig (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+	ArcBox (CONST_ArcBox& box)
+	dump (ostream& s)
+	matches (CONST_Box& b, CONST_Box*)
+	ArcBox (BoxDegrees start, BoxDegrees length, BoxCoordinate linethickness , char* t)
+	dup ()
+	_print (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+	start ()
+	length ()
+
+GENERALIZATION LineBox
+SUBCLASSES ArcBox
+
+CLASS-NAME: HatBox
+
+ATTRIBUTES:
+OPERATIONS:
+	_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	HatBox (CONST_HatBox& box)
+	matches (CONST_Box& b, CONST_Box*)
+	findTag (CONST_BoxPoint& p)
+	operator_= (CONST_HatBox&)
+	HatBox (Box* box, char* t)
+	~HatBox ()
+	box ()
+	resize ()
+	newFont (CONST_string& font)
+	countMatchBoxes (int instances[])
+	_print (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+	corner ()
+	str ()
+
+GENERALIZATION Box
+SUBCLASSES HatBox
+ASSOCIATION _box
+	HatBox
+	public
+ASSOCIATION 
+	HatBox
+	Box
+
+CLASS-NAME: BinBox
+
+ATTRIBUTES:
+OPERATIONS:
+	BinBox (CONST_BinBox& box)
+	dump (ostream& s)
+	BinBox (Box* box, char* t)
+	resize ()
+	dup ()
+
+GENERALIZATION HatBox
+SUBCLASSES BinBox
+ASSOCIATION 
+	BinBox
+	Box
+
+CLASS-NAME: TransparentHatBox
+
+ATTRIBUTES:
+OPERATIONS:
+	matchMe ()
+	TransparentHatBox (CONST_TransparentHatBox& box)
+	dump (ostream& s)
+	TransparentHatBox (Box *box)
+
+GENERALIZATION HatBox
+SUBCLASSES TransparentHatBox
+ASSOCIATION 
+	TransparentHatBox
+	Box
+
+CLASS-NAME: MarkBox
+
+ATTRIBUTES:
+OPERATIONS:
+	_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	MarkBox (CONST_MarkBox& box)
+	MarkBox (Box *box)
+	dup ()
+	__region ()
+
+GENERALIZATION TransparentHatBox
+SUBCLASSES MarkBox
+AGGREGATION _region
+	CONTAINER MarkBox
+	CONTAINED public
+ASSOCIATION 
+	MarkBox
+	Box
+
+CLASS-NAME: TagBox
+
+ATTRIBUTES:
+	public datalink
+	Data _data
+	DataLink default_datalink
+OPERATIONS:
+	operator_= (CONST_TagBox&)
+	_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	TagBox (CONST_TagBox& tagbox)
+	dump (ostream& s)
+	findTag (CONST_BoxPoint&)
+	TagBox (Box* box, Data* dta , DataLink* dl)
+	dup ()
+	link ()
+	~TagBox ()
+	__data ()
+	__selected ()
+	__name ()
+	__info ()
+
+GENERALIZATION MarkBox
+SUBCLASSES TagBox
+ASSOCIATION 
+	TagBox
+	Box
+
+CLASS-NAME: VSEFlags
+
+ATTRIBUTES:
+	VSEOptionTableEntry optionTable[]
+	bool assert_library_ok
+	bool assert_document_ok
+	bool dump_tree
+	bool dump_library
+	bool dump_document
+	bool dump_picture
+	bool dump_while_optimizing
+	bool dump_last
+	bool show_optimize
+	bool show_match_boxes
+	bool show_match_nodes
+	bool show_match_defs
+	bool show_tiny_eval
+	bool show_large_eval
+	bool show_huge_eval
+	bool show_balance
+	bool show_flags
+	bool show_backtrace
+	bool show_ids
+	bool show_vars
+	bool show_draw
+	bool include_size_info
+	bool include_list_info
+	bool include_font_info
+	bool include_const_info
+	bool include_id_info
+	bool include_tag_info
+	bool include_select_info
+	bool optimize_resolveDefs
+	bool optimize_resolveSynonyms
+	bool optimize_foldOps
+	bool optimize_foldConsts
+	bool optimize_inlineFuncs
+	bool optimize_cleanup
+	int max_optimize_loops
+	bool incremental_eval
+	bool optimize_globals
+	bool bag_mode
+	bool verbose
+	bool what
+	bool load_open_mode
+	bool concurrent_mode
+	bool show_eval_time
+	bool show_optimizing_time
+	bool show_display_time
+	bool suppress_eval
+	bool issue_nooptionals
+	char library_file
+	char document_file
+	char startup_file
+	char include_search_path
+	int max_eval_nesting
+	int max_pattern_variables
+	int max_info_nesting
+	int loops
+OPERATIONS:
+	optimize_mode ()
+	_parse (int& argc, char* *& argv, bool vsl_prefix_required)
+	getDefaults (bool warn)
+	explain (bool vsl_prefix_required)
+	parse (int& argc, char* *& argv, char* args)
+	parse_vsl (int& argc, char* *& argv)
+
+CLASS-NAME: ColorBox
+
+ATTRIBUTES:
+	bool use_color
+	Pixel _color
+	bool _color_valid
+	bool _color_failed
+OPERATIONS:
+	ColorBox (CONST_ColorBox& box)
+	_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	color_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	convert_color (Widget w)
+	ColorBox (Box* box, CONST_string& name)
+	color_name ()
+	color_valid ()
+	color_failed ()
+	color ()
+
+GENERALIZATION TransparentHatBox
+SUBCLASSES ColorBox
+AGGREGATION _color_name
+	CONTAINER ColorBox
+	CONTAINED string
+ASSOCIATION 
+	ColorBox
+	Box
+
+CLASS-NAME: ForegroundColorBox
+
+ATTRIBUTES:
+OPERATIONS:
+	color_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	ForegroundColorBox (CONST_ForegroundColorBox& box)
+	ForegroundColorBox (Box* box, CONST_string& name)
+	dup ()
+
+GENERALIZATION ColorBox
+SUBCLASSES ForegroundColorBox
+ASSOCIATION 
+	ForegroundColorBox
+	Box
+
+CLASS-NAME: BackgroundColorBox
+
+ATTRIBUTES:
+OPERATIONS:
+	color_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	BackgroundColorBox (CONST_BackgroundColorBox& box)
+	BackgroundColorBox (Box* box, CONST_string& name)
+	dup ()
+
+GENERALIZATION ColorBox
+SUBCLASSES BackgroundColorBox
+ASSOCIATION 
+	BackgroundColorBox
+	Box
+
+CLASS-NAME: FontTable
+
+ATTRIBUTES:
+	FontTableHashEntry table
+	Display _display
+OPERATIONS:
+	FontTable (CONST_FontTable&)
+	operator_= (CONST_FontTable&)
+	FontTable (Display *display)
+	~FontTable ()
+	operator_[] (string& name)
+ASSOCIATION 
+	FontTable
+	string
+
+CLASS-NAME: StringBox
+
+ATTRIBUTES:
+	XFontStruct _font
+	BoxCoordinate _ascent
+	bool quoted
+OPERATIONS:
+	operator_= (CONST_StringBox&)
+	_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	StringBox (CONST_StringBox& box)
+	dump (ostream& s)
+	matches (CONST_Box& b, CONST_Box*)
+	StringBox (CONST_string& s , CONST_string& fontname , char* t)
+	StringBox (CONST_string& s, XFontStruct* fnt, char* t)
+	dup ()
+	_newFont (XFontStruct *newfont)
+	newFont (CONST_string& fontname)
+	_print (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+	font ()
+	fontName ()
+	str ()
+	resize ()
+	isStringBox ()
+
+GENERALIZATION PrimitiveBox
+SUBCLASSES StringBox
+AGGREGATION _string
+	CONTAINER StringBox
+	CONTAINED public
+AGGREGATION _fontname
+	CONTAINER StringBox
+	CONTAINED string
+ASSOCIATION fontTable
+	StringBox
+	FontTable
+
+CLASS-NAME: DiagBox
+
+ATTRIBUTES:
+OPERATIONS:
+	DiagBox (CONST_DiagBox& box)
+	dump (ostream& s)
+	_draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	DiagBox (char *t)
+	dup ()
+	_print (ostream& , CONST_BoxRegion& , CONST_BoxPrintGC&)
+
+GENERALIZATION PrimitiveBox
+SUBCLASSES DiagBox
+
+CLASS-NAME: ListBox
+
+ATTRIBUTES:
+	public _last
+OPERATIONS:
+	_head ()
+	_tail ()
+	operator_= (CONST_ListBox&)
+	head ()
+	tail ()
+	head ()
+	tail ()
+	isEmpty ()
+	_relast ()
+	relast ()
+	ListBox (CONST_ListBox& box)
+	_draw (Widget, CONST_BoxRegion& , CONST_BoxRegion& , GC, bool)
+	dump (ostream& s)
+	ListBox (Box* hd, ListBox* tl, char* t)
+	ListBox (char *t)
+	dup ()
+	tag (Data* data, DataLink* datalink)
+	operator_+= (Box *b)
+	sublist (int start)
+	[] (int nchild)
+	length ()
+	matches (CONST_Box& b, CONST_Box* callbackArg)
+	isListBox ()
+	_print (ostream& , CONST_BoxRegion& , CONST_BoxPrintGC&)
+	atom ()
+	OK ()
+	cons (ListBox *b)
+	uncons (ListBox *attach)
+
+GENERALIZATION CompositeBox
+SUBCLASSES ListBox
+ASSOCIATION 
+	ListBox
+	Box
+
+CLASS-NAME: DummyBox
+
+ATTRIBUTES:
+	bool matchesAll
+OPERATIONS:
+	DummyBox (CONST_DummyBox& box)
+	dump (ostream& s)
+	matches (CONST_Box& b, CONST_Box* callbackArg)
+	DummyBox (char *t)
+	dup ()
+	isDummyBox ()
+
+GENERALIZATION ListBox
+SUBCLASSES DummyBox
+
+CLASS-NAME: FixBox
+
+ATTRIBUTES:
+OPERATIONS:
+	FixBox (CONST_FixBox& box)
+	FixBox (Box* box, char* t)
+	resize ()
+
+GENERALIZATION HatBox
+SUBCLASSES FixBox
+ASSOCIATION 
+	FixBox
+	Box
+
+CLASS-NAME: HFixBox
+
+ATTRIBUTES:
+OPERATIONS:
+	HFixBox (CONST_HFixBox& box)
+	dump (ostream& s)
+	HFixBox (Box* box, char* t)
+	resize ()
+	dup ()
+
+GENERALIZATION FixBox
+SUBCLASSES HFixBox
+ASSOCIATION 
+	HFixBox
+	Box
+
+CLASS-NAME: VFixBox
+
+ATTRIBUTES:
+OPERATIONS:
+	VFixBox (CONST_VFixBox& box)
+	dump (ostream& s)
+	VFixBox (Box* box, char* t)
+	resize ()
+	dup ()
+
+GENERALIZATION FixBox
+SUBCLASSES VFixBox
+ASSOCIATION 
+	VFixBox
+	Box
+
+CLASS-NAME: MatchBox
+
+ATTRIBUTES:
+	public _data
+	MatchBoxFunc matchCallback
+OPERATIONS:
+	MatchBox (CONST_MatchBox& box)
+	dump (ostream& s)
+	matches (CONST_Box& b, CONST_Box* callbackArg)
+	MatchBox (int d, char* t)
+	dup ()
+	countMatchBoxes (int instances[])
+
+GENERALIZATION DummyBox
+SUBCLASSES MatchBox
+
+CLASS-NAME: SlopeBox
+
+ATTRIBUTES:
+OPERATIONS:
+	SlopeBox (CONST_SlopeBox& box)
+	SlopeBox (BoxCoordinate linethickness , char* t)
+	~SlopeBox ()
+
+GENERALIZATION LineBox
+SUBCLASSES SlopeBox
+
+CLASS-NAME: RiseBox
+
+ATTRIBUTES:
+OPERATIONS:
+	__draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	RiseBox (CONST_RiseBox& box)
+	dump (ostream& s)
+	RiseBox (BoxCoordinate linethickness , char* t)
+	~RiseBox ()
+	dup ()
+	_print (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+
+GENERALIZATION SlopeBox
+SUBCLASSES RiseBox
+
+CLASS-NAME: FallBox
+
+ATTRIBUTES:
+OPERATIONS:
+	__draw (Widget w, CONST_BoxRegion& region, CONST_BoxRegion& exposed, GC gc, bool context_selected)
+	FallBox (CONST_FallBox& box)
+	dump (ostream& s)
+	FallBox (BoxCoordinate linethickness , char* t)
+	~FallBox ()
+	dup ()
+	_print (ostream& os, CONST_BoxRegion& region, CONST_BoxPrintGC& gc)
+
+GENERALIZATION SlopeBox
+SUBCLASSES FallBox
+
+CLASS-NAME: VSLArg
+
+ATTRIBUTES:
+OPERATIONS:
+	box ()
+	VSLArg ()
+	VSLArg (char *s)
+	VSLArg (CONST_string& s)
+	VSLArg (int n)
+	VSLArg (unsigned n)
+	VSLArg (Box *box)
+	VSLArg (CONST_VSLArg& arg)
+	~VSLArg ()
+	operator_= (Box *box)
+	operator_= (CONST_VSLArg& arg)
+ASSOCIATION _box
+	VSLArg
+	Box
+ASSOCIATION 
+	VSLArg
+	Box
+
+CLASS-NAME: VSLLib
+
+ATTRIBUTES:
+OPERATIONS:
+	initHash ()
+	bind ()
+	resolveNames ()
+	compilePatterns ()
+	resolveDefs ()
+	resolveSynonyms ()
+	foldOps ()
+	foldConsts ()
+	inlineFuncs ()
+	countSelfReferences ()
+	cleanup ()
+	process (unsigned mode)
+	_call (CONST_string& func_name, VSLNode* arglist)
+	call (CONST_string& func_name)
+	call (CONST_string& func_name, VSLNode* arg1)
+	call (CONST_string& func_name, VSLNode* arg1, VSLNode* arg2)
+	call (CONST_string& func_name, VSLNode* arg1, VSLNode* arg2, VSLNode* arg3)
+	call (char *func_name)
+	call (char* func_name, VSLNode* arg1)
+	call (char* func_name, VSLNode* arg1, VSLNode* arg2)
+	call (char* func_name, VSLNode* arg1, VSLNode* arg2, VSLNode* arg3)
+	add (CONST_string& func_name, VSLNode* pattern, VSLNode* expr , bool global , CONST_string& filename , int lineno)
+	override (CONST_string& func_name)
+	replace (CONST_string& func_name)
+	deflist (CONST_string& func_name)
+	def (CONST_string& func_name, Box* arg)
+	VSLLib (CONST_VSLLib&)
+	operator_= (CONST_VSLLib&)
+	VSLLib ()
+	VSLLib (CONST_string& lib_name, unsigned optimize)
+	VSLLib (istream& s, unsigned optimize)
+	read (CONST_string& lib_name, unsigned optimize)
+	read (istream& s, unsigned optimize)
+	parse ()
+	has (CONST_string& func_name)
+	eval (CONST_string& func_name, ListBox* arg)
+	eval (CONST_string& func_name, VSLArg args[])
+	eval (CONST_string& func_name, VSLArg arg0 , VSLArg arg1 , VSLArg arg2 , VSLArg arg3 , VSLArg arg4 , VSLArg arg5 , VSLArg arg6 , VSLArg arg7 , VSLArg arg8 , VSLArg arg9)
+	output (Box *&arg)
+	~VSLLib ()
+	echo (CONST_string& s)
+	parse_echo (CONST_string& s)
+	parse_error (CONST_string& s)
+	parse_warning (CONST_string& s)
+	eval_echo (CONST_string& s, CONST_VSLDef* def)
+	eval_error (CONST_string& s, CONST_VSLDef* def)
+	eval_warning (CONST_string& s, CONST_VSLDef* def)
+	dumpTree (ostream& s)
+	lastdef ()
+	firstdef ()
+	SHARED (*background)()
+	OK ()
+AGGREGATION _lib_name
+	CONTAINER VSLLib
+	CONTAINED public
+ASSOCIATION defs
+	VSLLib
+	VSLDefList
+ASSOCIATION _first
+	VSLLib
+	VSLDef
+ASSOCIATION _last
+	VSLLib
+	VSLDef
+ASSOCIATION 
+	VSLLib
+	VSLNode
+ASSOCIATION 
+	VSLLib
+	Box
+ASSOCIATION 
+	VSLLib
+	ListBox
+ASSOCIATION 
+	VSLLib
+	VSLArg
+
+CLASS-NAME: VSLNode
+
+ATTRIBUTES:
+	public _type
+	unsigned _base
+	bool sideEffectsProhibited
+	bool sideEffectsOccured
+	bool bothSidesCanMatch
+OPERATIONS:
+	VSLNode (CONST_VSLNode& node)
+	dump (ostream& s)
+	_dumpTree (ostream&)
+	matches (CONST_VSLNode& node)
+	operator_= (CONST_VSLNode &)
+	VSLNode (char *type)
+	~VSLNode ()
+	dup ()
+	eval (ListBox *arglist)
+	_eval (ListBox *arglist)
+	resolveDefs (VSLDef* , bool)
+	resolveSynonyms (VSLDef* , VSLNode* *)
+	foldOps (VSLDef* , VSLNode* *)
+	foldConsts (VSLDef* , VSLNode* *)
+	countSelfReferences (VSLDef* , VSLDefList*)
+	inlineFuncs (VSLDef* , VSLNode* *)
+	instantiateArgs (VSLDef* , VSLNode* * , VSLNode* * , unsigned , unsigned)
+	countArgNodes (VSLDef* , int[], unsigned , unsigned)
+	_reBase (VSLDef* , unsigned)
+	reBase (VSLDef* cdef, unsigned newBase)
+	compilePatterns (VSLDef *)
+	uncompilePatterns (VSLDef *)
+	resolveName (VSLDef* , VSLNode* * , string& , unsigned)
+	_resolveNames (VSLDef* , unsigned)
+	resolveNames (VSLDef* cdef, unsigned base)
+	firstName ()
+	isConst ()
+	isArgNode ()
+	isBuiltinCallNode ()
+	isCallNode ()
+	isConstNode ()
+	isDefCallNode ()
+	isDummyNode ()
+	isLetNode ()
+	isListNode ()
+	isNameNode ()
+	isTestNode ()
+	isStraight ()
+	nargs ()
+	operator_== (CONST_VSLNode& node)
+	operator_!= (CONST_VSLNode& node)
+	OK ()
+	dumpTree (ostream& s)
+ASSOCIATION 
+	VSLNode
+	ListBox
+ASSOCIATION 
+	VSLNode
+	VSLDef
+ASSOCIATION 
+	VSLNode
+	VSLDefList
+ASSOCIATION 
+	VSLNode
+	string
+
+CLASS-NAME: DummyNode
+
+ATTRIBUTES:
+	bool matchesAll
+OPERATIONS:
+	DummyNode (CONST_DummyNode& node)
+	dump (ostream& s)
+	matches (CONST_VSLNode& node)
+	DummyNode (char *type)
+	dup ()
+	_eval (ListBox *)
+	isConst ()
+	isDummyNode ()
+
+GENERALIZATION VSLNode
+SUBCLASSES DummyNode
+ASSOCIATION 
+	DummyNode
+	ListBox
+
+CLASS-NAME: ArgNode
+
+ATTRIBUTES:
+	public _id
+	ArgNodeFunc matchCallback
+OPERATIONS:
+	ArgNode (CONST_ArgNode& node)
+	matches (CONST_VSLNode &node)
+	dump (ostream& s)
+	_dumpTree (ostream& s)
+	ArgNode (unsigned i, char* type)
+	dup ()
+	_eval (ListBox *arglist)
+	instantiateArgs (VSLDef* cdef, VSLNode* * node, VSLNode* values[], unsigned base, unsigned n)
+	countArgNodes (VSLDef* cdef, int instances[], unsigned base, unsigned n)
+	isConst ()
+	isArgNode ()
+	id ()
+	nargs ()
+
+GENERALIZATION DummyNode
+SUBCLASSES ArgNode
+ASSOCIATION 
+	ArgNode
+	ListBox
+ASSOCIATION 
+	ArgNode
+	VSLDef
+ASSOCIATION 
+	ArgNode
+	VSLNode
+
+CLASS-NAME: VSLDef
+
+ATTRIBUTES:
+	unsigned _nargs
+	bool _straight
+	int _lineno
+	bool being_compiled
+	const *backtrace
+	const *backtrace_args
+OPERATIONS:
+	args ()
+	VSLDef (VSLDefList* l, VSLNode* pattern, VSLNode* e , string filename , int lineno)
+	VSLDef (CONST_VSLDef&)
+	operator_= (CONST_VSLDef&)
+	expr ()
+	node_pattern ()
+	box_pattern ()
+	nargs ()
+	straight ()
+	listnext ()
+	libnext ()
+	libprev ()
+	listnext ()
+	libnext ()
+	libprev ()
+	func_name ()
+	f_name ()
+	longname ()
+	eval (Box *arg)
+	compilePattern ()
+	uncompilePattern ()
+	resolveNames ()
+	matches (CONST_Box *arg)
+	matches (CONST_VSLNode *arg)
+	arglist (CONST_Box *arg)
+	nodelist (CONST_VSLNode *arg)
+	~VSLDef ()
+	OK ()
+ASSOCIATION _expr
+	VSLDef
+	public
+ASSOCIATION _node_pattern
+	VSLDef
+	VSLNode
+ASSOCIATION _box_pattern
+	VSLDef
+	Box
+AGGREGATION _filename
+	CONTAINER VSLDef
+	CONTAINED string
+ASSOCIATION _listnext
+	VSLDef
+	VSLDef
+ASSOCIATION _libnext
+	VSLDef
+	VSLDef
+ASSOCIATION _libprev
+	VSLDef
+	VSLDef
+ASSOCIATION deflist
+	VSLDef
+	VSLDefList
+ASSOCIATION 
+	VSLDef
+	VSLDefList
+ASSOCIATION 
+	VSLDef
+	VSLNode
+ASSOCIATION 
+	VSLDef
+	string
+ASSOCIATION 
+	VSLDef
+	Box
+
+CLASS-NAME: TrueBox
+
+ATTRIBUTES:
+OPERATIONS:
+	TrueBox ()
+
+GENERALIZATION SquareBox
+SUBCLASSES TrueBox
+
+CLASS-NAME: FalseBox
+
+ATTRIBUTES:
+OPERATIONS:
+	FalseBox ()
+
+GENERALIZATION SquareBox
+SUBCLASSES FalseBox
+
+CLASS-NAME: NullBox
+
+ATTRIBUTES:
+OPERATIONS:
+	NullBox ()
+
+GENERALIZATION SquareBox
+SUBCLASSES NullBox
+
+CLASS-NAME: VSLDefList
+
+ATTRIBUTES:
+	unsigned _ndefs
+	bool _global
+	unsigned hashcode
+	int references
+	int self_references
+OPERATIONS:
+	VSLDefList (VSLLib* l, unsigned hash, string func_nm, bool g)
+	VSLDefList (CONST_VSLDefList&)
+	operator_= (CONST_VSLDefList&)
+	add (bool& newFlag, VSLNode* pattern, VSLNode* expr , string filename , int lineno)
+	def (Box *arglist)
+	firstdef ()
+	func_name ()
+	global ()
+	global ()
+	f_name ()
+	first ()
+	next ()
+	ndefs ()
+	eval (Box *arg)
+	override ()
+	replace ()
+	~VSLDefList ()
+	OK ()
+AGGREGATION _func_name
+	CONTAINER VSLDefList
+	CONTAINED public
+ASSOCIATION _first
+	VSLDefList
+	VSLDef
+ASSOCIATION _last
+	VSLDefList
+	VSLDef
+ASSOCIATION _next
+	VSLDefList
+	VSLDefList
+ASSOCIATION lib
+	VSLDefList
+	VSLLib
+ASSOCIATION 
+	VSLDefList
+	VSLLib
+ASSOCIATION 
+	VSLDefList
+	string
+ASSOCIATION 
+	VSLDefList
+	VSLNode
+ASSOCIATION 
+	VSLDefList
+	Box
+
+CLASS-NAME: CallNode
+
+ATTRIBUTES:
+	bool matchesAll
+OPERATIONS:
+	CallNode (CONST_CallNode& node)
+	call (Box *arg)
+	dump (ostream& s)
+	_dumpTree (ostream& s)
+	func_name ()
+	isInfix ()
+	matches (CONST_VSLNode& node)
+	operator_= (CONST_CallNode&)
+	arg ()
+	arg ()
+	CallNode (VSLNode* a, char* type)
+	~CallNode ()
+	_eval (ListBox *arglist)
+	countSelfReferences (VSLDef* cdef, VSLDefList* deflist)
+	resolveDefs (VSLDef* cdef, bool complain_recursive)
+	resolveSynonyms (VSLDef* cdef, VSLNode* * node)
+	foldOps (VSLDef* cdef, VSLNode* * node)
+	foldConsts (VSLDef* cdef, VSLNode* * node)
+	inlineFuncs (VSLDef* cdef, VSLNode* * node)
+	instantiateArgs (VSLDef* cdef, VSLNode* * node, VSLNode* values[], unsigned base, unsigned n)
+	countArgNodes (VSLDef* cdef, int instances[], unsigned base, unsigned n)
+	_reBase (VSLDef* cdef, unsigned newBase)
+	compilePatterns (VSLDef *cdef)
+	uncompilePatterns (VSLDef *cdef)
+	resolveName (VSLDef* cdef, VSLNode* * node, string& name, unsigned id)
+	_resolveNames (VSLDef* cdef, unsigned base)
+	firstName ()
+	isConst ()
+	isCallNode ()
+	nargs ()
+	OK ()
+
+GENERALIZATION VSLNode
+SUBCLASSES CallNode
+ASSOCIATION _arg
+	CallNode
+	public
+ASSOCIATION 
+	CallNode
+	Box
+ASSOCIATION 
+	CallNode
+	VSLNode
+ASSOCIATION 
+	CallNode
+	ListBox
+ASSOCIATION 
+	CallNode
+	VSLDef
+ASSOCIATION 
+	CallNode
+	VSLDefList
+ASSOCIATION 
+	CallNode
+	string
+
+CLASS-NAME: DefCallNode
+
+ATTRIBUTES:
+OPERATIONS:
+	DefCallNode (CONST_DefCallNode& node)
+	call (Box *arg)
+	func_name ()
+	matches (CONST_VSLNode& node)
+	operator_= (CONST_DefCallNode&)
+	dup ()
+	DefCallNode (VSLDef* def, VSLNode* arg, char* type)
+	DefCallNode (VSLDefList* deflist, VSLNode* arg, char* type)
+	~DefCallNode ()
+	countSelfReferences (VSLDef* cdef, VSLDefList* deflist)
+	resolveDefs (VSLDef* cdef, bool complain_recursive)
+	resolveSynonyms (VSLDef* cdef, VSLNode* * node)
+	inlineFuncs (VSLDef* cdef, VSLNode* * node)
+	isDefCallNode ()
+	OK ()
+
+GENERALIZATION CallNode
+SUBCLASSES DefCallNode
+ASSOCIATION _def
+	DefCallNode
+	public
+ASSOCIATION _deflist
+	DefCallNode
+	VSLDefList
+ASSOCIATION 
+	DefCallNode
+	Box
+ASSOCIATION 
+	DefCallNode
+	VSLDef
+ASSOCIATION 
+	DefCallNode
+	VSLNode
+ASSOCIATION 
+	DefCallNode
+	VSLDefList
+
+CLASS-NAME: BuiltinCallNode
+
+ATTRIBUTES:
+	public _index
+OPERATIONS:
+	BuiltinCallNode (CONST_BuiltinCallNode& node)
+	call (Box *arg)
+	func_name ()
+	isInfix ()
+	matches (CONST_VSLNode& node)
+	BuiltinCallNode (int i, VSLNode* a, char* type)
+	BuiltinCallNode (BuiltinCallNode& node, VSLNode* a, char* type)
+	dup ()
+	foldOps (VSLDef* cdef, VSLNode* * node)
+	foldConsts (VSLDef* cdef, VSLNode* * node)
+	isBuiltinCallNode ()
+	OK ()
+
+GENERALIZATION CallNode
+SUBCLASSES BuiltinCallNode
+ASSOCIATION 
+	BuiltinCallNode
+	Box
+ASSOCIATION 
+	BuiltinCallNode
+	VSLNode
+ASSOCIATION 
+	BuiltinCallNode
+	VSLDef
+
+CLASS-NAME: ListNode
+
+ATTRIBUTES:
+OPERATIONS:
+	ListNode (CONST_ListNode& node)
+	matches (CONST_VSLNode& node)
+	operator_= (CONST_ListNode&)
+	ListNode (VSLNode* hd, VSLNode* tl, char* type)
+	dup ()
+	~ListNode ()
+	head ()
+	tail ()
+	head ()
+	tail ()
+	_eval (ListBox *arglist)
+	countSelfReferences (VSLDef* cdef, VSLDefList* deflist)
+	resolveDefs (VSLDef* cdef, bool complain_recursive)
+	resolveSynonyms (VSLDef* cdef, VSLNode* * node)
+	foldOps (VSLDef* cdef, VSLNode* * node)
+	foldConsts (VSLDef* cdef, VSLNode* * node)
+	inlineFuncs (VSLDef* cdef, VSLNode* * node)
+	instantiateArgs (VSLDef* cdef, VSLNode* * node, VSLNode* values[], unsigned base, unsigned n)
+	countArgNodes (VSLDef* cdef, int instances[], unsigned base, unsigned n)
+	_reBase (VSLDef* cdef, unsigned newBase)
+	compilePatterns (VSLDef *cdef)
+	uncompilePatterns (VSLDef *cdef)
+	resolveName (VSLDef* cdef, VSLNode* * node, string& name, unsigned id)
+	_resolveNames (VSLDef* cdef, unsigned base)
+	firstName ()
+	append (VSLNode *node)
+	dump (ostream& s)
+	_dumpTree (ostream& s)
+	isConst ()
+	isListNode ()
+	isStraight ()
+	nargs ()
+	OK ()
+
+GENERALIZATION VSLNode
+SUBCLASSES ListNode
+ASSOCIATION _head
+	ListNode
+	public
+ASSOCIATION _tail
+	ListNode
+	VSLNode
+ASSOCIATION 
+	ListNode
+	VSLNode
+ASSOCIATION 
+	ListNode
+	ListBox
+ASSOCIATION 
+	ListNode
+	VSLDef
+ASSOCIATION 
+	ListNode
+	VSLDefList
+ASSOCIATION 
+	ListNode
+	string
+
+CLASS-NAME: ConstNode
+
+ATTRIBUTES:
+OPERATIONS:
+	ConstNode (CONST_ConstNode& node)
+	dump (ostream& s)
+	_dumpTree (ostream& s)
+	matches (CONST_VSLNode& node)
+	operator_= (CONST_ConstNode&)
+	ConstNode (Box* box, char* type)
+	~ConstNode ()
+	dup ()
+	_eval (ListBox *arglist)
+	isConst ()
+	isConstNode ()
+	isStraight ()
+	OK ()
+
+GENERALIZATION VSLNode
+SUBCLASSES ConstNode
+ASSOCIATION _box
+	ConstNode
+	public
+ASSOCIATION 
+	ConstNode
+	Box
+ASSOCIATION 
+	ConstNode
+	ListBox
+
+CLASS-NAME: TrueNode
+
+ATTRIBUTES:
+OPERATIONS:
+	TrueNode ()
+
+GENERALIZATION ConstNode
+SUBCLASSES TrueNode
+
+CLASS-NAME: FalseNode
+
+ATTRIBUTES:
+OPERATIONS:
+	FalseNode ()
+
+GENERALIZATION ConstNode
+SUBCLASSES FalseNode
+
+CLASS-NAME: NullNode
+
+ATTRIBUTES:
+OPERATIONS:
+	NullNode ()
+
+GENERALIZATION ConstNode
+SUBCLASSES NullNode
+
+CLASS-NAME: StringNode
+
+ATTRIBUTES:
+OPERATIONS:
+	StringNode (CONST_string &str)
+
+GENERALIZATION ConstNode
+SUBCLASSES StringNode
+
+CLASS-NAME: NumNode
+
+ATTRIBUTES:
+OPERATIONS:
+	NumNode (int num)
+
+GENERALIZATION ConstNode
+SUBCLASSES NumNode
+
+CLASS-NAME: EmptyListNode
+
+ATTRIBUTES:
+OPERATIONS:
+	EmptyListNode ()
+
+GENERALIZATION ConstNode
+SUBCLASSES EmptyListNode
+
+CLASS-NAME: FixListNode
+
+ATTRIBUTES:
+OPERATIONS:
+	FixListNode (VSLNode *arg)
+	FixListNode (VSLNode* arg1, VSLNode* arg2)
+	FixListNode (VSLNode* arg1, VSLNode* arg2, VSLNode* arg3)
+	FixListNode (VSLNode* arg1, VSLNode* arg2, VSLNode* arg3, VSLNode* arg4)
+
+GENERALIZATION ListNode
+SUBCLASSES FixListNode
+ASSOCIATION 
+	FixListNode
+	VSLNode
+
+CLASS-NAME: LetNode
+
+ATTRIBUTES:
+	unsigned _nargs
+	bool _straight
+	bool being_compiled
+OPERATIONS:
+	_args ()
+	_body ()
+	arglist (CONST_Box *arg)
+	nodelist (CONST_VSLNode *arg)
+	domatch (CONST_Box *arg)
+	domatch (CONST_VSLNode *arg)
+	dump (ostream& s)
+	_dumpTree (ostream& s)
+	LetNode (CONST_LetNode& node)
+	func_name ()
+	call (Box *)
+	operator_= (CONST_LetNode&)
+	LetNode (VSLNode* p, VSLNode* a, VSLNode* b, char* type)
+	~LetNode ()
+	node_pattern ()
+	box_pattern ()
+	args ()
+	body ()
+	node_pattern ()
+	box_pattern ()
+	args ()
+	body ()
+	compilePatterns (VSLDef *cdef)
+	uncompilePatterns (VSLDef *cdef)
+	_resolveNames (VSLDef* cdef, unsigned base)
+	inlineFuncs (VSLDef* cdef, VSLNode* * node)
+	_reBase (VSLDef* cdef, unsigned newBase)
+	dup ()
+	_eval (ListBox *arglist)
+	isLetNode ()
+	OK ()
+
+GENERALIZATION CallNode
+SUBCLASSES LetNode
+ASSOCIATION _node_pattern
+	LetNode
+	public
+ASSOCIATION _box_pattern
+	LetNode
+	Box
+ASSOCIATION 
+	LetNode
+	Box
+ASSOCIATION 
+	LetNode
+	VSLNode
+ASSOCIATION 
+	LetNode
+	VSLDef
+ASSOCIATION 
+	LetNode
+	ListBox
+
+CLASS-NAME: WhereNode
+
+ATTRIBUTES:
+OPERATIONS:
+	dump (ostream& s)
+	WhereNode (WhereNode& node)
+	WhereNode (VSLNode* p, VSLNode* a, VSLNode* b)
+
+GENERALIZATION LetNode
+SUBCLASSES WhereNode
+ASSOCIATION 
+	WhereNode
+	VSLNode
+
+CLASS-NAME: GDBAgent
+
+ATTRIBUTES:
+	State state
+	DebuggerType _type
+	void _user_data
+	bool _has_frame_command
+	bool _has_func_command
+	bool _has_run_io_command
+	bool _has_print_r_option
+	bool _has_output_command
+	bool _has_where_h_option
+	bool _has_display_command
+	bool _has_clear_command
+	bool _has_handler_command
+	bool _has_pwd_command
+	bool _has_setenv_command
+	bool _has_edit_command
+	bool _has_make_command
+	bool _has_jump_command
+	bool _has_regs_command
+	WatchMode _has_watch_command
+	bool _has_named_values
+	bool _has_when_command
+	bool _has_when_semicolon
+	bool _wants_delete_comma
+	bool _has_err_redirection
+	bool _has_givenfile_command
+	bool _has_cont_sig_command
+	ProgramLanguage _program_language
+	bool _verbatim
+	bool _recording
+	bool _detect_echos
+	int echoed_characters
+	bool questions_waiting
+	void _qu_data
+	int qu_index
+	int _qu_count
+	StringArray cmd_array
+	StringArray complete_answers
+	VoidArray _qu_datas
+	void _qa_data
+	OAProc _on_answer
+	OACProc _on_answer_completion
+	OQCProc _on_question_completion
+	OQACProc _on_qu_array_completion
+OPERATIONS:
+	operator_= (CONST_GDBAgent&)
+	prepend_prefix (CONST_string& prefix, CONST_string& expr)
+	append_suffix (CONST_string& expr, CONST_string& suffix)
+	trace (char* prefix, void* call_data)
+	GDBAgent (XtAppContext app_context, CONST_string& gdb_call, DebuggerType type, unsigned nTypes)
+	GDBAgent (CONST_GDBAgent& gdb)
+	dup ()
+	~GDBAgent ()
+	do_start (OAProc on_answer, OACProc on_answer_completion, void* user_data)
+	start_plus (OAProc on_answer, OACProc on_answer_completion, void* user_data, CONST_StringArray& cmds, CONST_VoidArray& user_datas, int qu_count, OQACProc on_qu_array_completion, void* qa_data)
+	send_user_cmd (string cmd, void* user_data)
+	send_user_ctrl_cmd (string cmd, void* user_data)
+	send_user_cmd_plus (CONST_StringArray& cmds, CONST_VoidArray& qu_datas, int qu_count, OQACProc on_qu_array_completion, void* qa_data, string user_cmd, void* user_data)
+	send_question (string cmd, OQCProc on_question_completion, void* qu_data)
+	send_qu_array (CONST_StringArray& cmds, CONST_VoidArray& qu_datas, int qu_count, OQACProc on_qu_array_completion, void* qa_data)
+	type ()
+	title ()
+	isReadyWithPrompt ()
+	isBusyOnCmd ()
+	isBusyOnQuestion ()
+	prompt ()
+	has_frame_command ()
+	has_frame_command (bool val)
+	has_func_command ()
+	has_func_command (bool val)
+	has_run_io_command ()
+	has_run_io_command (bool val)
+	has_print_r_option ()
+	has_print_r_option (bool val)
+	has_output_command ()
+	has_output_command (bool val)
+	has_where_h_option ()
+	has_where_h_option (bool val)
+	has_display_command ()
+	has_display_command (bool val)
+	has_clear_command ()
+	has_clear_command (bool val)
+	has_handler_command ()
+	has_handler_command (bool val)
+	has_pwd_command ()
+	has_pwd_command (bool val)
+	has_setenv_command ()
+	has_setenv_command (bool val)
+	has_edit_command ()
+	has_edit_command (bool val)
+	has_make_command ()
+	has_make_command (bool val)
+	has_jump_command ()
+	has_jump_command (bool val)
+	has_regs_command ()
+	has_regs_command (bool val)
+	has_watch_command ()
+	has_watch_command (WatchMode val)
+	has_named_values ()
+	has_named_values (bool val)
+	has_when_command ()
+	has_when_command (bool val)
+	has_when_semicolon ()
+	has_when_semicolon (bool val)
+	wants_delete_comma ()
+	wants_delete_comma (bool val)
+	has_err_redirection ()
+	has_err_redirection (bool val)
+	has_givenfile_command ()
+	has_givenfile_command (bool val)
+	has_cont_sig_command ()
+	has_cont_sig_command (bool val)
+	program_language ()
+	program_language (ProgramLanguage val)
+	program_language (string text)
+	has_enable_command ()
+	has_disable_command ()
+	has_ignore_command ()
+	has_condition_command ()
+	has_delete_command ()
+	has_volatile_breakpoints ()
+	has_redirection ()
+	has_assign_command ()
+	has_system_calls ()
+	has_exec_files ()
+	has_classes ()
+	has_core_files ()
+	has_processes ()
+	has_cd_command ()
+	has_shell_command ()
+	has_temporary_breakpoints ()
+	has_breakpoint_conditions ()
+	has_typed_pointers ()
+	type ()
+	has_scalars ()
+	has_quotes ()
+	display_prints_values ()
+	has_enable_display_command ()
+	has_disable_display_command ()
+	has_numbered_displays ()
+	wants_display_comma ()
+	has_info_display_command ()
+	has_redisplaying_undisplay ()
+	has_conditions ()
+	can_disable ()
+	can_enable ()
+	verbatim ()
+	verbatim (bool val)
+	recording ()
+	recording (bool val)
+	detect_echos ()
+	detect_echos (bool val)
+	print_command (string expr , bool internal)
+	assign_command (string var, string expr)
+	display_command (string expr)
+	where_command (int count)
+	pwd_command ()
+	frame_command (int number)
+	frame_command ()
+	func_command ()
+	echo_command (string text)
+	whatis_command (string expr)
+	dereferenced_expr (string expr)
+	address_expr (string expr)
+	index_expr (string expr, string index)
+	default_index_base ()
+	info_locals_command ()
+	info_args_command ()
+	info_display_command ()
+	disassemble_command (string start, string end)
+	make_command (string target)
+	jump_command (string pc)
+	regs_command (bool all)
+	watch_command (string expr, WatchMode w)
+	kill_command ()
+	enable_command (string bp)
+	disable_command (string bp)
+	delete_command (string bp)
+	ignore_command (string bp, int count)
+	condition_command (string bp, string expr)
+	shell_command (string cmd)
+	debug_command (string program)
+	signal_command (int sig)
+	nop_command (string comment)
+	history_file ()
+	write (CONST_char* data, int length)
+	write (CONST_string& data)
+	ends_with_prompt (CONST_string& answer)
+	ends_with_secondary_prompt (CONST_string& answer)
+	init_qu_array (CONST_StringArray& cmds, CONST_VoidArray& qu_datas, int qu_count, OQACProc on_qu_array_completion, void* qa_data)
+	requires_reply (CONST_string& answer)
+	cut_off_prompt (string& answer)
+	strip_dbx_comments (string& answer)
+	strip_control (string& answer)
+	normalize_answer (string& answer)
+	normalize_address (string& addr)
+	handle_echo (string& answer)
+	handle_more (string& answer)
+	handle_reply (string& answer)
+	handle_input (string& answer)
+	handle_died ()
+	InputHP (Agent* , void* , void*)
+	PanicHP (Agent* , void* , void*)
+	StrangeHP (Agent* , void* , void*)
+	DiedHP (Agent* , void* , void*)
+	traceInputHP (Agent* , void* , void*)
+	traceOutputHP (Agent* , void* , void*)
+	traceErrorHP (Agent* , void* , void*)
+
+GENERALIZATION TTYAgent
+SUBCLASSES GDBAgent
+AGGREGATION last_prompt
+	CONTAINER GDBAgent
+	CONTAINED string
+AGGREGATION last_written
+	CONTAINER GDBAgent
+	CONTAINED string
+AGGREGATION complete_answer
+	CONTAINER GDBAgent
+	CONTAINED string
+ASSOCIATION 
+	GDBAgent
+	string
+ASSOCIATION 
+	GDBAgent
+	Agent
+
+CLASS-NAME: TestNode
+
+ATTRIBUTES:
+OPERATIONS:
+	_test ()
+	_true ()
+	_false ()
+	dump (ostream& s)
+	_dumpTree (ostream& s)
+	TestNode (CONST_TestNode& node)
+	func_name ()
+	call (Box *)
+	TestNode (VSLNode* tst, VSLNode* t, VSLNode* f, char* type)
+	test ()
+	thetrue ()
+	thefalse ()
+	test ()
+	thetrue ()
+	thefalse ()
+	dup ()
+	_eval (ListBox *arglist)
+	foldConsts (VSLDef* cdef, VSLNode* * node)
+	resolveDefs (VSLDef* cdef, bool complain_recursive)
+	isTestNode ()
+	OK ()
+
+GENERALIZATION CallNode
+SUBCLASSES TestNode
+ASSOCIATION 
+	TestNode
+	Box
+ASSOCIATION 
+	TestNode
+	VSLNode
+ASSOCIATION 
+	TestNode
+	ListBox
+ASSOCIATION 
+	TestNode
+	VSLDef
+
+CLASS-NAME: FontFixBox
+
+ATTRIBUTES:
+OPERATIONS:
+	FontFixBox (CONST_FontFixBox& box)
+	dump (ostream& s)
+	FontFixBox (Box* box, char* t)
+	dup ()
+	newFont (CONST_string&)
+
+GENERALIZATION HatBox
+SUBCLASSES FontFixBox
+ASSOCIATION 
+	FontFixBox
+	Box
+
+CLASS-NAME: NameNode
+
+ATTRIBUTES:
+OPERATIONS:
+	NameNode (CONST_NameNode& node)
+	dump (ostream& s)
+	_dumpTree (ostream& s)
+	NameNode (string nm, char* type)
+	dup ()
+	_eval (ListBox *)
+	isConst ()
+	isNameNode ()
+	nargs ()
+	resolveName (VSLDef* cdef, VSLNode* * node, string& name, unsigned id)
+	firstName ()
+	OK ()
+
+GENERALIZATION VSLNode
+SUBCLASSES NameNode
+AGGREGATION _name
+	CONTAINER NameNode
+	CONTAINED public
+ASSOCIATION 
+	NameNode
+	string
+ASSOCIATION 
+	NameNode
+	ListBox
+ASSOCIATION 
+	NameNode
+	VSLDef
+ASSOCIATION 
+	NameNode
+	VSLNode
+
+CLASS-NAME: vslNameSet
+
+ATTRIBUTES:
+OPERATIONS:
+	vslNameSet (CONST_char *name)
+	~vslNameSet ()
+	reset ()
+	add (CONST_char *name)
+	vslNameSet (CONST_vslNameSet&)
+	operator_= (CONST_vslNameSet&)
+AGGREGATION _name
+	CONTAINER vslNameSet
+	CONTAINED string
+ASSOCIATION _next
+	vslNameSet
+	vslNameSet
+
+CLASS-NAME: Layout
+
+ATTRIBUTES:
+OPERATIONS:
+	add_graph (char *g)
+	add_node (char* g, char* node)
+	add_edge (char* g, char* node1, char* node2)
+	set_node_width (char* g, char* node, int width)
+	set_node_height (char* g, char* node, int height)
+	set_node_position (char* g, char* node, int x, int y)
+	add_edge_hint (char* g, char* node1, char* node2, int x, int y)
+	remove_edge_hint (char* g, char* node1, char* node2, int x, int y)
+	remove_edge (char* g, char* node1, char* node2)
+	remove_node (char* g, char* label)
+	remove_graph (char *g)
+	layout (char *g)
+	SHARED (*node_callback)()
+	SHARED (*hint_callback)()
+	SHARED (*compare_callback)()
+	dddDebug (char *g)
+	inc_layout (GRAPH *graph)
+	new_layout (GRAPH *graph)
+	dddOutput (GRAPH *graph)
+	dddNodeOut (char* graph,NODE* node)
+	debugNode (NODE *node)
+	debugLevel (GRAPH* graph, int n)
+	debugAllLevel (GRAPH *graph)
+	debugAllNodes (GRAPH *graph)
+	debugNodeXFig (NODE *nd)
+	debugEdgeXFig (NODE* source, NODE* target, int arrow)
+	debugGraphXFig (GRAPH *graph)
+	listInit (EDGELIST *list)
+	listInsertEdge (EDGELIST* list, NODE* node)
+	listRemoveEdge (EDGELIST* list, EDGE* edge)
+	listFindNode (EDGELIST* list, NODE* node)
+	listFindTarget (EDGELIST* list, NODE* target)
+	listRemove (EDGELIST *list)
+	nodeInit (NODE* node, ID* id , NODETYPE type)
+	nodeRemove (NODE *node)
+	graphInit (GRAPH* graph, char* label)
+	graphEnterNode (GRAPH* graph, ID* id, NODETYPE type)
+	graphGetNode (GRAPH* graph, ID* id, NODETYPE type)
+	graphRemoveNode (GRAPH* graph, ID* id, NODETYPE type)
+	graphCreateLevels (GRAPH* graph, int n)
+	graphRemoveLevels (GRAPH *graph)
+	graphAddLevels (GRAPH* graph, int n)
+	graphInsertEdge (GRAPH* graph,NODE* source,NODE* target)
+	graphInvertEdge (NODE* source, NODE* target)
+	graphNewNodeID ()
+	graphInsertHint (GRAPH* graph, NODE* source, NODE* target)
+	graphFindEdgeAtSource (NODE* source, NODE* target)
+	graphFindEdgeAtTarget (NODE* source, NODE* target)
+	graphResetLevels (GRAPH *graph)
+	graphHashStr (char* str, int prime)
+	graphGet (GRAPHTAB* tab, char* label)
+	graphNew (GRAPHTAB* tab,char* label)
+	graphRemove (GRAPHTAB* tab, char* label)
+	graphTabInit (GRAPHTAB *tab)
+	levelsInsertNode (GRAPH* graph, NODE* node, int n)
+	levelsRemoveNode (GRAPH* graph, NODE* node, int n)
+	levelsEnterNodes (GRAPH* graph, int pullup)
+	levelsIndex (NODE **level)
+	levelsLength (NODE **level)
+	sortApplyLevel (GRAPH *graph)
+	sortPullupNodes (GRAPH *graph)
+	minimumLevel (NODE *node)
+	distance (NODE* node, NODE* origin)
+	sortInsertHints (GRAPH *graph)
+	sortCheckNode (GRAPH* graph, NODE* node)
+	sortNodeUpperBary (NODE *node)
+	sortNodeLowerBary (NODE *node)
+	sortGraphUpperBary (GRAPH *graph)
+	sortGraphLowerBary (GRAPH *graph)
+	sortByCenter (NODE **level)
+	sortAvrgCenter (GRAPH *graph)
+	sortCmpCenters (NODE* * first, NODE* * second)
+	sortInitX (GRAPH *graph)
+	sortGraphUpX (GRAPH *graph)
+	sortGraphDownX (GRAPH *graph)
+	sortLevelUpX (NODE* * level, int dist)
+	sortLevelDownX (NODE* * level, int dist)
+	sortLeftSpace (NODE* node, int dist)
+	sortMoveLeft (NODE* node, int newx, int dist)
+	sortMoveRight (NODE* node, int newx, int mindist)
+	sortMove (NODE* node, int newx, int mindist)
+	sortAvrgUpperX (NODE *node)
+	sortAvrgLowerX (NODE *node)
+	sortCmpUpperPrio (NODE* * fst, NODE* * snd)
+	sortCmpLowerPrio (NODE* * fst, NODE* * snd)
+	sortLevelVertical (NODE* * level, int miny, int minydist)
+	sortGraphVertical (GRAPH *graph)
+
+CLASS-NAME: GraphNode
+
+ATTRIBUTES:
+	bool _selected
+	bool _hidden
+	bool _redraw
+	int count
+OPERATIONS:
+	operator_= (CONST_GraphNode&)
+	GraphNode (CONST_GraphNode& node)
+	GraphNode ()
+	~GraphNode ()
+	dup ()
+	id ()
+	selected ()
+	selected ()
+	hidden ()
+	hidden ()
+	redraw ()
+	redraw ()
+	firstFrom ()
+	nextFrom (GraphEdge *ref)
+	firstTo ()
+	nextTo (GraphEdge *ref)
+	pos ()
+	region (CONST_GraphGC& gc)
+	highlightRegion (CONST_GraphGC& gc)
+	sensitiveRegion (CONST_GraphGC& gc)
+	str ()
+	origin (CONST_GraphGC& gc)
+	space (CONST_GraphGC& gc)
+	isHint ()
+	moveTo (CONST_BoxPoint& newPos)
+	originToPos (CONST_BoxPoint& origin, CONST_GraphGC&)
+	draw (Widget, CONST_BoxRegion& , CONST_GraphGC&)
+	draw (Widget w, CONST_BoxRegion& exposed)
+	draw (Widget w)
+	_print (ostream& , CONST_GraphGC&)
+	OK ()
+AGGREGATION _id
+	CONTAINER GraphNode
+	CONTAINED public
+ASSOCIATION _firstFrom
+	GraphNode
+	GraphEdge
+ASSOCIATION _firstTo
+	GraphNode
+	GraphEdge
+ASSOCIATION next
+	GraphNode
+	GraphNode
+ASSOCIATION prev
+	GraphNode
+	GraphNode
+ASSOCIATION graph
+	GraphNode
+	Graph
+ASSOCIATION 
+	GraphNode
+	GraphEdge
+
+CLASS-NAME: GraphEdge
+
+ATTRIBUTES:
+	bool _hidden
+OPERATIONS:
+	operator_= (CONST_GraphEdge&)
+	_draw (Widget w, CONST_BoxRegion& exposed, CONST_GraphGC& gc)
+	enqueue ()
+	dequeue ()
+	GraphEdge (CONST_GraphEdge& edge)
+	GraphEdge (GraphNode* f, GraphNode* t)
+	~GraphEdge ()
+	dup ()
+	from ()
+	to ()
+	id ()
+	hidden ()
+	hidden ()
+	draw (Widget w, CONST_BoxRegion& exposed , CONST_GraphGC& gc)
+	_print (ostream& os, CONST_GraphGC& gc)
+	OK ()
+AGGREGATION _id
+	CONTAINER GraphEdge
+	CONTAINED public
+ASSOCIATION _from
+	GraphEdge
+	GraphNode
+ASSOCIATION _to
+	GraphEdge
+	GraphNode
+ASSOCIATION _nextFrom
+	GraphEdge
+	GraphEdge
+ASSOCIATION _nextTo
+	GraphEdge
+	GraphEdge
+ASSOCIATION _prevFrom
+	GraphEdge
+	GraphEdge
+ASSOCIATION _prevTo
+	GraphEdge
+	GraphEdge
+ASSOCIATION next
+	GraphEdge
+	GraphEdge
+ASSOCIATION prev
+	GraphEdge
+	GraphEdge
+ASSOCIATION graph
+	GraphEdge
+	Graph
+ASSOCIATION 
+	GraphEdge
+	GraphNode
+
+CLASS-NAME: PosGraphNode
+
+ATTRIBUTES:
+OPERATIONS:
+	PosGraphNode (CONST_PosGraphNode& node)
+	PosGraphNode (CONST_BoxPoint& initialPos)
+	~PosGraphNode ()
+	SHARED (*MoveCB)()
+	moveTo (CONST_BoxPoint& newPos)
+	pos ()
+
+GENERALIZATION GraphNode
+SUBCLASSES PosGraphNode
+AGGREGATION _pos
+	CONTAINER PosGraphNode
+	CONTAINED public
+
+CLASS-NAME: RegionGraphNode
+
+ATTRIBUTES:
+OPERATIONS:
+	forceDraw (Widget w, CONST_BoxRegion& exposed, CONST_GraphGC& gc)
+	center ()
+	RegionGraphNode (CONST_RegionGraphNode& node)
+	RegionGraphNode (CONST_BoxPoint& initialPos , CONST_BoxSize& initialSize)
+	~RegionGraphNode ()
+	moveTo (CONST_BoxPoint& newPos)
+	SHARED (*ResizeCB)()
+	resize (CONST_BoxSize& newSize)
+	originToPos (CONST_BoxPoint& origin, CONST_GraphGC&)
+	draw (Widget w, CONST_BoxRegion& exposed, CONST_GraphGC& gc)
+	_print (ostream& os, CONST_GraphGC& gc)
+	region (CONST_GraphGC&)
+	highlightRegion (CONST_GraphGC& gc)
+	sensitiveRegion (CONST_GraphGC& gc)
+
+GENERALIZATION PosGraphNode
+SUBCLASSES RegionGraphNode
+AGGREGATION _region
+	CONTAINER RegionGraphNode
+	CONTAINED public
+
+CLASS-NAME: BoxGraphNode
+
+ATTRIBUTES:
+OPERATIONS:
+	operator_= (CONST_BoxGraphNode&)
+	forceDraw (Widget w, CONST_BoxRegion& exposed, CONST_GraphGC& gc)
+	find_mark (Box* dup, Box* src, Box* mark)
+	BoxGraphNode (CONST_BoxGraphNode& node)
+	BoxGraphNode (Box* b, CONST_BoxPoint& initialPos , MarkBox* h)
+	dup ()
+	~BoxGraphNode ()
+	box ()
+	highlight ()
+	str ()
+	highlightRegion (CONST_GraphGC& gc)
+	setHighlight (MarkBox *b)
+	setBox (Box *b)
+	_print (ostream& os, CONST_GraphGC& gc)
+
+GENERALIZATION RegionGraphNode
+SUBCLASSES BoxGraphNode
+ASSOCIATION _box
+	BoxGraphNode
+	public
+ASSOCIATION _highlight
+	BoxGraphNode
+	MarkBox
+ASSOCIATION 
+	BoxGraphNode
+	Box
+ASSOCIATION 
+	BoxGraphNode
+	MarkBox
+
+CLASS-NAME: Graph
+
+ATTRIBUTES:
+OPERATIONS:
+	operator_= (CONST_Graph&)
+	addNodes (GraphNode* nodes)
+	addEdges (GraphEdge* edges)
+	addUsedEdges (GraphEdge* edges)
+	removeNode (GraphNode* node)
+	removeEdge (GraphEdge* edge)
+	haveNode (GraphNode* node)
+	haveEdge (GraphEdge* edge)
+	getNode (GraphNode* node, CONST_Graph& graph)
+	Graph (CONST_Graph& graph)
+	Graph ()
+	~Graph ()
+	dup ()
+	operator_+= (CONST_Graph& g)
+	operator_+= (GraphNode *node)
+	operator_+= (GraphEdge *edge)
+	operator_-= (GraphNode *node)
+	operator_-= (GraphEdge *edge)
+	firstNode ()
+	nextNode (GraphNode *ref)
+	firstVisibleNode ()
+	nextVisibleNode (GraphNode *ref)
+	firstEdge ()
+	nextEdge (GraphEdge *ref)
+	firstVisibleEdge ()
+	nextVisibleEdge (GraphEdge *ref)
+	makeNodeFirst (GraphNode *node)
+	makeNodeLast (GraphNode *node)
+	makeEdgeFirst (GraphEdge *edge)
+	makeEdgeLast (GraphEdge *edge)
+	draw (Widget w, CONST_BoxRegion& exposed, CONST_GraphGC& gc)
+	draw (Widget w, CONST_BoxRegion& exposed)
+	draw (Widget w)
+	_print (ostream& os, CONST_GraphGC& gc)
+	_printHeader (ostream& os, CONST_GraphGC& gc)
+	_printTrailer (ostream& os, CONST_GraphGC& gc)
+	print (ostream& os, CONST_GraphGC& gc)
+	region (CONST_GraphGC& gc)
+	OK ()
+ASSOCIATION _firstNode
+	Graph
+	public
+ASSOCIATION _firstEdge
+	Graph
+	GraphEdge
+ASSOCIATION 
+	Graph
+	GraphNode
+ASSOCIATION 
+	Graph
+	GraphEdge
+
+CLASS-NAME: HintGraphNode
+
+ATTRIBUTES:
+OPERATIONS:
+	forceDraw (Widget w, CONST_BoxRegion& exposed, CONST_GraphGC& gc)
+	HintGraphNode (CONST_HintGraphNode &node)
+	HintGraphNode (CONST_BoxPoint& initialPos)
+	~HintGraphNode ()
+	dup ()
+	isHint ()
+	region (CONST_GraphGC& gc)
+	sensitiveRegion (CONST_GraphGC& gc)
+
+GENERALIZATION RegionGraphNode
+SUBCLASSES HintGraphNode
+
+CLASS-NAME: LineGraphEdge
+
+ATTRIBUTES:
+OPERATIONS:
+	findLine (CONST_BoxPoint& c1, CONST_BoxPoint& c2, CONST_BoxRegion& b1, CONST_BoxRegion& b2, BoxPoint& p1, BoxPoint& p2, CONST_GraphGC& gc)
+	_draw (Widget w, CONST_BoxRegion& exposed, CONST_GraphGC& gc)
+	drawLine (Widget w, CONST_BoxRegion& exposed, CONST_GraphGC& gc)
+	drawSelf (Widget w, CONST_BoxRegion& exposed, CONST_GraphGC& gc)
+	drawArrowHead (Widget w, CONST_BoxRegion& exposed, CONST_GraphGC& gc, CONST_BoxPoint& pos, double alpha)
+	LineGraphEdge (CONST_LineGraphEdge &edge)
+	moveToSide (CONST_BoxRegion& b, int side, BoxPoint& p, CONST_BoxPoint& c)
+	clipToSide (CONST_BoxRegion& b, int side, BoxPoint& p, CONST_BoxPoint& c)
+	clipToCircle (CONST_BoxRegion& b, int side, BoxPoint& p, CONST_BoxPoint& c)
+	LineGraphEdge (GraphNode* f, GraphNode* t)
+	~LineGraphEdge ()
+	_print (ostream& os, CONST_GraphGC& gc)
+	dup ()
+
+GENERALIZATION GraphEdge
+SUBCLASSES LineGraphEdge
+ASSOCIATION 
+	LineGraphEdge
+	BoxPoint
+ASSOCIATION 
+	LineGraphEdge
+	GraphNode
+
+CLASS-NAME: ArcGraphEdge
+
+ATTRIBUTES:
+OPERATIONS:
+	ArcGraphEdge (CONST_ArcGraphEdge& edge)
+	drawLine (Widget w, CONST_BoxRegion& exposed, CONST_GraphGC& gc)
+	center (CONST_BoxPoint& p1, CONST_BoxPoint& p2, CONST_BoxPoint& p3, double& x, double& y)
+	ArcGraphEdge (GraphNode* from, GraphNode* to)
+	~ArcGraphEdge ()
+	_print (ostream& os, CONST_GraphGC& gc)
+	dup ()
+
+GENERALIZATION LineGraphEdge
+SUBCLASSES ArcGraphEdge
+ASSOCIATION 
+	ArcGraphEdge
+	GraphNode
+
+CLASS-NAME: ArgField
+
+ATTRIBUTES:
+	Widget arg_text_field
+	bool is_empty
+OPERATIONS:
+	valueChangedCB (Widget w, XtPointer client_data, XtPointer call_data)
+	losePrimaryCB (Widget w, XtPointer client_data, XtPointer call_data)
+	ArgField (CONST_ArgField&)
+	operator_= (CONST_ArgField&)
+	ArgField (Widget parent, CONST_char* name)
+	empty ()
+	get_string ()
+	set_string (string s)
+	text ()
+	top ()
+	addHandler (unsigned type, HandlerProc proc, void* client_data)
+	removeHandler (unsigned type, HandlerProc proc, void* client_data)
+	callHandlers ()
+AGGREGATION handlers
+	CONTAINER ArgField
+	CONTAINED HandlerList
+ASSOCIATION 
+	ArgField
+	string
+
+CLASS-NAME: Map
+
+ATTRIBUTES:
+	Key key
+	Contents cont
+	int _length
+OPERATIONS:
+	search (Key k)
+	Map ()
+	clear ()
+	delete_all_contents ()
+	~Map ()
+	insert (Key k, Contents* c)
+	del (Key k)
+	get (Key k)
+	contains (Key k)
+	first_key (MapRef& ref)
+	next_key (MapRef& ref)
+	first (MapRef& ref)
+	next (MapRef& ref)
+	length ()
+	Map (CONST_Map<Key_Contents>&)
+	operator_= (CONST_Map<Key_Contents>&)
+ASSOCIATION _next
+	Map
+	ListNode
+ASSOCIATION _first
+	Map
+	ListNode
+
+CLASS-NAME: BreakPoint
+
+ATTRIBUTES:
+	int mynumber
+	BPType mytype
+	BPDispo mydispo
+	bool myenabled
+	int myline_nr
+	int myignore_count
+	StringArray mycommands
+	WatchMode mywatch_mode
+	bool myenabled_changed
+	bool myfile_changed
+	bool myposition_changed
+	bool myaddress_changed
+	bool myselected
+	Widget mysource_glyph
+	Widget mycode_glyph
+OPERATIONS:
+	BreakPoint (CONST_BreakPoint& b)
+	operator_= (CONST_BreakPoint&)
+	false_value ()
+	and_op ()
+	is_false (CONST_string& cond)
+	BreakPoint (string& info_output, string arg , int number)
+	number_str ()
+	number ()
+	symbol ()
+	type ()
+	dispo ()
+	enabled ()
+	file_name ()
+	line_nr ()
+	address ()
+	pos ()
+	expr ()
+	watch_mode ()
+	infos ()
+	ignore_count ()
+	real_condition ()
+	commands ()
+	condition ()
+	arg ()
+	selected ()
+	source_glyph ()
+	code_glyph ()
+	enabled_changed ()
+	file_changed ()
+	position_changed ()
+	address_changed ()
+	update (string& info_output)
+	get_state (ostream& os, int num, bool as_dummy , string addr , string cond)
+	make_false (CONST_string& cond)
+AGGREGATION mynumber_str
+	CONTAINER BreakPoint
+	CONTAINED string
+AGGREGATION myfile_name
+	CONTAINER BreakPoint
+	CONTAINED string
+AGGREGATION myaddress
+	CONTAINER BreakPoint
+	CONTAINED string
+AGGREGATION myexpr
+	CONTAINER BreakPoint
+	CONTAINED string
+AGGREGATION myinfos
+	CONTAINER BreakPoint
+	CONTAINED string
+AGGREGATION mycondition
+	CONTAINER BreakPoint
+	CONTAINED string
+AGGREGATION myarg
+	CONTAINER BreakPoint
+	CONTAINED string
+ASSOCIATION 
+	BreakPoint
+	string
+
+CLASS-NAME: SourceView
+
+ATTRIBUTES:
+	XtActionsRec []
+	MMDesc line_popup[]
+	MMDesc address_popup[]
+	MMDesc bp_popup[]
+	MMDesc text_popup[]
+	MMDesc bp_area[]
+	StringArray history
+	int history_position
+	bool source_history_locked
+	bool code_history_locked
+	bool checking_scroll
+	Widget toplevel_w
+	Widget source_form_w
+	Widget source_text_w
+	Widget code_form_w
+	Widget code_text_w
+	Widget edit_breakpoints_dialog_w
+	Widget breakpoint_list_w
+	Widget stack_dialog_w
+	Widget frame_list_w
+	Widget up_w
+	Widget down_w
+	bool stack_dialog_popped_up
+	Widget register_dialog_w
+	Widget register_list_w
+	Widget int_registers_w
+	Widget all_registers_w
+	bool register_dialog_popped_up
+	Widget thread_dialog_w
+	Widget thread_list_w
+	bool thread_dialog_popped_up
+	bool display_glyphs
+	bool display_line_numbers
+	bool disassemble
+	bool all_registers
+	bool at_lowest_frame
+	bool signal_received
+	WatchMode selected_watch_mode
+	int tab_width
+	BreakPointMap bp_map
+	int line_count
+	IntIntArrayAssoc bps_in_line
+	TextPositionArray _pos_of_line
+	StringArray bp_addresses
+	StringStringAssoc file_cache
+	StringOriginAssoc origin_cache
+	CodeCache code_cache
+	int current_frame
+	SourceOrigin current_origin
+	StringStringAssoc source_name_cache
+	StringStringAssoc file_name_cache
+	StringArray bad_files
+	XmTextPosition last_top
+	XmTextPosition last_pos
+	XmTextPosition last_start_highlight
+	XmTextPosition last_end_highlight
+	XmTextPosition last_top_pc
+	XmTextPosition last_pos_pc
+	XmTextPosition last_start_highlight_pc
+	XmTextPosition last_end_highlight_pc
+	int last_execution_line
+	int last_frame_pos
+	bool frame_pos_locked
+	Widget current_drag_origin
+	int current_drag_breakpoint
+	int arrow_x_offset
+	int stop_x_offset
+	int multiple_stop_x_offset
+	Widget plain_arrows
+	Widget grey_arrows
+	Widget signal_arrows
+	Widget drag_arrows
+	WidgetArray plain_stops
+	WidgetArray grey_stops
+	WidgetArray plain_conds
+	WidgetArray grey_conds
+	WidgetArray plain_temps
+	WidgetArray grey_temps
+	Widget drag_stops
+	Widget drag_conds
+	Widget drag_temps
+	bool update_code_glyphs
+	bool update_source_glyphs
+	bool change_glyphs
+	WidgetArray changed_glyphs
+	int max_breakpoint_number_seen
+	bool cache_source_files
+	bool cache_machine_code
+	bool cache_glyph_images
+	int max_popup_expr_length
+	int source_indent_amount
+	int code_indent_amount
+	int line_indent_amount
+	int lines_above_cursor
+	int lines_below_cursor
+	int max_breakpoint_number
+OPERATIONS:
+	add_to_history (CONST_string& file_name, int line)
+	add_to_history (CONST_string& address)
+	add_current_to_history ()
+	goto_entry (string entry)
+	set_source_argCB (Widget, XtPointer, XtPointer)
+	line_popup_setCB (Widget, XtPointer, XtPointer)
+	line_popup_set_tempCB (Widget, XtPointer, XtPointer)
+	line_popup_temp_n_contCB (Widget, XtPointer, XtPointer)
+	line_popup_set_pcCB (Widget, XtPointer, XtPointer)
+	bp_popup_infoCB (Widget, XtPointer, XtPointer)
+	bp_popup_deleteCB (Widget, XtPointer, XtPointer)
+	bp_popup_disableCB (Widget, XtPointer, XtPointer)
+	bp_popup_set_pcCB (Widget, XtPointer, XtPointer)
+	text_popup_printCB (Widget, XtPointer, XtPointer)
+	text_popup_dispCB (Widget, XtPointer, XtPointer)
+	text_popup_watchCB (Widget, XtPointer, XtPointer)
+	text_popup_print_refCB (Widget, XtPointer, XtPointer)
+	text_popup_disp_refCB (Widget, XtPointer, XtPointer)
+	text_popup_watch_refCB (Widget, XtPointer, XtPointer)
+	text_popup_whatisCB (Widget, XtPointer, XtPointer)
+	text_popup_lookupCB (Widget, XtPointer, XtPointer)
+	text_popup_breakCB (Widget, XtPointer, XtPointer)
+	text_popup_clearCB (Widget, XtPointer, XtPointer)
+	NewBreakpointDCB (Widget, XtPointer, XtPointer)
+	NewBreakpointCB (Widget, XtPointer, XtPointer)
+	NewWatchpointDCB (Widget, XtPointer, XtPointer)
+	NewWatchpointCB (Widget, XtPointer, XtPointer)
+	LookupBreakpointCB (Widget, XtPointer, XtPointer)
+	PrintWatchpointCB (Widget, XtPointer, XtPointer)
+	BreakpointCmdCB (Widget, XtPointer, XtPointer)
+	EditBreakpointPropertiesCB (Widget, XtPointer, XtPointer)
+	SetBreakpointIgnoreCountCB (Widget, XtPointer, XtPointer)
+	SetBreakpointConditionCB (Widget, XtPointer, XtPointer)
+	EnableBreakpointsCB (Widget, XtPointer, XtPointer)
+	DisableBreakpointsCB (Widget, XtPointer, XtPointer)
+	MakeBreakpointsTempCB (Widget, XtPointer, XtPointer)
+	DeleteBreakpointsCB (Widget, XtPointer, XtPointer)
+	RecordBreakpointCommandsCB (Widget, XtPointer, XtPointer)
+	EndBreakpointCommandsCB (Widget, XtPointer, XtPointer)
+	EditBreakpointCommandsCB (Widget, XtPointer, XtPointer)
+	SetBreakpointIgnoreCountNowCB (XtPointer, XtIntervalId*)
+	DeleteInfoCB (Widget, XtPointer, XtPointer)
+	RefreshBreakpointsHP (Agent* , void* , void*)
+	RecordingHP (Agent* , void* , void*)
+	UpdateBreakpointButtonsCB (Widget, XtPointer, XtPointer)
+	CheckScrollCB (Widget, XtPointer, XtPointer)
+	CheckScrollWorkProc (XtPointer, XtIntervalId*)
+	CheckModificationCB (Widget, XtPointer, XtPointer)
+	StackDialogPoppedDownCB (Widget, XtPointer, XtPointer)
+	CodeDialogPoppedDownCB (Widget, XtPointer, XtPointer)
+	RegisterDialogPoppedDownCB (Widget, XtPointer, XtPointer)
+	ThreadDialogPoppedDownCB (Widget, XtPointer, XtPointer)
+	SelectFrameCB (Widget, XtPointer, XtPointer)
+	SelectRegisterCB (Widget, XtPointer, XtPointer)
+	SelectThreadCB (Widget, XtPointer, XtPointer)
+	ThreadCommandCB (Widget, XtPointer, XtPointer)
+	SetWatchModeCB (Widget, XtPointer, XtPointer)
+	update_title ()
+	ActivateGlyphCB (Widget, XtPointer, XtPointer)
+	line_height (Widget text_w)
+	create_text (Widget parent, CONST_string& base, bool editable, Widget& form, Widget& text)
+	refresh_bp_disp ()
+	refresh_source_bp_disp ()
+	refresh_code_bp_disp ()
+	clearBP (void* client_data, XtIntervalId* timer)
+	clearJumpBP (CONST_string& answer, void* client_data)
+	move_bp (int nr, CONST_string& address, Widget origin , bool copy)
+	copy_bp (int nr, CONST_string& address, Widget origin)
+	_set_bps_cond (IntArray& nrs, string cond, int make_false, Widget origin)
+	set_bps_cond (IntArray& nrs, string cond, Widget origin)
+	set_bps_cond_enabled (IntArray& nrs, bool enabled, Widget origin)
+	enable_bps_cond (IntArray& nrs, Widget origin)
+	disable_bps_cond (IntArray& nrs, Widget origin)
+	get_line_of_pos (Widget w, XmTextPosition pos, int& line_nr, string& address, bool& in_text, int& bp_nr)
+	find_word_bounds (Widget w, CONST_XmTextPosition pos, XmTextPosition& startpos, XmTextPosition& endpos)
+	srcpopupAct (Widget, XEvent* , String* , Cardinal*)
+	startSelectWordAct (Widget, XEvent* , String* , Cardinal*)
+	endSelectWordAct (Widget, XEvent* , String* , Cardinal*)
+	updateGlyphsAct (Widget, XEvent* , String* , Cardinal*)
+	dragGlyphAct (Widget, XEvent* , String* , Cardinal*)
+	followGlyphAct (Widget, XEvent* , String* , Cardinal*)
+	dropGlyphAct (Widget, XEvent* , String* , Cardinal*)
+	deleteGlyphAct (Widget, XEvent* , String* , Cardinal*)
+	doubleClickAct (Widget, XEvent* , String* , Cardinal*)
+	setSelection (XtPointer client_data, XtIntervalId* timer)
+	set_text_popup_label (int item, CONST_string& arg, bool sens)
+	set_text_popup_resource (int item, CONST_string& arg)
+	pos_of_line (int line)
+	bp_matches (BreakPoint* bp, int line)
+	bp_matches (BreakPoint* bp, CONST_string& file, int line)
+	file_matches (CONST_string& file1, CONST_string& file2)
+	base_matches (CONST_string& file1, CONST_string& file2)
+	is_current_file (CONST_string& file)
+	current_source_name ()
+	new_bad_file (CONST_string& file_name)
+	post_file_error (CONST_string& file_name, string text, String name , Widget origin)
+	post_file_warning (CONST_string& file_name, string text, String name , Widget origin)
+	_show_execution_position (string file, int line, bool silent)
+	read_local (CONST_string& file_name, long& length, bool silent)
+	read_remote (CONST_string& file_name, long& length, bool silent)
+	read_class (CONST_string& class_name, string& file_name, SourceOrigin& origin, long& length, bool silent)
+	read_from_gdb (CONST_string& source_name, long& length, bool silent)
+	read_indented (string& file_name, long& length, SourceOrigin& origin, bool silent)
+	read_current (string& file_name, bool force_reload , bool silent)
+	SetInsertionPosition (Widget w, XmTextPosition pos, bool fromTop)
+	ShowPosition (Widget w, XmTextPosition pos, bool fromTop)
+	is_source_widget (Widget w)
+	is_code_widget (Widget w)
+	current_text (Widget w)
+	indent_amount (Widget w, int pos)
+	setup_where_line (string& line)
+	find_pc (CONST_string& pc)
+	refresh_codeOQC (CONST_string& answer, void* data)
+	set_code (CONST_string& code, CONST_string& start, CONST_string& end)
+	help_on_bp (int bp, bool detailed)
+	normalize_address (string& address)
+	make_address (long address)
+	get_func_at (CONST_string& address, string& func, int& offset)
+	function_is_larger_than (string pc, int max_size)
+	update_properties_panel (BreakpointPropertiesInfo *info)
+	update_properties_panels ()
+	move_breakpoint_properties (int old_bp, int new_bp)
+	copy_breakpoint_properties (int old_bp, int new_bp)
+	pixmap (Widget w, uchar* bits, int width, int height)
+	create_glyph (Widget form_w, String name, uchar* bits, int width, int height)
+	map_glyph (Widget& w, Position x, Position y)
+	unmap_glyph (Widget w)
+	log_glyph (Widget w, int n)
+	log_glyphs ()
+	glyph_position (Widget w, XEvent* e, bool normalize)
+	translate_glyph_pos (Widget glyph, Widget text, int& x, int& y)
+	map_stop_at (Widget w, XmTextPosition pos, WidgetArray& stops, int& count, TextPositionArray& positions)
+	map_arrow_at (Widget w, XmTextPosition pos)
+	map_drag_arrow_at (Widget w, XmTextPosition pos, Widget origin)
+	unmap_drag_arrow (Widget w)
+	map_drag_stop_at (Widget w, XmTextPosition pos, Widget origin)
+	unmap_drag_stop (Widget w)
+	copy_colors (Widget w, Widget origin)
+	UpdateGlyphsWorkProc (XtPointer, XtIntervalId*)
+	CreateGlyphsWorkProc (XtPointer)
+	update_glyphs_now ()
+	glyphs_to_be_updated ()
+	reset_done (CONST_string& answer, void* data)
+	jdb_breakpoint (CONST_string& bp_info)
+	SourceView (Widget parent)
+	create_shells ()
+	show_execution_position (string position , bool stopped , bool signaled , bool silent)
+	clear_execution_position ()
+	show_position (string position, bool silent)
+	show_pc (CONST_string& pc, XmHighlightMode mode , bool stopped , bool signaled)
+	process_info_bp (string& info_output, CONST_string& break_arg)
+	process_info_line_main (string& info_output)
+	process_where (string& where_output)
+	process_frame (string& frame_output)
+	process_registers (string& info_register_output)
+	process_threads (string& info_threads_output)
+	process_breakpoints (string& info_breakpoints_output)
+	process_disassemble (CONST_string& disassemble_output)
+	process_pwd (string& pwd_output)
+	process_use (string& use_output)
+	check_remainder (string& info_output)
+	set_frame_pos (int arg, int pos)
+	set_frame_func (CONST_string& func)
+	find (CONST_string& s, SearchDirection direction , bool words_only , bool case_sensitive , Time time)
+	lookup (string s, bool silent)
+	read_file (string file_name, int initial_line , bool force_reload , bool silent)
+	reload ()
+	go_back ()
+	go_forward ()
+	line_of_cursor ()
+	file_of_cursor ()
+	EditBreakpointsCB (Widget, XtPointer, XtPointer)
+	ViewStackFramesCB (Widget, XtPointer, XtPointer)
+	ViewRegistersCB (Widget, XtPointer, XtPointer)
+	ViewThreadsCB (Widget, XtPointer, XtPointer)
+	refresh_stack_frames ()
+	refresh_registers ()
+	refresh_threads (bool all_threadgroups)
+	refresh_registers_command ()
+	where_required ()
+	register_required ()
+	thread_required ()
+	set_display_glyphs (bool value)
+	set_display_line_numbers (bool value)
+	set_disassemble (bool value)
+	set_all_registers (bool value)
+	set_tab_width (int width)
+	set_indent (int source_indent, int code_indent)
+	set_max_glyphs (int max_glyphs)
+	next_breakpoint_number ()
+	set_bp (CONST_string& a, bool set, bool temp, CONST_string& cond , Widget origin)
+	create_bp (CONST_string& a, Widget origin)
+	create_temp_bp (CONST_string& a, Widget origin)
+	clear_bp (CONST_string& a, Widget origin)
+	temp_n_cont (CONST_string& a, Widget origin)
+	enable_bps (IntArray& nrs, Widget origin)
+	disable_bps (IntArray& nrs, Widget origin)
+	delete_bps (IntArray& nrs, Widget origin)
+	edit_bps (IntArray& nrs, Widget origin)
+	enable_bp (int nr, Widget origin)
+	disable_bp (int nr, Widget origin)
+	delete_bp (int nr, Widget origin)
+	edit_bp (int nr, Widget origin)
+	set_bp_commands (IntArray& nrs, CONST_StringArray& commands, Widget origin)
+	set_bp_commands (int nr, CONST_StringArray& commands, Widget origin)
+	numbers (CONST_IntArray& nrs)
+	all_numbers (CONST_IntArray& nrs)
+	all_bps (CONST_IntArray& nrs)
+	move_pc (CONST_string& address, Widget origin)
+	clear_command (string arg, bool clear_next , int first_bp)
+	delete_command (int bp_nr)
+	command_list (string cmd)
+	pwd ()
+	class_path ()
+	source ()
+	code ()
+	source_form ()
+	code_form ()
+	clear_file_cache ()
+	clear_code_cache ()
+	clear_history ()
+	get_line (string position)
+	help_on_glyph (Widget glyph, bool detailed)
+	help_on_pos (Widget w, XmTextPosition pos, XmTextPosition& ref, bool detailed)
+	bp_pos (int num)
+	breakpoint_at (string pos)
+	watchpoint_at (string expr)
+	get_word_at_event (Widget w, XEvent* event, XmTextPosition& first_pos, XmTextPosition& last_pos)
+	get_word_at_pos (Widget w, XmTextPosition pos, XmTextPosition& startpos, XmTextPosition& endpos)
+	have_source ()
+	have_exec_pos ()
+	have_pc ()
+	have_selection ()
+	need_pc ()
+	get_frame ()
+	get_state (ostream& os)
+	reset ()
+	full_path (string file)
+	basename (CONST_char *)
+	edit_breakpoint_properties (int bp_nr)
+	update_glyphs (Widget w)
+AGGREGATION current_file_name
+	CONTAINER SourceView
+	CONTAINED string
+AGGREGATION current_source
+	CONTAINER SourceView
+	CONTAINED string
+AGGREGATION current_code
+	CONTAINER SourceView
+	CONTAINED string
+AGGREGATION current_code_start
+	CONTAINER SourceView
+	CONTAINED string
+AGGREGATION current_code_end
+	CONTAINER SourceView
+	CONTAINED string
+AGGREGATION current_pwd
+	CONTAINER SourceView
+	CONTAINED string
+AGGREGATION current_class_path
+	CONTAINER SourceView
+	CONTAINED string
+AGGREGATION current_threadgroup
+	CONTAINER SourceView
+	CONTAINED string
+AGGREGATION last_execution_file
+	CONTAINER SourceView
+	CONTAINED string
+AGGREGATION last_execution_pc
+	CONTAINER SourceView
+	CONTAINED string
+AGGREGATION last_shown_pc
+	CONTAINER SourceView
+	CONTAINED string
+ASSOCIATION 
+	SourceView
+	string
+ASSOCIATION 
+	SourceView
+	Agent
+ASSOCIATION 
+	SourceView
+	BreakPoint
+
+CLASS-NAME: DispValue
+
+ATTRIBUTES:
+	DispValueType mytype
+	int mydepth
+	bool myexpanded
+	bool changed
+	int myrepeats
+	int v
+	StringStringAssoc type_cache
+	bool expand_repeated_values
+OPERATIONS:
+	init (string& value, DispValueType type)
+	clear ()
+	operator_= (CONST_DispValue&)
+	index_base (CONST_string& expr, int dim)
+	add_member_name (CONST_string& base, CONST_string& member_name)
+	_expand ()
+	_collapse ()
+	DispValue (DispValue* parent, int depth, string& value, CONST_string& full_name, CONST_string& print_name, DispValueType type)
+	DispValue (CONST_DispValue& dv)
+	~DispValue ()
+	dup ()
+	type ()
+	parent ()
+	depth ()
+	repeats ()
+	full_name ()
+	name ()
+	addr ()
+	parent ()
+	depth ()
+	repeats ()
+	full_name ()
+	name ()
+	is_changed ()
+	expanded ()
+	collapsed ()
+	value ()
+	dereferenced ()
+	dereferenced_name ()
+	nchildren ()
+	get_child (int i)
+	vertical_aligned ()
+	horizontal_aligned ()
+	dereference ()
+	collapseAll (int depth)
+	expandAll (int depth)
+	collapse ()
+	expand ()
+	expandedAll ()
+	collapsedAll ()
+	height ()
+	heightExpanded ()
+	align_vertical ()
+	align_horizontal ()
+	update (string& value, bool& changed, bool& inited, DispValueType type)
+	new_BaseClass_name (string name)
+	SHARED (*background)()
+	clear_type_cache ()
+ASSOCIATION myparent
+	DispValue
+	DispValue
+AGGREGATION myfull_name
+	CONTAINER DispValue
+	CONTAINED string
+AGGREGATION print_name
+	CONTAINER DispValue
+	CONTAINED string
+AGGREGATION myaddr
+	CONTAINER DispValue
+	CONTAINED string
+ASSOCIATION 
+	DispValue
+	string
+
+CLASS-NAME: DispBox
+
+ATTRIBUTES:
+	int max_display_title_length
+	bool align_2d_arrays
+	bool vsllib_initialized
+OPERATIONS:
+	DispBox (CONST_DispBox&)
+	operator_= (CONST_DispBox&)
+	init_vsllib (void())
+	DispBox (int disp_nr, CONST_string& name, CONST_DispValue* dv)
+	~DispBox ()
+	box ()
+	set_value (CONST_DispValue* dv)
+	create_value_box (CONST_DispValue* dv, int member_name_width)
+	vsllib ()
+	dup (CONST_string& func_name, CONST_Box* box)
+	eval (CONST_string& func_name, ListBox* arg)
+	eval (CONST_string& func_name, VSLArg args[])
+	eval (CONST_string& func_name, VSLArg arg1 , VSLArg arg2 , VSLArg arg3)
+ASSOCIATION mybox
+	DispBox
+	Box
+ASSOCIATION title_box
+	DispBox
+	Box
+AGGREGATION vsllib_name
+	CONTAINER DispBox
+	CONTAINED string
+AGGREGATION vsllib_path
+	CONTAINER DispBox
+	CONTAINED string
+AGGREGATION vsllib_defs
+	CONTAINER DispBox
+	CONTAINED string
+AGGREGATION vsllib_base_defs
+	CONTAINER DispBox
+	CONTAINED string
+AGGREGATION dummylib
+	CONTAINER DispBox
+	CONTAINED VSLLib
+ASSOCIATION vsllib_ptr
+	DispBox
+	VSLLib
+ASSOCIATION 
+	DispBox
+	ListBox
+ASSOCIATION 
+	DispBox
+	VSLArg
+
+CLASS-NAME: DispNode
+
+ATTRIBUTES:
+	int mydisp_nr
+	bool myenabled
+	bool myactive
+	bool saved_node_hidden
+	bool mydeferred
+	int mylast_change
+	int change_tics
+	int alias_of
+OPERATIONS:
+	findTagBox (CONST_Box* box, DispValue* dv)
+	DispNode (CONST_DispNode&)
+	operator_= (CONST_DispNode&)
+	DispNode (int disp_nr, CONST_string& name, CONST_string& scope , CONST_string& value)
+	~DispNode ()
+	disp_nr ()
+	name ()
+	addr ()
+	scope ()
+	depends_on ()
+	depends_on ()
+	enabled ()
+	disabled ()
+	active ()
+	deferred ()
+	deferred ()
+	last_change ()
+	is_user_command ()
+	user_command ()
+	alias_ok ()
+	nodeptr ()
+	box ()
+	value ()
+	selected_value ()
+	selected ()
+	moveTo (CONST_BoxPoint& newPos)
+	addHandler (unsigned type, HandlerProc proc, void* client_data)
+	removeHandler (unsigned type, HandlerProc proc, void* client_data)
+	update (string& new_value)
+	set_addr (CONST_string& new_addr)
+	refresh ()
+	select (DispValue *dv)
+	disable ()
+	enable ()
+	make_active ()
+	make_inactive ()
+AGGREGATION myname
+	CONTAINER DispNode
+	CONTAINED string
+AGGREGATION myaddr
+	CONTAINER DispNode
+	CONTAINED string
+AGGREGATION myscope
+	CONTAINER DispNode
+	CONTAINED string
+AGGREGATION mydepends_on
+	CONTAINER DispNode
+	CONTAINED string
+ASSOCIATION mynodeptr
+	DispNode
+	BoxGraphNode
+ASSOCIATION disp_value
+	DispNode
+	DispValue
+ASSOCIATION myselected_value
+	DispNode
+	DispValue
+ASSOCIATION disp_box
+	DispNode
+	DispBox
+AGGREGATION handlers
+	CONTAINER DispNode
+	CONTAINED HandlerList
+ASSOCIATION 
+	DispNode
+	DispValue
+ASSOCIATION 
+	DispNode
+	string
+
+CLASS-NAME: DataDisp
+
+ATTRIBUTES:
+	XtIntervalId refresh_args_timer
+	XtIntervalId refresh_graph_edit_timer
+	XtIntervalId refresh_addr_timer
+	bool lose_selection
+	XtActionsRec []
+	MMDesc graph_popup[]
+	MMDesc node_popup[]
+	MMDesc shortcut_popup1[]
+	MMDesc shortcut_popup2[]
+	MMDesc display_area[]
+	MMDesc detail_menu[]
+	MMDesc shortcut_menu[]
+	MMDesc rotate_menu[]
+	const shortcut_items
+	StringArray shortcut_exprs
+	StringArray shortcut_labels
+	MMDesc graph_cmd_area[]
+	Widget last_origin
+	Time last_select_time
+	int next_ddd_display_number
+	int next_gdb_display_number
+	bool detect_aliases
+	bool arg_needs_update
+	Widget graph_popup_w
+	Widget node_popup_w
+	Widget shortcut_popup_w
+	Widget edit_displays_dialog_w
+	Widget display_list_w
+	bool force_check_aliases
+	Widget graph_form_w
+	Widget graph_edit
+	Widget graph_cmd_w
+	Widget graph_selection_w
+	bool bump_displays
+	int max_display_number
+OPERATIONS:
+	dispCB (Widget, XtPointer, XtPointer)
+	dereferenceCB (Widget, XtPointer, XtPointer)
+	dereferenceArgCB (Widget, XtPointer, XtPointer)
+	toggleDetailCB (Widget, XtPointer, XtPointer)
+	toggleRotateCB (Widget, XtPointer, XtPointer)
+	toggleDisableCB (Widget, XtPointer, XtPointer)
+	rotateCB (Widget, XtPointer, XtPointer)
+	rotateAllCB (Widget, XtPointer, XtPointer)
+	newCB (Widget, XtPointer, XtPointer)
+	enableCB (Widget, XtPointer, XtPointer)
+	disableCB (Widget, XtPointer, XtPointer)
+	showDetailCB (Widget, XtPointer, XtPointer)
+	showMoreDetailCB (Widget, XtPointer, XtPointer)
+	hideDetailCB (Widget, XtPointer, XtPointer)
+	dependentCB (Widget, XtPointer, XtPointer)
+	displayArgCB (Widget, XtPointer, XtPointer)
+	setCB (Widget, XtPointer, XtPointer)
+	shortcutCB (Widget, XtPointer, XtPointer)
+	deleteArgCB (Widget, XtPointer, XtPointer)
+	popup_new_argCB (Widget, XtPointer, XtPointer)
+	popup_newCB (Widget, XtPointer, XtPointer)
+	new_displayDCB (Widget, XtPointer, XtPointer)
+	setDCB (Widget, XtPointer, XtPointer)
+	UpdateGraphEditorSelectionCB (Widget, XtPointer, XtPointer)
+	UpdateDisplayEditorSelectionCB (Widget, XtPointer, XtPointer)
+	PreLayoutCB (Widget, XtPointer, XtPointer)
+	PostLayoutCB (Widget, XtPointer, XtPointer)
+	DoubleClickCB (Widget, XtPointer, XtPointer)
+	bump (RegionGraphNode* node, CONST_BoxSize& newSize)
+	RefreshGraphEditCB (XtPointer client_data, XtIntervalId* id)
+	RefreshArgsCB (XtPointer client_data, XtIntervalId* id)
+	RefreshAddrCB (XtPointer client_data, XtIntervalId* id)
+	CompareNodesCB (Widget, XtPointer, XtPointer)
+	new_displayCD (Widget w, BoxPoint box_point)
+	no_displaysHP (void* , void* , void*)
+	set_args (BoxPoint p , SelectionMode mode)
+	refresh_display_list (bool silent)
+	selected_value ()
+	selected_node ()
+	open_data_window ()
+	close_data_window ()
+	new_data_node (CONST_string& name, CONST_string& scope, CONST_string& answer)
+	new_user_node (CONST_string& name, CONST_string& scope, CONST_string& answer)
+	new_deferred_node (CONST_string& expr, CONST_string& scope, CONST_BoxPoint& pos, CONST_string& depends_on)
+	getDispNrAtPoint (BoxPoint point)
+	numbers (IntArray& a)
+	all_display_numbers (IntArray& numbers)
+	show (Widget dialog, int depth, int more)
+	create_display_dialog (Widget parent, String name, NewDisplayInfo& info)
+	toggle_rotate (DispValue* dv, bool all)
+	graph_selectAct (Widget, XEvent* , String* , Cardinal*)
+	graph_select_or_moveAct (Widget, XEvent* , String* , Cardinal*)
+	graph_extendAct (Widget, XEvent* , String* , Cardinal*)
+	graph_extend_or_moveAct (Widget, XEvent* , String* , Cardinal*)
+	graph_toggleAct (Widget, XEvent* , String* , Cardinal*)
+	graph_toggle_or_moveAct (Widget, XEvent* , String* , Cardinal*)
+	graph_popupAct (Widget, XEvent* , String* , Cardinal*)
+	graph_dereferenceAct (Widget, XEvent* , String* , Cardinal*)
+	graph_detailAct (Widget, XEvent* , String* , Cardinal*)
+	graph_rotateAct (Widget, XEvent* , String* , Cardinal*)
+	graph_dependentAct (Widget, XEvent* , String* , Cardinal*)
+	call_selection_proc (Widget, String, XEvent* , String* , Cardinal, SelectionMode mode)
+	add_shortcut_expr (CONST_string& expr)
+	new_displaySQ (string display_expression, string scope, BoxPoint* pos , string depends_on , DeferMode deferred , Widget origin , bool verbose , bool prompt)
+	refresh_displaySQ (Widget origin , bool verbose , bool prompt)
+	disable_displaySQ (IntArray& display_nrs, bool verbose , bool prompt)
+	enable_displaySQ (IntArray& display_nrs, bool verbose , bool prompt)
+	delete_displaySQ (IntArray& display_nrs, bool verbose , bool prompt)
+	new_display_cmd (string display_expression, BoxPoint* pos , string depends_on)
+	refresh_display_cmd ()
+	disable_display_cmd (IntArray& display_nrs)
+	enable_display_cmd (IntArray& display_nrs)
+	delete_display_cmd (IntArray& display_nrs)
+	delete_display_cmd (CONST_string& name)
+	new_display (string display_expression, BoxPoint* pos , string depends_on , Widget origin)
+	refresh_display (Widget origin)
+	disable_display (IntArray& display_nrs, Widget origin)
+	enable_display (IntArray& display_nrs, Widget origin)
+	delete_display (IntArray& display_nrs, Widget origin)
+	delete_display (CONST_string& name, Widget origin)
+	process_info_display (string& info_display_answer, bool defer_deleted)
+	process_displays (string& display_answer, bool& disabling_occurred)
+	process_user (StringArray& answers)
+	process_addr (StringArray& answers)
+	process_scope (CONST_string& scope)
+	need_scope ()
+	set_shortcut_menu (CONST_StringArray& exprs, CONST_StringArray& labels)
+	get_shortcut_menu (StringArray& exprs, StringArray& labels)
+	refresh_args (bool update_arg)
+	again_new_displaySQ (XtPointer client_data, XtIntervalId* id)
+	new_data_displayOQC (CONST_string& answer, void* data)
+	new_data_display_extraOQC (CONST_string& answer, void* data)
+	new_data_displaysSQA (string display_expression, void* data)
+	new_data_displaysOQAC (CONST_StringArray& answers, CONST_VoidArray& qu_datas, void* data)
+	new_user_displayOQC (CONST_string& answer, void* data)
+	refresh_displayOQC (CONST_string& answer, void* data)
+	refresh_displayOQAC (CONST_StringArray& answers, CONST_VoidArray& qu_datas, void* data)
+	disable_displayOQC (CONST_string& answer, void* data)
+	enable_displayOQC (CONST_string& answer, void* data)
+	delete_displayOQC (CONST_string& answer, void* data)
+	deletion_done (IntArray& display_nrs, bool do_prompt)
+	add_aliases (IntArray& a)
+	sort_and_check (IntArray& a)
+	select_with_all_descendants (GraphNode *node)
+	select_with_all_ancestors (GraphNode *node)
+	read_number_and_name (string& answer, string& nr, string& name)
+	ClearOriginCB (Widget, XtPointer, XtPointer)
+	set_last_origin (Widget origin)
+	check_aliases ()
+	sort_last_change (IntArray& disp_nrs)
+	last_change_of_disp_nr (int disp_nr)
+	merge_displays (IntArray displays, bool& changed, bool& suppressed)
+	unmerge_display (int disp_nr)
+	alias_display_nr (GraphNode *node)
+	write_frame_command (ostream& os, int& current_frame, int target_frame)
+	write_restore_scope_command (ostream& os, int& current_frame, CONST_StringArray& scopes, DispNode* dn, bool& ok)
+	get_state (ostream& os, bool restore_state, bool include_position, CONST_StringArray& scopes, int target_frame)
+	reset_done (CONST_string& answer, void* data)
+	DataDisp (Widget parent)
+	create_shells ()
+	count_data_displays ()
+	get_all_display_numbers (IntArray& numbers)
+	refresh_graph_edit (bool silent)
+	graph_form ()
+	refresh_addr (DispNode *node)
+	add_refresh_data_commands (StringArray& cmds)
+	add_refresh_user_commands (StringArray& cmds)
+	add_refresh_addr_commands (StringArray& cmds, DispNode* dn)
+	EditDisplaysCB (Widget, XtPointer, XtPointer)
+	refreshCB (Widget, XtPointer, XtPointer)
+	selectAllCB (Widget, XtPointer, XtPointer)
+	unselectAllCB (Widget, XtPointer, XtPointer)
+	deleteCB (Widget, XtPointer, XtPointer)
+	have_user_display (CONST_string& name)
+	new_user_display (CONST_string& name)
+	delete_user_display (CONST_string& name)
+	language_changedHP (Agent* source, void* client_data, void* call_data)
+	set_detect_aliases (bool value)
+	have_selection ()
+	get_selection (ostream& os, bool include_position)
+	get_state (ostream& os, CONST_StringArray& scopes, int target_frame)
+	get_scopes (StringArray& scopes)
+	need_core_to_restore ()
+	shortcut_help (Widget w)
+	reset ()
+	SelectionLostCB (Widget , XtPointer , XtPointer)
+	display_number (CONST_string& name, bool verbose)
+ASSOCIATION disp_graph
+	DataDisp
+	DispGraph
+ASSOCIATION delay
+	DataDisp
+	Delay
+ASSOCIATION graph_arg
+	DataDisp
+	ArgField
+ASSOCIATION 
+	DataDisp
+	RegionGraphNode
+ASSOCIATION 
+	DataDisp
+	BoxPoint
+ASSOCIATION 
+	DataDisp
+	NewDisplayInfo
+ASSOCIATION 
+	DataDisp
+	DispValue
+ASSOCIATION 
+	DataDisp
+	string
+ASSOCIATION 
+	DataDisp
+	GraphNode
+ASSOCIATION 
+	DataDisp
+	DispNode
+ASSOCIATION 
+	DataDisp
+	Agent
+
+CLASS-NAME: _StatusMsg
+
+ATTRIBUTES:
+OPERATIONS:
+	_StatusMsg (CONST_string& c)
+	~_StatusMsg ()
+AGGREGATION cause
+	CONTAINER _StatusMsg
+	CONTAINED string
+AGGREGATION outcome
+	CONTAINER _StatusMsg
+	CONTAINED string
+
+CLASS-NAME: StatusMsg
+
+ATTRIBUTES:
+OPERATIONS:
+	StatusMsg (CONST_string& c)
+	~StatusMsg ()
+
+GENERALIZATION _StatusMsg
+SUBCLASSES StatusMsg
+
+CLASS-NAME: StatusDelay
+
+ATTRIBUTES:
+OPERATIONS:
+	StatusDelay (CONST_string& c)
+
+GENERALIZATION StatusMsg
+SUBCLASSES StatusDelay
+
+GENERALIZATION Delay
+SUBCLASSES StatusDelay
+
+CLASS-NAME: StreamAction
+
+ATTRIBUTES:
+	ostream stream
+	bool ok
+OPERATIONS:
+	StreamAction (ostream& os, CONST_string& c)
+	~StreamAction ()
+	failed (CONST_string& msg)
+AGGREGATION action
+	CONTAINER StreamAction
+	CONTAINED string
+
+CLASS-NAME: AliasGraphEdge
+
+ATTRIBUTES:
+	public _disp_nr
+OPERATIONS:
+	AliasGraphEdge (CONST_AliasGraphEdge& edge)
+	AliasGraphEdge (int disp_nr, GraphNode* from, GraphNode* to)
+	~AliasGraphEdge ()
+	disp_nr ()
+	dup ()
+
+GENERALIZATION ArcGraphEdge
+SUBCLASSES AliasGraphEdge
+ASSOCIATION 
+	AliasGraphEdge
+	GraphNode
+
+CLASS-NAME: Queue
+
+ATTRIBUTES:
+OPERATIONS:
+	firstRec ()
+	clear ()
+	add (CONST_Queue<E>& e)
+	Queue ()
+	~Queue ()
+	Queue (CONST_Queue<E>& e)
+	operator_= (CONST_Queue<E>& e)
+	enqueue_at_end (CONST_E& e)
+	enqueue_after (CONST_E& e, QueueIter<E> a)
+	enqueue_at_start (CONST_E& e)
+	dequeue (CONST_E& e)
+	operator_+= (CONST_E& e)
+	operator_-= (CONST_E& e)
+	first ()
+	last ()
+	first ()
+	last ()
+	isEmpty ()
+AGGREGATION _first
+	CONTAINER Queue
+	CONTAINED E
+AGGREGATION _last
+	CONTAINER Queue
+	CONTAINED E
+
+CLASS-NAME: QueueIter
+
+ATTRIBUTES:
+OPERATIONS:
+	QueueIter (QueueRec<E> *ptr)
+	theRec ()
+	QueueIter (CONST_Queue<E>& queue)
+	QueueIter (CONST_QueueIter<E>& iter)
+	operator_= (CONST_QueueIter<E>& iter)
+	operator_= (CONST_Queue<E>& queue)
+	operator ()
+	operator ()
+	ok ()
+	next ()
+AGGREGATION rec
+	CONTAINER QueueIter
+	CONTAINED E
+
+CLASS-NAME: DispGraph
+
+ATTRIBUTES:
+	DispNodeMap idMap
+	bool no_enabled
+	bool no_disabled
+	bool hide_inactive_displays
+OPERATIONS:
+	DispGraph ()
+	clear ()
+	~DispGraph ()
+	count_all ()
+	count_all (Displaying e)
+	count_selected ()
+	has_enabled ()
+	has_disabled ()
+	addHandler (unsigned type, HandlerProc proc, void* client_data)
+	removeHandler (unsigned type, HandlerProc proc, void* client_data)
+	callHandlers ()
+	insert (int disp_nr, DispNode* dn, int depends_on)
+	alias (Widget w, int disp_nr, int alias_disp_nr)
+	unalias (int alias_disp_nr)
+	make_active (int disp_nr)
+	make_inactive (int disp_nr)
+	default_pos (DispNode* new_node, Widget w, int depends_on)
+	del (int disp_nr)
+	get (int disp_nr)
+	get_by_name (CONST_string& name)
+	get_nr (BoxGraphNode *nodeptr)
+	contains (int disp_nr)
+	first (MapRef& ref, Displaying e)
+	next (MapRef& ref, Displaying e)
+	first_nr (MapRef& ref, Displaying e)
+	next_nr (MapRef& ref, Displaying e)
+	print (ostream& os, CONST_GraphGC& gc)
+	adjust_position (DispNode* new_node, Widget w, BoxPoint pos, BoxPoint offset, BoxPoint grid)
+	add_alias_edge (Widget w, int alias_disp_nr, GraphNode* from, GraphNode* to)
+	disp_node_disabledHP (void* , void* , void*)
+	same_angle (CONST_BoxPoint& r, CONST_BoxPoint& p1, CONST_BoxPoint& p2)
+	has_angle (PosGraphNode* node, CONST_BoxPoint& p)
+	add_direct_alias_edge (Widget w, int alias_disp_nr, GraphNode* from, GraphNode* to)
+	add_routed_alias_edge (Widget w, int alias_disp_nr, PosGraphNode* from, PosGraphNode* to)
+	is_hidden (Widget w, CONST_BoxPoint& p)
+	rotate_offset (CONST_BoxPoint& p, int angle)
+	hint_positions_ok (Widget w, PosGraphNode* from, PosGraphNode* to, CONST_BoxPoint& p1, CONST_BoxPoint& p2)
+
+GENERALIZATION Graph
+SUBCLASSES DispGraph
+AGGREGATION handlers
+	CONTAINER DispGraph
+	CONTAINED HandlerList
+ASSOCIATION 
+	DispGraph
+	DispNode
+ASSOCIATION 
+	DispGraph
+	BoxGraphNode
+ASSOCIATION 
+	DispGraph
+	BoxPoint
+ASSOCIATION 
+	DispGraph
+	GraphNode
+ASSOCIATION 
+	DispGraph
+	PosGraphNode
+
+CLASS-NAME: PosBuffer
+
+ATTRIBUTES:
+	ReadState already_read
+	bool started
+	bool terminated
+	bool signaled
+	bool recompiled
+	bool check_pc
+	bool check_func
+OPERATIONS:
+	clear ()
+	PosBuffer ()
+	filter (string& answer)
+	answer_ended ()
+	pos_found ()
+	pc_found ()
+	auto_cmd_found ()
+	get_position ()
+	get_function ()
+	get_pc ()
+	get_auto_cmd ()
+	started_found ()
+	terminated_found ()
+	signaled_found ()
+	recompiled_found ()
+AGGREGATION pos_buffer
+	CONTAINER PosBuffer
+	CONTAINED string
+AGGREGATION func_buffer
+	CONTAINER PosBuffer
+	CONTAINED string
+AGGREGATION answer_buffer
+	CONTAINER PosBuffer
+	CONTAINED string
+AGGREGATION pc_buffer
+	CONTAINER PosBuffer
+	CONTAINED string
+AGGREGATION auto_cmd_buffer
+	CONTAINER PosBuffer
+	CONTAINED string
+ASSOCIATION 
+	PosBuffer
+	string
+
+CLASS-NAME: NewDisplayInfo
+
+ATTRIBUTES:
+	StringArray display_expressions
+	Widget origin
+	Widget shortcut
+	Widget text
+	bool verbose
+	bool prompt
+	DeferMode deferred
+OPERATIONS:
+	NewDisplayInfo ()
+	~NewDisplayInfo ()
+	NewDisplayInfo (CONST_NewDisplayInfo&)
+	operator_= (CONST_NewDisplayInfo&)
+AGGREGATION display_expression
+	CONTAINER NewDisplayInfo
+	CONTAINED string
+AGGREGATION scope
+	CONTAINER NewDisplayInfo
+	CONTAINED string
+AGGREGATION point
+	CONTAINER NewDisplayInfo
+	CONTAINED BoxPoint
+ASSOCIATION point_ptr
+	NewDisplayInfo
+	BoxPoint
+AGGREGATION depends_on
+	CONTAINER NewDisplayInfo
+	CONTAINED string
+
+CLASS-NAME: RefreshInfo
+
+ATTRIBUTES:
+	bool verbose
+	bool prompt
+	IntArray display_nrs
+OPERATIONS:
+	RefreshInfo ()
+	~RefreshInfo ()
+	RefreshInfo (CONST_RefreshInfo&)
+	operator_= (CONST_RefreshInfo&)
+
+CLASS-NAME: DispBuffer
+
+ATTRIBUTES:
+	ReadState already_read
+OPERATIONS:
+	DispBuffer ()
+	filter (string& answer)
+	answer_ended ()
+	displays_found ()
+	get_displays ()
+	clear ()
+AGGREGATION display_buffer
+	CONTAINER DispBuffer
+	CONTAINED string
+AGGREGATION answer_buffer
+	CONTAINER DispBuffer
+	CONTAINED string
+ASSOCIATION 
+	DispBuffer
+	string
+
+CLASS-NAME: SimpleDispValue
+
+ATTRIBUTES:
+OPERATIONS:
+	SimpleDispValue ()
+AGGREGATION value
+	CONTAINER SimpleDispValue
+	CONTAINED string
+
+CLASS-NAME: PointerDispValue
+
+ATTRIBUTES:
+	bool dereferenced
+OPERATIONS:
+	PointerDispValue ()
+AGGREGATION value
+	CONTAINER PointerDispValue
+	CONTAINED string
+
+CLASS-NAME: ArrayDispValue
+
+ATTRIBUTES:
+	DispValueArray members
+	int member_count
+	int index_base
+	bool have_index_base
+	Alignment align
+OPERATIONS:
+	ArrayDispValue ()
+
+CLASS-NAME: StructOrClassDispValue
+
+ATTRIBUTES:
+	DispValueArray members
+	int member_count
+OPERATIONS:
+	StructOrClassDispValue ()
+
+CLASS-NAME: CmdData
+
+ATTRIBUTES:
+	Widget origin
+	Filtering filter_disp
+	bool new_exec_pos
+	bool new_frame_pos
+	bool set_frame_pos
+	int set_frame_arg
+	OQCProc user_callback
+	void user_data
+	bool user_verbose
+	bool user_prompt
+	bool user_check
+OPERATIONS:
+	clear_origin (Widget w, XtPointer client_data, XtPointer call_data)
+	add_destroy_callback ()
+	remove_destroy_callback ()
+	CmdData (Widget orig , Filtering fd)
+	~CmdData ()
+	CmdData (CONST_CmdData&)
+	operator_= (CONST_CmdData&)
+AGGREGATION command
+	CONTAINER CmdData
+	CONTAINED string
+ASSOCIATION disp_buffer
+	CmdData
+	DispBuffer
+ASSOCIATION pos_buffer
+	CmdData
+	PosBuffer
+AGGREGATION set_frame_func
+	CONTAINER CmdData
+	CONTAINED string
+AGGREGATION graph_cmd
+	CONTAINER CmdData
+	CONTAINED string
+AGGREGATION lookup_arg
+	CONTAINER CmdData
+	CONTAINED string
+AGGREGATION user_answer
+	CONTAINER CmdData
+	CONTAINED string
+
+CLASS-NAME: PlusCmdData
+
+ATTRIBUTES:
+	int n_init
+	bool refresh_initial_line
+	bool refresh_file
+	bool refresh_line
+	bool refresh_recent_files
+	bool refresh_pwd
+	bool refresh_class_path
+	bool refresh_breakpoints
+	bool refresh_where
+	bool refresh_frame
+	bool refresh_pc
+	bool refresh_registers
+	bool refresh_threads
+	bool refresh_data
+	bool refresh_user
+	bool refresh_addr
+	bool refresh_disp_info
+	bool refresh_history_filename
+	bool refresh_history_size
+	bool refresh_setting
+	bool refresh_handle
+	int n_refresh_data
+	int n_refresh_user
+	bool config_frame
+	bool config_func
+	bool config_run_io
+	bool config_print_r
+	bool config_where_h
+	bool config_display
+	bool config_clear
+	bool config_handler
+	bool config_pwd
+	bool config_setenv
+	bool config_edit
+	bool config_make
+	bool config_regs
+	bool config_named_values
+	bool config_when_semicolon
+	bool config_delete_comma
+	bool config_err_redirection
+	bool config_givenfile
+	bool config_cont_sig
+	bool config_xdb
+	bool config_output
+	bool config_program_language
+OPERATIONS:
+	PlusCmdData ()
+AGGREGATION command
+	CONTAINER PlusCmdData
+	CONTAINED string
+AGGREGATION set_command
+	CONTAINER PlusCmdData
+	CONTAINED string
+AGGREGATION break_arg
+	CONTAINER PlusCmdData
+	CONTAINED string

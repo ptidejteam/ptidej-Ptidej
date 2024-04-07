@@ -1,0 +1,3 @@
+struct blabla {
+  int a;
+};
