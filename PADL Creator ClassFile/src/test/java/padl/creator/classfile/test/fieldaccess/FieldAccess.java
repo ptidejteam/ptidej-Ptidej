@@ -11,9 +11,12 @@
 package padl.creator.classfile.test.fieldaccess;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
+import padl.kernel.IFirstClassEntity;
+import padl.kernel.IMethod;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
 
@@ -23,18 +26,17 @@ public final class FieldAccess extends TestCase {
 	public FieldAccess(String name) {
 		super(name);
 	}
-	protected void setUp() throws CreationException {
-		this.codeLevelModel =
-			Factory.getInstance().createCodeLevelModel("FieldAccess");
 
-		this.codeLevelModel
-			.create(new CompleteClassFileCreator(
-				new String[] { "../PADL Creator ClassFile Tests/bin/padl/example/fieldAccess/Test.class" }));
+	protected void setUp() throws CreationException {
+		this.codeLevelModel = Factory.getInstance().createCodeLevelModel("FieldAccess");
+
+		this.codeLevelModel.create(new CompleteClassFileCreator(
+				new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/fieldAccess/Test.class" }));
 	}
 
 	public void testFieldAccess() {
-		this.codeLevelModel
-			.getConstituentFromID("padl.example.fieldaccess.Test");
-		Assert.assertTrue(false);
+		final IFirstClassEntity entity = this.codeLevelModel.getTopLevelEntityFromID("padl.example.fieldaccess.Test");
+		final IMethod method = (IMethod) entity.getConstituentFromID("rien()");
+		Assert.assertTrue(method.doesContainConstituentWithID("Method Invocation_>PADL<_1".toCharArray()));
 	}
 }
