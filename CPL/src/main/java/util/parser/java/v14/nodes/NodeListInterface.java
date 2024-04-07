@@ -21,7 +21,7 @@ package util.parser.java.v14.nodes;
 public interface NodeListInterface extends Node {
    public void addNode(Node n);
    public Node elementAt(int i);
-   public java.util.Enumeration elements();
+   public java.util.Enumeration<?> elements();
    public int size();
 }
 

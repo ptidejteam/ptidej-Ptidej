@@ -105,13 +105,11 @@ public class EventGenerator implements IWalker, Serializable {
 	}
 	public final void close(final ISetter aSetter) {
 	}
-	@SuppressWarnings("deprecation")
 	protected final void genetateEventForElement(final IConstituentOfEntity anElement) {
 		this.abstractModel.fireModelChange(
 			IModelListener.ELEMENT_ADDED,
 			new ElementEvent(this.getCurrentEnclosingEntity(), anElement));
 	}
-	@SuppressWarnings("deprecation")
 	protected final void genetateEventForElement(
 		final IConstituentOfOperation anInvoke) {
 
@@ -119,7 +117,6 @@ public class EventGenerator implements IWalker, Serializable {
 			IModelListener.INVOKE_ADDED,
 			new InvokeEvent(this.getCurrentEnclosingEntity(), anInvoke));
 	}
-	@SuppressWarnings("deprecation")
 	protected final void genetateEventForEntity(final IConstituentOfModel anEntity) {
 		this.abstractModel.fireModelChange(
 			IModelListener.ENTITY_ADDED,

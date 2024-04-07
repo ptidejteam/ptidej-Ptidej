@@ -6,7 +6,6 @@
 
     <groupId>net.ptidej.demima</groupId>
     <artifactId>demima-ui-viewer-swing</artifactId>
-    <version>1.0.0</version>
     <name>DeMIMA UI Viewer Swing</name>
 
     <parent>

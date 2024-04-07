@@ -14,7 +14,6 @@
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/SAD Rules Creator"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/SAD"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/POM Tests"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/POM"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL Statements Creator ClassFile"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL Statements"/>
@@ -24,7 +23,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/DeMIMA"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/DeMIMA Solver 4"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/DeMIMA Solver Tests"/>
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

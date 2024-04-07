@@ -38,6 +38,7 @@ public class OutputMonitor extends Thread {
 		this.printStream = printStream;
 		this.isVerbose = true;
 	}
+	@SuppressWarnings("resource")
 	public OutputMonitor(
 		final String threadName,
 		final String header,

@@ -18,9 +18,10 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import util.io.ProxyDisk;
+
 import au.com.bytecode.opencsv.CSVReader;
 import au.com.bytecode.opencsv.CSVWriter;
+import util.io.ProxyDisk;
 
 public class CombinatorAllInOne {
 	private static final String FILE_EXTENSION = "csv";
@@ -43,7 +44,7 @@ public class CombinatorAllInOne {
 				dataTable,
 				"D:/Documents/Papers/2011/WCRE (Yann and Giulio)/Data/All Data In One File.csv");
 	}
-	private final Map mapOfColumnNamesWithColumnPositions = new HashMap();
+	private final Map<String, Integer> mapOfColumnNamesWithColumnPositions = new HashMap<>();
 	//	private final Map mapOfRowNamesWithRowPositions = new HashMap();
 	private void addValueToTable(
 		final TableModel aDataTable,
@@ -87,8 +88,8 @@ public class CombinatorAllInOne {
 				Integer.valueOf(columnNumber));
 		}
 
-		return ((Integer) this.mapOfColumnNamesWithColumnPositions
-			.get(aColumnName)).intValue();
+		return this.mapOfColumnNamesWithColumnPositions
+			.get(aColumnName).intValue();
 	}
 	//	private int findRowNumberFromName(
 	//		final TableModel aDataTable,
@@ -196,10 +197,11 @@ public class CombinatorAllInOne {
 				new CSVWriter(ProxyDisk.getInstance().fileAbsoluteOutput(
 					anOutputFile), ',');
 
-			final List dataVector = aDataTable.getDataVector();
-			final Iterator interatorOnRows = dataVector.iterator();
+			@SuppressWarnings("unchecked")
+			final List<List<String>> dataVector = aDataTable.getDataVector();
+			final Iterator<List<String>> interatorOnRows = dataVector.iterator();
 			while (interatorOnRows.hasNext()) {
-				final List rowVector = (List) interatorOnRows.next();
+				final List<String> rowVector = interatorOnRows.next();
 				final String[] rowArray = new String[rowVector.size()];
 				rowVector.toArray(rowArray);
 				csvWriter.writeNext(rowArray);

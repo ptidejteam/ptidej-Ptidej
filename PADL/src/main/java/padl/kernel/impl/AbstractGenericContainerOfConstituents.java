@@ -71,7 +71,6 @@ public abstract class AbstractGenericContainerOfConstituents
 
 			return this.listOfModelListeners.add(aModelListener);
 		}
-		@SuppressWarnings("unused")
 		public final boolean addModelListeners(
 			final List aListOfModelListeners) {
 

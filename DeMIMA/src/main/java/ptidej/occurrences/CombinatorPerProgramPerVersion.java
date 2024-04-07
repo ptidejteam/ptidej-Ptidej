@@ -19,14 +19,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
-import java.util.Vector;
-import javax.swing.table.DefaultTableModel;
+
+import au.com.bytecode.opencsv.CSVReader;
+import au.com.bytecode.opencsv.CSVWriter;
 import ptidej.solver.Occurrence;
 import ptidej.solver.OccurrenceBuilder;
 import ptidej.solver.OccurrenceComponent;
 import util.io.ProxyDisk;
-import au.com.bytecode.opencsv.CSVReader;
-import au.com.bytecode.opencsv.CSVWriter;
 
 public class CombinatorPerProgramPerVersion {
 	private static final String DATA_NAME = "Data  Name";
@@ -93,7 +92,7 @@ public class CombinatorPerProgramPerVersion {
 							"D:/Documents/Papers/2011/WCRE (Yann and Giulio)/Data/",
 							programName);
 
-				final DefaultTableModel dataTable =
+				final TableModel dataTable =
 					combinatorPerProgramPerVersion.createDataTable();
 
 				combinatorPerProgramPerVersion.populateTable(
@@ -108,8 +107,8 @@ public class CombinatorPerProgramPerVersion {
 			}
 		}
 	}
-	private DefaultTableModel createDataTable() {
-		final DefaultTableModel dataTable = new DefaultTableModel();
+	private TableModel createDataTable() {
+		final TableModel dataTable = new TableModel();
 
 		// By default, the table must include one cell (one row, one column)...
 		dataTable.addColumn(CombinatorPerProgramPerVersion.CLASS_NAMES);
@@ -147,7 +146,7 @@ public class CombinatorPerProgramPerVersion {
 		return dataTable;
 	}
 	private void writeTableToCSVFile(
-		final DefaultTableModel aDataTable,
+		final TableModel aDataTable,
 		final String anOutputFile) {
 
 		try {
@@ -155,10 +154,11 @@ public class CombinatorPerProgramPerVersion {
 				new CSVWriter(ProxyDisk.getInstance().fileAbsoluteOutput(
 					anOutputFile), ',');
 
-			final Vector dataVector = aDataTable.getDataVector();
-			final Iterator interatorOnRows = dataVector.iterator();
+			@SuppressWarnings("unchecked")
+			final List<List<String>> dataVector = aDataTable.getDataVector();
+			final Iterator<List<String>> interatorOnRows = dataVector.iterator();
 			while (interatorOnRows.hasNext()) {
-				final Vector rowVector = (Vector) interatorOnRows.next();
+				final List<String> rowVector = interatorOnRows.next();
 				final String[] rowArray = new String[rowVector.size()];
 				rowVector.toArray(rowArray);
 				csvWriter.writeNext(rowArray);
@@ -172,7 +172,7 @@ public class CombinatorPerProgramPerVersion {
 	private void populateTable(
 		final String[] anArrayOfFilePaths,
 		final String aVersionNumber,
-		final DefaultTableModel aDataTable) {
+		final TableModel aDataTable) {
 
 		for (int i = 0; i < anArrayOfFilePaths.length; i++) {
 			final String filePath = anArrayOfFilePaths[i];
@@ -220,7 +220,7 @@ public class CombinatorPerProgramPerVersion {
 	}
 	private void addMetricsData(
 		final String aFilePath,
-		final DefaultTableModel aDataTable) {
+		final TableModel aDataTable) {
 
 		try {
 			final CSVReader csvReader =
@@ -268,7 +268,7 @@ public class CombinatorPerProgramPerVersion {
 	}
 	private void addOccurrencesData(
 		final String aFilePath,
-		final DefaultTableModel aDataTable,
+		final TableModel aDataTable,
 		final String aColumnNameToCountRoles,
 		final String aColumnNameToBooleanRole) {
 
@@ -289,7 +289,8 @@ public class CombinatorPerProgramPerVersion {
 		for (int j = 0; j < occurrences.length; j++) {
 			final Occurrence occurrence = occurrences[j];
 
-			final List listOfComponents = occurrence.getComponents();
+			@SuppressWarnings("unchecked")
+			final List<OccurrenceComponent> listOfComponents = occurrence.getComponents();
 			for (int i = 0; i < listOfComponents.size(); i++) {
 				final OccurrenceComponent component =
 					(OccurrenceComponent) listOfComponents.get(i);
@@ -337,7 +338,7 @@ public class CombinatorPerProgramPerVersion {
 		}
 	}
 	private void addValueToTable(
-		final DefaultTableModel aDataTable,
+		final TableModel aDataTable,
 		final String aColumnName,
 		final String aRowName,
 		final String aValue) {
@@ -364,7 +365,7 @@ public class CombinatorPerProgramPerVersion {
 	private String[] findAllFiles(
 		final String aRootPath,
 		final String aProgramName) {
-		final List listOfFilePaths = new ArrayList();
+		final List<String> listOfFilePaths = new ArrayList<>();
 
 		this.findAllFiles(
 			aRootPath,
@@ -378,7 +379,7 @@ public class CombinatorPerProgramPerVersion {
 	private void findAllFiles(
 		final String aRootPath,
 		final String aLoweredCaseProgramName,
-		final List aListOfFilePaths) {
+		final List<String> aListOfFilePaths) {
 
 		final String[] fileNames = new File(aRootPath).list();
 		for (int i = 0; i < fileNames.length; i++) {
@@ -398,13 +399,13 @@ public class CombinatorPerProgramPerVersion {
 		}
 	}
 	private int findColumnNumberFromName(
-		final DefaultTableModel aDataTable,
+		final TableModel aDataTable,
 		final String aColumnName) {
 
 		return aDataTable.findColumn(aColumnName);
 	}
 	private int findRowNumberFromName(
-		final DefaultTableModel aDataTable,
+		final TableModel aDataTable,
 		final String aRowName) {
 
 		final int rowCount = aDataTable.getRowCount();

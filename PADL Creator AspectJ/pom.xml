@@ -1,79 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>net.ptidej.padl</groupId>
-    <artifactId>padl-creator-aspectj</artifactId>
-    <version>1.0.0</version>
-    <name>PADL Creator AspectJ</name>
+	<groupId>net.ptidej.padl</groupId>
+	<artifactId>padl-creator-aspectj</artifactId>
+	<name>PADL Creator AspectJ</name>
 
-    <parent>
-        <groupId>net.ptidej</groupId>
-        <artifactId>all-ptidej</artifactId>
-        <version>1.0.0</version>
-    </parent>
+	<parent>
+		<groupId>net.ptidej</groupId>
+		<artifactId>all-ptidej</artifactId>
+		<version>1.0.0</version>
+	</parent>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>windows-1252</project.build.sourceEncoding>
-    </properties>
+	<dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-install-plugin</artifactId>
-                <version>2.5.2</version>
-                <executions>
-                    <execution>
-                        <id>install-cfparse</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>install-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>src/main/resources/cfparse.jar</file>
-                            <groupId>com.ibm.toad</groupId>
-                            <artifactId>cfparse</artifactId>
-                            <version>1.0</version>
-                            <packaging>jar</packaging>
-                            <generatePom>true</generatePom>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+		<dependency>
+			<groupId>net.ptidej.cpl</groupId>
+			<artifactId>cpl-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
-    <dependencies>
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
-        <dependency>
-            <groupId>net.ptidej.cpl</groupId>
-            <artifactId>cpl-core</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjtools</artifactId>
+			<version>1.6.2</version>
+		</dependency>
 
-        <dependency>
-            <groupId>net.ptidej.padl</groupId>
-            <artifactId>padl-core</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+		<dependency>
+			<groupId>com.ibm.toad</groupId>
+			<artifactId>cfparse</artifactId>
+			<version>1.0</version>
+		</dependency>
 
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjtools</artifactId>
-            <version>1.6.2</version>
-        </dependency>
+	</dependencies>
 
-        <dependency>
-            <groupId>com.ibm.toad</groupId>
-            <artifactId>cfparse</artifactId>
-            <version>1.0</version>
-        </dependency>
-
-    </dependencies>
-    
 </project>

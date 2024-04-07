@@ -6,7 +6,6 @@
 
     <groupId>net.ptidej.padl</groupId>
     <artifactId>padl-creator-mse</artifactId>
-    <version>1.0.0</version>
     <name>PADL Creator MSE</name>
 
     <parent>
@@ -14,12 +13,6 @@
         <artifactId>all-ptidej</artifactId>
         <version>1.0.0</version>
     </parent>
-
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>windows-1252</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
 
