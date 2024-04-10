@@ -34,13 +34,13 @@ public class Files {
 		try {
 			// First, I get the client class name and I replace
 			// any '.' by a '/' to get a filesystem-style name.
-			final String clientClassName =
-				aClass.getName().replace('.', Files.getSeparatorChar());
+			final String clientClassName = aClass.getName().replace('.',
+					Files.getSeparatorChar());
 
 			// Then, I built a buffer that shall contain the full
 			// path of the client class.
-			final StringBuffer clientClassBuffer =
-				new StringBuffer(clientClassName.length() + 6);
+			final StringBuffer clientClassBuffer = new StringBuffer(
+					clientClassName.length() + 6);
 			clientClassBuffer.append(clientClassName);
 			clientClassBuffer.append(".class");
 
@@ -51,18 +51,17 @@ public class Files {
 			//   file name;
 			// - I get the absolute path of the client class file.
 			try {
-				final String clientClassAbsolutePath =
-					new File(URLDecoder.decode(aClass
-						.getClassLoader()
-						.getResource(clientClassBuffer.toString())
-						.getFile(), "UTF-8")).getAbsolutePath();
+				final String clientClassAbsolutePath = new File(
+						URLDecoder.decode(aClass.getClassLoader()
+								.getResource(clientClassBuffer.toString())
+								.getFile(), "UTF-8"))
+						.getAbsolutePath();
 				// Finally, I remove from the client class file its name
 				// itself to get the path to the client class, from which
 				// I can as usuall load other resources.
-				return clientClassAbsolutePath.substring(
-					0,
-					clientClassAbsolutePath.length()
-							- clientClassBuffer.length());
+				return clientClassAbsolutePath.substring(0,
+						clientClassAbsolutePath.length()
+								- clientClassBuffer.length());
 			}
 			catch (final NullPointerException npe) {
 				return "";
@@ -73,21 +72,19 @@ public class Files {
 			return "";
 		}
 	}
+
 	public static List<String> getRecursivelyFilenamesFromDirectory(
-		final String aPath,
-		final FilenameFilter aFilenameFilter) {
+			final String aPath, final FilenameFilter aFilenameFilter) {
 
 		final List<String> listOfFiles = new ArrayList<String>();
-		Files.getRecursivelyFilenamesFromDirectory(
-			aPath,
-			listOfFiles,
-			aFilenameFilter);
+		Files.getRecursivelyFilenamesFromDirectory(aPath, listOfFiles,
+				aFilenameFilter);
 		return listOfFiles;
 	}
-	private static void getRecursivelyFilenamesFromDirectory(
-		final String aPath,
-		final List<String> aListOfIles,
-		final FilenameFilter aFilenameFilter) {
+
+	private static void getRecursivelyFilenamesFromDirectory(final String aPath,
+			final List<String> aListOfIles,
+			final FilenameFilter aFilenameFilter) {
 
 		final File pathFile = new File(aPath);
 		final String[] subPaths = pathFile.list();
@@ -96,10 +93,8 @@ public class Files {
 				final String fileName = aPath + '/' + subPaths[i];
 				final File file = new File(fileName);
 				if (file.isDirectory()) {
-					Files.getRecursivelyFilenamesFromDirectory(
-						fileName,
-						aListOfIles,
-						aFilenameFilter);
+					Files.getRecursivelyFilenamesFromDirectory(fileName,
+							aListOfIles, aFilenameFilter);
 				}
 				else {
 					if (aFilenameFilter.accept(new File(aPath), subPaths[i])) {
@@ -110,21 +105,52 @@ public class Files {
 		}
 		else {
 			throw new RuntimeException(
-				"No subdirectories with expected files in " + aPath);
+					"No subdirectories with expected files in " + aPath);
 		}
 	}
+
+	/*
+		public static String getRunningPath(final Class aClass) {
+			// Yann 2013/07/06: Crapy piece of code because of Sun!
+			// See http://stackoverflow.com/questions/4114702/how-to-get-name-of-jar-which-is-a-desktop-application-run-from
+			String path = aClass.getProtectionDomain().getCodeSource().getLocation()
+					.getPath();
+			final File tentativePath = new File(path);
+			if (!tentativePath.isDirectory()) {
+				try {
+					path = URLDecoder.decode(path, "UTF-8").substring(1);
+					// Remove spurious "/" at the beginning of the decoded string
+				}
+				catch (final UnsupportedEncodingException e) {
+					e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+				}
+			}
+			return path;
+		}
+	
+		public static String getRunningRootPath(final Class aClass) {
+			// Yann 24/04/10: I know that getRunningPath() will include CPL (!!!).
+			final String path = Files.getRunningPath(aClass) + "../../../";
+			return path;
+		}
+	*/
+
 	public static char getSeparatorChar() {
 		return '/';
 	}
+
 	public static String normalizePath(final String aPath) {
 		return aPath.replace('\\', Files.getSeparatorChar());
 	}
+
 	public static List<String> getJARFiles(final String aPath) {
 		final List<String> jarFiles = new ArrayList<String>();
 		Files.getJARFiles0(aPath, jarFiles);
 		return jarFiles;
 	}
-	private static void getJARFiles0(final String aPath, final List<String> someJARFiles) {
+
+	private static void getJARFiles0(final String aPath,
+			final List<String> someJARFiles) {
 		final File path = new File(aPath);
 		final String[] files = path.list();
 		for (int i = 0; i < files.length; i++) {
