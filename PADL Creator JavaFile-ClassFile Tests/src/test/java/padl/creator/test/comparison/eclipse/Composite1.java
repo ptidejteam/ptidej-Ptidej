@@ -21,7 +21,7 @@ import util.io.Files;
 
 public class Composite1 extends TestCase {
 	private static final String SRC_PATH =
-		"../PADL Creator JavaFile-ClassFile/src/test/java/padl/example/composite1/";
+		"../PADL Creator JavaFile-ClassFile Tests/src/test/java/padl/example/composite1/";
 	private static final String BIN_PATH =
 		"../PADL Creator JavaFile-ClassFile/target/test-classes/padl/example/composite1/";
 	//	private static final List OPTIONS = Arrays.asList(new String[] {
