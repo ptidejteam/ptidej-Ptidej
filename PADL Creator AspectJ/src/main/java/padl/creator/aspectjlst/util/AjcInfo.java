@@ -11,6 +11,7 @@
 package padl.creator.aspectjlst.util;
 
 import java.util.Iterator;
+
 import org.aspectj.asm.IProgramElement;
 import org.aspectj.asm.IRelationship;
 import org.aspectj.asm.IRelationshipMap;
@@ -21,25 +22,24 @@ import org.aspectj.asm.IRelationshipMap;
  */
 public abstract class AjcInfo {
 
-	public static String getInfoOnNode(
-		final IProgramElement node,
-		final IRelationshipMap imap) {
+	public static String getInfoOnNode(final IProgramElement node,
+			final IRelationshipMap imap) {
 		final StringBuffer buffer = new StringBuffer();
 
 		buffer.append("Infos on node: " + node.getName() + "\n");
 		buffer.append("\tAccessibility= " + node.getAccessibility() + "\n");
-		buffer.append("\tHandleIdentifier= " + node.getHandleIdentifier()
-				+ "\n");
+		buffer.append(
+				"\tHandleIdentifier= " + node.getHandleIdentifier() + "\n");
 		buffer.append("\tBytecodeName= " + node.getBytecodeName() + "\n");
-		buffer.append("\tBytecodeSignature = " + node.getBytecodeSignature()
-				+ "\n");
-		buffer.append("\tCorrespondingType = " + node.getCorrespondingType()
-				+ "\n");
+		buffer.append(
+				"\tBytecodeSignature = " + node.getBytecodeSignature() + "\n");
+		buffer.append(
+				"\tCorrespondingType = " + node.getCorrespondingType() + "\n");
 		buffer.append("\tDeclaringType = " + node.getDeclaringType() + "\n");
 		buffer.append("\tDetails = " + node.getDetails() + "\n");
 		buffer.append("\tPackageName = " + node.getPackageName() + "\n");
-		buffer
-			.append("\tSourceSignature = " + node.getSourceSignature() + "\n");
+		buffer.append(
+				"\tSourceSignature = " + node.getSourceSignature() + "\n");
 		buffer.append("\tExtraInformation = " + node.getExtraInfo() + "\n");
 		buffer.append("\tKind = " + node.getKind() + "\n");
 		buffer.append("\tMessage = " + node.getMessage() + "\n");
@@ -51,35 +51,41 @@ public abstract class AjcInfo {
 		buffer.append("\tLongString: " + node.toLongString() + "\n");
 		buffer.append("\tSignatureString: " + node.toSignatureString() + "\n");
 		buffer.append("Parameters Type: ");
-		final Iterator ite_param_type = node.getParameterTypes().iterator();
+		@SuppressWarnings("unchecked")
+		final Iterator<String> ite_param_type = node.getParameterTypes()
+				.iterator();
 		while (ite_param_type.hasNext()) {
 			buffer.append(ite_param_type.next() + ", ");
 		}
-
 		buffer.append("Parameters Name: ");
-		final Iterator ite_param_name = node.getParameterNames().iterator();
+		@SuppressWarnings("unchecked")
+		final Iterator<String> ite_param_name = node.getParameterNames()
+				.iterator();
 		while (ite_param_name.hasNext()) {
 			buffer.append(ite_param_name.next() + ", ");
 		}
 		buffer.append("Childrens: \n");
 		buffer.append("\t");
-		final Iterator ite = node.getChildren().iterator();
+		@SuppressWarnings("unchecked")
+		final Iterator<IProgramElement> ite = node.getChildren().iterator();
 		while (ite.hasNext()) {
-			final IProgramElement child = (IProgramElement) ite.next();
+			final IProgramElement child = ite.next();
 			buffer.append(child.getName() + ", ");
 		}
 		buffer.append("RelationShips: \n");
 		buffer.append("\t");
 
 		if (imap != null && imap.get(node) != null) {
-			final Iterator iteRel = imap.get(node).iterator();
+			@SuppressWarnings("unchecked")
+			final Iterator<IRelationship> iteRel = imap.get(node).iterator();
 			while (iteRel.hasNext()) {
 				final IRelationship rel = (IRelationship) iteRel.next();
-				buffer.append(rel.getKind().toString() + " " + rel.getName()
-						+ ": ");
-				final Iterator iteTargets = rel.getTargets().iterator();
+				buffer.append(
+						rel.getKind().toString() + " " + rel.getName() + ": ");
+				@SuppressWarnings("unchecked")
+				final Iterator<String> iteTargets = rel.getTargets().iterator();
 				while (iteTargets.hasNext()) {
-					final String target = (String) iteTargets.next();
+					final String target = iteTargets.next();
 					buffer.append(target + ", ");
 				}
 			}
@@ -87,25 +93,24 @@ public abstract class AjcInfo {
 		return buffer.toString();
 	}
 
-	public static String getLightInfoOnNode(
-		final IProgramElement node,
-		final IRelationshipMap imap) {
+	public static String getLightInfoOnNode(final IProgramElement node,
+			final IRelationshipMap imap) {
 		final StringBuffer buffer = new StringBuffer();
 
 		buffer.append("Infos on node: " + node.getName() + "\n");
 		buffer.append("\tAccessibility= " + node.getAccessibility() + "\n");
-		buffer.append("\tHandleIdentifier= " + node.getHandleIdentifier()
-				+ "\n");
+		buffer.append(
+				"\tHandleIdentifier= " + node.getHandleIdentifier() + "\n");
 		buffer.append("\tBytecodeName= " + node.getBytecodeName() + "\n");
-		buffer.append("\tBytecodeSignature = " + node.getBytecodeSignature()
-				+ "\n");
-		buffer.append("\tCorrespondingType = " + node.getCorrespondingType()
-				+ "\n");
+		buffer.append(
+				"\tBytecodeSignature = " + node.getBytecodeSignature() + "\n");
+		buffer.append(
+				"\tCorrespondingType = " + node.getCorrespondingType() + "\n");
 		buffer.append("\tDeclaringType = " + node.getDeclaringType() + "\n");
 		buffer.append("\tDetails = " + node.getDetails() + "\n");
 		buffer.append("\tPackageName = " + node.getPackageName() + "\n");
-		buffer
-			.append("\tSourceSignature = " + node.getSourceSignature() + "\n");
+		buffer.append(
+				"\tSourceSignature = " + node.getSourceSignature() + "\n");
 		buffer.append("\tExtraInformation = " + node.getExtraInfo() + "\n");
 		buffer.append("\tKind = " + node.getKind() + "\n");
 		buffer.append("\tMessage = " + node.getMessage() + "\n");
@@ -117,9 +122,10 @@ public abstract class AjcInfo {
 		buffer.append("\tSignatureString: " + node.toSignatureString() + "\n");
 		buffer.append("Childrens: \n");
 		buffer.append("\t");
-		final Iterator ite = node.getChildren().iterator();
+		@SuppressWarnings("unchecked")
+		final Iterator<IProgramElement> ite = node.getChildren().iterator();
 		while (ite.hasNext()) {
-			final IProgramElement child = (IProgramElement) ite.next();
+			final IProgramElement child = ite.next();
 			buffer.append(child.getName() + ", ");
 		}
 		//		buffer.append("RelationShips: \n");

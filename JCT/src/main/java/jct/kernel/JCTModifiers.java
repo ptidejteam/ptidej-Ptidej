@@ -39,9 +39,10 @@ package jct.kernel;
 // TODO : add public get on flag, make it OR-able, move incompatibility to
 // ClassMember descendants !!
 public enum JCTModifiers {
-	ABSTRACT(0x001), FINAL(0x002), NATIVE(0x004), PRIVATE(0x008), PROTECTED(
-			0x010), PUBLIC(0x020), STATIC(0x040), STRICTFP(0x080), SYNCHRONIZED(
-			0x100), TRANSIENT(0x200), VOLATILE(0x400);
+	ABSTRACT(0x001), FINAL(0x002), NATIVE(0x004), PRIVATE(0x008),
+	PROTECTED(0x010), PUBLIC(0x020), STATIC(0x040), STRICTFP(0x080),
+	SYNCHRONIZED(0x100), TRANSIENT(0x200), VOLATILE(0x400), DEFAULT(0x800),
+	SEALED(0x1000);
 
 	private final int flag;
 

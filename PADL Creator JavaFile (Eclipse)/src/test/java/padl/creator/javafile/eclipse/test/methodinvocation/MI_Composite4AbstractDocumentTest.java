@@ -31,11 +31,11 @@ public class MI_Composite4AbstractDocumentTest extends TestCase {
 
 	public void testCLASS_INSTANCE_FROM_FIELD1() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse)/src/main/java/";
+			"../PADL Creator JavaFile (Eclipse)/src/test/java/";
 		final String[] javaFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/A.java",
-					"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/Aggregation_CLASS_INSTANCE_FROM_FIELD_1.java" };
+					"../PADL Creator JavaFile (Eclipse)/src/test/java/padl/example/relationship/A.java",
+					"../PADL Creator JavaFile (Eclipse)/src/test/java/padl/example/relationship/Aggregation_CLASS_INSTANCE_FROM_FIELD_1.java" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createCompleteJavaFilesPadlModel(
@@ -46,8 +46,8 @@ public class MI_Composite4AbstractDocumentTest extends TestCase {
 
 		final String[] classFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/A.class",
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/Aggregation_CLASS_INSTANCE_FROM_FIELD_1.class" };
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes/padl/example/relationship/A.class",
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes/padl/example/relationship/Aggregation_CLASS_INSTANCE_FROM_FIELD_1.class" };
 		final ICodeLevelModel classModel =
 			Utils.createCompleteJavaClassesPadlModel("", classFiles);
 
@@ -100,11 +100,11 @@ public class MI_Composite4AbstractDocumentTest extends TestCase {
 
 	public void testCLASS_INSTANCE_FROM_FIELD2() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse)/src/main/java/";
+			"../PADL Creator JavaFile (Eclipse)/src/test/java/";
 		final String[] javaFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/A.java",
-					"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/Aggregation_CLASS_INSTANCE_FROM_FIELD_2.java" };
+					"../PADL Creator JavaFile (Eclipse)/src/test/java/padl/example/relationship/A.java",
+					"../PADL Creator JavaFile (Eclipse)/src/test/java/padl/example/relationship/Aggregation_CLASS_INSTANCE_FROM_FIELD_2.java" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createCompleteJavaFilesPadlModel(
@@ -115,8 +115,8 @@ public class MI_Composite4AbstractDocumentTest extends TestCase {
 
 		final String[] classFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/A.class",
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/Aggregation_CLASS_INSTANCE_FROM_FIELD_2.class" };
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes/padl/example/relationship/A.class",
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes/padl/example/relationship/Aggregation_CLASS_INSTANCE_FROM_FIELD_2.class" };
 		final ICodeLevelModel classModel =
 			Utils.createCompleteJavaClassesPadlModel("", classFiles);
 

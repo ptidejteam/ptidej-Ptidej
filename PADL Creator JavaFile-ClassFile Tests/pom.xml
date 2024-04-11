@@ -28,6 +28,21 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.13.0</version>
+				<configuration>
+					<compilerArgs>
+						<arg>--add-exports</arg>
+						<arg>
+						</arg>
+						<arg>--add-exports</arg>
+						<arg>
+						</arg>
+					</compilerArgs>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 

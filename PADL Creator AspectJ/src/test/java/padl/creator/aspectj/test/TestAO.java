@@ -19,10 +19,9 @@ import padl.creator.aspectjlst.AspectCreator;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IPackage;
 import padl.kernel.exception.CreationException;
-import util.io.Files;
 
 public class TestAO extends AspectJPrimitive {
-	private HashMap importCreation = null;
+	private HashMap<String, IFirstClassEntity> importCreation = null;
 
 	private final String lstAO = "../PADL Creator AspectJ/target/test-classes/FigureElement/srcAO/files.lst";
 
@@ -46,14 +45,20 @@ public class TestAO extends AspectJPrimitive {
 
 	public void testConstituentCreation() {
 		//On package exemple.figureElement.aspect
-		Assert.assertTrue("Test creation of exemple.figureElement.aspect.DisplayAspect",
-				((IPackage) this.getCodeLevelModel().getConstituentFromID(AspectCreator.ASPECT_PACKAGE_ID))
-						.getConstituentFromID("exemple.figureElement.aspect.DisplayAspect") != null);
+		Assert.assertTrue(
+				"Test creation of exemple.figureElement.aspect.DisplayAspect",
+				((IPackage) this.getCodeLevelModel()
+						.getConstituentFromID(AspectCreator.ASPECT_PACKAGE_ID))
+						.getConstituentFromID(
+								"exemple.figureElement.aspect.DisplayAspect") != null);
 
 		//False test
-		Assert.assertTrue("Test non creation of exemple.figureElement.aspect.NonExistentAspect",
-				((IPackage) this.getCodeLevelModel().getConstituentFromID(AspectCreator.ASPECT_PACKAGE_ID))
-						.getConstituentFromID("exemple.figureElement.aspect.NonExistentAspect") == null);
+		Assert.assertTrue(
+				"Test non creation of exemple.figureElement.aspect.NonExistentAspect",
+				((IPackage) this.getCodeLevelModel()
+						.getConstituentFromID(AspectCreator.ASPECT_PACKAGE_ID))
+						.getConstituentFromID(
+								"exemple.figureElement.aspect.NonExistentAspect") == null);
 
 	}
 
@@ -63,45 +68,62 @@ public class TestAO extends AspectJPrimitive {
 		//		import exemple.figureElement.core.FigureElement;
 		//		import exemple.figureElement.display.DisplayManager;
 		//		import exemple.figureElement.display.DisplayableFigure;
-		Assert.assertTrue("Test creation of import exemple.figureElement.core.Point",
+		Assert.assertTrue(
+				"Test creation of import exemple.figureElement.core.Point",
 				(this.importCreation.get("Point") != null));
 
-		Assert.assertTrue("Test mapping of import exemple.figureElement.core.Point",
-				(((IFirstClassEntity) (this.importCreation.get("Point"))).getDisplayID()
+		Assert.assertTrue(
+				"Test mapping of import exemple.figureElement.core.Point",
+				(((IFirstClassEntity) (this.importCreation.get("Point")))
+						.getDisplayID()
 						.equals("exemple.figureElement.core.Point")));
 
-		Assert.assertTrue("Test creation of import exemple.figureElement.core.Line",
+		Assert.assertTrue(
+				"Test creation of import exemple.figureElement.core.Line",
 				(this.importCreation.get("Line") != null));
 
-		Assert.assertTrue("Test mapping of import exemple.figureElement.core.Line",
-				(((IFirstClassEntity) (this.importCreation.get("Line"))).getDisplayID()
+		Assert.assertTrue(
+				"Test mapping of import exemple.figureElement.core.Line",
+				(((IFirstClassEntity) (this.importCreation.get("Line")))
+						.getDisplayID()
 						.equals("exemple.figureElement.core.Line")));
 
-		Assert.assertTrue("Test creation of import exemple.figureElement.core.FigureElement",
+		Assert.assertTrue(
+				"Test creation of import exemple.figureElement.core.FigureElement",
 				(this.importCreation.get("FigureElement") != null));
 
-		Assert.assertTrue("Test mapping of import exemple.figureElement.core.FigureElement",
-				(((IFirstClassEntity) (this.importCreation.get("FigureElement"))).getDisplayID()
+		Assert.assertTrue(
+				"Test mapping of import exemple.figureElement.core.FigureElement",
+				(((IFirstClassEntity) (this.importCreation
+						.get("FigureElement"))).getDisplayID()
 						.equals("exemple.figureElement.core.FigureElement")));
 
-		Assert.assertTrue("Test creation of import exemple.figureElement.display.DisplayManager",
+		Assert.assertTrue(
+				"Test creation of import exemple.figureElement.display.DisplayManager",
 				(this.importCreation.get("DisplayManager") != null));
 
-		Assert.assertTrue("Test mapping of import exemple.figureElement.display.DisplayManager",
-				(((IFirstClassEntity) (this.importCreation.get("DisplayManager"))).getDisplayID()
+		Assert.assertTrue(
+				"Test mapping of import exemple.figureElement.display.DisplayManager",
+				(((IFirstClassEntity) (this.importCreation
+						.get("DisplayManager"))).getDisplayID()
 						.equals("exemple.figureElement.display.DisplayManager")));
 
-		Assert.assertTrue("Test creation of import exemple.figureElement.display.DisplayableFigure",
+		Assert.assertTrue(
+				"Test creation of import exemple.figureElement.display.DisplayableFigure",
 				(this.importCreation.get("DisplayableFigure") != null));
 
-		Assert.assertTrue("Test mapping of import exemple.figureElement.display.DisplayableFigure",
-				(((IFirstClassEntity) (this.importCreation.get("DisplayableFigure"))).getDisplayID()
+		Assert.assertTrue(
+				"Test mapping of import exemple.figureElement.display.DisplayableFigure",
+				(((IFirstClassEntity) (this.importCreation
+						.get("DisplayableFigure"))).getDisplayID()
 						.equals("exemple.figureElement.display.DisplayableFigure")));
 
-		Assert.assertTrue("Test creation of import java.awt.Color", (this.importCreation.get("Color") != null));
+		Assert.assertTrue("Test creation of import java.awt.Color",
+				(this.importCreation.get("Color") != null));
 
 		Assert.assertTrue("Test mapping of import java.awt.Color",
-				(((IFirstClassEntity) (this.importCreation.get("Color"))).getDisplayID().equals("java.awt.Color")));
+				(((IFirstClassEntity) (this.importCreation.get("Color")))
+						.getDisplayID().equals("java.awt.Color")));
 
 	}
 

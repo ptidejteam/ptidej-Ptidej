@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Sealed: true
-Class-Path: commons-lang-2.4.jar
-Main-Class: ptidej.viewer.Main
-

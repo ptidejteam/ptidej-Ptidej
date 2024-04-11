@@ -25,7 +25,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
+<!--                <executions>
                     <execution>
                         <id>copy-dependencies</id>
                         <phase>prepare-package</phase>
@@ -37,7 +37,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+-->            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>

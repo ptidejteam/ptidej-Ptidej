@@ -33,7 +33,7 @@ import util.io.Files;
 
 public class Test1 extends TestCase {
 	private static final String PATH =
-		"../PADL Creator JavaFile (Eclipse)/target/test-classes/";
+		"../PADL Creator JavaFile (JavaC)/target/test-classes/";
 	private static final String FILE = Test1.PATH + "CreatorJava.java";
 
 	private static ICodeLevelModel CodeLevelModel;

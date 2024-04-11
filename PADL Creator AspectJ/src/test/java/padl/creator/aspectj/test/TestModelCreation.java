@@ -24,11 +24,11 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IConstituent;
 import padl.kernel.IContainer;
 import padl.kernel.IFactory;
-import util.io.Files;
 import util.io.ProxyConsole;
 
 public class TestModelCreation extends TestCase {
-	private static IAspectJFactory factory = (IAspectJFactory) AspectJFactory.getInstance();
+	private static IAspectJFactory factory = (IAspectJFactory) AspectJFactory
+			.getInstance();
 
 	public static IFactory getFactory() {
 		return TestModelCreation.factory;
@@ -56,17 +56,22 @@ public class TestModelCreation extends TestCase {
 
 	private void iterate(final IContainer container, int indent) {
 		//Iterator iterate = container.listOfConstituents().iterator();
-		Iterator iterate = container.getIteratorOnConstituents();
+		@SuppressWarnings("unchecked")
+		final Iterator<IConstituent> iterate = container
+				.getIteratorOnConstituents();
 
 		while (iterate.hasNext()) {
-			IConstituent c = (IConstituent) iterate.next();
+			IConstituent c = iterate.next();
 			if (c instanceof IAspect) {
 				// this.indent(indent);
-				ProxyConsole.getInstance().debugOutput().println("Aspect: " + c.getDisplayName());
+				ProxyConsole.getInstance().debugOutput()
+						.println("Aspect: " + c.getDisplayName());
 				//IAspect aspect = (IAspect) c;
 				//this.iterate(aspect, indent + 1);
-			} else {
-				ProxyConsole.getInstance().debugOutput().println("Non-AJ: " + c.getDisplayName());
+			}
+			else {
+				ProxyConsole.getInstance().debugOutput()
+						.println("Non-AJ: " + c.getDisplayName());
 			}
 			//	if (c instanceof IAspectElement) {
 			//		this.indent(indent);
@@ -84,7 +89,8 @@ public class TestModelCreation extends TestCase {
 		final String lst = "../PADL Creator AspectJ/target/test-classes/examples/AJ1.2Example/observer/files.lst";
 		final AspectCreator ac = new AspectCreator(new String[] { lst });
 
-		this.codeLevelModel = AspectJFactory.getInstance().createCodeLevelModel(this.getName());
+		this.codeLevelModel = AspectJFactory.getInstance()
+				.createCodeLevelModel(this.getName());
 
 		ac.create(this.codeLevelModel);
 
@@ -92,6 +98,7 @@ public class TestModelCreation extends TestCase {
 	}
 
 	public void testCreation() {
-		Assert.assertEquals("CLM Creation", true, (this.getCodeLevelModel() != null));
+		Assert.assertEquals("CLM Creation", true,
+				(this.getCodeLevelModel() != null));
 	}
 }

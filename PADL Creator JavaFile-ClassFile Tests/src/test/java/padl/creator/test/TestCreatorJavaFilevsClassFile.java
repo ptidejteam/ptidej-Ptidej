@@ -50,7 +50,7 @@ public final class TestCreatorJavaFilevsClassFile extends TestSuite {
 	}
 	public TestCreatorJavaFilevsClassFile() {
 	}
-	public TestCreatorJavaFilevsClassFile(final Class theClass) {
+	public TestCreatorJavaFilevsClassFile(final Class<?> theClass) {
 		super(theClass);
 	}
 	public TestCreatorJavaFilevsClassFile(final String name) {

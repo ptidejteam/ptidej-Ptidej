@@ -14,12 +14,16 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.StringTokenizer;
+
 import org.aspectj.asm.HierarchyWalker;
 import org.aspectj.asm.IHierarchy;
 import org.aspectj.asm.IProgramElement;
 import org.aspectj.asm.IProgramElement.Accessibility;
 import org.aspectj.asm.IRelationship;
 import org.aspectj.asm.IRelationshipMap;
+
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.aspectj.kernel.IAspect;
 import padl.aspectj.kernel.IAspectJFactory;
 import padl.aspectj.kernel.IInterTypeDeclareParents;
@@ -37,7 +41,6 @@ import padl.kernel.IPackage;
 import padl.kernel.IParameter;
 import padl.kernel.impl.Factory;
 import padl.util.Util;
-import com.ibm.toad.cfparse.utils.Access;
 
 /**
  * @author Jean-Yves
@@ -51,19 +54,22 @@ public class AspectWalker extends HierarchyWalker {
 	private IAspectJFactory factory;
 	private final IHierarchy hierarchy;
 	private final IRelationshipMap imap;
-	private final HashMap mapImportEntity;
+	private final HashMap<String, IFirstClassEntity> mapImportEntity;
 	private boolean walkingOverAspect = false;
 
-	public AspectWalker(final IHierarchy ihierarchy, final IRelationshipMap imap) {
+	public AspectWalker(final IHierarchy ihierarchy,
+			final IRelationshipMap imap) {
 		this.imap = imap;
 		this.hierarchy = ihierarchy;
 
-		this.mapImportEntity = new HashMap();
+		this.mapImportEntity = new HashMap<>();
 	}
+
 	public void addCodeLevelModel(final ICodeLevelModel aCodeLevelModel) {
 		this.codeLevelModel = aCodeLevelModel;
 		this.factory = (IAspectJFactory) this.codeLevelModel.getFactory();
 	}
+
 	private IConstituentOfEntity createAdvice(final IProgramElement node) {
 		IConstituentOfEntity element = null;
 		element = this.factory.createAdvice(node.toLabelString().toCharArray());
@@ -71,21 +77,20 @@ public class AspectWalker extends HierarchyWalker {
 		//		TODO: setRelationShip
 		return element;
 	}
+
 	private IConstituentOfEntity createConstructor(final IProgramElement node) {
 		IConstituentOfEntity element = null;
-		element =
-			this.factory.createConstructor(node.getName().toCharArray(), node
-				.getName()
-				.toCharArray());
+		element = this.factory.createConstructor(node.getName().toCharArray(),
+				node.getName().toCharArray());
 		return element;
 	}
-	private IConstituentOfEntity createDeclareParent(final IProgramElement node) {
+
+	private IConstituentOfEntity createDeclareParent(
+			final IProgramElement node) {
 		IInterTypeDeclareParents element = null;
 		//TODO: fix duplicate actorID exception
-		element =
-			this.factory
-				.createInterTypeDeclareParents((node.toLabelString() + AspectWalker.NUMITDP++)
-					.toCharArray());
+		element = this.factory.createInterTypeDeclareParents(
+				(node.toLabelString() + AspectWalker.NUMITDP++).toCharArray());
 		element.setName(node.toLabelString().toCharArray());
 		this.setITRelationShip(node, element);
 		//Get entity declared
@@ -99,15 +104,14 @@ public class AspectWalker extends HierarchyWalker {
 
 		if (name != null) {
 			if (this.codeLevelModel.getConstituentFromName(name) != null) {
-				element
-					.setDeclaredParent((IFirstClassEntity) this.codeLevelModel
-						.getConstituentFromName(name));
+				element.setDeclaredParent(
+						(IFirstClassEntity) this.codeLevelModel
+								.getConstituentFromName(name));
 			}
 			else {
 				if (this.mapImportEntity.get(name) != null) {
-					element
-						.setDeclaredParent((IFirstClassEntity) this.mapImportEntity
-							.get(name));
+					element.setDeclaredParent(
+							(IFirstClassEntity) this.mapImportEntity.get(name));
 				}
 				else {
 					//					logger.warn(
@@ -117,29 +121,29 @@ public class AspectWalker extends HierarchyWalker {
 		}
 		return element;
 	}
+
 	private IConstituentOfEntity createField(final IProgramElement node) {
 		IConstituentOfEntity element = null;
 		//		 TODO: check the FIELD creation (Cardinality)
-		element =
-			this.factory.createField(node.getName().toCharArray(), node
-				.getName()
-				.toCharArray(), node.getCorrespondingType().toCharArray(), 1);
+		element = this.factory.createField(node.getName().toCharArray(),
+				node.getName().toCharArray(),
+				node.getCorrespondingType().toCharArray(), 1);
 		element.setName(node.getName().toCharArray());
 		return element;
 	}
-	private IConstituentOfEntity createITConstructor(final IProgramElement node) {
+
+	private IConstituentOfEntity createITConstructor(
+			final IProgramElement node) {
 		IConstituentOfEntity element = null;
-		element =
-			this.factory.createInterTypeConstructor(node
-				.getName()
-				.toCharArray());
+		element = this.factory
+				.createInterTypeConstructor(node.getName().toCharArray());
 		element.setName(node.getName().toCharArray());
 		return element;
 	}
+
 	private IConstituentOfEntity createITField(final IProgramElement node) {
 		IInterTypeElement element = null;
-		element =
-			this.factory.createInterTypeField(
+		element = this.factory.createInterTypeField(
 				node.getName().toCharArray(),
 				node.getCorrespondingType().toCharArray());
 		element.setName(node.getName().toCharArray());
@@ -147,21 +151,21 @@ public class AspectWalker extends HierarchyWalker {
 
 		return element;
 	}
+
 	private IConstituentOfEntity createITMethod(final IProgramElement node) {
 		IInterTypeMethod element = null;
-		element =
-			this.factory.createInterTypeMethode(node.getName().toCharArray());
+		element = this.factory
+				.createInterTypeMethode(node.getName().toCharArray());
 		element.setName(node.getName().toCharArray());
 
 		this.setITRelationShip(node, element);
 
 		//Create the method
-		final String[] signature =
-			this.processMethodSignature(node.toLabelString());
+		final String[] signature = this
+				.processMethodSignature(node.toLabelString());
 		//		logger.debug("Method name: " + signature[1]);
 		//		logger.debug("Method name: " + signature[1] + signature[2]);
-		final IMethod it_method =
-			this.factory.createMethod(
+		final IMethod it_method = this.factory.createMethod(
 				(signature[1] + signature[2]).toCharArray(),
 				(signature[1] + signature[2]).toCharArray());
 
@@ -175,7 +179,9 @@ public class AspectWalker extends HierarchyWalker {
 
 		//		logger.debug("Method RType: " + it_method.getReturnType());
 
-		final Iterator ite_param_type = node.getParameterTypes().iterator();
+		@SuppressWarnings("unchecked")
+		final Iterator<char[]> ite_param_type = node.getParameterTypes()
+				.iterator();
 		//	Iterator ite_param_name = node.getParameterNames().iterator();
 
 		final StringBuffer paramBuffer = new StringBuffer();
@@ -184,24 +190,21 @@ public class AspectWalker extends HierarchyWalker {
 			// Yann 2009/05/02: Parameters!
 			// Parameters do not use String anymore :-)
 			final String paramType = String.valueOf(ite_param_type.next());
-			IEntity entity =
-				this.codeLevelModel.getTopLevelEntityFromID(paramType);
+			IEntity entity = this.codeLevelModel
+					.getTopLevelEntityFromID(paramType);
 			if (entity == null) {
 				if (Util.isPrimtiveType(paramType.toCharArray())) {
-					entity =
-						this.factory.createPrimitiveEntity(paramType
-							.toCharArray());
+					entity = this.factory
+							.createPrimitiveEntity(paramType.toCharArray());
 				}
 				else {
-					entity =
-						this.factory.createGhost(
-							paramType.toCharArray(),
+					entity = this.factory.createGhost(paramType.toCharArray(),
 							paramType.toCharArray());
 					this.codeLevelModel.addConstituent(entity);
 				}
 			}
-			final IParameter param =
-				this.factory.createParameter(entity, Constants.CARDINALITY_ONE);
+			final IParameter param = this.factory.createParameter(entity,
+					Constants.CARDINALITY_ONE);
 			it_method.addConstituent(param);
 			paramBuffer.append(param.getTypeName());
 			paramBuffer.append(" ");
@@ -213,14 +216,14 @@ public class AspectWalker extends HierarchyWalker {
 		element.setMethod(it_method);
 		return element;
 	}
+
 	private IConstituentOfEntity createMethod(final IProgramElement node) {
 		IConstituentOfEntity element = null;
-		element =
-			this.factory.createMethod(node.getName().toCharArray(), node
-				.getName()
-				.toCharArray());
+		element = this.factory.createMethod(node.getName().toCharArray(),
+				node.getName().toCharArray());
 		return element;
 	}
+
 	private IConstituentOfEntity createPointcut(final IProgramElement node) {
 		IConstituentOfEntity element = null;
 		element = this.factory.createPointcut(node.getName().toCharArray());
@@ -228,32 +231,32 @@ public class AspectWalker extends HierarchyWalker {
 		//		TODO: setRelationShip?
 		return element;
 	}
+
 	//For JUNIT TEST
-	public HashMap getImportMap() {
+	public HashMap<String, IFirstClassEntity> getImportMap() {
 		return this.mapImportEntity;
 	}
+
 	protected void postProcess(final IProgramElement node) {
 		final String kind = node.getKind().toString();
 		if (kind.equals(IProgramElement.Kind.ASPECT.toString())) {
 			this.walkingOverAspect = false;
 			final IPackage enclosingPackage;
-			if (!this.codeLevelModel
-				.doesContainConstituentWithID(AspectCreator.ASPECT_PACKAGE_ID
-					.toCharArray())) {
+			if (!this.codeLevelModel.doesContainConstituentWithID(
+					AspectCreator.ASPECT_PACKAGE_ID.toCharArray())) {
 
-				enclosingPackage =
-					Factory.getInstance().createPackage(
+				enclosingPackage = Factory.getInstance().createPackage(
 						AspectCreator.ASPECT_PACKAGE_ID.toCharArray());
 				this.codeLevelModel.addConstituent(enclosingPackage);
 			}
 			else {
-				enclosingPackage =
-					(IPackage) this.codeLevelModel
+				enclosingPackage = (IPackage) this.codeLevelModel
 						.getConstituentFromID(AspectCreator.ASPECT_PACKAGE_ID);
 			}
 			enclosingPackage.addConstituent(this.currentAspect);
 		}
 	}
+
 	protected void preProcess(final IProgramElement node) {
 		this.factory = (IAspectJFactory) this.codeLevelModel.getFactory();
 
@@ -266,11 +269,12 @@ public class AspectWalker extends HierarchyWalker {
 		}
 		if (kind.equals(IProgramElement.Kind.ASPECT.toString())) {
 			this.walkingOverAspect = true;
-			this.currentAspect =
-				this.factory.createAspect((node.getPackageName() + "." + node
-					.getName()).toCharArray());
-			this.currentAspect.setName((node.getPackageName() + "." + node
-				.getName()).toCharArray());
+			this.currentAspect = this.factory
+					.createAspect((node.getPackageName() + "." + node.getName())
+							.toCharArray());
+			this.currentAspect
+					.setName((node.getPackageName() + "." + node.getName())
+							.toCharArray());
 			this.setVisibility(node, this.currentAspect);
 		}
 		if (this.walkingOverAspect()) {
@@ -291,14 +295,15 @@ public class AspectWalker extends HierarchyWalker {
 			if (kind.equals(IProgramElement.Kind.CONSTRUCTOR.toString())) {
 				currentConstituent = this.createConstructor(node);
 			}
-			if (kind.equals(IProgramElement.Kind.INTER_TYPE_CONSTRUCTOR
-				.toString())) {
+			if (kind.equals(
+					IProgramElement.Kind.INTER_TYPE_CONSTRUCTOR.toString())) {
 				currentConstituent = this.createITConstructor(node);
 			}
 			if (kind.equals(IProgramElement.Kind.INTER_TYPE_FIELD.toString())) {
 				currentConstituent = this.createITField(node);
 			}
-			if (kind.equals(IProgramElement.Kind.INTER_TYPE_METHOD.toString())) {
+			if (kind.equals(
+					IProgramElement.Kind.INTER_TYPE_METHOD.toString())) {
 				currentConstituent = this.createITMethod(node);
 			}
 			if (kind.equals(IProgramElement.Kind.DECLARE_PARENTS.toString())) {
@@ -310,6 +315,7 @@ public class AspectWalker extends HierarchyWalker {
 			}
 		}
 	}
+
 	private String[] processMethodSignature(final String signature) {
 		final String[] process = signature.split("(\\.|\\()");
 
@@ -321,13 +327,14 @@ public class AspectWalker extends HierarchyWalker {
 		}
 		return process;
 	}
+
 	private void saveImportDeclaration(final IProgramElement node) {
-		final IFirstClassEntity anEntity =
-			this.codeLevelModel.getTopLevelEntityFromID(node.toLabelString());
+		final IFirstClassEntity anEntity = this.codeLevelModel
+				.getTopLevelEntityFromID(node.toLabelString());
 
 		if (anEntity != null) {
-			final StringTokenizer st =
-				new StringTokenizer(String.valueOf(anEntity.getName()), ".");
+			final StringTokenizer st = new StringTokenizer(
+					String.valueOf(anEntity.getName()), ".");
 			String name = null;
 
 			while (st.hasMoreTokens()) {
@@ -339,39 +346,41 @@ public class AspectWalker extends HierarchyWalker {
 			}
 		}
 	}
-	private void setITRelationShip(
-		final IProgramElement node,
-		final IInterTypeElement it_element) {
+
+	private void setITRelationShip(final IProgramElement node,
+			final IInterTypeElement it_element) {
 		//			Set Target
-		final List relations = this.imap.get(node);
+		@SuppressWarnings("unchecked")
+		final List<IRelationship> relations = this.imap.get(node);
 
 		//		logger.debug("Extracting target for " + it_element.getName());
 
 		if (relations != null) {
 			//get handle
 			final IRelationship rel = (IRelationship) relations.get(0);
-			final List targets = rel.getTargets();
-			final String handle = (String) targets.get(0);
+			@SuppressWarnings("unchecked")
+			final List<String> targets = rel.getTargets();
+			final String handle = targets.get(0);
 
 			//get IProgramElement
-			final IProgramElement target =
-				this.hierarchy.findElementForHandle(handle);
+			final IProgramElement target = this.hierarchy
+					.findElementForHandle(handle);
 
 			//get packagename+name
 			if (target != null) {
-				final String target_name =
-					target.getPackageName() + "." + target.getName();
+				final String target_name = target.getPackageName() + "."
+						+ target.getName();
 
 				//get Constituent from ICodeLevelModel
-				final IConstituent target_entity =
-					this.codeLevelModel.getConstituentFromName(target_name);
+				final IConstituent target_entity = this.codeLevelModel
+						.getConstituentFromName(target_name);
 
 				//set Target
 				if (target_entity != null
 						&& target_entity instanceof IFirstClassEntity) {
 					//					logger.debug("Target found: " + target_entity.getName());
 					it_element
-						.setTargetEntity((IFirstClassEntity) target_entity);
+							.setTargetEntity((IFirstClassEntity) target_entity);
 				}
 				//				else {
 				//					logger.warn(
@@ -383,9 +392,9 @@ public class AspectWalker extends HierarchyWalker {
 		//			logger.warn("No relations found for " + it_element.getName());
 		//		}
 	}
-	private void setVisibility(
-		final IProgramElement node,
-		final IConstituent element) {
+
+	private void setVisibility(final IProgramElement node,
+			final IConstituent element) {
 
 		if (node.getAccessibility().equals(Accessibility.PUBLIC)) {
 			element.setVisibility(Access.ACC_PUBLIC);

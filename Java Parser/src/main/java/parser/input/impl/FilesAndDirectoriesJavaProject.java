@@ -16,8 +16,8 @@ import parser.reader.NamedReader;
 import parser.reader.NamedReaderType;
 
 public class FilesAndDirectoriesJavaProject extends FileSystemJavaProject {
-
 	private final NamedReader[] namedReaders;
+
 	public FilesAndDirectoriesJavaProject(
 		final List<String> classPaths,
 		final List<String> sourceFilesAndDirectories,
@@ -26,7 +26,6 @@ public class FilesAndDirectoriesJavaProject extends FileSystemJavaProject {
 		super(classPaths, sourceFilesAndDirectories);
 		this.namedReaders =
 			this.buildSourcepathEntries(aListOfFilesAndDiecrtories);
-
 	}
 
 	protected NamedReader[] buildCompilationUnitList() {

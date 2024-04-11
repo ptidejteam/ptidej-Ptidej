@@ -54,7 +54,7 @@ class Aspect extends Class implements IAspect {
 	public IInterfaceActor getImplementedInterface(final String aName) {
 		return null;
 	}
-	public Iterator getIteratorOnImplementedInterfaces() {
+	public Iterator<?> getIteratorOnImplementedInterfaces() {
 		return null;
 	}
 	public void removeImplementedInterface(final IFirstClassEntity anEntity) {

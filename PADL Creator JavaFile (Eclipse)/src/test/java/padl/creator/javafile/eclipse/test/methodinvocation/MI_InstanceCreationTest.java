@@ -33,11 +33,11 @@ public class MI_InstanceCreationTest extends TestCase {
 
 	public void testINSTANCE_CREATION_1() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse)/src/main/java/";
+			"../PADL Creator JavaFile (Eclipse)/src/test/java/";
 		final String[] javaFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/A.java",
-					"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/CreationLink_INSTANCE_CREATION_1.java" };
+					"../PADL Creator JavaFile (Eclipse)/src/test/java/padl/example/relationship/A.java",
+					"../PADL Creator JavaFile (Eclipse)/src/test/java/padl/example/relationship/CreationLink_INSTANCE_CREATION_1.java" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createCompleteJavaFilesPadlModel(
@@ -48,8 +48,8 @@ public class MI_InstanceCreationTest extends TestCase {
 
 		final String[] classFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/A.class",
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/CreationLink_INSTANCE_CREATION_1.class" };
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes/padl/example/relationship/A.class",
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes/padl/example/relationship/CreationLink_INSTANCE_CREATION_1.class" };
 		final ICodeLevelModel classModel =
 			Utils.createCompleteJavaClassesPadlModel("", classFiles);
 
@@ -123,11 +123,11 @@ public class MI_InstanceCreationTest extends TestCase {
 
 	public void testINSTANCE_CREATION_2() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse)/src/main/java/";
+			"../PADL Creator JavaFile (Eclipse)/src/test/java/";
 		final String[] javaFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/A.java",
-					"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/CreationLink_INSTANCE_CREATION_2.java" };
+					"../PADL Creator JavaFile (Eclipse)/src/test/java/padl/example/relationship/A.java",
+					"../PADL Creator JavaFile (Eclipse)/src/test/java/padl/example/relationship/CreationLink_INSTANCE_CREATION_2.java" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createCompleteJavaFilesPadlModel(
@@ -138,8 +138,8 @@ public class MI_InstanceCreationTest extends TestCase {
 
 		final String[] classFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/A.class",
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/CreationLink_INSTANCE_CREATION_2.class" };
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes/padl/example/relationship/A.class",
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes/padl/example/relationship/CreationLink_INSTANCE_CREATION_2.class" };
 		final ICodeLevelModel classModel =
 			Utils.createCompleteJavaClassesPadlModel("", classFiles);
 
@@ -216,11 +216,11 @@ public class MI_InstanceCreationTest extends TestCase {
 
 	public void testINSTANCE_CREATION_3() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse)/src/main/java/";
+			"../PADL Creator JavaFile (Eclipse)/src/test/java/";
 		final String[] javaFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/A.java",
-					"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/CreationLink_INSTANCE_CREATION_3.java" };
+					"../PADL Creator JavaFile (Eclipse)/src/test/java/padl/example/relationship/A.java",
+					"../PADL Creator JavaFile (Eclipse)/src/test/java/padl/example/relationship/CreationLink_INSTANCE_CREATION_3.java" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createCompleteJavaFilesPadlModel(
@@ -231,8 +231,8 @@ public class MI_InstanceCreationTest extends TestCase {
 
 		final String[] classFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/A.class",
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/CreationLink_INSTANCE_CREATION_3.class" };
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes/padl/example/relationship/A.class",
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes/padl/example/relationship/CreationLink_INSTANCE_CREATION_3.class" };
 		final ICodeLevelModel classModel =
 			Utils.createCompleteJavaClassesPadlModel("", classFiles);
 
@@ -308,11 +308,11 @@ public class MI_InstanceCreationTest extends TestCase {
 
 	public void testINSTANCE_CREATION_4() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse)/src/main/java/";
+			"../PADL Creator JavaFile (Eclipse)/src/test/java/";
 		final String[] javaFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/A.java",
-					"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/CreationLink_INSTANCE_CREATION_4.java" };
+					"../PADL Creator JavaFile (Eclipse)/src/test/java/padl/example/relationship/A.java",
+					"../PADL Creator JavaFile (Eclipse)/src/test/java/padl/example/relationship/CreationLink_INSTANCE_CREATION_4.java" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createCompleteJavaFilesPadlModel(
@@ -323,8 +323,8 @@ public class MI_InstanceCreationTest extends TestCase {
 
 		final String[] classFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/A.class",
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/CreationLink_INSTANCE_CREATION_4.class" };
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes/padl/example/relationship/A.class",
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes/padl/example/relationship/CreationLink_INSTANCE_CREATION_4.class" };
 		final ICodeLevelModel classModel =
 			Utils.createCompleteJavaClassesPadlModel("", classFiles);
 

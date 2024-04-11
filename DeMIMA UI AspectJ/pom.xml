@@ -16,6 +16,7 @@
 
     <dependencies>
 
+		<!-- Main dependecy -->
         <dependency>
             <groupId>net.ptidej.cpl</groupId>
             <artifactId>cpl-core</artifactId>
@@ -39,6 +40,29 @@
             <artifactId>demima-ui</artifactId>
             <version>1.0.0</version>
         </dependency>
+
+		<!-- Test dependecy -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-aspectj</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-ui-primitives-awt</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
 
     </dependencies>
 

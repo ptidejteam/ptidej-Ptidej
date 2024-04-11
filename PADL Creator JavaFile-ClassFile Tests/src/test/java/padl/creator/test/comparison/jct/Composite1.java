@@ -17,7 +17,6 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
 import padl.test.helper.ModelComparator;
-import util.io.Files;
 
 public class Composite1 extends TestCase {
 	private static final String SRC_PATH =

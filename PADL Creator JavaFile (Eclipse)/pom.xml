@@ -59,6 +59,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-statements-creator-classfile</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.12.0</version>

@@ -10,7 +10,6 @@
  ******************************************************************************/
 package ptidej.ui.kernel.builder.test;
 
-import padl.aspectj.kernel.IAdvice;
 import padl.creator.aspectj.test.AspectJPrimitive;
 import padl.kernel.exception.CreationException;
 import ptidej.ui.kernel.builder.AspectJBuilder;

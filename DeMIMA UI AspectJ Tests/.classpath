@@ -10,8 +10,8 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL Creator AspectJ"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/CPL"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/DeMIMA UI"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/DeMIMA UI AspectJ"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/DeMIMA UI Primitives AWT"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/DeMIMA UI"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

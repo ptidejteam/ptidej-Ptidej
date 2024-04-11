@@ -11,6 +11,7 @@
 package padl.creator.javafile.eclipse;
 
 import java.util.Arrays;
+
 import padl.creator.javafile.eclipse.astVisitors.ConditionalModelAnnotator;
 import padl.creator.javafile.eclipse.astVisitors.LOCModelAnnotator;
 import padl.creator.javafile.eclipse.astVisitors.VisitorFirstParsing;
@@ -34,9 +35,8 @@ public class LightJavaFileCreator implements ICodeLevelModelCreator {
 	 * @param aSourcePathEntry
 	 * @param aClasspathEntry
 	 */
-	public LightJavaFileCreator(
-		final String aSourcePathEntry,
-		final String aClasspathEntry) {
+	public LightJavaFileCreator(final String aSourcePathEntry,
+			final String aClasspathEntry) {
 
 		//the folder of the source code to analyse well organized like a project
 		//final String sourcePathEntry = "./rsc/src/";
@@ -48,8 +48,7 @@ public class LightJavaFileCreator implements ICodeLevelModelCreator {
 		final String[] classpathEntries = new String[] { aClasspathEntry };
 
 		try {
-			this.javaProject =
-				new FileSystemJavaProject(
+			this.javaProject = new FileSystemJavaProject(
 					Arrays.asList(classpathEntries),
 					Arrays.asList(sourcePathEntries));
 
@@ -68,10 +67,8 @@ public class LightJavaFileCreator implements ICodeLevelModelCreator {
 	 * @param aClasspathEntry
 	 * @param aPathFilesList
 	 */
-	public LightJavaFileCreator(
-		final String aSourcePathEntry,
-		final String aClasspathEntry,
-		final String[] aPathFilesList) {
+	public LightJavaFileCreator(final String aSourcePathEntry,
+			final String aClasspathEntry, final String[] aPathFilesList) {
 
 		//the folder of the source code to analyse well organized like a project
 
@@ -83,8 +80,7 @@ public class LightJavaFileCreator implements ICodeLevelModelCreator {
 
 		try {
 
-			this.javaProject =
-				new FilesAndDirectoriesJavaProject(
+			this.javaProject = new FilesAndDirectoriesJavaProject(
 					Arrays.asList(classpathEntries),
 					Arrays.asList(sourcePathEntries),
 					Arrays.asList(aPathFilesList));
@@ -112,35 +108,29 @@ public class LightJavaFileCreator implements ICodeLevelModelCreator {
 	 * @param aClassPathEntry
 	 * @return
 	 */
-	private void createModelFormSource(
-		final ICodeLevelModel aCodeLevelModel,
-		final SourceInputsHolder javaProject) {
+	private void createModelFormSource(final ICodeLevelModel aCodeLevelModel,
+			final SourceInputsHolder javaProject) {
 
-		final JavaParser eclipseSourceCodeParser =
-			new JavaParser(this.javaProject);
+		final JavaParser eclipseSourceCodeParser = new JavaParser(
+				this.javaProject);
 
-		final VisitorFirstParsing firstParseVisitor =
-			new VisitorFirstParsing(aCodeLevelModel);
-
+		final VisitorFirstParsing firstParseVisitor = new VisitorFirstParsing(
+				aCodeLevelModel);
 		eclipseSourceCodeParser.parse(firstParseVisitor);
 
-		final VisitorSecondParsing secondParseVisitor =
-			new VisitorSecondParsing(aCodeLevelModel);
-
+		final VisitorSecondParsing secondParseVisitor = new VisitorSecondParsing(
+				aCodeLevelModel);
 		eclipseSourceCodeParser.parse(secondParseVisitor);
 
-		final LOCModelAnnotator locAnnotator =
-			new LOCModelAnnotator(aCodeLevelModel);
-
+		final LOCModelAnnotator locAnnotator = new LOCModelAnnotator(
+				aCodeLevelModel);
 		eclipseSourceCodeParser.parse(locAnnotator);
 
-		final ConditionalModelAnnotator conditionalAnnotator =
-			new ConditionalModelAnnotator(aCodeLevelModel);
-
+		final ConditionalModelAnnotator conditionalAnnotator = new ConditionalModelAnnotator(
+				aCodeLevelModel);
 		eclipseSourceCodeParser.parse(conditionalAnnotator);
 
 		this.codeLevelModel = aCodeLevelModel;
-
 	}
 
 	public ICodeLevelModel getCodeLevelModel() {

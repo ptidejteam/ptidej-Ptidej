@@ -24,6 +24,7 @@ import padl.creator.aspectjlst.util.AjcCompilerWrapper;
 import padl.creator.aspectjlst.util.AspectWalker;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.ICodeLevelModelCreator;
+import padl.kernel.IFirstClassEntity;
 
 /**
  * @author Jean-Yves Guyomarc'h
@@ -37,14 +38,17 @@ public class AspectCreator implements ICodeLevelModelCreator {
 	private final IRelationshipMap map;
 
 	// somefileNames[0] = lst file, somefileNames[1]...somefileNames[n] = jar libs
-	public AspectCreator(final String[] somefileNames) throws AspectCreationException {
+	public AspectCreator(final String[] somefileNames)
+			throws AspectCreationException {
 		super();
 
 		File tmp = null;
 		File lst = null;
 		File ddir = null;
-		File[] classpath = new File[] { new File("../PADL Creator AspectJ/target/classes/rt_v1.4.2_11.jar"),
-				new File("../PADL Creator AspectJ/target/classes/aspectjrt.jar") };
+		File[] classpath = new File[] { new File(
+				"../PADL Creator AspectJ/target/classes/rt_v1.4.2_11.jar"),
+				new File(
+						"../PADL Creator AspectJ/target/classes/aspectjrt.jar") };
 
 		try {
 			tmp = File.createTempFile("foo", ".txt");
@@ -58,15 +62,18 @@ public class AspectCreator implements ICodeLevelModelCreator {
 					classpath[i - 1] = new File(somefileNames[i]);
 				}
 			}
-			ddir = new File(tmp.getParentFile().getAbsolutePath() + File.separator + "AspectCreatorTemp");
+			ddir = new File(tmp.getParentFile().getAbsolutePath()
+					+ File.separator + "AspectCreatorTemp");
 			ddir.mkdir();
 			ddir.deleteOnExit();
-		} catch (final IOException ioe) {
+		}
+		catch (final IOException ioe) {
 			ioe.printStackTrace(System.err);
 		}
 
 		if (ddir == null) {
-			throw new AspectCreationException("System temp directory unreachable.");
+			throw new AspectCreationException(
+					"System temp directory unreachable.");
 		}
 
 		if (!lst.exists() || !lst.isFile()) {
@@ -75,13 +82,14 @@ public class AspectCreator implements ICodeLevelModelCreator {
 		if (classpath != null) {
 			for (int i = 0; i < classpath.length; i++) {
 				if (!classpath[i].exists()) {
-					throw new AspectCreationException("jar file " + classpath[i] + "does not exists.");
+					throw new AspectCreationException(
+							"jar file " + classpath[i] + "does not exists.");
 				}
 			}
 		}
 		// Compile project and force Model Gen
 
-		final Vector ajcOptions = new Vector();
+		final Vector<String> ajcOptions = new Vector<>();
 
 		// PHASE 0: call ajc
 		ajcOptions.addElement("-noExit");
@@ -133,7 +141,7 @@ public class AspectCreator implements ICodeLevelModelCreator {
 	}
 
 	// For JUNIT TETS
-	public HashMap getImportMap() {
+	public HashMap<String, IFirstClassEntity> getImportMap() {
 		return this.walker.getImportMap();
 	}
 }
