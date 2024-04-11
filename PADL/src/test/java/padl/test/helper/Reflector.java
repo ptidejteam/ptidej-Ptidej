@@ -15,67 +15,53 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class Reflector {
-	public static void callMethodOnReflectedField(
-		final Class aDeclaringClass,
-		final String aFieldName,
-		final Object aReceiver,
-		final String aMethodName) throws NoSuchFieldException,
-			SecurityException, IllegalArgumentException,
-			IllegalAccessException, NoSuchMethodException,
-			InvocationTargetException {
+	public static void callMethodOnReflectedField(final Class aDeclaringClass,
+			final String aFieldName, final Object aReceiver,
+			final String aMethodName) throws NoSuchFieldException,
+			SecurityException, IllegalArgumentException, IllegalAccessException,
+			NoSuchMethodException, InvocationTargetException {
 
-		final Object object =
-			Reflector.getObjectFromReflectedField(
-				aDeclaringClass,
-				aFieldName,
-				aReceiver);
-		final Method method =
-			object.getClass().getMethod(aMethodName, new Class[0]);
+		final Object object = Reflector.getObjectFromReflectedField(
+				aDeclaringClass, aFieldName, aReceiver);
+		final Method method = object.getClass().getMethod(aMethodName,
+				new Class[0]);
 		method.invoke(object, new Object[0]);
 	}
-	public static void callMethodOnReflectedField(
-		final Class aDeclaringClass,
-		final String aFieldName,
-		final Object aReceiver,
-		final String aMethodName,
-		final Class aMethodParameterType,
-		final Object aMethodParameterValue) throws NoSuchFieldException,
-			SecurityException, IllegalArgumentException,
-			IllegalAccessException, NoSuchMethodException,
-			InvocationTargetException {
 
-		final Object object =
-			Reflector.getObjectFromReflectedField(
-				aDeclaringClass,
-				aFieldName,
-				aReceiver);
-		final Method method =
-			object.getClass().getMethod(
-				aMethodName,
+	public static void callMethodOnReflectedField(final Class aDeclaringClass,
+			final String aFieldName, final Object aReceiver,
+			final String aMethodName, final Class aMethodParameterType,
+			final Object aMethodParameterValue) throws NoSuchFieldException,
+			SecurityException, IllegalArgumentException, IllegalAccessException,
+			NoSuchMethodException, InvocationTargetException {
+
+		final Object object = Reflector.getObjectFromReflectedField(
+				aDeclaringClass, aFieldName, aReceiver);
+		final Method method = object.getClass().getMethod(aMethodName,
 				new Class[] { aMethodParameterType });
 		method.invoke(object, new Object[] { aMethodParameterValue });
 	}
+
 	public static Object getObjectFromReflectedField(
-		final Class aDeclaringClass,
-		final String aFieldName,
-		final Object aReceiver) throws NoSuchFieldException, SecurityException,
+			final Class aDeclaringClass, final String aFieldName,
+			final Object aReceiver)
+			throws NoSuchFieldException, SecurityException,
 			IllegalArgumentException, IllegalAccessException {
 
-		final Field containerField =
-			aDeclaringClass.getDeclaredField(aFieldName);
+		final Field containerField = aDeclaringClass
+				.getDeclaredField(aFieldName);
 		containerField.setAccessible(true);
 		final Object value = containerField.get(aReceiver);
 		return value;
 	}
-	public static void setReflectedFieldValue(
-		final Class aDeclaringClass,
-		final String aFieldName,
-		final Object aReceiver,
-		final Object aValue) throws NoSuchFieldException, SecurityException,
+
+	public static void setReflectedFieldValue(final Class aDeclaringClass,
+			final String aFieldName, final Object aReceiver,
+			final Object aValue) throws NoSuchFieldException, SecurityException,
 			IllegalArgumentException, IllegalAccessException {
 
-		final Field containerField =
-			aDeclaringClass.getDeclaredField(aFieldName);
+		final Field containerField = aDeclaringClass
+				.getDeclaredField(aFieldName);
 		containerField.setAccessible(true);
 		containerField.set(aReceiver, aValue);
 	}

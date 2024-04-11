@@ -18,6 +18,7 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IConstructor;
 import padl.kernel.IInterface;
 import padl.kernel.IMethod;
+import util.io.Files;
 
 public class LOCModelAnnotatorTest extends TestCase {
 
@@ -27,9 +28,9 @@ public class LOCModelAnnotatorTest extends TestCase {
 	}
 	public void testLoc() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/src/padl/example/annotator/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/annotator/" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createLightJavaFilesPadlModel(
@@ -55,9 +56,9 @@ public class LOCModelAnnotatorTest extends TestCase {
 	 */
 	public void testLocAbstractClass() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/src/padl/example/annotator/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/annotator/" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createLightJavaFilesPadlModel(
@@ -67,7 +68,7 @@ public class LOCModelAnnotatorTest extends TestCase {
 				javaFiles);
 
 		final String classFiles =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/annotator/bin/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/annotator/bin/";
 		final ICodeLevelModel classModel =
 			Utils.createAnnotatedPadlClassModel(classFiles);
 
@@ -99,9 +100,9 @@ public class LOCModelAnnotatorTest extends TestCase {
 	 */
 	public void testLocInterface() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/src/padl/example/annotator/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/annotator/" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createLightJavaFilesPadlModel(
@@ -111,7 +112,7 @@ public class LOCModelAnnotatorTest extends TestCase {
 				javaFiles);
 
 		final String classFiles =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/annotator/bin/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/annotator/bin/";
 		final ICodeLevelModel classModel =
 			Utils.createAnnotatedPadlClassModel(classFiles);
 

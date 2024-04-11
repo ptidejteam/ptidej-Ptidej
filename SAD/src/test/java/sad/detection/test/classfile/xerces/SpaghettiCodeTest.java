@@ -20,6 +20,7 @@ import sad.codesmell.detection.repository.SpaghettiCode.LongMethodDetection;
 import sad.codesmell.detection.repository.SpaghettiCode.MethodNoParameterDetection;
 import sad.designsmell.detection.IDesignSmellDetection;
 import sad.designsmell.detection.repository.SpaghettiCode.SpaghettiCodeDetection;
+import util.io.Files;
 import util.io.ProxyDisk;
 
 /**

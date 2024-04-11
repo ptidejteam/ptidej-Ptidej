@@ -20,6 +20,7 @@ import sad.designsmell.detection.repository.Blob.BlobDetection;
 import sad.designsmell.detection.repository.FunctionalDecomposition.FunctionalDecompositionDetection;
 import sad.designsmell.detection.repository.SpaghettiCode.SpaghettiCodeDetection;
 import sad.designsmell.detection.repository.SwissArmyKnife.SwissArmyKnifeDetection;
+import util.io.Files;
 import util.io.ProxyDisk;
 
 /**

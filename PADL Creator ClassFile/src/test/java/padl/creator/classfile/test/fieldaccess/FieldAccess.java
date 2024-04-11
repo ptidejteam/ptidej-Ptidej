@@ -14,11 +14,13 @@ import org.junit.Assert;
 
 import junit.framework.TestCase;
 import padl.creator.classfile.CompleteClassFileCreator;
+import padl.creator.classfile.test.compare.Compare;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IMethod;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
+import util.io.Files;
 
 public final class FieldAccess extends TestCase {
 	private ICodeLevelModel codeLevelModel;

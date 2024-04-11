@@ -30,9 +30,11 @@
 package padl.creator.javafile.eclipse.test.methodinvocation;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.ICodeLevelModel;
+import util.io.Files;
 
 public class MethodInvocationIgnoredTest extends TestCase {
 
@@ -47,10 +49,10 @@ public class MethodInvocationIgnoredTest extends TestCase {
 	// and it is not relevant for our purpose
 	public void testArgouml_GeneratorJava() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/";
 
 		final String javaFiles[] =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/testData/GeneratorJava.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes//testData/GeneratorJava.java" };
 
 		final String classPathEntry = "";
 

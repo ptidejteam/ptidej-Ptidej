@@ -37,6 +37,7 @@ import ptidej.solver.OccurrenceBuilder;
 import ptidej.solver.Problem;
 import ptidej.solver.domain.Generator;
 import ptidej.solver.domain.Manager;
+import util.io.Files;
 import util.io.MultiChannelOutputStream;
 import util.io.ProxyConsole;
 import util.io.ProxyDisk;
@@ -324,7 +325,7 @@ public class DesignMotifIdentificationCaller {
 			// "/repository/software/Versions/Eclipse/eclipse-SDK-2.1.1-win32/plugins/",
 			// "Eclipse v2.1.1");
 
-			//	final String root = "../../P-MARt Workspace/";
+			//	final String root = Files.getRunningRootPath() + "../../P-MARt Workspace/";
 			//	final String[] list = new File(root).list();
 			//	for (int i = 0; i < list.length; i++) {
 			//		final String directory = list[i];

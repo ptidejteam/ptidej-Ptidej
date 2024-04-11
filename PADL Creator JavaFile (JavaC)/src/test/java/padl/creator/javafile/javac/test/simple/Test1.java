@@ -29,14 +29,12 @@ import padl.kernel.IConstructor;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
+import util.io.Files;
 
 public class Test1 extends TestCase {
 	private static final String PATH =
-		"../PADL Creator JavaFile (JavaC) Tests/rsc/";
+		"../PADL Creator JavaFile (Eclipse)/target/test-classes/";
 	private static final String FILE = Test1.PATH + "CreatorJava.java";
-	//	private static final String PATH =
-	//		"../JCT Tests/src/jct/test/rsc/misc/comments/";
-	//	private static final String FILE = Test1.PATH + "Comments.java";
 
 	private static ICodeLevelModel CodeLevelModel;
 

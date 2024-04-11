@@ -21,6 +21,7 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
 import padl.util.ModelStatistics;
+import util.io.Files;
 import util.io.ProxyDisk;
 
 /**
@@ -36,7 +37,7 @@ public class Manager extends TestCase {
 	protected void setUp() {
 		if (Manager.CodeLevelModel == null) {
 			final String path =
-				"../Ptidej Tests/bin/ptidej/example/composite2/";
+					"../DeMIMA/target/test-classes/ptidej/example/composite2/";
 
 			// Instantiating model.
 			Manager.CodeLevelModel =

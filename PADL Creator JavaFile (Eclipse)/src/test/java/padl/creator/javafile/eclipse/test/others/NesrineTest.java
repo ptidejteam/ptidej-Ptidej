@@ -19,6 +19,7 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.ICreation;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IIdiomLevelModel;
+import util.io.Files;
 
 public class NesrineTest extends TestCase {
 	public NesrineTest(final String name) {
@@ -27,7 +28,7 @@ public class NesrineTest extends TestCase {
 
 	public void test1erCas() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/data/Nesrine's/1er Cas/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/Nesrine's/1er Cas/";
 		final String classPathEntry = "";
 
 		try {
@@ -54,7 +55,7 @@ public class NesrineTest extends TestCase {
 	}
 	public void test2èmeCas() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/data/Nesrine's/2Ã¨me Cas/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/Nesrine's/2ème Cas/";
 		final String classPathEntry = "";
 
 		try {
@@ -76,7 +77,7 @@ public class NesrineTest extends TestCase {
 	}
 	public void test3èmeCas() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/data/Nesrine's/3ème Cas/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/Nesrine's/3ème Cas/";
 		final String classPathEntry = "";
 
 		try {

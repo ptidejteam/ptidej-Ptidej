@@ -19,6 +19,7 @@ import padl.creator.aspectjlst.AspectCreator;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IPackage;
 import padl.kernel.exception.CreationException;
+import util.io.Files;
 
 public class TestAO extends AspectJPrimitive {
 	private HashMap importCreation = null;

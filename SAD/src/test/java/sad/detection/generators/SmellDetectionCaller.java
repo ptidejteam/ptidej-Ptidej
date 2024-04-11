@@ -14,6 +14,8 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.util.Arrays;
 
+import util.io.Files;
+
 public class SmellDetectionCaller {
 	public static void main(final String[] args) {
 		//	final SmellDetectionCaller caller = new SmellDetectionCaller();

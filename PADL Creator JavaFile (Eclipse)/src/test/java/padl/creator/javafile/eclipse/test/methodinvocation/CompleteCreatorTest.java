@@ -11,11 +11,13 @@
 package padl.creator.javafile.eclipse.test.methodinvocation;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IMethod;
+import util.io.Files;
 
 public class CompleteCreatorTest extends TestCase {
 
@@ -25,9 +27,9 @@ public class CompleteCreatorTest extends TestCase {
 
 	public void testCompleteCreatorTest1() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/";
 		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/clazz/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/padl/example/clazz/" };
 		final String classPathEntry = "";
 
 		final ICodeLevelModel model =
@@ -49,7 +51,7 @@ public class CompleteCreatorTest extends TestCase {
 
 	public void testCompleteCreatorTest2() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/padl/";
 
 		final String classPathEntry = "";
 

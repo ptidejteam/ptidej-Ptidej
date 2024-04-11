@@ -11,12 +11,14 @@
 package padl.creator.javafile.eclipse.test.methodinvocation;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
+import util.io.Files;
 
 public class MethodInvocationTest1 extends TestCase {
 	public MethodInvocationTest1(final String name) {
@@ -26,9 +28,9 @@ public class MethodInvocationTest1 extends TestCase {
 	//normal failure, it is to show the difference about the number of MIs of the 2 models
 	public void testMethodInvocation() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/";
 		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/methodInvocation/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/padl/example/methodInvocation/" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createCompleteJavaFilesPadlModel(
@@ -38,7 +40,7 @@ public class MethodInvocationTest1 extends TestCase {
 				javaFiles);
 
 		final String classFiles =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/methodInvocation/bin/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/padl/example/methodInvocation/bin/";
 		final ICodeLevelModel classModel =
 			Utils.createCompleteJavaClassesPadlModel(
 				"",

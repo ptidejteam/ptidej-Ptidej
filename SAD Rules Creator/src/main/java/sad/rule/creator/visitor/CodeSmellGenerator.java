@@ -28,6 +28,7 @@ import sad.rule.creator.model.ISemantic;
 import sad.rule.creator.model.IStruct;
 import sad.rule.creator.model.IVisitor;
 import sad.rule.creator.utils.Constants;
+import util.io.Files;
 import util.io.ProxyConsole;
 import util.io.ProxyDisk;
 

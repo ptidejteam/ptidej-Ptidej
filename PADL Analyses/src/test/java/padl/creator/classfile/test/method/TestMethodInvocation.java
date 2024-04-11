@@ -11,6 +11,7 @@
 package padl.creator.classfile.test.method;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.IClass;
@@ -29,50 +30,48 @@ import padl.kernel.impl.Factory;
  */
 public class TestMethodInvocation extends TestCase {
 	private static ICodeLevelModel CodeLevelModel;
+
 	public TestMethodInvocation(final String aName) {
 		super(aName);
 	}
+
 	public void setUp() throws Exception {
 		if (TestMethodInvocation.CodeLevelModel == null) {
-			TestMethodInvocation.CodeLevelModel =
-				Factory.getInstance().createCodeLevelModel("");
+			TestMethodInvocation.CodeLevelModel = Factory.getInstance()
+					.createCodeLevelModel("");
 			TestMethodInvocation.CodeLevelModel
-				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/bin/padl/example/method/MethodInvocation.class" }));
+					.create(new CompleteClassFileCreator(new String[] {
+							"../PADL Creator ClassFile Tests/bin/padl/example/method/MethodInvocation.class" }));
 		}
 	}
+
 	public void testMethodInvocation1() {
-		Assert.assertEquals(
-			"Number of entities",
-			2,
-			TestMethodInvocation.CodeLevelModel.getNumberOfConstituents());
+		Assert.assertEquals("Number of entities", 2,
+				TestMethodInvocation.CodeLevelModel.getNumberOfConstituents());
 	}
+
 	public void testMethodInvocation2() {
-		final IClass clazz =
-			(IClass) TestMethodInvocation.CodeLevelModel
-				.getConstituentFromID("padl.example.method.MethodInvocation");
-		Assert.assertEquals(
-			"Number of elemets",
-			6,
-			clazz.getNumberOfConstituents());
+		final IClass clazz = (IClass) TestMethodInvocation.CodeLevelModel
+				.getTopLevelEntityFromID(
+						"padl.example.method.MethodInvocation");
+		Assert.assertEquals("Number of elemets", 5,
+				clazz.getNumberOfConstituents());
 	}
+
 	public void testMethodInvocation3() {
-		final IClass clazz =
-			(IClass) TestMethodInvocation.CodeLevelModel
-				.getConstituentFromID("padl.example.method.MethodInvocation");
-		final IMethod method =
-			(IMethod) clazz.getConstituentFromName("SomeMethod".toCharArray());
-		Assert.assertEquals(
-			"Number of elemets",
-			2,
-			method.getNumberOfConstituents());
-		Assert.assertEquals("Assignation", "=", ((IMethodInvocation) method
-			.getConstituentFromID("Method Invocation 2"))
-			.getCalledMethod()
-			.getName());
-		Assert.assertEquals("Assignation", "=", ((IMethodInvocation) method
-			.getConstituentFromID("Method Invocation 3"))
-			.getCalledMethod()
-			.getName());
+		final IClass clazz = (IClass) TestMethodInvocation.CodeLevelModel
+				.getTopLevelEntityFromID("padl.example.method.MethodInvocation");
+		final IMethod method = (IMethod) clazz
+				.getConstituentFromName("SomeMethod".toCharArray());
+		Assert.assertEquals("Number of elemets", 2,
+				method.getNumberOfConstituents());
+		Assert.assertEquals("Assignation", "=",
+				((IMethodInvocation) method
+						.getConstituentFromID("Method Invocation_>PADL<_1"))
+						.getCalledMethod().getDisplayName());
+		Assert.assertEquals("Assignation", "=",
+				((IMethodInvocation) method
+						.getConstituentFromID("Method Invocation_>PADL<_2"))
+						.getCalledMethod().getDisplayName());
 	}
 }

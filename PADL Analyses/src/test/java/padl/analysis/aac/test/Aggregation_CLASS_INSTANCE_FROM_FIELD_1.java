@@ -73,11 +73,9 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1 extends TestCase {
 				Aggregation_CLASS_INSTANCE_FROM_FIELD_1.FirstClassEntities =
 					Util.getArrayOfTopLevelEntities(idiomLevelModel);
 
-				System.out.println();
-				
 				Aggregation_CLASS_INSTANCE_FROM_FIELD_1.Elements =
 					Util
-						.getArrayOfElements(Aggregation_CLASS_INSTANCE_FROM_FIELD_1.FirstClassEntities[2]);
+						.getArrayOfElements(Aggregation_CLASS_INSTANCE_FROM_FIELD_1.FirstClassEntities[4]);
 			}
 			catch (final CreationException e) {
 				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
@@ -104,7 +102,7 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1 extends TestCase {
 					.getCardinality());
 		Assert.assertEquals(
 			"Aggregation name",
-			"padl.kernel.impl.Aggregation:padl.analysis.aac.data.A:1",
+			"padl.kernel.impl.Aggregation:padl.analysis.aac.data.A:1+padl.kernel.impl.Aggregation:padl.analysis.aac.data.A:1",
 			Aggregation_CLASS_INSTANCE_FROM_FIELD_1.Elements[5]
 				.getDisplayName());
 		Assert
@@ -167,13 +165,13 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1 extends TestCase {
 					.getCardinality());
 		Assert.assertEquals(
 			"Association name",
-			"padl.kernel.impl.UseRelationship:padl.analysis.aac.data.A:1",
+			"padl.kernel.impl.UseRelationship:java.lang.System:1",
 			Aggregation_CLASS_INSTANCE_FROM_FIELD_1.Elements[6]
 				.getDisplayName());
 		Assert
 			.assertEquals(
 				"Association target",
-				"padl.analysis.aac.data.A",
+				"java.lang.System",
 				((IUseRelationship) Aggregation_CLASS_INSTANCE_FROM_FIELD_1.Elements[6])
 					.getTargetEntity()
 					.getDisplayID());
@@ -196,7 +194,7 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1 extends TestCase {
 		Assert
 			.assertEquals(
 				"Use relationship name",
-				"padl.kernel.impl.UseRelationship:padl.analysis.aac.data.Aggregation_CLASS_INSTANCE_FROM_FIELD_1:1",
+				"padl.kernel.impl.UseRelationship:padl.analysis.aac.data.Aggregation_CLASS_INSTANCE_FROM_FIELD_1:1+padl.kernel.impl.UseRelationship:padl.analysis.aac.data.Aggregation_CLASS_INSTANCE_FROM_FIELD_1:1",
 				Aggregation_CLASS_INSTANCE_FROM_FIELD_1.Elements[4]
 					.getDisplayName());
 		Assert
@@ -211,7 +209,7 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1 extends TestCase {
 		Assert.assertEquals(
 			"Entity name",
 			"padl.analysis.aac.data.Aggregation_CLASS_INSTANCE_FROM_FIELD_1",
-			Aggregation_CLASS_INSTANCE_FROM_FIELD_1.FirstClassEntities[2]
+			Aggregation_CLASS_INSTANCE_FROM_FIELD_1.FirstClassEntities[4]
 				.getDisplayID());
 	}
 	public void testMethod() {
@@ -224,13 +222,13 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1 extends TestCase {
 	public void testNumberOfElements() {
 		Assert.assertEquals(
 			"Number of elements",
-			7,
+			9,
 			Aggregation_CLASS_INSTANCE_FROM_FIELD_1.Elements.length);
 	}
 	public void testNumberOfEntities() {
 		Assert.assertEquals(
 			"Number of entities",
-			3,
+			5,
 			Aggregation_CLASS_INSTANCE_FROM_FIELD_1.FirstClassEntities.length);
 	}
 	public void testStaticField() {

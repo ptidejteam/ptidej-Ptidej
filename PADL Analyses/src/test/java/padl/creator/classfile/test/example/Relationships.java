@@ -49,7 +49,7 @@ public class Relationships extends ClassFilePrimitive {
 					"padl.example.relationship");
 			codeLevelModel
 				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/bin/padl/example/relationship/" }));
+					new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/relationship/" }));
 
 			final IIdiomLevelModel idiomLevelModel =
 				(IIdiomLevelModel) new AACRelationshipsAnalysis()

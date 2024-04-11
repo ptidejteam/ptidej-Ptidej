@@ -26,6 +26,7 @@ import sad.designsmell.detection.repository.ManyFieldAttributesButNotComplex.Man
 import sad.designsmell.detection.repository.MessageChains.MessageChainsDetection;
 import sad.designsmell.detection.repository.RefusedParentBequest.RefusedParentBequestDetection;
 import sad.designsmell.detection.repository.SpaghettiCode.SpaghettiCodeDetection;
+import util.io.Files;
 import util.io.ProxyDisk;
 
 public class FewSmellsTest extends TestCase {

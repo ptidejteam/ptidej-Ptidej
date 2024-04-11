@@ -17,15 +17,18 @@ import java.io.IOException;
 import java.util.List;
 import java.util.logging.Handler;
 import java.util.logging.LogRecord;
+
 import org.junit.Assert;
-import junit.framework.TestCase;
-import metamodel.scenariodiagram.ScenarioDiagram;
-import modec.solver.constraint.Caller;
-import modec.util.ExecutionTraceParser;
+
 import choco.Constraint;
 import choco.integer.IntVar;
 import choco.palm.PalmProblem;
 import choco.palm.search.PalmSolution;
+import junit.framework.TestCase;
+import metamodel.scenariodiagram.ScenarioDiagram;
+import modec.solver.constraint.Caller;
+import modec.util.ExecutionTraceParser;
+import util.io.Files;
 
 /**
  * @author ngjanice
@@ -40,7 +43,7 @@ public class TestCaller extends TestCase {
 	protected void setUp() throws IOException {
 		this.problem = new PalmProblem();
 		final String traceFilename =
-			"../MoDeC Solver Tests/rsc/TraceNumero2.trace";
+				"../MoDeC Solver Tests/rsc/TraceNumero2.trace";
 		final ExecutionTraceParser etp =
 			new ExecutionTraceParser(traceFilename);
 		this.sd = etp.getScenarioDiagram();

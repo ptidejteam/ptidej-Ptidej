@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-Gaï¿½l Guï¿½hï¿½neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-Gaï¿½l Guï¿½hï¿½neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package sad.detection.test.classfile.xerces;
 
@@ -28,6 +28,7 @@ import sad.codesmell.detection.repository.SpaghettiCode.ClassGlobalVariableDetec
 import sad.codesmell.detection.repository.SpaghettiCode.LongMethodDetection;
 import sad.codesmell.detection.repository.SpaghettiCode.MethodNoParameterDetection;
 import sad.codesmell.detection.repository.SwissArmyKnife.MultipleInterfaceDetection;
+import util.io.Files;
 import util.io.ProxyDisk;
 
 /**
@@ -37,7 +38,7 @@ import util.io.ProxyDisk;
 public final class VariousSmellsTest extends TestCase {
 	private static IIdiomLevelModel IdiomLevelModel;
 	//	private static ModelAnnotatorLOC Annotator;
-	private static final String PATH = "../SAD Tests/data/Xercesv1.0.1.jar";
+	private static final String PATH = "..//SAD Tests/data/Xercesv1.0.1.jar";
 	private static final String MAIN_PATH = "../SAD Tests/data/";
 	private static String SYSTEM_NAME = VariousSmellsTest.PATH
 		.substring(VariousSmellsTest.MAIN_PATH.length());

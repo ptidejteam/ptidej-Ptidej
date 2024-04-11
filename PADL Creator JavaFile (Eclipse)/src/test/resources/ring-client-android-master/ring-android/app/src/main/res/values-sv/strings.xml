@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="section_licence">Licens</string>
+  <string name="sponsor_section">Ring är fri mjukvara, utvecklad och understödd av</string>
+  <string name="copyright_section">Copyright</string>
+  <string name="contribute_section">Bidra</string>
+  <string name="version_section">Version</string>
+  <string name="no_email_app_installed">Inget e-postprogram hittades, installera ett och skicka en rapport</string>
+  <string name="email_chooser_title">Skicka e-post med...</string>
+  <!--RingActivity-->
+  <string name="title_section0">Ring upp</string>
+  <string name="title_activity_sflphone_home">Ring</string>
+  <string name="error_no_network">Ingen nätverksanslutning</string>
+  <string name="error_mobile_network_available_but_disabled">Bevilja tillgång till mobilnätet på inställningssidan.</string>
+  <!--AB menus-->
+  <string name="ab_account_creation">Nytt konto</string>
+  <string name="ab_account_edition_1">Ta bort</string>
+  <string name="ab_action_chat">Textmeddelande</string>
+  <!--Left Drawer-->
+  <!--Accessibility-->
+  <string name="drawer_open">Öppna navigeringspanelen</string>
+  <string name="drawer_close">Stäng navigeringspanelen</string>
+  <!--Sections-->
+  <string name="menu_item_home">Hem</string>
+  <string name="menu_item_accounts">Hantera konton</string>
+  <string name="menu_item_settings">Inställningar</string>
+  <string name="menu_item_about">Om Ring</string>
+  <!--Dialing Fragment-->
+  <string name="dial_action_call">Ring upp</string>
+  <string name="dial_number">Slå ett nummer</string>
+  <string name="dial_hint">Ange telefonnummer</string>
+  <!--History Fragment-->
+  <string name="hist_replay_button">Svara</string>
+  <string name="hist_replay_button_stop">Stopp</string>
+  <string name="hist_no_history">Ingen historik</string>
+  <!--DetailsHistory Fragment-->
+  <string name="detail_hist_call_number">Ring %1$s</string>
+  <!--Home Fragment-->
+  <plurals name="home_conferences_title">
+    <item quantity="one">%d konversation</item>
+    <item quantity="other">%d konversationer</item>
+  </plurals>
+  <string name="home_transfering">Överför %1$s till %1$s</string>
+  <string name="home_transfer_complet">Överföring slutförd</string>
+  <!--ContactList Fragment-->
+  <string name="no_contact_found">Ingen kontakt hittades</string>
+  <string name="starred_contacts_title">Favoriter</string>
+  <string name="searchbar_hint">Ange namn eller telefonnummer...</string>
+  <string name="choose_number">Välj ett nummer</string>
+  <!--FileExplorerDFragement-->
+  <!--TransferDFragment-->
+  <string name="transfer_to_another_call">Överför till ett annat aktuellt samtal:</string>
+  <string name="transfer_no_other_call">Inga andra samtal väntar</string>
+  <string name="transfer_type_number">Ange nummer att överföra till:</string>
+  <!--Notifications-->
+  <string name="notif_missed_incoming_call">Missat samtal från %1$s</string>
+  <string name="notif_missed_outgoing_call">Missat samtal till %1$s</string>
+  <string name="notif_incoming_call_title">Inkommande samtal från %1$s</string>
+  <string name="notif_incoming_call">Inkommande samtal</string>
+  <string name="notif_outgoing_call_title">Utgående samtal till %1$s</string>
+  <string name="notif_outgoing_call">Utgående samtal</string>
+  <string name="notif_current_call_title">Aktuellt samtal med %1$s</string>
+  <string name="notif_current_call">Aktuellt samtal</string>
+  <!--Call Fragment-->
+  <string name="me">Jag</string>
+  <string name="you_txt_prefix">Du:</string>
+  <string name="action_call_attended_transfer">Bevakad överföring</string>
+  <string name="action_call_conference">Konferens</string>
+  <string name="action_call_hangup">Lägg på</string>
+  <string name="action_settings">Inställningar</string>
+  <string name="help_gestures">Denna vy hjälper användare med olika slags interaktioner under samtal. Olika åtgärder kommer att beskrivas, som långtryck, snärt, svep etc.</string>
+  <string name="ongoing_call">Pågående samtal</string>
+  <string name="hist_in_call">Inkommande samtal av %1$s</string>
+  <string name="hist_out_call">Utgående samtal av %1$s</string>
+  <string name="start_error_title">Kan inte starta Ring!</string>
+  <string name="start_error_mic_required">Ring behöver mikrofonbehörighet för att fungera.</string>
+  <string name="action_call_accept">Svara</string>
+  <string name="action_call_decline">Avslå</string>
+  <string name="ab_action_speakerphone">Aktivera högtalare</string>
+  <string name="ab_action_contact_add">Lägg till i kontakter</string>
+  <string name="ab_action_contact_add_question">Vill du lägga till i kontakter?</string>
+  <string name="ab_action_audio_call">Ljudsamtal</string>
+  <string name="ab_action_video_call">Videosamtal</string>
+  <string name="share_via">Dela via</string>
+  <string name="write_a_message">Skriv ett meddelande</string>
+  <string name="scan_qr">Skanna QR-kod</string>
+  <string name="ab_action_flipcamera">Vänd kameran</string>
+  <!--Text messages-->
+  <string name="send_message">Skicka meddelande</string>
+  <string name="message_sending">Skickar meddelande...</string>
+  <string name="time_just_now">Just nu</string>
+  <string name="permission_read_denied">Appen nekas att läsa från din lagringsplats. Överväg att tilldela appen läsrättigheter, annars kommer den inte att fungera korrekt.</string>
+  <string name="permission_write_denied">Appen nekas att skriva till din lagringsplats. Överväg att tilldela appen skrivrättigheter, annars kommer den inte att fungera korrekt.</string>
+  <!--MediaPreferenceFragment-->
+  <string name="permission_dialog_camera_title">Kamerarättighet</string>
+  <string name="permission_dialog_camera_message">Videokonversationer kräver kamerarättigheter. Överväg att aktivera det.</string>
+  <!--Read contacts permission-->
+  <string name="permission_dialog_read_contacts_message">Ring behöver rättighet att läsa kontakter för att aktivera den här funktionen. Överväg att tilldela rättigheter.</string>
+  <!--Write call log permission-->
+  <string name="permission_dialog_write_call_log_message">Ring behöver rättighet att skriva till samtalskoggen för att aktivera den här funktionen. Överväg att tilldela rättigheter.</string>
+  <!--QRCode Scan-->
+  <string name="scan_qr_account_message">Scanna in QR-koden för det konto du vill lägga till.</string>
+  <!--Settings-->
+  <string name="clear_history_dialog_title">Vill du rensa historiken?</string>
+  <string name="clear_history_dialog_message">Denna åtgärd kan inte ångras.</string>
+  <string name="clear_history_completed">Historiken har rensats bort.</string>
+  <!--Conversation-->
+  <string name="conversation_action_delete_this">Ta bort den här konversationen</string>
+  <string name="conversation_action_delete_this_title">Vill du ta bort den här konversationen?</string>
+  <string name="conversation_action_delete_this_message">Denna åtgärd kan inte ångras.</string>
+  <string name="conversation_action_copy_peer_number">Kopiera nummer</string>
+  <string name="conversation_action_copied_peer_number_clipboard">%1$s kopierat till urklipp</string>
+  <string name="conversation_action_select_peer_number">Välj ett nummer</string>
+  <!--Contacts-->
+  <string name="add_call_contact_number_to_contacts">Vill du lägga till %1$s ?</string>
+</resources>

@@ -28,6 +28,7 @@ import sad.codesmell.detection.repository.SpaghettiCode.ClassGlobalVariableDetec
 import sad.codesmell.detection.repository.SpaghettiCode.LongMethodDetection;
 import sad.codesmell.detection.repository.SpaghettiCode.MethodNoParameterDetection;
 import sad.codesmell.detection.repository.SwissArmyKnife.MultipleInterfaceDetection;
+import util.io.Files;
 import util.io.ProxyDisk;
 
 /**

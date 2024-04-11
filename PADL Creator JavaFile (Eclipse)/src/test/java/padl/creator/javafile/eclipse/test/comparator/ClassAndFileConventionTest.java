@@ -11,7 +11,9 @@
 package padl.creator.javafile.eclipse.test.comparator;
 
 import java.io.File;
+
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.IClass;
@@ -19,6 +21,7 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IInterface;
 import padl.kernel.IMethod;
 import padl.kernel.IParameter;
+import util.io.Files;
 import util.io.ProxyConsole;
 
 public class ClassAndFileConventionTest extends TestCase {
@@ -28,12 +31,12 @@ public class ClassAndFileConventionTest extends TestCase {
 
 	public void testUseOfFileClassNameConvention() {
 
-		final String javaFilesFolderPath = "../PADL Creator JavaFile (Eclipse) Tests/rsc/";
+		final String javaFilesFolderPath = "../PADL Creator JavaFile (Eclipse)/target/test-classes//";
 		final String classPathEntry = "";
-		String rootPath = "../PADL Creator JavaFile (Eclipse) Tests/rsc/ptidej/example/FileAndClassNames/";
+		String rootPath = "../PADL Creator JavaFile (Eclipse)/target/test-classes//ptidej/example/FileAndClassNames/";
 
 		String someFilesPaths[] =
-			new File("../PADL Creator JavaFile (Eclipse) Tests/rsc/ptidej/example/FileAndClassNames/").list();
+			new File("../PADL Creator JavaFile (Eclipse)/target/test-classes//ptidej/example/FileAndClassNames/").list();
 		for (int i = 0; i < someFilesPaths.length; i++) {
 			someFilesPaths[i] =
 				new StringBuffer()
@@ -74,14 +77,14 @@ public class ClassAndFileConventionTest extends TestCase {
 
 	public void testUseOfFileClassNameConvention2() {
 
-		final String javaFilesFolderPath = "../PADL Creator JavaFile (Eclipse) Tests/rsc/";
+		final String javaFilesFolderPath = "../PADL Creator JavaFile (Eclipse)/target/test-classes//";
 		final String classPathEntry = "";
 		String rootPath = new StringBuffer()
 
-		.append("../PADL Creator JavaFile (Eclipse) Tests/rsc/ptidej/example/FileAndClassNames2/").toString();
+		.append("../PADL Creator JavaFile (Eclipse)/target/test-classes//ptidej/example/FileAndClassNames2/").toString();
 
 		String someFilesPaths[] =
-			new File("../PADL Creator JavaFile (Eclipse) Tests/rsc/ptidej/example/FileAndClassNames2/").list();
+			new File("../PADL Creator JavaFile (Eclipse)/target/test-classes//ptidej/example/FileAndClassNames2/").list();
 		for (int i = 0; i < someFilesPaths.length; i++) {
 			someFilesPaths[i] =
 				new StringBuffer()

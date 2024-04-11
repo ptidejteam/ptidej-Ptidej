@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-Gaï¿½l Guï¿½hï¿½neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-Gaï¿½l Guï¿½hï¿½neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.refactoring.test.method;
 
@@ -29,6 +29,7 @@ import padl.kernel.impl.Factory;
 import padl.refactoring.exception.ModelDeclarationException;
 import padl.refactoring.method.IClassComparator;
 import padl.refactoring.method.RefactoringRenameMethod;
+import util.io.Files;
 
 /**
  * @author Saliha Bouden
@@ -47,7 +48,7 @@ public final class RefactoringRenameMethodTest extends TestCase {
 		super(name);
 	}
 
-	// construire le modèle
+	// construire le modï¿½le
 	protected void setUp() throws Exception {
 		// if (RefactoringRenameMethodTest.IdiomLevelModel == null) {
 		final ICodeLevelModel codeLevelModel =
@@ -80,8 +81,8 @@ public final class RefactoringRenameMethodTest extends TestCase {
 				refactoringMethod.getClassContainsMethodToRefactor(
 					"acme.GifEncoder",
 					"encodeStart");
-			System.out.println("-----­" + aClass.getDisplayName());
-			System.out.println("-----­" + aMethod.getDisplayName());
+			System.out.println("-----ï¿½" + aClass.getDisplayName());
+			System.out.println("-----ï¿½" + aMethod.getDisplayName());
 			try {
 				refactoringMethod.renameMethod(
 					"acme.GifEncoder",
@@ -94,8 +95,8 @@ public final class RefactoringRenameMethodTest extends TestCase {
 						"acme.GifEncoder",
 						"newName");
 				if (aMethod != null) {
-					System.out.println("-----­" + aClass.getDisplayName());
-					System.out.println("-----­" + method.getDisplayName());
+					System.out.println("-----ï¿½" + aClass.getDisplayName());
+					System.out.println("-----ï¿½" + method.getDisplayName());
 					Assert.assertEquals(
 						"Name of the new method renamed",
 						"newName",
@@ -124,8 +125,8 @@ public final class RefactoringRenameMethodTest extends TestCase {
 				refactoringMethod.getClassContainsMethodToRefactor(
 					"acme.GifEncoder",
 					"char_init");
-			System.out.println("-----­" + aClass.getDisplayName());
-			System.out.println("-----­" + aMethod.getDisplayName());
+			System.out.println("-----ï¿½" + aClass.getDisplayName());
+			System.out.println("-----ï¿½" + aMethod.getDisplayName());
 			try {
 				refactoringMethod.renameMethod(
 					"acme.GifEncoder",
@@ -137,8 +138,8 @@ public final class RefactoringRenameMethodTest extends TestCase {
 						"BumpPixel");
 				if (aMethod != null) {
 					System.out.println("After Refactoring Rename Method");
-					System.out.println("-----­" + aClass.getDisplayName());
-					System.out.println("-----­" + method.getDisplayName());
+					System.out.println("-----ï¿½" + aClass.getDisplayName());
+					System.out.println("-----ï¿½" + method.getDisplayName());
 					Assert.assertEquals(
 						"Name of the new method renamed",
 						"BumpPixel",
@@ -167,8 +168,8 @@ public final class RefactoringRenameMethodTest extends TestCase {
 				refactoringMethod.getClassContainsMethodToRefactor(
 					"acme.GifEncoder",
 					"char_init");
-			System.out.println("-----­" + aClass.getDisplayName());
-			System.out.println("-----­" + aMethod.getDisplayName());
+			System.out.println("-----ï¿½" + aClass.getDisplayName());
+			System.out.println("-----ï¿½" + aMethod.getDisplayName());
 			try {
 				refactoringMethod.renameMethodAcceptOverloading(
 					"acme.GifEncoder",
@@ -176,8 +177,8 @@ public final class RefactoringRenameMethodTest extends TestCase {
 					"BumpPixel");
 				System.out
 					.println("After Refactoring Rename Method Accept Overloading");
-				System.out.println("-----­" + aClass.getDisplayName());
-				System.out.println("-----­" + aMethod.getDisplayName());
+				System.out.println("-----ï¿½" + aClass.getDisplayName());
+				System.out.println("-----ï¿½" + aMethod.getDisplayName());
 				Assert.assertEquals(
 					"Name of the new method renamed",
 					"BumpPixel",
@@ -230,8 +231,8 @@ public final class RefactoringRenameMethodTest extends TestCase {
 						theEntity.getDisplayName(),
 						"encodeStart");
 				if (theMethod != null) {
-					System.out.println("-----­" + theEntity.getDisplayName());
-					System.out.println("-----­" + theMethod.getDisplayName());
+					System.out.println("-----ï¿½" + theEntity.getDisplayName());
+					System.out.println("-----ï¿½" + theMethod.getDisplayName());
 					Assert.assertEquals(
 						"Name of the method ",
 						"encodeStart",
@@ -254,9 +255,9 @@ public final class RefactoringRenameMethodTest extends TestCase {
 							theEntity.getDisplayName(),
 							"newName");
 					if (theMethod != null) {
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theEntity.getDisplayName());
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theMethod.getDisplayName());
 						Assert.assertEquals(
 							"Name of the new method renamed",
@@ -312,8 +313,8 @@ public final class RefactoringRenameMethodTest extends TestCase {
 						theEntity.getDisplayName(),
 						"encodeStart");
 				if (theMethod != null) {
-					System.out.println("-----­" + theEntity.getDisplayName());
-					System.out.println("-----­" + theMethod.getDisplayName());
+					System.out.println("-----ï¿½" + theEntity.getDisplayName());
+					System.out.println("-----ï¿½" + theMethod.getDisplayName());
 					Assert.assertEquals(
 						"Name of the method ",
 						"encodeStart",
@@ -337,9 +338,9 @@ public final class RefactoringRenameMethodTest extends TestCase {
 							theEntity.getDisplayName(),
 							"BumpPixel");
 					if (theMethod != null) {
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theEntity.getDisplayName());
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theMethod.getDisplayName());
 						Assert.assertEquals(
 							"Name of the new method renamed",
@@ -400,9 +401,9 @@ public final class RefactoringRenameMethodTest extends TestCase {
 							theEntity.getDisplayName(),
 							"encodeStart");
 					if (theMethod != null) {
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theEntity.getDisplayName());
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theMethod.getDisplayName());
 						Assert.assertEquals(
 							"Name of the  method ",
@@ -427,9 +428,9 @@ public final class RefactoringRenameMethodTest extends TestCase {
 								theEntity.getDisplayName(),
 								"char_init");
 						if (theMethod != null) {
-							System.out.println("-----­"
+							System.out.println("-----ï¿½"
 									+ theEntity.getDisplayName());
-							System.out.println("-----­"
+							System.out.println("-----ï¿½"
 									+ theMethod.getDisplayName());
 							Assert.assertEquals(
 								"Name of the new method renamed",
@@ -485,8 +486,8 @@ public final class RefactoringRenameMethodTest extends TestCase {
 						theEntity.getDisplayName(),
 						"addDiagramDataListener");
 				if (theMethod != null) {
-					System.out.println("-----­" + theEntity.getDisplayName());
-					System.out.println("-----­" + theMethod.getDisplayName());
+					System.out.println("-----ï¿½" + theEntity.getDisplayName());
+					System.out.println("-----ï¿½" + theMethod.getDisplayName());
 					Assert.assertEquals(
 						"Name of the new method renamed",
 						"addDiagramDataListener",
@@ -518,8 +519,8 @@ public final class RefactoringRenameMethodTest extends TestCase {
 						theEntity.getDisplayName(),
 						"addDiagramDataListener");
 				if (theMethod != null) {
-					System.out.println("-----­" + theEntity.getDisplayName());
-					System.out.println("-----­" + theMethod.getDisplayName());
+					System.out.println("-----ï¿½" + theEntity.getDisplayName());
+					System.out.println("-----ï¿½" + theMethod.getDisplayName());
 					Assert.assertEquals(
 						"Name of the new method renamed",
 						"addDiagramDataListener",
@@ -543,9 +544,9 @@ public final class RefactoringRenameMethodTest extends TestCase {
 							theEntity.getDisplayName(),
 							"newName");
 					if (theMethod != null) {
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theEntity.getDisplayName());
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theMethod.getDisplayName());
 						Assert.assertEquals(
 							"Name of the new method renamed",
@@ -562,9 +563,9 @@ public final class RefactoringRenameMethodTest extends TestCase {
 							theEntity.getDisplayName(),
 							"newName");
 					if (theMethod != null) {
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theEntity.getDisplayName());
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theMethod.getDisplayName());
 						Assert.assertEquals(
 							"Name of the new method renamed",
@@ -619,8 +620,8 @@ public final class RefactoringRenameMethodTest extends TestCase {
 						theEntity.getDisplayName(),
 						"addDiagramDataListener");
 				if (theMethod != null) {
-					System.out.println("-----­" + theEntity.getDisplayName());
-					System.out.println("-----­" + theMethod.getDisplayName());
+					System.out.println("-----ï¿½" + theEntity.getDisplayName());
+					System.out.println("-----ï¿½" + theMethod.getDisplayName());
 					Assert.assertEquals(
 						"Name of the new method renamed",
 						"addDiagramDataListener",
@@ -650,8 +651,8 @@ public final class RefactoringRenameMethodTest extends TestCase {
 						theEntity.getDisplayName(),
 						"addDiagramDataListener");
 				if (theMethod != null) {
-					System.out.println("-----­" + theEntity.getDisplayName());
-					System.out.println("-----­" + theMethod.getDisplayName());
+					System.out.println("-----ï¿½" + theEntity.getDisplayName());
+					System.out.println("-----ï¿½" + theMethod.getDisplayName());
 					Assert.assertEquals(
 						"Name of the new method renamed",
 						"addDiagramDataListener",
@@ -676,9 +677,9 @@ public final class RefactoringRenameMethodTest extends TestCase {
 							theEntity.getDisplayName(),
 							"add");
 					if (theMethod != null) {
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theEntity.getDisplayName());
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theMethod.getDisplayName());
 						Assert.assertEquals(
 							"Name of the new method renamed",
@@ -695,9 +696,9 @@ public final class RefactoringRenameMethodTest extends TestCase {
 							theEntity.getDisplayName(),
 							"add");
 					if (theMethod != null) {
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theEntity.getDisplayName());
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theMethod.getDisplayName());
 						Assert.assertEquals(
 							"Name of the new method renamed",
@@ -753,9 +754,9 @@ public final class RefactoringRenameMethodTest extends TestCase {
 						firstClassEntity.getDisplayName(),
 						"addDiagramDataListener");
 				if (theMethod != null) {
-					System.out.println("-----­"
+					System.out.println("-----ï¿½"
 							+ firstClassEntity.getDisplayName());
-					System.out.println("-----­" + theMethod.getDisplayName());
+					System.out.println("-----ï¿½" + theMethod.getDisplayName());
 					Assert.assertEquals(
 						"Name of the new method renamed",
 						"addDiagramDataListener",
@@ -786,8 +787,8 @@ public final class RefactoringRenameMethodTest extends TestCase {
 						theEntity.getDisplayName(),
 						"addDiagramDataListener");
 				if (theMethod != null) {
-					System.out.println("-----­" + theEntity.getDisplayName());
-					System.out.println("-----­" + theMethod.getDisplayName());
+					System.out.println("-----ï¿½" + theEntity.getDisplayName());
+					System.out.println("-----ï¿½" + theMethod.getDisplayName());
 					Assert.assertEquals(
 						"Name of the new method renamed",
 						"addDiagramDataListener",
@@ -811,9 +812,9 @@ public final class RefactoringRenameMethodTest extends TestCase {
 							theEntity.getDisplayName(),
 							"add");
 					if (theMethod != null) {
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theEntity.getDisplayName());
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theMethod.getDisplayName());
 						Assert.assertEquals(
 							"Name of the new method renamed",
@@ -829,9 +830,9 @@ public final class RefactoringRenameMethodTest extends TestCase {
 							theEntity.getDisplayName(),
 							"add");
 					if (theMethod != null) {
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theEntity.getDisplayName());
-						System.out.println("-----­"
+						System.out.println("-----ï¿½"
 								+ theMethod.getDisplayName());
 						Assert.assertEquals(
 							"Name of the new method renamed",

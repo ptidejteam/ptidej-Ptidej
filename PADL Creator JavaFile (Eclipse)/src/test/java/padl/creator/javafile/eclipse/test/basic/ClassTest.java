@@ -24,6 +24,7 @@ import padl.kernel.IMethod;
 import padl.kernel.IPackage;
 import padl.kernel.IParameter;
 import padl.test.helper.ModelComparator;
+import util.io.Files;
 import util.io.ProxyConsole;
 
 public class ClassTest extends TestCase {
@@ -36,9 +37,9 @@ public class ClassTest extends TestCase {
 	protected void setUp() {
 
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/clazz/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/clazz/" };
 		final String classPathEntry = "";
 
 		this.model =
@@ -173,11 +174,11 @@ public class ClassTest extends TestCase {
 	public void testDefaultPackages() {
 
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/rsc/Aminata testdata/MyDefaultClass.java",
-					"../PADL Creator JavaFile (Eclipse) Tests/rsc/Aminata testdata/MyDefaultClass2.java" };
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/Aminata testdata/MyDefaultClass.java",
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/Aminata testdata/MyDefaultClass2.java" };
 		final String classPathEntry = "";
 
 		final ICodeLevelModel model =

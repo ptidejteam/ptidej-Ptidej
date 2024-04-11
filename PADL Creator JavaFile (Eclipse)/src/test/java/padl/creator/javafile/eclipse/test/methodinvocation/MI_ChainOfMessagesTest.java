@@ -18,6 +18,7 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
+import util.io.Files;
 import util.io.ProxyConsole;
 
 public class MI_ChainOfMessagesTest extends TestCase {
@@ -28,9 +29,9 @@ public class MI_ChainOfMessagesTest extends TestCase {
 
 	public void testChainOfMessages() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/src/";
+				"../PADL Creator JavaFile (Eclipse)/src/main/java/";
 		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/src/padl/example/relationship/ChainOfMessages.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/ChainOfMessages.java" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createCompleteJavaFilesPadlModel(
@@ -40,7 +41,7 @@ public class MI_ChainOfMessagesTest extends TestCase {
 				javaFiles);
 
 		final String[] classFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/ChainOfMessages.class" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/classes/padl/example/relationship/ChainOfMessages.class" };
 		final ICodeLevelModel classModel =
 			Utils.createCompleteJavaClassesPadlModel("", classFiles);
 

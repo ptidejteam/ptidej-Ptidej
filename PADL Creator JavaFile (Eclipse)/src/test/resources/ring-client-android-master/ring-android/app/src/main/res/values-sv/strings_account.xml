@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <!--Strings related to account creation-->
+  <string name="prompt_alias">Alias</string>
+  <string name="prompt_hostname">Värdnamn</string>
+  <string name="prompt_username">Användarnamn</string>
+  <string name="prompt_password">Lösenord</string>
+  <string name="action_create">Lägg till konto</string>
+  <string name="action_create_short">Registrera</string>
+  <string name="error_field_required">Det här fältet är obligatoriskt</string>
+  <string name="dialog_wait_create">Lägger till konto</string>
+  <string name="dialog_wait_create_details">Vänta medan ditt nya konto läggs till...</string>
+  <string name="dialog_warn_ip2ip_account_title">Vill du skapa ett tomt SIP-konto?</string>
+  <string name="dialog_warn_ip2ip_account_message">Du håller på att skapa ett SIP-konto utan giltigt värdnamn.
+Du kommer bara att kunna ringa och ta emot direkta IP-samtal.
+Du kan ändra kontot senare.</string>
+  <string-array name="accountType">
+    <item>RING</item>
+    <item>SIP</item>
+  </string-array>
+  <string name="help_ring_title">Skapa ett Ring-konto</string>
+  <string name="help_ring">Ett Ring-konto låter dig nå folk säkert via P2P, i ett fullständigt distribuerat närverk.</string>
+  <string name="help_sip_title">Lägg till ditt SIP-konto</string>
+  <string name="help_sip">Konfigurera ett befintligt SIP-konto.</string>
+  <string name="create_sip_account">Lägg till</string>
+  <string name="share_number">Dela nummer</string>
+  <!--Strings related to account deletion-->
+  <string name="account_delete_dialog_title">Vill du ta bort kontot?</string>
+  <string name="account_delete_dialog_message">Denna åtgärd kan inte ångras. Om du inte redan gjort det, bör du överväga att exportera ditt konto innan du tar bort det.</string>
+  <!--AccountManagementFragment-->
+  <string name="empty_account_list">Inget konto registrerat</string>
+  <string name="normal_accounts_titles">Konton</string>
+  <!--Basic Details-->
+  <string name="account_preferences_basic_tab">Allmänt</string>
+  <string name="account_basic_category">Grundläggande inställningar</string>
+  <string name="account_alias_label">Kontonamn</string>
+  <string name="account_hostname_label">Värdnamn</string>
+  <string name="account_bootstrap_label">Bootstrap</string>
+  <string name="account_username_label">Användarnamn</string>
+  <string name="account_password_label">Lösenord</string>
+  <string name="account_optionnal_category">Extra inställningar</string>
+  <string name="account_useragent_label">Användaragent</string>
+  <string name="account_autoanswer_label">Autosvar</string>
+  <string name="account_upnp_label">Aktivera UPnP</string>
+  <string name="account_proxy_field">Proxy</string>
+  <!--Audio Details-->
+  <string name="account_audio_label">Ljud</string>
+  <string name="account_preferences_media_tab">Media</string>
+  <string name="account_ringtone_label">Ringsignaler</string>
+  <string name="account_ringtone_enabled_label">Aktivera ringsignaler</string>
+  <string name="account_ringtone_path_label">Sökväg till ringsignal</string>
+  <!--Video Details-->
+  <string name="account_video_label">Video</string>
+  <string name="account_video_enable">Aktivera video</string>
+  <!--Advanced Details-->
+  <string name="account_preferences_advanced_tab">Avancerat</string>
+  <string name="account_registration_exp_label">Registreringen löper ut</string>
+  <string name="account_local_interface_label">Lokalt gränssnitt</string>
+  <string name="account_local_port_label">Lokal port</string>
+  <string name="account_stun_enable_label">Använd STUN</string>
+  <string name="account_stun_server_label">STUN-server</string>
+  <string name="account_turn_enable_label">Använd TURN</string>
+  <string name="account_turn_server_label">TURN-server</string>
+  <string name="account_turn_username_label">TURN-användarnamn</string>
+  <string name="account_turn_password_label">TURN-lösenord</string>
+  <string name="account_published_same_as_local_label">Publicerad samma som lokal</string>
+  <string name="account_published_port_label">Publicerad port</string>
+  <string name="account_published_address_label">Publiserad adress</string>
+  <!--Security Details-->
+  <string name="account_credentials_label">Inloggningsuppgifter</string>
+  <string name="account_credentials_edit">Redigera inloggningsuppgifter</string>
+  <string name="account_credentials_add">Lägg till inloggningsuppgifter</string>
+  <!--SRTP Details-->
+  <string name="account_preferences_security_tab">Säkerhet</string>
+  <string name="account_srtp_deactivated">Inaktiverad</string>
+  <!--SIP-->
+  <!--TLS Details-->
+  <string name="account_tls_transport_switch_label">Använd TLS-transport</string>
+  <string name="account_tls_port_label">TLS lyssningsport</string>
+  <string name="account_tls_certificate_list_label">Certifikatutfärdare</string>
+  <string name="account_tls_certificate_file_label">Certifikatfil</string>
+  <string name="account_tls_private_key_file_label">Privat nyckelfil</string>
+  <string name="account_tls_password_label">Privat nyckellösenord</string>
+  <string name="account_tls_method_label">TLS-metod</string>
+  <string name="account_tls_ciphers_label">TLS-chiffer</string>
+  <string name="account_tls_server_name_label">Servernamn</string>
+  <string name="account_tls_verify_server_label">Verifiera server</string>
+  <string name="account_tls_verify_client_label">Verifiera klient</string>
+  <string name="account_tls_negotiation_timeout_sec">Tidsgräns för förhandling (sek)</string>
+  <string name="account_rtp_max_port">Maximum</string>
+  <string name="account_rtp_min_port">Minimum</string>
+  <string name="account_rtp_port_range">Audio RTP portintervall</string>
+  <!--Import/export-->
+  <string name="account_export">Exportera</string>
+  <string name="account_import_account">Importera ett konto</string>
+  <string name="account_export_title">Exportera ett konto</string>
+  <string name="account_import_title">Importera konton</string>
+  <string name="account_import_explanation">Du kan importera tididigare exporterade konton.</string>
+  <string name="account_export_message">Spara kontoinställningar och autentiseringsuppgifter, lösenordet krypterat.</string>
+  <string name="account_export_new_password">Nytt lösenord</string>
+  <string name="account_export_confirm_password">Bekräfta lösenord</string>
+  <string name="account_import_message">Ange lösenord för att dekryptera filen</string>
+  <string name="account_import_decryption_password">Dekrypteringslösenord</string>
+  <string name="import_dialog_title">Importerar</string>
+  <string name="import_export_wait">Vänta...</string>
+  <string name="export_dialog_title">Exporterar konto</string>
+  <string name="account_export_result">Konto exporterat till %1$s</string>
+  <string name="export_failed_dialog_title">Exporten misslyckades</string>
+  <string name="export_failed_dialog_msg">Et fel inträffade</string>
+  <string name="error_password_char_count">6 tecken minimum</string>
+  <string name="error_passwords_not_equals">Lösenorden stämmer inte</string>
+  <string name="import_failed_dialog_title">Importen misslyckades</string>
+  <string name="import_failed_dialog_msg">Et fel inträffade</string>
+</resources>

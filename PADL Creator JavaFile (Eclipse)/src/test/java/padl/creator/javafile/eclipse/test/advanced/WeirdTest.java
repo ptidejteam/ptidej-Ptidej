@@ -18,6 +18,7 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IPackage;
 import padl.test.helper.ModelComparator;
+import util.io.Files;
 
 public class WeirdTest extends TestCase {
 
@@ -29,9 +30,9 @@ public class WeirdTest extends TestCase {
 	public void testWeirdClass() {
 
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/weird/Weird.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/weird/Weird.java" };
 		final String classPathEntry = "";
 
 		final ICodeLevelModel model =

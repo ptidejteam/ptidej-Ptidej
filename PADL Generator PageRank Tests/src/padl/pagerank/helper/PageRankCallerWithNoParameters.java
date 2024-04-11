@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-Gaï¿½l Guï¿½hï¿½neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-Gaï¿½l Guï¿½hï¿½neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.pagerank.helper;
 
@@ -20,6 +20,7 @@ import padl.pagerank.PageRankRankingGenerator;
 import padl.pagerank.utils.InputDataGeneratorWith9Relations;
 import padl.pagerank.utils.InputDataGeneratorWith9RelationsForCPP;
 import padl.visitor.IGenerator;
+import util.io.Files;
 import util.io.ProxyConsole;
 import util.io.ProxyDisk;
 

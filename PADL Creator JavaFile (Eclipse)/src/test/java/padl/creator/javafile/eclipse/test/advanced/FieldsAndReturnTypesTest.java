@@ -14,6 +14,7 @@ import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.RelaxedModelComparator;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.ICodeLevelModel;
+import util.io.Files;
 
 public class FieldsAndReturnTypesTest extends TestCase {
 
@@ -26,13 +27,13 @@ public class FieldsAndReturnTypesTest extends TestCase {
 	public void testFieldsAndReturnTypes() {
 
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/fieldsAndReturnTypes/FieldsAndReturnTypes.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/padl/example/fieldsAndReturnTypes/FieldsAndReturnTypes.java" };
 		final String classPathEntry = "";
 
 		final String classFilesFolderPath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/fieldsAndReturnTypes/FieldsAndReturnTypes.class";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/fieldsAndReturnTypes/FieldsAndReturnTypes.class";
 		final ICodeLevelModel padlModelFromJavaFiles =
 			Utils.createLightJavaFilesPadlModel(
 				"",

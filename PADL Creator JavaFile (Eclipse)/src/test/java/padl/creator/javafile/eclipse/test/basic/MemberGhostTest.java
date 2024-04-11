@@ -18,6 +18,7 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IEntity;
 import padl.kernel.IMethod;
 import padl.kernel.IParameter;
+import util.io.Files;
 import util.io.ProxyConsole;
 
 public class MemberGhostTest extends TestCase {
@@ -35,9 +36,9 @@ public class MemberGhostTest extends TestCase {
 
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/member1/MemberGhostExample.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/member1/MemberGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -82,9 +83,9 @@ public class MemberGhostTest extends TestCase {
 	public void testGhostMember2() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/member2/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/member2/" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -130,9 +131,9 @@ public class MemberGhostTest extends TestCase {
 	public void testGhostMember2bis() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/member2/MemberGhostExample.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/member2/MemberGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -178,9 +179,9 @@ public class MemberGhostTest extends TestCase {
 	public void testGhostMember3() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/member3/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/member3/" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -233,9 +234,9 @@ public class MemberGhostTest extends TestCase {
 	public void testGhostMember4() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/member4/MemberGhostExample.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/member4/MemberGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -272,9 +273,9 @@ public class MemberGhostTest extends TestCase {
 	public void testGhostMember5() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/member5/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/member5/" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -336,9 +337,9 @@ public class MemberGhostTest extends TestCase {
 	public void testGhostMember5bis() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/member5/MemberGhostExample.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/member5/MemberGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -400,9 +401,9 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost1() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance1/InheritanceGhostExample.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance1/InheritanceGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -437,9 +438,9 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost10() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance10/InheritanceGhostExample.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance10/InheritanceGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -477,11 +478,11 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost10bis() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance10/InheritanceGhostExample.java",
-					"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance9/B.java" };
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance10/InheritanceGhostExample.java",
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance9/B.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -519,9 +520,9 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost2() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance2/InheritanceGhostExample.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance2/InheritanceGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -564,9 +565,9 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost3() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance3/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance3/" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -604,9 +605,9 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost3bis() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance3/InheritanceGhostExample.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance3/InheritanceGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -644,9 +645,9 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost4() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance4/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance4/" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -684,9 +685,9 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost4bis() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance4/InheritanceGhostExample.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance4/InheritanceGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -722,9 +723,9 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost5() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance5/InheritanceGhostExample.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance5/InheritanceGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -762,9 +763,9 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost6() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance6/InheritanceGhostExample.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance6/InheritanceGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -794,9 +795,9 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost7() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance7/InheritanceGhostExample.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance7/InheritanceGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -839,9 +840,9 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost8() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance8/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance8/" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -879,9 +880,9 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost9() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance9/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance9/" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -919,9 +920,9 @@ public class MemberGhostTest extends TestCase {
 	public void testInheritanceGhost9bis() {
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] listOfFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/inheritance9/InheritanceGhostExample.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/inheritance9/InheritanceGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(

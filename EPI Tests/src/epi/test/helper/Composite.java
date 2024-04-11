@@ -1,16 +1,22 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-Gaï¿½l Guï¿½hï¿½neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-Gaï¿½l Guï¿½hï¿½neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package epi.test.helper;
 
 import java.util.Hashtable;
+
+import epi.solver.Approximation;
+import epi.solver.EPISolver;
+import epi.solver.OptimisedBitVectorSolver;
+import epi.solver.Solution;
+import epi.solver.StringBuilder;
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
@@ -18,17 +24,13 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IIdiomLevelModel;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
+import util.io.Files;
 import util.io.ProxyConsole;
 import util.io.ProxyDisk;
-import epi.solver.Approximation;
-import epi.solver.EPISolver;
-import epi.solver.OptimisedBitVectorSolver;
-import epi.solver.Solution;
-import epi.solver.StringBuilder;
 
 public class Composite {
 	public static void main(final String[] args) {
-		final String root = "../Ptidej Tests/bin/ptidej/example/composite2/";
+		final String root = "../DeMIMA/target/test-classes/ptidej/example/composite2/";
 
 		try {
 			final ICodeLevelModel codeLevelModel =

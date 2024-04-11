@@ -20,6 +20,7 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
+import util.io.Files;
 import util.io.ProxyConsole;
 
 public class MI_ClassClassTest extends TestCase {
@@ -30,11 +31,11 @@ public class MI_ClassClassTest extends TestCase {
 
 	public void testCLASS_CLASS_1() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/src/";
+			"../PADL Creator JavaFile (Eclipse)/src/main/java/";
 		final String[] javaFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/src/padl/example/relationship/A.java",
-					"../PADL Creator JavaFile (Eclipse) Tests/src/padl/example/relationship/UseRelationship_CLASS_CLASS_1.java" };
+				"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/A.java",
+				"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/UseRelationship_CLASS_CLASS_1.java" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createCompleteJavaFilesPadlModel(
@@ -45,8 +46,8 @@ public class MI_ClassClassTest extends TestCase {
 
 		final String[] classFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/A.class",
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/UseRelationship_CLASS_CLASS_1.class" };
+				"../PADL Creator JavaFile (Eclipse)/target/classes/padl/example/relationship/A.class",
+				"../PADL Creator JavaFile (Eclipse)/target/classes/padl/example/relationship/UseRelationship_CLASS_CLASS_1.class" };
 		final ICodeLevelModel classModel =
 			Utils.createCompleteJavaClassesPadlModel("", classFiles);
 
@@ -123,11 +124,11 @@ public class MI_ClassClassTest extends TestCase {
 
 	public void testCLASS_CLASS_2() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/src/";
+				"../PADL Creator JavaFile (Eclipse)/src/main/java/";
 		final String[] javaFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/src/padl/example/relationship/A.java",
-					"../PADL Creator JavaFile (Eclipse) Tests/src/padl/example/relationship/UseRelationship_CLASS_CLASS_2.java" };
+				"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/A.java",
+				"../PADL Creator JavaFile (Eclipse)/src/main/java/padl/example/relationship/UseRelationship_CLASS_CLASS_2.java" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createCompleteJavaFilesPadlModel(
@@ -138,8 +139,8 @@ public class MI_ClassClassTest extends TestCase {
 
 		final String[] classFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/A.class",
-					"../PADL Creator JavaFile (Eclipse) Tests/bin/padl/example/relationship/UseRelationship_CLASS_CLASS_2.class" };
+				"../PADL Creator JavaFile (Eclipse)/target/classes/padl/example/relationship/A.class",
+				"../PADL Creator JavaFile (Eclipse)/target/classes/padl/example/relationship/UseRelationship_CLASS_CLASS_2.class" };
 		final ICodeLevelModel classModel =
 			Utils.createCompleteJavaClassesPadlModel("", classFiles);
 

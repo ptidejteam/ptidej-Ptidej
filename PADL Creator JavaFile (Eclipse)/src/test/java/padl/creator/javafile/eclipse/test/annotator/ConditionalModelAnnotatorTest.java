@@ -18,6 +18,7 @@ import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IMethod;
 import padl.statement.kernel.ISwitchInstruction;
+import util.io.Files;
 import util.io.ProxyConsole;
 
 public class ConditionalModelAnnotatorTest extends TestCase {
@@ -29,9 +30,9 @@ public class ConditionalModelAnnotatorTest extends TestCase {
 
 	public void testLoc() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/annotator/" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/annotator/" };
 		final String classPathEntry = "";
 		final ICodeLevelModel javaModel =
 			Utils.createLightJavaFilesPadlModel(

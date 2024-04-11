@@ -20,6 +20,7 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.impl.Factory;
 import padl.util.ModelStatistics;
+import util.io.Files;
 
 /**
  * @author Yann-Gäel Guéhéneuc
@@ -30,7 +31,7 @@ public class Compare extends ClassFilePrimitive {
 		super(aName);
 	}
 	public void testCompare() {
-		final String path = "../Ptidej Tests/bin/ptidej/example/composite2/";
+		final String path = "../DeMIMA/target/test-classes/ptidej/example/composite2/";
 		final ICodeLevelModel codeLevelModel =
 			Factory.getInstance().createCodeLevelModel(path);
 		final ModelStatistics patternStatistics = new ModelStatistics();

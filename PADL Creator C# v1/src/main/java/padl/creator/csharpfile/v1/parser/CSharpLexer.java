@@ -14,7 +14,17 @@
 package padl.creator.csharpfile.v1.parser;
 
 
-import org.antlr.runtime.*;
+import org.antlr.runtime.BaseRecognizer;
+import org.antlr.runtime.CharStream;
+import org.antlr.runtime.DFA;
+import org.antlr.runtime.EarlyExitException;
+import org.antlr.runtime.Lexer;
+import org.antlr.runtime.MismatchedSetException;
+import org.antlr.runtime.NoViableAltException;
+import org.antlr.runtime.RecognitionException;
+import org.antlr.runtime.RecognizerSharedState;
+
+import util.io.Files;
 
 public class CSharpLexer extends Lexer {
     public static final int BitwiseAndExpression=107;
@@ -365,7 +375,7 @@ public class CSharpLexer extends Lexer {
         super(input, state);
 
     }
-    public String getGrammarFileName() { return "../rsc/CSharp.g3"; }
+    public String getGrammarFileName() { return "../PADL Creator C# v1/target/test-classes/CSharp.g3"; }
 
     // $ANTLR start "LBRACE"
     public final void mLBRACE() throws RecognitionException {

@@ -15,6 +15,7 @@ import padl.aspectj.kernel.impl.AspectJFactory;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.exception.CreationException;
+import util.io.Files;
 
 /**
  * @author Jean-Yves Guyomarc'h

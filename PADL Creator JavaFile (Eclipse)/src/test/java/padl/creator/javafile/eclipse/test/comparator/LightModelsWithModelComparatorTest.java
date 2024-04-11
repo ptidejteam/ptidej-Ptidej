@@ -14,6 +14,7 @@ import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.RelaxedModelComparator;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.ICodeLevelModel;
+import util.io.Files;
 
 public class LightModelsWithModelComparatorTest extends TestCase {
 	public LightModelsWithModelComparatorTest(final String aName) {
@@ -28,9 +29,9 @@ public class LightModelsWithModelComparatorTest extends TestCase {
 
 	/*public void testModelsFromAllSrceComparison() {
 
-		final String javaFilesFolderPath = "../Java Parser/src/";
+		final String javaFilesFolderPath = "../Java Parser/src/main/java/";
 		final String classPathEntry = "";
-		final String classFilesFolderPath = "../Java Parser/bin/";
+		final String classFilesFolderPath = "../Java Parser/target/classes/";
 
 		// Model from source code
 
@@ -60,12 +61,12 @@ public class LightModelsWithModelComparatorTest extends TestCase {
 
 	public void testModelsFromOneFileComparison() {
 
-		final String javaFilesFolderPath = "../Java Parser/src/";
+		final String javaFilesFolderPath = "../Java Parser/src/main/java/";
 		final String classPathEntry = "";
 		final String[] javaFilesList =
 			new String[] { "../Java Parser/src/parser/input/SourceInputsHolder.java" };
 		final String classFilesFolderPath =
-			"../Java Parser/bin/parser/input/SourceInputsHolder.class";
+				"../Java Parser/target/classes/parser/input/SourceInputsHolder.class";
 
 		// Model from source code
 
@@ -92,12 +93,12 @@ public class LightModelsWithModelComparatorTest extends TestCase {
 
 	public void testModelsFromOneFileComparison2() {
 		final String javaFilesFolderPath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/";
 		final String classPathEntry = "";
 		final String[] javaFilesList =
-			new String[] { "../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/interfaceComparator/IConstituent.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/padl/example/interfaceComparator/IConstituent.java" };
 		final String classFilesFolderPath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/interfaceComparator/IConstituent.class";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/padl/example/interfaceComparator/IConstituent.class";
 
 		// Model from source code
 

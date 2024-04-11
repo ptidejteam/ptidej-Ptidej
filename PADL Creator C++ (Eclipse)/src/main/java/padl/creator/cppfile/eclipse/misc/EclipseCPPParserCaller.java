@@ -302,21 +302,18 @@ public final class EclipseCPPParserCaller {
 		// I make things as relative as possible...
 		String pathToCurrentWorkspace;
 		try {
-			if (FileRepositoryFactory.getRunningPath().isDirectory()) {
+			final File path = new File(Files.getRunningPath());
+			if (path.isDirectory()) {
 				pathToCurrentWorkspace =
 					new File(Files.getClassPath(EclipseCPPParserCaller.class)
 							+ "../../").getCanonicalPath();
 			}
-			else if (FileRepositoryFactory.getRunningPath().isFile()
-					&& FileRepositoryFactory
-						.getRunningPath()
-						.getName()
+			else if (path.isFile()
+					&& path.getName()
 						.endsWith(".jar")) {
 
 				pathToCurrentWorkspace =
-					FileRepositoryFactory
-						.getRunningPath()
-						.getParentFile()
+						path.getParentFile()
 						.getCanonicalPath();
 			}
 			else {

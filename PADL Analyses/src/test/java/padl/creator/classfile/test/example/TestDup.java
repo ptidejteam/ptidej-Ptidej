@@ -28,6 +28,7 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
+import util.io.Files;
 
 /**
  * @author Farouk Zaidi
@@ -36,7 +37,7 @@ import padl.kernel.impl.Factory;
 public class TestDup extends TestCase {
 	private String className = "padl.example.relationship.MethodDump";
 	private IAbstractLevelModel currentModel;
-	private String fileName = "../PADL Creator ClassFile Tests/bin/padl/example/relationship/MethodDump.class";
+	private String fileName = "../PADL Creator ClassFile/target/test-classes/padl/example/relationship/MethodDump.class";
 
 	public TestDup(final String aName) {
 		super(aName);

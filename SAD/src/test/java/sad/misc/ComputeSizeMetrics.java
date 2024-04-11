@@ -20,6 +20,7 @@ import padl.kernel.IInterface;
 import padl.kernel.IOperation;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
+import util.io.Files;
 import util.io.ProxyDisk;
 
 
@@ -34,7 +35,7 @@ import util.io.ProxyDisk;
 public class ComputeSizeMetrics {
 
 	public static void main(final String[] args) {
-		final String MAIN_PATH = "../DPL - Evolution/";
+		final String MAIN_PATH = "../../DPL - Evolution/";
 		final String RESULT_PATH = "rsc/evolution/ComputeSizeMetrics2.csv";
 
 		final ComputeSizeMetrics sizeMetrics = new ComputeSizeMetrics();

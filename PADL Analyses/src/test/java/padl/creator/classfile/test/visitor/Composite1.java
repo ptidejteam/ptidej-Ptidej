@@ -14,7 +14,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.LineNumberReader;
 import java.util.StringTokenizer;
+
 import org.junit.Assert;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
@@ -27,37 +29,34 @@ import padl.visitor.IGenerator;
 import util.io.ProxyDisk;
 
 public class Composite1 extends ClassFilePrimitive {
+	private static final String EXPECTED_FILE_PATH = "../PADL Analyses/target/test-classes/padl/creator/classfile/test/visitor/Composite1.expected.txt";
+
 	private static IAbstractLevelModel AbstractLevelModel;
-	private static final String EXPECTED_FILE_PATH =
-		"../PADL Creator ClassFile Tests/src/padl/creator/classfile/test/visitor/Composite1.expected.txt";
-	private static final IGenerator SIMPLE_GENERATOR = new SimpleGenerator();
 
 	public Composite1(final String name) {
 		super(name);
 	}
+
 	protected void setUp()
 			throws IllegalAccessException, InstantiationException,
 			CreationException, UnsupportedSourceModelException {
 
 		if (Composite1.AbstractLevelModel == null) {
 			final ICodeLevelModel codeLevelModel = ClassFilePrimitive
-				.getFactory()
-				.createCodeLevelModel("padl.example.composite1");
-			codeLevelModel.create(
-				new CompleteClassFileCreator(
-					new String[] {
-							"../PADL Creator ClassFile Tests/bin/padl/example/composite1/" }));
+					.getFactory()
+					.createCodeLevelModel("padl.example.composite1");
+			codeLevelModel.create(new CompleteClassFileCreator(new String[] {
+					"../PADL Creator ClassFile/target/test-classes/padl/example/composite1/" }));
 
-			//	Composite1.AbstractLevelModel =
-			//		codeLevelModel.convert(codeLevelModel.getDisplayName());
-			Composite1.AbstractLevelModel =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+			Composite1.AbstractLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(codeLevelModel);
 		}
 	}
+
 	public void testVisitor() {
 		try {
-			Composite1.AbstractLevelModel.generate(Composite1.SIMPLE_GENERATOR);
+			final IGenerator generator = new SimpleGenerator();
+			Composite1.AbstractLevelModel.generate(generator);
 
 			// To generate a new expected file.
 			//	final FileWriter writer =
@@ -67,19 +66,16 @@ public class Composite1 extends ClassFilePrimitive {
 			//	writer.close();
 
 			final LineNumberReader reader = new LineNumberReader(
-				ProxyDisk.getInstance().fileAbsoluteInput(
-					Composite1.EXPECTED_FILE_PATH));
+					ProxyDisk.getInstance()
+							.fileAbsoluteInput(Composite1.EXPECTED_FILE_PATH));
 
 			int i = 0;
 			final StringTokenizer tokenizer = new StringTokenizer(
-				Composite1.SIMPLE_GENERATOR.getCode(),
-				"\n");
+					generator.getCode(), "\n");
 			Assert.assertEquals(150, tokenizer.countTokens());
 			while (tokenizer.hasMoreTokens()) {
-				Assert.assertEquals(
-					"TestVisitor output (line " + i + ')',
-					"\n" + reader.readLine(),
-					"\n" + tokenizer.nextToken());
+				Assert.assertEquals("TestVisitor output (line " + i + ')',
+						"\n" + reader.readLine(), "\n" + tokenizer.nextToken());
 				i++;
 			}
 

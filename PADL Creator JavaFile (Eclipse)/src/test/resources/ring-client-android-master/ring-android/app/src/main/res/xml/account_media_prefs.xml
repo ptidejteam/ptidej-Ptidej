@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+Copyright (C) 2004-2016 Savoir-faire Linux Inc.
+                                                                    
+Author: Alexandre Lision <alexandre.lision@savoirfairelinux.com>
+Author: Adrien Béraud <adrien.beraud@savoirfairelinux.com>
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or   
+(at your option) any later version.                                 
+                                                                    
+This program is distributed in the hope that it will be useful,     
+but WITHOUT ANY WARRANTY; without even the implied warranty of      
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the       
+GNU General Public License for more details.                        
+                                                                    
+You should have received a copy of the GNU General Public License   
+along with this program; if not, write to the Free Software
+ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.          
+-->
+<android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.preference.PreferenceCategory
+        android:id="@+id/audio_ringtone_category"
+        android:title="@string/account_ringtone_label">
+        <android.support.v14.preference.SwitchPreference
+            android:id="@+id/audio_ringtone"
+            android:key="Account.ringtoneEnabled"
+            android:persistent="false"
+            android:title="@string/account_ringtone_enabled_label" />
+
+        <android.support.v7.preference.Preference
+            android:id="@+id/audio_ringtone_path"
+            android:enabled="false"
+            android:key="Account.ringtonePath"
+            android:persistent="false"
+            android:title="@string/account_ringtone_path_label" />
+    </android.support.v7.preference.PreferenceCategory>
+
+    <android.support.v7.preference.PreferenceCategory
+        android:id="@+id/audio_codecs"
+        android:title="@string/account_audio_label">
+        <cx.ring.fragments.CodecPreference
+            android:key="Account.audioCodecs"
+            android:layout="@layout/frag_audio_mgmt"
+            android:persistent="false" />
+    </android.support.v7.preference.PreferenceCategory>
+
+    <android.support.v7.preference.PreferenceCategory
+        android:id="@+id/video_category"
+        android:title="@string/account_video_label">
+        <android.support.v14.preference.SwitchPreference
+            android:id="@+id/enable_video"
+            android:key="Account.videoEnabled"
+            android:persistent="false"
+            android:title="@string/account_video_enable" />
+        <cx.ring.fragments.CodecPreference
+            android:key="Account.videoCodecs"
+            android:layout="@layout/frag_audio_mgmt"
+            android:persistent="false"
+            android:dependency="Account.videoEnabled"/>
+    </android.support.v7.preference.PreferenceCategory>
+
+
+</android.support.v7.preference.PreferenceScreen>

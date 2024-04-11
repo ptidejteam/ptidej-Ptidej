@@ -16,6 +16,7 @@ import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IMethod;
+import util.io.Files;
 
 public class PooyaTest extends TestCase {
 	public PooyaTest(final String name) {
@@ -23,7 +24,7 @@ public class PooyaTest extends TestCase {
 	}
 	public void test1() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/data/Pooya's/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/Pooya's/";
 		final String classPathEntry = "";
 
 		final ICodeLevelModel codeLevelModel = Utils

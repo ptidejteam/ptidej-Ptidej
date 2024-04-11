@@ -28,6 +28,7 @@ import sad.designsmell.detection.repository.Blob.BlobDetection;
 import sad.designsmell.detection.repository.FunctionalDecomposition.FunctionalDecompositionDetection;
 import sad.designsmell.detection.repository.SpaghettiCode.SpaghettiCodeDetection;
 import sad.designsmell.detection.repository.SwissArmyKnife.SwissArmyKnifeDetection;
+import util.io.Files;
 import util.io.ProxyConsole;
 import util.io.ProxyDisk;
 
@@ -162,7 +163,7 @@ public class CodeSmellDetectionCalleronXerces {
 	public static void main(final String[] args) {
 		final String programsPath = "../SAD Tests/rsc/applications/";
 		final String resultsPath =
-			"../SAD Tests/rsc/060424 Xerces - Threshold/";
+				"../SAD Tests/rsc/060424 Xerces - Threshold/";
 
 		final String[] path = {
 				//			"rsc/applications/Xercesv1.0.1.jar",

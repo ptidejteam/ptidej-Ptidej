@@ -34,13 +34,13 @@ package jct.test.rsc;
 import java.util.Arrays;
 import java.util.List;
 
-public interface Constant {
-	String PROJECT_PATH = "";
+import util.io.Files;
 
+public interface Constant {
 	// Each test suite must ensure the existence and emptiness of this directory
-	String TMP_PATH = Constant.PROJECT_PATH + "../JCT Tests/garbage/";
-	String RSC_PATH = Constant.PROJECT_PATH + "../JCT Tests/rsc/";
-	String SRC_PATH = Constant.PROJECT_PATH + "../JCT Tests/src/";
+	String TMP_PATH = "../JCT Tests/garbage/";
+	String RSC_PATH = "../JCT Tests/rsc/";
+	String SRC_PATH = "../JCT Tests/src/";
 
 	List<String> OPTIONS =
 		Arrays.asList(new String[] { "-classpath",

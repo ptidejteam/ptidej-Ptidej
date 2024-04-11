@@ -13,11 +13,14 @@ package padl.creator.javafile.eclipse.test.methodinvocation;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.Iterator;
+
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
+import util.io.Files;
 import util.io.ProxyDisk;
 
 public class TestArgoUMLTest extends TestCase {
@@ -28,7 +31,7 @@ public class TestArgoUMLTest extends TestCase {
 
 	public void testArgouml() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/argouml/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes//argouml/";
 
 		final String classPathEntry = "";
 

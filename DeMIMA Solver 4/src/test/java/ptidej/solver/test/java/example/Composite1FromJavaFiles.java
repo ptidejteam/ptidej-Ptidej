@@ -16,7 +16,9 @@ import java.io.PrintWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Properties;
+
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.generator.helper.ModelGenerator;
 import padl.kernel.IIdiomLevelModel;
@@ -25,6 +27,7 @@ import ptidej.solver.OccurrenceBuilder;
 import ptidej.solver.Problem;
 import ptidej.solver.domain.Manager;
 import ptidej.solver.problem.CompositeMotif;
+import util.io.Files;
 import util.io.ProxyConsole;
 import util.io.ReaderInputStream;
 
@@ -42,7 +45,7 @@ public class Composite1FromJavaFiles extends TestCase {
 		if (Composite1FromJavaFiles.FoundSolutions == null) {
 			try {
 				final String rootPath =
-					"../DeMIMA/src/test/java/ptidej/example/composite1/";
+						"../DeMIMA/src/test/java/ptidej/example/composite1/";
 				final String someFilesPaths[] = new File(rootPath).list();
 				for (int i = 0; i < someFilesPaths.length; i++) {
 					someFilesPaths[i] = new StringBuffer()

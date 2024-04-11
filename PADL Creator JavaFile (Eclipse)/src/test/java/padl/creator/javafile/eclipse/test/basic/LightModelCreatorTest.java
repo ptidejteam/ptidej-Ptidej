@@ -15,6 +15,7 @@ import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
+import util.io.Files;
 
 public class LightModelCreatorTest extends TestCase {
 	public LightModelCreatorTest(final String aName) {
@@ -26,13 +27,13 @@ public class LightModelCreatorTest extends TestCase {
 
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 
 		final String[] listOfFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/member1/MemberGhostExample.java",
-					"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/member2/",
-					"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/ghost/member3/MemberGhostExample.java" };
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/member1/MemberGhostExample.java",
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/member2/",
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/ghost/member3/MemberGhostExample.java" };
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(
@@ -53,7 +54,7 @@ public class LightModelCreatorTest extends TestCase {
 
 		final String classPathEntry = "";
 		final String sourceCodePath =
-			"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/";
 
 		final ICodeLevelModel model =
 			Utils.createLightJavaFilesPadlModel(

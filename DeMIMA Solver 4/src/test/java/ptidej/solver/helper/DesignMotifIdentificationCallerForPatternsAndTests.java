@@ -34,6 +34,7 @@ import ptidej.solver.Occurrence;
 import ptidej.solver.OccurrenceBuilder;
 import ptidej.solver.Problem;
 import ptidej.solver.domain.Manager;
+import util.io.Files;
 import util.io.ProxyConsole;
 import util.io.ProxyDisk;
 import util.io.ReaderInputStream;
@@ -69,12 +70,12 @@ public class DesignMotifIdentificationCallerForPatternsAndTests {
 			//folder of jars to analyse
 			//			final String path = "/Polymtl/Data/PatternsAndTests/checkstyle/inputs/checkstyle_binaries_jars/";
 			//			String destinationPath =
-			//				"../Ptidej Solver Data/Checkstyle Versions/";
+			//				"../DeMIMA Solver Data/Checkstyle Versions/";
 			//folder of jars to analyse
 			final String path =
 				"/Polymtl/Data/PatternsAndTests/argouml/inputs/argouml_binaries_jars/";
 			final String destinationPath =
-				"../Ptidej Solver Data/ArgoUml Versions 1/";
+					"../DeMIMA Solver Data/ArgoUml Versions 1/";
 			final String[] directories = new File(path).list();
 
 			//find the jars to analyse

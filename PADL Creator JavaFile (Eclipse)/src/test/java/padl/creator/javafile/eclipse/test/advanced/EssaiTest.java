@@ -11,9 +11,11 @@
 package padl.creator.javafile.eclipse.test.advanced;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.ICodeLevelModel;
+import util.io.Files;
 
 public class EssaiTest extends TestCase {
 
@@ -27,8 +29,8 @@ public class EssaiTest extends TestCase {
 		final String sourcePath = "";
 		final String[] javaFiles =
 			new String[] {
-					"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/eclipse/duplication/classes/in/A.java",
-					"../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/eclipse/duplication/classes/out/A.java", };
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/padl/example/eclipse/duplication/classes/in/A.java",
+					"../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/padl/example/eclipse/duplication/classes/out/A.java", };
 		final String classPathEntry = "";
 
 		final ICodeLevelModel model =
