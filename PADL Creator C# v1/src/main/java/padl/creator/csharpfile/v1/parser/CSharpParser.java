@@ -34,7 +34,7 @@ import org.antlr.runtime.tree.CommonTreeAdaptor;
 import org.antlr.runtime.tree.RewriteEarlyExitException;
 import org.antlr.runtime.tree.RewriteRuleSubtreeStream;
 import org.antlr.runtime.tree.RewriteRuleTokenStream;
-import org.antlr.runtime.tree.TreeAdaptor
+import org.antlr.runtime.tree.TreeAdaptor;
 
 
 
@@ -47,8 +47,8 @@ import padl.kernel.IField;
 import padl.kernel.IInterface;
 import padl.kernel.IMethod;
 import padl.kernel.IParameter;
-import padl.kernel.exception.ModelDeclarationExceptio
-import util.io.Files;n;
+import padl.kernel.exception.ModelDeclarationException;
+import util.io.Files;
 import util.io.Files;
 import util.io.ProxyConsole;
 import util.lang.Modifier;
