@@ -37,38 +37,34 @@ import padl.kernel.ICodeLevelModel;
 import util.io.Files;
 import util.io.OutputMonitor;
 import util.io.ProxyConsole;
-import util.repository.impl.FileRepositoryFactory;
 
 public final class EclipseCPPParserCaller {
 	private static EclipseCPPParserCaller UniqueInstance;
+
 	public static EclipseCPPParserCaller getInstance() {
 		if (EclipseCPPParserCaller.UniqueInstance == null) {
-			EclipseCPPParserCaller.UniqueInstance =
-				new EclipseCPPParserCaller();
+			EclipseCPPParserCaller.UniqueInstance = new EclipseCPPParserCaller();
 		}
 		return EclipseCPPParserCaller.UniqueInstance;
 	}
 
 	private void configureOSGi(final String aPathToCurrentWorkspace) {
 		try {
-			final File src =
-				new File(aPathToCurrentWorkspace
-						+ Common.EQUINOX_CONFIGURATION_DATA
-						+ Common.EQUINOX_CONFIGURATION_TEMPLATE_CONFIG_FILE);
-			final File dst =
-				new File(aPathToCurrentWorkspace
-						+ Common.EQUINOX_CONFIGURATION_DATA
-						+ Common.EQUINOX_CONFIGURATION_CONFIG_FILE);
+			final File src = new File(aPathToCurrentWorkspace
+					+ Common.EQUINOX_CONFIGURATION_DATA
+					+ Common.EQUINOX_CONFIGURATION_TEMPLATE_CONFIG_FILE);
+			final File dst = new File(
+					aPathToCurrentWorkspace + Common.EQUINOX_CONFIGURATION_DATA
+							+ Common.EQUINOX_CONFIGURATION_CONFIG_FILE);
 			final Writer writer = new FileWriter(dst);
 
-			final List<String> placeHolderLines = FileUtils.readLines(src, Charset.defaultCharset());
-			final Iterator<String> iteratorOnPlaceHolderLines =
-				placeHolderLines.iterator();
+			final List<String> placeHolderLines = FileUtils.readLines(src,
+					Charset.defaultCharset());
+			final Iterator<String> iteratorOnPlaceHolderLines = placeHolderLines
+					.iterator();
 			while (iteratorOnPlaceHolderLines.hasNext()) {
 				final String line = (String) iteratorOnPlaceHolderLines.next();
-				final String newLine =
-					line.replace(
-						Common.PLACEHOLDER_TAG,
+				final String newLine = line.replace(Common.PLACEHOLDER_TAG,
 						aPathToCurrentWorkspace);
 				writer.write(newLine);
 				writer.write('\n');
@@ -80,30 +76,27 @@ public final class EclipseCPPParserCaller {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 	}
+
 	public void createCodeLevelModelUsingOSGiEmbedded(
-		final String aRootDirectoryContainingCPPFiles,
-		final ICodeLevelModel aCodeLevelModel) {
+			final String aRootDirectoryContainingCPPFiles,
+			final ICodeLevelModel aCodeLevelModel) {
 
 		final String pathToCurrentWorkspace = this.getPathToCurrentWorkspace();
 
-		final String[] startupArgs =
-			new String[] {
-					"-application",
-					Common.EQUINOX_LAUNCHER_NAME,
-					"-data",
-					pathToCurrentWorkspace + Common.EQUINOX_RUNTIME_WORKSPACE,
-					"-configuration",
-					"file:" + pathToCurrentWorkspace
-							+ Common.EQUINOX_CONFIGURATION_DATA,
-					"-dev",
-					"file:" + pathToCurrentWorkspace
-							+ Common.EQUINOX_CONFIGURATION_DATA
-							+ "dev.properties",
-					// "-consoleLog",
-					Common.ARGUMENT_DIRECTORY_TARGET_CPP_FILES + "="
-							+ aRootDirectoryContainingCPPFiles,
-					Common.ARGUMENT_DIRECTORY_PTIDEJ_WORKSPACE + "="
-							+ pathToCurrentWorkspace };
+		final String[] startupArgs = new String[] { "-application",
+				Common.EQUINOX_LAUNCHER_NAME, "-data",
+				pathToCurrentWorkspace + Common.EQUINOX_RUNTIME_WORKSPACE,
+				"-configuration",
+				"file:" + pathToCurrentWorkspace
+						+ Common.EQUINOX_CONFIGURATION_DATA,
+				"-dev",
+				"file:" + pathToCurrentWorkspace
+						+ Common.EQUINOX_CONFIGURATION_DATA + "dev.properties",
+				// "-consoleLog",
+				Common.ARGUMENT_DIRECTORY_TARGET_CPP_FILES + "="
+						+ aRootDirectoryContainingCPPFiles,
+				Common.ARGUMENT_DIRECTORY_PTIDEJ_WORKSPACE + "="
+						+ pathToCurrentWorkspace };
 
 		this.configureOSGi(pathToCurrentWorkspace);
 
@@ -118,12 +111,11 @@ public final class EclipseCPPParserCaller {
 			// the JVM class-loader and should not be loaded only by
 			// its own class-loader(s). See the config.ini file.
 			Map<String, String> properties = new HashMap<String, String>();
-			properties.put(
-				EclipseStarter.PROP_ADAPTOR,
-				"padl.creator.cppfile.eclipse.misc.EclipseCPPParserAdaptor");
+			properties.put(EclipseStarter.PROP_ADAPTOR,
+					"padl.creator.cppfile.eclipse.misc.EclipseCPPParserAdaptor");
 			EclipseStarter.setInitialProperties(properties);
-			final ICodeLevelModel codeLevelModel =
-				(ICodeLevelModel) EclipseStarter.run(startupArgs, null);
+			final ICodeLevelModel codeLevelModel = (ICodeLevelModel) EclipseStarter
+					.run(startupArgs, null);
 			EclipseStarter.shutdown();
 			codeLevelModel.moveIn(aCodeLevelModel);
 		}
@@ -134,8 +126,8 @@ public final class EclipseCPPParserCaller {
 	}
 
 	public void createCodeLevelModelUsingOSGiRemote(
-		final String aRootDirectoryContainingCPPFiles,
-		final ICodeLevelModel aCodeLevelModel) {
+			final String aRootDirectoryContainingCPPFiles,
+			final ICodeLevelModel aCodeLevelModel) {
 
 		Common.prepareForCodeLevelModel();
 
@@ -183,12 +175,12 @@ public final class EclipseCPPParserCaller {
 
 		this.configureOSGi(pathToCurrentWorkspace);
 
-		final VirtualMachineManager vmManager =
-			Bootstrap.virtualMachineManager();
-		final LaunchingConnector launchingConnector =
-			vmManager.defaultConnector();
-		final Map<String, Argument> arguments =
-			launchingConnector.defaultArguments();
+		final VirtualMachineManager vmManager = Bootstrap
+				.virtualMachineManager();
+		final LaunchingConnector launchingConnector = vmManager
+				.defaultConnector();
+		final Map<String, Argument> arguments = launchingConnector
+				.defaultArguments();
 		final StringBuffer arg = new StringBuffer();
 
 		arguments.get("home").setValue("");
@@ -243,18 +235,12 @@ public final class EclipseCPPParserCaller {
 		try {
 			final VirtualMachine vm = launchingConnector.launch(arguments);
 			final Process process = vm.process();
-			final OutputMonitor outMonitor =
-				new OutputMonitor(
-					"Out Monitor",
-					"VM running CDT analysis:",
-					process.getInputStream(),
+			final OutputMonitor outMonitor = new OutputMonitor("Out Monitor",
+					"VM running CDT analysis:", process.getInputStream(),
 					ProxyConsole.getInstance().debugOutput());
 			outMonitor.start();
-			final OutputMonitor errMonitor =
-				new OutputMonitor(
-					"Err Monitor",
-					"VM running CDT analysis:",
-					process.getErrorStream(),
+			final OutputMonitor errMonitor = new OutputMonitor("Err Monitor",
+					"VM running CDT analysis:", process.getErrorStream(),
 					ProxyConsole.getInstance().errorOutput());
 			errMonitor.start();
 
@@ -262,24 +248,18 @@ public final class EclipseCPPParserCaller {
 			eventMonitor.start();
 
 			final long startTime = System.currentTimeMillis();
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.println("Starting the remote VM.");
+			ProxyConsole.getInstance().debugOutput()
+					.println("Starting the remote VM.");
 
 			vm.resume();
 			eventMonitor.join();
 			outMonitor.join();
 			errMonitor.join();
 
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.print("Remote VM done in ");
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.print(System.currentTimeMillis() - startTime);
+			ProxyConsole.getInstance().debugOutput()
+					.print("Remote VM done in ");
+			ProxyConsole.getInstance().debugOutput()
+					.print(System.currentTimeMillis() - startTime);
 			ProxyConsole.getInstance().debugOutput().println(" ms.");
 
 			Common.readCodeLevelModel(aCodeLevelModel);
@@ -297,23 +277,23 @@ public final class EclipseCPPParserCaller {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 	}
+
 	private String getPathToCurrentWorkspace() {
 		// Yann 2013/06/11: Path!
 		// I make things as relative as possible...
 		String pathToCurrentWorkspace;
 		try {
-			final File path = new File(Files.getRunningPath());
+			final File path = new File(this.getClass().getProtectionDomain()
+					.getCodeSource().getLocation().getPath());
 			if (path.isDirectory()) {
-				pathToCurrentWorkspace =
-					new File(Files.getClassPath(EclipseCPPParserCaller.class)
-							+ "../../").getCanonicalPath();
+				pathToCurrentWorkspace = new File(
+						Files.getClassPath(EclipseCPPParserCaller.class)
+								+ "../../")
+						.getCanonicalPath();
 			}
-			else if (path.isFile()
-					&& path.getName()
-						.endsWith(".jar")) {
+			else if (path.isFile() && path.getName().endsWith(".jar")) {
 
-				pathToCurrentWorkspace =
-						path.getParentFile()
+				pathToCurrentWorkspace = path.getParentFile()
 						.getCanonicalPath();
 			}
 			else {
@@ -326,24 +306,24 @@ public final class EclipseCPPParserCaller {
 			return null;
 		}
 	}
-	public ICodeLevelModel getCodeLevelModelUsingOSGiEmbedded(
-		final String aRootDirectoryContainingCPPFiles) {
 
-		final ICodeLevelModel codeLevelModel =
-			CPPFactoryEclipse.getInstance().createCodeLevelModel("C++ Model");
+	public ICodeLevelModel getCodeLevelModelUsingOSGiEmbedded(
+			final String aRootDirectoryContainingCPPFiles) {
+
+		final ICodeLevelModel codeLevelModel = CPPFactoryEclipse.getInstance()
+				.createCodeLevelModel("C++ Model");
 		this.createCodeLevelModelUsingOSGiEmbedded(
-			aRootDirectoryContainingCPPFiles,
-			codeLevelModel);
+				aRootDirectoryContainingCPPFiles, codeLevelModel);
 		return codeLevelModel;
 	}
-	public ICodeLevelModel getCodeLevelModelUsingOSGiRemote(
-		final String aRootDirectoryContainingCPPFiles) {
 
-		final ICodeLevelModel codeLevelModel =
-			CPPFactoryEclipse.getInstance().createCodeLevelModel("C++ Model");
+	public ICodeLevelModel getCodeLevelModelUsingOSGiRemote(
+			final String aRootDirectoryContainingCPPFiles) {
+
+		final ICodeLevelModel codeLevelModel = CPPFactoryEclipse.getInstance()
+				.createCodeLevelModel("C++ Model");
 		this.createCodeLevelModelUsingOSGiRemote(
-			aRootDirectoryContainingCPPFiles,
-			codeLevelModel);
+				aRootDirectoryContainingCPPFiles, codeLevelModel);
 		return codeLevelModel;
 	}
 }

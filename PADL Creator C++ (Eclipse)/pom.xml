@@ -33,6 +33,7 @@
 
 	<dependencies>
 
+		<!-- Main dependecy -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
 			<artifactId>cpl-core</artifactId>
@@ -175,6 +176,14 @@
 			<scope>system</scope>
 			<systemPath>
 				${pom.basedir}/src/main/resources/lib/org.eclipse.osgi_3.15.jar</systemPath>
+		</dependency>
+
+		<!-- Test dependecy -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
 		</dependency>
 
 	</dependencies>
