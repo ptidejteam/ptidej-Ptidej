@@ -9,26 +9,26 @@ private jct.test.rsc.snpsht.utils.cvsutils.CVSRoot cvsRoot;
 
 private java.lang.Runtime rt = java.lang.Runtime.getRuntime();
 
-private java.io.File tempDir;
+private java.io.File tmpDir;
 
 public void <init>(jct.test.rsc.snpsht.utils.cvsutils.CVSRoot cvsRoot)
 {
 this.<init>();
 this.cvsRoot = cvsRoot;
-this.getAndFlushTempDir();
+this.getAndFlushtmpDir();
 
 }
 
-private java.io.File getAndFlushTempDir()
+private java.io.File getAndFlushtmpDir()
 {
-this.tempDir = new java.io.File(java.lang.System.getProperty("java.io.tmpdir"), "tmp_dir_cvs_co_" + this.hashCode());
-if(this.tempDir.exists()) 
+this.tmpDir = new java.io.File(java.lang.System.getProperty("java.io.tmpdir"), "tmp_dir_cvs_co_" + this.hashCode());
+if(this.tmpDir.exists()) 
 {
-jct.test.rsc.snpsht.utils.FSUtils.rmDir(this.tempDir);
+jct.test.rsc.snpsht.utils.FSUtils.rmDir(this.tmpDir);
 
 }
-this.tempDir.mkdirs();
-return this.tempDir;
+this.tmpDir.mkdirs();
+return this.tmpDir;
 
 }
 
@@ -80,8 +80,8 @@ int c;
 java.lang.String answer = "";
 java.io.File tmpFile;
 if(targetFile.isDirectory()) throw new java.lang.IllegalArgumentException("Target file is a diretory");
-this.getAndFlushTempDir();
-p = this.rt.exec("cvs co -r " + revision + " " + fileRevPath, new java.lang.String[] { "CVSROOT=" + this.cvsRoot.getCVSROOT() }, this.tempDir);
+this.getAndFlushtmpDir();
+p = this.rt.exec("cvs co -r " + revision + " " + fileRevPath, new java.lang.String[] { "CVSROOT=" + this.cvsRoot.getCVSROOT() }, this.tmpDir);
 java.lang.System.out.println("cvs co -r " + revision + " " + fileRevPath);
 is = p.getInputStream();
 while((c = is.read()) != -1) 
@@ -107,7 +107,7 @@ return false;
 }
  else 
 {
-tmpFile = this.getFile(fileRevPath, this.tempDir);
+tmpFile = this.getFile(fileRevPath, this.tmpDir);
 if(! tmpFile.isFile() || ! tmpFile.exists()) return false;
 targetFile.getParentFile().mkdirs();
 tmpFile.renameTo(targetFile);

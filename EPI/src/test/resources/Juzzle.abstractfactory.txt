@@ -1,0 +1,1625 @@
+String Creation Time:7
+--------------------------------------------------
+
+NONE
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:14
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:14
+
+
+# Micro-architecture 399 similar at 100% with AbstractFactory
+399.100.AbstractProduct = java.lang.Object
+399.100.Product = org.game.Juzzle.DummyPuzzlePartList
+399.100.AbstractFactory = java.awt.event.MouseMotionListener
+399.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 400 similar at 100% with AbstractFactory
+400.100.AbstractProduct = java.lang.Object
+400.100.Product = org.game.Juzzle.DummyPuzzlePartList
+400.100.AbstractFactory = javax.swing.JPanel
+400.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 401 similar at 100% with AbstractFactory
+401.100.AbstractProduct = java.lang.Object
+401.100.Product = org.game.Juzzle.DummyPuzzlePartList
+401.100.AbstractFactory = java.awt.event.MouseListener
+401.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 402 similar at 100% with AbstractFactory
+402.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+402.100.Product = org.game.Juzzle.DummyPuzzlePartList
+402.100.AbstractFactory = java.awt.event.MouseMotionListener
+402.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 403 similar at 100% with AbstractFactory
+403.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+403.100.Product = org.game.Juzzle.DummyPuzzlePartList
+403.100.AbstractFactory = javax.swing.JPanel
+403.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 404 similar at 100% with AbstractFactory
+404.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+404.100.Product = org.game.Juzzle.DummyPuzzlePartList
+404.100.AbstractFactory = java.awt.event.MouseListener
+404.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 405 similar at 100% with AbstractFactory
+405.100.AbstractProduct = java.lang.Object
+405.100.Product = org.game.Juzzle.ImageDescription
+405.100.AbstractFactory = java.lang.Object
+405.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 406 similar at 100% with AbstractFactory
+406.100.AbstractProduct = java.lang.Object
+406.100.Product = org.game.Juzzle.ImageDescription
+406.100.AbstractFactory = javax.swing.JDesktopPane
+406.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 407 similar at 100% with AbstractFactory
+407.100.AbstractProduct = java.lang.Object
+407.100.Product = org.game.Juzzle.PuzzlePartList
+407.100.AbstractFactory = java.awt.event.MouseMotionListener
+407.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 408 similar at 100% with AbstractFactory
+408.100.AbstractProduct = java.lang.Object
+408.100.Product = org.game.Juzzle.PuzzlePartList
+408.100.AbstractFactory = javax.swing.JPanel
+408.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 409 similar at 100% with AbstractFactory
+409.100.AbstractProduct = java.lang.Object
+409.100.Product = org.game.Juzzle.PuzzlePartList
+409.100.AbstractFactory = java.awt.event.MouseListener
+409.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 410 similar at 100% with AbstractFactory
+410.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+410.100.Product = org.game.Juzzle.PuzzlePartList
+410.100.AbstractFactory = java.awt.event.MouseMotionListener
+410.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 411 similar at 100% with AbstractFactory
+411.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+411.100.Product = org.game.Juzzle.PuzzlePartList
+411.100.AbstractFactory = javax.swing.JPanel
+411.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 412 similar at 100% with AbstractFactory
+412.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+412.100.Product = org.game.Juzzle.PuzzlePartList
+412.100.AbstractFactory = java.awt.event.MouseListener
+412.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+---------------------------------------------
+4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:29
+Number of Solutions Without Ghosts:6
+Number of Solutions With Ghosts:23
+
+
+# Micro-architecture 441 similar at 100% with AbstractFactory
+441.100.Product = java.awt.Dimension
+441.100.ConcreteFactory = org.game.Juzzle.StartDialog
+
+# Micro-architecture 442 similar at 100% with AbstractFactory
+442.100.Product = org.game.Juzzle.DummyPuzzlePartList
+442.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 443 similar at 100% with AbstractFactory
+443.100.Product = javax.swing.JMenuItem
+443.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 444 similar at 100% with AbstractFactory
+444.100.Product = javax.swing.ImageIcon
+444.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 445 similar at 100% with AbstractFactory
+445.100.Product = javax.swing.ImageIcon
+445.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 446 similar at 100% with AbstractFactory
+446.100.Product = javax.swing.ImageIcon
+446.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 447 similar at 100% with AbstractFactory
+447.100.Product = java.awt.image.BufferedImage
+447.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 448 similar at 100% with AbstractFactory
+448.100.Product = javax.swing.border.EmptyBorder
+448.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 449 similar at 100% with AbstractFactory
+449.100.Product = java.lang.NoClassDefFoundError
+449.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 450 similar at 100% with AbstractFactory
+450.100.Product = javax.swing.JFileChooser
+450.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 451 similar at 100% with AbstractFactory
+451.100.Product = javax.swing.JCheckBoxMenuItem
+451.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 452 similar at 100% with AbstractFactory
+452.100.Product = java.io.LineNumberReader
+452.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 453 similar at 100% with AbstractFactory
+453.100.Product = org.game.Juzzle.ImageDescription
+453.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 454 similar at 100% with AbstractFactory
+454.100.Product = org.game.Juzzle.ImageDescription
+454.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 455 similar at 100% with AbstractFactory
+455.100.Product = java.awt.Point
+455.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 456 similar at 100% with AbstractFactory
+456.100.Product = java.awt.Rectangle
+456.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 457 similar at 100% with AbstractFactory
+457.100.Product = java.awt.Rectangle
+457.100.ConcreteFactory = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 458 similar at 100% with AbstractFactory
+458.100.Product = org.game.Juzzle.PuzzlePartList
+458.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 459 similar at 100% with AbstractFactory
+459.100.Product = java.util.Vector
+459.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 460 similar at 100% with AbstractFactory
+460.100.Product = java.awt.Font
+460.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 461 similar at 100% with AbstractFactory
+461.100.Product = java.lang.StringBuffer
+461.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 462 similar at 100% with AbstractFactory
+462.100.Product = java.lang.StringBuffer
+462.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 463 similar at 100% with AbstractFactory
+463.100.Product = java.lang.StringBuffer
+463.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 464 similar at 100% with AbstractFactory
+464.100.Product = java.io.InputStreamReader
+464.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 465 similar at 100% with AbstractFactory
+465.100.Product = javax.swing.JLabel
+465.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 466 similar at 100% with AbstractFactory
+466.100.Product = java.awt.BasicStroke
+466.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 467 similar at 100% with AbstractFactory
+467.100.EPI_Abstract_AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+467.100.Product = org.game.Juzzle.DummyPuzzlePartList
+467.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 468 similar at 100% with AbstractFactory
+468.100.EPI_Abstract_AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+468.100.Product = org.game.Juzzle.PuzzlePartList
+468.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 469 similar at 100% with AbstractFactory
+469.100.Product = java.awt.Rectangle
+469.100.EPI_Abstract_AbstractFactory = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+469.100.ConcreteFactory = org.game.Juzzle.PuzzlePartList
+
+---------------------------------------------
+1 and 2
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 3
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:14
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:14
+
+
+# Micro-architecture 586 similar at 100% with AbstractFactory
+586.100.AbstractProduct = java.lang.Object
+586.100.Product = org.game.Juzzle.DummyPuzzlePartList
+586.100.AbstractFactory = java.awt.event.MouseMotionListener
+586.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 587 similar at 100% with AbstractFactory
+587.100.AbstractProduct = java.lang.Object
+587.100.Product = org.game.Juzzle.DummyPuzzlePartList
+587.100.AbstractFactory = javax.swing.JPanel
+587.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 588 similar at 100% with AbstractFactory
+588.100.AbstractProduct = java.lang.Object
+588.100.Product = org.game.Juzzle.DummyPuzzlePartList
+588.100.AbstractFactory = java.awt.event.MouseListener
+588.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 589 similar at 100% with AbstractFactory
+589.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+589.100.Product = org.game.Juzzle.DummyPuzzlePartList
+589.100.AbstractFactory = java.awt.event.MouseMotionListener
+589.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 590 similar at 100% with AbstractFactory
+590.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+590.100.Product = org.game.Juzzle.DummyPuzzlePartList
+590.100.AbstractFactory = javax.swing.JPanel
+590.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 591 similar at 100% with AbstractFactory
+591.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+591.100.Product = org.game.Juzzle.DummyPuzzlePartList
+591.100.AbstractFactory = java.awt.event.MouseListener
+591.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 592 similar at 100% with AbstractFactory
+592.100.AbstractProduct = java.lang.Object
+592.100.Product = org.game.Juzzle.ImageDescription
+592.100.AbstractFactory = java.lang.Object
+592.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 593 similar at 100% with AbstractFactory
+593.100.AbstractProduct = java.lang.Object
+593.100.Product = org.game.Juzzle.ImageDescription
+593.100.AbstractFactory = javax.swing.JDesktopPane
+593.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 594 similar at 100% with AbstractFactory
+594.100.AbstractProduct = java.lang.Object
+594.100.Product = org.game.Juzzle.PuzzlePartList
+594.100.AbstractFactory = java.awt.event.MouseMotionListener
+594.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 595 similar at 100% with AbstractFactory
+595.100.AbstractProduct = java.lang.Object
+595.100.Product = org.game.Juzzle.PuzzlePartList
+595.100.AbstractFactory = javax.swing.JPanel
+595.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 596 similar at 100% with AbstractFactory
+596.100.AbstractProduct = java.lang.Object
+596.100.Product = org.game.Juzzle.PuzzlePartList
+596.100.AbstractFactory = java.awt.event.MouseListener
+596.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 597 similar at 100% with AbstractFactory
+597.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+597.100.Product = org.game.Juzzle.PuzzlePartList
+597.100.AbstractFactory = java.awt.event.MouseMotionListener
+597.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 598 similar at 100% with AbstractFactory
+598.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+598.100.Product = org.game.Juzzle.PuzzlePartList
+598.100.AbstractFactory = javax.swing.JPanel
+598.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 599 similar at 100% with AbstractFactory
+599.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+599.100.Product = org.game.Juzzle.PuzzlePartList
+599.100.AbstractFactory = java.awt.event.MouseListener
+599.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+---------------------------------------------
+1 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:29
+Number of Solutions Without Ghosts:6
+Number of Solutions With Ghosts:23
+
+
+# Micro-architecture 628 similar at 100% with AbstractFactory
+628.100.Product = java.awt.Dimension
+628.100.ConcreteFactory = org.game.Juzzle.StartDialog
+
+# Micro-architecture 629 similar at 100% with AbstractFactory
+629.100.Product = org.game.Juzzle.DummyPuzzlePartList
+629.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 630 similar at 100% with AbstractFactory
+630.100.Product = javax.swing.JMenuItem
+630.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 631 similar at 100% with AbstractFactory
+631.100.Product = javax.swing.ImageIcon
+631.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 632 similar at 100% with AbstractFactory
+632.100.Product = javax.swing.ImageIcon
+632.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 633 similar at 100% with AbstractFactory
+633.100.Product = javax.swing.ImageIcon
+633.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 634 similar at 100% with AbstractFactory
+634.100.Product = java.awt.image.BufferedImage
+634.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 635 similar at 100% with AbstractFactory
+635.100.Product = javax.swing.border.EmptyBorder
+635.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 636 similar at 100% with AbstractFactory
+636.100.Product = java.lang.NoClassDefFoundError
+636.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 637 similar at 100% with AbstractFactory
+637.100.Product = javax.swing.JFileChooser
+637.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 638 similar at 100% with AbstractFactory
+638.100.Product = javax.swing.JCheckBoxMenuItem
+638.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 639 similar at 100% with AbstractFactory
+639.100.Product = java.io.LineNumberReader
+639.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 640 similar at 100% with AbstractFactory
+640.100.Product = org.game.Juzzle.ImageDescription
+640.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 641 similar at 100% with AbstractFactory
+641.100.Product = org.game.Juzzle.ImageDescription
+641.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 642 similar at 100% with AbstractFactory
+642.100.Product = java.awt.Point
+642.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 643 similar at 100% with AbstractFactory
+643.100.Product = java.awt.Rectangle
+643.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 644 similar at 100% with AbstractFactory
+644.100.Product = java.awt.Rectangle
+644.100.ConcreteFactory = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 645 similar at 100% with AbstractFactory
+645.100.Product = org.game.Juzzle.PuzzlePartList
+645.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 646 similar at 100% with AbstractFactory
+646.100.Product = java.util.Vector
+646.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 647 similar at 100% with AbstractFactory
+647.100.Product = java.awt.Font
+647.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 648 similar at 100% with AbstractFactory
+648.100.Product = java.lang.StringBuffer
+648.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 649 similar at 100% with AbstractFactory
+649.100.Product = java.lang.StringBuffer
+649.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 650 similar at 100% with AbstractFactory
+650.100.Product = java.lang.StringBuffer
+650.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 651 similar at 100% with AbstractFactory
+651.100.Product = java.io.InputStreamReader
+651.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 652 similar at 100% with AbstractFactory
+652.100.Product = javax.swing.JLabel
+652.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 653 similar at 100% with AbstractFactory
+653.100.Product = java.awt.BasicStroke
+653.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 654 similar at 100% with AbstractFactory
+654.100.EPI_Abstract_AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+654.100.Product = org.game.Juzzle.DummyPuzzlePartList
+654.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 655 similar at 100% with AbstractFactory
+655.100.EPI_Abstract_AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+655.100.Product = org.game.Juzzle.PuzzlePartList
+655.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 656 similar at 100% with AbstractFactory
+656.100.Product = java.awt.Rectangle
+656.100.EPI_Abstract_AbstractFactory = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+656.100.ConcreteFactory = org.game.Juzzle.PuzzlePartList
+
+---------------------------------------------
+2 and 3
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:14
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:14
+
+
+# Micro-architecture 717 similar at 100% with AbstractFactory
+717.100.AbstractProduct = java.lang.Object
+717.100.Product = org.game.Juzzle.DummyPuzzlePartList
+717.100.AbstractFactory = java.awt.event.MouseMotionListener
+717.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 718 similar at 100% with AbstractFactory
+718.100.AbstractProduct = java.lang.Object
+718.100.Product = org.game.Juzzle.DummyPuzzlePartList
+718.100.AbstractFactory = javax.swing.JPanel
+718.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 719 similar at 100% with AbstractFactory
+719.100.AbstractProduct = java.lang.Object
+719.100.Product = org.game.Juzzle.DummyPuzzlePartList
+719.100.AbstractFactory = java.awt.event.MouseListener
+719.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 720 similar at 100% with AbstractFactory
+720.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+720.100.Product = org.game.Juzzle.DummyPuzzlePartList
+720.100.AbstractFactory = java.awt.event.MouseMotionListener
+720.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 721 similar at 100% with AbstractFactory
+721.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+721.100.Product = org.game.Juzzle.DummyPuzzlePartList
+721.100.AbstractFactory = javax.swing.JPanel
+721.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 722 similar at 100% with AbstractFactory
+722.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+722.100.Product = org.game.Juzzle.DummyPuzzlePartList
+722.100.AbstractFactory = java.awt.event.MouseListener
+722.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 723 similar at 100% with AbstractFactory
+723.100.AbstractProduct = java.lang.Object
+723.100.Product = org.game.Juzzle.ImageDescription
+723.100.AbstractFactory = java.lang.Object
+723.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 724 similar at 100% with AbstractFactory
+724.100.AbstractProduct = java.lang.Object
+724.100.Product = org.game.Juzzle.ImageDescription
+724.100.AbstractFactory = javax.swing.JDesktopPane
+724.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 725 similar at 100% with AbstractFactory
+725.100.AbstractProduct = java.lang.Object
+725.100.Product = org.game.Juzzle.PuzzlePartList
+725.100.AbstractFactory = java.awt.event.MouseMotionListener
+725.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 726 similar at 100% with AbstractFactory
+726.100.AbstractProduct = java.lang.Object
+726.100.Product = org.game.Juzzle.PuzzlePartList
+726.100.AbstractFactory = javax.swing.JPanel
+726.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 727 similar at 100% with AbstractFactory
+727.100.AbstractProduct = java.lang.Object
+727.100.Product = org.game.Juzzle.PuzzlePartList
+727.100.AbstractFactory = java.awt.event.MouseListener
+727.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 728 similar at 100% with AbstractFactory
+728.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+728.100.Product = org.game.Juzzle.PuzzlePartList
+728.100.AbstractFactory = java.awt.event.MouseMotionListener
+728.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 729 similar at 100% with AbstractFactory
+729.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+729.100.Product = org.game.Juzzle.PuzzlePartList
+729.100.AbstractFactory = javax.swing.JPanel
+729.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 730 similar at 100% with AbstractFactory
+730.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+730.100.Product = org.game.Juzzle.PuzzlePartList
+730.100.AbstractFactory = java.awt.event.MouseListener
+730.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+---------------------------------------------
+2 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:29
+Number of Solutions Without Ghosts:6
+Number of Solutions With Ghosts:23
+
+
+# Micro-architecture 759 similar at 100% with AbstractFactory
+759.100.Product = java.awt.Dimension
+759.100.ConcreteFactory = org.game.Juzzle.StartDialog
+
+# Micro-architecture 760 similar at 100% with AbstractFactory
+760.100.Product = org.game.Juzzle.DummyPuzzlePartList
+760.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 761 similar at 100% with AbstractFactory
+761.100.Product = javax.swing.JMenuItem
+761.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 762 similar at 100% with AbstractFactory
+762.100.Product = javax.swing.ImageIcon
+762.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 763 similar at 100% with AbstractFactory
+763.100.Product = javax.swing.ImageIcon
+763.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 764 similar at 100% with AbstractFactory
+764.100.Product = javax.swing.ImageIcon
+764.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 765 similar at 100% with AbstractFactory
+765.100.Product = java.awt.image.BufferedImage
+765.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 766 similar at 100% with AbstractFactory
+766.100.Product = javax.swing.border.EmptyBorder
+766.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 767 similar at 100% with AbstractFactory
+767.100.Product = java.lang.NoClassDefFoundError
+767.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 768 similar at 100% with AbstractFactory
+768.100.Product = javax.swing.JFileChooser
+768.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 769 similar at 100% with AbstractFactory
+769.100.Product = javax.swing.JCheckBoxMenuItem
+769.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 770 similar at 100% with AbstractFactory
+770.100.Product = java.io.LineNumberReader
+770.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 771 similar at 100% with AbstractFactory
+771.100.Product = org.game.Juzzle.ImageDescription
+771.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 772 similar at 100% with AbstractFactory
+772.100.Product = org.game.Juzzle.ImageDescription
+772.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 773 similar at 100% with AbstractFactory
+773.100.Product = java.awt.Point
+773.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 774 similar at 100% with AbstractFactory
+774.100.Product = java.awt.Rectangle
+774.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 775 similar at 100% with AbstractFactory
+775.100.Product = java.awt.Rectangle
+775.100.ConcreteFactory = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 776 similar at 100% with AbstractFactory
+776.100.Product = org.game.Juzzle.PuzzlePartList
+776.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 777 similar at 100% with AbstractFactory
+777.100.Product = java.util.Vector
+777.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 778 similar at 100% with AbstractFactory
+778.100.Product = java.awt.Font
+778.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 779 similar at 100% with AbstractFactory
+779.100.Product = java.lang.StringBuffer
+779.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 780 similar at 100% with AbstractFactory
+780.100.Product = java.lang.StringBuffer
+780.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 781 similar at 100% with AbstractFactory
+781.100.Product = java.lang.StringBuffer
+781.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 782 similar at 100% with AbstractFactory
+782.100.Product = java.io.InputStreamReader
+782.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 783 similar at 100% with AbstractFactory
+783.100.Product = javax.swing.JLabel
+783.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 784 similar at 100% with AbstractFactory
+784.100.Product = java.awt.BasicStroke
+784.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 785 similar at 100% with AbstractFactory
+785.100.EPI_Abstract_AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+785.100.Product = org.game.Juzzle.DummyPuzzlePartList
+785.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 786 similar at 100% with AbstractFactory
+786.100.EPI_Abstract_AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+786.100.Product = org.game.Juzzle.PuzzlePartList
+786.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 787 similar at 100% with AbstractFactory
+787.100.Product = java.awt.Rectangle
+787.100.EPI_Abstract_AbstractFactory = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+787.100.ConcreteFactory = org.game.Juzzle.PuzzlePartList
+
+---------------------------------------------
+3 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:85
+Number of Solutions Without Ghosts:6
+Number of Solutions With Ghosts:79
+
+
+# Micro-architecture 816 similar at 100% with AbstractFactory
+816.100.Product = java.awt.Dimension
+816.100.ConcreteFactory = org.game.Juzzle.StartDialog
+
+# Micro-architecture 817 similar at 100% with AbstractFactory
+817.100.Product = org.game.Juzzle.DummyPuzzlePartList
+817.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 818 similar at 100% with AbstractFactory
+818.100.Product = javax.swing.JMenuItem
+818.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 819 similar at 100% with AbstractFactory
+819.100.Product = javax.swing.ImageIcon
+819.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 820 similar at 100% with AbstractFactory
+820.100.Product = javax.swing.ImageIcon
+820.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 821 similar at 100% with AbstractFactory
+821.100.Product = javax.swing.ImageIcon
+821.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 822 similar at 100% with AbstractFactory
+822.100.Product = java.awt.image.BufferedImage
+822.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 823 similar at 100% with AbstractFactory
+823.100.Product = javax.swing.border.EmptyBorder
+823.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 824 similar at 100% with AbstractFactory
+824.100.Product = java.lang.NoClassDefFoundError
+824.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 825 similar at 100% with AbstractFactory
+825.100.Product = javax.swing.JFileChooser
+825.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 826 similar at 100% with AbstractFactory
+826.100.Product = javax.swing.JCheckBoxMenuItem
+826.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 827 similar at 100% with AbstractFactory
+827.100.Product = java.io.LineNumberReader
+827.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 828 similar at 100% with AbstractFactory
+828.100.Product = org.game.Juzzle.ImageDescription
+828.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 829 similar at 100% with AbstractFactory
+829.100.Product = org.game.Juzzle.ImageDescription
+829.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 830 similar at 100% with AbstractFactory
+830.100.Product = java.awt.Point
+830.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 831 similar at 100% with AbstractFactory
+831.100.Product = java.awt.Rectangle
+831.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 832 similar at 100% with AbstractFactory
+832.100.Product = java.awt.Rectangle
+832.100.ConcreteFactory = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 833 similar at 100% with AbstractFactory
+833.100.Product = org.game.Juzzle.PuzzlePartList
+833.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 834 similar at 100% with AbstractFactory
+834.100.Product = java.util.Vector
+834.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 835 similar at 100% with AbstractFactory
+835.100.Product = java.awt.Font
+835.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 836 similar at 100% with AbstractFactory
+836.100.Product = java.lang.StringBuffer
+836.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 837 similar at 100% with AbstractFactory
+837.100.Product = java.lang.StringBuffer
+837.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 838 similar at 100% with AbstractFactory
+838.100.Product = java.lang.StringBuffer
+838.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 839 similar at 100% with AbstractFactory
+839.100.Product = java.io.InputStreamReader
+839.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 840 similar at 100% with AbstractFactory
+840.100.Product = javax.swing.JLabel
+840.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 841 similar at 100% with AbstractFactory
+841.100.Product = java.awt.BasicStroke
+841.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 842 similar at 100% with AbstractFactory
+842.100.AbstractProduct = java.lang.Object
+842.100.Product = org.game.Juzzle.DummyPuzzlePartList
+842.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 843 similar at 100% with AbstractFactory
+843.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+843.100.Product = org.game.Juzzle.DummyPuzzlePartList
+843.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 844 similar at 100% with AbstractFactory
+844.100.AbstractProduct = java.lang.Object
+844.100.Product = org.game.Juzzle.ImageDescription
+844.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 845 similar at 100% with AbstractFactory
+845.100.AbstractProduct = java.lang.Object
+845.100.Product = org.game.Juzzle.ImageDescription
+845.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 846 similar at 100% with AbstractFactory
+846.100.AbstractProduct = java.lang.Object
+846.100.Product = org.game.Juzzle.PuzzlePartList
+846.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 847 similar at 100% with AbstractFactory
+847.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+847.100.Product = org.game.Juzzle.PuzzlePartList
+847.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 848 similar at 100% with AbstractFactory
+848.100.Product = java.awt.Dimension
+848.100.AbstractFactory = java.lang.Object
+848.100.ConcreteFactory = org.game.Juzzle.StartDialog
+
+# Micro-architecture 849 similar at 100% with AbstractFactory
+849.100.Product = org.game.Juzzle.DummyPuzzlePartList
+849.100.AbstractFactory = java.awt.event.MouseMotionListener
+849.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 850 similar at 100% with AbstractFactory
+850.100.Product = org.game.Juzzle.DummyPuzzlePartList
+850.100.AbstractFactory = javax.swing.JPanel
+850.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 851 similar at 100% with AbstractFactory
+851.100.Product = org.game.Juzzle.DummyPuzzlePartList
+851.100.AbstractFactory = java.awt.event.MouseListener
+851.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 852 similar at 100% with AbstractFactory
+852.100.Product = javax.swing.JMenuItem
+852.100.AbstractFactory = javax.swing.JDesktopPane
+852.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 853 similar at 100% with AbstractFactory
+853.100.Product = javax.swing.ImageIcon
+853.100.AbstractFactory = java.lang.Object
+853.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 854 similar at 100% with AbstractFactory
+854.100.Product = javax.swing.ImageIcon
+854.100.AbstractFactory = javax.swing.JDesktopPane
+854.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 855 similar at 100% with AbstractFactory
+855.100.Product = javax.swing.ImageIcon
+855.100.AbstractFactory = javax.swing.JPanel
+855.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 856 similar at 100% with AbstractFactory
+856.100.Product = java.awt.image.BufferedImage
+856.100.AbstractFactory = javax.swing.JDesktopPane
+856.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 857 similar at 100% with AbstractFactory
+857.100.Product = javax.swing.border.EmptyBorder
+857.100.AbstractFactory = javax.swing.JPanel
+857.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 858 similar at 100% with AbstractFactory
+858.100.Product = java.lang.NoClassDefFoundError
+858.100.AbstractFactory = java.lang.Object
+858.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 859 similar at 100% with AbstractFactory
+859.100.Product = javax.swing.JFileChooser
+859.100.AbstractFactory = javax.swing.JDesktopPane
+859.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 860 similar at 100% with AbstractFactory
+860.100.Product = javax.swing.JCheckBoxMenuItem
+860.100.AbstractFactory = javax.swing.JDesktopPane
+860.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 861 similar at 100% with AbstractFactory
+861.100.Product = java.io.LineNumberReader
+861.100.AbstractFactory = java.lang.Object
+861.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 862 similar at 100% with AbstractFactory
+862.100.Product = org.game.Juzzle.ImageDescription
+862.100.AbstractFactory = java.lang.Object
+862.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 863 similar at 100% with AbstractFactory
+863.100.Product = org.game.Juzzle.ImageDescription
+863.100.AbstractFactory = javax.swing.JDesktopPane
+863.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 864 similar at 100% with AbstractFactory
+864.100.Product = java.awt.Point
+864.100.AbstractFactory = java.awt.event.MouseMotionListener
+864.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 865 similar at 100% with AbstractFactory
+865.100.Product = java.awt.Point
+865.100.AbstractFactory = javax.swing.JPanel
+865.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 866 similar at 100% with AbstractFactory
+866.100.Product = java.awt.Point
+866.100.AbstractFactory = java.awt.event.MouseListener
+866.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 867 similar at 100% with AbstractFactory
+867.100.Product = java.awt.Rectangle
+867.100.AbstractFactory = java.awt.event.MouseMotionListener
+867.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 868 similar at 100% with AbstractFactory
+868.100.Product = java.awt.Rectangle
+868.100.AbstractFactory = javax.swing.JPanel
+868.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 869 similar at 100% with AbstractFactory
+869.100.Product = java.awt.Rectangle
+869.100.AbstractFactory = java.awt.event.MouseListener
+869.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 870 similar at 100% with AbstractFactory
+870.100.Product = java.awt.Rectangle
+870.100.AbstractFactory = java.lang.Object
+870.100.ConcreteFactory = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 871 similar at 100% with AbstractFactory
+871.100.Product = java.awt.Rectangle
+871.100.AbstractFactory = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+871.100.ConcreteFactory = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 872 similar at 100% with AbstractFactory
+872.100.Product = org.game.Juzzle.PuzzlePartList
+872.100.AbstractFactory = java.awt.event.MouseMotionListener
+872.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 873 similar at 100% with AbstractFactory
+873.100.Product = org.game.Juzzle.PuzzlePartList
+873.100.AbstractFactory = javax.swing.JPanel
+873.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 874 similar at 100% with AbstractFactory
+874.100.Product = org.game.Juzzle.PuzzlePartList
+874.100.AbstractFactory = java.awt.event.MouseListener
+874.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 875 similar at 100% with AbstractFactory
+875.100.Product = java.util.Vector
+875.100.AbstractFactory = java.lang.Object
+875.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 876 similar at 100% with AbstractFactory
+876.100.Product = java.awt.Font
+876.100.AbstractFactory = javax.swing.JPanel
+876.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 877 similar at 100% with AbstractFactory
+877.100.Product = java.lang.StringBuffer
+877.100.AbstractFactory = java.awt.event.MouseMotionListener
+877.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 878 similar at 100% with AbstractFactory
+878.100.Product = java.lang.StringBuffer
+878.100.AbstractFactory = javax.swing.JPanel
+878.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 879 similar at 100% with AbstractFactory
+879.100.Product = java.lang.StringBuffer
+879.100.AbstractFactory = java.awt.event.MouseListener
+879.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 880 similar at 100% with AbstractFactory
+880.100.Product = java.lang.StringBuffer
+880.100.AbstractFactory = javax.swing.JDesktopPane
+880.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 881 similar at 100% with AbstractFactory
+881.100.Product = java.lang.StringBuffer
+881.100.AbstractFactory = javax.swing.JPanel
+881.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 882 similar at 100% with AbstractFactory
+882.100.Product = java.io.InputStreamReader
+882.100.AbstractFactory = java.lang.Object
+882.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 883 similar at 100% with AbstractFactory
+883.100.Product = javax.swing.JLabel
+883.100.AbstractFactory = javax.swing.JPanel
+883.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 884 similar at 100% with AbstractFactory
+884.100.Product = java.awt.BasicStroke
+884.100.AbstractFactory = java.awt.event.MouseMotionListener
+884.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 885 similar at 100% with AbstractFactory
+885.100.Product = java.awt.BasicStroke
+885.100.AbstractFactory = javax.swing.JPanel
+885.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 886 similar at 100% with AbstractFactory
+886.100.Product = java.awt.BasicStroke
+886.100.AbstractFactory = java.awt.event.MouseListener
+886.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 887 similar at 100% with AbstractFactory
+887.100.AbstractProduct = java.lang.Object
+887.100.Product = org.game.Juzzle.DummyPuzzlePartList
+887.100.AbstractFactory = java.awt.event.MouseMotionListener
+887.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 888 similar at 100% with AbstractFactory
+888.100.AbstractProduct = java.lang.Object
+888.100.Product = org.game.Juzzle.DummyPuzzlePartList
+888.100.AbstractFactory = javax.swing.JPanel
+888.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 889 similar at 100% with AbstractFactory
+889.100.AbstractProduct = java.lang.Object
+889.100.Product = org.game.Juzzle.DummyPuzzlePartList
+889.100.AbstractFactory = java.awt.event.MouseListener
+889.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 890 similar at 100% with AbstractFactory
+890.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+890.100.Product = org.game.Juzzle.DummyPuzzlePartList
+890.100.AbstractFactory = java.awt.event.MouseMotionListener
+890.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 891 similar at 100% with AbstractFactory
+891.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+891.100.Product = org.game.Juzzle.DummyPuzzlePartList
+891.100.AbstractFactory = javax.swing.JPanel
+891.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 892 similar at 100% with AbstractFactory
+892.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+892.100.Product = org.game.Juzzle.DummyPuzzlePartList
+892.100.AbstractFactory = java.awt.event.MouseListener
+892.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 893 similar at 100% with AbstractFactory
+893.100.AbstractProduct = java.lang.Object
+893.100.Product = org.game.Juzzle.ImageDescription
+893.100.AbstractFactory = java.lang.Object
+893.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 894 similar at 100% with AbstractFactory
+894.100.AbstractProduct = java.lang.Object
+894.100.Product = org.game.Juzzle.ImageDescription
+894.100.AbstractFactory = javax.swing.JDesktopPane
+894.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 895 similar at 100% with AbstractFactory
+895.100.AbstractProduct = java.lang.Object
+895.100.Product = org.game.Juzzle.PuzzlePartList
+895.100.AbstractFactory = java.awt.event.MouseMotionListener
+895.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 896 similar at 100% with AbstractFactory
+896.100.AbstractProduct = java.lang.Object
+896.100.Product = org.game.Juzzle.PuzzlePartList
+896.100.AbstractFactory = javax.swing.JPanel
+896.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 897 similar at 100% with AbstractFactory
+897.100.AbstractProduct = java.lang.Object
+897.100.Product = org.game.Juzzle.PuzzlePartList
+897.100.AbstractFactory = java.awt.event.MouseListener
+897.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 898 similar at 100% with AbstractFactory
+898.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+898.100.Product = org.game.Juzzle.PuzzlePartList
+898.100.AbstractFactory = java.awt.event.MouseMotionListener
+898.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 899 similar at 100% with AbstractFactory
+899.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+899.100.Product = org.game.Juzzle.PuzzlePartList
+899.100.AbstractFactory = javax.swing.JPanel
+899.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 900 similar at 100% with AbstractFactory
+900.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+900.100.Product = org.game.Juzzle.PuzzlePartList
+900.100.AbstractFactory = java.awt.event.MouseListener
+900.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+---------------------------------------------
+1 and 2 and 3
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:14
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:14
+
+
+# Micro-architecture 961 similar at 100% with AbstractFactory
+961.100.AbstractProduct = java.lang.Object
+961.100.Product = org.game.Juzzle.DummyPuzzlePartList
+961.100.AbstractFactory = java.awt.event.MouseMotionListener
+961.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 962 similar at 100% with AbstractFactory
+962.100.AbstractProduct = java.lang.Object
+962.100.Product = org.game.Juzzle.DummyPuzzlePartList
+962.100.AbstractFactory = javax.swing.JPanel
+962.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 963 similar at 100% with AbstractFactory
+963.100.AbstractProduct = java.lang.Object
+963.100.Product = org.game.Juzzle.DummyPuzzlePartList
+963.100.AbstractFactory = java.awt.event.MouseListener
+963.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 964 similar at 100% with AbstractFactory
+964.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+964.100.Product = org.game.Juzzle.DummyPuzzlePartList
+964.100.AbstractFactory = java.awt.event.MouseMotionListener
+964.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 965 similar at 100% with AbstractFactory
+965.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+965.100.Product = org.game.Juzzle.DummyPuzzlePartList
+965.100.AbstractFactory = javax.swing.JPanel
+965.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 966 similar at 100% with AbstractFactory
+966.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+966.100.Product = org.game.Juzzle.DummyPuzzlePartList
+966.100.AbstractFactory = java.awt.event.MouseListener
+966.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 967 similar at 100% with AbstractFactory
+967.100.AbstractProduct = java.lang.Object
+967.100.Product = org.game.Juzzle.ImageDescription
+967.100.AbstractFactory = java.lang.Object
+967.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 968 similar at 100% with AbstractFactory
+968.100.AbstractProduct = java.lang.Object
+968.100.Product = org.game.Juzzle.ImageDescription
+968.100.AbstractFactory = javax.swing.JDesktopPane
+968.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 969 similar at 100% with AbstractFactory
+969.100.AbstractProduct = java.lang.Object
+969.100.Product = org.game.Juzzle.PuzzlePartList
+969.100.AbstractFactory = java.awt.event.MouseMotionListener
+969.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 970 similar at 100% with AbstractFactory
+970.100.AbstractProduct = java.lang.Object
+970.100.Product = org.game.Juzzle.PuzzlePartList
+970.100.AbstractFactory = javax.swing.JPanel
+970.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 971 similar at 100% with AbstractFactory
+971.100.AbstractProduct = java.lang.Object
+971.100.Product = org.game.Juzzle.PuzzlePartList
+971.100.AbstractFactory = java.awt.event.MouseListener
+971.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 972 similar at 100% with AbstractFactory
+972.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+972.100.Product = org.game.Juzzle.PuzzlePartList
+972.100.AbstractFactory = java.awt.event.MouseMotionListener
+972.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 973 similar at 100% with AbstractFactory
+973.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+973.100.Product = org.game.Juzzle.PuzzlePartList
+973.100.AbstractFactory = javax.swing.JPanel
+973.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 974 similar at 100% with AbstractFactory
+974.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+974.100.Product = org.game.Juzzle.PuzzlePartList
+974.100.AbstractFactory = java.awt.event.MouseListener
+974.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+---------------------------------------------
+ALL
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:85
+Number of Solutions Without Ghosts:6
+Number of Solutions With Ghosts:79
+
+
+# Micro-architecture 1003 similar at 100% with AbstractFactory
+1003.100.Product = java.awt.Dimension
+1003.100.ConcreteFactory = org.game.Juzzle.StartDialog
+
+# Micro-architecture 1004 similar at 100% with AbstractFactory
+1004.100.Product = org.game.Juzzle.DummyPuzzlePartList
+1004.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1005 similar at 100% with AbstractFactory
+1005.100.Product = javax.swing.JMenuItem
+1005.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1006 similar at 100% with AbstractFactory
+1006.100.Product = javax.swing.ImageIcon
+1006.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1007 similar at 100% with AbstractFactory
+1007.100.Product = javax.swing.ImageIcon
+1007.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1008 similar at 100% with AbstractFactory
+1008.100.Product = javax.swing.ImageIcon
+1008.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 1009 similar at 100% with AbstractFactory
+1009.100.Product = java.awt.image.BufferedImage
+1009.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1010 similar at 100% with AbstractFactory
+1010.100.Product = javax.swing.border.EmptyBorder
+1010.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 1011 similar at 100% with AbstractFactory
+1011.100.Product = java.lang.NoClassDefFoundError
+1011.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1012 similar at 100% with AbstractFactory
+1012.100.Product = javax.swing.JFileChooser
+1012.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1013 similar at 100% with AbstractFactory
+1013.100.Product = javax.swing.JCheckBoxMenuItem
+1013.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1014 similar at 100% with AbstractFactory
+1014.100.Product = java.io.LineNumberReader
+1014.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1015 similar at 100% with AbstractFactory
+1015.100.Product = org.game.Juzzle.ImageDescription
+1015.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1016 similar at 100% with AbstractFactory
+1016.100.Product = org.game.Juzzle.ImageDescription
+1016.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1017 similar at 100% with AbstractFactory
+1017.100.Product = java.awt.Point
+1017.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1018 similar at 100% with AbstractFactory
+1018.100.Product = java.awt.Rectangle
+1018.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1019 similar at 100% with AbstractFactory
+1019.100.Product = java.awt.Rectangle
+1019.100.ConcreteFactory = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 1020 similar at 100% with AbstractFactory
+1020.100.Product = org.game.Juzzle.PuzzlePartList
+1020.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1021 similar at 100% with AbstractFactory
+1021.100.Product = java.util.Vector
+1021.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1022 similar at 100% with AbstractFactory
+1022.100.Product = java.awt.Font
+1022.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 1023 similar at 100% with AbstractFactory
+1023.100.Product = java.lang.StringBuffer
+1023.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1024 similar at 100% with AbstractFactory
+1024.100.Product = java.lang.StringBuffer
+1024.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1025 similar at 100% with AbstractFactory
+1025.100.Product = java.lang.StringBuffer
+1025.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 1026 similar at 100% with AbstractFactory
+1026.100.Product = java.io.InputStreamReader
+1026.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1027 similar at 100% with AbstractFactory
+1027.100.Product = javax.swing.JLabel
+1027.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 1028 similar at 100% with AbstractFactory
+1028.100.Product = java.awt.BasicStroke
+1028.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1029 similar at 100% with AbstractFactory
+1029.100.AbstractProduct = java.lang.Object
+1029.100.Product = org.game.Juzzle.DummyPuzzlePartList
+1029.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1030 similar at 100% with AbstractFactory
+1030.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+1030.100.Product = org.game.Juzzle.DummyPuzzlePartList
+1030.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1031 similar at 100% with AbstractFactory
+1031.100.AbstractProduct = java.lang.Object
+1031.100.Product = org.game.Juzzle.ImageDescription
+1031.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1032 similar at 100% with AbstractFactory
+1032.100.AbstractProduct = java.lang.Object
+1032.100.Product = org.game.Juzzle.ImageDescription
+1032.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1033 similar at 100% with AbstractFactory
+1033.100.AbstractProduct = java.lang.Object
+1033.100.Product = org.game.Juzzle.PuzzlePartList
+1033.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1034 similar at 100% with AbstractFactory
+1034.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+1034.100.Product = org.game.Juzzle.PuzzlePartList
+1034.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1035 similar at 100% with AbstractFactory
+1035.100.Product = java.awt.Dimension
+1035.100.AbstractFactory = java.lang.Object
+1035.100.ConcreteFactory = org.game.Juzzle.StartDialog
+
+# Micro-architecture 1036 similar at 100% with AbstractFactory
+1036.100.Product = org.game.Juzzle.DummyPuzzlePartList
+1036.100.AbstractFactory = java.awt.event.MouseMotionListener
+1036.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1037 similar at 100% with AbstractFactory
+1037.100.Product = org.game.Juzzle.DummyPuzzlePartList
+1037.100.AbstractFactory = javax.swing.JPanel
+1037.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1038 similar at 100% with AbstractFactory
+1038.100.Product = org.game.Juzzle.DummyPuzzlePartList
+1038.100.AbstractFactory = java.awt.event.MouseListener
+1038.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1039 similar at 100% with AbstractFactory
+1039.100.Product = javax.swing.JMenuItem
+1039.100.AbstractFactory = javax.swing.JDesktopPane
+1039.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1040 similar at 100% with AbstractFactory
+1040.100.Product = javax.swing.ImageIcon
+1040.100.AbstractFactory = java.lang.Object
+1040.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1041 similar at 100% with AbstractFactory
+1041.100.Product = javax.swing.ImageIcon
+1041.100.AbstractFactory = javax.swing.JDesktopPane
+1041.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1042 similar at 100% with AbstractFactory
+1042.100.Product = javax.swing.ImageIcon
+1042.100.AbstractFactory = javax.swing.JPanel
+1042.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 1043 similar at 100% with AbstractFactory
+1043.100.Product = java.awt.image.BufferedImage
+1043.100.AbstractFactory = javax.swing.JDesktopPane
+1043.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1044 similar at 100% with AbstractFactory
+1044.100.Product = javax.swing.border.EmptyBorder
+1044.100.AbstractFactory = javax.swing.JPanel
+1044.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 1045 similar at 100% with AbstractFactory
+1045.100.Product = java.lang.NoClassDefFoundError
+1045.100.AbstractFactory = java.lang.Object
+1045.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1046 similar at 100% with AbstractFactory
+1046.100.Product = javax.swing.JFileChooser
+1046.100.AbstractFactory = javax.swing.JDesktopPane
+1046.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1047 similar at 100% with AbstractFactory
+1047.100.Product = javax.swing.JCheckBoxMenuItem
+1047.100.AbstractFactory = javax.swing.JDesktopPane
+1047.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1048 similar at 100% with AbstractFactory
+1048.100.Product = java.io.LineNumberReader
+1048.100.AbstractFactory = java.lang.Object
+1048.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1049 similar at 100% with AbstractFactory
+1049.100.Product = org.game.Juzzle.ImageDescription
+1049.100.AbstractFactory = java.lang.Object
+1049.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1050 similar at 100% with AbstractFactory
+1050.100.Product = org.game.Juzzle.ImageDescription
+1050.100.AbstractFactory = javax.swing.JDesktopPane
+1050.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1051 similar at 100% with AbstractFactory
+1051.100.Product = java.awt.Point
+1051.100.AbstractFactory = java.awt.event.MouseMotionListener
+1051.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1052 similar at 100% with AbstractFactory
+1052.100.Product = java.awt.Point
+1052.100.AbstractFactory = javax.swing.JPanel
+1052.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1053 similar at 100% with AbstractFactory
+1053.100.Product = java.awt.Point
+1053.100.AbstractFactory = java.awt.event.MouseListener
+1053.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1054 similar at 100% with AbstractFactory
+1054.100.Product = java.awt.Rectangle
+1054.100.AbstractFactory = java.awt.event.MouseMotionListener
+1054.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1055 similar at 100% with AbstractFactory
+1055.100.Product = java.awt.Rectangle
+1055.100.AbstractFactory = javax.swing.JPanel
+1055.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1056 similar at 100% with AbstractFactory
+1056.100.Product = java.awt.Rectangle
+1056.100.AbstractFactory = java.awt.event.MouseListener
+1056.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1057 similar at 100% with AbstractFactory
+1057.100.Product = java.awt.Rectangle
+1057.100.AbstractFactory = java.lang.Object
+1057.100.ConcreteFactory = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 1058 similar at 100% with AbstractFactory
+1058.100.Product = java.awt.Rectangle
+1058.100.AbstractFactory = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+1058.100.ConcreteFactory = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 1059 similar at 100% with AbstractFactory
+1059.100.Product = org.game.Juzzle.PuzzlePartList
+1059.100.AbstractFactory = java.awt.event.MouseMotionListener
+1059.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1060 similar at 100% with AbstractFactory
+1060.100.Product = org.game.Juzzle.PuzzlePartList
+1060.100.AbstractFactory = javax.swing.JPanel
+1060.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1061 similar at 100% with AbstractFactory
+1061.100.Product = org.game.Juzzle.PuzzlePartList
+1061.100.AbstractFactory = java.awt.event.MouseListener
+1061.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1062 similar at 100% with AbstractFactory
+1062.100.Product = java.util.Vector
+1062.100.AbstractFactory = java.lang.Object
+1062.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1063 similar at 100% with AbstractFactory
+1063.100.Product = java.awt.Font
+1063.100.AbstractFactory = javax.swing.JPanel
+1063.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 1064 similar at 100% with AbstractFactory
+1064.100.Product = java.lang.StringBuffer
+1064.100.AbstractFactory = java.awt.event.MouseMotionListener
+1064.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1065 similar at 100% with AbstractFactory
+1065.100.Product = java.lang.StringBuffer
+1065.100.AbstractFactory = javax.swing.JPanel
+1065.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1066 similar at 100% with AbstractFactory
+1066.100.Product = java.lang.StringBuffer
+1066.100.AbstractFactory = java.awt.event.MouseListener
+1066.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1067 similar at 100% with AbstractFactory
+1067.100.Product = java.lang.StringBuffer
+1067.100.AbstractFactory = javax.swing.JDesktopPane
+1067.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1068 similar at 100% with AbstractFactory
+1068.100.Product = java.lang.StringBuffer
+1068.100.AbstractFactory = javax.swing.JPanel
+1068.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 1069 similar at 100% with AbstractFactory
+1069.100.Product = java.io.InputStreamReader
+1069.100.AbstractFactory = java.lang.Object
+1069.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1070 similar at 100% with AbstractFactory
+1070.100.Product = javax.swing.JLabel
+1070.100.AbstractFactory = javax.swing.JPanel
+1070.100.ConcreteFactory = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 1071 similar at 100% with AbstractFactory
+1071.100.Product = java.awt.BasicStroke
+1071.100.AbstractFactory = java.awt.event.MouseMotionListener
+1071.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1072 similar at 100% with AbstractFactory
+1072.100.Product = java.awt.BasicStroke
+1072.100.AbstractFactory = javax.swing.JPanel
+1072.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1073 similar at 100% with AbstractFactory
+1073.100.Product = java.awt.BasicStroke
+1073.100.AbstractFactory = java.awt.event.MouseListener
+1073.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1074 similar at 100% with AbstractFactory
+1074.100.AbstractProduct = java.lang.Object
+1074.100.Product = org.game.Juzzle.DummyPuzzlePartList
+1074.100.AbstractFactory = java.awt.event.MouseMotionListener
+1074.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1075 similar at 100% with AbstractFactory
+1075.100.AbstractProduct = java.lang.Object
+1075.100.Product = org.game.Juzzle.DummyPuzzlePartList
+1075.100.AbstractFactory = javax.swing.JPanel
+1075.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1076 similar at 100% with AbstractFactory
+1076.100.AbstractProduct = java.lang.Object
+1076.100.Product = org.game.Juzzle.DummyPuzzlePartList
+1076.100.AbstractFactory = java.awt.event.MouseListener
+1076.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1077 similar at 100% with AbstractFactory
+1077.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+1077.100.Product = org.game.Juzzle.DummyPuzzlePartList
+1077.100.AbstractFactory = java.awt.event.MouseMotionListener
+1077.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1078 similar at 100% with AbstractFactory
+1078.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+1078.100.Product = org.game.Juzzle.DummyPuzzlePartList
+1078.100.AbstractFactory = javax.swing.JPanel
+1078.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1079 similar at 100% with AbstractFactory
+1079.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+1079.100.Product = org.game.Juzzle.DummyPuzzlePartList
+1079.100.AbstractFactory = java.awt.event.MouseListener
+1079.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1080 similar at 100% with AbstractFactory
+1080.100.AbstractProduct = java.lang.Object
+1080.100.Product = org.game.Juzzle.ImageDescription
+1080.100.AbstractFactory = java.lang.Object
+1080.100.ConcreteFactory = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 1081 similar at 100% with AbstractFactory
+1081.100.AbstractProduct = java.lang.Object
+1081.100.Product = org.game.Juzzle.ImageDescription
+1081.100.AbstractFactory = javax.swing.JDesktopPane
+1081.100.ConcreteFactory = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 1082 similar at 100% with AbstractFactory
+1082.100.AbstractProduct = java.lang.Object
+1082.100.Product = org.game.Juzzle.PuzzlePartList
+1082.100.AbstractFactory = java.awt.event.MouseMotionListener
+1082.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1083 similar at 100% with AbstractFactory
+1083.100.AbstractProduct = java.lang.Object
+1083.100.Product = org.game.Juzzle.PuzzlePartList
+1083.100.AbstractFactory = javax.swing.JPanel
+1083.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1084 similar at 100% with AbstractFactory
+1084.100.AbstractProduct = java.lang.Object
+1084.100.Product = org.game.Juzzle.PuzzlePartList
+1084.100.AbstractFactory = java.awt.event.MouseListener
+1084.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1085 similar at 100% with AbstractFactory
+1085.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+1085.100.Product = org.game.Juzzle.PuzzlePartList
+1085.100.AbstractFactory = java.awt.event.MouseMotionListener
+1085.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1086 similar at 100% with AbstractFactory
+1086.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+1086.100.Product = org.game.Juzzle.PuzzlePartList
+1086.100.AbstractFactory = javax.swing.JPanel
+1086.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 1087 similar at 100% with AbstractFactory
+1087.100.AbstractProduct = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+1087.100.Product = org.game.Juzzle.PuzzlePartList
+1087.100.AbstractFactory = java.awt.event.MouseListener
+1087.100.ConcreteFactory = org.game.Juzzle.PuzzlePanel
+

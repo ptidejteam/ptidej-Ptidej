@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Apr 13 18:36:55 EDT 2024
+osgi-3.15.jar>=
+osgi-3.15.pom>=

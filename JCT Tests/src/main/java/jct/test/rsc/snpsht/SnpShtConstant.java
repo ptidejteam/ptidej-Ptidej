@@ -34,7 +34,7 @@ package jct.test.rsc.snpsht;
 public final class SnpShtConstant {
     public static final String SER_FILE = "jct/test/rsc/snpsht/snpsht.ser"; 
     
-	public static final String files[] =
+	public static final String FILES[] =
 		new String[] {
 				"jct/test/rsc/snpsht/parser/package-info.java",
 				"jct/test/rsc/snpsht/parser/verfilesystem/IVerFsParser.java",

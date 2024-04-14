@@ -11,30 +11,30 @@
 package padl.creator.cppfile.eclipse.test.simple;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
-import padl.generator.helper.ModelGenerator;
-import padl.kernel.IIdiomLevelModel;
+import padl.creator.cppfile.eclipse.test.helper.ModelGenerator;
+import padl.kernel.ICodeLevelModel;
 
 public class GetOrCreateTest extends TestCase {
-	private static IIdiomLevelModel IdiomLevelModel;
+	private static ICodeLevelModel CodeLevelModel;
+
 	public GetOrCreateTest(String name) {
 		super(name);
 	}
+
 	protected void setUp() throws Exception {
-		if (GetOrCreateTest.IdiomLevelModel == null) {
-			GetOrCreateTest.IdiomLevelModel =
-				ModelGenerator
-					.generateModelFromCppFilesUsingEclipse(
-						"Funny",
-						new String[] { "../PADL Creator C++ (Eclipse) Tests/data/getOrCreate/" });
+		if (GetOrCreateTest.CodeLevelModel == null) {
+			GetOrCreateTest.CodeLevelModel = ModelGenerator
+					.generateModelFromCppFilesUsingEclipse("Funny",
+							"../PADL Creator C++ (Eclipse) Tests/data/getOrCreate/");
 		}
 	}
+
 	public void testNumberOfTopLevelEntities() {
-		Assert.assertNotNull(
-			"The idiom-level model is null!",
-			GetOrCreateTest.IdiomLevelModel);
-		Assert.assertEquals(
-			21,
-			GetOrCreateTest.IdiomLevelModel.getNumberOfTopLevelEntities());
+		Assert.assertNotNull("The idiom-level model is null!",
+				GetOrCreateTest.CodeLevelModel);
+		Assert.assertEquals(21,
+				GetOrCreateTest.CodeLevelModel.getNumberOfTopLevelEntities());
 	}
 }

@@ -1,6 +1,6 @@
 /**
  * @author Mathieu Lemoine
- * @created 2008-09-30 (火)
+ * @created 2008-09-30
  *
  * Licensed under 3-clause BSD License:
  * Copyright © 2009, Mathieu Lemoine

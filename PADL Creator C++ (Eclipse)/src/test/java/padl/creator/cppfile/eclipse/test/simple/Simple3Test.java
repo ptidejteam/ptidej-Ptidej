@@ -11,21 +11,21 @@
 package padl.creator.cppfile.eclipse.test.simple;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
-import padl.generator.helper.ModelGenerator;
-import padl.kernel.IIdiomLevelModel;
+import padl.creator.cppfile.eclipse.test.helper.ModelGenerator;
+import padl.kernel.ICodeLevelModel;
 
 public class Simple3Test extends TestCase {
 	public Simple3Test(String name) {
 		super(name);
 	}
+
 	public void test1() {
-		final IIdiomLevelModel idiomLevelModel =
-			ModelGenerator
-				.generateModelFromCppFilesUsingEclipse(
-					"Funny",
-					new String[] { "../PADL Creator C++ (Eclipse) Tests/data/Simple3/" });
-		Assert.assertNotNull("The idiom-level model is null!", idiomLevelModel);
-		Assert.assertEquals(34, idiomLevelModel.getNumberOfTopLevelEntities());
+		final ICodeLevelModel codeLevelModel = ModelGenerator
+				.generateModelFromCppFilesUsingEclipse("Funny",
+						"../PADL Creator C++ (Eclipse) Tests/data/Simple3/");
+		Assert.assertNotNull("The idiom-level model is null!", codeLevelModel);
+		Assert.assertEquals(34, codeLevelModel.getNumberOfTopLevelEntities());
 	}
 }

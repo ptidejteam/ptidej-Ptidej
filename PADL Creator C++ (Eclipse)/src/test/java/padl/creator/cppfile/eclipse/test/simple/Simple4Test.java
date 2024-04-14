@@ -11,9 +11,10 @@
 package padl.creator.cppfile.eclipse.test.simple;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
-import padl.generator.helper.ModelGenerator;
-import padl.kernel.IIdiomLevelModel;
+import padl.creator.cppfile.eclipse.test.helper.ModelGenerator;
+import padl.kernel.ICodeLevelModel;
 import padl.path.Finder;
 import padl.path.FormatException;
 
@@ -21,22 +22,19 @@ public class Simple4Test extends TestCase {
 	public Simple4Test(String name) {
 		super(name);
 	}
+
 	public void test1() {
-		final IIdiomLevelModel idiomLevelModel =
-			ModelGenerator
-				.generateModelFromCppFilesUsingEclipse(
-					"Funny",
-					new String[] { "../PADL Creator C++ (Eclipse) Tests/data/Simple4/" });
-		Assert.assertNotNull("The idiom-level model is null!", idiomLevelModel);
-		Assert.assertEquals(20, idiomLevelModel.getNumberOfTopLevelEntities());
+		final ICodeLevelModel codeLevelModel = ModelGenerator
+				.generateModelFromCppFilesUsingEclipse("Funny",
+						"../PADL Creator C++ (Eclipse) Tests/data/Simple4/");
+		Assert.assertNotNull("The idiom-level model is null!", codeLevelModel);
+		Assert.assertEquals(20, codeLevelModel.getNumberOfTopLevelEntities());
 		try {
-			Assert
-				.assertNull(
+			Assert.assertNull(
 					"There should only exist writeBorlandParts(ProblemType)",
-					Finder
-						.find(
+					Finder.find(
 							"/Funny|DEFAULT_PACKAGE_ID|BorlandMakefileGenerator|BorlandMakefileGenerator.writeBorlandParts()",
-							idiomLevelModel));
+							codeLevelModel));
 		}
 		catch (final FormatException e) {
 			// We are expecting an exception because the 

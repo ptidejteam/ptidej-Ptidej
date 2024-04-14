@@ -1,0 +1,1198 @@
+String Creation Time: 38
+String Length in Tokens: 20155
+--------------------------------------------------
+
+NONE
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1
+Solution Computation Time:2
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+4
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2
+Solution Computation Time:2
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 3
+Solution Computation Time:2
+Number of Solutions With and Without Ghosts:6
+Number of Solutions Without Ghosts:6
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 4059 similar at 100% with Decorator
+4059.100.Decorator = junit.extensions.TestDecorator
+4059.100.Component = EPI_Abstract_junit.framework.Test
+4059.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4059.100.ConcreteComponent = EPI_Abstract_junit.framework.TestCase
+
+# Micro-architecture 4060 similar at 100% with Decorator
+4060.100.Decorator = junit.extensions.TestDecorator
+4060.100.Component = EPI_Abstract_junit.framework.Test
+4060.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4060.100.ConcreteComponent = junit.extensions.TestDecorator
+
+# Micro-architecture 4061 similar at 100% with Decorator
+4061.100.Decorator = junit.extensions.TestDecorator
+4061.100.Component = EPI_Abstract_junit.framework.Test
+4061.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4061.100.ConcreteComponent = junit.framework.TestSuite
+
+# Micro-architecture 4062 similar at 100% with Decorator
+4062.100.Decorator = junit.extensions.TestDecorator
+4062.100.Component = EPI_Abstract_junit.framework.Test
+4062.100.ConcreteDecorator = junit.extensions.TestSetup
+4062.100.ConcreteComponent = EPI_Abstract_junit.framework.TestCase
+
+# Micro-architecture 4063 similar at 100% with Decorator
+4063.100.Decorator = junit.extensions.TestDecorator
+4063.100.Component = EPI_Abstract_junit.framework.Test
+4063.100.ConcreteDecorator = junit.extensions.TestSetup
+4063.100.ConcreteComponent = junit.extensions.TestDecorator
+
+# Micro-architecture 4064 similar at 100% with Decorator
+4064.100.Decorator = junit.extensions.TestDecorator
+4064.100.Component = EPI_Abstract_junit.framework.Test
+4064.100.ConcreteDecorator = junit.extensions.TestSetup
+4064.100.ConcreteComponent = junit.framework.TestSuite
+
+---------------------------------------------
+1 and 4
+Solution Computation Time:2
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 3
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 4
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3 and 4
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2 and 3
+Solution Computation Time:4
+Number of Solutions With and Without Ghosts:64
+Number of Solutions Without Ghosts:64
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 4174 similar at 100% with Decorator
+4174.100.Decorator = junit.extensions.TestDecorator
+4174.100.Component = EPI_Abstract_junit.framework.Test
+4174.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4174.100.ConcreteComponent = EPI_Abstract_junit.framework.TestCase
+
+# Micro-architecture 4175 similar at 100% with Decorator
+4175.100.Decorator = junit.extensions.TestDecorator
+4175.100.Component = EPI_Abstract_junit.framework.Test
+4175.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4175.100.ConcreteComponent = junit.extensions.ActiveTestSuite
+
+# Micro-architecture 4176 similar at 100% with Decorator
+4176.100.Decorator = junit.extensions.TestDecorator
+4176.100.Component = EPI_Abstract_junit.framework.Test
+4176.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4176.100.ConcreteComponent = junit.extensions.TestSetup
+
+# Micro-architecture 4177 similar at 100% with Decorator
+4177.100.Decorator = junit.extensions.TestDecorator
+4177.100.Component = EPI_Abstract_junit.framework.Test
+4177.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4177.100.ConcreteComponent = junit.extensions.RepeatedTest
+
+# Micro-architecture 4178 similar at 100% with Decorator
+4178.100.Decorator = junit.extensions.TestDecorator
+4178.100.Component = EPI_Abstract_junit.framework.Test
+4178.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4178.100.ConcreteComponent = junit.tests.AssertTest
+
+# Micro-architecture 4179 similar at 100% with Decorator
+4179.100.Decorator = junit.extensions.TestDecorator
+4179.100.Component = EPI_Abstract_junit.framework.Test
+4179.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4179.100.ConcreteComponent = junit.tests.SuiteTest
+
+# Micro-architecture 4180 similar at 100% with Decorator
+4180.100.Decorator = junit.extensions.TestDecorator
+4180.100.Component = EPI_Abstract_junit.framework.Test
+4180.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4180.100.ConcreteComponent = junit.samples.money.MoneyTest
+
+# Micro-architecture 4181 similar at 100% with Decorator
+4181.100.Decorator = junit.extensions.TestDecorator
+4181.100.Component = EPI_Abstract_junit.framework.Test
+4181.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4181.100.ConcreteComponent = junit.tests.NoTestCases
+
+# Micro-architecture 4182 similar at 100% with Decorator
+4182.100.Decorator = junit.extensions.TestDecorator
+4182.100.Component = EPI_Abstract_junit.framework.Test
+4182.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4182.100.ConcreteComponent = junit.tests.TextRunnerTest
+
+# Micro-architecture 4183 similar at 100% with Decorator
+4183.100.Decorator = junit.extensions.TestDecorator
+4183.100.Component = EPI_Abstract_junit.framework.Test
+4183.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4183.100.ConcreteComponent = junit.tests.ExtensionTest
+
+# Micro-architecture 4184 similar at 100% with Decorator
+4184.100.Decorator = junit.extensions.TestDecorator
+4184.100.Component = EPI_Abstract_junit.framework.Test
+4184.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4184.100.ConcreteComponent = junit.tests.Failure
+
+# Micro-architecture 4185 similar at 100% with Decorator
+4185.100.Decorator = junit.extensions.TestDecorator
+4185.100.Component = EPI_Abstract_junit.framework.Test
+4185.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4185.100.ConcreteComponent = junit.tests.WasRun
+
+# Micro-architecture 4186 similar at 100% with Decorator
+4186.100.Decorator = junit.extensions.TestDecorator
+4186.100.Component = EPI_Abstract_junit.framework.Test
+4186.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4186.100.ConcreteComponent = junit.tests.NotVoidTestCase
+
+# Micro-architecture 4187 similar at 100% with Decorator
+4187.100.Decorator = junit.extensions.TestDecorator
+4187.100.Component = EPI_Abstract_junit.framework.Test
+4187.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4187.100.ConcreteComponent = junit.samples.VectorTest
+
+# Micro-architecture 4188 similar at 100% with Decorator
+4188.100.Decorator = junit.extensions.TestDecorator
+4188.100.Component = EPI_Abstract_junit.framework.Test
+4188.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4188.100.ConcreteComponent = junit.samples.SimpleTest
+
+# Micro-architecture 4189 similar at 100% with Decorator
+4189.100.Decorator = junit.extensions.TestDecorator
+4189.100.Component = EPI_Abstract_junit.framework.Test
+4189.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4189.100.ConcreteComponent = junit.tests.NotPublicTestCase
+
+# Micro-architecture 4190 similar at 100% with Decorator
+4190.100.Decorator = junit.extensions.TestDecorator
+4190.100.Component = EPI_Abstract_junit.framework.Test
+4190.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4190.100.ConcreteComponent = junit.tests.RepeatedTestTest
+
+# Micro-architecture 4191 similar at 100% with Decorator
+4191.100.Decorator = junit.extensions.TestDecorator
+4191.100.Component = EPI_Abstract_junit.framework.Test
+4191.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4191.100.ConcreteComponent = junit.tests.Success
+
+# Micro-architecture 4192 similar at 100% with Decorator
+4192.100.Decorator = junit.extensions.TestDecorator
+4192.100.Component = EPI_Abstract_junit.framework.Test
+4192.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4192.100.ConcreteComponent = junit.tests.TestListenerTest
+
+# Micro-architecture 4193 similar at 100% with Decorator
+4193.100.Decorator = junit.extensions.TestDecorator
+4193.100.Component = EPI_Abstract_junit.framework.Test
+4193.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4193.100.ConcreteComponent = junit.tests.TestImplementorTest
+
+# Micro-architecture 4194 similar at 100% with Decorator
+4194.100.Decorator = junit.extensions.TestDecorator
+4194.100.Component = EPI_Abstract_junit.framework.Test
+4194.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4194.100.ConcreteComponent = junit.tests.ActiveTestTest
+
+# Micro-architecture 4195 similar at 100% with Decorator
+4195.100.Decorator = junit.extensions.TestDecorator
+4195.100.Component = EPI_Abstract_junit.framework.Test
+4195.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4195.100.ConcreteComponent = junit.tests.ExceptionTestCaseTest
+
+# Micro-architecture 4196 similar at 100% with Decorator
+4196.100.Decorator = junit.extensions.TestDecorator
+4196.100.Component = EPI_Abstract_junit.framework.Test
+4196.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4196.100.ConcreteComponent = junit.extensions.ExceptionTestCase
+
+# Micro-architecture 4197 similar at 100% with Decorator
+4197.100.Decorator = junit.extensions.TestDecorator
+4197.100.Component = EPI_Abstract_junit.framework.Test
+4197.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4197.100.ConcreteComponent = junit.tests.StackFilterTest
+
+# Micro-architecture 4198 similar at 100% with Decorator
+4198.100.Decorator = junit.extensions.TestDecorator
+4198.100.Component = EPI_Abstract_junit.framework.Test
+4198.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4198.100.ConcreteComponent = junit.tests.OneTestCase
+
+# Micro-architecture 4199 similar at 100% with Decorator
+4199.100.Decorator = junit.extensions.TestDecorator
+4199.100.Component = EPI_Abstract_junit.framework.Test
+4199.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4199.100.ConcreteComponent = junit.tests.TestCaseTest
+
+# Micro-architecture 4200 similar at 100% with Decorator
+4200.100.Decorator = junit.extensions.TestDecorator
+4200.100.Component = EPI_Abstract_junit.framework.Test
+4200.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4200.100.ConcreteComponent = junit.tests.TestCaseClassLoaderTest
+
+# Micro-architecture 4201 similar at 100% with Decorator
+4201.100.Decorator = junit.extensions.TestDecorator
+4201.100.Component = EPI_Abstract_junit.framework.Test
+4201.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4201.100.ConcreteComponent = junit.tests.InheritedTestCase
+
+# Micro-architecture 4202 similar at 100% with Decorator
+4202.100.Decorator = junit.extensions.TestDecorator
+4202.100.Component = EPI_Abstract_junit.framework.Test
+4202.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4202.100.ConcreteComponent = junit.tests.OverrideTestCase
+
+# Micro-architecture 4203 similar at 100% with Decorator
+4203.100.Decorator = junit.extensions.TestDecorator
+4203.100.Component = EPI_Abstract_junit.framework.Test
+4203.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4203.100.ConcreteComponent = junit.tests.SorterTest
+
+# Micro-architecture 4204 similar at 100% with Decorator
+4204.100.Decorator = junit.extensions.TestDecorator
+4204.100.Component = EPI_Abstract_junit.framework.Test
+4204.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4204.100.ConcreteComponent = junit.extensions.TestDecorator
+
+# Micro-architecture 4205 similar at 100% with Decorator
+4205.100.Decorator = junit.extensions.TestDecorator
+4205.100.Component = EPI_Abstract_junit.framework.Test
+4205.100.ConcreteDecorator = junit.extensions.RepeatedTest
+4205.100.ConcreteComponent = junit.framework.TestSuite
+
+# Micro-architecture 4206 similar at 100% with Decorator
+4206.100.Decorator = junit.extensions.TestDecorator
+4206.100.Component = EPI_Abstract_junit.framework.Test
+4206.100.ConcreteDecorator = junit.extensions.TestSetup
+4206.100.ConcreteComponent = EPI_Abstract_junit.framework.TestCase
+
+# Micro-architecture 4207 similar at 100% with Decorator
+4207.100.Decorator = junit.extensions.TestDecorator
+4207.100.Component = EPI_Abstract_junit.framework.Test
+4207.100.ConcreteDecorator = junit.extensions.TestSetup
+4207.100.ConcreteComponent = junit.extensions.ActiveTestSuite
+
+# Micro-architecture 4208 similar at 100% with Decorator
+4208.100.Decorator = junit.extensions.TestDecorator
+4208.100.Component = EPI_Abstract_junit.framework.Test
+4208.100.ConcreteDecorator = junit.extensions.TestSetup
+4208.100.ConcreteComponent = junit.extensions.TestSetup
+
+# Micro-architecture 4209 similar at 100% with Decorator
+4209.100.Decorator = junit.extensions.TestDecorator
+4209.100.Component = EPI_Abstract_junit.framework.Test
+4209.100.ConcreteDecorator = junit.extensions.TestSetup
+4209.100.ConcreteComponent = junit.extensions.RepeatedTest
+
+# Micro-architecture 4210 similar at 100% with Decorator
+4210.100.Decorator = junit.extensions.TestDecorator
+4210.100.Component = EPI_Abstract_junit.framework.Test
+4210.100.ConcreteDecorator = junit.extensions.TestSetup
+4210.100.ConcreteComponent = junit.tests.AssertTest
+
+# Micro-architecture 4211 similar at 100% with Decorator
+4211.100.Decorator = junit.extensions.TestDecorator
+4211.100.Component = EPI_Abstract_junit.framework.Test
+4211.100.ConcreteDecorator = junit.extensions.TestSetup
+4211.100.ConcreteComponent = junit.tests.SuiteTest
+
+# Micro-architecture 4212 similar at 100% with Decorator
+4212.100.Decorator = junit.extensions.TestDecorator
+4212.100.Component = EPI_Abstract_junit.framework.Test
+4212.100.ConcreteDecorator = junit.extensions.TestSetup
+4212.100.ConcreteComponent = junit.samples.money.MoneyTest
+
+# Micro-architecture 4213 similar at 100% with Decorator
+4213.100.Decorator = junit.extensions.TestDecorator
+4213.100.Component = EPI_Abstract_junit.framework.Test
+4213.100.ConcreteDecorator = junit.extensions.TestSetup
+4213.100.ConcreteComponent = junit.tests.NoTestCases
+
+# Micro-architecture 4214 similar at 100% with Decorator
+4214.100.Decorator = junit.extensions.TestDecorator
+4214.100.Component = EPI_Abstract_junit.framework.Test
+4214.100.ConcreteDecorator = junit.extensions.TestSetup
+4214.100.ConcreteComponent = junit.tests.TextRunnerTest
+
+# Micro-architecture 4215 similar at 100% with Decorator
+4215.100.Decorator = junit.extensions.TestDecorator
+4215.100.Component = EPI_Abstract_junit.framework.Test
+4215.100.ConcreteDecorator = junit.extensions.TestSetup
+4215.100.ConcreteComponent = junit.tests.ExtensionTest
+
+# Micro-architecture 4216 similar at 100% with Decorator
+4216.100.Decorator = junit.extensions.TestDecorator
+4216.100.Component = EPI_Abstract_junit.framework.Test
+4216.100.ConcreteDecorator = junit.extensions.TestSetup
+4216.100.ConcreteComponent = junit.tests.Failure
+
+# Micro-architecture 4217 similar at 100% with Decorator
+4217.100.Decorator = junit.extensions.TestDecorator
+4217.100.Component = EPI_Abstract_junit.framework.Test
+4217.100.ConcreteDecorator = junit.extensions.TestSetup
+4217.100.ConcreteComponent = junit.tests.WasRun
+
+# Micro-architecture 4218 similar at 100% with Decorator
+4218.100.Decorator = junit.extensions.TestDecorator
+4218.100.Component = EPI_Abstract_junit.framework.Test
+4218.100.ConcreteDecorator = junit.extensions.TestSetup
+4218.100.ConcreteComponent = junit.tests.NotVoidTestCase
+
+# Micro-architecture 4219 similar at 100% with Decorator
+4219.100.Decorator = junit.extensions.TestDecorator
+4219.100.Component = EPI_Abstract_junit.framework.Test
+4219.100.ConcreteDecorator = junit.extensions.TestSetup
+4219.100.ConcreteComponent = junit.samples.VectorTest
+
+# Micro-architecture 4220 similar at 100% with Decorator
+4220.100.Decorator = junit.extensions.TestDecorator
+4220.100.Component = EPI_Abstract_junit.framework.Test
+4220.100.ConcreteDecorator = junit.extensions.TestSetup
+4220.100.ConcreteComponent = junit.samples.SimpleTest
+
+# Micro-architecture 4221 similar at 100% with Decorator
+4221.100.Decorator = junit.extensions.TestDecorator
+4221.100.Component = EPI_Abstract_junit.framework.Test
+4221.100.ConcreteDecorator = junit.extensions.TestSetup
+4221.100.ConcreteComponent = junit.tests.NotPublicTestCase
+
+# Micro-architecture 4222 similar at 100% with Decorator
+4222.100.Decorator = junit.extensions.TestDecorator
+4222.100.Component = EPI_Abstract_junit.framework.Test
+4222.100.ConcreteDecorator = junit.extensions.TestSetup
+4222.100.ConcreteComponent = junit.tests.RepeatedTestTest
+
+# Micro-architecture 4223 similar at 100% with Decorator
+4223.100.Decorator = junit.extensions.TestDecorator
+4223.100.Component = EPI_Abstract_junit.framework.Test
+4223.100.ConcreteDecorator = junit.extensions.TestSetup
+4223.100.ConcreteComponent = junit.tests.Success
+
+# Micro-architecture 4224 similar at 100% with Decorator
+4224.100.Decorator = junit.extensions.TestDecorator
+4224.100.Component = EPI_Abstract_junit.framework.Test
+4224.100.ConcreteDecorator = junit.extensions.TestSetup
+4224.100.ConcreteComponent = junit.tests.TestListenerTest
+
+# Micro-architecture 4225 similar at 100% with Decorator
+4225.100.Decorator = junit.extensions.TestDecorator
+4225.100.Component = EPI_Abstract_junit.framework.Test
+4225.100.ConcreteDecorator = junit.extensions.TestSetup
+4225.100.ConcreteComponent = junit.tests.TestImplementorTest
+
+# Micro-architecture 4226 similar at 100% with Decorator
+4226.100.Decorator = junit.extensions.TestDecorator
+4226.100.Component = EPI_Abstract_junit.framework.Test
+4226.100.ConcreteDecorator = junit.extensions.TestSetup
+4226.100.ConcreteComponent = junit.tests.ActiveTestTest
+
+# Micro-architecture 4227 similar at 100% with Decorator
+4227.100.Decorator = junit.extensions.TestDecorator
+4227.100.Component = EPI_Abstract_junit.framework.Test
+4227.100.ConcreteDecorator = junit.extensions.TestSetup
+4227.100.ConcreteComponent = junit.tests.ExceptionTestCaseTest
+
+# Micro-architecture 4228 similar at 100% with Decorator
+4228.100.Decorator = junit.extensions.TestDecorator
+4228.100.Component = EPI_Abstract_junit.framework.Test
+4228.100.ConcreteDecorator = junit.extensions.TestSetup
+4228.100.ConcreteComponent = junit.extensions.ExceptionTestCase
+
+# Micro-architecture 4229 similar at 100% with Decorator
+4229.100.Decorator = junit.extensions.TestDecorator
+4229.100.Component = EPI_Abstract_junit.framework.Test
+4229.100.ConcreteDecorator = junit.extensions.TestSetup
+4229.100.ConcreteComponent = junit.tests.StackFilterTest
+
+# Micro-architecture 4230 similar at 100% with Decorator
+4230.100.Decorator = junit.extensions.TestDecorator
+4230.100.Component = EPI_Abstract_junit.framework.Test
+4230.100.ConcreteDecorator = junit.extensions.TestSetup
+4230.100.ConcreteComponent = junit.tests.OneTestCase
+
+# Micro-architecture 4231 similar at 100% with Decorator
+4231.100.Decorator = junit.extensions.TestDecorator
+4231.100.Component = EPI_Abstract_junit.framework.Test
+4231.100.ConcreteDecorator = junit.extensions.TestSetup
+4231.100.ConcreteComponent = junit.tests.TestCaseTest
+
+# Micro-architecture 4232 similar at 100% with Decorator
+4232.100.Decorator = junit.extensions.TestDecorator
+4232.100.Component = EPI_Abstract_junit.framework.Test
+4232.100.ConcreteDecorator = junit.extensions.TestSetup
+4232.100.ConcreteComponent = junit.tests.TestCaseClassLoaderTest
+
+# Micro-architecture 4233 similar at 100% with Decorator
+4233.100.Decorator = junit.extensions.TestDecorator
+4233.100.Component = EPI_Abstract_junit.framework.Test
+4233.100.ConcreteDecorator = junit.extensions.TestSetup
+4233.100.ConcreteComponent = junit.tests.InheritedTestCase
+
+# Micro-architecture 4234 similar at 100% with Decorator
+4234.100.Decorator = junit.extensions.TestDecorator
+4234.100.Component = EPI_Abstract_junit.framework.Test
+4234.100.ConcreteDecorator = junit.extensions.TestSetup
+4234.100.ConcreteComponent = junit.tests.OverrideTestCase
+
+# Micro-architecture 4235 similar at 100% with Decorator
+4235.100.Decorator = junit.extensions.TestDecorator
+4235.100.Component = EPI_Abstract_junit.framework.Test
+4235.100.ConcreteDecorator = junit.extensions.TestSetup
+4235.100.ConcreteComponent = junit.tests.SorterTest
+
+# Micro-architecture 4236 similar at 100% with Decorator
+4236.100.Decorator = junit.extensions.TestDecorator
+4236.100.Component = EPI_Abstract_junit.framework.Test
+4236.100.ConcreteDecorator = junit.extensions.TestSetup
+4236.100.ConcreteComponent = junit.extensions.TestDecorator
+
+# Micro-architecture 4237 similar at 100% with Decorator
+4237.100.Decorator = junit.extensions.TestDecorator
+4237.100.Component = EPI_Abstract_junit.framework.Test
+4237.100.ConcreteDecorator = junit.extensions.TestSetup
+4237.100.ConcreteComponent = junit.framework.TestSuite
+
+---------------------------------------------
+ALL
+Solution Computation Time:37
+Number of Solutions With and Without Ghosts:154
+Number of Solutions Without Ghosts:31
+Number of Solutions With Ghosts:123
+
+
+# Micro-architecture 4241 similar at 100% with Decorator
+4241.100.Decorator = junit.framework.TestResult
+4241.100.Component = EPI_Abstract_junit.framework.TestListener
+
+# Micro-architecture 4242 similar at 100% with Decorator
+4242.100.Decorator = junit.swingui.TestHierarchyRunView
+4242.100.Component = EPI_Abstract_junit.framework.TestListener
+
+# Micro-architecture 4243 similar at 100% with Decorator
+4243.100.Decorator = junit.awtui.ProgressBar
+4243.100.Component = java.awt.Rectangle
+
+# Micro-architecture 4244 similar at 100% with Decorator
+4244.100.Decorator = junit.swingui.ProgressBar
+4244.100.Component = java.awt.Rectangle
+
+# Micro-architecture 4245 similar at 100% with Decorator
+4245.100.Decorator = junit.awtui.Logo
+4245.100.Component = java.awt.Rectangle
+
+# Micro-architecture 4246 similar at 100% with Decorator
+4246.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4246.100.Component = java.lang.String
+
+# Micro-architecture 4247 similar at 100% with Decorator
+4247.100.Decorator = junit.samples.AllTests
+4247.100.Component = java.lang.String
+
+# Micro-architecture 4248 similar at 100% with Decorator
+4248.100.Decorator = junit.swingui.TestRunner
+4248.100.Component = java.lang.String
+
+# Micro-architecture 4249 similar at 100% with Decorator
+4249.100.Decorator = junit.tests.LoadedFromJar
+4249.100.Component = java.lang.String
+
+# Micro-architecture 4250 similar at 100% with Decorator
+4250.100.Decorator = junit.tests.ExceptionTestCaseTest
+4250.100.Component = java.lang.String
+
+# Micro-architecture 4251 similar at 100% with Decorator
+4251.100.Decorator = junit.awtui.TestRunner
+4251.100.Component = java.lang.String
+
+# Micro-architecture 4252 similar at 100% with Decorator
+4252.100.Decorator = junit.tests.AllTests
+4252.100.Component = java.lang.String
+
+# Micro-architecture 4253 similar at 100% with Decorator
+4253.100.Decorator = junit.samples.money.Money
+4253.100.Component = java.lang.String
+
+# Micro-architecture 4254 similar at 100% with Decorator
+4254.100.Decorator = junit.samples.SimpleTest
+4254.100.Component = java.lang.String
+
+# Micro-architecture 4255 similar at 100% with Decorator
+4255.100.Decorator = junit.samples.VectorTest
+4255.100.Component = java.lang.String
+
+# Micro-architecture 4256 similar at 100% with Decorator
+4256.100.Decorator = junit.awtui.Logo
+4256.100.Component = java.lang.String
+
+# Micro-architecture 4257 similar at 100% with Decorator
+4257.100.Decorator = junit.swingui.DefaultFailureDetailView
+4257.100.Component = java.lang.String
+
+# Micro-architecture 4258 similar at 100% with Decorator
+4258.100.Decorator = junit.framework.TestSuite
+4258.100.Component = java.lang.String
+
+# Micro-architecture 4259 similar at 100% with Decorator
+4259.100.Decorator = junit.swingui.AboutDialog
+4259.100.Component = java.lang.String
+
+# Micro-architecture 4260 similar at 100% with Decorator
+4260.100.Decorator = junit.runner.LoadingTestCollector
+4260.100.Component = java.lang.String
+
+# Micro-architecture 4261 similar at 100% with Decorator
+4261.100.Decorator = EPI_Abstract_junit.runner.BaseTestRunner
+4261.100.Component = java.lang.String
+
+# Micro-architecture 4262 similar at 100% with Decorator
+4262.100.Decorator = junit.runner.TestCaseClassLoader
+4262.100.Component = java.lang.String
+
+# Micro-architecture 4263 similar at 100% with Decorator
+4263.100.Decorator = junit.tests.ClassLoaderTest
+4263.100.Component = java.lang.String
+
+# Micro-architecture 4264 similar at 100% with Decorator
+4264.100.Decorator = junit.samples.money.MoneyTest
+4264.100.Component = java.lang.String
+
+# Micro-architecture 4265 similar at 100% with Decorator
+4265.100.Decorator = junit.tests.SuiteTest
+4265.100.Component = java.lang.String
+
+# Micro-architecture 4266 similar at 100% with Decorator
+4266.100.Decorator = junit.framework.TestFailure
+4266.100.Component = java.lang.String
+
+# Micro-architecture 4267 similar at 100% with Decorator
+4267.100.Decorator = junit.awtui.TestRunner
+4267.100.Component = junit.awtui.ProgressBar
+
+# Micro-architecture 4268 similar at 100% with Decorator
+4268.100.Decorator = junit.swingui.TestTreeModel
+4268.100.Component = java.util.Hashtable
+
+# Micro-architecture 4269 similar at 100% with Decorator
+4269.100.Decorator = junit.swingui.TestSelector
+4269.100.Component = java.awt.event.KeyListener
+
+# Micro-architecture 4270 similar at 100% with Decorator
+4270.100.Decorator = junit.swingui.TestRunner
+4270.100.Component = junit.swingui.TestRunner
+
+# Micro-architecture 4271 similar at 100% with Decorator
+4271.100.Decorator = junit.swingui.TestSelector
+4271.100.Component = javax.swing.JLabel
+
+# Micro-architecture 4272 similar at 100% with Decorator
+4272.100.Decorator = junit.swingui.TestHierarchyRunView
+4272.100.Component = junit.swingui.TestSuitePanel
+
+# Micro-architecture 4273 similar at 100% with Decorator
+4273.100.Decorator = junit.swingui.TestRunner
+4273.100.Component = javax.swing.JButton
+
+# Micro-architecture 4274 similar at 100% with Decorator
+4274.100.Decorator = junit.swingui.TestSelector
+4274.100.Component = javax.swing.JButton
+
+# Micro-architecture 4275 similar at 100% with Decorator
+4275.100.Decorator = junit.swingui.DefaultFailureDetailView
+4275.100.Component = javax.swing.JTextArea
+
+# Micro-architecture 4276 similar at 100% with Decorator
+4276.100.Decorator = junit.samples.money.MoneyTest
+4276.100.Component = junit.samples.money.MoneyBag
+
+# Micro-architecture 4277 similar at 100% with Decorator
+4277.100.Decorator = EPI_Abstract_junit.runner.BaseTestRunner
+4277.100.Component = java.util.Properties
+
+# Micro-architecture 4278 similar at 100% with Decorator
+4278.100.Decorator = junit.awtui.TestRunner
+4278.100.Component = java.awt.List
+
+# Micro-architecture 4279 similar at 100% with Decorator
+4279.100.Decorator = junit.awtui.TestRunner
+4279.100.Component = java.awt.event.TextListener
+
+# Micro-architecture 4280 similar at 100% with Decorator
+4280.100.Decorator = junit.awtui.TestRunner
+4280.100.Component = java.awt.Font
+
+# Micro-architecture 4281 similar at 100% with Decorator
+4281.100.Decorator = junit.swingui.StatusLine
+4281.100.Component = java.awt.Font
+
+# Micro-architecture 4282 similar at 100% with Decorator
+4282.100.Decorator = junit.awtui.TestRunner
+4282.100.Component = junit.awtui.TestRunner
+
+# Micro-architecture 4283 similar at 100% with Decorator
+4283.100.Decorator = junit.swingui.TestSuitePanel
+4283.100.Component = javax.swing.tree.TreeModel
+
+# Micro-architecture 4284 similar at 100% with Decorator
+4284.100.Decorator = junit.samples.money.MoneyTest
+4284.100.Component = EPI_Abstract_junit.samples.money.IMoney
+
+# Micro-architecture 4285 similar at 100% with Decorator
+4285.100.Decorator = junit.samples.money.MoneyTest
+4285.100.Component = junit.samples.money.Money
+
+# Micro-architecture 4286 similar at 100% with Decorator
+4286.100.Decorator = junit.swingui.TestRunner
+4286.100.Component = javax.swing.JFrame
+
+# Micro-architecture 4287 similar at 100% with Decorator
+4287.100.Decorator = junit.swingui.TestRunner
+4287.100.Component = javax.swing.DefaultListModel
+
+# Micro-architecture 4288 similar at 100% with Decorator
+4288.100.Decorator = junit.awtui.TestRunner
+4288.100.Component = java.awt.Button
+
+# Micro-architecture 4289 similar at 100% with Decorator
+4289.100.Decorator = junit.swingui.CounterPanel
+4289.100.Component = javax.swing.JTextField
+
+# Micro-architecture 4290 similar at 100% with Decorator
+4290.100.Decorator = junit.swingui.TestSelector
+4290.100.Component = javax.swing.JList
+
+# Micro-architecture 4291 similar at 100% with Decorator
+4291.100.Decorator = junit.swingui.TestRunner
+4291.100.Component = EPI_Abstract_junit.runner.FailureDetailView
+
+# Micro-architecture 4292 similar at 100% with Decorator
+4292.100.Decorator = junit.swingui.TestRunner
+4292.100.Component = javax.swing.ComboBoxEditor
+
+# Micro-architecture 4293 similar at 100% with Decorator
+4293.100.Decorator = junit.swingui.TestRunner
+4293.100.Component = java.util.Vector
+
+# Micro-architecture 4294 similar at 100% with Decorator
+4294.100.Decorator = junit.samples.money.MoneyBag
+4294.100.Component = java.util.Vector
+
+# Micro-architecture 4295 similar at 100% with Decorator
+4295.100.Decorator = junit.awtui.TestRunner
+4295.100.Component = java.util.Vector
+
+# Micro-architecture 4296 similar at 100% with Decorator
+4296.100.Decorator = junit.swingui.TestTreeModel
+4296.100.Component = java.util.Vector
+
+# Micro-architecture 4297 similar at 100% with Decorator
+4297.100.Decorator = junit.samples.VectorTest
+4297.100.Component = java.util.Vector
+
+# Micro-architecture 4298 similar at 100% with Decorator
+4298.100.Decorator = junit.framework.TestSuite
+4298.100.Component = java.util.Vector
+
+# Micro-architecture 4299 similar at 100% with Decorator
+4299.100.Decorator = junit.framework.TestResult
+4299.100.Component = java.util.Vector
+
+# Micro-architecture 4300 similar at 100% with Decorator
+4300.100.Decorator = junit.runner.TestCaseClassLoader
+4300.100.Component = java.util.Vector
+
+# Micro-architecture 4301 similar at 100% with Decorator
+4301.100.Decorator = junit.awtui.TestRunner
+4301.100.Component = junit.awtui.Logo
+
+# Micro-architecture 4302 similar at 100% with Decorator
+4302.100.Decorator = junit.swingui.TestRunner
+4302.100.Component = junit.swingui.StatusLine
+
+# Micro-architecture 4303 similar at 100% with Decorator
+4303.100.Decorator = junit.tests.RepeatedTestTest
+4303.100.Component = junit.framework.TestSuite
+
+# Micro-architecture 4304 similar at 100% with Decorator
+4304.100.Decorator = junit.swingui.TestRunner
+4304.100.Component = junit.framework.TestResult
+
+# Micro-architecture 4305 similar at 100% with Decorator
+4305.100.Decorator = junit.awtui.TestRunner
+4305.100.Component = junit.framework.TestResult
+
+# Micro-architecture 4306 similar at 100% with Decorator
+4306.100.Decorator = junit.tests.TestListenerTest
+4306.100.Component = junit.framework.TestResult
+
+# Micro-architecture 4307 similar at 100% with Decorator
+4307.100.Decorator = junit.tests.SuiteTest
+4307.100.Component = junit.framework.TestResult
+
+# Micro-architecture 4308 similar at 100% with Decorator
+4308.100.Decorator = junit.swingui.TestRunner
+4308.100.Component = javax.swing.JComboBox
+
+# Micro-architecture 4309 similar at 100% with Decorator
+4309.100.Decorator = junit.awtui.TestRunner
+4309.100.Component = java.awt.TextArea
+
+# Micro-architecture 4310 similar at 100% with Decorator
+4310.100.Decorator = junit.awtui.TestRunner
+4310.100.Component = java.awt.Checkbox
+
+# Micro-architecture 4311 similar at 100% with Decorator
+4311.100.Decorator = junit.swingui.TestSelector
+4311.100.Component = java.awt.event.MouseListener
+
+# Micro-architecture 4312 similar at 100% with Decorator
+4312.100.Decorator = junit.swingui.TestRunner
+4312.100.Component = java.awt.Component
+
+# Micro-architecture 4313 similar at 100% with Decorator
+4313.100.Decorator = junit.awtui.TestRunner
+4313.100.Component = java.awt.Component
+
+# Micro-architecture 4314 similar at 100% with Decorator
+4314.100.Decorator = junit.awtui.TestRunner
+4314.100.Component = java.awt.TextField
+
+# Micro-architecture 4315 similar at 100% with Decorator
+4315.100.Decorator = junit.swingui.TestRunner
+4315.100.Component = java.lang.Thread
+
+# Micro-architecture 4316 similar at 100% with Decorator
+4316.100.Decorator = junit.awtui.TestRunner
+4316.100.Component = java.lang.Thread
+
+# Micro-architecture 4317 similar at 100% with Decorator
+4317.100.Decorator = junit.swingui.TestHierarchyRunView
+4317.100.Component = javax.swing.JTree
+
+# Micro-architecture 4318 similar at 100% with Decorator
+4318.100.Decorator = junit.swingui.TestRunner
+4318.100.Component = java.awt.Container
+
+# Micro-architecture 4319 similar at 100% with Decorator
+4319.100.Decorator = junit.swingui.FailureRunView
+4319.100.Component = java.lang.Class
+
+# Micro-architecture 4320 similar at 100% with Decorator
+4320.100.Decorator = junit.extensions.ExceptionTestCase
+4320.100.Component = java.lang.Class
+
+# Micro-architecture 4321 similar at 100% with Decorator
+4321.100.Decorator = junit.runner.TestCaseClassLoader
+4321.100.Component = java.lang.Class
+
+# Micro-architecture 4322 similar at 100% with Decorator
+4322.100.Decorator = junit.swingui.TestTreeModel
+4322.100.Component = javax.swing.event.TreeModelListener
+
+# Micro-architecture 4323 similar at 100% with Decorator
+4323.100.Decorator = junit.swingui.TestSelector
+4323.100.Component = javax.swing.JScrollPane
+
+# Micro-architecture 4324 similar at 100% with Decorator
+4324.100.Decorator = junit.runner.LoadingTestCollector
+4324.100.Component = junit.runner.TestCaseClassLoader
+
+# Micro-architecture 4325 similar at 100% with Decorator
+4325.100.Decorator = junit.swingui.FailureRunView
+4325.100.Component = javax.swing.ListModel
+
+# Micro-architecture 4326 similar at 100% with Decorator
+4326.100.Decorator = junit.swingui.TestSelector
+4326.100.Component = javax.swing.ListModel
+
+# Micro-architecture 4327 similar at 100% with Decorator
+4327.100.Decorator = junit.swingui.FailureRunView
+4327.100.Component = EPI_Abstract_junit.framework.Test
+
+# Micro-architecture 4328 similar at 100% with Decorator
+4328.100.Decorator = junit.swingui.TestSuitePanel
+4328.100.Component = EPI_Abstract_junit.framework.Test
+
+# Micro-architecture 4330 similar at 100% with Decorator
+4330.100.Decorator = junit.swingui.TestHierarchyRunView
+4330.100.Component = EPI_Abstract_junit.framework.Test
+
+# Micro-architecture 4331 similar at 100% with Decorator
+4331.100.Decorator = junit.framework.TestFailure
+4331.100.Component = EPI_Abstract_junit.framework.Test
+
+# Micro-architecture 4332 similar at 100% with Decorator
+4332.100.Decorator = junit.swingui.TestRunner
+4332.100.Component = java.awt.event.ActionListener
+
+# Micro-architecture 4333 similar at 100% with Decorator
+4333.100.Decorator = junit.awtui.TestRunner
+4333.100.Component = java.awt.event.ActionListener
+
+# Micro-architecture 4334 similar at 100% with Decorator
+4334.100.Decorator = junit.swingui.TestSelector
+4334.100.Component = java.awt.event.ActionListener
+
+# Micro-architecture 4335 similar at 100% with Decorator
+4335.100.Decorator = junit.swingui.TestSelector
+4335.100.Component = javax.swing.event.ListSelectionListener
+
+# Micro-architecture 4336 similar at 100% with Decorator
+4336.100.Decorator = junit.swingui.TestSuitePanel
+4336.100.Component = javax.swing.tree.TreeCellRenderer
+
+# Micro-architecture 4337 similar at 100% with Decorator
+4337.100.Decorator = junit.awtui.TestRunner
+4337.100.Component = java.awt.event.ItemListener
+
+# Micro-architecture 4338 similar at 100% with Decorator
+4338.100.Decorator = junit.swingui.TestRunner
+4338.100.Component = EPI_Abstract_junit.framework.TestListener
+
+# Micro-architecture 4339 similar at 100% with Decorator
+4339.100.Decorator = junit.tests.TestListenerTest
+4339.100.Component = EPI_Abstract_junit.framework.TestListener
+
+# Micro-architecture 4340 similar at 100% with Decorator
+4340.100.Decorator = junit.extensions.TestDecorator
+4340.100.Component = EPI_Abstract_junit.framework.Test
+
+# Micro-architecture 4341 similar at 100% with Decorator
+4341.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4341.100.Component = java.lang.String
+4341.100.ConcreteDecorator = junit.tests.SorterTest
+
+# Micro-architecture 4342 similar at 100% with Decorator
+4342.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4342.100.Component = java.lang.String
+4342.100.ConcreteDecorator = junit.tests.OverrideTestCase
+
+# Micro-architecture 4343 similar at 100% with Decorator
+4343.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4343.100.Component = java.lang.String
+4343.100.ConcreteDecorator = junit.tests.InheritedTestCase
+
+# Micro-architecture 4344 similar at 100% with Decorator
+4344.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4344.100.Component = java.lang.String
+4344.100.ConcreteDecorator = junit.tests.TestCaseClassLoaderTest
+
+# Micro-architecture 4345 similar at 100% with Decorator
+4345.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4345.100.Component = java.lang.String
+4345.100.ConcreteDecorator = junit.tests.TestCaseTest
+
+# Micro-architecture 4346 similar at 100% with Decorator
+4346.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4346.100.Component = java.lang.String
+4346.100.ConcreteDecorator = junit.tests.OneTestCase
+
+# Micro-architecture 4347 similar at 100% with Decorator
+4347.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4347.100.Component = java.lang.String
+4347.100.ConcreteDecorator = junit.tests.StackFilterTest
+
+# Micro-architecture 4348 similar at 100% with Decorator
+4348.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4348.100.Component = java.lang.String
+4348.100.ConcreteDecorator = junit.extensions.ExceptionTestCase
+
+# Micro-architecture 4349 similar at 100% with Decorator
+4349.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4349.100.Component = java.lang.String
+4349.100.ConcreteDecorator = junit.tests.ExceptionTestCaseTest
+
+# Micro-architecture 4350 similar at 100% with Decorator
+4350.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4350.100.Component = java.lang.String
+4350.100.ConcreteDecorator = junit.tests.ActiveTestTest
+
+# Micro-architecture 4351 similar at 100% with Decorator
+4351.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4351.100.Component = java.lang.String
+4351.100.ConcreteDecorator = junit.tests.TestImplementorTest
+
+# Micro-architecture 4352 similar at 100% with Decorator
+4352.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4352.100.Component = java.lang.String
+4352.100.ConcreteDecorator = junit.tests.TestListenerTest
+
+# Micro-architecture 4353 similar at 100% with Decorator
+4353.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4353.100.Component = java.lang.String
+4353.100.ConcreteDecorator = junit.tests.Success
+
+# Micro-architecture 4354 similar at 100% with Decorator
+4354.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4354.100.Component = java.lang.String
+4354.100.ConcreteDecorator = junit.tests.RepeatedTestTest
+
+# Micro-architecture 4355 similar at 100% with Decorator
+4355.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4355.100.Component = java.lang.String
+4355.100.ConcreteDecorator = junit.tests.NotPublicTestCase
+
+# Micro-architecture 4356 similar at 100% with Decorator
+4356.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4356.100.Component = java.lang.String
+4356.100.ConcreteDecorator = junit.samples.SimpleTest
+
+# Micro-architecture 4357 similar at 100% with Decorator
+4357.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4357.100.Component = java.lang.String
+4357.100.ConcreteDecorator = junit.samples.VectorTest
+
+# Micro-architecture 4358 similar at 100% with Decorator
+4358.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4358.100.Component = java.lang.String
+4358.100.ConcreteDecorator = junit.tests.NotVoidTestCase
+
+# Micro-architecture 4359 similar at 100% with Decorator
+4359.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4359.100.Component = java.lang.String
+4359.100.ConcreteDecorator = junit.tests.WasRun
+
+# Micro-architecture 4360 similar at 100% with Decorator
+4360.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4360.100.Component = java.lang.String
+4360.100.ConcreteDecorator = junit.tests.Failure
+
+# Micro-architecture 4361 similar at 100% with Decorator
+4361.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4361.100.Component = java.lang.String
+4361.100.ConcreteDecorator = junit.tests.ExtensionTest
+
+# Micro-architecture 4362 similar at 100% with Decorator
+4362.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4362.100.Component = java.lang.String
+4362.100.ConcreteDecorator = junit.tests.TextRunnerTest
+
+# Micro-architecture 4363 similar at 100% with Decorator
+4363.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4363.100.Component = java.lang.String
+4363.100.ConcreteDecorator = junit.tests.NoTestCases
+
+# Micro-architecture 4364 similar at 100% with Decorator
+4364.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4364.100.Component = java.lang.String
+4364.100.ConcreteDecorator = junit.samples.money.MoneyTest
+
+# Micro-architecture 4365 similar at 100% with Decorator
+4365.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4365.100.Component = java.lang.String
+4365.100.ConcreteDecorator = junit.tests.SuiteTest
+
+# Micro-architecture 4366 similar at 100% with Decorator
+4366.100.Decorator = EPI_Abstract_junit.framework.TestCase
+4366.100.Component = java.lang.String
+4366.100.ConcreteDecorator = junit.tests.AssertTest
+
+# Micro-architecture 4367 similar at 100% with Decorator
+4367.100.Decorator = junit.awtui.TestRunner
+4367.100.Component = java.lang.String
+4367.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4368 similar at 100% with Decorator
+4368.100.Decorator = junit.framework.TestSuite
+4368.100.Component = java.lang.String
+4368.100.ConcreteDecorator = junit.extensions.ActiveTestSuite
+
+# Micro-architecture 4369 similar at 100% with Decorator
+4369.100.Decorator = EPI_Abstract_junit.runner.BaseTestRunner
+4369.100.Component = java.lang.String
+4369.100.ConcreteDecorator = junit.swingui.TestRunner
+
+# Micro-architecture 4370 similar at 100% with Decorator
+4370.100.Decorator = EPI_Abstract_junit.runner.BaseTestRunner
+4370.100.Component = java.lang.String
+4370.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4371 similar at 100% with Decorator
+4371.100.Decorator = EPI_Abstract_junit.runner.BaseTestRunner
+4371.100.Component = java.lang.String
+4371.100.ConcreteDecorator = junit.awtui.TestRunner
+
+# Micro-architecture 4372 similar at 100% with Decorator
+4372.100.Decorator = EPI_Abstract_junit.runner.BaseTestRunner
+4372.100.Component = java.lang.String
+4372.100.ConcreteDecorator = junit.textui.TestRunner
+
+# Micro-architecture 4373 similar at 100% with Decorator
+4373.100.Decorator = junit.awtui.TestRunner
+4373.100.Component = junit.awtui.ProgressBar
+4373.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4374 similar at 100% with Decorator
+4374.100.Decorator = EPI_Abstract_junit.runner.BaseTestRunner
+4374.100.Component = java.util.Properties
+4374.100.ConcreteDecorator = junit.swingui.TestRunner
+
+# Micro-architecture 4375 similar at 100% with Decorator
+4375.100.Decorator = EPI_Abstract_junit.runner.BaseTestRunner
+4375.100.Component = java.util.Properties
+4375.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4376 similar at 100% with Decorator
+4376.100.Decorator = EPI_Abstract_junit.runner.BaseTestRunner
+4376.100.Component = java.util.Properties
+4376.100.ConcreteDecorator = junit.awtui.TestRunner
+
+# Micro-architecture 4377 similar at 100% with Decorator
+4377.100.Decorator = EPI_Abstract_junit.runner.BaseTestRunner
+4377.100.Component = java.util.Properties
+4377.100.ConcreteDecorator = junit.textui.TestRunner
+
+# Micro-architecture 4378 similar at 100% with Decorator
+4378.100.Decorator = junit.awtui.TestRunner
+4378.100.Component = java.awt.List
+4378.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4379 similar at 100% with Decorator
+4379.100.Decorator = junit.awtui.TestRunner
+4379.100.Component = java.awt.event.TextListener
+4379.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4380 similar at 100% with Decorator
+4380.100.Decorator = junit.awtui.TestRunner
+4380.100.Component = java.awt.Font
+4380.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4381 similar at 100% with Decorator
+4381.100.Decorator = junit.awtui.TestRunner
+4381.100.Component = junit.awtui.TestRunner
+4381.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4382 similar at 100% with Decorator
+4382.100.Decorator = junit.awtui.TestRunner
+4382.100.Component = java.awt.Button
+4382.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4383 similar at 100% with Decorator
+4383.100.Decorator = junit.awtui.TestRunner
+4383.100.Component = java.util.Vector
+4383.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4384 similar at 100% with Decorator
+4384.100.Decorator = junit.framework.TestSuite
+4384.100.Component = java.util.Vector
+4384.100.ConcreteDecorator = junit.extensions.ActiveTestSuite
+
+# Micro-architecture 4385 similar at 100% with Decorator
+4385.100.Decorator = junit.awtui.TestRunner
+4385.100.Component = junit.awtui.Logo
+4385.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4386 similar at 100% with Decorator
+4386.100.Decorator = junit.awtui.TestRunner
+4386.100.Component = junit.framework.TestResult
+4386.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4387 similar at 100% with Decorator
+4387.100.Decorator = junit.awtui.TestRunner
+4387.100.Component = java.awt.TextArea
+4387.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4388 similar at 100% with Decorator
+4388.100.Decorator = junit.awtui.TestRunner
+4388.100.Component = java.awt.Checkbox
+4388.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4389 similar at 100% with Decorator
+4389.100.Decorator = junit.awtui.TestRunner
+4389.100.Component = java.awt.Component
+4389.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4390 similar at 100% with Decorator
+4390.100.Decorator = junit.awtui.TestRunner
+4390.100.Component = java.awt.TextField
+4390.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4391 similar at 100% with Decorator
+4391.100.Decorator = junit.awtui.TestRunner
+4391.100.Component = java.lang.Thread
+4391.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4392 similar at 100% with Decorator
+4392.100.Decorator = junit.awtui.TestRunner
+4392.100.Component = java.awt.event.ActionListener
+4392.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4393 similar at 100% with Decorator
+4393.100.Decorator = junit.awtui.TestRunner
+4393.100.Component = java.awt.event.ItemListener
+4393.100.ConcreteDecorator = junit.ui.TestRunner
+
+# Micro-architecture 4394 similar at 100% with Decorator
+4394.100.Decorator = junit.extensions.TestDecorator
+4394.100.Component = EPI_Abstract_junit.framework.Test
+4394.100.ConcreteDecorator = junit.extensions.RepeatedTest
+
+# Micro-architecture 4395 similar at 100% with Decorator
+4395.100.Decorator = junit.extensions.TestDecorator
+4395.100.Component = EPI_Abstract_junit.framework.Test
+4395.100.ConcreteDecorator = junit.extensions.TestSetup
+

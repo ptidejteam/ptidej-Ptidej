@@ -1,0 +1,1707 @@
+# Micro-architecture 2736 similar at 100% with AbstractFactory
+2736.100.Product = java.util.Properties
+2736.100.ConcreteFactory = org.acm.seguin.util.FileSettings
+
+# Micro-architecture 2737 similar at 100% with AbstractFactory
+2737.100.Product = org.acm.seguin.parser.ast.ASTNestedInterfaceDeclaration
+2737.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2738 similar at 100% with AbstractFactory
+2738.100.Product = org.acm.seguin.pretty.JavaDocComponent
+2738.100.ConcreteFactory = org.acm.seguin.pretty.JavaDocableImpl
+
+# Micro-architecture 2739 similar at 100% with AbstractFactory
+2739.100.Product = org.acm.seguin.parser.ast.ASTUnaryExpression
+2739.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2740 similar at 100% with AbstractFactory
+2740.100.Product = org.acm.seguin.parser.ast.ASTNullLiteral
+2740.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2741 similar at 100% with AbstractFactory
+2741.100.Product = org.acm.seguin.metrics.TypeMetrics
+2741.100.ConcreteFactory = org.acm.seguin.metrics.GatherData
+
+# Micro-architecture 2742 similar at 100% with AbstractFactory
+2742.100.Product = org.acm.seguin.refactor.method.InvokeMovedMethodTransform
+2742.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodRefactoring
+
+# Micro-architecture 2743 similar at 100% with AbstractFactory
+2743.100.Product = org.acm.seguin.parser.ast.ASTUnaryExpressionNotPlusMinus
+2743.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2744 similar at 100% with AbstractFactory
+2744.100.Product = org.acm.seguin.parser.ast.ASTForUpdate
+2744.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2745 similar at 100% with AbstractFactory
+2745.100.Product = org.acm.seguin.parser.ast.ASTSwitchLabel
+2745.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2746 similar at 100% with AbstractFactory
+2746.100.Product = org.acm.seguin.refactor.type.AbstractMethodFinder
+2746.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 2747 similar at 100% with AbstractFactory
+2747.100.Product = org.acm.seguin.uml.UMLType
+2747.100.ConcreteFactory = org.acm.seguin.uml.UMLType
+
+# Micro-architecture 2748 similar at 100% with AbstractFactory
+2748.100.Product = org.acm.seguin.uml.UMLType
+2748.100.ConcreteFactory = org.acm.seguin.uml.UMLPackage
+
+# Micro-architecture 2749 similar at 100% with AbstractFactory
+2749.100.Product = org.acm.seguin.uml.UMLType
+2749.100.ConcreteFactory = org.acm.seguin.uml.PackageLoader
+
+# Micro-architecture 2750 similar at 100% with AbstractFactory
+2750.100.Product = javax.swing.JFrame
+2750.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 2751 similar at 100% with AbstractFactory
+2751.100.Product = org.acm.seguin.parser.factory.InputStreamParserFactory
+2751.100.ConcreteFactory = org.acm.seguin.summary.FileSummary
+
+# Micro-architecture 2752 similar at 100% with AbstractFactory
+2752.100.Product = org.acm.seguin.uml.refactor.PushDownMethodListener
+2752.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2753 similar at 100% with AbstractFactory
+2753.100.Product = org.acm.seguin.refactor.method.AddConstructor
+2753.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 2754 similar at 100% with AbstractFactory
+2754.100.Product = org.acm.seguin.parser.ast.ASTCastLookahead
+2754.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2755 similar at 100% with AbstractFactory
+2755.100.Product = org.acm.seguin.parser.build.BuildExpression
+2755.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 2756 similar at 100% with AbstractFactory
+2756.100.Product = org.acm.seguin.parser.build.BuildExpression
+2756.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2757 similar at 100% with AbstractFactory
+2757.100.Product = org.acm.seguin.refactor.method.AddConcreteMethod
+2757.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 2758 similar at 100% with AbstractFactory
+2758.100.Product = org.acm.seguin.refactor.method.AddConcreteMethod
+2758.100.ConcreteFactory = org.acm.seguin.refactor.type.ExtractInterfaceRefactoring
+
+# Micro-architecture 2759 similar at 100% with AbstractFactory
+2759.100.Product = org.acm.seguin.refactor.field.RemoveFieldTransform
+2759.100.ConcreteFactory = org.acm.seguin.refactor.field.PushDownFieldRefactoring
+
+# Micro-architecture 2760 similar at 100% with AbstractFactory
+2760.100.Product = javax.swing.JMenuItem
+2760.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2761 similar at 100% with AbstractFactory
+2761.100.Product = java.lang.NoClassDefFoundError
+2761.100.ConcreteFactory = org.acm.seguin.uml.PackageLoader
+
+# Micro-architecture 2762 similar at 100% with AbstractFactory
+2762.100.Product = org.acm.seguin.parser.ast.ASTNestedClassDeclaration
+2762.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2763 similar at 100% with AbstractFactory
+2763.100.Product = org.acm.seguin.parser.ast.ASTBooleanLiteral
+2763.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2764 similar at 100% with AbstractFactory
+2764.100.Product = org.acm.seguin.parser.ast.ASTInclusiveOrExpression
+2764.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2765 similar at 100% with AbstractFactory
+2765.100.Product = org.acm.seguin.parser.ast.ASTSwitchStatement
+2765.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2766 similar at 100% with AbstractFactory
+2766.100.Product = org.acm.seguin.refactor.method.AddMethodTransform
+2766.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodRefactoring
+
+# Micro-architecture 2767 similar at 100% with AbstractFactory
+2767.100.Product = java.io.FileWriter
+2767.100.ConcreteFactory = org.acm.seguin.uml.UMLPackage
+
+# Micro-architecture 2768 similar at 100% with AbstractFactory
+2768.100.Product = org.acm.seguin.ide.command.ExitMenuSelection
+2768.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 2769 similar at 100% with AbstractFactory
+2769.100.Product = org.acm.seguin.summary.FieldSummary
+2769.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 2770 similar at 100% with AbstractFactory
+2770.100.Product = org.acm.seguin.parser.ast.ASTBlockStatement
+2770.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2771 similar at 100% with AbstractFactory
+2771.100.Product = org.acm.seguin.parser.ast.ASTBlockStatement
+2771.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2772 similar at 100% with AbstractFactory
+2772.100.Product = org.acm.seguin.pretty.sort.TopLevelOrdering
+2772.100.ConcreteFactory = org.acm.seguin.pretty.PrintData
+
+# Micro-architecture 2773 similar at 100% with AbstractFactory
+2773.100.Product = org.acm.seguin.parser.NamedToken
+2773.100.ConcreteFactory = org.acm.seguin.parser.ast.SimpleNode
+
+# Micro-architecture 2774 similar at 100% with AbstractFactory
+2774.100.Product = org.acm.seguin.parser.Token
+2774.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2775 similar at 100% with AbstractFactory
+2775.100.Product = org.acm.seguin.uml.line.Vertex
+2775.100.ConcreteFactory = org.acm.seguin.uml.line.SegmentedLine
+
+# Micro-architecture 2776 similar at 100% with AbstractFactory
+2776.100.Product = java.util.Hashtable
+2776.100.ConcreteFactory = org.acm.seguin.util.FileSettings
+
+# Micro-architecture 2777 similar at 100% with AbstractFactory
+2777.100.Product = org.acm.seguin.parser.ast.ASTArrayInitializer
+2777.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2778 similar at 100% with AbstractFactory
+2778.100.Product = org.acm.seguin.parser.ast.ASTConditionalAndExpression
+2778.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2779 similar at 100% with AbstractFactory
+2779.100.Product = org.acm.seguin.uml.refactor.RenameParameterListener
+2779.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2780 similar at 100% with AbstractFactory
+2780.100.Product = org.acm.seguin.refactor.type.RenameTypeTransform
+2780.100.ConcreteFactory = org.acm.seguin.refactor.type.RenameClassVisitor
+
+# Micro-architecture 2781 similar at 100% with AbstractFactory
+2781.100.Product = java.io.InputStreamReader
+2781.100.ConcreteFactory = org.acm.seguin.uml.PackageLoader
+
+# Micro-architecture 2782 similar at 100% with AbstractFactory
+2782.100.Product = javax.swing.border.EmptyBorder
+2782.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 2783 similar at 100% with AbstractFactory
+2783.100.Product = org.acm.seguin.parser.ast.ASTCompilationUnit
+2783.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 2784 similar at 100% with AbstractFactory
+2784.100.Product = org.acm.seguin.parser.ast.ASTCompilationUnit
+2784.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2785 similar at 100% with AbstractFactory
+2785.100.Product = org.acm.seguin.parser.ast.ASTMethodDeclaration
+2785.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2786 similar at 100% with AbstractFactory
+2786.100.Product = org.acm.seguin.pretty.line.NumberedLineQueue
+2786.100.ConcreteFactory = org.acm.seguin.pretty.line.LineNumberingData
+
+# Micro-architecture 2787 similar at 100% with AbstractFactory
+2787.100.Product = org.acm.seguin.parser.ast.ASTArgumentList
+2787.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 2788 similar at 100% with AbstractFactory
+2788.100.Product = org.acm.seguin.parser.ast.ASTArgumentList
+2788.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2789 similar at 100% with AbstractFactory
+2789.100.Product = org.acm.seguin.parser.ast.ASTArgumentList
+2789.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 2790 similar at 100% with AbstractFactory
+2790.100.Product = java.awt.Point
+2790.100.ConcreteFactory = org.acm.seguin.uml.PackageLoader
+
+# Micro-architecture 2791 similar at 100% with AbstractFactory
+2791.100.Product = java.awt.Point
+2791.100.ConcreteFactory = org.acm.seguin.uml.line.SegmentedLine
+
+# Micro-architecture 2792 similar at 100% with AbstractFactory
+2792.100.Product = org.acm.seguin.uml.line.AssociationRelationship
+2792.100.ConcreteFactory = org.acm.seguin.uml.UMLType
+
+# Micro-architecture 2793 similar at 100% with AbstractFactory
+2793.100.Product = org.acm.seguin.summary.VariableSummary
+2793.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2794 similar at 100% with AbstractFactory
+2794.100.Product = org.acm.seguin.ide.command.PackageSelectorPanel
+2794.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 2795 similar at 100% with AbstractFactory
+2795.100.Product = org.acm.seguin.summary.TypeDeclSummary
+2795.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 2796 similar at 100% with AbstractFactory
+2796.100.Product = org.acm.seguin.uml.refactor.PushUpMethodListener
+2796.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2797 similar at 100% with AbstractFactory
+2797.100.Product = org.acm.seguin.parser.ast.ASTPrimarySuffix
+2797.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2798 similar at 100% with AbstractFactory
+2798.100.Product = org.acm.seguin.parser.ast.ASTPrimarySuffix
+2798.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 2799 similar at 100% with AbstractFactory
+2799.100.Product = org.acm.seguin.parser.ast.ASTPreIncrementExpression
+2799.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2800 similar at 100% with AbstractFactory
+2800.100.Product = org.acm.seguin.pretty.PrettyPrintFile
+2800.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 2801 similar at 100% with AbstractFactory
+2801.100.Product = java.io.BufferedReader
+2801.100.ConcreteFactory = org.acm.seguin.util.FileSettings
+
+# Micro-architecture 2802 similar at 100% with AbstractFactory
+2802.100.Product = java.io.BufferedReader
+2802.100.ConcreteFactory = org.acm.seguin.uml.PackageLoader
+
+# Micro-architecture 2803 similar at 100% with AbstractFactory
+2803.100.Product = org.acm.seguin.parser.factory.FileParserFactory
+2803.100.ConcreteFactory = org.acm.seguin.summary.FileSummary
+
+# Micro-architecture 2804 similar at 100% with AbstractFactory
+2804.100.Product = java.util.StringTokenizer
+2804.100.ConcreteFactory = org.acm.seguin.uml.UMLType
+
+# Micro-architecture 2805 similar at 100% with AbstractFactory
+2805.100.Product = java.util.StringTokenizer
+2805.100.ConcreteFactory = org.acm.seguin.refactor.type.RenameClassVisitor
+
+# Micro-architecture 2806 similar at 100% with AbstractFactory
+2806.100.Product = java.util.StringTokenizer
+2806.100.ConcreteFactory = org.acm.seguin.refactor.field.RenameSystemTraversal
+
+# Micro-architecture 2807 similar at 100% with AbstractFactory
+2807.100.Product = java.util.StringTokenizer
+2807.100.ConcreteFactory = org.acm.seguin.uml.PackageLoader
+
+# Micro-architecture 2808 similar at 100% with AbstractFactory
+2808.100.Product = java.util.StringTokenizer
+2808.100.ConcreteFactory = org.acm.seguin.pretty.JavaDocableImpl
+
+# Micro-architecture 2809 similar at 100% with AbstractFactory
+2809.100.Product = java.util.StringTokenizer
+2809.100.ConcreteFactory = org.acm.seguin.refactor.field.RenameFieldVisitor
+
+# Micro-architecture 2810 similar at 100% with AbstractFactory
+2810.100.Product = java.util.StringTokenizer
+2810.100.ConcreteFactory = org.acm.seguin.uml.line.SegmentedLine
+
+# Micro-architecture 2811 similar at 100% with AbstractFactory
+2811.100.Product = org.acm.seguin.uml.refactor.AddRenameClassListener
+2811.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2812 similar at 100% with AbstractFactory
+2812.100.Product = org.acm.seguin.summary.SummaryLoaderState
+2812.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2813 similar at 100% with AbstractFactory
+2813.100.Product = org.acm.seguin.summary.SummaryLoaderState
+2813.100.ConcreteFactory = org.acm.seguin.summary.FileSummary
+
+# Micro-architecture 2814 similar at 100% with AbstractFactory
+2814.100.Product = java.io.ByteArrayOutputStream
+2814.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2815 similar at 100% with AbstractFactory
+2815.100.Product = java.io.FileReader
+2815.100.ConcreteFactory = org.acm.seguin.util.FileSettings
+
+# Micro-architecture 2816 similar at 100% with AbstractFactory
+2816.100.Product = java.io.FileReader
+2816.100.ConcreteFactory = org.acm.seguin.uml.PackageLoader
+
+# Micro-architecture 2817 similar at 100% with AbstractFactory
+2817.100.Product = org.acm.seguin.parser.ast.ASTContinueStatement
+2817.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2818 similar at 100% with AbstractFactory
+2818.100.Product = org.acm.seguin.parser.ast.ASTEqualityExpression
+2818.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2819 similar at 100% with AbstractFactory
+2819.100.Product = java.awt.Dimension
+2819.100.ConcreteFactory = org.acm.seguin.uml.UMLType
+
+# Micro-architecture 2820 similar at 100% with AbstractFactory
+2820.100.Product = java.awt.Dimension
+2820.100.ConcreteFactory = org.acm.seguin.uml.UMLPackage
+
+# Micro-architecture 2821 similar at 100% with AbstractFactory
+2821.100.Product = java.awt.Dimension
+2821.100.ConcreteFactory = org.acm.seguin.uml.UMLLine
+
+# Micro-architecture 2822 similar at 100% with AbstractFactory
+2822.100.Product = java.awt.Dimension
+2822.100.ConcreteFactory = org.acm.seguin.uml.line.SizableLabel
+
+# Micro-architecture 2823 similar at 100% with AbstractFactory
+2823.100.Product = org.acm.seguin.parser.ast.ASTPrimaryPrefix
+2823.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2824 similar at 100% with AbstractFactory
+2824.100.Product = org.acm.seguin.parser.ast.ASTInterfaceMemberDeclaration
+2824.100.ConcreteFactory = org.acm.seguin.refactor.field.RemoveFieldVisitor
+
+# Micro-architecture 2825 similar at 100% with AbstractFactory
+2825.100.Product = org.acm.seguin.parser.ast.ASTInterfaceMemberDeclaration
+2825.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2826 similar at 100% with AbstractFactory
+2826.100.Product = org.acm.seguin.util.FileSettings
+2826.100.ConcreteFactory = org.acm.seguin.util.FileSettings
+
+# Micro-architecture 2827 similar at 100% with AbstractFactory
+2827.100.Product = org.acm.seguin.parser.ast.ASTBreakStatement
+2827.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2828 similar at 100% with AbstractFactory
+2828.100.Product = java.io.File
+2828.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 2829 similar at 100% with AbstractFactory
+2829.100.Product = java.io.File
+2829.100.ConcreteFactory = org.acm.seguin.uml.UMLPackage
+
+# Micro-architecture 2830 similar at 100% with AbstractFactory
+2830.100.Product = java.io.File
+2830.100.ConcreteFactory = org.acm.seguin.refactor.type.RenameClassVisitor
+
+# Micro-architecture 2831 similar at 100% with AbstractFactory
+2831.100.Product = java.io.File
+2831.100.ConcreteFactory = org.acm.seguin.util.FileSettings
+
+# Micro-architecture 2832 similar at 100% with AbstractFactory
+2832.100.Product = java.io.File
+2832.100.ConcreteFactory = org.acm.seguin.refactor.type.ExtractInterfaceRefactoring
+
+# Micro-architecture 2833 similar at 100% with AbstractFactory
+2833.100.Product = java.io.File
+2833.100.ConcreteFactory = org.acm.seguin.uml.PackageLoader
+
+# Micro-architecture 2834 similar at 100% with AbstractFactory
+2834.100.Product = org.acm.seguin.uml.line.InheretenceRelationship
+2834.100.ConcreteFactory = org.acm.seguin.uml.PackageLoader
+
+# Micro-architecture 2835 similar at 100% with AbstractFactory
+2835.100.Product = java.io.PrintWriter
+2835.100.ConcreteFactory = org.acm.seguin.uml.UMLPackage
+
+# Micro-architecture 2836 similar at 100% with AbstractFactory
+2836.100.Product = org.acm.seguin.parser.ast.ASTFieldDeclaration
+2836.100.ConcreteFactory = org.acm.seguin.refactor.field.RemoveFieldVisitor
+
+# Micro-architecture 2837 similar at 100% with AbstractFactory
+2837.100.Product = org.acm.seguin.parser.ast.ASTFieldDeclaration
+2837.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2838 similar at 100% with AbstractFactory
+2838.100.Product = org.acm.seguin.parser.ast.ASTStatementExpression
+2838.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2839 similar at 100% with AbstractFactory
+2839.100.Product = org.acm.seguin.refactor.field.RenameFieldTransform
+2839.100.ConcreteFactory = org.acm.seguin.refactor.field.RenameSystemTraversal
+
+# Micro-architecture 2840 similar at 100% with AbstractFactory
+2840.100.Product = java.lang.String
+2840.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2841 similar at 100% with AbstractFactory
+2841.100.Product = org.acm.seguin.pretty.LocalVariableLookAhead
+2841.100.ConcreteFactory = org.acm.seguin.pretty.PrettyPrintVisitor
+
+# Micro-architecture 2842 similar at 100% with AbstractFactory
+2842.100.Product = org.acm.seguin.uml.refactor.RenameFieldListener
+2842.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2843 similar at 100% with AbstractFactory
+2843.100.Product = org.acm.seguin.uml.refactor.AddParentClassListener
+2843.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2844 similar at 100% with AbstractFactory
+2844.100.Product = org.acm.seguin.parser.ast.ASTPrimaryExpression
+2844.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2845 similar at 100% with AbstractFactory
+2845.100.Product = org.acm.seguin.parser.ast.ASTExclusiveOrExpression
+2845.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2846 similar at 100% with AbstractFactory
+2846.100.Product = org.acm.seguin.parser.ast.ASTFormalParameter
+2846.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 2847 similar at 100% with AbstractFactory
+2847.100.Product = org.acm.seguin.parser.ast.ASTFormalParameter
+2847.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2848 similar at 100% with AbstractFactory
+2848.100.Product = org.acm.seguin.parser.ast.ASTFormalParameter
+2848.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 2849 similar at 100% with AbstractFactory
+2849.100.Product = org.acm.seguin.summary.ImportSummary
+2849.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 2850 similar at 100% with AbstractFactory
+2850.100.Product = org.acm.seguin.parser.ast.ASTConditionalOrExpression
+2850.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2851 similar at 100% with AbstractFactory
+2851.100.Product = java.lang.Boolean
+2851.100.ConcreteFactory = org.acm.seguin.util.FileSettings
+
+# Micro-architecture 2852 similar at 100% with AbstractFactory
+2852.100.Product = org.acm.seguin.uml.ProjectMetricsListener
+2852.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2853 similar at 100% with AbstractFactory
+2853.100.Product = org.acm.seguin.ide.command.CommandLineMenu
+2853.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 2854 similar at 100% with AbstractFactory
+2854.100.Product = java.util.LinkedList
+2854.100.ConcreteFactory = org.acm.seguin.summary.TraversalVisitor
+
+# Micro-architecture 2855 similar at 100% with AbstractFactory
+2855.100.Product = java.util.LinkedList
+2855.100.ConcreteFactory = org.acm.seguin.refactor.type.RenameClassVisitor
+
+# Micro-architecture 2856 similar at 100% with AbstractFactory
+2856.100.Product = java.util.LinkedList
+2856.100.ConcreteFactory = org.acm.seguin.summary.MethodSummary
+
+# Micro-architecture 2857 similar at 100% with AbstractFactory
+2857.100.Product = java.util.LinkedList
+2857.100.ConcreteFactory = org.acm.seguin.refactor.method.EMParameterFinder
+
+# Micro-architecture 2858 similar at 100% with AbstractFactory
+2858.100.Product = java.util.LinkedList
+2858.100.ConcreteFactory = org.acm.seguin.summary.FileSummary
+
+# Micro-architecture 2859 similar at 100% with AbstractFactory
+2859.100.Product = org.acm.seguin.parser.ast.ASTLiteral
+2859.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2860 similar at 100% with AbstractFactory
+2860.100.Product = java.io.FileInputStream
+2860.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2861 similar at 100% with AbstractFactory
+2861.100.Product = javax.swing.JPopupMenu
+2861.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2862 similar at 100% with AbstractFactory
+2862.100.Product = org.acm.seguin.pretty.PrintData
+2862.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2863 similar at 100% with AbstractFactory
+2863.100.Product = org.acm.seguin.summary.MessageSendSummary
+2863.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 2864 similar at 100% with AbstractFactory
+2864.100.Product = org.acm.seguin.parser.ast.ASTPrimitiveType
+2864.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 2865 similar at 100% with AbstractFactory
+2865.100.Product = org.acm.seguin.parser.ast.ASTPrimitiveType
+2865.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2866 similar at 100% with AbstractFactory
+2866.100.Product = java.awt.image.BufferedImage
+2866.100.ConcreteFactory = org.acm.seguin.uml.line.SizableLabel
+
+# Micro-architecture 2867 similar at 100% with AbstractFactory
+2867.100.Product = org.acm.seguin.parser.ast.ASTName
+2867.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 2868 similar at 100% with AbstractFactory
+2868.100.Product = org.acm.seguin.parser.ast.ASTName
+2868.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 2869 similar at 100% with AbstractFactory
+2869.100.Product = org.acm.seguin.parser.ast.ASTName
+2869.100.ConcreteFactory = org.acm.seguin.refactor.type.RenameClassVisitor
+
+# Micro-architecture 2870 similar at 100% with AbstractFactory
+2870.100.Product = org.acm.seguin.parser.ast.ASTName
+2870.100.ConcreteFactory = org.acm.seguin.refactor.type.ExtractInterfaceRefactoring
+
+# Micro-architecture 2871 similar at 100% with AbstractFactory
+2871.100.Product = org.acm.seguin.parser.ast.ASTName
+2871.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2872 similar at 100% with AbstractFactory
+2872.100.Product = org.acm.seguin.parser.ast.ASTName
+2872.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 2873 similar at 100% with AbstractFactory
+2873.100.Product = org.acm.seguin.parser.ast.ASTName
+2873.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 2874 similar at 100% with AbstractFactory
+2874.100.Product = EPI_Abstract_org.acm.seguin.parser.Node
+2874.100.ConcreteFactory = org.acm.seguin.parser.ast.SimpleNode
+
+# Micro-architecture 2875 similar at 100% with AbstractFactory
+2875.100.Product = org.acm.seguin.uml.refactor.AddChildClassListener
+2875.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2876 similar at 100% with AbstractFactory
+2876.100.Product = org.acm.seguin.parser.ast.ASTBlock
+2876.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2877 similar at 100% with AbstractFactory
+2877.100.Product = org.acm.seguin.parser.ast.ASTForInit
+2877.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2878 similar at 100% with AbstractFactory
+2878.100.Product = org.acm.seguin.parser.ast.ASTIfStatement
+2878.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2879 similar at 100% with AbstractFactory
+2879.100.Product = org.acm.seguin.parser.ast.ASTCastExpression
+2879.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2880 similar at 100% with AbstractFactory
+2880.100.Product = java.lang.Double
+2880.100.ConcreteFactory = org.acm.seguin.util.FileSettings
+
+# Micro-architecture 2881 similar at 100% with AbstractFactory
+2881.100.Product = org.acm.seguin.uml.refactor.ExtractInterfaceListener
+2881.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2882 similar at 100% with AbstractFactory
+2882.100.Product = org.acm.seguin.uml.refactor.PushDownFieldListener
+2882.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2883 similar at 100% with AbstractFactory
+2883.100.Product = org.acm.seguin.parser.ast.ASTShiftExpression
+2883.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2884 similar at 100% with AbstractFactory
+2884.100.Product = org.acm.seguin.refactor.RefactoringException
+2884.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 2885 similar at 100% with AbstractFactory
+2885.100.Product = org.acm.seguin.refactor.RefactoringException
+2885.100.ConcreteFactory = org.acm.seguin.refactor.field.PushDownFieldRefactoring
+
+# Micro-architecture 2886 similar at 100% with AbstractFactory
+2886.100.Product = org.acm.seguin.refactor.RefactoringException
+2886.100.ConcreteFactory = org.acm.seguin.refactor.type.ExtractInterfaceRefactoring
+
+# Micro-architecture 2887 similar at 100% with AbstractFactory
+2887.100.Product = org.acm.seguin.refactor.RefactoringException
+2887.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodRefactoring
+
+# Micro-architecture 2888 similar at 100% with AbstractFactory
+2888.100.Product = org.acm.seguin.refactor.RefactoringException
+2888.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2889 similar at 100% with AbstractFactory
+2889.100.Product = org.acm.seguin.refactor.type.CreateNewInterface
+2889.100.ConcreteFactory = org.acm.seguin.refactor.type.ExtractInterfaceRefactoring
+
+# Micro-architecture 2890 similar at 100% with AbstractFactory
+2890.100.Product = org.acm.seguin.uml.refactor.AddMoveClassListener
+2890.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2891 similar at 100% with AbstractFactory
+2891.100.Product = org.acm.seguin.parser.ast.ASTExplicitConstructorInvocation
+2891.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 2892 similar at 100% with AbstractFactory
+2892.100.Product = org.acm.seguin.parser.ast.ASTExplicitConstructorInvocation
+2892.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2893 similar at 100% with AbstractFactory
+2893.100.Product = org.acm.seguin.parser.ast.ASTWhileStatement
+2893.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2894 similar at 100% with AbstractFactory
+2894.100.Product = org.acm.seguin.pretty.SpecialTokenData
+2894.100.ConcreteFactory = org.acm.seguin.pretty.PrettyPrintVisitor
+
+# Micro-architecture 2895 similar at 100% with AbstractFactory
+2895.100.Product = org.acm.seguin.uml.PopupMenuListener
+2895.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2896 similar at 100% with AbstractFactory
+2896.100.Product = org.acm.seguin.parser.ast.ASTTryStatement
+2896.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2897 similar at 100% with AbstractFactory
+2897.100.Product = java.awt.Font
+2897.100.ConcreteFactory = org.acm.seguin.uml.UMLLine
+
+# Micro-architecture 2898 similar at 100% with AbstractFactory
+2898.100.Product = java.awt.Font
+2898.100.ConcreteFactory = org.acm.seguin.uml.line.SizableLabel
+
+# Micro-architecture 2899 similar at 100% with AbstractFactory
+2899.100.Product = java.util.HashMap
+2899.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 2900 similar at 100% with AbstractFactory
+2900.100.Product = java.util.HashMap
+2900.100.ConcreteFactory = org.acm.seguin.refactor.type.ExtractInterfaceRefactoring
+
+# Micro-architecture 2901 similar at 100% with AbstractFactory
+2901.100.Product = java.util.HashMap
+2901.100.ConcreteFactory = org.acm.seguin.summary.FileSummary
+
+# Micro-architecture 2902 similar at 100% with AbstractFactory
+2902.100.Product = org.acm.seguin.refactor.method.AddMethodTypeVisitor
+2902.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 2903 similar at 100% with AbstractFactory
+2903.100.Product = java.lang.Object
+2903.100.ConcreteFactory = org.acm.seguin.refactor.method.EMParameterFinder
+
+# Micro-architecture 2904 similar at 100% with AbstractFactory
+2904.100.Product = java.lang.Object
+2904.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2905 similar at 100% with AbstractFactory
+2905.100.Product = org.acm.seguin.uml.refactor.PushUpFieldListener
+2905.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2906 similar at 100% with AbstractFactory
+2906.100.Product = org.acm.seguin.summary.FieldAccessSummary
+2906.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 2907 similar at 100% with AbstractFactory
+2907.100.Product = org.acm.seguin.refactor.method.FindLocalVariableDeclVisitor
+2907.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2908 similar at 100% with AbstractFactory
+2908.100.Product = org.acm.seguin.parser.ast.ASTDoStatement
+2908.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2909 similar at 100% with AbstractFactory
+2909.100.Product = org.acm.seguin.parser.ast.ASTClassBodyDeclaration
+2909.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 2910 similar at 100% with AbstractFactory
+2910.100.Product = org.acm.seguin.parser.ast.ASTClassBodyDeclaration
+2910.100.ConcreteFactory = org.acm.seguin.refactor.field.RemoveFieldVisitor
+
+# Micro-architecture 2911 similar at 100% with AbstractFactory
+2911.100.Product = org.acm.seguin.parser.ast.ASTClassBodyDeclaration
+2911.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2912 similar at 100% with AbstractFactory
+2912.100.Product = javax.swing.JPanel
+2912.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 2913 similar at 100% with AbstractFactory
+2913.100.Product = java.util.ArrayList
+2913.100.ConcreteFactory = org.acm.seguin.summary.FileSummary
+
+# Micro-architecture 2914 similar at 100% with AbstractFactory
+2914.100.Product = org.acm.seguin.pretty.PrettyPrintVisitor
+2914.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2915 similar at 100% with AbstractFactory
+2915.100.Product = org.acm.seguin.uml.refactor.MoveMethodListener
+2915.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2916 similar at 100% with AbstractFactory
+2916.100.Product = org.acm.seguin.parser.ast.ASTPreDecrementExpression
+2916.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2917 similar at 100% with AbstractFactory
+2917.100.Product = org.acm.seguin.metrics.ProjectMetrics
+2917.100.ConcreteFactory = org.acm.seguin.metrics.GatherData
+
+# Micro-architecture 2918 similar at 100% with AbstractFactory
+2918.100.Product = org.acm.seguin.parser.ast.ASTConditionalExpression
+2918.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2919 similar at 100% with AbstractFactory
+2919.100.Product = org.acm.seguin.util.SettingNotFoundException
+2919.100.ConcreteFactory = org.acm.seguin.util.FileSettings
+
+# Micro-architecture 2920 similar at 100% with AbstractFactory
+2920.100.Product = org.acm.seguin.uml.line.LineMouseAdapter
+2920.100.ConcreteFactory = org.acm.seguin.uml.UMLPackage
+
+# Micro-architecture 2921 similar at 100% with AbstractFactory
+2921.100.Product = org.acm.seguin.uml.refactor.PushUpAbstractMethodListener
+2921.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2922 similar at 100% with AbstractFactory
+2922.100.Product = org.acm.seguin.tools.install.RefactoryInstaller
+2922.100.ConcreteFactory = org.acm.seguin.util.FileSettings
+
+# Micro-architecture 2923 similar at 100% with AbstractFactory
+2923.100.Product = org.acm.seguin.parser.ast.ASTAllocationExpression
+2923.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2924 similar at 100% with AbstractFactory
+2924.100.Product = org.acm.seguin.parser.JavaParser
+2924.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2925 similar at 100% with AbstractFactory
+2925.100.Product = org.acm.seguin.parser.ast.ASTMethodDeclarationLookahead
+2925.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2926 similar at 100% with AbstractFactory
+2926.100.Product = org.acm.seguin.parser.ast.ASTForStatement
+2926.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2927 similar at 100% with AbstractFactory
+2927.100.Product = org.acm.seguin.uml.PackageLoader
+2927.100.ConcreteFactory = org.acm.seguin.uml.UMLPackage
+
+# Micro-architecture 2928 similar at 100% with AbstractFactory
+2928.100.Product = org.acm.seguin.parser.ast.ASTConstructorDeclaration
+2928.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 2929 similar at 100% with AbstractFactory
+2929.100.Product = org.acm.seguin.parser.ast.ASTConstructorDeclaration
+2929.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2930 similar at 100% with AbstractFactory
+2930.100.Product = java.lang.StringBuffer
+2930.100.ConcreteFactory = org.acm.seguin.uml.UMLType
+
+# Micro-architecture 2931 similar at 100% with AbstractFactory
+2931.100.Product = java.lang.StringBuffer
+2931.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 2932 similar at 100% with AbstractFactory
+2932.100.Product = java.lang.StringBuffer
+2932.100.ConcreteFactory = org.acm.seguin.refactor.field.PushDownFieldRefactoring
+
+# Micro-architecture 2933 similar at 100% with AbstractFactory
+2933.100.Product = java.lang.StringBuffer
+2933.100.ConcreteFactory = org.acm.seguin.uml.UMLPackage
+
+# Micro-architecture 2934 similar at 100% with AbstractFactory
+2934.100.Product = java.lang.StringBuffer
+2934.100.ConcreteFactory = org.acm.seguin.refactor.type.RenameClassVisitor
+
+# Micro-architecture 2935 similar at 100% with AbstractFactory
+2935.100.Product = java.lang.StringBuffer
+2935.100.ConcreteFactory = org.acm.seguin.util.FileSettings
+
+# Micro-architecture 2936 similar at 100% with AbstractFactory
+2936.100.Product = java.lang.StringBuffer
+2936.100.ConcreteFactory = org.acm.seguin.refactor.type.ExtractInterfaceRefactoring
+
+# Micro-architecture 2937 similar at 100% with AbstractFactory
+2937.100.Product = java.lang.StringBuffer
+2937.100.ConcreteFactory = org.acm.seguin.pretty.PrintData
+
+# Micro-architecture 2938 similar at 100% with AbstractFactory
+2938.100.Product = java.lang.StringBuffer
+2938.100.ConcreteFactory = org.acm.seguin.uml.line.SizableLabel
+
+# Micro-architecture 2939 similar at 100% with AbstractFactory
+2939.100.Product = java.lang.StringBuffer
+2939.100.ConcreteFactory = org.acm.seguin.tools.international.StringListVisitor
+
+# Micro-architecture 2940 similar at 100% with AbstractFactory
+2940.100.Product = java.lang.StringBuffer
+2940.100.ConcreteFactory = org.acm.seguin.refactor.field.RenameSystemTraversal
+
+# Micro-architecture 2941 similar at 100% with AbstractFactory
+2941.100.Product = java.lang.StringBuffer
+2941.100.ConcreteFactory = org.acm.seguin.pretty.PrettyPrintVisitor
+
+# Micro-architecture 2942 similar at 100% with AbstractFactory
+2942.100.Product = java.lang.StringBuffer
+2942.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2943 similar at 100% with AbstractFactory
+2943.100.Product = java.lang.StringBuffer
+2943.100.ConcreteFactory = org.acm.seguin.uml.PackageLoader
+
+# Micro-architecture 2944 similar at 100% with AbstractFactory
+2944.100.Product = java.lang.StringBuffer
+2944.100.ConcreteFactory = org.acm.seguin.pretty.JavaDocableImpl
+
+# Micro-architecture 2945 similar at 100% with AbstractFactory
+2945.100.Product = java.lang.StringBuffer
+2945.100.ConcreteFactory = org.acm.seguin.pretty.LineQueue
+
+# Micro-architecture 2946 similar at 100% with AbstractFactory
+2946.100.Product = java.lang.StringBuffer
+2946.100.ConcreteFactory = org.acm.seguin.parser.ast.SimpleNode
+
+# Micro-architecture 2947 similar at 100% with AbstractFactory
+2947.100.Product = java.lang.StringBuffer
+2947.100.ConcreteFactory = org.acm.seguin.summary.MethodSummary
+
+# Micro-architecture 2948 similar at 100% with AbstractFactory
+2948.100.Product = java.lang.StringBuffer
+2948.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodRefactoring
+
+# Micro-architecture 2949 similar at 100% with AbstractFactory
+2949.100.Product = java.lang.StringBuffer
+2949.100.ConcreteFactory = org.acm.seguin.pretty.ModifierHolder
+
+# Micro-architecture 2950 similar at 100% with AbstractFactory
+2950.100.Product = java.lang.StringBuffer
+2950.100.ConcreteFactory = org.acm.seguin.summary.LineCountVisitor
+
+# Micro-architecture 2951 similar at 100% with AbstractFactory
+2951.100.Product = java.lang.StringBuffer
+2951.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 2952 similar at 100% with AbstractFactory
+2952.100.Product = java.lang.StringBuffer
+2952.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2953 similar at 100% with AbstractFactory
+2953.100.Product = java.lang.StringBuffer
+2953.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 2954 similar at 100% with AbstractFactory
+2954.100.Product = java.lang.StringBuffer
+2954.100.ConcreteFactory = org.acm.seguin.summary.FileSummary
+
+# Micro-architecture 2955 similar at 100% with AbstractFactory
+2955.100.Product = org.acm.seguin.parser.ast.ASTInitializer
+2955.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2956 similar at 100% with AbstractFactory
+2956.100.Product = org.acm.seguin.uml.ConvertAdapter
+2956.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2957 similar at 100% with AbstractFactory
+2957.100.Product = org.acm.seguin.refactor.method.RemoveMethodTransform
+2957.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodRefactoring
+
+# Micro-architecture 2958 similar at 100% with AbstractFactory
+2958.100.Product = org.acm.seguin.parser.ast.ASTLocalVariableDeclaration
+2958.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2959 similar at 100% with AbstractFactory
+2959.100.Product = java.awt.Color
+2959.100.ConcreteFactory = org.acm.seguin.uml.UMLType
+
+# Micro-architecture 2960 similar at 100% with AbstractFactory
+2960.100.Product = java.awt.Color
+2960.100.ConcreteFactory = org.acm.seguin.uml.UMLLine
+
+# Micro-architecture 2961 similar at 100% with AbstractFactory
+2961.100.Product = java.awt.Color
+2961.100.ConcreteFactory = org.acm.seguin.uml.line.SizableLabel
+
+# Micro-architecture 2962 similar at 100% with AbstractFactory
+2962.100.Product = org.acm.seguin.parser.ast.ASTImportDeclaration
+2962.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 2963 similar at 100% with AbstractFactory
+2963.100.Product = org.acm.seguin.parser.ast.ASTImportDeclaration
+2963.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2964 similar at 100% with AbstractFactory
+2964.100.Product = org.acm.seguin.parser.ast.ASTInterfaceDeclaration
+2964.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2965 similar at 100% with AbstractFactory
+2965.100.Product = org.acm.seguin.ide.command.UMLFrame
+2965.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 2966 similar at 100% with AbstractFactory
+2966.100.Product = org.acm.seguin.metrics.PackageMetrics
+2966.100.ConcreteFactory = org.acm.seguin.metrics.GatherData
+
+# Micro-architecture 2967 similar at 100% with AbstractFactory
+2967.100.Product = org.acm.seguin.parser.factory.BufferParserFactory
+2967.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2968 similar at 100% with AbstractFactory
+2968.100.Product = org.acm.seguin.parser.factory.BufferParserFactory
+2968.100.ConcreteFactory = org.acm.seguin.summary.FileSummary
+
+# Micro-architecture 2969 similar at 100% with AbstractFactory
+2969.100.Product = org.acm.seguin.parser.ast.ASTReturnStatement
+2969.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2970 similar at 100% with AbstractFactory
+2970.100.Product = org.acm.seguin.parser.ast.ASTReturnStatement
+2970.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2971 similar at 100% with AbstractFactory
+2971.100.Product = org.acm.seguin.parser.ast.ASTFormalParameters
+2971.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 2972 similar at 100% with AbstractFactory
+2972.100.Product = org.acm.seguin.parser.ast.ASTFormalParameters
+2972.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2973 similar at 100% with AbstractFactory
+2973.100.Product = org.acm.seguin.parser.ast.ASTAndExpression
+2973.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2974 similar at 100% with AbstractFactory
+2974.100.Product = org.acm.seguin.uml.TypeMetricsListener
+2974.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 2975 similar at 100% with AbstractFactory
+2975.100.Product = org.acm.seguin.pretty.sort.SameOrdering
+2975.100.ConcreteFactory = org.acm.seguin.pretty.PrintData
+
+# Micro-architecture 2976 similar at 100% with AbstractFactory
+2976.100.Product = org.acm.seguin.pretty.LineQueue
+2976.100.ConcreteFactory = org.acm.seguin.pretty.PrintData
+
+# Micro-architecture 2977 similar at 100% with AbstractFactory
+2977.100.Product = org.acm.seguin.parser.ast.ASTAssignmentOperator
+2977.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2978 similar at 100% with AbstractFactory
+2978.100.Product = org.acm.seguin.parser.ast.ASTSynchronizedStatement
+2978.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2979 similar at 100% with AbstractFactory
+2979.100.Product = org.acm.seguin.parser.ast.ASTResultType
+2979.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 2980 similar at 100% with AbstractFactory
+2980.100.Product = org.acm.seguin.parser.ast.ASTResultType
+2980.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2981 similar at 100% with AbstractFactory
+2981.100.Product = org.acm.seguin.refactor.method.EMBuilder
+2981.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2982 similar at 100% with AbstractFactory
+2982.100.Product = java.util.Vector
+2982.100.ConcreteFactory = org.acm.seguin.refactor.type.ExtractInterfaceRefactoring
+
+# Micro-architecture 2983 similar at 100% with AbstractFactory
+2983.100.Product = java.util.Vector
+2983.100.ConcreteFactory = org.acm.seguin.parser.ast.SimpleNode
+
+# Micro-architecture 2984 similar at 100% with AbstractFactory
+2984.100.Product = org.acm.seguin.summary.MethodSummary
+2984.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 2985 similar at 100% with AbstractFactory
+2985.100.Product = org.acm.seguin.parser.ast.ASTLabeledStatement
+2985.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2986 similar at 100% with AbstractFactory
+2986.100.Product = org.acm.seguin.refactor.method.EMParameterFinder
+2986.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 2987 similar at 100% with AbstractFactory
+2987.100.Product = org.acm.seguin.parser.ast.ASTThrowStatement
+2987.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2988 similar at 100% with AbstractFactory
+2988.100.Product = org.acm.seguin.refactor.type.AddImplementedInterfaceTransform
+2988.100.ConcreteFactory = org.acm.seguin.refactor.type.ExtractInterfaceRefactoring
+
+# Micro-architecture 2989 similar at 100% with AbstractFactory
+2989.100.Product = org.acm.seguin.parser.ast.ASTVariableDeclaratorId
+2989.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 2990 similar at 100% with AbstractFactory
+2990.100.Product = org.acm.seguin.parser.ast.ASTVariableDeclaratorId
+2990.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2991 similar at 100% with AbstractFactory
+2991.100.Product = org.acm.seguin.parser.ast.ASTVariableDeclaratorId
+2991.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 2992 similar at 100% with AbstractFactory
+2992.100.Product = org.acm.seguin.pretty.NamedJavaDocComponent
+2992.100.ConcreteFactory = org.acm.seguin.pretty.JavaDocableImpl
+
+# Micro-architecture 2993 similar at 100% with AbstractFactory
+2993.100.Product = org.acm.seguin.parser.ast.ASTClassBody
+2993.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 2994 similar at 100% with AbstractFactory
+2994.100.Product = org.acm.seguin.parser.ast.ASTClassBody
+2994.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2995 similar at 100% with AbstractFactory
+2995.100.Product = org.acm.seguin.parser.ast.ASTMultiplicativeExpression
+2995.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2996 similar at 100% with AbstractFactory
+2996.100.Product = org.acm.seguin.parser.ast.ASTPackageDeclaration
+2996.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 2997 similar at 100% with AbstractFactory
+2997.100.Product = org.acm.seguin.parser.ast.ASTPackageDeclaration
+2997.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2998 similar at 100% with AbstractFactory
+2998.100.Product = org.acm.seguin.parser.ast.ASTEmptyStatement
+2998.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 2999 similar at 100% with AbstractFactory
+2999.100.Product = org.acm.seguin.parser.ast.ASTPostfixExpression
+2999.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3000 similar at 100% with AbstractFactory
+3000.100.Product = org.acm.seguin.refactor.field.AddFieldTransform
+3000.100.ConcreteFactory = org.acm.seguin.refactor.field.PushDownFieldRefactoring
+
+# Micro-architecture 3001 similar at 100% with AbstractFactory
+3001.100.Product = org.acm.seguin.parser.ast.ASTUnmodifiedClassDeclaration
+3001.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 3002 similar at 100% with AbstractFactory
+3002.100.Product = org.acm.seguin.parser.ast.ASTUnmodifiedClassDeclaration
+3002.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3003 similar at 100% with AbstractFactory
+3003.100.Product = org.acm.seguin.uml.MethodMetricsListener
+3003.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3004 similar at 100% with AbstractFactory
+3004.100.Product = org.acm.seguin.metrics.GatherData
+3004.100.ConcreteFactory = org.acm.seguin.metrics.GatherData
+
+# Micro-architecture 3005 similar at 100% with AbstractFactory
+3005.100.Product = org.acm.seguin.summary.TypeSummary
+3005.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3006 similar at 100% with AbstractFactory
+3006.100.Product = org.acm.seguin.parser.ast.ASTClassDeclaration
+3006.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 3007 similar at 100% with AbstractFactory
+3007.100.Product = org.acm.seguin.parser.ast.ASTClassDeclaration
+3007.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3008 similar at 100% with AbstractFactory
+3008.100.Product = org.acm.seguin.ide.common.SourceBrowserAdapter
+3008.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3009 similar at 100% with AbstractFactory
+3009.100.Product = java.awt.BorderLayout
+3009.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3010 similar at 100% with AbstractFactory
+3010.100.Product = org.acm.seguin.parser.ast.ASTVariableInitializer
+3010.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3011 similar at 100% with AbstractFactory
+3011.100.Product = org.acm.seguin.parser.ast.ASTTypeDeclaration
+3011.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 3012 similar at 100% with AbstractFactory
+3012.100.Product = org.acm.seguin.parser.ast.ASTTypeDeclaration
+3012.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3013 similar at 100% with AbstractFactory
+3013.100.Product = org.acm.seguin.parser.ast.ASTMethodDeclarator
+3013.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3014 similar at 100% with AbstractFactory
+3014.100.Product = org.acm.seguin.parser.ast.ASTAdditiveExpression
+3014.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3015 similar at 100% with AbstractFactory
+3015.100.Product = org.acm.seguin.parser.query.Search
+3015.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 3016 similar at 100% with AbstractFactory
+3016.100.Product = org.acm.seguin.uml.PackageMetricsListener
+3016.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3017 similar at 100% with AbstractFactory
+3017.100.Product = org.acm.seguin.refactor.method.EMDigger
+3017.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 3018 similar at 100% with AbstractFactory
+3018.100.Product = org.acm.seguin.refactor.AddImportTransform
+3018.100.ConcreteFactory = org.acm.seguin.refactor.field.PushDownFieldRefactoring
+
+# Micro-architecture 3019 similar at 100% with AbstractFactory
+3019.100.Product = org.acm.seguin.refactor.AddImportTransform
+3019.100.ConcreteFactory = org.acm.seguin.refactor.type.RenameClassVisitor
+
+# Micro-architecture 3020 similar at 100% with AbstractFactory
+3020.100.Product = org.acm.seguin.refactor.AddImportTransform
+3020.100.ConcreteFactory = org.acm.seguin.refactor.type.ExtractInterfaceRefactoring
+
+# Micro-architecture 3021 similar at 100% with AbstractFactory
+3021.100.Product = org.acm.seguin.parser.ast.ASTType
+3021.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 3022 similar at 100% with AbstractFactory
+3022.100.Product = org.acm.seguin.parser.ast.ASTType
+3022.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3023 similar at 100% with AbstractFactory
+3023.100.Product = org.acm.seguin.parser.ast.ASTType
+3023.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 3024 similar at 100% with AbstractFactory
+3024.100.Product = org.acm.seguin.uml.line.ImplementsRelationship
+3024.100.ConcreteFactory = org.acm.seguin.uml.PackageLoader
+
+# Micro-architecture 3025 similar at 100% with AbstractFactory
+3025.100.Product = org.acm.seguin.parser.ast.ASTVariableDeclarator
+3025.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3026 similar at 100% with AbstractFactory
+3026.100.Product = org.acm.seguin.parser.ast.ASTStatementExpressionList
+3026.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3027 similar at 100% with AbstractFactory
+3027.100.Product = org.acm.seguin.parser.ast.ASTInterfaceBody
+3027.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3028 similar at 100% with AbstractFactory
+3028.100.Product = org.acm.seguin.refactor.RemoveImportTransform
+3028.100.ConcreteFactory = org.acm.seguin.refactor.type.RenameClassVisitor
+
+# Micro-architecture 3029 similar at 100% with AbstractFactory
+3029.100.Product = org.acm.seguin.pretty.FieldSizeLookAhead
+3029.100.ConcreteFactory = org.acm.seguin.pretty.PrettyPrintVisitor
+
+# Micro-architecture 3030 similar at 100% with AbstractFactory
+3030.100.Product = org.acm.seguin.parser.ast.ASTRelationalExpression
+3030.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3031 similar at 100% with AbstractFactory
+3031.100.Product = org.acm.seguin.uml.refactor.RemoveClassListener
+3031.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3032 similar at 100% with AbstractFactory
+3032.100.Product = org.acm.seguin.parser.ast.ASTArguments
+3032.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 3033 similar at 100% with AbstractFactory
+3033.100.Product = org.acm.seguin.parser.ast.ASTArguments
+3033.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3034 similar at 100% with AbstractFactory
+3034.100.Product = org.acm.seguin.parser.ast.ASTArguments
+3034.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 3035 similar at 100% with AbstractFactory
+3035.100.Product = org.acm.seguin.parser.ast.ASTExpression
+3035.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3036 similar at 100% with AbstractFactory
+3036.100.Product = javax.swing.JMenu
+3036.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3037 similar at 100% with AbstractFactory
+3037.100.Product = org.acm.seguin.parser.ast.ASTInstanceOfExpression
+3037.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3038 similar at 100% with AbstractFactory
+3038.100.Product = java.util.Date
+3038.100.ConcreteFactory = org.acm.seguin.summary.FileSummary
+
+# Micro-architecture 3039 similar at 100% with AbstractFactory
+3039.100.Product = org.acm.seguin.summary.ParameterSummary
+3039.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3040 similar at 100% with AbstractFactory
+3040.100.Product = org.acm.seguin.parser.ast.ASTStatement
+3040.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3041 similar at 100% with AbstractFactory
+3041.100.Product = org.acm.seguin.parser.ast.ASTStatement
+3041.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 3042 similar at 100% with AbstractFactory
+3042.100.Product = org.acm.seguin.refactor.method.MoveMethodVisitor
+3042.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodRefactoring
+
+# Micro-architecture 3043 similar at 100% with AbstractFactory
+3043.100.Product = org.acm.seguin.parser.ast.ASTArrayDimsAndInits
+3043.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3044 similar at 100% with AbstractFactory
+3044.100.Product = org.acm.seguin.summary.SummaryLoadVisitor
+3044.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 3045 similar at 100% with AbstractFactory
+3045.100.Product = org.acm.seguin.summary.SummaryLoadVisitor
+3045.100.ConcreteFactory = org.acm.seguin.summary.FileSummary
+
+# Micro-architecture 3046 similar at 100% with AbstractFactory
+3046.100.Product = org.acm.seguin.metrics.MethodMetrics
+3046.100.ConcreteFactory = org.acm.seguin.metrics.GatherData
+
+# Micro-architecture 3047 similar at 100% with AbstractFactory
+3047.100.Product = org.acm.seguin.summary.FileSummary
+3047.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3048 similar at 100% with AbstractFactory
+3048.100.Product = org.acm.seguin.parser.ast.ASTUnmodifiedInterfaceDeclaration
+3048.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3049 similar at 100% with AbstractFactory
+3049.100.Product = org.acm.seguin.parser.ParseException
+3049.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3050 similar at 100% with AbstractFactory
+3050.100.Product = org.acm.seguin.parser.ast.ASTNameList
+3050.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 3051 similar at 100% with AbstractFactory
+3051.100.Product = org.acm.seguin.parser.ast.ASTNameList
+3051.100.ConcreteFactory = org.acm.seguin.refactor.type.AddImplementedInterfaceVisitor
+
+# Micro-architecture 3052 similar at 100% with AbstractFactory
+3052.100.Product = org.acm.seguin.parser.ast.ASTNameList
+3052.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3053 similar at 100% with AbstractFactory
+3053.100.Product = org.acm.seguin.summary.SummaryTraversal
+3053.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3054 similar at 100% with AbstractFactory
+3054.100.Product = org.acm.seguin.summary.SummaryTraversal
+3054.100.ConcreteFactory = org.acm.seguin.metrics.GatherData
+
+# Micro-architecture 3055 similar at 100% with AbstractFactory
+3055.100.AbstractProduct = java.awt.event.WindowAdapter
+3055.100.Product = org.acm.seguin.ide.command.ExitMenuSelection
+3055.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3056 similar at 100% with AbstractFactory
+3056.100.AbstractProduct = java.awt.event.ActionListener
+3056.100.Product = org.acm.seguin.ide.command.ExitMenuSelection
+3056.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3057 similar at 100% with AbstractFactory
+3057.100.AbstractProduct = java.awt.event.ActionListener
+3057.100.Product = org.acm.seguin.ide.command.PackageSelectorPanel
+3057.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3058 similar at 100% with AbstractFactory
+3058.100.AbstractProduct = org.acm.seguin.uml.PopupMenuListener
+3058.100.Product = org.acm.seguin.uml.ProjectMetricsListener
+3058.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3059 similar at 100% with AbstractFactory
+3059.100.AbstractProduct = java.awt.event.ActionListener
+3059.100.Product = org.acm.seguin.uml.ProjectMetricsListener
+3059.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3060 similar at 100% with AbstractFactory
+3060.100.AbstractProduct = java.awt.event.MouseAdapter
+3060.100.Product = org.acm.seguin.uml.ProjectMetricsListener
+3060.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3061 similar at 100% with AbstractFactory
+3061.100.AbstractProduct = java.lang.Cloneable
+3061.100.Product = org.acm.seguin.parser.ast.ASTName
+3061.100.ConcreteFactory = org.acm.seguin.refactor.method.AddConstructor
+
+# Micro-architecture 3062 similar at 100% with AbstractFactory
+3062.100.AbstractProduct = java.lang.Cloneable
+3062.100.Product = org.acm.seguin.parser.ast.ASTName
+3062.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 3063 similar at 100% with AbstractFactory
+3063.100.AbstractProduct = java.lang.Cloneable
+3063.100.Product = org.acm.seguin.parser.ast.ASTName
+3063.100.ConcreteFactory = org.acm.seguin.refactor.type.RenameClassVisitor
+
+# Micro-architecture 3064 similar at 100% with AbstractFactory
+3064.100.AbstractProduct = java.lang.Cloneable
+3064.100.Product = org.acm.seguin.parser.ast.ASTName
+3064.100.ConcreteFactory = org.acm.seguin.refactor.type.ExtractInterfaceRefactoring
+
+# Micro-architecture 3065 similar at 100% with AbstractFactory
+3065.100.AbstractProduct = java.lang.Cloneable
+3065.100.Product = org.acm.seguin.parser.ast.ASTName
+3065.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3066 similar at 100% with AbstractFactory
+3066.100.AbstractProduct = java.lang.Cloneable
+3066.100.Product = org.acm.seguin.parser.ast.ASTName
+3066.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 3067 similar at 100% with AbstractFactory
+3067.100.AbstractProduct = java.lang.Cloneable
+3067.100.Product = org.acm.seguin.parser.ast.ASTName
+3067.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3068 similar at 100% with AbstractFactory
+3068.100.AbstractProduct = java.lang.Exception
+3068.100.Product = org.acm.seguin.refactor.RefactoringException
+3068.100.ConcreteFactory = org.acm.seguin.refactor.type.CreateClass
+
+# Micro-architecture 3069 similar at 100% with AbstractFactory
+3069.100.AbstractProduct = java.lang.Exception
+3069.100.Product = org.acm.seguin.refactor.RefactoringException
+3069.100.ConcreteFactory = org.acm.seguin.refactor.field.PushDownFieldRefactoring
+
+# Micro-architecture 3070 similar at 100% with AbstractFactory
+3070.100.AbstractProduct = java.lang.Exception
+3070.100.Product = org.acm.seguin.refactor.RefactoringException
+3070.100.ConcreteFactory = org.acm.seguin.refactor.type.ExtractInterfaceRefactoring
+
+# Micro-architecture 3071 similar at 100% with AbstractFactory
+3071.100.AbstractProduct = java.lang.Exception
+3071.100.Product = org.acm.seguin.refactor.RefactoringException
+3071.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodRefactoring
+
+# Micro-architecture 3072 similar at 100% with AbstractFactory
+3072.100.AbstractProduct = java.lang.Exception
+3072.100.Product = org.acm.seguin.refactor.RefactoringException
+3072.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 3073 similar at 100% with AbstractFactory
+3073.100.AbstractProduct = java.awt.event.MouseAdapter
+3073.100.Product = org.acm.seguin.uml.PopupMenuListener
+3073.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3074 similar at 100% with AbstractFactory
+3074.100.AbstractProduct = java.awt.event.ActionListener
+3074.100.Product = org.acm.seguin.uml.PopupMenuListener
+3074.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3075 similar at 100% with AbstractFactory
+3075.100.AbstractProduct = org.acm.seguin.parser.ChildrenVisitor
+3075.100.Product = org.acm.seguin.refactor.method.FindLocalVariableDeclVisitor
+3075.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 3076 similar at 100% with AbstractFactory
+3076.100.AbstractProduct = java.awt.event.MouseListener
+3076.100.Product = org.acm.seguin.uml.line.LineMouseAdapter
+3076.100.ConcreteFactory = org.acm.seguin.uml.UMLPackage
+
+# Micro-architecture 3077 similar at 100% with AbstractFactory
+3077.100.AbstractProduct = java.awt.event.MouseMotionListener
+3077.100.Product = org.acm.seguin.uml.line.LineMouseAdapter
+3077.100.ConcreteFactory = org.acm.seguin.uml.UMLPackage
+
+# Micro-architecture 3078 similar at 100% with AbstractFactory
+3078.100.AbstractProduct = java.lang.Thread
+3078.100.Product = org.acm.seguin.uml.PackageLoader
+3078.100.ConcreteFactory = org.acm.seguin.uml.UMLPackage
+
+# Micro-architecture 3079 similar at 100% with AbstractFactory
+3079.100.AbstractProduct = java.awt.event.ActionListener
+3079.100.Product = org.acm.seguin.uml.ConvertAdapter
+3079.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3080 similar at 100% with AbstractFactory
+3080.100.AbstractProduct = javax.swing.JFrame
+3080.100.Product = org.acm.seguin.ide.command.UMLFrame
+3080.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3081 similar at 100% with AbstractFactory
+3081.100.AbstractProduct = org.acm.seguin.uml.PopupMenuListener
+3081.100.Product = org.acm.seguin.uml.TypeMetricsListener
+3081.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3082 similar at 100% with AbstractFactory
+3082.100.AbstractProduct = java.awt.event.ActionListener
+3082.100.Product = org.acm.seguin.uml.TypeMetricsListener
+3082.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3083 similar at 100% with AbstractFactory
+3083.100.AbstractProduct = java.awt.event.MouseAdapter
+3083.100.Product = org.acm.seguin.uml.TypeMetricsListener
+3083.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3084 similar at 100% with AbstractFactory
+3084.100.AbstractProduct = org.acm.seguin.uml.PopupMenuListener
+3084.100.Product = org.acm.seguin.uml.MethodMetricsListener
+3084.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3085 similar at 100% with AbstractFactory
+3085.100.AbstractProduct = java.awt.event.ActionListener
+3085.100.Product = org.acm.seguin.uml.MethodMetricsListener
+3085.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3086 similar at 100% with AbstractFactory
+3086.100.AbstractProduct = java.awt.event.MouseAdapter
+3086.100.Product = org.acm.seguin.uml.MethodMetricsListener
+3086.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3087 similar at 100% with AbstractFactory
+3087.100.AbstractProduct = java.awt.event.ActionListener
+3087.100.Product = org.acm.seguin.ide.common.SourceBrowserAdapter
+3087.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3088 similar at 100% with AbstractFactory
+3088.100.AbstractProduct = org.acm.seguin.uml.PopupMenuListener
+3088.100.Product = org.acm.seguin.uml.PackageMetricsListener
+3088.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3089 similar at 100% with AbstractFactory
+3089.100.AbstractProduct = java.awt.event.ActionListener
+3089.100.Product = org.acm.seguin.uml.PackageMetricsListener
+3089.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3090 similar at 100% with AbstractFactory
+3090.100.AbstractProduct = java.awt.event.MouseAdapter
+3090.100.Product = org.acm.seguin.uml.PackageMetricsListener
+3090.100.ConcreteFactory = org.acm.seguin.uml.UMLPopupMenu
+
+# Micro-architecture 3091 similar at 100% with AbstractFactory
+3091.100.AbstractProduct = org.acm.seguin.parser.ChildrenVisitor
+3091.100.Product = org.acm.seguin.refactor.method.MoveMethodVisitor
+3091.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodRefactoring
+
+# Micro-architecture 3092 similar at 100% with AbstractFactory
+3092.100.AbstractProduct = org.acm.seguin.summary.LineCountVisitor
+3092.100.Product = org.acm.seguin.summary.SummaryLoadVisitor
+3092.100.ConcreteFactory = org.acm.seguin.refactor.method.ExtractMethodRefactoring
+
+# Micro-architecture 3093 similar at 100% with AbstractFactory
+3093.100.AbstractProduct = org.acm.seguin.summary.LineCountVisitor
+3093.100.Product = org.acm.seguin.summary.SummaryLoadVisitor
+3093.100.ConcreteFactory = org.acm.seguin.summary.FileSummary
+
+# Micro-architecture 3094 similar at 100% with AbstractFactory
+3094.100.AbstractProduct = java.lang.Exception
+3094.100.Product = org.acm.seguin.parser.ParseException
+3094.100.ConcreteFactory = org.acm.seguin.parser.JavaParser
+
+# Micro-architecture 3095 similar at 100% with AbstractFactory
+3095.100.Product = javax.swing.JFrame
+3095.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3095.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3096 similar at 100% with AbstractFactory
+3096.100.Product = org.acm.seguin.ide.command.ExitMenuSelection
+3096.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3096.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3097 similar at 100% with AbstractFactory
+3097.100.Product = org.acm.seguin.summary.FieldSummary
+3097.100.AbstractFactory = org.acm.seguin.summary.LineCountVisitor
+3097.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3098 similar at 100% with AbstractFactory
+3098.100.Product = javax.swing.border.EmptyBorder
+3098.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3098.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3099 similar at 100% with AbstractFactory
+3099.100.Product = org.acm.seguin.pretty.line.NumberedLineQueue
+3099.100.AbstractFactory = org.acm.seguin.pretty.PrintData
+3099.100.ConcreteFactory = org.acm.seguin.pretty.line.LineNumberingData
+
+# Micro-architecture 3100 similar at 100% with AbstractFactory
+3100.100.Product = org.acm.seguin.parser.ast.ASTArgumentList
+3100.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3100.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 3101 similar at 100% with AbstractFactory
+3101.100.Product = org.acm.seguin.ide.command.PackageSelectorPanel
+3101.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3101.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3102 similar at 100% with AbstractFactory
+3102.100.Product = org.acm.seguin.summary.TypeDeclSummary
+3102.100.AbstractFactory = org.acm.seguin.summary.LineCountVisitor
+3102.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3103 similar at 100% with AbstractFactory
+3103.100.Product = org.acm.seguin.parser.ast.ASTPrimarySuffix
+3103.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3103.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 3104 similar at 100% with AbstractFactory
+3104.100.Product = java.util.StringTokenizer
+3104.100.AbstractFactory = org.acm.seguin.summary.TraversalVisitor
+3104.100.ConcreteFactory = org.acm.seguin.refactor.field.RenameSystemTraversal
+
+# Micro-architecture 3105 similar at 100% with AbstractFactory
+3105.100.Product = java.util.StringTokenizer
+3105.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3105.100.ConcreteFactory = org.acm.seguin.refactor.field.RenameFieldVisitor
+
+# Micro-architecture 3106 similar at 100% with AbstractFactory
+3106.100.Product = org.acm.seguin.parser.ast.ASTInterfaceMemberDeclaration
+3106.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3106.100.ConcreteFactory = org.acm.seguin.refactor.field.RemoveFieldVisitor
+
+# Micro-architecture 3107 similar at 100% with AbstractFactory
+3107.100.Product = org.acm.seguin.parser.ast.ASTFieldDeclaration
+3107.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3107.100.ConcreteFactory = org.acm.seguin.refactor.field.RemoveFieldVisitor
+
+# Micro-architecture 3108 similar at 100% with AbstractFactory
+3108.100.Product = org.acm.seguin.refactor.field.RenameFieldTransform
+3108.100.AbstractFactory = org.acm.seguin.summary.TraversalVisitor
+3108.100.ConcreteFactory = org.acm.seguin.refactor.field.RenameSystemTraversal
+
+# Micro-architecture 3109 similar at 100% with AbstractFactory
+3109.100.Product = org.acm.seguin.parser.ast.ASTFormalParameter
+3109.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3109.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 3110 similar at 100% with AbstractFactory
+3110.100.Product = org.acm.seguin.summary.ImportSummary
+3110.100.AbstractFactory = org.acm.seguin.summary.LineCountVisitor
+3110.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3111 similar at 100% with AbstractFactory
+3111.100.Product = org.acm.seguin.ide.command.CommandLineMenu
+3111.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3111.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3112 similar at 100% with AbstractFactory
+3112.100.Product = org.acm.seguin.summary.MessageSendSummary
+3112.100.AbstractFactory = org.acm.seguin.summary.LineCountVisitor
+3112.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3113 similar at 100% with AbstractFactory
+3113.100.Product = org.acm.seguin.parser.ast.ASTName
+3113.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3113.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 3114 similar at 100% with AbstractFactory
+3114.100.Product = org.acm.seguin.parser.ast.ASTName
+3114.100.AbstractFactory = org.acm.seguin.summary.LineCountVisitor
+3114.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3115 similar at 100% with AbstractFactory
+3115.100.Product = java.util.HashMap
+3115.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3115.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3116 similar at 100% with AbstractFactory
+3116.100.Product = org.acm.seguin.summary.FieldAccessSummary
+3116.100.AbstractFactory = org.acm.seguin.summary.LineCountVisitor
+3116.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3117 similar at 100% with AbstractFactory
+3117.100.Product = org.acm.seguin.parser.ast.ASTClassBodyDeclaration
+3117.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3117.100.ConcreteFactory = org.acm.seguin.refactor.field.RemoveFieldVisitor
+
+# Micro-architecture 3118 similar at 100% with AbstractFactory
+3118.100.Product = javax.swing.JPanel
+3118.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3118.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3119 similar at 100% with AbstractFactory
+3119.100.Product = java.lang.StringBuffer
+3119.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3119.100.ConcreteFactory = org.acm.seguin.tools.international.StringListVisitor
+
+# Micro-architecture 3120 similar at 100% with AbstractFactory
+3120.100.Product = java.lang.StringBuffer
+3120.100.AbstractFactory = org.acm.seguin.summary.TraversalVisitor
+3120.100.ConcreteFactory = org.acm.seguin.refactor.field.RenameSystemTraversal
+
+# Micro-architecture 3121 similar at 100% with AbstractFactory
+3121.100.Product = java.lang.StringBuffer
+3121.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3121.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 3122 similar at 100% with AbstractFactory
+3122.100.Product = java.lang.StringBuffer
+3122.100.AbstractFactory = org.acm.seguin.summary.LineCountVisitor
+3122.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3123 similar at 100% with AbstractFactory
+3123.100.Product = org.acm.seguin.ide.command.UMLFrame
+3123.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3123.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3124 similar at 100% with AbstractFactory
+3124.100.Product = org.acm.seguin.summary.MethodSummary
+3124.100.AbstractFactory = org.acm.seguin.summary.LineCountVisitor
+3124.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3125 similar at 100% with AbstractFactory
+3125.100.Product = org.acm.seguin.parser.ast.ASTVariableDeclaratorId
+3125.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3125.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 3126 similar at 100% with AbstractFactory
+3126.100.Product = org.acm.seguin.summary.TypeSummary
+3126.100.AbstractFactory = org.acm.seguin.summary.LineCountVisitor
+3126.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3127 similar at 100% with AbstractFactory
+3127.100.Product = java.awt.BorderLayout
+3127.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3127.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3128 similar at 100% with AbstractFactory
+3128.100.Product = org.acm.seguin.parser.ast.ASTType
+3128.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3128.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 3129 similar at 100% with AbstractFactory
+3129.100.Product = org.acm.seguin.parser.ast.ASTArguments
+3129.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3129.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 3130 similar at 100% with AbstractFactory
+3130.100.Product = org.acm.seguin.summary.ParameterSummary
+3130.100.AbstractFactory = org.acm.seguin.summary.LineCountVisitor
+3130.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3131 similar at 100% with AbstractFactory
+3131.100.Product = org.acm.seguin.summary.FileSummary
+3131.100.AbstractFactory = org.acm.seguin.summary.LineCountVisitor
+3131.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3132 similar at 100% with AbstractFactory
+3132.100.Product = org.acm.seguin.parser.ast.ASTNameList
+3132.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3132.100.ConcreteFactory = org.acm.seguin.refactor.type.AddImplementedInterfaceVisitor
+
+# Micro-architecture 3133 similar at 100% with AbstractFactory
+3133.100.Product = org.acm.seguin.summary.SummaryTraversal
+3133.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3133.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3134 similar at 100% with AbstractFactory
+3134.100.AbstractProduct = java.awt.event.WindowAdapter
+3134.100.Product = org.acm.seguin.ide.command.ExitMenuSelection
+3134.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3134.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3135 similar at 100% with AbstractFactory
+3135.100.AbstractProduct = java.awt.event.ActionListener
+3135.100.Product = org.acm.seguin.ide.command.ExitMenuSelection
+3135.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3135.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3136 similar at 100% with AbstractFactory
+3136.100.AbstractProduct = java.awt.event.ActionListener
+3136.100.Product = org.acm.seguin.ide.command.PackageSelectorPanel
+3136.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3136.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+
+# Micro-architecture 3137 similar at 100% with AbstractFactory
+3137.100.AbstractProduct = java.lang.Cloneable
+3137.100.Product = org.acm.seguin.parser.ast.ASTName
+3137.100.AbstractFactory = org.acm.seguin.parser.ChildrenVisitor
+3137.100.ConcreteFactory = org.acm.seguin.refactor.method.MoveMethodVisitor
+
+# Micro-architecture 3138 similar at 100% with AbstractFactory
+3138.100.AbstractProduct = java.lang.Cloneable
+3138.100.Product = org.acm.seguin.parser.ast.ASTName
+3138.100.AbstractFactory = org.acm.seguin.summary.LineCountVisitor
+3138.100.ConcreteFactory = org.acm.seguin.summary.SummaryLoadVisitor
+
+# Micro-architecture 3139 similar at 100% with AbstractFactory
+3139.100.AbstractProduct = javax.swing.JFrame
+3139.100.Product = org.acm.seguin.ide.command.UMLFrame
+3139.100.AbstractFactory = org.acm.seguin.ide.common.PackageSelectorArea
+3139.100.ConcreteFactory = org.acm.seguin.ide.command.PackageSelectorPanel
+

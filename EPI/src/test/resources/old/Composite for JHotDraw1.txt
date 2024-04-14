@@ -1,0 +1,1019 @@
+# Micro-architecture 1713 similar at 100% with Composite
+1713.100.Component = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+1713.100.Composite = CH.ifa.draw.figures.LineConnection
+
+# Micro-architecture 1714 similar at 100% with Composite
+1714.100.Component = java.applet.Applet
+1714.100.Composite = CH.ifa.draw.samples.javadraw.JavaDrawApplet
+
+# Micro-architecture 1715 similar at 100% with Composite
+1715.100.Component = java.applet.Applet
+1715.100.Composite = CH.ifa.draw.applet.DrawApplet
+
+# Micro-architecture 1716 similar at 100% with Composite
+1716.100.Component = java.applet.Applet
+1716.100.Composite = CH.ifa.draw.samples.javadraw.JavaDrawViewer
+
+# Micro-architecture 1717 similar at 100% with Composite
+1717.100.Component = java.awt.AWTEventMulticaster
+1717.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 1718 similar at 100% with Composite
+1718.100.Component = CH.ifa.draw.standard.ChopBoxConnector
+1718.100.Composite = CH.ifa.draw.figures.PolyLineConnector
+
+# Micro-architecture 1719 similar at 100% with Composite
+1719.100.Component = CH.ifa.draw.standard.ChopBoxConnector
+1719.100.Composite = CH.ifa.draw.figures.ChopEllipseConnector
+
+# Micro-architecture 1720 similar at 100% with Composite
+1720.100.Component = CH.ifa.draw.standard.ChopBoxConnector
+1720.100.Composite = CH.ifa.draw.contrib.ChopPolygonConnector
+
+# Micro-architecture 1721 similar at 100% with Composite
+1721.100.Component = CH.ifa.draw.standard.StandardDrawing
+1721.100.Composite = CH.ifa.draw.samples.javadraw.BouncingDrawing
+
+# Micro-architecture 1722 similar at 100% with Composite
+1722.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractConnector
+1722.100.Composite = CH.ifa.draw.figures.ShortestDistanceConnector
+
+# Micro-architecture 1723 similar at 100% with Composite
+1723.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractConnector
+1723.100.Composite = CH.ifa.draw.figures.PolyLineConnector
+
+# Micro-architecture 1724 similar at 100% with Composite
+1724.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractConnector
+1724.100.Composite = CH.ifa.draw.standard.ChopBoxConnector
+
+# Micro-architecture 1725 similar at 100% with Composite
+1725.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractConnector
+1725.100.Composite = CH.ifa.draw.standard.LocatorConnector
+
+# Micro-architecture 1726 similar at 100% with Composite
+1726.100.Component = java.awt.Frame
+1726.100.Composite = CH.ifa.draw.application.DrawApplication
+
+# Micro-architecture 1727 similar at 100% with Composite
+1727.100.Component = java.awt.Frame
+1727.100.Composite = CH.ifa.draw.samples.javadraw.JavaDrawApp
+
+# Micro-architecture 1728 similar at 100% with Composite
+1728.100.Component = java.awt.Canvas
+1728.100.Composite = CH.ifa.draw.util.Filler
+
+# Micro-architecture 1729 similar at 100% with Composite
+1729.100.Component = java.awt.Canvas
+1729.100.Composite = EPI_Abstract_CH.ifa.draw.util.PaletteButton
+
+# Micro-architecture 1730 similar at 100% with Composite
+1730.100.Component = CH.ifa.draw.figures.TextFigure
+1730.100.Composite = CH.ifa.draw.samples.net.NodeFigure
+
+# Micro-architecture 1731 similar at 100% with Composite
+1731.100.Component = CH.ifa.draw.figures.TextFigure
+1731.100.Composite = CH.ifa.draw.figures.NumberTextFigure
+
+# Micro-architecture 1732 similar at 100% with Composite
+1732.100.Component = CH.ifa.draw.application.DrawApplication
+1732.100.Composite = CH.ifa.draw.samples.net.NetApp
+
+# Micro-architecture 1733 similar at 100% with Composite
+1733.100.Component = CH.ifa.draw.application.DrawApplication
+1733.100.Composite = CH.ifa.draw.samples.javadraw.JavaDrawApp
+
+# Micro-architecture 1734 similar at 100% with Composite
+1734.100.Component = CH.ifa.draw.application.DrawApplication
+1734.100.Composite = CH.ifa.draw.samples.nothing.NothingApp
+
+# Micro-architecture 1735 similar at 100% with Composite
+1735.100.Component = CH.ifa.draw.application.DrawApplication
+1735.100.Composite = CH.ifa.draw.samples.pert.PertApplication
+
+# Micro-architecture 1736 similar at 100% with Composite
+1736.100.Component = java.lang.Object
+1736.100.Composite = CH.ifa.draw.standard.StandardDrawing
+
+# Micro-architecture 1737 similar at 100% with Composite
+1737.100.Component = java.lang.Object
+1737.100.Composite = CH.ifa.draw.figures.FigureAttributes
+
+# Micro-architecture 1738 similar at 100% with Composite
+1738.100.Component = java.lang.Object
+1738.100.Composite = EPI_Abstract_CH.ifa.draw.standard.AbstractConnector
+
+# Micro-architecture 1739 similar at 100% with Composite
+1739.100.Component = java.lang.Object
+1739.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 1740 similar at 100% with Composite
+1740.100.Component = java.lang.Object
+1740.100.Composite = CH.ifa.draw.util.Geom
+
+# Micro-architecture 1741 similar at 100% with Composite
+1741.100.Component = java.lang.Object
+1741.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 1742 similar at 100% with Composite
+1742.100.Component = java.lang.Object
+1742.100.Composite = CH.ifa.draw.samples.javadraw.PatternPainter
+
+# Micro-architecture 1743 similar at 100% with Composite
+1743.100.Component = java.lang.Object
+1743.100.Composite = CH.ifa.draw.standard.BufferedUpdateStrategy
+
+# Micro-architecture 1744 similar at 100% with Composite
+1744.100.Component = java.lang.Object
+1744.100.Composite = CH.ifa.draw.util.ColorMap
+
+# Micro-architecture 1745 similar at 100% with Composite
+1745.100.Component = java.lang.Object
+1745.100.Composite = CH.ifa.draw.util.StorableInput
+
+# Micro-architecture 1746 similar at 100% with Composite
+1746.100.Component = java.lang.Object
+1746.100.Composite = CH.ifa.draw.framework.FigureSelection
+
+# Micro-architecture 1747 similar at 100% with Composite
+1747.100.Component = java.lang.Object
+1747.100.Composite = CH.ifa.draw.util.ReverseVectorEnumerator
+
+# Micro-architecture 1748 similar at 100% with Composite
+1748.100.Component = java.lang.Object
+1748.100.Composite = CH.ifa.draw.standard.ReverseFigureEnumerator
+
+# Micro-architecture 1749 similar at 100% with Composite
+1749.100.Component = java.lang.Object
+1749.100.Composite = CH.ifa.draw.standard.AbstractTool
+
+# Micro-architecture 1750 similar at 100% with Composite
+1750.100.Component = java.lang.Object
+1750.100.Composite = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+
+# Micro-architecture 1751 similar at 100% with Composite
+1751.100.Component = java.lang.Object
+1751.100.Composite = CH.ifa.draw.figures.GroupFigure
+
+# Micro-architecture 1752 similar at 100% with Composite
+1752.100.Component = java.lang.Object
+1752.100.Composite = CH.ifa.draw.figures.PolyLineFigure
+
+# Micro-architecture 1753 similar at 100% with Composite
+1753.100.Component = java.lang.Object
+1753.100.Composite = CH.ifa.draw.standard.BoxHandleKit
+
+# Micro-architecture 1754 similar at 100% with Composite
+1754.100.Component = java.lang.Object
+1754.100.Composite = CH.ifa.draw.standard.FigureEnumerator
+
+# Micro-architecture 1755 similar at 100% with Composite
+1755.100.Component = java.lang.Object
+1755.100.Composite = CH.ifa.draw.figures.ArrowTip
+
+# Micro-architecture 1756 similar at 100% with Composite
+1756.100.Component = java.lang.Object
+1756.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 1757 similar at 100% with Composite
+1757.100.Component = java.lang.Object
+1757.100.Composite = CH.ifa.draw.util.PaletteIcon
+
+# Micro-architecture 1758 similar at 100% with Composite
+1758.100.Component = java.lang.Object
+1758.100.Composite = EPI_Abstract_CH.ifa.draw.standard.AbstractLocator
+
+# Micro-architecture 1759 similar at 100% with Composite
+1759.100.Component = java.lang.Object
+1759.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 1760 similar at 100% with Composite
+1760.100.Component = java.lang.Object
+1760.100.Composite = CH.ifa.draw.standard.GridConstrainer
+
+# Micro-architecture 1761 similar at 100% with Composite
+1761.100.Component = java.lang.Object
+1761.100.Composite = CH.ifa.draw.util.PaletteLayout
+
+# Micro-architecture 1762 similar at 100% with Composite
+1762.100.Component = java.lang.Object
+1762.100.Composite = CH.ifa.draw.util.ColorEntry
+
+# Micro-architecture 1763 similar at 100% with Composite
+1763.100.Component = java.lang.Object
+1763.100.Composite = CH.ifa.draw.contrib.TriangleFigure
+
+# Micro-architecture 1764 similar at 100% with Composite
+1764.100.Component = java.lang.Object
+1764.100.Composite = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+
+# Micro-architecture 1765 similar at 100% with Composite
+1765.100.Component = java.lang.Object
+1765.100.Composite = CH.ifa.draw.util.FloatingTextField
+
+# Micro-architecture 1766 similar at 100% with Composite
+1766.100.Component = java.lang.Object
+1766.100.Composite = CH.ifa.draw.standard.SimpleUpdateStrategy
+
+# Micro-architecture 1767 similar at 100% with Composite
+1767.100.Component = java.lang.Object
+1767.100.Composite = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+
+# Micro-architecture 1768 similar at 100% with Composite
+1768.100.Component = java.lang.Object
+1768.100.Composite = EPI_Abstract_CH.ifa.draw.util.Command
+
+# Micro-architecture 1769 similar at 100% with Composite
+1769.100.Component = java.lang.Object
+1769.100.Composite = CH.ifa.draw.util.Iconkit
+
+# Micro-architecture 1770 similar at 100% with Composite
+1770.100.Component = java.lang.Object
+1770.100.Composite = CH.ifa.draw.util.StorableOutput
+
+# Micro-architecture 1771 similar at 100% with Composite
+1771.100.Component = java.lang.Error
+1771.100.Composite = CH.ifa.draw.framework.HJDError
+
+# Micro-architecture 1772 similar at 100% with Composite
+1772.100.Component = CH.ifa.draw.standard.AbstractTool
+1772.100.Composite = CH.ifa.draw.samples.javadraw.MySelectionTool
+
+# Micro-architecture 1773 similar at 100% with Composite
+1773.100.Component = CH.ifa.draw.standard.AbstractTool
+1773.100.Composite = CH.ifa.draw.standard.SelectAreaTracker
+
+# Micro-architecture 1774 similar at 100% with Composite
+1774.100.Component = CH.ifa.draw.standard.AbstractTool
+1774.100.Composite = CH.ifa.draw.standard.HandleTracker
+
+# Micro-architecture 1775 similar at 100% with Composite
+1775.100.Component = CH.ifa.draw.standard.AbstractTool
+1775.100.Composite = CH.ifa.draw.samples.javadraw.URLTool
+
+# Micro-architecture 1776 similar at 100% with Composite
+1776.100.Component = CH.ifa.draw.standard.AbstractTool
+1776.100.Composite = CH.ifa.draw.standard.DragTracker
+
+# Micro-architecture 1777 similar at 100% with Composite
+1777.100.Component = CH.ifa.draw.standard.AbstractTool
+1777.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 1778 similar at 100% with Composite
+1778.100.Component = CH.ifa.draw.standard.AbstractTool
+1778.100.Composite = CH.ifa.draw.contrib.PolygonTool
+
+# Micro-architecture 1779 similar at 100% with Composite
+1779.100.Component = CH.ifa.draw.standard.AbstractTool
+1779.100.Composite = CH.ifa.draw.figures.ConnectedTextTool
+
+# Micro-architecture 1780 similar at 100% with Composite
+1780.100.Component = CH.ifa.draw.standard.AbstractTool
+1780.100.Composite = CH.ifa.draw.figures.BorderTool
+
+# Micro-architecture 1781 similar at 100% with Composite
+1781.100.Component = CH.ifa.draw.standard.AbstractTool
+1781.100.Composite = CH.ifa.draw.samples.javadraw.FollowURLTool
+
+# Micro-architecture 1782 similar at 100% with Composite
+1782.100.Component = CH.ifa.draw.standard.AbstractTool
+1782.100.Composite = CH.ifa.draw.standard.ConnectionTool
+
+# Micro-architecture 1783 similar at 100% with Composite
+1783.100.Component = CH.ifa.draw.standard.AbstractTool
+1783.100.Composite = CH.ifa.draw.standard.CreationTool
+
+# Micro-architecture 1784 similar at 100% with Composite
+1784.100.Component = CH.ifa.draw.standard.AbstractTool
+1784.100.Composite = EPI_Abstract_CH.ifa.draw.standard.ActionTool
+
+# Micro-architecture 1785 similar at 100% with Composite
+1785.100.Component = CH.ifa.draw.standard.AbstractTool
+1785.100.Composite = CH.ifa.draw.figures.TextTool
+
+# Micro-architecture 1786 similar at 100% with Composite
+1786.100.Component = CH.ifa.draw.standard.AbstractTool
+1786.100.Composite = CH.ifa.draw.figures.ScribbleTool
+
+# Micro-architecture 1787 similar at 100% with Composite
+1787.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1787.100.Composite = CH.ifa.draw.standard.WestHandle
+
+# Micro-architecture 1788 similar at 100% with Composite
+1788.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1788.100.Composite = CH.ifa.draw.standard.NorthEastHandle
+
+# Micro-architecture 1789 similar at 100% with Composite
+1789.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1789.100.Composite = CH.ifa.draw.figures.FontSizeHandle
+
+# Micro-architecture 1790 similar at 100% with Composite
+1790.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1790.100.Composite = CH.ifa.draw.standard.NorthWestHandle
+
+# Micro-architecture 1791 similar at 100% with Composite
+1791.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1791.100.Composite = CH.ifa.draw.standard.NorthHandle
+
+# Micro-architecture 1792 similar at 100% with Composite
+1792.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1792.100.Composite = CH.ifa.draw.standard.LocatorHandle
+
+# Micro-architecture 1793 similar at 100% with Composite
+1793.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1793.100.Composite = CH.ifa.draw.standard.NullHandle
+
+# Micro-architecture 1794 similar at 100% with Composite
+1794.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1794.100.Composite = CH.ifa.draw.contrib.TriangleRotationHandle
+
+# Micro-architecture 1795 similar at 100% with Composite
+1795.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1795.100.Composite = CH.ifa.draw.contrib.PolygonHandle
+
+# Micro-architecture 1796 similar at 100% with Composite
+1796.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1796.100.Composite = CH.ifa.draw.standard.ConnectionHandle
+
+# Micro-architecture 1797 similar at 100% with Composite
+1797.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1797.100.Composite = CH.ifa.draw.standard.SouthHandle
+
+# Micro-architecture 1798 similar at 100% with Composite
+1798.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1798.100.Composite = CH.ifa.draw.figures.GroupHandle
+
+# Micro-architecture 1799 similar at 100% with Composite
+1799.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1799.100.Composite = CH.ifa.draw.figures.RadiusHandle
+
+# Micro-architecture 1800 similar at 100% with Composite
+1800.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1800.100.Composite = CH.ifa.draw.standard.SouthEastHandle
+
+# Micro-architecture 1801 similar at 100% with Composite
+1801.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1801.100.Composite = CH.ifa.draw.figures.ElbowHandle
+
+# Micro-architecture 1802 similar at 100% with Composite
+1802.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1802.100.Composite = CH.ifa.draw.figures.PolyLineHandle
+
+# Micro-architecture 1803 similar at 100% with Composite
+1803.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1803.100.Composite = CH.ifa.draw.standard.SouthWestHandle
+
+# Micro-architecture 1804 similar at 100% with Composite
+1804.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1804.100.Composite = CH.ifa.draw.contrib.PolygonScaleHandle
+
+# Micro-architecture 1805 similar at 100% with Composite
+1805.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1805.100.Composite = EPI_Abstract_CH.ifa.draw.standard.ChangeConnectionHandle
+
+# Micro-architecture 1806 similar at 100% with Composite
+1806.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+1806.100.Composite = CH.ifa.draw.standard.EastHandle
+
+# Micro-architecture 1807 similar at 100% with Composite
+1807.100.Component = CH.ifa.draw.standard.LocatorHandle
+1807.100.Composite = CH.ifa.draw.standard.WestHandle
+
+# Micro-architecture 1808 similar at 100% with Composite
+1808.100.Component = CH.ifa.draw.standard.LocatorHandle
+1808.100.Composite = CH.ifa.draw.standard.NorthEastHandle
+
+# Micro-architecture 1809 similar at 100% with Composite
+1809.100.Component = CH.ifa.draw.standard.LocatorHandle
+1809.100.Composite = CH.ifa.draw.figures.FontSizeHandle
+
+# Micro-architecture 1810 similar at 100% with Composite
+1810.100.Component = CH.ifa.draw.standard.LocatorHandle
+1810.100.Composite = CH.ifa.draw.standard.NorthWestHandle
+
+# Micro-architecture 1811 similar at 100% with Composite
+1811.100.Component = CH.ifa.draw.standard.LocatorHandle
+1811.100.Composite = CH.ifa.draw.standard.NorthHandle
+
+# Micro-architecture 1812 similar at 100% with Composite
+1812.100.Component = CH.ifa.draw.standard.LocatorHandle
+1812.100.Composite = CH.ifa.draw.standard.NullHandle
+
+# Micro-architecture 1813 similar at 100% with Composite
+1813.100.Component = CH.ifa.draw.standard.LocatorHandle
+1813.100.Composite = CH.ifa.draw.standard.ConnectionHandle
+
+# Micro-architecture 1814 similar at 100% with Composite
+1814.100.Component = CH.ifa.draw.standard.LocatorHandle
+1814.100.Composite = CH.ifa.draw.standard.SouthHandle
+
+# Micro-architecture 1815 similar at 100% with Composite
+1815.100.Component = CH.ifa.draw.standard.LocatorHandle
+1815.100.Composite = CH.ifa.draw.standard.SouthEastHandle
+
+# Micro-architecture 1816 similar at 100% with Composite
+1816.100.Component = CH.ifa.draw.standard.LocatorHandle
+1816.100.Composite = CH.ifa.draw.figures.PolyLineHandle
+
+# Micro-architecture 1817 similar at 100% with Composite
+1817.100.Component = CH.ifa.draw.standard.LocatorHandle
+1817.100.Composite = CH.ifa.draw.standard.SouthWestHandle
+
+# Micro-architecture 1818 similar at 100% with Composite
+1818.100.Component = CH.ifa.draw.standard.LocatorHandle
+1818.100.Composite = CH.ifa.draw.standard.EastHandle
+
+# Micro-architecture 1819 similar at 100% with Composite
+1819.100.Component = java.util.EventListener
+1819.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 1820 similar at 100% with Composite
+1820.100.Component = CH.ifa.draw.figures.PolyLineFigure
+1820.100.Composite = CH.ifa.draw.figures.LineFigure
+
+# Micro-architecture 1821 similar at 100% with Composite
+1821.100.Component = CH.ifa.draw.figures.PolyLineFigure
+1821.100.Composite = CH.ifa.draw.samples.pert.PertDependency
+
+# Micro-architecture 1822 similar at 100% with Composite
+1822.100.Component = CH.ifa.draw.figures.PolyLineFigure
+1822.100.Composite = CH.ifa.draw.figures.ElbowConnection
+
+# Micro-architecture 1823 similar at 100% with Composite
+1823.100.Component = CH.ifa.draw.figures.PolyLineFigure
+1823.100.Composite = CH.ifa.draw.figures.LineConnection
+
+# Micro-architecture 1824 similar at 100% with Composite
+1824.100.Component = CH.ifa.draw.standard.NullHandle
+1824.100.Composite = CH.ifa.draw.figures.GroupHandle
+
+# Micro-architecture 1825 similar at 100% with Composite
+1825.100.Component = EPI_Abstract_CH.ifa.draw.standard.FigureTransferCommand
+1825.100.Composite = CH.ifa.draw.standard.DuplicateCommand
+
+# Micro-architecture 1826 similar at 100% with Composite
+1826.100.Component = EPI_Abstract_CH.ifa.draw.standard.FigureTransferCommand
+1826.100.Composite = CH.ifa.draw.standard.CutCommand
+
+# Micro-architecture 1827 similar at 100% with Composite
+1827.100.Component = EPI_Abstract_CH.ifa.draw.standard.FigureTransferCommand
+1827.100.Composite = CH.ifa.draw.standard.PasteCommand
+
+# Micro-architecture 1828 similar at 100% with Composite
+1828.100.Component = EPI_Abstract_CH.ifa.draw.standard.FigureTransferCommand
+1828.100.Composite = CH.ifa.draw.standard.DeleteCommand
+
+# Micro-architecture 1829 similar at 100% with Composite
+1829.100.Component = EPI_Abstract_CH.ifa.draw.standard.FigureTransferCommand
+1829.100.Composite = CH.ifa.draw.standard.CopyCommand
+
+# Micro-architecture 1830 similar at 100% with Composite
+1830.100.Component = java.awt.Button
+1830.100.Composite = CH.ifa.draw.util.CommandButton
+
+# Micro-architecture 1831 similar at 100% with Composite
+1831.100.Component = CH.ifa.draw.applet.DrawApplet
+1831.100.Composite = CH.ifa.draw.samples.javadraw.JavaDrawApplet
+
+# Micro-architecture 1832 similar at 100% with Composite
+1832.100.Component = CH.ifa.draw.applet.DrawApplet
+1832.100.Composite = CH.ifa.draw.samples.pert.PertApplet
+
+# Micro-architecture 1833 similar at 100% with Composite
+1833.100.Component = CH.ifa.draw.applet.DrawApplet
+1833.100.Composite = CH.ifa.draw.samples.nothing.NothingApplet
+
+# Micro-architecture 1834 similar at 100% with Composite
+1834.100.Component = EPI_Abstract_CH.ifa.draw.framework.DrawingChangeListener
+1834.100.Composite = CH.ifa.draw.standard.StandardDrawingView
+
+# Micro-architecture 1835 similar at 100% with Composite
+1835.100.Component = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+1835.100.Composite = CH.ifa.draw.samples.javadraw.AnimationDecorator
+
+# Micro-architecture 1836 similar at 100% with Composite
+1836.100.Component = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+1836.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 1837 similar at 100% with Composite
+1837.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+1837.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 1838 similar at 100% with Composite
+1838.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractLocator
+1838.100.Composite = CH.ifa.draw.standard.RelativeLocator
+
+# Micro-architecture 1839 similar at 100% with Composite
+1839.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractLocator
+1839.100.Composite = CH.ifa.draw.figures.ElbowTextLocator
+
+# Micro-architecture 1840 similar at 100% with Composite
+1840.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractLocator
+1840.100.Composite = CH.ifa.draw.standard.OffsetLocator
+
+# Micro-architecture 1841 similar at 100% with Composite
+1841.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractLocator
+1841.100.Composite = CH.ifa.draw.figures.PolyLineLocator
+
+# Micro-architecture 1842 similar at 100% with Composite
+1842.100.Component = CH.ifa.draw.standard.SelectionTool
+1842.100.Composite = CH.ifa.draw.samples.javadraw.MySelectionTool
+
+# Micro-architecture 1843 similar at 100% with Composite
+1843.100.Component = java.awt.Panel
+1843.100.Composite = CH.ifa.draw.standard.StandardDrawingView
+
+# Micro-architecture 1844 similar at 100% with Composite
+1844.100.Component = EPI_Abstract_CH.ifa.draw.framework.Locator
+1844.100.Composite = CH.ifa.draw.standard.RelativeLocator
+
+# Micro-architecture 1845 similar at 100% with Composite
+1845.100.Component = EPI_Abstract_CH.ifa.draw.framework.Locator
+1845.100.Composite = CH.ifa.draw.standard.OffsetLocator
+
+# Micro-architecture 1846 similar at 100% with Composite
+1846.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+1846.100.Composite = CH.ifa.draw.standard.StandardDrawing
+
+# Micro-architecture 1847 similar at 100% with Composite
+1847.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+1847.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 1848 similar at 100% with Composite
+1848.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+1848.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 1849 similar at 100% with Composite
+1849.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+1849.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 1850 similar at 100% with Composite
+1850.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+1850.100.Composite = CH.ifa.draw.figures.LineConnection
+
+# Micro-architecture 1851 similar at 100% with Composite
+1851.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+1851.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 1852 similar at 100% with Composite
+1852.100.Component = EPI_Abstract_CH.ifa.draw.framework.DrawingView
+1852.100.Composite = CH.ifa.draw.standard.StandardDrawingView
+
+# Micro-architecture 1853 similar at 100% with Composite
+1853.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+1853.100.Composite = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+
+# Micro-architecture 1854 similar at 100% with Composite
+1854.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+1854.100.Composite = CH.ifa.draw.standard.StandardDrawing
+
+# Micro-architecture 1855 similar at 100% with Composite
+1855.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+1855.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 1856 similar at 100% with Composite
+1856.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+1856.100.Composite = CH.ifa.draw.figures.GroupFigure
+
+# Micro-architecture 1857 similar at 100% with Composite
+1857.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+1857.100.Composite = CH.ifa.draw.samples.pert.PertDependency
+
+# Micro-architecture 1858 similar at 100% with Composite
+1858.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+1858.100.Composite = CH.ifa.draw.samples.pert.PertFigure
+
+# Micro-architecture 1859 similar at 100% with Composite
+1859.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+1859.100.Composite = CH.ifa.draw.samples.javadraw.BouncingDrawing
+
+# Micro-architecture 1860 similar at 100% with Composite
+1860.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+1860.100.Composite = CH.ifa.draw.figures.ElbowConnection
+
+# Micro-architecture 1861 similar at 100% with Composite
+1861.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+1861.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 1862 similar at 100% with Composite
+1862.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+1862.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 1863 similar at 100% with Composite
+1863.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+1863.100.Composite = CH.ifa.draw.figures.LineConnection
+
+# Micro-architecture 1864 similar at 100% with Composite
+1864.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+1864.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 1865 similar at 100% with Composite
+1865.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+1865.100.Composite = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+
+# Micro-architecture 1866 similar at 100% with Composite
+1866.100.Component = java.lang.Thread
+1866.100.Composite = CH.ifa.draw.applet.SleeperThread
+
+# Micro-architecture 1867 similar at 100% with Composite
+1867.100.Component = java.lang.Thread
+1867.100.Composite = CH.ifa.draw.samples.javadraw.Animator
+
+# Micro-architecture 1868 similar at 100% with Composite
+1868.100.Component = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+1868.100.Composite = CH.ifa.draw.contrib.PolygonFigure
+
+# Micro-architecture 1869 similar at 100% with Composite
+1869.100.Component = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+1869.100.Composite = CH.ifa.draw.samples.net.NodeFigure
+
+# Micro-architecture 1870 similar at 100% with Composite
+1870.100.Component = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+1870.100.Composite = CH.ifa.draw.figures.EllipseFigure
+
+# Micro-architecture 1871 similar at 100% with Composite
+1871.100.Component = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+1871.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 1872 similar at 100% with Composite
+1872.100.Component = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+1872.100.Composite = CH.ifa.draw.figures.ImageFigure
+
+# Micro-architecture 1873 similar at 100% with Composite
+1873.100.Component = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+1873.100.Composite = CH.ifa.draw.contrib.DiamondFigure
+
+# Micro-architecture 1874 similar at 100% with Composite
+1874.100.Component = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+1874.100.Composite = CH.ifa.draw.contrib.TriangleFigure
+
+# Micro-architecture 1875 similar at 100% with Composite
+1875.100.Component = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+1875.100.Composite = CH.ifa.draw.figures.RoundRectangleFigure
+
+# Micro-architecture 1876 similar at 100% with Composite
+1876.100.Component = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+1876.100.Composite = CH.ifa.draw.figures.RectangleFigure
+
+# Micro-architecture 1877 similar at 100% with Composite
+1877.100.Component = CH.ifa.draw.figures.LineConnection
+1877.100.Composite = CH.ifa.draw.samples.pert.PertDependency
+
+# Micro-architecture 1878 similar at 100% with Composite
+1878.100.Component = CH.ifa.draw.figures.LineConnection
+1878.100.Composite = CH.ifa.draw.figures.ElbowConnection
+
+# Micro-architecture 1879 similar at 100% with Composite
+1879.100.Component = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+1879.100.Composite = CH.ifa.draw.standard.StandardDrawing
+
+# Micro-architecture 1880 similar at 100% with Composite
+1880.100.Component = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+1880.100.Composite = CH.ifa.draw.figures.GroupFigure
+
+# Micro-architecture 1881 similar at 100% with Composite
+1881.100.Component = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+1881.100.Composite = CH.ifa.draw.samples.pert.PertFigure
+
+# Micro-architecture 1882 similar at 100% with Composite
+1882.100.Component = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+1882.100.Composite = CH.ifa.draw.samples.javadraw.BouncingDrawing
+
+# Micro-architecture 1883 similar at 100% with Composite
+1883.100.Component = EPI_Abstract_CH.ifa.draw.util.PaletteButton
+1883.100.Composite = CH.ifa.draw.standard.ToolButton
+
+# Micro-architecture 1884 similar at 100% with Composite
+1884.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1884.100.Composite = CH.ifa.draw.contrib.PolygonFigure
+
+# Micro-architecture 1885 similar at 100% with Composite
+1885.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1885.100.Composite = CH.ifa.draw.samples.net.NodeFigure
+
+# Micro-architecture 1886 similar at 100% with Composite
+1886.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1886.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 1887 similar at 100% with Composite
+1887.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1887.100.Composite = CH.ifa.draw.figures.GroupFigure
+
+# Micro-architecture 1888 similar at 100% with Composite
+1888.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1888.100.Composite = CH.ifa.draw.samples.pert.PertFigure
+
+# Micro-architecture 1889 similar at 100% with Composite
+1889.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1889.100.Composite = CH.ifa.draw.figures.PolyLineFigure
+
+# Micro-architecture 1890 similar at 100% with Composite
+1890.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1890.100.Composite = CH.ifa.draw.figures.ImageFigure
+
+# Micro-architecture 1891 similar at 100% with Composite
+1891.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1891.100.Composite = CH.ifa.draw.figures.ElbowConnection
+
+# Micro-architecture 1892 similar at 100% with Composite
+1892.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1892.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 1893 similar at 100% with Composite
+1893.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1893.100.Composite = CH.ifa.draw.contrib.TriangleFigure
+
+# Micro-architecture 1894 similar at 100% with Composite
+1894.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1894.100.Composite = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+
+# Micro-architecture 1895 similar at 100% with Composite
+1895.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1895.100.Composite = CH.ifa.draw.figures.LineConnection
+
+# Micro-architecture 1896 similar at 100% with Composite
+1896.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1896.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 1897 similar at 100% with Composite
+1897.100.Component = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+1897.100.Composite = CH.ifa.draw.figures.RoundRectangleFigure
+
+# Micro-architecture 1898 similar at 100% with Composite
+1898.100.Component = CH.ifa.draw.standard.CreationTool
+1898.100.Composite = CH.ifa.draw.samples.pert.PertFigureCreationTool
+
+# Micro-architecture 1899 similar at 100% with Composite
+1899.100.Component = CH.ifa.draw.standard.CreationTool
+1899.100.Composite = CH.ifa.draw.figures.ConnectedTextTool
+
+# Micro-architecture 1900 similar at 100% with Composite
+1900.100.Component = CH.ifa.draw.standard.CreationTool
+1900.100.Composite = CH.ifa.draw.figures.TextTool
+
+# Micro-architecture 1901 similar at 100% with Composite
+1901.100.Component = EPI_Abstract_CH.ifa.draw.framework.Connector
+1901.100.Composite = CH.ifa.draw.figures.ShortestDistanceConnector
+
+# Micro-architecture 1902 similar at 100% with Composite
+1902.100.Component = EPI_Abstract_CH.ifa.draw.framework.Connector
+1902.100.Composite = CH.ifa.draw.standard.ChopBoxConnector
+
+# Micro-architecture 1903 similar at 100% with Composite
+1903.100.Component = EPI_Abstract_CH.ifa.draw.standard.ActionTool
+1903.100.Composite = CH.ifa.draw.figures.BorderTool
+
+# Micro-architecture 1904 similar at 100% with Composite
+1904.100.Component = CH.ifa.draw.figures.TextTool
+1904.100.Composite = CH.ifa.draw.figures.ConnectedTextTool
+
+# Micro-architecture 1905 similar at 100% with Composite
+1905.100.Component = CH.ifa.draw.figures.RectangleFigure
+1905.100.Composite = CH.ifa.draw.contrib.DiamondFigure
+
+# Micro-architecture 1906 similar at 100% with Composite
+1906.100.Component = CH.ifa.draw.figures.RectangleFigure
+1906.100.Composite = CH.ifa.draw.contrib.TriangleFigure
+
+# Micro-architecture 1907 similar at 100% with Composite
+1907.100.Component = java.awt.Choice
+1907.100.Composite = CH.ifa.draw.util.CommandChoice
+
+# Micro-architecture 1908 similar at 100% with Composite
+1908.100.Component = java.awt.event.ActionListener
+1908.100.Composite = CH.ifa.draw.util.CommandMenu
+
+# Micro-architecture 1909 similar at 100% with Composite
+1909.100.Component = EPI_Abstract_CH.ifa.draw.standard.ChangeConnectionHandle
+1909.100.Composite = CH.ifa.draw.standard.ChangeConnectionStartHandle
+
+# Micro-architecture 1910 similar at 100% with Composite
+1910.100.Component = EPI_Abstract_CH.ifa.draw.standard.ChangeConnectionHandle
+1910.100.Composite = CH.ifa.draw.standard.ChangeConnectionEndHandle
+
+# Micro-architecture 1911 similar at 100% with Composite
+1911.100.Component = EPI_Abstract_CH.ifa.draw.util.Command
+1911.100.Composite = CH.ifa.draw.standard.AlignCommand
+
+# Micro-architecture 1912 similar at 100% with Composite
+1912.100.Component = EPI_Abstract_CH.ifa.draw.util.Command
+1912.100.Composite = CH.ifa.draw.standard.BringToFrontCommand
+
+# Micro-architecture 1913 similar at 100% with Composite
+1913.100.Component = EPI_Abstract_CH.ifa.draw.util.Command
+1913.100.Composite = CH.ifa.draw.figures.GroupCommand
+
+# Micro-architecture 1914 similar at 100% with Composite
+1914.100.Component = EPI_Abstract_CH.ifa.draw.util.Command
+1914.100.Composite = CH.ifa.draw.standard.ToggleGridCommand
+
+# Micro-architecture 1915 similar at 100% with Composite
+1915.100.Component = EPI_Abstract_CH.ifa.draw.util.Command
+1915.100.Composite = CH.ifa.draw.standard.SendToBackCommand
+
+# Micro-architecture 1916 similar at 100% with Composite
+1916.100.Component = EPI_Abstract_CH.ifa.draw.util.Command
+1916.100.Composite = EPI_Abstract_CH.ifa.draw.standard.FigureTransferCommand
+
+# Micro-architecture 1917 similar at 100% with Composite
+1917.100.Component = EPI_Abstract_CH.ifa.draw.util.Command
+1917.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 1918 similar at 100% with Composite
+1918.100.Component = EPI_Abstract_CH.ifa.draw.util.Command
+1918.100.Composite = CH.ifa.draw.figures.UngroupCommand
+
+# Micro-architecture 1919 similar at 100% with Composite
+1919.100.Component = EPI_Abstract_CH.ifa.draw.util.Command
+1919.100.Composite = CH.ifa.draw.figures.InsertImageCommand
+
+# Micro-architecture 1920 similar at 100% with Composite
+1920.100.Component = java.awt.Menu
+1920.100.Composite = CH.ifa.draw.util.CommandMenu
+
+# Micro-architecture 1921 similar at 100% with Composite
+1921.100.Component = java.util.Enumeration
+1921.100.Composite = CH.ifa.draw.standard.FigureEnumerator
+
+# Micro-architecture 1922 similar at 100% with Composite
+1922.100.Component = java.util.EventObject
+1922.100.Composite = CH.ifa.draw.framework.DrawingChangeEvent
+
+# Micro-architecture 1923 similar at 100% with Composite
+1923.100.Component = java.util.EventObject
+1923.100.Composite = CH.ifa.draw.framework.FigureChangeEvent
+
+# Micro-architecture 1924 similar at 100% with Composite
+1924.100.Component = CH.ifa.draw.standard.StandardDrawing
+1924.100.Leaf = CH.ifa.draw.samples.javadraw.BouncingDrawing
+1924.100.Composite = CH.ifa.draw.samples.javadraw.BouncingDrawing
+
+# Micro-architecture 1925 similar at 100% with Composite
+1925.100.Component = CH.ifa.draw.figures.TextFigure
+1925.100.Leaf = CH.ifa.draw.samples.net.NodeFigure
+1925.100.Composite = CH.ifa.draw.samples.net.NodeFigure
+
+# Micro-architecture 1926 similar at 100% with Composite
+1926.100.Component = CH.ifa.draw.figures.TextFigure
+1926.100.Leaf = CH.ifa.draw.figures.NumberTextFigure
+1926.100.Composite = CH.ifa.draw.samples.net.NodeFigure
+
+# Micro-architecture 1927 similar at 100% with Composite
+1927.100.Component = CH.ifa.draw.figures.TextFigure
+1927.100.Leaf = CH.ifa.draw.samples.net.NodeFigure
+1927.100.Composite = CH.ifa.draw.figures.NumberTextFigure
+
+# Micro-architecture 1928 similar at 100% with Composite
+1928.100.Component = CH.ifa.draw.figures.TextFigure
+1928.100.Leaf = CH.ifa.draw.figures.NumberTextFigure
+1928.100.Composite = CH.ifa.draw.figures.NumberTextFigure
+
+# Micro-architecture 1929 similar at 100% with Composite
+1929.100.Component = CH.ifa.draw.application.DrawApplication
+1929.100.Leaf = CH.ifa.draw.samples.net.NetApp
+1929.100.Composite = CH.ifa.draw.samples.net.NetApp
+
+# Micro-architecture 1930 similar at 100% with Composite
+1930.100.Component = CH.ifa.draw.application.DrawApplication
+1930.100.Leaf = CH.ifa.draw.samples.nothing.NothingApp
+1930.100.Composite = CH.ifa.draw.samples.net.NetApp
+
+# Micro-architecture 1931 similar at 100% with Composite
+1931.100.Component = CH.ifa.draw.application.DrawApplication
+1931.100.Leaf = CH.ifa.draw.samples.pert.PertApplication
+1931.100.Composite = CH.ifa.draw.samples.net.NetApp
+
+# Micro-architecture 1932 similar at 100% with Composite
+1932.100.Component = CH.ifa.draw.application.DrawApplication
+1932.100.Leaf = CH.ifa.draw.samples.net.NetApp
+1932.100.Composite = CH.ifa.draw.samples.javadraw.JavaDrawApp
+
+# Micro-architecture 1933 similar at 100% with Composite
+1933.100.Component = CH.ifa.draw.application.DrawApplication
+1933.100.Leaf = CH.ifa.draw.samples.nothing.NothingApp
+1933.100.Composite = CH.ifa.draw.samples.javadraw.JavaDrawApp
+
+# Micro-architecture 1934 similar at 100% with Composite
+1934.100.Component = CH.ifa.draw.application.DrawApplication
+1934.100.Leaf = CH.ifa.draw.samples.pert.PertApplication
+1934.100.Composite = CH.ifa.draw.samples.javadraw.JavaDrawApp
+
+# Micro-architecture 1935 similar at 100% with Composite
+1935.100.Component = CH.ifa.draw.application.DrawApplication
+1935.100.Leaf = CH.ifa.draw.samples.net.NetApp
+1935.100.Composite = CH.ifa.draw.samples.nothing.NothingApp
+
+# Micro-architecture 1936 similar at 100% with Composite
+1936.100.Component = CH.ifa.draw.application.DrawApplication
+1936.100.Leaf = CH.ifa.draw.samples.nothing.NothingApp
+1936.100.Composite = CH.ifa.draw.samples.nothing.NothingApp
+
+# Micro-architecture 1937 similar at 100% with Composite
+1937.100.Component = CH.ifa.draw.application.DrawApplication
+1937.100.Leaf = CH.ifa.draw.samples.pert.PertApplication
+1937.100.Composite = CH.ifa.draw.samples.nothing.NothingApp
+
+# Micro-architecture 1938 similar at 100% with Composite
+1938.100.Component = CH.ifa.draw.application.DrawApplication
+1938.100.Leaf = CH.ifa.draw.samples.net.NetApp
+1938.100.Composite = CH.ifa.draw.samples.pert.PertApplication
+
+# Micro-architecture 1939 similar at 100% with Composite
+1939.100.Component = CH.ifa.draw.application.DrawApplication
+1939.100.Leaf = CH.ifa.draw.samples.nothing.NothingApp
+1939.100.Composite = CH.ifa.draw.samples.pert.PertApplication
+
+# Micro-architecture 1940 similar at 100% with Composite
+1940.100.Component = CH.ifa.draw.application.DrawApplication
+1940.100.Leaf = CH.ifa.draw.samples.pert.PertApplication
+1940.100.Composite = CH.ifa.draw.samples.pert.PertApplication
+
+# Micro-architecture 1941 similar at 100% with Composite
+1941.100.Component = CH.ifa.draw.figures.PolyLineFigure
+1941.100.Leaf = CH.ifa.draw.figures.LineFigure
+1941.100.Composite = CH.ifa.draw.figures.LineFigure
+
+# Micro-architecture 1942 similar at 100% with Composite
+1942.100.Component = CH.ifa.draw.figures.PolyLineFigure
+1942.100.Leaf = CH.ifa.draw.figures.LineFigure
+1942.100.Composite = CH.ifa.draw.samples.pert.PertDependency
+
+# Micro-architecture 1943 similar at 100% with Composite
+1943.100.Component = CH.ifa.draw.figures.PolyLineFigure
+1943.100.Leaf = CH.ifa.draw.figures.LineFigure
+1943.100.Composite = CH.ifa.draw.figures.ElbowConnection
+
+# Micro-architecture 1944 similar at 100% with Composite
+1944.100.Component = CH.ifa.draw.figures.PolyLineFigure
+1944.100.Leaf = CH.ifa.draw.figures.LineFigure
+1944.100.Composite = CH.ifa.draw.figures.LineConnection
+
+# Micro-architecture 1945 similar at 100% with Composite
+1945.100.Component = CH.ifa.draw.applet.DrawApplet
+1945.100.Leaf = CH.ifa.draw.samples.pert.PertApplet
+1945.100.Composite = CH.ifa.draw.samples.javadraw.JavaDrawApplet
+
+# Micro-architecture 1946 similar at 100% with Composite
+1946.100.Component = CH.ifa.draw.applet.DrawApplet
+1946.100.Leaf = CH.ifa.draw.samples.nothing.NothingApplet
+1946.100.Composite = CH.ifa.draw.samples.javadraw.JavaDrawApplet
+
+# Micro-architecture 1947 similar at 100% with Composite
+1947.100.Component = CH.ifa.draw.applet.DrawApplet
+1947.100.Leaf = CH.ifa.draw.samples.pert.PertApplet
+1947.100.Composite = CH.ifa.draw.samples.pert.PertApplet
+
+# Micro-architecture 1948 similar at 100% with Composite
+1948.100.Component = CH.ifa.draw.applet.DrawApplet
+1948.100.Leaf = CH.ifa.draw.samples.nothing.NothingApplet
+1948.100.Composite = CH.ifa.draw.samples.pert.PertApplet
+
+# Micro-architecture 1949 similar at 100% with Composite
+1949.100.Component = CH.ifa.draw.applet.DrawApplet
+1949.100.Leaf = CH.ifa.draw.samples.pert.PertApplet
+1949.100.Composite = CH.ifa.draw.samples.nothing.NothingApplet
+
+# Micro-architecture 1950 similar at 100% with Composite
+1950.100.Component = CH.ifa.draw.applet.DrawApplet
+1950.100.Leaf = CH.ifa.draw.samples.nothing.NothingApplet
+1950.100.Composite = CH.ifa.draw.samples.nothing.NothingApplet
+
+# Micro-architecture 1951 similar at 100% with Composite
+1951.100.Component = CH.ifa.draw.figures.LineConnection
+1951.100.Leaf = CH.ifa.draw.samples.pert.PertDependency
+1951.100.Composite = CH.ifa.draw.samples.pert.PertDependency
+
+# Micro-architecture 1952 similar at 100% with Composite
+1952.100.Component = CH.ifa.draw.figures.LineConnection
+1952.100.Leaf = CH.ifa.draw.figures.ElbowConnection
+1952.100.Composite = CH.ifa.draw.samples.pert.PertDependency
+
+# Micro-architecture 1953 similar at 100% with Composite
+1953.100.Component = CH.ifa.draw.figures.LineConnection
+1953.100.Leaf = CH.ifa.draw.samples.pert.PertDependency
+1953.100.Composite = CH.ifa.draw.figures.ElbowConnection
+
+# Micro-architecture 1954 similar at 100% with Composite
+1954.100.Component = CH.ifa.draw.figures.LineConnection
+1954.100.Leaf = CH.ifa.draw.figures.ElbowConnection
+1954.100.Composite = CH.ifa.draw.figures.ElbowConnection
+
+# Micro-architecture 1955 similar at 100% with Composite
+1955.100.Component = CH.ifa.draw.figures.RectangleFigure
+1955.100.Leaf = CH.ifa.draw.contrib.DiamondFigure
+1955.100.Composite = CH.ifa.draw.contrib.DiamondFigure
+
+# Micro-architecture 1956 similar at 100% with Composite
+1956.100.Component = CH.ifa.draw.figures.RectangleFigure
+1956.100.Leaf = CH.ifa.draw.contrib.TriangleFigure
+1956.100.Composite = CH.ifa.draw.contrib.DiamondFigure
+
+# Micro-architecture 1957 similar at 100% with Composite
+1957.100.Component = CH.ifa.draw.figures.RectangleFigure
+1957.100.Leaf = CH.ifa.draw.contrib.DiamondFigure
+1957.100.Composite = CH.ifa.draw.contrib.TriangleFigure
+
+# Micro-architecture 1958 similar at 100% with Composite
+1958.100.Component = CH.ifa.draw.figures.RectangleFigure
+1958.100.Leaf = CH.ifa.draw.contrib.TriangleFigure
+1958.100.Composite = CH.ifa.draw.contrib.TriangleFigure
+

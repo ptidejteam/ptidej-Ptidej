@@ -158,7 +158,7 @@ this.manager.addTag(jct.test.rsc.snpsht.serializer.verfilesystem.VerFsCommonStri
 if(this.existChild(rev, jct.test.rsc.snpsht.serializer.verfilesystem.VerFsCommonStrings.FILE_REV_UPDATE_TIME_MAKER)) 
 {
 attr = jct.test.rsc.snpsht.serializer.verfilesystem.VerFsCommonStrings.XML2ASCII(xpath.evaluate(jct.test.rsc.snpsht.serializer.verfilesystem.VerFsCommonStrings.FILE_REV_UPDATE_TIME_MAKER + "/" + jct.test.rsc.snpsht.serializer.verfilesystem.VerFsCommonStrings.FILE_REV_TIME_MAKER, rev));
-this.manager.setUpdateTime(new java.util.Date(new java.lang.Long(attr)), fileRev);
+this.manager.setUpdateTime(new java.util.Date(java.lang.Long.valueOf(attr)), fileRev);
 
 }
 attr = jct.test.rsc.snpsht.serializer.verfilesystem.VerFsCommonStrings.XML2PATH(xpath.evaluate(jct.test.rsc.snpsht.serializer.verfilesystem.VerFsCommonStrings.FILE_REV_FILE_LOCATION_MAKER, rev));

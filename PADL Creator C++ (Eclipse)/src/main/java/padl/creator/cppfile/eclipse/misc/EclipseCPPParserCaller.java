@@ -14,7 +14,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.net.URISyntaxException;
 import java.nio.charset.Charset;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -74,6 +76,7 @@ public final class EclipseCPPParserCaller {
 		}
 		catch (final IOException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			throw new RuntimeException(e);
 		}
 	}
 
@@ -283,27 +286,27 @@ public final class EclipseCPPParserCaller {
 		// I make things as relative as possible...
 		String pathToCurrentWorkspace;
 		try {
-			final File path = new File(this.getClass().getProtectionDomain()
-					.getCodeSource().getLocation().getPath());
+			final File path = Paths.get(this.getClass().getProtectionDomain()
+					.getCodeSource().getLocation().toURI()).toFile();
 			if (path.isDirectory()) {
 				pathToCurrentWorkspace = new File(
 						Files.getClassPath(EclipseCPPParserCaller.class)
-								+ "../../")
+								+ "../../../")
 						.getCanonicalPath();
 			}
 			else if (path.isFile() && path.getName().endsWith(".jar")) {
-
 				pathToCurrentWorkspace = path.getParentFile()
 						.getCanonicalPath();
 			}
 			else {
-				return null;
+				throw new RuntimeException(
+						"Path " + path + " is neither a file nor a directory");
 			}
 			return pathToCurrentWorkspace.replace('\\', '/') + '/';
 		}
-		catch (final IOException e) {
+		catch (final IOException | URISyntaxException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
-			return null;
+			throw new RuntimeException(e);
 		}
 	}
 

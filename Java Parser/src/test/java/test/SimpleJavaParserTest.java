@@ -13,6 +13,7 @@ package test;
 import java.util.Arrays;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import parser.input.SourceInputsHolder;
 import parser.input.impl.FileSystemJavaProject;
@@ -20,19 +21,18 @@ import parser.wrapper.JavaParser;
 import parser.wrapper.NamedCompilationUnit;
 
 public class SimpleJavaParserTest extends TestCase {
-    public void testParse() throws Exception {
-        final String[] classpathEntries = new String[]{""};
-        final String[] sourcepathEntries =
-                new String[]{"src/test/resources/NestingClasses/src"};
+	public void testParse() throws Exception {
+		final String[] classpathEntries = new String[] { "" };
+		final String[] sourcepathEntries = new String[] {
+				"../Java Parser/target/test-classes/NestingClasses/src" };
 
-        final SourceInputsHolder javaProject =
-                new FileSystemJavaProject(
-                        Arrays.asList(classpathEntries),
-                        Arrays.asList(sourcepathEntries));
+		final SourceInputsHolder javaProject = new FileSystemJavaProject(
+				Arrays.asList(classpathEntries),
+				Arrays.asList(sourcepathEntries));
 
-        final NamedCompilationUnit[] namedCompilationUnits =
-                new JavaParser(javaProject).parse();
+		final NamedCompilationUnit[] namedCompilationUnits = new JavaParser(
+				javaProject).parse();
 
-        Assert.assertEquals("JavaParserTest", namedCompilationUnits.length, 3);
-    }
+		Assert.assertEquals("JavaParserTest", namedCompilationUnits.length, 3);
+	}
 }

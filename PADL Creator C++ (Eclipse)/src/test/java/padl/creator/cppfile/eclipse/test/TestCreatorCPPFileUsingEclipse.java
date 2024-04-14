@@ -17,7 +17,7 @@ import padl.creator.cppfile.eclipse.test.big.QMakeTest;
 import padl.creator.cppfile.eclipse.test.simple.ClassesTest;
 import padl.creator.cppfile.eclipse.test.simple.FieldAccessTest;
 import padl.creator.cppfile.eclipse.test.simple.GetOrCreateTest;
-import padl.creator.cppfile.eclipse.test.simple.SimpleTest;
+import padl.creator.cppfile.eclipse.test.simple.Simple1Test;
 import padl.creator.cppfile.eclipse.test.simple.Simple2Test;
 import padl.creator.cppfile.eclipse.test.simple.Simple3Test;
 import padl.creator.cppfile.eclipse.test.simple.StructuresTest;
@@ -43,7 +43,7 @@ public final class TestCreatorCPPFileUsingEclipse extends TestSuite {
 
 		suite.addTestSuite(ClassesTest.class);
 		suite.addTestSuite(FieldAccessTest.class);
-		suite.addTestSuite(SimpleTest.class);
+		suite.addTestSuite(Simple1Test.class);
 		suite.addTestSuite(GetOrCreateTest.class);
 		suite.addTestSuite(Simple2Test.class);
 		suite.addTestSuite(Simple3Test.class);

@@ -37,7 +37,7 @@ public class Comments
     public void foo() {} 
 
     /*
-     * Comment 6
+     * Comment 4
      * <init>
      */
     public Comments() {}

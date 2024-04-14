@@ -86,6 +86,8 @@ class JCTCompilationUnit extends JCTSourceCodePart<IJCTSourceCodePart>
 
 	/**
 	 * List of comments of this compilation unit
+	 * TODO Remove because it shadows the instance variable
+	 * comments defined in its superclass JCTSourceCodePart
 	 */
 	private final List<IJCTComment> comments = this.createInternalList();
 

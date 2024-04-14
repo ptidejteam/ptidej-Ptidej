@@ -29,25 +29,25 @@ import jct.test.rsc.snpsht.utils.FSUtils;
 public class CVSRevMLCheckOut {
 	private CVSRoot cvsRoot;
 	private Runtime rt = Runtime.getRuntime();
-	private File tempDir;
+	private File tmpDir;
 
 	public CVSRevMLCheckOut(CVSRoot cvsRoot) {
 		this.cvsRoot = cvsRoot;
-		getAndFlushTempDir();
+		getAndFlushtmpDir();
 	}
 
-	private File getAndFlushTempDir() {
-		this.tempDir =
+	private File getAndFlushtmpDir() {
+		this.tmpDir =
 			new File(System.getProperty("java.io.tmpdir"), "tmp_dir_revML_co_"
 					+ this.hashCode());
 
-		if (this.tempDir.exists()) {
-			FSUtils.rmDir(this.tempDir);
+		if (this.tmpDir.exists()) {
+			FSUtils.rmDir(this.tmpDir);
 		}
 
-		this.tempDir.mkdirs();
+		this.tmpDir.mkdirs();
 
-		return this.tempDir;
+		return this.tmpDir;
 	}
 
 	/**
@@ -75,7 +75,7 @@ public class CVSRevMLCheckOut {
 		if (targetFile.isDirectory())
 			throw new IllegalArgumentException("Target file is a diretory");
 
-		getAndFlushTempDir();
+		getAndFlushtmpDir();
 
 		// Trim '/' of repository first char
 		if (module.startsWith("/")) {

@@ -1,0 +1,3001 @@
+String Creation Time:142
+--------------------------------------------------
+
+NONE
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:12
+Number of Solutions Without Ghosts:12
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 15465 similar at 100% with Composite
+15465.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15465.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+15465.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15466 similar at 100% with Composite
+15466.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15466.100.Leaf = CH.ifa.draw.figures.TextFigure
+15466.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15467 similar at 100% with Composite
+15467.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15467.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+15467.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15468 similar at 100% with Composite
+15468.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15468.100.Leaf = CH.ifa.draw.standard.FigureChangeEventMulticaster
+15468.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15469 similar at 100% with Composite
+15469.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15469.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.Drawing
+15469.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15470 similar at 100% with Composite
+15470.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15470.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+15470.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15471 similar at 100% with Composite
+15471.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15471.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+15471.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15472 similar at 100% with Composite
+15472.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15472.100.Leaf = CH.ifa.draw.figures.TextFigure
+15472.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15473 similar at 100% with Composite
+15473.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15473.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+15473.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15474 similar at 100% with Composite
+15474.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15474.100.Leaf = CH.ifa.draw.standard.FigureChangeEventMulticaster
+15474.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15475 similar at 100% with Composite
+15475.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15475.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.Drawing
+15475.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15476 similar at 100% with Composite
+15476.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15476.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+15476.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+---------------------------------------------
+2
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+4
+Solution Computation Time:2
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2
+Solution Computation Time:3
+Number of Solutions With and Without Ghosts:103
+Number of Solutions Without Ghosts:103
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 15562 similar at 100% with Composite
+15562.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.DrawingChangeListener
+15562.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.DrawingView
+15562.100.Composite = CH.ifa.draw.standard.StandardDrawingView
+
+# Micro-architecture 15563 similar at 100% with Composite
+15563.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.DrawingChangeListener
+15563.100.Leaf = CH.ifa.draw.standard.StandardDrawingView
+15563.100.Composite = CH.ifa.draw.standard.StandardDrawingView
+
+# Micro-architecture 15564 similar at 100% with Composite
+15564.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Locator
+15564.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractLocator
+15564.100.Composite = CH.ifa.draw.standard.OffsetLocator
+
+# Micro-architecture 15565 similar at 100% with Composite
+15565.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Locator
+15565.100.Leaf = CH.ifa.draw.figures.PolyLineLocator
+15565.100.Composite = CH.ifa.draw.standard.OffsetLocator
+
+# Micro-architecture 15566 similar at 100% with Composite
+15566.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Locator
+15566.100.Leaf = CH.ifa.draw.standard.OffsetLocator
+15566.100.Composite = CH.ifa.draw.standard.OffsetLocator
+
+# Micro-architecture 15567 similar at 100% with Composite
+15567.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Locator
+15567.100.Leaf = CH.ifa.draw.figures.ElbowTextLocator
+15567.100.Composite = CH.ifa.draw.standard.OffsetLocator
+
+# Micro-architecture 15568 similar at 100% with Composite
+15568.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Locator
+15568.100.Leaf = CH.ifa.draw.standard.RelativeLocator
+15568.100.Composite = CH.ifa.draw.standard.OffsetLocator
+
+# Micro-architecture 15569 similar at 100% with Composite
+15569.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15569.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+15569.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15570 similar at 100% with Composite
+15570.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15570.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+15570.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15571 similar at 100% with Composite
+15571.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15571.100.Leaf = CH.ifa.draw.figures.GroupFigure
+15571.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15572 similar at 100% with Composite
+15572.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15572.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+15572.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15573 similar at 100% with Composite
+15573.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15573.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+15573.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15574 similar at 100% with Composite
+15574.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15574.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+15574.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15575 similar at 100% with Composite
+15575.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15575.100.Leaf = CH.ifa.draw.figures.LineConnection
+15575.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15576 similar at 100% with Composite
+15576.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15576.100.Leaf = CH.ifa.draw.figures.TextFigure
+15576.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15577 similar at 100% with Composite
+15577.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15577.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+15577.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15578 similar at 100% with Composite
+15578.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15578.100.Leaf = CH.ifa.draw.standard.FigureChangeEventMulticaster
+15578.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15579 similar at 100% with Composite
+15579.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15579.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.Drawing
+15579.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15580 similar at 100% with Composite
+15580.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15580.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+15580.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15581 similar at 100% with Composite
+15581.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15581.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+15581.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15582 similar at 100% with Composite
+15582.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15582.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+15582.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15583 similar at 100% with Composite
+15583.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15583.100.Leaf = CH.ifa.draw.figures.GroupFigure
+15583.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15584 similar at 100% with Composite
+15584.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15584.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+15584.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15585 similar at 100% with Composite
+15585.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15585.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+15585.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15586 similar at 100% with Composite
+15586.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15586.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+15586.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15587 similar at 100% with Composite
+15587.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15587.100.Leaf = CH.ifa.draw.figures.LineConnection
+15587.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15588 similar at 100% with Composite
+15588.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15588.100.Leaf = CH.ifa.draw.figures.TextFigure
+15588.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15589 similar at 100% with Composite
+15589.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15589.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+15589.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15590 similar at 100% with Composite
+15590.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15590.100.Leaf = CH.ifa.draw.standard.FigureChangeEventMulticaster
+15590.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15591 similar at 100% with Composite
+15591.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15591.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.Drawing
+15591.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15592 similar at 100% with Composite
+15592.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15592.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+15592.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15593 similar at 100% with Composite
+15593.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15593.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+15593.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15594 similar at 100% with Composite
+15594.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15594.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+15594.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15595 similar at 100% with Composite
+15595.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15595.100.Leaf = CH.ifa.draw.figures.GroupFigure
+15595.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15596 similar at 100% with Composite
+15596.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15596.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+15596.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15597 similar at 100% with Composite
+15597.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15597.100.Leaf = CH.ifa.draw.figures.RectangleFigure
+15597.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15598 similar at 100% with Composite
+15598.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15598.100.Leaf = CH.ifa.draw.figures.RoundRectangleFigure
+15598.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15599 similar at 100% with Composite
+15599.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15599.100.Leaf = CH.ifa.draw.figures.ImageFigure
+15599.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15600 similar at 100% with Composite
+15600.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15600.100.Leaf = CH.ifa.draw.figures.TextFigure
+15600.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15601 similar at 100% with Composite
+15601.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15601.100.Leaf = CH.ifa.draw.figures.EllipseFigure
+15601.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15602 similar at 100% with Composite
+15602.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15602.100.Leaf = CH.ifa.draw.contrib.PolygonFigure
+15602.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15603 similar at 100% with Composite
+15603.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15603.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+15603.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15604 similar at 100% with Composite
+15604.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15604.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+15604.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15605 similar at 100% with Composite
+15605.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15605.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+15605.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15606 similar at 100% with Composite
+15606.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15606.100.Leaf = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+15606.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15607 similar at 100% with Composite
+15607.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15607.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+15607.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15608 similar at 100% with Composite
+15608.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15608.100.Leaf = CH.ifa.draw.figures.PolyLineFigure
+15608.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15609 similar at 100% with Composite
+15609.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15609.100.Leaf = CH.ifa.draw.figures.LineConnection
+15609.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15610 similar at 100% with Composite
+15610.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15610.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+15610.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15611 similar at 100% with Composite
+15611.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15611.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+15611.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15612 similar at 100% with Composite
+15612.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15612.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+15612.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15613 similar at 100% with Composite
+15613.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15613.100.Leaf = CH.ifa.draw.figures.GroupFigure
+15613.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15614 similar at 100% with Composite
+15614.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15614.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+15614.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15615 similar at 100% with Composite
+15615.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15615.100.Leaf = CH.ifa.draw.figures.RectangleFigure
+15615.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15616 similar at 100% with Composite
+15616.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15616.100.Leaf = CH.ifa.draw.figures.RoundRectangleFigure
+15616.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15617 similar at 100% with Composite
+15617.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15617.100.Leaf = CH.ifa.draw.figures.ImageFigure
+15617.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15618 similar at 100% with Composite
+15618.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15618.100.Leaf = CH.ifa.draw.figures.TextFigure
+15618.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15619 similar at 100% with Composite
+15619.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15619.100.Leaf = CH.ifa.draw.figures.EllipseFigure
+15619.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15620 similar at 100% with Composite
+15620.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15620.100.Leaf = CH.ifa.draw.contrib.PolygonFigure
+15620.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15621 similar at 100% with Composite
+15621.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15621.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+15621.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15622 similar at 100% with Composite
+15622.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15622.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+15622.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15623 similar at 100% with Composite
+15623.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15623.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+15623.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15624 similar at 100% with Composite
+15624.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15624.100.Leaf = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+15624.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15625 similar at 100% with Composite
+15625.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15625.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+15625.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15626 similar at 100% with Composite
+15626.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15626.100.Leaf = CH.ifa.draw.figures.PolyLineFigure
+15626.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15627 similar at 100% with Composite
+15627.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15627.100.Leaf = CH.ifa.draw.figures.LineConnection
+15627.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15628 similar at 100% with Composite
+15628.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15628.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+15628.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15629 similar at 100% with Composite
+15629.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15629.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+15629.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15630 similar at 100% with Composite
+15630.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15630.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+15630.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15631 similar at 100% with Composite
+15631.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15631.100.Leaf = CH.ifa.draw.figures.GroupFigure
+15631.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15632 similar at 100% with Composite
+15632.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15632.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+15632.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15633 similar at 100% with Composite
+15633.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15633.100.Leaf = CH.ifa.draw.figures.RectangleFigure
+15633.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15634 similar at 100% with Composite
+15634.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15634.100.Leaf = CH.ifa.draw.figures.RoundRectangleFigure
+15634.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15635 similar at 100% with Composite
+15635.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15635.100.Leaf = CH.ifa.draw.figures.ImageFigure
+15635.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15636 similar at 100% with Composite
+15636.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15636.100.Leaf = CH.ifa.draw.figures.TextFigure
+15636.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15637 similar at 100% with Composite
+15637.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15637.100.Leaf = CH.ifa.draw.figures.EllipseFigure
+15637.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15638 similar at 100% with Composite
+15638.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15638.100.Leaf = CH.ifa.draw.contrib.PolygonFigure
+15638.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15639 similar at 100% with Composite
+15639.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15639.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+15639.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15640 similar at 100% with Composite
+15640.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15640.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+15640.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15641 similar at 100% with Composite
+15641.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15641.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+15641.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15642 similar at 100% with Composite
+15642.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15642.100.Leaf = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+15642.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15643 similar at 100% with Composite
+15643.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15643.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+15643.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15644 similar at 100% with Composite
+15644.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15644.100.Leaf = CH.ifa.draw.figures.PolyLineFigure
+15644.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15645 similar at 100% with Composite
+15645.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15645.100.Leaf = CH.ifa.draw.figures.LineConnection
+15645.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15646 similar at 100% with Composite
+15646.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15646.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+15646.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 15647 similar at 100% with Composite
+15647.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15647.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+15647.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15648 similar at 100% with Composite
+15648.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15648.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+15648.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15649 similar at 100% with Composite
+15649.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15649.100.Leaf = CH.ifa.draw.figures.GroupFigure
+15649.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15650 similar at 100% with Composite
+15650.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15650.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+15650.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15651 similar at 100% with Composite
+15651.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15651.100.Leaf = CH.ifa.draw.figures.RectangleFigure
+15651.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15652 similar at 100% with Composite
+15652.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15652.100.Leaf = CH.ifa.draw.figures.RoundRectangleFigure
+15652.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15653 similar at 100% with Composite
+15653.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15653.100.Leaf = CH.ifa.draw.figures.ImageFigure
+15653.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15654 similar at 100% with Composite
+15654.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15654.100.Leaf = CH.ifa.draw.figures.TextFigure
+15654.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15655 similar at 100% with Composite
+15655.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15655.100.Leaf = CH.ifa.draw.figures.EllipseFigure
+15655.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15656 similar at 100% with Composite
+15656.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15656.100.Leaf = CH.ifa.draw.contrib.PolygonFigure
+15656.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15657 similar at 100% with Composite
+15657.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15657.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+15657.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15658 similar at 100% with Composite
+15658.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15658.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+15658.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15659 similar at 100% with Composite
+15659.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15659.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+15659.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15660 similar at 100% with Composite
+15660.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15660.100.Leaf = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+15660.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15661 similar at 100% with Composite
+15661.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15661.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+15661.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15662 similar at 100% with Composite
+15662.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15662.100.Leaf = CH.ifa.draw.figures.PolyLineFigure
+15662.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15663 similar at 100% with Composite
+15663.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15663.100.Leaf = CH.ifa.draw.figures.LineConnection
+15663.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 15664 similar at 100% with Composite
+15664.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+15664.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+15664.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+---------------------------------------------
+1 and 3
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:39
+Number of Solutions Without Ghosts:12
+Number of Solutions With Ghosts:27
+
+
+# Micro-architecture 15859 similar at 100% with Composite
+15859.100.Component = java.lang.Object
+15859.100.Leaf = CH.ifa.draw.figures.FigureAttributes
+15859.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15860 similar at 100% with Composite
+15860.100.Component = java.lang.Object
+15860.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractConnector
+15860.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15861 similar at 100% with Composite
+15861.100.Component = java.lang.Object
+15861.100.Leaf = CH.ifa.draw.util.Clipboard
+15861.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15862 similar at 100% with Composite
+15862.100.Component = java.lang.Object
+15862.100.Leaf = CH.ifa.draw.util.Geom
+15862.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15863 similar at 100% with Composite
+15863.100.Component = java.lang.Object
+15863.100.Leaf = CH.ifa.draw.samples.javadraw.PatternPainter
+15863.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15864 similar at 100% with Composite
+15864.100.Component = java.lang.Object
+15864.100.Leaf = CH.ifa.draw.standard.BufferedUpdateStrategy
+15864.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15865 similar at 100% with Composite
+15865.100.Component = java.lang.Object
+15865.100.Leaf = CH.ifa.draw.util.ColorMap
+15865.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15866 similar at 100% with Composite
+15866.100.Component = java.lang.Object
+15866.100.Leaf = CH.ifa.draw.util.StorableInput
+15866.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15867 similar at 100% with Composite
+15867.100.Component = java.lang.Object
+15867.100.Leaf = CH.ifa.draw.framework.FigureSelection
+15867.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15868 similar at 100% with Composite
+15868.100.Component = java.lang.Object
+15868.100.Leaf = CH.ifa.draw.util.ReverseVectorEnumerator
+15868.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15869 similar at 100% with Composite
+15869.100.Component = java.lang.Object
+15869.100.Leaf = CH.ifa.draw.standard.ReverseFigureEnumerator
+15869.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15870 similar at 100% with Composite
+15870.100.Component = java.lang.Object
+15870.100.Leaf = CH.ifa.draw.standard.AbstractTool
+15870.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15871 similar at 100% with Composite
+15871.100.Component = java.lang.Object
+15871.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+15871.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15872 similar at 100% with Composite
+15872.100.Component = java.lang.Object
+15872.100.Leaf = CH.ifa.draw.standard.BoxHandleKit
+15872.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15873 similar at 100% with Composite
+15873.100.Component = java.lang.Object
+15873.100.Leaf = CH.ifa.draw.standard.FigureEnumerator
+15873.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15874 similar at 100% with Composite
+15874.100.Component = java.lang.Object
+15874.100.Leaf = CH.ifa.draw.figures.ArrowTip
+15874.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15875 similar at 100% with Composite
+15875.100.Component = java.lang.Object
+15875.100.Leaf = CH.ifa.draw.util.PaletteIcon
+15875.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15876 similar at 100% with Composite
+15876.100.Component = java.lang.Object
+15876.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractLocator
+15876.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15877 similar at 100% with Composite
+15877.100.Component = java.lang.Object
+15877.100.Leaf = CH.ifa.draw.standard.GridConstrainer
+15877.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15878 similar at 100% with Composite
+15878.100.Component = java.lang.Object
+15878.100.Leaf = CH.ifa.draw.util.PaletteLayout
+15878.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15879 similar at 100% with Composite
+15879.100.Component = java.lang.Object
+15879.100.Leaf = CH.ifa.draw.util.ColorEntry
+15879.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15880 similar at 100% with Composite
+15880.100.Component = java.lang.Object
+15880.100.Leaf = CH.ifa.draw.util.FloatingTextField
+15880.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15881 similar at 100% with Composite
+15881.100.Component = java.lang.Object
+15881.100.Leaf = CH.ifa.draw.standard.SimpleUpdateStrategy
+15881.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15882 similar at 100% with Composite
+15882.100.Component = java.lang.Object
+15882.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+15882.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15883 similar at 100% with Composite
+15883.100.Component = java.lang.Object
+15883.100.Leaf = EPI_Abstract_CH.ifa.draw.util.Command
+15883.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15884 similar at 100% with Composite
+15884.100.Component = java.lang.Object
+15884.100.Leaf = CH.ifa.draw.util.Iconkit
+15884.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15885 similar at 100% with Composite
+15885.100.Component = java.lang.Object
+15885.100.Leaf = CH.ifa.draw.util.StorableOutput
+15885.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 15886 similar at 100% with Composite
+15886.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15886.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+15886.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15887 similar at 100% with Composite
+15887.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15887.100.Leaf = CH.ifa.draw.figures.TextFigure
+15887.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15888 similar at 100% with Composite
+15888.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15888.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+15888.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15889 similar at 100% with Composite
+15889.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15889.100.Leaf = CH.ifa.draw.standard.FigureChangeEventMulticaster
+15889.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15890 similar at 100% with Composite
+15890.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15890.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.Drawing
+15890.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15891 similar at 100% with Composite
+15891.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15891.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+15891.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15892 similar at 100% with Composite
+15892.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15892.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+15892.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15893 similar at 100% with Composite
+15893.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15893.100.Leaf = CH.ifa.draw.figures.TextFigure
+15893.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15894 similar at 100% with Composite
+15894.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15894.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+15894.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15895 similar at 100% with Composite
+15895.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15895.100.Leaf = CH.ifa.draw.standard.FigureChangeEventMulticaster
+15895.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15896 similar at 100% with Composite
+15896.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15896.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.Drawing
+15896.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 15897 similar at 100% with Composite
+15897.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15897.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+15897.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+---------------------------------------------
+1 and 4
+Solution Computation Time:3
+Number of Solutions With and Without Ghosts:2
+Number of Solutions Without Ghosts:2
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 15972 similar at 100% with Composite
+15972.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15972.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 15973 similar at 100% with Composite
+15973.100.EPI_Abstract_Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+15973.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+---------------------------------------------
+2 and 3
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 4
+Solution Computation Time:2
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3 and 4
+Solution Computation Time:2
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2 and 3
+Solution Computation Time:5333
+Number of Solutions With and Without Ghosts:413
+Number of Solutions Without Ghosts:162
+Number of Solutions With Ghosts:251
+
+
+# Micro-architecture 39672 similar at 100% with Composite
+39672.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39672.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+39672.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39673 similar at 100% with Composite
+39673.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39673.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+39673.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39674 similar at 100% with Composite
+39674.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39674.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+39674.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39675 similar at 100% with Composite
+39675.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39675.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+39675.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39676 similar at 100% with Composite
+39676.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39676.100.Leaf = CH.ifa.draw.figures.GroupFigure
+39676.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39677 similar at 100% with Composite
+39677.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39677.100.Leaf = CH.ifa.draw.figures.GroupFigure
+39677.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39678 similar at 100% with Composite
+39678.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39678.100.Leaf = CH.ifa.draw.samples.javadraw.BouncingDrawing
+39678.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39679 similar at 100% with Composite
+39679.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39679.100.Leaf = CH.ifa.draw.samples.javadraw.BouncingDrawing
+39679.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39680 similar at 100% with Composite
+39680.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39680.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+39680.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39681 similar at 100% with Composite
+39681.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39681.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+39681.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39682 similar at 100% with Composite
+39682.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39682.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+39682.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39683 similar at 100% with Composite
+39683.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39683.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+39683.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39684 similar at 100% with Composite
+39684.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39684.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+39684.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39685 similar at 100% with Composite
+39685.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39685.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+39685.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39686 similar at 100% with Composite
+39686.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39686.100.Leaf = CH.ifa.draw.figures.NumberTextFigure
+39686.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39687 similar at 100% with Composite
+39687.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39687.100.Leaf = CH.ifa.draw.figures.NumberTextFigure
+39687.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39688 similar at 100% with Composite
+39688.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39688.100.Leaf = CH.ifa.draw.samples.net.NodeFigure
+39688.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39689 similar at 100% with Composite
+39689.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39689.100.Leaf = CH.ifa.draw.samples.net.NodeFigure
+39689.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39690 similar at 100% with Composite
+39690.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39690.100.Leaf = CH.ifa.draw.figures.ElbowConnection
+39690.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39691 similar at 100% with Composite
+39691.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39691.100.Leaf = CH.ifa.draw.figures.ElbowConnection
+39691.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39692 similar at 100% with Composite
+39692.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39692.100.Leaf = CH.ifa.draw.samples.pert.PertDependency
+39692.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39693 similar at 100% with Composite
+39693.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39693.100.Leaf = CH.ifa.draw.samples.pert.PertDependency
+39693.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39694 similar at 100% with Composite
+39694.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39694.100.Leaf = CH.ifa.draw.figures.LineConnection
+39694.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39695 similar at 100% with Composite
+39695.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39695.100.Leaf = CH.ifa.draw.figures.LineConnection
+39695.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39696 similar at 100% with Composite
+39696.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39696.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+39696.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39697 similar at 100% with Composite
+39697.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39697.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+39697.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39698 similar at 100% with Composite
+39698.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39698.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+39698.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39699 similar at 100% with Composite
+39699.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39699.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+39699.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39700 similar at 100% with Composite
+39700.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39700.100.Leaf = CH.ifa.draw.samples.javadraw.BouncingDrawing
+39700.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39701 similar at 100% with Composite
+39701.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39701.100.Leaf = CH.ifa.draw.samples.javadraw.BouncingDrawing
+39701.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39702 similar at 100% with Composite
+39702.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39702.100.Leaf = CH.ifa.draw.samples.javadraw.BouncingDrawing
+39702.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39703 similar at 100% with Composite
+39703.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39703.100.Leaf = CH.ifa.draw.samples.javadraw.BouncingDrawing
+39703.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39704 similar at 100% with Composite
+39704.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39704.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+39704.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39705 similar at 100% with Composite
+39705.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39705.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+39705.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39706 similar at 100% with Composite
+39706.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39706.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+39706.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39707 similar at 100% with Composite
+39707.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39707.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+39707.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39708 similar at 100% with Composite
+39708.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39708.100.Leaf = CH.ifa.draw.figures.GroupFigure
+39708.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39709 similar at 100% with Composite
+39709.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39709.100.Leaf = CH.ifa.draw.figures.GroupFigure
+39709.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39710 similar at 100% with Composite
+39710.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39710.100.Leaf = CH.ifa.draw.figures.GroupFigure
+39710.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39711 similar at 100% with Composite
+39711.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39711.100.Leaf = CH.ifa.draw.figures.GroupFigure
+39711.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39712 similar at 100% with Composite
+39712.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39712.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+39712.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39713 similar at 100% with Composite
+39713.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39713.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+39713.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39714 similar at 100% with Composite
+39714.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39714.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+39714.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39715 similar at 100% with Composite
+39715.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39715.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+39715.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39716 similar at 100% with Composite
+39716.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39716.100.Leaf = CH.ifa.draw.contrib.TriangleFigure
+39716.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39717 similar at 100% with Composite
+39717.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39717.100.Leaf = CH.ifa.draw.contrib.TriangleFigure
+39717.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39718 similar at 100% with Composite
+39718.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39718.100.Leaf = CH.ifa.draw.contrib.TriangleFigure
+39718.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39719 similar at 100% with Composite
+39719.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39719.100.Leaf = CH.ifa.draw.contrib.TriangleFigure
+39719.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39720 similar at 100% with Composite
+39720.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39720.100.Leaf = CH.ifa.draw.contrib.DiamondFigure
+39720.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39721 similar at 100% with Composite
+39721.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39721.100.Leaf = CH.ifa.draw.contrib.DiamondFigure
+39721.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39722 similar at 100% with Composite
+39722.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39722.100.Leaf = CH.ifa.draw.contrib.DiamondFigure
+39722.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39723 similar at 100% with Composite
+39723.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39723.100.Leaf = CH.ifa.draw.contrib.DiamondFigure
+39723.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39724 similar at 100% with Composite
+39724.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39724.100.Leaf = CH.ifa.draw.figures.NumberTextFigure
+39724.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39725 similar at 100% with Composite
+39725.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39725.100.Leaf = CH.ifa.draw.figures.NumberTextFigure
+39725.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39726 similar at 100% with Composite
+39726.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39726.100.Leaf = CH.ifa.draw.figures.NumberTextFigure
+39726.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39727 similar at 100% with Composite
+39727.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39727.100.Leaf = CH.ifa.draw.figures.NumberTextFigure
+39727.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39728 similar at 100% with Composite
+39728.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39728.100.Leaf = CH.ifa.draw.samples.net.NodeFigure
+39728.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39729 similar at 100% with Composite
+39729.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39729.100.Leaf = CH.ifa.draw.samples.net.NodeFigure
+39729.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39730 similar at 100% with Composite
+39730.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39730.100.Leaf = CH.ifa.draw.samples.net.NodeFigure
+39730.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39731 similar at 100% with Composite
+39731.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39731.100.Leaf = CH.ifa.draw.samples.net.NodeFigure
+39731.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39732 similar at 100% with Composite
+39732.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39732.100.Leaf = CH.ifa.draw.figures.RectangleFigure
+39732.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39733 similar at 100% with Composite
+39733.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39733.100.Leaf = CH.ifa.draw.figures.RectangleFigure
+39733.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39734 similar at 100% with Composite
+39734.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39734.100.Leaf = CH.ifa.draw.figures.RectangleFigure
+39734.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39735 similar at 100% with Composite
+39735.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39735.100.Leaf = CH.ifa.draw.figures.RectangleFigure
+39735.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39736 similar at 100% with Composite
+39736.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39736.100.Leaf = CH.ifa.draw.figures.RoundRectangleFigure
+39736.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39737 similar at 100% with Composite
+39737.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39737.100.Leaf = CH.ifa.draw.figures.RoundRectangleFigure
+39737.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39738 similar at 100% with Composite
+39738.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39738.100.Leaf = CH.ifa.draw.figures.RoundRectangleFigure
+39738.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39739 similar at 100% with Composite
+39739.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39739.100.Leaf = CH.ifa.draw.figures.RoundRectangleFigure
+39739.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39740 similar at 100% with Composite
+39740.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39740.100.Leaf = CH.ifa.draw.figures.ImageFigure
+39740.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39741 similar at 100% with Composite
+39741.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39741.100.Leaf = CH.ifa.draw.figures.ImageFigure
+39741.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39742 similar at 100% with Composite
+39742.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39742.100.Leaf = CH.ifa.draw.figures.ImageFigure
+39742.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39743 similar at 100% with Composite
+39743.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39743.100.Leaf = CH.ifa.draw.figures.ImageFigure
+39743.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39744 similar at 100% with Composite
+39744.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39744.100.Leaf = CH.ifa.draw.figures.TextFigure
+39744.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39745 similar at 100% with Composite
+39745.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39745.100.Leaf = CH.ifa.draw.figures.TextFigure
+39745.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39746 similar at 100% with Composite
+39746.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39746.100.Leaf = CH.ifa.draw.figures.TextFigure
+39746.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39747 similar at 100% with Composite
+39747.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39747.100.Leaf = CH.ifa.draw.figures.TextFigure
+39747.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39748 similar at 100% with Composite
+39748.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39748.100.Leaf = CH.ifa.draw.figures.EllipseFigure
+39748.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39749 similar at 100% with Composite
+39749.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39749.100.Leaf = CH.ifa.draw.figures.EllipseFigure
+39749.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39750 similar at 100% with Composite
+39750.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39750.100.Leaf = CH.ifa.draw.figures.EllipseFigure
+39750.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39751 similar at 100% with Composite
+39751.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39751.100.Leaf = CH.ifa.draw.figures.EllipseFigure
+39751.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39752 similar at 100% with Composite
+39752.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39752.100.Leaf = CH.ifa.draw.contrib.PolygonFigure
+39752.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39753 similar at 100% with Composite
+39753.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39753.100.Leaf = CH.ifa.draw.contrib.PolygonFigure
+39753.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39754 similar at 100% with Composite
+39754.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39754.100.Leaf = CH.ifa.draw.contrib.PolygonFigure
+39754.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39755 similar at 100% with Composite
+39755.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39755.100.Leaf = CH.ifa.draw.contrib.PolygonFigure
+39755.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39756 similar at 100% with Composite
+39756.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39756.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+39756.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39757 similar at 100% with Composite
+39757.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39757.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+39757.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39758 similar at 100% with Composite
+39758.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39758.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+39758.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39759 similar at 100% with Composite
+39759.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39759.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+39759.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39760 similar at 100% with Composite
+39760.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39760.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+39760.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39761 similar at 100% with Composite
+39761.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39761.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+39761.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39762 similar at 100% with Composite
+39762.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39762.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+39762.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39763 similar at 100% with Composite
+39763.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39763.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+39763.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39764 similar at 100% with Composite
+39764.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39764.100.Leaf = CH.ifa.draw.figures.LineFigure
+39764.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39765 similar at 100% with Composite
+39765.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39765.100.Leaf = CH.ifa.draw.figures.LineFigure
+39765.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39766 similar at 100% with Composite
+39766.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39766.100.Leaf = CH.ifa.draw.figures.LineFigure
+39766.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39767 similar at 100% with Composite
+39767.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39767.100.Leaf = CH.ifa.draw.figures.LineFigure
+39767.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39768 similar at 100% with Composite
+39768.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39768.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+39768.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39769 similar at 100% with Composite
+39769.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39769.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+39769.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39770 similar at 100% with Composite
+39770.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39770.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+39770.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39771 similar at 100% with Composite
+39771.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39771.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+39771.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39772 similar at 100% with Composite
+39772.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39772.100.Leaf = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+39772.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39773 similar at 100% with Composite
+39773.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39773.100.Leaf = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+39773.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39774 similar at 100% with Composite
+39774.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39774.100.Leaf = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+39774.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39775 similar at 100% with Composite
+39775.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39775.100.Leaf = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+39775.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39776 similar at 100% with Composite
+39776.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39776.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+39776.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39777 similar at 100% with Composite
+39777.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39777.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+39777.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39778 similar at 100% with Composite
+39778.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39778.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+39778.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39779 similar at 100% with Composite
+39779.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39779.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+39779.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39780 similar at 100% with Composite
+39780.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39780.100.Leaf = CH.ifa.draw.figures.PolyLineFigure
+39780.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39781 similar at 100% with Composite
+39781.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39781.100.Leaf = CH.ifa.draw.figures.PolyLineFigure
+39781.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39782 similar at 100% with Composite
+39782.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39782.100.Leaf = CH.ifa.draw.figures.PolyLineFigure
+39782.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39783 similar at 100% with Composite
+39783.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39783.100.Leaf = CH.ifa.draw.figures.PolyLineFigure
+39783.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39784 similar at 100% with Composite
+39784.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39784.100.Leaf = CH.ifa.draw.figures.ElbowConnection
+39784.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39785 similar at 100% with Composite
+39785.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39785.100.Leaf = CH.ifa.draw.figures.ElbowConnection
+39785.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39786 similar at 100% with Composite
+39786.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39786.100.Leaf = CH.ifa.draw.figures.ElbowConnection
+39786.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39787 similar at 100% with Composite
+39787.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39787.100.Leaf = CH.ifa.draw.figures.ElbowConnection
+39787.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39788 similar at 100% with Composite
+39788.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39788.100.Leaf = CH.ifa.draw.samples.pert.PertDependency
+39788.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39789 similar at 100% with Composite
+39789.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39789.100.Leaf = CH.ifa.draw.samples.pert.PertDependency
+39789.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39790 similar at 100% with Composite
+39790.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39790.100.Leaf = CH.ifa.draw.samples.pert.PertDependency
+39790.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39791 similar at 100% with Composite
+39791.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39791.100.Leaf = CH.ifa.draw.samples.pert.PertDependency
+39791.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39792 similar at 100% with Composite
+39792.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39792.100.Leaf = CH.ifa.draw.figures.LineConnection
+39792.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39793 similar at 100% with Composite
+39793.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39793.100.Leaf = CH.ifa.draw.figures.LineConnection
+39793.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 39794 similar at 100% with Composite
+39794.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39794.100.Leaf = CH.ifa.draw.figures.LineConnection
+39794.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 39795 similar at 100% with Composite
+39795.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+39795.100.Leaf = CH.ifa.draw.figures.LineConnection
+39795.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39796 similar at 100% with Composite
+39796.100.Component = java.lang.Object
+39796.100.Leaf = CH.ifa.draw.figures.FigureAttributes
+39796.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39797 similar at 100% with Composite
+39797.100.Component = java.lang.Object
+39797.100.Leaf = CH.ifa.draw.figures.FigureAttributes
+39797.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39798 similar at 100% with Composite
+39798.100.Component = java.lang.Object
+39798.100.Leaf = CH.ifa.draw.figures.InsertImageCommand
+39798.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39799 similar at 100% with Composite
+39799.100.Component = java.lang.Object
+39799.100.Leaf = CH.ifa.draw.figures.InsertImageCommand
+39799.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39800 similar at 100% with Composite
+39800.100.Component = java.lang.Object
+39800.100.Leaf = CH.ifa.draw.figures.UngroupCommand
+39800.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39801 similar at 100% with Composite
+39801.100.Component = java.lang.Object
+39801.100.Leaf = CH.ifa.draw.figures.UngroupCommand
+39801.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39802 similar at 100% with Composite
+39802.100.Component = java.lang.Object
+39802.100.Leaf = CH.ifa.draw.standard.ChangeAttributeCommand
+39802.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39803 similar at 100% with Composite
+39803.100.Component = java.lang.Object
+39803.100.Leaf = CH.ifa.draw.standard.ChangeAttributeCommand
+39803.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39804 similar at 100% with Composite
+39804.100.Component = java.lang.Object
+39804.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.FigureTransferCommand
+39804.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39805 similar at 100% with Composite
+39805.100.Component = java.lang.Object
+39805.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.FigureTransferCommand
+39805.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39806 similar at 100% with Composite
+39806.100.Component = java.lang.Object
+39806.100.Leaf = CH.ifa.draw.standard.SendToBackCommand
+39806.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39807 similar at 100% with Composite
+39807.100.Component = java.lang.Object
+39807.100.Leaf = CH.ifa.draw.standard.SendToBackCommand
+39807.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39808 similar at 100% with Composite
+39808.100.Component = java.lang.Object
+39808.100.Leaf = CH.ifa.draw.standard.ToggleGridCommand
+39808.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39809 similar at 100% with Composite
+39809.100.Component = java.lang.Object
+39809.100.Leaf = CH.ifa.draw.standard.ToggleGridCommand
+39809.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39810 similar at 100% with Composite
+39810.100.Component = java.lang.Object
+39810.100.Leaf = CH.ifa.draw.figures.GroupCommand
+39810.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39811 similar at 100% with Composite
+39811.100.Component = java.lang.Object
+39811.100.Leaf = CH.ifa.draw.figures.GroupCommand
+39811.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39812 similar at 100% with Composite
+39812.100.Component = java.lang.Object
+39812.100.Leaf = CH.ifa.draw.standard.BringToFrontCommand
+39812.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39813 similar at 100% with Composite
+39813.100.Component = java.lang.Object
+39813.100.Leaf = CH.ifa.draw.standard.BringToFrontCommand
+39813.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39814 similar at 100% with Composite
+39814.100.Component = java.lang.Object
+39814.100.Leaf = CH.ifa.draw.standard.DuplicateCommand
+39814.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39815 similar at 100% with Composite
+39815.100.Component = java.lang.Object
+39815.100.Leaf = CH.ifa.draw.standard.DuplicateCommand
+39815.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39816 similar at 100% with Composite
+39816.100.Component = java.lang.Object
+39816.100.Leaf = CH.ifa.draw.standard.CutCommand
+39816.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39817 similar at 100% with Composite
+39817.100.Component = java.lang.Object
+39817.100.Leaf = CH.ifa.draw.standard.CutCommand
+39817.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39818 similar at 100% with Composite
+39818.100.Component = java.lang.Object
+39818.100.Leaf = CH.ifa.draw.standard.PasteCommand
+39818.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39819 similar at 100% with Composite
+39819.100.Component = java.lang.Object
+39819.100.Leaf = CH.ifa.draw.standard.PasteCommand
+39819.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39820 similar at 100% with Composite
+39820.100.Component = java.lang.Object
+39820.100.Leaf = CH.ifa.draw.standard.DeleteCommand
+39820.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39821 similar at 100% with Composite
+39821.100.Component = java.lang.Object
+39821.100.Leaf = CH.ifa.draw.standard.DeleteCommand
+39821.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39822 similar at 100% with Composite
+39822.100.Component = java.lang.Object
+39822.100.Leaf = CH.ifa.draw.standard.CopyCommand
+39822.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39823 similar at 100% with Composite
+39823.100.Component = java.lang.Object
+39823.100.Leaf = CH.ifa.draw.standard.CopyCommand
+39823.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39824 similar at 100% with Composite
+39824.100.Component = java.lang.Object
+39824.100.Leaf = CH.ifa.draw.standard.AlignCommand
+39824.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39825 similar at 100% with Composite
+39825.100.Component = java.lang.Object
+39825.100.Leaf = CH.ifa.draw.standard.AlignCommand
+39825.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39826 similar at 100% with Composite
+39826.100.Component = java.lang.Object
+39826.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+39826.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39827 similar at 100% with Composite
+39827.100.Component = java.lang.Object
+39827.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+39827.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39828 similar at 100% with Composite
+39828.100.Component = java.lang.Object
+39828.100.Leaf = CH.ifa.draw.figures.GroupFigure
+39828.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39829 similar at 100% with Composite
+39829.100.Component = java.lang.Object
+39829.100.Leaf = CH.ifa.draw.figures.GroupFigure
+39829.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39830 similar at 100% with Composite
+39830.100.Component = java.lang.Object
+39830.100.Leaf = CH.ifa.draw.samples.javadraw.BouncingDrawing
+39830.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39831 similar at 100% with Composite
+39831.100.Component = java.lang.Object
+39831.100.Leaf = CH.ifa.draw.samples.javadraw.BouncingDrawing
+39831.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39832 similar at 100% with Composite
+39832.100.Component = java.lang.Object
+39832.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+39832.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39833 similar at 100% with Composite
+39833.100.Component = java.lang.Object
+39833.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+39833.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39834 similar at 100% with Composite
+39834.100.Component = java.lang.Object
+39834.100.Leaf = CH.ifa.draw.figures.RectangleFigure
+39834.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39835 similar at 100% with Composite
+39835.100.Component = java.lang.Object
+39835.100.Leaf = CH.ifa.draw.figures.RectangleFigure
+39835.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39836 similar at 100% with Composite
+39836.100.Component = java.lang.Object
+39836.100.Leaf = CH.ifa.draw.figures.RoundRectangleFigure
+39836.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39837 similar at 100% with Composite
+39837.100.Component = java.lang.Object
+39837.100.Leaf = CH.ifa.draw.figures.RoundRectangleFigure
+39837.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39838 similar at 100% with Composite
+39838.100.Component = java.lang.Object
+39838.100.Leaf = CH.ifa.draw.figures.ImageFigure
+39838.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39839 similar at 100% with Composite
+39839.100.Component = java.lang.Object
+39839.100.Leaf = CH.ifa.draw.figures.ImageFigure
+39839.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39840 similar at 100% with Composite
+39840.100.Component = java.lang.Object
+39840.100.Leaf = CH.ifa.draw.figures.TextFigure
+39840.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39841 similar at 100% with Composite
+39841.100.Component = java.lang.Object
+39841.100.Leaf = CH.ifa.draw.figures.TextFigure
+39841.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39842 similar at 100% with Composite
+39842.100.Component = java.lang.Object
+39842.100.Leaf = CH.ifa.draw.figures.EllipseFigure
+39842.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39843 similar at 100% with Composite
+39843.100.Component = java.lang.Object
+39843.100.Leaf = CH.ifa.draw.figures.EllipseFigure
+39843.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39844 similar at 100% with Composite
+39844.100.Component = java.lang.Object
+39844.100.Leaf = CH.ifa.draw.samples.net.NodeFigure
+39844.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39845 similar at 100% with Composite
+39845.100.Component = java.lang.Object
+39845.100.Leaf = CH.ifa.draw.samples.net.NodeFigure
+39845.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39846 similar at 100% with Composite
+39846.100.Component = java.lang.Object
+39846.100.Leaf = CH.ifa.draw.figures.NumberTextFigure
+39846.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39847 similar at 100% with Composite
+39847.100.Component = java.lang.Object
+39847.100.Leaf = CH.ifa.draw.figures.NumberTextFigure
+39847.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39848 similar at 100% with Composite
+39848.100.Component = java.lang.Object
+39848.100.Leaf = CH.ifa.draw.contrib.DiamondFigure
+39848.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39849 similar at 100% with Composite
+39849.100.Component = java.lang.Object
+39849.100.Leaf = CH.ifa.draw.contrib.DiamondFigure
+39849.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39850 similar at 100% with Composite
+39850.100.Component = java.lang.Object
+39850.100.Leaf = CH.ifa.draw.contrib.TriangleFigure
+39850.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39851 similar at 100% with Composite
+39851.100.Component = java.lang.Object
+39851.100.Leaf = CH.ifa.draw.contrib.TriangleFigure
+39851.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39852 similar at 100% with Composite
+39852.100.Component = java.lang.Object
+39852.100.Leaf = CH.ifa.draw.contrib.PolygonFigure
+39852.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39853 similar at 100% with Composite
+39853.100.Component = java.lang.Object
+39853.100.Leaf = CH.ifa.draw.contrib.PolygonFigure
+39853.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39854 similar at 100% with Composite
+39854.100.Component = java.lang.Object
+39854.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+39854.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39855 similar at 100% with Composite
+39855.100.Component = java.lang.Object
+39855.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+39855.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39856 similar at 100% with Composite
+39856.100.Component = java.lang.Object
+39856.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+39856.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39857 similar at 100% with Composite
+39857.100.Component = java.lang.Object
+39857.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+39857.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39858 similar at 100% with Composite
+39858.100.Component = java.lang.Object
+39858.100.Leaf = CH.ifa.draw.figures.LineConnection
+39858.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39859 similar at 100% with Composite
+39859.100.Component = java.lang.Object
+39859.100.Leaf = CH.ifa.draw.figures.LineConnection
+39859.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39860 similar at 100% with Composite
+39860.100.Component = java.lang.Object
+39860.100.Leaf = CH.ifa.draw.samples.pert.PertDependency
+39860.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39861 similar at 100% with Composite
+39861.100.Component = java.lang.Object
+39861.100.Leaf = CH.ifa.draw.samples.pert.PertDependency
+39861.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39862 similar at 100% with Composite
+39862.100.Component = java.lang.Object
+39862.100.Leaf = CH.ifa.draw.figures.ElbowConnection
+39862.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39863 similar at 100% with Composite
+39863.100.Component = java.lang.Object
+39863.100.Leaf = CH.ifa.draw.figures.ElbowConnection
+39863.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39864 similar at 100% with Composite
+39864.100.Component = java.lang.Object
+39864.100.Leaf = CH.ifa.draw.figures.LineFigure
+39864.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39865 similar at 100% with Composite
+39865.100.Component = java.lang.Object
+39865.100.Leaf = CH.ifa.draw.figures.LineFigure
+39865.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39866 similar at 100% with Composite
+39866.100.Component = java.lang.Object
+39866.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+39866.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39867 similar at 100% with Composite
+39867.100.Component = java.lang.Object
+39867.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+39867.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39868 similar at 100% with Composite
+39868.100.Component = java.lang.Object
+39868.100.Leaf = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+39868.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39869 similar at 100% with Composite
+39869.100.Component = java.lang.Object
+39869.100.Leaf = EPI_Abstract_CH.ifa.draw.figures.AttributeFigure
+39869.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39870 similar at 100% with Composite
+39870.100.Component = java.lang.Object
+39870.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+39870.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39871 similar at 100% with Composite
+39871.100.Component = java.lang.Object
+39871.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+39871.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39872 similar at 100% with Composite
+39872.100.Component = java.lang.Object
+39872.100.Leaf = CH.ifa.draw.figures.PolyLineFigure
+39872.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39873 similar at 100% with Composite
+39873.100.Component = java.lang.Object
+39873.100.Leaf = CH.ifa.draw.figures.PolyLineFigure
+39873.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39874 similar at 100% with Composite
+39874.100.Component = java.lang.Object
+39874.100.Leaf = CH.ifa.draw.figures.PolyLineLocator
+39874.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39875 similar at 100% with Composite
+39875.100.Component = java.lang.Object
+39875.100.Leaf = CH.ifa.draw.figures.PolyLineLocator
+39875.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39876 similar at 100% with Composite
+39876.100.Component = java.lang.Object
+39876.100.Leaf = CH.ifa.draw.standard.OffsetLocator
+39876.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39877 similar at 100% with Composite
+39877.100.Component = java.lang.Object
+39877.100.Leaf = CH.ifa.draw.standard.OffsetLocator
+39877.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39878 similar at 100% with Composite
+39878.100.Component = java.lang.Object
+39878.100.Leaf = CH.ifa.draw.figures.ElbowTextLocator
+39878.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39879 similar at 100% with Composite
+39879.100.Component = java.lang.Object
+39879.100.Leaf = CH.ifa.draw.figures.ElbowTextLocator
+39879.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39880 similar at 100% with Composite
+39880.100.Component = java.lang.Object
+39880.100.Leaf = CH.ifa.draw.standard.RelativeLocator
+39880.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39881 similar at 100% with Composite
+39881.100.Component = java.lang.Object
+39881.100.Leaf = CH.ifa.draw.standard.RelativeLocator
+39881.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39882 similar at 100% with Composite
+39882.100.Component = java.lang.Object
+39882.100.Leaf = CH.ifa.draw.standard.ChangeConnectionEndHandle
+39882.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39883 similar at 100% with Composite
+39883.100.Component = java.lang.Object
+39883.100.Leaf = CH.ifa.draw.standard.ChangeConnectionEndHandle
+39883.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39884 similar at 100% with Composite
+39884.100.Component = java.lang.Object
+39884.100.Leaf = CH.ifa.draw.standard.ChangeConnectionStartHandle
+39884.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39885 similar at 100% with Composite
+39885.100.Component = java.lang.Object
+39885.100.Leaf = CH.ifa.draw.standard.ChangeConnectionStartHandle
+39885.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39886 similar at 100% with Composite
+39886.100.Component = java.lang.Object
+39886.100.Leaf = CH.ifa.draw.standard.EastHandle
+39886.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39887 similar at 100% with Composite
+39887.100.Component = java.lang.Object
+39887.100.Leaf = CH.ifa.draw.standard.EastHandle
+39887.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39888 similar at 100% with Composite
+39888.100.Component = java.lang.Object
+39888.100.Leaf = CH.ifa.draw.standard.SouthWestHandle
+39888.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39889 similar at 100% with Composite
+39889.100.Component = java.lang.Object
+39889.100.Leaf = CH.ifa.draw.standard.SouthWestHandle
+39889.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39890 similar at 100% with Composite
+39890.100.Component = java.lang.Object
+39890.100.Leaf = CH.ifa.draw.figures.PolyLineHandle
+39890.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39891 similar at 100% with Composite
+39891.100.Component = java.lang.Object
+39891.100.Leaf = CH.ifa.draw.figures.PolyLineHandle
+39891.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39892 similar at 100% with Composite
+39892.100.Component = java.lang.Object
+39892.100.Leaf = CH.ifa.draw.standard.SouthEastHandle
+39892.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39893 similar at 100% with Composite
+39893.100.Component = java.lang.Object
+39893.100.Leaf = CH.ifa.draw.standard.SouthEastHandle
+39893.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39894 similar at 100% with Composite
+39894.100.Component = java.lang.Object
+39894.100.Leaf = CH.ifa.draw.standard.SouthHandle
+39894.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39895 similar at 100% with Composite
+39895.100.Component = java.lang.Object
+39895.100.Leaf = CH.ifa.draw.standard.SouthHandle
+39895.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39896 similar at 100% with Composite
+39896.100.Component = java.lang.Object
+39896.100.Leaf = CH.ifa.draw.standard.ConnectionHandle
+39896.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39897 similar at 100% with Composite
+39897.100.Component = java.lang.Object
+39897.100.Leaf = CH.ifa.draw.standard.ConnectionHandle
+39897.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39898 similar at 100% with Composite
+39898.100.Component = java.lang.Object
+39898.100.Leaf = CH.ifa.draw.standard.NullHandle
+39898.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39899 similar at 100% with Composite
+39899.100.Component = java.lang.Object
+39899.100.Leaf = CH.ifa.draw.standard.NullHandle
+39899.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39900 similar at 100% with Composite
+39900.100.Component = java.lang.Object
+39900.100.Leaf = CH.ifa.draw.standard.NorthHandle
+39900.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39901 similar at 100% with Composite
+39901.100.Component = java.lang.Object
+39901.100.Leaf = CH.ifa.draw.standard.NorthHandle
+39901.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39902 similar at 100% with Composite
+39902.100.Component = java.lang.Object
+39902.100.Leaf = CH.ifa.draw.standard.NorthWestHandle
+39902.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39903 similar at 100% with Composite
+39903.100.Component = java.lang.Object
+39903.100.Leaf = CH.ifa.draw.standard.NorthWestHandle
+39903.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39904 similar at 100% with Composite
+39904.100.Component = java.lang.Object
+39904.100.Leaf = CH.ifa.draw.figures.FontSizeHandle
+39904.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39905 similar at 100% with Composite
+39905.100.Component = java.lang.Object
+39905.100.Leaf = CH.ifa.draw.figures.FontSizeHandle
+39905.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39906 similar at 100% with Composite
+39906.100.Component = java.lang.Object
+39906.100.Leaf = CH.ifa.draw.standard.NorthEastHandle
+39906.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39907 similar at 100% with Composite
+39907.100.Component = java.lang.Object
+39907.100.Leaf = CH.ifa.draw.standard.NorthEastHandle
+39907.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39908 similar at 100% with Composite
+39908.100.Component = java.lang.Object
+39908.100.Leaf = CH.ifa.draw.figures.GroupHandle
+39908.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39909 similar at 100% with Composite
+39909.100.Component = java.lang.Object
+39909.100.Leaf = CH.ifa.draw.figures.GroupHandle
+39909.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39910 similar at 100% with Composite
+39910.100.Component = java.lang.Object
+39910.100.Leaf = CH.ifa.draw.standard.WestHandle
+39910.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39911 similar at 100% with Composite
+39911.100.Component = java.lang.Object
+39911.100.Leaf = CH.ifa.draw.standard.WestHandle
+39911.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39912 similar at 100% with Composite
+39912.100.Component = java.lang.Object
+39912.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.ChangeConnectionHandle
+39912.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39913 similar at 100% with Composite
+39913.100.Component = java.lang.Object
+39913.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.ChangeConnectionHandle
+39913.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39914 similar at 100% with Composite
+39914.100.Component = java.lang.Object
+39914.100.Leaf = CH.ifa.draw.contrib.PolygonScaleHandle
+39914.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39915 similar at 100% with Composite
+39915.100.Component = java.lang.Object
+39915.100.Leaf = CH.ifa.draw.contrib.PolygonScaleHandle
+39915.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39916 similar at 100% with Composite
+39916.100.Component = java.lang.Object
+39916.100.Leaf = CH.ifa.draw.figures.ElbowHandle
+39916.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39917 similar at 100% with Composite
+39917.100.Component = java.lang.Object
+39917.100.Leaf = CH.ifa.draw.figures.ElbowHandle
+39917.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39918 similar at 100% with Composite
+39918.100.Component = java.lang.Object
+39918.100.Leaf = CH.ifa.draw.figures.RadiusHandle
+39918.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39919 similar at 100% with Composite
+39919.100.Component = java.lang.Object
+39919.100.Leaf = CH.ifa.draw.figures.RadiusHandle
+39919.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39920 similar at 100% with Composite
+39920.100.Component = java.lang.Object
+39920.100.Leaf = CH.ifa.draw.contrib.PolygonHandle
+39920.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39921 similar at 100% with Composite
+39921.100.Component = java.lang.Object
+39921.100.Leaf = CH.ifa.draw.contrib.PolygonHandle
+39921.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39922 similar at 100% with Composite
+39922.100.Component = java.lang.Object
+39922.100.Leaf = CH.ifa.draw.contrib.TriangleRotationHandle
+39922.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39923 similar at 100% with Composite
+39923.100.Component = java.lang.Object
+39923.100.Leaf = CH.ifa.draw.contrib.TriangleRotationHandle
+39923.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39924 similar at 100% with Composite
+39924.100.Component = java.lang.Object
+39924.100.Leaf = CH.ifa.draw.standard.LocatorHandle
+39924.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39925 similar at 100% with Composite
+39925.100.Component = java.lang.Object
+39925.100.Leaf = CH.ifa.draw.standard.LocatorHandle
+39925.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39926 similar at 100% with Composite
+39926.100.Component = java.lang.Object
+39926.100.Leaf = CH.ifa.draw.figures.BorderTool
+39926.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39927 similar at 100% with Composite
+39927.100.Component = java.lang.Object
+39927.100.Leaf = CH.ifa.draw.figures.BorderTool
+39927.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39928 similar at 100% with Composite
+39928.100.Component = java.lang.Object
+39928.100.Leaf = CH.ifa.draw.figures.ConnectedTextTool
+39928.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39929 similar at 100% with Composite
+39929.100.Component = java.lang.Object
+39929.100.Leaf = CH.ifa.draw.figures.ConnectedTextTool
+39929.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39930 similar at 100% with Composite
+39930.100.Component = java.lang.Object
+39930.100.Leaf = CH.ifa.draw.figures.TextTool
+39930.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39931 similar at 100% with Composite
+39931.100.Component = java.lang.Object
+39931.100.Leaf = CH.ifa.draw.figures.TextTool
+39931.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39932 similar at 100% with Composite
+39932.100.Component = java.lang.Object
+39932.100.Leaf = CH.ifa.draw.samples.pert.PertFigureCreationTool
+39932.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39933 similar at 100% with Composite
+39933.100.Component = java.lang.Object
+39933.100.Leaf = CH.ifa.draw.samples.pert.PertFigureCreationTool
+39933.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39934 similar at 100% with Composite
+39934.100.Component = java.lang.Object
+39934.100.Leaf = CH.ifa.draw.samples.javadraw.MySelectionTool
+39934.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39935 similar at 100% with Composite
+39935.100.Component = java.lang.Object
+39935.100.Leaf = CH.ifa.draw.samples.javadraw.MySelectionTool
+39935.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39936 similar at 100% with Composite
+39936.100.Component = java.lang.Object
+39936.100.Leaf = CH.ifa.draw.figures.ScribbleTool
+39936.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39937 similar at 100% with Composite
+39937.100.Component = java.lang.Object
+39937.100.Leaf = CH.ifa.draw.figures.ScribbleTool
+39937.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39938 similar at 100% with Composite
+39938.100.Component = java.lang.Object
+39938.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.ActionTool
+39938.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39939 similar at 100% with Composite
+39939.100.Component = java.lang.Object
+39939.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.ActionTool
+39939.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39940 similar at 100% with Composite
+39940.100.Component = java.lang.Object
+39940.100.Leaf = CH.ifa.draw.standard.CreationTool
+39940.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39941 similar at 100% with Composite
+39941.100.Component = java.lang.Object
+39941.100.Leaf = CH.ifa.draw.standard.CreationTool
+39941.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39942 similar at 100% with Composite
+39942.100.Component = java.lang.Object
+39942.100.Leaf = CH.ifa.draw.standard.ConnectionTool
+39942.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39943 similar at 100% with Composite
+39943.100.Component = java.lang.Object
+39943.100.Leaf = CH.ifa.draw.standard.ConnectionTool
+39943.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39944 similar at 100% with Composite
+39944.100.Component = java.lang.Object
+39944.100.Leaf = CH.ifa.draw.samples.javadraw.FollowURLTool
+39944.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39945 similar at 100% with Composite
+39945.100.Component = java.lang.Object
+39945.100.Leaf = CH.ifa.draw.samples.javadraw.FollowURLTool
+39945.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39946 similar at 100% with Composite
+39946.100.Component = java.lang.Object
+39946.100.Leaf = CH.ifa.draw.contrib.PolygonTool
+39946.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39947 similar at 100% with Composite
+39947.100.Component = java.lang.Object
+39947.100.Leaf = CH.ifa.draw.contrib.PolygonTool
+39947.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39948 similar at 100% with Composite
+39948.100.Component = java.lang.Object
+39948.100.Leaf = CH.ifa.draw.standard.SelectionTool
+39948.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39949 similar at 100% with Composite
+39949.100.Component = java.lang.Object
+39949.100.Leaf = CH.ifa.draw.standard.SelectionTool
+39949.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39950 similar at 100% with Composite
+39950.100.Component = java.lang.Object
+39950.100.Leaf = CH.ifa.draw.standard.DragTracker
+39950.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39951 similar at 100% with Composite
+39951.100.Component = java.lang.Object
+39951.100.Leaf = CH.ifa.draw.standard.DragTracker
+39951.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39952 similar at 100% with Composite
+39952.100.Component = java.lang.Object
+39952.100.Leaf = CH.ifa.draw.samples.javadraw.URLTool
+39952.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39953 similar at 100% with Composite
+39953.100.Component = java.lang.Object
+39953.100.Leaf = CH.ifa.draw.samples.javadraw.URLTool
+39953.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39954 similar at 100% with Composite
+39954.100.Component = java.lang.Object
+39954.100.Leaf = CH.ifa.draw.standard.HandleTracker
+39954.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39955 similar at 100% with Composite
+39955.100.Component = java.lang.Object
+39955.100.Leaf = CH.ifa.draw.standard.HandleTracker
+39955.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39956 similar at 100% with Composite
+39956.100.Component = java.lang.Object
+39956.100.Leaf = CH.ifa.draw.standard.SelectAreaTracker
+39956.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39957 similar at 100% with Composite
+39957.100.Component = java.lang.Object
+39957.100.Leaf = CH.ifa.draw.standard.SelectAreaTracker
+39957.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39958 similar at 100% with Composite
+39958.100.Component = java.lang.Object
+39958.100.Leaf = CH.ifa.draw.standard.LocatorConnector
+39958.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39959 similar at 100% with Composite
+39959.100.Component = java.lang.Object
+39959.100.Leaf = CH.ifa.draw.standard.LocatorConnector
+39959.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39960 similar at 100% with Composite
+39960.100.Component = java.lang.Object
+39960.100.Leaf = CH.ifa.draw.standard.ChopBoxConnector
+39960.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39961 similar at 100% with Composite
+39961.100.Component = java.lang.Object
+39961.100.Leaf = CH.ifa.draw.standard.ChopBoxConnector
+39961.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39962 similar at 100% with Composite
+39962.100.Component = java.lang.Object
+39962.100.Leaf = CH.ifa.draw.figures.PolyLineConnector
+39962.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39963 similar at 100% with Composite
+39963.100.Component = java.lang.Object
+39963.100.Leaf = CH.ifa.draw.figures.PolyLineConnector
+39963.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39964 similar at 100% with Composite
+39964.100.Component = java.lang.Object
+39964.100.Leaf = CH.ifa.draw.figures.ChopEllipseConnector
+39964.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39965 similar at 100% with Composite
+39965.100.Component = java.lang.Object
+39965.100.Leaf = CH.ifa.draw.figures.ChopEllipseConnector
+39965.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39966 similar at 100% with Composite
+39966.100.Component = java.lang.Object
+39966.100.Leaf = CH.ifa.draw.contrib.ChopPolygonConnector
+39966.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39967 similar at 100% with Composite
+39967.100.Component = java.lang.Object
+39967.100.Leaf = CH.ifa.draw.contrib.ChopPolygonConnector
+39967.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39968 similar at 100% with Composite
+39968.100.Component = java.lang.Object
+39968.100.Leaf = CH.ifa.draw.figures.ShortestDistanceConnector
+39968.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39969 similar at 100% with Composite
+39969.100.Component = java.lang.Object
+39969.100.Leaf = CH.ifa.draw.figures.ShortestDistanceConnector
+39969.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39970 similar at 100% with Composite
+39970.100.Component = java.lang.Object
+39970.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractConnector
+39970.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39971 similar at 100% with Composite
+39971.100.Component = java.lang.Object
+39971.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractConnector
+39971.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39972 similar at 100% with Composite
+39972.100.Component = java.lang.Object
+39972.100.Leaf = CH.ifa.draw.util.Clipboard
+39972.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39973 similar at 100% with Composite
+39973.100.Component = java.lang.Object
+39973.100.Leaf = CH.ifa.draw.util.Clipboard
+39973.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39974 similar at 100% with Composite
+39974.100.Component = java.lang.Object
+39974.100.Leaf = CH.ifa.draw.util.Geom
+39974.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39975 similar at 100% with Composite
+39975.100.Component = java.lang.Object
+39975.100.Leaf = CH.ifa.draw.util.Geom
+39975.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39976 similar at 100% with Composite
+39976.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39976.100.Leaf = CH.ifa.draw.figures.TextFigure
+39976.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 39977 similar at 100% with Composite
+39977.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+39977.100.Leaf = CH.ifa.draw.figures.TextFigure
+39977.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 39978 similar at 100% with Composite
+39978.100.Component = java.lang.Object
+39978.100.Leaf = CH.ifa.draw.samples.javadraw.PatternPainter
+39978.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39979 similar at 100% with Composite
+39979.100.Component = java.lang.Object
+39979.100.Leaf = CH.ifa.draw.samples.javadraw.PatternPainter
+39979.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39980 similar at 100% with Composite
+39980.100.Component = java.lang.Object
+39980.100.Leaf = CH.ifa.draw.standard.BufferedUpdateStrategy
+39980.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39981 similar at 100% with Composite
+39981.100.Component = java.lang.Object
+39981.100.Leaf = CH.ifa.draw.standard.BufferedUpdateStrategy
+39981.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39982 similar at 100% with Composite
+39982.100.Component = java.lang.Object
+39982.100.Leaf = CH.ifa.draw.util.ColorMap
+39982.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39983 similar at 100% with Composite
+39983.100.Component = java.lang.Object
+39983.100.Leaf = CH.ifa.draw.util.ColorMap
+39983.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39984 similar at 100% with Composite
+39984.100.Component = java.lang.Object
+39984.100.Leaf = CH.ifa.draw.util.StorableInput
+39984.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39985 similar at 100% with Composite
+39985.100.Component = java.lang.Object
+39985.100.Leaf = CH.ifa.draw.util.StorableInput
+39985.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39986 similar at 100% with Composite
+39986.100.Component = java.lang.Object
+39986.100.Leaf = CH.ifa.draw.framework.FigureSelection
+39986.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39987 similar at 100% with Composite
+39987.100.Component = java.lang.Object
+39987.100.Leaf = CH.ifa.draw.framework.FigureSelection
+39987.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39988 similar at 100% with Composite
+39988.100.Component = java.lang.Object
+39988.100.Leaf = CH.ifa.draw.util.ReverseVectorEnumerator
+39988.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39989 similar at 100% with Composite
+39989.100.Component = java.lang.Object
+39989.100.Leaf = CH.ifa.draw.util.ReverseVectorEnumerator
+39989.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39990 similar at 100% with Composite
+39990.100.Component = java.util.Enumeration
+39990.100.Leaf = CH.ifa.draw.util.ReverseVectorEnumerator
+39990.100.Composite = CH.ifa.draw.standard.FigureEnumerator
+
+# Micro-architecture 39991 similar at 100% with Composite
+39991.100.Component = java.util.Enumeration
+39991.100.Leaf = CH.ifa.draw.standard.FigureEnumerator
+39991.100.Composite = CH.ifa.draw.standard.FigureEnumerator
+
+# Micro-architecture 39992 similar at 100% with Composite
+39992.100.Component = java.util.Enumeration
+39992.100.Leaf = CH.ifa.draw.standard.ReverseFigureEnumerator
+39992.100.Composite = CH.ifa.draw.standard.FigureEnumerator
+
+# Micro-architecture 39993 similar at 100% with Composite
+39993.100.Component = java.lang.Object
+39993.100.Leaf = CH.ifa.draw.standard.ReverseFigureEnumerator
+39993.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39994 similar at 100% with Composite
+39994.100.Component = java.lang.Object
+39994.100.Leaf = CH.ifa.draw.standard.ReverseFigureEnumerator
+39994.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39995 similar at 100% with Composite
+39995.100.Component = java.lang.Object
+39995.100.Leaf = CH.ifa.draw.standard.AbstractTool
+39995.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 39996 similar at 100% with Composite
+39996.100.Component = java.lang.Object
+39996.100.Leaf = CH.ifa.draw.standard.AbstractTool
+39996.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 39997 similar at 100% with Composite
+39997.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+39997.100.Leaf = CH.ifa.draw.standard.AbstractTool
+39997.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 39998 similar at 100% with Composite
+39998.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+39998.100.Leaf = CH.ifa.draw.figures.ScribbleTool
+39998.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 39999 similar at 100% with Composite
+39999.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+39999.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.ActionTool
+39999.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40000 similar at 100% with Composite
+40000.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40000.100.Leaf = CH.ifa.draw.standard.CreationTool
+40000.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40001 similar at 100% with Composite
+40001.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40001.100.Leaf = CH.ifa.draw.standard.ConnectionTool
+40001.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40002 similar at 100% with Composite
+40002.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40002.100.Leaf = CH.ifa.draw.samples.javadraw.FollowURLTool
+40002.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40003 similar at 100% with Composite
+40003.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40003.100.Leaf = CH.ifa.draw.contrib.PolygonTool
+40003.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40004 similar at 100% with Composite
+40004.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40004.100.Leaf = CH.ifa.draw.standard.SelectionTool
+40004.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40005 similar at 100% with Composite
+40005.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40005.100.Leaf = CH.ifa.draw.standard.DragTracker
+40005.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40006 similar at 100% with Composite
+40006.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40006.100.Leaf = CH.ifa.draw.samples.javadraw.URLTool
+40006.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40007 similar at 100% with Composite
+40007.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40007.100.Leaf = CH.ifa.draw.standard.HandleTracker
+40007.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40008 similar at 100% with Composite
+40008.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40008.100.Leaf = CH.ifa.draw.samples.javadraw.MySelectionTool
+40008.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40009 similar at 100% with Composite
+40009.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40009.100.Leaf = CH.ifa.draw.samples.pert.PertFigureCreationTool
+40009.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40010 similar at 100% with Composite
+40010.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40010.100.Leaf = CH.ifa.draw.figures.TextTool
+40010.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40011 similar at 100% with Composite
+40011.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40011.100.Leaf = CH.ifa.draw.figures.ConnectedTextTool
+40011.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40012 similar at 100% with Composite
+40012.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40012.100.Leaf = CH.ifa.draw.figures.BorderTool
+40012.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40013 similar at 100% with Composite
+40013.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40013.100.Leaf = CH.ifa.draw.standard.SelectAreaTracker
+40013.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40014 similar at 100% with Composite
+40014.100.Component = java.lang.Object
+40014.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+40014.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40015 similar at 100% with Composite
+40015.100.Component = java.lang.Object
+40015.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractHandle
+40015.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40016 similar at 100% with Composite
+40016.100.Component = java.lang.Object
+40016.100.Leaf = CH.ifa.draw.standard.BoxHandleKit
+40016.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40017 similar at 100% with Composite
+40017.100.Component = java.lang.Object
+40017.100.Leaf = CH.ifa.draw.standard.BoxHandleKit
+40017.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40018 similar at 100% with Composite
+40018.100.Component = java.lang.Object
+40018.100.Leaf = CH.ifa.draw.standard.FigureEnumerator
+40018.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40019 similar at 100% with Composite
+40019.100.Component = java.lang.Object
+40019.100.Leaf = CH.ifa.draw.standard.FigureEnumerator
+40019.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40020 similar at 100% with Composite
+40020.100.Component = java.util.EventListener
+40020.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.DrawingChangeListener
+40020.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40021 similar at 100% with Composite
+40021.100.Component = java.util.EventListener
+40021.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+40021.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40022 similar at 100% with Composite
+40022.100.Component = java.util.EventListener
+40022.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.Drawing
+40022.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40023 similar at 100% with Composite
+40023.100.Component = java.util.EventListener
+40023.100.Leaf = CH.ifa.draw.standard.FigureChangeEventMulticaster
+40023.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40024 similar at 100% with Composite
+40024.100.Component = java.util.EventListener
+40024.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+40024.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40025 similar at 100% with Composite
+40025.100.Component = java.util.EventListener
+40025.100.Leaf = CH.ifa.draw.figures.TextFigure
+40025.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40026 similar at 100% with Composite
+40026.100.Component = java.util.EventListener
+40026.100.Leaf = CH.ifa.draw.figures.LineConnection
+40026.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40027 similar at 100% with Composite
+40027.100.Component = java.util.EventListener
+40027.100.Leaf = CH.ifa.draw.samples.pert.PertDependency
+40027.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40028 similar at 100% with Composite
+40028.100.Component = java.util.EventListener
+40028.100.Leaf = CH.ifa.draw.figures.ElbowConnection
+40028.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40029 similar at 100% with Composite
+40029.100.Component = java.util.EventListener
+40029.100.Leaf = CH.ifa.draw.samples.net.NodeFigure
+40029.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40030 similar at 100% with Composite
+40030.100.Component = java.util.EventListener
+40030.100.Leaf = CH.ifa.draw.figures.NumberTextFigure
+40030.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40031 similar at 100% with Composite
+40031.100.Component = java.util.EventListener
+40031.100.Leaf = CH.ifa.draw.samples.javadraw.AnimationDecorator
+40031.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40032 similar at 100% with Composite
+40032.100.Component = java.util.EventListener
+40032.100.Leaf = CH.ifa.draw.figures.BorderDecorator
+40032.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40033 similar at 100% with Composite
+40033.100.Component = java.util.EventListener
+40033.100.Leaf = CH.ifa.draw.standard.StandardDrawing
+40033.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40034 similar at 100% with Composite
+40034.100.Component = java.util.EventListener
+40034.100.Leaf = CH.ifa.draw.samples.javadraw.BouncingDrawing
+40034.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40035 similar at 100% with Composite
+40035.100.Component = java.util.EventListener
+40035.100.Leaf = CH.ifa.draw.figures.GroupFigure
+40035.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40036 similar at 100% with Composite
+40036.100.Component = java.util.EventListener
+40036.100.Leaf = CH.ifa.draw.samples.pert.PertFigure
+40036.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40037 similar at 100% with Composite
+40037.100.Component = java.util.EventListener
+40037.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.ConnectionFigure
+40037.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40038 similar at 100% with Composite
+40038.100.Component = java.util.EventListener
+40038.100.Leaf = CH.ifa.draw.standard.StandardDrawingView
+40038.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40039 similar at 100% with Composite
+40039.100.Component = java.util.EventListener
+40039.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.DrawingView
+40039.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40040 similar at 100% with Composite
+40040.100.Component = java.lang.Object
+40040.100.Leaf = CH.ifa.draw.figures.ArrowTip
+40040.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40041 similar at 100% with Composite
+40041.100.Component = java.lang.Object
+40041.100.Leaf = CH.ifa.draw.figures.ArrowTip
+40041.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40042 similar at 100% with Composite
+40042.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+40042.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+40042.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 40043 similar at 100% with Composite
+40043.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+40043.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+40043.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 40044 similar at 100% with Composite
+40044.100.Component = java.lang.Object
+40044.100.Leaf = CH.ifa.draw.util.PaletteIcon
+40044.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40045 similar at 100% with Composite
+40045.100.Component = java.lang.Object
+40045.100.Leaf = CH.ifa.draw.util.PaletteIcon
+40045.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40046 similar at 100% with Composite
+40046.100.Component = java.lang.Object
+40046.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractLocator
+40046.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40047 similar at 100% with Composite
+40047.100.Component = java.lang.Object
+40047.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractLocator
+40047.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40048 similar at 100% with Composite
+40048.100.Component = EPI_Abstract_CH.ifa.draw.framework.Locator
+40048.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractLocator
+40048.100.Composite = CH.ifa.draw.standard.OffsetLocator
+
+# Micro-architecture 40049 similar at 100% with Composite
+40049.100.Component = EPI_Abstract_CH.ifa.draw.framework.Locator
+40049.100.Leaf = CH.ifa.draw.figures.PolyLineLocator
+40049.100.Composite = CH.ifa.draw.standard.OffsetLocator
+
+# Micro-architecture 40050 similar at 100% with Composite
+40050.100.Component = EPI_Abstract_CH.ifa.draw.framework.Locator
+40050.100.Leaf = CH.ifa.draw.standard.OffsetLocator
+40050.100.Composite = CH.ifa.draw.standard.OffsetLocator
+
+# Micro-architecture 40051 similar at 100% with Composite
+40051.100.Component = EPI_Abstract_CH.ifa.draw.framework.Locator
+40051.100.Leaf = CH.ifa.draw.figures.ElbowTextLocator
+40051.100.Composite = CH.ifa.draw.standard.OffsetLocator
+
+# Micro-architecture 40052 similar at 100% with Composite
+40052.100.Component = EPI_Abstract_CH.ifa.draw.framework.Locator
+40052.100.Leaf = CH.ifa.draw.standard.RelativeLocator
+40052.100.Composite = CH.ifa.draw.standard.OffsetLocator
+
+# Micro-architecture 40053 similar at 100% with Composite
+40053.100.Component = java.lang.Object
+40053.100.Leaf = CH.ifa.draw.standard.GridConstrainer
+40053.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40054 similar at 100% with Composite
+40054.100.Component = java.lang.Object
+40054.100.Leaf = CH.ifa.draw.standard.GridConstrainer
+40054.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40055 similar at 100% with Composite
+40055.100.Component = java.util.EventListener
+40055.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+40055.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40056 similar at 100% with Composite
+40056.100.Component = EPI_Abstract_CH.ifa.draw.framework.DrawingChangeListener
+40056.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.DrawingView
+40056.100.Composite = CH.ifa.draw.standard.StandardDrawingView
+
+# Micro-architecture 40057 similar at 100% with Composite
+40057.100.Component = EPI_Abstract_CH.ifa.draw.framework.DrawingChangeListener
+40057.100.Leaf = CH.ifa.draw.standard.StandardDrawingView
+40057.100.Composite = CH.ifa.draw.standard.StandardDrawingView
+
+# Micro-architecture 40058 similar at 100% with Composite
+40058.100.Component = java.lang.Object
+40058.100.Leaf = CH.ifa.draw.util.PaletteLayout
+40058.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40059 similar at 100% with Composite
+40059.100.Component = java.lang.Object
+40059.100.Leaf = CH.ifa.draw.util.PaletteLayout
+40059.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40060 similar at 100% with Composite
+40060.100.Component = java.util.Enumeration
+40060.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.FigureEnumeration
+40060.100.Composite = CH.ifa.draw.standard.FigureEnumerator
+
+# Micro-architecture 40061 similar at 100% with Composite
+40061.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+40061.100.Leaf = CH.ifa.draw.standard.FigureChangeEventMulticaster
+40061.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 40062 similar at 100% with Composite
+40062.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+40062.100.Leaf = CH.ifa.draw.standard.FigureChangeEventMulticaster
+40062.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 40063 similar at 100% with Composite
+40063.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+40063.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.Drawing
+40063.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 40064 similar at 100% with Composite
+40064.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+40064.100.Leaf = EPI_Abstract_CH.ifa.draw.framework.Drawing
+40064.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 40065 similar at 100% with Composite
+40065.100.Component = java.lang.Object
+40065.100.Leaf = CH.ifa.draw.util.ColorEntry
+40065.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40066 similar at 100% with Composite
+40066.100.Component = java.lang.Object
+40066.100.Leaf = CH.ifa.draw.util.ColorEntry
+40066.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40067 similar at 100% with Composite
+40067.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+40067.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+40067.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 40068 similar at 100% with Composite
+40068.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+40068.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+40068.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 40069 similar at 100% with Composite
+40069.100.Component = java.lang.Object
+40069.100.Leaf = CH.ifa.draw.util.FloatingTextField
+40069.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40070 similar at 100% with Composite
+40070.100.Component = java.lang.Object
+40070.100.Leaf = CH.ifa.draw.util.FloatingTextField
+40070.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40071 similar at 100% with Composite
+40071.100.Component = java.lang.Object
+40071.100.Leaf = CH.ifa.draw.standard.SimpleUpdateStrategy
+40071.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40072 similar at 100% with Composite
+40072.100.Component = java.lang.Object
+40072.100.Leaf = CH.ifa.draw.standard.SimpleUpdateStrategy
+40072.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40073 similar at 100% with Composite
+40073.100.Component = java.lang.Object
+40073.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+40073.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40074 similar at 100% with Composite
+40074.100.Component = java.lang.Object
+40074.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+40074.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40075 similar at 100% with Composite
+40075.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+40075.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+40075.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 40076 similar at 100% with Composite
+40076.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+40076.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+40076.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 40077 similar at 100% with Composite
+40077.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+40077.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+40077.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 40078 similar at 100% with Composite
+40078.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+40078.100.Leaf = EPI_Abstract_CH.ifa.draw.standard.AbstractFigure
+40078.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 40079 similar at 100% with Composite
+40079.100.Component = java.lang.Object
+40079.100.Leaf = EPI_Abstract_CH.ifa.draw.util.Command
+40079.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40080 similar at 100% with Composite
+40080.100.Component = java.lang.Object
+40080.100.Leaf = EPI_Abstract_CH.ifa.draw.util.Command
+40080.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40081 similar at 100% with Composite
+40081.100.Component = java.lang.Object
+40081.100.Leaf = CH.ifa.draw.util.Iconkit
+40081.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40082 similar at 100% with Composite
+40082.100.Component = java.lang.Object
+40082.100.Leaf = CH.ifa.draw.util.Iconkit
+40082.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40083 similar at 100% with Composite
+40083.100.Component = java.lang.Object
+40083.100.Leaf = CH.ifa.draw.util.StorableOutput
+40083.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40084 similar at 100% with Composite
+40084.100.Component = java.lang.Object
+40084.100.Leaf = CH.ifa.draw.util.StorableOutput
+40084.100.Composite = CH.ifa.draw.util.Clipboard
+
+---------------------------------------------
+ALL
+Solution Computation Time:3
+Number of Solutions With and Without Ghosts:13
+Number of Solutions Without Ghosts:9
+Number of Solutions With Ghosts:4
+
+
+# Micro-architecture 40276 similar at 100% with Composite
+40276.100.Component = java.lang.Object
+40276.100.Composite = CH.ifa.draw.util.Clipboard
+
+# Micro-architecture 40277 similar at 100% with Composite
+40277.100.Component = java.lang.Object
+40277.100.Composite = CH.ifa.draw.standard.ChangeAttributeCommand
+
+# Micro-architecture 40278 similar at 100% with Composite
+40278.100.Component = java.util.EventListener
+40278.100.Composite = CH.ifa.draw.standard.FigureChangeEventMulticaster
+
+# Micro-architecture 40279 similar at 100% with Composite
+40279.100.Component = EPI_Abstract_CH.ifa.draw.framework.DrawingChangeListener
+40279.100.Composite = CH.ifa.draw.standard.StandardDrawingView
+
+# Micro-architecture 40280 similar at 100% with Composite
+40280.100.Component = EPI_Abstract_CH.ifa.draw.framework.Tool
+40280.100.Composite = CH.ifa.draw.standard.SelectionTool
+
+# Micro-architecture 40281 similar at 100% with Composite
+40281.100.Component = EPI_Abstract_CH.ifa.draw.framework.Locator
+40281.100.Composite = CH.ifa.draw.standard.OffsetLocator
+
+# Micro-architecture 40282 similar at 100% with Composite
+40282.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+40282.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 40283 similar at 100% with Composite
+40283.100.Component = EPI_Abstract_CH.ifa.draw.framework.FigureChangeListener
+40283.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 40284 similar at 100% with Composite
+40284.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+40284.100.Composite = CH.ifa.draw.figures.TextFigure
+
+# Micro-architecture 40285 similar at 100% with Composite
+40285.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+40285.100.Composite = EPI_Abstract_CH.ifa.draw.standard.DecoratorFigure
+
+# Micro-architecture 40286 similar at 100% with Composite
+40286.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+40286.100.Composite = CH.ifa.draw.figures.BorderDecorator
+
+# Micro-architecture 40287 similar at 100% with Composite
+40287.100.Component = EPI_Abstract_CH.ifa.draw.framework.Figure
+40287.100.Composite = EPI_Abstract_CH.ifa.draw.standard.CompositeFigure
+
+# Micro-architecture 40288 similar at 100% with Composite
+40288.100.Component = java.util.Enumeration
+40288.100.Composite = CH.ifa.draw.standard.FigureEnumerator
+

@@ -1,0 +1,255 @@
+String Creation Time: 2
+String Length in Tokens: 4249
+--------------------------------------------------
+
+NONE
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 3
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 3
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2 and 3
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+ALL
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:37
+Number of Solutions Without Ghosts:5
+Number of Solutions With Ghosts:32
+
+
+# Micro-architecture 88 similar at 100% with Decorator
+88.100.Decorator = org.game.Juzzle.PuzzlePanel
+88.100.Component = java.awt.Dimension
+
+# Micro-architecture 89 similar at 100% with Decorator
+89.100.Decorator = org.game.Juzzle.JuzzlePanel
+89.100.Component = java.awt.Dimension
+
+# Micro-architecture 90 similar at 100% with Decorator
+90.100.Decorator = org.game.Juzzle.PuzzlePartList
+90.100.Component = java.awt.Dimension
+
+# Micro-architecture 91 similar at 100% with Decorator
+91.100.Decorator = org.game.Juzzle.JuzzlePanel
+91.100.Component = java.awt.event.ActionListener
+
+# Micro-architecture 92 similar at 100% with Decorator
+92.100.Decorator = org.game.Juzzle.StartDialog
+92.100.Component = javax.swing.JList
+
+# Micro-architecture 93 similar at 100% with Decorator
+93.100.Decorator = org.game.Juzzle.JuzzlePanel
+93.100.Component = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 94 similar at 100% with Decorator
+94.100.Decorator = org.game.Juzzle.ControlPanel
+94.100.Component = javax.swing.Timer
+
+# Micro-architecture 95 similar at 100% with Decorator
+95.100.Decorator = org.game.Juzzle.PuzzlePaint
+95.100.Component = java.awt.geom.Rectangle2D
+
+# Micro-architecture 96 similar at 100% with Decorator
+96.100.Decorator = org.game.Juzzle.PuzzlePartList
+96.100.Component = java.awt.geom.Dimension2D
+
+# Micro-architecture 97 similar at 100% with Decorator
+97.100.Decorator = org.game.Juzzle.PuzzlePanel
+97.100.Component = java.awt.image.BufferedImage
+
+# Micro-architecture 98 similar at 100% with Decorator
+98.100.Decorator = org.game.Juzzle.PuzzlePanel
+98.100.Component = java.awt.Paint
+
+# Micro-architecture 99 similar at 100% with Decorator
+99.100.Decorator = org.game.Juzzle.PuzzlePanel
+99.100.Component = java.awt.Cursor
+
+# Micro-architecture 100 similar at 100% with Decorator
+100.100.Decorator = org.game.Juzzle.JuzzlePanel
+100.100.Component = java.io.File
+
+# Micro-architecture 101 similar at 100% with Decorator
+101.100.Decorator = org.game.Juzzle.JuzzlePanel
+101.100.Component = java.awt.Image
+
+# Micro-architecture 102 similar at 100% with Decorator
+102.100.Decorator = org.game.Juzzle.PuzzlePaint
+102.100.Component = java.awt.image.ColorModel
+
+# Micro-architecture 103 similar at 100% with Decorator
+103.100.Decorator = org.game.Juzzle.JuzzlePanel
+103.100.Component = javax.swing.JFileChooser
+
+# Micro-architecture 104 similar at 100% with Decorator
+104.100.Decorator = org.game.Juzzle.PuzzlePanel
+104.100.Component = java.awt.geom.GeneralPath
+
+# Micro-architecture 105 similar at 100% with Decorator
+105.100.Decorator = org.game.Juzzle.PuzzlePartList
+105.100.Component = java.awt.geom.GeneralPath
+
+# Micro-architecture 106 similar at 100% with Decorator
+106.100.Decorator = org.game.Juzzle.JuzzlePanel
+106.100.Component = org.game.Juzzle.StartDialog
+
+# Micro-architecture 107 similar at 100% with Decorator
+107.100.Decorator = org.game.Juzzle.ControlPanel
+107.100.Component = javax.swing.Icon
+
+# Micro-architecture 108 similar at 100% with Decorator
+108.100.Decorator = org.game.Juzzle.PuzzlePaint
+108.100.Component = java.awt.image.WritableRaster
+
+# Micro-architecture 109 similar at 100% with Decorator
+109.100.Decorator = org.game.Juzzle.JuzzlePanel
+109.100.Component = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 110 similar at 100% with Decorator
+110.100.Decorator = org.game.Juzzle.PuzzlePanel
+110.100.Component = java.awt.Point
+
+# Micro-architecture 111 similar at 100% with Decorator
+111.100.Decorator = org.game.Juzzle.PuzzlePartList
+111.100.Component = java.awt.Point
+
+# Micro-architecture 112 similar at 100% with Decorator
+112.100.Decorator = org.game.Juzzle.PuzzlePanel
+112.100.Component = java.awt.Rectangle
+
+# Micro-architecture 113 similar at 100% with Decorator
+113.100.Decorator = org.game.Juzzle.PuzzlePartList
+113.100.Component = java.awt.Rectangle
+
+# Micro-architecture 114 similar at 100% with Decorator
+114.100.Decorator = org.game.Juzzle.StartDialog
+114.100.Component = java.util.Vector
+
+# Micro-architecture 115 similar at 100% with Decorator
+115.100.Decorator = org.game.Juzzle.PuzzlePanel
+115.100.Component = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+
+# Micro-architecture 116 similar at 100% with Decorator
+116.100.Decorator = org.game.Juzzle.JuzzlePanel
+116.100.Component = javax.swing.filechooser.FileFilter
+
+# Micro-architecture 117 similar at 100% with Decorator
+117.100.Decorator = org.game.Juzzle.PuzzlePanel
+117.100.Component = java.lang.String
+
+# Micro-architecture 118 similar at 100% with Decorator
+118.100.Decorator = org.game.Juzzle.images.JuzzleImages
+118.100.Component = java.lang.String
+
+# Micro-architecture 119 similar at 100% with Decorator
+119.100.Decorator = org.game.Juzzle.StartDialog
+119.100.Component = java.lang.String
+
+# Micro-architecture 120 similar at 100% with Decorator
+120.100.Decorator = org.game.Juzzle.JuzzlePanel
+120.100.Component = java.lang.String
+
+# Micro-architecture 121 similar at 100% with Decorator
+121.100.Decorator = org.game.Juzzle.ControlPanel
+121.100.Component = java.lang.String
+
+# Micro-architecture 122 similar at 100% with Decorator
+122.100.Decorator = org.game.Juzzle.PuzzlePanel
+122.100.Component = java.awt.Color
+
+# Micro-architecture 123 similar at 100% with Decorator
+123.100.Decorator = org.game.Juzzle.ControlPanel
+123.100.Component = java.awt.Color
+
+# Micro-architecture 124 similar at 100% with Decorator
+124.100.Decorator = org.game.Juzzle.PuzzlePanel
+124.100.Component = org.game.Juzzle.ControlPanel
+

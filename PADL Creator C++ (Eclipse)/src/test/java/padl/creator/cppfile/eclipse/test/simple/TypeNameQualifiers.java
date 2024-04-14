@@ -11,37 +11,38 @@
 package padl.creator.cppfile.eclipse.test.simple;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.cpp.kernel.IGlobalFunction;
-import padl.generator.helper.ModelGenerator;
-import padl.kernel.IIdiomLevelModel;
+import padl.creator.cppfile.eclipse.test.helper.ModelGenerator;
+import padl.kernel.ICodeLevelModel;
 
 public class TypeNameQualifiers extends TestCase {
-	private static IIdiomLevelModel IdiomLevelModel;
+	private static ICodeLevelModel CodeLevelModel;
+
 	public TypeNameQualifiers(String name) {
 		super(name);
 	}
+
 	protected void setUp() throws Exception {
-		if (TypeNameQualifiers.IdiomLevelModel == null) {
-			TypeNameQualifiers.IdiomLevelModel =
-				ModelGenerator
-					.generateModelFromCppFilesUsingEclipse(
-						"Funny",
-						new String[] { "../PADL Creator C++ (Eclipse) Tests/data/TypeNameQualifiers/" });
+		if (TypeNameQualifiers.CodeLevelModel == null) {
+			TypeNameQualifiers.CodeLevelModel = ModelGenerator
+					.generateModelFromCppFilesUsingEclipse("Funny",
+							"../PADL Creator C++ (Eclipse) Tests/data/TypeNameQualifiers/");
 		}
 	}
+
 	public void testNumberOfTopLevelEntities() {
-		Assert.assertNotNull(
-			"The idiom-level model is null!",
-			TypeNameQualifiers.IdiomLevelModel);
-		Assert.assertEquals(
-			5,
-			TypeNameQualifiers.IdiomLevelModel.getNumberOfTopLevelEntities());
+		Assert.assertNotNull("The idiom-level model is null!",
+				TypeNameQualifiers.CodeLevelModel);
+		Assert.assertEquals(5, TypeNameQualifiers.CodeLevelModel
+				.getNumberOfTopLevelEntities());
 	}
+
 	public void testStructure() {
-		final IGlobalFunction function =
-			(IGlobalFunction) TypeNameQualifiers.IdiomLevelModel
-				.getTopLevelEntityFromID("js_TraceRuntime(ProblemType *, ProblemType)");
+		final IGlobalFunction function = (IGlobalFunction) TypeNameQualifiers.CodeLevelModel
+				.getTopLevelEntityFromID(
+						"js_TraceRuntime(ProblemType *, ProblemType)");
 		Assert.assertNotNull("No global function!?", function);
 	}
 }

@@ -10,26 +10,26 @@ private jct.test.rsc.snpsht.utils.cvsutils.CVSRoot cvsRoot;
 
 private java.lang.Runtime rt = java.lang.Runtime.getRuntime();
 
-private java.io.File tempDir;
+private java.io.File tmpDir;
 
 public void <init>(jct.test.rsc.snpsht.utils.cvsutils.CVSRoot cvsRoot)
 {
 this.<init>();
 this.cvsRoot = cvsRoot;
-this.getAndFlushTempDir();
+this.getAndFlushtmpDir();
 
 }
 
-private java.io.File getAndFlushTempDir()
+private java.io.File getAndFlushtmpDir()
 {
-this.tempDir = new java.io.File(java.lang.System.getProperty("java.io.tmpdir"), "tmp_dir_revML_co_" + this.hashCode());
-if(this.tempDir.exists()) 
+this.tmpDir = new java.io.File(java.lang.System.getProperty("java.io.tmpdir"), "tmp_dir_revML_co_" + this.hashCode());
+if(this.tmpDir.exists()) 
 {
-jct.test.rsc.snpsht.utils.FSUtils.rmDir(this.tempDir);
+jct.test.rsc.snpsht.utils.FSUtils.rmDir(this.tmpDir);
 
 }
-this.tempDir.mkdirs();
-return this.tempDir;
+this.tmpDir.mkdirs();
+return this.tmpDir;
 
 }
 
@@ -44,7 +44,7 @@ java.lang.String repo;
 java.lang.String targetReativePath;
 java.io.File vcpExe;
 if(targetFile.isDirectory()) throw new java.lang.IllegalArgumentException("Target file is a diretory");
-this.getAndFlushTempDir();
+this.getAndFlushtmpDir();
 if(module.startsWith("/")) 
 {
 repo = module.substring(1);

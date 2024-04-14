@@ -23,38 +23,40 @@ import test.visitor.MyVisitor;
  *
  */
 public class ConciseParseTest extends AbstractParseTest {
-    public ConciseParseTest() throws Exception {
-        this("ConciseParseTest");
-    }
+	public ConciseParseTest() throws Exception {
+		this("ConciseParseTest");
+	}
 
-    public ConciseParseTest(final String aName) throws Exception {
-        super(aName);
+	public ConciseParseTest(final String aName) throws Exception {
+		super(aName);
 
-        final String[] classpathEntries = new String[]{
-                "target/test-classes/CodeAnalyser/libs/jaxb-api.jar",
-                "target/test-classes/CodeAnalyser/libs/tools.jar"};
+		final String[] classpathEntries = new String[] {
+				"../Java Parser/target/test-classes/CodeAnalyser/libs/jaxb-api.jar",
+				"../Java Parser/target/test-classes/CodeAnalyser/libs/tools.jar" };
 
-        final String sourcePathEntry = "target/test-classes/CodeAnalyser/src";
-        final String[] sourcePathEntries = new String[]{sourcePathEntry};
+		final String sourcePathEntry = "../Java Parser/target/test-classes/CodeAnalyser/src";
+		final String[] sourcePathEntries = new String[] { sourcePathEntry };
 
-        final String resultFilePath = "log_concise.txt";
+		final String resultFilePath = "log_concise.txt";
 
-        final SourceInputsHolder javaProject = new FileSystemJavaProject(Arrays.asList(classpathEntries),
-                Arrays.asList(sourcePathEntries));
+		final SourceInputsHolder javaProject = new FileSystemJavaProject(
+				Arrays.asList(classpathEntries),
+				Arrays.asList(sourcePathEntries));
 
-        final WrapperClientWithLog parserClient = new WrapperClientWithLog(javaProject, resultFilePath)
-                .setVerbose(false);
+		final WrapperClientWithLog parserClient = new WrapperClientWithLog(
+				javaProject, resultFilePath).setVerbose(false);
 
-        final String oracleFilePath = "target/test-classes/CodeAnalyser/log/log_oracle_concise.txt";
+		final String oracleFilePath = "../Java Parser/target/test-classes/CodeAnalyser/log/log_oracle_concise.txt";
 
-        final String testCaseName = "CodeAnalyser concise Test Case";
+		final String testCaseName = "CodeAnalyser concise Test Case";
 
-        final ASTVisitor visitor = new MyVisitor(parserClient);
+		final ASTVisitor visitor = new MyVisitor(parserClient);
 
-        this.init(resultFilePath, oracleFilePath, testCaseName, parserClient, visitor);
-    }
+		this.init(resultFilePath, oracleFilePath, testCaseName, parserClient,
+				visitor);
+	}
 
-    public void testParse() {
-        super.testParse();
-    }
+	public void testParse() {
+		super.testParse();
+	}
 }

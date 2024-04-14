@@ -70,4 +70,4 @@ When using the ''Import-Package'' statement and if the plug-in shares some commo
 Plug-ins Referenced in Config.ini but Missing
 ---------------------------------------------
 
-The "config.ini" file contains, among other things, the locations of the plug-ins (actually, their JAR files or folders) required by an Eclipse application. If one of more plug-ins are missing, i.e., there is a discrepancy between the "config.ini" file and the folder containing the plug-ins JARs and folders, then Eclipse will throw an error and the "configuration area" will contain a log file detailing the missing plug-ins.    
+The "config.ini" file contains, among other things, the locations of the plug-ins (actually, their JAR files or folders) required by an Eclipse application. If one of more plug-ins are missing, i.e., there is a discrepancy between the "config.ini" file and the folder containing the plug-ins JARs and folders, then Eclipse will throw an error and the "configuration area" will contain a log file detailing the missing plug-ins.

@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Apr 13 18:21:32 EDT 2024
+make.core-7.2.jar>=
+make.core-7.2.pom>=

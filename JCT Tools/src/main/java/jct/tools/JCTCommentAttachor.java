@@ -50,117 +50,120 @@ import jct.util.IJCTContainer;
  * This class attach the comments within each
  * compilation unit to the constituent following them directly.
  */
-public class JCTCommentAttachor
-    extends JCTMap<Void, Void>
-{
-    private final Map<IJCTSourceCodePart, Integer> cache = new HashMap<IJCTSourceCodePart, Integer>();
+public class JCTCommentAttachor extends JCTMap<Void, Void> {
+	private final Map<IJCTSourceCodePart, Integer> cache = new HashMap<IJCTSourceCodePart, Integer>();
 
-    private int getAbsoluteOffset(final IJCTSourceCodePart scp, final IJCTCompilationUnit cu)
-    {
-        Integer offset = this.cache.get(scp);
-        if(scp.getEnclosingCompilationUnit() != cu)
-            throw new IllegalArgumentException("scp (" + scp + ") must be enclosed in " + cu);
-        if(null == offset)
-            this.cache.put(scp, offset = scp.getStoredSourceCodeOffset(cu));
-        if(null == offset)
-            throw new IllegalArgumentException("scp (" + scp + ") must be enclosed in " + cu + " and contains stored source code data");
+	private int getAbsoluteOffset(final IJCTSourceCodePart scp,
+			final IJCTCompilationUnit cu) {
+		Integer offset = this.cache.get(scp);
+		if (scp.getEnclosingCompilationUnit() != cu)
+			throw new IllegalArgumentException(
+					"scp (" + scp + ") must be enclosed in " + cu);
+		if (null == offset)
+			this.cache.put(scp, offset = scp.getStoredSourceCodeOffset(cu));
+		if (null == offset)
+			throw new IllegalArgumentException(
+					"scp (" + scp + ") must be enclosed in " + cu
+							+ " and contains stored source code data");
 
-        return offset;
-    }
+		return offset;
+	}
 
-    @Override
-        public Void visitCompilationUnit(final IJCTCompilationUnit t, final Void p)
-    {
-        this.cache.clear();
+	@Override
+	public Void visitCompilationUnit(final IJCTCompilationUnit t,
+			final Void p) {
+		this.cache.clear();
 
-        if(null == t.getStoredSourceCode())
-            return null;
+		if (null == t.getStoredSourceCode())
+			return null;
 
-        final SortedSet<IJCTSourceCodePart> parts = new TreeSet<IJCTSourceCodePart>(new ConstituentOffsetOrder(t, this.cache));
+		final SortedSet<IJCTSourceCodePart> parts = new TreeSet<IJCTSourceCodePart>(
+				new ConstituentOffsetOrder(t, this.cache));
 
-        parts.addAll(t.getImporteds());
-        for(IJCTClass c : t.getClazzs())
-        {
-            parts.add(c);
-            for(IJCTClassMember cm : c.getDeclaredMembers())
-                parts.addAll((Collection<IJCTSourceCodePart>)((IJCTContainer<? extends IJCTSourceCodePart>)cm).getAllEnclosedElements());
-        }
+		parts.addAll(t.getImporteds());
+		for (IJCTClass c : t.getClazzs()) {
+			parts.add(c);
+			for (IJCTClassMember cm : c.getDeclaredMembers())
+				parts.addAll(
+						(Collection<IJCTSourceCodePart>) ((IJCTContainer<? extends IJCTSourceCodePart>) cm)
+								.getAllEnclosedElements());
+		}
 
-        final SortedSet<IJCTComment> comments = new TreeSet<IJCTComment>(new ConstituentOffsetOrder(t, this.cache));
+		final SortedSet<IJCTComment> comments = new TreeSet<IJCTComment>(
+				new ConstituentOffsetOrder(t, this.cache));
 
-        comments.addAll(t.getComments());
+		comments.addAll(t.getComments());
 
-        final Iterator<IJCTSourceCodePart> it = parts.iterator();
-        if(!it.hasNext())
-            return null;
+		final Iterator<IJCTSourceCodePart> it = parts.iterator();
+		if (!it.hasNext())
+			return null;
 
-        IJCTSourceCodePart last = it.next();
+		IJCTSourceCodePart last = it.next();
 
-        comments: for(final IJCTComment c : comments)
-        {
-            while(true)
-            {
-                if(this.getAbsoluteOffset(last, t) >= this.getAbsoluteOffset(c, t) + c.getStoredSourceCodeLength())
-                {
-                    last.addComment(c);
-                    continue comments;
-                }
-                else if(it.hasNext())
-                {
-                    last = it.next();
-                    continue;
-                }
-                else
-                    return null;
-            }
-        }
+		comments: for (final IJCTComment c : comments) {
+			while (true) {
+				if (this.getAbsoluteOffset(last, t) >= this.getAbsoluteOffset(c,
+						t) + c.getStoredSourceCodeLength()) {
+					last.addComment(c);
+					continue comments;
+				}
+				else if (it.hasNext()) {
+					last = it.next();
+					continue;
+				}
+				else
+					return null;
+			}
+		}
 
-        return null;
-    }
+		return null;
+	}
 }
 
-class ConstituentOffsetOrder
-    implements Comparator<IJCTSourceCodePart>
-{
-    private final Map<IJCTSourceCodePart, Integer> cache;
+class ConstituentOffsetOrder implements Comparator<IJCTSourceCodePart> {
+	private final Map<IJCTSourceCodePart, Integer> cache;
 
-    private final IJCTCompilationUnit compilationUnit;
+	private final IJCTCompilationUnit compilationUnit;
 
-    public ConstituentOffsetOrder(final IJCTCompilationUnit cu, final Map<IJCTSourceCodePart, Integer> cache)
-    {
-        this.compilationUnit = cu;
-        this.cache = cache;
-    }
+	public ConstituentOffsetOrder(final IJCTCompilationUnit cu,
+			final Map<IJCTSourceCodePart, Integer> cache) {
+		this.compilationUnit = cu;
+		this.cache = cache;
+	}
 
-    public ConstituentOffsetOrder(final IJCTCompilationUnit cu)
-    { this(cu, new HashMap<IJCTSourceCodePart, Integer>()); }
+	public ConstituentOffsetOrder(final IJCTCompilationUnit cu) {
+		this(cu, new HashMap<IJCTSourceCodePart, Integer>());
+	}
 
-    private int getAbsoluteOffset(final IJCTSourceCodePart scp)
-    {
-        Integer offset = this.cache.get(scp);
-        if(scp.getEnclosingCompilationUnit() != this.compilationUnit)
-            throw new IllegalArgumentException("scp (" + scp + ") must be enclosed in " + this.compilationUnit);
-        if(null == offset)
-            this.cache.put(scp, offset = scp.getStoredSourceCodeOffset(this.compilationUnit));
-        if(null == offset)
-            throw new IllegalArgumentException("scp (" + scp + ") must contain stored source code data");
-        return offset;
-    }
+	private int getAbsoluteOffset(final IJCTSourceCodePart scp) {
+		Integer offset = this.cache.get(scp);
+		if (scp.getEnclosingCompilationUnit() != this.compilationUnit)
+			throw new IllegalArgumentException("scp (" + scp
+					+ ") must be enclosed in " + this.compilationUnit);
+		if (null == offset)
+			this.cache.put(scp, offset = scp
+					.getStoredSourceCodeOffset(this.compilationUnit));
+		if (null == offset)
+			throw new IllegalArgumentException(
+					"scp (" + scp + ") must contain stored source code data");
+		return offset;
+	}
 
-    public int compare(final IJCTSourceCodePart a, final IJCTSourceCodePart b)
-    {
-        if(a.equals(b))
-            return 0;
+	public int compare(final IJCTSourceCodePart a, final IJCTSourceCodePart b) {
+		if (a.equals(b))
+			return 0;
 
-        final int ia = this.getAbsoluteOffset(a);
-        final int ib = this.getAbsoluteOffset(b);
+		final int ia = this.getAbsoluteOffset(a);
+		final int ib = this.getAbsoluteOffset(b);
 
-        if(ia != ib)
-            return ia - ib;
+		if (ia != ib)
+			return ia - ib;
 
-        if(a.getStoredSourceCodeLength().intValue() != b.getStoredSourceCodeLength().intValue())
-            return b.getStoredSourceCodeLength() - a.getStoredSourceCodeLength();
+		if (a.getStoredSourceCodeLength().intValue() != b
+				.getStoredSourceCodeLength().intValue())
+			return b.getStoredSourceCodeLength()
+					- a.getStoredSourceCodeLength();
 
-        return b.getPath().isEnclosing(a.getPath()) ? 1 : -1;
-    }
+		return b.getPath().isEnclosing(a.getPath()) ? 1 : -1;
+	}
 }

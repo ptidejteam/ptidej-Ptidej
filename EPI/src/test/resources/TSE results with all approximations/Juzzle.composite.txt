@@ -1,0 +1,658 @@
+String Creation Time:7
+--------------------------------------------------
+
+NONE
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 3
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:56
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:56
+
+
+# Micro-architecture 207 similar at 100% with Composite
+207.100.Component = javax.swing.JDesktopPane
+207.100.Leaf = org.game.Juzzle.JuzzlePanel
+207.100.Composite = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 208 similar at 100% with Composite
+208.100.Component = javax.swing.JFrame
+208.100.Leaf = org.game.Juzzle.MainFrame
+208.100.Composite = org.game.Juzzle.MainFrame
+
+# Micro-architecture 209 similar at 100% with Composite
+209.100.Component = java.awt.PaintContext
+209.100.Leaf = org.game.Juzzle.PuzzlePaint
+209.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 210 similar at 100% with Composite
+210.100.Component = java.lang.Object
+210.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+210.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 211 similar at 100% with Composite
+211.100.Component = java.lang.Object
+211.100.Leaf = org.game.Juzzle.main
+211.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 212 similar at 100% with Composite
+212.100.Component = java.lang.Object
+212.100.Leaf = org.game.Juzzle.images.JuzzleImages
+212.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 213 similar at 100% with Composite
+213.100.Component = java.lang.Object
+213.100.Leaf = org.game.Juzzle.StartDialog
+213.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 214 similar at 100% with Composite
+214.100.Component = java.lang.Object
+214.100.Leaf = org.game.Juzzle.ImageDescription
+214.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 215 similar at 100% with Composite
+215.100.Component = java.lang.Object
+215.100.Leaf = org.game.Juzzle.PuzzlePartList
+215.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 216 similar at 100% with Composite
+216.100.Component = java.lang.Object
+216.100.Leaf = org.game.Juzzle.PuzzlePaint
+216.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 217 similar at 100% with Composite
+217.100.Component = java.lang.Object
+217.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+217.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 218 similar at 100% with Composite
+218.100.Component = java.lang.Object
+218.100.Leaf = org.game.Juzzle.main
+218.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 219 similar at 100% with Composite
+219.100.Component = java.lang.Object
+219.100.Leaf = org.game.Juzzle.images.JuzzleImages
+219.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 220 similar at 100% with Composite
+220.100.Component = java.lang.Object
+220.100.Leaf = org.game.Juzzle.StartDialog
+220.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 221 similar at 100% with Composite
+221.100.Component = java.lang.Object
+221.100.Leaf = org.game.Juzzle.ImageDescription
+221.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 222 similar at 100% with Composite
+222.100.Component = java.lang.Object
+222.100.Leaf = org.game.Juzzle.PuzzlePartList
+222.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 223 similar at 100% with Composite
+223.100.Component = java.lang.Object
+223.100.Leaf = org.game.Juzzle.PuzzlePaint
+223.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 224 similar at 100% with Composite
+224.100.Component = java.lang.Object
+224.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+224.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 225 similar at 100% with Composite
+225.100.Component = java.lang.Object
+225.100.Leaf = org.game.Juzzle.main
+225.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 226 similar at 100% with Composite
+226.100.Component = java.lang.Object
+226.100.Leaf = org.game.Juzzle.images.JuzzleImages
+226.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 227 similar at 100% with Composite
+227.100.Component = java.lang.Object
+227.100.Leaf = org.game.Juzzle.StartDialog
+227.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 228 similar at 100% with Composite
+228.100.Component = java.lang.Object
+228.100.Leaf = org.game.Juzzle.ImageDescription
+228.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 229 similar at 100% with Composite
+229.100.Component = java.lang.Object
+229.100.Leaf = org.game.Juzzle.PuzzlePartList
+229.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 230 similar at 100% with Composite
+230.100.Component = java.lang.Object
+230.100.Leaf = org.game.Juzzle.PuzzlePaint
+230.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 231 similar at 100% with Composite
+231.100.Component = java.lang.Object
+231.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+231.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 232 similar at 100% with Composite
+232.100.Component = java.lang.Object
+232.100.Leaf = org.game.Juzzle.main
+232.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 233 similar at 100% with Composite
+233.100.Component = java.lang.Object
+233.100.Leaf = org.game.Juzzle.images.JuzzleImages
+233.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 234 similar at 100% with Composite
+234.100.Component = java.lang.Object
+234.100.Leaf = org.game.Juzzle.StartDialog
+234.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 235 similar at 100% with Composite
+235.100.Component = java.lang.Object
+235.100.Leaf = org.game.Juzzle.ImageDescription
+235.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 236 similar at 100% with Composite
+236.100.Component = java.lang.Object
+236.100.Leaf = org.game.Juzzle.PuzzlePartList
+236.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 237 similar at 100% with Composite
+237.100.Component = java.lang.Object
+237.100.Leaf = org.game.Juzzle.PuzzlePaint
+237.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 238 similar at 100% with Composite
+238.100.Component = java.lang.Object
+238.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+238.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 239 similar at 100% with Composite
+239.100.Component = java.lang.Object
+239.100.Leaf = org.game.Juzzle.main
+239.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 240 similar at 100% with Composite
+240.100.Component = java.lang.Object
+240.100.Leaf = org.game.Juzzle.images.JuzzleImages
+240.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 241 similar at 100% with Composite
+241.100.Component = java.lang.Object
+241.100.Leaf = org.game.Juzzle.StartDialog
+241.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 242 similar at 100% with Composite
+242.100.Component = java.lang.Object
+242.100.Leaf = org.game.Juzzle.ImageDescription
+242.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 243 similar at 100% with Composite
+243.100.Component = java.lang.Object
+243.100.Leaf = org.game.Juzzle.PuzzlePartList
+243.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 244 similar at 100% with Composite
+244.100.Component = java.lang.Object
+244.100.Leaf = org.game.Juzzle.PuzzlePaint
+244.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 245 similar at 100% with Composite
+245.100.Component = java.lang.Object
+245.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+245.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 246 similar at 100% with Composite
+246.100.Component = java.lang.Object
+246.100.Leaf = org.game.Juzzle.main
+246.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 247 similar at 100% with Composite
+247.100.Component = java.lang.Object
+247.100.Leaf = org.game.Juzzle.images.JuzzleImages
+247.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 248 similar at 100% with Composite
+248.100.Component = java.lang.Object
+248.100.Leaf = org.game.Juzzle.StartDialog
+248.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 249 similar at 100% with Composite
+249.100.Component = java.lang.Object
+249.100.Leaf = org.game.Juzzle.ImageDescription
+249.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 250 similar at 100% with Composite
+250.100.Component = java.lang.Object
+250.100.Leaf = org.game.Juzzle.PuzzlePartList
+250.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 251 similar at 100% with Composite
+251.100.Component = java.lang.Object
+251.100.Leaf = org.game.Juzzle.PuzzlePaint
+251.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 252 similar at 100% with Composite
+252.100.Component = java.lang.Object
+252.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+252.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 253 similar at 100% with Composite
+253.100.Component = java.lang.Object
+253.100.Leaf = org.game.Juzzle.main
+253.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 254 similar at 100% with Composite
+254.100.Component = java.lang.Object
+254.100.Leaf = org.game.Juzzle.images.JuzzleImages
+254.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 255 similar at 100% with Composite
+255.100.Component = java.lang.Object
+255.100.Leaf = org.game.Juzzle.StartDialog
+255.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 256 similar at 100% with Composite
+256.100.Component = java.lang.Object
+256.100.Leaf = org.game.Juzzle.ImageDescription
+256.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 257 similar at 100% with Composite
+257.100.Component = java.lang.Object
+257.100.Leaf = org.game.Juzzle.PuzzlePartList
+257.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 258 similar at 100% with Composite
+258.100.Component = java.lang.Object
+258.100.Leaf = org.game.Juzzle.PuzzlePaint
+258.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 259 similar at 100% with Composite
+259.100.Component = javax.swing.JPanel
+259.100.Leaf = org.game.Juzzle.PuzzlePanel
+259.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 260 similar at 100% with Composite
+260.100.Component = javax.swing.JPanel
+260.100.Leaf = org.game.Juzzle.ControlPanel
+260.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 261 similar at 100% with Composite
+261.100.Component = javax.swing.JPanel
+261.100.Leaf = org.game.Juzzle.PuzzlePanel
+261.100.Composite = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 262 similar at 100% with Composite
+262.100.Component = javax.swing.JPanel
+262.100.Leaf = org.game.Juzzle.ControlPanel
+262.100.Composite = org.game.Juzzle.ControlPanel
+
+---------------------------------------------
+1 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 3
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3 and 4
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+ALL
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:56
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:56
+
+
+# Micro-architecture 349 similar at 100% with Composite
+349.100.Component = java.lang.Object
+349.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+349.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 350 similar at 100% with Composite
+350.100.Component = java.lang.Object
+350.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+350.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 351 similar at 100% with Composite
+351.100.Component = java.lang.Object
+351.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+351.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 352 similar at 100% with Composite
+352.100.Component = java.lang.Object
+352.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+352.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 353 similar at 100% with Composite
+353.100.Component = java.lang.Object
+353.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+353.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 354 similar at 100% with Composite
+354.100.Component = java.lang.Object
+354.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+354.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 355 similar at 100% with Composite
+355.100.Component = java.lang.Object
+355.100.Leaf = org.game.Juzzle.DummyPuzzlePartList
+355.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 356 similar at 100% with Composite
+356.100.Component = javax.swing.JPanel
+356.100.Leaf = org.game.Juzzle.PuzzlePanel
+356.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 357 similar at 100% with Composite
+357.100.Component = javax.swing.JPanel
+357.100.Leaf = org.game.Juzzle.PuzzlePanel
+357.100.Composite = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 358 similar at 100% with Composite
+358.100.Component = java.lang.Object
+358.100.Leaf = org.game.Juzzle.main
+358.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 359 similar at 100% with Composite
+359.100.Component = java.lang.Object
+359.100.Leaf = org.game.Juzzle.main
+359.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 360 similar at 100% with Composite
+360.100.Component = java.lang.Object
+360.100.Leaf = org.game.Juzzle.main
+360.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 361 similar at 100% with Composite
+361.100.Component = java.lang.Object
+361.100.Leaf = org.game.Juzzle.main
+361.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 362 similar at 100% with Composite
+362.100.Component = java.lang.Object
+362.100.Leaf = org.game.Juzzle.main
+362.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 363 similar at 100% with Composite
+363.100.Component = java.lang.Object
+363.100.Leaf = org.game.Juzzle.main
+363.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 364 similar at 100% with Composite
+364.100.Component = java.lang.Object
+364.100.Leaf = org.game.Juzzle.main
+364.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 365 similar at 100% with Composite
+365.100.Component = java.lang.Object
+365.100.Leaf = org.game.Juzzle.images.JuzzleImages
+365.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 366 similar at 100% with Composite
+366.100.Component = java.lang.Object
+366.100.Leaf = org.game.Juzzle.images.JuzzleImages
+366.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 367 similar at 100% with Composite
+367.100.Component = java.lang.Object
+367.100.Leaf = org.game.Juzzle.images.JuzzleImages
+367.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 368 similar at 100% with Composite
+368.100.Component = java.lang.Object
+368.100.Leaf = org.game.Juzzle.images.JuzzleImages
+368.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 369 similar at 100% with Composite
+369.100.Component = java.lang.Object
+369.100.Leaf = org.game.Juzzle.images.JuzzleImages
+369.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 370 similar at 100% with Composite
+370.100.Component = java.lang.Object
+370.100.Leaf = org.game.Juzzle.images.JuzzleImages
+370.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 371 similar at 100% with Composite
+371.100.Component = java.lang.Object
+371.100.Leaf = org.game.Juzzle.images.JuzzleImages
+371.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 372 similar at 100% with Composite
+372.100.Component = java.lang.Object
+372.100.Leaf = org.game.Juzzle.StartDialog
+372.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 373 similar at 100% with Composite
+373.100.Component = java.lang.Object
+373.100.Leaf = org.game.Juzzle.StartDialog
+373.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 374 similar at 100% with Composite
+374.100.Component = java.lang.Object
+374.100.Leaf = org.game.Juzzle.StartDialog
+374.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 375 similar at 100% with Composite
+375.100.Component = java.lang.Object
+375.100.Leaf = org.game.Juzzle.StartDialog
+375.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 376 similar at 100% with Composite
+376.100.Component = java.lang.Object
+376.100.Leaf = org.game.Juzzle.StartDialog
+376.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 377 similar at 100% with Composite
+377.100.Component = java.lang.Object
+377.100.Leaf = org.game.Juzzle.StartDialog
+377.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 378 similar at 100% with Composite
+378.100.Component = java.lang.Object
+378.100.Leaf = org.game.Juzzle.StartDialog
+378.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 379 similar at 100% with Composite
+379.100.Component = javax.swing.JFrame
+379.100.Leaf = org.game.Juzzle.MainFrame
+379.100.Composite = org.game.Juzzle.MainFrame
+
+# Micro-architecture 380 similar at 100% with Composite
+380.100.Component = java.lang.Object
+380.100.Leaf = org.game.Juzzle.ImageDescription
+380.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 381 similar at 100% with Composite
+381.100.Component = java.lang.Object
+381.100.Leaf = org.game.Juzzle.ImageDescription
+381.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 382 similar at 100% with Composite
+382.100.Component = java.lang.Object
+382.100.Leaf = org.game.Juzzle.ImageDescription
+382.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 383 similar at 100% with Composite
+383.100.Component = java.lang.Object
+383.100.Leaf = org.game.Juzzle.ImageDescription
+383.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 384 similar at 100% with Composite
+384.100.Component = java.lang.Object
+384.100.Leaf = org.game.Juzzle.ImageDescription
+384.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 385 similar at 100% with Composite
+385.100.Component = java.lang.Object
+385.100.Leaf = org.game.Juzzle.ImageDescription
+385.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 386 similar at 100% with Composite
+386.100.Component = java.lang.Object
+386.100.Leaf = org.game.Juzzle.ImageDescription
+386.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 387 similar at 100% with Composite
+387.100.Component = javax.swing.JDesktopPane
+387.100.Leaf = org.game.Juzzle.JuzzlePanel
+387.100.Composite = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 388 similar at 100% with Composite
+388.100.Component = java.lang.Object
+388.100.Leaf = org.game.Juzzle.PuzzlePartList
+388.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 389 similar at 100% with Composite
+389.100.Component = java.lang.Object
+389.100.Leaf = org.game.Juzzle.PuzzlePartList
+389.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 390 similar at 100% with Composite
+390.100.Component = java.lang.Object
+390.100.Leaf = org.game.Juzzle.PuzzlePartList
+390.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 391 similar at 100% with Composite
+391.100.Component = java.lang.Object
+391.100.Leaf = org.game.Juzzle.PuzzlePartList
+391.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 392 similar at 100% with Composite
+392.100.Component = java.lang.Object
+392.100.Leaf = org.game.Juzzle.PuzzlePartList
+392.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 393 similar at 100% with Composite
+393.100.Component = java.lang.Object
+393.100.Leaf = org.game.Juzzle.PuzzlePartList
+393.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 394 similar at 100% with Composite
+394.100.Component = java.lang.Object
+394.100.Leaf = org.game.Juzzle.PuzzlePartList
+394.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 395 similar at 100% with Composite
+395.100.Component = java.awt.PaintContext
+395.100.Leaf = org.game.Juzzle.PuzzlePaint
+395.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 396 similar at 100% with Composite
+396.100.Component = java.lang.Object
+396.100.Leaf = org.game.Juzzle.PuzzlePaint
+396.100.Composite = org.game.Juzzle.DummyPuzzlePartList
+
+# Micro-architecture 397 similar at 100% with Composite
+397.100.Component = java.lang.Object
+397.100.Leaf = org.game.Juzzle.PuzzlePaint
+397.100.Composite = org.game.Juzzle.main
+
+# Micro-architecture 398 similar at 100% with Composite
+398.100.Component = java.lang.Object
+398.100.Leaf = org.game.Juzzle.PuzzlePaint
+398.100.Composite = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 399 similar at 100% with Composite
+399.100.Component = java.lang.Object
+399.100.Leaf = org.game.Juzzle.PuzzlePaint
+399.100.Composite = org.game.Juzzle.StartDialog
+
+# Micro-architecture 400 similar at 100% with Composite
+400.100.Component = java.lang.Object
+400.100.Leaf = org.game.Juzzle.PuzzlePaint
+400.100.Composite = org.game.Juzzle.ImageDescription
+
+# Micro-architecture 401 similar at 100% with Composite
+401.100.Component = java.lang.Object
+401.100.Leaf = org.game.Juzzle.PuzzlePaint
+401.100.Composite = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 402 similar at 100% with Composite
+402.100.Component = java.lang.Object
+402.100.Leaf = org.game.Juzzle.PuzzlePaint
+402.100.Composite = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 403 similar at 100% with Composite
+403.100.Component = javax.swing.JPanel
+403.100.Leaf = org.game.Juzzle.ControlPanel
+403.100.Composite = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 404 similar at 100% with Composite
+404.100.Component = javax.swing.JPanel
+404.100.Leaf = org.game.Juzzle.ControlPanel
+404.100.Composite = org.game.Juzzle.ControlPanel
+

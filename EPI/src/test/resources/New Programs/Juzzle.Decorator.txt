@@ -1,0 +1,460 @@
+
+--------------------------------------------------
+Creating model...
+Accessing repository /u/guehene/Ptidej Workspace/EPI Tests/../PADL/bin/
+Loading class files in: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/ControlPanel$TimeCounterListener.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/ControlPanel.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/DummyPuzzlePartList.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/ImageDescription.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/images/JuzzleImages.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/IPuzzlePartList.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/JuzzlePanel$ImageFileFilter.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/JuzzlePanel$JuzzlePanelResizer.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/JuzzlePanel$MenuListener.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/JuzzlePanel.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/main.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/MainFrame.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/PuzzlePaint.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/PuzzlePanel.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/PuzzlePartList$PuzzlePart.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/PuzzlePartList.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/StartDialog$ImageListRenderer.class
+Loading from: ../../P-MARt Workspace/Juzzle/bin/org/game/Juzzle/StartDialog.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/UseRelationship.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Specialisation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Setter.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Relationship.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Parameter.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Package.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MotifModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MethodInvocation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Method.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MemberInterface.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MemberGhost.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MemberClass.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Interface.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Implementation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/IdiomLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Ghost.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Getter.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Generalisation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Field.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Factory.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Entity.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Element.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/DesignLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/DelegatingMethod.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Creation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/ContainerComposition.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/ContainerAggregation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Constructor.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Constituent.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Composition.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/CodeLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Class.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Attribute.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Association.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Aggregation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/AbstractSubject.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/AbstractLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/AbstractContainer.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/UseRelationship.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Specialisation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Setter.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Relationship.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Parameter.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Package.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MotifModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MethodInvocation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Method.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MemberInterface.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MemberGhost.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/MemberClass.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Interface.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Implementation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/IdiomLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Ghost.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Getter.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Generalisation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Field.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Factory.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Entity.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Element.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/DesignLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/DelegatingMethod.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Creation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/ContainerComposition.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/ContainerAggregation.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Constructor.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Constituent.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Composition.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/CodeLevelModel.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Class.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Attribute.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Association.class
+Loading from: /u/guehene/Ptidej Workspace/PADL/bin/padl/kernel/impl/Aggregation.class
+
+--------------------------------------------------
+Analysing the model...
+
+--------------------------------------------------
+Creating string...
+Adding dummy relationship between java.awt.GridLayout and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.Component and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.lang.Integer and org.game.Juzzle.ControlPanel
+Adding dummy relationship between org.game.Juzzle.DummyPuzzlePartList and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.Dimension and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.lang.System and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.Graphics and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.event.ActionListener and org.game.Juzzle.ControlPanel
+Adding dummy relationship between javax.swing.border.Border and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.event.ActionEvent and org.game.Juzzle.ControlPanel
+Adding dummy relationship between javax.swing.JDesktopPane and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.Color and org.game.Juzzle.ControlPanel
+Adding dummy relationship between java.awt.Color and java.awt.event.MouseMotionListener
+Adding dummy relationship between java.awt.Color and org.game.Juzzle.PuzzlePaint
+Adding dummy relationship between java.awt.Container and org.game.Juzzle.PuzzlePaint
+Adding dummy relationship between javax.swing.ImageIcon and org.game.Juzzle.PuzzlePaint
+Adding dummy relationship between javax.swing.ImageIcon and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.awt.geom.Dimension2D and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.awt.image.BufferedImage and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.util.Vector and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.awt.image.ImageObserver and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.lang.Object and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.lang.Class and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.awt.Rectangle and org.game.Juzzle.PuzzlePartList
+Adding dummy relationship between java.awt.Rectangle and org.game.Juzzle.MainFrame
+Adding dummy relationship between java.awt.Rectangle and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.awt.RenderingHints and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.util.Random and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.lang.Boolean and org.game.Juzzle.StartDialog
+Adding dummy relationship between javax.swing.JInternalFrame and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.awt.Point and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.io.IOException and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.io.File and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.awt.Toolkit and org.game.Juzzle.StartDialog
+Adding dummy relationship between javax.swing.JScrollPane and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.awt.image.ColorModel and org.game.Juzzle.StartDialog
+Adding dummy relationship between java.awt.geom.GeneralPath and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between javax.swing.Icon and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.awt.Graphics2D and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.awt.event.ComponentAdapter and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.awt.geom.AffineTransform and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.lang.Throwable and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between javax.swing.border.CompoundBorder and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.io.LineNumberReader and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between javax.swing.JCheckBoxMenuItem and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.awt.image.WritableRaster and org.game.Juzzle.images.JuzzleImages
+Adding dummy relationship between java.awt.image.WritableRaster and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.JFileChooser and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.Image and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.geom.Area and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between org.game.Juzzle.ImageDescription and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.image.Raster and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.JOptionPane and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.lang.NoClassDefFoundError and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.BorderLayout and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.border.EtchedBorder and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.JPanel and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.Cursor and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.Stroke and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.border.EmptyBorder and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.event.MouseEvent and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.JMenuBar and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.Font and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.lang.StringBuffer and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.io.InputStreamReader and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between java.awt.event.ComponentEvent and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.filechooser.FileFilter and org.game.Juzzle.JuzzlePanel
+Adding dummy relationship between javax.swing.filechooser.FileFilter and org.game.Juzzle.main
+Adding dummy relationship between javax.swing.JLabel and org.game.Juzzle.main
+Adding dummy relationship between javax.swing.JLabel and java.awt.event.MouseListener
+Adding dummy relationship between javax.swing.JLabel and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.JMenuItem and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between java.lang.String and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between java.awt.BasicStroke and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between java.awt.geom.Rectangle2D and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.Timer and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.JTextField and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.JViewport and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.JList and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between java.awt.FlowLayout and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.border.LineBorder and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.JMenu and org.game.Juzzle.PuzzlePanel
+Adding dummy relationship between javax.swing.border.BevelBorder and org.game.Juzzle.PuzzlePanel
+Remove: java.awt.GridBagConstraints
+Remove: java.io.InputStream
+Remove: java.net.URL
+Remove: javax.swing.ListCellRenderer
+String Creation Time: 38
+String Length in Tokens: 3611
+--------------------------------------------------
+
+
+--------------------------------------------------
+Computing solutions...
+NONE
+EPI_Abstract_Decorator containerComposition EPI_Abstract_Component inheritance EPI_Abstract_Decorator inheritance ConcreteDecorator dummyRelationship EPI_Abstract_Component inheritance ConcreteComponent
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1
+EPI_Abstract_Decorator containerComposition EPI_Abstract_Component inheritance EPI_Abstract_Decorator inheritance ConcreteDecorator dummyRelationship EPI_Abstract_Component inheritance ConcreteComponent
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2
+EPI_Abstract_Decorator containerComposition EPI_Abstract_Component inheritance EPI_Abstract_Decorator inheritance ConcreteDecorator dummyRelationship EPI_Abstract_Component inheritance ConcreteComponent
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3
+Decorator containerComposition Component inheritance Decorator inheritance ConcreteDecorator dummyRelationship Component inheritance ConcreteComponent
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+4
+EPI_Abstract_Decorator containerComposition EPI_Abstract_Component inheritance EPI_Abstract_Decorator inheritance ConcreteDecorator dummyRelationship EPI_Abstract_Component
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2
+EPI_Abstract_Decorator containerComposition EPI_Abstract_Component inheritance EPI_Abstract_Decorator inheritance ConcreteDecorator dummyRelationship EPI_Abstract_Component inheritance ConcreteComponent
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 3
+Decorator containerComposition Component inheritance Decorator inheritance ConcreteDecorator dummyRelationship Component inheritance ConcreteComponent
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 4
+EPI_Abstract_Decorator containerComposition EPI_Abstract_Component inheritance EPI_Abstract_Decorator inheritance ConcreteDecorator dummyRelationship EPI_Abstract_Component
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 3
+Decorator containerComposition Component inheritance Decorator inheritance ConcreteDecorator dummyRelationship Component inheritance ConcreteComponent
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 4
+EPI_Abstract_Decorator containerComposition EPI_Abstract_Component inheritance EPI_Abstract_Decorator inheritance ConcreteDecorator dummyRelationship EPI_Abstract_Component
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3 and 4
+EPI_Abstract_Decorator containerComposition EPI_Abstract_Component inheritance EPI_Abstract_Decorator inheritance ConcreteDecorator dummyRelationship EPI_Abstract_Component
+Solution Computation Time:0
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2 and 3
+Decorator containerComposition Component inheritance Decorator inheritance ConcreteDecorator dummyRelationship Component inheritance ConcreteComponent
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+ALL
+Decorator containerComposition Component inheritance Decorator inheritance ConcreteDecorator dummyRelationship Component
+Solution Computation Time:1
+Number of Solutions With and Without Ghosts:37
+Number of Solutions Without Ghosts:5
+Number of Solutions With Ghosts:32
+
+
+# Micro-architecture 88 similar at 100% with Decorator
+88.100.Component = java.awt.Dimension
+88.100.Decorator = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 89 similar at 100% with Decorator
+89.100.Component = java.awt.Dimension
+89.100.Decorator = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 90 similar at 100% with Decorator
+90.100.Component = java.awt.Dimension
+90.100.Decorator = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 91 similar at 100% with Decorator
+91.100.Component = java.awt.event.ActionListener
+91.100.Decorator = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 92 similar at 100% with Decorator
+92.100.Component = org.game.Juzzle.ControlPanel
+92.100.Decorator = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 93 similar at 100% with Decorator
+93.100.Component = java.awt.Color
+93.100.Decorator = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 94 similar at 100% with Decorator
+94.100.Component = java.awt.Color
+94.100.Decorator = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 95 similar at 100% with Decorator
+95.100.Component = java.awt.geom.Dimension2D
+95.100.Decorator = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 96 similar at 100% with Decorator
+96.100.Component = java.awt.image.BufferedImage
+96.100.Decorator = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 97 similar at 100% with Decorator
+97.100.Component = java.util.Vector
+97.100.Decorator = org.game.Juzzle.StartDialog
+
+# Micro-architecture 98 similar at 100% with Decorator
+98.100.Component = java.awt.Rectangle
+98.100.Decorator = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 99 similar at 100% with Decorator
+99.100.Component = java.awt.Rectangle
+99.100.Decorator = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 100 similar at 100% with Decorator
+100.100.Component = java.awt.Point
+100.100.Decorator = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 101 similar at 100% with Decorator
+101.100.Component = java.awt.Point
+101.100.Decorator = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 102 similar at 100% with Decorator
+102.100.Component = java.io.File
+102.100.Decorator = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 103 similar at 100% with Decorator
+103.100.Component = java.awt.image.ColorModel
+103.100.Decorator = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 104 similar at 100% with Decorator
+104.100.Component = java.awt.geom.GeneralPath
+104.100.Decorator = org.game.Juzzle.PuzzlePartList
+
+# Micro-architecture 105 similar at 100% with Decorator
+105.100.Component = java.awt.geom.GeneralPath
+105.100.Decorator = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 106 similar at 100% with Decorator
+106.100.Component = javax.swing.Icon
+106.100.Decorator = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 107 similar at 100% with Decorator
+107.100.Component = org.game.Juzzle.StartDialog
+107.100.Decorator = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 108 similar at 100% with Decorator
+108.100.Component = java.awt.image.WritableRaster
+108.100.Decorator = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 109 similar at 100% with Decorator
+109.100.Component = javax.swing.JFileChooser
+109.100.Decorator = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 110 similar at 100% with Decorator
+110.100.Component = java.awt.Image
+110.100.Decorator = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 111 similar at 100% with Decorator
+111.100.Component = org.game.Juzzle.ImageDescription
+111.100.Decorator = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 112 similar at 100% with Decorator
+112.100.Component = java.awt.Cursor
+112.100.Decorator = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 113 similar at 100% with Decorator
+113.100.Component = java.awt.Paint
+113.100.Decorator = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 114 similar at 100% with Decorator
+114.100.Component = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
+114.100.Decorator = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 115 similar at 100% with Decorator
+115.100.Component = javax.swing.filechooser.FileFilter
+115.100.Decorator = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 116 similar at 100% with Decorator
+116.100.Component = java.lang.String
+116.100.Decorator = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 117 similar at 100% with Decorator
+117.100.Component = java.lang.String
+117.100.Decorator = org.game.Juzzle.StartDialog
+
+# Micro-architecture 118 similar at 100% with Decorator
+118.100.Component = java.lang.String
+118.100.Decorator = org.game.Juzzle.images.JuzzleImages
+
+# Micro-architecture 119 similar at 100% with Decorator
+119.100.Component = java.lang.String
+119.100.Decorator = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 120 similar at 100% with Decorator
+120.100.Component = java.lang.String
+120.100.Decorator = org.game.Juzzle.PuzzlePanel
+
+# Micro-architecture 121 similar at 100% with Decorator
+121.100.Component = java.awt.geom.Rectangle2D
+121.100.Decorator = org.game.Juzzle.PuzzlePaint
+
+# Micro-architecture 122 similar at 100% with Decorator
+122.100.Component = javax.swing.Timer
+122.100.Decorator = org.game.Juzzle.ControlPanel
+
+# Micro-architecture 123 similar at 100% with Decorator
+123.100.Component = org.game.Juzzle.PuzzlePanel
+123.100.Decorator = org.game.Juzzle.JuzzlePanel
+
+# Micro-architecture 124 similar at 100% with Decorator
+124.100.Component = javax.swing.JList
+124.100.Decorator = org.game.Juzzle.StartDialog
+

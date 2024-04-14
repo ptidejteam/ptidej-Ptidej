@@ -100,6 +100,23 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!--
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-cpp-eclipse</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-cpp-eclipse</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+		-->
+
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-creator-javafile-javac</artifactId>
@@ -153,11 +170,57 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>net.ptidej.epi</groupId>
+			<artifactId>epi-core</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.epi</groupId>
+			<artifactId>epi-core</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.java-parser</groupId>
+			<artifactId>java-parser-core</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.java-parser</groupId>
+			<artifactId>java-parser-core</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.jct</groupId>
+			<artifactId>jct-tests</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.jct</groupId>
+			<artifactId>jct-tests</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
 		<!--
 		These two last dependencies MUST COME LAST because 
 		they bring with them aspectjtools, which itself bring
 		with it an old version of SubMonitor, which leads to
-			java.lang.NoSuchMethodError: 'org.eclipse.core.runtime.SubMonitor org.eclipse.core.runtime.SubMonitor.split(int)' 
+			java.lang.NoSuchMethodError: 'org.eclipse.core.runtime.SubMonitor
+		org.eclipse.core.runtime.SubMonitor.split(int)' 
 		-->
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>

@@ -28,25 +28,25 @@ import jct.test.rsc.snpsht.utils.FSUtils;
 public class CVSCheckOut {
 	private CVSRoot cvsRoot;
 	private Runtime rt = Runtime.getRuntime();
-	private File tempDir;
+	private File tmpDir;
 
 	public CVSCheckOut(CVSRoot cvsRoot) {
 		this.cvsRoot = cvsRoot;
-		getAndFlushTempDir();
+		getAndFlushtmpDir();
 	}
 
-	private File getAndFlushTempDir() {
-		this.tempDir =
+	private File getAndFlushtmpDir() {
+		this.tmpDir =
 			new File(System.getProperty("java.io.tmpdir"), "tmp_dir_cvs_co_"
 					+ this.hashCode());
 
-		if (this.tempDir.exists()) {
-			FSUtils.rmDir(this.tempDir);
+		if (this.tmpDir.exists()) {
+			FSUtils.rmDir(this.tmpDir);
 		}
 
-		this.tempDir.mkdirs();
+		this.tmpDir.mkdirs();
 
-		return this.tempDir;
+		return this.tmpDir;
 	}
 
 	public boolean checkOut(String module, File targetDir) throws IOException {
@@ -99,13 +99,13 @@ public class CVSCheckOut {
 		if (targetFile.isDirectory())
 			throw new IllegalArgumentException("Target file is a diretory");
 
-		getAndFlushTempDir();
+		getAndFlushtmpDir();
 		
 		p =
 			this.rt.exec(
 				"cvs co -r " + revision + " " + fileRevPath,
 				new String[] { "CVSROOT=" + this.cvsRoot.getCVSROOT() },
-				this.tempDir);
+				this.tmpDir);
 		System.out.println("cvs co -r " + revision + " " + fileRevPath);
 		
 		// Display server answer
@@ -129,7 +129,7 @@ public class CVSCheckOut {
 		if (answer.contains("aborted") || answer.contains("warning")) {
 			return false;
 		} else {
-			tmpFile = getFile(fileRevPath, this.tempDir);
+			tmpFile = getFile(fileRevPath, this.tmpDir);
 
 			if (!tmpFile.isFile() || !tmpFile.exists())
 				return false;

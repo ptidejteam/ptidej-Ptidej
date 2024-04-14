@@ -1,0 +1,815 @@
+String Creation Time: 22050
+String Length in Tokens: 111565
+--------------------------------------------------
+
+NONE
+Solution Computation Time:416
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1
+Solution Computation Time:553
+Number of Solutions With and Without Ghosts:2
+Number of Solutions Without Ghosts:2
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 61 similar at 100% with Composite
+61.100.EPI_Abstract_Component = EPI_Abstract_net.sourceforge.ganttproject.time.DateFrameable
+61.100.Leaf = net.sourceforge.ganttproject.time.gregorian.FramerImpl
+61.100.Composite = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+
+# Micro-architecture 62 similar at 100% with Composite
+62.100.EPI_Abstract_Component = EPI_Abstract_net.sourceforge.ganttproject.time.DateFrameable
+62.100.Leaf = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+62.100.Composite = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+
+---------------------------------------------
+2
+Solution Computation Time:417
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3
+Solution Computation Time:417
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+4
+Solution Computation Time:831
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2
+Solution Computation Time:559
+Number of Solutions With and Without Ghosts:2
+Number of Solutions Without Ghosts:2
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 125 similar at 100% with Composite
+125.100.EPI_Abstract_Component = EPI_Abstract_net.sourceforge.ganttproject.time.DateFrameable
+125.100.Leaf = net.sourceforge.ganttproject.time.gregorian.FramerImpl
+125.100.Composite = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+
+# Micro-architecture 126 similar at 100% with Composite
+126.100.EPI_Abstract_Component = EPI_Abstract_net.sourceforge.ganttproject.time.DateFrameable
+126.100.Leaf = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+126.100.Composite = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+
+---------------------------------------------
+1 and 3
+Solution Computation Time:560
+Number of Solutions With and Without Ghosts:53
+Number of Solutions Without Ghosts:2
+Number of Solutions With Ghosts:51
+
+
+# Micro-architecture 537 similar at 100% with Composite
+537.100.Component = javax.swing.AbstractAction
+537.100.Leaf = net.sourceforge.ganttproject.document.OpenDocumentAction
+537.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 538 similar at 100% with Composite
+538.100.Component = javax.swing.AbstractAction
+538.100.Leaf = EPI_Abstract_net.sourceforge.ganttproject.action.ResourceAction
+538.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 539 similar at 100% with Composite
+539.100.Component = javax.swing.AbstractAction
+539.100.Leaf = net.sourceforge.ganttproject.action.ImportResources
+539.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 540 similar at 100% with Composite
+540.100.Component = javax.swing.AbstractAction
+540.100.Leaf = net.sourceforge.ganttproject.action.NewTaskAction
+540.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 541 similar at 100% with Composite
+541.100.Component = javax.swing.AbstractAction
+541.100.Leaf = net.sourceforge.ganttproject.action.NewArtefactAction
+541.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 542 similar at 100% with Composite
+542.100.Component = java.awt.event.ActionListener
+542.100.Leaf = net.sourceforge.ganttproject.gui.GanttDialogCalendar
+542.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 543 similar at 100% with Composite
+543.100.Component = java.awt.event.ActionListener
+543.100.Leaf = EPI_Abstract_net.sourceforge.ganttproject.gui.GeneralDialog
+543.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 544 similar at 100% with Composite
+544.100.Component = java.awt.event.ActionListener
+544.100.Leaf = net.sourceforge.ganttproject.gui.options.PDFSettingsPanel
+544.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 545 similar at 100% with Composite
+545.100.Component = java.awt.event.ActionListener
+545.100.Leaf = net.sourceforge.ganttproject.GanttProject
+545.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 546 similar at 100% with Composite
+546.100.Component = java.awt.event.ActionListener
+546.100.Leaf = net.sourceforge.ganttproject.gui.GanttPreviewPrint
+546.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 547 similar at 100% with Composite
+547.100.Component = java.awt.event.ActionListener
+547.100.Leaf = net.sourceforge.ganttproject.shape.Shape
+547.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 548 similar at 100% with Composite
+548.100.Component = java.awt.event.ActionListener
+548.100.Leaf = net.sourceforge.ganttproject.gui.options.CSVSettingsPanel
+548.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 549 similar at 100% with Composite
+549.100.Component = java.awt.event.ActionListener
+549.100.Leaf = net.sourceforge.ganttproject.gui.options.HTMLSettingsPanel
+549.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 550 similar at 100% with Composite
+550.100.Component = java.awt.event.ActionListener
+550.100.Leaf = net.sourceforge.ganttproject.gui.GanttDialogProperties
+550.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 551 similar at 100% with Composite
+551.100.Component = java.awt.event.ActionListener
+551.100.Leaf = net.sourceforge.ganttproject.gui.GanttApplet
+551.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 552 similar at 100% with Composite
+552.100.Component = java.awt.event.ActionListener
+552.100.Leaf = net.sourceforge.ganttproject.gui.options.SettingsDialog
+552.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 553 similar at 100% with Composite
+553.100.Component = java.awt.event.ActionListener
+553.100.Leaf = net.sourceforge.ganttproject.gui.GanttDialogCalendar
+553.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 554 similar at 100% with Composite
+554.100.Component = java.awt.event.ActionListener
+554.100.Leaf = EPI_Abstract_net.sourceforge.ganttproject.gui.GeneralDialog
+554.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 555 similar at 100% with Composite
+555.100.Component = java.awt.event.ActionListener
+555.100.Leaf = net.sourceforge.ganttproject.gui.options.PDFSettingsPanel
+555.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 556 similar at 100% with Composite
+556.100.Component = java.awt.event.ActionListener
+556.100.Leaf = net.sourceforge.ganttproject.GanttProject
+556.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 557 similar at 100% with Composite
+557.100.Component = java.awt.event.ActionListener
+557.100.Leaf = net.sourceforge.ganttproject.gui.GanttPreviewPrint
+557.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 558 similar at 100% with Composite
+558.100.Component = java.awt.event.ActionListener
+558.100.Leaf = net.sourceforge.ganttproject.shape.Shape
+558.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 559 similar at 100% with Composite
+559.100.Component = java.awt.event.ActionListener
+559.100.Leaf = net.sourceforge.ganttproject.gui.options.CSVSettingsPanel
+559.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 560 similar at 100% with Composite
+560.100.Component = java.awt.event.ActionListener
+560.100.Leaf = net.sourceforge.ganttproject.gui.options.HTMLSettingsPanel
+560.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 561 similar at 100% with Composite
+561.100.Component = java.awt.event.ActionListener
+561.100.Leaf = net.sourceforge.ganttproject.gui.GanttDialogProperties
+561.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 562 similar at 100% with Composite
+562.100.Component = java.awt.event.ActionListener
+562.100.Leaf = net.sourceforge.ganttproject.gui.GanttApplet
+562.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 563 similar at 100% with Composite
+563.100.Component = java.awt.event.ActionListener
+563.100.Leaf = net.sourceforge.ganttproject.gui.options.SettingsDialog
+563.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 564 similar at 100% with Composite
+564.100.Component = java.awt.event.ActionListener
+564.100.Leaf = net.sourceforge.ganttproject.gui.GanttDialogCalendar
+564.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 565 similar at 100% with Composite
+565.100.Component = java.awt.event.ActionListener
+565.100.Leaf = EPI_Abstract_net.sourceforge.ganttproject.gui.GeneralDialog
+565.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 566 similar at 100% with Composite
+566.100.Component = java.awt.event.ActionListener
+566.100.Leaf = net.sourceforge.ganttproject.gui.options.PDFSettingsPanel
+566.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 567 similar at 100% with Composite
+567.100.Component = java.awt.event.ActionListener
+567.100.Leaf = net.sourceforge.ganttproject.GanttProject
+567.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 568 similar at 100% with Composite
+568.100.Component = java.awt.event.ActionListener
+568.100.Leaf = net.sourceforge.ganttproject.gui.GanttPreviewPrint
+568.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 569 similar at 100% with Composite
+569.100.Component = java.awt.event.ActionListener
+569.100.Leaf = net.sourceforge.ganttproject.shape.Shape
+569.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 570 similar at 100% with Composite
+570.100.Component = java.awt.event.ActionListener
+570.100.Leaf = net.sourceforge.ganttproject.gui.options.CSVSettingsPanel
+570.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 571 similar at 100% with Composite
+571.100.Component = java.awt.event.ActionListener
+571.100.Leaf = net.sourceforge.ganttproject.gui.options.HTMLSettingsPanel
+571.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 572 similar at 100% with Composite
+572.100.Component = java.awt.event.ActionListener
+572.100.Leaf = net.sourceforge.ganttproject.gui.GanttDialogProperties
+572.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 573 similar at 100% with Composite
+573.100.Component = java.awt.event.ActionListener
+573.100.Leaf = net.sourceforge.ganttproject.gui.GanttApplet
+573.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 574 similar at 100% with Composite
+574.100.Component = java.awt.event.ActionListener
+574.100.Leaf = net.sourceforge.ganttproject.gui.options.SettingsDialog
+574.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 575 similar at 100% with Composite
+575.100.Component = javax.swing.JPanel
+575.100.Leaf = net.sourceforge.ganttproject.gui.options.TopPanel
+575.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 576 similar at 100% with Composite
+576.100.Component = javax.swing.JPanel
+576.100.Leaf = net.sourceforge.ganttproject.GanttGraphicArea
+576.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 577 similar at 100% with Composite
+577.100.Component = javax.swing.JPanel
+577.100.Leaf = net.sourceforge.ganttproject.gui.GanttStatusBar
+577.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 578 similar at 100% with Composite
+578.100.Component = javax.swing.JPanel
+578.100.Leaf = net.sourceforge.ganttproject.GanttTree
+578.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 579 similar at 100% with Composite
+579.100.Component = javax.swing.JPanel
+579.100.Leaf = net.sourceforge.ganttproject.GanttResourcePanel
+579.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 580 similar at 100% with Composite
+580.100.Component = javax.swing.JPanel
+580.100.Leaf = net.sourceforge.ganttproject.gui.GanttPanelDate
+580.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 581 similar at 100% with Composite
+581.100.Component = javax.swing.JPanel
+581.100.Leaf = net.sourceforge.ganttproject.shape.PreviewPanel
+581.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 582 similar at 100% with Composite
+582.100.Component = javax.swing.JPanel
+582.100.Leaf = EPI_Abstract_net.sourceforge.ganttproject.gui.options.GeneralOptionPanel
+582.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 583 similar at 100% with Composite
+583.100.Component = javax.swing.JPanel
+583.100.Leaf = net.sourceforge.ganttproject.shape.Shape
+583.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 584 similar at 100% with Composite
+584.100.Component = javax.swing.JPanel
+584.100.Leaf = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+584.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 585 similar at 100% with Composite
+585.100.Component = javax.swing.JPanel
+585.100.Leaf = net.sourceforge.ganttproject.GanttImagePanel
+585.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 586 similar at 100% with Composite
+586.100.Component = javax.swing.JPanel
+586.100.Leaf = net.sourceforge.ganttproject.shape.PaintCellRenderer
+586.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 587 similar at 100% with Composite
+587.100.Component = javax.swing.JPanel
+587.100.Leaf = net.sourceforge.ganttproject.ResourceLoadGraphicArea
+587.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 588 similar at 100% with Composite
+588.100.Component = EPI_Abstract_net.sourceforge.ganttproject.time.DateFrameable
+588.100.Leaf = net.sourceforge.ganttproject.time.gregorian.FramerImpl
+588.100.Composite = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+
+# Micro-architecture 589 similar at 100% with Composite
+589.100.Component = EPI_Abstract_net.sourceforge.ganttproject.time.DateFrameable
+589.100.Leaf = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+589.100.Composite = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+
+---------------------------------------------
+1 and 4
+Solution Computation Time:541
+Number of Solutions With and Without Ghosts:1
+Number of Solutions Without Ghosts:1
+Number of Solutions With Ghosts:0
+
+
+# Micro-architecture 648 similar at 100% with Composite
+648.100.EPI_Abstract_Component = EPI_Abstract_net.sourceforge.ganttproject.time.DateFrameable
+648.100.Composite = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+
+---------------------------------------------
+2 and 3
+Solution Computation Time:208
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+2 and 4
+Solution Computation Time:413
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+3 and 4
+Solution Computation Time:414
+Number of Solutions With and Without Ghosts:0
+Number of Solutions Without Ghosts:0
+Number of Solutions With Ghosts:0
+
+
+---------------------------------------------
+1 and 2 and 3
+Solution Computation Time:332
+Number of Solutions With and Without Ghosts:79
+Number of Solutions Without Ghosts:3
+Number of Solutions With Ghosts:76
+
+
+# Micro-architecture 1062 similar at 100% with Composite
+1062.100.Component = javax.swing.AbstractAction
+1062.100.Leaf = net.sourceforge.ganttproject.document.OpenDocumentAction
+1062.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 1063 similar at 100% with Composite
+1063.100.Component = javax.swing.AbstractAction
+1063.100.Leaf = net.sourceforge.ganttproject.action.DeleteHumanAction
+1063.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 1064 similar at 100% with Composite
+1064.100.Component = javax.swing.AbstractAction
+1064.100.Leaf = net.sourceforge.ganttproject.action.NewHumanAction
+1064.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 1065 similar at 100% with Composite
+1065.100.Component = javax.swing.AbstractAction
+1065.100.Leaf = EPI_Abstract_net.sourceforge.ganttproject.action.ResourceAction
+1065.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 1066 similar at 100% with Composite
+1066.100.Component = javax.swing.AbstractAction
+1066.100.Leaf = net.sourceforge.ganttproject.action.ImportResources
+1066.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 1067 similar at 100% with Composite
+1067.100.Component = javax.swing.AbstractAction
+1067.100.Leaf = net.sourceforge.ganttproject.action.NewTaskAction
+1067.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 1068 similar at 100% with Composite
+1068.100.Component = javax.swing.AbstractAction
+1068.100.Leaf = net.sourceforge.ganttproject.action.NewArtefactAction
+1068.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 1069 similar at 100% with Composite
+1069.100.Component = java.awt.event.ActionListener
+1069.100.Leaf = net.sourceforge.ganttproject.gui.GanttDialogCalendar
+1069.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1070 similar at 100% with Composite
+1070.100.Component = java.awt.event.ActionListener
+1070.100.Leaf = net.sourceforge.ganttproject.gui.about.AboutDialog
+1070.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1071 similar at 100% with Composite
+1071.100.Component = java.awt.event.ActionListener
+1071.100.Leaf = net.sourceforge.ganttproject.gui.server.ServerDialog
+1071.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1072 similar at 100% with Composite
+1072.100.Component = java.awt.event.ActionListener
+1072.100.Leaf = EPI_Abstract_net.sourceforge.ganttproject.gui.GeneralDialog
+1072.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1073 similar at 100% with Composite
+1073.100.Component = java.awt.event.ActionListener
+1073.100.Leaf = net.sourceforge.ganttproject.gui.options.PDFSettingsPanel
+1073.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1074 similar at 100% with Composite
+1074.100.Component = java.awt.event.ActionListener
+1074.100.Leaf = net.sourceforge.ganttproject.GanttProject
+1074.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1075 similar at 100% with Composite
+1075.100.Component = java.awt.event.ActionListener
+1075.100.Leaf = net.sourceforge.ganttproject.gui.GanttPreviewPrint
+1075.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1076 similar at 100% with Composite
+1076.100.Component = java.awt.event.ActionListener
+1076.100.Leaf = net.sourceforge.ganttproject.shape.Shape
+1076.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1077 similar at 100% with Composite
+1077.100.Component = java.awt.event.ActionListener
+1077.100.Leaf = net.sourceforge.ganttproject.gui.options.CSVSettingsPanel
+1077.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1078 similar at 100% with Composite
+1078.100.Component = java.awt.event.ActionListener
+1078.100.Leaf = net.sourceforge.ganttproject.gui.options.HTMLSettingsPanel
+1078.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1079 similar at 100% with Composite
+1079.100.Component = java.awt.event.ActionListener
+1079.100.Leaf = net.sourceforge.ganttproject.gui.GanttDialogProperties
+1079.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1080 similar at 100% with Composite
+1080.100.Component = java.awt.event.ActionListener
+1080.100.Leaf = net.sourceforge.ganttproject.gui.GanttApplet
+1080.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1081 similar at 100% with Composite
+1081.100.Component = java.awt.event.ActionListener
+1081.100.Leaf = net.sourceforge.ganttproject.gui.options.SettingsDialog
+1081.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1082 similar at 100% with Composite
+1082.100.Component = java.awt.event.ActionListener
+1082.100.Leaf = net.sourceforge.ganttproject.gui.GanttDialogCalendar
+1082.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1083 similar at 100% with Composite
+1083.100.Component = java.awt.event.ActionListener
+1083.100.Leaf = net.sourceforge.ganttproject.gui.about.AboutDialog
+1083.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1084 similar at 100% with Composite
+1084.100.Component = java.awt.event.ActionListener
+1084.100.Leaf = net.sourceforge.ganttproject.gui.server.ServerDialog
+1084.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1085 similar at 100% with Composite
+1085.100.Component = java.awt.event.ActionListener
+1085.100.Leaf = EPI_Abstract_net.sourceforge.ganttproject.gui.GeneralDialog
+1085.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1086 similar at 100% with Composite
+1086.100.Component = java.awt.event.ActionListener
+1086.100.Leaf = net.sourceforge.ganttproject.gui.options.PDFSettingsPanel
+1086.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1087 similar at 100% with Composite
+1087.100.Component = java.awt.event.ActionListener
+1087.100.Leaf = net.sourceforge.ganttproject.GanttProject
+1087.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1088 similar at 100% with Composite
+1088.100.Component = java.awt.event.ActionListener
+1088.100.Leaf = net.sourceforge.ganttproject.gui.GanttPreviewPrint
+1088.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1089 similar at 100% with Composite
+1089.100.Component = java.awt.event.ActionListener
+1089.100.Leaf = net.sourceforge.ganttproject.shape.Shape
+1089.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1090 similar at 100% with Composite
+1090.100.Component = java.awt.event.ActionListener
+1090.100.Leaf = net.sourceforge.ganttproject.gui.options.CSVSettingsPanel
+1090.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1091 similar at 100% with Composite
+1091.100.Component = java.awt.event.ActionListener
+1091.100.Leaf = net.sourceforge.ganttproject.gui.options.HTMLSettingsPanel
+1091.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1092 similar at 100% with Composite
+1092.100.Component = java.awt.event.ActionListener
+1092.100.Leaf = net.sourceforge.ganttproject.gui.GanttDialogProperties
+1092.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1093 similar at 100% with Composite
+1093.100.Component = java.awt.event.ActionListener
+1093.100.Leaf = net.sourceforge.ganttproject.gui.GanttApplet
+1093.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1094 similar at 100% with Composite
+1094.100.Component = java.awt.event.ActionListener
+1094.100.Leaf = net.sourceforge.ganttproject.gui.options.SettingsDialog
+1094.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1095 similar at 100% with Composite
+1095.100.Component = java.awt.event.ActionListener
+1095.100.Leaf = net.sourceforge.ganttproject.gui.GanttDialogCalendar
+1095.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1096 similar at 100% with Composite
+1096.100.Component = java.awt.event.ActionListener
+1096.100.Leaf = net.sourceforge.ganttproject.gui.about.AboutDialog
+1096.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1097 similar at 100% with Composite
+1097.100.Component = java.awt.event.ActionListener
+1097.100.Leaf = net.sourceforge.ganttproject.gui.server.ServerDialog
+1097.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1098 similar at 100% with Composite
+1098.100.Component = java.awt.event.ActionListener
+1098.100.Leaf = EPI_Abstract_net.sourceforge.ganttproject.gui.GeneralDialog
+1098.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1099 similar at 100% with Composite
+1099.100.Component = java.awt.event.ActionListener
+1099.100.Leaf = net.sourceforge.ganttproject.gui.options.PDFSettingsPanel
+1099.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1100 similar at 100% with Composite
+1100.100.Component = java.awt.event.ActionListener
+1100.100.Leaf = net.sourceforge.ganttproject.GanttProject
+1100.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1101 similar at 100% with Composite
+1101.100.Component = java.awt.event.ActionListener
+1101.100.Leaf = net.sourceforge.ganttproject.gui.GanttPreviewPrint
+1101.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1102 similar at 100% with Composite
+1102.100.Component = java.awt.event.ActionListener
+1102.100.Leaf = net.sourceforge.ganttproject.shape.Shape
+1102.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1103 similar at 100% with Composite
+1103.100.Component = java.awt.event.ActionListener
+1103.100.Leaf = net.sourceforge.ganttproject.gui.options.CSVSettingsPanel
+1103.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1104 similar at 100% with Composite
+1104.100.Component = java.awt.event.ActionListener
+1104.100.Leaf = net.sourceforge.ganttproject.gui.options.HTMLSettingsPanel
+1104.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1105 similar at 100% with Composite
+1105.100.Component = java.awt.event.ActionListener
+1105.100.Leaf = net.sourceforge.ganttproject.gui.GanttDialogProperties
+1105.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1106 similar at 100% with Composite
+1106.100.Component = java.awt.event.ActionListener
+1106.100.Leaf = net.sourceforge.ganttproject.gui.GanttApplet
+1106.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1107 similar at 100% with Composite
+1107.100.Component = java.awt.event.ActionListener
+1107.100.Leaf = net.sourceforge.ganttproject.gui.options.SettingsDialog
+1107.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1108 similar at 100% with Composite
+1108.100.Component = javax.swing.JPanel
+1108.100.Leaf = net.sourceforge.ganttproject.gui.options.TopPanel
+1108.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1109 similar at 100% with Composite
+1109.100.Component = javax.swing.JPanel
+1109.100.Leaf = net.sourceforge.ganttproject.gui.server.ConnectionPanel
+1109.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1110 similar at 100% with Composite
+1110.100.Component = javax.swing.JPanel
+1110.100.Leaf = net.sourceforge.ganttproject.gui.options.LnFSettingsPanel
+1110.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1111 similar at 100% with Composite
+1111.100.Component = javax.swing.JPanel
+1111.100.Leaf = net.sourceforge.ganttproject.gui.options.RolesSettingsPanel
+1111.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1112 similar at 100% with Composite
+1112.100.Component = javax.swing.JPanel
+1112.100.Leaf = net.sourceforge.ganttproject.gui.about.AboutLibraryPanel
+1112.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1113 similar at 100% with Composite
+1113.100.Component = javax.swing.JPanel
+1113.100.Leaf = net.sourceforge.ganttproject.gui.about.AboutLicensePanel
+1113.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1114 similar at 100% with Composite
+1114.100.Component = javax.swing.JPanel
+1114.100.Leaf = net.sourceforge.ganttproject.gui.options.HTMLSettingsPanel
+1114.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1115 similar at 100% with Composite
+1115.100.Component = javax.swing.JPanel
+1115.100.Leaf = net.sourceforge.ganttproject.gui.options.CSVSettingsPanel
+1115.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1116 similar at 100% with Composite
+1116.100.Component = javax.swing.JPanel
+1116.100.Leaf = net.sourceforge.ganttproject.gui.options.ExportSettingsPanel
+1116.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1117 similar at 100% with Composite
+1117.100.Component = javax.swing.JPanel
+1117.100.Leaf = net.sourceforge.ganttproject.gui.about.AboutJavaInfosPanel
+1117.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1118 similar at 100% with Composite
+1118.100.Component = javax.swing.JPanel
+1118.100.Leaf = net.sourceforge.ganttproject.gui.about.AboutAuthorPanel
+1118.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1119 similar at 100% with Composite
+1119.100.Component = javax.swing.JPanel
+1119.100.Leaf = net.sourceforge.ganttproject.gui.options.ColorSettingsPanel
+1119.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1120 similar at 100% with Composite
+1120.100.Component = javax.swing.JPanel
+1120.100.Leaf = net.sourceforge.ganttproject.gui.options.WelcomeSettingsPanel
+1120.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1121 similar at 100% with Composite
+1121.100.Component = javax.swing.JPanel
+1121.100.Leaf = net.sourceforge.ganttproject.gui.options.ParametersSettingsPanel
+1121.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1122 similar at 100% with Composite
+1122.100.Component = javax.swing.JPanel
+1122.100.Leaf = net.sourceforge.ganttproject.gui.options.PDFSettingsPanel
+1122.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1123 similar at 100% with Composite
+1123.100.Component = javax.swing.JPanel
+1123.100.Leaf = net.sourceforge.ganttproject.gui.about.AboutPanel
+1123.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1124 similar at 100% with Composite
+1124.100.Component = javax.swing.JPanel
+1124.100.Leaf = net.sourceforge.ganttproject.gui.options.LanguageSettingsPanel
+1124.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1125 similar at 100% with Composite
+1125.100.Component = javax.swing.JPanel
+1125.100.Leaf = net.sourceforge.ganttproject.gui.options.ProjectSettingsPanel
+1125.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1126 similar at 100% with Composite
+1126.100.Component = javax.swing.JPanel
+1126.100.Leaf = net.sourceforge.ganttproject.GanttGraphicArea
+1126.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1127 similar at 100% with Composite
+1127.100.Component = javax.swing.JPanel
+1127.100.Leaf = net.sourceforge.ganttproject.gui.GanttStatusBar
+1127.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1128 similar at 100% with Composite
+1128.100.Component = javax.swing.JPanel
+1128.100.Leaf = net.sourceforge.ganttproject.GanttTree
+1128.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1129 similar at 100% with Composite
+1129.100.Component = javax.swing.JPanel
+1129.100.Leaf = net.sourceforge.ganttproject.GanttResourcePanel
+1129.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1130 similar at 100% with Composite
+1130.100.Component = javax.swing.JPanel
+1130.100.Leaf = net.sourceforge.ganttproject.gui.GanttPanelDate
+1130.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1131 similar at 100% with Composite
+1131.100.Component = javax.swing.JPanel
+1131.100.Leaf = net.sourceforge.ganttproject.shape.PreviewPanel
+1131.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1132 similar at 100% with Composite
+1132.100.Component = javax.swing.JPanel
+1132.100.Leaf = EPI_Abstract_net.sourceforge.ganttproject.gui.options.GeneralOptionPanel
+1132.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1133 similar at 100% with Composite
+1133.100.Component = javax.swing.JPanel
+1133.100.Leaf = net.sourceforge.ganttproject.shape.Shape
+1133.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1134 similar at 100% with Composite
+1134.100.Component = javax.swing.JPanel
+1134.100.Leaf = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+1134.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1135 similar at 100% with Composite
+1135.100.Component = javax.swing.JPanel
+1135.100.Leaf = net.sourceforge.ganttproject.GanttImagePanel
+1135.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1136 similar at 100% with Composite
+1136.100.Component = javax.swing.JPanel
+1136.100.Leaf = net.sourceforge.ganttproject.shape.PaintCellRenderer
+1136.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1137 similar at 100% with Composite
+1137.100.Component = javax.swing.JPanel
+1137.100.Leaf = net.sourceforge.ganttproject.ResourceLoadGraphicArea
+1137.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1138 similar at 100% with Composite
+1138.100.Component = EPI_Abstract_net.sourceforge.ganttproject.time.DateFrameable
+1138.100.Leaf = net.sourceforge.ganttproject.time.gregorian.FramerImpl
+1138.100.Composite = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+
+# Micro-architecture 1139 similar at 100% with Composite
+1139.100.Component = EPI_Abstract_net.sourceforge.ganttproject.time.DateFrameable
+1139.100.Leaf = net.sourceforge.ganttproject.time.TimeUnitFunctionOfDateImpl
+1139.100.Composite = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+
+# Micro-architecture 1140 similar at 100% with Composite
+1140.100.Component = EPI_Abstract_net.sourceforge.ganttproject.time.DateFrameable
+1140.100.Leaf = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+1140.100.Composite = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+
+---------------------------------------------
+ALL
+Solution Computation Time:483
+Number of Solutions With and Without Ghosts:6
+Number of Solutions Without Ghosts:1
+Number of Solutions With Ghosts:5
+
+
+# Micro-architecture 1545 similar at 100% with Composite
+1545.100.Component = javax.swing.AbstractAction
+1545.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 1546 similar at 100% with Composite
+1546.100.Component = java.awt.event.ActionListener
+1546.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 1547 similar at 100% with Composite
+1547.100.Component = java.awt.event.ActionListener
+1547.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 1548 similar at 100% with Composite
+1548.100.Component = java.awt.event.ActionListener
+1548.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 1549 similar at 100% with Composite
+1549.100.Component = javax.swing.JPanel
+1549.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 1550 similar at 100% with Composite
+1550.100.Component = EPI_Abstract_net.sourceforge.ganttproject.time.DateFrameable
+1550.100.Composite = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+

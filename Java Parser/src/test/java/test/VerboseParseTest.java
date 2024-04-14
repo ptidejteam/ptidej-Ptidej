@@ -13,6 +13,7 @@ package test;
 import java.util.Arrays;
 
 import org.eclipse.jdt.core.dom.ASTVisitor;
+
 import client.WrapperClientWithLog;
 import parser.input.SourceInputsHolder;
 import parser.input.impl.FileSystemJavaProject;
@@ -22,39 +23,39 @@ import test.visitor.MyVisitor;
  *
  */
 public class VerboseParseTest extends AbstractParseTest {
-    public VerboseParseTest() throws Exception {
-        this("VerboseParseTest");
-    }
+	public VerboseParseTest() throws Exception {
+		this("VerboseParseTest");
+	}
 
-    public VerboseParseTest(final String aName) throws Exception {
-        super(aName);
+	public VerboseParseTest(final String aName) throws Exception {
+		super(aName);
 
-        final String classPathEntry = "src/test/resources/CodeAnalyser/libs/tools.jar";
-        final String[] classpathEntries = new String[]{classPathEntry};
+		final String classPathEntry = "../Java Parser/target/test-classes/CodeAnalyser/libs/tools.jar";
+		final String[] classpathEntries = new String[] { classPathEntry };
 
-        final String sourcePathEntry = "src/test/resources/CodeAnalyser/src";
-        final String[] sourcePathEntries = new String[]{sourcePathEntry};
+		final String sourcePathEntry = "../Java Parser/target/test-classes/CodeAnalyser/src";
+		final String[] sourcePathEntries = new String[] { sourcePathEntry };
 
-        final String resultFilePath = "log_verbose.txt";
+		final String resultFilePath = "log_verbose.txt";
 
-        final SourceInputsHolder javaProject =
-                new FileSystemJavaProject(
-                        Arrays.asList(classpathEntries),
-                        Arrays.asList(sourcePathEntries)
-                );
+		final SourceInputsHolder javaProject = new FileSystemJavaProject(
+				Arrays.asList(classpathEntries),
+				Arrays.asList(sourcePathEntries));
 
-        final WrapperClientWithLog parserClient = new WrapperClientWithLog(javaProject, resultFilePath);
+		final WrapperClientWithLog parserClient = new WrapperClientWithLog(
+				javaProject, resultFilePath);
 
-        final String oracleFilePath = "src/test/resources/CodeAnalyser/log/log_oracle_verbose.txt";
+		final String oracleFilePath = "../Java Parser/target/test-classes/CodeAnalyser/log/log_oracle_verbose.txt";
 
-        final String testCaseName = "CodeAnalyser Verbose Test Case";
+		final String testCaseName = "CodeAnalyser Verbose Test Case";
 
-        final ASTVisitor visitor = new MyVisitor(parserClient);
+		final ASTVisitor visitor = new MyVisitor(parserClient);
 
-        this.init(resultFilePath, oracleFilePath, testCaseName, parserClient, visitor);
-    }
+		this.init(resultFilePath, oracleFilePath, testCaseName, parserClient,
+				visitor);
+	}
 
-    public void testParse() {
-        super.testParse();
-    }
+	public void testParse() {
+		super.testParse();
+	}
 }

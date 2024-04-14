@@ -11,48 +11,48 @@
 package padl.creator.cppfile.eclipse.test.simple;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.cpp.kernel.ICPPClass;
 import padl.cpp.kernel.IGlobalFunction;
-import padl.generator.helper.ModelGenerator;
+import padl.creator.cppfile.eclipse.test.helper.ModelGenerator;
+import padl.kernel.ICodeLevelModel;
 import padl.kernel.IGetter;
-import padl.kernel.IIdiomLevelModel;
 
 public class FieldAccessTest extends TestCase {
-	private static IIdiomLevelModel IdiomLevelModel;
+	private static ICodeLevelModel IdiomLevelModel;
+
 	public FieldAccessTest(String name) {
 		super(name);
 	}
+
 	protected void setUp() throws Exception {
 		if (FieldAccessTest.IdiomLevelModel == null) {
-			FieldAccessTest.IdiomLevelModel =
-				ModelGenerator
-					.generateModelFromCppFilesUsingEclipse(
-						"Funny",
-						new String[] { "../PADL Creator C++ (Eclipse) Tests/data/FieldAccess/" });
+			FieldAccessTest.IdiomLevelModel = ModelGenerator
+					.generateModelFromCppFilesUsingEclipse("Funny",
+							"../PADL Creator C++ (Eclipse) Tests/data/FieldAccess/");
 		}
 	}
+
 	public void testNumberOfTopLevelEntities() {
-		Assert.assertNotNull(
-			"The idiom-level model is null!",
-			FieldAccessTest.IdiomLevelModel);
-		Assert.assertEquals(
-			9,
-			FieldAccessTest.IdiomLevelModel.getNumberOfTopLevelEntities());
+		Assert.assertNotNull("The idiom-level model is null!",
+				FieldAccessTest.IdiomLevelModel);
+		Assert.assertEquals(9,
+				FieldAccessTest.IdiomLevelModel.getNumberOfTopLevelEntities());
 	}
+
 	public void testMainFunction() {
-		final IGlobalFunction mainFunction =
-			(IGlobalFunction) FieldAccessTest.IdiomLevelModel
+		final IGlobalFunction mainFunction = (IGlobalFunction) FieldAccessTest.IdiomLevelModel
 				.getTopLevelEntityFromID("main()");
 		Assert.assertNotNull("No main function!?", mainFunction);
 		Assert.assertEquals(13, mainFunction.getNumberOfConstituents());
 	}
+
 	public void testGetter() {
-		final ICPPClass clazz =
-			(ICPPClass) FieldAccessTest.IdiomLevelModel
+		final ICPPClass clazz = (ICPPClass) FieldAccessTest.IdiomLevelModel
 				.getTopLevelEntityFromID("FieldAccessTest");
-		final IGetter getter =
-			(IGetter) clazz.getConstituentFromID("getString()");
+		final IGetter getter = (IGetter) clazz
+				.getConstituentFromID("getString()");
 		Assert.assertNotNull("No getter!?", getter);
 		Assert.assertEquals(1, getter.getNumberOfConstituents());
 	}

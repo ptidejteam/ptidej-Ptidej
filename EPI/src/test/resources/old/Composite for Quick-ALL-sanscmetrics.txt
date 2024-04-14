@@ -1,0 +1,535 @@
+# Micro-architecture 424 similar at 100% with Composite
+424.100.Component = java.lang.Object
+424.100.Composite = util.FilteredIterator
+
+# Micro-architecture 425 similar at 100% with Composite
+425.100.Component = java.util.Iterator
+425.100.Composite = util.WrappedIterator
+
+# Micro-architecture 426 similar at 100% with Composite
+426.100.Component = EPI_Abstract_diagram.Figure
+426.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 427 similar at 100% with Composite
+427.100.Component = java.awt.image.ImageConsumer
+427.100.Composite = EPI_Abstract_acme.ImageEncoder
+
+# Micro-architecture 428 similar at 100% with Composite
+428.100.Component = EPI_Abstract_diagram.tool.Tool
+428.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 429 similar at 100% with Composite
+429.100.Component = java.lang.Object
+429.100.Leaf = uml.builder.ObjectBuilder
+429.100.Composite = util.FilteredIterator
+
+# Micro-architecture 430 similar at 100% with Composite
+430.100.Component = java.lang.Object
+430.100.Leaf = util.FilteredIterator
+430.100.Composite = util.FilteredIterator
+
+# Micro-architecture 431 similar at 100% with Composite
+431.100.Component = java.lang.Object
+431.100.Leaf = diagram.DefaultDiagramModel
+431.100.Composite = util.FilteredIterator
+
+# Micro-architecture 432 similar at 100% with Composite
+432.100.Component = java.lang.Object
+432.100.Leaf = uml.builder.AttributeNamingComponent
+432.100.Composite = util.FilteredIterator
+
+# Micro-architecture 433 similar at 100% with Composite
+433.100.Component = java.lang.Object
+433.100.Leaf = acme.GifEncoder
+433.100.Composite = util.FilteredIterator
+
+# Micro-architecture 434 similar at 100% with Composite
+434.100.Component = java.lang.Object
+434.100.Leaf = uml.ui.RealizationTool
+434.100.Composite = util.FilteredIterator
+
+# Micro-architecture 435 similar at 100% with Composite
+435.100.Component = java.lang.Object
+435.100.Leaf = uml.ui.AssociationTool
+435.100.Composite = util.FilteredIterator
+
+# Micro-architecture 436 similar at 100% with Composite
+436.100.Component = java.lang.Object
+436.100.Leaf = uml.ui.CompositionTool
+436.100.Composite = util.FilteredIterator
+
+# Micro-architecture 437 similar at 100% with Composite
+437.100.Component = java.lang.Object
+437.100.Leaf = uml.ui.DependencyTool
+437.100.Composite = util.FilteredIterator
+
+# Micro-architecture 438 similar at 100% with Composite
+438.100.Component = java.lang.Object
+438.100.Leaf = uml.ui.GeneralizationTool
+438.100.Composite = util.FilteredIterator
+
+# Micro-architecture 439 similar at 100% with Composite
+439.100.Component = java.lang.Object
+439.100.Leaf = diagram.tool.FigureTool
+439.100.Composite = util.FilteredIterator
+
+# Micro-architecture 440 similar at 100% with Composite
+440.100.Component = java.lang.Object
+440.100.Leaf = diagram.tool.LinkTool
+440.100.Composite = util.FilteredIterator
+
+# Micro-architecture 441 similar at 100% with Composite
+441.100.Component = java.lang.Object
+441.100.Leaf = diagram.tool.FigureShappingTool
+441.100.Composite = util.FilteredIterator
+
+# Micro-architecture 442 similar at 100% with Composite
+442.100.Component = java.lang.Object
+442.100.Leaf = diagram.tool.EditingTool
+442.100.Composite = util.FilteredIterator
+
+# Micro-architecture 443 similar at 100% with Composite
+443.100.Component = java.lang.Object
+443.100.Leaf = diagram.tool.FigureDraggingTool
+443.100.Composite = util.FilteredIterator
+
+# Micro-architecture 444 similar at 100% with Composite
+444.100.Component = java.lang.Object
+444.100.Leaf = diagram.tool.LinkShappingTool
+444.100.Composite = util.FilteredIterator
+
+# Micro-architecture 445 similar at 100% with Composite
+445.100.Component = java.lang.Object
+445.100.Leaf = uml.ui.CardinalityTool
+445.100.Composite = util.FilteredIterator
+
+# Micro-architecture 446 similar at 100% with Composite
+446.100.Component = java.lang.Object
+446.100.Leaf = diagram.tool.SelectionTool
+446.100.Composite = util.FilteredIterator
+
+# Micro-architecture 447 similar at 100% with Composite
+447.100.Component = java.lang.Object
+447.100.Leaf = diagram.tool.ClipboardTool
+447.100.Composite = util.FilteredIterator
+
+# Micro-architecture 448 similar at 100% with Composite
+448.100.Component = java.lang.Object
+448.100.Leaf = diagram.ValueIterator
+448.100.Composite = util.FilteredIterator
+
+# Micro-architecture 449 similar at 100% with Composite
+449.100.Component = java.lang.Object
+449.100.Leaf = uml.diagram.ClassItem
+449.100.Composite = util.FilteredIterator
+
+# Micro-architecture 450 similar at 100% with Composite
+450.100.Component = java.lang.Object
+450.100.Leaf = uml.diagram.CompositionItem
+450.100.Composite = util.FilteredIterator
+
+# Micro-architecture 451 similar at 100% with Composite
+451.100.Component = java.lang.Object
+451.100.Leaf = uml.diagram.DependencyItem
+451.100.Composite = util.FilteredIterator
+
+# Micro-architecture 452 similar at 100% with Composite
+452.100.Component = java.lang.Object
+452.100.Leaf = uml.diagram.InterfaceItem
+452.100.Composite = util.FilteredIterator
+
+# Micro-architecture 453 similar at 100% with Composite
+453.100.Component = java.lang.Object
+453.100.Leaf = uml.diagram.GeneralizationItem
+453.100.Composite = util.FilteredIterator
+
+# Micro-architecture 454 similar at 100% with Composite
+454.100.Component = java.lang.Object
+454.100.Leaf = uml.diagram.RealizationItem
+454.100.Composite = util.FilteredIterator
+
+# Micro-architecture 455 similar at 100% with Composite
+455.100.Component = java.lang.Object
+455.100.Leaf = uml.diagram.AssociationItem
+455.100.Composite = util.FilteredIterator
+
+# Micro-architecture 456 similar at 100% with Composite
+456.100.Component = java.lang.Object
+456.100.Leaf = uml.builder.MetaParameter
+456.100.Composite = util.FilteredIterator
+
+# Micro-architecture 457 similar at 100% with Composite
+457.100.Component = java.lang.Object
+457.100.Leaf = uml.builder.MetaClass
+457.100.Composite = util.FilteredIterator
+
+# Micro-architecture 458 similar at 100% with Composite
+458.100.Component = java.lang.Object
+458.100.Leaf = uml.builder.MetaAssociation
+458.100.Composite = util.FilteredIterator
+
+# Micro-architecture 459 similar at 100% with Composite
+459.100.Component = java.lang.Object
+459.100.Leaf = uml.builder.MetaMethod
+459.100.Composite = util.FilteredIterator
+
+# Micro-architecture 460 similar at 100% with Composite
+460.100.Component = java.lang.Object
+460.100.Leaf = uml.builder.MetaComposition
+460.100.Composite = util.FilteredIterator
+
+# Micro-architecture 461 similar at 100% with Composite
+461.100.Component = java.lang.Object
+461.100.Leaf = uml.builder.MetaConstructor
+461.100.Composite = util.FilteredIterator
+
+# Micro-architecture 462 similar at 100% with Composite
+462.100.Component = java.lang.Object
+462.100.Leaf = uml.builder.MetaAttribute
+462.100.Composite = util.FilteredIterator
+
+# Micro-architecture 463 similar at 100% with Composite
+463.100.Component = java.lang.Object
+463.100.Leaf = uml.builder.ClassBuilder
+463.100.Composite = util.FilteredIterator
+
+# Micro-architecture 464 similar at 100% with Composite
+464.100.Component = java.lang.Object
+464.100.Leaf = uml.builder.InheritanceBuilder
+464.100.Composite = util.FilteredIterator
+
+# Micro-architecture 465 similar at 100% with Composite
+465.100.Component = java.lang.Object
+465.100.Leaf = uml.builder.AssociationBuilder
+465.100.Composite = util.FilteredIterator
+
+# Micro-architecture 466 similar at 100% with Composite
+466.100.Component = java.lang.Object
+466.100.Leaf = uml.builder.CompositionBuilder
+466.100.Composite = util.FilteredIterator
+
+# Micro-architecture 467 similar at 100% with Composite
+467.100.Component = java.lang.Object
+467.100.Leaf = diagram.DefaultSelectionModel
+467.100.Composite = util.FilteredIterator
+
+# Micro-architecture 468 similar at 100% with Composite
+468.100.Component = java.lang.Object
+468.100.Leaf = uml.builder.JavaBuilder
+468.100.Composite = util.FilteredIterator
+
+# Micro-architecture 469 similar at 100% with Composite
+469.100.Component = java.lang.Object
+469.100.Leaf = uml.builder.CPlusPlusBuilder
+469.100.Composite = util.FilteredIterator
+
+# Micro-architecture 470 similar at 100% with Composite
+470.100.Component = java.lang.Object
+470.100.Leaf = EPI_Abstract_uml.diagram.AbstractLayout
+470.100.Composite = util.FilteredIterator
+
+# Micro-architecture 471 similar at 100% with Composite
+471.100.Component = java.lang.Object
+471.100.Leaf = uml.builder.MetaException
+471.100.Composite = util.FilteredIterator
+
+# Micro-architecture 472 similar at 100% with Composite
+472.100.Component = java.lang.Object
+472.100.Leaf = uml.ui.IconManager
+472.100.Composite = util.FilteredIterator
+
+# Micro-architecture 473 similar at 100% with Composite
+473.100.Component = java.lang.Object
+473.100.Leaf = EPI_Abstract_diagram.AbstractSelectionModel
+473.100.Composite = util.FilteredIterator
+
+# Micro-architecture 474 similar at 100% with Composite
+474.100.Component = java.lang.Object
+474.100.Leaf = EPI_Abstract_uml.builder.AbstractBuilder
+474.100.Composite = util.FilteredIterator
+
+# Micro-architecture 475 similar at 100% with Composite
+475.100.Component = java.lang.Object
+475.100.Leaf = acme.IntHashtableEntry
+475.100.Composite = util.FilteredIterator
+
+# Micro-architecture 476 similar at 100% with Composite
+476.100.Component = java.lang.Object
+476.100.Leaf = diagram.shape.DiamondHead
+476.100.Composite = util.FilteredIterator
+
+# Micro-architecture 477 similar at 100% with Composite
+477.100.Component = java.lang.Object
+477.100.Leaf = EPI_Abstract_uml.builder.MetaAccess
+477.100.Composite = util.FilteredIterator
+
+# Micro-architecture 478 similar at 100% with Composite
+478.100.Component = java.lang.Object
+478.100.Leaf = EPI_Abstract_uml.builder.MetaComponent
+478.100.Composite = util.FilteredIterator
+
+# Micro-architecture 479 similar at 100% with Composite
+479.100.Component = java.lang.Object
+479.100.Leaf = EPI_Abstract_uml.diagram.DesignItem
+479.100.Composite = util.FilteredIterator
+
+# Micro-architecture 480 similar at 100% with Composite
+480.100.Component = java.lang.Object
+480.100.Leaf = diagram.FigureIterator
+480.100.Composite = util.FilteredIterator
+
+# Micro-architecture 481 similar at 100% with Composite
+481.100.Component = java.lang.Object
+481.100.Leaf = EPI_Abstract_diagram.tool.AbstractTool
+481.100.Composite = util.FilteredIterator
+
+# Micro-architecture 482 similar at 100% with Composite
+482.100.Component = java.lang.Object
+482.100.Leaf = uml.builder.RealizationBuilder
+482.100.Composite = util.FilteredIterator
+
+# Micro-architecture 483 similar at 100% with Composite
+483.100.Component = java.lang.Object
+483.100.Leaf = EPI_Abstract_acme.ImageEncoder
+483.100.Composite = util.FilteredIterator
+
+# Micro-architecture 484 similar at 100% with Composite
+484.100.Component = java.lang.Object
+484.100.Leaf = uml.builder.MetaAccessComparator
+484.100.Composite = util.FilteredIterator
+
+# Micro-architecture 485 similar at 100% with Composite
+485.100.Component = java.lang.Object
+485.100.Leaf = acme.GifEncoderHashitem
+485.100.Composite = util.FilteredIterator
+
+# Micro-architecture 486 similar at 100% with Composite
+486.100.Component = java.lang.Object
+486.100.Leaf = diagram.FigureComparator
+486.100.Composite = util.FilteredIterator
+
+# Micro-architecture 487 similar at 100% with Composite
+487.100.Component = java.lang.Object
+487.100.Leaf = uml.builder.NamingComponent
+487.100.Composite = util.FilteredIterator
+
+# Micro-architecture 488 similar at 100% with Composite
+488.100.Component = java.lang.Object
+488.100.Leaf = EPI_Abstract_diagram.AbstractDiagramModel
+488.100.Composite = util.FilteredIterator
+
+# Micro-architecture 489 similar at 100% with Composite
+489.100.Component = java.lang.Object
+489.100.Leaf = acme.IntHashtableEnumerator
+489.100.Composite = util.FilteredIterator
+
+# Micro-architecture 490 similar at 100% with Composite
+490.100.Component = java.lang.Object
+490.100.Leaf = diagram.shape.ArrowHead
+490.100.Composite = util.FilteredIterator
+
+# Micro-architecture 491 similar at 100% with Composite
+491.100.Component = java.lang.Object
+491.100.Leaf = uml.builder.Context
+491.100.Composite = util.FilteredIterator
+
+# Micro-architecture 492 similar at 100% with Composite
+492.100.Component = java.lang.Object
+492.100.Leaf = util.WrappedIterator
+492.100.Composite = util.FilteredIterator
+
+# Micro-architecture 493 similar at 100% with Composite
+493.100.Component = java.lang.Object
+493.100.Leaf = diagram.figures.FigureBorder
+493.100.Composite = util.FilteredIterator
+
+# Micro-architecture 494 similar at 100% with Composite
+494.100.Component = java.lang.Object
+494.100.Leaf = diagram.tool.CompositeTool
+494.100.Composite = util.FilteredIterator
+
+# Micro-architecture 495 similar at 100% with Composite
+495.100.Component = java.lang.Object
+495.100.Leaf = util.ClassFilter
+495.100.Composite = util.FilteredIterator
+
+# Micro-architecture 496 similar at 100% with Composite
+496.100.Component = java.util.Iterator
+496.100.Leaf = diagram.FigureIterator
+496.100.Composite = util.WrappedIterator
+
+# Micro-architecture 497 similar at 100% with Composite
+497.100.Component = java.util.Iterator
+497.100.Leaf = util.FilteredIterator
+497.100.Composite = util.WrappedIterator
+
+# Micro-architecture 498 similar at 100% with Composite
+498.100.Component = java.util.Iterator
+498.100.Leaf = diagram.ValueIterator
+498.100.Composite = util.WrappedIterator
+
+# Micro-architecture 499 similar at 100% with Composite
+499.100.Component = java.util.Iterator
+499.100.Leaf = util.WrappedIterator
+499.100.Composite = util.WrappedIterator
+
+# Micro-architecture 500 similar at 100% with Composite
+500.100.Component = EPI_Abstract_diagram.Figure
+500.100.Leaf = diagram.figures.CircularFigure
+500.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 501 similar at 100% with Composite
+501.100.Component = EPI_Abstract_diagram.Figure
+501.100.Leaf = uml.diagram.CompositionLink
+501.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 502 similar at 100% with Composite
+502.100.Component = EPI_Abstract_diagram.Figure
+502.100.Leaf = uml.diagram.DependencyLink
+502.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 503 similar at 100% with Composite
+503.100.Component = EPI_Abstract_diagram.Figure
+503.100.Leaf = uml.diagram.GeneralizationLink
+503.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 504 similar at 100% with Composite
+504.100.Component = EPI_Abstract_diagram.Figure
+504.100.Leaf = uml.diagram.RealizationLink
+504.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 505 similar at 100% with Composite
+505.100.Component = EPI_Abstract_diagram.Figure
+505.100.Leaf = uml.diagram.AssociationLink
+505.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 506 similar at 100% with Composite
+506.100.Component = EPI_Abstract_diagram.Figure
+506.100.Leaf = diagram.figures.PolyLink
+506.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 507 similar at 100% with Composite
+507.100.Component = EPI_Abstract_diagram.Figure
+507.100.Leaf = uml.diagram.NoteFigure
+507.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 508 similar at 100% with Composite
+508.100.Component = EPI_Abstract_diagram.Figure
+508.100.Leaf = uml.diagram.ClassFigure
+508.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 509 similar at 100% with Composite
+509.100.Component = EPI_Abstract_diagram.Figure
+509.100.Leaf = uml.diagram.InterfaceFigure
+509.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 510 similar at 100% with Composite
+510.100.Component = EPI_Abstract_diagram.Figure
+510.100.Leaf = diagram.figures.PointFigure
+510.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 511 similar at 100% with Composite
+511.100.Component = EPI_Abstract_diagram.Figure
+511.100.Leaf = diagram.figures.RectangularFigure
+511.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 512 similar at 100% with Composite
+512.100.Component = EPI_Abstract_diagram.Figure
+512.100.Leaf = diagram.figures.PolygonFigure
+512.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 513 similar at 100% with Composite
+513.100.Component = EPI_Abstract_diagram.Figure
+513.100.Leaf = EPI_Abstract_diagram.Link
+513.100.Composite = diagram.figures.PolyLink
+
+# Micro-architecture 514 similar at 100% with Composite
+514.100.Component = java.awt.image.ImageConsumer
+514.100.Leaf = EPI_Abstract_acme.ImageEncoder
+514.100.Composite = EPI_Abstract_acme.ImageEncoder
+
+# Micro-architecture 515 similar at 100% with Composite
+515.100.Component = java.awt.image.ImageConsumer
+515.100.Leaf = acme.GifEncoder
+515.100.Composite = EPI_Abstract_acme.ImageEncoder
+
+# Micro-architecture 516 similar at 100% with Composite
+516.100.Component = EPI_Abstract_diagram.tool.Tool
+516.100.Leaf = EPI_Abstract_diagram.tool.AbstractTool
+516.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 517 similar at 100% with Composite
+517.100.Component = EPI_Abstract_diagram.tool.Tool
+517.100.Leaf = diagram.tool.FigureTool
+517.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 518 similar at 100% with Composite
+518.100.Component = EPI_Abstract_diagram.tool.Tool
+518.100.Leaf = diagram.tool.LinkTool
+518.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 519 similar at 100% with Composite
+519.100.Component = EPI_Abstract_diagram.tool.Tool
+519.100.Leaf = diagram.tool.FigureShappingTool
+519.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 520 similar at 100% with Composite
+520.100.Component = EPI_Abstract_diagram.tool.Tool
+520.100.Leaf = diagram.tool.EditingTool
+520.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 521 similar at 100% with Composite
+521.100.Component = EPI_Abstract_diagram.tool.Tool
+521.100.Leaf = diagram.tool.FigureDraggingTool
+521.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 522 similar at 100% with Composite
+522.100.Component = EPI_Abstract_diagram.tool.Tool
+522.100.Leaf = diagram.tool.LinkShappingTool
+522.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 523 similar at 100% with Composite
+523.100.Component = EPI_Abstract_diagram.tool.Tool
+523.100.Leaf = uml.ui.CardinalityTool
+523.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 524 similar at 100% with Composite
+524.100.Component = EPI_Abstract_diagram.tool.Tool
+524.100.Leaf = diagram.tool.SelectionTool
+524.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 525 similar at 100% with Composite
+525.100.Component = EPI_Abstract_diagram.tool.Tool
+525.100.Leaf = uml.ui.GeneralizationTool
+525.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 526 similar at 100% with Composite
+526.100.Component = EPI_Abstract_diagram.tool.Tool
+526.100.Leaf = uml.ui.DependencyTool
+526.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 527 similar at 100% with Composite
+527.100.Component = EPI_Abstract_diagram.tool.Tool
+527.100.Leaf = uml.ui.CompositionTool
+527.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 528 similar at 100% with Composite
+528.100.Component = EPI_Abstract_diagram.tool.Tool
+528.100.Leaf = uml.ui.AssociationTool
+528.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 529 similar at 100% with Composite
+529.100.Component = EPI_Abstract_diagram.tool.Tool
+529.100.Leaf = uml.ui.RealizationTool
+529.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 530 similar at 100% with Composite
+530.100.Component = EPI_Abstract_diagram.tool.Tool
+530.100.Leaf = diagram.tool.ClipboardTool
+530.100.Composite = diagram.tool.CompositeTool
+
+# Micro-architecture 531 similar at 100% with Composite
+531.100.Component = EPI_Abstract_diagram.tool.Tool
+531.100.Leaf = diagram.tool.CompositeTool
+531.100.Composite = diagram.tool.CompositeTool
+

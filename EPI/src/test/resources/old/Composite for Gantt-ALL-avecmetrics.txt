@@ -1,0 +1,24 @@
+# Micro-architecture 407 similar at 100% with Composite
+407.100.Component = javax.swing.AbstractAction
+407.100.Composite = net.sourceforge.ganttproject.action.NewArtefactAction
+
+# Micro-architecture 408 similar at 100% with Composite
+408.100.Component = java.awt.event.ActionListener
+408.100.Composite = net.sourceforge.ganttproject.GanttProject
+
+# Micro-architecture 409 similar at 100% with Composite
+409.100.Component = java.awt.event.ActionListener
+409.100.Composite = net.sourceforge.ganttproject.shape.Shape
+
+# Micro-architecture 410 similar at 100% with Composite
+410.100.Component = java.awt.event.ActionListener
+410.100.Composite = net.sourceforge.ganttproject.gui.GanttApplet
+
+# Micro-architecture 411 similar at 100% with Composite
+411.100.Component = javax.swing.JPanel
+411.100.Composite = net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean
+
+# Micro-architecture 412 similar at 100% with Composite
+412.100.Component = EPI_Abstract_net.sourceforge.ganttproject.time.DateFrameable
+412.100.Composite = net.sourceforge.ganttproject.time.TimeUnitDateFrameableImpl
+
