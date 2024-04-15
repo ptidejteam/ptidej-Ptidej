@@ -10,5 +10,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/CPL"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

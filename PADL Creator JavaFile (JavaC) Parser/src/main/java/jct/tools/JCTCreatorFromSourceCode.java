@@ -74,8 +74,11 @@ import javax.tools.DiagnosticListener;
 import javax.tools.JavaFileObject;
 import javax.tools.StandardJavaFileManager;
 
+import org.apache.commons.lang3.tuple.Pair;
+
 import com.sun.source.tree.AnnotatedTypeTree;
 import com.sun.source.tree.AnnotationTree;
+import com.sun.source.tree.AnyPatternTree;
 import com.sun.source.tree.ArrayAccessTree;
 import com.sun.source.tree.ArrayTypeTree;
 import com.sun.source.tree.AssertTree;
@@ -90,7 +93,9 @@ import com.sun.source.tree.ClassTree;
 import com.sun.source.tree.CompilationUnitTree;
 import com.sun.source.tree.CompoundAssignmentTree;
 import com.sun.source.tree.ConditionalExpressionTree;
+import com.sun.source.tree.ConstantCaseLabelTree;
 import com.sun.source.tree.ContinueTree;
+import com.sun.source.tree.DeconstructionPatternTree;
 import com.sun.source.tree.DefaultCaseLabelTree;
 import com.sun.source.tree.DoWhileLoopTree;
 import com.sun.source.tree.EmptyStatementTree;
@@ -100,7 +105,6 @@ import com.sun.source.tree.ExportsTree;
 import com.sun.source.tree.ExpressionStatementTree;
 import com.sun.source.tree.ExpressionTree;
 import com.sun.source.tree.ForLoopTree;
-import com.sun.source.tree.GuardedPatternTree;
 import com.sun.source.tree.IdentifierTree;
 import com.sun.source.tree.IfTree;
 import com.sun.source.tree.ImportTree;
@@ -120,13 +124,14 @@ import com.sun.source.tree.NewClassTree;
 import com.sun.source.tree.OpensTree;
 import com.sun.source.tree.PackageTree;
 import com.sun.source.tree.ParameterizedTypeTree;
-import com.sun.source.tree.ParenthesizedPatternTree;
 import com.sun.source.tree.ParenthesizedTree;
+import com.sun.source.tree.PatternCaseLabelTree;
 import com.sun.source.tree.PrimitiveTypeTree;
 import com.sun.source.tree.ProvidesTree;
 import com.sun.source.tree.RequiresTree;
 import com.sun.source.tree.ReturnTree;
 import com.sun.source.tree.StatementTree;
+import com.sun.source.tree.StringTemplateTree;
 import com.sun.source.tree.SwitchExpressionTree;
 import com.sun.source.tree.SwitchTree;
 import com.sun.source.tree.SynchronizedTree;
@@ -145,21 +150,10 @@ import com.sun.source.tree.WildcardTree;
 import com.sun.source.tree.YieldTree;
 import com.sun.source.util.JavacTask;
 import com.sun.source.util.SourcePositions;
-import com.sun.tools.javac.api.JavacTool;
-import com.sun.tools.javac.api.JavacTrees;
-import com.sun.tools.javac.code.Symbol;
-import com.sun.tools.javac.code.Type;
-import com.sun.tools.javac.model.JavacElements;
-import com.sun.tools.javac.tree.JCTree;
-import com.sun.tools.javac.util.Pair;
 
 import jct.kernel.*;
 import jct.kernel.impl.JCTFactory;
 import util.io.ProxyConsole;
-
-interface Setter<T> {
-	public void set(T value);
-}
 
 /**
  * This class can be use to create a JavaC AST (JCT) from a bunch of java source files
@@ -418,6 +412,31 @@ public class JCTCreatorFromSourceCode
 		this.extractActualSourceCode = extractActualSourceCode;
 	}
 
+	public IJCTElement error(final Tree o, final Object p) {
+		throw new IllegalStateException("Unknown Tree Part ==> " + o.getKind()
+				+ " :: " + o + " (argument :" + p + ")");
+	}
+
+	private IJCTSourceCodePart putSourceCodePosition(
+			final IJCTSourceCodePart part, final Tree t) {
+		if (!this.extractActualSourceCode)
+			return part;
+
+		for (final CompilationUnitTree cu : this.cus) {
+			final int offset = (int) this.positions.getStartPosition(cu, t);
+			if (Diagnostic.NOPOS != offset) {
+				part.setStoredSourceCodeOffset(offset);
+				final int end = (int) this.positions.getEndPosition(cu, t);
+				if (Diagnostic.NOPOS != end) {
+					part.setStoredSourceCodeLength(end - offset);
+				}
+				break;
+			}
+		}
+
+		return part;
+	}
+
 	private <T extends IJCTIdentifiable & IJCTSourceCodePart> IJCTIdentifiable putSourceCodePosition(
 			final T part, final Element e) {
 		if (!this.extractActualSourceCode)
@@ -441,24 +460,12 @@ public class JCTCreatorFromSourceCode
 		return part;
 	}
 
-	private IJCTSourceCodePart putSourceCodePosition(
-			final IJCTSourceCodePart part, final Tree t) {
-		if (!this.extractActualSourceCode)
-			return part;
+	public IJCTIdentifiable visit(final Element e) {
+		return this.visit(e, null);
+	}
 
-		for (final CompilationUnitTree cu : this.cus) {
-			final int offset = (int) this.positions.getStartPosition(cu, t);
-			if (Diagnostic.NOPOS != offset) {
-				part.setStoredSourceCodeOffset(offset);
-				final int end = (int) this.positions.getEndPosition(cu, t);
-				if (Diagnostic.NOPOS != end) {
-					part.setStoredSourceCodeLength(end - offset);
-				}
-				break;
-			}
-		}
-
-		return part;
+	public IJCTIdentifiable visit(final Element e, final Object p) {
+		throw new IllegalArgumentException("Unknown element");
 	}
 
 	public IJCTType visit(final TypeMirror t) {
@@ -467,6 +474,21 @@ public class JCTCreatorFromSourceCode
 
 	public IJCTType visit(final TypeMirror t, final Object p) {
 		throw new IllegalArgumentException("Unknown type " + t);
+	}
+
+	public IJCTElement visitAnnotatedType(AnnotatedTypeTree node, Object o) {
+		return null;
+	}
+
+	public IJCTElement visitAnnotation(final AnnotationTree node,
+			final Object p) {
+		return this.visitOther(node, p);
+	}
+
+	@Override
+	public IJCTElement visitAnyPattern(AnyPatternTree node, Object p) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	public IJCTType visitArray(final ArrayType t, final Object p) {
@@ -486,317 +508,6 @@ public class JCTCreatorFromSourceCode
 			name = aJCTType.getTypeName();
 
 		return this.rootNode.registerArrayType(aJCTType, name);
-	}
-
-	public IJCTType visitDeclared(final DeclaredType t, final Object p) {
-		return ((IJCTClass) t.asElement().accept(this, p)).createClassType();
-	}
-
-	public IJCTType visitError(final ErrorType t, final Object p) {
-		return this.visit(t, p);
-	}
-
-	public IJCTType visitExecutable(final ExecutableType t, final Object p) {
-		return this.visit(t, p);
-	}
-
-	public IJCTType visitNoType(final NoType t, final Object p) {
-		return this.rootNode.getType(JCTPrimitiveTypes.VOID);
-	}
-
-	public IJCTType visitNull(final NullType t, final Object p) {
-		return this.visit(t, p);
-	}
-
-	public IJCTType visitPrimitive(final PrimitiveType t, final Object p) {
-		IJCTType aType;
-
-		switch (t.getKind()) {
-		case INT:
-			aType = this.rootNode.getType(JCTPrimitiveTypes.INTEGER);
-			break;
-		case CHAR:
-			aType = this.rootNode.getType(JCTPrimitiveTypes.CHARACTER);
-			break;
-		default:
-			aType = this.rootNode
-					.getType(JCTPrimitiveTypes.valueOf(t.getKind().toString()));
-			break;
-		}
-
-		return aType;
-	}
-
-	public IJCTType visitTypeVariable(final TypeVariable t, final Object p) {
-		return ((IJCTClass) t.asElement().accept(this, p)).createClassType();
-	}
-
-	public IJCTType visitUnknown(final TypeMirror t, final Object p) {
-		return this.visit(t, p);
-	}
-
-	public IJCTType visitUnion(UnionType t, Object o) {
-		return null;
-	}
-
-	public IJCTType visitIntersection(IntersectionType t, Object o) {
-		return null;
-	}
-
-	public IJCTType visitWildcard(final WildcardType t, final Object p) {
-		return t.getExtendsBound().accept(this, p);
-	}
-
-	public IJCTIdentifiable visit(final Element e) {
-		return this.visit(e, null);
-	}
-
-	public IJCTIdentifiable visit(final Element e, final Object p) {
-		throw new IllegalArgumentException("Unknown element");
-	}
-
-	public IJCTIdentifiable visitPackage(final PackageElement e,
-			final Object param) {
-		final IJCTIdentifiable i = this.identifiables.get(e);
-		if (null != i)
-			return i;
-
-		final Tree t = this.javacElements.getTree(e);
-		if (null != t) {
-			final IJCTElement element = t.accept(this, param);
-			if (element instanceof IJCTPackage) {
-				this.identifiables.put(e, (IJCTPackage) element);
-				return (IJCTPackage) element;
-			}
-		}
-
-		final IJCTPackage p = e.isUnnamed()
-				? this.factory.createPackage(null, false)
-				: this.factory.createPackage(e.getQualifiedName().toString(),
-						false);
-
-		this.identifiables.put(e, p);
-		this.rootNode.addPackage(p);
-
-		for (final Element aElement : e.getEnclosedElements())
-			aElement.accept(this, param);
-
-		return p;
-	}
-
-	public IJCTIdentifiable visitType(final TypeElement e, final Object p) {
-		final IJCTIdentifiable i = this.identifiables.get(e);
-		if (null != i)
-			return i;
-
-		final Tree t = this.javacElements.getTree(e);
-		if (null != t) {
-			final IJCTIdentifiable aJCTIdentifiable = (IJCTIdentifiable) t
-					.accept(this, p);
-			this.identifiables.put(e, aJCTIdentifiable);
-			return aJCTIdentifiable;
-		}
-
-		final IJCTClass c = this.factory
-				.createClass(e.getSimpleName().toString(),
-						ElementKind.INTERFACE == e.getKind()
-								|| ElementKind.ANNOTATION_TYPE == e.getKind(),
-						false);
-
-		this.classes.put(this.javacElements.getBinaryName(e).toString(), c);
-		this.classeNames.put(c, this.javacElements.getBinaryName(e).toString());
-
-		this.identifiables.put(e, c);
-
-		while (c.getModifiers().size() > 0) {
-			c.removeModifier(c.getModifiers().iterator().next());
-		}
-
-		for (final Modifier mod : e.getModifiers())
-			try {
-				c.addModifier(
-						JCTModifiers.valueOf(mod.toString().toUpperCase()));
-			}
-			catch (final IllegalArgumentException iae) {
-				ProxyConsole.getInstance().errorOutput()
-						.print(this.getClass().getName());
-				ProxyConsole.getInstance().errorOutput()
-						.print(" must handle modifier: ");
-				ProxyConsole.getInstance().errorOutput().println(mod);
-			}
-
-		if (null != e.getSuperclass()
-				&& TypeKind.NONE != e.getSuperclass().getKind()) {
-			final IJCTClassType aJCTClassType = (IJCTClassType) e
-					.getSuperclass().accept(this, p);
-			if (aJCTClassType.getSelector().getElement().getIsInterface())
-				c.addDirectlyImplementedInterface(aJCTClassType);
-			else
-				c.setDirectSuperClass(aJCTClassType);
-		}
-
-		for (final TypeMirror aTypeMirror : e.getInterfaces())
-			c.addDirectlyImplementedInterface(
-					(IJCTClassType) aTypeMirror.accept(this, p));
-
-		for (final Element anElement : e.getEnclosedElements()) {
-			final IJCTElement aJCTElement = anElement.accept(this, p);
-			switch (aJCTElement.getKind()) {
-			case CLASS:
-			case METHOD:
-			case VARIABLE:
-				c.addDeclaredMember((IJCTClassMember) aJCTElement);
-				break;
-			case BLOCK: {
-				final IJCTMethod init;
-				if (anElement.getModifiers().contains(Modifier.STATIC)) {
-					init = this.factory.createMethod("<clinit>");
-					init.addModifier(JCTModifiers.STATIC);
-				}
-				else
-					init = this.factory.createMethod(">init<");
-
-				init.addModifier(JCTModifiers.PRIVATE);
-				init.addModifier(JCTModifiers.FINAL);
-				init.setBody((IJCTBlock) aJCTElement);
-				c.addDeclaredMember(init);
-			}
-				break;
-			default:
-				throw new AssertionError(
-						"The elements authorized in a class are only class members and blocks (initializers).");
-			}
-		}
-
-		return c;
-	}
-
-	public IJCTIdentifiable visitVariable(final VariableElement e,
-			final Object p) {
-
-		if (null != e.getEnclosingElement())
-			e.getEnclosingElement().accept(this, p);
-
-		final IJCTIdentifiable i = this.identifiables.get(e);
-		if (null != i)
-			return i;
-
-		final Tree t = this.javacElements.getTree(e);
-		if (null != t) {
-			final IJCTIdentifiable aJCTIdentifiable = (IJCTIdentifiable) t
-					.accept(this, p);
-			this.identifiables.put(e, aJCTIdentifiable);
-			return aJCTIdentifiable;
-		}
-
-		final IJCTVariable v = this.factory
-				.createVariable(e.getSimpleName().toString());
-		v.setType(this.rootNode.getType("Ljava.lang.Object",
-				IJCTClassType.class));
-		this.identifiables.put(e, v);
-
-		while (v.getModifiers().size() > 0) {
-			v.removeModifier(v.getModifiers().iterator().next());
-		}
-
-		for (final Modifier m : e.getModifiers())
-			v.addModifier(JCTModifiers.valueOf(m.toString().toUpperCase()));
-
-		return this.putSourceCodePosition(v, e);
-	}
-
-	public IJCTIdentifiable visitExecutable(final ExecutableElement e,
-			final Object p) {
-		if (null != e.getEnclosingElement())
-			e.getEnclosingElement().accept(this, p);
-
-		final IJCTIdentifiable i = this.identifiables.get(e);
-		if (null != i)
-			return i;
-
-		final Tree t = this.javacElements.getTree(e);
-		if (null != t) {
-			final IJCTIdentifiable aJCTIdentifiable = (IJCTIdentifiable) t
-					.accept(this, p);
-			this.identifiables.put(e, aJCTIdentifiable);
-			return aJCTIdentifiable;
-		}
-
-		final IJCTMethod m = this.factory
-				.createMethod(e.getSimpleName().toString());
-		this.identifiables.put(e, m);
-
-		if (null != e.asType() && null != e.getReturnType())
-			m.setReturnType(e.getReturnType().accept(this, p));
-
-		while (m.getModifiers().size() > 0) {
-			m.removeModifier(m.getModifiers().iterator().next());
-		}
-
-		for (final Modifier mod : e.getModifiers())
-			try {
-				m.addModifier(
-						JCTModifiers.valueOf(mod.toString().toUpperCase()));
-			}
-			catch (final IllegalArgumentException iae) {
-				ProxyConsole.getInstance().errorOutput()
-						.print(this.getClass().getName());
-				ProxyConsole.getInstance().errorOutput()
-						.print(" must handle modifier: ");
-				ProxyConsole.getInstance().errorOutput().println(mod);
-			}
-
-		if (null != e.asType()) {
-			for (final VariableElement v : e.getParameters())
-				m.addParameter((IJCTParameter) v.accept(this, p));
-
-			for (final TypeMirror aTypeMirror : e.getThrownTypes())
-				m.addThrownException(
-						(IJCTClassType) aTypeMirror.accept(this, p));
-		}
-
-		return this.putSourceCodePosition(m, e);
-	}
-
-	public IJCTIdentifiable visitTypeParameter(final TypeParameterElement e,
-			final Object p) {
-		if (null != e.getEnclosingElement())
-			e.getEnclosingElement().accept(this, p);
-
-		for (final TypeMirror aTypeMirror : e.getBounds()) {
-			final IJCTType t = aTypeMirror.accept(this, p);
-			if (JCTKind.CLASS_TYPE == t.getKind())
-				return ((IJCTClassType) t).getSelector().getElement();
-		}
-
-		return this.rootNode.getType("Ljava.lang.Object", IJCTClassType.class)
-				.getSelector().getElement();
-	}
-
-	public IJCTIdentifiable visitUnknown(final Element e, final Object p) {
-		return null;
-	}
-
-	public IJCTElement visitOther(final Tree o, final Object p) {
-		return null;
-	}
-
-	public IJCTElement visitYield(YieldTree node, Object o) {
-		return null;
-	}
-
-	public IJCTElement error(final Tree o, final Object p) {
-		throw new IllegalStateException("Unknown Tree Part ==> " + o.getKind()
-				+ " :: " + o + " (argument :" + p + ")");
-	}
-
-	public IJCTElement visitAnnotatedType(AnnotatedTypeTree node, Object o) {
-		return null;
-	}
-
-	public IJCTElement visitAnnotation(final AnnotationTree node,
-			final Object p) {
-		return this.visitOther(node, p);
 	}
 
 	public IJCTElement visitArrayAccess(final ArrayAccessTree node,
@@ -937,6 +648,10 @@ public class JCTCreatorFromSourceCode
 					"A Binary Operator must have a binary operator kind");
 		}
 		return this.putSourceCodePosition(result, node);
+	}
+
+	public IJCTElement visitBindingPattern(BindingPatternTree node, Object o) {
+		return null;
 	}
 
 	public IJCTElement visitBlock(final BlockTree node, final Object p) {
@@ -1130,12 +845,35 @@ public class JCTCreatorFromSourceCode
 						node);
 	}
 
+	@Override
+	public IJCTElement visitConstantCaseLabel(ConstantCaseLabelTree node,
+			Object p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public IJCTElement visitContinue(final ContinueTree node, final Object p) {
 		final IJCTContinue aJCTContinue = this.factory.createContinue();
 		final Name name = node.getLabel();
 		if (name != null)
 			aJCTContinue.setLabel(this.labels.get(name.toString()));
 		return this.putSourceCodePosition(aJCTContinue, node);
+	}
+
+	public IJCTType visitDeclared(final DeclaredType t, final Object p) {
+		return ((IJCTClass) t.asElement().accept(this, p)).createClassType();
+	}
+
+	@Override
+	public IJCTElement visitDeconstructionPattern(
+			DeconstructionPatternTree node, Object p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public IJCTElement visitDefaultCaseLabel(DefaultCaseLabelTree node,
+			Object o) {
+		return null;
 	}
 
 	public IJCTElement visitDoWhileLoop(final DoWhileLoopTree node,
@@ -1181,6 +919,71 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTErroneousExpression, node);
 	}
 
+	public IJCTType visitError(final ErrorType t, final Object p) {
+		return this.visit(t, p);
+	}
+
+	public IJCTIdentifiable visitExecutable(final ExecutableElement e,
+			final Object p) {
+		if (null != e.getEnclosingElement())
+			e.getEnclosingElement().accept(this, p);
+
+		final IJCTIdentifiable i = this.identifiables.get(e);
+		if (null != i)
+			return i;
+
+		final Tree t = this.javacElements.getTree(e);
+		if (null != t) {
+			final IJCTIdentifiable aJCTIdentifiable = (IJCTIdentifiable) t
+					.accept(this, p);
+			this.identifiables.put(e, aJCTIdentifiable);
+			return aJCTIdentifiable;
+		}
+
+		final IJCTMethod m = this.factory
+				.createMethod(e.getSimpleName().toString());
+		this.identifiables.put(e, m);
+
+		if (null != e.asType() && null != e.getReturnType())
+			m.setReturnType(e.getReturnType().accept(this, p));
+
+		while (m.getModifiers().size() > 0) {
+			m.removeModifier(m.getModifiers().iterator().next());
+		}
+
+		for (final Modifier mod : e.getModifiers())
+			try {
+				m.addModifier(
+						JCTModifiers.valueOf(mod.toString().toUpperCase()));
+			}
+			catch (final IllegalArgumentException iae) {
+				ProxyConsole.getInstance().errorOutput()
+						.print(this.getClass().getName());
+				ProxyConsole.getInstance().errorOutput()
+						.print(" must handle modifier: ");
+				ProxyConsole.getInstance().errorOutput().println(mod);
+			}
+
+		if (null != e.asType()) {
+			for (final VariableElement v : e.getParameters())
+				m.addParameter((IJCTParameter) v.accept(this, p));
+
+			for (final TypeMirror aTypeMirror : e.getThrownTypes())
+				m.addThrownException(
+						(IJCTClassType) aTypeMirror.accept(this, p));
+		}
+
+		return this.putSourceCodePosition(m, e);
+	}
+
+	public IJCTType visitExecutable(final ExecutableType t, final Object p) {
+		return this.visit(t, p);
+	}
+
+	public IJCTElement visitExports(ExportsTree node, Object o) {
+		return null;
+	}
+
 	public IJCTElement visitExpressionStatement(
 			final ExpressionStatementTree node, final Object p) {
 		return this.putSourceCodePosition(
@@ -1202,6 +1005,10 @@ public class JCTCreatorFromSourceCode
 					(IJCTExpressionStatement) update.accept(this, p));
 
 		return this.putSourceCodePosition(aJCTFor, node);
+	}
+
+	public IJCTElement visitGuardedPattern(GuardedPatternTree node, Object o) {
+		return null;
 	}
 
 	public IJCTElement visitIdentifier(final IdentifierTree node,
@@ -1321,6 +1128,15 @@ public class JCTCreatorFromSourceCode
 				node);
 	}
 
+	public IJCTType visitIntersection(IntersectionType t, Object o) {
+		return null;
+	}
+
+	public IJCTElement visitIntersectionType(IntersectionTypeTree node,
+			Object o) {
+		return null;
+	}
+
 	public IJCTElement visitLabeledStatement(final LabeledStatementTree node,
 			final Object p) {
 		final IJCTLabel jctLabel = this.factory.createLabel(
@@ -1331,6 +1147,11 @@ public class JCTCreatorFromSourceCode
 				(IJCTStatement) node.getStatement().accept(this, p));
 		this.labels.put(jctLabel.getName(), l);
 		return this.putSourceCodePosition(jctLabel, node);
+	}
+
+	public IJCTElement visitLambdaExpression(LambdaExpressionTree node,
+			Object o) {
+		return null;
 	}
 
 	public IJCTElement visitLiteral(final LiteralTree node, final Object p) {
@@ -1370,11 +1191,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(result, node);
 	}
 
-	public IJCTElement visitBindingPattern(BindingPatternTree node, Object o) {
-		return null;
-	}
-
-	public IJCTElement visitDefaultCaseLabel(DefaultCaseLabelTree node,
+	public IJCTElement visitMemberReference(MemberReferenceTree node,
 			Object o) {
 		return null;
 	}
@@ -1399,11 +1216,6 @@ public class JCTCreatorFromSourceCode
 						? this.factory.createSimpleSelector(m)
 						: this.factory.createMemberSelector(aJCTExpression, m),
 				node);
-	}
-
-	public IJCTElement visitMemberReference(MemberReferenceTree node,
-			Object o) {
-		return null;
 	}
 
 	public IJCTElement visitMethod(final MethodTree node, final Object p) {
@@ -1502,6 +1314,10 @@ public class JCTCreatorFromSourceCode
 		return this.error(node, p);
 	}
 
+	public IJCTElement visitModule(ModuleTree node, Object o) {
+		return null;
+	}
+
 	public IJCTElement visitNewArray(final NewArrayTree node, final Object p) {
 		// Recover underlying type, store the number of unspecified dimensions
 		Tree type = node.getType();
@@ -1550,15 +1366,6 @@ public class JCTCreatorFromSourceCode
 		aJCTNewArray.setUnspecifiedDimensions(unspecifiedDims);
 
 		return this.putSourceCodePosition(aJCTNewArray, node);
-	}
-
-	public IJCTElement visitGuardedPattern(GuardedPatternTree node, Object o) {
-		return null;
-	}
-
-	public IJCTElement visitParenthesizedPattern(ParenthesizedPatternTree node,
-			Object o) {
-		return null;
 	}
 
 	public IJCTElement visitNewClass(final NewClassTree node, final Object p) {
@@ -1613,9 +1420,49 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTNewClass, node);
 	}
 
-	public IJCTElement visitLambdaExpression(LambdaExpressionTree node,
-			Object o) {
+	public IJCTType visitNoType(final NoType t, final Object p) {
+		return this.rootNode.getType(JCTPrimitiveTypes.VOID);
+	}
+
+	public IJCTType visitNull(final NullType t, final Object p) {
+		return this.visit(t, p);
+	}
+
+	public IJCTElement visitOpens(OpensTree node, Object o) {
 		return null;
+	}
+
+	public IJCTElement visitOther(final Tree o, final Object p) {
+		return null;
+	}
+
+	public IJCTIdentifiable visitPackage(final PackageElement e,
+			final Object param) {
+		final IJCTIdentifiable i = this.identifiables.get(e);
+		if (null != i)
+			return i;
+
+		final Tree t = this.javacElements.getTree(e);
+		if (null != t) {
+			final IJCTElement element = t.accept(this, param);
+			if (element instanceof IJCTPackage) {
+				this.identifiables.put(e, (IJCTPackage) element);
+				return (IJCTPackage) element;
+			}
+		}
+
+		final IJCTPackage p = e.isUnnamed()
+				? this.factory.createPackage(null, false)
+				: this.factory.createPackage(e.getQualifiedName().toString(),
+						false);
+
+		this.identifiables.put(e, p);
+		this.rootNode.addPackage(p);
+
+		for (final Element aElement : e.getEnclosedElements())
+			aElement.accept(this, param);
+
+		return p;
 	}
 
 	public IJCTElement visitPackage(PackageTree node, Object o) {
@@ -1627,21 +1474,43 @@ public class JCTCreatorFromSourceCode
 		return node.getType().accept(this, p);
 	}
 
-	public IJCTElement visitUnionType(UnionTypeTree node, Object o) {
-		return null;
-	}
-
-	public IJCTElement visitIntersectionType(IntersectionTypeTree node,
-			Object o) {
-		return null;
-	}
-
 	public IJCTElement visitParenthesized(final ParenthesizedTree node,
 			final Object p) {
 		return this.putSourceCodePosition(
 				this.factory.createParenthesis(
 						(IJCTExpression) node.getExpression().accept(this, p)),
 				node);
+	}
+
+	public IJCTElement visitParenthesizedPattern(ParenthesizedPatternTree node,
+			Object o) {
+		return null;
+	}
+
+	@Override
+	public IJCTElement visitPatternCaseLabel(PatternCaseLabelTree node,
+			Object p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public IJCTType visitPrimitive(final PrimitiveType t, final Object p) {
+		IJCTType aType;
+
+		switch (t.getKind()) {
+		case INT:
+			aType = this.rootNode.getType(JCTPrimitiveTypes.INTEGER);
+			break;
+		case CHAR:
+			aType = this.rootNode.getType(JCTPrimitiveTypes.CHARACTER);
+			break;
+		default:
+			aType = this.rootNode
+					.getType(JCTPrimitiveTypes.valueOf(t.getKind().toString()));
+			break;
+		}
+
+		return aType;
 	}
 
 	public IJCTElement visitPrimitiveType(final PrimitiveTypeTree node,
@@ -1659,12 +1528,26 @@ public class JCTCreatorFromSourceCode
 		return this.rootNode.getType(t);
 	}
 
+	public IJCTElement visitProvides(ProvidesTree node, Object o) {
+		return null;
+	}
+
+	public IJCTElement visitRequires(RequiresTree node, Object o) {
+		return null;
+	}
+
 	public IJCTElement visitReturn(final ReturnTree node, final Object p) {
 		final IJCTReturn aJCTReturn = this.factory.createReturn();
 		if (null != node.getExpression())
 			aJCTReturn.setReturnedExpression(
 					(IJCTExpression) node.getExpression().accept(this, p));
 		return this.putSourceCodePosition(aJCTReturn, node);
+	}
+
+	@Override
+	public IJCTElement visitStringTemplate(StringTemplateTree node, Object p) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	public IJCTElement visitSwitch(final SwitchTree node, final Object p) {
@@ -1714,6 +1597,93 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTTry, node);
 	}
 
+	public IJCTIdentifiable visitType(final TypeElement e, final Object p) {
+		final IJCTIdentifiable i = this.identifiables.get(e);
+		if (null != i)
+			return i;
+
+		final Tree t = this.javacElements.getTree(e);
+		if (null != t) {
+			final IJCTIdentifiable aJCTIdentifiable = (IJCTIdentifiable) t
+					.accept(this, p);
+			this.identifiables.put(e, aJCTIdentifiable);
+			return aJCTIdentifiable;
+		}
+
+		final IJCTClass c = this.factory
+				.createClass(e.getSimpleName().toString(),
+						ElementKind.INTERFACE == e.getKind()
+								|| ElementKind.ANNOTATION_TYPE == e.getKind(),
+						false);
+
+		this.classes.put(this.javacElements.getBinaryName(e).toString(), c);
+		this.classeNames.put(c, this.javacElements.getBinaryName(e).toString());
+
+		this.identifiables.put(e, c);
+
+		while (c.getModifiers().size() > 0) {
+			c.removeModifier(c.getModifiers().iterator().next());
+		}
+
+		for (final Modifier mod : e.getModifiers())
+			try {
+				c.addModifier(
+						JCTModifiers.valueOf(mod.toString().toUpperCase()));
+			}
+			catch (final IllegalArgumentException iae) {
+				ProxyConsole.getInstance().errorOutput()
+						.print(this.getClass().getName());
+				ProxyConsole.getInstance().errorOutput()
+						.print(" must handle modifier: ");
+				ProxyConsole.getInstance().errorOutput().println(mod);
+			}
+
+		if (null != e.getSuperclass()
+				&& TypeKind.NONE != e.getSuperclass().getKind()) {
+			final IJCTClassType aJCTClassType = (IJCTClassType) e
+					.getSuperclass().accept(this, p);
+			if (aJCTClassType.getSelector().getElement().getIsInterface())
+				c.addDirectlyImplementedInterface(aJCTClassType);
+			else
+				c.setDirectSuperClass(aJCTClassType);
+		}
+
+		for (final TypeMirror aTypeMirror : e.getInterfaces())
+			c.addDirectlyImplementedInterface(
+					(IJCTClassType) aTypeMirror.accept(this, p));
+
+		for (final Element anElement : e.getEnclosedElements()) {
+			final IJCTElement aJCTElement = anElement.accept(this, p);
+			switch (aJCTElement.getKind()) {
+			case CLASS:
+			case METHOD:
+			case VARIABLE:
+				c.addDeclaredMember((IJCTClassMember) aJCTElement);
+				break;
+			case BLOCK: {
+				final IJCTMethod init;
+				if (anElement.getModifiers().contains(Modifier.STATIC)) {
+					init = this.factory.createMethod("<clinit>");
+					init.addModifier(JCTModifiers.STATIC);
+				}
+				else
+					init = this.factory.createMethod(">init<");
+
+				init.addModifier(JCTModifiers.PRIVATE);
+				init.addModifier(JCTModifiers.FINAL);
+				init.setBody((IJCTBlock) aJCTElement);
+				c.addDeclaredMember(init);
+			}
+				break;
+			default:
+				throw new AssertionError(
+						"The elements authorized in a class are only class members and blocks (initializers).");
+			}
+		}
+
+		return c;
+	}
+
 	public IJCTElement visitTypeCast(final TypeCastTree node, final Object p) {
 		IJCTType t = null;
 
@@ -1748,9 +1718,28 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTCast, node);
 	}
 
+	public IJCTIdentifiable visitTypeParameter(final TypeParameterElement e,
+			final Object p) {
+		if (null != e.getEnclosingElement())
+			e.getEnclosingElement().accept(this, p);
+
+		for (final TypeMirror aTypeMirror : e.getBounds()) {
+			final IJCTType t = aTypeMirror.accept(this, p);
+			if (JCTKind.CLASS_TYPE == t.getKind())
+				return ((IJCTClassType) t).getSelector().getElement();
+		}
+
+		return this.rootNode.getType("Ljava.lang.Object", IJCTClassType.class)
+				.getSelector().getElement();
+	}
+
 	public IJCTElement visitTypeParameter(final TypeParameterTree node,
 			final Object p) {
 		return this.visitOther(node, p);
+	}
+
+	public IJCTType visitTypeVariable(final TypeVariable t, final Object p) {
+		return ((IJCTClass) t.asElement().accept(this, p)).createClassType();
 	}
 
 	public IJCTElement visitUnary(final UnaryTree node, final Object p) {
@@ -1787,6 +1776,60 @@ public class JCTCreatorFromSourceCode
 					"An unary operator must have a unary operator kind");
 		}
 		return this.putSourceCodePosition(result, node);
+	}
+
+	public IJCTType visitUnion(UnionType t, Object o) {
+		return null;
+	}
+
+	public IJCTElement visitUnionType(UnionTypeTree node, Object o) {
+		return null;
+	}
+
+	public IJCTIdentifiable visitUnknown(final Element e, final Object p) {
+		return null;
+	}
+
+	public IJCTType visitUnknown(final TypeMirror t, final Object p) {
+		return this.visit(t, p);
+	}
+
+	public IJCTElement visitUses(UsesTree node, Object o) {
+		return null;
+	}
+
+	public IJCTIdentifiable visitVariable(final VariableElement e,
+			final Object p) {
+
+		if (null != e.getEnclosingElement())
+			e.getEnclosingElement().accept(this, p);
+
+		final IJCTIdentifiable i = this.identifiables.get(e);
+		if (null != i)
+			return i;
+
+		final Tree t = this.javacElements.getTree(e);
+		if (null != t) {
+			final IJCTIdentifiable aJCTIdentifiable = (IJCTIdentifiable) t
+					.accept(this, p);
+			this.identifiables.put(e, aJCTIdentifiable);
+			return aJCTIdentifiable;
+		}
+
+		final IJCTVariable v = this.factory
+				.createVariable(e.getSimpleName().toString());
+		v.setType(this.rootNode.getType("Ljava.lang.Object",
+				IJCTClassType.class));
+		this.identifiables.put(e, v);
+
+		while (v.getModifiers().size() > 0) {
+			v.removeModifier(v.getModifiers().iterator().next());
+		}
+
+		for (final Modifier m : e.getModifiers())
+			v.addModifier(JCTModifiers.valueOf(m.toString().toUpperCase()));
+
+		return this.putSourceCodePosition(v, e);
 	}
 
 	public IJCTElement visitVariable(final VariableTree node, final Object p) {
@@ -1860,48 +1903,17 @@ public class JCTCreatorFromSourceCode
 		return this.visitOther(node, p);
 	}
 
-	public IJCTElement visitModule(ModuleTree node, Object o) {
-		return null;
+	public IJCTType visitWildcard(final WildcardType t, final Object p) {
+		return t.getExtendsBound().accept(this, p);
 	}
 
-	public IJCTElement visitExports(ExportsTree node, Object o) {
-		return null;
-	}
-
-	public IJCTElement visitOpens(OpensTree node, Object o) {
-		return null;
-	}
-
-	public IJCTElement visitProvides(ProvidesTree node, Object o) {
-		return null;
-	}
-
-	public IJCTElement visitRequires(RequiresTree node, Object o) {
-		return null;
-	}
-
-	public IJCTElement visitUses(UsesTree node, Object o) {
+	public IJCTElement visitYield(YieldTree node, Object o) {
 		return null;
 	}
 
 }
 
 class OffsetTranslator extends JCTMap<Void, IJCTSourceCodePart> {
-	private void visitSourceCodePart(final IJCTSourceCodePart scp,
-			final IJCTSourceCodePart enclosing) {
-
-		// TODO: Fixed (?) bug when scp.getStoredSourceCodeOffset() == null.
-		if (scp.getStoredSourceCodeOffset() != null) {
-			scp.setStoredSourceCodeOffset(scp.getStoredSourceCodeOffset()
-					- enclosing.getStoredSourceCodeOffset(
-							enclosing.getEnclosingCompilationUnit()));
-		}
-		else {
-			scp.setStoredSourceCodeOffset(enclosing.getStoredSourceCodeOffset(
-					enclosing.getEnclosingCompilationUnit()));
-		}
-	}
-
 	@Override
 	public Void visitAnd(IJCTAnd andElement,
 			IJCTSourceCodePart additionalParameter) {
@@ -2073,18 +2085,18 @@ class OffsetTranslator extends JCTMap<Void, IJCTSourceCodePart> {
 	}
 
 	@Override
-	public Void visitDoWhile(IJCTDoWhile doWhileElement,
-			IJCTSourceCodePart additionalParameter) {
-		this.visitSourceCodePart(doWhileElement, additionalParameter);
-		return super.visitDoWhile(doWhileElement, doWhileElement);
-	}
-
-	@Override
 	public Void visitDoubleLiteral(IJCTDoubleLiteral doubleLiteralElement,
 			IJCTSourceCodePart additionalParameter) {
 		this.visitSourceCodePart(doubleLiteralElement, additionalParameter);
 		return super.visitDoubleLiteral(doubleLiteralElement,
 				doubleLiteralElement);
+	}
+
+	@Override
+	public Void visitDoWhile(IJCTDoWhile doWhileElement,
+			IJCTSourceCodePart additionalParameter) {
+		this.visitSourceCodePart(doWhileElement, additionalParameter);
+		return super.visitDoWhile(doWhileElement, doWhileElement);
 	}
 
 	@Override
@@ -2474,6 +2486,21 @@ class OffsetTranslator extends JCTMap<Void, IJCTSourceCodePart> {
 				simpleSelectorElement);
 	}
 
+	private void visitSourceCodePart(final IJCTSourceCodePart scp,
+			final IJCTSourceCodePart enclosing) {
+
+		// TODO: Fixed (?) bug when scp.getStoredSourceCodeOffset() == null.
+		if (scp.getStoredSourceCodeOffset() != null) {
+			scp.setStoredSourceCodeOffset(scp.getStoredSourceCodeOffset()
+					- enclosing.getStoredSourceCodeOffset(
+							enclosing.getEnclosingCompilationUnit()));
+		}
+		else {
+			scp.setStoredSourceCodeOffset(enclosing.getStoredSourceCodeOffset(
+					enclosing.getEnclosingCompilationUnit()));
+		}
+	}
+
 	@Override
 	public Void visitStringLiteral(IJCTStringLiteral stringLiteralElement,
 			IJCTSourceCodePart additionalParameter) {
@@ -2574,4 +2601,8 @@ class OffsetTranslator extends JCTMap<Void, IJCTSourceCodePart> {
 		return super.visitXorAssignment(xorAssignmentElement,
 				xorAssignmentElement);
 	}
+}
+
+interface Setter<T> {
+	public void set(T value);
 }

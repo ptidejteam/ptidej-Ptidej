@@ -47,82 +47,76 @@ import jct.test.rsc.jct.kernel.JCTKind;
  * @author Mathieu Lemoine
  */
 public abstract class AbstractJCTContainer<Element extends IJCTElement>
-	implements IJCTContainer<Element>
-{
-    /**
-     * Returns an unmodifiable list of Enclosed Elements of type T
-     */
-    @Override
-	public <T extends Element> Collection<T> getEnclosedElements(final Class<T> c)
-    {
-        final Collection<T> result = new LinkedList<T>();
-        for(final Element e : this.getEnclosedElements())
-            if(c.isInstance(e))
-                result.add(c.cast(e));
-        return Collections.unmodifiableCollection(result);
-    }
-
-    @Override
-	public Collection<? extends IJCTElement> getAllEnclosedElements()
-    { return this.getAllEnclosedElements(null, IJCTElement.class, false); }
-
-    /**
-     * Returns an unmodifiable Set on indirectly Enclosed Elements of kind K.
-     *
-     * T must be compatible with K
-     */
-    @SuppressWarnings("unchecked")
+		implements IJCTContainer<Element> {
+	/**
+	 * Returns an unmodifiable list of Enclosed Elements of type T
+	 */
 	@Override
-	public <T extends IJCTElement> Collection<T> getAllEnclosedElements(final JCTKind K, final Class<T> c, final boolean first_layer_only)
-    {
-        final Set<T> result = new HashSet<T>();
-        final Set<IJCTElement> checked = new HashSet<IJCTElement>();
-        final Set<IJCTElement> not_ok_yet = new HashSet<IJCTElement>();
+	public <T extends Element> Collection<T> getEnclosedElements(
+			final Class<T> c) {
+		final Collection<T> result = new LinkedList<T>();
+		for (final Element e : this.getEnclosedElements())
+			if (c.isInstance(e))
+				result.add(c.cast(e));
+		return Collections.unmodifiableCollection(result);
+	}
 
-        if(this instanceof IJCTElement)
-            not_ok_yet.add((IJCTElement)this);
-        else
-            for(final Element e : this.getEnclosedElements())
-                if(null != e)
-                    not_ok_yet.add(e);
+	@Override
+	public Collection<? extends IJCTElement> getAllEnclosedElements() {
+		return this.getAllEnclosedElements(null, IJCTElement.class, false);
+	}
 
-        while(!not_ok_yet.isEmpty())
-        {
-            final Iterator<IJCTElement> it = not_ok_yet.iterator();
-            final IJCTElement T = it.next();
+	/**
+	 * Returns an unmodifiable Set on indirectly Enclosed Elements of kind K.
+	 *
+	 * T must be compatible with K
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public <T extends IJCTElement> Collection<T> getAllEnclosedElements(
+			final JCTKind K, final Class<T> c, final boolean first_layer_only) {
+		final Set<T> result = new HashSet<T>();
+		final Set<IJCTElement> checked = new HashSet<IJCTElement>();
+		final Set<IJCTElement> not_ok_yet = new HashSet<IJCTElement>();
 
-            assert null != T : "T should not be null, test below";
+		if (this instanceof IJCTElement)
+			not_ok_yet.add((IJCTElement) this);
+		else
+			for (final Element e : this.getEnclosedElements())
+				if (null != e)
+					not_ok_yet.add(e);
 
-            checked.add(T);
-            it.remove();
+		while (!not_ok_yet.isEmpty()) {
+			final Iterator<IJCTElement> it = not_ok_yet.iterator();
+			final IJCTElement T = it.next();
 
-            if(null == K
-               || K == T.getKind())
-            {
-                result.add(c.cast(T));
-                if(first_layer_only)
-                    continue;
-            }
+			assert null != T : "T should not be null, test below";
 
-            for(final IJCTElement t : ((IJCTContainer<IJCTElement>)T).getEnclosedElements())
-            {
-                if(null == t)
-                    continue;
+			checked.add(T);
+			it.remove();
 
-                if(!checked.contains(t))
-                {
-                    if(t instanceof IJCTContainer)
-                        not_ok_yet.add(t);
-                    else if(null == K
-                            || K == t.getKind())
-                    {
-                        result.add(c.cast(t));
-                        checked.add(t);
-                    }
-                }
-            }
-        }
+			if (null == K || K == T.getKind()) {
+				result.add(c.cast(T));
+				if (first_layer_only)
+					continue;
+			}
 
-        return Collections.unmodifiableCollection(result);
-    }
+			for (final IJCTElement t : ((IJCTContainer<IJCTElement>) T)
+					.getEnclosedElements()) {
+				if (null == t)
+					continue;
+
+				if (!checked.contains(t)) {
+					if (t instanceof IJCTContainer)
+						not_ok_yet.add(t);
+					else if (null == K || K == t.getKind()) {
+						result.add(c.cast(t));
+						checked.add(t);
+					}
+				}
+			}
+		}
+
+		return Collections.unmodifiableCollection(result);
+	}
 }

@@ -1,45 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>net.ptidej.pom</groupId>
-    <artifactId>pom-core</artifactId>
-    <name>POM</name>
+	<groupId>net.ptidej.pom</groupId>
+	<artifactId>pom-core</artifactId>
+	<name>POM</name>
 
-    <parent>
-        <groupId>net.ptidej</groupId>
-        <artifactId>all-ptidej</artifactId>
-        <version>1.0.0</version>
-    </parent>
+	<parent>
+		<groupId>net.ptidej</groupId>
+		<artifactId>all-ptidej</artifactId>
+		<version>1.0.0</version>
+	</parent>
 
-    <dependencies>
+	<dependencies>
 
-        <dependency>
-            <groupId>net.ptidej.cpl</groupId>
-            <artifactId>cpl-core</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+		<!-- Main dependencies -->
+		<dependency>
+			<groupId>net.ptidej.cpl</groupId>
+			<artifactId>cpl-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
-        <dependency>
-            <groupId>net.ptidej.padl</groupId>
-            <artifactId>padl-core</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
-        <dependency>
-            <groupId>net.ptidej.padl</groupId>
-            <artifactId>padl-statements</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-statements</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
-        <dependency>
-            <groupId>com.ibm.toad</groupId>
-            <artifactId>cfparse</artifactId>
-            <version>1.0</version>
-        </dependency>
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-generator</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
-    </dependencies>
-    
+		<!-- Test dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.14.0</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
 </project>

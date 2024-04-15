@@ -1,0 +1,174 @@
+CLASS A
+
+
+    ATTRIBUTES
+        PRIVATE  input_stream:fstream,
+        PUBLIC  _rwFileName:RWCString,
+        PUBLIC  _rwBlock:RWCString,
+        PUBLIC  _rwHd:RWCString,
+        PRIVATE  aA:A
+
+    OPERATIONS
+        PRIVATE VP_FM_Explorer( VP_FM_Explorer&  ):VP_FM_Explorer,
+        PRIVATE operator=( VP_FM_Explorer& ):VP_FM_Explorer&,
+        PRIVATE removeSyncFlag(unsigned char* wbuf, unsigned char* pbuf, int wsize):int,
+        PUBLIC VP_FM_Explorer(void):VP_FM_Explorer,
+        PUBLIC ~VP_FM_Explorer(void):VP_FM_Explorer,
+        PUBLIC openfile( RWCString& fullPath, RWCString& fileName):_Error_,
+        PUBLIC getBlock():int,
+        PUBLIC getHeader():int,
+        PUBLIC getRecord(channel_id& id, char* pInfo):int,
+        PUBLIC getA():A,
+        PUBLIC setA(A a):void
+        ;
+
+
+CLASS B
+
+
+    ATTRIBUTES
+        PRIVATE  _bIsInitDone:int,
+        PRIVATE  _activeVip:int,
+        PRIVATE  cfg:cfgFile,
+        PRIVATE  _rwServiceAreaId:RWCString,
+        PRIVATE  _rwStatusDir:RWCString,
+        PRIVATE  LookUpTable:RWBTree
+
+    OPERATIONS
+        PRIVATE readCfgFile(void):_Error_,
+        PRIVATE VP_FM_Filter( VP_FM_Filter&):VP_FM_Filter,
+        PRIVATE operator=( VP_FM_Filter&):VP_FM_Filter&,
+        PRIVATE UnassignedNotification(channel_id& id):int,
+        PRIVATE InvalidNotification(channel_id& id):int,
+        PRIVATE getThreshold(void):int,
+        PRIVATE setThresholdCounter(void):_Error_,
+        PUBLIC VP_FM_Filter(void):VP_FM_Filter,
+        PUBLIC ~VP_FM_Filter():VP_FM_Filter,
+        PUBLIC init(void):_Error_,
+        PUBLIC init(cfgFile& file):_Error_,
+        PUBLIC operation(void):_Error_,
+        PUBLIC SHARED getVipList(cfgFile& , RWTValSlist<RWCString>& ):_Error_,
+        PUBLIC clean(void):_Error_,
+        PUBLIC recover(void):_Error_
+        ;
+
+
+
+    GENERALIZATION BdtElaboration
+            SUBCLASSES VP_FM_Filter
+        ;
+
+
+    AGGREGATION NAME unassignedList CONTAINER CLASS VP_FM_Filter MULT UNDEFINED
+            PARTS
+            CLASS   channel_id MULT UNDEFINED
+        ;
+
+
+    AGGREGATION NAME invalidList CONTAINER CLASS VP_FM_Filter MULT UNDEFINED
+            PARTS
+            CLASS   channel_id MULT UNDEFINED
+        ;
+
+
+    AGGREGATION NAME Explorer CONTAINER CLASS VP_FM_Filter MULT UNDEFINED
+            PARTS
+            CLASS   VP_FM_Explorer MULT UNDEFINED
+        ;
+
+
+    AGGREGATION NAME GeneratorList CONTAINER CLASS VP_FM_Filter MULT UNDEFINED
+            PARTS
+            CLASS   VP_FM_Generator MULT UNDEFINED
+        ;
+
+
+    AGGREGATION NAME VipInfoList CONTAINER CLASS VP_FM_Filter MULT UNDEFINED
+            PARTS
+            CLASS   VP_FM_VipInfo MULT UNDEFINED
+        ;
+
+CLASS C
+
+
+    ATTRIBUTES
+        PRIVATE  _rwBuffer: RWCString,
+        PRIVATE  _rwVipIdentifer: RWCString,
+        PRIVATE  _rwInputFileName: RWCString,
+        PRIVATE  _rwDataFullFileName: RWCString,
+        PRIVATE  _rwStatusFullFileName: RWCString,
+        PRIVATE  new_header:int
+
+    OPERATIONS
+        PRIVATE VP_FM_Generator( RWCString& _VIP_identifer):VP_FM_Generator,
+        PRIVATE ~VP_FM_Generator(void):VP_FM_Generator,
+        PRIVATE start( RWCString& _InputFileName):void,
+        PRIVATE buffer_length():int,
+        PRIVATE insertHeader( RWCString& hd):void,
+        PRIVATE insertRecord( char* record):void,
+        PRIVATE creatFile( RWCString& ServiceAreaId, RWCString& PutDataDir, RWCString& PutStatusDir):_Error_
+        ;
+
+
+
+    GENERALIZATION RWCollectable
+            SUBCLASSES VP_FM_Generator
+        ;
+
+CLASS D
+
+
+    ATTRIBUTES
+        PRIVATE  Status: vip_status,
+        PRIVATE  Channel_id:channel_id
+
+    OPERATIONS
+        PRIVATE VP_FM_TableElement(void):VP_FM_TableElement,
+        PRIVATE VP_FM_TableElement( VP_FM_TableElement&  ):VP_FM_TableElement,
+        PRIVATE operator=( VP_FM_TableElement& ):VP_FM_TableElement&,
+        PRIVATE ~VP_FM_TableElement(void):VP_FM_TableElement,
+        PRIVATE compareTo( RWCollectable* ):int,
+        PRIVATE get(vip_status& St):void,
+        PRIVATE get(channel_id& Id):void,
+        PRIVATE set( vip_status& St):void,
+        PRIVATE set( channel_id& Id):void
+        ;
+
+
+
+    GENERALIZATION RWCollectable
+            SUBCLASSES VP_FM_TableElement
+        ;
+
+
+    AGGREGATION NAME VipList CONTAINER CLASS VP_FM_TableElement MULT UNDEFINED
+            PARTS
+            CLASS   int MULT UNDEFINED
+        ;
+
+CLASS E
+
+
+    ATTRIBUTES
+        PRIVATE  VIP_Name: RWCString,
+        PRIVATE  VIP_Id:int,
+        PRIVATE  Status:RWCString
+
+    OPERATIONS
+        PRIVATE VP_FM_VipInfo(void):VP_FM_VipInfo,
+        PRIVATE ~VP_FM_VipInfo(void):VP_FM_VipInfo,
+        PRIVATE compareTo(  RWCollectable*):int
+        ;
+
+
+
+    GENERALIZATION RWCollectable
+            SUBCLASSES VP_FM_VipInfo
+        ;
+
+
+    AGGREGATION NAME VIP_Channels CONTAINER CLASS VP_FM_VipInfo MULT UNDEFINED
+            PARTS
+            CLASS   RWCString  MULT UNDEFINED
+        ;
+
