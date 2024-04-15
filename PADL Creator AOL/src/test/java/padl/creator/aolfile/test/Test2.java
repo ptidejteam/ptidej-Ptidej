@@ -38,7 +38,7 @@ public class Test2 extends TestCase {
 				Factory.getInstance().createCodeLevelModel("Test1");
 			final AOLCreator aolCreator =
 				new AOLCreator(
-					new String[] { "../PADL Creator AOL Tests/rsc/Unit Tests/Test2.aol" });
+					new String[] { "../PADL Creator AOL/target/test-classes/Unit Tests/Test2.aol" });
 			aolCreator.create(Test2.CodeLevelModel, true);
 			try {
 				Test2.IdiomLevelModel =

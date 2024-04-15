@@ -11,6 +11,7 @@
 package padl.creator.javafile.eclipse.astVisitors;
 
 import java.util.Stack;
+
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.AnnotationTypeDeclaration;
 import org.eclipse.jdt.core.dom.AnnotationTypeMemberDeclaration;
@@ -20,6 +21,7 @@ import org.eclipse.jdt.core.dom.EnumDeclaration;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.PackageDeclaration;
 import org.eclipse.jdt.core.dom.TypeDeclaration;
+
 import padl.creator.javafile.eclipse.util.PadlParserUtil;
 import padl.kernel.Constants;
 import padl.kernel.ICodeLevelModel;
@@ -41,15 +43,15 @@ public class VisitorFirstParsing extends ExtendedASTVisitor {
 	private IFirstClassEntity myCurrentEntity;
 
 	// Stack for managing member entities
-	private final Stack<IFirstClassEntity> entitiesStack =
-		new Stack<IFirstClassEntity>();
+	private final Stack<IFirstClassEntity> entitiesStack = new Stack<IFirstClassEntity>();
 
 	public VisitorFirstParsing(final ICodeLevelModel aCodeLevelModel) {
 		this.padlModel = aCodeLevelModel;
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.println("Beginning of the first pass...");
+
+		//		ProxyConsole
+		//			.getInstance()
+		//			.debugOutput()
+		//			.println("Beginning of the first pass...");
 	}
 
 	@Override
@@ -80,13 +82,9 @@ public class VisitorFirstParsing extends ExtendedASTVisitor {
 		// this method is executed
 
 		if (this.myCurrentEntity != null && node.resolveBinding() != null) {
-			final String nodeId =
-				PadlParserUtil.renameWith$(node
-					.resolveBinding()
-					.getQualifiedName(), node
-					.resolveBinding()
-					.getPackage()
-					.getName());
+			final String nodeId = PadlParserUtil.renameWith$(
+					node.resolveBinding().getQualifiedName(),
+					node.resolveBinding().getPackage().getName());
 			// check if it is really the end of the current entity
 			if (this.myCurrentEntity.getDisplayID().equals(nodeId)) {
 				// check that the stack is empty to be sure that it is a top level class
@@ -160,8 +158,8 @@ public class VisitorFirstParsing extends ExtendedASTVisitor {
 	public boolean visit(final PackageDeclaration node) {
 		final char[] name = node.getName().toString().toCharArray();
 
-		this.myCurrentPackage =
-			PadlParserUtil.getOrCreatePackage(name, this.padlModel);
+		this.myCurrentPackage = PadlParserUtil.getOrCreatePackage(name,
+				this.padlModel);
 
 		return super.visit(node);
 	}
@@ -187,16 +185,14 @@ public class VisitorFirstParsing extends ExtendedASTVisitor {
 		this.entityNb++;
 
 		if (this.entityNb % 1000 == 0) {
-			ProxyConsole
-				.getInstance()
-				.normalOutput()
-				.println(
-					"visited " + this.entityNb + " entities, current entity: "
+			ProxyConsole.getInstance().normalOutput()
+					.println("visited " + this.entityNb
+							+ " entities, current entity: "
 							+ node.resolveBinding().getQualifiedName());
 
 		}
-		char[] entityBindingName =
-			node.resolveBinding().getQualifiedName().toCharArray();
+		char[] entityBindingName = node.resolveBinding().getQualifiedName()
+				.toCharArray();
 
 		final String simpleName = node.getName().toString();
 
@@ -208,25 +204,22 @@ public class VisitorFirstParsing extends ExtendedASTVisitor {
 			// visited class is a top level class
 			if (this.myCurrentPackage == null) {
 				// This means that it is a default package
-				if ((this.myCurrentPackage =
-					(IPackageDefault) this.padlModel
-						.getConstituentFromID(Constants.DEFAULT_PACKAGE_ID)) == null) {
-					this.myCurrentPackage =
-						this.padlModel.getFactory().createPackageDefault();
+				if ((this.myCurrentPackage = (IPackageDefault) this.padlModel
+						.getConstituentFromID(
+								Constants.DEFAULT_PACKAGE_ID)) == null) {
+					this.myCurrentPackage = this.padlModel.getFactory()
+							.createPackageDefault();
 					this.padlModel.addConstituent(this.myCurrentPackage);
 				}
 			}
 			if (node.isInterface()) {
-				this.myCurrentEntity =
-					this.padlModel.getFactory().createInterface(
-						entityBindingName,
-						simpleName.toCharArray());
+				this.myCurrentEntity = this.padlModel.getFactory()
+						.createInterface(entityBindingName,
+								simpleName.toCharArray());
 			}
 			else {
-				this.myCurrentEntity =
-					this.padlModel.getFactory().createClass(
-						entityBindingName,
-						simpleName.toCharArray());
+				this.myCurrentEntity = this.padlModel.getFactory().createClass(
+						entityBindingName, simpleName.toCharArray());
 
 			}
 			this.myCurrentPackage.addConstituent(this.myCurrentEntity);
@@ -234,13 +227,12 @@ public class VisitorFirstParsing extends ExtendedASTVisitor {
 		else {
 			// class member
 			// id of a class member - replace the . by $
-			entityBindingName =
-				(this.myCurrentEntity.getDisplayID() + "$" + simpleName)
-					.toCharArray();
+			entityBindingName = (this.myCurrentEntity.getDisplayID() + "$"
+					+ simpleName).toCharArray();
 			// if a class member with this id is already in the current
 			// class we don't parse it
 			if (this.myCurrentEntity
-				.doesContainConstituentWithID(entityBindingName)) {
+					.doesContainConstituentWithID(entityBindingName)) {
 
 				return false;
 			}
@@ -248,19 +240,16 @@ public class VisitorFirstParsing extends ExtendedASTVisitor {
 			IFirstClassEntity memberEntity;
 
 			if (node.isInterface()) {
-				memberEntity =
-					this.padlModel.getFactory().createMemberInterface(
-						entityBindingName,
-						simpleName.toCharArray());
+				memberEntity = this.padlModel.getFactory()
+						.createMemberInterface(entityBindingName,
+								simpleName.toCharArray());
 			}
 			else {
-				memberEntity =
-					this.padlModel.getFactory().createMemberClass(
-						entityBindingName,
-						simpleName.toCharArray());
+				memberEntity = this.padlModel.getFactory().createMemberClass(
+						entityBindingName, simpleName.toCharArray());
 			}
 			this.myCurrentEntity
-				.addConstituent((IConstituentOfEntity) memberEntity);
+					.addConstituent((IConstituentOfEntity) memberEntity);
 			this.entitiesStack.addElement(this.myCurrentEntity);
 			this.myCurrentEntity = memberEntity;
 

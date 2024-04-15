@@ -14,6 +14,22 @@
 		<version>1.0.0</version>
 	</parent>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<!-- Excluded on purpose -->
+					<excludes>
+						<exclude>TestAllPtidej.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencies>
 
 		<!-- Main dependencies -->
@@ -202,14 +218,14 @@
 
 		<dependency>
 			<groupId>net.ptidej.jct</groupId>
-			<artifactId>jct-tests</artifactId>
+			<artifactId>jct-core</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>net.ptidej.jct</groupId>
-			<artifactId>jct-tests</artifactId>
+			<artifactId>jct-core</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>

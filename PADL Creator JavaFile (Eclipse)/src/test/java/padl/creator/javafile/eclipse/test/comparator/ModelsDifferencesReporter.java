@@ -14,36 +14,32 @@ import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.RelaxedModelComparatorReporter;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.ICodeLevelModel;
-import util.io.Files;
 
 public class ModelsDifferencesReporter extends TestCase {
 	public ModelsDifferencesReporter(final String aName) {
 		super(aName);
 	}
+
 	public void testComparison() {
 		/**
 		 * Compare two models created source code or binary classes based on all
 		 * the source The comparison is done by ModelComparator
 		 * 
 		 */
-		System.out.println("Models differences reporter");
-		final String javaFilesFolderPath = "../Java Parser/src/main/java/";
-		final String classPathEntry = "";
-		//	final String classFilesFolderPath = "../Java Parser/target/classes/";
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse) Parser/src/main/java/";
+		final String classPath = "";
+		//	final String classFilesFolderPath = "../PADL Creator JavaFile (Eclipse) Parser/target/classes/";
 
 		// Model from source code
 
-		final ICodeLevelModel padlModelFromJavaFiles =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				javaFilesFolderPath,
-				classPathEntry);
+		final ICodeLevelModel padlModelFromJavaFiles = Utils
+				.createLightJavaFilesPadlModel("", sourcePath, classPath);
 
 		// Model from .class
 		//	final ICodeLevelModel padlModelFromClassFiles =
 		//		Utils.createLightJavaClassesPadlModel("", classFilesFolderPath);
 
-		padlModelFromJavaFiles.walk(new RelaxedModelComparatorReporter(
-			padlModelFromJavaFiles));
+		padlModelFromJavaFiles.walk(
+				new RelaxedModelComparatorReporter(padlModelFromJavaFiles));
 	}
 }

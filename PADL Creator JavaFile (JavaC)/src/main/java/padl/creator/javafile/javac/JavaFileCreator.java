@@ -37,8 +37,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+
 import javax.tools.DiagnosticListener;
 import javax.tools.JavaFileObject;
+
 import jct.kernel.IJCTRootNode;
 import jct.tools.JCTCommentAttachor;
 import jct.tools.JCTCommentExtractor;
@@ -101,18 +103,14 @@ public class JavaFileCreator implements ICodeLevelModelCreator {
 	 * @param diag DiagnosticListener used to report error during compilation pass.
 	 * @param someOptions Options to pass to JavaC, splited as in a command line.
 	 */
-	public JavaFileCreator(
-		final List<String> someOptions,
-		final String aSourcePath,
-		final String[] someFilesInThePath) {
+	public JavaFileCreator(final List<String> someOptions,
+			final String aSourcePath, final String[] someFilesInThePath) {
 
 		this.initialise(someOptions, aSourcePath, someFilesInThePath);
 	}
 
-	private void initialise(
-		final List<String> options,
-		final String aSourcePath,
-		final String[] someFilesInThePath) {
+	private void initialise(final List<String> options,
+			final String aSourcePath, final String[] someFilesInThePath) {
 
 		this.options = options;
 		final File[] files = new File[someFilesInThePath.length];
@@ -121,47 +119,41 @@ public class JavaFileCreator implements ICodeLevelModelCreator {
 		}
 		this.files = files;
 	}
+
 	private void initialise(String aSourcePath, String[] someFilesInThePath) {
-		//	private static final List<String> OPTIONS = Arrays.asList(new String[] {
-		//			"-classpath",
-		//			System.getProperty("java.class.path", ".") + ":" + Test1.PATH,
-		//			"-d", Test1.PATH }); // , "-source", "6"
 		this.initialise(
-			Arrays.asList(new String[] {
-					"-classpath",
-					System.getProperty("java.class.path", ".") + ":"
-							+ aSourcePath, "-d", aSourcePath }),
-			aSourcePath,
-			someFilesInThePath);
+				Arrays.asList(new String[] { "-source", "17", "-classpath",
+						System.getProperty("java.class.path", ".") + ":"
+								+ aSourcePath,
+						"-d", aSourcePath }),
+				aSourcePath, someFilesInThePath);
 	}
 
 	public JavaFileCreator(final String aSourcePath) {
-		final List<String> listOfFilenames =
-			JavaFileCreator.castList(String.class, util.io.Files
-				.getRecursivelyFilenamesFromDirectory(
-					aSourcePath,
-					new FilenameFilter() {
-						public boolean accept(
-							final File aDirectory,
-							final String aFilename) {
+		final List<String> listOfFilenames = JavaFileCreator.castList(
+				String.class,
+				util.io.Files.getRecursivelyFilenamesFromDirectory(aSourcePath,
+						new FilenameFilter() {
+							public boolean accept(final File aDirectory,
+									final String aFilename) {
 
-							return aFilename.endsWith(".java");
-						}
-					}));
+								return aFilename.endsWith(".java");
+							}
+						}));
 		final String[] arrayOfFilenames = new String[listOfFilenames.size()];
 		listOfFilenames.toArray(arrayOfFilenames);
 
 		this.initialise(aSourcePath, arrayOfFilenames);
 	}
-	public JavaFileCreator(
-		final String aSourcePath,
-		final String[] someFilesInThePath) {
+
+	public JavaFileCreator(final String aSourcePath,
+			final String[] someFilesInThePath) {
 
 		this.initialise(aSourcePath, someFilesInThePath);
 	}
-	private static <T> List<T> castList(
-		Class<? extends T> clazz,
-		Collection<?> c) {
+
+	private static <T> List<T> castList(Class<? extends T> clazz,
+			Collection<?> c) {
 		List<T> r = new ArrayList<T>(c.size());
 		for (Object o : c)
 			r.add(clazz.cast(o));
@@ -171,13 +163,8 @@ public class JavaFileCreator implements ICodeLevelModelCreator {
 	public void create(final ICodeLevelModel model) throws CreationException {
 		final JCTtoPADLTranslator creator = new JCTtoPADLTranslator(model);
 		try {
-			final IJCTRootNode rootNode =
-				JCTCreatorFromSourceCode.createJCT(
-					"",
-					true,
-					this.diag,
-					this.options,
-					this.files);
+			final IJCTRootNode rootNode = JCTCreatorFromSourceCode.createJCT("",
+					true, this.diag, this.options, this.files);
 			// TODO: Crashed with Juzzle!
 			rootNode.accept(new JCTCommentExtractor(), null);
 			rootNode.accept(new JCTCommentAttachor(), null);
@@ -208,12 +195,12 @@ public class JavaFileCreator implements ICodeLevelModelCreator {
 		}
 		catch (final IOException e) {
 			throw new CreationException(
-				"An I/O error occured during the creation.");
+					"An I/O error occured during the creation.");
 		}
 	}
 
 	public void setDiagnosticListener(
-		DiagnosticListener<? super JavaFileObject> diag) {
+			DiagnosticListener<? super JavaFileObject> diag) {
 
 		this.diag = diag;
 	}

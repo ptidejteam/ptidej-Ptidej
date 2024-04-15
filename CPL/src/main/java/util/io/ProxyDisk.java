@@ -20,7 +20,7 @@ import java.util.Calendar;
 import org.apache.commons.io.FileUtils;
 
 public class ProxyDisk {
-	private static final String TEMP_DIRECTORY = "Temp/";
+	private static final String TEMP_DIRECTORY = "tmp/";
 	private static ProxyDisk UniqueInstance;
 
 	public static ProxyDisk getInstance() {

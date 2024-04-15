@@ -22,7 +22,7 @@ public class Helper {
 	public static void main(final String[] args) throws ClassNotFoundException {
 		//the folder of the source code to analyse well organized like a project
 		//final String sourcePathEntry = "./rsc/src/";
-		final String sourcePathEntry = "./../Java Parser/src/";
+		final String sourcePathEntry = "./../PADL Creator JavaFile (Eclipse) Parser/src/";
 
 		//using librairies?
 		final String classPathEntry = "";

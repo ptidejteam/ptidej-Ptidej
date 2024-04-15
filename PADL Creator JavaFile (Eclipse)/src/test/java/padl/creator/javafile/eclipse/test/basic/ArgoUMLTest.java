@@ -13,35 +13,30 @@ package padl.creator.javafile.eclipse.test.basic;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.Iterator;
+
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
-import util.io.Files;
 import util.io.ProxyDisk;
 
 public class ArgoUMLTest extends TestCase {
-
 	public ArgoUMLTest(final String name) {
 		super(name);
 	}
 
 	public void testArgouml() {
-		final String sourcePath =
-				"../PADL Creator JavaFile (Eclipse)/target/test-classes/argouml/";
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/argouml/";
+		final String classPath = "";
 
-		final String classPathEntry = "";
-
-		final ICodeLevelModel model =
-			Utils.createCompleteJavaFilesPadlModel(
-				"",
-				sourcePath,
-				classPathEntry);
+		final ICodeLevelModel model = Utils.createCompleteJavaFilesPadlModel(
+				"ArgoUML", sourcePath, classPath);
 
 		try {
-			final Writer writer =
-				ProxyDisk.getInstance().fileTempOutput("result.txt");
+			final Writer writer = ProxyDisk.getInstance()
+					.fileTempOutput("result.txt");
 			writer.write("Summary for :\n");
 			writer.write(model.getDisplayName());
 
@@ -51,8 +46,8 @@ public class ArgoUMLTest extends TestCase {
 					+ model.getNumberOfTopLevelEntities());
 			final Iterator iter = model.getIteratorOnTopLevelEntities();
 			while (iter.hasNext()) {
-				final IFirstClassEntity entity =
-					(IFirstClassEntity) iter.next();
+				final IFirstClassEntity entity = (IFirstClassEntity) iter
+						.next();
 				writer.write(entity.getDisplayID() + " "
 						+ entity.getNumberOfConstituents() + " "
 						+ entity.getClass() + "\n");

@@ -11,6 +11,7 @@
 package padl.creator.classfile.test.topLevelEntity;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
@@ -34,68 +35,64 @@ public class TopLevelEntityTest extends TestCase {
 	 * forbid the insertion of member classes in the list of top level entities
 	 */
 	public void testClassMemberIsTopLevelEntity1() {
-		final ICodeLevelModel model =
-			Factory.getInstance().createCodeLevelModel("");
+		final ICodeLevelModel model = Factory.getInstance()
+				.createCodeLevelModel("");
 
 		try {
-			model
-				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/rsc/TopLevelEntities/swing 1.3.1/" },
+			model.create(new CompleteClassFileCreator(new String[] {
+					"../PADL Creator ClassFile/target/test-classes/TopLevelEntities/swing 1.3.1/" },
 					true));
 		}
 		catch (final CreationException e) {
 			e.printStackTrace();
 		}
 
-		final IFirstClassEntity entity =
-			model.getTopLevelEntityFromID("javax.swing.JTable");
+		final IFirstClassEntity entity = model
+				.getTopLevelEntityFromID("javax.swing.JTable");
 		Assert.assertNotNull(entity);
 
-		final IFirstClassEntity memberEntity =
-			model.getTopLevelEntityFromID("javax.swing.JTable$DateRenderer");
+		final IFirstClassEntity memberEntity = model
+				.getTopLevelEntityFromID("javax.swing.JTable$DateRenderer");
 		Assert.assertNull(memberEntity);
 	}
 
 	public void testClassMemberIsTopLevelEntity2() {
-		final ICodeLevelModel model =
-			Factory.getInstance().createCodeLevelModel("");
+		final ICodeLevelModel model = Factory.getInstance()
+				.createCodeLevelModel("");
 
 		try {
-			model
-				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/rsc/TopLevelEntities/rt 1.3.1/" },
+			model.create(new CompleteClassFileCreator(new String[] {
+					"../PADL Creator ClassFile/target/test-classes/TopLevelEntities/rt 1.3.1/" },
 					true));
 		}
 		catch (final CreationException e) {
 			e.printStackTrace();
 		}
 
-		final IFirstClassEntity entity =
-			model.getTopLevelEntityFromID("javax.swing.JTable");
+		final IFirstClassEntity entity = model
+				.getTopLevelEntityFromID("javax.swing.JTable");
 		Assert.assertNotNull(entity);
 
-		final IFirstClassEntity memberEntity =
-			model.getTopLevelEntityFromID("javax.swing.JTable$DateRenderer");
+		final IFirstClassEntity memberEntity = model
+				.getTopLevelEntityFromID("javax.swing.JTable$DateRenderer");
 		Assert.assertNull(memberEntity);
 	}
 
 	public void testClassMemberInAnonymousIsTopLevelEntity() {
-		final ICodeLevelModel model =
-			Factory.getInstance().createCodeLevelModel("");
+		final ICodeLevelModel model = Factory.getInstance()
+				.createCodeLevelModel("");
 
 		try {
-			model
-				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/rsc/TopLevelEntities/swing 1.3.1/" },
+			model.create(new CompleteClassFileCreator(new String[] {
+					"../PADL Creator ClassFile/target/test-classes/TopLevelEntities/swing 1.3.1/" },
 					true));
 		}
 		catch (final CreationException e) {
 			e.printStackTrace();
 		}
 
-		final IFirstClassEntity entity =
-			model
-				.getTopLevelEntityFromID("javax.swing.JSlider$1$SmartHashtable");
+		final IFirstClassEntity entity = model.getTopLevelEntityFromID(
+				"javax.swing.JSlider$1$SmartHashtable");
 		Assert.assertNull(entity);
 	}
 }

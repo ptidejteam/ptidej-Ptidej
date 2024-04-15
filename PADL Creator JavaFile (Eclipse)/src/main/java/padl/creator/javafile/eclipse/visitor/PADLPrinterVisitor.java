@@ -12,6 +12,7 @@ package padl.creator.javafile.eclipse.visitor;
 
 import java.io.PrintWriter;
 import java.util.Iterator;
+
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -40,16 +41,16 @@ import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
 import padl.visitor.IWalker;
+import util.io.NullWriter;
 import util.io.ProxyConsole;
 import util.io.ProxyDisk;
 import util.io.WriterOutputStream;
 
 public class PADLPrinterVisitor implements IWalker {
-
-	String currentEntity;
-	String currentPackage = "./result1/";
-	boolean inFile;
-	PrintWriter writer;
+	private String currentEntity;
+	private String currentPackage = "./result1/";
+	private boolean inFile;
+	private PrintWriter writer;
 
 	/**
 	 * 
@@ -68,64 +69,54 @@ public class PADLPrinterVisitor implements IWalker {
 
 	@Override
 	public void close(final IAbstractModel anAbstractModel) {
-
+		this.writer.close();
 	}
 
 	@Override
 	public void close(final IClass aClass) {
-
 		this.printTopEntityClose(aClass);
 	}
+
 	@Override
 	public void close(final IConstructor aConstructor) {
-
 		this.writer.println();
-		this.writer.println("		End of constructor "
-				+ aConstructor.getDisplayName());
-
+		this.writer.println(
+				"		End of constructor " + aConstructor.getDisplayName());
 	}
 
 	@Override
 	public void close(final IDelegatingMethod aDelegatingMethod) {
-
 	}
 
 	@Override
 	public void close(final IGetter aGetter) {
-
 		this.writer.println();
 		this.writer.println("		End of getter " + aGetter.getDisplayName());
 	}
 
 	@Override
 	public void close(final IGhost aGhost) {
-
 		this.printTopEntityClose(aGhost);
 	}
 
 	@Override
 	public void close(final IInterface anInterface) {
-
 		this.printTopEntityClose(anInterface);
 	}
 
 	@Override
 	public void close(final IMemberClass aMemberClass) {
-
 		this.printTopEntityClose(aMemberClass);
 	}
 
 	@Override
 	public void close(final IMemberGhost aMemberGhost) {
-
 		this.printTopEntityClose(aMemberGhost);
 	}
 
 	@Override
 	public void close(final IMemberInterface aMemberInterface) {
-
 		this.printTopEntityClose(aMemberInterface);
-
 	}
 
 	@Override
@@ -158,78 +149,68 @@ public class PADLPrinterVisitor implements IWalker {
 		return null;
 	}
 
+	@SuppressWarnings("resource")
 	@Override
 	public void open(final IAbstractModel anAbstractModel) {
-
+		if (this.inFile) {
+			this.writer = new PrintWriter(new WriterOutputStream(ProxyDisk
+					.getInstance().fileTempOutput(this.currentEntity)));
+		}
+		else {
+			// TODO: Remove, unnecessary with Output.getInstance().normalOutput()
+			this.writer = new PrintWriter(new NullWriter());
+		}
 	}
 
 	@Override
 	public void open(final IClass aClass) {
-
 		this.printTopEntityOpen(aClass);
-
 	}
 
 	@Override
 	public void open(final IConstructor aConstructor) {
-
 		this.writer.println();
-		this.writer
-			.println("		Start of constructor " + aConstructor.toString());
-
+		this.writer.println(
+				"		Start of constructor " + aConstructor.toString());
 	}
 
 	@Override
 	public void open(final IDelegatingMethod aDelegatingMethod) {
-
 	}
 
 	@Override
 	public void open(final IGetter aGetter) {
-
 		this.writer.println();
 		this.writer.println("		Statr of getter " + aGetter.toString());
-
 	}
 
 	@Override
 	public void open(final IGhost aGhost) {
-
 		this.printTopEntityOpen(aGhost);
-
 	}
 
 	@Override
 	public void open(final IInterface anInterface) {
-
 		this.printTopEntityOpen(anInterface);
-
 	}
 
 	@Override
 	public void open(final IMemberClass aMemberClass) {
-
 		this.printTopEntityOpen(aMemberClass);
-
 	}
 
 	@Override
 	public void open(final IMemberGhost aMemberGhost) {
-
 		this.printTopEntityOpen(aMemberGhost);
-
 	}
 
 	@Override
 	public void open(final IMemberInterface aMemberInterface) {
-
 		this.printTopEntityOpen(aMemberInterface);
-
 	}
 
 	@Override
 	public void open(final IMethod aMethod) {
-
 		this.writer.println();
 		this.writer.println("		Start of Method " + aMethod.getDisplayID());
 
@@ -237,26 +218,24 @@ public class PADLPrinterVisitor implements IWalker {
 
 	@Override
 	public void open(final IPackage aPackage) {
-		this.currentPackage =
-			this.currentPackage + aPackage.getDisplayName() + "/";
+		this.currentPackage = this.currentPackage + aPackage.getDisplayName()
+				+ "/";
 	}
 
 	@Override
 	public void open(final IPackageDefault aPackage) {
-		this.currentPackage =
-			this.currentPackage + aPackage.getDisplayName() + "/";
+		this.currentPackage = this.currentPackage + aPackage.getDisplayName()
+				+ "/";
 	}
 
 	@Override
 	public void open(final ISetter aSetter) {
-
 		this.writer.println();
 		this.writer.println("		Start of setter " + aSetter.toString());
 
 	}
 
 	void printTopEntityClose(final IFirstClassEntity entity) {
-
 		this.writer.println();
 		this.writer.println("	End of type " + entity.getClass().toString()
 				+ " " + entity.getDisplayName());
@@ -268,27 +247,16 @@ public class PADLPrinterVisitor implements IWalker {
 	}
 
 	void printTopEntityOpen(final IFirstClassEntity entity) {
-		if (this.inFile) {
-			if (!entity.getDisplayID().contains("$")) {
-				final String name = entity.getDisplayName();
-				//	final int lastIndex = name.lastIndexOf('.');
+		if (!entity.getDisplayID().contains("$")) {
+			final String name = entity.getDisplayName();
+			//	final int lastIndex = name.lastIndexOf('.');
 
-				this.currentEntity = this.currentPackage + name;
+			this.currentEntity = this.currentPackage + name;
 
-				this.currentEntity = this.currentEntity.replace('>', '+');
-				this.currentEntity = this.currentEntity.replace('<', '-');
-				this.currentEntity = this.currentEntity.replace('[', '-');
-				this.currentEntity = this.currentEntity.replace('[', '+');
-
-				this.writer =
-					new PrintWriter(new WriterOutputStream(ProxyDisk
-						.getInstance()
-						.fileTempOutput(this.currentEntity)));
-			}
-		}
-		else {
-			// TODO: Remove, unnecessary with Output.getInstance().normalOutput()
-			this.writer = ProxyConsole.getInstance().debugOutput();
+			this.currentEntity = this.currentEntity.replace('>', '+');
+			this.currentEntity = this.currentEntity.replace('<', '-');
+			this.currentEntity = this.currentEntity.replace('[', '-');
+			this.currentEntity = this.currentEntity.replace('[', '+');
 		}
 
 		this.writer.println();
@@ -300,8 +268,8 @@ public class PADLPrinterVisitor implements IWalker {
 		this.writer.println();
 		this.writer.println("		Super-classes and interfaces");
 		while (iter.hasNext()) {
-			final IFirstClassEntity superEntity =
-				(IFirstClassEntity) iter.next();
+			final IFirstClassEntity superEntity = (IFirstClassEntity) iter
+					.next();
 
 			this.writer.println("			" + superEntity.toString());
 		}
@@ -314,24 +282,17 @@ public class PADLPrinterVisitor implements IWalker {
 	}
 
 	@Override
-	public final void unknownConstituentHandler(
-		final String aCalledMethodName,
-		final IConstituent aConstituent) {
+	public final void unknownConstituentHandler(final String aCalledMethodName,
+			final IConstituent aConstituent) {
 
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(this.getClass().getName());
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(" does not know what to do for \"");
+		ProxyConsole.getInstance().debugOutput()
+				.print(this.getClass().getName());
+		ProxyConsole.getInstance().debugOutput()
+				.print(" does not know what to do for \"");
 		ProxyConsole.getInstance().debugOutput().print(aCalledMethodName);
 		ProxyConsole.getInstance().debugOutput().print("\" (");
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(aConstituent.getDisplayID());
+		ProxyConsole.getInstance().debugOutput()
+				.print(aConstituent.getDisplayID());
 		ProxyConsole.getInstance().debugOutput().println(')');
 	}
 
@@ -372,8 +333,8 @@ public class PADLPrinterVisitor implements IWalker {
 	public void visit(final IField aField) {
 
 		this.writer.println();
-		this.writer.println("		Field " + aField.toString() + ", cardinality "
-				+ aField.getCardinality());
+		this.writer.println("		Field " + aField.toString()
+				+ ", cardinality " + aField.getCardinality());
 
 	}
 

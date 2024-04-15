@@ -28,6 +28,17 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>TestCreatorJavaFileUsingJavaC.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -43,18 +54,6 @@
 		<dependency>
 			<groupId>net.ptidej.jct</groupId>
 			<artifactId>jct-core</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.jct</groupId>
-			<artifactId>jct-tools</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.jct</groupId>
-			<artifactId>jct-utils</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 

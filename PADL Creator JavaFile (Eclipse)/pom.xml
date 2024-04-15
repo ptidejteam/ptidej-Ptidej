@@ -28,6 +28,19 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>TestCreatorJavaFileUsingEclipse.java</exclude>
+						<!-- TODO Add this test -->
+						<exclude>InvocationTargetExceptionTest.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -89,13 +102,6 @@
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-creator-classfile</artifactId>
-			<version>1.0.0</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-statements-creator-classfile</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>

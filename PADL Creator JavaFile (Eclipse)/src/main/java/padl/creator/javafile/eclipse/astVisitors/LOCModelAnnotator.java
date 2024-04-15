@@ -13,6 +13,7 @@ package padl.creator.javafile.eclipse.astVisitors;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+
 import org.apache.commons.lang3.ArrayUtils;
 import org.eclipse.jdt.core.dom.ASTNode;
 import org.eclipse.jdt.core.dom.AnnotationTypeDeclaration;
@@ -98,6 +99,7 @@ import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 import org.eclipse.jdt.core.dom.VariableDeclarationStatement;
 import org.eclipse.jdt.core.dom.WhileStatement;
 import org.eclipse.jdt.core.dom.WildcardType;
+
 import padl.creator.javafile.eclipse.util.PadlParserUtil;
 import padl.kernel.Constants;
 import padl.kernel.ICodeLevelModel;
@@ -136,10 +138,10 @@ public class LOCModelAnnotator extends ExtendedASTVisitor {
 		this.listOfVisitedMemberEntities = new ArrayList<String>();
 		this.padlModel = aCodeLevelModel;
 
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.println("Beginning of LOC annotating...");
+		//		ProxyConsole
+		//			.getInstance()
+		//			.debugOutput()
+		//			.println("Beginning of LOC annotating...");
 
 		// Yann 2012/10/17: No Method Left Behind Policy...
 		this.padlModel.walk(new DefaultCodeLineSetter());

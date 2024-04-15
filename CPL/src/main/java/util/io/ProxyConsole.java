@@ -23,6 +23,7 @@ import java.util.Set;
  */
 public class ProxyConsole {
 	private static ProxyConsole UniqueInstance;
+
 	public static ProxyConsole getInstance() {
 		if (ProxyConsole.UniqueInstance == null) {
 			ProxyConsole.UniqueInstance = new ProxyConsole();
@@ -39,21 +40,27 @@ public class ProxyConsole {
 	private ProxyConsole() {
 		// this.setDebugOutput(new NullWriter());
 		this.setDebugOutput(
-			new AutoFlushPrintWriter(new OutputStreamWriter(System.err)));
+				new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
 		this.setErrorOutput(
-			new AutoFlushPrintWriter(new OutputStreamWriter(System.err)));
+				new AutoFlushPrintWriter(new OutputStreamWriter(System.err)));
 		this.setNormalOutput(
-			new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
+				new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
+		this.setWarningOutput(
+				new AutoFlushPrintWriter(new OutputStreamWriter(System.err)));
 	}
+
 	public PrintWriter debugOutput() {
 		return this.debugOutput;
 	}
+
 	public PrintWriter errorOutput() {
 		return this.errorOutput;
 	}
+
 	public PrintWriter normalOutput() {
 		return this.normalOutput;
 	}
+
 	public void printSetContent(final Writer writer, final Set<?> aSet) {
 		final Iterator<?> iterator = aSet.iterator();
 		while (iterator.hasNext()) {
@@ -68,15 +75,19 @@ public class ProxyConsole {
 			}
 		}
 	}
+
 	private void setDebugOutput(final PrintWriter messageWriter) {
 		this.debugOutput = messageWriter;
 	}
+
 	public void setDebugOutput(final Writer messageWriter) {
 		this.setDebugOutput(new UnclosablePrintWriter(messageWriter));
 	}
+
 	private void setErrorOutput(final PrintWriter messageWriter) {
 		this.errorOutput = messageWriter;
 	}
+
 	public void setErrorOutput(final Writer messageWriter) {
 		// Yann 2014/06/22: Eclipse...
 		// For some unknown reason, Eclipse decided to close the writer
@@ -88,11 +99,11 @@ public class ProxyConsole {
 		// UnclosablePrintWriter.
 		this.setErrorOutput(new UnclosablePrintWriter(messageWriter));
 	}
+
 	private void setNormalOutput(final PrintWriter messageWriter) {
 		this.normalOutput = messageWriter;
-		// this.warningOutput = new WarningPrintWriter(this.normalOutput);
-		this.warningOutput = this.normalOutput;
 	}
+
 	public void setNormalOutput(final Writer messageWriter) {
 		// Yann 2014/06/22: Eclipse...
 		// For some unknown reason, Eclipse decided to close the writer
@@ -104,6 +115,15 @@ public class ProxyConsole {
 		// UnclosablePrintWriter.
 		this.setNormalOutput(new UnclosablePrintWriter(messageWriter));
 	}
+
+	private void setWarningOutput(final PrintWriter messageWriter) {
+		this.warningOutput = messageWriter;
+	}
+
+	public void setWarningOutput(final Writer messageWriter) {
+		this.setWarningOutput(new UnclosablePrintWriter(messageWriter));
+	}
+
 	public PrintWriter warningOutput() {
 		return this.warningOutput;
 	}

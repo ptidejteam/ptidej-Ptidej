@@ -29,9 +29,9 @@ public class LightModelsWithModelComparatorTest extends TestCase {
 
 	/*public void testModelsFromAllSrceComparison() {
 
-		final String javaFilesFolderPath = "../Java Parser/src/main/java/";
+		final String javaFilesFolderPath = "../PADL Creator JavaFile (Eclipse) Parser/src/main/java/";
 		final String classPathEntry = "";
-		final String classFilesFolderPath = "../Java Parser/target/classes/";
+		final String classFilesFolderPath = "../PADL Creator JavaFile (Eclipse) Parser/target/classes/";
 
 		// Model from source code
 
@@ -61,12 +61,12 @@ public class LightModelsWithModelComparatorTest extends TestCase {
 
 	public void testModelsFromOneFileComparison() {
 
-		final String javaFilesFolderPath = "../Java Parser/src/main/java/";
+		final String javaFilesFolderPath = "../PADL Creator JavaFile (Eclipse) Parser/src/main/java/";
 		final String classPathEntry = "";
 		final String[] javaFilesList =
-			new String[] { "../Java Parser/src/parser/input/SourceInputsHolder.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse) Parser/src/parser/input/SourceInputsHolder.java" };
 		final String classFilesFolderPath =
-				"../Java Parser/target/classes/parser/input/SourceInputsHolder.class";
+				"../PADL Creator JavaFile (Eclipse) Parser/target/classes/parser/input/SourceInputsHolder.class";
 
 		// Model from source code
 

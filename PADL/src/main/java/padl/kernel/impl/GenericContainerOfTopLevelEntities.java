@@ -81,8 +81,8 @@ class GenericContainerOfTopLevelEntities implements Serializable {
 	// non-empty package to the model! This new implementation should improved
 	// performances...
 	private void createMapOfIDsEntities() {
-		ProxyConsole.getInstance().debugOutput().print(
-			"(Re)Creating the maps of IDs and Entities");
+		// ProxyConsole.getInstance().debugOutput().print("(Re)Creating the maps of IDs and Entities");
+
 		// Yann 2008/11/17: Walker!
 		// I cannot use the visitor to count the number
 		// of entities as new entity *not* taken into

@@ -38,7 +38,7 @@ public class TestPierreNCode extends TestCase {
 				Factory.getInstance().createCodeLevelModel("Test1");
 			final AOLCreator aolCreator =
 				new AOLCreator(
-					new String[] { "../PADL Creator AOL Tests/rsc/Pierre-N/First/poly-class-code-concat_des_2010-01-29180648.aol" });
+					new String[] { "../PADL Creator AOL/target/test-classes/Pierre-N/First/poly-class-code-concat_des_2010-01-29180648.aol" });
 			aolCreator.create(TestPierreNCode.CodeLevelModel, true);
 			try {
 				TestPierreNCode.IdiomLevelModel =

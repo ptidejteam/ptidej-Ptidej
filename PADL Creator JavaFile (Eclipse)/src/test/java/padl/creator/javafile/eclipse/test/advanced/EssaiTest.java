@@ -25,7 +25,6 @@ public class EssaiTest extends TestCase {
 	}
 
 	public void testClassesDuplication() {
-
 		final String sourcePath = "";
 		final String[] javaFiles =
 			new String[] {
@@ -46,11 +45,8 @@ public class EssaiTest extends TestCase {
 					.forName("padl.kernel.impl.Class"));
 		}
 		catch (final ClassNotFoundException e) {
-
 			e.printStackTrace();
 		}
 		Assert.assertEquals(1, nbClasses);
-
 	}
-
 }

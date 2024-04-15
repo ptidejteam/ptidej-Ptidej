@@ -30,6 +30,7 @@
 package padl.creator.javafile.eclipse.test.basic;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.IClass;
@@ -37,67 +38,48 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IGhost;
 
 public class WithAndWithoutSourcePathTest extends TestCase {
-
 	public WithAndWithoutSourcePathTest(final String aName) {
 		super(aName);
 	}
 
-	
-	public void testWithSourcePath(){
-		
-		final String classPathEntry = "";
-		final String sourceCodePath =
-			"data/JHotDraw/src/";
+	public void testWithSourcePath() {
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/JHotDraw/src/";
+		final String classPath = "";
 
-		final String[] listOfFiles =
-			new String[] {
-					"data/JHotDraw/src/ch/ifa/draw/applet/DrawApplet.java"
-					};
+		final String[] listOfFiles = new String[] {
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/JHotDraw/src/ch/ifa/draw/applet/DrawApplet.java" };
 
-		final ICodeLevelModel model =
-			Utils.createCompleteJavaFilesPadlModel(
-				"",
-				sourceCodePath,
-				classPathEntry,
-				listOfFiles);
+		final ICodeLevelModel model = Utils.createCompleteJavaFilesPadlModel(
+				"DrawApplet", sourcePath, classPath, listOfFiles);
 
-		IClass clazz=(IClass) model.getTopLevelEntityFromID("ch.ifa.draw.applet.DrawApplet");
+		final IClass clazz = (IClass) model
+				.getTopLevelEntityFromID("ch.ifa.draw.applet.DrawApplet");
 		Assert.assertNotNull(clazz);
-		//Interface implemented by clazz
-		IGhost interfaz=(IGhost) model.getTopLevelEntityFromID("ch.ifa.draw.framework.DrawingEditor".toCharArray());
+		// Interface implemented by clazz
+		final IGhost interfaz = (IGhost) model.getTopLevelEntityFromID(
+				"ch.ifa.draw.framework.DrawingEditor".toCharArray());
 		Assert.assertNotNull(interfaz);
 	}
-	
-	
-	
-	public void testWithoutSourcePath(){
-		
-		final String classPathEntry = "";
-		final String sourceCodePath =
-			"";
 
-		final String[] listOfFiles =
-			new String[] {
-					"data/JHotDraw/src/ch/ifa/draw/applet/DrawApplet.java"
-					};
+	public void testWithoutSourcePath() {
+		final String sourcePath = "";
+		final String classPath = "";
 
-		final ICodeLevelModel model =
-			Utils.createCompleteJavaFilesPadlModel(
-				"",
-				sourceCodePath,
-				classPathEntry,
-				listOfFiles);
+		final String[] listOfFiles = new String[] {
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/JHotDraw/src/ch/ifa/draw/applet/DrawApplet.java" };
 
-		IClass clazz=(IClass) model.getTopLevelEntityFromID("ch.ifa.draw.applet.DrawApplet");
+		final ICodeLevelModel model = Utils.createCompleteJavaFilesPadlModel(
+				"DrawApplet", sourcePath, classPath, listOfFiles);
+
+		final IClass clazz = (IClass) model
+				.getTopLevelEntityFromID("ch.ifa.draw.applet.DrawApplet");
 		Assert.assertNotNull(clazz);
-		//Interface implemented by clazz
-		IGhost interfaz=(IGhost) model.getTopLevelEntityFromID("ch.ifa.draw.framework.DrawingEditor".toCharArray());
+		// Interface implemented by clazz
+		final IGhost interfaz = (IGhost) model.getTopLevelEntityFromID(
+				"ch.ifa.draw.framework.DrawingEditor".toCharArray());
 		Assert.assertNull(interfaz);
-		IGhost interfaz1=(IGhost) model.getTopLevelEntityFromID("unknown.ghost.packag.DrawingEditor".toCharArray());
+		final IGhost interfaz1 = (IGhost) model.getTopLevelEntityFromID(
+				"unknown.ghost.packag.DrawingEditor".toCharArray());
 		Assert.assertNotNull(interfaz1);
-		
 	}
-	
-	
-	
 }

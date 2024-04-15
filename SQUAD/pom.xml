@@ -112,12 +112,6 @@
             <version>2.3.2</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.ibm.toad</groupId>
-            <artifactId>cfparse</artifactId>
-            <version>1.0</version>
-        </dependency>
-
     </dependencies>
 
 </project>

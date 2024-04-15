@@ -30,6 +30,7 @@
 package padl.creator.javafile.eclipse.test.basic;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.ICodeLevelModel;
@@ -41,16 +42,11 @@ public class JProfilerTest extends TestCase {
 	}
 
 	public void testJProfiler() {
-		final String sourcePath =
-			"/Polymtl/Data/Bugs and Tests/Systems/srcs/agoumlv0.20/src_new/";
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/argouml/trunk/src_new/";
+		final String classPath = "";
 
-		final String classPathEntry = "";
-
-		ICodeLevelModel model =
-			Utils.createCompleteJavaFilesPadlModel(
-				"",
-				sourcePath,
-				classPathEntry);
+		ICodeLevelModel model = Utils.createCompleteJavaFilesPadlModel(
+				"ArgoUML", sourcePath, classPath);
 
 		Assert.assertNotNull(model);
 	}

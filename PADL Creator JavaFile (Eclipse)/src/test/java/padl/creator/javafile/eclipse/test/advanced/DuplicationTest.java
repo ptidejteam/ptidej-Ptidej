@@ -21,7 +21,6 @@ import padl.kernel.IMemberClass;
 import util.io.Files;
 
 public class DuplicationTest extends TestCase {
-
 	public DuplicationTest(final String aName) {
 		super(aName);
 
@@ -34,7 +33,6 @@ public class DuplicationTest extends TestCase {
 	// * should be visited
 	// */
 	public void testClassesDuplication() {
-
 		final String sourcePath =
 				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
@@ -56,15 +54,12 @@ public class DuplicationTest extends TestCase {
 					.forName("padl.kernel.impl.Class"));
 		}
 		catch (final ClassNotFoundException e) {
-
 			e.printStackTrace();
 		}
 		Assert.assertEquals(1, nbClasses);
-
 	}
 
 	public void testClassesDuplication2() {
-
 		final String sourcePath =
 				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
@@ -85,15 +80,12 @@ public class DuplicationTest extends TestCase {
 					.forName("padl.kernel.impl.Class"));
 		}
 		catch (final ClassNotFoundException e) {
-
 			e.printStackTrace();
 		}
 		Assert.assertEquals(1, nbClasses);
-
 	}
 
 	public void testClassesDuplication3() {
-
 		final String sourcePath =
 				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
@@ -114,11 +106,9 @@ public class DuplicationTest extends TestCase {
 					.forName("padl.kernel.impl.Class"));
 		}
 		catch (final ClassNotFoundException e) {
-
 			e.printStackTrace();
 		}
 		Assert.assertEquals(2, nbClasses);
-
 	}
 
 	// many classes in the same file, one public, 3 no public and not member
@@ -127,7 +117,6 @@ public class DuplicationTest extends TestCase {
 	// class ThirdClass
 	// class ThirdClass (node.resolveBinding() == null)
 	public void testClassesDuplication4() {
-
 		final String sourcePath =
 				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
@@ -148,18 +137,15 @@ public class DuplicationTest extends TestCase {
 					.forName("padl.kernel.impl.Class"));
 		}
 		catch (final ClassNotFoundException e) {
-
 			e.printStackTrace();
 		}
 		Assert.assertEquals(2, nbClasses);
-
 	}
 
 	/**
 	* Member classes with the same name (node.resolveBinding() == null)
 	*/
 	public void testMemberClassesDuplication() {
-
 		final String sourcePath =
 				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
@@ -184,14 +170,12 @@ public class DuplicationTest extends TestCase {
 		catch (final ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
 	* Member classes with the same name (node.resolveBinding() == null)
 	*/
 	public void testMemberClassesDuplication1() {
-
 		final String sourcePath =
 				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
@@ -217,7 +201,6 @@ public class DuplicationTest extends TestCase {
 		catch (final ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**

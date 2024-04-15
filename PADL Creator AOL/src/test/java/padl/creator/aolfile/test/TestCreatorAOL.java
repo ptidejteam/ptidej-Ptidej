@@ -16,17 +16,21 @@ import junit.framework.TestSuite;
 public class TestCreatorAOL extends TestSuite {
 	public TestCreatorAOL() {
 	}
+
 	public TestCreatorAOL(final Class theClass) {
 		super(theClass);
 	}
+
 	public TestCreatorAOL(final String name) {
 		super(name);
 	}
+
 	public static Test suite() {
 		final TestCreatorAOL suite = new TestCreatorAOL();
 		suite.addTestSuite(Test1.class);
 		suite.addTestSuite(Test2.class);
+		// TODO Add this test
+		//	suite.addTestSuite(TestPierreNCode.class);
 		return suite;
 	}
-
 }

@@ -67,7 +67,7 @@ public class MultilingualManager {
 		}
 		catch (final MissingResourceException mre) {
 			mre.printStackTrace(ProxyConsole.getInstance().errorOutput());
-			return "<MISSING>";
+			return aKey;
 		}
 	}
 	public static String getString(
@@ -82,7 +82,7 @@ public class MultilingualManager {
 		}
 		catch (final MissingResourceException mre) {
 			mre.printStackTrace(ProxyConsole.getInstance().errorOutput());
-			return "<MISSING>";
+			return aKey;
 		}
 	}
 

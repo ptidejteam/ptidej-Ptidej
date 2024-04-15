@@ -26,37 +26,33 @@ public class LightModelsWithStatisticVisitor extends TestCase {
 	}
 
 	public void testCompareSomeFiles() {
-		final String sourcePath = "./../PADL Creator JavaFile (Eclipse)/src/";
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/src/main/java/";
 		final String classpath = "";
-		final String[] javaFiles =
-			new String[] { "./../PADL Creator JavaFile (Eclipse)/src/padl/creator/javafile/eclipse/LightJavaFileCreator.java" };
-		final String binPath =
-			"./../PADL Creator JavaFile (Eclipse)/bin/padl/creator/javafile/eclipse/LightJavaFileCreator.class";
+		final String[] javaFiles = new String[] {
+				"./../PADL Creator JavaFile (Eclipse)/src/main/java/padl/creator/javafile/eclipse/LightJavaFileCreator.java" };
+		final String binPath = "../PADL Creator JavaFile (Eclipse)/target/classes/padl/creator/javafile/eclipse/LightJavaFileCreator.class";
 
 		// Create a model form source code and add it a statistic listener
-		final ICodeLevelModel modelFromSourceCode =
-			Factory.getInstance().createCodeLevelModel("Model");
+		final ICodeLevelModel modelFromSourceCode = Factory.getInstance()
+				.createCodeLevelModel("Model");
 		final IModelListener statisticListenerJavaFile = new ModelStatistics();
 		modelFromSourceCode.addModelListener(statisticListenerJavaFile);
 		try {
-			modelFromSourceCode.create(new LightJavaFileCreator(
-				sourcePath,
-				classpath,
-				javaFiles));
+			modelFromSourceCode.create(
+					new LightJavaFileCreator(sourcePath, classpath, javaFiles));
 		}
 		catch (final CreationException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 
 		// Create a model form .class and add it a statistic listener
-		final ICodeLevelModel modelFromClassFiles =
-			Factory.getInstance().createCodeLevelModel("Model");
+		final ICodeLevelModel modelFromClassFiles = Factory.getInstance()
+				.createCodeLevelModel("Model");
 		final IModelListener statisticListenerClassFile = new ModelStatistics();
 		modelFromClassFiles.addModelListener(statisticListenerClassFile);
 		try {
-			modelFromClassFiles.create(new LightClassFileCreator(
-				new String[] { binPath },
-				true));
+			modelFromClassFiles.create(
+					new LightClassFileCreator(new String[] { binPath }, true));
 		}
 		catch (final CreationException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
@@ -80,21 +76,20 @@ public class LightModelsWithStatisticVisitor extends TestCase {
 	}
 
 	public void testCompareSourceFolder() {
-		final String sourcePath = "./../PADL Creator JavaFile (Eclipse)/src/";
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/src/main/java/";
 		final String classpath = "";
-		final String binPath = "./../PADL Creator JavaFile (Eclipse)/bin/";
+		final String binPath = "../PADL Creator JavaFile (Eclipse)/target/classes/";
 
 		//create a model form source code and add it a statistic listener
-		final ICodeLevelModel modelFromSourceCode =
-			Factory.getInstance().createCodeLevelModel("javaFilesModel");
+		final ICodeLevelModel modelFromSourceCode = Factory.getInstance()
+				.createCodeLevelModel("javaFilesModel");
 
 		final IModelListener statisticListener = new ModelStatistics();
 		modelFromSourceCode.addModelListener(statisticListener);
 		try {
 
-			modelFromSourceCode.create(new LightJavaFileCreator(
-				sourcePath,
-				classpath));
+			modelFromSourceCode
+					.create(new LightJavaFileCreator(sourcePath, classpath));
 
 		}
 		catch (final CreationException e) {
@@ -102,14 +97,13 @@ public class LightModelsWithStatisticVisitor extends TestCase {
 		}
 
 		//create a model form .class and add it a statistic listener
-		final ICodeLevelModel modelFromClassFiles =
-			Factory.getInstance().createCodeLevelModel("classFilesModel");
+		final ICodeLevelModel modelFromClassFiles = Factory.getInstance()
+				.createCodeLevelModel("classFilesModel");
 		final IModelListener statisticListener1 = new ModelStatistics();
 		modelFromClassFiles.addModelListener(statisticListener1);
 		try {
-			modelFromClassFiles.create(new LightClassFileCreator(
-				new String[] { binPath },
-				true));
+			modelFromClassFiles.create(
+					new LightClassFileCreator(new String[] { binPath }, true));
 		}
 		catch (final CreationException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());

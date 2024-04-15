@@ -13,6 +13,7 @@ package padl.creator.javafile.eclipse;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
+
 import padl.creator.javafile.eclipse.astVisitors.VisitorFirstParsing;
 import padl.creator.javafile.eclipse.astVisitors.VisitorSecondParsing;
 import padl.creator.javafile.eclipse.astVisitors.VisitorThirdParsing;
@@ -35,16 +36,15 @@ public class CompleteJavaFileCreator implements ICodeLevelModelCreator {
 	 * @param aSourcePathEntry
 	 * @param aClassPathEntry
 	 */
-	public CompleteJavaFileCreator(
-		final String aSourcePathEntry,
-		final String aClasspathEntry) {
+	public CompleteJavaFileCreator(final String aSourcePathEntry,
+			final String aClasspathEntry) {
 
 		//the folder of the source code to analyse well organized like a project
 		//final String sourcePathEntry = "./rsc/src/";
 		//how to throw an exception here
 		if (!new File(aSourcePathEntry).exists()) {
 			throw new RuntimeException(new FileNotFoundException(
-				"The source does not exist " + aSourcePathEntry));
+					"The source does not exist " + aSourcePathEntry));
 		}
 		final String[] sourcePathEntries = new String[] { aSourcePathEntry };
 
@@ -53,8 +53,7 @@ public class CompleteJavaFileCreator implements ICodeLevelModelCreator {
 		final String[] classpathEntries = new String[] { aClasspathEntry };
 
 		try {
-			this.javaProject =
-				new FileSystemJavaProject(
+			this.javaProject = new FileSystemJavaProject(
 					Arrays.asList(classpathEntries),
 					Arrays.asList(sourcePathEntries));
 
@@ -65,32 +64,19 @@ public class CompleteJavaFileCreator implements ICodeLevelModelCreator {
 		}
 	}
 
-	public CompleteJavaFileCreator(
-		final String aSourcePathEntry,
-		final String aClasspathEntry,
-		final String[] someSourceFiles) {
+	public CompleteJavaFileCreator(final String aSourcePathEntry,
+			final String aClasspathEntry, final String[] someSourceFiles) {
 
-		this(
-			new String[] { aSourcePathEntry },
-			new String[] { aClasspathEntry },
-			someSourceFiles);
+		this(new String[] { aSourcePathEntry },
+				new String[] { aClasspathEntry }, someSourceFiles);
 	}
 
-	public CompleteJavaFileCreator(
-		final String[] someSourcePathEntries,
-		final String[] someClasspathEntries,
-		final String[] someSourceFiles) {
-
-		for (final String path : someSourcePathEntries) {
-			if (!new File(path).exists()) {
-				throw new RuntimeException(new FileNotFoundException(
-					"The source does not exist " + path));
-			}
-		}
+	public CompleteJavaFileCreator(final String[] someSourcePathEntries,
+			final String[] someClasspathEntries,
+			final String[] someSourceFiles) {
 
 		try {
-			this.javaProject =
-				new FilesAndDirectoriesJavaProject(
+			this.javaProject = new FilesAndDirectoriesJavaProject(
 					Arrays.asList(someClasspathEntries),
 					Arrays.asList(someSourcePathEntries),
 					Arrays.asList(someSourceFiles));
@@ -114,23 +100,22 @@ public class CompleteJavaFileCreator implements ICodeLevelModelCreator {
 
 	}
 
-	private void createModelFromSource(
-		final ICodeLevelModel aCodeLevelModel,
-		final SourceInputsHolder javaProject) {
+	private void createModelFromSource(final ICodeLevelModel aCodeLevelModel,
+			final SourceInputsHolder javaProject) {
 
-		final VisitorFirstParsing firstParseVisitor =
-			new VisitorFirstParsing(aCodeLevelModel);
+		final VisitorFirstParsing firstParseVisitor = new VisitorFirstParsing(
+				aCodeLevelModel);
 		this.eclipseSourceCodeParser.parse(firstParseVisitor);
 
 		//second visit: inheritance, methods, fields added to the model
-		final VisitorSecondParsing secondParseVisitor =
-			new VisitorSecondParsing(aCodeLevelModel);
+		final VisitorSecondParsing secondParseVisitor = new VisitorSecondParsing(
+				aCodeLevelModel);
 
 		this.eclipseSourceCodeParser.parse(secondParseVisitor);
 
 		//third visit : method invocations added to the model
-		final VisitorThirdParsing thirdParseVisitor =
-			new VisitorThirdParsing(aCodeLevelModel);
+		final VisitorThirdParsing thirdParseVisitor = new VisitorThirdParsing(
+				aCodeLevelModel);
 		this.eclipseSourceCodeParser.parse(thirdParseVisitor);
 
 		// TODO: Make sure that wherever we call this Creator, 

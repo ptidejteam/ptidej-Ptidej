@@ -29,7 +29,6 @@ public final class TestAllPtidejButCreators extends TestSuite {
 		suite.addTest(TestEPI.suite());
 		suite.addTest(TestJavaParser.suite());
 		suite.addTest(TestJCT.suite());
-		//		suite.addTest(TestJCTLong.suite());
 		//		suite.addTest(TestMoDecSolver.suite());
 		//		suite.addTest(TestPADL.suite());
 		//		suite.addTest(TestPADLAnalyses.suite());

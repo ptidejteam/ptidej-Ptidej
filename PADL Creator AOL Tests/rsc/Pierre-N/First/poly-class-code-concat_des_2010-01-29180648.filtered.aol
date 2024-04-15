@@ -372,7 +372,7 @@ CLASS CParam	#LOC 103 L_BEGIN  L_END 168
 		;
 
 
-	AGGREGATION NAME mCmdStack CONTAINER CLASS CParam:: MULT UNDEFINED
+	AGGREGATION NAME mCmdStack CONTAINER CLASS CParam MULT UNDEFINED
 			PARTS
 			CLASS	CUndoStack MULT UNDEFINED
 		;
@@ -418,7 +418,7 @@ CLASS CSignalEditDialog	#LOC 15 L_BEGIN 47 L_END 61
 		;
 
 
-	GENERALIZATION Ui%CSignalEditDialog
+	GENERALIZATION Ui::CSignalEditDialog
 			SUBCLASSES CSignalEditDialog
 		;
 
@@ -464,7 +464,7 @@ CLASS CParamEditDialog	#LOC 48 L_BEGIN 47 L_END 94
 		;
 
 
-	GENERALIZATION Ui%CParamEditDialog
+	GENERALIZATION Ui::CParamEditDialog
 			SUBCLASSES CParamEditDialog
 		;
 
@@ -492,7 +492,7 @@ CLASS CParamSecEditDialog	#LOC 9 L_BEGIN 47 L_END 55
 		;
 
 
-	GENERALIZATION Ui%CParamSecEditDialog
+	GENERALIZATION Ui::CParamSecEditDialog
 			SUBCLASSES CParamSecEditDialog
 		;
 
@@ -771,8 +771,8 @@ CLASS CMarkupSTL	#LOC 338 L_BEGIN 30 L_END 367
 		PUBLIC SetData( int nValue):bool,
 		PUBLIC SetChildData( int nValue):bool,
 		PUBLIC SetElemContent(CONST_char*szContent):bool,
-		PUBLIC SHARED ReadTextFile(CONST_char*szFileName, std%string& strDoc, std%string* pstrError, int* pnFlags):bool,
-		PUBLIC SHARED WriteTextFile(CONST_char*szFileName, std%string& strDoc, std%string* pstrError, int* pnFlags):bool,
+		PUBLIC SHARED ReadTextFile(CONST_char*szFileName, std::string& strDoc, std::string* pstrError, int* pnFlags):bool,
+		PUBLIC SHARED WriteTextFile(CONST_char*szFileName, std::string& strDoc, std::string* pstrError, int* pnFlags):bool,
 		PUBLIC SHARED EscapeText(CONST_char*szText, int nFlags):std::string,
 		PUBLIC SHARED UnescapeText(CONST_char*szText, int nTextLength):std::string,
 		PROTECTED x_SetPos( int iPosParent, int iPos, int iPosChild):void,
@@ -800,7 +800,7 @@ CLASS CMarkupSTL	#LOC 338 L_BEGIN 30 L_END 367
 		PROTECTED x_AddNode( int nNodeType, CONST_char* szText, int nFlags):bool,
 		PROTECTED x_RemoveNode( int iPosParent, int& iPos, int& nNodeType, int& nNodeOffset, int& nNodeLength):void,
 		PROTECTED x_AdjustForNode( int iPosParent, int iPos, int nShift):void,
-		PROTECTED SHARED x_CreateNode( std%string& strNode, int nNodeType, CONST_char* szText):bool,
+		PROTECTED SHARED x_CreateNode( std::string& strNode, int nNodeType, CONST_char* szText):bool,
 		PROTECTED x_InsertNew( int iPosParent, int& iPosRel, NodePos& node):int,
 		PROTECTED x_LinkElem( int iPosParent, int iPosBefore, int iPos):void,
 		PROTECTED x_UnlinkElem( int iPos):int,
@@ -813,7 +813,7 @@ CLASS CMarkupSTL	#LOC 338 L_BEGIN 30 L_END 367
 		PROTECTED x_RemoveElem( int iPos):int,
 		PROTECTED x_GetElemContent( int iPos):std::string,
 		PROTECTED x_SetElemContent(CONST_char*szContent):bool,
-		PROTECTED x_DocChange( int nLeft, int nReplace, CONST_std%string& strInsert):void,
+		PROTECTED x_DocChange( int nLeft, int nReplace, CONST_std::string& strInsert):void,
 		PROTECTED x_Adjust( int iPos, int nShift, bool bAfterPos):void,
 		PUBLIC getPos():Pos,
 		PUBLIC setPos(Pos &pos):void
@@ -821,13 +821,13 @@ CLASS CMarkupSTL	#LOC 338 L_BEGIN 30 L_END 367
 
 
 
-	AGGREGATION NAME m_mapSavedPos CONTAINER CLASS CMarkupSTL:: MULT UNDEFINED
+	AGGREGATION NAME m_mapSavedPos CONTAINER CLASS CMarkupSTL MULT UNDEFINED
 			PARTS
 			CLASS	SavedPosMap MULT UNDEFINED
 		;
 
 
-	AGGREGATION NAME m_aPos CONTAINER CLASS CMarkupSTL:: MULT UNDEFINED
+	AGGREGATION NAME m_aPos CONTAINER CLASS CMarkupSTL MULT UNDEFINED
 			PARTS
 			CLASS	PosArray MULT UNDEFINED
 		;
@@ -917,10 +917,10 @@ CLASS TokenPos	#LOC 24 L_BEGIN 212 L_END 235
 
 	OPERATIONS
 		PUBLIC TokenPos(CONST_char*sz, int n):TokenPos,
-		PUBLIC TokenPos( CONST_std%string& str, int n):TokenPos,
+		PUBLIC TokenPos( CONST_std::string& str, int n):TokenPos,
 		PUBLIC Clear():void,
 		PUBLIC Length():int,
-		PUBLIC Match( CONST_std%string& strName):bool,
+		PUBLIC Match( CONST_std::string& strName):bool,
 		PUBLIC Match(CONST_char*szName):bool
 		;
 
@@ -1369,7 +1369,7 @@ CLASS CWidgetView	#LOC 83 L_BEGIN 67 L_END 149
 		;
 
 
-	AGGREGATION NAME mCmdStack CONTAINER CLASS CWidgetView:: MULT UNDEFINED
+	AGGREGATION NAME mCmdStack CONTAINER CLASS CWidgetView MULT UNDEFINED
 			PARTS
 			CLASS	Q_OBJECTCUndoStack MULT UNDEFINED
 		;
@@ -1518,13 +1518,13 @@ CLASS CLayerCmdEdit	#LOC 21 L_BEGIN 61 L_END 81
 		;
 
 
-	AGGREGATION NAME mOld CONTAINER CLASS CLayerCmdEdit:: MULT UNDEFINED
+	AGGREGATION NAME mOld CONTAINER CLASS CLayerCmdEdit MULT UNDEFINED
 			PARTS
 			CLASS	CProperties MULT UNDEFINED
 		;
 
 
-	AGGREGATION NAME mNew CONTAINER CLASS CLayerCmdEdit:: MULT UNDEFINED
+	AGGREGATION NAME mNew CONTAINER CLASS CLayerCmdEdit MULT UNDEFINED
 			PARTS
 			CLASS	CProperties MULT UNDEFINED
 		;
@@ -1565,13 +1565,13 @@ CLASS CWidgetCmdEdit	#LOC 21 L_BEGIN 97 L_END 117
 		;
 
 
-	AGGREGATION NAME mOld CONTAINER CLASS CWidgetCmdEdit:: MULT UNDEFINED
+	AGGREGATION NAME mOld CONTAINER CLASS CWidgetCmdEdit MULT UNDEFINED
 			PARTS
 			CLASS	CProperties MULT UNDEFINED
 		;
 
 
-	AGGREGATION NAME mNew CONTAINER CLASS CWidgetCmdEdit:: MULT UNDEFINED
+	AGGREGATION NAME mNew CONTAINER CLASS CWidgetCmdEdit MULT UNDEFINED
 			PARTS
 			CLASS	CProperties MULT UNDEFINED
 		;
@@ -1628,7 +1628,7 @@ CLASS CFindWidgetDialog	#LOC 35 L_BEGIN 61 L_END 95
 		PUBLIC  mClose:QPushButton
 
 	OPERATIONS
-		PUBLIC CFindWidgetDialog(QWidget*parent , CONST_char* name , bool modal , Qt%WFlags fl):CFindWidgetDialog,
+		PUBLIC CFindWidgetDialog(QWidget*parent , CONST_char* name , bool modal , Qt::WFlags fl):CFindWidgetDialog,
 		PUBLIC ~CFindWidgetDialog():CFindWidgetDialog,
 		PUBLIC enableFindButton(CONST_QString &text):public slots: void,
 		PUBLIC find():void,
@@ -1671,7 +1671,7 @@ CLASS CStyle	#LOC 27 L_BEGIN 59 L_END 85
 		;
 
 
-	AGGREGATION NAME mDefaultFont CONTAINER CLASS CStyle:: MULT UNDEFINED
+	AGGREGATION NAME mDefaultFont CONTAINER CLASS CStyle MULT UNDEFINED
 			PARTS
 			CLASS	CFont MULT UNDEFINED
 		;
@@ -2207,7 +2207,7 @@ CLASS CProject	#LOC 81 L_BEGIN  L_END 144
 		;
 
 
-	AGGREGATION NAME mCmdStack CONTAINER CLASS CProject:: MULT UNDEFINED
+	AGGREGATION NAME mCmdStack CONTAINER CLASS CProject MULT UNDEFINED
 			PARTS
 			CLASS	CUndoStack MULT UNDEFINED
 		;
@@ -3203,7 +3203,7 @@ CLASS CGraphicElement	#LOC 55 L_BEGIN 62 L_END 116
 		PUBLIC CGraphicElement(typeElement sorteElem, QPixmap* Image, QWidget* parent):Q_OBJECT,
 		PUBLIC pixmap():QPixmap,
 		PUBLIC setPixmap(QPixmap Image):void,
-		PUBLIC setColor(Qt%GlobalColor Couleur):void,
+		PUBLIC setColor(Qt::GlobalColor Couleur):void,
 		PUBLIC getProperties():QTreeWidgetItem*,
 		PUBLIC setProperties(QTreeWidgetItem*elem):void,
 		PUBLIC setElemEnabled(bool enabled):void,
@@ -3344,7 +3344,7 @@ CLASS CAddPropDialog	#LOC 11 L_BEGIN 45 L_END 55
 		;
 
 
-	GENERALIZATION Ui%addPropDialog
+	GENERALIZATION Ui::addPropDialog
 			SUBCLASSES CAddPropDialog
 		;
 
@@ -3373,7 +3373,7 @@ CLASS CAddMsgDialog	#LOC 11 L_BEGIN 45 L_END 55
 		;
 
 
-	GENERALIZATION Ui%addMsgDialog
+	GENERALIZATION Ui::addMsgDialog
 			SUBCLASSES CAddMsgDialog
 		;
 
@@ -3405,8 +3405,8 @@ CLASS CGraphicDesign	#LOC 133 L_BEGIN  L_END 194
 		PUBLIC filter():QString,
 		PUBLIC addElement(typeElement typeElem, QTreeWidgetItem* item, QTreeWidgetItem* parent, QPoint position):CGraphicElement*,
 		PUBLIC getGraphicElement(QTreeWidgetItem*treeItem):CGraphicElement*,
-		PUBLIC getList():QList<CGraphicElement* >*,
-		PUBLIC getMsgList():QList<CGraphicMessage* >*,
+		PUBLIC getList():QList<CGraphicElement*>*,
+		PUBLIC getMsgList():QList<CGraphicMessage*>*,
 		PUBLIC getMainWindow():CMainWindow*,
 		PUBLIC getCmdStack():CUndoStack*,
 		PUBLIC getItemParent():QTreeWidgetItem*,
@@ -4118,7 +4118,7 @@ CLASS CTextControl	#LOC 74 L_BEGIN  L_END 142
 		;
 
 
-	AGGREGATION NAME mCmdStack CONTAINER CLASS CTextControl:: MULT UNDEFINED
+	AGGREGATION NAME mCmdStack CONTAINER CLASS CTextControl MULT UNDEFINED
 			PARTS
 			CLASS	CUndoStack MULT UNDEFINED
 		;
@@ -4327,7 +4327,7 @@ CLASS CKeyEditDialog	#LOC 16 L_BEGIN 47 L_END 62
 		;
 
 
-	GENERALIZATION Ui%CKeyEditDialog
+	GENERALIZATION Ui::CKeyEditDialog
 			SUBCLASSES CKeyEditDialog
 		;
 
@@ -4738,7 +4738,7 @@ CLASS CFormatEditDialog	#LOC 12 L_BEGIN 47 L_END 58
 		;
 
 
-	GENERALIZATION Ui%CFormatEditDialog
+	GENERALIZATION Ui::CFormatEditDialog
 			SUBCLASSES CFormatEditDialog
 		;
 
@@ -4768,7 +4768,7 @@ CLASS CFindDialog	#LOC 14 L_BEGIN 47 L_END 60
 		;
 
 
-	GENERALIZATION Ui%CFindDialog
+	GENERALIZATION Ui::CFindDialog
 			SUBCLASSES CFindDialog
 		;
 
@@ -4841,7 +4841,7 @@ CLASS CNewFileDialog	#LOC 18 L_BEGIN 47 L_END 64
 		;
 
 
-	GENERALIZATION Ui%CNewFileDialog
+	GENERALIZATION Ui::CNewFileDialog
 			SUBCLASSES CNewFileDialog
 		;
 
@@ -4897,7 +4897,7 @@ CLASS COptionEditDialog	#LOC 19 L_BEGIN 48 L_END 66
 		;
 
 
-	GENERALIZATION Ui%COptionEditDialog
+	GENERALIZATION Ui::COptionEditDialog
 			SUBCLASSES COptionEditDialog
 		;
 
@@ -5174,7 +5174,7 @@ CLASS COption	#LOC 85 L_BEGIN  L_END 150
 		;
 
 
-	AGGREGATION NAME mCmdStack CONTAINER CLASS COption:: MULT UNDEFINED
+	AGGREGATION NAME mCmdStack CONTAINER CLASS COption MULT UNDEFINED
 			PARTS
 			CLASS	CUndoStack MULT UNDEFINED
 		;

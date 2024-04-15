@@ -21,8 +21,6 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IInterface;
 import padl.kernel.IMethod;
 import padl.kernel.IParameter;
-import util.io.Files;
-import util.io.ProxyConsole;
 
 public class ClassAndFileConventionTest extends TestCase {
 	public ClassAndFileConventionTest(final String aName) {
@@ -35,43 +33,36 @@ public class ClassAndFileConventionTest extends TestCase {
 		final String classPathEntry = "";
 		String rootPath = "../PADL Creator JavaFile (Eclipse)/target/test-classes//ptidej/example/FileAndClassNames/";
 
-		String someFilesPaths[] =
-			new File("../PADL Creator JavaFile (Eclipse)/target/test-classes//ptidej/example/FileAndClassNames/").list();
+		String someFilesPaths[] = new File(
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes//ptidej/example/FileAndClassNames/")
+				.list();
 		for (int i = 0; i < someFilesPaths.length; i++) {
-			someFilesPaths[i] =
-				new StringBuffer()
-					.append(rootPath)
-					.append(someFilesPaths[i])
-					.toString();
+			someFilesPaths[i] = new StringBuffer().append(rootPath)
+					.append(someFilesPaths[i]).toString();
 		}
 
 		// Model from source code
 
-		final ICodeLevelModel padlModelFromJavaFiles =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				javaFilesFolderPath,
-				classPathEntry,
-				someFilesPaths);
+		final ICodeLevelModel padlModelFromJavaFiles = Utils
+				.createLightJavaFilesPadlModel("", javaFilesFolderPath,
+						classPathEntry, someFilesPaths);
 
-		IInterface interface1 =
-			(IInterface) padlModelFromJavaFiles
-				.getTopLevelEntityFromID("ptidej.example.FileAndClassNames.Element");
-		IClass class1 =
-			(IClass) padlModelFromJavaFiles
-				.getTopLevelEntityFromID("ptidej.example.FileAndClassNames.Document");
-		IMethod method =
-			(IMethod) class1.getConstituentFromName("removeComponent");
+		IInterface interface1 = (IInterface) padlModelFromJavaFiles
+				.getTopLevelEntityFromID(
+						"ptidej.example.FileAndClassNames.Element");
+		IClass class1 = (IClass) padlModelFromJavaFiles.getTopLevelEntityFromID(
+				"ptidej.example.FileAndClassNames.Document");
+		IMethod method = (IMethod) class1
+				.getConstituentFromName("removeComponent");
 		IParameter param = (IParameter) method.getConstituentFromName("e");
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.println(param.getDisplayTypeName());
+		//		ProxyConsole
+		//			.getInstance()
+		//			.debugOutput()
+		//			.println(param.getDisplayTypeName());
 
 		Assert.assertNotNull("entity is null", interface1);
-		Assert.assertEquals(
-			"ptidej.example.FileAndClassNames.Element",
-			param.getDisplayTypeName());
+		Assert.assertEquals("ptidej.example.FileAndClassNames.Element",
+				param.getDisplayTypeName());
 
 	}
 
@@ -81,45 +72,38 @@ public class ClassAndFileConventionTest extends TestCase {
 		final String classPathEntry = "";
 		String rootPath = new StringBuffer()
 
-		.append("../PADL Creator JavaFile (Eclipse)/target/test-classes//ptidej/example/FileAndClassNames2/").toString();
+				.append("../PADL Creator JavaFile (Eclipse)/target/test-classes//ptidej/example/FileAndClassNames2/")
+				.toString();
 
-		String someFilesPaths[] =
-			new File("../PADL Creator JavaFile (Eclipse)/target/test-classes//ptidej/example/FileAndClassNames2/").list();
+		String someFilesPaths[] = new File(
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes//ptidej/example/FileAndClassNames2/")
+				.list();
 		for (int i = 0; i < someFilesPaths.length; i++) {
-			someFilesPaths[i] =
-				new StringBuffer()
-					.append(rootPath)
-					.append(someFilesPaths[i])
-					.toString();
+			someFilesPaths[i] = new StringBuffer().append(rootPath)
+					.append(someFilesPaths[i]).toString();
 		}
 
 		// Model from source code
 
-		final ICodeLevelModel padlModelFromJavaFiles =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				javaFilesFolderPath,
-				classPathEntry,
-				someFilesPaths);
+		final ICodeLevelModel padlModelFromJavaFiles = Utils
+				.createLightJavaFilesPadlModel("", javaFilesFolderPath,
+						classPathEntry, someFilesPaths);
 
-		IInterface interface1 =
-			(IInterface) padlModelFromJavaFiles
-				.getTopLevelEntityFromID("ptidej.example.FileAndClassNames2.Element");
-		IClass class1 =
-			(IClass) padlModelFromJavaFiles
-				.getTopLevelEntityFromID("ptidej.example.FileAndClassNames2.Document");
-		IMethod method =
-			(IMethod) class1.getConstituentFromName("removeComponent");
+		IInterface interface1 = (IInterface) padlModelFromJavaFiles
+				.getTopLevelEntityFromID(
+						"ptidej.example.FileAndClassNames2.Element");
+		IClass class1 = (IClass) padlModelFromJavaFiles.getTopLevelEntityFromID(
+				"ptidej.example.FileAndClassNames2.Document");
+		IMethod method = (IMethod) class1
+				.getConstituentFromName("removeComponent");
 		IParameter param = (IParameter) method.getConstituentFromName("e");
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.println(param.getDisplayTypeName());
+		//		ProxyConsole.getInstance().debugOutput()
+		//				.println(param.getDisplayTypeName());
 
 		Assert.assertNotNull("entity is not null", interface1);
 		//the type is not equal to what is expected
 		Assert.assertTrue(!("ptidej.example.FileAndClassNames.Element"
-			.equals(param.getDisplayTypeName())));
+				.equals(param.getDisplayTypeName())));
 
 	}
 
