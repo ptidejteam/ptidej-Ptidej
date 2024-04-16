@@ -16,6 +16,16 @@
 
 	<build>
 		<plugins>
+			<!-- Because of CFParse, I must compile towards 1.4 bytecode -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<target>1.4</target>
+				</configuration>
+			</plugin>
+
 			<!-- Must generate the test-jar for the tests in DeMIMA Solver 4 and
 			DeMIMA Solver Metrics -->
 			<plugin>

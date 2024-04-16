@@ -94,12 +94,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-creator-aspectj</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-
-		<dependency>
 			<groupId>net.ptidej.demima</groupId>
 			<artifactId>demima-core</artifactId>
 			<version>1.0.0</version>
@@ -125,12 +119,6 @@
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-ui-aspectj</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.demima</groupId>
 			<artifactId>demima-ui-layouts</artifactId>
 			<version>1.0.0</version>
 		</dependency>
@@ -147,11 +135,11 @@
 			<version>1.0.0</version>
 		</dependency>
 
-		<!--        <dependency>-->
-		<!--            <groupId>net.ptidej.demima</groupId>-->
-		<!--            <artifactId>demima-ui-viewer-extensions</artifactId>-->
-		<!--            <version>1.0.0</version>-->
-		<!--        </dependency>-->
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-ui-viewer-extensions</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
@@ -316,7 +304,26 @@
 			<version>1.16</version>
 		</dependency>
 		-->
-		
+
+		<!--
+		These two last dependencies MUST COME LAST because 
+		they bring with them aspectjtools, which itself bring
+		with it an old version of SubMonitor, which leads to
+			java.lang.NoSuchMethodError: 'org.eclipse.core.runtime.SubMonitor
+		org.eclipse.core.runtime.SubMonitor.split(int)' 
+		-->
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-aspectj</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-ui-aspectj</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
 	</dependencies>
 
 </project>

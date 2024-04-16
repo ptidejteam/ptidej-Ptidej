@@ -1,45 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>net.ptidej.padl</groupId>
-    <artifactId>padl-design-motifs</artifactId>
-    <name>PADL Design Motifs</name>
+	<groupId>net.ptidej.padl</groupId>
+	<artifactId>padl-design-motifs</artifactId>
+	<name>PADL Design Motifs</name>
 
-    <parent>
-        <groupId>net.ptidej</groupId>
-        <artifactId>all-ptidej</artifactId>
-        <version>1.0.0</version>
-    </parent>
+	<parent>
+		<groupId>net.ptidej</groupId>
+		<artifactId>all-ptidej</artifactId>
+		<version>1.0.0</version>
+	</parent>
 
-    <dependencies>
+	<build>
+		<plugins>
+			<!-- Because of CFParse, I must compile towards 1.4 bytecode -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<target>1.4</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
-        <dependency>
-            <groupId>net.ptidej.cpl</groupId>
-            <artifactId>cpl-core</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+	<dependencies>
 
-        <dependency>
-            <groupId>net.ptidej.padl</groupId>
-            <artifactId>padl-core</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+		<dependency>
+			<groupId>net.ptidej.cpl</groupId>
+			<artifactId>cpl-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
-        <dependency>
-            <groupId>com.ibm.toad</groupId>
-            <artifactId>cfparse</artifactId>
-            <version>1.0</version>
-        </dependency>
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.12.0</version>
-        </dependency>
+		<dependency>
+			<groupId>com.ibm.toad</groupId>
+			<artifactId>cfparse</artifactId>
+			<version>1.0</version>
+		</dependency>
 
-    </dependencies>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.12.0</version>
+		</dependency>
+
+	</dependencies>
 
 </project>

@@ -139,8 +139,7 @@ public class FileRepositoryFactory {
 		catch (ClassNotFoundException | NoSuchMethodException
 				| SecurityException | IllegalAccessException
 				| IllegalArgumentException | InvocationTargetException e) {
-			ProxyConsole.getInstance().errorOutput().print(
-					"Class org.eclipse.core.resources.IWorkspace not found");
+			// ProxyConsole.getInstance().errorOutput().println("Class org.eclipse.core.resources.IWorkspace not found");
 		}
 
 		return false;
@@ -192,7 +191,7 @@ public class FileRepositoryFactory {
 			}
 		}
 		catch (final ClassNotFoundException e) {
-			ProxyConsole.getInstance().errorOutput().print(
+			ProxyConsole.getInstance().errorOutput().println(
 					"Class org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader not found");
 		}
 

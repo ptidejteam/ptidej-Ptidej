@@ -1,17 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/CPL"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/PADL"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Ptidej"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Ptidej UI"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Ptidej UI Viewer"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/InfoVis"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/PADL Statements"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Mendel"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/DRAM OADymPPaC"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/DRAM Libraries"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/POM"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
