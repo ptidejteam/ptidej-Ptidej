@@ -47,7 +47,7 @@ public class Aggregations extends ClassFilePrimitive {
 					"padl.example.aggregation");
 			codeLevelModel
 				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/bin/padl/example/aggregation/" }));
+					new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/aggregation/" }));
 
 			final IIdiomLevelModel idiomLevelModel =
 				(IIdiomLevelModel) new AACRelationshipsAnalysis()

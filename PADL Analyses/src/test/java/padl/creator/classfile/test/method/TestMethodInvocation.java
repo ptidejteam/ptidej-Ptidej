@@ -41,7 +41,7 @@ public class TestMethodInvocation extends TestCase {
 					.createCodeLevelModel("");
 			TestMethodInvocation.CodeLevelModel
 					.create(new CompleteClassFileCreator(new String[] {
-							"../PADL Creator ClassFile Tests/bin/padl/example/method/MethodInvocation.class" }));
+							"../PADL Creator ClassFile/target/test-classes/padl/example/method/MethodInvocation.class" }));
 		}
 	}
 

@@ -42,7 +42,7 @@ public class Composite1 extends ClassFilePrimitive {
 			codeLevelModel.create(
 				new CompleteClassFileCreator(
 					new String[] {
-							"../PADL Creator ClassFile Tests/bin/padl/example/composite1/" }));
+							"../PADL Creator ClassFile/target/test-classes/padl/example/composite1/" }));
 
 			final IIdiomLevelModel idiomLevelModel =
 				(IIdiomLevelModel) new AACRelationshipsAnalysis()

@@ -50,7 +50,7 @@ public class CreationLink_INSTANCE_CREATION_3 extends ClassFilePrimitive {
 					"ptidej.example.relationship");
 			codeLevelModel
 				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/bin/padl/example/relationship/CreationLink_INSTANCE_CREATION_3.class" }));
+					new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/relationship/CreationLink_INSTANCE_CREATION_3.class" }));
 
 			final IIdiomLevelModel idiomLevelModel =
 				(IIdiomLevelModel) new AACRelationshipsAnalysis()

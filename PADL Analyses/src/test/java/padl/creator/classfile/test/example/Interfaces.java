@@ -42,10 +42,10 @@ public class Interfaces extends ClassFilePrimitive {
 			codeLevelModel.create(
 				new CompleteClassFileCreator(
 					new String[] {
-							"../PADL Creator ClassFile Tests/bin/padl/example/interfaces/Element.class",
-							"../PADL Creator ClassFile Tests/bin/padl/example/interfaces/IAdaptable.class",
-							"../PADL Creator ClassFile Tests/bin/padl/example/interfaces/IJavaElement.class",
-							"../PADL Creator ClassFile Tests/bin/padl/example/interfaces/Simple.class" }));
+							"../PADL Creator ClassFile/target/test-classes/padl/example/interfaces/Element.class",
+							"../PADL Creator ClassFile/target/test-classes/padl/example/interfaces/IAdaptable.class",
+							"../PADL Creator ClassFile/target/test-classes/padl/example/interfaces/IJavaElement.class",
+							"../PADL Creator ClassFile/target/test-classes/padl/example/interfaces/Simple.class" }));
 
 			Interfaces.FirstClassEntities =
 				Util.getArrayOfTopLevelEntities(codeLevelModel);

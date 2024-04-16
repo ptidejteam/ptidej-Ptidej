@@ -231,6 +231,68 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-analyses</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-analyses</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-generator</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-generator</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- 
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-generator-pagerank</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-generator-pagerank</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+		-->
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-micro-pattern-analysis</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-micro-pattern-analysis</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
 		<!--
 		These two last dependencies MUST COME LAST because 
 		they bring with them aspectjtools, which itself bring

@@ -49,7 +49,7 @@ public class Association_INSTANCE_INSTANCE_2 extends ClassFilePrimitive {
 					"ptidej.example.relationship");
 			codeLevelModel
 				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/bin/padl/example/relationship/Association_INSTANCE_INSTANCE_2.class" }));
+					new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/relationship/Association_INSTANCE_INSTANCE_2.class" }));
 
 			final IIdiomLevelModel idiomLevelModel =
 				(IIdiomLevelModel) new AACRelationshipsAnalysis()

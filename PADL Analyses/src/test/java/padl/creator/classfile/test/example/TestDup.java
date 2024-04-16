@@ -28,7 +28,6 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
-import util.io.Files;
 
 /**
  * @author Farouk Zaidi
@@ -43,14 +42,16 @@ public class TestDup extends TestCase {
 		super(aName);
 	}
 
-	private boolean compareArrays(final String[] expectedResult, final String[] reference) {
+	private boolean compareArrays(final String[] expectedResult,
+			final String[] reference) {
 
 		if (expectedResult.length != reference.length) {
 			return false;
 		}
 		for (int i = 0; i < expectedResult.length; i++) {
 			if (!expectedResult[i].equals(reference[i])) {
-				System.err.println("Problem with method invocation number " + i);
+				System.err
+						.println("Problem with method invocation number " + i);
 				return false;
 			}
 		}
@@ -60,11 +61,14 @@ public class TestDup extends TestCase {
 	private Object[] listMethodInvocations(final String methodName) {
 		final IFirstClassEntity firstClassEntity = (IFirstClassEntity) this.currentModel
 				.getTopLevelEntityFromID(this.className);
-		final IMethod method = (IMethod) firstClassEntity.getConstituentFromID(methodName);
+		final IMethod method = (IMethod) firstClassEntity
+				.getConstituentFromID(methodName);
 		final List listMI = new ArrayList();
-		final Iterator iteratorOnConstituents = method.getIteratorOnConstituents(IMethodInvocation.class);
+		final Iterator iteratorOnConstituents = method
+				.getIteratorOnConstituents(IMethodInvocation.class);
 		while (iteratorOnConstituents.hasNext()) {
-			final IMethodInvocation methodInvocation = (IMethodInvocation) iteratorOnConstituents.next();
+			final IMethodInvocation methodInvocation = (IMethodInvocation) iteratorOnConstituents
+					.next();
 			listMI.add(methodInvocation.getDisplayName());
 		}
 		final String[] result = new String[listMI.size()];
@@ -72,13 +76,17 @@ public class TestDup extends TestCase {
 		return result;
 	}
 
-	protected void setUp() throws CreationException, UnsupportedSourceModelException {
+	protected void setUp()
+			throws CreationException, UnsupportedSourceModelException {
 
-		final ICodeLevelModel codeLevelModel = Factory.getInstance().createCodeLevelModel("MethodDump");
-		codeLevelModel.create(new CompleteClassFileCreator(new String[] { this.fileName }));
+		final ICodeLevelModel codeLevelModel = Factory.getInstance()
+				.createCodeLevelModel("MethodDump");
+		codeLevelModel.create(
+				new CompleteClassFileCreator(new String[] { this.fileName }));
 
 		// this.currentModel = codeLevelModel.convert(codeLevelModel.getDisplayName());
-		this.currentModel = (IIdiomLevelModel) new AACRelationshipsAnalysis().invoke(codeLevelModel);
+		this.currentModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
+				.invoke(codeLevelModel);
 	}
 
 	/**
@@ -86,27 +94,35 @@ public class TestDup extends TestCase {
 	 * the parsing (MethodInvocationAnalyzer). The test is here to show it clearly.
 	 */
 	public void testAnalyzeDup() {
-		final String[] expectedResult = { "counter:padl.example.relationship.MethodDump:NoMethod:NoTarget",
+		final String[] expectedResult = {
+				"counter:padl.example.relationship.MethodDump:NoMethod:NoTarget",
 				"counter:padl.example.relationship.MethodDump:=:NoTarget" };
 
 		final String methodName = "analyzeDup()";
-		final String[] result = (String[]) this.listMethodInvocations(methodName);
+		final String[] result = (String[]) this
+				.listMethodInvocations(methodName);
 		Assert.assertTrue(this.compareArrays(expectedResult, result));
 	}
 
 	public void testControlIfWhileForSwitch() {
-		final String[] expectedResult = { "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+		final String[] expectedResult = {
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
 				"NoField:NoFieldEntity:NoMethod:java.lang.System",
 				"NoField:NoFieldEntity:NoMethod:java.lang.StringBuilder",
-				"NoField:NoFieldEntity:NoMethod:java.lang.Integer", "NoField:NoFieldEntity:NoMethod:java.lang.String",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.String",
 				"NoField:NoFieldEntity:NoMethod:java.io.PrintStream",
 				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
 				"NoField:NoFieldEntity:NoMethod:java.lang.StringBuilder",
 				"NoField:NoFieldEntity:NoMethod:java.io.PrintStream",
-				"NoField:NoFieldEntity:NoMethod:java.lang.Integer", "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
-				"NoField:NoFieldEntity:NoMethod:java.lang.Integer", "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
-				"NoField:NoFieldEntity:NoMethod:java.lang.System", "NoField:NoFieldEntity:NoMethod:java.io.PrintStream",
-				"NoField:NoFieldEntity:NoMethod:java.lang.Integer", "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.System",
+				"NoField:NoFieldEntity:NoMethod:java.io.PrintStream",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
 				"NoField:NoFieldEntity:valueOf:java.lang.Integer",
 				"p:padl.example.relationship.MethodDump:floatValue:java.lang.Integer",
 				"NoField:NoFieldEntity:valueOf:java.lang.String",
@@ -122,7 +138,8 @@ public class TestDup extends TestCase {
 				"p:padl.example.relationship.MethodDump:intValue:java.lang.Integer",
 				"p:padl.example.relationship.MethodDump:floatValue:java.lang.Integer",
 				"f:padl.example.relationship.MethodDump:NoMethod:NoTarget",
-				"out:java.lang.System:println:java.io.PrintStream", "p:padl.example.relationship.MethodDump:=:NoTarget",
+				"out:java.lang.System:println:java.io.PrintStream",
+				"p:padl.example.relationship.MethodDump:=:NoTarget",
 				"str:padl.example.relationship.MethodDump:NoMethod:NoTarget",
 				"NoField:NoFieldEntity:getInteger:java.lang.Integer",
 				"p:padl.example.relationship.MethodDump:=:NoTarget",
@@ -133,13 +150,16 @@ public class TestDup extends TestCase {
 				"p:padl.example.relationship.MethodDump:intValue:java.lang.Integer" };
 
 		final String methodName = "controlIfWhileForSwitch()";
-		final String[] result = (String[]) this.listMethodInvocations(methodName);
+		final String[] result = (String[]) this
+				.listMethodInvocations(methodName);
 		Assert.assertTrue(this.compareArrays(expectedResult, result));
 	}
 
 	public void testDetectOperators() {
-		final String[] expectedResult = { "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
-				"NoField:NoFieldEntity:NoMethod:java.lang.Integer", "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+		final String[] expectedResult = {
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
 				"p:padl.example.relationship.MethodDump:floatValue:java.lang.Integer",
 				"f:padl.example.relationship.MethodDump:=:NoTarget",
 				"p:padl.example.relationship.MethodDump:intValue:java.lang.Integer",
@@ -147,38 +167,49 @@ public class TestDup extends TestCase {
 				"f:padl.example.relationship.MethodDump:NoMethod:NoTarget" };
 
 		final String methodName = "detectOperators()";
-		final String[] result = (String[]) this.listMethodInvocations(methodName);
+		final String[] result = (String[]) this
+				.listMethodInvocations(methodName);
 		Assert.assertTrue(this.compareArrays(expectedResult, result));
 	}
 
 	public void testDynamicMethod() {
-		final String[] expectedResult = { "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
-				"NoField:NoFieldEntity:NoMethod:java.lang.String", "NoField:NoFieldEntity:NoMethod:java.lang.String",
-				"NoField:NoFieldEntity:NoMethod:java.lang.String", "NoField:NoFieldEntity:NoMethod:java.lang.String",
-				"NoField:NoFieldEntity:NoMethod:java.lang.String", "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
-				"NoField:NoFieldEntity:NoMethod:java.lang.Integer", "NoField:NoFieldEntity:NoMethod:java.lang.String",
+		final String[] expectedResult = {
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.String",
+				"NoField:NoFieldEntity:NoMethod:java.lang.String",
+				"NoField:NoFieldEntity:NoMethod:java.lang.String",
+				"NoField:NoFieldEntity:NoMethod:java.lang.String",
+				"NoField:NoFieldEntity:NoMethod:java.lang.String",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.String",
 				"NoField:NoFieldEntity:NoMethod:java.lang.String",
 				"p:padl.example.relationship.MethodDump:intValue:java.lang.Integer",
 				"str:padl.example.relationship.MethodDump:length:java.lang.String",
 				"str:padl.example.relationship.MethodDump:substring:java.lang.String",
 				"str:padl.example.relationship.MethodDump:charAt:java.lang.String",
 				"str:padl.example.relationship.MethodDump:NoMethod:NoTarget",
-				"NoField:NoFieldEntity:compareTo:java.lang.String", "NoField:NoFieldEntity:length:java.lang.String",
+				"NoField:NoFieldEntity:compareTo:java.lang.String",
+				"NoField:NoFieldEntity:length:java.lang.String",
 				"p:padl.example.relationship.MethodDump:NoMethod:NoTarget",
 				"str:padl.example.relationship.MethodDump:NoMethod:NoTarget",
 				"NoField:NoFieldEntity:dynamicMethod:padl.example.relationship.MethodDump" };
 
 		final String methodName = "dynamicMethod(java.lang.Integer, java.lang.String, java.lang.String, int)";
-		final String[] result = (String[]) this.listMethodInvocations(methodName);
+		final String[] result = (String[]) this
+				.listMethodInvocations(methodName);
 		Assert.assertTrue(this.compareArrays(expectedResult, result));
 	}
 
 	public void testInstanceOf() {
-		final String[] expectedResult = { "NoField:NoFieldEntity:NoMethod:java.lang.Object",
-				"NoField:NoFieldEntity:NoMethod:java.lang.String", "NoField:NoFieldEntity:NoMethod:java.lang.Number",
+		final String[] expectedResult = {
+				"NoField:NoFieldEntity:NoMethod:java.lang.Object",
+				"NoField:NoFieldEntity:NoMethod:java.lang.String",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Number",
 				"NoField:NoFieldEntity:NoMethod:java.lang.System",
 				"NoField:NoFieldEntity:NoMethod:java.lang.StringBuilder",
-				"NoField:NoFieldEntity:NoMethod:java.io.PrintStream", "NoField:NoFieldEntity:NoMethod:java.lang.String",
+				"NoField:NoFieldEntity:NoMethod:java.io.PrintStream",
+				"NoField:NoFieldEntity:NoMethod:java.lang.String",
 				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
 				"NoField:NoFieldEntity:NoMethod:java.lang.StringBuilder",
 				"p:padl.example.relationship.MethodDump:NoMethod:NoTarget",
@@ -190,13 +221,16 @@ public class TestDup extends TestCase {
 				"out:java.lang.System:println:java.io.PrintStream" };
 
 		final String methodName = "instanceOf()";
-		final String[] result = (String[]) this.listMethodInvocations(methodName);
+		final String[] result = (String[]) this
+				.listMethodInvocations(methodName);
 		Assert.assertTrue(this.compareArrays(expectedResult, result));
 	}
 
 	public void testLoadAndStoreInArray() {
-		final String[] expectedResult = { "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
-				"NoField:NoFieldEntity:NoMethod:java.lang.System", "NoField:NoFieldEntity:NoMethod:java.io.PrintStream",
+		final String[] expectedResult = {
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.System",
+				"NoField:NoFieldEntity:NoMethod:java.io.PrintStream",
 				"myTab:padl.example.relationship.MethodDump:=:NoTarget",
 				"myTab:padl.example.relationship.MethodDump:NoMethod:NoTarget",
 				"f:padl.example.relationship.MethodDump:NoMethod:NoTarget",
@@ -206,31 +240,39 @@ public class TestDup extends TestCase {
 				"out:java.lang.System:println:java.io.PrintStream" };
 
 		final String methodName = "loadAndStoreInArray()";
-		final String[] result = (String[]) this.listMethodInvocations(methodName);
+		final String[] result = (String[]) this
+				.listMethodInvocations(methodName);
 		Assert.assertTrue(this.compareArrays(expectedResult, result));
 	}
 
 	public void testMethod3aryOperator() {
-		final String[] expectedResult = { "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
-				"NoField:NoFieldEntity:NoMethod:java.lang.Math", "NoField:NoFieldEntity:NoMethod:java.lang.System",
+		final String[] expectedResult = {
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Math",
+				"NoField:NoFieldEntity:NoMethod:java.lang.System",
 				"NoField:NoFieldEntity:NoMethod:java.io.PrintStream",
 				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
 				"p:padl.example.relationship.MethodDump:NoMethod:NoTarget",
-				"NoField:NoFieldEntity:floatValue:java.lang.Integer", "NoField:NoFieldEntity:random:java.lang.Math",
+				"NoField:NoFieldEntity:floatValue:java.lang.Integer",
+				"NoField:NoFieldEntity:random:java.lang.Math",
 				"out:java.lang.System:println:java.io.PrintStream" };
 
 		final String methodName = "method3aryOperator(java.lang.Integer)";
-		final String[] result = (String[]) this.listMethodInvocations(methodName);
+		final String[] result = (String[]) this
+				.listMethodInvocations(methodName);
 		Assert.assertTrue(this.compareArrays(expectedResult, result));
 	}
 
 	public void testMethodPrintln() {
-		final String[] expectedResult = { "NoField:NoFieldEntity:NoMethod:java.lang.System",
+		final String[] expectedResult = {
+				"NoField:NoFieldEntity:NoMethod:java.lang.System",
 				"NoField:NoFieldEntity:NoMethod:java.lang.StringBuilder",
-				"NoField:NoFieldEntity:NoMethod:java.lang.Integer", "NoField:NoFieldEntity:NoMethod:java.lang.String",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.String",
 				"NoField:NoFieldEntity:NoMethod:java.io.PrintStream",
 				"NoField:NoFieldEntity:NoMethod:java.lang.StringBuilder",
-				"NoField:NoFieldEntity:NoMethod:java.lang.Object", "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Object",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
 				"NoField:NoFieldEntity:NoMethod:java.lang.StringBuilder",
 				"NoField:NoFieldEntity:NoMethod:java.lang.StringBuilder",
 				"NoField:NoFieldEntity:NoMethod:java.io.PrintStream",
@@ -239,21 +281,26 @@ public class TestDup extends TestCase {
 				"NoField:NoFieldEntity:valueOf:java.lang.String",
 				"NoField:NoFieldEntity:StringBuilder:java.lang.StringBuilder",
 				"NoField:NoFieldEntity:append:java.lang.StringBuilder",
-				"NoField:NoFieldEntity:append:java.lang.StringBuilder", "NoField:NoFieldEntity:Object:java.lang.Object",
+				"NoField:NoFieldEntity:append:java.lang.StringBuilder",
+				"NoField:NoFieldEntity:Object:java.lang.Object",
 				"NoField:NoFieldEntity:compareTo:java.lang.Integer",
 				"NoField:NoFieldEntity:append:java.lang.StringBuilder",
 				"NoField:NoFieldEntity:toString:java.lang.StringBuilder",
 				"out:java.lang.System:println:java.io.PrintStream" };
 
 		final String methodName = "methodPrintln(short, java.lang.Integer)";
-		final String[] result = (String[]) this.listMethodInvocations(methodName);
+		final String[] result = (String[]) this
+				.listMethodInvocations(methodName);
 		Assert.assertTrue(this.compareArrays(expectedResult, result));
 	}
 
 	public void testStaticInvocations() {
-		final String[] expectedResult = { "NoField:NoFieldEntity:random:java.lang.Math",
-				"NoField:NoFieldEntity:NoMethod:java.lang.Integer", "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
-				"NoField:NoFieldEntity:NoMethod:java.lang.System", "NoField:NoFieldEntity:random:java.lang.Math",
+		final String[] expectedResult = {
+				"NoField:NoFieldEntity:random:java.lang.Math",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.System",
+				"NoField:NoFieldEntity:random:java.lang.Math",
 				"NoField:NoFieldEntity:parseInt:java.lang.Integer",
 				"p:padl.example.relationship.MethodDump:NoMethod:NoTarget",
 				"NoField:NoFieldEntity:getInteger:java.lang.Integer",
@@ -261,16 +308,21 @@ public class TestDup extends TestCase {
 				"NoField:NoFieldEntity:load:java.lang.System" };
 
 		final String methodName = "staticInvocations()";
-		final String[] result = (String[]) this.listMethodInvocations(methodName);
+		final String[] result = (String[]) this
+				.listMethodInvocations(methodName);
 		Assert.assertTrue(this.compareArrays(expectedResult, result));
 	}
 
 	public void testStoreToField() {
-		final String[] expectedResult = { "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
-				"NoField:NoFieldEntity:NoMethod:java.lang.Integer", "NoField:NoFieldEntity:NoMethod:java.lang.Integer",
-				"NoField:NoFieldEntity:NoMethod:java.lang.System", "NoField:NoFieldEntity:NoMethod:java.io.PrintStream",
+		final String[] expectedResult = {
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.Integer",
+				"NoField:NoFieldEntity:NoMethod:java.lang.System",
+				"NoField:NoFieldEntity:NoMethod:java.io.PrintStream",
 				"str:padl.example.relationship.MethodDump:NoMethod:NoTarget",
-				"NoField:NoFieldEntity:valueOf:java.lang.Integer", "p:padl.example.relationship.MethodDump:=:NoTarget",
+				"NoField:NoFieldEntity:valueOf:java.lang.Integer",
+				"p:padl.example.relationship.MethodDump:=:NoTarget",
 				"p:padl.example.relationship.MethodDump:toString:java.lang.Integer",
 				"str:padl.example.relationship.MethodDump:=:NoTarget",
 				"str:padl.example.relationship.MethodDump:NoMethod:NoTarget",
@@ -279,7 +331,8 @@ public class TestDup extends TestCase {
 				"out:java.lang.System:println:java.io.PrintStream" };
 
 		final String methodName = "storeToField()";
-		final String[] result = (String[]) this.listMethodInvocations(methodName);
+		final String[] result = (String[]) this
+				.listMethodInvocations(methodName);
 		Assert.assertTrue(this.compareArrays(expectedResult, result));
 	}
 }

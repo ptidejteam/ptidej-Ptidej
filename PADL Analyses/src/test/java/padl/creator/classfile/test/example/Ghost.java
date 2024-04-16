@@ -41,7 +41,7 @@ public class Ghost extends ClassFilePrimitive {
 				ClassFilePrimitive.getFactory().createCodeLevelModel("Ghost");
 			codeLevelModel
 				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/bin/padl/example/ghost/Simple.class" }));
+					new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/ghost/Simple.class" }));
 
 			final IIdiomLevelModel idiomLevelModel =
 				(IIdiomLevelModel) new AACRelationshipsAnalysis()

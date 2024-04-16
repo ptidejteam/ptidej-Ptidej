@@ -41,11 +41,11 @@ public class TestMemberInterfaces extends ClassFilePrimitive {
 			codeLevelModel
 				.create(new CompleteClassFileCreator(
 					new String[] {
-							"../PADL Creator ClassFile Tests/bin/padl/example/innerclasses/IA.class",
-							"../PADL Creator ClassFile Tests/bin/padl/example/innerclasses/IA$IAMember.class",
-							"../PADL Creator ClassFile Tests/bin/padl/example/innerclasses/B.class",
-							"../PADL Creator ClassFile Tests/bin/padl/example/innerclasses/B$BMember.class",
-							"../PADL Creator ClassFile Tests/bin/padl/example/innerclasses/C.class" }));
+							"../PADL Creator ClassFile/target/test-classes/padl/example/innerclasses/IA.class",
+							"../PADL Creator ClassFile/target/test-classes/padl/example/innerclasses/IA$IAMember.class",
+							"../PADL Creator ClassFile/target/test-classes/padl/example/innerclasses/B.class",
+							"../PADL Creator ClassFile/target/test-classes/padl/example/innerclasses/B$BMember.class",
+							"../PADL Creator ClassFile/target/test-classes/padl/example/innerclasses/C.class" }));
 
 			final IIdiomLevelModel idiomLevelModel =
 				(IIdiomLevelModel) new AACRelationshipsAnalysis()

@@ -50,7 +50,7 @@ public class Aggregation13 extends ClassFilePrimitive {
 					"ptidej.example.aggregations");
 			codeLevelModel
 				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/bin/padl/example/aggregation/Aggregation13.class" }));
+					new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/aggregation/Aggregation13.class" }));
 
 			final IIdiomLevelModel idiomLevelModel =
 				(IIdiomLevelModel) new AACRelationshipsAnalysis()

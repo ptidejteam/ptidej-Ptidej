@@ -124,10 +124,10 @@ public class Relationships extends ClassFilePrimitive {
 		Assert.assertEquals(
 			"Entity 1",
 			"padl.example.relationship.A",
-			Relationships.FirstClassEntities[10].getDisplayID());
+			Relationships.FirstClassEntities[5].getDisplayID());
 
 		final IElement[] elements =
-			Util.getArrayOfElements(Relationships.FirstClassEntities[10]);
+			Util.getArrayOfElements(Relationships.FirstClassEntities[5]);
 
 		Assert.assertEquals("Identified elements", 4, elements.length);
 
@@ -153,9 +153,9 @@ public class Relationships extends ClassFilePrimitive {
 			.assertEquals(
 				"Entity 3",
 				"padl.example.relationship.Aggregation_CLASS_INSTANCE_FROM_FIELD_2",
-				Relationships.FirstClassEntities[12].getDisplayID());
+				Relationships.FirstClassEntities[7].getDisplayID());
 		final IElement[] elements =
-			Util.getArrayOfElements(Relationships.FirstClassEntities[12]);
+			Util.getArrayOfElements(Relationships.FirstClassEntities[7]);
 
 		Assert.assertEquals("Identified elements", 7, elements.length);
 
@@ -272,9 +272,9 @@ public class Relationships extends ClassFilePrimitive {
 			.assertEquals(
 				"Entity 4",
 				"padl.example.relationship.Aggregation_CLASS_INSTANCE_FROM_FIELD_3",
-				Relationships.FirstClassEntities[13].getDisplayID());
+				Relationships.FirstClassEntities[8].getDisplayID());
 		final IElement[] elements =
-			Util.getArrayOfElements(Relationships.FirstClassEntities[13]);
+			Util.getArrayOfElements(Relationships.FirstClassEntities[8]);
 
 		Assert.assertEquals("Identified elements", 6, elements.length);
 
@@ -393,9 +393,9 @@ public class Relationships extends ClassFilePrimitive {
 			.assertEquals(
 				"Entity 5",
 				"padl.example.relationship.Aggregation_INSTANCE_INSTANCE_FROM_FIELD_1",
-				Relationships.FirstClassEntities[14].getDisplayID());
+				Relationships.FirstClassEntities[9].getDisplayID());
 		final IElement[] elements =
-			Util.getArrayOfElements(Relationships.FirstClassEntities[14]);
+			Util.getArrayOfElements(Relationships.FirstClassEntities[9]);
 		Assert.assertEquals("Identified elements", 6, elements.length);
 
 		Assert.assertEquals(
@@ -486,9 +486,9 @@ public class Relationships extends ClassFilePrimitive {
 			.assertEquals(
 				"Entity 6",
 				"padl.example.relationship.Aggregation_INSTANCE_INSTANCE_FROM_FIELD_2",
-				Relationships.FirstClassEntities[15].getDisplayID());
+				Relationships.FirstClassEntities[10].getDisplayID());
 		final IElement[] elements =
-			Util.getArrayOfElements(Relationships.FirstClassEntities[15]);
+			Util.getArrayOfElements(Relationships.FirstClassEntities[10]);
 
 		Assert.assertEquals("Identified elements", 6, elements.length);
 
@@ -579,9 +579,9 @@ public class Relationships extends ClassFilePrimitive {
 		Assert.assertEquals(
 			"Entity 7",
 			"padl.example.relationship.Association_CLASS_INSTANCE_1",
-			Relationships.FirstClassEntities[16].getDisplayID());
+			Relationships.FirstClassEntities[11].getDisplayID());
 		final IElement[] elements =
-			Util.getArrayOfElements(Relationships.FirstClassEntities[16]);
+			Util.getArrayOfElements(Relationships.FirstClassEntities[11]);
 
 		// Yann 2004/08/07: Bug in the analyzer?
 		// The analyzer for relationships create an extra association
@@ -666,9 +666,9 @@ public class Relationships extends ClassFilePrimitive {
 		Assert.assertEquals(
 			"Entity 8",
 			"padl.example.relationship.Association_CLASS_INSTANCE_2",
-			Relationships.FirstClassEntities[17].getDisplayID());
+			Relationships.FirstClassEntities[12].getDisplayID());
 		final IElement[] elements =
-			Util.getArrayOfElements(Relationships.FirstClassEntities[17]);
+			Util.getArrayOfElements(Relationships.FirstClassEntities[12]);
 
 		Assert.assertEquals("Identified elements", 5, elements.length);
 
@@ -769,9 +769,9 @@ public class Relationships extends ClassFilePrimitive {
 		Assert.assertEquals(
 			"Entity 9",
 			"padl.example.relationship.Association_INSTANCE_INSTANCE_1",
-			Relationships.FirstClassEntities[18].getDisplayID());
+			Relationships.FirstClassEntities[13].getDisplayID());
 		final IElement[] elements =
-			Util.getArrayOfElements(Relationships.FirstClassEntities[18]);
+			Util.getArrayOfElements(Relationships.FirstClassEntities[13]);
 
 		Assert.assertEquals("Identified elements", 5, elements.length);
 

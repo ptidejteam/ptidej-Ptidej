@@ -32,9 +32,21 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Solver Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Solver"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Metamodel"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Invoker"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Bytecode Instrumentation Tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Bytecode Instrumentation"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Caffeine"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Caffeine Analyses"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Caffeine Tests"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL JNI"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/PADL JNI Tests"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

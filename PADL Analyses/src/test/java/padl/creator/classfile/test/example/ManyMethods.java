@@ -38,7 +38,7 @@ public class ManyMethods extends ClassFilePrimitive {
 					"ptidej.example.method");
 			codeLevelModel
 				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/bin/padl/example/method/ManyMethods.class" }));
+					new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/method/ManyMethods.class" }));
 
 			ManyMethods.FirstClassEntities =
 				Util.getArrayOfTopLevelEntities(codeLevelModel);

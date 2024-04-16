@@ -63,7 +63,7 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1 extends TestCase {
 			try {
 				codeLevelModel
 					.create(new CompleteClassFileCreator(
-						new String[] { "target/test-classes/padl/analysis/aac/data/Aggregation_CLASS_INSTANCE_FROM_FIELD_1.class" }));
+						new String[] { "../PADL Analyses/target/test-classes/padl/analysis/aac/data/Aggregation_CLASS_INSTANCE_FROM_FIELD_1.class" }));
 
 				final AACRelationshipsAnalysis analysis =
 					new AACRelationshipsAnalysis();

@@ -53,7 +53,7 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1
 					.getFactory()
 					.createCodeLevelModel("ptidej.example.relationship");
 			codeLevelModel.create(new CompleteClassFileCreator(new String[] {
-					"../PADL Creator ClassFile Tests/bin/padl/example/relationship/Aggregation_CLASS_INSTANCE_FROM_FIELD_1.class" }));
+					"../PADL Creator ClassFile/target/test-classes/padl/example/relationship/Aggregation_CLASS_INSTANCE_FROM_FIELD_1.class" }));
 
 			final IIdiomLevelModel idiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(codeLevelModel);

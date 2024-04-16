@@ -42,7 +42,7 @@ public class Test1 extends TestCase {
 			try {
 				Test1.OriginalCodeLevelModel
 					.create(new CompleteClassFileCreator(
-						new String[] { "target/test-classes/padl/analysis/systematicuml/data/" }));
+						new String[] { "../PADL Analyses/target/test-classes/padl/analysis/systematicuml/data/" }));
 				Test1.ResultingAbstractModel =
 					new PackageIdentifierAnalysis().invoke(Test1.OriginalCodeLevelModel);
 			}

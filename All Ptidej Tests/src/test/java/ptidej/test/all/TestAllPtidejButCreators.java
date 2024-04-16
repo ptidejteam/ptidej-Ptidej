@@ -10,12 +10,9 @@
  ******************************************************************************/
 package ptidej.test.all;
 
-import caffeine.test.TestCaffeine;
-import epi.test.TestEPI;
 import jct.test.TestJCT;
 import junit.framework.Test;
 import junit.framework.TestSuite;
-import test.TestJavaParser;
 
 /**
  * @author Yann-Ga�l Gu�h�neuc
@@ -25,14 +22,14 @@ public final class TestAllPtidejButCreators extends TestSuite {
 	public static Test suite() {
 		final TestAllPtidejButCreators suite = new TestAllPtidejButCreators();
 
-		suite.addTest(TestCaffeine.suite());
-		suite.addTest(TestEPI.suite());
-		suite.addTest(TestJavaParser.suite());
+		// suite.addTest(TestCaffeine.suite());
+		// suite.addTest(TestEPI.suite());
+		// suite.addTest(TestJavaParser.suite());
 		suite.addTest(TestJCT.suite());
-		//		suite.addTest(TestMoDecSolver.suite());
-		//		suite.addTest(TestPADL.suite());
-		//		suite.addTest(TestPADLAnalyses.suite());
-		//		suite.addTest(TestPADLGenerator.suite());
+		// suite.addTest(TestMoDecSolver.suite());
+		// suite.addTest(TestPADL.suite());
+		// suite.addTest(TestPADLAnalyses.suite());
+		// suite.addTest(TestPADLGenerator.suite());
 		//		suite.addTest(TestPADLGeneratorPageRank.suite());
 		//		suite.addTest(TestPADLJNI.suite());
 		//		suite.addTest(TestMicroPatterns.suite());

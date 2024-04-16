@@ -48,7 +48,7 @@ public class ChainOfMessages extends ClassFilePrimitive {
 					"ptidej.example.relationship");
 			codeLevelModel
 				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/bin/padl/example/relationship/ChainOfMessages.class" }));
+					new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/relationship/ChainOfMessages.class" }));
 
 			final IIdiomLevelModel idiomLevelModel =
 				(IIdiomLevelModel) new AACRelationshipsAnalysis()

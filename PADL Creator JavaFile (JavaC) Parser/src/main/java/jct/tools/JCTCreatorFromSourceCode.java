@@ -74,8 +74,6 @@ import javax.tools.DiagnosticListener;
 import javax.tools.JavaFileObject;
 import javax.tools.StandardJavaFileManager;
 
-import org.apache.commons.lang3.tuple.Pair;
-
 import com.sun.source.tree.AnnotatedTypeTree;
 import com.sun.source.tree.AnnotationTree;
 import com.sun.source.tree.AnyPatternTree;
@@ -150,6 +148,13 @@ import com.sun.source.tree.WildcardTree;
 import com.sun.source.tree.YieldTree;
 import com.sun.source.util.JavacTask;
 import com.sun.source.util.SourcePositions;
+import com.sun.tools.javac.api.JavacTool;
+import com.sun.tools.javac.api.JavacTrees;
+import com.sun.tools.javac.code.Symbol;
+import com.sun.tools.javac.code.Type;
+import com.sun.tools.javac.model.JavacElements;
+import com.sun.tools.javac.tree.JCTree;
+import com.sun.tools.javac.util.Pair;
 
 import jct.kernel.*;
 import jct.kernel.impl.JCTFactory;
@@ -263,9 +268,8 @@ public class JCTCreatorFromSourceCode
 
 			for (final File file : files)
 				if ("package-info.java".equals(file.getName()))
-					try {
-						final BufferedReader reader = new BufferedReader(
-								new FileReader(file));
+					try (final BufferedReader reader = new BufferedReader(
+							new FileReader(file))) {
 						String line;
 						boolean in_code = true;
 						file_reading: while (null != (line = reader.readLine()))
@@ -460,37 +464,44 @@ public class JCTCreatorFromSourceCode
 		return part;
 	}
 
+	@Override
 	public IJCTIdentifiable visit(final Element e) {
 		return this.visit(e, null);
 	}
 
+	@Override
 	public IJCTIdentifiable visit(final Element e, final Object p) {
 		throw new IllegalArgumentException("Unknown element");
 	}
 
+	@Override
 	public IJCTType visit(final TypeMirror t) {
 		return this.visit(t, null);
 	}
 
+	@Override
 	public IJCTType visit(final TypeMirror t, final Object p) {
 		throw new IllegalArgumentException("Unknown type " + t);
 	}
 
+	@Override
 	public IJCTElement visitAnnotatedType(AnnotatedTypeTree node, Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitAnnotation(final AnnotationTree node,
 			final Object p) {
 		return this.visitOther(node, p);
 	}
 
 	@Override
-	public IJCTElement visitAnyPattern(AnyPatternTree node, Object p) {
-		// TODO Auto-generated method stub
+	public IJCTElement visitAnyPattern(final AnyPatternTree node,
+			final Object p) {
 		return null;
 	}
 
+	@Override
 	public IJCTType visitArray(final ArrayType t, final Object p) {
 		TypeMirror aTypeMirror = t.getComponentType();
 
@@ -510,6 +521,7 @@ public class JCTCreatorFromSourceCode
 		return this.rootNode.registerArrayType(aJCTType, name);
 	}
 
+	@Override
 	public IJCTElement visitArrayAccess(final ArrayAccessTree node,
 			final Object p) {
 		return this.putSourceCodePosition(
@@ -519,6 +531,7 @@ public class JCTCreatorFromSourceCode
 				node);
 	}
 
+	@Override
 	public IJCTElement visitArrayType(final ArrayTypeTree node,
 			final Object p) {
 		final IJCTElement t = node.getType().accept(this, p);
@@ -561,6 +574,7 @@ public class JCTCreatorFromSourceCode
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitAssert(final AssertTree node, final Object p) {
 		final IJCTAssert r = this.factory.createAssert(
 				(IJCTExpression) node.getCondition().accept(this, p));
@@ -569,6 +583,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(r, node);
 	}
 
+	@Override
 	public IJCTElement visitAssignment(final AssignmentTree node,
 			final Object p) {
 		return this.putSourceCodePosition(
@@ -578,6 +593,7 @@ public class JCTCreatorFromSourceCode
 				node);
 	}
 
+	@Override
 	public IJCTElement visitBinary(final BinaryTree node, final Object p) {
 		final IJCTExpression left = (IJCTExpression) node.getLeftOperand()
 				.accept(this, p);
@@ -650,10 +666,12 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(result, node);
 	}
 
+	@Override
 	public IJCTElement visitBindingPattern(BindingPatternTree node, Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitBlock(final BlockTree node, final Object p) {
 		final IJCTBlock aJCTBlock = this.factory.createBlock();
 		for (final StatementTree statement : node.getStatements())
@@ -661,6 +679,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTBlock, node);
 	}
 
+	@Override
 	public IJCTElement visitBreak(final BreakTree node, final Object p) {
 		final IJCTBreak aJCTBreak = this.factory.createBreak();
 		final Name name = node.getLabel();
@@ -669,6 +688,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTBreak, node);
 	}
 
+	@Override
 	public IJCTElement visitCase(final CaseTree node, final Object p) {
 		final IJCTCase aJCTCase = this.factory.createCase();
 		if (null != node.getExpression())
@@ -679,6 +699,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTCase, node);
 	}
 
+	@Override
 	public IJCTElement visitCatch(final CatchTree node, final Object p) {
 		final IJCTCatch aJCTCatch = this.factory.createCatch(
 				(IJCTVariable) node.getParameter().accept(this, p));
@@ -686,6 +707,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTCatch, node);
 	}
 
+	@Override
 	public IJCTElement visitClass(final ClassTree node, final Object p) {
 		final IJCTClass c = (IJCTClass) this.identifiables
 				.get(((JCTree.JCClassDecl) node).sym);
@@ -751,6 +773,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTClass, node);
 	}
 
+	@Override
 	public IJCTElement visitCompilationUnit(final CompilationUnitTree node,
 			final Object p) {
 
@@ -784,6 +807,7 @@ public class JCTCreatorFromSourceCode
 		return aJCTCompilationUnit;
 	}
 
+	@Override
 	public IJCTElement visitCompoundAssignment(
 			final CompoundAssignmentTree node, final Object p) {
 		final IJCTExpression variable = (IJCTExpression) node.getVariable()
@@ -833,6 +857,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(result, node);
 	}
 
+	@Override
 	public IJCTElement visitConditionalExpression(
 			final ConditionalExpressionTree node, final Object p) {
 		return this
@@ -846,12 +871,12 @@ public class JCTCreatorFromSourceCode
 	}
 
 	@Override
-	public IJCTElement visitConstantCaseLabel(ConstantCaseLabelTree node,
-			Object p) {
-		// TODO Auto-generated method stub
+	public IJCTElement visitConstantCaseLabel(final ConstantCaseLabelTree node,
+			final Object p) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitContinue(final ContinueTree node, final Object p) {
 		final IJCTContinue aJCTContinue = this.factory.createContinue();
 		final Name name = node.getLabel();
@@ -860,22 +885,24 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTContinue, node);
 	}
 
+	@Override
 	public IJCTType visitDeclared(final DeclaredType t, final Object p) {
 		return ((IJCTClass) t.asElement().accept(this, p)).createClassType();
 	}
 
 	@Override
 	public IJCTElement visitDeconstructionPattern(
-			DeconstructionPatternTree node, Object p) {
-		// TODO Auto-generated method stub
+			final DeconstructionPatternTree node, final Object p) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitDefaultCaseLabel(DefaultCaseLabelTree node,
 			Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitDoWhileLoop(final DoWhileLoopTree node,
 			final Object p) {
 		final IJCTDoWhile result = this.factory.createDoWhile(
@@ -893,12 +920,14 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(result, node);
 	}
 
+	@Override
 	public IJCTElement visitEmptyStatement(final EmptyStatementTree node,
 			final Object p) {
 		return this.putSourceCodePosition(this.factory.createEmptyStatement(),
 				node);
 	}
 
+	@Override
 	public IJCTElement visitEnhancedForLoop(final EnhancedForLoopTree node,
 			final Object p) {
 		return this.putSourceCodePosition(
@@ -909,6 +938,7 @@ public class JCTCreatorFromSourceCode
 				node);
 	}
 
+	@Override
 	public IJCTElement visitErroneous(final ErroneousTree node,
 			final Object p) {
 		final IJCTErroneousExpression aJCTErroneousExpression = this.factory
@@ -919,10 +949,12 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTErroneousExpression, node);
 	}
 
+	@Override
 	public IJCTType visitError(final ErrorType t, final Object p) {
 		return this.visit(t, p);
 	}
 
+	@Override
 	public IJCTIdentifiable visitExecutable(final ExecutableElement e,
 			final Object p) {
 		if (null != e.getEnclosingElement())
@@ -976,14 +1008,17 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(m, e);
 	}
 
+	@Override
 	public IJCTType visitExecutable(final ExecutableType t, final Object p) {
 		return this.visit(t, p);
 	}
 
+	@Override
 	public IJCTElement visitExports(ExportsTree node, Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitExpressionStatement(
 			final ExpressionStatementTree node, final Object p) {
 		return this.putSourceCodePosition(
@@ -992,6 +1027,7 @@ public class JCTCreatorFromSourceCode
 				node);
 	}
 
+	@Override
 	public IJCTElement visitForLoop(final ForLoopTree node, final Object p) {
 		final IJCTFor aJCTFor = this.factory.createFor(
 				(IJCTExpression) node.getCondition().accept(this, p),
@@ -1007,10 +1043,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTFor, node);
 	}
 
-	public IJCTElement visitGuardedPattern(GuardedPatternTree node, Object o) {
-		return null;
-	}
-
+	@Override
 	public IJCTElement visitIdentifier(final IdentifierTree node,
 			final Object p) {
 		if (null != ((JCTree.JCIdent) node).sym)
@@ -1023,6 +1056,7 @@ public class JCTCreatorFromSourceCode
 				node);
 	}
 
+	@Override
 	public IJCTElement visitIf(final IfTree node, final Object p) {
 		final IJCTIf aJCTIf = this.factory.createIf(
 				(IJCTExpression) node.getCondition().accept(this, p),
@@ -1042,6 +1076,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTIf, node);
 	}
 
+	@Override
 	public IJCTElement visitImport(final ImportTree node, final Object param) {
 		final boolean isStatic = node.isStatic();
 		final String globalIdentifier = node.getQualifiedIdentifier()
@@ -1094,6 +1129,7 @@ public class JCTCreatorFromSourceCode
 		}
 	}
 
+	@Override
 	public IJCTElement visitInstanceOf(final InstanceOfTree node,
 			final Object p) {
 		final IJCTExpression e = (IJCTExpression) node.getExpression()
@@ -1128,15 +1164,18 @@ public class JCTCreatorFromSourceCode
 				node);
 	}
 
+	@Override
 	public IJCTType visitIntersection(IntersectionType t, Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitIntersectionType(IntersectionTypeTree node,
 			Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitLabeledStatement(final LabeledStatementTree node,
 			final Object p) {
 		final IJCTLabel jctLabel = this.factory.createLabel(
@@ -1149,11 +1188,13 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(jctLabel, node);
 	}
 
+	@Override
 	public IJCTElement visitLambdaExpression(LambdaExpressionTree node,
 			Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitLiteral(final LiteralTree node, final Object p) {
 		final IJCTLiteral result;
 		switch (node.getKind()) {
@@ -1191,11 +1232,13 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(result, node);
 	}
 
+	@Override
 	public IJCTElement visitMemberReference(MemberReferenceTree node,
 			Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitMemberSelect(final MemberSelectTree node,
 			final Object p) {
 		final IJCTExpression aJCTExpression = (IJCTExpression) node
@@ -1218,6 +1261,7 @@ public class JCTCreatorFromSourceCode
 				node);
 	}
 
+	@Override
 	public IJCTElement visitMethod(final MethodTree node, final Object p) {
 		IJCTMethod aJCTMethod = (IJCTMethod) this.identifiables
 				.get(((JCTree.JCMethodDecl) node).sym);
@@ -1296,6 +1340,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTMethod, node);
 	}
 
+	@Override
 	public IJCTElement visitMethodInvocation(final MethodInvocationTree node,
 			final Object p) {
 		final IJCTMethodInvocation aJCTMethodInvocation = this.factory
@@ -1309,15 +1354,18 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTMethodInvocation, node);
 	}
 
+	@Override
 	public IJCTElement visitModifiers(final ModifiersTree node,
 			final Object p) {
 		return this.error(node, p);
 	}
 
+	@Override
 	public IJCTElement visitModule(ModuleTree node, Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitNewArray(final NewArrayTree node, final Object p) {
 		// Recover underlying type, store the number of unspecified dimensions
 		Tree type = node.getType();
@@ -1368,6 +1416,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTNewArray, node);
 	}
 
+	@Override
 	public IJCTElement visitNewClass(final NewClassTree node, final Object p) {
 		Tree type = node.getIdentifier();
 
@@ -1420,22 +1469,27 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTNewClass, node);
 	}
 
+	@Override
 	public IJCTType visitNoType(final NoType t, final Object p) {
 		return this.rootNode.getType(JCTPrimitiveTypes.VOID);
 	}
 
+	@Override
 	public IJCTType visitNull(final NullType t, final Object p) {
 		return this.visit(t, p);
 	}
 
+	@Override
 	public IJCTElement visitOpens(OpensTree node, Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitOther(final Tree o, final Object p) {
 		return null;
 	}
 
+	@Override
 	public IJCTIdentifiable visitPackage(final PackageElement e,
 			final Object param) {
 		final IJCTIdentifiable i = this.identifiables.get(e);
@@ -1465,15 +1519,18 @@ public class JCTCreatorFromSourceCode
 		return p;
 	}
 
+	@Override
 	public IJCTElement visitPackage(PackageTree node, Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitParameterizedType(final ParameterizedTypeTree node,
 			final Object p) {
 		return node.getType().accept(this, p);
 	}
 
+	@Override
 	public IJCTElement visitParenthesized(final ParenthesizedTree node,
 			final Object p) {
 		return this.putSourceCodePosition(
@@ -1482,18 +1539,13 @@ public class JCTCreatorFromSourceCode
 				node);
 	}
 
-	public IJCTElement visitParenthesizedPattern(ParenthesizedPatternTree node,
-			Object o) {
+	@Override
+	public IJCTElement visitPatternCaseLabel(final PatternCaseLabelTree node,
+			final Object p) {
 		return null;
 	}
 
 	@Override
-	public IJCTElement visitPatternCaseLabel(PatternCaseLabelTree node,
-			Object p) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	public IJCTType visitPrimitive(final PrimitiveType t, final Object p) {
 		IJCTType aType;
 
@@ -1513,6 +1565,7 @@ public class JCTCreatorFromSourceCode
 		return aType;
 	}
 
+	@Override
 	public IJCTElement visitPrimitiveType(final PrimitiveTypeTree node,
 			final Object p) {
 		JCTPrimitiveTypes t = null;
@@ -1528,14 +1581,17 @@ public class JCTCreatorFromSourceCode
 		return this.rootNode.getType(t);
 	}
 
+	@Override
 	public IJCTElement visitProvides(ProvidesTree node, Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitRequires(RequiresTree node, Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitReturn(final ReturnTree node, final Object p) {
 		final IJCTReturn aJCTReturn = this.factory.createReturn();
 		if (null != node.getExpression())
@@ -1545,11 +1601,12 @@ public class JCTCreatorFromSourceCode
 	}
 
 	@Override
-	public IJCTElement visitStringTemplate(StringTemplateTree node, Object p) {
-		// TODO Auto-generated method stub
+	public IJCTElement visitStringTemplate(final StringTemplateTree node,
+			final Object p) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitSwitch(final SwitchTree node, final Object p) {
 		final IJCTSwitch aJCTSwitch = this.factory.createSwitch(
 				(IJCTExpression) node.getExpression().accept(this, p));
@@ -1561,11 +1618,13 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTSwitch, node);
 	}
 
+	@Override
 	public IJCTElement visitSwitchExpression(SwitchExpressionTree node,
 			Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitSynchronized(final SynchronizedTree node,
 			final Object p) {
 		final IJCTSynchronized aJCTSynchronized = this.factory
@@ -1575,6 +1634,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTSynchronized, node);
 	}
 
+	@Override
 	public IJCTElement visitThrow(final ThrowTree node, final Object p) {
 		return this.putSourceCodePosition(
 				this.factory.createThrow(
@@ -1582,6 +1642,7 @@ public class JCTCreatorFromSourceCode
 				node);
 	}
 
+	@Override
 	public IJCTElement visitTry(final TryTree node, final Object p) {
 		final IJCTTry aJCTTry = this.factory.createTry();
 
@@ -1597,6 +1658,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTTry, node);
 	}
 
+	@Override
 	public IJCTIdentifiable visitType(final TypeElement e, final Object p) {
 		final IJCTIdentifiable i = this.identifiables.get(e);
 		if (null != i)
@@ -1654,6 +1716,14 @@ public class JCTCreatorFromSourceCode
 
 		for (final Element anElement : e.getEnclosedElements()) {
 			final IJCTElement aJCTElement = anElement.accept(this, p);
+			
+			// Yann 24/04/15: JDK 22
+			// Now, with the JDK 22, aJCTElement may be null.
+			// TODO Should it allowed to be null?
+			if (aJCTElement == null) {
+				continue;
+			}
+			
 			switch (aJCTElement.getKind()) {
 			case CLASS:
 			case METHOD:
@@ -1684,6 +1754,7 @@ public class JCTCreatorFromSourceCode
 		return c;
 	}
 
+	@Override
 	public IJCTElement visitTypeCast(final TypeCastTree node, final Object p) {
 		IJCTType t = null;
 
@@ -1718,6 +1789,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTCast, node);
 	}
 
+	@Override
 	public IJCTIdentifiable visitTypeParameter(final TypeParameterElement e,
 			final Object p) {
 		if (null != e.getEnclosingElement())
@@ -1733,15 +1805,18 @@ public class JCTCreatorFromSourceCode
 				.getSelector().getElement();
 	}
 
+	@Override
 	public IJCTElement visitTypeParameter(final TypeParameterTree node,
 			final Object p) {
 		return this.visitOther(node, p);
 	}
 
+	@Override
 	public IJCTType visitTypeVariable(final TypeVariable t, final Object p) {
 		return ((IJCTClass) t.asElement().accept(this, p)).createClassType();
 	}
 
+	@Override
 	public IJCTElement visitUnary(final UnaryTree node, final Object p) {
 		final IJCTExpression operand = (IJCTExpression) node.getExpression()
 				.accept(this, p);
@@ -1778,26 +1853,32 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(result, node);
 	}
 
+	@Override
 	public IJCTType visitUnion(UnionType t, Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTElement visitUnionType(UnionTypeTree node, Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTIdentifiable visitUnknown(final Element e, final Object p) {
 		return null;
 	}
 
+	@Override
 	public IJCTType visitUnknown(final TypeMirror t, final Object p) {
 		return this.visit(t, p);
 	}
 
+	@Override
 	public IJCTElement visitUses(UsesTree node, Object o) {
 		return null;
 	}
 
+	@Override
 	public IJCTIdentifiable visitVariable(final VariableElement e,
 			final Object p) {
 
@@ -1832,6 +1913,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(v, e);
 	}
 
+	@Override
 	public IJCTElement visitVariable(final VariableTree node, final Object p) {
 		final IJCTVariable v = (IJCTVariable) this.identifiables
 				.get(((JCTree.JCVariableDecl) node).sym);
@@ -1882,6 +1964,7 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(aJCTVariable, node);
 	}
 
+	@Override
 	public IJCTElement visitWhileLoop(final WhileLoopTree node,
 			final Object p) {
 		final IJCTWhile result = this.factory.createWhile(
@@ -1899,14 +1982,17 @@ public class JCTCreatorFromSourceCode
 		return this.putSourceCodePosition(result, node);
 	}
 
+	@Override
 	public IJCTElement visitWildcard(final WildcardTree node, final Object p) {
 		return this.visitOther(node, p);
 	}
 
+	@Override
 	public IJCTType visitWildcard(final WildcardType t, final Object p) {
 		return t.getExtendsBound().accept(this, p);
 	}
 
+	@Override
 	public IJCTElement visitYield(YieldTree node, Object o) {
 		return null;
 	}
@@ -2489,7 +2575,7 @@ class OffsetTranslator extends JCTMap<Void, IJCTSourceCodePart> {
 	private void visitSourceCodePart(final IJCTSourceCodePart scp,
 			final IJCTSourceCodePart enclosing) {
 
-		// TODO: Fixed (?) bug when scp.getStoredSourceCodeOffset() == null.
+		// TODO Fixed (?) bug when scp.getStoredSourceCodeOffset() == null.
 		if (scp.getStoredSourceCodeOffset() != null) {
 			scp.setStoredSourceCodeOffset(scp.getStoredSourceCodeOffset()
 					- enclosing.getStoredSourceCodeOffset(

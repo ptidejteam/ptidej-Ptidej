@@ -49,7 +49,7 @@ public class UseRelationship_CLASS_CLASS_1 extends ClassFilePrimitive {
 					"ptidej.example.relationship");
 			codeLevelModel
 				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/bin/padl/example/relationship/UseRelationship_CLASS_CLASS_1.class" }));
+					new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/relationship/UseRelationship_CLASS_CLASS_1.class" }));
 
 			final IIdiomLevelModel idiomLevelModel =
 				(IIdiomLevelModel) new AACRelationshipsAnalysis()
