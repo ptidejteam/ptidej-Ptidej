@@ -18,21 +18,29 @@ import junit.framework.TestSuite;
  * @since 2004/11/11
  */
 @SuppressWarnings("rawtypes")
-public final class TestAACAnalyses
-	extends junit.framework.TestSuite {
+public final class TestAACAnalyses extends junit.framework.TestSuite {
 
 	public TestAACAnalyses() {
 	}
+
 	public TestAACAnalyses(final Class theClass) {
 		super(theClass);
 	}
+
 	public TestAACAnalyses(final String name) {
 		super(name);
 	}
+
 	public static Test suite() {
-		final TestAACAnalyses suite =
-			new TestAACAnalyses();
-		suite.addTest(new TestSuite(Aggregation_CLASS_INSTANCE_FROM_FIELD_1.class));
+		final TestAACAnalyses suite = new TestAACAnalyses();
+
+		suite.addTest(
+				new TestSuite(Aggregation_CLASS_CLASS_FROM_FIELD_1.class));
+		suite.addTest(
+				new TestSuite(Aggregation_CLASS_INSTANCE_FROM_FIELD_1.class));
+		suite.addTest(
+				new TestSuite(Aggregation_CLASS_INSTANCE_FROM_FIELD_2.class));
+
 		return suite;
 	}
 }
