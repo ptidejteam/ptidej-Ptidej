@@ -97,7 +97,7 @@ public final class SubtypeLoader {
 		final List<ClassFile> currentListOfClasses = new ArrayList<ClassFile>();
 		if (file.endsWith(extension)) {
 			ProxyConsole.getInstance().debugOutput()
-					.print(MultilingualManager.getString("LOADING_FROM",
+					.println(MultilingualManager.getString("LOADING_FROM",
 							SubtypeLoader.class, new Object[] { file }));
 
 			try {
@@ -107,10 +107,10 @@ public final class SubtypeLoader {
 				inputStream.close();
 			}
 			catch (final Exception e) {
+				ProxyConsole.getInstance().errorOutput().print(e.getMessage());
 				ProxyConsole.getInstance().errorOutput()
-						.print("Exception while reading file: ");
+						.print(": Exception while reading file: ");
 				ProxyConsole.getInstance().errorOutput().println(file);
-				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 			}
 		}
 
@@ -357,7 +357,7 @@ public final class SubtypeLoader {
 					&& files[i].getName().indexOf(directory) > -1) {
 
 				ProxyConsole.getInstance().debugOutput()
-						.print(MultilingualManager.getString("LOADING_FROM",
+						.println(MultilingualManager.getString("LOADING_FROM",
 								SubtypeLoader.class,
 								new Object[] { files[i].getName() }));
 				try {
@@ -368,7 +368,7 @@ public final class SubtypeLoader {
 					ProxyConsole.getInstance().errorOutput()
 							.print(e.getMessage());
 					ProxyConsole.getInstance().errorOutput()
-							.print(": exception while reading file: ");
+							.print(": Exception while reading file: ");
 					ProxyConsole.getInstance().errorOutput().println(files[i]);
 				}
 			}

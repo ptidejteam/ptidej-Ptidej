@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.test.all;
 
+import jct.test.TestCreatorJavaFileUsingJavaCParser;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import padl.creator.aolfile.test.TestCreatorAOL;
@@ -17,9 +18,12 @@ import padl.creator.aspectj.test.TestCreatorAspectJ;
 import padl.creator.classfile.test.TestCreatorClassFile;
 import padl.creator.javafile.eclipse.test.TestCreatorJavaFileUsingEclipse;
 import padl.creator.javafile.javac.test.TestCreatorJavaFileUsingJavaC;
+import padl.creator.msefile.test.TestCreatorMSE;
 import padl.creator.test.TestCreatorJavaFilevsClassFile;
 import padl.creator.test.csharpfile.v1.TestCreatorCSharpV1;
 import padl.creator.test.csharpfile.v2.TestCreatorCSharpv2;
+import padl.creator.xmiclassdiagram.test.TestCreatorXMI;
+import test.TestCreatorJavaFileUsingEclipseParser;
 
 /**
  * @author Yann-Ga�l Gu�h�neuc
@@ -31,16 +35,20 @@ public final class TestAllCreators extends TestSuite {
 
 		suite.addTest(TestCreatorAOL.suite());
 		suite.addTest(TestCreatorAspectJ.suite());
-		suite.addTest(TestCreatorClassFile.suite());
-		// TODO Add test suite
-		//	suite.addTest(TestCreatorCPPFileUsingEclipse.suite());
-		suite.addTest(TestCreatorJavaFileUsingEclipse.suite());
-		suite.addTest(TestCreatorJavaFileUsingJavaC.suite());
-		suite.addTest(TestCreatorJavaFilevsClassFile.suite());
 		suite.addTestSuite(TestCreatorCSharpV1.class);
 		suite.addTestSuite(TestCreatorCSharpv2.class);
 		// TODO Add test suite
+		//	suite.addTest(TestCreatorCPPFileUsingEclipse.suite());
+		suite.addTest(TestCreatorClassFile.suite());
+		suite.addTest(TestCreatorJavaFileUsingEclipse.suite());
+		suite.addTest(TestCreatorJavaFileUsingEclipseParser.suite());
+		suite.addTest(TestCreatorJavaFileUsingJavaC.suite());
+		suite.addTest(TestCreatorJavaFileUsingJavaCParser.suite());
+		suite.addTest(TestCreatorJavaFilevsClassFile.suite());
+		// TODO Add test suite
 		// 	suite.addTest(TestCreatorCPPFileUsingANTLR.suite());
+		suite.addTest(TestCreatorMSE.suite());
+		suite.addTest(TestCreatorXMI.suite());
 
 		return suite;
 	}

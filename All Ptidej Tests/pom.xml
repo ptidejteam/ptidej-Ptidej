@@ -88,6 +88,36 @@
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-csharp-v1</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-csharp-v1</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-csharp-v2</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-csharp-v2</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-creator-classfile</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
@@ -158,14 +188,14 @@
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-creator-csharp-v1</artifactId>
+			<artifactId>padl-creator-mse</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-creator-csharp-v1</artifactId>
+			<artifactId>padl-creator-mse</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>
@@ -173,14 +203,7 @@
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-creator-csharp-v2</artifactId>
-			<version>1.0.0</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-creator-csharp-v2</artifactId>
+			<artifactId>padl-creator-xmi</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>
@@ -261,7 +284,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-generator-pagerank</artifactId>
@@ -276,7 +298,6 @@
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
-		-->
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
@@ -288,6 +309,51 @@
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-micro-pattern-analysis</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-refactorings</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-refactorings</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.pom</groupId>
+			<artifactId>pom-core</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.pom</groupId>
+			<artifactId>pom-core</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-serialiser-db4o</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-serialiser-db4o</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>

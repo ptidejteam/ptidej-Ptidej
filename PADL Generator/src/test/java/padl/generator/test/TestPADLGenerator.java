@@ -12,7 +12,6 @@ package padl.generator.test;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
-import padl.generator.test.cases.SanityTest;
 
 /**
  * @author yann

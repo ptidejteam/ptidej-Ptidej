@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
-import padl.cpp.kernel.impl.CPPFactoryEclipse;
+// import padl.cpp.kernel.impl.CPPFactoryEclipse;
 import padl.creator.aolfile.AOLCreator;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.msefile.MSECreator;
@@ -260,6 +260,8 @@ public final class ModelGenerator {
 
 		return ModelGenerator.finishModelCreation(codeLevelModel);
 	}
+	// TODO Add back this method
+	/*
 	public static IIdiomLevelModel generateModelFromCppFilesUsingEclipse(
 		final String aName,
 		final String aSourceDirectory) {
@@ -269,6 +271,9 @@ public final class ModelGenerator {
 			aSourceDirectory,
 			null);
 	}
+	*/
+	// TODO Add back this method
+	/*
 	public static IIdiomLevelModel generateModelFromCppFilesUsingEclipse(
 		final String aName,
 		final String aSourceDirectory,
@@ -291,6 +296,9 @@ public final class ModelGenerator {
 
 		return ModelGenerator.finishModelCreation(codeLevelModel);
 	}
+	*/
+	// TODO Add back this method
+	/*
 	public static IIdiomLevelModel generateModelFromCppFilesUsingEclipse(
 		final String aName,
 		final String[] fileNames) {
@@ -300,6 +308,7 @@ public final class ModelGenerator {
 			fileNames[0],
 			null);
 	}
+	*/
 	public static IIdiomLevelModel generateModelFromCSharpFilesV1(
 		final String aName,
 		final String[] someCSharpFiles,

@@ -14,6 +14,25 @@
 		<version>1.0.0</version>
 	</parent>
 
+	<build>
+		<plugins>
+			<!-- Must generate the test-jar for the tests in PADL Serialiser
+			DB4O -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.3.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencies>
 
 		<!-- Main dependencies -->
@@ -47,11 +66,13 @@
 			<version>1.0.0</version>
 		</dependency>
 
+		<!--
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-creator-cpp-eclipse</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+		-->
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>

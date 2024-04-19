@@ -37,6 +37,5 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/PADL Serialiser DB4O"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

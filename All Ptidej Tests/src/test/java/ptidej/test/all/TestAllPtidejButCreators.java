@@ -10,9 +10,19 @@
  ******************************************************************************/
 package ptidej.test.all;
 
-import jct.test.TestJCT;
+import caffeine.test.TestCaffeine;
+import epi.test.TestEPI;
 import junit.framework.Test;
 import junit.framework.TestSuite;
+import modec.solver.constraint.test.TestMoDecSolver;
+import padl.analysis.test.TestPADLAnalyses;
+import padl.generator.test.TestPADLGenerator;
+import padl.micropatterns.test.TestMicroPatterns;
+import padl.pagerank.test.TestPADLGeneratorPageRank;
+import padl.refactoring.test.TestRefactorings;
+import padl.serialiser.test.TestDB4OSerialiser;
+import padl.test.TestPADL;
+import pom.test.TestPOM;
 
 /**
  * @author Yann-Ga�l Gu�h�neuc
@@ -22,21 +32,20 @@ public final class TestAllPtidejButCreators extends TestSuite {
 	public static Test suite() {
 		final TestAllPtidejButCreators suite = new TestAllPtidejButCreators();
 
-		// suite.addTest(TestCaffeine.suite());
-		// suite.addTest(TestEPI.suite());
-		// suite.addTest(TestJavaParser.suite());
-		suite.addTest(TestJCT.suite());
-		// suite.addTest(TestMoDecSolver.suite());
-		// suite.addTest(TestPADL.suite());
-		// suite.addTest(TestPADLAnalyses.suite());
-		// suite.addTest(TestPADLGenerator.suite());
-		//		suite.addTest(TestPADLGeneratorPageRank.suite());
+		suite.addTest(TestCaffeine.suite());
+		suite.addTest(TestEPI.suite());
+		suite.addTest(TestMoDecSolver.suite());
+		suite.addTest(TestPADL.suite());
+		suite.addTest(TestPADLAnalyses.suite());
+		suite.addTest(TestPADLGenerator.suite());
+		suite.addTest(TestPADLGeneratorPageRank.suite());
+		// TODO Add this test
 		//		suite.addTest(TestPADLJNI.suite());
-		//		suite.addTest(TestMicroPatterns.suite());
-		//		suite.addTest(TestRefactorings.suite());
-		//		suite.addTest(TestDB4OSerialiser.suite());
+		suite.addTest(TestMicroPatterns.suite());
+		suite.addTest(TestRefactorings.suite());
+		suite.addTest(TestDB4OSerialiser.suite());
 		//		suite.addTest(TestJOSSerialiser.suite());
-		//		suite.addTest(TestPOM.suite());
+		suite.addTest(TestPOM.suite());
 		//		suite.addTest(TestPtidejSolver.suite());
 		//		suite.addTest(TestMetricalPtidejSolver.suite());
 		//		suite.addTestSuite(TestAspectJBuilder.class);
