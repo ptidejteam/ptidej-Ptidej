@@ -1,7 +1,10 @@
 Change char encoding to UTF-8
 Remove warnings from compilation
 
+Clean test outputs
+
 Fix "PADL Creator C++ (Eclipse)"
 Test "Creator MSE"
 
-Implement util.lang.AvailableModulesGuard
+Remove CFParse
+	Use util.lang.CFParseBCELConvertor?

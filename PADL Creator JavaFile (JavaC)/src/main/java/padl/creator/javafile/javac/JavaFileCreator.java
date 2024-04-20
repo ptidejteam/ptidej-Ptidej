@@ -37,6 +37,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 import javax.tools.DiagnosticListener;
 import javax.tools.JavaFileObject;
@@ -49,6 +50,7 @@ import padl.creator.javafile.javac.util.JCTtoPADLTranslator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.ICodeLevelModelCreator;
 import padl.kernel.exception.CreationException;
+import util.lang.OpenedModulesGuard;
 
 /**
  * This class is used to create a PADL Model, from a set of Java Source Files, using JCT.
@@ -118,6 +120,24 @@ public class JavaFileCreator implements ICodeLevelModelCreator {
 			files[i] = new File(someFilesInThePath[i]);
 		}
 		this.files = files;
+
+		// Yann 24/04/20: Checking for opened modules
+		OpenedModulesGuard.getInstance().addOpenedModuleCheck("jdk.compiler",
+				"com.sun.tools.javac.api.JavacTool");
+		OpenedModulesGuard.getInstance().addOpenedModuleCheck("jdk.compiler",
+				"com.sun.tools.javac.code.Symbol");
+		OpenedModulesGuard.getInstance().addOpenedModuleCheck("jdk.compiler",
+				"com.sun.tools.javac.model.JavacElements");
+		OpenedModulesGuard.getInstance().addOpenedModuleCheck("jdk.compiler",
+				"com.sun.tools.javac.tree.JCTree");
+		OpenedModulesGuard.getInstance().addOpenedModuleCheck("jdk.compiler",
+				"com.sun.tools.javac.util.Pair");
+
+		final Optional<String> check = OpenedModulesGuard.getInstance()
+				.checkOpenedModules();
+		if (check.isPresent()) {
+			throw new RuntimeException(check.get());
+		}
 	}
 
 	private void initialise(String aSourcePath, String[] someFilesInThePath) {

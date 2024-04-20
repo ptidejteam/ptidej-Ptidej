@@ -12,6 +12,7 @@ package padl.serialiser;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Optional;
 
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
@@ -22,6 +23,7 @@ import padl.kernel.IAbstractModel;
 import padl.kernel.IAbstractModelSerialiser;
 import util.io.ProxyConsole;
 import util.io.ProxyDisk;
+import util.lang.OpenedModulesGuard;
 
 /**
  * 
@@ -58,6 +60,14 @@ public class DB4OSerialiser implements IAbstractModelSerialiser {
 	}
 
 	private DB4OSerialiser() {
+		OpenedModulesGuard.getInstance().addOpenedModuleCheck("java.base",
+				"java.util.HashSet");
+
+		final Optional<String> check = OpenedModulesGuard.getInstance()
+				.checkOpenedModules();
+		if (check.isPresent()) {
+			throw new RuntimeException(check.get());
+		}
 	}
 
 	public IAbstractModel deserialise(

@@ -42,14 +42,14 @@ import padl.kernel.exception.CreationException;
  *
  * @author Mathieu Lemoine
  */
-public class JCTCreator implements ICodeLevelModelCreator {
+public class JCTtoPADLConvertor implements ICodeLevelModelCreator {
 	private final IJCTRootNode jctRootNode;
 
 	/**
 	 * @param aRootNode The JCT from which the PADL Model will be made.
 	 */
 	@SuppressWarnings("unused")
-	public JCTCreator(
+	public JCTtoPADLConvertor(
 		final IJCTRootNode aRootNode,
 		final IFactory PADLImplementationProvider) {
 		this.jctRootNode = aRootNode;
