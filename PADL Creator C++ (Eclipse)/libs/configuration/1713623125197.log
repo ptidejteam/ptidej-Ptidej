@@ -1,0 +1,14 @@
+!SESSION 2024-04-20 10:25:24.690 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_402-402
+java.vendor=OpenLogic-OpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+
+!ENTRY org.eclipse.osgi 4 0 2024-04-20 10:25:25.768
+!MESSAGE Application error
+!STACK 1
+java.lang.IllegalStateException: Unable to acquire application service. Ensure that the org.eclipse.core.runtime bundle is resolved and started (see config.ini).
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:81)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.main(EclipseStarter.java:228)

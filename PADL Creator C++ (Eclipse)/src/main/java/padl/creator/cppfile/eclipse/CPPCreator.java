@@ -25,7 +25,7 @@ public class CPPCreator implements ICodeLevelModelCreator {
 
 		EclipseCPPParserCaller
 			.getInstance()
-			.createCodeLevelModelUsingOSGiEmbedded(
+			.createCodeLevelModelUsingOSGiRemote(
 				this.sourceDirectory,
 				aCodeLevelModel);
 	}

@@ -203,23 +203,23 @@ public final class EclipseCPPParserCaller {
 		//	arg.append("padl.creator.cppfile.eclipse.misc.SimpleStarter");
 		// Shoudn't it be anyways:
 		//	arg.append("org.eclipse.equinox.launcher.Main");
-		arg.append("    -application ");
+		arg.append(" -application ");
 		arg.append(Common.EQUINOX_LAUNCHER_NAME);
-		arg.append("    -data \"");
+		arg.append(" -data \"");
 		arg.append(pathToCurrentWorkspace);
 		arg.append(Common.EQUINOX_RUNTIME_WORKSPACE);
 		arg.append("\"");
-		arg.append("    -configuration \"file:");
+		arg.append(" -configuration \"file:");
 		arg.append(pathToCurrentWorkspace);
 		arg.append(Common.EQUINOX_CONFIGURATION_DATA);
 		arg.append("\"");
-		arg.append("    -dev \"file:");
+		arg.append(" -dev \"file:");
 		arg.append(pathToCurrentWorkspace);
 		arg.append(Common.EQUINOX_CONFIGURATION_DATA);
 		arg.append("dev.properties\"");
 		//	arg.append(" ");
 		//	arg.append(architecture);
-		//	arg.append("    -consoleLog");
+		//	arg.append(" -consoleLog");
 		arg.append(" ");
 		arg.append(Common.ARGUMENT_DIRECTORY_TARGET_CPP_FILES);
 		arg.append("=\"");
@@ -236,6 +236,7 @@ public final class EclipseCPPParserCaller {
 		arguments.get("main").setValue(arg.toString());
 
 		try {
+			ProxyConsole.getInstance().debugOutput().println(arguments);
 			final VirtualMachine vm = launchingConnector.launch(arguments);
 			final Process process = vm.process();
 			final OutputMonitor outMonitor = new OutputMonitor("Out Monitor",
