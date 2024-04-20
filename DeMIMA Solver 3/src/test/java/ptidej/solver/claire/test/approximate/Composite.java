@@ -14,6 +14,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.junit.Assert;
 import padl.motif.IDesignMotifModel;
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -33,7 +34,7 @@ public final class Composite extends Primitive {
 				((IDesignMotifModel) padl.motif.repository.Composite.class
 					.getDeclaredConstructor().newInstance()).getName(),
 				padl.motif.repository.Composite.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_CUSTOM);
 
 		Assert.assertEquals("Number of solutions", 2, builtSolutions.length);
@@ -88,7 +89,7 @@ public final class Composite extends Primitive {
 				((IDesignMotifModel) padl.motif.repository.Composite.class
 					.getDeclaredConstructor().newInstance()).getName(),
 				padl.motif.repository.Composite.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_AC4);
 
 		Assert.assertEquals("Number of solutions", 1, builtSolutions.length);

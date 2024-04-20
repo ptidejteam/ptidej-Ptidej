@@ -19,6 +19,7 @@ import padl.motif.repository.Composite;
 import padl.motif.repository.Facade;
 import padl.motif.repository.FactoryMethod;
 import padl.motif.repository.Mediator;
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -107,7 +108,7 @@ public final class HalfRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				((IDesignMotifModel) Composite.class.getDeclaredConstructor().newInstance()).getName(),
 				Composite.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_AC4);
 
 		this.testCompositeDesignPattern(builtSolutions);
@@ -124,7 +125,7 @@ public final class HalfRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				((IDesignMotifModel) Composite.class.getDeclaredConstructor().newInstance()).getName(),
 				Composite.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_CUSTOM)[0] };
 
 		this.testCompositeDesignPattern(builtSolutions);
@@ -204,7 +205,7 @@ public final class HalfRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				((IDesignMotifModel) Facade.class.getDeclaredConstructor().newInstance()).getName(),
 				Facade.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_AC4);
 
 		this.testFacadeDesignPattern(builtSolutions);
@@ -218,7 +219,7 @@ public final class HalfRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				((IDesignMotifModel) Facade.class.getDeclaredConstructor().newInstance()).getName(),
 				Facade.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_CUSTOM);
 
 		this.testFacadeDesignPattern(builtSolutions);
@@ -273,7 +274,7 @@ public final class HalfRoundtrip extends Primitive {
 				((IDesignMotifModel) FactoryMethod.class.getDeclaredConstructor().newInstance())
 					.getName(),
 				FactoryMethod.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_AC4);
 
 		this.testFactoryMethodDesignPattern(builtSolutions, 100);
@@ -288,7 +289,7 @@ public final class HalfRoundtrip extends Primitive {
 				((IDesignMotifModel) FactoryMethod.class.getDeclaredConstructor().newInstance())
 					.getName(),
 				FactoryMethod.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_CUSTOM);
 
 		this.testFactoryMethodDesignPattern(builtSolutions, 30);
@@ -302,7 +303,7 @@ public final class HalfRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				((IDesignMotifModel) Mediator.class.getDeclaredConstructor().newInstance()).getName(),
 				Mediator.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_AC4);
 
 		this.testAC4MediatorDesignPattern(builtSolutions);
@@ -316,7 +317,7 @@ public final class HalfRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				((IDesignMotifModel) Mediator.class.getDeclaredConstructor().newInstance()).getName(),
 				Mediator.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_CUSTOM);
 
 		this.testCustomMediatorDesignPattern(builtSolutions);

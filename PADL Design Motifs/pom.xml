@@ -4,15 +4,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>net.ptidej.padl</groupId>
-	<artifactId>padl-design-motifs</artifactId>
-	<name>PADL Design Motifs</name>
-
 	<parent>
 		<groupId>net.ptidej</groupId>
 		<artifactId>all-ptidej</artifactId>
 		<version>1.0.0</version>
 	</parent>
+
+	<groupId>net.ptidej.padl</groupId>
+	<artifactId>padl-design-motifs</artifactId>
+	<name>PADL Design Motifs</name>
 
 	<build>
 		<plugins>
@@ -40,12 +40,6 @@
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-core</artifactId>
 			<version>1.0.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.ibm.toad</groupId>
-			<artifactId>cfparse</artifactId>
-			<version>1.0</version>
 		</dependency>
 
 		<dependency>

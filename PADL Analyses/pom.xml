@@ -75,12 +75,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.ibm.toad</groupId>
-			<artifactId>cfparse</artifactId>
-			<version>1.0</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.apache.bcel</groupId>
 			<artifactId>bcel</artifactId>
 			<version>5.2</version>

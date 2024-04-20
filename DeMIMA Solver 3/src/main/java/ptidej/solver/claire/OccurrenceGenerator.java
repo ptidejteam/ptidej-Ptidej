@@ -19,6 +19,7 @@ import padl.kernel.IAbstractModel;
 import padl.motif.IDesignMotifModel;
 import padl.visitor.IGenerator;
 import padl.visitor.IWalker;
+import ptidej.occurrences.SolverKinds;
 import util.io.Files;
 import util.io.OutputMonitor;
 import util.io.ProxyConsole;
@@ -37,9 +38,6 @@ import util.multilingual.MultilingualManager;
 public final class OccurrenceGenerator {
 	public static final int PROBLEM_AC4 = 0;
 	public static final int PROBLEM_CUSTOM = 1;
-	public static final int SOLVER_AUTOMATIC = 2;
-	public static final int SOLVER_COMBINATORIAL_AUTOMATIC = 3;
-	public static final int SOLVER_SIMPLE_AUTOMATIC = 4;
 	// TODO: Using constant passed in parameter is bad programming
 	// bacause it bypasses the type system. I should remove the
 	// following constants and offer different getSolutions() methods.
@@ -239,13 +237,13 @@ public final class OccurrenceGenerator {
 		final IWalker domainGenerator;
 
 		switch (solver) {
-		case OccurrenceGenerator.SOLVER_AUTOMATIC:
+		case SolverKinds.SOLVER_AUTOMATIC:
 			solverName = "automaticSolve";
 			break;
-		case OccurrenceGenerator.SOLVER_COMBINATORIAL_AUTOMATIC:
+		case SolverKinds.SOLVER_COMBINATORIAL_AUTOMATIC:
 			solverName = "combinatorialAutomaticSolve";
 			break;
-		case OccurrenceGenerator.SOLVER_SIMPLE_AUTOMATIC:
+		case SolverKinds.SOLVER_SIMPLE_AUTOMATIC:
 			solverName = "simpleAutomaticSolve";
 			break;
 		default:
@@ -301,13 +299,13 @@ public final class OccurrenceGenerator {
 		final IWalker domainGenerator;
 
 		switch (aSolverKind) {
-		case OccurrenceGenerator.SOLVER_AUTOMATIC:
+		case SolverKinds.SOLVER_AUTOMATIC:
 			solverName = "automaticSolve";
 			break;
-		case OccurrenceGenerator.SOLVER_COMBINATORIAL_AUTOMATIC:
+		case SolverKinds.SOLVER_COMBINATORIAL_AUTOMATIC:
 			solverName = "combinatorialAutomaticSolve";
 			break;
-		case OccurrenceGenerator.SOLVER_SIMPLE_AUTOMATIC:
+		case SolverKinds.SOLVER_SIMPLE_AUTOMATIC:
 			solverName = "simpleAutomaticSolve";
 			break;
 		default:

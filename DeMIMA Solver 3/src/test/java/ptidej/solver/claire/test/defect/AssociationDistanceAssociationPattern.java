@@ -13,6 +13,8 @@ package ptidej.solver.claire.test.defect;
 import java.lang.reflect.InvocationTargetException;
 
 import org.junit.Assert;
+
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -47,7 +49,7 @@ public final class AssociationDistanceAssociationPattern extends Primitive {
 					Primitive.ALL_SOLUTIONS,
 					"AssociationDistanceTest".toCharArray(),
 					AssociationPattern.class,
-					OccurrenceGenerator.SOLVER_AUTOMATIC,
+					SolverKinds.SOLVER_AUTOMATIC,
 					OccurrenceGenerator.PROBLEM_CUSTOM);
 		}
 	}

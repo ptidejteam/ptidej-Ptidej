@@ -16,6 +16,7 @@ import padl.creator.classfile.LightClassFileCreator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -52,7 +53,7 @@ public final class AssociationDistanceComposite2 extends Primitive {
 			AssociationDistanceComposite2.Solutions = this.testDesignPattern(
 					Composite2.class, Primitive.ALL_SOLUTIONS,
 					AssociationDistanceComposite2.ASSOCIATION_DISTANCE_TEST,
-					codeLevelModel, OccurrenceGenerator.SOLVER_AUTOMATIC,
+					codeLevelModel, SolverKinds.SOLVER_AUTOMATIC,
 					OccurrenceGenerator.PROBLEM_CUSTOM);
 		}
 	}

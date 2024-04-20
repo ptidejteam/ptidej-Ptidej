@@ -16,6 +16,7 @@ import org.junit.Assert;
 
 import padl.motif.IDesignMotifModel;
 import ptidej.example.pattern.CompositionExample;
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -90,7 +91,7 @@ public final class CompositionTest extends Primitive {
 				Primitive.ALL_SOLUTIONS,
 				((IDesignMotifModel) CompositionPattern.class
 						.getDeclaredConstructor().newInstance()).getName(),
-				CompositionExample.class, OccurrenceGenerator.SOLVER_AUTOMATIC,
+				CompositionExample.class, SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_CUSTOM);
 	}
 

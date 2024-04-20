@@ -16,6 +16,7 @@ import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -50,7 +51,7 @@ public final class InheritanceTreeDepthComposite2 extends Primitive {
 					InheritanceTreeDepthComposite2.class,
 					Primitive.ALL_SOLUTIONS,
 					InheritanceTreeDepthComposite2.INHERITANCE_TREE_DEPTH_TEST,
-					codeLevelModel, OccurrenceGenerator.SOLVER_AUTOMATIC,
+					codeLevelModel, SolverKinds.SOLVER_AUTOMATIC,
 					OccurrenceGenerator.PROBLEM_CUSTOM);
 		}
 	}

@@ -16,6 +16,7 @@ import org.junit.Assert;
 
 import padl.motif.IDesignMotifModel;
 import ptidej.example.pattern.UseExample;
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -38,7 +39,7 @@ public final class UseTest extends Primitive {
 					Primitive.ALL_SOLUTIONS,
 					((IDesignMotifModel) UsePattern.class
 							.getDeclaredConstructor().newInstance()).getName(),
-					UseExample.class, OccurrenceGenerator.SOLVER_AUTOMATIC,
+					UseExample.class, SolverKinds.SOLVER_AUTOMATIC,
 					OccurrenceGenerator.PROBLEM_AC4);
 		}
 	}

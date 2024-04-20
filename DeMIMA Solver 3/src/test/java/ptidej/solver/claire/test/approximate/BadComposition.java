@@ -15,6 +15,7 @@ import java.lang.reflect.InvocationTargetException;
 import org.junit.Assert;
 
 import padl.motif.IDesignMotifModel;
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -27,27 +28,26 @@ public final class BadComposition extends Primitive {
 	public BadComposition(final String name) {
 		super(name);
 	}
-	protected void setUp() throws IllegalAccessException,
-			InstantiationException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 
-		this.builtSolutions =
-			this.testDesignPattern(
-				BadComposition.class,
+	protected void setUp()
+			throws IllegalAccessException, InstantiationException,
+			IllegalArgumentException, InvocationTargetException,
+			NoSuchMethodException, SecurityException {
+
+		this.builtSolutions = this.testDesignPattern(BadComposition.class,
 				Primitive.ALL_SOLUTIONS,
-				((IDesignMotifModel) BadCompositionPattern.class.getDeclaredConstructor().newInstance())
-					.getName(),
-				BadCompositionExample1.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				((IDesignMotifModel) BadCompositionPattern.class
+						.getDeclaredConstructor().newInstance()).getName(),
+				BadCompositionExample1.class, SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_AC4);
 	}
+
 	public void testNumberOfSolutions() {
 		// Yann 2002/08/27: That's right!
 		// This problem has no solution with the automatic solver.
 		// Indeed, the composition constraint is of weight 90, thus
 		// the composition constraint is not relaxable.
-		Assert.assertEquals(
-			"Number of solutions",
-			0,
-			this.builtSolutions.length);
+		Assert.assertEquals("Number of solutions", 0,
+				this.builtSolutions.length);
 	}
 }

@@ -13,22 +13,22 @@ package ptidej.viewer.action;
 import java.awt.event.ActionEvent;
 import java.util.Properties;
 import javax.swing.AbstractAction;
-import ptidej.solver.OccurrenceGenerator;
+import ptidej.solver.fingerprint.OccurrenceGenerator;
 import ptidej.viewer.ViewerCommons;
 import ptidej.viewer.ui.DesktopPane;
 import ptidej.viewer.utils.Resources;
 import util.help.Browser;
 
-public class Solver4MetricalAction extends AbstractAction {
+public class SolverFingerprintsAction extends AbstractAction {
 	private static final long serialVersionUID = 1L;
-	private static Solver4MetricalAction UniqueInstance;
-	public static Solver4MetricalAction getInstance() {
-		return (Solver4MetricalAction.UniqueInstance == null) ? Solver4MetricalAction.UniqueInstance =
-			new Solver4MetricalAction()
-				: Solver4MetricalAction.UniqueInstance;
+	private static SolverFingerprintsAction UniqueInstance;
+	public static SolverFingerprintsAction getInstance() {
+		return (SolverFingerprintsAction.UniqueInstance == null) ? SolverFingerprintsAction.UniqueInstance =
+			new SolverFingerprintsAction()
+				: SolverFingerprintsAction.UniqueInstance;
 	}
 
-	private Solver4MetricalAction() {
+	private SolverFingerprintsAction() {
 	}
 	public void actionPerformed(final ActionEvent e) {
 		final String action = e.getActionCommand();
@@ -46,7 +46,6 @@ public class Solver4MetricalAction extends AbstractAction {
 							.getInstance()
 							.getAbstractRepresentationWindow()
 							.getSourceModel(),
-						OccurrenceGenerator.VERSION_METRICAL_PTIDEJSOLVER4,
 						DesktopPane.getInstance().getSolver(),
 						DesktopPane.getInstance().getProblem());
 

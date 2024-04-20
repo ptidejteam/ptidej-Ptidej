@@ -54,14 +54,14 @@
 		</dependency>
 
 		<dependency>
-			<groupId>net.ptidej.java-parser</groupId>
-			<artifactId>java-parser-core</artifactId>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-core</artifactId>
+			<artifactId>padl-analyses</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 
@@ -73,7 +73,7 @@
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-statements-creator-classfile</artifactId>
+			<artifactId>padl-creator-javafile-eclipse-parser</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 
@@ -102,6 +102,13 @@
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-creator-classfile</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-statements-creator-classfile</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>

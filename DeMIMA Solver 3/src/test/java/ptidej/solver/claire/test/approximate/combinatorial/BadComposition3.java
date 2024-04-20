@@ -14,6 +14,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.junit.Assert;
 import padl.motif.IDesignMotifModel;
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -36,7 +37,7 @@ public final class BadComposition3 extends Primitive {
 				((IDesignMotifModel) BadCompositionPattern.class.getDeclaredConstructor().newInstance())
 					.getName(),
 				BadCompositionExample3.class,
-				OccurrenceGenerator.SOLVER_COMBINATORIAL_AUTOMATIC,
+				SolverKinds.SOLVER_COMBINATORIAL_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_AC4);
 	}
 	public void testNumberOfSolutions() {

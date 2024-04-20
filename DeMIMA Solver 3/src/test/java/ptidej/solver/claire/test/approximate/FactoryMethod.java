@@ -14,6 +14,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import org.junit.Assert;
 import padl.motif.IDesignMotifModel;
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -87,7 +88,7 @@ public final class FactoryMethod extends Primitive {
 				((IDesignMotifModel) padl.motif.repository.FactoryMethod.class
 					.getDeclaredConstructor().newInstance()).getName(),
 				padl.motif.repository.FactoryMethod.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_AC4);
 
 		this.testFactoryMethodDesignPattern(builtSolutions, 100);
@@ -102,7 +103,7 @@ public final class FactoryMethod extends Primitive {
 				((IDesignMotifModel) padl.motif.repository.FactoryMethod.class
 					.getDeclaredConstructor().newInstance()).getName(),
 				padl.motif.repository.FactoryMethod.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_CUSTOM);
 
 		this.testFactoryMethodDesignPattern(builtSolutions, 30);

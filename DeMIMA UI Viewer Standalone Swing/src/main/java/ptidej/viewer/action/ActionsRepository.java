@@ -175,11 +175,11 @@ public class ActionsRepository {
 			actionsGroup
 				.put(
 					Resources.METRICAL_PTIDEJ_SOLVER_4_FIND_SIMILAR_MICRO_ARCHITECTURE,
-					Solver4MetricalAction.getInstance());
+					SolverFingerprintsAction.getInstance());
 			actionsGroup
 				.put(
 					Resources.METRICAL_PTIDEJ_SOLVER_4_SIMILAR_MICRO_ARCHITECTURE_HELP,
-					Solver4MetricalAction.getInstance());
+					SolverFingerprintsAction.getInstance());
 		}
 		else if (strGroup.equals(actionsGroups[5])) { // SOLVERS
 			actionsGroup.put(

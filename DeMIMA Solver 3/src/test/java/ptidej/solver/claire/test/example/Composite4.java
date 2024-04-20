@@ -19,6 +19,7 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
 import padl.motif.IDesignMotifModel;
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -61,7 +62,7 @@ public class Composite4 extends Primitive {
 			// Solutions found.
 			Composite4.FoundSolutions = this.testDesignPattern(Composite4.class,
 					Primitive.ALL_SOLUTIONS, pattern.getName(), codeLevelModel,
-					OccurrenceGenerator.SOLVER_COMBINATORIAL_AUTOMATIC,
+					SolverKinds.SOLVER_COMBINATORIAL_AUTOMATIC,
 					OccurrenceGenerator.PROBLEM_AC4);
 		}
 	}

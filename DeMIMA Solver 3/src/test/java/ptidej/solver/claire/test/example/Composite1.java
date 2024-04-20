@@ -22,6 +22,7 @@ import padl.kernel.IIdiomLevelModel;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
 import padl.motif.IDesignMotifModel;
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -66,7 +67,7 @@ public class Composite1 extends Primitive {
 				Composite1.FoundSolutions = this.testDesignPattern(
 						Composite1.class, Primitive.ALL_SOLUTIONS,
 						pattern.getName(), idiomLevelModel,
-						OccurrenceGenerator.SOLVER_COMBINATORIAL_AUTOMATIC,
+						SolverKinds.SOLVER_COMBINATORIAL_AUTOMATIC,
 						OccurrenceGenerator.PROBLEM_AC4);
 			}
 			catch (final CreationException e) {

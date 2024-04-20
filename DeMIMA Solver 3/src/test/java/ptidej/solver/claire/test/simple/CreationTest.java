@@ -16,6 +16,7 @@ import org.junit.Assert;
 
 import padl.motif.IDesignMotifModel;
 import ptidej.example.pattern.CreationExample;
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -38,7 +39,7 @@ public final class CreationTest extends Primitive {
 					Primitive.ALL_SOLUTIONS,
 					((IDesignMotifModel) CreationPattern.class
 							.getDeclaredConstructor().newInstance()).getName(),
-					CreationExample.class, OccurrenceGenerator.SOLVER_AUTOMATIC,
+					CreationExample.class, SolverKinds.SOLVER_AUTOMATIC,
 					OccurrenceGenerator.PROBLEM_AC4);
 		}
 	}

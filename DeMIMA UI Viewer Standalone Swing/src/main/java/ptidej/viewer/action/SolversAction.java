@@ -16,7 +16,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import javax.swing.AbstractAction;
-import ptidej.solver.OccurrenceGenerator;
+
+import ptidej.occurrences.SolverKinds;
 import ptidej.ui.IDrawable;
 import ptidej.ui.occurrence.IGroupOccurrenceTip;
 import ptidej.viewer.GroupOccurrence;
@@ -49,15 +50,15 @@ public class SolversAction extends AbstractAction {
 
 		if (action.equals(Resources.SOLVER_PROBLEM_AUTOMATIC)) {
 			DesktopPane.getInstance().setSolver(
-				OccurrenceGenerator.SOLVER_AUTOMATIC);
+				SolverKinds.SOLVER_AUTOMATIC);
 		}
 		else if (action.equals(Resources.SOLVER_COMBINATORIAL_AUTOMATIC)) {
 			DesktopPane.getInstance().setSolver(
-				OccurrenceGenerator.SOLVER_COMBINATORIAL_AUTOMATIC);
+				SolverKinds.SOLVER_COMBINATORIAL_AUTOMATIC);
 		}
 		else if (action.equals(Resources.SOLVER_SIMPLE_AUTOMATIC)) {
 			DesktopPane.getInstance().setSolver(
-				OccurrenceGenerator.SOLVER_SIMPLE_AUTOMATIC);
+				SolverKinds.SOLVER_SIMPLE_AUTOMATIC);
 		}
 		else if (action.equals(Resources.SHOW_STATISTICS)) {
 			final ModelStatisticsWindow window =

@@ -12,8 +12,10 @@ package ptidej.viewer.action;
 
 import java.awt.event.ActionEvent;
 import java.util.Properties;
+
 import javax.swing.AbstractAction;
-import ptidej.solver.OccurrenceGenerator;
+
+import ptidej.solver.java.OccurrenceGenerator;
 import ptidej.viewer.ViewerCommons;
 import ptidej.viewer.ui.DesktopPane;
 import ptidej.viewer.utils.Resources;
@@ -47,7 +49,6 @@ public class Solver4Action extends AbstractAction {
 							.getInstance()
 							.getAbstractRepresentationWindow()
 							.getSourceModel(),
-						OccurrenceGenerator.VERSION_PTIDEJSOLVER4,
 						DesktopPane.getInstance().getSolver(),
 						DesktopPane.getInstance().getProblem());
 

@@ -18,6 +18,7 @@ import padl.motif.repository.Composite;
 import padl.motif.repository.Facade;
 import padl.motif.repository.FactoryMethod;
 import padl.motif.repository.Mediator;
+import ptidej.occurrences.SolverKinds;
 import ptidej.solver.Occurrence;
 import ptidej.solver.claire.OccurrenceGenerator;
 import ptidej.solver.claire.test.Primitive;
@@ -62,7 +63,7 @@ public final class CompleteRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				Composite.class,
 				Composite.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_AC4);
 
 		this.testCompositeDesignPattern(builtSolutions);
@@ -79,7 +80,7 @@ public final class CompleteRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				Composite.class,
 				Composite.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_CUSTOM)[0] };
 
 		this.testCompositeDesignPattern(builtSolutions);
@@ -118,7 +119,7 @@ public final class CompleteRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				Facade.class,
 				Facade.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_AC4);
 
 		this.testFacadeDesignPattern(builtSolutions);
@@ -132,7 +133,7 @@ public final class CompleteRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				Facade.class,
 				Facade.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_CUSTOM);
 
 		this.testFacadeDesignPattern(builtSolutions);
@@ -186,7 +187,7 @@ public final class CompleteRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				FactoryMethod.class,
 				FactoryMethod.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_AC4);
 
 		this.testFactoryMethodDesignPattern(builtSolutions, 100);
@@ -200,7 +201,7 @@ public final class CompleteRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				FactoryMethod.class,
 				FactoryMethod.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_CUSTOM);
 
 		this.testFactoryMethodDesignPattern(builtSolutions, 30);
@@ -218,7 +219,7 @@ public final class CompleteRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				Mediator.class,
 				Mediator.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_AC4);
 
 		Assert.assertEquals("Number of solutions", 2, builtSolutions.length);
@@ -269,7 +270,7 @@ public final class CompleteRoundtrip extends Primitive {
 				Primitive.CANONICAL_SOLUTIONS,
 				Mediator.class,
 				Mediator.class,
-				OccurrenceGenerator.SOLVER_AUTOMATIC,
+				SolverKinds.SOLVER_AUTOMATIC,
 				OccurrenceGenerator.PROBLEM_CUSTOM);
 
 		Assert.assertEquals("Number of solutions", 2, builtSolutions.length);
