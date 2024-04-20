@@ -10,8 +10,8 @@
  ******************************************************************************/
 /**
  *"Return the numbers of lines of code of all the methods of a test case."
- * ref: Bruntink, M., Deursen, A.V.: Predicting class testability using object oriented metrics. In: Proceedings of the IEEE International Workshop on Source Code Analysis and Manipulation, pp. 136ï¿½145 (2004) 
- * @author Aminata Sabanï¿½
+ * ref: Bruntink, M., Deursen, A.V.: Predicting class testability using object oriented metrics. In: Proceedings of the IEEE International Workshop on Source Code Analysis and Manipulation, pp. 136-145 (2004) 
+ * @author Aminata Sabané
  * @since  2012/07/03
  * 
  */

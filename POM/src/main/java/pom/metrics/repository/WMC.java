@@ -36,9 +36,9 @@ public class WMC extends AbstractMetric implements IMetric, IUnaryMetric, IDepen
 		final IAbstractModel anAbstractModel,
 		final IFirstClassEntity anEntity) {
 
-		//JYves 2006/02/24:
-		// weight initialisï¿½ ï¿½ 0 car une classe sans aucune 
-		// mï¿½thodes (ni constructeur par dï¿½faut) a un WMC de 0.
+		// JYves 2006/02/24:
+		// weight initialisé à 0 car une classe sans aucune 
+		// méthodes (ni constructeur par défaut) a un WMC de 0.
 		//		double weight = 1;
 		double weight = 0;
 

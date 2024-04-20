@@ -27,23 +27,23 @@ public final class TaxonomyDetection extends AbstractMicroPatternDetection
 	}
 
 	/*
-	 * 	2. Taxonomy. Even if the deï¬?nition of an interface is empty it may
+	 * 	2. Taxonomy. Even if the definition of an interface is empty it may
 	 * 	still extend another, potentially non-empty, interface.
-	 * 	Consider for example interface DocAttribute (deï¬?ned in pack-
+	 * 	Consider for example interface DocAttribute (defined in pack-
 	 * 	age javax.print.attribute). This interface extends inter-
 	 * 	face Attribute in the same package without adding any further
 	 * 	declarations. Interface DocAttribute is used, similarly to the
-	 * 	Designator micro pattern, for tagging purposesâ€”speciï¬?cally that
-	 * 	the attribute at hand is specialized for what is known as â€œDocâ€? in
+	 * 	Designator micro pattern, for tagging purposes, specifically that
+	 * 	the attribute at hand is specialized for what is known as "Doc" in
 	 * 	the JRE.
 	 * 	An empty interface which extends a single interface is called a Tax-
 	 * 	onomy, since it is included, in the subtyping sense, in its parent, but
 	 * 	otherwise identical to it.
 	 * 	There are also classes which are Taxonomy. Such a class must sim-
-	 * 	ilarly be empty, i.e., add no ï¬?elds nor methods to its parent. Since
+	 * 	ilarly be empty, i.e., add no fields nor methods to its parent. Since
 	 * 	constructors are not inherited, an empty class may contain construc-
 	 * 	tors. A Taxonomy class may not implement any interfaces.
-	 * 	This micro pattern is very common in the hierarchy of JAVAâ€™s ex-
+	 * 	This micro pattern is very common in the hierarchy of Java's ex-
 	 * 	ception classes, such as: EOFException which extends IOEx-
 	 * 	ception. The reason is that selection of a catch clause is de-
 	 * 	termined by the runtime type of the thrown exception, and not by

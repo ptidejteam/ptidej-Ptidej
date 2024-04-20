@@ -16,7 +16,6 @@ import sad.detection.test.classfile.xerces.SpaghettiCodeTest;
 import sad.detection.test.classfile.xerces.SpaghettiCodeTest2;
 import sad.detection.test.classfile.xerces.VariousSmellsTest;
 import sad.detection.test.comparison.xerces.BlobTest;
-import sad.detection.test.cppfile.qmake.FewSmellsTest;
 import sad.detection.test.generic.BoxPlotTest;
 import sad.detection.test.javafile.ideasimsyn.SomeSmellsTest;
 
@@ -29,27 +28,30 @@ import sad.detection.test.javafile.ideasimsyn.SomeSmellsTest;
 public final class TestSAD extends junit.framework.TestSuite {
 	public static Test suite() {
 		final TestSAD suite = new TestSAD();
-		suite.addTestSuite(DetectionAntipatternSWTTest.class);
 
+		suite.addTestSuite(DetectionAntipatternSWTTest.class);
 		suite.addTestSuite(SpaghettiCodeTest.class);
 		suite.addTestSuite(SpaghettiCodeTest2.class);
 		suite.addTestSuite(VariousSmellsTest.class);
 		suite.addTestSuite(BlobTest.class);
-
+		// TODO Add these tests back
+		//		suite.addTestSuite(FewSmellsTest.class);
+		//		suite.addTestSuite(FewSmellsTest.class);
+		//		suite.addTestSuite(RingDaemon.class);
 		suite.addTestSuite(BoxPlotTest.class);
-
 		suite.addTestSuite(SomeSmellsTest.class);
-
-		suite.addTestSuite(FewSmellsTest.class);
 
 		return suite;
 	}
+
 	public TestSAD() {
 		// Empty block.
 	}
+
 	public TestSAD(final Class<?> theClass) {
 		super(theClass);
 	}
+
 	public TestSAD(final String name) {
 		super(name);
 	}

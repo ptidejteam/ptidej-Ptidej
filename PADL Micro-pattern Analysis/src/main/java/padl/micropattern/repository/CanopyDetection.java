@@ -29,12 +29,12 @@ public final class CanopyDetection extends AbstractMicroPatternDetection
 	}
 
 	/*
-	 *  14. Canopy. A Canopy is a class with exactly one instance �?eld
+	 *  14. Canopy. A Canopy is a class with exactly one instance field
 	 *	which can only changed by the constructors of this cass.
 	 *	     The name Canopy draws from the visual association of a trans-
 	 *	     parent enclosure set over a precious object; an enclosure which
 	 *	     makes it possible to see, but not touch, the protected item.
-	 *	Class Integer, which boxes an immutable int �?eld, is a famous
+	 *	Class Integer, which boxes an immutable int field, is a famous
 	 *	example of Canopy.
 	 *	As explained above, since the Canopy pattern captures immutable
 	 *	classes, it also belongs in the Degenerate State category.

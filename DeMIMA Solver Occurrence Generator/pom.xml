@@ -31,13 +31,19 @@
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-3</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
 			<artifactId>demima-solver-4</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-solver-metrics</artifactId>
+			<artifactId>demima-solver-fingerprints</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 

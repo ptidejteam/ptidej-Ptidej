@@ -37,7 +37,7 @@ public class PtidejResourceBundle extends ListResourceBundle {
 						"Loader: No files found into {0}" },
 				{ "util.io.SubtypeLoader::Err_READING_FILE",
 						"Loader: Error while reading file {0}" },
-				{ "util.io.SubtypeLoader::LOADING_FROM", "Loading from: {0}\n" },
+				{ "util.io.SubtypeLoader::LOADING_FROM", "Loading from: {0}" },
 				{ "util.lang.ClassLoader::Err_FILE",
 						"The file {0} produces an error." },
 
@@ -245,37 +245,37 @@ public class PtidejResourceBundle extends ListResourceBundle {
 						"(See the GoF's book.)" },
 
 				// *********** Ptidej Solver 4 ***********
-				{ "ptidej.solver.combination.BitString::NB_OF_BITS",
+				{ "ptidej.solver.java.combination.BitString::NB_OF_BITS",
 						"The number of bits must be {0}" },
-				{ "ptidej.solver.branching.InteractiveBranching::ANOTHER_SOL",
+				{ "ptidej.solver.java.branching.InteractiveBranching::ANOTHER_SOL",
 						"Do you want another solution ? (y/n)" },
-				{ "ptidej.solver.branching.InteractiveBranching::SOL",
+				{ "ptidej.solver.java.branching.InteractiveBranching::SOL",
 						"> Solution {0} :" },
 				{
-						"ptidej.solver.branching.InteractiveRepair::CONST_CONTRADICTION",
+						"ptidej.solver.java.branching.InteractiveRepair::CONST_CONTRADICTION",
 
 						"The following constraint(s) led to a contradiction:" },
-				{ "ptidej.solver.branching.InteractiveRepair::NO_MORE_SOL",
+				{ "ptidej.solver.java.branching.InteractiveRepair::NO_MORE_SOL",
 
 				"There is no more solution because of the constraint" },
-				{ "ptidej.solver.branching.InteractiveRepair::TO_BE_REPLACED",
+				{ "ptidej.solver.java.branching.InteractiveRepair::TO_BE_REPLACED",
 						"To be replaced with: {0}" },
 				{
-						"ptidej.solver.branching.InteractiveRepair::WHICH_TO_PUT_BACK",
+						"ptidej.solver.java.branching.InteractiveRepair::WHICH_TO_PUT_BACK",
 
 						"Which one do you want to put back? (-1 -> none)" },
-				{ "ptidej.solver.branching.InteractiveRepair::WHICH_TO_RELAX",
+				{ "ptidej.solver.java.branching.InteractiveRepair::WHICH_TO_RELAX",
 
 				"Which one do you want to relax? (-1 -> none)" },
 				{
-						"ptidej.solver.Problem::PTIDEJ",
+						"ptidej.solver.java.Problem::PTIDEJ",
 
-						"++ JPtidejSolver v1.5 (February, 2007), Copyright (c) 2001-2013 Y.-G. Guï¿½hï¿½neuc\n++ Constraint programming for design patterns and design defects identification" },
-				{ "ptidej.solver.solver.SimpleInteractiveRepair::NO_MORE_SOL",
+						"++ JPtidejSolver v1.5 (February, 2007), Copyright (c) 2001-2013 Y.-G. Guéhéneuc\n++ Constraint programming for design patterns and design defects identification" },
+				{ "ptidej.solver.java.solver.SimpleInteractiveRepair::NO_MORE_SOL",
 
 				"There is no more solution because of the constraints: {0}" },
 				{
-						"ptidej.solver.solver.SimpleInteractiveRepair::WHICH_TO_RELAX",
+						"ptidej.solver.java.solver.SimpleInteractiveRepair::WHICH_TO_RELAX",
 
 						"Which one do you want to relax? (-1 -> none)" },
 
@@ -951,13 +951,13 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				{
 						"ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R01_C05",
 
-						"by Yann-Gaï¿½l Guï¿½hï¿½neuc uses the PADL meta-model (Pattern and Abstract-level" },
+						"by Yann-Gaël Guéhéneuc uses the PADL meta-model (Pattern and Abstract-level" },
 				{
 						"ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R01_C06",
 
 						"Description Language), extension of the PDL meta-model (Pattern Description Language)" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R01_C07",
-						"by Hervï¿½ Albin-Amiot." },
+						"by Hervé Albin-Amiot." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R01_C08",
 						"Get more information at www.ptidej.net." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R01_C09",
@@ -966,20 +966,20 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C01",
 						"Main developpers:" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C02",
-						"        - Yann-Gaï¿½l Guï¿½hï¿½neuc" },
+						"        - Yann-Gaël Guéhéneuc" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C03",
-						"                Universitï¿½ de Montrï¿½al" },
+						"                Université de Montréal" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C04",
 
-				"                ï¿½cole des Mines de Nantes" },
+				"                École des Mines de Nantes" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C05",
 
 				"                Object Technology International, Inc." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C06",
-						"        - Hervï¿½ Albin-Amiot." },
+						"        - Hervé Albin-Amiot." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C07",
 
-				"                ï¿½cole des Mines de Nantes" },
+				"                École des Mines de Nantes" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C08",
 						"                Softmaint S.A." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C10",
@@ -993,7 +993,7 @@ public class PtidejResourceBundle extends ListResourceBundle {
 						"                Graduate, fall 2004" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C14",
 
-				"                Universitï¿½ de Montrï¿½al." },
+				"                Université de Montréal." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C15",
 						"        - Lulzim Laloshi and Driton Salihu" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C16",
@@ -1003,10 +1003,10 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				"                Undergraduates, Summer 2004" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C18",
 
-				"                Universitï¿½ de Montrï¿½al." },
+				"                Université de Montréal." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C19",
 
-				"        - Ward Flores and Sï¿½bastien Robidoux" },
+				"        - Ward Flores and Sébastien Robidoux" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C20",
 
 				"                On the C++ creator and PADL" },
@@ -1015,10 +1015,10 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				"                Undergraduates, Summer 2004" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C22",
 
-				"                Universitï¿½ de Montrï¿½al." },
+				"                Université de Montréal." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C23",
 
-				"        - Salime Bensemmane, Iyadh Sidhom, and Fayï¿½al Skhiri" },
+				"        - Salime Bensemmane, Iyadh Sidhom, and Fayçal Skhiri" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C24",
 
 				"                On the Ptidej Solver in Java" },
@@ -1027,7 +1027,7 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				"                Undergraduates, Summer 2004" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C26",
 
-				"                Universitï¿½ de Montrï¿½al." },
+				"                Université de Montréal." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C27",
 						"        - Farouk Zaidi" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C28",
@@ -1037,18 +1037,18 @@ public class PtidejResourceBundle extends ListResourceBundle {
 						"                Trainee, Winter 2004" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C30",
 
-				"                Universitï¿½ de technologie Belfort-Montbï¿½liard" },
+				"                Université de technologie Belfort-Montbéliard" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C31",
 
-				"                Centre de Recherche en Informatique de Montrï¿½al" },
+				"                Centre de Recherche en Informatique de Montréal" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C32",
 
-				"                Universitï¿½ de Montrï¿½al." },
+				"                Université de Montréal." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R03_C01",
 
 				"The Ptidej tool suite, copyright (c) 2000-2004," },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R03_C02",
-						"Yann-Gaï¿½l Guï¿½hï¿½neuc." },
+						"Yann-Gaël Guéhéneuc." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R03_C03",
 						"All right reserved." },
 				{
@@ -1276,7 +1276,7 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				{ "ptidej.viewer.ui.MenuBar::MENU_LANGUAGE", "Language" },
 				{ "ptidej.viewer.ui.MenuBar::MENU_LANGUAGE_MNEMONIC", "L" },
 				{ "ptidej.viewer.ui.MenuBar::RADIO_ITEM_ENGLISH", "English" },
-				{ "ptidej.viewer.ui.MenuBar::RADIO_ITEM_FRENCH", "Franï¿½ais" },
+				{ "ptidej.viewer.ui.MenuBar::RADIO_ITEM_FRENCH", "Français" },
 				{ "ptidej.viewer.ui.MenuBar::MENU_WINDOW", "Window" },
 				{ "ptidej.viewer.ui.MenuBar::MENU_WINDOW_MNEMONIC", "W" },
 				{ "ptidej.viewer.ui.MenuBar::ITEM_MINIMIZE_ALL", "Minimize All" },

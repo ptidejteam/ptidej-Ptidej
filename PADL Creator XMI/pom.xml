@@ -4,14 +4,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>net.ptidej.padl</groupId>
-	<artifactId>padl-creator-xmi</artifactId>
-
 	<parent>
 		<groupId>net.ptidej</groupId>
 		<artifactId>all-ptidej</artifactId>
 		<version>1.0.0</version>
 	</parent>
+
+	<groupId>net.ptidej.padl</groupId>
+	<artifactId>padl-creator-xmi</artifactId>
 
 	<build>
 		<plugins>
@@ -32,17 +32,18 @@
 							</sources>
 						</configuration>
 					</execution>
+				</executions>
+			</plugin>
+			<!-- Must generate the test-jar for dependent tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.3.0</version>
+				<executions>
 					<execution>
-						<id>add-lib-test-source</id>
-						<phase>generate-test-sources</phase>
 						<goals>
-							<goal>add-test-source</goal>
+							<goal>test-jar</goal>
 						</goals>
-						<configuration>
-							<sources>
-								<source>lib/SDMetricsOpenCore/test</source>
-							</sources>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>

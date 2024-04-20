@@ -26,7 +26,7 @@ public final class RestrictedCreationDetection extends
 
 	/*
 	 *  11. Restricted Creation. A class with no public constructors, and at
-	 *	least one static ям?eld of the same type as the class, matches the
+	 *	least one static field of the same type as the class, matches the
 	 *	Restricted Creation micro pattern.
 	 *	Many S I N G L E T O N classes satisfy this criteria. A famous example
 	 *	is java.lang.Runtime.

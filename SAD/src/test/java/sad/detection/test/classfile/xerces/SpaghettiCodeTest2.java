@@ -12,13 +12,14 @@ package sad.detection.test.classfile.xerces;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.generator.helper.ModelGenerator;
 import padl.kernel.IIdiomLevelModel;
 import sad.designsmell.detection.IDesignSmellDetection;
 import sad.designsmell.detection.repository.SpaghettiCode.SpaghettiCodeDetection;
-import util.io.Files;
 import util.io.ProxyDisk;
 
 /**
@@ -28,25 +29,26 @@ import util.io.ProxyDisk;
 public final class SpaghettiCodeTest2 extends TestCase {
 	private static IIdiomLevelModel IdiomLevelModel;
 	private static final String NAME = "Xercesv2.7.0.jar";
-	private static final String PATH = "../SAD Tests/data/Xercesv2.7.0.jar";
+	private static final String PATH = "../SAD/target/test-classes/Xercesv2.7.0.jar";
 
 	public SpaghettiCodeTest2(final String name) {
 		super(name);
 	}
+
 	protected void setUp() throws Exception {
 		if (SpaghettiCodeTest2.IdiomLevelModel == null) {
-			SpaghettiCodeTest2.IdiomLevelModel =
-				ModelGenerator
-					.generateModelFromClassFilesDirectories(new String[] { SpaghettiCodeTest2.PATH });
+			SpaghettiCodeTest2.IdiomLevelModel = ModelGenerator
+					.generateModelFromClassFilesDirectories(
+							new String[] { SpaghettiCodeTest2.PATH });
 		}
 	}
+
 	public void testSpaghettiCode() throws IOException {
 		final IDesignSmellDetection ad = new SpaghettiCodeDetection();
 		ad.detect(SpaghettiCodeTest2.IdiomLevelModel);
 		ad.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-			SpaghettiCodeTest2.NAME + "_SpaghettiCode.ini")));
-		Assert.assertEquals("Incorrect number of spaghetti code found", 1, ad
-			.getDesignSmells()
-			.size());
+				SpaghettiCodeTest2.NAME + "_SpaghettiCode.ini")));
+		Assert.assertEquals("Incorrect number of spaghetti code found", 1,
+				ad.getDesignSmells().size());
 	}
 }

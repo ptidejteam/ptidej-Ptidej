@@ -26,8 +26,8 @@ public final class FunctionPointerDetection extends
 
 	/*
 	 * 	5. Function Pointer. Very peculiar are those classes which have no
-	 *	ï¬?elds at all, and only a single public instance method.
-	 *	An example is class LdapNameParser (which is deï¬?ned in pack-
+	 *	fields at all, and only a single public instance method.
+	 *	An example is class LdapNameParser (which is defined in pack-
 	 *	age com.sun.jndi.ldap.LdapNameParser). This class has
 	 *	a single parse method, with (as expected) a string parameter.
 	 *	Instances of Function Pointer classes represent the equivalent of a

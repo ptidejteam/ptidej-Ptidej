@@ -1,0 +1,16 @@
+Lexi
+
+Role: C_L
+	(NMI >= 25.0)(DIT >= 5.0)
+	(NMI >= 25.0)(NMO <= 1.0)
+	(CBO >= 10.0)(DIT >= 3.0)(NCM <= 10.0)
+
+Step	ILMCreation	ProblemCreation	Solver	Total
+Ruled	0'0	-28559003'-37	28559003'37	0'0
+No Rule	0'0	-28559003'-37	28559003'37	0'0
+
+Var	DomainNoRule	DomainRuled	Reduction
+
+Solutions	Total	Ghosted	Valabe
+Ruled	0	0	0
+No rule	0	0	0

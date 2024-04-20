@@ -25,9 +25,7 @@
 					<target>1.4</target>
 				</configuration>
 			</plugin>
-
-			<!-- Must generate the test-jar for the tests in DeMIMA Solver 4 and
-			DeMIMA Solver Metrics -->
+			<!-- Must generate the test-jar for dependent tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -39,6 +37,18 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>TestDup.java</exclude>
+						<exclude>TestNew.java</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

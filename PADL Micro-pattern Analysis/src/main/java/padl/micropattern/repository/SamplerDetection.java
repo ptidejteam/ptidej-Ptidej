@@ -26,10 +26,10 @@ public final class SamplerDetection extends AbstractMicroPatternDetection
 
 	/*
 	 *  12. Sampler. The Sampler matches classes class with at least one
-	 *	public constructor, and at least one static ï¬?eld whose type is the
+	 *	public constructor, and at least one static field whose type is the
 	 *	same as that of the class. These classes allow client code to create
-	 *	new instances, but they also provide several predeï¬?ned instances.
-	 *	An example is class Color (in package java.awt) with ï¬?elds
+	 *	new instances, but they also provide several predefined instances.
+	 *	An example is class Color (in package java.awt) with fields
 	 *	such as red, green and blue.
 	 */
 

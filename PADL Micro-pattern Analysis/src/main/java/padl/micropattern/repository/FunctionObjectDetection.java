@@ -27,7 +27,7 @@ public final class FunctionObjectDetection extends
 	/*
 	 * 	6. Function Object. The Function Object micro pattern is similar
 	 *	to the Function Pointer micro pattern. The only difference is that
-	 *	Function Object has instance ям?elds (which are often set by the class
+	 *	Function Object has instance fields (which are often set by the class
 	 *	constructor). Thus, an instance of Function Object class can store
 	 *	parameters to the main method of the class.
 	 *	The Function Object pattern matches many anonymous classes in

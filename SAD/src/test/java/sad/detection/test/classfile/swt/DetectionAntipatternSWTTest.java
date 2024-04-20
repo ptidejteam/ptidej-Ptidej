@@ -11,7 +11,9 @@
 package sad.detection.test.classfile.swt;
 
 import java.io.PrintWriter;
+
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.generator.helper.ModelGenerator;
 import padl.kernel.IIdiomLevelModel;
@@ -20,7 +22,6 @@ import sad.designsmell.detection.repository.Blob.BlobDetection;
 import sad.designsmell.detection.repository.FunctionalDecomposition.FunctionalDecompositionDetection;
 import sad.designsmell.detection.repository.SpaghettiCode.SpaghettiCodeDetection;
 import sad.designsmell.detection.repository.SwissArmyKnife.SwissArmyKnifeDetection;
-import util.io.Files;
 import util.io.ProxyDisk;
 
 /**
@@ -30,10 +31,10 @@ import util.io.ProxyDisk;
 public final class DetectionAntipatternSWTTest extends TestCase {
 	private static IIdiomLevelModel IdiomLevelModel;
 	//	private static ModelAnnotatorLOC Annotator;
-	private static final String PATH = "../SAD Tests/data/orgEclipseSwt.jar";
-	private static final String MAIN_PATH = "../SAD Tests/data/";
+	private static final String PATH = "../SAD/target/test-classes/orgEclipseSwt.jar";
+	private static final String MAIN_PATH = "../SAD/test-classes/";
 	private static final String SYSTEM_NAME = DetectionAntipatternSWTTest.PATH
-		.substring(DetectionAntipatternSWTTest.MAIN_PATH.length());
+			.substring(DetectionAntipatternSWTTest.MAIN_PATH.length());
 
 	public DetectionAntipatternSWTTest(final String name) {
 		super(name);
@@ -57,11 +58,12 @@ public final class DetectionAntipatternSWTTest extends TestCase {
 			//		new String[] { DetectionAntipatternSWTTest.PATH },
 			//		DetectionAntipatternSWTTest.IdiomLevelModel);
 
-			DetectionAntipatternSWTTest.IdiomLevelModel =
-				ModelGenerator
-					.generateModelFromClassFilesDirectories(new String[] { DetectionAntipatternSWTTest.PATH });
+			DetectionAntipatternSWTTest.IdiomLevelModel = ModelGenerator
+					.generateModelFromClassFilesDirectories(
+							new String[] { DetectionAntipatternSWTTest.PATH });
 		}
 	}
+
 	/** 
 	 *  Test of the detection of Blobs
 	 */
@@ -71,14 +73,11 @@ public final class DetectionAntipatternSWTTest extends TestCase {
 		//	ad.setMetricsFileRepository(ClassFileRepository
 		//		.getInstance(MetricRepository.class));
 		ad.detect(DetectionAntipatternSWTTest.IdiomLevelModel);
-		((BlobDetection) ad).output(new PrintWriter(ProxyDisk
-			.getInstance()
-			.fileTempOutput(
-				DetectionAntipatternSWTTest.SYSTEM_NAME + "_Blob.ini")));
-		Assert.assertEquals(
-			"detectBlobs: Incorrect Number of Blobs found",
-			3,
-			ad.getDesignSmells().size());
+		((BlobDetection) ad).output(new PrintWriter(ProxyDisk.getInstance()
+				.fileTempOutput(DetectionAntipatternSWTTest.SYSTEM_NAME
+						+ "_Blob.ini")));
+		Assert.assertEquals("detectBlobs: Incorrect Number of Blobs found", 3,
+				ad.getDesignSmells().size());
 	}
 
 	/** 
@@ -90,15 +89,13 @@ public final class DetectionAntipatternSWTTest extends TestCase {
 		//	ad.setMetricsFileRepository(ClassFileRepository
 		//		.getInstance(MetricRepository.class));
 		ad.detect(DetectionAntipatternSWTTest.IdiomLevelModel);
-		((FunctionalDecompositionDetection) ad).output(new PrintWriter(
-			ProxyDisk.getInstance().fileTempOutput(
-				DetectionAntipatternSWTTest.SYSTEM_NAME
-						+ "_FunctionalDecomposition.ini")));
-		Assert
-			.assertEquals(
+		((FunctionalDecompositionDetection) ad)
+				.output(new PrintWriter(ProxyDisk.getInstance()
+						.fileTempOutput(DetectionAntipatternSWTTest.SYSTEM_NAME
+								+ "_FunctionalDecomposition.ini")));
+		Assert.assertEquals(
 				"detectFunctionalDecompositions: Incorrect Number of FunctionalDecompositions found",
-				0,
-				ad.getDesignSmells().size());
+				0, ad.getDesignSmells().size());
 	}
 
 	/** 
@@ -126,13 +123,12 @@ public final class DetectionAntipatternSWTTest extends TestCase {
 		//		.getInstance(MetricRepository.class));
 		ad.detect(DetectionAntipatternSWTTest.IdiomLevelModel);
 		((SpaghettiCodeDetection) ad)
-			.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-				DetectionAntipatternSWTTest.SYSTEM_NAME + "_SpaghettiCode.ini")));
-		Assert
-			.assertEquals(
+				.output(new PrintWriter(ProxyDisk.getInstance()
+						.fileTempOutput(DetectionAntipatternSWTTest.SYSTEM_NAME
+								+ "_SpaghettiCode.ini")));
+		Assert.assertEquals(
 				"detectNumberSpaghettiCode: Incorrect Number of spaghetti codes found",
-				0,
-				ad.getDesignSmells().size());
+				0, ad.getDesignSmells().size());
 	}
 
 	/** 
@@ -141,16 +137,12 @@ public final class DetectionAntipatternSWTTest extends TestCase {
 	public void testDetectSwissArmyKnives() {
 		final IDesignSmellDetection ad = new SwissArmyKnifeDetection();
 		ad.detect(DetectionAntipatternSWTTest.IdiomLevelModel);
-		((SwissArmyKnifeDetection) ad).output(new PrintWriter(
-			ProxyDisk
-				.getInstance()
-				.fileTempOutput(
-					DetectionAntipatternSWTTest.SYSTEM_NAME
-							+ "_SwissArmyKnife.ini")));
-		Assert
-			.assertEquals(
+		((SwissArmyKnifeDetection) ad)
+				.output(new PrintWriter(ProxyDisk.getInstance()
+						.fileTempOutput(DetectionAntipatternSWTTest.SYSTEM_NAME
+								+ "_SwissArmyKnife.ini")));
+		Assert.assertEquals(
 				"detectSwissArmyKnives: Incorrect Number of Swiss army knives found",
-				0,
-				ad.getDesignSmells().size());
+				0, ad.getDesignSmells().size());
 	}
 }

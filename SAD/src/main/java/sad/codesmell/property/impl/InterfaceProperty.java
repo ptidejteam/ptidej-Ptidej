@@ -17,7 +17,7 @@ import sad.codesmell.property.ICodeSmellProperty;
  * Hold information about an interface
  *
  * @author Pierre Leduc
- * @author Yann-Gaï¿½l Guï¿½hï¿½neuc
+ * @author Yann-Gaël Guéhéneuc 
  * @since  2006/05/29
  */
 public class InterfaceProperty extends PropertyContainer implements ICodeSmellProperty {

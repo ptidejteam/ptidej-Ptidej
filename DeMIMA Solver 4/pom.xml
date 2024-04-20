@@ -4,27 +4,40 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>net.ptidej.demima</groupId>
-	<artifactId>demima-solver-4</artifactId>
-	<name>DeMIMA Solver 4</name>
-
 	<parent>
 		<groupId>net.ptidej</groupId>
 		<artifactId>all-ptidej</artifactId>
 		<version>1.0.0</version>
 	</parent>
 
+	<groupId>net.ptidej.demima</groupId>
+	<artifactId>demima-solver-4</artifactId>
+	<name>DeMIMA Solver 4</name>
+
+	<build>
+		<plugins>
+			<!-- Must generate the test-jar for dependent tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.3.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencies>
+
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
 			<artifactId>cpl-core</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.jchoco</groupId>
-			<artifactId>jchoco-core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 
@@ -35,9 +48,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>net.sf.trove4j</groupId>
-			<artifactId>trove4j</artifactId>
-			<version>3.0.3</version>
+			<groupId>net.ptidej.jchoco</groupId>
+			<artifactId>jchoco-core</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 
 		<!-- Test dependencies -->

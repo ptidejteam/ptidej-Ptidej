@@ -29,11 +29,11 @@ public final class BoxDetection extends AbstractMicroPatternDetection implements
 	}
 
 	/*
-	 * 	13. Box. A Box is class with exactly one instance ям?eld. This in-
-	 *	stance ям?eld is mutated by at least one of the methods, or one of the
+	 * 	13. Box. A Box is class with exactly one instance field. This in-
+	 *	stance field is mutated by at least one of the methods, or one of the
 	 *	static methods, of the class.
 	 *	Class CRC32 (in the java.util.crc package) is an example of
-	 *	this micro pattern. Its entire state is represented by a single ям?eld
+	 *	this micro pattern. Its entire state is represented by a single field
 	 *	(int crc), which is mutated by method
 	 *	     update(int i)
 	 */

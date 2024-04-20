@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>DeMIMA Solver Fingerprints Tests</name>
+	<comment></comment>
+	<projects>
+		<project>CPL</project>
+		<project>JChoco</project>
+		<project>JUnit</project>
+		<project>Metrical Ptidej Solver</project>
+		<project>PADL</project>
+		<project>PADL Creator ClassFile</project>
+		<project>Ptidej</project>
+		<project>Ptidej Solver 4</project>
+		<project>Ptidej Solver Tests</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>net.sourceforge.metrics.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+</projectDescription>

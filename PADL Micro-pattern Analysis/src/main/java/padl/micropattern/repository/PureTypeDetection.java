@@ -33,11 +33,11 @@ public final class PureTypeDetection extends AbstractMicroPatternDetection
 	 *	is a Pure Type.
 	 *	An example is class BufferStrategy, which is found in package
 	 *	java.awt.image.BufferStrategy. As the documentation
-	 *	of this class states, it �represents the mechanism with which to
-	 *	organize complex memory . . . �. The concrete implementation can
-	 *	only be fixed in a subclass, since, �Hardware and software limitations
+	 *	of this class states, it represents the mechanism with which to
+	 *	organize complex memory... The concrete implementation can
+	 *	only be fixed in a subclass, since, "Hardware and software limitations
 	 *	determine whether and how a particular buffer strategy can
-	 *	be implemented.�. Indeed, this class has nothing more than four
+	 *	be implemented". Indeed, this class has nothing more than four
 	 *	abstract methods which concrete subclasses must override.
 	 */
 

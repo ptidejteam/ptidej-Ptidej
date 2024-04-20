@@ -1,0 +1,101 @@
+
+--------- Original GoF Patterns ----------
+
+
+
+Strategy Pattern.
+LoadedBracesConfiguration is the Context class.
+ConfigurationProperties is the Strategy interface.
+Concrete Strategy classes:  FakeConfigurationProperties LoadedConfiguration
+Delegation through myProperties of type ConfigurationProperties
+File Location: trunk/src/net/intensicode/idea/config/loaded/LoadedBracesConfiguration.java,
+               trunk/src/net/intensicode/idea/config/ConfigurationProperties.java
+
+Strategy Pattern.
+LoadedCommentConfiguration is the Context class.
+ConfigurationProperties is the Strategy interface.
+Concrete Strategy classes:  FakeConfigurationProperties LoadedConfiguration
+Delegation through myProperties of type ConfigurationProperties
+File Location: trunk/src/net/intensicode/idea/config/loaded/LoadedCommentConfiguration.java,
+               trunk/src/net/intensicode/idea/config/ConfigurationProperties.java
+
+Strategy Pattern.
+LoadedFileTypeConfiguration is the Context class.
+OptionsFolder is the Strategy interface.
+Concrete Strategy classes:  FakeOptionsFolder ProductionOptionsFolder
+Delegation through myOptionsFolder of type OptionsFolder
+File Location: trunk/src/net/intensicode/idea/config/loaded/LoadedFileTypeConfiguration.java,
+               trunk/src/net/intensicode/idea/system/OptionsFolder.java
+
+Strategy Pattern.
+LoadedFileTypeConfiguration is the Context class.
+ConfigurationProperties is the Strategy interface.
+Concrete Strategy classes:  FakeConfigurationProperties LoadedConfiguration
+Delegation through myProperties of type ConfigurationProperties
+File Location: trunk/src/net/intensicode/idea/config/loaded/LoadedFileTypeConfiguration.java,
+               trunk/src/net/intensicode/idea/config/ConfigurationProperties.java
+
+Flyweight Pattern.
+RecognizedTokenRegEx is immutable.
+File location: trunk/src/net/intensicode/idea/syntax/RecognizedTokenRegEx.java
+
+Flyweight Pattern.
+LoadedBracesConfiguration is immutable.
+File location: trunk/src/net/intensicode/idea/config/loaded/LoadedBracesConfiguration.java
+
+Flyweight Pattern.
+LoadedCommentConfiguration is immutable.
+File location: trunk/src/net/intensicode/idea/config/loaded/LoadedCommentConfiguration.java
+
+Flyweight Pattern.
+LoadedFileTypeConfiguration is immutable.
+File location: trunk/src/net/intensicode/idea/config/loaded/LoadedFileTypeConfiguration.java
+
+Facade Pattern.
+FileUtils is a facade class.
+Hidden types: ReaderUtils StreamUtils
+Facade access types: FileUtils
+File Location: trunk/src/net/intensicode/idea/util/FileUtils.java
+
+
+------------------------------------------
+
+Pattern Instance Statistics:
+
+Creational Patterns
+==============================
+Abstract Factory            0
+Factory Method              0
+Singleton                   0
+------------------------------
+Structural Patterns
+==============================
+Adapter                     0
+Bridge                      0
+Composite                   0
+Decorator                   0
+Facade                      1
+Flyweight                   4
+Proxy                       0
+------------------------------
+Behavioral Patterns
+==============================
+Chain of Responsibility     0
+Mediator                    0
+Observer                    0
+State                       0
+Strategy                    4
+Template Method             0
+Visitor                     0
+------------------------------
+
+Number of classes processed: 31
+Number of files processed: 95
+Size of DelegationTable: 39
+Size of concrete class nodes: 18
+Size of undirected invocation edges: 6
+
+
+nMediatorFacadeDual/nMediator = 0/0
+nImmutable/nFlyweight = 4/4
+nFlyweightGoFVersion = 0

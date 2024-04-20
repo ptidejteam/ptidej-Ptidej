@@ -33,12 +33,12 @@ public final class DesignatorDetection extends AbstractMicroPatternDetection
 	 *	examined at runtime.
 	 *	 
 	 *	For example, a class that implements the empty interface Clone-
-	 *	able indicates (at run time) that it is legal to make a ï¬?eld-for-ï¬?eld
+	 *	able indicates (at run time) that it is legal to make a field-for-field
 	 *	copy of instances of that class.
 	 *	Thus, a Designator micro pattern is an interface which does not de-
-	 *	clare any methods, does not deï¬?ne any static ï¬?elds or methods, and
+	 *	clare any methods, does not define any static fields or methods, and
 	 *	does not inherit such members from any of its superinterfaces.
-	 *	A class can also be Designator if its deï¬?nition, as well as the deï¬?n-
+	 *	A class can also be Designator if its definition, as well as the defin-
 	 *	itions of all of its ancestors (other than Object), are empty.
 	 *	Pattern Designator is the rarest, with only 0.2% prevalence in our
 	 *	software corpus. It was included in the catalog because it presents

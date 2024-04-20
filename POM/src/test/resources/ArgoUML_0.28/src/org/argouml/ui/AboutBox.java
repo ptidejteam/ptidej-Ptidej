@@ -274,7 +274,7 @@ public class AboutBox extends ArgoDialog {
         buf.append("+ Bogdan Szanto\n");
         buf.append("+ Bogdan Pistol\n");
         buf.append("+ Brian Hudson\n");
-        buf.append("+ Christian López Espínola\n");
+        buf.append("+ Christian López Espínola\n");
         buf.append("+ Dave Thompson\n");
         buf.append("+ Harald Braun\n");
         buf.append("+ Jan Magne Andersen\n");

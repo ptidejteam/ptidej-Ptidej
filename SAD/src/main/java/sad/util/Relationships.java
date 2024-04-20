@@ -24,7 +24,7 @@ import sad.kernel.impl.CodeSmellComposite;
 
 /**
  * @author Naouel Moha
- * @author Yann-Gaï¿½l Guï¿½hï¿½neuc
+ * @author Yann-Gaël Guéhéneuc 
  * @since  2005/02/04
  *
  * The class Relationships allows to check the relationships

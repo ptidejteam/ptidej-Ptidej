@@ -25,14 +25,14 @@ public final class RecordDetection extends AbstractMicroPatternDetection
 	}
 
 	/*
-	 *  16. Record. JAVA makes it possible to deям?ne classes which look
+	 *  16. Record. JAVA makes it possible to define classes which look
 	 *	and feel much like PA S C A L [46] record types. A class matches
-	 *	the Record micro pattern if all of its ям?elds are public and if
+	 *	the Record micro pattern if all of its fields are public and if
 	 *	has no methods other than constructors and methods inherited from
 	 *	Object.
 	 *	Perhaps surprisingly, there is a considerable number of examples
 	 *	of this pattern in the JAVA standard library. For example, in pack-
-	 *	age java.sql we ям?nd class DriverPropertyInfo which is
+	 *	age java.sql we find class DriverPropertyInfo which is
 	 *	a record managing a textual property passed to a JDBC driver.
 	 */
 

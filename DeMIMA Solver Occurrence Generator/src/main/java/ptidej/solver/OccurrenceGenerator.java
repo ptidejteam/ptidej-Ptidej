@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Ga�l Gu�h�neuc and others.
+ * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc  and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Ga�l Gu�h�neuc and others, see in file; API and its implementation
+ *     Yann-Gaël Guéhéneuc  and others, see in file; API and its implementation
  ******************************************************************************/
 package ptidej.solver;
 
@@ -18,19 +18,14 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Properties;
+
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.motif.IDesignMotifModel;
-import padl.motif.visitor.repository.PtidejSolver2AC4DomainGenerator;
-import padl.motif.visitor.repository.PtidejSolver2CustomDomainGenerator;
-import padl.motif.visitor.repository.PtidejSolver3AC4DomainGenerator;
-import padl.motif.visitor.repository.PtidejSolver3CustomDomainGenerator;
-import padl.motif.visitor.repository.PtidejSolverAC4ConstraintGenerator;
-import padl.motif.visitor.repository.PtidejSolverCustomConstraintGenerator;
 import padl.visitor.IGenerator;
 import padl.visitor.IWalker;
-import ptidej.solver.domain.Manager;
 import ptidej.solver.fingerprint.ReducedDomainBuilder;
+import ptidej.solver.java.domain.Manager;
 import util.io.Files;
 import util.io.OutputMonitor;
 import util.io.ProxyConsole;
@@ -62,6 +57,7 @@ public final class OccurrenceGenerator {
 	public static final int VERSION_PTIDEJSOLVER4 = 8;
 
 	private static OccurrenceGenerator UniqueInstance;
+
 	public static OccurrenceGenerator getInstance() {
 		if (OccurrenceGenerator.UniqueInstance == null) {
 			OccurrenceGenerator.UniqueInstance = new OccurrenceGenerator();
@@ -86,30 +82,26 @@ public final class OccurrenceGenerator {
 			//				+ PropertyManager.getSolverArguments() + " -f \""
 			//				+ PropertyManager.getSolverDomainDirectory() + "Instructions.cl\"")
 			//			.replace('/', '\\');
-			final String commandLine =
-				('\"' + Files.getClassPath(OccurrenceGenerator.class)
-				// Yann 2003/10/24: Relativity!
-				// The PtidejSolver executable file must be
-				// in the Ptidej project folder where it
-				// will be found automatically, no need for
-				// hard-coded path anymore!
-				// return "C:/Documents and Settings/Yann/Work/Ptidej Solver 3/Ptidej/";
-						+ "../PtidejSolver.exe\" -s 4 4" + " -f \""
-						+ System.getProperty("user.dir") + '/'
-						+ ProxyDisk.getInstance().directoryTempString()
-						+ "Instructions.cl\"").replace('/', '\\');
+			final String commandLine = ('\"'
+					+ Files.getClassPath(OccurrenceGenerator.class)
+					// Yann 2003/10/24: Relativity!
+					// The PtidejSolver executable file must be
+					// in the Ptidej project folder where it
+					// will be found automatically, no need for
+					// hard-coded path anymore!
+					// return "C:/Documents and Settings/Yann/Work/Ptidej Solver 3/Ptidej/";
+					+ "../PtidejSolver.exe\" -s 4 4" + " -f \""
+					+ System.getProperty("user.dir") + '/'
+					+ ProxyDisk.getInstance().directoryTempString()
+					+ "Instructions.cl\"").replace('/', '\\');
 			final Process process = Runtime.getRuntime().exec(commandLine);
 			final OutputMonitor errorStreamMonitor = new OutputMonitor(
-				"Ptidej Solver Error Stream Monitor",
-				"",
-				process.getErrorStream(),
-				System.out);
+					"Ptidej Solver Error Stream Monitor", "",
+					process.getErrorStream(), System.out);
 			errorStreamMonitor.start();
 			final OutputMonitor inputStreamMonitor = new OutputMonitor(
-				"Ptidej Solver Input Stream Monitor",
-				"",
-				process.getInputStream(),
-				System.out);
+					"Ptidej Solver Input Stream Monitor", "",
+					process.getInputStream(), System.out);
 			inputStreamMonitor.start();
 
 			// I wait for the process to finish; i.e., I wait for
@@ -129,8 +121,7 @@ public final class OccurrenceGenerator {
 			}
 
 			// I load the results.
-			properties.load(
-				new FileInputStream(
+			properties.load(new FileInputStream(
 					ProxyDisk.getInstance().directoryTempString()
 							+ "ConstraintResults.ini"));
 		}
@@ -140,18 +131,17 @@ public final class OccurrenceGenerator {
 
 		return properties;
 	}
+
 	private Properties callJavaConstraintSolver(
-		final ptidej.solver.Problem problem,
-		final char[] motifName,
-		final IAbstractModel source,
-		final int solver) {
+			final ptidej.solver.java.Problem problem, final char[] motifName,
+			final IAbstractModel source, final int solver) {
 
 		final Properties solutions = new Properties();
 
 		try {
 			final String resultFile = "ConstraintResults.ini";
-			final Writer writer =
-				ProxyDisk.getInstance().fileTempOutput(resultFile);
+			final Writer writer = ProxyDisk.getInstance()
+					.fileTempOutput(resultFile);
 
 			problem.setWriter(new PrintWriter(writer));
 			if (solver == OccurrenceGenerator.SOLVER_AUTOMATIC) {
@@ -164,8 +154,7 @@ public final class OccurrenceGenerator {
 				problem.simpleAutomaticSolve(true);
 			}
 
-			solutions.load(
-				new ReaderInputStream(
+			solutions.load(new ReaderInputStream(
 					ProxyDisk.getInstance().fileTempInput(resultFile)));
 		}
 		catch (final IOException e) {
@@ -174,10 +163,9 @@ public final class OccurrenceGenerator {
 
 		return solutions;
 	}
-	private Properties callPtidejSolver4(
-		final char[] motifName,
-		final IAbstractModel source,
-		final int solver) {
+
+	private Properties callPtidejSolver4(final char[] motifName,
+			final IAbstractModel source, final int solver) {
 
 		try {
 			final StringBuffer buffer = new StringBuffer();
@@ -185,16 +173,14 @@ public final class OccurrenceGenerator {
 			buffer.append(motifName);
 			buffer.append("Motif");
 			final Class<?> chosenPattern = Class.forName(buffer.toString());
-			final Method problemMethod = chosenPattern
-				.getDeclaredMethod("getProblem", new Class[] { List.class });
-			final ptidej.solver.Problem problem =
-				(ptidej.solver.Problem) problemMethod.invoke(
-					null,
-					new Object[] {
+			final Method problemMethod = chosenPattern.getDeclaredMethod(
+					"getProblem", new Class[] { List.class });
+			final ptidej.solver.java.Problem problem = (ptidej.solver.java.Problem) problemMethod
+					.invoke(null, new Object[] {
 							Manager.build((IAbstractLevelModel) source) });
 
-			return this
-				.callJavaConstraintSolver(problem, motifName, source, solver);
+			return this.callJavaConstraintSolver(problem, motifName, source,
+					solver);
 		}
 		catch (final IllegalArgumentException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
@@ -214,10 +200,9 @@ public final class OccurrenceGenerator {
 
 		return new Properties();
 	}
-	private Properties callPtidejSolver4Metrical(
-		final char[] motifName,
-		final IAbstractModel source,
-		final int solver) {
+
+	private Properties callPtidejSolver4Metrical(final char[] motifName,
+			final IAbstractModel source, final int solver) {
 
 		try {
 			final StringBuffer buffer = new StringBuffer();
@@ -226,20 +211,20 @@ public final class OccurrenceGenerator {
 			buffer.append("Motif");
 			final Class<?> chosenPattern = Class.forName(buffer.toString());
 			final Method problemMethod = chosenPattern.getDeclaredMethod(
-				"getProblem",
-				new Class[] { List.class, ReducedDomainBuilder.class });
+					"getProblem",
+					new Class[] { List.class, ReducedDomainBuilder.class });
 			// Yann 2004/12/03: Consistency.
 			// Manger and ReducedDomainBuilder take different type
 			// of parameters as arguments, these should be consistent!
-			final ptidej.solver.fingerprint.Problem problem =
-				(ptidej.solver.fingerprint.Problem) problemMethod.invoke(
-					null,
-					new Object[] { Manager.build((IAbstractLevelModel) source),
-							new ReducedDomainBuilder(
-								(IAbstractLevelModel) source) });
+			final ptidej.solver.fingerprint.Problem problem = (ptidej.solver.fingerprint.Problem) problemMethod
+					.invoke(null,
+							new Object[] {
+									Manager.build((IAbstractLevelModel) source),
+									new ReducedDomainBuilder(
+											(IAbstractLevelModel) source) });
 
-			return this
-				.callJavaConstraintSolver(problem, motifName, source, solver);
+			return this.callJavaConstraintSolver(problem, motifName, source,
+					solver);
 		}
 		catch (final IllegalArgumentException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
@@ -259,16 +244,16 @@ public final class OccurrenceGenerator {
 
 		return new Properties();
 	}
-	private void createClaireConstraints(
-		final IDesignMotifModel model,
-		final IGenerator constraintGenerator) {
+
+	private void createClaireConstraints(final IDesignMotifModel model,
+			final IGenerator constraintGenerator) {
 
 		if (model != null) {
 			try {
 				model.generate(constraintGenerator);
 
-				final Writer writer = ProxyDisk.getInstance().fileTempOutput(
-					model.getDisplayName() + "Pattern.cl");
+				final Writer writer = ProxyDisk.getInstance()
+						.fileTempOutput(model.getDisplayName() + "Pattern.cl");
 				writer.write(constraintGenerator.getCode());
 				writer.close();
 			}
@@ -277,14 +262,14 @@ public final class OccurrenceGenerator {
 			}
 		}
 	}
-	private void createClaireDomain(
-		final IAbstractModel source,
-		final IWalker domainGenerator) {
+
+	private void createClaireDomain(final IAbstractModel source,
+			final IWalker domainGenerator) {
 		try {
 			source.walk(domainGenerator);
 
-			final Writer writer =
-				ProxyDisk.getInstance().fileTempOutput("Domain.cl");
+			final Writer writer = ProxyDisk.getInstance()
+					.fileTempOutput("Domain.cl");
 			writer.write(domainGenerator.getResult().toString());
 			writer.close();
 		}
@@ -292,10 +277,9 @@ public final class OccurrenceGenerator {
 			ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 	}
-	private void createClaireInstructions(
-		final IDesignMotifModel pattern,
-		final String solver,
-		final String problem) {
+
+	private void createClaireInstructions(final IDesignMotifModel pattern,
+			final String solver, final String problem) {
 
 		Writer writer = null;
 		try {
@@ -316,7 +300,7 @@ public final class OccurrenceGenerator {
 				// this directory to locate the instructions...
 				//	instructions.append(PropertyManager.getSolverDomainDirectory());
 				instructions
-					.append(ProxyDisk.getInstance().directoryTempString());
+						.append(ProxyDisk.getInstance().directoryTempString());
 				instructions.append(pattern.getName());
 				instructions.append("Pattern.cl");
 				instructions.append("\"),\n");
@@ -351,220 +335,77 @@ public final class OccurrenceGenerator {
 			}
 		}
 	}
+
 	// Yann 2004/12/03: Duplicate for the cause!
 	// Methods generatePtidejSolver2ExecutionData() and
 	// generatePtidejSolver3ExecutionData() are almost
 	// duplicate but I don't know if it is worth abstracting
 	// them because they don't do much and won't change much.
-	public void generatePtidejSolver2ExecutionData(
-		final char[] motifName,
-		final IDesignMotifModel pattern,
-		final IAbstractModel source,
-		final int solver,
-		final int problem) {
+	public void generatePtidejSolver2ExecutionData(final char[] motifName,
+			final IDesignMotifModel pattern, final IAbstractModel source,
+			final int solver, final int problem) {
 
-		// Yann 2002/08/09: Algorithms!
-		// I manage different solving algorithms.
-		// Yann 2002/08/27: Solvers and problems!
-		// I now allow combination of different solve strategies
-		// (automatic, combinatorial automatic...) with different
-		// problem (ac4ProblemForCompositePattern,
-		// customProblemForAbstractFactory...).
-		final String solverName;
-		final StringBuffer problemName = new StringBuffer();
-		final IGenerator constraintGenerator;
-		final IWalker domainGenerator;
-
-		switch (solver) {
-			case OccurrenceGenerator.SOLVER_AUTOMATIC :
-				solverName = "automaticSolve";
-				break;
-			case OccurrenceGenerator.SOLVER_COMBINATORIAL_AUTOMATIC :
-				solverName = "combinatorialAutomaticSolve";
-				break;
-			case OccurrenceGenerator.SOLVER_SIMPLE_AUTOMATIC :
-				solverName = "simpleAutomaticSolve";
-				break;
-			default :
-				throw new RuntimeException(
-					MultilingualManager.getString(
-						"UNKNOWN_SOLVER_ALGO",
-						OccurrenceGenerator.class));
-		}
-
-		switch (problem) {
-			case OccurrenceGenerator.PROBLEM_CUSTOM :
-				problemName.append("customProblemFor");
-				problemName.append(motifName);
-				domainGenerator = new PtidejSolver2CustomDomainGenerator();
-				constraintGenerator =
-					new PtidejSolverCustomConstraintGenerator();
-				break;
-			case OccurrenceGenerator.PROBLEM_AC4 :
-				problemName.append("ac4ProblemFor");
-				problemName.append(motifName);
-				domainGenerator = new PtidejSolver2AC4DomainGenerator();
-				constraintGenerator = new PtidejSolverAC4ConstraintGenerator();
-				break;
-			default :
-				throw new RuntimeException(
-					MultilingualManager.getString(
-						"UNKNOWN_PROBLEM_TYPE",
-						OccurrenceGenerator.class));
-		}
-
-		// First, I write in a file the domain from the source.
-		this.createClaireDomain(source, domainGenerator);
-
-		// Second, I write in a file the constraints from the pattern.
-		// (if any).
-		this.createClaireConstraints(pattern, constraintGenerator);
-
-		// Third, I write the instructions for the constraint solver.
-		this.createClaireInstructions(
-			pattern,
-			solverName,
-			problemName.toString());
+		ptidej.solver.claire.OccurrenceGenerator.getInstance()
+				.generatePtidejSolver2ExecutionData(motifName, pattern, source,
+						solver, problem);
 	}
-	public void generatePtidejSolver3ExecutionData(
-		final char[] aMotifName,
-		final IDesignMotifModel aMotifModel,
-		final IAbstractModel aSourceModel,
-		final int aSolverKind,
-		final int aProblemKind) {
 
-		// Yann 2002/08/09: Algorithms!
-		// I manage different solving algorithms.
-		// Yann 2002/08/27: Solvers and problems!
-		// I now allow combination of different solve strategies
-		// (automatic, combinatorial automatic...) with different
-		// problem (ac4ProblemForCompositePattern,
-		// customProblemForAbstractFactory...).
-		final String solverName;
-		final StringBuffer problemName = new StringBuffer();
-		final IGenerator constraintGenerator;
-		final IWalker domainGenerator;
+	public void generatePtidejSolver3ExecutionData(final char[] aMotifName,
+			final IDesignMotifModel aMotifModel,
+			final IAbstractModel aSourceModel, final int aSolverKind,
+			final int aProblemKind) {
 
-		switch (aSolverKind) {
-			case OccurrenceGenerator.SOLVER_AUTOMATIC :
-				solverName = "automaticSolve";
-				break;
-			case OccurrenceGenerator.SOLVER_COMBINATORIAL_AUTOMATIC :
-				solverName = "combinatorialAutomaticSolve";
-				break;
-			case OccurrenceGenerator.SOLVER_SIMPLE_AUTOMATIC :
-				solverName = "simpleAutomaticSolve";
-				break;
-			default :
-				throw new RuntimeException(
-					MultilingualManager.getString(
-						"UNKNOWN_SOLVER_ALGO",
-						OccurrenceGenerator.class));
-		}
+		ptidej.solver.claire.OccurrenceGenerator.getInstance()
+				.generatePtidejSolver3ExecutionData(aMotifName, aMotifModel,
+						aSourceModel, aSolverKind, aProblemKind);
 
-		switch (aProblemKind) {
-			case OccurrenceGenerator.PROBLEM_CUSTOM :
-				problemName.append("customProblemFor");
-				problemName.append(aMotifName);
-				domainGenerator = new PtidejSolver3CustomDomainGenerator();
-				constraintGenerator =
-					new PtidejSolverCustomConstraintGenerator();
-				break;
-			case OccurrenceGenerator.PROBLEM_AC4 :
-				problemName.append("ac4ProblemFor");
-				problemName.append(aMotifName);
-				domainGenerator = new PtidejSolver3AC4DomainGenerator();
-				constraintGenerator = new PtidejSolverAC4ConstraintGenerator();
-				break;
-			default :
-				throw new RuntimeException(
-					MultilingualManager.getString(
-						"UNKNOWN_PROBLEM_TYPE",
-						OccurrenceGenerator.class));
-		}
-
-		// First, I write in a file the domain from the source.
-		this.createClaireDomain(aSourceModel, domainGenerator);
-
-		// Second, I write in a file the constraints from the pattern.
-		// (if any).
-		this.createClaireConstraints(aMotifModel, constraintGenerator);
-
-		// Third, I write the instructions for the constraint solver.
-		this.createClaireInstructions(
-			aMotifModel,
-			solverName,
-			problemName.toString());
 	}
-	public Properties getOccurrences(
-		final IDesignMotifModel aMotif,
-		final IAbstractModel source,
-		final int version,
-		final int solver,
-		final int problem) {
 
-		return this.getOccurrences(
-			aMotif.getName(),
-			aMotif,
-			source,
-			version,
-			solver,
-			problem);
-	}
-	public Properties getOccurrences(
-		final char[] motifName,
-		final IAbstractModel source,
-		final int version,
-		final int solver,
-		final int problem) {
+	public Properties getOccurrences(final IDesignMotifModel aMotif,
+			final IAbstractModel source, final int version, final int solver,
+			final int problem) {
 
-		return this
-			.getOccurrences(motifName, null, source, version, solver, problem);
+		return this.getOccurrences(aMotif.getName(), aMotif, source, version,
+				solver, problem);
 	}
-	private Properties getOccurrences(
-		final char[] motifName,
-		final IDesignMotifModel motif,
-		final IAbstractModel source,
-		final int version,
-		final int solver,
-		final int problem) {
+
+	public Properties getOccurrences(final char[] motifName,
+			final IAbstractModel source, final int version, final int solver,
+			final int problem) {
+
+		return this.getOccurrences(motifName, null, source, version, solver,
+				problem);
+	}
+
+	private Properties getOccurrences(final char[] motifName,
+			final IDesignMotifModel motif, final IAbstractModel source,
+			final int version, final int solver, final int problem) {
 
 		switch (version) {
-			case OccurrenceGenerator.VERSION_PTIDEJSOLVER2 :
-				this.generatePtidejSolver2ExecutionData(
-					motifName,
-					motif,
-					source,
-					solver,
-					problem);
+		case OccurrenceGenerator.VERSION_PTIDEJSOLVER2:
+			this.generatePtidejSolver2ExecutionData(motifName, motif, source,
+					solver, problem);
 
-				// Fourth, I call the constraint solver.
-				return this.callClaireConstraintSolver();
+			// Fourth, I call the constraint solver.
+			return this.callClaireConstraintSolver();
 
-			case OccurrenceGenerator.VERSION_PTIDEJSOLVER3 :
-				this.generatePtidejSolver3ExecutionData(
-					motifName,
-					motif,
-					source,
-					solver,
-					problem);
+		case OccurrenceGenerator.VERSION_PTIDEJSOLVER3:
+			this.generatePtidejSolver3ExecutionData(motifName, motif, source,
+					solver, problem);
 
-				// Fourth, I call the constraint solver.
-				return this.callClaireConstraintSolver();
+			// Fourth, I call the constraint solver.
+			return this.callClaireConstraintSolver();
 
-			case OccurrenceGenerator.VERSION_PTIDEJSOLVER4 :
-				return this.callPtidejSolver4(motifName, source, solver);
+		case OccurrenceGenerator.VERSION_PTIDEJSOLVER4:
+			return this.callPtidejSolver4(motifName, source, solver);
 
-			case OccurrenceGenerator.VERSION_METRICAL_PTIDEJSOLVER4 :
-				return this
-					.callPtidejSolver4Metrical(motifName, source, solver);
+		case OccurrenceGenerator.VERSION_METRICAL_PTIDEJSOLVER4:
+			return this.callPtidejSolver4Metrical(motifName, source, solver);
 
-			default :
-				throw new RuntimeException(
-					new IllegalAccessException(
-						MultilingualManager.getString(
-							"UNKNOWN_SOLVER_VER",
-							OccurrenceGenerator.class)));
+		default:
+			throw new RuntimeException(
+					new IllegalAccessException(MultilingualManager.getString(
+							"UNKNOWN_SOLVER_VER", OccurrenceGenerator.class)));
 		}
 	}
 }

@@ -21,6 +21,24 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.2.5</version>
 				<configuration>
+					<!-- Must export/open some hidden package to run PADL
+					Creator JavaFile (JavaC) -->
+					<argLine>
+						--add-exports=jdk.compiler/com.sun.source.tree=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.source.tree=ALL-UNNAMED
+						--add-exports=jdk.compiler/com.sun.source.util=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.source.util=ALL-UNNAMED
+						--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
+						--add-exports=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED
+						--add-exports=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED
+						--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
+						--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
+					</argLine>
 					<!-- Excluded on purpose -->
 					<excludes>
 						<exclude>TestAllPtidej.java</exclude>
@@ -146,6 +164,21 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-javafile-eclipse-parser</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-javafile-eclipse-parser</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
 		<!--
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
@@ -225,30 +258,15 @@
 		</dependency>
 
 		<dependency>
-			<groupId>net.ptidej.java-parser</groupId>
-			<artifactId>java-parser-core</artifactId>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-javafile-javac-parser</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>net.ptidej.java-parser</groupId>
-			<artifactId>java-parser-core</artifactId>
-			<version>1.0.0</version>
-			<type>test-jar</type>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.jct</groupId>
-			<artifactId>jct-core</artifactId>
-			<version>1.0.0</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.jct</groupId>
-			<artifactId>jct-core</artifactId>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-javafile-javac-parser</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>
@@ -354,6 +372,96 @@
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-serialiser-db4o</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-serialiser-jos</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-serialiser-jos</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.sad</groupId>
+			<artifactId>sad-core</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.sad</groupId>
+			<artifactId>sad-core</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.squad</groupId>
+			<artifactId>squad-core</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.squad</groupId>
+			<artifactId>squad-core</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-3</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-3</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-4</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-4</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-fingerprints</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-fingerprints</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>

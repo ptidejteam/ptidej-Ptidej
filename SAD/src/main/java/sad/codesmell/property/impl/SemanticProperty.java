@@ -16,7 +16,7 @@ import sad.codesmell.property.ICodeSmellProperty;
  * Hold information about a semantic property
  *
  * @author Pierre Leduc
- * @author Yann-Gaï¿½l Guï¿½hï¿½neuc
+ * @author Yann-Gaël Guéhéneuc 
  * @since  2006/05/29
  */
 public class SemanticProperty implements ICodeSmellProperty {

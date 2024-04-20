@@ -11,7 +11,9 @@
 package sad.detection.test.classfile.xerces;
 
 import java.io.PrintWriter;
+
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.generator.helper.ModelGenerator;
 import padl.kernel.IIdiomLevelModel;
@@ -28,7 +30,6 @@ import sad.codesmell.detection.repository.SpaghettiCode.ClassGlobalVariableDetec
 import sad.codesmell.detection.repository.SpaghettiCode.LongMethodDetection;
 import sad.codesmell.detection.repository.SpaghettiCode.MethodNoParameterDetection;
 import sad.codesmell.detection.repository.SwissArmyKnife.MultipleInterfaceDetection;
-import util.io.Files;
 import util.io.ProxyDisk;
 
 /**
@@ -38,10 +39,10 @@ import util.io.ProxyDisk;
 public final class VariousSmellsTest extends TestCase {
 	private static IIdiomLevelModel IdiomLevelModel;
 	//	private static ModelAnnotatorLOC Annotator;
-	private static final String PATH = "../SAD Tests/data/Xercesv1.0.1.jar";
-	private static final String MAIN_PATH = "../SAD Tests/data/";
+	private static final String PATH = "../SAD/target/test-classes/Xercesv1.0.1.jar";
+	private static final String MAIN_PATH = "../SAD/target/test-classes/";
 	private static String SYSTEM_NAME = VariousSmellsTest.PATH
-		.substring(VariousSmellsTest.MAIN_PATH.length());
+			.substring(VariousSmellsTest.MAIN_PATH.length());
 
 	public VariousSmellsTest(final String name) {
 		super(name);
@@ -64,9 +65,9 @@ public final class VariousSmellsTest extends TestCase {
 			//		new String[] { PATH },
 			//		DetectionCodeSmellTest.IdiomLevelModel);
 
-			VariousSmellsTest.IdiomLevelModel =
-				ModelGenerator
-					.generateModelFromClassFilesDirectories(new String[] { VariousSmellsTest.PATH });
+			VariousSmellsTest.IdiomLevelModel = ModelGenerator
+					.generateModelFromClassFilesDirectories(
+							new String[] { VariousSmellsTest.PATH });
 		}
 	}
 
@@ -77,12 +78,10 @@ public final class VariousSmellsTest extends TestCase {
 		final ICodeSmellDetection cs = new ClassGlobalVariableDetection();
 		cs.detect(VariousSmellsTest.IdiomLevelModel);
 		cs.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-			VariousSmellsTest.SYSTEM_NAME + "_ClassGlobalVariable.ini")));
-		Assert
-			.assertEquals(
+				VariousSmellsTest.SYSTEM_NAME + "_ClassGlobalVariable.ini")));
+		Assert.assertEquals(
 				"detectAllClassGlobalVariable: Incorrect Number of classes with no class and global variables",
-				11,
-				cs.getCodeSmells().size());
+				11, cs.getCodeSmells().size());
 	}
 
 	/** 
@@ -94,15 +93,12 @@ public final class VariousSmellsTest extends TestCase {
 		//	cs.setMetricsFileRepository(ClassFileRepository
 		//		.getInstance(MetricRepository.class));
 		cs.detect(VariousSmellsTest.IdiomLevelModel);
-		cs
-			.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-				VariousSmellsTest.SYSTEM_NAME
+		cs.output(new PrintWriter(ProxyDisk.getInstance()
+				.fileTempOutput(VariousSmellsTest.SYSTEM_NAME
 						+ "_NoInheritanceDetection.ini")));
-		Assert
-			.assertEquals(
+		Assert.assertEquals(
 				"detectAllClassNoInheritance: Incorrect Number of classes that do not use inheritance",
-				189,
-				cs.getCodeSmells().size());
+				189, cs.getCodeSmells().size());
 	}
 
 	/** 
@@ -112,16 +108,12 @@ public final class VariousSmellsTest extends TestCase {
 		final ICodeSmellDetection cs = new NoPolymorphismDetection();
 		cs.detect(VariousSmellsTest.IdiomLevelModel);
 
-		cs.output(new PrintWriter(ProxyDisk
-			.getInstance()
-			.fileTempOutput(
-				VariousSmellsTest.SYSTEM_NAME
+		cs.output(new PrintWriter(ProxyDisk.getInstance()
+				.fileTempOutput(VariousSmellsTest.SYSTEM_NAME
 						+ "_NoPolymorphismDetection.ini")));
-		Assert
-			.assertEquals(
+		Assert.assertEquals(
 				"detectAllClassNoPolymorphism: Incorrect Number of classes that do not use polymorphism",
-				148,
-				cs.getCodeSmells().size());
+				148, cs.getCodeSmells().size());
 	}
 
 	/** 
@@ -131,12 +123,10 @@ public final class VariousSmellsTest extends TestCase {
 		final ICodeSmellDetection cs = new ClassOneMethodDetection();
 		cs.detect(VariousSmellsTest.IdiomLevelModel);
 		cs.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-			VariousSmellsTest.SYSTEM_NAME + "_ClassOneMethod.ini")));
-		Assert
-			.assertEquals(
+				VariousSmellsTest.SYSTEM_NAME + "_ClassOneMethod.ini")));
+		Assert.assertEquals(
 				"detectAllClassOneMethod: Incorrect Number of classes that have only one method",
-				11,
-				cs.getCodeSmells().size());
+				11, cs.getCodeSmells().size());
 	}
 
 	/** 
@@ -162,13 +152,12 @@ public final class VariousSmellsTest extends TestCase {
 		//	cs.setMetricsFileRepository(ClassFileRepository
 		//		.getInstance(MetricRepository.class));
 		cs.detect(VariousSmellsTest.IdiomLevelModel);
-		cs.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-			VariousSmellsTest.SYSTEM_NAME
-					+ "_ControllerClassDetection.ini")));
+		cs.output(new PrintWriter(ProxyDisk.getInstance()
+				.fileTempOutput(VariousSmellsTest.SYSTEM_NAME
+						+ "_ControllerClassDetection.ini")));
 		Assert.assertEquals(
-			"detectControllerClass: Incorrect Number of controller classes",
-			2,
-			cs.getCodeSmells().size());
+				"detectControllerClass: Incorrect Number of controller classes",
+				2, cs.getCodeSmells().size());
 	}
 
 	/** 
@@ -181,11 +170,10 @@ public final class VariousSmellsTest extends TestCase {
 		//		.getInstance(MetricRepository.class));
 		cs.detect(VariousSmellsTest.IdiomLevelModel);
 		cs.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-			VariousSmellsTest.SYSTEM_NAME + "_DataClassDetection.ini")));
+				VariousSmellsTest.SYSTEM_NAME + "_DataClassDetection.ini")));
 		Assert.assertEquals(
-			"detectAllDataClass: Incorrect Number of data classes",
-			80,
-			cs.getCodeSmells().size());
+				"detectAllDataClass: Incorrect Number of data classes", 80,
+				cs.getCodeSmells().size());
 	}
 
 	/** 
@@ -197,14 +185,12 @@ public final class VariousSmellsTest extends TestCase {
 		//	cs.setMetricsFileRepository(ClassFileRepository
 		//		.getInstance(MetricRepository.class));
 		cs.detect(VariousSmellsTest.IdiomLevelModel);
-		cs
-			.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-				VariousSmellsTest.SYSTEM_NAME
+		cs.output(new PrintWriter(ProxyDisk.getInstance()
+				.fileTempOutput(VariousSmellsTest.SYSTEM_NAME
 						+ "_FunctionClassDetection.ini")));
 		Assert.assertEquals(
-			"detectFunctionClass: Incorrect Number of function classes",
-			0,
-			cs.getCodeSmells().size());
+				"detectFunctionClass: Incorrect Number of function classes", 0,
+				cs.getCodeSmells().size());
 	}
 
 	/** 
@@ -217,11 +203,10 @@ public final class VariousSmellsTest extends TestCase {
 		//		.getInstance(MetricRepository.class));
 		cs.detect(VariousSmellsTest.IdiomLevelModel);
 		cs.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-			VariousSmellsTest.SYSTEM_NAME + "_LargeClassDetection.ini")));
+				VariousSmellsTest.SYSTEM_NAME + "_LargeClassDetection.ini")));
 		Assert.assertEquals(
-			"detectAllLargeClass: Incorrect Number of large classes",
-			17,
-			cs.getCodeSmells().size());
+				"detectAllLargeClass: Incorrect Number of large classes", 17,
+				cs.getCodeSmells().size());
 	}
 
 	/** 
@@ -247,11 +232,10 @@ public final class VariousSmellsTest extends TestCase {
 		//		.getInstance(MetricRepository.class));
 		cs.detect(VariousSmellsTest.IdiomLevelModel);
 		cs.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-			VariousSmellsTest.SYSTEM_NAME + "_LongMethodDetection.ini")));
+				VariousSmellsTest.SYSTEM_NAME + "_LongMethodDetection.ini")));
 		Assert.assertEquals(
-			"detectLongMethods: Incorrect Number of long methods found",
-			18,
-			cs.getCodeSmells().size());
+				"detectLongMethods: Incorrect Number of long methods found", 18,
+				cs.getCodeSmells().size());
 	}
 
 	/** 
@@ -264,12 +248,10 @@ public final class VariousSmellsTest extends TestCase {
 		//		.getInstance(MetricRepository.class));
 		cs.detect(VariousSmellsTest.IdiomLevelModel);
 		cs.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-			VariousSmellsTest.SYSTEM_NAME + "_LowCohesionDetection.ini")));
-		Assert
-			.assertEquals(
+				VariousSmellsTest.SYSTEM_NAME + "_LowCohesionDetection.ini")));
+		Assert.assertEquals(
 				"detectLowCohesion: Incorrect Number of low cohesion classes found",
-				0,
-				cs.getCodeSmells().size());
+				0, cs.getCodeSmells().size());
 	}
 
 	/** 
@@ -281,14 +263,12 @@ public final class VariousSmellsTest extends TestCase {
 		//	cs.setMetricsFileRepository(ClassFileRepository
 		//		.getInstance(MetricRepository.class));
 		cs.detect(VariousSmellsTest.IdiomLevelModel);
-		cs.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-			VariousSmellsTest.SYSTEM_NAME
-					+ "_MethodsNoParameterDetection.ini")));
-		Assert
-			.assertEquals(
+		cs.output(new PrintWriter(ProxyDisk.getInstance()
+				.fileTempOutput(VariousSmellsTest.SYSTEM_NAME
+						+ "_MethodsNoParameterDetection.ini")));
+		Assert.assertEquals(
 				"detectAllMethodsNoParameter: Incorrect Number of methods with no parameter",
-				159,
-				cs.getCodeSmells().size());
+				159, cs.getCodeSmells().size());
 	}
 
 	/** 
@@ -298,14 +278,12 @@ public final class VariousSmellsTest extends TestCase {
 		// Number of interfaces that are considered as multiple
 		final ICodeSmellDetection cs = new MultipleInterfaceDetection();
 		cs.detect(VariousSmellsTest.IdiomLevelModel);
-		cs.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-			VariousSmellsTest.SYSTEM_NAME
-					+ "_MultipleInterfaceDetection.ini")));
-		Assert
-			.assertEquals(
+		cs.output(new PrintWriter(ProxyDisk.getInstance()
+				.fileTempOutput(VariousSmellsTest.SYSTEM_NAME
+						+ "_MultipleInterfaceDetection.ini")));
+		Assert.assertEquals(
 				"detectAllMultipleInterface: Incorrect Number of multiple interfaces",
-				6,
-				cs.getCodeSmells().size());
+				6, cs.getCodeSmells().size());
 	}
 
 	/** 

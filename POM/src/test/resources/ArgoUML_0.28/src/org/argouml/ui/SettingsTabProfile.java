@@ -64,7 +64,7 @@ import org.argouml.uml.diagram.DiagramAppearance;
 /**
  * The Tab containing the global settings for profiles
  * 
- * @author Marcos Aurï¿½lio
+ * @author Marcos Aurélio
  */
 public class SettingsTabProfile extends JPanel implements
         GUISettingsTabInterface, ActionListener {

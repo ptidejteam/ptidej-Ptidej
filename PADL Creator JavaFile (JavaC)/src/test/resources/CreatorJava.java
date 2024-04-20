@@ -1,9 +1,9 @@
 /**
  * @author Mathieu Lemoine
- * @created 2009-03-02 (æœˆ)
+ * @created 2009-03-02
  * 
  * Licensed under 3-clause BSD License:
- * Copyright © 2009, Mathieu Lemoine
+ * Copyright 2009, Mathieu Lemoine
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

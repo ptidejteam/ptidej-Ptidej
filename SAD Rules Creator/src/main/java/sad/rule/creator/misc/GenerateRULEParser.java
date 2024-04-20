@@ -18,7 +18,7 @@ import java.io.Writer;
 import util.io.ProxyDisk;
 
 /**
- * @author Yann-Gaï¿½l Guï¿½hï¿½neuc
+ * @author Yann-Gaël Guéhéneuc 
  * @modified by Naouel Moha 2006/01/24
  */
 public class GenerateRULEParser {

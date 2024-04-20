@@ -48,10 +48,10 @@ public class PadlModelJNI {
 
 	public static void main(String[] args) throws CreationException {
 		final String apathJ =
-			"C:/Users/manel/Desktop/TheseManel/Recherche/ProgrammesJNIcollectésparOpenHub/ogre4j/ogre4j/src/java/org/ogre4j - testmanel";
+			"C:/Users/manel/Desktop/TheseManel/Recherche/ProgrammesJNIcollect/sparOpenHub/ogre4j/ogre4j/src/java/org/ogre4j - testmanel";
 		// Faut compiler les fichiers.java 
 		final String apathC =
-			"C:/Users/manel/Desktop/TheseManel/Recherche/ProgrammesJNIcollectésparOpenHub/ogre4j/ogre4j/src/native/src - testmanel";
+			"C:/Users/manel/Desktop/TheseManel/Recherche/ProgrammesJNIcollect/sparOpenHub/ogre4j/ogre4j/src/native/src - testmanel";
 
 		final ICodeLevelModel hybrid =
 			Factory.getInstance().createCodeLevelModel("Hybrid");
@@ -150,9 +150,9 @@ public class PadlModelJNI {
 	// for Java files and C++ files.
 	public ICodeLevelModel CreateModelTestCase() throws CreationException {
 		final String apathJ =
-			"C:/Users/manel/Desktop/TheseManel/Recherche/ProgrammesJNIcollectésparOpenHub/ogre4j/ogre4j/src/java/org/ogre4j - testmanel";
+			"C:/Users/manel/Desktop/TheseManel/Recherche/ProgrammesJNIcollect/sparOpenHub/ogre4j/ogre4j/src/java/org/ogre4j - testmanel";
 		final String apathC =
-			"C:/Users/manel/Desktop/TheseManel/Recherche/ProgrammesJNIcollectésparOpenHub/ogre4j/ogre4j/src/native/src - testmanel";
+			"C:/Users/manel/Desktop/TheseManel/Recherche/ProgrammesJNIcollect/sparOpenHub/ogre4j/ogre4j/src/native/src - testmanel";
 		final ICodeLevelModel hybrid =
 			Factory.getInstance().createCodeLevelModel("Hybrid");
 		final ICodeLevelModelCreator javaCreator =

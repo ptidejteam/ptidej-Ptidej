@@ -25,8 +25,8 @@ public final class CompoundBoxDetection extends AbstractMicroPatternDetection
 
 	/*
 	 *  15. Compound Box. This is a variant of a Box class with exactly one
-	 *	non-primitive instance �?eld, and, additionally, one or more primi-
-	 *	tive instance �?elds. The highly popular Vector class matches the
+	 *	non-primitive instance field, and, additionally, one or more primi-
+	 *	tive instance fields. The highly popular Vector class matches the
 	 *	Compound Box pattern. 
 	 */
 

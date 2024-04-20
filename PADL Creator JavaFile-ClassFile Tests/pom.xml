@@ -14,12 +14,14 @@
 		<version>1.0.0</version>
 	</parent>
 
+
 	<build>
 		<plugins>
+			<!-- Must generate the test-jar for dependent tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.2</version>
+				<version>3.3.0</version>
 				<executions>
 					<execution>
 						<goals>
@@ -27,6 +29,31 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<!-- Must export/open some hidden package to run PADL Creator
+			JavaFile (JavaC) -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<argLine>
+						--add-exports=jdk.compiler/com.sun.source.tree=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.source.tree=ALL-UNNAMED
+						--add-exports=jdk.compiler/com.sun.source.util=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.source.util=ALL-UNNAMED
+						--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
+						--add-exports=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED
+						--add-exports=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED
+						--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
+						--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
+						--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
+					</argLine>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

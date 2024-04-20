@@ -18,7 +18,7 @@ import sad.kernel.impl.CodeSmellComposite;
 
 /**
  * @author Naouel Moha
- * @author Yann-Gaï¿½l Guï¿½hï¿½neuc
+ * @author Yann-Gaël Guéhéneuc 
  * @since  2005/12/05
  *
  * The class OperatorsCodeSmells uses the Singleton pattern.

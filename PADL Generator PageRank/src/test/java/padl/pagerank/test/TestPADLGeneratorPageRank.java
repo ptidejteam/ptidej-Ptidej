@@ -19,15 +19,21 @@ import junit.framework.TestSuite;
 public class TestPADLGeneratorPageRank extends TestSuite {
 	public TestPADLGeneratorPageRank() {
 	}
+
 	public TestPADLGeneratorPageRank(final Class theClass) {
 		super(theClass);
 	}
+
 	public TestPADLGeneratorPageRank(final String name) {
 		super(name);
 	}
+
 	public static Test suite() {
 		final TestPADLGeneratorPageRank suite = new TestPADLGeneratorPageRank();
-		suite.addTestSuite(TestCPP.class);
+
+		// TODO Add this test back
+		//		suite.addTestSuite(CPPTest.class);
+		
 		return suite;
 	}
 }

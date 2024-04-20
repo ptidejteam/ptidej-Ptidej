@@ -27,7 +27,7 @@ public final class CobolLikeDetection extends AbstractMicroPatternDetection
 	/*
 	 *  7. Cobol like. Formally, the Cobol like micro pattern is deï¬?ned by
 	 *	the requirement that a class has a single static method, one or more
-	 *	static variables, and no instance methods or ï¬?elds. This particular
+	 *	static variables, and no instance methods or fields. This particular
 	 *	programming style makes a signiï¬?cant deviation from the object
 	 *	oriented paradigm. Although the prevalence of this pattern is van-
 	 *	ishingly small, instances can be found even in mature libraries.

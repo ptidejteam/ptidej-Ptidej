@@ -1,0 +1,14 @@
+Composite2
+
+Role: C_L Test
+	(DIT >= 1.0)
+
+Step	ILMCreation	ProblemCreation	Solver	Total
+Ruled	0'0	-28559003'-37	28559003'37	0'0
+No Rule	0'0	-28559003'-37	28559003'37	0'0
+
+Var	DomainNoRule	DomainRuled	Reduction
+
+Solutions	Total	Ghosted	Valabe
+Ruled	0	0	0
+No rule	0	0	0

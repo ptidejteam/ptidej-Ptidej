@@ -110,10 +110,11 @@ public class SmellDetectionCaller {
 		for (int i = 0; i < folders.length; i++) {
 			final String name = folders[i];
 			final String directory = path + name + "/bin/";
-			SmellDetectionHelper.analyseCodeLevelModelFromJavaClassFiles(
-				directory,
-				name,
-				"rsc/");
+			// TODO Add this code back
+			//	SmellDetectionHelper.analyseCodeLevelModelFromJavaClassFiles(
+			//		directory,
+			//		name,
+			//		"rsc/");
 		}
 	}
 }

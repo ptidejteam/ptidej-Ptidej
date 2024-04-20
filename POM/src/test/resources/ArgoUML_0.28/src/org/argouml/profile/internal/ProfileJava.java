@@ -41,7 +41,7 @@ import org.argouml.profile.ResourceModelLoader;
 /**
  * This class represents the Java default Profile
  *
- * @author Marcos Aurï¿½lio
+ * @author Marcos Aurélio
  */
 public class ProfileJava extends Profile {
 

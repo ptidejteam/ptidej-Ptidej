@@ -28,18 +28,18 @@ public final class PoolDetection extends AbstractMicroPatternDetection
 	/*
 	 * 	4. Pool. The most degenerate classes are those which have neither
 	 *	state nor behavior. Such a class is distinguished by the requirement
-	 *	that it declares no instance ï¬?elds. Moreover, all of its declared static
-	 *	ï¬?elds must be ï¬?nal . Another requirement is that the class has no
+	 *	that it declares no instance fields. Moreover, all of its declared static
+	 *	fields must be final . Another requirement is that the class has no
 	 *	methods (other than those inherited from Object, or automatically
 	 *	generated constructors).
-	 *	A Pool is a class deï¬?ned by these requirements. It serves a the
+	 *	A Pool is a class defined by these requirements. It serves a the
 	 *	purpose of grouping together a set of named constants.
 	 *	Programmers often use interfaces for the Pool micro pattern.
 	 *	For example, package javax.swing includes interface Swing-
-	 *	Constants which deï¬?nes constants used in positioning and ori-
+	 *	Constants which defines constants used in positioning and ori-
 	 *	enting screen components.
-	 *	The pattern, also called â€œconstant interface anti-patternâ€? [7], makes
-	 *	it possible to incorporate a name space of deï¬?nitions into a class by
+	 *	The pattern, also called "constant interface anti-pattern" [7], makes
+	 *	it possible to incorporate a name space of definitions into a class by
 	 *	adding an implements clause to that class.
 	 */
 

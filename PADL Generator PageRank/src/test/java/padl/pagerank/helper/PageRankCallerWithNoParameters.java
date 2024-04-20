@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaï¿½l Guï¿½hï¿½neuc and others.
+ * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc  and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaï¿½l Guï¿½hï¿½neuc and others, see in file; API and its implementation
+ *     Yann-Gaël Guéhéneuc  and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.pagerank.helper;
 
@@ -74,10 +74,11 @@ public class PageRankCallerWithNoParameters {
 		final Writer aResultWriter) {
 
 		long startTime = System.currentTimeMillis();
-		final IIdiomLevelModel idomLevelModel =
-			ModelGenerator.generateModelFromCppFilesUsingEclipse(
-				aName,
-				new String[] { aPath });
+		final IIdiomLevelModel idomLevelModel = null;
+		// TODO Add this code back
+		//	ModelGenerator.generateModelFromCppFilesUsingEclipse(
+		//		aName,
+		//		new String[] { aPath });
 		ProxyConsole.getInstance().debugOutput().print("Model generated in ");
 		ProxyConsole
 			.getInstance()
@@ -927,15 +928,17 @@ public class PageRankCallerWithNoParameters {
 			new InputDataGeneratorWith9RelationsForCPP(false, true);
 
 		for (int i = 1; i < names.length; i++) {
-			final IIdiomLevelModel idiomLevelModel1 =
-				ModelGenerator.generateModelFromCppFilesUsingEclipse(
-					names[i - 1],
-					new String[] { paths[i - 1] });
+			final IIdiomLevelModel idiomLevelModel1 = null;
+			// TODO Add this code back
+			//	ModelGenerator.generateModelFromCppFilesUsingEclipse(
+			//		names[i - 1],
+			//		new String[] { paths[i - 1] });
 			
-			final IIdiomLevelModel idiomLevelModel2 =
-				ModelGenerator.generateModelFromCppFilesUsingEclipse(
-					names[i],
-					new String[] { paths[i] });
+			final IIdiomLevelModel idiomLevelModel2 = null;
+			// TODO Add this code back
+			//	ModelGenerator.generateModelFromCppFilesUsingEclipse(
+			//		names[i],
+			//		new String[] { paths[i] });
 			PageRankRankingGenerator.getInstance().compareModels(
 				idiomLevelModel1,
 				idiomLevelModel2,

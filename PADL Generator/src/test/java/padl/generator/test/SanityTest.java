@@ -24,7 +24,7 @@ public class SanityTest extends TestCase {
 	public void testGenerateModelFromAOLCodeFiles() {
 		final ICodeLevelModel codeLevelModel = ModelGenerator
 				.generateModelFromAOLCodeFiles("Model", new String[] {
-						"../PADL Generator Tests/rsc/test/AOL/Test1.aol" });
+						"../PADL Generator/target/test-classes/AOL/Test1.aol" });
 		Assert.assertEquals("Number of classes", 18,
 				codeLevelModel.getNumberOfTopLevelEntities());
 	}

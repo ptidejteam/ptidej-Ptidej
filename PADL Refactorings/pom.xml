@@ -13,6 +13,24 @@
 	<groupId>net.ptidej.padl</groupId>
 	<artifactId>padl-refactorings</artifactId>
 
+	<build>
+		<plugins>
+			<!-- Must generate the test-jar for dependent tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.3.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencies>
 
 		<!-- Main dependencies -->

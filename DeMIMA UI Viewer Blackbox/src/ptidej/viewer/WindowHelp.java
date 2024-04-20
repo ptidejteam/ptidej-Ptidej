@@ -1,6 +1,6 @@
 /*
- * (c) Copyright 2001-2003 Yann-Gaël Guéhéneuc,
- * École des Mines de Nantes and Object Technology International, Inc.
+ * (c) Copyright 2001-2003 Yann-GaÃ«l GuÃ©hÃ©neuc ,
+ * Ã‰cole des Mines de Nantes and Object Technology International, Inc.
  * 
  * Use and copying of this software and preparation of derivative works
  * based upon this software are permitted. Any copy of this software or
@@ -27,7 +27,7 @@ import javax.swing.JScrollPane;
 import javax.swing.text.html.HTMLEditorKit;
 
 /**
- * @author 	Yann-Gaël Guéhéneuc
+ * @author 	Yann-GaÃ«l GuÃ©hÃ©neuc 
  */
 class WindowHelp extends JFrame {
 	private static final long serialVersionUID = -205512839059327053L;

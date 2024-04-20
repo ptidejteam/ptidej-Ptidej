@@ -21,8 +21,9 @@ public final class TestAllPtidej extends TestSuite {
 	public static Test suite() {
 		final TestAllPtidej suite = new TestAllPtidej();
 
-		suite.addTest(TestAllCreators.suite());
-		suite.addTest(TestAllPtidejButCreators.suite());
+		suite.addTest(TestCreators.suite());
+		suite.addTest(TestDeMIMA.suite());
+		suite.addTest(TestOthers.suite());
 
 		return suite;
 	}

@@ -11,7 +11,7 @@
 package ptidej.viewer.ui.rulecard;
 
 /**
- * @author Yann-Gaï¿½l Guï¿½hï¿½neuc
+ * @author Yann-Gaël Guéhéneuc 
  * @since  2004/08/20
  */
 public class RuleCardEvent {

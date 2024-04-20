@@ -4,15 +4,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>net.ptidej.sad</groupId>
-	<artifactId>sad-core</artifactId>
-	<name>SAD</name>
-
 	<parent>
 		<groupId>net.ptidej</groupId>
 		<artifactId>all-ptidej</artifactId>
 		<version>1.0.0</version>
 	</parent>
+
+	<groupId>net.ptidej.sad</groupId>
+	<artifactId>sad-core</artifactId>
+	<name>SAD</name>
 
 	<build>
 		<plugins>
@@ -25,11 +25,37 @@
 					<target>1.4</target>
 				</configuration>
 			</plugin>
+			<!-- Must generate the test-jar for dependent tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.3.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>FewSmellsTest.java</exclude>
+						<exclude>RingDaemon.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
 
+		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
 			<artifactId>cpl-core</artifactId>
@@ -48,12 +74,7 @@
 			<version>1.0.0</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.ibm.toad</groupId>
-			<artifactId>cfparse</artifactId>
-			<version>1.0</version>
-		</dependency>
-
+		<!-- Test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -64,27 +85,6 @@
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-analyses</artifactId>
-			<version>1.0.0</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-creator-classfile</artifactId>
-			<version>1.0.0</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-core</artifactId>
-			<version>1.0.0</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-creator-aol</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>

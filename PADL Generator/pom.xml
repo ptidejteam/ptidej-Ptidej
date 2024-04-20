@@ -82,12 +82,6 @@
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-creator-aspectj</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-creator-csharp-v1</artifactId>
 			<version>1.0.0</version>
 		</dependency>
@@ -133,6 +127,20 @@
 			<artifactId>padl-statements-creator-classfile</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+
+		<!--
+		This one last dependencies MUST COME LAST because 
+		it brings with it aspectjtools, which itself bring
+		with it an old version of SubMonitor, which leads to
+			java.lang.NoSuchMethodError: 'org.eclipse.core.runtime.SubMonitor
+		org.eclipse.core.runtime.SubMonitor.split(int)' 
+		-->
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-aspectj</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
 
 		<!-- Test dependencies -->
 		<dependency>

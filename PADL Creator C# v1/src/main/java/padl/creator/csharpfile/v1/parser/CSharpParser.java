@@ -88,7 +88,7 @@ import util.lang.Modifier;
  * This file has been modified to connect the C# grammar to the PADL meta-model
  * for the PTIDEJ tool (http://www.yann-gael.gueheneuc.net/Work/Info/).
  *
- * Author: Gerardo Cepeda Porras, Universitï¿½ de Montrï¿½al; gerardocepeda@gmail.com
+ * Author: Gerardo Cepeda Porras, Université de Montréal; gerardocepeda@gmail.com
  *
  * Date: April 2009
  */

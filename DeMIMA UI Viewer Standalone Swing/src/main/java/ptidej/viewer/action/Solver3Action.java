@@ -17,10 +17,10 @@ import java.io.IOException;
 import java.util.Properties;
 import javax.swing.AbstractAction;
 import padl.kernel.IAbstractModel;
-import padl.motif.visitor.repository.PtidejSolver3AC4DomainGenerator;
-import padl.motif.visitor.repository.PtidejSolver3CustomDomainGenerator;
 import padl.visitor.IWalker;
 import ptidej.solver.OccurrenceGenerator;
+import ptidej.solver.claire.DomainGenerator3AC4;
+import ptidej.solver.claire.DomainGenerator3Custom;
 import ptidej.viewer.ViewerCommons;
 import ptidej.viewer.ui.DesktopFrame;
 import ptidej.viewer.ui.DesktopPane;
@@ -62,10 +62,10 @@ public class Solver3Action extends AbstractAction {
 			final IWalker generator;
 			if (DesktopPane.getInstance().getProblem() == OccurrenceGenerator.PROBLEM_AC4) {
 
-				generator = new PtidejSolver3AC4DomainGenerator();
+				generator = new DomainGenerator3AC4();
 			}
 			else {
-				generator = new PtidejSolver3CustomDomainGenerator();
+				generator = new DomainGenerator3Custom();
 			}
 			abstractModel.walk(generator);
 

@@ -27,7 +27,7 @@ public final class DataManagerDetection extends AbstractMicroPatternDetection
 
 	/*
 	 *  17. Data Manager. Experienced object-oriented programmers will
-	 *	encapsulate all ям?elds of a Record and use setter and getter methods
+	 *	encapsulate all fields of a Record and use setter and getter methods
 	 *	to access these.
 	 *	We say that a class is a Data Manager if all of its methods (including
 	 *	inherited ones) are either setters or getters5 .

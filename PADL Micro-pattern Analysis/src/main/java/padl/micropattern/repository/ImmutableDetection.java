@@ -31,14 +31,14 @@ public final class ImmutableDetection extends AbstractMicroPatternDetection
 	private List modifiedinConstructor = new ArrayList();
 
 	/*
-	 *  10. Immutable. An immutable class is class whose instance ям?elds
+	 *  10. Immutable. An immutable class is class whose instance fields
 	 *	are only changed by its constructors.
 	 *	The Canopy is an immutable class which has exactly one instance
-	 *	ям?eld. Its description is placed under its other category, Wrappers
+	 *	field. Its description is placed under its other category, Wrappers
 	 *	(Sec. 3.2.1). More general is the Immutable micro pattern, which
-	 *	stands for immutable classes which have at least two instance ям?elds.
+	 *	stands for immutable classes which have at least two instance fields.
 	 *	Class java.util.jar.Manifest is an Immutable class since
-	 *	assignment to its two ям?elds takes place only in constructors code.
+	 *	assignment to its two fields takes place only in constructors code.
 	 */
 
 	public boolean detect(final IFirstClassEntity anEntity) {

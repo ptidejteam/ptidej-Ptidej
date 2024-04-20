@@ -26,8 +26,8 @@ public final class CommonStateDetection extends AbstractMicroPatternDetection
 	/*
 	 *  9. Common State. At the next level of complexity, stand classes
 	 *	that maintain state, but this state is shared by all of their instances.
-	 *	Speciï¬?cally, a class that has no instance ï¬?elds, but at least one static
-	 *	ï¬?eld is a Common State.
+	 *	Specifically, a class that has no instance fields, but at least one static
+	 *	field is a Common State.
 	 *	For example, the class System manages (among other things) the
 	 *	global input, output, and error streams.
 	 *	A Common State with no instance methods is in fact an incarnation

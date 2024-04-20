@@ -1,4 +1,4 @@
-/* (c) Copyright 2001 and following years, Yann-Gaël Guéhéneuc,
+/* (c) Copyright 2001 and following years, Yann-GaÃ«l GuÃ©hÃ©neuc ,
  * University of Montreal.
  * 
  * Use and copying of this software and preparation of derivative works
@@ -30,7 +30,7 @@ public interface Constants {
 	int MODEL_JAVA_BYTECODE = 4;
 	int MODEL_JAVA_JAR_FILE = 5;
 	int MODEL_JAVA_SOURCE_CODE = 3;
-	String PROGRAM_AUTHOR = "Yann-Gaël Guéhéneuc, Naouel Moha, and Ptidej Team";
+	String PROGRAM_AUTHOR = "Yann-GaÃ«l GuÃ©hÃ©neuc , Naouel Moha, and Ptidej Team";
 	String PROGRAM_FILE_NAME = "PtidejBlackbox";
 	String PROGRAM_NAME = "Ptidej Blackbox";
 	String PROGRAM_VERSION = "1.0 (Ptidej 4)";

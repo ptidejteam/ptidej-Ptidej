@@ -24,7 +24,7 @@ public final class StateLessDetection extends AbstractMicroPatternDetection
 	}
 
 	/*
-	 *  8. Stateless. If a class has no �?elds at all (except for �?elds which
+	 *  8. Stateless. If a class has no fields at all (except for fields which
 	 *	are both static and final), then it is stateless. The behavior of
 	 *	such a class cannot depend on its history. Therefore, the execution
 	 *	of each of its methods can only be dictated by the parameters.

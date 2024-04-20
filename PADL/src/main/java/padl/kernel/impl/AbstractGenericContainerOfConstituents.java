@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaï¿½l Guï¿½hï¿½neuc and others.
+ * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc  and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaï¿½l Guï¿½hï¿½neuc and others, see in file; API and its implementation
+ *     Yann-Gaël Guéhéneuc  and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.kernel.impl;
 
@@ -46,7 +46,7 @@ import padl.util.Util;
 import util.io.ProxyConsole;
 
 /**
- * @author Yann-Gaï¿½l Guï¿½hï¿½neuc
+ * @author Yann-Gaël Guéhéneuc 
  * @since 2004/04/09
  */
 // Sebastien Colladon 23/04/2012 : Change the visibility to public to
@@ -532,7 +532,7 @@ public abstract class AbstractGenericContainerOfConstituents
 		final IConstituent aConstituent) {
 		// Default behaviour: do nothing.
 	}
-	// Sï¿½bastien Colladon 24/04/2012 : Visibility set to public...If you have
+	// Sébastien Colladon 24/04/2012 : Visibility set to public...If you have
 	// more than one ClassLoader then the only methods you can invoke on classes
 	// from other ClassLoaders are public ones because private, package and
 	// protected methods are all inaccessible due to being in a different

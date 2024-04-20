@@ -9,13 +9,13 @@
  *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
  ******************************************************************************/
 /*
- * (c) Copyright 2000-2003 Yann-Gaï¿½l Guï¿½hï¿½neuc,
+ * (c) Copyright 2000-2003 Yann-Gaël Guéhéneuc ,
  * Ecole des Mines de Nantes and Object Technology International, Inc.
  * 
  * Use and copying of this software and preparation of derivative works
  * based upon this software are permitted. Any copy of this software or
  * of any derivative work must include the above copyright notice of
- * Yann-Gaï¿½l Guï¿½hï¿½neuc, this paragraph and the one after it.
+ * Yann-Gaël Guéhéneuc , this paragraph and the one after it.
  * 
  * This software is made available AS IS, and THE AUTHOR DISCLAIMS
  * ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE
