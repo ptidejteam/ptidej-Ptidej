@@ -1668,7 +1668,7 @@ public class PtidejResourceBundle extends ListResourceBundle {
 						"MSE File (.mse)" },
 				{
 						"ptidej.viewer.widget.DropDownButton::CMD_ECLIPSE_JDT_PROJECT",
-						"Eclipse JDT Projecy (.project)" },
+						"Eclipse JDT Project (.project)" },
 				{ "ptidej.viewer.widget.DropDownButton::CMD_PTIDEJ_FILE",
 						"Ptidej File (.ptidej)" },
 				{ "ptidej.viewer.widget.DropDownButton::CMD_DROP_DOWN_ICON",
