@@ -68,21 +68,6 @@ public class StringBuilder {
 
 		final MatrixBuilder builder =
 			new MatrixBuilder(anAbstractModel.getNumberOfTopLevelEntities());
-
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.println(
-				"NumberOfTopLevelEntities: "
-						+ anAbstractModel.getNumberOfTopLevelEntities());
-
-		//Iterator c = anAbstractModel.getIteratorOnConstituents();
-		//  while(c.hasNext()){
-		//	  String id = ((IConstituent)c.next()).getID();
-		//	  System.out.println(id);
-		//  }
-
-		//System.out.println("Size: " + anAbstractModel.getNumberOfConstituents() + " " + num);  
 		anAbstractModel.walk(builder);
 		return (Matrix) builder.getResult();
 	}

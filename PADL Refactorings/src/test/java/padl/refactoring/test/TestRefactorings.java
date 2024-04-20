@@ -31,10 +31,12 @@ public final class TestRefactorings extends junit.framework.TestSuite {
 	}
 	public static Test suite() {
 		final TestRefactorings suite = new TestRefactorings();
+		
 		suite.addTestSuite(RefactoringMoveMethodTest.class);
 		suite.addTestSuite(RefactoringPullUpMethodTest.class);
 		suite.addTestSuite(RefactoringPushDownMethodTest.class);
 		suite.addTestSuite(RefactoringRenameMethodTest.class);
+		
 		return suite;
 	}
 }

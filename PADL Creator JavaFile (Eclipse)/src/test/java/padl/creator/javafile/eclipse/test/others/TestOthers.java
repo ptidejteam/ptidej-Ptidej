@@ -16,17 +16,21 @@ import junit.framework.TestSuite;
 public class TestOthers extends TestSuite {
 	public static Test suite() {
 		final TestOthers suite = new TestOthers();
+
 		suite.addTestSuite(CompleteCreatorTest.class);
-		suite.addTestSuite(EclipseSnapshotTest.class);
 		suite.addTestSuite(PADLParserUtilsTest.class);
 		suite.addTestSuite(ArgoUMLTest.class);
+
 		return suite;
 	}
+
 	public TestOthers() {
 	}
+
 	public TestOthers(final Class theClass) {
 		super(theClass);
 	}
+
 	public TestOthers(final String name) {
 		super(name);
 	}

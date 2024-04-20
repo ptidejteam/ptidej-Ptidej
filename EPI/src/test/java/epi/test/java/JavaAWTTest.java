@@ -88,7 +88,7 @@ public class JavaAWTTest extends TestCase {
 				ProxyConsole.getInstance().debugOutput().println(" ms.");
 				Solution.print(JavaAWTTest.FoundSolutions, ProxyDisk
 					.getInstance()
-					.fileTempOutput("rsc/Java AWT v1.4.2_04.solutions.txt"));
+					.fileTempOutput("Java AWT v1.4.2_04.solutions.txt"));
 			}
 			catch (final CreationException e) {
 				e.printStackTrace(ProxyConsole.getInstance().errorOutput());

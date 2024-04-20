@@ -38,6 +38,7 @@
 						--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
 						--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
+						--add-exports jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED
 					</argLine>
 					<!-- Excluded on purpose -->
 					<excludes>
@@ -238,6 +239,13 @@
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-creator-xmi</artifactId>
 			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-xmi</artifactId>
+			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
@@ -417,6 +425,14 @@
 		<dependency>
 			<groupId>net.ptidej.squad</groupId>
 			<artifactId>squad-core</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-core</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>

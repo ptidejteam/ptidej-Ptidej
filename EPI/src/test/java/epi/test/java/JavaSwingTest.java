@@ -78,7 +78,7 @@ public class JavaSwingTest extends TestCase {
 				ProxyConsole.getInstance().debugOutput().println(" ms.");
 				Solution.print(JavaSwingTest.FoundSolutions,
 						ProxyDisk.getInstance().fileTempOutput(
-								"rsc/Java Swing v1.4.2_11.solutions.txt"));
+								"Java Swing v1.4.2_11.solutions.txt"));
 			}
 			catch (final CreationException e) {
 				e.printStackTrace(ProxyConsole.getInstance().errorOutput());

@@ -1,0 +1,7 @@
+Change char encoding to UTF-8
+Remove warnings from compilation
+
+Fix "PADL Creator C++ (Eclipse)"
+Test "Creator MSE"
+
+Implement util.lang.AvailableModulesGuard

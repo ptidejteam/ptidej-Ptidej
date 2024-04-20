@@ -247,19 +247,19 @@ public final class Caffeine {
 	public void start(final String ruleFileName, final String classPath, final String mainClassName,
 			final String[] classNameFilter, final int requiredEventMask) {
 
-		this.start(null, ruleFileName, classPath, mainClassName, classNameFilter, requiredEventMask, null);
+		this.start("Caffeine.trace", ruleFileName, classPath, mainClassName, classNameFilter, requiredEventMask, null);
 	}
 
 	public void start(final String ruleFileName, final String classPath, final String mainClassName,
 			final String[] classNameFilter, final int requiredEventMask, final String[][] fieldAccesses) {
 
-		this.start(null, ruleFileName, classPath, mainClassName, classNameFilter, requiredEventMask, fieldAccesses);
+		this.start("Caffeine.trace", ruleFileName, classPath, mainClassName, classNameFilter, requiredEventMask, fieldAccesses);
 	}
 
 	public void start(final String ruleFileName, final String classPath, final String mainClassName,
 			final String[] classNameFilter, final String[][] fieldAccesses) {
 
-		this.start(null, ruleFileName, classPath, mainClassName, classNameFilter, 0, fieldAccesses);
+		this.start("Caffeine.trace", ruleFileName, classPath, mainClassName, classNameFilter, 0, fieldAccesses);
 	}
 
 	public void stop() {

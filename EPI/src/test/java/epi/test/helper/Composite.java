@@ -64,7 +64,7 @@ public class Composite {
 			ProxyConsole.getInstance().debugOutput().println(patternString);
 			Solution.print(solver.computeSolutions(), ProxyDisk
 				.getInstance()
-				.fileTempOutput("rsc/Composite2.solutions.txt"));
+				.fileTempOutput("Composite2.solutions.txt"));
 
 			solver =
 				new OptimisedBitVectorSolver(
@@ -76,7 +76,7 @@ public class Composite {
 
 			Solution.print(solver.computeSolutions(), ProxyDisk
 				.getInstance()
-				.fileTempOutput("rsc/Composite2.solutions.txt"));
+				.fileTempOutput("Composite2.solutions.txt"));
 
 			ProxyConsole.getInstance().debugOutput().println("Done.");
 		}
