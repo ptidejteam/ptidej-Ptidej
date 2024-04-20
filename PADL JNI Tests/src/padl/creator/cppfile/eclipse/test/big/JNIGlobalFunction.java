@@ -12,11 +12,11 @@ import padl.kernel.impl.Factory;
 import padl.visitor.IWalker;
 import util.io.Files;
 
-public class TestCaseJnifctglobale extends TestCase {
+public class JNIGlobalFunction extends TestCase {
 	protected void setUp() throws Exception {
 		super.setUp();
 	}
-	public void testFctGlobale() throws CreationException {
+	public void testGlobalFunction() throws CreationException {
 		final String apathJ =
 			"../PADL JNI Tests/rsc/ogre4j/ogre4j/src/java/org/ogre4j - testmanel";
 		final String apathC =

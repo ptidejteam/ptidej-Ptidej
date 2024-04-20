@@ -30,11 +30,13 @@ public class TestPADLJNI extends TestSuite {
 
 	public static Test suite() {
 		final TestPADLJNI suite = new TestPADLJNI();
-		suite.addTestSuite(TestCaseJnifctglobale.class);
-		suite.addTestSuite(TestCaseJniMethodJNIMissed.class);
-		suite.addTestSuite(TestCaseJNIModel.class);
-		suite.addTestSuite(TestCaseJniNatif.class);
-		suite.addTestSuite(TestCaseJniNatifMissed.class);
+
+		suite.addTestSuite(JNIGlobalFunction.class);
+		suite.addTestSuite(JNIMethodMissed.class);
+		suite.addTestSuite(JNIModel.class);
+		suite.addTestSuite(JNINativeMethod.class);
+		suite.addTestSuite(JNINativeMethodMissed.class);
+
 		return suite;
 	}
 }

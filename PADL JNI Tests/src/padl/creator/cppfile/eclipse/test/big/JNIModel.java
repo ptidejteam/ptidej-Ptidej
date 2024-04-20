@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.exception.CreationException;
 
-public class TestCaseJNIModel extends TestCase {
+public class JNIModel extends TestCase {
 
 	protected void setUp() throws Exception {
 		super.setUp();
@@ -14,7 +14,7 @@ public class TestCaseJNIModel extends TestCase {
 		super.tearDown();
 	}
 
-	public void testmodel() throws CreationException {
+	public void testModel() throws CreationException {
 		PadlModelJNI JNI = new PadlModelJNI();
 		ICodeLevelModel model = JNI.CreateModelTestCase();
 		assertEquals(8, model.getNumberOfConstituents());

@@ -3,7 +3,7 @@ package padl.creator.cppfile.eclipse.test.big;
 import junit.framework.TestCase;
 import padl.kernel.exception.CreationException;
 
-public class TestCaseJniNatifMissed extends TestCase {
+public class JNINativeMethodMissed extends TestCase {
 
 	protected void setUp() throws Exception {
 		super.setUp();
