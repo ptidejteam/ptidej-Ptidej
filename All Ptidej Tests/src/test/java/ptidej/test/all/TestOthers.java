@@ -18,7 +18,6 @@ import padl.generator.test.TestPADLGenerator;
 import padl.micropatterns.test.TestMicroPatterns;
 import padl.pagerank.test.TestPADLGeneratorPageRank;
 import padl.refactoring.test.TestRefactorings;
-import padl.serialiser.test.TestDB4OSerialiser;
 import padl.serialiser.test.TestJOSSerialiser;
 import padl.test.TestPADL;
 import pom.test.TestPOM;

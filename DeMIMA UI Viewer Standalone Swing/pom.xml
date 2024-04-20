@@ -14,12 +14,6 @@
 		<version>1.0.0</version>
 	</parent>
 
-	<properties>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
-		<project.build.sourceEncoding>windows-1252</project.build.sourceEncoding>
-	</properties>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -137,7 +131,19 @@
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-3</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
 			<artifactId>demima-solver-4</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-fingerprints</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 

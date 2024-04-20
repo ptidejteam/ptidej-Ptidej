@@ -30,12 +30,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.ibm.toad</groupId>
-            <artifactId>cfparse</artifactId>
-            <version>1.0</version>
-        </dependency>
-
-        <dependency>
             <groupId>net.java.dev.javacc</groupId>
             <artifactId>javacc</artifactId>
             <version>7.0.12</version>
