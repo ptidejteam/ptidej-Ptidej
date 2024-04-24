@@ -15,6 +15,10 @@ package padl.kernel;
  */
 public interface IRelationship extends IElement {
 	int getCardinality();
+
+	void setCardinality(final int aCardinality);
+
 	IFirstClassEntity getTargetEntity();
+
 	void setTargetEntity(final IFirstClassEntity anEntity);
 }

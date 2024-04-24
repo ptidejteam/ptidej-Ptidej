@@ -42,7 +42,7 @@ import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 import padl.kernel.IAbstractModel;
 import padl.util.ExternalDataProcessor;
-import ptidej.ui.occurrence.awt.PrimitiveFactory;
+import ptidej.ui.awt.occurrence.PrimitiveFactory;
 import ptidej.viewer.IRepresentation;
 import ptidej.viewer.awt.IAWTRepresentation;
 import ptidej.viewer.ui.AbstractRepresentationWindow;

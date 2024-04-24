@@ -47,7 +47,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Scrollable;
 import ptidej.ui.Constants;
 import ptidej.ui.canvas.Canvas;
-import ptidej.ui.primitive.swt.Primitive;
+import ptidej.ui.swt.primitive.Primitive;
 
 /**
  * Canvas where graphical constituants of Ptitdej UI are drawn.

@@ -13,7 +13,8 @@ package ptidej.viewer.ui.panel;
 import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JPanel;
-import ptidej.ui.occurrence.awt.PrimitiveFactory;
+
+import ptidej.ui.awt.occurrence.PrimitiveFactory;
 
 public class CanvasPanel extends JPanel {
 	private static final long serialVersionUID = -6512157689860956726L;
@@ -39,7 +40,7 @@ public class CanvasPanel extends JPanel {
 		// painting the current component. This is the only place
 		// where I can do that because I am sure at this point that
 		// a Graphics has been assigned to the canvas.
-		((ptidej.ui.primitive.awt.PrimitiveFactory) PrimitiveFactory
+		((ptidej.ui.awt.primitive.PrimitiveFactory) PrimitiveFactory
 			.getInstance()).setGraphics(aGraphics);
 		super.paint(aGraphics);
 	}

@@ -15,6 +15,4 @@ package padl.kernel;
  */
 public interface IUseRelationship extends IRelationship {
 	String LOGO = "-k-->";
-	int getCardinality();
-	void setCardinality(final int aCardinality);
 }

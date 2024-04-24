@@ -12,6 +12,7 @@ package padl.motif.repository;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.IContainerAggregation;
@@ -23,13 +24,13 @@ import padl.motif.IDesignMotifModel;
 import padl.motif.models.BehaviouralMotifModel;
 import util.multilingual.MultilingualManager;
 
-public class Observer extends BehaviouralMotifModel implements
-		PropertyChangeListener, Cloneable, IDesignMotifModel {
+public class Observer extends BehaviouralMotifModel
+		implements PropertyChangeListener, Cloneable, IDesignMotifModel {
 
 	private static final char[] CONCRETE_OBSERVER = "ConcreteObserver"
-		.toCharArray();
+			.toCharArray();
 	private static final char[] CONCRETE_SUBJECT = "ConcreteSubject"
-		.toCharArray();
+			.toCharArray();
 	private static final char[] GET_STATE = "getState".toCharArray();
 	private static final char[] NOTIFY = "Notify".toCharArray();
 	private static final char[] OBSERVER = "Observer".toCharArray();
@@ -69,93 +70,72 @@ public class Observer extends BehaviouralMotifModel implements
 	private final IInterface anInterface;
 
 	private IDelegatingMethod aPDelegatingMethod;
+
 	public Observer() {
 		super(Observer.OBSERVER);
 
 		// Interface Observer 
-		this.anInterface =
-			this.getFactory().createInterface(
-				Observer.OBSERVER,
+		this.anInterface = this.getFactory().createInterface(Observer.OBSERVER,
 				Observer.OBSERVER);
-		this.abMethod =
-			this.getFactory().createMethod(Observer.UPDATE, Observer.UPDATE);
+		this.abMethod = this.getFactory().createMethod(Observer.UPDATE,
+				Observer.UPDATE);
 		this.anInterface.addConstituent(this.abMethod);
-		this.anInterface.setPurpose(MultilingualManager.getString(
-			"Observer_PURPOSE",
-			Observer.class));
+		this.anInterface.setPurpose(MultilingualManager
+				.getString("Observer_PURPOSE", Observer.class));
 		this.addConstituent(this.anInterface);
 
 		// Association observers 
-		final IContainerAggregation anAssoc =
-			this.getFactory().createContainerAggregationRelationship(
-				Observer.OBSERVERS,
-				this.anInterface,
-				Constants.CARDINALITY_MANY);
+		final IContainerAggregation anAssoc = this.getFactory()
+				.createContainerAggregationRelationship(Observer.OBSERVERS,
+						this.anInterface, Constants.CARDINALITY_MANY);
 
 		// Classe Subject 
-		this.aClass =
-			this.getFactory().createClass(Observer.SUBJECT, Observer.SUBJECT);
+		this.aClass = this.getFactory().createClass(Observer.SUBJECT,
+				Observer.SUBJECT);
 		this.aClass.setAbstract(true);
 		this.aClass.addConstituent(anAssoc);
-		this.aPDelegatingMethod =
-			this.getFactory().createDelegatingMethod(
-				Observer.NOTIFY,
-				anAssoc,
-				this.abMethod);
+		this.aPDelegatingMethod = this.getFactory().createDelegatingMethod(
+				Observer.NOTIFY, anAssoc, this.abMethod);
 		this.aClass.addConstituent(this.aPDelegatingMethod);
 		this.aClass.assumeAllInterfaces();
-		this.aClass.setPurpose(MultilingualManager.getString(
-			"Subject_PURPOSE",
-			Observer.class));
+		this.aClass.setPurpose(MultilingualManager.getString("Subject_PURPOSE",
+				Observer.class));
 		this.addConstituent(this.aClass);
 
 		// Classe Concrete Subject
-		this.acMethod =
-			this.getFactory().createMethod(
-				Observer.GET_STATE,
+		this.acMethod = this.getFactory().createMethod(Observer.GET_STATE,
 				Observer.GET_STATE);
-		this.a2Class =
-			this.getFactory().createClass(
-				Observer.CONCRETE_SUBJECT,
+		this.a2Class = this.getFactory().createClass(Observer.CONCRETE_SUBJECT,
 				Observer.CONCRETE_SUBJECT);
 		this.a2Class.addInheritedEntity(this.aClass);
-		this.a2Class.setPurpose(MultilingualManager.getString(
-			"ConcreteSubject_CLASS_PURPOSE",
-			Observer.class));
+		this.a2Class.setPurpose(MultilingualManager
+				.getString("ConcreteSubject_CLASS_PURPOSE", Observer.class));
 		this.a2Class.addConstituent(this.acMethod);
 		this.a2Class.assumeAllInterfaces();
 		this.addConstituent(this.a2Class);
 
 		// Assoc subject
-		final IContainerAggregation a2Assoc =
-			this.getFactory().createContainerAggregationRelationship(
-				Observer.STRING,
-				this.a2Class,
-				Constants.CARDINALITY_ONE);
+		final IContainerAggregation a2Assoc = this.getFactory()
+				.createContainerAggregationRelationship(Observer.STRING,
+						this.a2Class, Constants.CARDINALITY_ONE);
 
 		// Classe Concrete Observer
-		this.aPDelegatingMethod =
-			this.getFactory().createDelegatingMethod(
-				Observer.UPDATE,
-				a2Assoc,
-				this.acMethod);
-		this.aPDelegatingMethod.setComment(MultilingualManager.getString(
-			"DELEG_METHOD_COMMENT",
-			Observer.class));
+		this.aPDelegatingMethod = this.getFactory().createDelegatingMethod(
+				Observer.UPDATE, a2Assoc, this.acMethod);
+		this.aPDelegatingMethod.setComment(MultilingualManager
+				.getString("DELEG_METHOD_COMMENT", Observer.class));
 		this.aPDelegatingMethod.attachTo(this.abMethod);
-		this.a2Class =
-			this.getFactory().createClass(
-				Observer.CONCRETE_OBSERVER,
+		this.a2Class = this.getFactory().createClass(Observer.CONCRETE_OBSERVER,
 				Observer.CONCRETE_OBSERVER);
-		this.a2Class.setPurpose(MultilingualManager.getString(
-			"ConcreteObserver_CLASS_PURPOSE",
-			Observer.class));
+		this.a2Class.setPurpose(MultilingualManager
+				.getString("ConcreteObserver_CLASS_PURPOSE", Observer.class));
 		this.a2Class.addImplementedInterface(this.anInterface);
 		this.a2Class.addConstituent(a2Assoc);
 		this.a2Class.addConstituent(this.aPDelegatingMethod);
 		//	this.a2Class.assumeAllInterfaces();
 		this.addConstituent(this.a2Class);
 	}
+
 	private void codeForSetMethod() {
 		// Add code for the setMethod.
 		if (this.getConstituentFromName(Observer.CONCRETE_OBSERVER) == null
@@ -163,50 +143,49 @@ public class Observer extends BehaviouralMotifModel implements
 			return;
 		}
 
-		final IContainerAggregation a2Assoc =
-			(IContainerAggregation) ((IFirstClassEntity) this
+		final IContainerAggregation a2Assoc = (IContainerAggregation) ((IFirstClassEntity) this
 				.getConstituentFromName(Observer.CONCRETE_OBSERVER))
 				.getConstituentFromName(Observer.STRING);
-		final IContainerAggregation anAssoc =
-			(IContainerAggregation) ((IFirstClassEntity) this
+		final IContainerAggregation anAssoc = (IContainerAggregation) ((IFirstClassEntity) this
 				.getConstituentFromName(Observer.SUBJECT))
 				.getConstituentFromName(Observer.OBSERVERS);
 
-		final IMethod sMethod =
-			(IMethod) a2Assoc.getConstituentFromID(IContainerAggregation.ID3);
-		final String[] codeLines =
-			new String[] {
-					"if ("
-							+ a2Assoc.getConstituentFromID(
-								IContainerAggregation.ID1).getDisplayName()
-							+ " != null)",
-					"     "
-							+ a2Assoc.getConstituentFromID(
-								IContainerAggregation.ID1).getDisplayName()
-							+ '.'
-							+ anAssoc.getConstituentFromID(
-								IContainerAggregation.ID3).getDisplayName()
-							+ "(this);",
-					a2Assoc
-						.getConstituentFromID(IContainerAggregation.ID1)
+		final IMethod sMethod = (IMethod) a2Assoc
+				.getConstituentFromID(a2Assoc.getOriginFieldName());
+		final String[] codeLines = new String[] {
+				"if (" + a2Assoc
+						.getConstituentFromID(a2Assoc.getOriginFieldName())
+						.getDisplayName() + " != null)",
+				"     " + a2Assoc
+						.getConstituentFromID(a2Assoc.getOriginFieldName())
+						.getDisplayName() + '.'
+						+ anAssoc
+								.getConstituentFromID(
+										a2Assoc.getOriginSetterMethodName())
+								.getDisplayName()
+						+ "(this);",
+				a2Assoc.getConstituentFromID(a2Assoc.getOriginFieldName())
+						.getDisplayName() + " = a"
+						+ a2Assoc.getTargetEntity().getDisplayName() + ';',
+				a2Assoc.getConstituentFromID(a2Assoc.getOriginFieldName())
 						.getDisplayName()
-							+ " = a"
-							+ a2Assoc.getTargetEntity().getDisplayName() + ';',
-					a2Assoc
-						.getConstituentFromID(IContainerAggregation.ID1)
-						.getDisplayName()
-							+ '.'
-							+ anAssoc.getConstituentFromID(
-								IContainerAggregation.ID2).getDisplayName()
-							+ "(this);" };
+						+ '.'
+						+ anAssoc
+								.getConstituentFromID(
+										a2Assoc.getOriginGetterMethodName())
+								.getDisplayName()
+						+ "(this);" };
 		sMethod.setCodeLines(codeLines);
 	}
+
 	public String getIntent() {
 		return MultilingualManager.getString("INTENT", Observer.class);
 	}
+
 	public char[] getName() {
 		return Observer.OBSERVER;
 	}
+
 	public void propertyChange(final PropertyChangeEvent e) {
 		this.codeForSetMethod();
 	}

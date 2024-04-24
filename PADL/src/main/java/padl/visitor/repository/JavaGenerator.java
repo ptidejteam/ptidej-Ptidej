@@ -11,6 +11,7 @@
 package padl.visitor.repository;
 
 import java.util.Iterator;
+
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -48,11 +49,13 @@ import util.lang.Modifier;
 public final class JavaGenerator implements IGenerator {
 	private final StringBuffer buffer = new StringBuffer();
 	private int indentation = 0;
+
 	public void close(final IAbstractLevelModel p) {
 	}
 
 	public void close(IAbstractModel anAbstractModel) {
 	}
+
 	public void close(final IClass p) {
 		this.buffer.append('\n');
 		this.buffer.append('}');
@@ -60,12 +63,16 @@ public final class JavaGenerator implements IGenerator {
 
 		this.indentation--;
 	}
+
 	public void close(final IConstructor aConstructor) {
 	}
+
 	public void close(final IDelegatingMethod aDelegatingMethod) {
 	}
+
 	public void close(final IGetter aGetter) {
 	}
+
 	public void close(final IGhost p) {
 		this.buffer.append('\n');
 		this.buffer.append('}');
@@ -74,6 +81,7 @@ public final class JavaGenerator implements IGenerator {
 
 		this.indentation--;
 	}
+
 	public void close(final IInterface p) {
 		this.buffer.append('\n');
 		this.buffer.append('}');
@@ -82,20 +90,28 @@ public final class JavaGenerator implements IGenerator {
 
 		this.indentation--;
 	}
+
 	public void close(final IMemberClass aMemberClass) {
 	}
+
 	public void close(final IMemberGhost aMemberGhost) {
 	}
+
 	public void close(final IMemberInterface aMemberInterface) {
 	}
+
 	public void close(final IMethod aMethod) {
 	}
+
 	public void close(final IPackage aPackage) {
 	}
+
 	public void close(final IPackageDefault aPackage) {
 	}
+
 	public void close(final ISetter aSetter) {
 	}
+
 	private void commentsAndVisibility(final IConstituent p) {
 		Util.addTabs(this.indentation, this.buffer);
 		this.buffer.append("//id= ");
@@ -110,15 +126,19 @@ public final class JavaGenerator implements IGenerator {
 		}
 		this.buffer.append(Modifier.toString(p.getVisibility()));
 	}
+
 	public String getCode() {
 		return this.buffer.toString();
 	}
+
 	public String getName() {
 		return "Java";
 	}
+
 	public Object getResult() {
 		return this.buffer.toString();
 	}
+
 	private void nameAndParameters(final IOperation p) {
 		this.buffer.append(p.getName());
 		this.buffer.append('(');
@@ -149,12 +169,15 @@ public final class JavaGenerator implements IGenerator {
 		this.buffer.append('\n');
 		this.buffer.append('\n');
 	}
+
 	public void open(final IAbstractLevelModel p) {
 		this.open((IAbstractModel) p);
 	}
+
 	public void open(IAbstractModel anAbstractModel) {
 		this.reset();
 	}
+
 	public void open(final IClass p) {
 		this.commentsAndVisibility(p);
 		this.buffer.append(" class ");
@@ -163,8 +186,8 @@ public final class JavaGenerator implements IGenerator {
 		if (iterator.hasNext()) {
 			this.buffer.append(" extends ");
 			while (iterator.hasNext()) {
-				this.buffer.append(((IFirstClassEntity) (iterator.next()))
-					.getName());
+				this.buffer.append(
+						((IFirstClassEntity) (iterator.next())).getName());
 				if (iterator.hasNext())
 					this.buffer.append(", ");
 			}
@@ -173,8 +196,8 @@ public final class JavaGenerator implements IGenerator {
 		if (iterator.hasNext()) {
 			this.buffer.append(" implements ");
 			while (iterator.hasNext()) {
-				this.buffer.append(((IFirstClassEntity) (iterator.next()))
-					.getName());
+				this.buffer.append(
+						((IFirstClassEntity) (iterator.next())).getName());
 				if (iterator.hasNext())
 					this.buffer.append(", ");
 			}
@@ -186,19 +209,23 @@ public final class JavaGenerator implements IGenerator {
 
 		this.indentation++;
 	}
+
 	public void open(final IConstructor p) {
 		this.commentsAndVisibility(p);
 		this.buffer.append(' ');
 		this.nameAndParameters(p);
 	}
+
 	public void open(final IDelegatingMethod p) {
 		if (p.getTargetAssoc().getCardinality() > 1) {
-			p.setCodeLines("for (java.util.Enumeration enum = "
-					+ p.getTargetAssoc().getDisplayName()
-					+ ".elements(); enum.hasMoreElements(); (("
-					+ p.getTargetAssoc().getTargetEntity().getDisplayID()
-					+ ") enum.nextElement())."
-					+ p.getTargetMethod().getCallDeclaration() + ");");
+			p.setCodeLines(
+					"for (java.util.Enumeration enum = "
+							+ p.getTargetAssoc().getDisplayName()
+							+ ".elements(); enum.hasMoreElements(); (("
+							+ p.getTargetAssoc().getTargetEntity()
+									.getDisplayID()
+							+ ") enum.nextElement())."
+							+ p.getTargetMethod().getCallDeclaration() + ");");
 		}
 		else {
 			p.setCodeLines(p.getTargetAssoc().getDisplayName() + "."
@@ -212,9 +239,11 @@ public final class JavaGenerator implements IGenerator {
 
 		this.open((IMethod) p);
 	}
+
 	public void open(final IGetter p) {
 		this.open((IMethod) p);
 	}
+
 	public void open(final IGhost p) {
 		this.commentsAndVisibility(p);
 		this.buffer.append(" ghost ");
@@ -223,8 +252,8 @@ public final class JavaGenerator implements IGenerator {
 		if (iterator.hasNext()) {
 			this.buffer.append(" extends ");
 			while (iterator.hasNext()) {
-				this.buffer.append(((IFirstClassEntity) (iterator.next()))
-					.getName());
+				this.buffer.append(
+						((IFirstClassEntity) (iterator.next())).getName());
 				if (iterator.hasNext())
 					this.buffer.append(", ");
 			}
@@ -233,8 +262,8 @@ public final class JavaGenerator implements IGenerator {
 		if (iterator.hasNext()) {
 			this.buffer.append(" implements ");
 			while (iterator.hasNext()) {
-				this.buffer.append(((IFirstClassEntity) (iterator.next()))
-					.getName());
+				this.buffer.append(
+						((IFirstClassEntity) (iterator.next())).getName());
 				if (iterator.hasNext())
 					this.buffer.append(", ");
 			}
@@ -245,6 +274,7 @@ public final class JavaGenerator implements IGenerator {
 
 		this.indentation++;
 	}
+
 	public void open(final IInterface p) {
 		commentsAndVisibility(p);
 		this.buffer.append(" interface ");
@@ -253,8 +283,8 @@ public final class JavaGenerator implements IGenerator {
 		if (iterator.hasNext()) {
 			this.buffer.append(" extends ");
 			while (iterator.hasNext()) {
-				this.buffer.append(((IFirstClassEntity) (iterator.next()))
-					.getName());
+				this.buffer.append(
+						((IFirstClassEntity) (iterator.next())).getName());
 				if (iterator.hasNext())
 					this.buffer.append(", ");
 			}
@@ -265,12 +295,16 @@ public final class JavaGenerator implements IGenerator {
 
 		this.indentation++;
 	}
+
 	public void open(final IMemberClass aMemberClass) {
 	}
+
 	public void open(final IMemberGhost aMemberGhost) {
 	}
+
 	public void open(final IMemberInterface aMemberInterface) {
 	}
+
 	public void open(final IMethod p) {
 		this.commentsAndVisibility(p);
 		this.buffer.append(' ');
@@ -278,76 +312,80 @@ public final class JavaGenerator implements IGenerator {
 		this.buffer.append(' ');
 		this.nameAndParameters(p);
 	}
+
 	public void open(final IPackage aPackage) {
 	}
+
 	public void open(final IPackageDefault aPackage) {
 	}
+
 	public void open(final ISetter p) {
 		this.open((IMethod) p);
 	}
+
 	public void reset() {
 		this.buffer.setLength(0);
 		this.indentation = 0;
 	}
-	public final void unknownConstituentHandler(
-		final String aCalledMethodName,
-		final IConstituent aConstituent) {
 
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(this.getClass().getName());
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(" does not know what to do for \"");
+	public final void unknownConstituentHandler(final String aCalledMethodName,
+			final IConstituent aConstituent) {
+
+		ProxyConsole.getInstance().debugOutput()
+				.print(this.getClass().getName());
+		ProxyConsole.getInstance().debugOutput()
+				.print(" does not know what to do for \"");
 		ProxyConsole.getInstance().debugOutput().print(aCalledMethodName);
 		ProxyConsole.getInstance().debugOutput().print("\" (");
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(aConstituent.getDisplayID());
+		ProxyConsole.getInstance().debugOutput()
+				.print(aConstituent.getDisplayID());
 		ProxyConsole.getInstance().debugOutput().println(')');
 	}
+
 	public void visit(final IAggregation p) {
 		Util.addTabs(this.indentation, this.buffer);
 		this.buffer.append("// Aggregation: ");
 		this.buffer.append(p.getName());
 		this.buffer.append('\n');
 	}
+
 	public void visit(final IAssociation p) {
 		Util.addTabs(this.indentation, this.buffer);
 		this.buffer.append("// Association: ");
 		this.buffer.append(p.getName());
 		this.buffer.append('\n');
 	}
+
 	public void visit(final IComposition p) {
 		Util.addTabs(this.indentation, this.buffer);
 		this.buffer.append("// Composition: ");
 		this.buffer.append(p.getName());
 		this.buffer.append('\n');
 	}
+
 	public void visit(final IContainerAggregation p) {
 		Util.addTabs(this.indentation, this.buffer);
 		this.buffer.append("// Aggregation: ");
 		this.buffer.append(p.getName());
 		this.buffer.append('\n');
 
-		this
-			.visit((IField) p.getConstituentFromName(IContainerAggregation.ID1));
+		this.visit((IField) p.getConstituentFromName(p.getOriginFieldName()));
 		this.buffer.append('\n');
-		this
-			.open((IMethod) p.getConstituentFromName(IContainerAggregation.ID2));
+		this.open((IMethod) p
+				.getConstituentFromName(p.getOriginGetterMethodName()));
 		this.buffer.append('\n');
-		this
-			.open((IMethod) p.getConstituentFromName(IContainerAggregation.ID3));
+		this.open((IMethod) p
+				.getConstituentFromName(p.getOriginSetterMethodName()));
 		this.buffer.append('\n');
 	}
+
 	public void visit(final IContainerComposition p) {
 		this.visit((IContainerAggregation) p);
 	}
+
 	public void visit(final ICreation p) {
 	}
+
 	public void visit(final IField p) {
 		this.commentsAndVisibility(p);
 		this.buffer.append(' ');
@@ -367,16 +405,20 @@ public final class JavaGenerator implements IGenerator {
 		this.buffer.append(';');
 		this.buffer.append('\n');
 	}
+
 	public void visit(final IMethodInvocation aMethodInvocation) {
 	}
+
 	public void visit(final IParameter p) {
 		/*this.buffer.append(p.getTypeName());
 		this.buffer.append(' ');
 		this.buffer.append(p.getName());*/
 	}
+
 	public void visit(final IPrimitiveEntity aPrimitiveEntity) {
 		// Do nothing for uninteresting primitive types.
 	}
+
 	public void visit(final IUseRelationship p) {
 	}
 }

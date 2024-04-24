@@ -12,10 +12,10 @@ package ptidej.ui.kernel.builder.test;
 
 import padl.creator.aspectj.test.AspectJPrimitive;
 import padl.kernel.exception.CreationException;
+import ptidej.ui.awt.primitive.PrimitiveFactory;
 import ptidej.ui.kernel.builder.AspectJBuilder;
 import ptidej.ui.kernel.builder.Builder;
 import ptidej.ui.primitive.IPrimitiveFactory;
-import ptidej.ui.primitive.awt.PrimitiveFactory;
 
 /**
  * @author Jean-Yves Guyomarc'h

@@ -1,0 +1,3 @@
+[Ptidej Project]
+Name = Ptidej UI
+JavaCode = ../../../DeMIMA/target/classes/ptidej/occurrences/;../../../DeMIMA/target/classes/ptidej/solver/;../../../DeMIMA UI/target/classes/ptidej/ui/;../../../DeMIMA UI Primitives AWT/target/classes/ptidej/ui/primitive/awt/;../../../DeMIMA UI Primitives AWT/target/classes/ptidej/ui/solution/awt/;../../../DeMIMA UI Viewer Standalone/target/classes/ptidej/viewer/;

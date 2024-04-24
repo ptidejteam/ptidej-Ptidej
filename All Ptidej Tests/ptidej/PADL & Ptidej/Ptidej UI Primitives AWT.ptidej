@@ -1,0 +1,3 @@
+[Ptidej Project]
+Name = Ptidej UI Primitives AWT
+JavaCode = ../../../DeMIMA UI Primitives AWT/target/classes/ptidej/ui/primitive/awt/;../../../DeMIMA UI Primitives AWT/target/classes/ptidej/ui/solution/awt/

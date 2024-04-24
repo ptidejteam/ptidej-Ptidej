@@ -14,10 +14,10 @@ package padl.kernel;
  * @author Yann-Gaël Guéhéneuc
  */
 public interface IContainerAggregation extends IAssociation, IContainer {
-	void addConstituent(final IConstituentOfEntity aConstituent);
-
 	String LOGO = "<>-->";
-	char[] ID1 = "~ID1".toCharArray();
-	char[] ID2 = "~ID2".toCharArray();
-	char[] ID3 = "~ID3".toCharArray();
+
+	void addConstituent(final IConstituentOfEntity aConstituent);
+	char[] getOriginFieldName();
+	char[] getOriginGetterMethodName();
+	char[] getOriginSetterMethodName();
 }

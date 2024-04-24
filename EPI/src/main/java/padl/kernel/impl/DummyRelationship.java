@@ -54,4 +54,6 @@ public class DummyRelationship extends Constituent implements IRelationship {
 	}
 	public void setTargetEntity(final IFirstClassEntity anEntity) {
 	}
+	public void setCardinality(final int aCardinality) {
+	}
 }

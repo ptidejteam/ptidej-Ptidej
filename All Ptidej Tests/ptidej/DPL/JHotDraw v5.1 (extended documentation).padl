@@ -1,0 +1,8 @@
+[Extra Behavioral Information]
+
+Relation0 = convertAggregationInComposition(CH.ifa.draw.application.DrawApplication, CH.ifa.draw.framework.Drawing)
+Relation1 = convertAggregationInComposition(CH.ifa.draw.application.DrawApplication, CH.ifa.draw.standard.StandardDrawingView)
+Relation2 = convertAggregationInComposition(CH.ifa.draw.application.DrawApplication, CH.ifa.draw.standard.StandardDrawing)
+Relation3 = convertAggregationInComposition(CH.ifa.draw.standard.StandardDrawingView, CH.ifa.draw.framework.Figure)
+Relation4 = convertAggregationInComposition(CH.ifa.draw.standard.CompositeFigure, CH.ifa.draw.framework.Figure)
+Relation5 = convertAggregationInComposition(CH.ifa.draw.application.DrawApplication, CH.ifa.draw.framework.Tool)

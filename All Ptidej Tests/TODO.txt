@@ -8,3 +8,5 @@ Test "Creator MSE"
 
 Remove CFParse
 	Use util.lang.CFParseBCELConvertor?
+
+Fix JPG export from the menu Export SVG in ...Swing

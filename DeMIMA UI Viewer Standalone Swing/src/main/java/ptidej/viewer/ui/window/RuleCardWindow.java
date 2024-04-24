@@ -23,7 +23,8 @@ import java.io.LineNumberReader;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import ptidej.ui.occurrence.awt.PrimitiveFactory;
+
+import ptidej.ui.awt.occurrence.PrimitiveFactory;
 import ptidej.viewer.ui.AbstractInternalWindow;
 import ptidej.viewer.ui.DesktopPane;
 import ptidej.viewer.ui.panel.CanvasPanel;
@@ -113,7 +114,7 @@ public final class RuleCardWindow extends AbstractInternalWindow {
 		this.getContentPane().add(buttonPanel, BorderLayout.SOUTH);
 	}
 	public void paint(final Graphics g) {
-		((ptidej.ui.primitive.awt.PrimitiveFactory) PrimitiveFactory
+		((ptidej.ui.awt.primitive.PrimitiveFactory) PrimitiveFactory
 			.getInstance()).setGraphics(g);
 		super.paint(g);
 	}

@@ -12,6 +12,7 @@ package padl.kernel.impl;
 
 import java.util.Iterator;
 import java.util.List;
+
 import padl.event.IEvent;
 import padl.event.IModelListener;
 import padl.kernel.Constants;
@@ -30,6 +31,9 @@ class ContainerAggregation extends Association implements IElementMarker,
 		IContainerAggregation, IPrivateModelObservable {
 
 	private static final long serialVersionUID = -6973745337657683093L;
+	private static final char[] ID1 = "~ID1".toCharArray();
+	private static final char[] ID2 = "~ID2".toCharArray();
+	private static final char[] ID3 = "~ID3".toCharArray();
 
 	// Only used if concrete.
 	// Yann 2009/04/28: Container.
@@ -37,8 +41,8 @@ class ContainerAggregation extends Association implements IElementMarker,
 	// No need to keep the associated elements aside :-)
 	//	private List associationElements;
 
-	private AbstractGenericContainerOfConstituents container =
-		new GenericContainerOfNaturallyOrderedConstituents(this);
+	private AbstractGenericContainerOfConstituents container = new GenericContainerOfNaturallyOrderedConstituents(
+			this);
 	// Yann 2002/07/31: Start small...
 	// For the moment, an aggregation only knows about its field
 	// and the getter and setter methods:
@@ -58,8 +62,8 @@ class ContainerAggregation extends Association implements IElementMarker,
 	private Method originSetterMethod;
 
 	public ContainerAggregation(final Association pAssociation) {
-		this(pAssociation.getID(), pAssociation.getTargetEntity(), pAssociation
-			.getCardinality());
+		this(pAssociation.getID(), pAssociation.getTargetEntity(),
+				pAssociation.getCardinality());
 	}
 
 	// Yann 2003/12/15: Hervé!
@@ -95,10 +99,8 @@ class ContainerAggregation extends Association implements IElementMarker,
 	//		this.associationElements.add(originSetterMethod);
 	//	}
 
-	public ContainerAggregation(
-		final char[] anID,
-		final IFirstClassEntity aTargetEntity,
-		final int cardinality) {
+	public ContainerAggregation(final char[] anID,
+			final IFirstClassEntity aTargetEntity, final int cardinality) {
 
 		super(anID, aTargetEntity, cardinality);
 
@@ -106,6 +108,7 @@ class ContainerAggregation extends Association implements IElementMarker,
 
 		this.updateAssociation();
 	}
+
 	public void addConstituent(final IConstituent aConstituent) {
 		if (aConstituent instanceof IConstituentOfEntity) {
 			this.addConstituent((IConstituentOfEntity) aConstituent);
@@ -115,39 +118,44 @@ class ContainerAggregation extends Association implements IElementMarker,
 					+ " can only add IConstituentOfEntity");
 		}
 	}
+
 	public void addConstituent(final IConstituentOfEntity aConstituent) {
-		throw new ModelDeclarationException(MultilingualManager.getString(
-			"ELEMS_ATTACH",
-			IContainerAggregation.class));
+		throw new ModelDeclarationException(MultilingualManager
+				.getString("ELEMS_ATTACH", IContainerAggregation.class));
 	}
+
 	public void addModelListener(IModelListener aModelListener) {
 		this.container.addModelListener(aModelListener);
 	}
+
 	public void addModelListeners(List aListOfModelListeners) {
 		this.container.addModelListeners(aListOfModelListeners);
 	}
+
 	public boolean doesContainConstituentWithID(final char[] anID) {
 		return this.container.doesContainConstituentWithID(anID);
 	}
+
 	public boolean doesContainConstituentWithName(final char[] aName) {
 		return this.container.doesContainConstituentWithName(aName);
 	}
+
 	//	public boolean doesContainConstituentWithName(final String aName) {
 	//		return this.associationElements.contains(this
 	//			.getConstituentFromName(aName));
 	//	}
 	public void endCloneSession() {
-		final ContainerAggregation clonedAggregation =
-			(ContainerAggregation) this.getClone();
+		final ContainerAggregation clonedAggregation = (ContainerAggregation) this
+				.getClone();
 		if (this.isFromVoid) {
 			clonedAggregation.updateAssociation();
 		}
 		else {
 			clonedAggregation.originField = (Field) this.originField.getClone();
-			clonedAggregation.originGetterMethod =
-				(Method) this.originGetterMethod.getClone();
-			clonedAggregation.originSetterMethod =
-				(Method) this.originSetterMethod.getClone();
+			clonedAggregation.originGetterMethod = (Method) this.originGetterMethod
+					.getClone();
+			clonedAggregation.originSetterMethod = (Method) this.originSetterMethod
+					.getClone();
 
 			//	clonedAggregation.associationElements.clear();
 			//	if (!clonedAggregation.isAbstract()) {
@@ -162,33 +170,43 @@ class ContainerAggregation extends Association implements IElementMarker,
 			clonedAggregation.container.addConstituent(this.originSetterMethod);
 		}
 	}
-	public void fireModelChange(final String anEventType, final IEvent anEvent) {
+
+	public void fireModelChange(final String anEventType,
+			final IEvent anEvent) {
 		this.container.fireModelChange(anEventType, anEvent);
 	}
+
 	public Iterator getConcurrentIteratorOnConstituents() {
 		return this.container.getConcurrentIteratorOnConstituents();
 	}
+
 	public Iterator getConcurrentIteratorOnConstituents(final IFilter filter) {
 		return this.container.getConcurrentIteratorOnConstituents();
 	}
+
 	public Iterator getConcurrentIteratorOnConstituents(
-		final java.lang.Class aConstituentType) {
+			final java.lang.Class aConstituentType) {
 
 		return this.container
-			.getConcurrentIteratorOnConstituents(aConstituentType);
+				.getConcurrentIteratorOnConstituents(aConstituentType);
 	}
+
 	public IConstituent getConstituentFromID(final char[] anID) {
 		return this.container.getConstituentFromID(anID);
 	}
+
 	public IConstituent getConstituentFromID(final String anID) {
 		return this.getConstituentFromID(anID.toCharArray());
 	}
+
 	public IConstituent getConstituentFromName(final char[] aName) {
 		return this.container.getConstituentFromName(aName);
 	}
+
 	public IConstituent getConstituentFromName(final String aName) {
 		return this.getConstituentFromName(aName.toCharArray());
 	}
+
 	//	public IConstituent getConstituentFromName(final String aName) {
 	//		final Iterator iterator = this.associationElements.iterator();
 	//
@@ -204,34 +222,44 @@ class ContainerAggregation extends Association implements IElementMarker,
 	public char[] getFieldType() {
 		return this.originField.getType();
 	}
+
 	public Iterator getIteratorOnConstituents() {
 		return this.container.getIteratorOnConstituents();
 	}
+
 	public Iterator getIteratorOnConstituents(final IFilter aFilter) {
 		return this.container.getIteratorOnConstituents(aFilter);
 	}
+
 	public Iterator getIteratorOnConstituents(
-		final java.lang.Class aConstituentType) {
+			final java.lang.Class aConstituentType) {
 		return this.container.getIteratorOnConstituents(aConstituentType);
 	}
+
 	public Iterator getIteratorOnModelListeners() {
 		return this.container.getIteratorOnModelListeners();
 	}
+
 	public int getNumberOfConstituents() {
 		return this.container.getNumberOfConstituents();
 	}
+
 	public int getNumberOfConstituents(final java.lang.Class aConstituentType) {
 		return this.container.getNumberOfConstituents(aConstituentType);
 	}
+
 	public void removeConstituentFromID(final char[] anID) {
 		this.container.removeConstituentFromID(anID);
 	}
+
 	public void removeModelListener(final IModelListener aModelListener) {
 		this.container.removeModelListener(aModelListener);
 	}
+
 	public void removeModelListeners(final List modelListeners) {
 		this.container.removeModelListeners(modelListeners);
 	}
+
 	/**
 	 * This method returns a list of all the
 	 * actors (instances of Association) added to
@@ -253,12 +281,14 @@ class ContainerAggregation extends Association implements IElementMarker,
 			this.updateAssociation();
 		}
 	}
+
 	public void setName(final char[] aName) {
 		super.setName(aName);
 		if (this.isFromVoid) {
 			this.updateAssociation();
 		}
 	}
+
 	public void setTargetEntity(final IFirstClassEntity anEntity) {
 		super.setTargetEntity(anEntity);
 
@@ -271,15 +301,17 @@ class ContainerAggregation extends Association implements IElementMarker,
 			}
 		}
 	}
+
 	public void setVisibility(int visibility) {
 		super.setVisibility(visibility);
 		this.updateAssociation();
 	}
+
 	public void startCloneSession() {
 		super.startCloneSession();
 
-		final ContainerAggregation clone =
-			(ContainerAggregation) this.getClone();
+		final ContainerAggregation clone = (ContainerAggregation) this
+				.getClone();
 
 		// New association elements.
 		// Yann 2010/10/03: Objects!
@@ -287,9 +319,9 @@ class ContainerAggregation extends Association implements IElementMarker,
 		// and must be assigned a new instance independently.
 		//	((ContainerAggregation) this.getClone()).container
 		//		.resetListOfConstituents();
-		((ContainerAggregation) this.getClone()).container =
-			new GenericContainerOfNaturallyOrderedConstituents(
-				((ContainerAggregation) this.getClone()));
+		((ContainerAggregation) this
+				.getClone()).container = new GenericContainerOfNaturallyOrderedConstituents(
+						((ContainerAggregation) this.getClone()));
 
 		// Yann 2015/09/01: Clone of listeners!
 		// I don't forget to clone the listners too...
@@ -319,6 +351,7 @@ class ContainerAggregation extends Association implements IElementMarker,
 		// However, this is done in the performCloneSession() method from the
 		// superclass Use.
 	}
+
 	public String toString(final int tab) {
 		final StringBuffer codeEq = new StringBuffer();
 		codeEq.append(super.toString(tab));
@@ -334,17 +367,18 @@ class ContainerAggregation extends Association implements IElementMarker,
 
 		return codeEq.toString();
 	}
+
 	private void updateAssociation() {
 		// Yann 2002/07/31: Update.
 		// When an aggregation relationship is built from void,
 		// we must create "fake" field and accessor methods.
-		this.originField = new Field(IContainerAggregation.ID1);
+		this.originField = new Field(ContainerAggregation.ID1);
 		this.originField.setName(this.getName());
 		this.originField.setVisibility(this.getVisibility());
 		this.originField.setPrivate(true);
 		this.originField.resetCodeLines();
 
-		this.originGetterMethod = new Method(IContainerAggregation.ID2);
+		this.originGetterMethod = new Method(ContainerAggregation.ID2);
 		this.originGetterMethod.setVisibility(this.getVisibility());
 		// Yann 2004/05/24: Abstractness.
 		// The getter method (respectively setter method) might
@@ -354,27 +388,27 @@ class ContainerAggregation extends Association implements IElementMarker,
 			this.originGetterMethod.resetCodeLines();
 		}
 
-		this.originSetterMethod = new Method(IContainerAggregation.ID3);
+		this.originSetterMethod = new Method(ContainerAggregation.ID3);
 		this.originSetterMethod.setVisibility(this.getVisibility());
 		if (!Modifier.isAbstract(this.getVisibility())) {
 			this.originSetterMethod.resetCodeLines();
 		}
 
-		final Parameter parameter =
-			new Parameter(this.getTargetEntity(), Constants.CARDINALITY_ONE);
+		final Parameter parameter = new Parameter(this.getTargetEntity(),
+				Constants.CARDINALITY_ONE);
 
 		if (this.getCardinality() > 1) {
 			this.originField.setType(Constants.DEFAULT_LIST_INTERFACE);
 
-			this.originGetterMethod.setName(("remove" + this
-				.getTargetEntity()
-				.getDisplayName()).toCharArray());
+			this.originGetterMethod.setName(
+					("remove" + this.getTargetEntity().getDisplayName())
+							.toCharArray());
 			this.originGetterMethod.addConstituent(parameter);
 			this.originGetterMethod.setReturnType(Method.VOID);
 
-			this.originSetterMethod.setName(("add" + this
-				.getTargetEntity()
-				.getDisplayName()).toCharArray());
+			this.originSetterMethod
+					.setName(("add" + this.getTargetEntity().getDisplayName())
+							.toCharArray());
 			this.originSetterMethod.addConstituent(parameter);
 			this.originSetterMethod.setReturnType(Method.VOID);
 
@@ -392,32 +426,31 @@ class ContainerAggregation extends Association implements IElementMarker,
 		else {
 			this.originField.setType(this.getTargetEntity().getID());
 
-			this.originGetterMethod.setName(("get" + this
-				.getTargetEntity()
-				.getDisplayName()).toCharArray());
-			this.originGetterMethod.setReturnType(this
-				.getTargetEntity()
-				.getID());
+			this.originGetterMethod
+					.setName(("get" + this.getTargetEntity().getDisplayName())
+							.toCharArray());
+			this.originGetterMethod
+					.setReturnType(this.getTargetEntity().getID());
 
-			this.originSetterMethod.setName(("set" + this
-				.getTargetEntity()
-				.getDisplayName()).toCharArray());
+			this.originSetterMethod
+					.setName(("set" + this.getTargetEntity().getDisplayName())
+							.toCharArray());
 			this.originSetterMethod.setReturnType(Method.VOID);
 			this.originSetterMethod.addConstituent(parameter);
 
 			if (!this.isAbstract()) {
-				this.originGetterMethod.setCodeLines("return "
-						+ this.getDisplayName() + ";");
+				this.originGetterMethod
+						.setCodeLines("return " + this.getDisplayName() + ";");
 
-				this.originSetterMethod
-					.setCodeLines(this.getDisplayName() + " = "
-							+ this.getTargetEntity().getDisplayName() + ';');
+				this.originSetterMethod.setCodeLines(this.getDisplayName()
+						+ " = " + this.getTargetEntity().getDisplayName()
+						+ ';');
 			}
 		}
 
 		if (this.container == null) {
-			this.container =
-				new GenericContainerOfNaturallyOrderedConstituents(this);
+			this.container = new GenericContainerOfNaturallyOrderedConstituents(
+					this);
 		}
 		else {
 			// Yann 2016/09/19: Question!
@@ -429,5 +462,17 @@ class ContainerAggregation extends Association implements IElementMarker,
 		}
 		this.container.addConstituent(this.originGetterMethod);
 		this.container.addConstituent(this.originSetterMethod);
+	}
+
+	public char[] getOriginFieldName() {
+		return ContainerAggregation.ID1;
+	}
+
+	public char[] getOriginGetterMethodName() {
+		return ContainerAggregation.ID2;
+	}
+
+	public char[] getOriginSetterMethodName() {
+		return ContainerAggregation.ID3;
 	}
 }
