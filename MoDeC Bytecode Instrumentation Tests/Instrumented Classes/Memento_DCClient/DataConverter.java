@@ -3,8 +3,8 @@ import java.io.*;
 import java.util.*;
 
 public class DataConverter {
-  public static final String DATA_FILE = "Data.txt";
-  public static final String OUTPUT_FILE = "SQL.txt";
+  public static final String DATA_FILE = "Data/Data.txt";
+  public static final String OUTPUT_FILE = "Data/SQL.txt";
 
   private long ID = 0;
 

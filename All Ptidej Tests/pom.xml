@@ -272,6 +272,21 @@
 		</dependency>
 
 		<dependency>
+			<groupId>net.ptidej.modec</groupId>
+			<artifactId>modec-solver</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.modec</groupId>
+			<artifactId>modec-solver</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-analyses</artifactId>
 			<version>1.0.0</version>

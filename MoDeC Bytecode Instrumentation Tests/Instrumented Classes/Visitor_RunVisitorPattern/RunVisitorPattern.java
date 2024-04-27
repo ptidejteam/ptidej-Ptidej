@@ -23,10 +23,10 @@ public class RunVisitorPattern {
 
     System.out.println("Deserializing a test Project for Visitor pattern");
     System.out.println();
-    if (!(new File("data.ser").exists())) {
-      DataCreator.serialize("data.ser");
+    if (!(new File("tmp/data.ser").exists())) {
+      DataCreator.serialize("tmp/data.ser");
     }
-    Project project = (Project) (DataRetriever.deserializeData("data.ser"));
+    Project project = (Project) (DataRetriever.deserializeData("tmp/data.ser"));
 
     System.out
         .println("Creating a ProjectCostVisitor, to calculate the total cost of the project.");
@@ -281,7 +281,7 @@ class ContactImpl implements Contact {
 }
 
 class DataCreator {
-  private static final String DEFAULT_FILE = "data.ser";
+  private static final String DEFAULT_FILE = "tmp/data.ser";
 
   public static void main(String[] args) {
     String fileName;

@@ -2,6 +2,7 @@ Change char encoding to UTF-8
 Remove warnings from compilation
 
 Clean test outputs
+	Fix/hide any exceptions
 
 Fix "PADL Creator C++ (Eclipse)"
 Test "Creator MSE"
@@ -10,3 +11,9 @@ Remove CFParse
 	Use util.lang.CFParseBCELConvertor?
 
 Fix JPG export from the menu Export SVG in ...Swing
+
+Simplify and update "About" in ...Swing
+
+Maven-ise Caffeine
+
+Add tests in PADL Generator PageRank

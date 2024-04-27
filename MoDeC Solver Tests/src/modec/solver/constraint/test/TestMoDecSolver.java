@@ -17,20 +17,25 @@ import junit.framework.TestSuite;
  * @author Yann-Gaël Guéhéneuc
  * @since 2013/04/28
  */
-public final class TestMoDecSolver extends junit.framework.TestSuite {
+public final class TestMoDecSolver extends TestSuite {
 
 	public TestMoDecSolver() {
 	}
+
 	public TestMoDecSolver(final Class theClass) {
 		super(theClass);
 	}
+
 	public TestMoDecSolver(final String name) {
 		super(name);
 	}
+
 	public static Test suite() {
 		final TestMoDecSolver suite = new TestMoDecSolver();
-		suite.addTest(new TestSuite(TestCaller.class));
-		suite.addTest(new TestSuite(TestMessageFollowsImmediately.class));
+		
+		suite.addTest(new TestSuite(CallerTest.class));
+		suite.addTest(new TestSuite(MessageFollowsImmediatelyTest.class));
+		
 		return suite;
 	}
 }

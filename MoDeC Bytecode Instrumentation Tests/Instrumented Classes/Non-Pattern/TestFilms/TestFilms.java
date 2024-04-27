@@ -252,10 +252,10 @@ public class TestFilms {
 		
 
 	//	3.a) Remplir un tableau d'objets Acteur
-		int nbAct = readFichierActeursAAAAAAAAAAAAAAAAAAA("acteurs.txt", tabActeurs);
+		int nbAct = readFichierActeursAAAAAAAAAAAAAAAAAAA("Data/Acteurs.txt", tabActeurs);
 
 		// 3.b) Remplir un tableau d'objets Film
-	int nbMovies = readFichierFilms ("films.txt", tabFilms, tabActeurs, nbAct);
+	int nbMovies = readFichierFilms ("Data/Films.txt", tabFilms, tabActeurs, nbAct);
 
 		// 3.c) Trier les films selon leur année de sortie
 	//	trierLesFilms (tabFilms, nbMovies);

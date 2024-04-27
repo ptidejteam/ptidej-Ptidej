@@ -13,11 +13,13 @@ package ptidej.test.all;
 import epi.test.TestEPI;
 import junit.framework.Test;
 import junit.framework.TestSuite;
+import modec.solver.constraint.test.TestMoDecSolver;
 import padl.analysis.test.TestPADLAnalyses;
 import padl.generator.test.TestPADLGenerator;
 import padl.micropatterns.test.TestMicroPatterns;
 import padl.pagerank.test.TestPADLGeneratorPageRank;
 import padl.refactoring.test.TestRefactorings;
+import padl.serialiser.test.TestDB4OSerialiser;
 import padl.serialiser.test.TestJOSSerialiser;
 import padl.test.TestPADL;
 import pom.test.TestPOM;
@@ -35,8 +37,7 @@ public final class TestOthers extends TestSuite {
 		// TODO Maven-ise Caffeine
 		//		suite.addTest(TestCaffeine.suite());
 		suite.addTest(TestEPI.suite());
-		// TODO Maven-ise MoDec
-		//		suite.addTest(TestMoDecSolver.suite());
+		suite.addTest(TestMoDecSolver.suite());
 		suite.addTest(TestPADL.suite());
 		suite.addTest(TestPADLAnalyses.suite());
 		suite.addTest(TestPADLGenerator.suite());
@@ -45,7 +46,7 @@ public final class TestOthers extends TestSuite {
 		//		suite.addTest(TestPADLJNI.suite());
 		suite.addTest(TestMicroPatterns.suite());
 		suite.addTest(TestRefactorings.suite());
-		// suite.addTest(TestDB4OSerialiser.suite());
+		suite.addTest(TestDB4OSerialiser.suite());
 		suite.addTest(TestJOSSerialiser.suite());
 		suite.addTest(TestPOM.suite());
 		suite.addTest(TestSAD.suite());

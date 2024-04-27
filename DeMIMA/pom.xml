@@ -68,6 +68,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-classfile</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 </project>

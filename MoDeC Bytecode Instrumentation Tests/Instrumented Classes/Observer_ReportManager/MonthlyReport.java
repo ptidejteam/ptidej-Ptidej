@@ -75,7 +75,7 @@ public class MonthlyReport extends JFrame implements Observer {
                                              ) {
     Vector v = new Vector();
     FileUtil futil = new FileUtil();
-    Vector allRows = futil.fileToVector("Transactions.dat");
+    Vector allRows = futil.fileToVector("Data/Transactions.dat");
 
     //current month
     Calendar cal = Calendar.getInstance();

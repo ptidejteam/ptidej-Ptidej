@@ -37,12 +37,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Solver Tests"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Solver"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Metamodel"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Invoker"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Bytecode Instrumentation Tests"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/MoDeC Bytecode Instrumentation"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Caffeine"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Caffeine Analyses"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Caffeine Tests"/>
