@@ -15,6 +15,7 @@ import junit.framework.TestSuite;
 import ptidej.solver.claire.test.TestPtidejSolver3;
 import ptidej.solver.fingerprint.test.TestPtidejSolverFingerprints;
 import ptidej.solver.java.test.TestPtidejSolver4;
+import util.lang.MavenTestGuard;
 
 /**
  * @author Yann-Gaël Guéhéneuc
@@ -24,7 +25,13 @@ public final class TestDeMIMA extends TestSuite {
 	public static Test suite() {
 		final TestDeMIMA suite = new TestDeMIMA();
 
-		suite.addTest(TestPtidejSolver3.suite());
+		// Yann 24/04/28: Maven and DOS programs
+		// These tests cannot pass because they require executing 
+		// the DOS program PtidejSolver.exe, which is archived into
+		// the DeMIMA Solver 3 JAR, in addition to being a program.
+		if (MavenTestGuard.getInstance().isRunningOutsideMavenTest()) {
+			suite.addTest(TestPtidejSolver3.suite());
+		}
 		suite.addTest(TestPtidejSolver4.suite());
 		suite.addTest(TestPtidejSolverFingerprints.suite());
 

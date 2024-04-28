@@ -51,11 +51,20 @@ public class Files {
 			//   file name;
 			// - I get the absolute path of the client class file.
 			try {
-				final String clientClassAbsolutePath = new File(
+				final File clientClassFile = new File(
 						URLDecoder.decode(aClass.getClassLoader()
 								.getResource(clientClassBuffer.toString())
-								.getFile(), "UTF-8"))
-						.getAbsolutePath();
+								.getFile(), "UTF-8"));
+
+				// Yann 24/04/27: Weird behaviour of getAbsolutePath() 
+				// with a URL, when running in Maven instead of JUnit.
+				final String clientClassAbsolutePath;
+				if (clientClassFile.isFile()) {
+					clientClassAbsolutePath = clientClassFile.getAbsolutePath();
+				}
+				else {
+					clientClassAbsolutePath = clientClassFile.getPath();
+				}
 				// Finally, I remove from the client class file its name
 				// itself to get the path to the client class, from which
 				// I can as usuall load other resources.

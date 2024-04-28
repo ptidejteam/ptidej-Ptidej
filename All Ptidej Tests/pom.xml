@@ -21,8 +21,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.2.5</version>
 				<configuration>
-					<!-- Must export/open some hidden package to run PADL
-					Creator JavaFile (JavaC) -->
+					<!-- Must export/open some hidden packages -->
 					<argLine>
 						--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED

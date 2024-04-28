@@ -1,5 +1,9 @@
+All Ptidej Tests, make "mvn test" pass
+	JUnit already does, so why not in Maven?
+		Because PtidejSolver.exe is (1) in a JAR and (2) a DOS program (that cannot be run on Linux)...
+
 Change char encoding to UTF-8
-Remove warnings from compilation
+Remove compilation warnings
 
 Clean test outputs
 	Fix/hide any exceptions
