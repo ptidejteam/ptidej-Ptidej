@@ -3,7 +3,7 @@
 [![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
+![Apache Maven](https://img.shields.io/badge/Maven-green?style=for-the-badge&logo=Apache%20Maven)
 
 In the Ptidej Team (Pattern Trace Identification, Detection, and Enhancement in Java), we aim at developing theories, methods, 
 and tools, to evaluate and to improve the quality of object-oriented programs by promoting the use of idioms, design patterns, 
@@ -52,6 +52,7 @@ Currently, the whole project is require some sub-projects to be compiled towards
 
 ### To be done
 
+In no particular order of importance:
 - Migrate the use of the `cfparse` library to the [`bcel` library](https://mvnrepository.com/artifact/org.apache.bcel/bcel)
   - Use `util.lang.CFParseBCELConvertor`?
 - Find an alternative to using the `com.sun.tools.javac` library, which is internal to the JDK.
@@ -65,6 +66,7 @@ Currently, the whole project is require some sub-projects to be compiled towards
 - Fix JPG export from the menu Export SVG in `...Swing`
 - Simplify and update "About" in `...Swing`
 - Maven-ise Caffeine
+- Add GitHub Actions to compile/test the whole project
 
 ## Contribution guidelines
 
