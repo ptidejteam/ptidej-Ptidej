@@ -1,4 +1,0 @@
-[Extra Behavioral Information]
-
-Relation1 = convertAggregationInComposition(CH.ifa.draw.application.DrawApplication, CH.ifa.draw.standard.StandardDrawingView)
-Relation2 = convertAggregationInComposition(CH.ifa.draw.application.DrawApplication, CH.ifa.draw.standard.StandardDrawing)

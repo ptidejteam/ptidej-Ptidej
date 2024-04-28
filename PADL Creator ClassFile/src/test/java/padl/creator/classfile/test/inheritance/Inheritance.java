@@ -30,7 +30,7 @@ public final class Inheritance extends ClassFilePrimitive {
 
 		this.codeLevelModel
 			.create(new CompleteClassFileCreator(
-				new String[] { "../PADL Creator ClassFile Tests/rsc/Inheritance/jdiui.jar" }));
+				new String[] { "../PADL Creator ClassFile/target/test-classes/Inheritance/jdiui.jar" }));
 	}
 
 	public void testFieldAccess() {

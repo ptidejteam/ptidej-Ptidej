@@ -38,7 +38,7 @@ public class TestPrivateConstructor extends TestCase {
 				Factory.getInstance().createCodeLevelModel("");
 			codeLevelModel
 				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/rsc/RestrictedCreation.class" }));
+					new String[] { "../PADL Analyses/target/test-classes/RestrictedCreation.class" }));
 
 			TestPrivateConstructor.IdiomLevelModel =
 				(IIdiomLevelModel) new AACRelationshipsAnalysis()

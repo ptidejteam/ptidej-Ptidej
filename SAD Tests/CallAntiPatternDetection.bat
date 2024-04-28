@@ -1,2 +1,0 @@
-JAVA -Xmx1200M -classpath "../CPL/bin":"../CPL/bcel-5.2.jar":"../CPL/cfparse.jar":"../PADL/bin":"../PADL Analyses/bin":"../POM/bin":"../PADL Creator ClassFile/bin":"../Ptidej/bin":"../SAD/bin":"../SAD Rules/bin":"./bin" sad.detection.test.CallAntiPatternDetection
-PAUSE

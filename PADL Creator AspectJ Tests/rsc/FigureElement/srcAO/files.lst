@@ -1,7 +1,0 @@
-exemple/figureElement/aspect/DisplayAspect.aj
-exemple/figureElement/core/FigureElement.java
-exemple/figureElement/core/Line.java
-exemple/figureElement/core/Main.java
-exemple/figureElement/core/Point.java
-exemple/figureElement/display/DisplayManager.java
-exemple/figureElement/display/DisplayableFigure.java

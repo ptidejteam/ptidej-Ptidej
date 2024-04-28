@@ -46,7 +46,7 @@ public class JHotDrawTest extends TestCase {
 					.createCodeLevelModel("JHotDraw v5.1");
 			((ICodeLevelModel) JHotDrawTest.OriginalModel)
 					.create(new CompleteClassFileCreator(new String[] {
-							"../PADL Serialiser JOS/JHotDraw v5.1/bin/" },
+							"../PADL Serialiser JOS/target/test-classes/JHotDraw v5.1/bin/" },
 							true));
 			JHotDrawTest.OriginalModel = new AACRelationshipsAnalysis()
 					.invoke(JHotDrawTest.OriginalModel);

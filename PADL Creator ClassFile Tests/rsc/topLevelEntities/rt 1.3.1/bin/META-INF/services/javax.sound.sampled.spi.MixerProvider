@@ -1,4 +1,0 @@
-# Provider for the Headspace Mixer
-com.sun.media.sound.HeadspaceMixerProvider
-com.sun.media.sound.SimpleInputDeviceProvider
-com.sun.media.sound.SimpleOutputDeviceProvider

@@ -39,7 +39,7 @@ public class TestPathArgoUML extends ClassFilePrimitive {
 			TestPathArgoUML.Model.create(
 				new CompleteClassFileCreator(
 					new String[] {
-							"../PADL Creator ClassFile Tests/rsc/ArgoUML-0.15.6.jar" }));
+							"../PADL Creator ClassFile/target/test-classes/ArgoUML-0.15.6.jar" }));
 
 			TestPathArgoUML.FirstClassEntities =
 				Util.getArrayOfTopLevelEntities(TestPathArgoUML.Model);

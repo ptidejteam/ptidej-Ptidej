@@ -1,4 +1,0 @@
-# Micro-architecture 98 similar at 100% with Composite
-98.100.EPI_Abstract_Component = EPI_Abstract_org.game.Juzzle.IPuzzlePartList
-98.100.Composite = org.game.Juzzle.PuzzlePanel
-

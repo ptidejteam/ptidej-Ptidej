@@ -11,6 +11,7 @@
 package padl.creator.javafile.eclipse.test.basic;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
 import padl.kernel.ICodeLevelModel;
@@ -25,25 +26,18 @@ public class InterfaceTest extends TestCase {
 	public void testInterface1() {
 		final String classpath = "";
 
-		final String sourcePath =
-			"./../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
-		final String[] javaFiles =
-			new String[] { "./../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/interfaz/" };
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
+		final String[] javaFiles = new String[] {
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/interfaz/" };
 
-		final ICodeLevelModel model =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				sourcePath,
-				classpath,
-				javaFiles);
+		final ICodeLevelModel model = Utils.createLightJavaFilesPadlModel("",
+				sourcePath, classpath, javaFiles);
 
-		final IInterface interfaz =
-			(IInterface) model
+		final IInterface interfaz = (IInterface) model
 				.getTopLevelEntityFromID("padl.example.interfaz.MyInterface");
 		Assert.assertNotNull(interfaz);
 
-		final IInterface interfaz1 =
-			(IInterface) model
+		final IInterface interfaz1 = (IInterface) model
 				.getTopLevelEntityFromID("padl.example.interfaz.MyInterface1");
 		Assert.assertNull(interfaz1);
 
@@ -58,30 +52,23 @@ public class InterfaceTest extends TestCase {
 	public void testInterfaceNoDefaultConstructor() {
 		final String classpath = "";
 
-		final String sourcePath =
-			"./../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/";
-		final String[] javaFiles =
-			new String[] { "./../PADL Creator JavaFile (Eclipse) Tests/rsc/PADL testdata/padl/example/interfaz/" };
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
+		final String[] javaFiles = new String[] {
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/interfaz/" };
 
-		final ICodeLevelModel model =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				sourcePath,
-				classpath,
-				javaFiles);
+		final ICodeLevelModel model = Utils.createLightJavaFilesPadlModel("",
+				sourcePath, classpath, javaFiles);
 
-		final IInterface interfaz =
-			(IInterface) model
+		final IInterface interfaz = (IInterface) model
 				.getTopLevelEntityFromID("padl.example.interfaz.MyInterface");
 		Assert.assertNotNull(interfaz);
 
 		try {
-			Assert.assertEquals(
-				0,
-				interfaz.getNumberOfConstituents(Class
-					.forName("padl.kernel.impl.Constructor"))
-						- interfaz.getNumberOfConstituents(Class
-							.forName("padl.kernel.impl.Method")));
+			Assert.assertEquals(0,
+					interfaz.getNumberOfConstituents(
+							Class.forName("padl.kernel.impl.Constructor"))
+							- interfaz.getNumberOfConstituents(
+									Class.forName("padl.kernel.impl.Method")));
 		}
 		catch (final ClassNotFoundException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());

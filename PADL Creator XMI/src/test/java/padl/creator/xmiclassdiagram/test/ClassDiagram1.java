@@ -30,7 +30,7 @@ public class ClassDiagram1 extends TestCase {
 			((MotifFactory) MotifFactory.getInstance())
 				.createDesignLevelModel(new char[0]);
 		this.model.create(new XMICreator(
-			"../PADL Creator XMI Tests/data/ClassDiagram1.xmi"));
+			"../PADL Creator XMI/target/test-classes/ClassDiagram1.xmi"));
 	}
 
 	public void testAssociation() {

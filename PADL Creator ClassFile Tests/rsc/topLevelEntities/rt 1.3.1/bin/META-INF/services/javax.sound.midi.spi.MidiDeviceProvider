@@ -1,4 +1,0 @@
-# Providers for midi devices
-com.sun.media.sound.MixerSynthProvider
-com.sun.media.sound.MixerSequencerProvider
-com.sun.media.sound.MidiOutDeviceProvider

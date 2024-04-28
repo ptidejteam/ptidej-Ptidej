@@ -11,6 +11,7 @@
 package padl.creator.classfile.test.innerclasses;
 
 import org.junit.Assert;
+
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.classfile.test.ClassFilePrimitive;
 import padl.kernel.ICodeLevelModel;
@@ -29,28 +30,25 @@ public class TestInnerClasses extends ClassFilePrimitive {
 	public TestInnerClasses(final String aName) {
 		super(aName);
 	}
+
 	protected void setUp() throws CreationException {
-		this.testedModel =
-			ClassFilePrimitive.getFactory().createCodeLevelModel(
-				"ptidej.example.innerclasses2");
-		this.testedModel
-			.create(new CompleteClassFileCreator(
-				new String[] {
-						"../PADL Creator ClassFile Tests/rsc/InternalClass/org/argouml/language/java/generator/GeneratorJava.class",
-						"../PADL Creator ClassFile Tests/rsc/InternalClass/org/argouml/language/java/generator/GeneratorJava$1$TagExtractor.class" }));
+		this.testedModel = ClassFilePrimitive.getFactory()
+				.createCodeLevelModel("ptidej.example.innerclasses2");
+		this.testedModel.create(new CompleteClassFileCreator(new String[] {
+				"../PADL Creator ClassFile/target/test-classes/InternalClass/org/argouml/language/java/generator/GeneratorJava.class",
+				"../PADL Creator ClassFile/target/test-classes/InternalClass/org/argouml/language/java/generator/GeneratorJava$1$TagExtractor.class" }));
 
-		this.testedClass =
-			(IFirstClassEntity) this.testedModel
-				.getTopLevelEntityFromID("org.argouml.language.java.generator.GeneratorJava");
+		this.testedClass = (IFirstClassEntity) this.testedModel
+				.getTopLevelEntityFromID(
+						"org.argouml.language.java.generator.GeneratorJava");
 	}
-	public void testMemberClass() {
-		int numMembers =
-			this.testedClass.getNumberOfConstituents(IMemberGhost.class);
 
-		Assert.assertEquals(
-			"Number of members contained should be ",
-			0,
-			numMembers);
+	public void testMemberClass() {
+		int numMembers = this.testedClass
+				.getNumberOfConstituents(IMemberGhost.class);
+
+		Assert.assertEquals("Number of members contained should be ", 0,
+				numMembers);
 
 		//    TestCase.assertNotNull("Could not find member class 'TagExtractor'", 
 		//            this.testedClass.getConstituentFromID("TagExtractor"));

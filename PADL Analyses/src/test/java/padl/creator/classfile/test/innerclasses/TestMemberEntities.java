@@ -11,6 +11,7 @@
 package padl.creator.classfile.test.innerclasses;
 
 import org.junit.Assert;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
@@ -32,30 +33,29 @@ public class TestMemberEntities extends ClassFilePrimitive {
 	public TestMemberEntities(final String aName) {
 		super(aName);
 	}
-	protected void setUp() throws CreationException,
-			UnsupportedSourceModelException {
+
+	protected void setUp()
+			throws CreationException, UnsupportedSourceModelException {
 
 		if (TestMemberEntities.FirstClassEntities == null) {
-			final ICodeLevelModel codeLevelModel =
-				ClassFilePrimitive.getFactory().createCodeLevelModel("");
-			codeLevelModel
-				.create(new CompleteClassFileCreator(
-					new String[] {
-							"../PADL Creator ClassFile Tests/rsc/ArgoUML/org/argouml/application/events/ArgoEventPump.class",
-							"../PADL Creator ClassFile Tests/rsc/ArgoUML/org/argouml/application/events/ArgoEventPump$Pair.class" }));
+			final ICodeLevelModel codeLevelModel = ClassFilePrimitive
+					.getFactory().createCodeLevelModel("");
+			codeLevelModel.create(new CompleteClassFileCreator(new String[] {
+					"../PADL Creator ClassFile/target/test-classes/ArgoUML/org/argouml/application/events/ArgoEventPump.class",
+					"../PADL Creator ClassFile/target/test-classes/ArgoUML/org/argouml/application/events/ArgoEventPump$Pair.class" }));
 
-			final IIdiomLevelModel idiomLevelModel =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+			final IIdiomLevelModel idiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(codeLevelModel);
 
-			TestMemberEntities.FirstClassEntities =
-				Util.getArrayOfTopLevelEntities(idiomLevelModel);
+			TestMemberEntities.FirstClassEntities = Util
+					.getArrayOfTopLevelEntities(idiomLevelModel);
 		}
 	}
+
 	public void testMemberEntities() {
-		Assert.assertTrue(
-			"Member class should have methods!",
-			((IMemberClass) TestMemberEntities.FirstClassEntities[17]
-				.getConstituentFromName("Pair")).getNumberOfConstituents() > 0);
+		Assert.assertTrue("Member class should have methods!",
+				((IMemberClass) TestMemberEntities.FirstClassEntities[17]
+						.getConstituentFromName("Pair"))
+						.getNumberOfConstituents() > 0);
 	}
 }

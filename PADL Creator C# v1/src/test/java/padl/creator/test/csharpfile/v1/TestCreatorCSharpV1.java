@@ -11,8 +11,10 @@
 package padl.creator.test.csharpfile.v1;
 
 import java.io.IOException;
-import junit.framework.TestCase;
+
 import org.antlr.runtime.RecognitionException;
+
+import junit.framework.TestCase;
 import padl.creator.csharpfile.v1.CSharpCreator;
 import padl.csharp.kernel.impl.CSharpFactory;
 import padl.kernel.IClass;
@@ -27,22 +29,19 @@ public class TestCreatorCSharpV1 extends TestCase {
 		super(aName);
 	}
 
-	public void testParser() throws IOException, RecognitionException,
-			CreationException {
+	public void testParser()
+			throws IOException, RecognitionException, CreationException {
 
-		final ICodeLevelModel model =
-			CSharpFactory.getInstance().createCodeLevelModel(
-				"Test".toCharArray());
-		final CSharpCreator creator =
-			new CSharpCreator(
-				new String[] {
-						"../PADL Creator C# v1 Tests/rsc/parser_oracles/drawdemo.cs",
-						"../PADL Creator C# v1 Tests/rsc/parser_oracles/drawingobject.cs",
-						"../PADL Creator C# v1 Tests/rsc/parser_oracles/interface_impl.cs",
-						"../PADL Creator C# v1 Tests/rsc/parser_oracles/interface.cs",
-						"../PADL Creator C# v1 Tests/rsc/parser_oracles/lcs.cs",
-						"../PADL Creator C# v1 Tests/rsc/parser_oracles/mystring.cs",
-						"../PADL Creator C# v1 Tests/rsc/parser_oracles/parameters.cs" });
+		final ICodeLevelModel model = CSharpFactory.getInstance()
+				.createCodeLevelModel("Test".toCharArray());
+		final CSharpCreator creator = new CSharpCreator(new String[] {
+				"../PADL Creator C# v1/target/test-classes/parser_oracles/drawdemo.cs",
+				"../PADL Creator C# v1/target/test-classes/parser_oracles/drawingobject.cs",
+				"../PADL Creator C# v1/target/test-classes/parser_oracles/interface_impl.cs",
+				"../PADL Creator C# v1/target/test-classes/parser_oracles/interface.cs",
+				"../PADL Creator C# v1/target/test-classes/parser_oracles/lcs.cs",
+				"../PADL Creator C# v1/target/test-classes/parser_oracles/mystring.cs",
+				"../PADL Creator C# v1/target/test-classes/parser_oracles/parameters.cs" });
 		creator.create(model);
 
 		// make sure we got our right number of classes
@@ -65,11 +64,11 @@ public class TestCreatorCSharpV1 extends TestCase {
 
 		// make sure we got the class member of Outputclass
 		assertTrue(((IClass) model.getConstituentFromName("OutputClass"))
-			.doesContainConstituentWithName("myString".toCharArray()));
+				.doesContainConstituentWithName("myString".toCharArray()));
 
 		// make sure we got the method and parameter 'myChoice' of method makeDecision
 		assertTrue(((IClass) model.getConstituentFromName("MethodParams"))
-			.doesContainConstituentWithName("address".toCharArray()));
+				.doesContainConstituentWithName("address".toCharArray()));
 		// TODO Add elements properly!
 		//	assertNotNull(((IMethod) ((IClass) model
 		//		.getConstituentFromName("MethodParams"))

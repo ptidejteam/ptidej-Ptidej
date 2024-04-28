@@ -1,7 +1,0 @@
-# Micro-architecture 20 similar at 100% with unknown pattern
-20.100.abstractfactory = com.jmonkey.office.lexi.support.ActionManager
-20.100.abstractproduct = com.jmonkey.office.lexi.support.ActionManager
-20.100.concretefactory = com.jmonkey.office.lexi.support.EditorActionManager
-20.100.product = com.jmonkey.office.lexi.support.EditorActionManager
-20.100.XCommand = No source transformation needed
-

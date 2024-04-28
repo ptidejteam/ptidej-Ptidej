@@ -1,4 +1,0 @@
-interface IMyInterface
-{
-    void MethodToImplement();
-} 

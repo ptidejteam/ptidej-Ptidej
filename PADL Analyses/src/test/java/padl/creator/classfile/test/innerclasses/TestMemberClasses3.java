@@ -36,7 +36,7 @@ public class TestMemberClasses3 extends ClassFilePrimitive {
 					"ptidej.example.innerclasses");
 			codeLevelModel
 				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/rsc/Multiple Same-name Member Classes/" }));
+					new String[] { "../PADL Creator ClassFile/target/test-classes/Multiple Same-name Member Classes/" }));
 
 			TestMemberClasses3.FirstClassEntities =
 				Util.getArrayOfTopLevelEntities(codeLevelModel);

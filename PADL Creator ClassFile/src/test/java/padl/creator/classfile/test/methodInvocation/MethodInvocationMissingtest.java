@@ -31,17 +31,21 @@ public class MethodInvocationMissingtest extends TestCase {
 	 * Client alone
 	 */
 	public void testMethodInvocationMissingConfig1() {
-		final ICodeLevelModel modelClient = Factory.getInstance().createCodeLevelModel("");
+		final ICodeLevelModel modelClient = Factory.getInstance()
+				.createCodeLevelModel("");
 
 		try {
 			modelClient.create(new CompleteClassFileCreator(new String[] {
 					"../PADL Creator ClassFile/target/test-classes/MethodInvocation - Missing Method Called/ImmutableCollection.class" }));
-		} catch (final CreationException e) {
+		}
+		catch (final CreationException e) {
 			e.printStackTrace();
 		}
 		final IFirstClassEntity entityModelClient = modelClient
-				.getTopLevelEntityFromID("com.google.common.collect.ImmutableCollection");
-		final IMethod isEmptyClient = (IMethod) entityModelClient.getConstituentFromName("isEmpty");
+				.getTopLevelEntityFromID(
+						"com.google.common.collect.ImmutableCollection");
+		final IMethod isEmptyClient = (IMethod) entityModelClient
+				.getConstituentFromName("isEmpty");
 
 		final IMethodInvocation sizeClient = (IMethodInvocation) isEmptyClient
 				.getConstituentFromID("Method Invocation_>PADL<_2");
@@ -53,7 +57,8 @@ public class MethodInvocationMissingtest extends TestCase {
 	 * Client with supers form original code
 	 */
 	public void testMethodInvocationMissingConfig2() {
-		final ICodeLevelModel modelSystem = Factory.getInstance().createCodeLevelModel("");
+		final ICodeLevelModel modelSystem = Factory.getInstance()
+				.createCodeLevelModel("");
 
 		try {
 			modelSystem.create(new CompleteClassFileCreator(new String[] {
@@ -61,13 +66,16 @@ public class MethodInvocationMissingtest extends TestCase {
 					"../PADL Creator ClassFile/target/test-classes/MethodInvocation - Missing Method Called/Collection.class",
 					"../PADL Creator ClassFile/target/test-classes/MethodInvocation - Missing Method Called/Serializable.class",
 					"../PADL Creator ClassFile/target/test-classes/MethodInvocation - Missing Method Called/ImmutableCollection.class" }));
-		} catch (CreationException e) {
+		}
+		catch (CreationException e) {
 			e.printStackTrace();
 		}
 
 		final IFirstClassEntity entityModelSystem = modelSystem
-				.getTopLevelEntityFromID("com.google.common.collect.ImmutableCollection");
-		final IMethod isEmptySystem = (IMethod) entityModelSystem.getConstituentFromName("isEmpty");
+				.getTopLevelEntityFromID(
+						"com.google.common.collect.ImmutableCollection");
+		final IMethod isEmptySystem = (IMethod) entityModelSystem
+				.getConstituentFromName("isEmpty");
 
 		final IMethodInvocation sizeSystem = (IMethodInvocation) isEmptySystem
 				.getConstituentFromID("Method Invocation_>PADL<_2");
@@ -78,7 +86,8 @@ public class MethodInvocationMissingtest extends TestCase {
 	 * Client with supers (partial simplified configuration - only ImmutableCollection is changed)
 	 */
 	public void testMethodInvocationMissingConfig3() {
-		final ICodeLevelModel modelSystem = Factory.getInstance().createCodeLevelModel("");
+		final ICodeLevelModel modelSystem = Factory.getInstance()
+				.createCodeLevelModel("");
 
 		try {
 			modelSystem.create(new CompleteClassFileCreator(new String[] {
@@ -86,13 +95,16 @@ public class MethodInvocationMissingtest extends TestCase {
 					"../PADL Creator ClassFile/target/test-classes/MethodInvocation - Missing Method Called/Collection.class",
 					"../PADL Creator ClassFile/target/test-classes/MethodInvocation - Missing Method Called/Serializable.class",
 					"../PADL Creator ClassFile/target/test-classes/padl/example/methodInvocation/ImmutableCollection.class" }));
-		} catch (final CreationException e) {
+		}
+		catch (final CreationException e) {
 			e.printStackTrace();
 		}
 
 		final IFirstClassEntity entityModelSystem = modelSystem
-				.getTopLevelEntityFromID("padl.example.methodInvocation.ImmutableCollection");
-		final IMethod isEmptySystem = (IMethod) entityModelSystem.getConstituentFromName("isEmpty");
+				.getTopLevelEntityFromID(
+						"padl.example.methodInvocation.ImmutableCollection");
+		final IMethod isEmptySystem = (IMethod) entityModelSystem
+				.getConstituentFromName("isEmpty");
 
 		final IMethodInvocation sizeSystem = (IMethodInvocation) isEmptySystem
 				.getConstituentFromID("Method Invocation_>PADL<_2");
@@ -104,21 +116,24 @@ public class MethodInvocationMissingtest extends TestCase {
 	 * changed)
 	 */
 	public void testMethodInvocationMissingConfig4() {
-		final ICodeLevelModel modelSystem = Factory.getInstance().createCodeLevelModel("");
+		final ICodeLevelModel modelSystem = Factory.getInstance()
+				.createCodeLevelModel("");
 
 		try {
-			modelSystem.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile Tests/bin/padl/example/methodInvocation1/B.class",
-							"../PADL Creator ClassFile Tests/bin/padl/example/methodInvocation1/C.class",
-							"../PADL Creator ClassFile Tests/bin/padl/example/methodInvocation1/D.class",
-							"../PADL Creator ClassFile Tests/bin/padl/example/methodInvocation/A.class" }));
-		} catch (final CreationException e) {
+			modelSystem.create(new CompleteClassFileCreator(new String[] {
+					"../PADL Creator ClassFile/target/test-classes/padl/example/methodInvocation1/B.class",
+					"../PADL Creator ClassFile/target/test-classes/padl/example/methodInvocation1/C.class",
+					"../PADL Creator ClassFile/target/test-classes/padl/example/methodInvocation1/D.class",
+					"../PADL Creator ClassFile/target/test-classes/padl/example/methodInvocation/A.class" }));
+		}
+		catch (final CreationException e) {
 			e.printStackTrace();
 		}
 
 		final IFirstClassEntity entityModelSystem = modelSystem
 				.getTopLevelEntityFromID("padl.example.methodInvocation.A");
-		final IMethod isEmptySystem = (IMethod) entityModelSystem.getConstituentFromName("isEmpty");
+		final IMethod isEmptySystem = (IMethod) entityModelSystem
+				.getConstituentFromName("isEmpty");
 
 		final IMethodInvocation sizeSystem = (IMethodInvocation) isEmptySystem
 				.getConstituentFromID("Method Invocation_>PADL<_2");

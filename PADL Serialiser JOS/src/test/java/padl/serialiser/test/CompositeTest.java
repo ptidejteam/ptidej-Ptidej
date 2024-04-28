@@ -36,7 +36,7 @@ public class CompositeTest extends TestCase {
 			CompositeTest.SerialisedFileName = JOSSerialiser.getInstance()
 					.serialiseWithAutomaticNaming(
 							CompositeTest.CompositePattern,
-							"../PADL Serialiser JOS Tests/target/test-classes/");
+							"../PADL Serialiser JOS/target/test-classes/");
 			CompositeTest.SerialisedCompositePattern = (IDesignMotifModel) JOSSerialiser
 					.getInstance()
 					.deserialise(CompositeTest.SerialisedFileName);

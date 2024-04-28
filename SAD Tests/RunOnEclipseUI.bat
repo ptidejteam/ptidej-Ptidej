@@ -1,2 +1,0 @@
-Java -Xmx1200M -classpath "../CPL/bin";"../CPL/bcel-5.2.jar";"../CPL/cfparse.jar";"../PADL/bin";"../PADL Analyses/bin";"../POM/bin";"../PADL Creator ClassFile/bin";"../SAD/bin";"./bin" sad.detection.generators.DetectionAntipatternEclipse
-PAUSE

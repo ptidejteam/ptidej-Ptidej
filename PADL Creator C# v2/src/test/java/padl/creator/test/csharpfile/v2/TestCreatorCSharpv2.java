@@ -28,7 +28,7 @@ public class TestCreatorCSharpv2 extends TestCase {
 	public void testParser() throws CreationException {
 		final ICodeLevelModel model =
 			CSharpCreator
-				.parse("../PADL Creator C# v2 Tests/rsc/parser_oracles");
+				.parse("../PADL Creator C# v2/target/test-classes/parser_oracles");
 
 		// make sure we got our right number of classes
 		assertEquals(11, model.getNumberOfConstituents());
