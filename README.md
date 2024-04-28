@@ -23,6 +23,7 @@ The source code of the Ptidej Tool Suite is open and released under the GNU Publ
 
 - Get Maven version 3 - [Installation](https://maven.apache.org/install.html)
 - Configure Maven using Java 17 - [Download JDK](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) - [Set Java Version of Maven](https://stackoverflow.com/a/19654699)
+  - Also compiled and tested with Java 22
 
 ## How do I get set up?
 
@@ -30,12 +31,11 @@ To build the whole project, use :
 ```bash
 mvn clean
 mvn validate
-mvn install -DskipTests=true
+mvn install
 ```
 
 - The `mvn validate` command is used to install 3rd party JARs like `cfparse`.
-- The `mvn install` command is used to compile, package et install all modules.
-  - The `-DskipTests=true` option lets you ignore the results of unit tests that are not yet valid.
+- The `mvn install` command is used to compile, package, and install all modules.
 
 After executing these commands, you get in particular an executable :
 ```bash
@@ -51,10 +51,18 @@ Currently, the project is not functional because it uses the `cfparse` library, 
 ### To be done
 
 - Migrate the use of the `cfparse` library to the [`bcel` library](https://mvnrepository.com/artifact/org.apache.bcel/bcel)
-- Fix unit tests and adapt old tests with Maven (see _Java Parser_ or _JCT Tests_)
+  - Use `util.lang.CFParseBCELConvertor`?
 - Find an alternative to using the `com.sun.tools.javac` library, which is internal to the JDK.
 - Change the encoding from **windows-1252** to **UTF-8**
-- Refactoring the code to make full use of java 17
+- Refactoring the code to make full use of Java 17
+- Remove compilation warnings
+- Clean test outputs
+- Fix `PADL Creator C++ (Eclipse)`
+- Add tests to `Creator MSE`
+- Add tests to `PADL Generator PageRank`
+- Fix JPG export from the menu Export SVG in `...Swing`
+- Simplify and update "About" in `...Swing`
+- Maven-ise Caffeine
 
 ## Contribution guidelines
 
