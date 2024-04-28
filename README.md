@@ -46,7 +46,9 @@ This jar launches a Swing GUI that lets you interact with the Ptidej tool.
 
 ## Troubleshooting
 
-Currently, the project is not functional because it uses the `cfparse` library, which is only compatible with java version 1.4.
+Currently, the whole project is require some sub-projects to be compiled towards bytecode for Java 1.4. This requirement is described into the appropriate `pom.xml` files. The whole projects and some sub-projects also require specific `--add-exports` and `--add-opens` arguments to the JVM, which are already set appropriately in the corresponding `pom.xml` files for the tests. These areguments are:
+
+```--add-exports jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED --add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED```
 
 ### To be done
 
