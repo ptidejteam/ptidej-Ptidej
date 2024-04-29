@@ -6,18 +6,18 @@
 ![Apache Maven](https://img.shields.io/badge/Maven-green?style=for-the-badge&logo=Apache%20Maven)
 
 In the Ptidej Team (Pattern Trace Identification, Detection, and Enhancement in Java), we aim at developing theories, methods, 
-and tools, to evaluate and to improve the quality of object-oriented programs by promoting the use of idioms, design patterns, 
-and architectural patterns. We want to formalise patterns, to identify occurrences of patterns, and to improve the identified 
+and tools, to evaluate and improve the quality of object-oriented programs by promoting the use of idioms, design patterns, 
+and architectural patterns. We want to formalise patterns, identify occurrences of patterns, and improve the identified 
 occurrences. We also want to evaluate experimentally the impact of patterns on the quality of object-oriented programs. We 
-develop various tools, most notably the Ptidej tool suite and Taupe, to evaluate and to enhance the quality of object-oriented 
-programs, promoting the use of patterns, either at the language-, design-, or architectural-levels.
+develop various tools, most notably the Ptidej tool suite and Taupe, to evaluate and enhance the quality of object-oriented 
+programs, promoting the use of patterns, at the language, design, and architectural levels.
 
 The source code of the Ptidej Tool Suite is open and released under the GNU Public License v2.
 
 ## What is this repository for?
 
 * Ptidej 
-* http://wiki.ptidej.net/
+* https://wiki.ptidej.net/
 
 ## Prerequisites
 
@@ -46,14 +46,14 @@ This jar launches a Swing GUI that lets you interact with the Ptidej tool.
 
 ## Troubleshooting
 
-Currently, the whole project is require some sub-projects to be compiled towards bytecode for Java 1.4. This requirement is described into the appropriate `pom.xml` files. The whole projects and some sub-projects also require specific `--add-exports` and `--add-opens` arguments to the JVM, which are already set appropriately in the corresponding `pom.xml` files for the tests. These areguments are:
+Currently, the whole project requires some sub-projects to be compiled towards bytecode for Java 1.4. This requirement is described into the appropriate `pom.xml` files. The whole projects and some sub-projects also require specific `--add-exports` and `--add-opens` arguments to the JVM, which are already set appropriately in the corresponding `pom.xml` files for the tests. These areguments are:
 
 ```--add-exports jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED --add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED```
 
 ### To be done
 
 In no particular order of importance:
-- Migrate the use of the `cfparse` library to the [`bcel` library](https://mvnrepository.com/artifact/org.apache.bcel/bcel)
+- Migrate the use of the `cfparse` library to the `bcel` [library](https://mvnrepository.com/artifact/org.apache.bcel/bcel)
   - Use `util.lang.CFParseBCELConvertor`?
 - Find an alternative to using the `com.sun.tools.javac` library, which is internal to the JDK.
 - Change the encoding from **windows-1252** to **UTF-8**
@@ -76,5 +76,5 @@ In no particular order of importance:
 
 ## Who do I talk to?
 
-- Repo owner or admin: **Yann-Gaël Guéhéneuc** at *yann-gael.gueheneuc@concordia.ca*
-- Other community or team contact: **Wiki** of the Ptidej Team at *http://wiki.ptidej.net*
+- Repo owner or admin: **Yann-Gaël Guéhéneuc** at *info@ptidej.net*
+- Other community or team contact: **Wiki** of the Ptidej Team at *https://wiki.ptidej.net*
