@@ -1,23 +1,28 @@
-All Ptidej Tests, make "mvn test" pass
-	JUnit already does, so why not in Maven?
-		Because PtidejSolver.exe is (1) in a JAR and (2) a DOS program (that cannot be run on Linux)...
+Remove CFParse
+	Use util.lang.CFParseBCELConvertor?
+
+Fix tests in "PADL Creator C++ (Eclipse)"
+Add tests to "Creator MSE"
+Add tests to "PADL Generator PageRank"
+Clean test outputs
+	Fix/hide any exceptions
+
+Maven-ise Caffeine
 
 Change char encoding to UTF-8
 Remove compilation warnings
 
-Clean test outputs
-	Fix/hide any exceptions
-
-Fix "PADL Creator C++ (Eclipse)"
-Test "Creator MSE"
-
-Remove CFParse
-	Use util.lang.CFParseBCELConvertor?
-
+Fix extremely slow and memory-consuming running of Ptidej from JAR
+	java -jar "DeMIMA UI Viewer Standalone Swing/target/demima-ui-viewer-swing-1.0.0-jar-with-dependencies.jar"
 Fix JPG export from the menu Export SVG in ...Swing
-
 Simplify and update "About" in ...Swing
 
-Maven-ise Caffeine
+Find an alternative to using the `com.sun.tools.javac` library, which is internal to the JDK.
 
-Add tests in PADL Generator PageRank
+Add GitHub Actions to compile/test the whole project
+
+
+
+All Ptidej Tests, make "mvn test" pass
+	JUnit already does, so why not in Maven?
+		Because PtidejSolver.exe is (1) in a JAR and (2) a DOS program (that cannot be run on Linux)...

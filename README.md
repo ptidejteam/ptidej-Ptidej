@@ -51,20 +51,23 @@ Currently, the whole project requires some sub-projects to be compiled towards b
 
 ### To be done
 
-In no particular order of importance:
+In some order of importance:
 - Migrate the use of the `cfparse` library to the `bcel` [library](https://mvnrepository.com/artifact/org.apache.bcel/bcel)
   - Use `util.lang.CFParseBCELConvertor`?
-- Find an alternative to using the `com.sun.tools.javac` library, which is internal to the JDK.
+- Fix tests in `PADL Creator C++ (Eclipse)`
+- Add tests to `Creator MSE`
+- Add tests to `PADL Generator PageRank`
+- Clean test outputs
+  - Fix/hide any exceptions
+- Maven-ise `Caffeine`
 - Change the encoding from **windows-1252** to **UTF-8**
 - Refactoring the code to make full use of Java 17
 - Remove compilation warnings
-- Clean test outputs
-- Fix `PADL Creator C++ (Eclipse)`
-- Add tests to `Creator MSE`
-- Add tests to `PADL Generator PageRank`
+- Fix extremely slow and memory-consuming running of Ptidej from JAR
+  - `java -jar "DeMIMA UI Viewer Standalone Swing/target/demima-ui-viewer-swing-1.0.0-jar-with-dependencies.jar"`
 - Fix JPG export from the menu Export SVG in `...Swing`
 - Simplify and update "About" in `...Swing`
-- Maven-ise Caffeine
+- Find an alternative to using the `com.sun.tools.javac` library, which is internal to the JDK.
 - Add GitHub Actions to compile/test the whole project
 
 ## Contribution guidelines

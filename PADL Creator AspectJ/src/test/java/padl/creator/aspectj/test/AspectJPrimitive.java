@@ -35,8 +35,10 @@ public abstract class AspectJPrimitive extends TestCase {
 
 	protected void setUp() throws CreationException {
 		if (this.codelevelmodel == null) {
-			this.codelevelmodel = AspectJFactory.getInstance().createCodeLevelModel("AspectJ Model");
-			this.codelevelmodel.create(new CompleteClassFileCreator(new String[] { this.jarOO }));
+			this.codelevelmodel = AspectJFactory.getInstance()
+					.createCodeLevelModel("AspectJ Model");
+			this.codelevelmodel.create(
+					new CompleteClassFileCreator(new String[] { this.jarOO }));
 		}
 	}
 }

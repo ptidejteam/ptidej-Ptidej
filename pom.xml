@@ -7,47 +7,53 @@
 	<groupId>net.ptidej</groupId>
 	<artifactId>all-ptidej</artifactId>
 	<version>1.0.0</version>
-	<name>All Ptidej</name>
+	<name>Ptidej Tool Suite</name>
 	<packaging>pom</packaging>
 
 	<modules>
 		<module>CPL</module>
 		<module>DeMIMA</module>
-		<module>DeMIMA Solver Metrics</module>
+		<module>DeMIMA Solver 3</module>
 		<module>DeMIMA Solver 4</module>
+		<module>DeMIMA Solver Fingerprints</module>
 		<module>DeMIMA UI</module>
 		<module>DeMIMA UI Analyses</module>
 		<module>DeMIMA UI AspectJ</module>
 		<module>DeMIMA UI C++</module>
 		<module>DeMIMA UI Layouts</module>
 		<module>DeMIMA UI Primitives AWT</module>
+		<!-- TODO Add this module                      -->
+		<!-- <module>DeMIMA UI Primitives SWT</module> -->
 		<module>DeMIMA UI Viewer</module>
 		<module>DeMIMA UI Viewer AWT</module>
-		<!-- <module>DeMIMA UI Viewer Extensions</module>-->
+		<module>DeMIMA UI Viewer Extensions</module>
 		<module>DeMIMA UI Viewer Standalone Swing</module>
 		<module>EPI</module>
-		<module>Java Parser</module>
 		<module>JChoco</module>
-		<module>JCT</module>
-		<module>JCT Impl</module>
-		<module>JCT Tools</module>
-		<module>JCT Utils</module>
-		<module>JCT Tests</module>
+		<module>MoDeC Metamodel</module>
+		<module>MoDeC Solver</module>
 		<module>PADL</module>
 		<module>PADL Analyses</module>
 		<module>PADL Creator AOL</module>
 		<module>PADL Creator AspectJ</module>
 		<module>PADL Creator C# v1</module>
 		<module>PADL Creator C# v2</module>
-		<module>PADL Creator C++</module>
-		<module>PADL Creator C++ (Eclipse)</module>
+		<!-- TODO Add this module                        -->
+		<!-- <module>PADL Creator C++ (Eclipse)</module> -->
 		<module>PADL Creator ClassFile</module>
 		<module>PADL Creator JavaFile (Eclipse)</module>
+		<module>PADL Creator JavaFile (Eclipse) Parser</module>
 		<module>PADL Creator JavaFile (JavaC)</module>
+		<module>PADL Creator JavaFile (JavaC) Parser</module>
 		<module>PADL Creator MSE</module>
+		<module>PADL Creator XMI</module>
 		<module>PADL Design Motifs</module>
 		<module>PADL Generator</module>
+		<module>PADL Generator PageRank</module>
 		<module>PADL Micro-pattern Analysis</module>
+		<module>PADL Refactorings</module>
+		<module>PADL Serialiser DB4O</module>
+		<module>PADL Serialiser JOS</module>
 		<module>PADL Statements</module>
 		<module>PADL Statements Creator AOL</module>
 		<module>PADL Statements Creator ClassFile</module>
@@ -60,6 +66,7 @@
 	<properties>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
+		<!-- TODO Change to UTF-8 -->
 		<project.build.sourceEncoding>windows-1252</project.build.sourceEncoding>
 	</properties>
 

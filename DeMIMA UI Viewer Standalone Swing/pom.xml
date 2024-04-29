@@ -148,12 +148,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-occurence-generator</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-
-		<dependency>
 			<groupId>net.ptidej.epi</groupId>
 			<artifactId>epi-core</artifactId>
 			<version>1.0.0</version>
