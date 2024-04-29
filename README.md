@@ -76,5 +76,5 @@ In no particular order of importance:
 
 ## Who do I talk to?
 
-- Repo owner or admin: **Yann-Gaël Guéhéneuc** at *info@ptidej.net*
-- Other community or team contact: **Wiki** of the Ptidej Team at *https://wiki.ptidej.net*
+- Repo. admin: info@ptidej.net
+- Wiki documentation: https://wiki.ptidej.net
