@@ -139,91 +139,70 @@ public class BCELLOCFinder implements Visitor {
 		return this.instructionMap.toString();
 	}
 
-	@Override
 	public void visitCode(final Code aCode) {
 	}
 
-	@Override
 	public void visitCodeException(final CodeException aCodeException) {
 	}
 
-	@Override
 	public void visitConstantClass(final ConstantClass aConstantClass) {
 	}
 
-	@Override
 	public void visitConstantDouble(final ConstantDouble aConstantDouble) {
 	}
 
-	@Override
 	public void visitConstantFieldref(
 			final ConstantFieldref aConstantFieldref) {
 	}
 
-	@Override
 	public void visitConstantFloat(final ConstantFloat aConstantFloat) {
 	}
 
-	@Override
 	public void visitConstantInteger(final ConstantInteger aConstantInteger) {
 	}
 
-	@Override
 	public void visitConstantInterfaceMethodref(
 			final ConstantInterfaceMethodref aConstantInterfaceMethodref) {
 	}
 
-	@Override
 	public void visitConstantLong(final ConstantLong aConstantLong) {
 	}
 
-	@Override
 	public void visitConstantMethodref(
 			final ConstantMethodref aConstantMethodref) {
 	}
 
-	@Override
 	public void visitConstantNameAndType(
 			final ConstantNameAndType aConstantNameAndType) {
 	}
 
-	@Override
 	public void visitConstantPool(final ConstantPool aConstantPool) {
 	}
 
-	@Override
 	public void visitConstantString(final ConstantString aConstantString) {
 	}
 
-	@Override
 	public void visitConstantUtf8(final ConstantUtf8 aConstantUtf8) {
 	}
 
-	@Override
 	public void visitConstantValue(final ConstantValue aConstantValue) {
 	}
 
-	@Override
 	public void visitDeprecated(final Deprecated aDeprecated) {
 	}
 
-	@Override
 	public void visitExceptionTable(final ExceptionTable aExceptionTable) {
 	}
 
-	@Override
 	public void visitField(final Field aField) {
 	}
 
-	@Override
 	public void visitInnerClass(final InnerClass anInnerClass) {
 	}
 
-	@Override
 	public void visitInnerClasses(final InnerClasses someInnerClasses) {
 	}
 
-	@Override
 	public void visitJavaClass(final JavaClass aClass) {
 		this.currentClass = aClass;
 		final Method[] methods = aClass.getMethods();
@@ -233,24 +212,19 @@ public class BCELLOCFinder implements Visitor {
 		}
 	}
 
-	@Override
 	public void visitLineNumber(final LineNumber aLineNumber) {
 	}
 
-	@Override
 	public void visitLineNumberTable(final LineNumberTable aLineNumberTable) {
 	}
 
-	@Override
 	public void visitLocalVariable(final LocalVariable aLocalVariable) {
 	}
 
-	@Override
 	public void visitLocalVariableTable(
 			final LocalVariableTable aLocalVariableTable) {
 	}
 
-	@Override
 	public void visitMethod(final Method aMethod) {
 		Integer count = null;
 		final String ckey = this.adaptor.adapt(this.currentClass);
@@ -268,109 +242,89 @@ public class BCELLOCFinder implements Visitor {
 		methodMap.put(mkey, count);
 	}
 
-	@Override
 	public void visitSignature(final Signature arg0) {
 	}
 
-	@Override
 	public void visitSourceFile(final SourceFile aSourceFile) {
 	}
 
-	@Override
 	public void visitStackMap(final StackMap aStackMap) {
 	}
 
-	@Override
 	public void visitStackMapEntry(final StackMapEntry aStackMapEntry) {
 	}
 
-	@Override
 	public void visitSynthetic(final Synthetic aSynthetic) {
 	}
 
-	@Override
 	public void visitUnknown(final Unknown aUnknown) {
 	}
 
-	@Override
 	public void visitAnnotation(Annotations obj) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void visitAnnotationDefault(AnnotationDefault obj) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void visitAnnotationEntry(AnnotationEntry obj) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void visitBootstrapMethods(BootstrapMethods obj) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void visitConstantInvokeDynamic(ConstantInvokeDynamic obj) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void visitConstantMethodHandle(ConstantMethodHandle obj) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void visitConstantMethodType(ConstantMethodType obj) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void visitConstantModule(ConstantModule constantModule) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void visitConstantPackage(ConstantPackage constantPackage) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void visitEnclosingMethod(EnclosingMethod obj) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void visitLocalVariableTypeTable(LocalVariableTypeTable obj) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void visitMethodParameters(MethodParameters obj) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void visitParameterAnnotation(ParameterAnnotations obj) {
 		// TODO Auto-generated method stub
 
 	}
 
-	@Override
 	public void visitParameterAnnotationEntry(ParameterAnnotationEntry obj) {
 		// TODO Auto-generated method stub
 

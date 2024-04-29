@@ -12,13 +12,15 @@ package padl.analysis;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.ibm.toad.cfparse.ClassFile;
+
 import util.io.ProxyConsole;
 import util.io.SubtypeLoader;
 import util.multilingual.MultilingualManager;
 import util.repository.FileAccessException;
 import util.repository.IRepository;
 import util.repository.impl.FileRepositoryFactory;
-import com.ibm.toad.cfparse.ClassFile;
 
 /**
  * @author Yann-Gaël Guéhéneuc
@@ -26,6 +28,7 @@ import com.ibm.toad.cfparse.ClassFile;
  */
 public class AnalysesRepository implements IRepository {
 	private static AnalysesRepository UniqueInstance;
+
 	public static AnalysesRepository getInstance() {
 		if (AnalysesRepository.UniqueInstance == null) {
 			AnalysesRepository.UniqueInstance = new AnalysesRepository();
@@ -39,26 +42,22 @@ public class AnalysesRepository implements IRepository {
 	//	}
 
 	private IAnalysis[] analyses;
+
 	private AnalysesRepository() {
 		// Yann 2003/10/14: Demo!
 		// I must catch the AccessControlException
 		// thrown when attempting loading analyses
 		// from the applet viewer.
 		try {
-			final ClassFile[] classFiles =
-				SubtypeLoader.loadSubtypesFromStream(
-					"padl.analysis.IAnalysis",
-					FileRepositoryFactory
-						.getInstance()
-						.getFileRepository(this)
-						.getFiles(),
-					"padl.analysis.repository",
-					".class");
+			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
+					"padl.analysis.IAnalysis", FileRepositoryFactory
+							.getInstance().getFileRepository(this).getFiles(),
+					"padl.analysis.repository", ".class");
 			final List listOfAnalyses = new ArrayList(classFiles.length);
 			for (int i = 0; i < classFiles.length; i++) {
 				try {
-					listOfAnalyses.add((IAnalysis) Class.forName(
-						classFiles[i].getName()).getDeclaredConstructor().newInstance());
+					listOfAnalyses.add((IAnalysis) Class
+							.forName(classFiles[i].getName()).newInstance());
 				}
 				// Yann 2003/10/07: Protection!
 				// I want to make sure that any problem in this
@@ -74,10 +73,8 @@ public class AnalysesRepository implements IRepository {
 				//	}
 				//	catch (final NoClassDefFoundError ncdfe) {
 				catch (final Throwable t) {
-					System.err.println(MultilingualManager
-						.getString(
-							"LOAD_ANALYSIS",
-							AnalysesRepository.class,
+					System.err.println(MultilingualManager.getString(
+							"LOAD_ANALYSIS", AnalysesRepository.class,
 							new Object[] { classFiles[i].getName(),
 									t.getMessage() }));
 				}
@@ -91,9 +88,11 @@ public class AnalysesRepository implements IRepository {
 			this.analyses = new IAnalysis[0];
 		}
 	}
+
 	public IAnalysis[] getAnalyses() {
 		return this.analyses;
 	}
+
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append("Analysis Repository:\n");

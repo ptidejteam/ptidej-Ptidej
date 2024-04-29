@@ -31,15 +31,16 @@ public class MicroPatternDetectionsRepository implements IRepository {
 
 	public static MicroPatternDetectionsRepository getInstance() {
 		if (MicroPatternDetectionsRepository.UniqueInstance == null) {
-			MicroPatternDetectionsRepository.UniqueInstance =
-				new MicroPatternDetectionsRepository();
+			MicroPatternDetectionsRepository.UniqueInstance = new MicroPatternDetectionsRepository();
 		}
 		return MicroPatternDetectionsRepository.UniqueInstance;
 	}
 
 	private IMicroPatternDetection[] detections;
+
 	private MicroPatternDetectionsRepository() {
 	}
+
 	public IMicroPatternDetection[] getMicroPatternDetections() {
 		if (this.detections == null) {
 			// Yann 2003/10/14: Demo!
@@ -47,21 +48,18 @@ public class MicroPatternDetectionsRepository implements IRepository {
 			// thrown when attempting loading analyses
 			// from the applet viewer.
 			try {
-				final ClassFile[] classFiles =
-					SubtypeLoader.loadSubtypesFromStream(
-						"padl.micropattern.IMicroPatternDetection",
-						FileRepositoryFactory
-							.getInstance()
-							.getFileRepository(this)
-							.getFiles(),
-						"padl.micropattern.repository",
-						".class");
+				final ClassFile[] classFiles = SubtypeLoader
+						.loadSubtypesFromStream(
+								"padl.micropattern.IMicroPatternDetection",
+								FileRepositoryFactory.getInstance()
+										.getFileRepository(this).getFiles(),
+								"padl.micropattern.repository", ".class");
 				final List listOfDetections = new ArrayList(classFiles.length);
 				for (int i = 0; i < classFiles.length; i++) {
 					try {
 						listOfDetections.add((IMicroPatternDetection) Class
-							.forName(classFiles[i].getName())
-							.getDeclaredConstructor().newInstance());
+								.forName(classFiles[i].getName())
+								.newInstance());
 					}
 					// Yann 2003/10/07: Protection!
 					// I want to make sure that any problem in this
@@ -77,16 +75,16 @@ public class MicroPatternDetectionsRepository implements IRepository {
 					//	}
 					//	catch (final NoClassDefFoundError ncdfe) {
 					catch (final Throwable t) {
-						System.err.println(MultilingualManager.getString(
-							"LOAD_ANALYSIS",
-							MicroPatternDetectionsRepository.class,
-							new Object[] { classFiles[i].getName(),
-									t.getMessage() }));
+						System.err.println(
+								MultilingualManager.getString("LOAD_ANALYSIS",
+										MicroPatternDetectionsRepository.class,
+										new Object[] { classFiles[i].getName(),
+												t.getMessage() }));
 					}
 				}
 
-				this.detections =
-					new IMicroPatternDetection[listOfDetections.size()];
+				this.detections = new IMicroPatternDetection[listOfDetections
+						.size()];
 				listOfDetections.toArray(this.detections);
 			}
 			catch (final FileAccessException e) {
@@ -96,6 +94,7 @@ public class MicroPatternDetectionsRepository implements IRepository {
 		}
 		return this.detections;
 	}
+
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append("Micro-pattern Detection Repository:\n");

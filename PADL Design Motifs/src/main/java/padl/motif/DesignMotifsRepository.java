@@ -10,22 +10,23 @@
  ******************************************************************************/
 package padl.motif;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.ibm.toad.cfparse.ClassFile;
+
 import util.io.ProxyConsole;
 import util.io.SubtypeLoader;
 import util.repository.FileAccessException;
 import util.repository.IRepository;
 import util.repository.impl.FileRepositoryFactory;
-import com.ibm.toad.cfparse.ClassFile;
 
 public class DesignMotifsRepository implements IRepository {
 	private static DesignMotifsRepository UniqueInstance;
+
 	public static DesignMotifsRepository getInstance() {
 		if (DesignMotifsRepository.UniqueInstance == null) {
-			DesignMotifsRepository.UniqueInstance =
-				new DesignMotifsRepository();
+			DesignMotifsRepository.UniqueInstance = new DesignMotifsRepository();
 		}
 
 		return DesignMotifsRepository.UniqueInstance;
@@ -38,18 +39,14 @@ public class DesignMotifsRepository implements IRepository {
 	//	}
 
 	private IDesignMotifModel[] designMotifs;
+
 	private DesignMotifsRepository() {
 		ClassFile[] classFiles;
 		try {
-			classFiles =
-				SubtypeLoader.loadSubtypesFromStream(
-					"padl.motif.IDesignMotifModel",
-					FileRepositoryFactory
-						.getInstance()
-						.getFileRepository(this)
-						.getFiles(),
-					"padl.motif.repository",
-					".class");
+			classFiles = SubtypeLoader.loadSubtypesFromStream(
+					"padl.motif.IDesignMotifModel", FileRepositoryFactory
+							.getInstance().getFileRepository(this).getFiles(),
+					"padl.motif.repository", ".class");
 
 			// Yann 2003/10/14: Demo!
 			// I must catch the AccessControlException
@@ -104,31 +101,25 @@ public class DesignMotifsRepository implements IRepository {
 			final List listOfPatterns = new ArrayList(classFiles.length);
 			for (int i = 0; i < classFiles.length; i++) {
 				try {
-					listOfPatterns.add((IDesignMotifModel) Class.forName(
-						classFiles[i].getName()).getDeclaredConstructor().newInstance());
+					listOfPatterns.add((IDesignMotifModel) Class
+							.forName(classFiles[i].getName()).newInstance());
 				}
 				catch (final ClassNotFoundException cnfe) {
-					cnfe.printStackTrace(ProxyConsole
-						.getInstance()
-						.errorOutput());
+					cnfe.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
 				}
 				catch (final InstantiationException ie) {
-					ie
-						.printStackTrace(ProxyConsole
-							.getInstance()
-							.errorOutput());
+					ie.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
 				}
 				catch (final IllegalAccessException iae) {
-					iae.printStackTrace(ProxyConsole
-						.getInstance()
-						.errorOutput());
-				} catch (IllegalArgumentException e) {
+					iae.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
+				}
+				catch (final IllegalArgumentException e) {
 					e.printStackTrace();
-				} catch (InvocationTargetException e) {
-					e.printStackTrace();
-				} catch (NoSuchMethodException e) {
-					e.printStackTrace();
-				} catch (SecurityException e) {
+				}
+				catch (final SecurityException e) {
 					e.printStackTrace();
 				}
 			}
@@ -141,9 +132,11 @@ public class DesignMotifsRepository implements IRepository {
 			this.designMotifs = new IDesignMotifModel[0];
 		}
 	}
+
 	public IDesignMotifModel[] getDesignMotifs() {
 		return this.designMotifs;
 	}
+
 	//	public void resetAbstractModel(int modelIndex) {
 	//		try {
 	//			this.listOfPatterns[modelIndex] =

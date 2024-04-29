@@ -14,7 +14,6 @@ package padl.analysis.systematicuml.data;
  * @author Yann-Gaël Guéhéneuc
  * @since  2004/05/21
  */
-@SuppressWarnings("rawtypes")
 public class ClassF_Implementation extends ClassE_Implementation {
 	public void operation1(final Class c) {
 	}

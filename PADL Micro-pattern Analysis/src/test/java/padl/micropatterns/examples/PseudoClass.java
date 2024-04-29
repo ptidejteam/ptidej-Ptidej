@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.micropatterns.examples;
 
-@SuppressWarnings("unused")
 public abstract class PseudoClass {
 	private static int aField = 0;
 	public abstract int TestMethod();

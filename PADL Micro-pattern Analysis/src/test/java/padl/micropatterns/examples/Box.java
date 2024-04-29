@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.micropatterns.examples;
 
-@SuppressWarnings("unused")
 public class Box {
 	private int anAttribute;
 	private static int anotherAttribute;

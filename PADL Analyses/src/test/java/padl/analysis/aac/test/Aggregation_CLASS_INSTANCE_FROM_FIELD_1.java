@@ -34,12 +34,10 @@ import util.lang.Modifier;
  * @author 	Yann-Gaël Guéhéneuc
  * @since	2005/08/08
  */
-@SuppressWarnings("rawtypes")
 public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1 extends TestCase {
 	private static IElement[] Elements = null;
 	private static IFirstClassEntity[] FirstClassEntities = null;
 
-	@SuppressWarnings("unchecked")
 	public static void assertAssigable(
 		final String aMessage,
 		final Class anInterface,

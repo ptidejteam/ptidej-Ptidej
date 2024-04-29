@@ -10,18 +10,20 @@
  ******************************************************************************/
 package pom.metrics;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.ibm.toad.cfparse.ClassFile;
+
 import util.io.ProxyConsole;
 import util.io.SubtypeLoader;
 import util.repository.FileAccessException;
 import util.repository.IRepository;
 import util.repository.impl.FileRepositoryFactory;
-import com.ibm.toad.cfparse.ClassFile;
 
 public class MetricsRepository implements IRepository {
 	private static MetricsRepository UniqueInstance;
+
 	public static MetricsRepository getInstance() {
 		// Yann 2013/07/03: Singleton per model
 		// It is a Singleton per model, probably could
@@ -47,15 +49,10 @@ public class MetricsRepository implements IRepository {
 	private MetricsRepository() {
 		final ClassFile[] classFiles;
 		try {
-			classFiles =
-				SubtypeLoader.loadSubtypesFromStream(
-					"pom.metrics.IMetric",
-					FileRepositoryFactory
-						.getInstance()
-						.getFileRepository(this)
-						.getFiles(),
-					"pom.metrics.repository",
-					".class");
+			classFiles = SubtypeLoader.loadSubtypesFromStream(
+					"pom.metrics.IMetric", FileRepositoryFactory.getInstance()
+							.getFileRepository(this).getFiles(),
+					"pom.metrics.repository", ".class");
 		}
 		catch (final FileAccessException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
@@ -75,9 +72,9 @@ public class MetricsRepository implements IRepository {
 
 		for (int i = 0; i < classFiles.length; i++) {
 			try {
-				final Class metricClass =
-					Class.forName(classFiles[i].getName());
-				final IMetric metric = (IMetric) metricClass.getDeclaredConstructor().newInstance();
+				final Class metricClass = Class
+						.forName(classFiles[i].getName());
+				final IMetric metric = (IMetric) metricClass.newInstance();
 
 				listOfAllMetrics.add(metric);
 				if (IUnaryMetric.class.isAssignableFrom(metricClass)) {
@@ -92,7 +89,8 @@ public class MetricsRepository implements IRepository {
 				}
 
 				// David: Added IIndependentMetrics
-				if (IDependencyIndependentMetric.class.isAssignableFrom(metricClass)) {
+				if (IDependencyIndependentMetric.class
+						.isAssignableFrom(metricClass)) {
 					listOfIndependentMetrics.add(metric);
 				}
 
@@ -110,10 +108,6 @@ public class MetricsRepository implements IRepository {
 			}
 			catch (final IllegalAccessException iae) {
 				iae.printStackTrace(ProxyConsole.getInstance().errorOutput());
-			} catch (InvocationTargetException e) {
-				e.printStackTrace();
-			} catch (NoSuchMethodException e) {
-				e.printStackTrace();
 			}
 		}
 
@@ -124,10 +118,11 @@ public class MetricsRepository implements IRepository {
 		this.unaryMetrics = new IUnaryMetric[listOfUnaryMetrics.size()];
 		listOfUnaryMetrics.toArray(this.unaryMetrics);
 
-		this.dependencyIndependentMetrics =
-			new IDependencyIndependentMetric[listOfIndependentMetrics.size()];
+		this.dependencyIndependentMetrics = new IDependencyIndependentMetric[listOfIndependentMetrics
+				.size()];
 		listOfIndependentMetrics.toArray(this.dependencyIndependentMetrics);
 	}
+
 	//	public double compute(
 	//		final String aMetricName,
 	//		final IFirstClassEntity anEntity) {
@@ -155,6 +150,7 @@ public class MetricsRepository implements IRepository {
 	public IBinaryMetric[] getBinaryMetrics() {
 		return this.binaryMetrics;
 	}
+
 	// TODO For symmetry with other Repository, could we do without this method?
 	public IMetric getMetric(final String aMetricName) {
 		for (int i = 0; i < this.allMetrics.length; i++) {
@@ -166,9 +162,11 @@ public class MetricsRepository implements IRepository {
 		}
 		return null;
 	}
+
 	public IMetric[] getMetrics() {
 		return this.allMetrics;
 	}
+
 	public IUnaryMetric[] getUnaryMetrics() {
 		return this.unaryMetrics;
 	}

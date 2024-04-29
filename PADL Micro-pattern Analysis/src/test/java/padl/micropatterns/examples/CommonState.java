@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.micropatterns.examples;
 
-@SuppressWarnings("unused")
 public class CommonState {
 	private static int aStaticAttribute = 0;
 	

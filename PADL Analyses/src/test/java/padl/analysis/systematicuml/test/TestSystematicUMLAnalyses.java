@@ -17,7 +17,6 @@ import junit.framework.TestSuite;
  * @author Yann-Gaël Guéhéneuc
  * @since 2005/10/07
  */
-@SuppressWarnings("rawtypes")
 public final class TestSystematicUMLAnalyses
 	extends junit.framework.TestSuite {
 

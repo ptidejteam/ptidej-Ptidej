@@ -12,13 +12,15 @@ package ptidej.ui.layout;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.ibm.toad.cfparse.ClassFile;
+
 import util.io.ProxyConsole;
 import util.io.SubtypeLoader;
 import util.multilingual.MultilingualManager;
 import util.repository.FileAccessException;
 import util.repository.IRepository;
 import util.repository.impl.FileRepositoryFactory;
-import com.ibm.toad.cfparse.ClassFile;
 
 /**
  * @author Yann-Gaël Guéhéneuc
@@ -26,6 +28,7 @@ import com.ibm.toad.cfparse.ClassFile;
  */
 public class UILayoutsRepository implements IRepository {
 	private static UILayoutsRepository UniqueInstance;
+
 	public static UILayoutsRepository getInstance() {
 		if (UILayoutsRepository.UniqueInstance == null) {
 			UILayoutsRepository.UniqueInstance = new UILayoutsRepository();
@@ -34,26 +37,23 @@ public class UILayoutsRepository implements IRepository {
 	}
 
 	private IUILayout[] uiLayouts;
+
 	private UILayoutsRepository() {
 		// Yann 2003/10/14: Demo!
 		// I must catch the AccessControlException
 		// thrown when attempting loading analyses
 		// from the applet viewer.
 		try {
-			final ClassFile[] classFiles =
-				SubtypeLoader.loadSubtypesFromStream(
+			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
 					"ptidej.ui.layout.IUILayout",
-					FileRepositoryFactory
-						.getInstance()
-						.getFileRepository(this)
-						.getFiles(),
-					"ptidej.ui.layout.repository",
-					".class");
+					FileRepositoryFactory.getInstance().getFileRepository(this)
+							.getFiles(),
+					"ptidej.ui.layout.repository", ".class");
 			final List listOfAnalyses = new ArrayList(classFiles.length);
 			for (int i = 0; i < classFiles.length; i++) {
 				try {
-					listOfAnalyses.add((IUILayout) Class.forName(
-						classFiles[i].getName()).getDeclaredConstructor().newInstance());
+					listOfAnalyses.add((IUILayout) Class
+							.forName(classFiles[i].getName()).newInstance());
 				}
 				// Yann 2003/10/07: Protection!
 				// I want to make sure that any problem in this
@@ -69,10 +69,8 @@ public class UILayoutsRepository implements IRepository {
 				//	}
 				//	catch (final NoClassDefFoundError ncdfe) {
 				catch (final Throwable t) {
-					System.err.println(MultilingualManager
-						.getString(
-							"Err_LOAD_GRAPH_LAYOUTS",
-							UILayoutsRepository.class,
+					System.err.println(MultilingualManager.getString(
+							"Err_LOAD_GRAPH_LAYOUTS", UILayoutsRepository.class,
 							new Object[] { classFiles[i].getName(),
 									t.getMessage() }));
 				}
@@ -86,9 +84,11 @@ public class UILayoutsRepository implements IRepository {
 			this.uiLayouts = new IUILayout[0];
 		}
 	}
+
 	public IUILayout[] getUILayouts() {
 		return this.uiLayouts;
 	}
+
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append("Graph Layout Repository:\n");

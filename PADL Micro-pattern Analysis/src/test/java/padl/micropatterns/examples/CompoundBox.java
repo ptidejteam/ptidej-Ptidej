@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.micropatterns.examples;
 
-@SuppressWarnings("unused")
 public class CompoundBox {
 	private NonPrimitive instanceAttribute;
 	private int fieldOne;

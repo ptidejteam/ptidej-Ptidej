@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.micropatterns.examples;
 
-@SuppressWarnings("unused")
 public class CobolLike {
 	private static int tata;
 	

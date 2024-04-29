@@ -14,6 +14,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Iterator;
 import java.util.List;
+
 import padl.event.IEvent;
 import padl.event.IModelListener;
 import padl.kernel.IAbstractModel;
@@ -43,6 +44,7 @@ public class DesignLevelModelAdapter implements IDesignLevelModel {
 	private static final long serialVersionUID = -265422879837345649L;
 
 	private final IIdiomLevelModel wrappedIdiomLevelModel;
+
 	public DesignLevelModelAdapter(final IIdiomLevelModel anIdiomLevelModel) {
 		this.wrappedIdiomLevelModel = anIdiomLevelModel;
 	}
@@ -74,13 +76,10 @@ public class DesignLevelModelAdapter implements IDesignLevelModel {
 		final Class abstractLevelModel = thisClass.getSuperclass();
 		final Class abstractContainer = abstractLevelModel.getSuperclass();
 		try {
-			final Method addConstituentMethod =
-				abstractContainer.getMethod(
-					"addConstituent",
-					new Class[] { IConstituent.class });
-			addConstituentMethod.invoke(
-				this.wrappedIdiomLevelModel,
-				new Object[] { aDesignMotifModel });
+			final Method addConstituentMethod = abstractContainer.getMethod(
+					"addConstituent", new Class[] { IConstituent.class });
+			addConstituentMethod.invoke(this.wrappedIdiomLevelModel,
+					new Object[] { aDesignMotifModel });
 		}
 		catch (final SecurityException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
@@ -115,7 +114,7 @@ public class DesignLevelModelAdapter implements IDesignLevelModel {
 			throws CreationException {
 
 		throw new ModelDeclarationException(
-			"A DesignLevelModelAdapter cannot be created using a builder");
+				"A DesignLevelModelAdapter cannot be created using a builder");
 	}
 
 	public boolean doesContainConstituentWithID(final char[] anID) {
@@ -124,16 +123,16 @@ public class DesignLevelModelAdapter implements IDesignLevelModel {
 
 	public boolean doesContainConstituentWithName(final char[] aName) {
 		return this.wrappedIdiomLevelModel
-			.doesContainConstituentWithName(aName);
+				.doesContainConstituentWithName(aName);
 	}
 
 	public boolean doesContainTopLevelEntityWithID(final char[] anID) {
 		return this.wrappedIdiomLevelModel
-			.doesContainTopLevelEntityWithID(anID);
+				.doesContainTopLevelEntityWithID(anID);
 	}
 
-	@SuppressWarnings("deprecation")
-	public void fireModelChange(final String anEventType, final IEvent anEvent) {
+	public void fireModelChange(final String anEventType,
+			final IEvent anEvent) {
 		this.wrappedIdiomLevelModel.fireModelChange(anEventType, anEvent);
 	}
 
@@ -143,18 +142,18 @@ public class DesignLevelModelAdapter implements IDesignLevelModel {
 
 	public Iterator getConcurrentIteratorOnConstituents() {
 		return this.wrappedIdiomLevelModel
-			.getConcurrentIteratorOnConstituents();
+				.getConcurrentIteratorOnConstituents();
 	}
 
 	public Iterator getConcurrentIteratorOnConstituents(
-		final Class aConstituentType) {
+			final Class aConstituentType) {
 		return this.wrappedIdiomLevelModel
-			.getConcurrentIteratorOnConstituents(aConstituentType);
+				.getConcurrentIteratorOnConstituents(aConstituentType);
 	}
 
 	public Iterator getConcurrentIteratorOnConstituents(final IFilter aFilter) {
 		return this.wrappedIdiomLevelModel
-			.getConcurrentIteratorOnConstituents(aFilter);
+				.getConcurrentIteratorOnConstituents(aFilter);
 	}
 
 	public IConstituent getConstituentFromID(final char[] anID) {
@@ -170,8 +169,8 @@ public class DesignLevelModelAdapter implements IDesignLevelModel {
 	}
 
 	public IConstituent getConstituentFromName(final String aName) {
-		return this.wrappedIdiomLevelModel.getConstituentFromName(aName
-			.toCharArray());
+		return this.wrappedIdiomLevelModel
+				.getConstituentFromName(aName.toCharArray());
 	}
 
 	public String getDisplayName() {
@@ -192,7 +191,7 @@ public class DesignLevelModelAdapter implements IDesignLevelModel {
 
 	public Iterator getIteratorOnConstituents(final Class aConstituentType) {
 		return this.wrappedIdiomLevelModel
-			.getIteratorOnConstituents(aConstituentType);
+				.getIteratorOnConstituents(aConstituentType);
 	}
 
 	public Iterator getIteratorOnConstituents(final IFilter aFilter) {
@@ -217,7 +216,7 @@ public class DesignLevelModelAdapter implements IDesignLevelModel {
 
 	public int getNumberOfConstituents(final Class aConstituentType) {
 		return this.wrappedIdiomLevelModel
-			.getNumberOfConstituents(aConstituentType);
+				.getNumberOfConstituents(aConstituentType);
 	}
 
 	public int getNumberOfTopLevelEntities() {

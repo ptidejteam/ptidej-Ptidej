@@ -12,13 +12,15 @@ package ptidej.ui.analysis;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.ibm.toad.cfparse.ClassFile;
+
 import util.io.ProxyConsole;
 import util.io.SubtypeLoader;
 import util.multilingual.MultilingualManager;
 import util.repository.FileAccessException;
 import util.repository.IRepository;
 import util.repository.impl.FileRepositoryFactory;
-import com.ibm.toad.cfparse.ClassFile;
 
 /**
  * @author Yann-Gaël Guéhéneuc
@@ -26,6 +28,7 @@ import com.ibm.toad.cfparse.ClassFile;
  */
 public class UIAnalysesRepository implements IRepository {
 	private static UIAnalysesRepository UniqueInstance;
+
 	public static UIAnalysesRepository getInstance() {
 		if (UIAnalysesRepository.UniqueInstance == null) {
 			UIAnalysesRepository.UniqueInstance = new UIAnalysesRepository();
@@ -39,26 +42,23 @@ public class UIAnalysesRepository implements IRepository {
 	//	}
 
 	private IUIAnalysis[] analyses;
+
 	private UIAnalysesRepository() {
 		// Yann 2003/10/14: Demo!
 		// I must catch the AccessControlException
 		// thrown when attempting loading analyses
 		// from the applet viewer.
 		try {
-			final ClassFile[] classFiles =
-				SubtypeLoader.loadSubtypesFromStream(
+			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
 					"ptidej.ui.analysis.IUIAnalysis",
-					FileRepositoryFactory
-						.getInstance()
-						.getFileRepository(this)
-						.getFiles(),
-					"ptidej.ui.analysis.repository",
-					".class");
+					FileRepositoryFactory.getInstance().getFileRepository(this)
+							.getFiles(),
+					"ptidej.ui.analysis.repository", ".class");
 			final List listOfAnalyses = new ArrayList(classFiles.length);
 			for (int i = 0; i < classFiles.length; i++) {
 				try {
-					listOfAnalyses.add((IUIAnalysis) Class.forName(
-						classFiles[i].getName()).getDeclaredConstructor().newInstance());
+					listOfAnalyses.add((IUIAnalysis) Class
+							.forName(classFiles[i].getName()).newInstance());
 				}
 				// Yann 2003/10/07: Protection!
 				// I want to make sure that any problem in this
@@ -74,10 +74,8 @@ public class UIAnalysesRepository implements IRepository {
 				//	}
 				//	catch (final NoClassDefFoundError ncdfe) {
 				catch (final Throwable t) {
-					System.err.println(MultilingualManager
-						.getString(
-							"Err_LOAD_ANALYSIS",
-							UIAnalysesRepository.class,
+					System.err.println(MultilingualManager.getString(
+							"Err_LOAD_ANALYSIS", UIAnalysesRepository.class,
 							new Object[] { classFiles[i].getName(),
 									t.getMessage() }));
 				}
@@ -91,9 +89,11 @@ public class UIAnalysesRepository implements IRepository {
 			this.analyses = new IUIAnalysis[0];
 		}
 	}
+
 	public IUIAnalysis[] getUIAnalyses() {
 		return this.analyses;
 	}
+
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append("Analysis Repository:\n");

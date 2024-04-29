@@ -34,7 +34,6 @@ package padl.analysis.systematicuml.data;
  * @version 1.80, 01/23/03
  * @since JDK1.0 
  */
-@SuppressWarnings("rawtypes")
 public final class Float_DataType extends Number implements Comparable {
     /**
      * A constant holding the positive infinity of type

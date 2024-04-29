@@ -17,7 +17,6 @@ import junit.framework.TestSuite;
  * @author Yann-Gaël Guéhéneuc
  * @since 2004/11/11
  */
-@SuppressWarnings("rawtypes")
 public final class TestAACAnalyses extends junit.framework.TestSuite {
 
 	public TestAACAnalyses() {

@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.micropatterns.examples;
 
-@SuppressWarnings("unused")
 public class Immutable {
 	// Not modified outside of the constructor
 	private int anImmutableAttribute;

@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.micropatterns.examples;
 
-@SuppressWarnings("unused")
 public abstract class AugmentedType {
 	private static int aField1 = 0;
 	private static int aField2 = 0;

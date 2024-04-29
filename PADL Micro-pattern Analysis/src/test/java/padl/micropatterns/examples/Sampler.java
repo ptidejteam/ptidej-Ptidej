@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.micropatterns.examples;
 
-@SuppressWarnings("unused")
 public class Sampler {
 	private static Sampler uniqueInstance;
 	private int aField;

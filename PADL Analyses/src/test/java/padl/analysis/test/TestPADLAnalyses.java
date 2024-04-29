@@ -27,7 +27,6 @@ import padl.test.setter.TestGetterAndSetter;
  * @author Yann-Gaël Guéhéneuc
  * @since 2004/11/11
  */
-@SuppressWarnings("rawtypes")
 public final class TestPADLAnalyses extends junit.framework.TestSuite {
 	public TestPADLAnalyses() {
 	}

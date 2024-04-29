@@ -17,11 +17,9 @@ import java.util.List;
  * @author Yann-Gaël Guéhéneuc
  * @since  2004/07/24
  */
-@SuppressWarnings("rawtypes")
 public class Example2 {
 	private List listOfAs = new ArrayList();
 
-	@SuppressWarnings("unchecked")
 	public void addA(final A a) {
 		this.listOfAs.add(a);
 	}

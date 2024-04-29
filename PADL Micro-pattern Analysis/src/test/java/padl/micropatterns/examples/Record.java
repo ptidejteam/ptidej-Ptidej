@@ -29,7 +29,6 @@ public class Record {
 		return super.equals(arg0);
 	}
 
-	@SuppressWarnings("deprecation")
 	protected void finalize() throws Throwable {
 		// TODO Auto-generated method stub
 		super.finalize();
