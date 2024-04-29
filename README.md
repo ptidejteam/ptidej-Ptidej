@@ -14,17 +14,17 @@ programs, promoting the use of patterns, at the language, design, and architectu
 
 The source code of the Ptidej Tool Suite is open and released under the GNU Public License v2.
 
-## What is this repository for?
+## What is it?
 
-* Ptidej 
+* The Ptidej Tool Suite
 * https://wiki.ptidej.net/
 
-## Prerequisites
+## What do I need?
 
-- Get Maven version 3
-- Use Java 17 or mor recent (compiled and tested with Java 22)
+- Maven version 3.9.6
+- Java 17 or more recent (compiled and tested with Java 22)
 
-## How do I get set up?
+## How do I set it up?
 
 To build the whole project, use : 
 ```bash
@@ -33,23 +33,34 @@ mvn validate
 mvn install
 ```
 
-- The `mvn validate` command is used to install 3rd party JARs like `cfparse`.
-- The `mvn install` command is used to compile, package, and install all modules.
+- `mvn validate` installs 3rd party JARs, like `cfparse`.
+- `mvn install` compiles, tests, packages, and installs all the sub-projects.
 
-After executing these commands, you get in particular an executable :
+After executing these commands, run:
 ```bash
 java -jar "DeMIMA UI Viewer Standalone Swing/target/demima-ui-viewer-swing-1.0.0-jar-with-dependencies.jar"
 ```
 
-This jar launches a Swing GUI that lets you interact with the Ptidej tool.
+This JAR launches a Swing GUI to interact with the Ptidej Tool Suite.
+
+## Who do I talk to?
+
+- Repo. admin: info@ptidej.net
+- Wiki documentation: https://wiki.ptidej.net
 
 ## Troubleshooting
 
-Currently, the whole project requires some sub-projects to be compiled towards bytecode for Java 1.4. This requirement is described into the appropriate `pom.xml` files. The whole projects and some sub-projects also require specific `--add-exports` and `--add-opens` arguments to the JVM, which are already set appropriately in the corresponding `pom.xml` files for the tests. These areguments are:
+Some sub-projects must be compiled towards bytecode for Java 1.4. This requirement is enforced in the appropriate `pom.xml` files. The whole projects and some sub-projects also require specific `--add-exports` and `--add-opens` arguments to the JVM, which are also already set in the corresponding `pom.xml` files. These arguments are:
 
 ```--add-exports jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED --add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED```
 
-### To be done
+## Guidelines
+
+* Writing tests
+* Code review
+* Other guidelines
+
+### TODO
 
 In some order of importance:
 - Migrate the use of the `cfparse` library to the `bcel` [library](https://mvnrepository.com/artifact/org.apache.bcel/bcel)
@@ -69,14 +80,3 @@ In some order of importance:
 - Simplify and update "About" in `...Swing`
 - Find an alternative to using the `com.sun.tools.javac` library, which is internal to the JDK.
 - Add GitHub Actions to compile/test the whole project
-
-## Contribution guidelines
-
-* Writing tests
-* Code review
-* Other guidelines
-
-## Who do I talk to?
-
-- Repo. admin: info@ptidej.net
-- Wiki documentation: https://wiki.ptidej.net
