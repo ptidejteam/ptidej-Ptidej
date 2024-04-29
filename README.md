@@ -21,9 +21,8 @@ The source code of the Ptidej Tool Suite is open and released under the GNU Publ
 
 ## Prerequisites
 
-- Get Maven version 3 - [Installation](https://maven.apache.org/install.html)
-- Configure Maven using Java 17 - [Download JDK](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) - [Set Java Version of Maven](https://stackoverflow.com/a/19654699)
-  - Also compiled and tested with Java 22
+- Get Maven version 3
+- Use Java 17 or mor recent (compiled and tested with Java 22)
 
 ## How do I get set up?
 
