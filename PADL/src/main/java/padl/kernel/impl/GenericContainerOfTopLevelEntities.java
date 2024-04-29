@@ -18,6 +18,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+
 import padl.event.EntityEvent;
 import padl.event.IModelListener;
 import padl.kernel.IAbstractModel;
@@ -27,21 +28,24 @@ import padl.kernel.IFirstClassEntity;
 import padl.kernel.IPackage;
 import padl.util.CharArrayComparator;
 import padl.util.adapter.ModelListenerAdapter;
-import util.io.ProxyConsole;
 
 class GenericContainerOfTopLevelEntities implements Serializable {
 	private static final long serialVersionUID = -714741910389826912L;
+
 	private final class ModelListener extends ModelListenerAdapter
 			implements Serializable {
 
 		private static final long serialVersionUID = -3585462658647723807L;
+
 		public void entityAdded(EntityEvent entityEvent) {
 			GenericContainerOfTopLevelEntities.this.dirty = true;
 		}
+
 		public void entityRemoved(EntityEvent entityEvent) {
 			GenericContainerOfTopLevelEntities.this.dirty = true;
 		}
 	}
+
 	// Yann 2010/10/10: DB4O
 	// Used to be:
 	//	private final IAbstractModel containerAbstractModel;
@@ -57,20 +61,20 @@ class GenericContainerOfTopLevelEntities implements Serializable {
 	//	private final Map mapOfIDsEntities = new TreeMap();
 	// I removed the final to make DB4O works...
 	// TODO: Understand how to keep it final with DB4O!
-	private Map mapOfIDsEntities =
-		new TreeMap(CharArrayComparator.getInstance());
+	private Map mapOfIDsEntities = new TreeMap(
+			CharArrayComparator.getInstance());
 
 	public GenericContainerOfTopLevelEntities(
-		final IAbstractModel anAbstractModel) {
+			final IAbstractModel anAbstractModel) {
 
 		this.containerAbstractModel = anAbstractModel;
 		this.dirty = true;
 	}
 
 	public void addTopLevelEntity(
-		final IConstituentOfModel aConstituentOfModel) {
-		this.mapOfIDsEntities
-			.put(aConstituentOfModel.getID(), aConstituentOfModel);
+			final IConstituentOfModel aConstituentOfModel) {
+		this.mapOfIDsEntities.put(aConstituentOfModel.getID(),
+				aConstituentOfModel);
 	}
 
 	// Yann 2011/06/20: Top-level entities...
@@ -99,15 +103,15 @@ class GenericContainerOfTopLevelEntities implements Serializable {
 		// }
 		this.mapOfIDsEntities.clear();
 
-		final Iterator iterator =
-			this.containerAbstractModel.getIteratorOnConstituents();
+		final Iterator iterator = this.containerAbstractModel
+				.getIteratorOnConstituents();
 		while (iterator.hasNext()) {
 			final IConstituent constituent = (IConstituent) iterator.next();
 			if (constituent instanceof IPackage) {
 				this.createMapOfIDsEntities((IPackage) constituent);
 			}
 			else if (IFirstClassEntity.class
-				.isAssignableFrom(constituent.getClass())) {
+					.isAssignableFrom(constituent.getClass())) {
 
 				this.createMapOfIDsEntities((IFirstClassEntity) constituent);
 			}
@@ -115,8 +119,9 @@ class GenericContainerOfTopLevelEntities implements Serializable {
 
 		this.dirty = false;
 	}
+
 	private void createMapOfIDsEntities(
-		final IFirstClassEntity aConstituentOfModel) {
+			final IFirstClassEntity aConstituentOfModel) {
 
 		// Yann 2009/05/03: Comparable!
 		// I must use String as keys because
@@ -125,9 +130,10 @@ class GenericContainerOfTopLevelEntities implements Serializable {
 		// Yann 2010/06/20: Arrays!
 		// The mapOfIDsEntities now implements a comparator
 		// for char arrays to avoid unnecessary conversion.
-		this.mapOfIDsEntities
-			.put(aConstituentOfModel.getID(), aConstituentOfModel);
+		this.mapOfIDsEntities.put(aConstituentOfModel.getID(),
+				aConstituentOfModel);
 	}
+
 	private void createMapOfIDsEntities(final IPackage aPackage) {
 		final Iterator iterator = aPackage.getIteratorOnConstituents();
 		while (iterator.hasNext()) {
@@ -136,15 +142,17 @@ class GenericContainerOfTopLevelEntities implements Serializable {
 				this.createMapOfIDsEntities((IPackage) constituent);
 			}
 			else if (IFirstClassEntity.class
-				.isAssignableFrom(constituent.getClass())) {
+					.isAssignableFrom(constituent.getClass())) {
 
 				this.createMapOfIDsEntities((IFirstClassEntity) constituent);
 			}
 		}
 	}
+
 	public boolean doesContainTopLevelEntityWithID(char[] anID) {
 		return this.getTopLevelEntityFromID(anID) != null;
 	}
+
 	public Iterator getIteratorOnTopLevelEntities() {
 		if (this.dirty) {
 			this.createMapOfIDsEntities();
@@ -154,20 +162,22 @@ class GenericContainerOfTopLevelEntities implements Serializable {
 		// I make sure I sort the list of entities according to
 		// their ID to preserve the behavior of other code that
 		// assumes this order.
-		final List listOfEntities =
-			new ArrayList(this.mapOfIDsEntities.values());
+		final List listOfEntities = new ArrayList(
+				this.mapOfIDsEntities.values());
 		Collections.sort(listOfEntities, new Comparator() {
 			public int compare(final Object o1, final Object o2) {
 				return CharArrayComparator.getInstance().compare(
-					((IFirstClassEntity) o1).getID(),
-					((IFirstClassEntity) o2).getID());
+						((IFirstClassEntity) o1).getID(),
+						((IFirstClassEntity) o2).getID());
 			}
 		});
 		return listOfEntities.iterator();
 	}
+
 	IModelListener getModelListener() {
 		return this.listenerAbstractModel;
 	}
+
 	public int getNumberOfTopLevelEntities() {
 		if (this.dirty) {
 			this.createMapOfIDsEntities();
@@ -175,6 +185,7 @@ class GenericContainerOfTopLevelEntities implements Serializable {
 
 		return this.mapOfIDsEntities.size();
 	}
+
 	public int getNumberOfTopLevelEntities(final java.lang.Class aClass) {
 		if (this.dirty) {
 			this.createMapOfIDsEntities();
@@ -190,6 +201,7 @@ class GenericContainerOfTopLevelEntities implements Serializable {
 		}
 		return number;
 	}
+
 	public IFirstClassEntity getTopLevelEntityFromID(final char[] anID) {
 		// Yann 2008/11/04: Global access!
 		// The addition of packages means that we need a global
@@ -200,6 +212,7 @@ class GenericContainerOfTopLevelEntities implements Serializable {
 
 		return (IFirstClassEntity) this.mapOfIDsEntities.get(anID);
 	}
+
 	public void removeTopLevelEntityFromID(final char[] anID) {
 		// Yann 2008/11/04: Global access!
 		// The addition of packages means that we need a global

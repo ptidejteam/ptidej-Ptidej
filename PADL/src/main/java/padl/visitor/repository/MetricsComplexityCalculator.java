@@ -11,6 +11,7 @@
 package padl.visitor.repository;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import padl.kernel.IAbstractModel;
@@ -276,7 +277,7 @@ public final class MetricsComplexityCalculator implements IWalker {
 	public void open(final IMemberInterface aMemberInterface) {
 	}
 	public void open(final IMethod p) {
-		if (!p.getReturnType().equals("void")) {
+		if (!Arrays.equals(p.getReturnType(), "void".toCharArray())) {
 			this.valuesForCurrentModule.addIOVariables(1);
 		}
 	}

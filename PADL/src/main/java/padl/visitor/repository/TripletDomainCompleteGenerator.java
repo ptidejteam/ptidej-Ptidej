@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.visitor.repository;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Stack;
 import padl.kernel.IAbstractModel;
@@ -244,9 +245,9 @@ public class TripletDomainCompleteGenerator implements IWalker {
 		final IRelationship aRelationship,
 		final String aRelationName) {
 
-		if (!Util.computeFullyQualifiedName(
+		if (!Arrays.equals(Util.computeFullyQualifiedName(
 			this.model,
-			aRelationship.getTargetEntity()).equals("")) {
+			aRelationship.getTargetEntity()), "".toCharArray())) {
 
 			this.output.append(this.getCurrentEntityName());
 			this.output.append(aRelationName);

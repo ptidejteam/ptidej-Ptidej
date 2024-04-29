@@ -33,7 +33,9 @@ package sad.codesmell.detection;
 import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
+
 import com.ibm.toad.cfparse.ClassFile;
+
 import util.io.ProxyConsole;
 import util.io.SubtypeLoader;
 import util.repository.FileAccessException;
@@ -42,26 +44,24 @@ import util.repository.impl.FileRepositoryFactory;
 
 public class CodeSmellDetectionsRepository implements IRepository {
 	private static CodeSmellDetectionsRepository UniqueInstance;
+
 	public static CodeSmellDetectionsRepository getInstance() {
 		// TODO: Do not use Singleton pattern to force reload
 		if (CodeSmellDetectionsRepository.UniqueInstance == null) {
-			CodeSmellDetectionsRepository.UniqueInstance =
-				new CodeSmellDetectionsRepository();
+			CodeSmellDetectionsRepository.UniqueInstance = new CodeSmellDetectionsRepository();
 		}
 		return CodeSmellDetectionsRepository.UniqueInstance;
 	}
 
 	private ICodeSmellDetection[] codeSmells;
+
 	private CodeSmellDetectionsRepository() {
 		try {
 			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
-				"sad.codesmell.detection.ICodeSmellDetection",
-				FileRepositoryFactory
-					.getInstance()
-					.getFileRepository(this)
-					.getFiles(),
-				"sad.codesmell.detection.repository",
-				".class");
+					"sad.codesmell.detection.ICodeSmellDetection",
+					FileRepositoryFactory.getInstance().getFileRepository(this)
+							.getFiles(),
+					"sad.codesmell.detection.repository", ".class");
 
 			// For debugging on MacOS X only!
 			//	ProxyConsole
@@ -72,8 +72,8 @@ public class CodeSmellDetectionsRepository implements IRepository {
 
 			final Set codeSmells = new TreeSet(new Comparator() {
 				public int compare(final Object o1, final Object o2) {
-					return ((ICodeSmellDetection) o1).getName().compareTo(
-						((ICodeSmellDetection) o2).getName());
+					return ((ICodeSmellDetection) o1).getName()
+							.compareTo(((ICodeSmellDetection) o2).getName());
 				}
 			});
 			for (int i = 0; i < classFiles.length; i++) {
@@ -82,10 +82,10 @@ public class CodeSmellDetectionsRepository implements IRepository {
 					// I do not care about member classes of
 					// detection algorithms.
 					if (classFiles[i].getName().indexOf('$') == -1) {
-						final Class codeSmellClass =
-							Class.forName(classFiles[i].getName());
-						final ICodeSmellDetection detection =
-							(ICodeSmellDetection) codeSmellClass.getDeclaredConstructor().newInstance();
+						final Class codeSmellClass = Class
+								.forName(classFiles[i].getName());
+						final ICodeSmellDetection detection = (ICodeSmellDetection) codeSmellClass
+								.newInstance();
 						codeSmells.add(detection);
 					}
 				}
@@ -108,8 +108,9 @@ public class CodeSmellDetectionsRepository implements IRepository {
 			this.codeSmells = new ICodeSmellDetection[0];
 		}
 	}
+
 	public ICodeSmellDetection getCodeSmellDetection(
-		String aCodeSmellDetectionName) {
+			String aCodeSmellDetectionName) {
 		for (int i = 0; i < this.codeSmells.length; i++) {
 			final ICodeSmellDetection codeSmellDetection = this.codeSmells[i];
 			final String codeSmellDetectionName = codeSmellDetection.getName();
@@ -120,9 +121,11 @@ public class CodeSmellDetectionsRepository implements IRepository {
 
 		return null;
 	}
+
 	public ICodeSmellDetection[] getCodeSmellDetections() {
 		return this.codeSmells;
 	}
+
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append("Code smell repository:\n");

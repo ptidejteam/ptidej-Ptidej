@@ -12,7 +12,9 @@ package pom.test.classfile.general;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.junit.Assert;
+
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
@@ -20,7 +22,6 @@ import padl.kernel.IMethod;
 import padl.kernel.impl.Factory;
 import pom.operators.Operators;
 import pom.primitives.MethodPrimitives;
-import util.io.Files;
 
 /**
  * @author Farouk ZAIDI - 2004-02-05

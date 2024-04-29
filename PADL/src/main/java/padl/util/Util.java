@@ -96,7 +96,7 @@ public class Util {
 						firstClassEntity,
 						anEntity,
 						firstClassEntity.getName());
-				if (!fullyQualifiedName.equals("")) {
+				if (fullyQualifiedName.length > 0) {
 					return fullyQualifiedName;
 				}
 			}

@@ -11,6 +11,7 @@
 package pom.test.classfile.specific;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
@@ -18,7 +19,6 @@ import padl.kernel.IFirstClassEntity;
 import padl.kernel.impl.Factory;
 import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
-import util.io.Files;
 
 public class TestWMC extends TestCase {
 	private static MetricsRepository metrics;

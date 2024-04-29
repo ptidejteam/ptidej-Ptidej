@@ -13,6 +13,7 @@ package sad.detection.generators.old;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.analysis.repository.ModelAnnotatorLOCAnalysis;
@@ -30,17 +31,14 @@ import util.io.ProxyDisk;
  * @author Naouel Moha
  * @since  2006/02/03
  */
-@SuppressWarnings("deprecation")
 public class SpaghettiCodeDetectionCalleronXercesv101 {
 	public static void main(final String[] args) {
-		final ICodeLevelModel codeLevelModel =
-			Factory
-				.getInstance()
+		final ICodeLevelModel codeLevelModel = Factory.getInstance()
 				.createCodeLevelModel("Model of Xerces v1.0.1");
 		try {
-			codeLevelModel
-				.create(new CompleteClassFileCreator(
-					new String[] { "../SAD Tests/rsc/applications/Xercesv1.0.1.jar" },
+			codeLevelModel.create(new CompleteClassFileCreator(
+					new String[] {
+							"../SAD Tests/rsc/applications/Xercesv1.0.1.jar" },
 					true));
 		}
 		catch (final CreationException e) {
@@ -48,35 +46,27 @@ public class SpaghettiCodeDetectionCalleronXercesv101 {
 		}
 
 		try {
-			final IIdiomLevelModel idiomLevelModel =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+			final IIdiomLevelModel idiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(codeLevelModel);
 
-			final ModelAnnotatorLOCAnalysis annotator =
-				new ModelAnnotatorLOCAnalysis();
+			final ModelAnnotatorLOCAnalysis annotator = new ModelAnnotatorLOCAnalysis();
 			annotator.annotateFromJARs(
-				new String[] { "rsc/applications/Xercesv1.0.1.jar" },
-				idiomLevelModel);
+					new String[] { "rsc/applications/Xercesv1.0.1.jar" },
+					idiomLevelModel);
 
 			final IDesignSmellDetection ad1 = new SpaghettiCodeDetection();
-			((SpaghettiCodeDetection) ad1)
-				.output(new PrintWriter(
-					ProxyDisk
-						.getInstance()
-						.fileTempOutput(
+			((SpaghettiCodeDetection) ad1).output(
+					new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
 							"rsc/060310 Yann/CandidateSpaghettiCodeClassesXerces1.0.1.ini")));
 
-			final PrintWriter outFile =
-				new PrintWriter(
-					ProxyDisk
-						.getInstance()
-						.fileTempOutput(
+			final PrintWriter outFile = new PrintWriter(
+					ProxyDisk.getInstance().fileTempOutput(
 							"rsc/060310 Yann/CandidateSpaghettiCodeClassesXerces1.0.1.stats.txt"));
 			outFile.println();
 			outFile.println("###### Statistics #####");
 			final Date today = new Date();
-			final SimpleDateFormat formatter =
-				new SimpleDateFormat("yyyy'/'MM'/'dd' Heure ' hh':'mm':'ss");
+			final SimpleDateFormat formatter = new SimpleDateFormat(
+					"yyyy'/'MM'/'dd' Heure ' hh':'mm':'ss");
 			final String timeStamp = formatter.format(today);
 			outFile.println(timeStamp);
 			//			outFile.print("Number of Poltergeists found: ");
@@ -84,7 +74,7 @@ public class SpaghettiCodeDetectionCalleronXercesv101 {
 			outFile.print("Number of SpaghettiCodes found: ");
 			outFile.println(ad1.getDesignSmells().size());
 			outFile.close();
-			
+
 			// TODO Does this test do anything?!
 		}
 		catch (final UnsupportedSourceModelException e) {

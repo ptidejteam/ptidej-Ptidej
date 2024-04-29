@@ -13,6 +13,7 @@ package pom.test.classfile.general;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
 import junit.framework.TestCase;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.IAbstractLevelModel;
@@ -25,7 +26,6 @@ import padl.util.ModelStatistics;
 import pom.metrics.IBinaryMetric;
 import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
-import util.io.Files;
 
 /**
  * @author zaidifar

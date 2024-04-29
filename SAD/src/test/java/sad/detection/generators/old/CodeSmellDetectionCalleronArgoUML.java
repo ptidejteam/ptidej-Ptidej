@@ -11,7 +11,9 @@
 package sad.detection.generators.old;
 
 import java.io.PrintWriter;
+
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.analysis.repository.ModelAnnotatorLOCAnalysis;
@@ -30,15 +32,13 @@ import util.io.ProxyDisk;
  * @author Naouel Moha
  * @since  2005/12/04
  */
-@SuppressWarnings("deprecation")
 public final class CodeSmellDetectionCalleronArgoUML extends TestCase {
 	private static IIdiomLevelModel IdiomLevelModel;
 	private static ModelAnnotatorLOCAnalysis Annotator;
 	//	private static MetricRepository Metrics;
 	private static final String PATH = "rsc/applications/ArgoUMLv0.18.1.jar";
 	private static final String MAIN_PATH = "rsc/applications/";
-	private static final String ProgramName =
-		CodeSmellDetectionCalleronArgoUML.PATH
+	private static final String ProgramName = CodeSmellDetectionCalleronArgoUML.PATH
 			.substring(CodeSmellDetectionCalleronArgoUML.MAIN_PATH.length());
 
 	public CodeSmellDetectionCalleronArgoUML(final String name) {
@@ -47,22 +47,20 @@ public final class CodeSmellDetectionCalleronArgoUML extends TestCase {
 
 	protected void setUp() throws Exception {
 		if (CodeSmellDetectionCalleronArgoUML.IdiomLevelModel == null) {
-			final ICodeLevelModel codeLevelModel =
-				Factory.getInstance().createCodeLevelModel(
-					CodeSmellDetectionCalleronArgoUML.PATH);
+			final ICodeLevelModel codeLevelModel = Factory.getInstance()
+					.createCodeLevelModel(
+							CodeSmellDetectionCalleronArgoUML.PATH);
 			codeLevelModel.create(new CompleteClassFileCreator(
-				new String[] { CodeSmellDetectionCalleronArgoUML.PATH },
-				true));
-			CodeSmellDetectionCalleronArgoUML.IdiomLevelModel =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+					new String[] { CodeSmellDetectionCalleronArgoUML.PATH },
+					true));
+			CodeSmellDetectionCalleronArgoUML.IdiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(codeLevelModel);
 			//	DetectionAntipatternArgoUML018Test.Metrics = MetricRepository
 			//		.getMetricRepository(DetectionAntipatternArgoUML018Test.IdiomLevelModel);
-			CodeSmellDetectionCalleronArgoUML.Annotator =
-				new ModelAnnotatorLOCAnalysis();
+			CodeSmellDetectionCalleronArgoUML.Annotator = new ModelAnnotatorLOCAnalysis();
 			CodeSmellDetectionCalleronArgoUML.Annotator.annotateFromJARs(
-				new String[] { CodeSmellDetectionCalleronArgoUML.PATH },
-				CodeSmellDetectionCalleronArgoUML.IdiomLevelModel);
+					new String[] { CodeSmellDetectionCalleronArgoUML.PATH },
+					CodeSmellDetectionCalleronArgoUML.IdiomLevelModel);
 		}
 	}
 
@@ -73,36 +71,32 @@ public final class CodeSmellDetectionCalleronArgoUML extends TestCase {
 		IDesignSmellDetection ad;
 
 		ad = new BlobDetection();
-		((BlobDetection) ad).output(new PrintWriter(ProxyDisk
-			.getInstance()
-			.fileTempOutput(
-				"rsc/060224_Yann/"
+		((BlobDetection) ad).output(new PrintWriter(ProxyDisk.getInstance()
+				.fileTempOutput("rsc/060224_Yann/"
 						+ CodeSmellDetectionCalleronArgoUML.ProgramName
 						+ "_Blob.ini")));
 
 		ad = new FunctionalDecompositionDetection();
-		((FunctionalDecompositionDetection) ad).output(new PrintWriter(
-			ProxyDisk.getInstance().fileTempOutput(
-				"rsc/060224_Yann/"
-						+ CodeSmellDetectionCalleronArgoUML.ProgramName
-						+ "_FunctionalDecomposition.ini")));
+		((FunctionalDecompositionDetection) ad)
+				.output(new PrintWriter(ProxyDisk.getInstance()
+						.fileTempOutput("rsc/060224_Yann/"
+								+ CodeSmellDetectionCalleronArgoUML.ProgramName
+								+ "_FunctionalDecomposition.ini")));
 
 		ad = new SpaghettiCodeDetection();
-		((SpaghettiCodeDetection) ad).output(new PrintWriter(ProxyDisk
-			.getInstance()
-			.fileTempOutput(
-				"rsc/060224_Yann/"
-						+ CodeSmellDetectionCalleronArgoUML.ProgramName
-						+ "_SpaghettiCodeDetection.ini")));
+		((SpaghettiCodeDetection) ad)
+				.output(new PrintWriter(ProxyDisk.getInstance()
+						.fileTempOutput("rsc/060224_Yann/"
+								+ CodeSmellDetectionCalleronArgoUML.ProgramName
+								+ "_SpaghettiCodeDetection.ini")));
 
 		ad = new SwissArmyKnifeDetection();
-		((SwissArmyKnifeDetection) ad).output(new PrintWriter(ProxyDisk
-			.getInstance()
-			.fileTempOutput(
-				"rsc/060224_Yann/"
-						+ CodeSmellDetectionCalleronArgoUML.ProgramName
-						+ "_SwissArmyKnifeDetection.ini")));
-		
+		((SwissArmyKnifeDetection) ad)
+				.output(new PrintWriter(ProxyDisk.getInstance()
+						.fileTempOutput("rsc/060224_Yann/"
+								+ CodeSmellDetectionCalleronArgoUML.ProgramName
+								+ "_SwissArmyKnifeDetection.ini")));
+
 		// TODO This test does not do anything!?
 
 		Assert.assertTrue(true);

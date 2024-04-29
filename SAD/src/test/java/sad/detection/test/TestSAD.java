@@ -48,7 +48,7 @@ public final class TestSAD extends junit.framework.TestSuite {
 		// Empty block.
 	}
 
-	public TestSAD(final Class<?> theClass) {
+	public TestSAD(final Class theClass) {
 		super(theClass);
 	}
 

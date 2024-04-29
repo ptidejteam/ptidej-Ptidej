@@ -30,7 +30,10 @@
 						--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
 					</argLine>
-						<!-- -add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED -->
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>TestCreatorJavaFileUsingJavaC.java</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 			<!-- Must generate the test-jar for dependent tests -->
@@ -45,17 +48,6 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.5</version>
-				<configuration>
-					<excludes>
-						<!-- Excluded on purpose -->
-						<exclude>TestCreatorJavaFileUsingJavaC.java</exclude>
-					</excludes>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

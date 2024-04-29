@@ -18,6 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.analysis.repository.ModelAnnotatorLOCAnalysis;
@@ -40,24 +41,20 @@ import util.io.ProxyDisk;
  * @author Yann-Gaël Guéhéneuc
  * @since  2006/02/03
  */
-@SuppressWarnings("deprecation")
 public class CodeSmellDetectionCalleronEclipse {
 	public static void main(final String[] args) {
 		final String programName = "Eclipse v3.1.2";
 		final String pluginsPath = "E:/Programs/Eclipse 3/plugins/";
 		final String resultsPath = "rsc/";
 
-		final Writer writer =
-			ProxyDisk.getInstance().fileTempOutput(
+		final Writer writer = ProxyDisk.getInstance().fileTempOutput(
 				resultsPath + "DetectionResults in " + programName + ".log");
 		ProxyConsole.getInstance().setNormalOutput(writer);
 		ProxyConsole.getInstance().setErrorOutput(writer);
 		ProxyConsole.getInstance().setDebugOutput(writer);
 
-		ProxyConsole
-			.getInstance()
-			.normalOutput()
-			.println("Listing JAR files...");
+		ProxyConsole.getInstance().normalOutput()
+				.println("Listing JAR files...");
 		final List listOfPlugins = new ArrayList();
 		final File pluginDirectory = new File(pluginsPath);
 		final String[] allFiles = pluginDirectory.list();
@@ -73,150 +70,115 @@ public class CodeSmellDetectionCalleronEclipse {
 
 		/************** Creation of the program model ************************/
 
-		ProxyConsole
-			.getInstance()
-			.normalOutput()
-			.println("Building the code-level model...");
+		ProxyConsole.getInstance().normalOutput()
+				.println("Building the code-level model...");
 		long startTime = System.currentTimeMillis();
-		final ICodeLevelModel originalCodeLevelModel =
-			Factory.getInstance().createCodeLevelModel("");
+		final ICodeLevelModel originalCodeLevelModel = Factory.getInstance()
+				.createCodeLevelModel("");
 		final ModelStatistics statistics = new ModelStatistics();
 		originalCodeLevelModel.addModelListener(statistics);
 		try {
-			originalCodeLevelModel.create(new CompleteClassFileCreator(
-				arrayOfPlugins,
-				true));
+			originalCodeLevelModel
+					.create(new CompleteClassFileCreator(arrayOfPlugins, true));
 		}
 		catch (final CreationException e) {
 			e.printStackTrace(ProxyConsole.getInstance().normalOutput());
 		}
 		ProxyConsole.getInstance().normalOutput().println(statistics);
 		ProxyConsole.getInstance().normalOutput().print("in ");
-		ProxyConsole
-			.getInstance()
-			.normalOutput()
-			.print(System.currentTimeMillis() - startTime);
+		ProxyConsole.getInstance().normalOutput()
+				.print(System.currentTimeMillis() - startTime);
 		ProxyConsole.getInstance().normalOutput().println(" milliseconds");
 
-		ProxyConsole
-			.getInstance()
-			.normalOutput()
-			.println("Annotating the code-level model...");
+		ProxyConsole.getInstance().normalOutput()
+				.println("Annotating the code-level model...");
 		startTime = System.currentTimeMillis();
-		final ModelAnnotatorLOCAnalysis annotator =
-			new ModelAnnotatorLOCAnalysis();
+		final ModelAnnotatorLOCAnalysis annotator = new ModelAnnotatorLOCAnalysis();
 		annotator.annotateFromJARs(arrayOfPlugins, originalCodeLevelModel);
 		ProxyConsole.getInstance().normalOutput().print("in ");
-		ProxyConsole
-			.getInstance()
-			.normalOutput()
-			.print(System.currentTimeMillis() - startTime);
+		ProxyConsole.getInstance().normalOutput()
+				.print(System.currentTimeMillis() - startTime);
 		ProxyConsole.getInstance().normalOutput().println(" milliseconds");
 
-		ProxyConsole
-			.getInstance()
-			.normalOutput()
-			.println("Building the idiom-level model...");
+		ProxyConsole.getInstance().normalOutput()
+				.println("Building the idiom-level model...");
 		startTime = System.currentTimeMillis();
 		try {
-			final IIdiomLevelModel idiomLevelModel =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+			final IIdiomLevelModel idiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(originalCodeLevelModel);
 			ProxyConsole.getInstance().normalOutput().println(statistics);
 			ProxyConsole.getInstance().normalOutput().print("in ");
-			ProxyConsole
-				.getInstance()
-				.normalOutput()
-				.print(System.currentTimeMillis() - startTime);
+			ProxyConsole.getInstance().normalOutput()
+					.print(System.currentTimeMillis() - startTime);
 			ProxyConsole.getInstance().normalOutput().println(" milliseconds");
 
 			/************** Detection of Blobs ***********************************/
 
-			ProxyConsole
-				.getInstance()
-				.normalOutput()
-				.println("Detecting Blobs...");
+			ProxyConsole.getInstance().normalOutput()
+					.println("Detecting Blobs...");
 			startTime = System.currentTimeMillis();
 			final IDesignSmellDetection ad4 = new BlobDetection();
 			ad4.detect(idiomLevelModel);
-			ProxyConsole
-				.getInstance()
-				.normalOutput()
-				.println(System.currentTimeMillis() - startTime);
-			((BlobDetection) ad4).output(new PrintWriter(ProxyDisk
-				.getInstance()
-				.fileTempOutput(
-					resultsPath + "DetectionResults in " + programName
-							+ " for Blob.ini")));
+			ProxyConsole.getInstance().normalOutput()
+					.println(System.currentTimeMillis() - startTime);
+			((BlobDetection) ad4).output(new PrintWriter(ProxyDisk.getInstance()
+					.fileTempOutput(resultsPath + "DetectionResults in "
+							+ programName + " for Blob.ini")));
 
 			/************** Detection of Functional Decompositions ***************/
 
-			ProxyConsole
-				.getInstance()
-				.normalOutput()
-				.println("Detecting Functional Decompositions...");
+			ProxyConsole.getInstance().normalOutput()
+					.println("Detecting Functional Decompositions...");
 			startTime = System.currentTimeMillis();
-			final IDesignSmellDetection ad5 =
-				new FunctionalDecompositionDetection();
+			final IDesignSmellDetection ad5 = new FunctionalDecompositionDetection();
 			ad5.detect(idiomLevelModel);
-			ProxyConsole
-				.getInstance()
-				.normalOutput()
-				.println(System.currentTimeMillis() - startTime);
-			((FunctionalDecompositionDetection) ad5).output(new PrintWriter(
-				ProxyDisk.getInstance().fileTempOutput(
-					resultsPath + "DetectionResults in " + programName
-							+ " for FunctionalDecomposition.ini")));
+			ProxyConsole.getInstance().normalOutput()
+					.println(System.currentTimeMillis() - startTime);
+			((FunctionalDecompositionDetection) ad5)
+					.output(new PrintWriter(ProxyDisk.getInstance()
+							.fileTempOutput(resultsPath + "DetectionResults in "
+									+ programName
+									+ " for FunctionalDecomposition.ini")));
 
 			/************** Detection of SpaghettiCodes **************************/
 
-			ProxyConsole
-				.getInstance()
-				.normalOutput()
-				.println("Detecting Spaghetti Codes...");
+			ProxyConsole.getInstance().normalOutput()
+					.println("Detecting Spaghetti Codes...");
 			startTime = System.currentTimeMillis();
 			final IDesignSmellDetection ad1 = new SpaghettiCodeDetection();
 			ad1.detect(idiomLevelModel);
-			ProxyConsole
-				.getInstance()
-				.normalOutput()
-				.println(System.currentTimeMillis() - startTime);
-			((SpaghettiCodeDetection) ad1).output(new PrintWriter(ProxyDisk
-				.getInstance()
-				.fileTempOutput(
-					resultsPath + "DetectionResults in " + programName
-							+ " for SpaghettiCode.ini")));
+			ProxyConsole.getInstance().normalOutput()
+					.println(System.currentTimeMillis() - startTime);
+			((SpaghettiCodeDetection) ad1)
+					.output(new PrintWriter(ProxyDisk.getInstance()
+							.fileTempOutput(resultsPath + "DetectionResults in "
+									+ programName + " for SpaghettiCode.ini")));
 
 			/************** Detection of SwissArmyKnives *************************/
 
-			ProxyConsole
-				.getInstance()
-				.normalOutput()
-				.println("Detecting Swiss Army Knives...");
+			ProxyConsole.getInstance().normalOutput()
+					.println("Detecting Swiss Army Knives...");
 			startTime = System.currentTimeMillis();
 			final IDesignSmellDetection ad2 = new SwissArmyKnifeDetection();
 			ad2.detect(idiomLevelModel);
-			ProxyConsole
-				.getInstance()
-				.normalOutput()
-				.println(System.currentTimeMillis() - startTime);
-			((SwissArmyKnifeDetection) ad2).output(new PrintWriter(ProxyDisk
-				.getInstance()
-				.fileTempOutput(
-					resultsPath + "DetectionResults in " + programName
-							+ " for SwissArmyKnife.ini")));
+			ProxyConsole.getInstance().normalOutput()
+					.println(System.currentTimeMillis() - startTime);
+			((SwissArmyKnifeDetection) ad2)
+					.output(new PrintWriter(ProxyDisk.getInstance()
+							.fileTempOutput(resultsPath + "DetectionResults in "
+									+ programName
+									+ " for SwissArmyKnife.ini")));
 
 			/************** Generation of some statistics ************************/
 
-			final PrintWriter outFile =
-				new PrintWriter(new BufferedWriter(ProxyDisk
-					.getInstance()
-					.fileTempOutput(resultsPath + programName + ".stats.txt")));
+			final PrintWriter outFile = new PrintWriter(
+					new BufferedWriter(ProxyDisk.getInstance().fileTempOutput(
+							resultsPath + programName + ".stats.txt")));
 			outFile.println();
 			outFile.println("###### Statistics #####");
 			final Date today = new Date();
-			final SimpleDateFormat formatter =
-				new SimpleDateFormat("yyyy'/'MM'/'dd' Heure ' hh':'mm':'ss");
+			final SimpleDateFormat formatter = new SimpleDateFormat(
+					"yyyy'/'MM'/'dd' Heure ' hh':'mm':'ss");
 			final String timeStamp = formatter.format(today);
 			outFile.println(timeStamp);
 			outFile.print("Number of Blobs found: ");

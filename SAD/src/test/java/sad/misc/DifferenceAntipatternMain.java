@@ -17,6 +17,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.analysis.repository.ModelAnnotatorLOCAnalysis;
@@ -37,8 +38,6 @@ import util.io.ProxyDisk;
  * 
  * This class enables to check the difference between two sets of antipatterns
  */
-
-@SuppressWarnings("deprecation")
 public class DifferenceAntipatternMain {
 	// TODO: Reorganise the test project to distinguish tests 
 	// from helper class such as this one.
@@ -52,25 +51,20 @@ public class DifferenceAntipatternMain {
 	 *            path : path of the software
 	 * @return Set setOfAntipatterns
 	 */
-	public static Set createModel(
-		final String resultsPath,
-		final String nameSoftware,
-		final String path) {
+	public static Set createModel(final String resultsPath,
+			final String nameSoftware, final String path) {
 
 		System.err.println("Building the code-level model...");
 		long startTime = System.currentTimeMillis();
 		try {
-			final ICodeLevelModel originalCodeLevelModel =
-				Factory.getInstance().createCodeLevelModel(path);
-			originalCodeLevelModel.create(new CompleteClassFileCreator(
-				new String[] { path },
-				true));
-			final IIdiomLevelModel idiomLevelModel =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+			final ICodeLevelModel originalCodeLevelModel = Factory.getInstance()
+					.createCodeLevelModel(path);
+			originalCodeLevelModel.create(
+					new CompleteClassFileCreator(new String[] { path }, true));
+			final IIdiomLevelModel idiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(originalCodeLevelModel);
 
-			final ModelAnnotatorLOCAnalysis annotator =
-				new ModelAnnotatorLOCAnalysis();
+			final ModelAnnotatorLOCAnalysis annotator = new ModelAnnotatorLOCAnalysis();
 			annotator.annotateFromJARs(new String[] { path }, idiomLevelModel);
 
 			/************** Detection of Blobs *********************/
@@ -81,10 +75,9 @@ public class DifferenceAntipatternMain {
 			final IDesignSmellDetection ad4 = new BlobDetection();
 			final Set blobSet = ((BlobDetection) ad4).getDesignSmells();
 
-			((BlobDetection) ad4).output(new PrintWriter(ProxyDisk
-				.getInstance()
-				.fileTempOutput(resultsPath + nameSoftware + "_Blob.ini")));
-			
+			((BlobDetection) ad4).output(new PrintWriter(ProxyDisk.getInstance()
+					.fileTempOutput(resultsPath + nameSoftware + "_Blob.ini")));
+
 			// TODO Does this test do anything?!
 
 			return blobSet;
@@ -114,23 +107,16 @@ public class DifferenceAntipatternMain {
 		return setDiff;
 	}
 
-	public static void displayResult(
-		final String resultsPath,
-		final String nameOfTwoVersion,
-		final Set setFirst,
-		final String pathFirst,
-		final Set setSecond,
-		final String pathSecond) {
+	public static void displayResult(final String resultsPath,
+			final String nameOfTwoVersion, final Set setFirst,
+			final String pathFirst, final Set setSecond,
+			final String pathSecond) {
 
 		// We print the result in a file
 		try {
-			final PrintWriter outFile =
-				new PrintWriter(new BufferedWriter(
-					ProxyDisk
-						.getInstance()
-						.fileTempOutput(
-							resultsPath + "Difference_" + nameOfTwoVersion
-									+ ".txt")));
+			final PrintWriter outFile = new PrintWriter(new BufferedWriter(
+					ProxyDisk.getInstance().fileTempOutput(resultsPath
+							+ "Difference_" + nameOfTwoVersion + ".txt")));
 
 			outFile.println();
 			outFile.println("#############################################");
@@ -138,8 +124,8 @@ public class DifferenceAntipatternMain {
 			outFile.println("#############################################");
 			outFile.println();
 			final Date today = new Date();
-			final SimpleDateFormat formatter =
-				new SimpleDateFormat("yyyy'/'MM'/'dd' Heure ' hh':'mm':'ss");
+			final SimpleDateFormat formatter = new SimpleDateFormat(
+					"yyyy'/'MM'/'dd' Heure ' hh':'mm':'ss");
 			final String timeStamp = formatter.format(today);
 			outFile.println(timeStamp);
 
@@ -175,12 +161,12 @@ public class DifferenceAntipatternMain {
 			outFile.println("#############################################");
 			outFile.println("################# Différence # " + pathFirst
 					+ " - " + pathSecond);
-			outFile
-				.println("Things that appear in the first version that do not appear in the second one");
+			outFile.println(
+					"Things that appear in the first version that do not appear in the second one");
 			outFile.println("#############################################");
 			outFile.println();
-			final Set differences =
-				DifferenceAntipatternMain.difference(setFirst, setSecond);
+			final Set differences = DifferenceAntipatternMain
+					.difference(setFirst, setSecond);
 			int count3 = 0;
 			final Iterator iterDiff = differences.iterator();
 			while (iterDiff.hasNext()) {
@@ -194,12 +180,12 @@ public class DifferenceAntipatternMain {
 			outFile.println("#############################################");
 			outFile.println("################# Différence # " + pathSecond
 					+ " - " + pathFirst);
-			outFile
-				.println("Things that appear in the second version that do not appear in the first one");
+			outFile.println(
+					"Things that appear in the second version that do not appear in the first one");
 			outFile.println("#############################################");
 			outFile.println();
-			final Set differencesInv =
-				DifferenceAntipatternMain.difference(setSecond, setFirst);
+			final Set differencesInv = DifferenceAntipatternMain
+					.difference(setSecond, setFirst);
 			final Iterator iterInv = differencesInv.iterator();
 			int count4 = 0;
 			while (iterInv.hasNext()) {
@@ -213,8 +199,8 @@ public class DifferenceAntipatternMain {
 			outFile.println("#############################################");
 			outFile.println("################# Intersection # ");
 			outFile.println("#############################################");
-			final Set inter =
-				DifferenceAntipatternMain.intersection(setFirst, setSecond);
+			final Set inter = DifferenceAntipatternMain.intersection(setFirst,
+					setSecond);
 			int count5 = 0;
 			final Iterator iter = inter.iterator();
 			while (iter.hasNext()) {
@@ -252,48 +238,40 @@ public class DifferenceAntipatternMain {
 		final String main_path = "rsc/applications/";
 		final String resultsPath = "rsc/060424 Xerces - Report/";
 
-		final String[] path =
-			{
-					//				"rsc/applications/Xercesv1.0.1.jar",
-					//				"rsc/applications/Xercesv1.2.0.jar",
-					//				"rsc/applications/Xercesv1.2.1.jar",
-					//				"rsc/applications/Xercesv1.3.0.jar",
-					//				"rsc/applications/Xercesv1.3.1.jar",
-					//				"rsc/applications/Xercesv1.4.0.jar",
-					//				"rsc/applications/Xercesv1.4.1.jar",
-					//				"rsc/applications/Xercesv1.4.2.jar",
-					//				"rsc/applications/Xercesv1.4.3.jar",
-					//				"rsc/applications/Xercesv2.0.0.jar",
-					//				"rsc/applications/Xercesv2.1.0.jar",
-					"rsc/applications/Xercesv2.2.0.jar",
-					"rsc/applications/Xercesv2.3.0.jar",
-					"rsc/applications/Xercesv2.4.0.jar",
-					"rsc/applications/Xercesv2.5.0.jar"
-			//				"rsc/applications/Xercesv2.6.0.jar",
-			//				"rsc/applications/Xercesv2.7.0.jar"
-			};
+		final String[] path = {
+				//				"rsc/applications/Xercesv1.0.1.jar",
+				//				"rsc/applications/Xercesv1.2.0.jar",
+				//				"rsc/applications/Xercesv1.2.1.jar",
+				//				"rsc/applications/Xercesv1.3.0.jar",
+				//				"rsc/applications/Xercesv1.3.1.jar",
+				//				"rsc/applications/Xercesv1.4.0.jar",
+				//				"rsc/applications/Xercesv1.4.1.jar",
+				//				"rsc/applications/Xercesv1.4.2.jar",
+				//				"rsc/applications/Xercesv1.4.3.jar",
+				//				"rsc/applications/Xercesv2.0.0.jar",
+				//				"rsc/applications/Xercesv2.1.0.jar",
+				"rsc/applications/Xercesv2.2.0.jar",
+				"rsc/applications/Xercesv2.3.0.jar",
+				"rsc/applications/Xercesv2.4.0.jar",
+				"rsc/applications/Xercesv2.5.0.jar"
+				//				"rsc/applications/Xercesv2.6.0.jar",
+				//				"rsc/applications/Xercesv2.7.0.jar"
+		};
 
 		final Set[] models = new Set[path.length];
 		final String[] version = new String[path.length];
 
 		for (int i = 0; i < path.length; i++) {
 			final String nameSoftware = path[i].substring(main_path.length());
-			models[i] =
-				DifferenceAntipatternMain.createModel(
-					resultsPath,
-					nameSoftware,
-					path[i]);
+			models[i] = DifferenceAntipatternMain.createModel(resultsPath,
+					nameSoftware, path[i]);
 			version[i] = nameSoftware;
 		}
 
 		for (int j = 0; j < path.length - 1; j++) {
-			DifferenceAntipatternMain.displayResult(
-				resultsPath,
-				version[j] + version[j + 1],
-				models[j],
-				path[j],
-				models[j + 1],
-				path[j + 1]);
+			DifferenceAntipatternMain.displayResult(resultsPath,
+					version[j] + version[j + 1], models[j], path[j],
+					models[j + 1], path[j + 1]);
 		}
 
 	}

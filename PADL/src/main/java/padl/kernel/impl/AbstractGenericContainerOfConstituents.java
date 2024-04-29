@@ -71,6 +71,7 @@ public abstract class AbstractGenericContainerOfConstituents
 
 			return this.listOfModelListeners.add(aModelListener);
 		}
+		/*
 		public final boolean addModelListeners(
 			final List aListOfModelListeners) {
 
@@ -82,6 +83,7 @@ public abstract class AbstractGenericContainerOfConstituents
 			}
 			return result;
 		}
+		*/
 		public final void fireModelChange(
 			final String eventType,
 			final IEvent modelEvent) {

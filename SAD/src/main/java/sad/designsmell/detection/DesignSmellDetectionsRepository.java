@@ -34,15 +34,18 @@ import java.security.AccessControlException;
 import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
+
+import com.ibm.toad.cfparse.ClassFile;
+
 import util.io.ProxyConsole;
 import util.io.SubtypeLoader;
 import util.repository.FileAccessException;
 import util.repository.IRepository;
 import util.repository.impl.FileRepositoryFactory;
-import com.ibm.toad.cfparse.ClassFile;
 
 public class DesignSmellDetectionsRepository implements IRepository {
 	private static DesignSmellDetectionsRepository UniqueInstance;
+
 	public static DesignSmellDetectionsRepository getInstance() {
 		// TODO: Do not use Singleton pattern to force reload
 		//if (AntipatternRepository.UniqueInstance == null) {
@@ -52,22 +55,19 @@ public class DesignSmellDetectionsRepository implements IRepository {
 	}
 
 	private IDesignSmellDetection[] designSmells;
+
 	private DesignSmellDetectionsRepository() {
 		try {
-			final ClassFile[] classFiles =
-				SubtypeLoader.loadSubtypesFromStream(
+			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
 					"sad.designsmell.detection.IDesignSmellDetection",
-					FileRepositoryFactory
-						.getInstance()
-						.getFileRepository(this)
-						.getFiles(),
-					"sad.designsmell.detection.repository",
-					".class");
+					FileRepositoryFactory.getInstance().getFileRepository(this)
+							.getFiles(),
+					"sad.designsmell.detection.repository", ".class");
 
 			final Set codeSmells = new TreeSet(new Comparator() {
 				public int compare(final Object o1, final Object o2) {
-					return ((IDesignSmellDetection) o1).getName().compareTo(
-						((IDesignSmellDetection) o2).getName());
+					return ((IDesignSmellDetection) o1).getName()
+							.compareTo(((IDesignSmellDetection) o2).getName());
 				}
 			});
 			for (int i = 0; i < classFiles.length; i++) {
@@ -76,11 +76,10 @@ public class DesignSmellDetectionsRepository implements IRepository {
 					// I do not care about membre classes of
 					// detection algorithms.
 					if (classFiles[i].getName().indexOf('$') == -1) {
-						final Class antiPatternClass =
-							Class.forName(classFiles[i].getName());
-						final IDesignSmellDetection detection =
-							(IDesignSmellDetection) antiPatternClass
-								.getDeclaredConstructor().newInstance();
+						final Class antiPatternClass = Class
+								.forName(classFiles[i].getName());
+						final IDesignSmellDetection detection = (IDesignSmellDetection) antiPatternClass
+								.newInstance();
 						codeSmells.add(detection);
 					}
 				}
@@ -95,8 +94,7 @@ public class DesignSmellDetectionsRepository implements IRepository {
 				}
 			}
 
-			this.designSmells =
-				new IDesignSmellDetection[codeSmells.size()];
+			this.designSmells = new IDesignSmellDetection[codeSmells.size()];
 			codeSmells.toArray(this.designSmells);
 		}
 		catch (final AccessControlException ace) {
@@ -107,20 +105,25 @@ public class DesignSmellDetectionsRepository implements IRepository {
 			this.designSmells = new IDesignSmellDetection[0];
 		}
 	}
-	public IDesignSmellDetection getDesignSmellDetection(String aDesignSmellDetectionName) {
+
+	public IDesignSmellDetection getDesignSmellDetection(
+			String aDesignSmellDetectionName) {
 		for (int i = 0; i < this.designSmells.length; i++) {
 			final IDesignSmellDetection designSmellDetection = this.designSmells[i];
-			final String designSmellDetectionName = designSmellDetection.getName();
+			final String designSmellDetectionName = designSmellDetection
+					.getName();
 			if (designSmellDetectionName.equals(aDesignSmellDetectionName)) {
 				return designSmellDetection;
 			}
 		}
-		
+
 		return null;
 	}
+
 	public IDesignSmellDetection[] getDesignSmellDetections() {
 		return this.designSmells;
 	}
+
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append("Design smell repository:\n");

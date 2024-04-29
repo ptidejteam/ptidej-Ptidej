@@ -15,6 +15,7 @@ import java.io.PrintWriter;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.analysis.repository.ModelAnnotatorLOCAnalysis;
@@ -42,8 +43,6 @@ import util.io.ProxyDisk;
  * 
  * This class identify all the CodeSmell associated with a class
  */
-
-@SuppressWarnings("deprecation")
 public class WCRECodeSmellIdentificationMain {
 
 	/**
@@ -51,24 +50,19 @@ public class WCRECodeSmellIdentificationMain {
 	 * 
 	 * @return Set codeSmells
 	 */
-	public static IIdiomLevelModel createModel(
-		final String resultsPath,
-		final String nameSoftware,
-		final String path) {
+	public static IIdiomLevelModel createModel(final String resultsPath,
+			final String nameSoftware, final String path) {
 
 		System.err.println("Building the code-level model...");
-		final ICodeLevelModel originalCodeLevelModel =
-			Factory.getInstance().createCodeLevelModel(path);
+		final ICodeLevelModel originalCodeLevelModel = Factory.getInstance()
+				.createCodeLevelModel(path);
 		try {
-			originalCodeLevelModel.create(new CompleteClassFileCreator(
-				new String[] { path },
-				true));
-			final IIdiomLevelModel idiomLevelModel =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+			originalCodeLevelModel.create(
+					new CompleteClassFileCreator(new String[] { path }, true));
+			final IIdiomLevelModel idiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(originalCodeLevelModel);
 
-			final ModelAnnotatorLOCAnalysis annotator =
-				new ModelAnnotatorLOCAnalysis();
+			final ModelAnnotatorLOCAnalysis annotator = new ModelAnnotatorLOCAnalysis();
 			annotator.annotateFromJARs(new String[] { path }, idiomLevelModel);
 
 			return idiomLevelModel;
@@ -88,10 +82,8 @@ public class WCRECodeSmellIdentificationMain {
 	 * @return String csvRow
 	 *				  Return the information about the class in CSV format
 	 */
-	public static String extractData(
-		final IClass aClass,
-		final Set codeSmells,
-		final String[] codeSmellToDetect) {
+	public static String extractData(final IClass aClass, final Set codeSmells,
+			final String[] codeSmellToDetect) {
 		final int values[] = new int[codeSmellToDetect.length];
 		final StringBuffer buffer = new StringBuffer();
 
@@ -105,10 +97,8 @@ public class WCRECodeSmellIdentificationMain {
 
 			final Iterator iter = codeSmells.iterator();
 			while (iter.hasNext()) {
-				if (WCRECodeSmellIdentificationMain.findClass(
-					aClass,
-					codeSmellToDetect[i],
-					(ICodeSmell) iter.next())) {
+				if (WCRECodeSmellIdentificationMain.findClass(aClass,
+						codeSmellToDetect[i], (ICodeSmell) iter.next())) {
 					values[i] = 1;
 				}
 			}
@@ -130,16 +120,14 @@ public class WCRECodeSmellIdentificationMain {
 	 * @return boolean isFound
 	 *				Return if the Class have been detected in this CodeSmell  
 	 */
-	private static boolean findClass(
-		final IClass aClass,
-		final String csName,
-		final ICodeSmell cs) {
+	private static boolean findClass(final IClass aClass, final String csName,
+			final ICodeSmell cs) {
 		boolean isFound = false;
 
 		if (cs instanceof CodeSmell) {
 			// Search the current CodeSmell for the corresponding class
 			if (cs.getName().equals(csName)
-					&& cs.getIClassID().equals(aClass.getID())) {
+					&& cs.getIClassID().equals(aClass.getDisplayID())) {
 				isFound = true;
 			}
 
@@ -147,26 +135,19 @@ public class WCRECodeSmellIdentificationMain {
 		else if (cs instanceof CodeSmellComposite) {
 
 			// recursive call, if the CodeSmell is Composite
-			final Iterator iter =
-				((CodeSmellComposite) cs)
-					.getSetOfCodeSmellsOfGeneric()
-					.iterator();
+			final Iterator iter = ((CodeSmellComposite) cs)
+					.getSetOfCodeSmellsOfGeneric().iterator();
 			while (iter.hasNext() && !isFound) {
-				isFound =
-					WCRECodeSmellIdentificationMain.findClass(
-						aClass,
-						csName,
-						(ICodeSmell) iter.next());
+				isFound = WCRECodeSmellIdentificationMain.findClass(aClass,
+						csName, (ICodeSmell) iter.next());
 			}
 		}
 
 		return isFound;
 	}
 
-	private static Set identifyCodeSmell(
-		final IIdiomLevelModel idiomLevelModel,
-		final String resultsPath,
-		final String nameSoftware) {
+	private static Set identifyCodeSmell(final IIdiomLevelModel idiomLevelModel,
+			final String resultsPath, final String nameSoftware) {
 
 		final Set codeSmells = new HashSet();
 		long startTime = System.currentTimeMillis();
@@ -178,9 +159,8 @@ public class WCRECodeSmellIdentificationMain {
 		final IDesignSmellDetection ad1 = new BlobDetection();
 		final Set blobSet = ((BlobDetection) ad1).getDesignSmells();
 
-		((BlobDetection) ad1).output(new PrintWriter(ProxyDisk
-			.getInstance()
-			.fileTempOutput(resultsPath + nameSoftware + "_Blob.ini")));
+		((BlobDetection) ad1).output(new PrintWriter(ProxyDisk.getInstance()
+				.fileTempOutput(resultsPath + nameSoftware + "_Blob.ini")));
 
 		Iterator iter = blobSet.iterator();
 		while (iter.hasNext()) {
@@ -188,7 +168,7 @@ public class WCRECodeSmellIdentificationMain {
 		}
 
 		System.err
-			.println("Time : " + (System.currentTimeMillis() - startTime));
+				.println("Time : " + (System.currentTimeMillis() - startTime));
 		System.err.println("# Blob : " + blobSet.size() + "\n");
 
 		/************** Detection of Spaghetti Code *********************/
@@ -199,8 +179,8 @@ public class WCRECodeSmellIdentificationMain {
 		final Set spagSet = ((SpaghettiCodeDetection) ad2).getDesignSmells();
 
 		((SpaghettiCodeDetection) ad2)
-			.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-				resultsPath + nameSoftware + "_SpaghettiCode.ini")));
+				.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
+						resultsPath + nameSoftware + "_SpaghettiCode.ini")));
 
 		iter = spagSet.iterator();
 		while (iter.hasNext()) {
@@ -208,21 +188,20 @@ public class WCRECodeSmellIdentificationMain {
 		}
 
 		System.err
-			.println("Time : " + (System.currentTimeMillis() - startTime));
+				.println("Time : " + (System.currentTimeMillis() - startTime));
 		System.err.println("# Spaghetti : " + spagSet.size() + "\n");
 
 		/************** Detection of Functional Decomposition *********************/
 
 		System.err.println("Detecting Functional Decomposition...");
 		startTime = System.currentTimeMillis();
-		final IDesignSmellDetection ad3 =
-			new FunctionalDecompositionDetection();
-		final Set funcSet =
-			((FunctionalDecompositionDetection) ad3).getDesignSmells();
+		final IDesignSmellDetection ad3 = new FunctionalDecompositionDetection();
+		final Set funcSet = ((FunctionalDecompositionDetection) ad3)
+				.getDesignSmells();
 
 		((FunctionalDecompositionDetection) ad3).output(new PrintWriter(
-			ProxyDisk.getInstance().fileTempOutput(
-				resultsPath + nameSoftware + "_FunctionalDecomposition.ini")));
+				ProxyDisk.getInstance().fileTempOutput(resultsPath
+						+ nameSoftware + "_FunctionalDecomposition.ini")));
 
 		iter = funcSet.iterator();
 		while (iter.hasNext()) {
@@ -230,7 +209,7 @@ public class WCRECodeSmellIdentificationMain {
 		}
 
 		System.err
-			.println("Time : " + (System.currentTimeMillis() - startTime));
+				.println("Time : " + (System.currentTimeMillis() - startTime));
 		System.err.println("# Fuct Decomp : " + funcSet.size() + "\n");
 
 		/************** Detection of Swiss Army Knife *********************/
@@ -238,12 +217,11 @@ public class WCRECodeSmellIdentificationMain {
 		System.err.println("Detecting Swiss Army Knife...");
 		startTime = System.currentTimeMillis();
 		final IDesignSmellDetection ad4 = new SwissArmyKnifeDetection();
-		final Set armySet =
-			((SwissArmyKnifeDetection) ad4).getDesignSmells();
+		final Set armySet = ((SwissArmyKnifeDetection) ad4).getDesignSmells();
 
 		((SwissArmyKnifeDetection) ad4)
-			.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-				resultsPath + nameSoftware + "_SwissArmyKnife.ini")));
+				.output(new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
+						resultsPath + nameSoftware + "_SwissArmyKnife.ini")));
 
 		iter = armySet.iterator();
 		while (iter.hasNext()) {
@@ -251,7 +229,7 @@ public class WCRECodeSmellIdentificationMain {
 		}
 
 		System.err
-			.println("Time : " + (System.currentTimeMillis() - startTime));
+				.println("Time : " + (System.currentTimeMillis() - startTime));
 		System.err.println("# Swiss Army : " + armySet.size() + "\n");
 
 		//	/************** Detection of Poltergeist *********************/
@@ -273,7 +251,7 @@ public class WCRECodeSmellIdentificationMain {
 
 		System.err.println("Total # of CS : " + codeSmells.size() + "\n");
 		return codeSmells;
-		
+
 		// TODO Does this test do anything?!
 	}
 
@@ -282,55 +260,53 @@ public class WCRECodeSmellIdentificationMain {
 		final String main_path = "rsc/applications/";
 		final String resultsPath = "rsc/060524 Xerces - WCRE/";
 
-		final String[] codeSmellToDetect =
-			{
-					// Blob
-					"DataClass",
-					"NMD_NAD", // LargeClass
-					"ControllerClass",
+		final String[] codeSmellToDetect = {
+				// Blob
+				"DataClass", "NMD_NAD", // LargeClass
+				"ControllerClass",
 
-					// Spaghetti Code
-					"No Inheritance", "Class and Gobal Variables",
-					"Long Method", "Method with no parameters",
+				// Spaghetti Code
+				"No Inheritance", "Class and Gobal Variables", "Long Method",
+				"Method with no parameters",
 
-					// functional Decomposition
-					"No Polymorphism", "No Inheritance", "ClassPrivateField",
-					"ClassOneMethod",
+				// functional Decomposition
+				"No Polymorphism", "No Inheritance", "ClassPrivateField",
+				"ClassOneMethod",
 
-					// Swiss Army Knife
-					"MultipleInterface",
+				// Swiss Army Knife
+				"MultipleInterface",
 
-					//Poltergeist
-					"StatelessClass", "LeafClass" };
+				//Poltergeist
+				"StatelessClass", "LeafClass" };
 
 		final String[] path = {
-		//				"rsc/applications/Xerces-J_1_0_1.jar",
-		//				"rsc/applications/Xerces-J_1_1_0.jar",
-		//				"rsc/applications/Xerces-J_1_1_1.jar",
-		//				"rsc/applications/Xerces-J_1_1_2.jar",
-		//				"rsc/applications/Xerces-J_1_1_3.jar",
-		//				"rsc/applications/Xerces-J_1_2_0.jar",
-		//				"rsc/applications/Xerces-J_1_2_1.jar",
-		//				"rsc/applications/Xerces-J_1_2_2.jar",
-		//				"rsc/applications/Xerces-J_1_2_3.jar",
-		//				"rsc/applications/Xerces-J_1_3_0.jar",
-		//				"rsc/applications/Xerces-J_1_3_1.jar",
-		//				"rsc/applications/Xerces-J_1_4_0.jar",
-		//				
-		//				"rsc/applications/Xerces-J_1_4_1.jar",
-		//				"rsc/applications/Xerces-J_1_4_2.jar",
-		//				"rsc/applications/Xerces-J_1_4_3.jar",
-		//				"rsc/applications/Xerces-J_1_4_4.jar",
-		//				"rsc/applications/Xerces-J_2_0_0.jar",
-		//				"rsc/applications/Xerces-J_2_1_0.jar",
-		//				"rsc/applications/Xerces-J_2_2_0.jar",
-		//				"rsc/applications/Xerces-J_2_3_0.jar",
-		//				"rsc/applications/Xerces-J_2_4_0.jar",
-		//				
-		//				"rsc/applications/Xerces-J_2_5_0.jar",
-		//				"rsc/applications/Xerces-J_2_6_0.jar",
-		//				"rsc/applications/Xerces-J_2_7_0.jar",
-			};
+				//				"rsc/applications/Xerces-J_1_0_1.jar",
+				//				"rsc/applications/Xerces-J_1_1_0.jar",
+				//				"rsc/applications/Xerces-J_1_1_1.jar",
+				//				"rsc/applications/Xerces-J_1_1_2.jar",
+				//				"rsc/applications/Xerces-J_1_1_3.jar",
+				//				"rsc/applications/Xerces-J_1_2_0.jar",
+				//				"rsc/applications/Xerces-J_1_2_1.jar",
+				//				"rsc/applications/Xerces-J_1_2_2.jar",
+				//				"rsc/applications/Xerces-J_1_2_3.jar",
+				//				"rsc/applications/Xerces-J_1_3_0.jar",
+				//				"rsc/applications/Xerces-J_1_3_1.jar",
+				//				"rsc/applications/Xerces-J_1_4_0.jar",
+				//				
+				//				"rsc/applications/Xerces-J_1_4_1.jar",
+				//				"rsc/applications/Xerces-J_1_4_2.jar",
+				//				"rsc/applications/Xerces-J_1_4_3.jar",
+				//				"rsc/applications/Xerces-J_1_4_4.jar",
+				//				"rsc/applications/Xerces-J_2_0_0.jar",
+				//				"rsc/applications/Xerces-J_2_1_0.jar",
+				//				"rsc/applications/Xerces-J_2_2_0.jar",
+				//				"rsc/applications/Xerces-J_2_3_0.jar",
+				//				"rsc/applications/Xerces-J_2_4_0.jar",
+				//				
+				//				"rsc/applications/Xerces-J_2_5_0.jar",
+				//				"rsc/applications/Xerces-J_2_6_0.jar",
+				//				"rsc/applications/Xerces-J_2_7_0.jar",
+		};
 
 		final IIdiomLevelModel[] models = new IIdiomLevelModel[path.length];
 		final Set[] codeSmells = new Set[path.length];
@@ -339,18 +315,12 @@ public class WCRECodeSmellIdentificationMain {
 		// Build model and identify CodeSmell
 		for (int i = 0; i < path.length; i++) {
 			final String nameSoftware = path[i].substring(main_path.length());
-			models[i] =
-				WCRECodeSmellIdentificationMain.createModel(
-					resultsPath,
-					nameSoftware,
-					path[i]);
+			models[i] = WCRECodeSmellIdentificationMain.createModel(resultsPath,
+					nameSoftware, path[i]);
 			version[i] = nameSoftware;
 
-			codeSmells[i] =
-				WCRECodeSmellIdentificationMain.identifyCodeSmell(
-					models[i],
-					resultsPath,
-					nameSoftware);
+			codeSmells[i] = WCRECodeSmellIdentificationMain
+					.identifyCodeSmell(models[i], resultsPath, nameSoftware);
 		}
 
 		// Build csvHeader
@@ -368,23 +338,20 @@ public class WCRECodeSmellIdentificationMain {
 			long startTime = System.currentTimeMillis();
 			startTime = System.currentTimeMillis();
 
-			final Iterator iter =
-				models[j].getIteratorOnConstituents(IClass.class);
+			final Iterator iter = models[j]
+					.getIteratorOnConstituents(IClass.class);
 			while (iter.hasNext()) {
 				final IClass currentClass = (IClass) iter.next();
 
 				// Identify all CodeSmell associated with this class
 				csvData.append(WCRECodeSmellIdentificationMain.extractData(
-					currentClass,
-					codeSmells[j],
-					codeSmellToDetect));
+						currentClass, codeSmells[j], codeSmellToDetect));
 			}
 
 			// Write the CSV file
-			final PrintWriter outFile =
-				new PrintWriter(
+			final PrintWriter outFile = new PrintWriter(
 					new BufferedWriter(ProxyDisk.getInstance().fileTempOutput(
-						resultsPath + "CSV/" + version[j] + ".csv")));
+							resultsPath + "CSV/" + version[j] + ".csv")));
 
 			outFile.println(csvData.toString());
 			outFile.close();

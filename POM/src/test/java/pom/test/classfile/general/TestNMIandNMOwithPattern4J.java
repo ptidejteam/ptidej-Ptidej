@@ -11,6 +11,7 @@
 package pom.test.classfile.general;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
@@ -18,7 +19,6 @@ import padl.kernel.IFirstClassEntity;
 import padl.kernel.impl.Factory;
 import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
-import util.io.Files;
 
 /**
  * @author Yann
@@ -37,33 +37,31 @@ public final class TestNMIandNMOwithPattern4J extends TestCase {
 		super.setUp();
 		if (Model == null) {
 			MetricsRepository = pom.metrics.MetricsRepository.getInstance();
-			Model =
-				Factory.getInstance().createCodeLevelModel("Test.TestMetrics");
+			Model = Factory.getInstance()
+					.createCodeLevelModel("Test.TestMetrics");
 			Model.create(new CompleteClassFileCreator(new String[] { ROOT }));
 		}
 	}
+
 	public void testNMOforPatternDescriptor() {
-		final IFirstClassEntity firstClassEntity =
-			(IFirstClassEntity) Model
-				.getTopLevelEntityFromID("gr.uom.java.pattern.PatternDescriptor");
+		final IFirstClassEntity firstClassEntity = (IFirstClassEntity) Model
+				.getTopLevelEntityFromID(
+						"gr.uom.java.pattern.PatternDescriptor");
 		Assert.assertEquals(
-			"Computing NMO on gr.uom.java.pattern.PatternDescriptor",
-			0d,
-			((IUnaryMetric) MetricsRepository.getMetric("NMO")).compute(
-				Model,
-				firstClassEntity),
-			0);
+				"Computing NMO on gr.uom.java.pattern.PatternDescriptor", 0d,
+				((IUnaryMetric) MetricsRepository.getMetric("NMO"))
+						.compute(Model, firstClassEntity),
+				0);
 	}
+
 	public void testNMIforPatternDescriptor() {
-		final IFirstClassEntity firstClassEntity =
-			(IFirstClassEntity) Model
-				.getTopLevelEntityFromID("gr.uom.java.pattern.PatternDescriptor");
+		final IFirstClassEntity firstClassEntity = (IFirstClassEntity) Model
+				.getTopLevelEntityFromID(
+						"gr.uom.java.pattern.PatternDescriptor");
 		Assert.assertEquals(
-			"Computing NMI on gr.uom.java.pattern.PatternDescriptor",
-			69d,
-			((IUnaryMetric) MetricsRepository.getMetric("NMI")).compute(
-				Model,
-				firstClassEntity),
-			0);
+				"Computing NMI on gr.uom.java.pattern.PatternDescriptor", 69d,
+				((IUnaryMetric) MetricsRepository.getMetric("NMI"))
+						.compute(Model, firstClassEntity),
+				0);
 	}
 }

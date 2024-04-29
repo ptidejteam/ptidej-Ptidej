@@ -13,6 +13,7 @@ package sad.misc;
 import java.io.File;
 import java.io.PrintWriter;
 import java.util.Iterator;
+
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
@@ -20,7 +21,6 @@ import padl.kernel.IInterface;
 import padl.kernel.IOperation;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
-import util.io.Files;
 import util.io.ProxyDisk;
 
 
