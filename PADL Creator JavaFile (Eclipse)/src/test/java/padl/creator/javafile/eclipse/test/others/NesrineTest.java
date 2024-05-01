@@ -53,7 +53,7 @@ public class NesrineTest extends TestCase {
 			e.printStackTrace();
 		}
 	}
-	public void test2èmeCas() {
+	public void test2emeCas() {
 		final String sourcePath =
 			"../PADL Creator JavaFile (Eclipse)/target/test-classes/Nesrine's/2ème Cas/";
 		final String classPathEntry = "";
@@ -75,7 +75,7 @@ public class NesrineTest extends TestCase {
 			e.printStackTrace();
 		}
 	}
-	public void test3èmeCas() {
+	public void test3emeCas() {
 		final String sourcePath =
 			"../PADL Creator JavaFile (Eclipse)/target/test-classes/Nesrine's/3ème Cas/";
 		final String classPathEntry = "";

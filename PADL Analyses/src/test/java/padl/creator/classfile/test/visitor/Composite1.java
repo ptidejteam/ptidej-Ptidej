@@ -53,6 +53,7 @@ public class Composite1 extends ClassFilePrimitive {
 		}
 	}
 
+	// FLAKY TEST
 	public void testVisitor() {
 		try {
 			final IGenerator generator = new SimpleGenerator();
