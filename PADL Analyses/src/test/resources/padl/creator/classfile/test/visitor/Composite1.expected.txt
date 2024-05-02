@@ -50,12 +50,12 @@ visit	padl.kernel.impl.Association:padl.example.composite1.Element:1+padl.kernel
 open	printAll
 visit	NoField:NoFieldEntity:NoMethod:java.util.Vector
 visit	NoField:NoFieldEntity:NoMethod:java.util.Enumeration
-visit	NoField:NoFieldEntity:NoMethod:padl.example.composite1.AbstractDocument
 visit	NoField:NoFieldEntity:NoMethod:java.util.Enumeration
+visit	NoField:NoFieldEntity:NoMethod:padl.example.composite1.AbstractDocument
 visit	elements:padl.example.composite1.Document:elements:java.util.Vector
+visit	NoField:NoFieldEntity:hasMoreElements:java.util.Enumeration
 visit	NoField:NoFieldEntity:nextElement:java.util.Enumeration
 visit	NoField:NoFieldEntity:print:padl.example.composite1.AbstractDocument
-visit	NoField:NoFieldEntity:hasMoreElements:java.util.Enumeration
 close	printAll
 visit	padl.kernel.impl.Association:java.util.Enumeration:1+padl.kernel.impl.Association:java.util.Enumeration:1+padl.kernel.impl.Association:java.util.Enumeration:1+padl.kernel.impl.Association:java.util.Enumeration:1
 visit	padl.kernel.impl.Association:padl.example.composite1.AbstractDocument:1+padl.kernel.impl.Association:padl.example.composite1.AbstractDocument:1
