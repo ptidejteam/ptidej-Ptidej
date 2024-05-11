@@ -19,7 +19,6 @@
  */
 package jct.test.rsc.snpsht.parser.revml.sax.fsm.contentloader;
 
-import jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings;
 import jct.test.rsc.snpsht.parser.revml.sax.fsm.AbstractRevMLState;
 import jct.test.rsc.snpsht.parser.revml.sax.fsm.ErrorStateRevMLState;
 import jct.test.rsc.snpsht.parser.sax.AbstractStateSaxFsm;
@@ -60,7 +59,7 @@ public class LoadInfoStartState extends AbstractRevMLState {
 		String name,
 		Attributes attributes) throws SAXException {
 
-		if (RevMLDocCommonsStrings.REVML_DOCUMENT_MARKER.compareTo(name
+		if (jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.REVML_DOCUMENT_MARKER.compareTo(name
 			.trim()
 			.toLowerCase()) == 0) {
 

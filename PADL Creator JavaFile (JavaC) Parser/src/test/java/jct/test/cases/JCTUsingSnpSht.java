@@ -31,118 +31,61 @@
 
 package jct.test.cases;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 
 import org.junit.Assert;
 
 import jct.kernel.IJCTRootNode;
 import jct.test.common.JCTConstant;
+import jct.test.common.JCTUtil;
 import jct.test.rsc.snpsht.SnpShtConstant;
 import jct.tools.JCTPrettyPrinter;
 import junit.framework.TestCase;
 
 public final class JCTUsingSnpSht extends TestCase {
-	private final File srcFiles[] = new File[SnpShtConstant.FILES.length];
 	private final File outputFiles[] = new File[SnpShtConstant.FILES.length];
 	private final File expectedFiles[] = new File[SnpShtConstant.FILES.length];
 	private final File tmpDir;
 	private final File serializedFile;
 
-	private static String getFileContent(final File file) {
-		try {
-			final char characters[] = new char[(int) file.length()];
-			final BufferedReader bufferedReader = new BufferedReader(
-					new InputStreamReader(new FileInputStream(file)));
-			final int length = bufferedReader.read(characters, 0,
-					characters.length);
-			bufferedReader.close();
-			return new String(characters, 0, length);
-		}
-		catch (final IOException e) {
-			Assert.fail("Cannot read file " + file.getAbsolutePath());
-		}
-		throw new RuntimeException(
-				"Assert.fail() failed to fail... (Cannot read file + "
-						+ file.getAbsolutePath() + ")");
-	}
-
 	public JCTUsingSnpSht(final String name) {
 		super(name);
 		this.tmpDir = new File(JCTConstant.TMP_PATH);
-		this.serializedFile = new File(
-				JCTConstant.RSC_PATH + SnpShtConstant.SER_FILE);
+		this.serializedFile = new File(JCTConstant.REF_PATH + SnpShtConstant.SER_FILE);
 	}
 
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
 		if (!this.tmpDir.exists() && !this.tmpDir.mkdirs())
-			Assert.fail("Cannot create temp directory (" + JCTConstant.TMP_PATH
-					+ ") !");
+			Assert.fail("Cannot create temp directory (" + JCTConstant.TMP_PATH + ") !");
 
 		for (int i = 0; i < SnpShtConstant.FILES.length; ++i) {
-			this.srcFiles[i] = new File(
-					JCTConstant.SRC_PATH + SnpShtConstant.FILES[i]);
-			this.outputFiles[i] = new File(
-					JCTConstant.TMP_PATH + SnpShtConstant.FILES[i]);
-			this.expectedFiles[i] = new File(
-					JCTConstant.RSC_PATH + SnpShtConstant.FILES[i]);
+			this.outputFiles[i] = new File(JCTConstant.TMP_PATH + SnpShtConstant.FILES[i]);
+			this.expectedFiles[i] = new File(JCTConstant.REF_PATH + SnpShtConstant.FILES[i]);
 		}
 	}
 
 	public void testCreatorAndPrettyPrinter() {
 		try {
-			final ObjectInputStream ois = new ObjectInputStream(
-					new FileInputStream(this.serializedFile));
+			final ObjectInputStream ois = new ObjectInputStream(new FileInputStream(this.serializedFile));
 			final IJCTRootNode jct = (IJCTRootNode) ois.readObject();
 			ois.close();
 
 			jct.accept(new JCTPrettyPrinter(this.tmpDir));
 
 			for (int i = 0; i < SnpShtConstant.FILES.length; ++i)
-				Assert.assertEquals("difference between files "
-						+ this.outputFiles[i].getCanonicalPath() + " and "
-						+ this.expectedFiles[i].getCanonicalPath(),
-						JCTUsingSnpSht.getFileContent(this.expectedFiles[i]),
-						JCTUsingSnpSht.getFileContent(this.outputFiles[i]));
-		}
-		catch (final ClassNotFoundException e) {
+				Assert.assertEquals(
+						"difference between files " + this.outputFiles[i].getCanonicalPath() + " and "
+								+ this.expectedFiles[i].getCanonicalPath(),
+						JCTUtil.getFileContent(this.expectedFiles[i]), JCTUtil.getFileContent(this.outputFiles[i]));
+		} catch (final ClassNotFoundException e) {
 			Assert.fail(e.toString());
-		}
-		catch (final IOException e) {
+		} catch (final IOException e) {
 			Assert.fail(e.getMessage());
 		}
 	}
-
-	// TODO Move test to PADL Creator JavaFile (JavaC)
-	/*
-	public void testPADLCreatorFromJCT() {
-		try {
-			final ObjectInputStream ois = new ObjectInputStream(
-					new FileInputStream(this.serializedFile));
-			final IJCTRootNode jct = (IJCTRootNode) ois.readObject();
-			ois.close();
-			final IFactory f = padl.kernel.impl.Factory.getInstance();
-			new JCTCreator(jct, f)
-					.create(f.createCodeLevelModel("snpsht Test"));
-		}
-		catch (final CreationException e) {
-			Assert.fail(e.toString());
-		}
-		catch (FileNotFoundException e) {
-			Assert.fail(e.toString());
-		}
-		catch (IOException e) {
-			Assert.fail(e.toString());
-		}
-		catch (ClassNotFoundException e) {
-			Assert.fail(e.toString());
-		}
-	}
-	*/
 }

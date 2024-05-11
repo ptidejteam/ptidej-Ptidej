@@ -31,49 +31,28 @@
 
 package jct.test.cases;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 
 import org.junit.Assert;
 
 import jct.kernel.IJCTRootNode;
 import jct.test.common.JCTConstant;
+import jct.test.common.JCTUtil;
 import jct.tools.JCTPrettyPrinter;
 import junit.framework.TestCase;
 
 public final class JCTMisc extends TestCase {
-	private final String rscPath;
 	private final String outputPath;
 	private final String expectedPath;
 	private final File tmpDir;
 
-	private static String getFileContent(final File file) {
-		try {
-			final char characters[] = new char[(int) file.length()];
-			final BufferedReader bufferedReader = new BufferedReader(
-					new InputStreamReader(new FileInputStream(file)));
-			final int length = bufferedReader.read(characters, 0,
-					characters.length);
-			bufferedReader.close();
-			return new String(characters, 0, length);
-		}
-		catch (final IOException e) {
-			Assert.fail("Cannot read file " + file.getAbsolutePath());
-		}
-		throw new RuntimeException(
-				"Assert.fail() failed to fail... (Cannot read file + "
-						+ file.getAbsolutePath() + ")");
-	}
-
 	public JCTMisc(final String name) {
 		super(name);
-		this.rscPath = JCTConstant.RSC_PATH + JCTConstant.MISC_DIR;
 		this.outputPath = JCTConstant.TMP_PATH + JCTConstant.MISC_DIR;
-		this.expectedPath = JCTConstant.RSC_PATH + JCTConstant.MISC_DIR;
+		this.expectedPath = JCTConstant.REF_PATH + JCTConstant.MISC_DIR;
 		this.tmpDir = new File(JCTConstant.TMP_PATH);
 	}
 
@@ -89,7 +68,7 @@ public final class JCTMisc extends TestCase {
 
 	private IJCTRootNode getJCTInstance(String serializedFile) {
 		try {
-			final File file = new File(this.rscPath + serializedFile);
+			final File file = new File(this.expectedPath + serializedFile);
 			final ObjectInputStream ois = new ObjectInputStream(
 					new FileInputStream(file));
 			final IJCTRootNode ijctRootNote = (IJCTRootNode) ois.readObject();
@@ -126,8 +105,8 @@ public final class JCTMisc extends TestCase {
 						"difference between files "
 								+ outputFiles[i].getCanonicalPath() + " and "
 								+ expectedFiles[i].getCanonicalPath(),
-						JCTMisc.getFileContent(expectedFiles[i]),
-						JCTMisc.getFileContent(outputFiles[i]));
+						JCTUtil.getFileContent(expectedFiles[i]),
+						JCTUtil.getFileContent(outputFiles[i]));
 			}
 		}
 		catch (final IOException e) {

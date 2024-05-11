@@ -19,7 +19,6 @@
  */
 package jct.test.rsc.snpsht.parser.revml.sax.fsm.structurebuilder;
 
-import jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings;
 import jct.test.rsc.snpsht.parser.revml.sax.fsm.AbstractRevMLState;
 import jct.test.rsc.snpsht.parser.revml.sax.fsm.ErrorStateRevMLState;
 import jct.test.rsc.snpsht.parser.sax.AbstractStateSaxFsm;
@@ -42,7 +41,7 @@ public class BuildRepoStructScanState extends AbstractRevMLState {
 
 		if (attributes != null) {
 			for (int i = 0; i < attributes.getLength(); i++) {
-				if (RevMLDocCommonsStrings.REVML_DOCUMENT_VERSION_ATTRIBUTE
+				if (jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.REVML_DOCUMENT_VERSION_ATTRIBUTE
 					.compareTo(attributes.getLocalName(i).trim().toLowerCase()) == 0) {
 
 					getManager().setRevmlVersion(attributes.getValue(i));
@@ -62,7 +61,7 @@ public class BuildRepoStructScanState extends AbstractRevMLState {
 	public void endElement(String uri, String localName, String name)
 			throws SAXException {
 
-		if (RevMLDocCommonsStrings.REVML_DOCUMENT_MARKER.compareTo(name
+		if (jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.REVML_DOCUMENT_MARKER.compareTo(name
 			.trim()
 			.toLowerCase()) == 0) {
 
@@ -76,7 +75,7 @@ public class BuildRepoStructScanState extends AbstractRevMLState {
 					getManager(),
 					"Misformed xml document.\nEnd marker unexpected.\nReceived: "
 							+ name + "\nExpected: "
-							+ RevMLDocCommonsStrings.REVML_DOCUMENT_MARKER,
+							+ jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.REVML_DOCUMENT_MARKER,
 					ErrorStateRevMLState.MISFORMED_XML_DOCUMENT));
 		}
 
@@ -91,22 +90,22 @@ public class BuildRepoStructScanState extends AbstractRevMLState {
 		String fileId;
 
 		if (name.trim().toLowerCase().compareTo(
-			RevMLDocCommonsStrings.ROOT_REPOSITORY_MARKER) == 0) {
+			jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.ROOT_REPOSITORY_MARKER) == 0) {
 
 			getFsm().changeState(
 				new BuildRootRepoState(getFsm(), this, getManager()));
 		} else if (name.trim().toLowerCase().compareTo(
-			RevMLDocCommonsStrings.ROOT_REPOSITORY_TIME_MARKER) == 0) {
+			jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.ROOT_REPOSITORY_TIME_MARKER) == 0) {
 
 			getFsm().changeState(
 				new BuildRootRepoTimeState(getFsm(), this, getManager()));
 		} else if (name.trim().toLowerCase().compareTo(
-			RevMLDocCommonsStrings.ROOT_REPOSITORY_DESCR_MARKER) == 0) {
+			jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.ROOT_REPOSITORY_DESCR_MARKER) == 0) {
 
 			getFsm().changeState(
 				new BuildRootRepoDescrState(getFsm(), this, getManager()));
 		} else if (name.trim().toLowerCase().compareTo(
-			RevMLDocCommonsStrings.FILE_REV_MARKER) == 0) {
+			jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.FILE_REV_MARKER) == 0) {
 
 			if (getManager().getRoot() == null) {
 				getFsm().changeState(
@@ -121,7 +120,7 @@ public class BuildRepoStructScanState extends AbstractRevMLState {
 					for (int i = 0; i < attributes.getLength(); i++) {
 						String aName = attributes.getLocalName(i);
 
-						if (RevMLDocCommonsStrings.REVML_VERSION_ID_ATTRIBUTE
+						if (jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.REVML_VERSION_ID_ATTRIBUTE
 							.equals(aName.toLowerCase().trim())) {
 							fileId = attributes.getValue(i);
 

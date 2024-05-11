@@ -19,7 +19,6 @@
  */
 package jct.test.rsc.snpsht.parser.revml.sax.fsm.structurebuilder;
 
-import jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings;
 import jct.test.rsc.snpsht.parser.revml.sax.fsm.AbstractRevMLState;
 import jct.test.rsc.snpsht.parser.revml.sax.fsm.ErrorStateRevMLState;
 import jct.test.rsc.snpsht.parser.sax.AbstractStateSaxFsm;
@@ -49,7 +48,7 @@ public class BuildFileRevState extends AbstractRevMLState {
 	public void endElement(String uri, String localName, String name)
 			throws SAXException {
 		if (name.trim().toLowerCase().compareTo(
-			RevMLDocCommonsStrings.FILE_REV_MARKER) == 0) {
+			jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.FILE_REV_MARKER) == 0) {
 
 			if (this.file == null) {
 				getFsm().changeState(
@@ -59,7 +58,7 @@ public class BuildFileRevState extends AbstractRevMLState {
 						getManager(),
 						"Misformed xml document.\nEnd marker unexpected.\nReceived: "
 								+ name + "\nExpected: "
-								+ RevMLDocCommonsStrings.FILE_REV_NAME_MARKER,
+								+ jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.FILE_REV_NAME_MARKER,
 						ErrorStateRevMLState.MISFORMED_XML_DOCUMENT));
 			} else {
 				getFsm().changeState(getPreviewState());
@@ -72,7 +71,7 @@ public class BuildFileRevState extends AbstractRevMLState {
 					getManager(),
 					"Misformed xml document.\nEnd marker unexpected.\nReceived: "
 							+ name + "\nExpected: "
-							+ RevMLDocCommonsStrings.FILE_REV_MARKER,
+							+ jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.FILE_REV_MARKER,
 					ErrorStateRevMLState.MISFORMED_XML_DOCUMENT));
 		}
 	}
@@ -85,7 +84,7 @@ public class BuildFileRevState extends AbstractRevMLState {
 		Attributes attributes) throws SAXException {
 
 		if (name.trim().toLowerCase().compareTo(
-			RevMLDocCommonsStrings.FILE_REV_NAME_MARKER) == 0) {
+			jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.FILE_REV_NAME_MARKER) == 0) {
 
 			getFsm()
 				.changeState(
@@ -136,7 +135,7 @@ public class BuildFileRevState extends AbstractRevMLState {
 		public void endElement(String uri, String localName, String name)
 				throws SAXException {
 			if (name.trim().toLowerCase().compareTo(
-				RevMLDocCommonsStrings.FILE_REV_NAME_MARKER) == 0) {
+				jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.FILE_REV_NAME_MARKER) == 0) {
 
 				BuildFileRevState.this.file =
 					getManager().addSimpleRevision(
@@ -152,7 +151,7 @@ public class BuildFileRevState extends AbstractRevMLState {
 						getManager(),
 						"Misformed xml document.\nEnd marker unexpected.\nReceived: "
 								+ name + "\nExpected: "
-								+ RevMLDocCommonsStrings.FILE_REV_MARKER,
+								+ jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.FILE_REV_MARKER,
 						ErrorStateRevMLState.MISFORMED_XML_DOCUMENT));
 			}
 		}

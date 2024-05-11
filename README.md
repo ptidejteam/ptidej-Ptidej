@@ -22,7 +22,7 @@ The source code of the Ptidej Tool Suite is open and released under the GNU Publ
 ## What do I need?
 
 - Maven version 3.9.6
-- Java 17 or more recent (compiled and tested with Java 22)
+- Java 21 (or more recent?)
 
 ## How do I set it up?
 

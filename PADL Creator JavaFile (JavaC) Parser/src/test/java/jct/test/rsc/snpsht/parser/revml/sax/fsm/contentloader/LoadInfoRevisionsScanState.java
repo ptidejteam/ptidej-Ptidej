@@ -19,7 +19,6 @@
  */
 package jct.test.rsc.snpsht.parser.revml.sax.fsm.contentloader;
 
-import jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings;
 import jct.test.rsc.snpsht.parser.revml.sax.fsm.AbstractRevMLState;
 import jct.test.rsc.snpsht.parser.revml.sax.fsm.ErrorStateRevMLState;
 import jct.test.rsc.snpsht.parser.sax.AbstractStateSaxFsm;
@@ -50,7 +49,7 @@ public class LoadInfoRevisionsScanState extends AbstractRevMLState {
 	public void endElement(String uri, String localName, String name)
 			throws SAXException {
 
-		if (RevMLDocCommonsStrings.REVML_DOCUMENT_MARKER.compareTo(name
+		if (jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.REVML_DOCUMENT_MARKER.compareTo(name
 			.trim()
 			.toLowerCase()) == 0) {
 
@@ -64,7 +63,7 @@ public class LoadInfoRevisionsScanState extends AbstractRevMLState {
 					getManager(),
 					"Misformed xml document.\nEnd marker unexpected.\nReceived: "
 							+ name + "\nExpected: "
-							+ RevMLDocCommonsStrings.REVML_DOCUMENT_MARKER,
+							+ jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.REVML_DOCUMENT_MARKER,
 					ErrorStateRevMLState.MISFORMED_XML_DOCUMENT));
 		}
 
@@ -80,13 +79,13 @@ public class LoadInfoRevisionsScanState extends AbstractRevMLState {
 		VerFsFileRev file;
 
 		if (name.trim().toLowerCase().compareTo(
-			RevMLDocCommonsStrings.FILE_REV_MARKER) == 0) {
+			jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.FILE_REV_MARKER) == 0) {
 
 			if (attributes != null) {
 				for (int i = 0; i < attributes.getLength(); i++) {
 					String aName = attributes.getLocalName(i);
 
-					if (RevMLDocCommonsStrings.REVML_VERSION_ID_ATTRIBUTE
+					if (jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.REVML_VERSION_ID_ATTRIBUTE
 						.equals(aName.toLowerCase().trim())) {
 						fileId = attributes.getValue(i);
 

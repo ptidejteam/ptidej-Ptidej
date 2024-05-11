@@ -31,11 +31,9 @@
 
 package jct.test.cases;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectStreamClass;
 
@@ -43,6 +41,7 @@ import org.junit.Assert;
 
 import jct.kernel.IJCTRootNode;
 import jct.test.common.JCTConstant;
+import jct.test.common.JCTUtil;
 import jct.tools.JCTPrettyPrinter;
 import jct.util.collection.IndirectCollection;
 import junit.framework.TestCase;
@@ -54,29 +53,11 @@ public final class JCTUsingJCT extends TestCase {
 	private final File serializedFile;
 	private final File tmpDir;
 
-	private static String getFileContent(final File file) {
-		try {
-			final char characters[] = new char[(int) file.length()];
-			final FileInputStream fis = new FileInputStream(file);
-			final int length = new BufferedReader(new InputStreamReader(fis))
-					.read(characters, 0, characters.length);
-			final String result = new String(characters, 0, length);
-			fis.close();
-			return result;
-		}
-		catch (final IOException e) {
-			Assert.fail("Cannot read file " + file.getAbsolutePath());
-		}
-		throw new RuntimeException(
-				"Assert.fail() failed to fail... (Cannot read file + "
-						+ file.getAbsolutePath() + ")");
-	}
-
 	public JCTUsingJCT(final String name) {
 		super(name);
 		this.tmpDir = new File(JCTConstant.TMP_PATH);
 		this.serializedFile = new File(
-				JCTConstant.RSC_PATH + JCTConstant.SER_FILE_JCT);
+				JCTConstant.REF_PATH + JCTConstant.SER_FILE);
 	}
 
 	@Override
@@ -84,8 +65,8 @@ public final class JCTUsingJCT extends TestCase {
 		super.setUp();
 
 		if (!this.tmpDir.exists() && !this.tmpDir.mkdirs()) {
-			Assert.fail("Cannot create temp directory ("
-					+ JCTConstant.TMP_PATH + ") !");
+			Assert.fail("Cannot create temp directory (" + JCTConstant.TMP_PATH
+					+ ") !");
 		}
 
 		for (int i = 0; i < JCTConstant.FILES.length; ++i) {
@@ -94,7 +75,7 @@ public final class JCTUsingJCT extends TestCase {
 			this.outputFiles[i] = new File(
 					JCTConstant.TMP_PATH + JCTConstant.FILES[i]);
 			this.expectedFiles[i] = new File(
-					JCTConstant.RSC_PATH + JCTConstant.FILES[i]);
+					JCTConstant.REF_PATH + JCTConstant.FILES[i]);
 		}
 	}
 
@@ -127,9 +108,8 @@ public final class JCTUsingJCT extends TestCase {
 				Assert.assertEquals("Difference between files "
 						+ this.outputFiles[i].getCanonicalPath() + " and "
 						+ this.expectedFiles[i].getCanonicalPath() + " (" + i
-						+ ')',
-						JCTUsingJCT.getFileContent(this.expectedFiles[i]),
-						JCTUsingJCT.getFileContent(this.outputFiles[i]));
+						+ ')', JCTUtil.getFileContent(this.expectedFiles[i]),
+						JCTUtil.getFileContent(this.outputFiles[i]));
 		}
 		catch (final ClassNotFoundException e) {
 			e.printStackTrace();

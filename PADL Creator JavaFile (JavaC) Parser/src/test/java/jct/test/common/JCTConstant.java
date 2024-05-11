@@ -37,16 +37,16 @@ import java.util.List;
 public interface JCTConstant {
 	// Each test suite must ensure the existence and emptiness of this directory
 	String TMP_PATH = "../PADL Creator JavaFile (JavaC) Parser/tmp/";
-	String RSC_PATH = "../PADL Creator JavaFile (JavaC) Parser/src/test/resources/";
+	String REF_PATH = "../PADL Creator JavaFile (JavaC) Parser/src/test/resources/reference/";
 	String SRC_PATH = "../PADL Creator JavaFile (JavaC) Parser/src/main/java/";
 	String TST_PATH = "../PADL Creator JavaFile (JavaC) Parser/src/test/java/";
 
-	List<String> OPTIONS = Arrays
-			.asList(new String[] { "-classpath", SRC_PATH, "-d", TMP_PATH });
+	// From padl.creator.javafile.javac.JavaFileCreator.initialise(String, String[])
+	List<String> OPTIONS = Arrays.asList(new String[] { "--enable-preview", "--release", "21",
+			"-classpath", SRC_PATH, "-d", TMP_PATH });
 
-	String LIB_PATH = "lib/";
 	String MISC_DIR = "jct/test/rsc/misc/";
-	String SER_FILE_JCT = "jct/test/rsc/jct/JCT.ser";
+	String SER_FILE = "jct/test/rsc/jct/JCT.ser";
 
 	String FILES[] = new String[] { "jct/test/rsc/jct/kernel/IJCTMethod.java",
 			"jct/test/rsc/jct/kernel/IJCTRemainderAssignment.java",

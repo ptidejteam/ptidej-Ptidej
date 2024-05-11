@@ -23,7 +23,6 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.util.Date;
 
-import jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings;
 import jct.test.rsc.snpsht.parser.revml.sax.fsm.AbstractRevMLState;
 import jct.test.rsc.snpsht.parser.revml.sax.fsm.ErrorStateRevMLState;
 import jct.test.rsc.snpsht.parser.sax.AbstractStateSaxFsm;
@@ -55,7 +54,7 @@ public class BuildRootRepoTimeState extends AbstractRevMLState {
 	@Override
 	public void endElement(String uri, String localName, String name)
 			throws SAXException {
-		if (RevMLDocCommonsStrings.ROOT_REPOSITORY_TIME_MARKER.compareTo(name
+		if (jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.ROOT_REPOSITORY_TIME_MARKER.compareTo(name
 			.trim()
 			.toLowerCase()) == 0) {
 
@@ -88,7 +87,7 @@ public class BuildRootRepoTimeState extends AbstractRevMLState {
 						"Misformed xml document.\nEnd marker unexpected.\nReceived: "
 								+ name
 								+ "\nExpected: "
-								+ RevMLDocCommonsStrings.ROOT_REPOSITORY_TIME_MARKER,
+								+ jct.test.rsc.snpsht.parser.revml.RevMLDocCommonsStrings.ROOT_REPOSITORY_TIME_MARKER,
 						ErrorStateRevMLState.MISFORMED_XML_DOCUMENT));
 		}
 	}
