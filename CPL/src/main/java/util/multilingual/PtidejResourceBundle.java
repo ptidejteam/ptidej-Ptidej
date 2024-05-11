@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package util.multilingual;
 
@@ -14,7 +14,7 @@ import java.util.ListResourceBundle;
 
 /**
  * @author Mehdi Lahlou
- * @author Yann-Gaël Guéhéneuc
+ * @author Yann-GaÃ«l GuÃ©hÃ©neuc
  * @since  18/05/2005
  */
 public class PtidejResourceBundle extends ListResourceBundle {
@@ -270,7 +270,7 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				{
 						"ptidej.solver.java.Problem::PTIDEJ",
 
-						"++ JPtidejSolver v1.5 (February, 2007), Copyright (c) 2001-2013 Y.-G. Guéhéneuc\n++ Constraint programming for design patterns and design defects identification" },
+						"++ JPtidejSolver v1.5 (February, 2007), Copyright (c) 2001-2013 Y.-G. GuÃ©hÃ©neuc\n++ Constraint programming for design patterns and design defects identification" },
 				{ "ptidej.solver.java.solver.SimpleInteractiveRepair::NO_MORE_SOL",
 
 				"There is no more solution because of the constraints: {0}" },
@@ -951,13 +951,13 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				{
 						"ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R01_C05",
 
-						"by Yann-Gaël Guéhéneuc uses the PADL meta-model (Pattern and Abstract-level" },
+						"by Yann-GaÃ«l GuÃ©hÃ©neuc uses the PADL meta-model (Pattern and Abstract-level" },
 				{
 						"ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R01_C06",
 
 						"Description Language), extension of the PDL meta-model (Pattern Description Language)" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R01_C07",
-						"by Hervé Albin-Amiot." },
+						"by Herve Albin-Amiot." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R01_C08",
 						"Get more information at www.ptidej.net." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R01_C09",
@@ -966,20 +966,20 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C01",
 						"Main developpers:" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C02",
-						"        - Yann-Gaël Guéhéneuc" },
+						"        - Yann-GaÃ«l GuÃ©hÃ©neuc" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C03",
-						"                Université de Montréal" },
+						"                Universite de Montreal" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C04",
 
-				"                École des Mines de Nantes" },
+				"                ecole des Mines de Nantes" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C05",
 
 				"                Object Technology International, Inc." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C06",
-						"        - Hervé Albin-Amiot." },
+						"        - Herve Albin-Amiot." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C07",
 
-				"                École des Mines de Nantes" },
+				"                ecole des Mines de Nantes" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C08",
 						"                Softmaint S.A." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C10",
@@ -993,7 +993,7 @@ public class PtidejResourceBundle extends ListResourceBundle {
 						"                Graduate, fall 2004" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C14",
 
-				"                Université de Montréal." },
+				"                Universite de Montreal." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C15",
 						"        - Lulzim Laloshi and Driton Salihu" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C16",
@@ -1003,10 +1003,10 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				"                Undergraduates, Summer 2004" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C18",
 
-				"                Université de Montréal." },
+				"                Universite de Montreal." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C19",
 
-				"        - Ward Flores and Sébastien Robidoux" },
+				"        - Ward Flores and Sebastien Robidoux" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C20",
 
 				"                On the C++ creator and PADL" },
@@ -1015,10 +1015,10 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				"                Undergraduates, Summer 2004" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C22",
 
-				"                Université de Montréal." },
+				"                Universite de Montreal." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C23",
 
-				"        - Salime Bensemmane, Iyadh Sidhom, and Fayçal Skhiri" },
+				"        - Salime Bensemmane, Iyadh Sidhom, and Fayeal Skhiri" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C24",
 
 				"                On the Ptidej Solver in Java" },
@@ -1027,7 +1027,7 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				"                Undergraduates, Summer 2004" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C26",
 
-				"                Université de Montréal." },
+				"                Universite de Montreal." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C27",
 						"        - Farouk Zaidi" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C28",
@@ -1037,18 +1037,18 @@ public class PtidejResourceBundle extends ListResourceBundle {
 						"                Trainee, Winter 2004" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C30",
 
-				"                Université de technologie Belfort-Montbéliard" },
+				"                Universite de technologie Belfort-Montbeliard" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C31",
 
-				"                Centre de Recherche en Informatique de Montréal" },
+				"                Centre de Recherche en Informatique de Montreal" },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R02_C32",
 
-				"                Université de Montréal." },
+				"                Universite de Montreal." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R03_C01",
 
 				"The Ptidej tool suite, copyright (c) 2000-2004," },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R03_C02",
-						"Yann-Gaël Guéhéneuc." },
+						"Yann-GaÃ«l GuÃ©hÃ©neuc." },
 				{ "ptidej.viewer.ProjectData::COPYRIGHT_MESSAGE_R03_C03",
 						"All right reserved." },
 				{
@@ -1276,7 +1276,7 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				{ "ptidej.viewer.ui.MenuBar::MENU_LANGUAGE", "Language" },
 				{ "ptidej.viewer.ui.MenuBar::MENU_LANGUAGE_MNEMONIC", "L" },
 				{ "ptidej.viewer.ui.MenuBar::RADIO_ITEM_ENGLISH", "English" },
-				{ "ptidej.viewer.ui.MenuBar::RADIO_ITEM_FRENCH", "Français" },
+				{ "ptidej.viewer.ui.MenuBar::RADIO_ITEM_FRENCH", "Franeais" },
 				{ "ptidej.viewer.ui.MenuBar::MENU_WINDOW", "Window" },
 				{ "ptidej.viewer.ui.MenuBar::MENU_WINDOW_MNEMONIC", "W" },
 				{ "ptidej.viewer.ui.MenuBar::ITEM_MINIMIZE_ALL", "Minimize All" },
@@ -2036,7 +2036,7 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				{
 						"ptidej.viewer.ui.splash.SplashScreen::RICH_TXT_GEODES",
 
-						"<center><b>Ptidej Team</b><br>PolyMORSE, DGIGL<Br>Polytechnique Montréal</center>" },
+						"<center><b>Ptidej Team</b><br>PolyMORSE, DGIGL<Br>Polytechnique Montreal</center>" },
 				{
 						"ptidej.viewer.ui.about.AboutDialog::RICH_TXT_PTIDEJ",
 
@@ -2044,141 +2044,141 @@ public class PtidejResourceBundle extends ListResourceBundle {
 								+ "oriented programs,<Br>promoting the use of patterns, either at the language-, design-, or "
 								+ "architectural-level."
 								+ "<p>The Ptidej tool suite (Pattern Trace Identification, Detection, and Enhancement in Java)<Br>"
-								+ "by Yann-Gaël Guéhéneuc uses the PADL meta-model (Pattern and Abstract-level "
+								+ "by Yann-GaÃ«l GuÃ©hÃ©neuc uses the PADL meta-model (Pattern and Abstract-level "
 								+ "Description Language),<Br>extension of the PDL meta-model (Pattern Description Language)<Br>"
-								+ "by Hervé Albin-Amiot.</p>"
+								+ "by Herve Albin-Amiot.</p>"
 								+ "<p>Get more information at <a href=\"http://www.ptidej.net\">www.ptidej.net</a> and <a href=\"http://wiki.ptidej.net\">wiki.ptidej.net</a>.<Br>"
 								+ "Send comments and questions to <a href=\"mailto:info@ptidej.net\">info@ptidej.net</a>.</p></body></html>" },
 				{
 						"ptidej.viewer.ui.about.AboutDialog::RICH_TXT_DEVELOPPERS",
 
 						"<html><body><b>Main developpers:</b>"
-								+ "<blockquote>- <i>Yann-Gaël Guéhéneuc</i>"
-								+ "<blockquote>Polytechnique Montréal<br>"
-								+ "Université de Montréal<br>"
+								+ "<blockquote>- <i>Yann-GaÃ«l GuÃ©hÃ©neuc</i>"
+								+ "<blockquote>Polytechnique Montreal<br>"
+								+ "Universite de Montreal<br>"
 								+ "Ecole des Mines de Nantes<br>"
 								+ "Object Technology International, Inc.</blockquote>"
-								+ "- <i>Hervé Albin-Amiot.</i>"
+								+ "- <i>Herve Albin-Amiot.</i>"
 								+ "<blockquote>Ecole des Mines de Nantes<br>"
 								+ "Softmaint S.A.</blockquote></blockquote>"
 								+ "<hr><b>With contributions by:</b><blockquote>"
 								+
 
-								"- <i>Aminata Sabané</i>"
+								"- <i>Aminata Sabane</i>"
 								+ "<blockquote>Java creator of PADL models<br>"
 								+ "Ph.D. student, 2012<br>"
-								+ "Polytechnique Montréal.</blockquote>"
+								+ "Polytechnique Montreal.</blockquote>"
 								+
 
-								"- <i>Sébastien Colladon</i>"
+								"- <i>Sebastien Colladon</i>"
 								+ "<blockquote>C++ creator of PADL models<br>"
 								+ "Intern, 2012<br>"
-								+ "Polytechnique Montréal.</blockquote>"
+								+ "Polytechnique Montreal.</blockquote>"
 								+
 
 								"- <i>Gerardo Cepeda and Yousra Tagmouti</i>"
 								+ "<blockquote>C# creator of PADL models<br>"
 								+ "Post-docs, 2010-2011<br>"
-								+ "Polytechnique Montréal.</blockquote>"
+								+ "Polytechnique Montreal.</blockquote>"
 								+
 
 								"- <i>Foutse Khomh</i>"
 								+ "<blockquote>Patterns and Quality of Object-oriented Programs<br>"
 								+ "Ph.D. student, 2010<br>"
-								+ "Université de Montréal.</blockquote>"
+								+ "Universite de Montreal.</blockquote>"
 								+
 
 								"- <i>Naouel Moha</i>"
 								+ "<blockquote>Classification, Identification, and Correction of Design Defects<br>"
 								+ "Ph.D. student, 2008<br>"
-								+ "Université de Montréal.</blockquote>"
+								+ "Universite de Montreal.</blockquote>"
 								+
 
 								"- <i>Saliha Bouden</i>"
 								+ "<blockquote>Refactorings and Traceability of Models Transformation<br>"
 								+ "Master student, December 2006<br>"
-								+ "Université de Montréal.</blockquote>"
+								+ "Universite de Montreal.</blockquote>"
 								+
 
 								"- <i>Jean-Yves Guyomarc'h</i>"
 								+ "<blockquote>Metrics for Aspect-Oriented Programs<br>"
 								+ "Master student, April 2006<br>"
-								+ "Université de Montréal.</blockquote>"
+								+ "Universite de Montreal.</blockquote>"
 								+
 
 								"- <i>Olivier Kaczor</i>"
 								+ "<blockquote>Efficient Pattern Identification<br>"
 								+ "Master student, August 2005<br>"
-								+ "Université de Montréal.</blockquote>"
+								+ "Universite de Montreal.</blockquote>"
 								+
 
 								"- <i>Khashayar Khosravi</i>"
 								+ "<blockquote>Design Pattern-Enabled Object-Oriented Metrics<br>"
 								+ "Master student, August 2005<br>"
-								+ "Université de Montréal.</blockquote>"
+								+ "Universite de Montreal.</blockquote>"
 								+
 
 								"- <i>Samah Rached</i>"
 								+ "<blockquote>Program Behaviour Analysis with Adjacency Matrices and Formal Concept Analysis<br>"
 								+ "Master student, August 2005<br>"
-								+ "Université de Montréal.</blockquote>"
+								+ "Universite de Montreal.</blockquote>"
 								+
 
 								"- <i>Mohamed Kahla</i>"
 								+ "<blockquote>Algorithms to lay-out Class Diagrams<br>"
 								+ "Undergraduate, Summer 2006<br>"
-								+ "Université de Montréal.</blockquote>"
+								+ "Universite de Montreal.</blockquote>"
 								+
 
 								"- <i>Pierre Leduc</i>"
 								+ "<blockquote>A Language to Define Design Defects and"
 								+ "to Generate Detection Algorithms Automatically<br>"
 								+ "Undergraduate, Summer 2006<br>"
-								+ "Université de Montréal.</blockquote>"
+								+ "Universite de Montreal.</blockquote>"
 								+
 
 								"- <i>Pierre Leduc and Julien Tanteri</i>"
 								+ "<blockquote>Implementing Micro-patterns in Ptidej"
 								+ "Undergraduates, Winter 2006<br>"
-								+ "Université de Montréal.</blockquote>"
+								+ "Universite de Montreal.</blockquote>"
 								+
 
 								"- <i>Mehdi Lahlou</i>"
 								+ "<blockquote>On the Ptidej UI Standalone Swing Interface and<br>"
 								+ "Multilanguage Managing<br>"
 								+ "Undergraduate, Summer 2005<br>"
-								+ "Université de Montréal.</blockquote>"
+								+ "Universite de Montreal.</blockquote>"
 								+
 
 								"- <i>Others including but not limited to</i>"
 								+ "- <i>Jean-Yves Guyomarc'h</i>"
 								+ "<blockquote>On the Ptidej Solver in Java and metrics<br>"
 								+ "Graduate, fall 2004<br>"
-								+ "Université de Montréal.</blockquote>"
+								+ "Universite de Montreal.</blockquote>"
 								+ "- <i>Lulzim Laloshi and Driton Salihu</i>"
 								+ "<blockquote>On the Eclipse plug-in<br>"
 								+ "Undergraduates, Summer 2004<br>"
-								+ "Université de Montréal.</blockquote>"
-								+ "- <i>Ward Flores and Sébastien Robidoux</i>"
+								+ "Universite de Montreal.</blockquote>"
+								+ "- <i>Ward Flores and Sebastien Robidoux</i>"
 								+ "<blockquote>On the C++ creator and PADL<br>"
 								+ "Undergraduates, Summer 2004<br>"
-								+ "Université de Montréal.</blockquote>"
-								+ "- <i>Salime Bensemmane, Iyadh Sidhom, and Fayéal Skhiri</i>"
+								+ "Universite de Montreal.</blockquote>"
+								+ "- <i>Salime Bensemmane, Iyadh Sidhom, and Fayeal Skhiri</i>"
 								+ "<blockquote>On the Ptidej Solver in Java<br>"
 								+ "Undergraduates, Summer 2004<br>"
-								+ "Université de Montréal.</blockquote>"
+								+ "Universite de Montreal.</blockquote>"
 								+ "- <i>Farouk Zaidi</i>"
 								+ "<blockquote>On the Java classfile creator and metrics<br>"
 								+ "Trainee, Winter 2004<br>"
-								+ "Université de technologie Belfort-Montbéliard<br>"
-								+ "Centre de Recherche en Informatique de Montréal<br>"
-								+ "Université de Montréal.</blockquote></body></html>" },
+								+ "Universite de technologie Belfort-Montbeliard<br>"
+								+ "Centre de Recherche en Informatique de Montreal<br>"
+								+ "Universite de Montreal.</blockquote></body></html>" },
 				{
 						"ptidej.viewer.ui.about.AboutDialog::RICH_TXT_COPYRIGHT",
 
 						"<html><body><p align='center'><b>The Ptidej tool suite, copyright (c) 2000-2013,<br>"
-								+ "Polytechnique Montréal,<br>"
-								+ "Yann-Gaël Guéhéneuc.<br>"
+								+ "Polytechnique Montreal,<br>"
+								+ "Yann-GaÃ«l GuÃ©hÃ©neuc.<br>"
 								+ "All right reserved.</p></b>"
 								+ "<p color='red'>This software is made available AS IS, and THE AUTHORS DISCLAIM ALL WARRANTIES,<br>"
 								+ "EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES<br>"

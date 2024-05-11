@@ -12,7 +12,7 @@ import choco.util.IntIterator;
 // *     for Research and Education                 *
 // **************************************************
 
-/* FileLargeConjunction.java, last modified by François, 4 avr. 2004 */
+/* FileLargeConjunction.java, last modified by Franeois, 4 avr. 2004 */
 
 public class LargeConjunction extends AbstractLargeBoolConstraint {
 

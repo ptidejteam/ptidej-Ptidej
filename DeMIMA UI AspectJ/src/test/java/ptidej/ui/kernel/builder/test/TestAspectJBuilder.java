@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package ptidej.ui.kernel.builder.test;
 
@@ -42,7 +42,6 @@ public class TestAspectJBuilder extends PrimitiveBuilder {
 	}
 
 	public void testTypematching() {
-		@SuppressWarnings("unchecked")
 		final Iterator<IConstituent> iterator = this.getCodeLevelModel()
 				.getIteratorOnConstituents();
 		while (iterator.hasNext()) {
@@ -52,7 +51,6 @@ public class TestAspectJBuilder extends PrimitiveBuilder {
 						this.getBuilder().getEntity(
 								(IConstituentOfModel) c) instanceof Aspect);
 
-				@SuppressWarnings("unchecked")
 				final Iterator<IConstituent> iterAspect = ((IAspect) c)
 						.getIteratorOnConstituents();
 				while (iterAspect.hasNext()) {

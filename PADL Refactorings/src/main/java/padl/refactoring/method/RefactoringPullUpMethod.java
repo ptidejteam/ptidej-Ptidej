@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.refactoring.method;
 
@@ -32,7 +32,7 @@ public class RefactoringPullUpMethod extends RefactoringMethod {
 		super(anAbstractLevelModel);
 	}
 	/**
-	 * cette méthode retourne true si la méthode existe dans toutes les sous-classes
+	 * cette methode retourne true si la methode existe dans toutes les sous-classes
 	 * 
 	 */
 
@@ -151,7 +151,7 @@ public class RefactoringPullUpMethod extends RefactoringMethod {
 			this.removeMethod(
 				superClass.getIteratorOnInheritingEntities(),
 				aMethod);
-			// TODO: RESTE A BIEN VÉRIFIER pourquoi la méthode existe tjs apres avoir supprimer cette méthode
+			// TODO: RESTE A BIEN VeRIFIER pourquoi la methode existe tjs apres avoir supprimer cette methode
 			// On devrait regarder cela ensemble quand les autres "TODO" auront ete regles :-)
 		}
 	}

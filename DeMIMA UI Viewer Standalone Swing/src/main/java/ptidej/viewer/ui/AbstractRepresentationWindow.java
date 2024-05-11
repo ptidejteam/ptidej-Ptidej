@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package ptidej.viewer.ui;
 
@@ -55,7 +55,7 @@ import ptidej.viewer.widget.HierarchicalTreeCell;
 import util.io.ProxyConsole;
 
 /**
- * @author Yann-Gaël Guéhéneuc
+ * @author Yann-GaÃ«l GuÃ©hÃ©neuc
  * @since  2007/08/31
  */
 public abstract class AbstractRepresentationWindow extends JInternalFrame
@@ -372,7 +372,7 @@ public abstract class AbstractRepresentationWindow extends JInternalFrame
 	}
 	void bootstrapListeningWindows() {
 		// Yann 2014/03/28: Friends!
-		// A form of friendship à la C++ between the
+		// A form of friendship e la C++ between the
 		// AbstractExternalWindow and AbstractInternalWindow
 		// on the one hand and the AbstractRepresentationWindow
 		// on the other hand.

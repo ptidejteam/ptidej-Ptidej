@@ -1,5 +1,5 @@
 /*
- * (c) Copyright 2001 and following years, Yann-Gaël Guéhéneuc,
+ * (c) Copyright 2001 and following years, Yann-GaÃ«l GuÃ©hÃ©neuc,
  * University of Montreal.
  * 
  * Use and copying of this software and preparation of derivative works

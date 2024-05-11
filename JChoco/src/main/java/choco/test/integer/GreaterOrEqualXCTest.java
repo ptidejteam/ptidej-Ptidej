@@ -6,7 +6,7 @@
 // *     for Research and Education                 *
 // **************************************************
 
-/* File choco.test.search.GreaterOrEqualXCTest.java, last modified by Francois 23 août 2003:17:40:29 */
+/* File choco.test.search.GreaterOrEqualXCTest.java, last modified by Francois 23 aoet 2003:17:40:29 */
 package choco.test.integer;
 
 import java.util.logging.Logger;

@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package sad.misc;
 
@@ -159,7 +159,7 @@ public class DifferenceAntipatternMain {
 
 			// We perform : difference(someSolutionsA, someSolutionsB)
 			outFile.println("#############################################");
-			outFile.println("################# Différence # " + pathFirst
+			outFile.println("################# Difference # " + pathFirst
 					+ " - " + pathSecond);
 			outFile.println(
 					"Things that appear in the first version that do not appear in the second one");
@@ -178,7 +178,7 @@ public class DifferenceAntipatternMain {
 
 			// We perform : difference(someSolutionsB, someSolutionsA)
 			outFile.println("#############################################");
-			outFile.println("################# Différence # " + pathSecond
+			outFile.println("################# Difference # " + pathSecond
 					+ " - " + pathFirst);
 			outFile.println(
 					"Things that appear in the second version that do not appear in the first one");

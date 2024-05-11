@@ -92,7 +92,7 @@ public class PalmElt2D extends AbstractPalmTernIntConstraint {
 			this.cIdx1,
 			(Explanation) expl.copy());
 		if (idx <= 2) {
-			this.updateIndexFromValue(); // on l'appelle à l'envers pour voir les valeurs qu'on peut remettre
+			this.updateIndexFromValue(); // on l'appelle e l'envers pour voir les valeurs qu'on peut remettre
 		}
 		else {
 			this.updateValueFromIndex();
@@ -290,7 +290,7 @@ public class PalmElt2D extends AbstractPalmTernIntConstraint {
 			(Explanation) e.copy());
 
 		//values = ((PalmIntVar) this.v0).getAllValues();
-		final int[] values = ((PalmIntVar) this.v2).getAllValues(); // TODO : remplacer par des itérateurs
+		final int[] values = ((PalmIntVar) this.v2).getAllValues(); // TODO : remplacer par des iterateurs
 		idx1 = ((PalmIntVar) this.v0).getAllValues();
 		idx2 = ((PalmIntVar) this.v1).getAllValues();
 		// propagate on holes

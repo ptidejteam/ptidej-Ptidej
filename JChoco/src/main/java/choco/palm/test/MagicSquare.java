@@ -6,7 +6,7 @@
 //       \ /            Version 0.1
 //       \ /            January 2004
 //       \ /
-// ______\_/_______     Contibutors: François Laburthe, Hadrien Cambazard, Guillaume Rochart...
+// ______\_/_______     Contibutors: Franeois Laburthe, Hadrien Cambazard, Guillaume Rochart...
 
 package choco.palm.test;
 
@@ -97,10 +97,10 @@ public class MagicSquare extends TestCase {
 				}
 			}
 			for (int i = 0; i < n - 1; i++) {
-				Assert.assertEquals(col[i], col[i + 1]); // toutes les lignes sont égales
+				Assert.assertEquals(col[i], col[i + 1]); // toutes les lignes sont egales
 				Assert.assertEquals(lig[i], lig[i + 1]); // les colonnes
 			}
-			Assert.assertEquals(col[1], lig[1]); // il suffit d'une ligne égale à une colonne
+			Assert.assertEquals(col[1], lig[1]); // il suffit d'une ligne egale e une colonne
 			for (int i = 0; i < n; i++) {
 				for (int j = 0; j < n; j++) {
 					if (i != j) {

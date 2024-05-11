@@ -1,17 +1,17 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package modec.test.nonpattern.example.TestFilms;
 
 /*
- * Créé le 7 février 2005
+ * Cree le 7 fevrier 2005
  *
  * Auteur : Janice Ng
  * Source : TestFilms.java
@@ -26,9 +26,9 @@ public class TestFilms {
 	static int test = 0;
 	/**
 	 * Lecture du fichier des acteurs et remplissage
-	 * d'un tableau d'acteurs présents dans le fichier.
+	 * d'un tableau d'acteurs presents dans le fichier.
 	 *
-	 * @param filename : le nom du fichier à lire
+	 * @param filename : le nom du fichier e lire
 	 * @param tabActeurs : le tableau qui contien les acteurs
 	 *
 	 * @return le nombre d'acteurs dans le fichier
@@ -76,14 +76,14 @@ public class TestFilms {
 
 	/**
 	 * Lire le fichier des films et remplissage d'un
-	 * tableau des films présents dans le fichier.
+	 * tableau des films presents dans le fichier.
 	 *
-	 * @param filename : nom du fichier à lire
-	 * @param tabFilms : tableau des films à remplir
-	 * @param tabActeurs : tableau des acteurs déjà rempli
-	 * @param nbActeurs : nombre d'acteurs présents dans le fichier "acteurs.txt"
+	 * @param filename : nom du fichier e lire
+	 * @param tabFilms : tableau des films e remplir
+	 * @param tabActeurs : tableau des acteurs deje rempli
+	 * @param nbActeurs : nombre d'acteurs presents dans le fichier "acteurs.txt"
 	 *
-	 * @return le nombre de films présents dans le fichier
+	 * @return le nombre de films presents dans le fichier
 	 * @throws IOException
 	 */
 	static int readFichierFilms(
@@ -103,7 +103,7 @@ public class TestFilms {
 
 		BufferedReader inFile = new BufferedReader(fr);
 		String line = inFile.readLine().trim();
-		// première ligne pour l'annee et le titre du film
+		// premiere ligne pour l'annee et le titre du film
 
 		int nbFilms = 0;
 
@@ -118,7 +118,7 @@ public class TestFilms {
 			Film f = new Film(title, annee);
 
 			line = inFile.readLine();
-			// deuxième ligne pour les acteurs du film
+			// deuxieme ligne pour les acteurs du film
 			st = new StringTokenizer(line, ",");
 
 			while (st.hasMoreTokens()) {
@@ -140,13 +140,13 @@ public class TestFilms {
 
 	/**
 	 * Rechercher un acteur dans le tableau des acteurs
-	 * selon un numéro id.
+	 * selon un numero id.
 	 *
 	 * @param tabAct : le tableau des acteurs
 	 * @param nbAct : le nombre effectif d'acteurs lu
 	 * 				  dans le fichier "acteurs.txt"
-	 * @param id : le num ID de l'acteur à rechercher
-	 * @return l'Acteur représenté par le num ID reçu
+	 * @param id : le num ID de l'acteur e rechercher
+	 * @return l'Acteur represente par le num ID reeu
 	 */
 	static Acteur obtenirActeur(Acteur tabAct[], int nbAct, int id) {
 		for (int i = 0; i < nbAct; i++) {
@@ -158,7 +158,7 @@ public class TestFilms {
 	}
 
 	/**
-	 * Trier le tableau des films selon leur années
+	 * Trier le tableau des films selon leur annees
 	 * de sortie.
 	 *
 	 * @param lesFilms : le tableau des films
@@ -178,7 +178,7 @@ public class TestFilms {
 	}
 
 	/**
-	 * Permuter deux élements d'un tableau.
+	 * Permuter deux elements d'un tableau.
 	 *
 	 * @param lesFilms : le tableau des films
 	 * @param i : position 1 pour laquelle on veut inverser avec la position 1
@@ -241,7 +241,7 @@ public class TestFilms {
 	}
 
 	/**
-		 * La méthode main.
+		 * La methode main.
 		 *
 		 * @param args : le tableau des arguments
 		 */
@@ -266,7 +266,7 @@ public class TestFilms {
 
 			readFichierFilms("Data/Films.txt", tabFilms, tabActeurs, nbAct);
 
-			// 3.c) Trier les films selon leur année de sortie
+			// 3.c) Trier les films selon leur annee de sortie
 			//	trierLesFilms (tabFilms, nbMovies);
 
 			// 3.d) Corriger le nom de l'actrice "Cameron Diaz"
@@ -276,8 +276,8 @@ public class TestFilms {
 			/*System.out.println("Le film comportant le plus d'acteurs :\n" +*/
 			//rechercherFilmMax(tabFilms, nbMovies)/*)*/;
 
-			// 3.f) Afficher l'acteur qui n'apparaît pas dans aucun film
-			/*System.out.println("L'acteur qui n'apparaît dans aucun film :\n" +*/
+			// 3.f) Afficher l'acteur qui n'apparaet pas dans aucun film
+			/*System.out.println("L'acteur qui n'apparaet dans aucun film :\n" +*/
 			//rechercherActeurNul (tabActeurs, tabFilms, nbAct, nbMovies)/* + "\n")*/;
 
 			// 3.g) Supprimer les actrices "Cameron Diaz" et "Uma Thurman"
@@ -337,15 +337,15 @@ public class TestFilms {
 	}
 
 	/**
-	 * Supprimer l'acteur dont le nom est reçu en paramètre.
+	 * Supprimer l'acteur dont le nom est reeu en parametre.
 	 *
 	 * @param lesActeurs : le tableau des acteurs
 	 * @param lesFilms : le tableau des films
 	 * @param nbActeurs : le nombre effectif d'acteurs dans le fichier "acteurs.txt"
 	 * @param nbFilms : le nombre effectif de films dans le fichier "films.txt"
-	 * @param nom : le nom de l'acteur à supprimer
+	 * @param nom : le nom de l'acteur e supprimer
 	 *
-	 * @return le nombre d'acteurs après suppression
+	 * @return le nombre d'acteurs apres suppression
 	 */
 
 	static int supprimerActeur(

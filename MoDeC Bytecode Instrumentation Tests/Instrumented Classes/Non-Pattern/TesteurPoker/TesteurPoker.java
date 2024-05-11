@@ -1,8 +1,8 @@
 /*
 	IFT1170 - Hiver 2005
 	
-	Classe pour l'évaluation du TP1 no.2
-	(Voir résultat attendu au bas...)
+	Classe pour l'evaluation du TP1 no.2
+	(Voir resultat attendu au bas...)
 	
 	par Charles Lanteigne
 	
@@ -94,7 +94,7 @@ public class TesteurPoker
 	}
 }
 
-/* Résultat attendu:
+/* Resultat attendu:
 
 Partie #1:
 

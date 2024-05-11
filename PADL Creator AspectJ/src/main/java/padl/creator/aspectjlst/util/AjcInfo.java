@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.creator.aspectjlst.util;
 
@@ -51,14 +51,12 @@ public abstract class AjcInfo {
 		buffer.append("\tLongString: " + node.toLongString() + "\n");
 		buffer.append("\tSignatureString: " + node.toSignatureString() + "\n");
 		buffer.append("Parameters Type: ");
-		@SuppressWarnings("unchecked")
 		final Iterator<String> ite_param_type = node.getParameterTypes()
 				.iterator();
 		while (ite_param_type.hasNext()) {
 			buffer.append(ite_param_type.next() + ", ");
 		}
 		buffer.append("Parameters Name: ");
-		@SuppressWarnings("unchecked")
 		final Iterator<String> ite_param_name = node.getParameterNames()
 				.iterator();
 		while (ite_param_name.hasNext()) {
@@ -66,7 +64,6 @@ public abstract class AjcInfo {
 		}
 		buffer.append("Childrens: \n");
 		buffer.append("\t");
-		@SuppressWarnings("unchecked")
 		final Iterator<IProgramElement> ite = node.getChildren().iterator();
 		while (ite.hasNext()) {
 			final IProgramElement child = ite.next();
@@ -76,13 +73,11 @@ public abstract class AjcInfo {
 		buffer.append("\t");
 
 		if (imap != null && imap.get(node) != null) {
-			@SuppressWarnings("unchecked")
 			final Iterator<IRelationship> iteRel = imap.get(node).iterator();
 			while (iteRel.hasNext()) {
 				final IRelationship rel = (IRelationship) iteRel.next();
 				buffer.append(
 						rel.getKind().toString() + " " + rel.getName() + ": ");
-				@SuppressWarnings("unchecked")
 				final Iterator<String> iteTargets = rel.getTargets().iterator();
 				while (iteTargets.hasNext()) {
 					final String target = iteTargets.next();
@@ -122,7 +117,7 @@ public abstract class AjcInfo {
 		buffer.append("\tSignatureString: " + node.toSignatureString() + "\n");
 		buffer.append("Childrens: \n");
 		buffer.append("\t");
-		@SuppressWarnings("unchecked")
+
 		final Iterator<IProgramElement> ite = node.getChildren().iterator();
 		while (ite.hasNext()) {
 			final IProgramElement child = ite.next();

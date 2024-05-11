@@ -58,10 +58,10 @@ public class TestSession
 	{
 
 		FileReader fr = null; // initialiser pour Java
-		boolean existeFichier = true ; // à ajuster après
+		boolean existeFichier = true ; // e ajuster apres
 		LinkedList mesSessions = new LinkedList();
 
-		// essayer de LOCALISER le fichier à partir de son nom
+		// essayer de LOCALISER le fichier e partir de son nom
 		try {
 			fr = new FileReader (nomFichier) ;		
 		}

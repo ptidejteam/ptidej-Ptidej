@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package ptidej.occurrences;
 
@@ -154,7 +154,6 @@ public class CombinatorPerProgramPerVersion {
 				new CSVWriter(ProxyDisk.getInstance().fileAbsoluteOutput(
 					anOutputFile), ',');
 
-			@SuppressWarnings("unchecked")
 			final List<List<String>> dataVector = aDataTable.getDataVector();
 			final Iterator<List<String>> interatorOnRows = dataVector.iterator();
 			while (interatorOnRows.hasNext()) {
@@ -289,7 +288,6 @@ public class CombinatorPerProgramPerVersion {
 		for (int j = 0; j < occurrences.length; j++) {
 			final Occurrence occurrence = occurrences[j];
 
-			@SuppressWarnings("unchecked")
 			final List<OccurrenceComponent> listOfComponents = occurrence.getComponents();
 			for (int i = 0; i < listOfComponents.size(); i++) {
 				final OccurrenceComponent component =

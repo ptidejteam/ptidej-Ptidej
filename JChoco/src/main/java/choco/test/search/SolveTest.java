@@ -6,7 +6,7 @@
 // *     for Research and Education                 *
 // **************************************************
 
-/* File choco.test.search.SolveTest.java, last modified by Francois 2 déc. 2003 23:49:19 */
+/* File choco.test.search.SolveTest.java, last modified by Francois 2 dec. 2003 23:49:19 */
 package choco.test.search;
 
 import java.util.logging.Logger;

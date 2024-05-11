@@ -1,11 +1,11 @@
 /*
- * (c) Copyright 2001 Yann-Gaël Guéhéneuc,
+ * (c) Copyright 2001 Yann-GaÃ«l GuÃ©hÃ©neuc,
  * Ecole des Mines de Nantes and Object Technology Internationl, Inc.
  * 
  * Use and copying of this software and preparation of derivative works
  * based upon this software are permitted. Any copy of this software or
  * of any derivative work must include the above copyright notice of
- * Yann-Gaël Guéhéneuc, this paragraph and the one after it.
+ * Yann-GaÃ«l GuÃ©hÃ©neuc, this paragraph and the one after it.
  * 
  * This software is made available AS IS, and THE AUTHOR DISCLAIMS
  * ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE
@@ -25,7 +25,7 @@ import caffeine.Constants;
 import caffeine.test.Primitive;
 
 /**
- * @author	Yann-Gaël Guéhéneuc
+ * @author	Yann-GaÃ«l GuÃ©hÃ©neuc
  * @version 0.1
  */
 public final class CaffeineLauncher extends Primitive {

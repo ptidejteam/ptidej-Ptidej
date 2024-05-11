@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package ptidej.viewer;
 
@@ -14,7 +14,7 @@ package ptidej.viewer;
 
 
 /**
- * @author Yann-Gaël Guéhéneuc
+ * @author Yann-GaÃ«l GuÃ©hÃ©neuc
  * @since  2004/08/15
  */
 public final class ProjectData {
@@ -39,9 +39,9 @@ public final class ProjectData {
 				"oriented programs, promoting the use of patterns, either at the language-, design-, or",
 				"architectural-levels.",
 				"The Ptidej tool suite (Pattern Trace Identification, Detection, and Enhancement in Java)",
-				"by Yann-Gaël Guéhéneuc uses the PADL meta-model (Pattern and Abstract-level",
+				"by Yann-GaÃ«l GuÃ©hÃ©neuc uses the PADL meta-model (Pattern and Abstract-level",
 				"Description Language), extension of the PDL meta-model (Pattern Description Language)",
-				"by Hervé Albin-Amiot.",
+				"by Herve Albin-Amiot.",
 				"Get more information at www.yann-gael.gueheneuc.net/Work/Research/Ptidej/Demo/.",
 				"Send comments and questions to yann-gael@gueheneuc.net."
 			}, {/*
@@ -79,43 +79,43 @@ public final class ProjectData {
 				MultilanguageManager.getStrResource("COPYRIGHT_MESSAGE_R02_C32", resourceBaseName)
 				*/
 				"Main developpers:",
-				"        - Yann-Gaël Guéhéneuc",
-				"                Université de Montréal",
-				"                École des Mines de Nantes",
+				"        - Yann-GaÃ«l GuÃ©hÃ©neuc",
+				"                Universite de Montreal",
+				"                ecole des Mines de Nantes",
 				"                Object Technology International, Inc.",
-				"        - Hervé Albin-Amiot.",
-				"                École des Mines de Nantes",
+				"        - Herve Albin-Amiot.",
+				"                ecole des Mines de Nantes",
 				"                Softmaint S.A.",
 				"With contributions by:",
 				"        - Jean-Yves Guyomarc'h",
 				"                On the Ptidej Solver in Java and metrics",
 				"                Graduate, fall 2004",
-				"                Université de Montréal.",
+				"                Universite de Montreal.",
 				"        - Lulzim Laloshi and Driton Salihu",
 				"                On the Eclipse plug-in",
 				"                Undergraduates, summer 2004",
-				"                Université de Montréal.",
-				"        - Ward Flores and Sébastien Robidoux",
+				"                Universite de Montreal.",
+				"        - Ward Flores and Sebastien Robidoux",
 				"                On the C++ creator and PADL",
 				"                Undergraduates, summer 2004",
-				"                Université de Montréal.",
-				"        - Salime Bensemmane, Iyadh Sidhom, and Fayçal Skhiri",
+				"                Universite de Montreal.",
+				"        - Salime Bensemmane, Iyadh Sidhom, and Fayeal Skhiri",
 				"                On the Ptidej Solver in Java",
 				"                Undergraduates, summer 2004",
-				"                Université de Montréal.",
+				"                Universite de Montreal.",
 				"        - Farouk Zaidi",
 				"                On the Java classfile creator and metrics",
 				"                Trainee, winter 2004",
-				"                Université de technologie Belfort-Montbéliard",
-				"                Centre de Recherche en Informatique de Montréal",
-				"                Université de Montréal."
+				"                Universite de technologie Belfort-Montbeliard",
+				"                Centre de Recherche en Informatique de Montreal",
+				"                Universite de Montreal."
 			}, {/*
 				MultilanguageManager.getStrResource("COPYRIGHT_MESSAGE_R03_C01", resourceBaseName),
 				MultilanguageManager.getStrResource("COPYRIGHT_MESSAGE_R03_C02", resourceBaseName),
 				MultilanguageManager.getStrResource("COPYRIGHT_MESSAGE_R03_C03", resourceBaseName)
 				*/
 				"The Ptidej tool suite, copyright (c) 2000-2008,",
-				"Yann-Gaël Guéhéneuc.",
+				"Yann-GaÃ«l GuÃ©hÃ©neuc.",
 				"All right reserved."
 			}, {/*
 				MultilanguageManager.getStrResource("COPYRIGHT_MESSAGE_R04_C01", resourceBaseName),

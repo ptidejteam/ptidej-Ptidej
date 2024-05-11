@@ -64,9 +64,9 @@
 	</modules>
 
 	<properties>
-		<!-- TODO Change to UTF-8 -->
-		<project.build.sourceEncoding>windows-1252</project.build.sourceEncoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.release>21</maven.compiler.release>
+		<maven.compiler.release.next>22</maven.compiler.release.next>
 		<maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
 	</properties>
 

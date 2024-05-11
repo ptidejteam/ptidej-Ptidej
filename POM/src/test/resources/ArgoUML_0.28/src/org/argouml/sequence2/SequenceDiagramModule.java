@@ -129,7 +129,7 @@ public class SequenceDiagramModule implements ModuleInterface {
         case DESCRIPTION:
             return "The new sequence diagram implementation";
         case AUTHOR:
-            return "Christian López Espínola";
+            return "Christian Lepez Espenola";
         case VERSION:
             return "0.28";
         case DOWNLOADSITE:

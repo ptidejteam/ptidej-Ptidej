@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package ptidej.solver.java.problem;
 
@@ -24,7 +24,7 @@ import ptidej.solver.java.constraint.repository.NotEqualConstraint;
 import ptidej.solver.java.constraint.repository.StrictInheritanceConstraint;
 
 /**
- * @author Lucas Nelaupe, Ferrand Anthony, Tran Quang Dung, Verdier Frédéric 
+ * @author Lucas Nelaupe, Ferrand Anthony, Tran Quang Dung, Verdier Frederic 
  * @since  2014/06/01 
  */
 public final class MediatorMotif {
@@ -105,21 +105,21 @@ public final class MediatorMotif {
 			100,
 			DefaultNoApproximations.getDefaultApproximations()));
 		pb.post(new AggregationConstraint(
-			"ConcreteMediator ---­> ConcreteColleague",
+			"ConcreteMediator ---e> ConcreteColleague",
 			"",
 			concretemediator,
 			concretecolleague,
 			100,
 			DefaultNoApproximations.getDefaultApproximations()));
 		pb.post(new AssociationConstraint(
-			"ConcreteColleague ---­> InterfaceMediator",
+			"ConcreteColleague ---e> InterfaceMediator",
 			"",
 			concretecolleague,
 			interfacemediator,
 			100,
 			DefaultNoApproximations.getDefaultApproximations()));
 		pb.post(new IgnoranceConstraint(
-			"ConcreteColleague ---­> InterfaceMediator",
+			"ConcreteColleague ---e> InterfaceMediator",
 			"",
 			concretecolleague,
 			concretecolleague,

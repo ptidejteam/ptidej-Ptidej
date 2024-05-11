@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package epi.ui;
 
@@ -241,7 +241,7 @@ public class CustomApproximationDialog extends JDialog {
 								.getSelectedIndex();
 
 						final List relationshipList = new Vector();
-						// Modification the 26 October 2011 by Sébastien Colladon (INF6306) for compatibility with java 1.6
+						// Modification the 26 October 2011 by Sebastien Colladon (INF6306) for compatibility with java 1.6
 						for (final Enumeration anEnumeration =
 							CustomApproximationDialog.this.approximationListModel
 								.elements(); anEnumeration.hasMoreElements();) {

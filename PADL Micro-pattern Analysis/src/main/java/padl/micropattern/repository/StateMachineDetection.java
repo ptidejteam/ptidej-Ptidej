@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.micropattern.repository;
 
@@ -29,7 +29,7 @@ public final class StateMachineDetection extends AbstractMicroPatternDetection
 	 *	only parameterless methods. Such an interface allows client code to
 	 *	either query the state of the object, or, request the object to change
 	 *	its state in some predefined manner. Since no parameters are passed,
-	 *	the way the object changes is determined entirely by the object’s
+	 *	the way the object changes is determined entirely by the objectes
 	 *	dynamic type.
 	 *	This sort of interface, captured by the State Machine pattern, is typical
 	 *	for state machine classes.
@@ -38,7 +38,7 @@ public final class StateMachineDetection extends AbstractMicroPatternDetection
 	 *	that has two possible transitions: next() and remove().
 	 *	The third method, hasNext() is a query that tests whether the
 	 *	iteration is complete. In the state machine analogy, this query is
-	 *	equivalent for checking if the machine’s final state was reached.
+	 *	equivalent for checking if the machinees final state was reached.
 	 */
 
 	public boolean detect(final IFirstClassEntity anEntity) {

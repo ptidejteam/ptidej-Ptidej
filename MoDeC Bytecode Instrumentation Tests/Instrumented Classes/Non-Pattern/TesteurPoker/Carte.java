@@ -1,7 +1,7 @@
 /* ============================================
 
 	IFT1170 - Hiver05
-	TP1 - Numéro 2
+	TP1 - Numero 2
 	Source : Carte.java
 
    ============================================*/
@@ -29,7 +29,7 @@ public class Carte
 		}
 	}
 
-	// méthode pour afficher les informations de la carte
+	// methode pour afficher les informations de la carte
 	public void afficher () {
 
 		String information;
@@ -58,11 +58,11 @@ public class Carte
 	}
 
 
-	// méthodes d'accès
+	// methodes d'acces
 	public int getValeur () { return valeur; }
 	public int getCouleur ()  { return couleur; }
 
-	// méthodes modificatrices
+	// methodes modificatrices
 	public void setValeur (int val) { valeur = val; }
 	public void setCouleur (int coul) { couleur = coul; }
 

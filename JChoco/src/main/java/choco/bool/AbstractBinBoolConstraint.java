@@ -13,7 +13,7 @@ import choco.util.BitSet;
 // *     for Research and Education                 *
 // **************************************************
 
-/* FileAbstractBinBoolConstraint.java, last modified by François, 28 mars 2004 */
+/* FileAbstractBinBoolConstraint.java, last modified by Franeois, 28 mars 2004 */
 
 /**
  * An abstract class for binary Boolean composition

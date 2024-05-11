@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.creator.cppfile.antlr.test;
 
@@ -17,7 +17,7 @@ import padl.kernel.cpp.antlr.ICPPFactoryANTLR;
 import padl.kernel.cpp.antlr.impl.CPPFactoryANTLR;
 
 /**
- * @author Yann-Gaël Guéhéneuc
+ * @author Yann-GaÃ«l GuÃ©hÃ©neuc
  * @since  2003/12/09
  */
 public abstract class CppPrimitive extends TestCase {

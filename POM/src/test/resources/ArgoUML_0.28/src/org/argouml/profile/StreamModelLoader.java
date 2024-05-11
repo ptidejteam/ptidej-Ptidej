@@ -37,7 +37,7 @@ import org.xml.sax.InputSource;
 /**
  * Abstract ProfileModelLoader which loads models from an InputStream.
  *
- * @author Marcos Aurélio
+ * @author Marcos Aurelio
  */
 public abstract class StreamModelLoader implements ProfileModelLoader {
 

@@ -13,7 +13,7 @@ import choco.util.IntIterator;
 // *     for Research and Education                 *
 // **************************************************
 
-/* FileLargeDisjunction.java, last modified by François, 4 avr. 2004 */
+/* FileLargeDisjunction.java, last modified by Franeois, 4 avr. 2004 */
 
 public class LargeDisjunction extends
 		AbstractLargeBoolConstraintWithCounterOpposite {

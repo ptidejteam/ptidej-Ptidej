@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package caffeine.analysis.nervoustext;
 
@@ -26,7 +26,7 @@ import java.awt.event.WindowEvent;
  * @version 1.10, 02/05/97
  * @modified 05/09/95 kwalrath Changed string; added thread suspension
  * @modified 02/06/98 madbot removed use of suspend and resume and cleaned up
- * @modified 27/03/01 Yann-Gaël Guéhéneuc transformed the applet into an application (very unclean!)
+ * @modified 27/03/01 Yann-GaÃ«l GuÃ©hÃ©neuc transformed the applet into an application (very unclean!)
  */
 
 @SuppressWarnings("removal")

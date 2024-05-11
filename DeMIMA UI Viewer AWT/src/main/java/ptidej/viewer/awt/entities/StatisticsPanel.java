@@ -1,21 +1,21 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 /*
- * (c) Copyright 2001, 2002 Yann-Gaël Guéhéneuc, Ecole des Mines de Nantes and
+ * (c) Copyright 2001, 2002 Yann-GaÃ«l GuÃ©hÃ©neuc, Ecole des Mines de Nantes and
  * Object Technology International, Inc.
  * 
  * Use and copying of this software and preparation of derivative works based
  * upon this software are permitted. Any copy of this software or of any
- * derivative work must include the above copyright notice of Yann-Gaël
- * Guéhéneuc, this paragraph and the one after it.
+ * derivative work must include the above copyright notice of Yann-GaÃ«l
+ * GuÃ©hÃ©neuc, this paragraph and the one after it.
  * 
  * This software is made available AS IS, and THE AUTHOR DISCLAIMS ALL
  * WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED
@@ -36,7 +36,7 @@ import ptidej.viewer.event.SourceAndGraphModelEvent;
 import ptidej.viewer.layout.PercentLayout;
 
 /**
- * @author Yann-Gaël Guéhéneuc
+ * @author Yann-GaÃ«l GuÃ©hÃ©neuc
  * @since 2014/03/30
  */
 public final class StatisticsPanel extends Panel {

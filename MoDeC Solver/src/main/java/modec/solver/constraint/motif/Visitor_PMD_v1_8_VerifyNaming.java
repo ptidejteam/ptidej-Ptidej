@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package modec.solver.constraint.motif;
 
@@ -44,7 +44,7 @@ public class Visitor_PMD_v1_8_VerifyNaming {
 		System.out.println("Start time : " + timeStart);
 
 		// -------------------------------------------------------------------------------------------------------------
-		//  SOLUTION À OBTENIR POUR ../MoDeC Bytecode Instrumentation Tests/JHotDraw_Visitor.trace                     -
+		//  SOLUTION e OBTENIR POUR ../MoDeC Bytecode Instrumentation Tests/JHotDraw_Visitor.trace                     -
 		// -------------------------------------------------------------------------------------------------------------		
 		//	v_accept1 = <OPERATION> public void visit (org.jhotdraw.framework.FigureVisitor visitor)                   -
 		//	v_visitConcreteElement1 = <OPERATION> public void visitFigure (org.jhotdraw.framework.Figure hostFigure)   -

@@ -1,7 +1,7 @@
 /* ============================================
 
 	IFT1170 - Hiver05
-	TP1 - Numéro 2
+	TP1 - Numero 2
 	Source : Jeu.java
 
    ============================================*/
@@ -44,7 +44,7 @@ public class Jeu
 		determinerCouleurs();
 	}
 
-	// déterminer les occurrences de chaque valeur pour un jeu
+	// determiner les occurrences de chaque valeur pour un jeu
 	private void determinerOccurrences ()
 	{
 
@@ -56,7 +56,7 @@ public class Jeu
 
 	}
 
-	// déterminer les couleurs présentes parmi les cinq cartes du jeu
+	// determiner les couleurs presentes parmi les cinq cartes du jeu
 	private void determinerCouleurs ()
 	{
 
@@ -67,17 +67,17 @@ public class Jeu
 		}
 	}
 
-	// déterminer si le jeu contient "paire"
+	// determiner si le jeu contient "paire"
 	private boolean paire ()
 	{
 		boolean estPaire = false;
 		for(int i = 0 ; i < NB_VALEURS && !estPaire; i++)
-			if(lesOccurrences[i] == 2) // deux cartes de même valeur
+			if(lesOccurrences[i] == 2) // deux cartes de meme valeur
 				estPaire = true;
 		return estPaire;
 	}
 
-	// déterminer si le jeu contient "doublePaire"
+	// determiner si le jeu contient "doublePaire"
 	private boolean doublePaire ()
 	{
 		int compteur = 0;
@@ -90,7 +90,7 @@ public class Jeu
 		return false;
 	}
 
-	// déterminer si le jeu contient "brelan"
+	// determiner si le jeu contient "brelan"
 	private boolean brelan ()
 	{
 		boolean estTriple = false;
@@ -100,16 +100,16 @@ public class Jeu
 		return estTriple;
 	}
 
-	// déterminer si le jeu contient cinq cartes de valeur consécutive
+	// determiner si le jeu contient cinq cartes de valeur consecutive
 	private boolean cinqConsecutif ()
 	{
 
-		// au moins une occurrence est supérieure à 1
+		// au moins une occurrence est superieure e 1
 		for(int i = 0; i < NB_VALEURS; i++)
 			if(lesOccurrences[i] > 1)
 				return false;
 
-		// toutes les occurrences sont égales à 0 ou 1
+		// toutes les occurrences sont egales e 0 ou 1
 		for(int i = 0; i < NB_VALEURS; i++)
 		{
 			if(lesOccurrences[i] == 1)
@@ -117,7 +117,7 @@ public class Jeu
 				for(int j = i; j < i+5; j++)
 					if(lesOccurrences[j] != 1)
 						return false;
-				return true; // une suite de cinq valeurs consécutives est présente
+				return true; // une suite de cinq valeurs consecutives est presente
 			}
 		}
 
@@ -125,7 +125,7 @@ public class Jeu
 
 	}
 
-	// déterminer si le jeu contient "quinte"
+	// determiner si le jeu contient "quinte"
 	private boolean quinte ()
 	{
 		if(cinqConsecutif() && !couleur())
@@ -133,7 +133,7 @@ public class Jeu
 		return false;
 	}
 
-	// déterminer si le jeu contient "couleur"
+	// determiner si le jeu contient "couleur"
 	private boolean couleur ()
 	{
 		for(int i=0; i < NB_COULEURS; i++)
@@ -142,7 +142,7 @@ public class Jeu
 		return true;
 	}
 
-	// déterminer si le jeu contient "main plaine"
+	// determiner si le jeu contient "main plaine"
 	private boolean mainPlaine ()
 	{
 		if(paire() && brelan())
@@ -150,18 +150,18 @@ public class Jeu
 		return false;
 	}
 
-	// déterminer si le jeu contient "carré"
+	// determiner si le jeu contient "carre"
 	private boolean carre ()
 		{
 			boolean estCarre = false;
 			for(int i = 0 ; i < NB_VALEURS && !estCarre; i++)
-				if(lesOccurrences[i] == 4) // quatre cartes de même valeur
+				if(lesOccurrences[i] == 4) // quatre cartes de meme valeur
 					estCarre = true;
 			return estCarre;
 	}
 
 
-	// déterminer si le jeu contient "quinte flush"
+	// determiner si le jeu contient "quinte flush"
 	private boolean quinteFlush ()
 	{
 		if( cinqConsecutif() && couleur() && lesOccurrences[12] == 0 )
@@ -169,7 +169,7 @@ public class Jeu
 		return false;
 	}
 
-	// déterminer si le jeu contient "royale"
+	// determiner si le jeu contient "royale"
 	private boolean royale ()
 	{
 		if( cinqConsecutif() && couleur() && lesOccurrences[12] == 1)
@@ -177,7 +177,7 @@ public class Jeu
 		return false;
 	}
 
-	// déterminer la force du jeu
+	// determiner la force du jeu
 	public int force ()
 	{
 		if( royale() ) return 9;

@@ -30,7 +30,7 @@ import java.util.Iterator;
  * Interface for the formating strategy to be used when formating model element
  * names.
  * 
- * @author Marcos Aurélio
+ * @author Marcos Aurelio
  */
 public interface FormatingStrategy {
     

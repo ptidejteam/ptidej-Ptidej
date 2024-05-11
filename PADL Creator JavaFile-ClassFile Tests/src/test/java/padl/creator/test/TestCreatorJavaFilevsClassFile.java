@@ -1,16 +1,16 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 /**
- * (c) Copyright 2001-2004 Yann-Gaël Guéhéneuc,
- * University of Montréal.
+ * (c) Copyright 2001-2004 Yann-GaÃ«l GuÃ©hÃ©neuc,
+ * University of Montreal.
  * 
  * Use and copying of this software and preparation of derivative works
  * based upon this software are permitted. Any copy of this software or
@@ -35,7 +35,7 @@ import junit.framework.TestSuite;
 import padl.creator.test.relationships.RelationshipsTest;
 
 /**
- * @author Yann-Gaël Guéhéneuc
+ * @author Yann-GaÃ«l GuÃ©hÃ©neuc
  * @since  2004/01/25
  */
 public final class TestCreatorJavaFilevsClassFile extends TestSuite {

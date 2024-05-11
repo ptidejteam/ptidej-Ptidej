@@ -29,7 +29,6 @@ import padl.kernel.impl.Factory;
 import padl.refactoring.exception.ModelDeclarationException;
 import padl.refactoring.method.IClassComparator;
 import padl.refactoring.method.RefactoringRenameMethod;
-import util.io.Files;
 
 /**
  * @author Saliha Bouden

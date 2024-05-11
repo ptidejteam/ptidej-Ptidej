@@ -1,5 +1,5 @@
-/* (c) Copyright 2008 and following years, Yann-Gaël Guéhéneuc,
- * École Polytechnique de Montréal.
+/* (c) Copyright 2008 and following years, Yann-GaÃ«l GuÃ©hÃ©neuc,
+ * ecole Polytechnique de Montreal.
  * 
  * Use and copying of this software and preparation of derivative works
  * based upon this software are permitted. Any copy of this software or

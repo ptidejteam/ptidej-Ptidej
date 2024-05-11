@@ -1,5 +1,5 @@
 /*
- * Créé le 7 février 2005
+ * Cree le 7 fevrier 2005
  *
  * Auteur : Janice Ng
  * Source : Film.java
@@ -18,11 +18,11 @@ public class Film {
 	public Film(){
 	}
 	/**
-	 * Contructeur qui reçoit le titre et
-	 * l'année du film.
+	 * Contructeur qui reeoit le titre et
+	 * l'annee du film.
 	 *
 	 * @param titre : titre du film
-	 * @param annee : année du film
+	 * @param annee : annee du film
 	 */
 	public Film (String titre, int annee)
 	{		
@@ -49,7 +49,7 @@ public class Film {
 	}
 
 	/**
-	 * Méthodes d'accès et de modification
+	 * Methodes d'acces et de modification
 	 */
 	public void setTitre (String titre) { this.titre = titre; }
 	public void setAnnee (int annee) { this.annee = annee; }
@@ -62,7 +62,7 @@ public class Film {
 	/**
 	 * Ajouter un acteur.
 	 *
-	 * @param a : acteur à ajouter au tableau des acteurs
+	 * @param a : acteur e ajouter au tableau des acteurs
 	 */
 	public void addActeur (Acteur a)
 	{
@@ -70,8 +70,8 @@ public class Film {
 		
 		for(int i = 0; i < nbActeurs; i++)
 		{
-			if(lesActeurs[i].getID() == a.getID()) // s'assurer que l'acteur à ajouter
-				return;							   // n'est pas déjà présent dans le tableau
+			if(lesActeurs[i].getID() == a.getID()) // s'assurer que l'acteur e ajouter
+				return;							   // n'est pas deje present dans le tableau
 		}
 		lesActeurs[nbActeurs] = a;
 		nbActeurs++;
@@ -80,7 +80,7 @@ public class Film {
 	/**
 	 * Supprimer un acteur.
 	 *
-	 * @param id : numéro ID de l'acteur à supprimer
+	 * @param id : numero ID de l'acteur e supprimer
 	 */
 	public void deleteActeur (int id)
 	{
@@ -101,11 +101,11 @@ public class Film {
 	}
 
 	/**
-	 * Déterminer si l'acteur dont le ID est reçu en
-	 * paramètre a un rôle dans ce film.
+	 * Determiner si l'acteur dont le ID est reeu en
+	 * parametre a un rele dans ce film.
 	 *
-	 * @param id : numéro de l'acteur à identifier
-	 * @return true, si l'acteur est présent dans le film
+	 * @param id : numero de l'acteur e identifier
+	 * @return true, si l'acteur est present dans le film
 	 * 		   false, sinon
 	 */
 	public boolean aUnRole (int id)
@@ -123,7 +123,7 @@ public class Film {
 	}
 
 	/**
-	 * Redéfinition de la méthode toString pour fin d'affichage.
+	 * Redefinition de la methode toString pour fin d'affichage.
 	 */
 	public String toString()
 	{

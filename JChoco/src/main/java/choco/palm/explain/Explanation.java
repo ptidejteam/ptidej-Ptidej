@@ -6,7 +6,7 @@
 //       \ /            Version 0.1
 //       \ /            January 2004
 //       \ /
-// ______\_/_______     Contibutors: François Laburthe, Hadrien Cambazard, Guillaume Rochart...
+// ______\_/_______     Contibutors: Franeois Laburthe, Hadrien Cambazard, Guillaume Rochart...
 
 package choco.palm.explain;
 

@@ -8,7 +8,7 @@ package choco.bool;
 // *     for Research and Education                 *
 // **************************************************
 
-/* File choco.bool.BoolConstraint.java, last modified by François march, 17th, 2004 */
+/* File choco.bool.BoolConstraint.java, last modified by Franeois march, 17th, 2004 */
 
 /**
  * Boolean constraints are composite constraints who maintain for each sub-constraint:

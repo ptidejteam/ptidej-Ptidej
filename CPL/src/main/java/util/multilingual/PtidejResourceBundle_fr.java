@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package util.multilingual;
 
@@ -40,7 +40,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{ "CPL::NameDialog::BUTTON_LABEL", new String("Confirmer") },
 				{ "CPL::NameDialog::TITLE", new String("Note") },
 				{ "CPL::SubtypeLoader::Err_FILES_NOT_FOUND",
-						new String("Loader: Pas de fichier trouvé dans {0}") },
+						new String("Loader: Pas de fichier trouve dans {0}") },
 				{
 						"CPL::SubtypeLoader::Err_READING_FILE",
 						new String(
@@ -56,43 +56,43 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"JChoco::PalmAssignVar::Err_USING_checkAcceptable",
 						new String(
-							"PalmAssignVar.checkAcceptable(List) ne devrait pas être utilisé !") },
+							"PalmAssignVar.checkAcceptable(List) ne devrait pas etre utilise !") },
 				{
 						"JChoco::PalmAssignVar::Err_USING_getNextDecisions",
 						new String(
-							"PalmAssignVar.getNextDecisions() ne devrait pas être utilisé !") },
+							"PalmAssignVar.getNextDecisions() ne devrait pas etre utilise !") },
 				{
 						"JChoco::PalmAssignVar::Err_USING_learnFromRejection",
 						new String(
-							"PalmAssignVar.learnFromRejection() ne devrait pas être utilisé !") },
+							"PalmAssignVar.learnFromRejection() ne devrait pas etre utilise !") },
 				{
 						"JChoco::PalmBitSetIntDomain::Err_RESTORE_INF",
 						new String(
-							"restoreInf ne devrait pas être appelé à partir de BitSetIntdomain !") },
+							"restoreInf ne devrait pas etre appele e partir de BitSetIntdomain !") },
 				{
 						"JChoco::PalmBitSetIntDomain::Err_RESTORE_SUP",
 						new String(
-							"restoreSup ne devrait pas être appelé à partir de BitSetIntdomain !") },
+							"restoreSup ne devrait pas etre appele e partir de BitSetIntdomain !") },
 				{
 						"JChoco::PalmBitSetIntDomain::Warning_NEED_PARAM",
 						new String(
-							"PaLM: VAL requiert un autre paramètre dans self_explain (IntVar)") },
+							"PaLM: VAL requiert un autre parametre dans self_explain (IntVar)") },
 				{
 						"JChoco::PalmBitSetIntDomain::Warning_NO_PARAM_NEEDED",
 						new String(
-							"PaLM: INF, SUP ou DOM n'a pas besoin d'un paramètre supplémentaire dans self_explain (IntVar)") },
+							"PaLM: INF, SUP ou DOM n'a pas besoin d'un parametre supplementaire dans self_explain (IntVar)") },
 				{
 						"JChoco::PalmIntervalIntDomain::Err_RESTORE_VAL",
 						new String(
-							"restoreVal ne devrait pas être appelé à partir de IntervalIntdomain !") },
+							"restoreVal ne devrait pas etre appele e partir de IntervalIntdomain !") },
 				{
 						"JChoco::PalmIntervalIntDomain::Warning_NEED_PARAM",
 						new String(
-							"PaLM: VAL requiert un autre paramètre dans self_explain (IntVar)") },
+							"PaLM: VAL requiert un autre parametre dans self_explain (IntVar)") },
 				{
 						"JChoco::PalmIntervalIntDomain::Warning_NO_PARAM_NEEDED",
 						new String(
-							"PaLM: INF, SUP ou DOM n'a pas besoin d'un paramètre supplémentaire dans self_explain (IntVar)") },
+							"PaLM: INF, SUP ou DOM n'a pas besoin d'un parametre supplementaire dans self_explain (IntVar)") },
 				{ "JChoco::PalmSolver::CONTRADICTION",
 						new String("Contradiction : {0}") },
 				{ "JChoco::Problem::Err_INTEXP",
@@ -136,7 +136,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Metrical Ptidej Solver::Problem::USING_METRICS",
 						new String(
-							"++ Utilisation de metriques pour faire la trace des rôles and ainsi que pour réduire l'espace de recherche") },
+							"++ Utilisation de metriques pour faire la trace des reles and ainsi que pour reduire l'espace de recherche") },
 
 				// *********** PADL Analyses ***********
 				{ "PADL Analyses::Repository::LOAD_ANALYSIS",
@@ -150,15 +150,15 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{ "PADL AOL Creator::AOLCreator::CLASSES",
 						new String(" classes...") },
 				{ "PADL AOL Creator::AOLCreator::FILTERING_DONE",
-						new String("Filterage terminé.") },
+						new String("Filterage termine.") },
 				{ "PADL AOL Creator::AOLCreator::PARSING",
 						new String("Parsage") },
 				{ "PADL AOL Creator::AOLCreator::PARSING_DONE",
-						new String("Parsage terminé.") },
+						new String("Parsage termine.") },
 				{
 						"PADL AOL Creator::AOLLexer::Err_BAD_IN_STREAM_INIT",
 						new String(
-							"Erreur: Mauvais analyseur de flot d'entrée.") },
+							"Erreur: Mauvais analyseur de flot d'entree.") },
 				{
 						"PADL AOL Creator::AOLLexer::Err_REPORT",
 						new String(
@@ -166,19 +166,19 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{ "PADL AOL Creator::AOLLexer::FATAL_ERR",
 						new String("Erreur Fatale.\n") },
 				{ "PADL AOL Creator::AOLLexer::ILLEGAL_CHAR",
-						new String("Charactère Illégal: {}") },
+						new String("Charactere Illegal: {}") },
 				{
 						"PADL AOL Creator::AOLLexer::LEXICAL_ERR",
 						new String(
-							"Erreur Lexiquale: L'entrée ne coïncide pas.") },
+							"Erreur Lexiquale: L'entree ne coencide pas.") },
 				{
 						"PADL AOL Creator::AOLParser::INVALID_ACTION_NUMBER",
 						new String(
-							"Un numéro d'action invalid a été trouvé dans la table de parsage interne") },
+							"Un numero d'action invalid a ete trouve dans la table de parsage interne") },
 				{ "PADL AOL Creator::AOLParser::SYN_ERR",
 						new String("Erreur de syntaxe ({0})") },
 				{ "PADL AOL Creator::AspectCreator::CALL_AJC",
-						new String("> Appel à ajc...") },
+						new String("> Appel e ajc...") },
 				{ "PADL AOL Creator::AspectCreator::COMPILER_FAIL",
 						new String("Compilateur - Echec") },
 				{ "PADL AOL Creator::AspectCreator::TERM_AJC",
@@ -194,61 +194,61 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"PADL::ChainOfResponsibility::INTENT",
 						new String(
-							"Eviter de coupler la source d'une requête\nà sa destination en donnant la chance\nà plus d'un objet de pouvoir traiter\nla requête. Chaîner les objets receveurs\net passer la requête à travers\nla chaîne jusqu'à ce qu'un objet la traite.") },
+							"Eviter de coupler la source d'une requete\ne sa destination en donnant la chance\ne plus d'un objet de pouvoir traiter\nla requete. Chaener les objets receveurs\net passer la requete e travers\nla chaene jusqu'e ce qu'un objet la traite.") },
 				{ "PADL::Class::ALREADY_IMPL",
-						new String("{0} est deja implementé par {1}") },
+						new String("{0} est deja implemente par {1}") },
 				{ "PADL::Class::NOT_IMPL",
-						new String("{0} n'est pas implementé par {1}") },
+						new String("{0} n'est pas implemente par {1}") },
 				{
 						"PADL::Composite::Err_INIT_ALMD",
 						new String(
-							"Erreur: ne peut initialiser le detécteur du AbstractLevelModel.") },
+							"Erreur: ne peut initialiser le detecteur du AbstractLevelModel.") },
 				{
 						"PADL::Composite::INTENT",
 						new String(
-							"Composer les objets en arbre de structures\npour representer les hierarchies part-whole.\nComposite permet aux clients de traiter les objets individuels\n et les compositions d'objets\nuniformément.") },
+							"Composer les objets en arbre de structures\npour representer les hierarchies part-whole.\nComposite permet aux clients de traiter les objets individuels\n et les compositions d'objets\nuniformement.") },
 				{ "PADL::Constituent::ACTOR_ID_NULL",
-						new String("Un actorID ne peut être nul") },
+						new String("Un actorID ne peut etre nul") },
 				{ "PADL::Constituent::ELEM_ABSTRACT",
-						new String("Cet element ne peut être abstrait") },
+						new String("Cet element ne peut etre abstrait") },
 				{
 						"PADL::Constituent::ELEM_CODE_DEF",
 						new String(
-							"Cet element ne peut contenir de la définition de code") },
+							"Cet element ne peut contenir de la definition de code") },
 				{ "PADL::Constituent::Exception_ACCEPT_METHOD",
-						new String("Méthode accept : {0} ({1})") },
+						new String("Methode accept : {0} ({1})") },
 				{
 						"PADL::Constructor+Destcuctor::PARAM_OR_METHOD_ADD",
 						new String(
-							"Seulement un paramètre ou l'invoquation d'une méthode peuvent être ajoutés à une méthode.") },
+							"Seulement un parametre ou l'invoquation d'une methode peuvent etre ajoutes e une methode.") },
 				{
 						"PADL::ContainerAggregation::ELEMS_ATTACH",
 						new String(
-							"Seulement, les éléments peuvent être attachés à une aggregation conteneuse lors d'une instantiation.") },
+							"Seulement, les elements peuvent etre attaches e une aggregation conteneuse lors d'une instantiation.") },
 				{ "PADL::DelegatingMethod::ABSTRACT",
-						new String("{0} ne peut être abstrait.") },
+						new String("{0} ne peut etre abstrait.") },
 				{
 						"PADL::DesignLevelModel::ENT_OR_PATTERN_ADD",
 						new String(
-							"Seulement les entités ou les \"pattern\" peuvent être ajoutés à un model de niveau conception.") },
+							"Seulement les entites ou les \"pattern\" peuvent etre ajoutes e un model de niveau conception.") },
 				{ "PADL::Element::ATTACH",
-						new String("{0} ne peut être attaché à {1}") },
+						new String("{0} ne peut etre attache e {1}") },
 				{
 						"PADL::Element::ELEM_ATTACH",
 						new String(
-							"Un element ne peut être attaché à lui même.") },
+							"Un element ne peut etre attache e lui meme.") },
 				{ "PADL::Entity::ALREADY_INHERITED",
-						new String("{0} est deja hérité par {1}") },
+						new String("{0} est deja herite par {1}") },
 				{
 						"PADL::Entity::ELEM_ADD_ENT",
 						new String(
-							"Seulement les elements peuvent être ajoutés à une entité.") },
+							"Seulement les elements peuvent etre ajoutes e une entite.") },
 				{ "PADL::Entity::ENT_INHERIT_ITSELF",
-						new String("Une entité ne peut hériter d'elle même") },
+						new String("Une entite ne peut heriter d'elle meme") },
 				{
 						"PADL::Facade::INTENT",
 						new String(
-							"Fournis une interface unique à un ensemble \nd'interfaces dans un sous système.\nFacade définit une interface de haut niveau\npermettant au sous système une facilité d'utilisation.") },
+							"Fournis une interface unique e un ensemble \nd'interfaces dans un sous systeme.\nFacade definit une interface de haut niveau\npermettant au sous systeme une facilite d'utilisation.") },
 				{
 						"PADL::Factory::ADD",
 						new String(
@@ -256,43 +256,43 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"PADL::FactoryMethod::INTENT",
 						new String(
-							"Définit une interface pour la création\nd'une famille d'objets, tout en laissant les sous classes le choix de décider\nquelle classe à instancier.\nFactory Method donne le choix à une class de laisser\nl'instantiation aux sous-classes.") },
+							"Definit une interface pour la creation\nd'une famille d'objets, tout en laissant les sous classes le choix de decider\nquelle classe e instancier.\nFactory Method donne le choix e une class de laisser\nl'instantiation aux sous-classes.") },
 				{
 						"PADL::Field::CARDINALITY",
 						new String(
-							"La cardinalité d'un champ doit être un ou plusieurs (Ici, {0})") },
+							"La cardinalite d'un champ doit etre un ou plusieurs (Ici, {0})") },
 				{
 						"PADL::GlobalField::CARDINALITY",
 						new String(
-							"La cardinalité d'un champ global doit être un ou plusieurs (Ici, {0})") },
+							"La cardinalite d'un champ global doit etre un ou plusieurs (Ici, {0})") },
 				{
 						"PADL::GoodInheritance::INTENT",
 						new String(
-							"Définit qu'une super classe doit complètement ignorer\n ses sous classes.") },
+							"Definit qu'une super classe doit completement ignorer\n ses sous classes.") },
 				{
 						"PADL::IdiomLevelModel::ENT_ADD_ORG_LEVEL",
 						new String(
-							"Seulement les entités peuvent être ajoutées à modèle de niveau organisation.") },
+							"Seulement les entites peuvent etre ajoutees e modele de niveau organisation.") },
 				{
 						"PADL::Mediator::INTENT",
 						new String(
-							"Définit un objet encapsulant\ncomment un ensemble d'objets peuvent interagir.\nMediator promouvoit le couplage faible en faisant en sorte que ces dernièrs\nne se referrent entre eux explicitment,\net vous laisse varier leur interaction independemment.") },
+							"Definit un objet encapsulant\ncomment un ensemble d'objets peuvent interagir.\nMediator promouvoit le couplage faible en faisant en sorte que ces derniers\nne se referrent entre eux explicitment,\net vous laisse varier leur interaction independemment.") },
 				{
 						"PADL::Memento::INTENT",
 						new String(
-							"Sans violer l'encapsulation, capture\net externalise l'état interne d'un objet\npour qu'il puisse être remis à cet état plustard.") },
+							"Sans violer l'encapsulation, capture\net externalise l'etat interne d'un objet\npour qu'il puisse etre remis e cet etat plustard.") },
 				{
 						"PADL::Observer::ConcreteObserver_CLASS_PURPOSE",
 						new String(
-							"1. Maintient une réference à un objet ConcreteSubject\n2. Emmagasiner l'état qui doit rester consistant avec le sujet\n3. Implemente l'Observateur mettant à jout l'interface pour garder son état consistant avec le sujet") },
+							"1. Maintient une reference e un objet ConcreteSubject\n2. Emmagasiner l'etat qui doit rester consistant avec le sujet\n3. Implemente l'Observateur mettant e jout l'interface pour garder son etat consistant avec le sujet") },
 				{
 						"PADL::Observer::ConcreteSubject_CLASS_PURPOSE",
 						new String(
-							"1. Emmagasiner l'état d'interet aux objets ConcreteObserver\n2. Envoie une notification à ses observateurs lors d'un changement d'état") },
+							"1. Emmagasiner l'etat d'interet aux objets ConcreteObserver\n2. Envoie une notification e ses observateurs lors d'un changement d'etat") },
 				{
 						"PADL::Observer::DELEG_METHOD_COMMENT",
 						new String(
-							"Ajouter une opération specifique à cette méthode") },
+							"Ajouter une operation specifique e cette methode") },
 				{
 						"PADL::Observer::IDIOM",
 						new String(
@@ -300,19 +300,19 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"PADL::Observer::INTENT",
 						new String(
-							"Définit une dépendance un-à-plusieurs\nentre les objets.\nQuand un objet change d'état,\ntout ses dependants sont notifiés\net mis à jour automatiquement.") },
+							"Definit une dependance un-e-plusieurs\nentre les objets.\nQuand un objet change d'etat,\ntout ses dependants sont notifies\net mis e jour automatiquement.") },
 				{
 						"PADL::Observer::Observer_PURPOSE",
 						new String(
-							"Definit une interface commune aux objets qui doivent être notifiés quand le sujet change.") },
+							"Definit une interface commune aux objets qui doivent etre notifies quand le sujet change.") },
 				{
 						"PADL::Observer::Subject_PURPOSE",
 						new String(
-							"1. Connaît  ses observateurs. Tout objet Observateur peut observer un sujet\n2. Fournit une interface pour attacher et détacher les objets Observateurs") },
+							"1. Connaet  ses observateurs. Tout objet Observateur peut observer un sujet\n2. Fournit une interface pour attacher et detacher les objets Observateurs") },
 				{
 						"PADL::PatternModel::ENT_ADD_MODEL",
 						new String(
-							"Seuelemnt une entité peut être ajoutée à un modèle.") },
+							"Seuelemnt une entite peut etre ajoutee e un modele.") },
 				{
 						"PADL::PatternModel::Err_INIT_ALMD",
 						new String(
@@ -320,21 +320,21 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"PADL::Proxy::INTENT",
 						new String(
-							"Fournit un objet intermediaire pour l'accès.") },
+							"Fournit un objet intermediaire pour l'acces.") },
 				{
 						"PADL::Relationship::CARDINALITY",
 						new String(
-							"La cardinalité d'une relation doit être un ou plus (Ici, {0})") },
+							"La cardinalite d'une relation doit etre un ou plus (Ici, {0})") },
 				{ "PADL::Visitor::INTENT",
 						new String("(Voir le livre de GoF.)") },
 
 				// *********** Ptidej Solver 4 ***********
 				{ "Ptidej Solver 4::BitString::NB_OF_BITS",
-						new String("Le nombre de bits doit être {0}") },
+						new String("Le nombre de bits doit etre {0}") },
 				{
 						"Ptidej Solver 4::InteractiveBranching::ANOTHER_SOL",
 						new String(
-							"Désirez-vous avoir une autre solution? (y/n) [\"y\" pour Oui]/[\"n\" pour Non]") },
+							"Desirez-vous avoir une autre solution? (y/n) [\"y\" pour Oui]/[\"n\" pour Non]") },
 				{ "Ptidej Solver 4::InteractiveBranching::SOL",
 						new String("> Solution {0} :") },
 				{
@@ -344,13 +344,13 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej Solver 4::InteractiveRepair::NO_MORE_SOL",
 						new String(
-							"Il y'a plus d'une solution à cause de la contrainte") },
+							"Il y'a plus d'une solution e cause de la contrainte") },
 				{ "Ptidej Solver 4::InteractiveRepair::TO_BE_REPLACED",
-						new String("Doit être replacé par: {0}") },
+						new String("Doit etre replace par: {0}") },
 				{
 						"Ptidej Solver 4::InteractiveRepair::WHICH_TO_PUT_BACK",
 						new String(
-							"Laquelle voullez-vous rétablir? (-1 -> none)") },
+							"Laquelle voullez-vous retablir? (-1 -> none)") },
 				{
 						"Ptidej Solver 4::InteractiveRepair::WHICH_TO_RELAX",
 						new String(
@@ -358,11 +358,11 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej Solver 4::Problem::PTIDEJ",
 						new String(
-							"++ JPtidejSolver v1.0 (Décembre, 2004), Copyright (c) 2001-2004 Y.-G. Guéhéneuc\n++ Constraint programming for design patterns and design defects identification") },
+							"++ JPtidejSolver v1.0 (Decembre, 2004), Copyright (c) 2001-2004 Y.-G. GuÃ©hÃ©neuc\n++ Constraint programming for design patterns and design defects identification") },
 				{
 						"Ptidej Solver 4::SimpleInteractiveRepair::NO_MORE_SOL",
 						new String(
-							"Il n ya plus de solution à cause de la contrainte: {0}") },
+							"Il n ya plus de solution e cause de la contrainte: {0}") },
 				{
 						"Ptidej Solver 4::SimpleInteractiveRepair::WHICH_TO_RELAX",
 						new String(
@@ -374,20 +374,20 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String(
 							"Choisissez un fichier avec des differences dans le model") },
 				{ "Ptidej UI Analyses::DifferenceHighlighterFromClasses::NAME",
-						new String("Différences entre modèle (classes)") },
+						new String("Differences entre modele (classes)") },
 				{
 						"Ptidej UI Analyses::DifferenceHighlighterFromMethods::DIALOG_TITLE",
 						new String(
 							"Choisissez un fichier avec des differences dans le model") },
 				{ "Ptidej UI Analyses::DifferenceHighlighterFromMethods::NAME",
-						new String("Différences entre modèle (méthods)") },
+						new String("Differences entre modele (methods)") },
 				{
 						"Ptidej UI Analyses::HighlighterFromMethods::Err_UNKNOWN_KEY",
-						new String("Clé inconnue dans le fichier : {0}") },
+						new String("Cle inconnue dans le fichier : {0}") },
 				{
 						"Ptidej UI Analyses::Management::Err_METHODE_NOT_FOUND_IN_ENTITY",
 						new String(
-							"Ne peut trouver la méthode \"{0}\" dans l'entité {1}") },
+							"Ne peut trouver la methode \"{0}\" dans l'entite {1}") },
 				{ "Ptidej UI Analyses::ModelComparator::DIALOG_TITLE",
 						new String("Choisissez un fichier AOL") },
 				{ "Ptidej UI Analyses::ModelComparator::NAME",
@@ -398,13 +398,13 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				// *********** Ptidej UI Viewer Extensions ***********
 				{
 						"Ptidej UI Viewer Extensions::CSVGraphReader::Err_SYNTAX_ERR",
-						new String("Erreur de syntaxe à la ligne {0}") },
+						new String("Erreur de syntaxe e la ligne {0}") },
 				{
 						"Ptidej UI Viewer Extensions::CSVGraphReader::Err_UNEXPECTED_TOKEN",
 						new String(
-							"Token innatendu {0} à été lû du flot, un mot était attendu") },
+							"Token innatendu {0} e ete le du flot, un mot etait attendu") },
 				{ "Ptidej UI Viewer Extensions::POMCalculator::COMPUTE_TIME",
-						new String("Metriques calculées en {0} ms.\n{1}") },
+						new String("Metriques calculees en {0} ms.\n{1}") },
 				{ "Ptidej UI Viewer Extensions::Repository::LOAD_EXTENSION",
 						new String("Ne peut charger l'extension {0} :\n{1}") },
 
@@ -416,7 +416,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer Plugin::AddFolderAction::Err_INIT_DIAGRAM_EDITOR",
 						new String(
-							"(class: PopActionClass) ne peut initialiser l'éditeur de diagramme!") },
+							"(class: PopActionClass) ne peut initialiser l'editeur de diagramme!") },
 				{
 						"Ptidej UI Viewer Plugin::AddFolderAction::Err_OPEN_DIAGRAM_EDITOR",
 						new String(
@@ -424,13 +424,13 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer Plugin::AddFolderAction::MessageDialog_CONTENT",
 						new String(
-							"Ptidej Viewer: Pas de fichiers .class trouvés dans :\n{0}\nAction: {1}") },
+							"Ptidej Viewer: Pas de fichiers .class trouves dans :\n{0}\nAction: {1}") },
 				{
 						"Ptidej UI Viewer Plugin::AddFolderAction::MessageDialog_TITLE",
 						new String("Ptidej Viewer") },
 				{
 						"Ptidej UI Viewer Plugin::AddFolderAction::NO_CLASSFILE_FOUND",
-						new String("Pas de fichiers .class trouvés dans: {0}") },
+						new String("Pas de fichiers .class trouves dans: {0}") },
 				{
 						"Ptidej UI Viewer Plugin::AddJavaAction::Err_Exception_IN_RUN",
 						new String("Exception dans run()") },
@@ -468,13 +468,13 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer Plugin::AddJDTPackageAction::MessageDialog_CONTENT",
 						new String(
-							"Ptidej Viewer: Pas de fichiers .class trouvés dans :\n{0}\nAction: {1}") },
+							"Ptidej Viewer: Pas de fichiers .class trouves dans :\n{0}\nAction: {1}") },
 				{
 						"Ptidej UI Viewer Plugin::AddJDTPackageAction::MessageDialog_TITLE",
 						new String("Ptidej Viewer") },
 				{
 						"Ptidej UI Viewer Plugin::AddJDTPackageAction::NO_CLASSFILE_FOUND",
-						new String("PAs de fichiers .class trouvés dans : {0}") },
+						new String("PAs de fichiers .class trouves dans : {0}") },
 				{
 						"Ptidej UI Viewer Plugin::AddNewFolderAction::Err_Exception_OPEN_DIAGRAM_EDITOR",
 						new String(
@@ -482,7 +482,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer Plugin::AddNewFolderAction::Err_INIT_DIAGRAM_EDITOR",
 						new String(
-							"(class: PopActionClass) Ne peut initialiser l'éditeur de diagram!") },
+							"(class: PopActionClass) Ne peut initialiser l'editeur de diagram!") },
 				{
 						"Ptidej UI Viewer Plugin::AddNewFolderAction::Err_OPEN_DIAGRAM_EDITOR",
 						new String(
@@ -490,13 +490,13 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer Plugin::AddNewFolderAction::MessageDialog_CONTENT",
 						new String(
-							"Ptidej Viewer: Pas de fichiers .class trouvés dans :\n{0}\nAction: {1}") },
+							"Ptidej Viewer: Pas de fichiers .class trouves dans :\n{0}\nAction: {1}") },
 				{
 						"Ptidej UI Viewer Plugin::AddNewFolderAction::MessageDialog_TITLE",
 						new String("Ptidej Viewer") },
 				{
 						"Ptidej UI Viewer Plugin::AddNewFolderAction::NO_CLASSFILE_FOUND",
-						new String("Pas de fichiers .class trouvés dans: {0}") },
+						new String("Pas de fichiers .class trouves dans: {0}") },
 				{
 						"Ptidej UI Viewer Plugin::AddNewJavaAction::Err_Exception_IN_RUN",
 						new String("Exception dans run()") },
@@ -526,20 +526,20 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer Plugin::AddNewJDTPackageAction::Err_INIT_DIAGRAM_EDITOR",
 						new String(
-							"(class: PopActionClass) Ne peut initialiser l'éditeur de diagrammes!") },
+							"(class: PopActionClass) Ne peut initialiser l'editeur de diagrammes!") },
 				{
 						"Ptidej UI Viewer Plugin::AddNewJDTPackageAction::Err_OPEN_DIAGRAM_EDITOR",
 						new String("Erreur lors de l'ouverture DiagramEditor!") },
 				{
 						"Ptidej UI Viewer Plugin::AddNewJDTPackageAction::MessageDialog_CONTENT",
 						new String(
-							"Ptidej Viewer: Pas de fichiers .class trouvés dans :\n{0}\nAction: {1}") },
+							"Ptidej Viewer: Pas de fichiers .class trouves dans :\n{0}\nAction: {1}") },
 				{
 						"Ptidej UI Viewer Plugin::AddNewJDTPackageAction::MessageDialog_TITLE",
 						new String("Ptidej Viewer") },
 				{
 						"Ptidej UI Viewer Plugin::AddNewJDTPackageAction::NO_CLASSFILE_FOUND",
-						new String("Pas de fichiers .class trouvés dans: {0}") },
+						new String("Pas de fichiers .class trouves dans: {0}") },
 				{
 						"Ptidej UI Viewer Plugin::AddSelectedPackageAction::Err_Exception_OPEN_DIAGRAM_EDITOR",
 						new String(
@@ -547,7 +547,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer Plugin::AddSelectedPackageAction::Err_INIT_DIAGRAM_EDITOR",
 						new String(
-							"(class: PopActionClass) Ne peut initialiser l'éditeur de diagramme!") },
+							"(class: PopActionClass) Ne peut initialiser l'editeur de diagramme!") },
 				{
 						"Ptidej UI Viewer Plugin::AddSelectedPackageAction::Err_OPEN_DIAGRAM_EDITOR",
 						new String(
@@ -555,13 +555,13 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer Plugin::AddSelectedPackageAction::MessageDialog_CONTENT",
 						new String(
-							"Ptidej Viewer: PAs de fichiers .class trouvés dans :\n{0}\nAction: {1}") },
+							"Ptidej Viewer: PAs de fichiers .class trouves dans :\n{0}\nAction: {1}") },
 				{
 						"Ptidej UI Viewer Plugin::AddSelectedPackageAction::MessageDialog_TITLE",
 						new String("Ptidej Viewer") },
 				{
 						"Ptidej UI Viewer Plugin::AddSelectedPackageAction::NO_CLASSFILE_FOUND",
-						new String("Pas de fichiers .class trouvés dans: {0}") },
+						new String("Pas de fichiers .class trouves dans: {0}") },
 				{ "Ptidej UI Viewer Plugin::DiagramEditor::CANVAS_IS_NULL",
 						new String("Canvas = NUL") },
 				{ "Ptidej UI Viewer Plugin::DiagramEditor::CANVAS_NOT_NULL",
@@ -569,15 +569,15 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer Plugin::DiagramEditor::Err_FILE_NOT_FOUND",
 						new String(
-							"Erreur: Ne peut trouver le fichier sélectionné!") },
+							"Erreur: Ne peut trouver le fichier selectionne!") },
 				{
 						"Ptidej UI Viewer Plugin::DiagramEditor::Err_INVALID_INPUT",
 						new String(
-							"Entrée invalide: doit être IFileEditorInput") },
+							"Entree invalide: doit etre IFileEditorInput") },
 				{ "Ptidej UI Viewer Plugin::DiagramEditor::PROJECT_NAME",
 						new String("Fichier 1") },
 				{ "Ptidej UI Viewer Plugin::FileList::DEFAULT_SELECT",
-						new String("Sélection pas défaut") },
+						new String("Selection pas defaut") },
 				{
 						"Ptidej UI Viewer Plugin::FindConcretePatterns::MessageDialog_CONTENT",
 						new String("Action: {0}") },
@@ -588,7 +588,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						"Ptidej UI Viewer Plugin::GUIOptions::Button_FIND_CONCRETE_PATTERNS",
 						new String("Trouver les patterns concrets") },
 				{ "Ptidej UI Viewer Plugin::GUIOptions::Button_GEN_EXEC_INFO",
-						new String("Generer les informations d'éxecution") },
+						new String("Generer les informations d'execution") },
 				{ "Ptidej UI Viewer Plugin::GUIOptions::Button_GEN_MODEL",
 						new String("Generer le model") },
 				{
@@ -605,7 +605,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer Plugin::GUIOptions::FILE_DIALOG_TITLE",
 						new String(
-							"Choisir le fichier des résulats des contraintes") },
+							"Choisir le fichier des resulats des contraintes") },
 				{ "Ptidej UI Viewer Plugin::GUIOptions::Group_OPTIONS",
 						new String("Options") },
 				{ "Ptidej UI Viewer Plugin::NewProject::MessageDialog_CONTENT",
@@ -645,11 +645,11 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer Plugin::PopActionNewClass::Err_INIT_DIAGRAM_EDITOR",
 						new String(
-							"(class: PopActionNewClass) Le diagramme ne peut etre initialisé") },
+							"(class: PopActionNewClass) Le diagramme ne peut etre initialise") },
 				{
 						"Ptidej UI Viewer Plugin::PopActionNewJar::Err_INIT_DIAGRAM_EDITOR",
 						new String(
-							"(class: PopActionJar) la vue ne peut être initialisée") },
+							"(class: PopActionJar) la vue ne peut etre initialisee") },
 				{
 						"Ptidej UI Viewer Plugin::PopActionNewJava::Err_Exception_IN_RUN",
 						new String("Exception dans run()") },
@@ -672,11 +672,11 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer Plugin::PopActionNewPackage::Err_INIT_DIAGRAM_EDITOR",
 						new String(
-							"(class: PopActionNewPackage) le diagramme ne peut être initialisé") },
+							"(class: PopActionNewPackage) le diagramme ne peut etre initialise") },
 				{
 						"Ptidej UI Viewer Plugin::PopActionNewPtidej::Err_INIT_DIAGRAM_EDITOR",
 						new String(
-							"(class: PopActionNewPtidej) le diagramme ne peut être initialisé") },
+							"(class: PopActionNewPtidej) le diagramme ne peut etre initialise") },
 				{
 						"Ptidej UI Viewer Plugin::PopActionPackage::Err_INIT_DIAGRAM_EDITOR",
 						new String(
@@ -715,9 +715,9 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						"Ptidej UI Viewer Plugin::Preferences::CONTAINER_COMPOSITION_NAMES",
 						new String("Noms des compositions conteneuses") },
 				{ "Ptidej UI Viewer Plugin::Preferences::CREATION_DISPLAY",
-						new String("Affichage de création") },
+						new String("Affichage de creation") },
 				{ "Ptidej UI Viewer Plugin::Preferences::CREATION_NAMES",
-						new String("Noms de création") },
+						new String("Noms de creation") },
 				{ "Ptidej UI Viewer Plugin::Preferences::FIELD_NAMES",
 						new String("Noms du champ") },
 				{
@@ -725,7 +725,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String("Noms complets") },
 				{
 						"Ptidej UI Viewer Plugin::Preferences::GHOST_ENTITIES_DISPLAY",
-						new String("Affichage des entités fontômes") },
+						new String("Affichage des entites fontemes") },
 				{ "Ptidej UI Viewer Plugin::Preferences::HIERARCHY_DISPLAY",
 						new String("Affichage de la hierarchie") },
 				{ "Ptidej UI Viewer Plugin::Preferences::HIERARCHY_NAMES",
@@ -735,17 +735,17 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{ "Ptidej UI Viewer Plugin::Preferences::USE_NAMES",
 						new String("Affichage des noms des utilisations") },
 				{ "Ptidej UI Viewer Plugin::Preferences::METHOD_NAMES",
-						new String("Noms de méthodes") },
+						new String("Noms de methodes") },
 				{
 						"Ptidej UI Viewer Plugin::PtidejDiagramEditor::Err_INVALID_INPUT",
 						new String(
-							"Entrée invalide: doit être IFileEditorInput") },
+							"Entree invalide: doit etre IFileEditorInput") },
 				{ "Ptidej UI Viewer Plugin::PtidejDiagramEditor::LOADING_TIME",
 						new String("Temps de chargement: {0} ms.\n\n") },
 				{
 						"Ptidej UI Viewer Plugin::PtidejDiagramEditor::STATISTICS",
 						new String(
-							"\nStatistiques:\n{0}\n              Mémoire totale\tMémoire libre\nAvant la construction  {1}\t\t{2}\t\t{3}\nAprès la construction  {4}\t\t{5}\t\t{6}\nAprès l\'affichage       {7}\t\t{8}\t\t{9}\n") },
+							"\nStatistiques:\n{0}\n              Memoire totale\tMemoire libre\nAvant la construction  {1}\t\t{2}\t\t{3}\nApres la construction  {4}\t\t{5}\t\t{6}\nApres l\'affichage       {7}\t\t{8}\t\t{9}\n") },
 				{
 						"Ptidej UI Viewer Plugin::RemoveConcretePatterns::MessageDialog_CONTENT",
 						new String("Action: {0}") },
@@ -761,10 +761,10 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				// *********** Ptidej UI Viewer Standalone ***********
 				{
 						"Ptidej UI Viewer Standalone::ConstraintViewerPanel::CHECKBOXES_TEXTS_R01",
-						new String("Problème personnalisé") },
+						new String("Probleme personnalise") },
 				{
 						"Ptidej UI Viewer Standalone::ConstraintViewerPanel::CHECKBOXES_TEXTS_R02",
-						new String("Problème AC-4") },
+						new String("Probleme AC-4") },
 				{
 						"Ptidej UI Viewer Standalone::ConstraintViewerPanel::CHECKBOXES_TEXTS_R03",
 						new String("Solveur automatiue simple") },
@@ -787,10 +787,10 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 							"Trouver les micro-architectures  similaires") },
 				{
 						"Ptidej UI Viewer Standalone::ConstraintViewerPanel::GENERATE_PROGRAM_MODEL",
-						new String("Génerer le model du programme") },
+						new String("Generer le model du programme") },
 				{
 						"Ptidej UI Viewer Standalone::ConstraintViewerPanel::GENERATE_SOLVER_DATA_TEXT",
-						new String("Génerer les données d'éxecution du solveur") },
+						new String("Generer les donnees d'execution du solveur") },
 				{
 						"Ptidej UI Viewer Standalone::ConstraintViewerPanel::HELP_PTIDEJSOLVER3",
 						new String(
@@ -820,7 +820,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String("Ptidej Solveur 3") },
 				{
 						"Ptidej UI Viewer Standalone::ConstraintViewerPanel::PTIDEJSOLVER4_METRICAL_TEXT",
-						new String("Ptidej Solveur de métriques 4") },
+						new String("Ptidej Solveur de metriques 4") },
 				{
 						"Ptidej UI Viewer Standalone::ConstraintViewerPanel::PTIDEJSOLVER4_TEXT",
 						new String("Ptidej Solveur 4") },
@@ -830,13 +830,13 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 							"Enlever toutes les micro-architectures similaires") },
 				{
 						"Ptidej UI Viewer Standalone::MetricResultsActionListener::FOLD_UNFOLD",
-						new String("Plier/Déplier") },
+						new String("Plier/Deplier") },
 				{
 						"Ptidej UI Viewer Standalone::MetricResultsActionListener::FOLD_UNFOLD_ALL",
-						new String("Plier/Déplier Tout") },
+						new String("Plier/Deplier Tout") },
 				{
 						"Ptidej UI Viewer Standalone::MetricResultsActionListener::GO_TO",
-						new String("Aller à") },
+						new String("Aller e") },
 				{
 						"Ptidej UI Viewer Standalone::MetricResultsActionListener::SHOW_HIDE",
 						new String("Afficher/Cacher") },
@@ -845,15 +845,15 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String("Metrique {0} = {1}") },
 				{
 						"Ptidej UI Viewer Standalone::MetricResultsFrame::Lbl_NO_SOLUTION_LABEL",
-						new String("Pas de métrique calculée") },
+						new String("Pas de metrique calculee") },
 				{ "Ptidej UI Viewer Standalone::MetricResultsFrame::TITLE",
-						new String("Résultats des metriques") },
+						new String("Resultats des metriques") },
 				{
 						"Ptidej UI Viewer Standalone::MetricViewerPanel::Button_COMPUTE_METRICS",
-						new String("Calculer les métriques") },
+						new String("Calculer les metriques") },
 				{
 						"Ptidej UI Viewer Standalone::MetricViewerPanel::Button_SHOW_RESULTS",
-						new String("Afficher les résultats") },
+						new String("Afficher les resultats") },
 				{
 						"Ptidej UI Viewer Standalone::PercentLayout::IAException_INVALID_CONSTRAINT",
 						new String("Contrainte invalide") },
@@ -895,7 +895,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String("Ajouter un fichier Java (.java)") },
 				{
 						"Ptidej UI Viewer Standalone::ProjectViewerPanel::CREATE_NEW_PROJECT_TEXT",
-						new String("Créer un projet Ptidej") },
+						new String("Creer un projet Ptidej") },
 				{
 						"Ptidej UI Viewer Standalone::ProjectViewerPanel::Err_LOAD_ONLY_JAVA_PTIDEJ_PROJECT",
 						new String(
@@ -905,17 +905,17 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String("Type de fichier inconnu!") },
 				{
 						"Ptidej UI Viewer Standalone::ProjectViewerPanel::FILE_DIALOG_ADD_TITLE",
-						new String("Choisir {0} à ajouter") },
+						new String("Choisir {0} e ajouter") },
 				{
 						"Ptidej UI Viewer Standalone::ProjectViewerPanel::FILE_DIALOG_CHOOSE_PROJECT_FILE",
 						new String("Choisir un fichier projet") },
 				{
 						"Ptidej UI Viewer Standalone::ProjectViewerPanel::FILE_DIALOG_CHOOSE_PROJECT_TITLE",
-						new String("Choisir un project à charger") },
+						new String("Choisir un project e charger") },
 				{
 						"Ptidej UI Viewer Standalone::ProjectViewerPanel::FILE_DIALOG_EXTRA_DATA_TITLE",
 						new String(
-							"Choisir des données supplémentaires à charger") },
+							"Choisir des donnees supplementaires e charger") },
 				{
 						"Ptidej UI Viewer Standalone::ProjectViewerPanel::FILE_DIALOG_PROJECT_NAME_TITLE",
 						new String("Entrez un nom de projet:") },
@@ -925,7 +925,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 							"http://www.iro.umontreal.ca/~ptidej/Publications/Documents/LMO02.doc.pdf") },
 				{
 						"Ptidej UI Viewer Standalone::ProjectViewerPanel::LOAD_EXTRINSIC_DATA_TEXT",
-						new String("Charger des données extrinsèques") },
+						new String("Charger des donnees extrinseques") },
 				{
 						"Ptidej UI Viewer Standalone::ProjectViewerPanel::LOAD_PTIDEJ_PROJECT_TEXT",
 						new String("Charger un projet Ptidej") },
@@ -941,7 +941,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer Standalone::ProjectViewerPanel::STATISTICS",
 						new String(
-							"\nStatistiques:\n{0}\n              Mémoire totale\tMémoire libre\nAvant la construction  {1}\t\t{2}\t\t{3}\nAprès la construction  {4}\t\t{5}\t\t{6}\nAprès l\'affichage       {7}\t\t{8}\t\t{9}\n") },
+							"\nStatistiques:\n{0}\n              Memoire totale\tMemoire libre\nAvant la construction  {1}\t\t{2}\t\t{3}\nApres la construction  {4}\t\t{5}\t\t{6}\nApres l\'affichage       {7}\t\t{8}\t\t{9}\n") },
 				{
 						"Ptidej UI Viewer Standalone::ProjectViewerPanel::TYPE_AOL_NAME",
 						new String("AOL") },
@@ -956,21 +956,21 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String("Java") },
 				{
 						"Ptidej UI Viewer Standalone::SolutionConstants::FOLD_UNFOLD",
-						new String("Plier/Déplier") },
+						new String("Plier/Deplier") },
 				{
 						"Ptidej UI Viewer Standalone::SolutionConstants::FOLD_UNFOLD_ALL",
-						new String("Plier/Déplier tout") },
+						new String("Plier/Deplier tout") },
 				{
 						"Ptidej UI Viewer Standalone::SolutionConstants::FOLD_UNFOLD_GHOSTS",
-						new String("Plier/Déplier le conteneur de fontômes") },
+						new String("Plier/Deplier le conteneur de fontemes") },
 				{
 						"Ptidej UI Viewer Standalone::SolutionConstants::FOLD_UNFOLD_OBJECT",
-						new String("Plier/Déplier le conteneur d'objets") },
+						new String("Plier/Deplier le conteneur d'objets") },
 				{ "Ptidej UI Viewer Standalone::SolutionConstants::GO_TO",
-						new String("Aller à") },
+						new String("Aller e") },
 				{
 						"Ptidej UI Viewer Standalone::SolutionConstants::NO_SOLUTION_LABEL",
-						new String("Pas de solutions trouvées") },
+						new String("Pas de solutions trouvees") },
 				{ "Ptidej UI Viewer Standalone::SolutionConstants::SHOW_HIDE",
 						new String("Afficher/Cacher") },
 				{
@@ -978,10 +978,10 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String(
 							"Micro-architecture {0} similaire avec {2} de {1}%") },
 				{ "Ptidej UI Viewer Standalone::SolutionWindow::TITLE",
-						new String("Résultats de contraintes") },
+						new String("Resultats de contraintes") },
 				{
 						"Ptidej UI Viewer Standalone::SplashProgram::Err_SPLASH_IMG_NOT_FOUND",
-						new String("Image de chargement non trouvée") },
+						new String("Image de chargement non trouvee") },
 				{
 						"Ptidej UI Viewer Standalone::SplashProgram::IMG_SPLASH_FILE_NAME",
 						new String("Setup.gif") },
@@ -1001,7 +1001,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String("Noms des associations") },
 				{
 						"Ptidej UI Viewer Standalone::ViewerPanel::Button_IMAGE_BUTTON",
-						new String("À Propos") },
+						new String("e Propos") },
 				{
 						"Ptidej UI Viewer Standalone::ViewerPanel::COMPOSITION_DISPLAY",
 						new String("Affichage des compositions") },
@@ -1021,9 +1021,9 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						"Ptidej UI Viewer Standalone::ViewerPanel::CONTAINER_COMPOSITION_NAMES",
 						new String("Noms des compositions conteneuses") },
 				{ "Ptidej UI Viewer Standalone::ViewerPanel::CREATION_DISPLAY",
-						new String("Affichage de création") },
+						new String("Affichage de creation") },
 				{ "Ptidej UI Viewer Standalone::ViewerPanel::CREATION_NAMES",
-						new String("Noms de création") },
+						new String("Noms de creation") },
 				{ "Ptidej UI Viewer Standalone::ViewerPanel::EXIT_TEXT",
 						new String("Quitter") },
 				{ "Ptidej UI Viewer Standalone::ViewerPanel::FIELD_NAMES",
@@ -1033,7 +1033,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String("Noms complets") },
 				{
 						"Ptidej UI Viewer Standalone::ViewerPanel::GHOST_ENTITIES_DISPLAY",
-						new String("Affichage des entités fantômes") },
+						new String("Affichage des entites fantemes") },
 				{ "Ptidej UI Viewer Standalone::ViewerPanel::HELP_TEXT",
 						new String("Aide") },
 				{
@@ -1042,7 +1042,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{ "Ptidej UI Viewer Standalone::ViewerPanel::HIERARCHY_NAMES",
 						new String("Nom de la hierarchie") },
 				{ "Ptidej UI Viewer Standalone::ViewerPanel::METHOD_NAMES",
-						new String("Noms de méthode") },
+						new String("Noms de methode") },
 				{ "Ptidej UI Viewer Standalone::ViewerPanel::NO_PROJECT_TEXT",
 						new String("Pas de projet Ptidej") },
 				{ "Ptidej UI Viewer Standalone::ViewerPanel::PRINT_TEXT",
@@ -1053,7 +1053,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String("Noms des utilisations") },
 				{
 						"Ptidej UI Viewer Standalone::VisitorViewerPanel::FILE_DIALOG_SAVE_MODEL_TITLE",
-						new String("Sauvgarder le modèle vers...") },
+						new String("Sauvgarder le modele vers...") },
 
 				// *********** Ptidej UI Viewer ***********
 				{
@@ -1073,13 +1073,13 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R01_C05",
 						new String(
-							"by Yann-Gaël Guéhéneuc uses the PADL meta-model (Pattern and Abstract-level") },
+							"by Yann-GaÃ«l GuÃ©hÃ©neuc uses the PADL meta-model (Pattern and Abstract-level") },
 				{
 						"Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R01_C06",
 						new String(
 							"Description Language), extension of the PDL meta-model (Pattern Description Language)") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R01_C07",
-						new String("by Hervé Albin-Amiot.") },
+						new String("by Herve Albin-Amiot.") },
 				{
 						"Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R01_C08",
 						new String(
@@ -1091,19 +1091,19 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C01",
 						new String("Main developpers:") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C02",
-						new String("        - Yann-Gaël Guéhéneuc") },
+						new String("        - Yann-GaÃ«l GuÃ©hÃ©neuc") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C03",
-						new String("                Université de Montréal") },
+						new String("                Universite de Montreal") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C04",
-						new String("                École des Mines de Nantes") },
+						new String("                ecole des Mines de Nantes") },
 				{
 						"Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C05",
 						new String(
 							"                Object Technology International, Inc.") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C06",
-						new String("        - Hervé Albin-Amiot.") },
+						new String("        - Herve Albin-Amiot.") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C07",
-						new String("                École des Mines de Nantes") },
+						new String("                ecole des Mines de Nantes") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C08",
 						new String("                Softmaint S.A.") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C10",
@@ -1117,7 +1117,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C13",
 						new String("                Graduate, fall 2004") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C14",
-						new String("                Université de Montréal.") },
+						new String("                Universite de Montreal.") },
 				{
 						"Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C15",
 						new String("        - Lulzim Laloshi and Driton Salihu") },
@@ -1128,11 +1128,11 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String(
 							"                Undergraduates, summer 2004") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C18",
-						new String("                Université de Montréal.") },
+						new String("                Universite de Montreal.") },
 				{
 						"Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C19",
 						new String(
-							"        - Ward Flores and Sébastien Robidoux") },
+							"        - Ward Flores and Sebastien Robidoux") },
 				{
 						"Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C20",
 						new String(
@@ -1142,11 +1142,11 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String(
 							"                Undergraduates, summer 2004") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C22",
-						new String("                Université de Montréal.") },
+						new String("                Universite de Montreal.") },
 				{
 						"Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C23",
 						new String(
-							"        - Salime Bensemmane, Iyadh Sidhom, and Fayçal Skhiri") },
+							"        - Salime Bensemmane, Iyadh Sidhom, and Fayeal Skhiri") },
 				{
 						"Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C24",
 						new String(
@@ -1156,7 +1156,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						new String(
 							"                Undergraduates, summer 2004") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C26",
-						new String("                Université de Montréal.") },
+						new String("                Universite de Montreal.") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C27",
 						new String("        - Farouk Zaidi") },
 				{
@@ -1168,19 +1168,19 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C30",
 						new String(
-							"                Université de technologie Belfort-Montbéliard") },
+							"                Universite de technologie Belfort-Montbeliard") },
 				{
 						"Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C31",
 						new String(
-							"                Centre de Recherche en Informatique de Montréal") },
+							"                Centre de Recherche en Informatique de Montreal") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R02_C32",
-						new String("                Université de Montréal.") },
+						new String("                Universite de Montreal.") },
 				{
 						"Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R03_C01",
 						new String(
 							"The Ptidej tool suite, copyright (c) 2000-2004,") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R03_C02",
-						new String("Yann-Gaël Guéhéneuc.") },
+						new String("Yann-GaÃ«l GuÃ©hÃ©neuc.") },
 				{ "Ptidej UI Viewer::ProjectData::COPYRIGHT_MESSAGE_R03_C03",
 						new String("All right reserved.") },
 				{
@@ -1254,17 +1254,17 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej UI::InheritanceClusterLayout::Err_CALL_getDepth",
 						new String(
-							"La profondeur de DepthAwareEntity doit être calculée (computeDepth(Map)) avant l'appel à getDepth().") },
+							"La profondeur de DepthAwareEntity doit etre calculee (computeDepth(Map)) avant l'appel e getDepth().") },
 				{
 						"Ptidej UI::InheritanceDepthLayout::Err_CALL_getDepth",
 						new String(
-							"La profondeur de DepthAwareDEntity doit être calculée (computeDepth(Hashtable)) avant l'appel à getDepth().") },
+							"La profondeur de DepthAwareDEntity doit etre calculee (computeDepth(Hashtable)) avant l'appel e getDepth().") },
 
 				// *********** Ptidej ***********
 				{
 						"Ptidej::SolutionGenerator::UNKNOWN_PROBLEM_TYPE",
 						new String(
-							"SolutionGenerator: Type de problème inconnu.") },
+							"SolutionGenerator: Type de probleme inconnu.") },
 				{
 						"Ptidej::SolutionGenerator::UNKNOWN_SOLVER_ALGO",
 						new String(

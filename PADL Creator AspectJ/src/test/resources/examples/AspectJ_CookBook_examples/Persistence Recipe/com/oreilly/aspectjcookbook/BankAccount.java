@@ -25,7 +25,7 @@ public class BankAccount implements Account
       if (balance < value)
       {
          throw new InsufficientFundsException(
-               "Your available funds are £" + this.balance);
+               "Your available funds are e" + this.balance);
       }
       else
       {

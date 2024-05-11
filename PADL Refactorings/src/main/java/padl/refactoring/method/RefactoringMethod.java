@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.refactoring.method;
 
@@ -167,7 +167,7 @@ public class RefactoringMethod {
 
 							//					if (methodInvocation.getCalledMethod().equals(theMethodID)){
 							//						return true;
-							//    RESTE A BIEN VÉRIFIER
+							//    RESTE A BIEN VeRIFIER
 							//if (methodInvocation.getCalledMethod().equals(theMethodID)){
 
 							return true;
@@ -245,8 +245,8 @@ public class RefactoringMethod {
 	}
 
 	/**
-	 * Cette méthode permet de vérifier que newName n'existe pas dans une classe
-	 * en supportant la surcharge des méthodes
+	 * Cette methode permet de verifier que newName n'existe pas dans une classe
+	 * en supportant la surcharge des methodes
 	 */
 	public boolean doesNewMethodExistWithOverloading(
 		String anID,
@@ -267,8 +267,8 @@ public class RefactoringMethod {
 		return false;
 	}
 	/**
-	 * Cette méthode permet de vérifier que newName n'existe pas dans une classe
-	 * sans supporter la surcharge des méthodes
+	 * Cette methode permet de verifier que newName n'existe pas dans une classe
+	 * sans supporter la surcharge des methodes
 	 */
 
 	// private boolean doesNewMethodExist(
@@ -303,10 +303,10 @@ public class RefactoringMethod {
 	}
 
 	/**
-	 * cette méthode vérifie que le nouveau nom newName n'existe pas dans la
-	 * liste des classes de l'hiérarchie d'héritage passée en paramètre. Elle
-	 * retourne true si newName existe déjà et n'accepte pas la surcharge des
-	 * méthodes
+	 * cette methode verifie que le nouveau nom newName n'existe pas dans la
+	 * liste des classes de l'hierarchie d'heritage passee en parametre. Elle
+	 * retourne true si newName existe deje et n'accepte pas la surcharge des
+	 * methodes
 	 */
 
 	// private boolean doesNewMethodExist(
@@ -360,9 +360,9 @@ public class RefactoringMethod {
 	}
 
 	/**
-	 * cette méthode vérifie que le nouveau nom newName n'existe pas dans la
-	 * liste des classes de l'hiérarchie d'héritage passée en paramètre. Elle
-	 * retourne true si newName existe déjà et accepte la surcharge des méthodes
+	 * cette methode verifie que le nouveau nom newName n'existe pas dans la
+	 * liste des classes de l'hierarchie d'heritage passee en parametre. Elle
+	 * retourne true si newName existe deje et accepte la surcharge des methodes
 	 */
 
 	// private List doesNewMethodExistWithOverloading(

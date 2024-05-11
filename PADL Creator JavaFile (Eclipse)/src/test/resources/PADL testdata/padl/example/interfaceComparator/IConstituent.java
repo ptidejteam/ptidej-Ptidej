@@ -17,7 +17,7 @@ import padl.kernel.exception.ModelDeclarationException;
  *   temporary values, mainly it sets to null all the "clone"
  *   instance variable.
  * 
- * @author Yann-Gaël Guéhéneuc
+ * @author Yann-GaÃ«l GuÃ©hÃ©neuc
  */
 public interface IConstituent extends Cloneable, INavigable, Serializable {
 	void accept(final IVisitor aVisitor);

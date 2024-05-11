@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.creator.aspectjlst.util;
 
@@ -179,7 +179,6 @@ public class AspectWalker extends HierarchyWalker {
 
 		//		logger.debug("Method RType: " + it_method.getReturnType());
 
-		@SuppressWarnings("unchecked")
 		final Iterator<char[]> ite_param_type = node.getParameterTypes()
 				.iterator();
 		//	Iterator ite_param_name = node.getParameterNames().iterator();
@@ -264,7 +263,7 @@ public class AspectWalker extends HierarchyWalker {
 
 		if (kind.equals(IProgramElement.Kind.IMPORT_REFERENCE.toString())
 				&& !node.getName().equals("import declarations")) {
-			//Permet de sauvegarder les entités importées par les aspects afin d'y accéder plus facilement.
+			//Permet de sauvegarder les entites importees par les aspects afin d'y acceder plus facilement.
 			this.saveImportDeclaration(node);
 		}
 		if (kind.equals(IProgramElement.Kind.ASPECT.toString())) {
@@ -349,8 +348,8 @@ public class AspectWalker extends HierarchyWalker {
 
 	private void setITRelationShip(final IProgramElement node,
 			final IInterTypeElement it_element) {
+
 		//			Set Target
-		@SuppressWarnings("unchecked")
 		final List<IRelationship> relations = this.imap.get(node);
 
 		//		logger.debug("Extracting target for " + it_element.getName());
@@ -358,7 +357,6 @@ public class AspectWalker extends HierarchyWalker {
 		if (relations != null) {
 			//get handle
 			final IRelationship rel = (IRelationship) relations.get(0);
-			@SuppressWarnings("unchecked")
 			final List<String> targets = rel.getTargets();
 			final String handle = targets.get(0);
 

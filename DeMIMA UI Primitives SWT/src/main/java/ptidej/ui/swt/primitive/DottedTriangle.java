@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package ptidej.ui.swt.primitive;
 
@@ -83,23 +83,23 @@ public final class DottedTriangle extends Triangle implements
 
 		// now that we have the coordonates of the origin point in 
 		// the usuel base E = {i, j}
-		// and let § = the rotation angle
+		// and let e = the rotation angle
 		// 1- we determine this coordonates in the base S = {k, l}
-		// where 	k = cos § i + sin § j
-		// and 		l = cos (§+PI/2) i + sin (§+PI/2) j
+		// where 	k = cos e i + sin e j
+		// and 		l = cos (e+PI/2) i + sin (e+PI/2) j
 
 		// let 	 P = passage matrix from S to E
 		// and 	 Q =Passage matrix from E to S
 		// as P * Q = I : the identy matrix
 		// 				  _										     _
-		// so P = K x  |   -sin (§+PI/2)	 cos (§+PI/2)    |
-		//					 |_  sin §			 cos §			 _|
+		// so P = K x  |   -sin (e+PI/2)	 cos (e+PI/2)    |
+		//					 |_  sin e			 cos e			 _|
 
-		// K = 1/ (cos (§+PI/2) * sin § - sin (§+PI/2) * cos § )
+		// K = 1/ (cos (e+PI/2) * sin e - sin (e+PI/2) * cos e )
 
 		// 				  _										_
-		// and Q =	     |   cos §	 	cos (§+PI/2)    |
-		//					 |_  sin §		sin (§+PI/2)	_|
+		// and Q =	     |   cos e	 	cos (e+PI/2)    |
+		//					 |_  sin e		sin (e+PI/2)	_|
 
 		// test
 		//		this.rotationAngle = Math.PI / 4;

@@ -175,7 +175,6 @@ public final class FieldInfo {
 				new MutableCodeSegment(this.d_cp, codeattrinfo, false);
 			mutablecodesegment
 				.setInstructionFactory(new StringInstructionFactory());
-			@SuppressWarnings("unchecked")
 			final Vector<BaseInstruction> vector = mutablecodesegment.getInstructions();
 
 			if (vector.lastElement().toString().trim().equals("return")) {

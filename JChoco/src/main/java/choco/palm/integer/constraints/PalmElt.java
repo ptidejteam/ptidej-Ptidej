@@ -205,7 +205,7 @@ public class PalmElt extends AbstractPalmBinIntConstraint {
 			(Explanation) e.copy());
 
 		values = ((PalmIntVar) this.v0).getAllValues();
-		final int[] values2 = ((PalmIntVar) this.v1).getAllValues(); // TODO : remplacer par des itérateurs
+		final int[] values2 = ((PalmIntVar) this.v1).getAllValues(); // TODO : remplacer par des iterateurs
 		// propagate on holes
 		if (this.v1.hasEnumeratedDomain()) {
 			for (int i = 0; i < values2.length; i++) {

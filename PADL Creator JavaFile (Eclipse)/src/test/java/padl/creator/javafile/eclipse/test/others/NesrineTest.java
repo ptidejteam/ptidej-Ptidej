@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc  and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc  and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc  and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc  and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.creator.javafile.eclipse.test.others;
 
@@ -19,7 +19,6 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.ICreation;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IIdiomLevelModel;
-import util.io.Files;
 
 public class NesrineTest extends TestCase {
 	public NesrineTest(final String name) {
@@ -55,7 +54,7 @@ public class NesrineTest extends TestCase {
 	}
 	public void test2emeCas() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse)/target/test-classes/Nesrine's/2ème Cas/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/Nesrine's/2Ã¨me Cas/";
 		final String classPathEntry = "";
 
 		try {
@@ -77,7 +76,7 @@ public class NesrineTest extends TestCase {
 	}
 	public void test3emeCas() {
 		final String sourcePath =
-			"../PADL Creator JavaFile (Eclipse)/target/test-classes/Nesrine's/3ème Cas/";
+			"../PADL Creator JavaFile (Eclipse)/target/test-classes/Nesrine's/3Ã¨me Cas/";
 		final String classPathEntry = "";
 
 		try {

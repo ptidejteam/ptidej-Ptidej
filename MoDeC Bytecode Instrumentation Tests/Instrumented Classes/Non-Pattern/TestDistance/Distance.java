@@ -20,7 +20,7 @@ public class Distance
 	public void setArrivee(String depart) { this.arrivee = arrivee; }
 	public void setKm(int km) { this.km = km; }
 
-	// à compléter (equals(), toString())
+	// e completer (equals(), toString())
 
 	public boolean equals(Object autre)
 	{

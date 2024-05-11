@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc  and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc  and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc  and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc  and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.creator.classfile.relationship;
 
@@ -498,7 +498,7 @@ public class RelationshipAnalyzer {
 					RelationshipAnalyzer.MapOfIDsEntities);
 
 				// Yann 2012/03/23: New case!
-				// Ségla found out that in Lucene Core v3.0.3, the callee is
+				// Segla found out that in Lucene Core v3.0.3, the callee is
 				// actually "long[]", which leads to entityDeclaringMethod being
 				// null and thus break the code below...
 				if (entityDeclaringMethod != null) {

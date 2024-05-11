@@ -13,7 +13,7 @@ import choco.util.IntIterator;
 // *     for Research and Education                 *
 // **************************************************
 
-/* FileBinConjunction.java, last modified by François, 4 avr. 2004 */
+/* FileBinConjunction.java, last modified by Franeois, 4 avr. 2004 */
 /**
  * A class for Conjunctions (only used in subterms of Boolean formulae (c1 and c2)
  */

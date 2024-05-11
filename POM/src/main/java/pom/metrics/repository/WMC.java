@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package pom.metrics.repository;
 
@@ -37,8 +37,8 @@ public class WMC extends AbstractMetric implements IMetric, IUnaryMetric, IDepen
 		final IFirstClassEntity anEntity) {
 
 		// JYves 2006/02/24:
-		// weight initialisé à 0 car une classe sans aucune 
-		// méthodes (ni constructeur par défaut) a un WMC de 0.
+		// weight initialise e 0 car une classe sans aucune 
+		// methodes (ni constructeur par defaut) a un WMC de 0.
 		//		double weight = 1;
 		double weight = 0;
 

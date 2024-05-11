@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package ptidej.viewer.widget;
 
@@ -53,11 +53,11 @@ public class Frame extends JFrame {
 	}
 
 	/**
-	 * Si le frame reçoit une largeur et/ou hauteur supérieures à celles de la
-	 * résolution de l'écran, cette méthode les redéfinit pour qu'ils y soient
-	 * inférieures.
-	 * @param inTmpFrameWidth   la largeur passé en paramètre au constructeur
-	 * @param inTmpFrameHeight  la hauteur passé en paramètre au constructeur
+	 * Si le frame reeoit une largeur et/ou hauteur superieures e celles de la
+	 * resolution de l'ecran, cette methode les redefinit pour qu'ils y soient
+	 * inferieures.
+	 * @param inTmpFrameWidth   la largeur passe en parametre au constructeur
+	 * @param inTmpFrameHeight  la hauteur passe en parametre au constructeur
 	 */
 	private void checkAndMakeCentered(int inTmpFrameWidth, int inTmpFrameHeight) {
 		boolean boolTooBig = false;
@@ -82,10 +82,10 @@ public class Frame extends JFrame {
 			JOptionPane.showMessageDialog(
 				this,
 				"Pour une meilleur interface utilisateur,"
-						+ " veillez augmenter votre résolution d'écran"
-						+ "\nRésolution Actuelle :  " + this.screenSizeWidth
+						+ " veillez augmenter votre resolution d'ecran"
+						+ "\nResolution Actuelle :  " + this.screenSizeWidth
 						+ " par " + this.screenSizeHeight + " pixels."
-						+ "\nRésolution Minimale Préféré :  " + inTmpFrameWidth
+						+ "\nResolution Minimale Prefere :  " + inTmpFrameWidth
 						+ " par " + inTmpFrameHeight + " pixels.",
 				"Information",
 				JOptionPane.INFORMATION_MESSAGE);

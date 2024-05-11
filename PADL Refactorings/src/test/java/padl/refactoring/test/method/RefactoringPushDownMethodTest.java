@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.refactoring.test.method;
 
@@ -68,8 +68,8 @@ public class RefactoringPushDownMethodTest extends TestCase {
 							"padl.refactoring.test.method.data.PushDownMethod.classD"
 									.toCharArray());
 			if (superClass != null) {
-				System.out.println("-----­" + superClass.getDisplayName());
-				System.out.println("-----­" + method.getDisplayName());
+				System.out.println("-----e" + superClass.getDisplayName());
+				System.out.println("-----e" + method.getDisplayName());
 
 				final Iterator iterator = superClass
 						.getIteratorOnInheritingEntities();
@@ -80,9 +80,9 @@ public class RefactoringPushDownMethodTest extends TestCase {
 									"foo");
 					if (theMethod != null) {
 						System.out
-								.println("-----­" + theClass.getDisplayName());
+								.println("-----e" + theClass.getDisplayName());
 						System.out
-								.println("-----­" + theMethod.getDisplayName());
+								.println("-----e" + theMethod.getDisplayName());
 
 					}
 				}
@@ -94,8 +94,8 @@ public class RefactoringPushDownMethodTest extends TestCase {
 						"padl.refactoring.test.method.data.PushDownMethod.classD",
 						"foo");
 				if (aMethod != null) {
-					System.out.println("-----­" + aMethod.getDisplayName());
-					System.out.println("-----­" + superClass.getDisplayName());
+					System.out.println("-----e" + aMethod.getDisplayName());
+					System.out.println("-----e" + superClass.getDisplayName());
 				}
 				final Iterator iter = superClass
 						.getIteratorOnInheritingEntities();
@@ -106,9 +106,9 @@ public class RefactoringPushDownMethodTest extends TestCase {
 									"foo");
 					if (theMethod != null) {
 						System.out
-								.println("-----­" + theClass.getDisplayName());
+								.println("-----e" + theClass.getDisplayName());
 						System.out
-								.println("-----­" + theMethod.getDisplayName());
+								.println("-----e" + theMethod.getDisplayName());
 						Assert.assertEquals("Name of the new method pushdowned",
 								"foo", theMethod.getName());
 
@@ -135,8 +135,8 @@ public class RefactoringPushDownMethodTest extends TestCase {
 							"padl.refactoring.test.method.data.PushDownMethod.classD"
 									.toCharArray());
 			if (superClass != null) {
-				System.out.println("-----­" + superClass.getDisplayName());
-				System.out.println("-----­" + method.getDisplayName());
+				System.out.println("-----e" + superClass.getDisplayName());
+				System.out.println("-----e" + method.getDisplayName());
 
 				final Iterator iterator = superClass
 						.getIteratorOnInheritingEntities();
@@ -147,9 +147,9 @@ public class RefactoringPushDownMethodTest extends TestCase {
 									"fo");
 					if (theMethod != null) {
 						System.out
-								.println("-----­" + theClass.getDisplayName());
+								.println("-----e" + theClass.getDisplayName());
 						System.out
-								.println("-----­" + theMethod.getDisplayName());
+								.println("-----e" + theMethod.getDisplayName());
 
 					}
 				}
@@ -162,8 +162,8 @@ public class RefactoringPushDownMethodTest extends TestCase {
 						"padl.refactoring.test.method.data.PushDownMethod.classD",
 						"fo");
 				if (aMethod != null) {
-					System.out.println("-----­" + aMethod.getDisplayName());
-					System.out.println("-----­" + superClass.getDisplayName());
+					System.out.println("-----e" + aMethod.getDisplayName());
+					System.out.println("-----e" + superClass.getDisplayName());
 				}
 				final Iterator iter = superClass
 						.getIteratorOnInheritingEntities();
@@ -174,9 +174,9 @@ public class RefactoringPushDownMethodTest extends TestCase {
 									"fo");
 					if (theMethod != null) {
 						System.out
-								.println("-----­" + theClass.getDisplayName());
+								.println("-----e" + theClass.getDisplayName());
 						System.out
-								.println("-----­" + theMethod.getDisplayName());
+								.println("-----e" + theMethod.getDisplayName());
 						Assert.assertEquals("Name of the new method renamed",
 								"fo", theMethod.getName());
 
@@ -202,8 +202,8 @@ public class RefactoringPushDownMethodTest extends TestCase {
 							"padl.refactoring.test.method.data.PushDownMethod.classD"
 									.toCharArray());
 			if (superClass != null) {
-				System.out.println("-----­" + superClass.getDisplayName());
-				System.out.println("-----­" + method.getDisplayName());
+				System.out.println("-----e" + superClass.getDisplayName());
+				System.out.println("-----e" + method.getDisplayName());
 
 				final Iterator iterator = superClass
 						.getIteratorOnInheritingEntities();
@@ -214,9 +214,9 @@ public class RefactoringPushDownMethodTest extends TestCase {
 									"fo");
 					if (theMethod != null) {
 						System.out
-								.println("-----­" + theClass.getDisplayName());
+								.println("-----e" + theClass.getDisplayName());
 						System.out
-								.println("-----­" + theMethod.getDisplayName());
+								.println("-----e" + theMethod.getDisplayName());
 
 					}
 				}
@@ -228,8 +228,8 @@ public class RefactoringPushDownMethodTest extends TestCase {
 						"padl.refactoring.test.method.data.PushDownMethod.classD",
 						"fo");
 				if (aMethod != null) {
-					System.out.println("-----­" + aMethod.getDisplayName());
-					System.out.println("-----­" + superClass.getDisplayName());
+					System.out.println("-----e" + aMethod.getDisplayName());
+					System.out.println("-----e" + superClass.getDisplayName());
 				}
 				final Iterator iter = superClass
 						.getIteratorOnInheritingEntities();
@@ -240,9 +240,9 @@ public class RefactoringPushDownMethodTest extends TestCase {
 									"fo");
 					if (theMethod != null) {
 						System.out
-								.println("-----­" + theClass.getDisplayName());
+								.println("-----e" + theClass.getDisplayName());
 						System.out
-								.println("-----­" + theMethod.getDisplayName());
+								.println("-----e" + theMethod.getDisplayName());
 						Assert.assertEquals("Name of the new method renamed",
 								"fo", theMethod.getName());
 

@@ -14,7 +14,7 @@ import choco.util.IntIterator;
 // *     for Research and Education                 *
 // **************************************************
 
-/* FileEquiv.java, last modified by François, 4 avr. 2004 */
+/* FileEquiv.java, last modified by Franeois, 4 avr. 2004 */
 /**
  * A class for equivalences (c1 if and only if c2)
  */

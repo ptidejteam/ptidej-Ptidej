@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.micropattern.repository;
 
@@ -28,7 +28,7 @@ public final class OutlineDetection extends AbstractMicroPatternDetection
 	/*
 	 *  19. Outline. An Outline is an abstract class where two or more
 	 *	declared methods invoke at least one abstract methods of the current
-	 *	(“this”) object.
+	 *	(ethise) object.
 	 *	For example, the methods of java.io.Reader rely on the abstract
 	 *	method
 	 *	read(char ac[], int i, int j)

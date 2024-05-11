@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.serialiser.helper.eclipse.snapshots;
 
@@ -30,7 +30,7 @@ public class ModelsFromEclipseSnaphotsGenerator {
 
 		String snapshotsPath = "F:/Snapshots/Test/";
 
-		//Lire la liste des zips à analyser
+		//Lire la liste des zips e analyser
 		List zipsList = FilesUtils.getZipsList(snapshotsPath);
 
 		String serializationDirPath = "F:/Snapshots/Serialization/";
@@ -62,8 +62,8 @@ public class ModelsFromEclipseSnaphotsGenerator {
 
 				e.printStackTrace();
 			}
-			//processer pour ne garder que les fichiers java et .jar à la rigueur
-			//ne doit on pas cibler certains repertoires et éviter les repertoires exemples pour les tests
+			//processer pour ne garder que les fichiers java et .jar e la rigueur
+			//ne doit on pas cibler certains repertoires et eviter les repertoires exemples pour les tests
 
 			final Writer errorWriter =
 				new BufferedWriter(ProxyDisk.getInstance().fileAbsoluteOutput(
@@ -74,7 +74,7 @@ public class ModelsFromEclipseSnaphotsGenerator {
 			ProxyConsole.getInstance().setErrorOutput(errorWriter);
 			ProxyConsole.getInstance().setNormalOutput(normalWriter);
 
-			//créer le modèle avec le generateur de Yann
+			//creer le modele avec le generateur de Yann
 			IIdiomLevelModel idiomLevelModel =
 				ModelGenerator
 					.generateModelFromJavaFilesDirectoryUsingEclipse(untaredPath);
@@ -84,7 +84,7 @@ public class ModelsFromEclipseSnaphotsGenerator {
 						" (From Java Files, No Ghosts).classes)" });
 			ModelGeneratorCaller.output(idiomLevelModel, outputPath);
 
-			//serialiser le modèle
+			//serialiser le modele
 
 			String modelSerializedPath =
 				getString(new String[] { serializationDirPath, tarName });
@@ -94,7 +94,7 @@ public class ModelsFromEclipseSnaphotsGenerator {
 					idiomLevelModel,
 					modelSerializedPath);
 			System.out.println("serialization " + deserializedPath);
-			//deserializer le modèle et le comparer au modèle en cours
+			//deserializer le modele et le comparer au modele en cours
 			ICodeLevelModel idiomLevelModelDeserialized =
 				(ICodeLevelModel) PADLModelSerializer
 					.deserializeModel(deserializedPath);
@@ -107,12 +107,12 @@ public class ModelsFromEclipseSnaphotsGenerator {
 					+ idiomLevelModelDeserialized.getNumberOfTopLevelEntities()
 					+ " constituents"
 					+ idiomLevelModelDeserialized.getNumberOfConstituents());
-			//supprimer le repertoire dezippé
+			//supprimer le repertoire dezippe
 
 			//FilesUtils.deleteDir(new File(untaredPath));
 		}
 
-		//voir avec Yann s'il faut mettre cela dans une autre classe pour ne pas créer trop de liens avec d'autres projets
+		//voir avec Yann s'il faut mettre cela dans une autre classe pour ne pas creer trop de liens avec d'autres projets
 
 		//ne vaut il pas mieux faire une autre classe pour modelGeneratorfromjavafiles
 	}

@@ -155,7 +155,7 @@ public class JavaImport implements ModuleInterface, ImportInterface {
         case DESCRIPTION:
             return "This is a module for import from Java files.";
         case AUTHOR:
-            return "Marcus Andersson, Thomas Neustupny, Andreas Rückert";
+            return "Marcus Andersson, Thomas Neustupny, Andreas Reckert";
         case VERSION:
             return "1.0";
         default:

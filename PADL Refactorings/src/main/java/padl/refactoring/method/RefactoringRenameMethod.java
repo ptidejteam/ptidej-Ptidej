@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.refactoring.method;
 
@@ -36,8 +36,8 @@ public class RefactoringRenameMethod extends RefactoringMethod {
 	}
 
 	/**
-	 * Cette méthode permet de vérifier les pres conditions de renommer une
-	 * méthode dans sa classe de définition avec la surcharge de méthodes
+	 * Cette methode permet de verifier les pres conditions de renommer une
+	 * methode dans sa classe de definition avec la surcharge de methodes
 	 * 
 	 * @throws ModelDeclarationException
 	 */
@@ -55,8 +55,8 @@ public class RefactoringRenameMethod extends RefactoringMethod {
 	}
 
 	/**
-	 * Cette méthode permet de renommer une méthode dans sa classe de définition
-	 * sans la surcharge de méthodes
+	 * Cette methode permet de renommer une methode dans sa classe de definition
+	 * sans la surcharge de methodes
 	 */
 	public void renameMethod(
 		final String aClassName,
@@ -86,8 +86,8 @@ public class RefactoringRenameMethod extends RefactoringMethod {
 	}
 
 	/**
-	 * Cette méthode permet de vérifier les pres conditions de renommer une
-	 * méthode dans sa classe de définition avec la surcharge de méthodes
+	 * Cette methode permet de verifier les pres conditions de renommer une
+	 * methode dans sa classe de definition avec la surcharge de methodes
 	 */
 	private List checkPreConditionsOfRenameMethod(
 		final IClass aClass,
@@ -102,8 +102,8 @@ public class RefactoringRenameMethod extends RefactoringMethod {
 	}
 
 	/**
-	 * Cette méthode permet de renommer une méthode dans sa classe de définition
-	 * en acceptant la surcharge de méthodes
+	 * Cette methode permet de renommer une methode dans sa classe de definition
+	 * en acceptant la surcharge de methodes
 	 */
 	public void renameMethodAcceptOverloading(
 		final String aClassName,
@@ -137,8 +137,8 @@ public class RefactoringRenameMethod extends RefactoringMethod {
 	}
 
 	/**
-	 * Cette méthode permet de renommer une méthode et de la propager à la
-	 * hiérarchie d'héritage sans la surcharge de méthodes
+	 * Cette methode permet de renommer une methode et de la propager e la
+	 * hierarchie d'heritage sans la surcharge de methodes
 	 */
 	private void renameMethod(
 		final List list,
@@ -200,8 +200,8 @@ public class RefactoringRenameMethod extends RefactoringMethod {
 	}
 
 	/**
-	 * Cette méthode permet de renommer une méthode et de la propager à la
-	 * hiérarchie d'héritage sans la surcharge de méthodes
+	 * Cette methode permet de renommer une methode et de la propager e la
+	 * hierarchie d'heritage sans la surcharge de methodes
 	 * 
 	 * @throws ModelDeclarationException
 	 */
@@ -231,8 +231,8 @@ public class RefactoringRenameMethod extends RefactoringMethod {
 	}
 
 	/**
-	 * Cette méthode permet de renommer une méthode et de la propager à la
-	 * hiérarchie d'héritage en acceptant la surcharge de méthodes
+	 * Cette methode permet de renommer une methode et de la propager e la
+	 * hierarchie d'heritage en acceptant la surcharge de methodes
 	 * 
 	 * @throws ModelDeclarationException
 	 */
@@ -285,8 +285,8 @@ public class RefactoringRenameMethod extends RefactoringMethod {
 	}
 
 	/**
-	 * Cette méthode permet de renommer une méthode et de la propager aux
-	 * interfaces sans surcharge de méthodes
+	 * Cette methode permet de renommer une methode et de la propager aux
+	 * interfaces sans surcharge de methodes
 	 */
 	public void renameMethodWithPropagationToInterface(
 		final List list,
@@ -371,8 +371,8 @@ public class RefactoringRenameMethod extends RefactoringMethod {
 	}
 
 	/**
-	 * Cette méthode permet de renommer une méthode et de la propager aux
-	 * interfaces en acceptant la surcharge de méthodes
+	 * Cette methode permet de renommer une methode et de la propager aux
+	 * interfaces en acceptant la surcharge de methodes
 	 */
 	public void renameMethodWithPropagationToInterfaceAcceptOverloading(
 

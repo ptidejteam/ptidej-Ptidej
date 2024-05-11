@@ -20,10 +20,10 @@ public class TestDistances
 		throws IOException
 	{
 		FileReader fr = null; // initialiser pour Java
-		boolean existeFichier = true ; // à ajuster après
+		boolean existeFichier = true ; // e ajuster apres
 		Vector mesDistances = new Vector();
 
-		// essayer de LOCALISER le fichier à partir de son nom
+		// essayer de LOCALISER le fichier e partir de son nom
 		try {
 			fr = new FileReader (nomFichier) ;
 		}

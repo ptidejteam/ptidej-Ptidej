@@ -1,6 +1,6 @@
 /*
  * (c) Copyright 2003-2006 Jean-Yves Guyomarc'h,
- * University of Montréal.
+ * University of Montreal.
  * 
  * Use and copying of this software and preparation of derivative works
  * based upon this software are permitted. Any copy of this software or

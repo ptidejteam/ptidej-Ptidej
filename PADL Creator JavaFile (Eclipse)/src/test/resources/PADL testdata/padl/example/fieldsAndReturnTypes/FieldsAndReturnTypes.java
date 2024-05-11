@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Map;
 
 public abstract class FieldsAndReturnTypes {
-	// refaire mettre les même choses en return type, en type field et en param
-	// à faire demain matin inchaAllah et voir ce que donne le .class avec les
-	// mêmes données, les passer au comparateur...
+	// refaire mettre les meme choses en return type, en type field et en param
+	// e faire demain matin inchaAllah et voir ce que donne le .class avec les
+	// memes donnees, les passer au comparateur...
 
 	// Fields
 	int q;
@@ -41,7 +41,7 @@ public abstract class FieldsAndReturnTypes {
 
 	Map<String, String> map;
 
-	// voir le cas d'un member class comme type et comparé avec le resultat en
+	// voir le cas d'un member class comme type et compare avec le resultat en
 	// .class
 
 	// Return Types

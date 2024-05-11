@@ -1,6 +1,6 @@
 /*
- * (c) Copyright 2001-2004 Yann-Gaël Guéhéneuc,
- * University of Montréal.
+ * (c) Copyright 2001-2004 Yann-GaÃ«l GuÃ©hÃ©neuc,
+ * University of Montreal.
  * 
  * Use and copying of this software and preparation of derivative works
  * based upon this software are permitted. Any copy of this software or

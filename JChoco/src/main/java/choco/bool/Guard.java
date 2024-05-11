@@ -14,7 +14,7 @@ import choco.util.IntIterator;
 // *     for Research and Education                 *
 // **************************************************
 
-/* FileGuard.java, last modified by François, 4 avr. 2004 */
+/* FileGuard.java, last modified by Franeois, 4 avr. 2004 */
 
 /**
  * A class for implications (if (c1,c2)) propagated in a lazy way (nothing done until c1 proven true)

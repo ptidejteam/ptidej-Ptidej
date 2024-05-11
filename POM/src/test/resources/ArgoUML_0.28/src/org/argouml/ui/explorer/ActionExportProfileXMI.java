@@ -52,7 +52,7 @@ import org.argouml.util.ArgoFrame;
 /**
  * Exports the model of a selected profile as XMI
  *
- * @author Marcos Aurélio
+ * @author Marcos Aurelio
  */
 public class ActionExportProfileXMI extends AbstractAction {
 

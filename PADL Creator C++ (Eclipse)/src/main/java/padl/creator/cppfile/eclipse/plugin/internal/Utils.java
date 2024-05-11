@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.creator.cppfile.eclipse.plugin.internal;
 
@@ -613,7 +613,7 @@ public class Utils {
 	}
 	/**
 	 * Permet de savoir si une classe est abstraite ou non Pour savoir, en
-	 * C++ il suffit qu'une méthode soit déclaré virtuelle pur pour que la
+	 * C++ il suffit qu'une methode soit declare virtuelle pur pour que la
 	 * classe soit abstraite (non instantiable)
 	 * 
 	 * @param aCPPClass
@@ -621,15 +621,15 @@ public class Utils {
 	 * @return true si la classe est abstraite, false sinon.
 	 */
 	static Boolean isAbstract(final ICPPClassType aCPPClass) {
-		// On parcourt toutes les méthodes déclarées par la classe
+		// On parcourt toutes les methodes declarees par la classe
 		for (final ICPPMethod method : aCPPClass.getDeclaredMethods()) {
-			// Si une méthode est virtuelle pure on renvoie true
+			// Si une methode est virtuelle pure on renvoie true
 			if (method.isPureVirtual()) {
 				return true;
 			}
 		}
 
-		// Si on a rien trouvé c'est que la classe n'est pas abstraite !!
+		// Si on a rien trouve c'est que la classe n'est pas abstraite !!
 		return false;
 	}
 	static Boolean isContainerName(final char[] aName) {

@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.micropattern.repository;
 
@@ -25,10 +25,10 @@ public final class CobolLikeDetection extends AbstractMicroPatternDetection
 	}
 
 	/*
-	 *  7. Cobol like. Formally, the Cobol like micro pattern is deï¬?ned by
+	 *  7. Cobol like. Formally, the Cobol like micro pattern is dee?ned by
 	 *	the requirement that a class has a single static method, one or more
 	 *	static variables, and no instance methods or fields. This particular
-	 *	programming style makes a signiï¬?cant deviation from the object
+	 *	programming style makes a signie?cant deviation from the object
 	 *	oriented paradigm. Although the prevalence of this pattern is van-
 	 *	ishingly small, instances can be found even in mature libraries.
 	 *	Beginner programmers may tend to use Cobol like for their main

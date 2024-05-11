@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.micropattern.repository;
 
@@ -29,7 +29,7 @@ public final class TraitDetection extends AbstractMicroPatternDetection
 	 *	state. Specifically, a Trait class must have no instance fields, and at
 	 *	least one abstract method.
 	 *	
-	 *	The term Trait follows the traits modules of Sch¨arli, Ducasse,
+	 *	The term Trait follows the traits modules of Schearli, Ducasse,
 	 *	Nierstrasz and Black [38]. A trait module, found in e.g., the
 	 *	SCALA [35] programming language, is a collection of implemented
 	 *	methods, but with no underlying state.

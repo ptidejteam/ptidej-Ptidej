@@ -41,6 +41,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
+
 import jct.kernel.Constants;
 import jct.kernel.IJCTClass;
 import jct.kernel.IJCTComment;
@@ -95,17 +96,15 @@ class JCTCompilationUnit extends JCTSourceCodePart<IJCTSourceCodePart>
 		super(aRootNode, sourceFile.getAbsolutePath());
 		this.sourceFile = sourceFile;
 		super.backpatchElements(new IndirectCollection<IJCTSourceCodePart>(
-			this.importeds,
-			this.clazzs,
-			this.comments));
+				this.importeds, this.clazzs, this.comments));
 	}
 
 	/**
 	 * Returns whether the compilation unit is a {@literal package-info.java} file
 	 */
 	public boolean isPackageDeclaration() {
-		return this.sourceFile.getName().equals(
-			Constants.PACKAGE_DECLARATION_FILENAME);
+		return this.sourceFile.getName()
+				.equals(Constants.PACKAGE_DECLARATION_FILENAME);
 	}
 
 	/**
@@ -209,11 +208,9 @@ class JCTCompilationUnit extends JCTSourceCodePart<IJCTSourceCodePart>
 
 	@Override
 	public String getSourceCode() {
-		StringWriter w = null;
+		final StringWriter w = new StringWriter();
 		try {
-			w =
-				new StringWriter()
-					.append(this.getSourceFile().getPath())
+			w.append(this.getSourceFile().getPath())
 					.append(new String(Character.toChars(0x00))); // NULL control character
 			final String s = this.getSourceCode(w).toString();
 			return s;
@@ -224,7 +221,8 @@ class JCTCompilationUnit extends JCTSourceCodePart<IJCTSourceCodePart>
 		finally {
 			try {
 				w.close();
-			} catch (final IOException e) {
+			}
+			catch (final IOException e) {
 				e.printStackTrace();
 			}
 		}
@@ -235,12 +233,13 @@ class JCTCompilationUnit extends JCTSourceCodePart<IJCTSourceCodePart>
 		if (null != p && !p.isUnnamed())
 			aWriter.append("package " + p.getName() + ";\n");
 
-		final SortedSet<IJCTImport> is =
-			new TreeSet<IJCTImport>(new Comparator<IJCTImport>() {
-				public int compare(final IJCTImport o1, final IJCTImport o2) {
-					return o1.toString().compareTo(o2.toString());
-				}
-			});
+		final SortedSet<IJCTImport> is = new TreeSet<IJCTImport>(
+				new Comparator<IJCTImport>() {
+					public int compare(final IJCTImport o1,
+							final IJCTImport o2) {
+						return o1.toString().compareTo(o2.toString());
+					}
+				});
 		is.addAll(this.getImporteds());
 
 		for (final IJCTImport i : is)
@@ -255,7 +254,7 @@ class JCTCompilationUnit extends JCTSourceCodePart<IJCTSourceCodePart>
 	@Override
 	public void setStoredSourceCodeLength(final Integer length) {
 		throw new UnsupportedOperationException(
-			"A compilation unit is not pre-calculated");
+				"A compilation unit is not pre-calculated");
 	}
 
 	@Override
@@ -269,7 +268,7 @@ class JCTCompilationUnit extends JCTSourceCodePart<IJCTSourceCodePart>
 	@Override
 	public void setStoredSourceCodeOffset(final Integer offset) {
 		throw new UnsupportedOperationException(
-			"A compilation unit is always at offset 0");
+				"A compilation unit is always at offset 0");
 	}
 
 	@Override
@@ -280,18 +279,18 @@ class JCTCompilationUnit extends JCTSourceCodePart<IJCTSourceCodePart>
 
 	@Override
 	public Integer getStoredSourceCodeOffset(
-		final IJCTSourceCodePart enclosingElement) {
+			final IJCTSourceCodePart enclosingElement) {
 		if (this != enclosingElement)
 			throw new IllegalArgumentException(
-				"enclosingElement must be an Enclosing Element of this");
+					"enclosingElement must be an Enclosing Element of this");
 
 		return this.getStoredSourceCodeOffset();
 	}
 
 	@Override
 	public String getStoredSourceCode() {
-		return null == this.storedSourceCode ? null : this.storedSourceCode
-			.toString();
+		return null == this.storedSourceCode ? null
+				: this.storedSourceCode.toString();
 	}
 
 	@Override
@@ -299,24 +298,24 @@ class JCTCompilationUnit extends JCTSourceCodePart<IJCTSourceCodePart>
 		this.storedSourceCode = new StringBuffer(storedSourceCode);
 	}
 
-	protected void updateStoredSourceCode(
-		final JCTSourceCodePart part,
-		final String storedSourceCode) {
+	protected void updateStoredSourceCode(final JCTSourceCodePart part,
+			final String storedSourceCode) {
 		if (null == this.storedSourceCode)
 			throw new IllegalStateException(
-				"Impossible to replace a part of Stored Source Code if there is no SSC.");
+					"Impossible to replace a part of Stored Source Code if there is no SSC.");
 
 		final int absoluteOffset = part.getStoredSourceCodeOffset(this);
 
-		this.storedSourceCode.replace(absoluteOffset, absoluteOffset
-				+ part.getStoredSourceCodeLength(), storedSourceCode);
+		this.storedSourceCode.replace(absoluteOffset,
+				absoluteOffset + part.getStoredSourceCodeLength(),
+				storedSourceCode);
 
-		final int delta =
-			storedSourceCode.length() - part.getStoredSourceCodeLength();
+		final int delta = storedSourceCode.length()
+				- part.getStoredSourceCodeLength();
 
 		if (delta != 0)
 			for (final IJCTSourceCodePart enclosingPart : this
-				.getEnclosedElements()) {
+					.getEnclosedElements()) {
 				if (!(enclosingPart instanceof JCTSourceCodePart)
 						|| null == enclosingPart.getStoredSourceCodeOffset())
 					continue;

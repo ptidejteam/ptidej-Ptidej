@@ -6,7 +6,7 @@
 // *     for Research and Education                 *
 // **************************************************
 
-/* File choco.test.search.TestSuite.java, last modified by Francois 3 déc. 2003 00:01:54 */
+/* File choco.test.search.TestSuite.java, last modified by Francois 3 dec. 2003 00:01:54 */
 package choco.test.search;
 
 import java.util.logging.Logger;

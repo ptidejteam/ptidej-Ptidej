@@ -110,7 +110,7 @@ public class PathComparator implements Comparator {
     /*
      * Compare path of two elements in reverse order (inner to outer)
      * using a primary strength text collator. 
-     * This will collate e, E, é, É together, but not eliminate non-identical
+     * This will collate e, E, e, e together, but not eliminate non-identical
      * strings which collate in the same place.
      * 
      * @return equivalent of list1.compareTo(list2)

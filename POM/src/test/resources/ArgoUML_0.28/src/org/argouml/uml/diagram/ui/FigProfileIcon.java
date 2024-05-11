@@ -34,7 +34,7 @@ import org.tigris.gef.presentation.FigText;
  * This FigNode displays the image and the name of a classifier with an
  * stereotype that provides an icon.
  *
- * @author Marcos Aurélio
+ * @author Marcos Aurelio
  */
 public class FigProfileIcon extends FigNode {
 

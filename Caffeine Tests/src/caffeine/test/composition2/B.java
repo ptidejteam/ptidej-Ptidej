@@ -1,6 +1,6 @@
 /*
- * (c) Copyright 2002-2003 Yann-Gaël Guéhéneuc,
- * École des Mines de Nantes and Object Technology International, Inc.
+ * (c) Copyright 2002-2003 Yann-GaÃ«l GuÃ©hÃ©neuc,
+ * ecole des Mines de Nantes and Object Technology International, Inc.
  * 
  * Use and copying of this software and preparation of derivative works
  * based upon this software are permitted. Any copy of this software or
@@ -21,7 +21,6 @@
 package caffeine.test.composition2;
 
 public final class B {
-	@SuppressWarnings("deprecation")
 	protected void finalize() throws Throwable {
 		super.finalize();
 		System.out.println("Instance of class B finalized.");

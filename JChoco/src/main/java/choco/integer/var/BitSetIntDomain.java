@@ -8,7 +8,7 @@ import choco.util.IntIterator;
 /**
  * Created by IntelliJ IDEA.
  * User: hcambaza
- * Date: 8 déc. 2003
+ * Date: 8 dec. 2003
  * Time: 16:14:56
  * To change this template use Options | File Templates.
  */

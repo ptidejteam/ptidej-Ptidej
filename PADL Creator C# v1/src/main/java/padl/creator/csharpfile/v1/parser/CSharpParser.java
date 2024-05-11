@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 // $ANTLR 3.1.3 Mar 18, 2009 10:09:25 ../rsc/CSharp.g3 2009-09-02 16:20:06
 
@@ -48,8 +48,6 @@ import padl.kernel.IInterface;
 import padl.kernel.IMethod;
 import padl.kernel.IParameter;
 import padl.kernel.exception.ModelDeclarationException;
-import util.io.Files;
-import util.io.Files;
 import util.io.ProxyConsole;
 import util.lang.Modifier;
 //import padl.kernel.IDestructor;
@@ -88,7 +86,7 @@ import util.lang.Modifier;
  * This file has been modified to connect the C# grammar to the PADL meta-model
  * for the PTIDEJ tool (http://www.yann-gael.gueheneuc.net/Work/Info/).
  *
- * Author: Gerardo Cepeda Porras, Université de Montréal; gerardocepeda@gmail.com
+ * Author: Gerardo Cepeda Porras, Universite de Montreal; gerardocepeda@gmail.com
  *
  * Date: April 2009
  */

@@ -10,7 +10,6 @@ import padl.kernel.ICodeLevelModelCreator;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
 import padl.visitor.IWalker;
-import util.io.Files;
 
 public class JNIGlobalFunction extends TestCase {
 	protected void setUp() throws Exception {

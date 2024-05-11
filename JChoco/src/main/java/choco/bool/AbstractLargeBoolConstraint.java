@@ -14,7 +14,7 @@ import choco.util.BitSet;
 // *     for Research and Education                 *
 // **************************************************
 
-/* FileAbstractLargeBoolConstraint.java, last modified by François, 28 mars 2004 */
+/* FileAbstractLargeBoolConstraint.java, last modified by Franeois, 28 mars 2004 */
 
 /**
  * An abstract class for Boolean composition of more than two constraints

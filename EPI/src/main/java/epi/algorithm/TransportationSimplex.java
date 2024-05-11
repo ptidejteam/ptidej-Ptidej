@@ -12,7 +12,7 @@
  
    PROGRAMMED ON OCT 29, 1984 
    LAST REVISED ON JAN 13, 2000 
-   MODIFIED by Yann-Gaël Guéhéneuc 
+   MODIFIED by Yann-GaÃ«l GuÃ©hÃ©neuc 
    TO BE CALLED FROM THE EPI FRAMEWORK
  -----------------------------------------------*/
 

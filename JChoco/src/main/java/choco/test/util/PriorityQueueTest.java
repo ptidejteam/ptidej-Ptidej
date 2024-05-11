@@ -7,7 +7,7 @@
  * --------------------------------------------------
  *
  * file: choco.test.util.PriorityQueueTest.java
- * last modified by Francois 28 août 2003:14:59:09
+ * last modified by Francois 28 aoet 2003:14:59:09
  */
 package choco.test.util;
 

@@ -1,12 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+ * Copyright (c) 2001-2014 Yann-GaÃ«l GuÃ©hÃ©neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-GaÃ«l GuÃ©hÃ©neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package padl.refactoring.method;
 
@@ -30,8 +30,8 @@ public class RefactoringMoveMethod extends RefactoringMethod {
 	}
 
 	/**
-	 * Cette méthode permet de vérifier les pres conditions de Move Method sans
-	 * la surcharge de méthodes
+	 * Cette methode permet de verifier les pres conditions de Move Method sans
+	 * la surcharge de methodes
 	 * @throws ModelDeclarationException 
 	 * @throws ModelDeclarationException 
 	 */
@@ -51,7 +51,7 @@ public class RefactoringMoveMethod extends RefactoringMethod {
 				theMethod.getDisplayID(),
 				sourceClass)) {
 
-				// si la méthode est final il faut tester que le nom de la méthode ne doit pas exister dans les
+				// si la methode est final il faut tester que le nom de la methode ne doit pas exister dans les
 				// sous classes de la classe de destination.
 				if (theMethod.isFinal()) {
 					final List listOfSubClasses =
@@ -68,8 +68,8 @@ public class RefactoringMoveMethod extends RefactoringMethod {
 
 				}
 				else // !(theMethod.isFinal())
-				// si la méthode n'est pas final il faut s'assurer qu'aucune méthode dans les super classes de la classe
-				//  de destination ne doit avoir le meme non avec une visibilité final.
+				// si la methode n'est pas final il faut s'assurer qu'aucune methode dans les super classes de la classe
+				//  de destination ne doit avoir le meme non avec une visibilite final.
 				{
 					List listOfSuperClasses =
 						this.doesNewMethodExist(
@@ -143,8 +143,8 @@ public class RefactoringMoveMethod extends RefactoringMethod {
 		}
 	}
 	/**
-	 * Cette méthode permet de vérifier les pres conditions de Move Method avec
-	 * la surcharge de méthodes
+	 * Cette methode permet de verifier les pres conditions de Move Method avec
+	 * la surcharge de methodes
 	 * @throws ModelDeclarationException 
 	 * @throws ModelDeclarationException 
 	 */
@@ -166,7 +166,7 @@ public class RefactoringMoveMethod extends RefactoringMethod {
 				theMethod.getDisplayID(),
 				sourceClass)) {
 
-				// si la méthode est final il faut tester que le nom de la méthode ne doit pas exister dans les
+				// si la methode est final il faut tester que le nom de la methode ne doit pas exister dans les
 				// sous classes de la classe de destination.
 				if (theMethod.isFinal()) {
 					final List listOfSubClasses =
@@ -183,8 +183,8 @@ public class RefactoringMoveMethod extends RefactoringMethod {
 
 				}
 				else // !(theMethod.isFinal())
-				// si la méthode n'est pas final il faut s'assurer qu'aucune méthode dans les super classes de la classe
-				//  de destination ne doit avoir le meme non avec une visibilité final.
+				// si la methode n'est pas final il faut s'assurer qu'aucune methode dans les super classes de la classe
+				//  de destination ne doit avoir le meme non avec une visibilite final.
 				{
 					List listOfSuperClasses =
 						this.doesNewMethodExistWithOverloading(
