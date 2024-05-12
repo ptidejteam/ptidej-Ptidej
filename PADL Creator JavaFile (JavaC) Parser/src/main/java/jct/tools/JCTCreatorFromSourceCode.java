@@ -30,16 +30,18 @@
  */
 
 package jct.tools;
- 
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -389,6 +391,8 @@ public class JCTCreatorFromSourceCode
 		return JCTRootNode;
 	}
 
+	private final StringBuffer errorMessage = new StringBuffer();
+
 	private final boolean extractActualSourceCode;
 	private final IJCTRootNode rootNode;
 	private final IJCTFactory factory;
@@ -403,6 +407,7 @@ public class JCTCreatorFromSourceCode
 	private final Map<Element, IJCTIdentifiable> identifiables = new HashMap<Element, IJCTIdentifiable>();
 
 	private final Set<CompilationUnitTree> cus;
+	private final List<String> errorMessages = new ArrayList<>();
 
 	protected JCTCreatorFromSourceCode(final IJCTRootNode root,
 			final JavacElements elements, final JavacTrees trees,
@@ -989,11 +994,17 @@ public class JCTCreatorFromSourceCode
 						JCTModifiers.valueOf(mod.toString().toUpperCase()));
 			}
 			catch (final IllegalArgumentException iae) {
-				ProxyConsole.getInstance().errorOutput()
-						.print(this.getClass().getName());
-				ProxyConsole.getInstance().errorOutput()
-						.print(" must handle modifier: ");
-				ProxyConsole.getInstance().errorOutput().println(mod);
+				this.errorMessage.setLength(0);
+				this.errorMessage.append(this.getClass().getName());
+				this.errorMessage.append(" must handle modifier: ");
+				this.errorMessage.append(mod);
+
+				if (!this.errorMessages
+						.contains(this.errorMessage.toString())) {
+					this.errorMessages.add(this.errorMessage.toString());
+					ProxyConsole.getInstance().errorOutput()
+							.println(this.errorMessage);
+				}
 			}
 
 		if (null != e.asType()) {
@@ -1693,11 +1704,17 @@ public class JCTCreatorFromSourceCode
 						JCTModifiers.valueOf(mod.toString().toUpperCase()));
 			}
 			catch (final IllegalArgumentException iae) {
-				ProxyConsole.getInstance().errorOutput()
-						.print(this.getClass().getName());
-				ProxyConsole.getInstance().errorOutput()
-						.print(" must handle modifier: ");
-				ProxyConsole.getInstance().errorOutput().println(mod);
+				this.errorMessage.setLength(0);
+				this.errorMessage.append(this.getClass().getName());
+				this.errorMessage.append(" must handle modifier: ");
+				this.errorMessage.append(mod);
+
+				if (!this.errorMessages
+						.contains(this.errorMessage.toString())) {
+					this.errorMessages.add(this.errorMessage.toString());
+					ProxyConsole.getInstance().errorOutput()
+							.println(this.errorMessage);
+				}
 			}
 
 		if (null != e.getSuperclass()
@@ -1716,14 +1733,14 @@ public class JCTCreatorFromSourceCode
 
 		for (final Element anElement : e.getEnclosedElements()) {
 			final IJCTElement aJCTElement = anElement.accept(this, p);
-			
+
 			// Yann 24/04/15: JDK 22
 			// Now, with the JDK 22, aJCTElement may be null.
 			// TODO Should it allowed to be null?
 			if (aJCTElement == null) {
 				continue;
 			}
-			
+
 			switch (aJCTElement.getKind()) {
 			case CLASS:
 			case METHOD:

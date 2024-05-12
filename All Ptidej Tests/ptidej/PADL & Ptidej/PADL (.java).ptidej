@@ -1,0 +1,3 @@
+[Ptidej Project]
+Name = PADL
+JavaSourcefilesIdiomModel = ../../../PADL/src/main/java/;../../../PADL/src/main/java/padl/kernel/IAbstractModel.java;../../../PADL/src/main/java/padl/kernel/IAbstractLevelModel.java;../../../PADL/src/main/java/padl/kernel/ICodeLevelModel.java;../../../PADL/src/main/java/padl/kernel/IIdiomLevelModel.java;

@@ -16,7 +16,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 // import padl.cpp.kernel.impl.CPPFactoryEclipse;
@@ -34,10 +36,8 @@ import util.io.ProxyConsole;
 public final class ModelGenerator {
 	private static final String OUTPUT = "kind=\"output\" path=\"";
 
-	private static void extractFilesFromDir(
-		final String aPath,
-		final String anExtension,
-		final List aListOfFiles) {
+	private static void extractFilesFromDir(final String aPath,
+			final String anExtension, final List aListOfFiles) {
 
 		final File pathFile = new File(aPath);
 		final String[] subPaths = pathFile.list();
@@ -46,10 +46,8 @@ public final class ModelGenerator {
 				final String fileName = aPath + '/' + subPaths[i];
 				final File file = new File(fileName);
 				if (file.isDirectory()) {
-					ModelGenerator.extractFilesFromDir(
-						fileName,
-						anExtension,
-						aListOfFiles);
+					ModelGenerator.extractFilesFromDir(fileName, anExtension,
+							aListOfFiles);
 				}
 				else {
 					if (// fileName.indexOf("org.eclipse.") > 0 && 
@@ -61,18 +59,18 @@ public final class ModelGenerator {
 		}
 		else {
 			throw new RuntimeException(new CreationException(
-				"No subdirectories with JAR files in " + aPath));
+					"No subdirectories with JAR files in " + aPath));
 		}
 	}
+
 	private static IIdiomLevelModel finishModelCreation(
-		final ICodeLevelModel aCodeLevelModel) {
+			final ICodeLevelModel aCodeLevelModel) {
 
 		// TODO Annotate the model with LOC and conditionals?
 
 		IIdiomLevelModel idiomLevelModel = null;
 		try {
-			idiomLevelModel =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+			idiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(aCodeLevelModel);
 		}
 		catch (final UnsupportedSourceModelException e) {
@@ -80,32 +78,28 @@ public final class ModelGenerator {
 		}
 		return idiomLevelModel;
 	}
+
 	public static ICodeLevelModel generateModelFromAOLCodeFile(
-		final String aName,
-		String anAOLFile,
-		final IModelListener aModelListener) {
+			final String aName, String anAOLFile,
+			final IModelListener aModelListener) {
 
-		return ModelGenerator.generateModelFromAOLCodeFiles(
-			aName,
-			new String[] { anAOLFile },
-			aModelListener);
+		return ModelGenerator.generateModelFromAOLCodeFiles(aName,
+				new String[] { anAOLFile }, aModelListener);
 	}
-	public static ICodeLevelModel generateModelFromAOLCodeFiles(
-		final String aName,
-		final String[] someAOLFiles) {
 
-		return ModelGenerator.generateModelFromAOLCodeFiles(
-			aName,
-			someAOLFiles,
-			null);
+	public static ICodeLevelModel generateModelFromAOLCodeFiles(
+			final String aName, final String[] someAOLFiles) {
+
+		return ModelGenerator.generateModelFromAOLCodeFiles(aName, someAOLFiles,
+				null);
 	}
-	public static ICodeLevelModel generateModelFromAOLCodeFiles(
-		final String aName,
-		final String[] someAOLFiles,
-		final IModelListener aModelListener) {
 
-		final ICodeLevelModel codeLevelModel =
-			Factory.getInstance().createCodeLevelModel(aName);
+	public static ICodeLevelModel generateModelFromAOLCodeFiles(
+			final String aName, final String[] someAOLFiles,
+			final IModelListener aModelListener) {
+
+		final ICodeLevelModel codeLevelModel = Factory.getInstance()
+				.createCodeLevelModel(aName);
 		if (aModelListener != null) {
 			codeLevelModel.addModelListener(aModelListener);
 		}
@@ -117,20 +111,19 @@ public final class ModelGenerator {
 		padl.statement.creator.aol.ModelAnnotator annotator;
 		ICodeLevelModel annotatedCodeLevelModel = null;
 		try {
-			annotator =
-				new padl.statement.creator.aol.ConditionalModelAnnotator(
+			annotator = new padl.statement.creator.aol.ConditionalModelAnnotator(
 					someAOLFiles);
-			annotatedCodeLevelModel =
-				(ICodeLevelModel) annotator.invoke(codeLevelModel);
+			annotatedCodeLevelModel = (ICodeLevelModel) annotator
+					.invoke(codeLevelModel);
 		}
 		catch (final UnsupportedSourceModelException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 		try {
-			annotator =
-				new padl.statement.creator.aol.LOCModelAnnotator(someAOLFiles);
-			annotatedCodeLevelModel =
-				(ICodeLevelModel) annotator.invoke(annotatedCodeLevelModel);
+			annotator = new padl.statement.creator.aol.LOCModelAnnotator(
+					someAOLFiles);
+			annotatedCodeLevelModel = (ICodeLevelModel) annotator
+					.invoke(annotatedCodeLevelModel);
 		}
 		catch (final UnsupportedSourceModelException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
@@ -138,31 +131,25 @@ public final class ModelGenerator {
 
 		return codeLevelModel;
 	}
-	public static IIdiomLevelModel generateModelFromAOLDesignFiles(
-		final String aName,
-		final String[] someAOLFiles) {
 
-		return ModelGenerator.generateModelFromAOLDesignFiles(
-			aName,
-			someAOLFiles,
-			null);
+	public static IIdiomLevelModel generateModelFromAOLDesignFiles(
+			final String aName, final String[] someAOLFiles) {
+
+		return ModelGenerator.generateModelFromAOLDesignFiles(aName,
+				someAOLFiles, null);
 	}
 
 	public static IIdiomLevelModel generateModelFromAOLDesignFiles(
-		final String aName,
-		final String[] someAOLFiles,
-		final IModelListener aModelListener) {
+			final String aName, final String[] someAOLFiles,
+			final IModelListener aModelListener) {
 
-		final ICodeLevelModel codeLevelModel =
-			ModelGenerator.generateModelFromAOLCodeFiles(
-				aName,
-				someAOLFiles,
-				aModelListener);
+		final ICodeLevelModel codeLevelModel = ModelGenerator
+				.generateModelFromAOLCodeFiles(aName, someAOLFiles,
+						aModelListener);
 
 		IIdiomLevelModel idiomLevelModel = null;
 		try {
-			idiomLevelModel =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+			idiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(codeLevelModel);
 		}
 		catch (final UnsupportedSourceModelException e) {
@@ -170,86 +157,77 @@ public final class ModelGenerator {
 		}
 		return idiomLevelModel;
 	}
+
 	public static IIdiomLevelModel generateModelFromAspectJLSTFiles(
-		final String aName,
-		final String[] someAspectJLSTFiles) {
+			final String aName, final String[] someAspectJLSTFiles) {
 
 		throw new RuntimeException(new CreationException(
-			"Version collision between aspectj.jar and other OSGi uses"));
+				"Version collision between aspectj.jar and other OSGi uses"));
 	}
-	public static IIdiomLevelModel generateModelFromClassFilesDirectories(
-		final String aName,
-		final String aPath,
-		final IModelListener aModelListener) {
 
-		return ModelGenerator.generateModelFromClassFilesDirectories(
-			aName,
-			new String[] { aPath },
-			aModelListener);
-	}
 	public static IIdiomLevelModel generateModelFromClassFilesDirectories(
-		final String aName,
-		final String[] someSources) {
+			final String aName, final String aPath,
+			final IModelListener aModelListener) {
 
-		return ModelGenerator.generateModelFromClassFilesDirectories(
-			aName,
-			someSources,
-			null);
+		return ModelGenerator.generateModelFromClassFilesDirectories(aName,
+				new String[] { aPath }, aModelListener);
 	}
+
 	public static IIdiomLevelModel generateModelFromClassFilesDirectories(
-		final String aName,
-		final String[] someSources,
-		final IModelListener aModelListener) {
+			final String aName, final String[] someSources) {
+
+		return ModelGenerator.generateModelFromClassFilesDirectories(aName,
+				someSources, null);
+	}
+
+	public static IIdiomLevelModel generateModelFromClassFilesDirectories(
+			final String aName, final String[] someSources,
+			final IModelListener aModelListener) {
 
 		return ModelGenerator.generateModelFromDirectories(
-			new CompleteClassFileCreator(someSources, true),
-			aName,
-			someSources,
-			aModelListener);
+				new CompleteClassFileCreator(someSources, true), aName,
+				someSources, aModelListener);
 	}
+
 	public static IIdiomLevelModel generateModelFromClassFilesDirectories(
-		final String[] someSources) {
+			final String[] someSources) {
 
 		return ModelGenerator.generateModelFromDirectories(
-			new CompleteClassFileCreator(someSources, true),
-			someSources);
+				new CompleteClassFileCreator(someSources, true), someSources);
 	}
+
 	public static IIdiomLevelModel generateModelFromClassFilesDirectory(
-		final String aPath) {
+			final String aPath) {
 
 		return ModelGenerator.generateModelFromDirectory(
-			new CompleteClassFileCreator(new String[] { aPath }, true),
-			aPath);
+				new CompleteClassFileCreator(new String[] { aPath }, true),
+				aPath);
 	}
-	public static IIdiomLevelModel generateModelFromClassFilesDirectory(
-		final String aName,
-		final String aPath) {
 
-		return ModelGenerator.generateModelFromClassFilesDirectory(
-			aName,
-			aPath,
-			null);
-	}
 	public static IIdiomLevelModel generateModelFromClassFilesDirectory(
-		final String aName,
-		final String aPath,
-		final IModelListener aModelListener) {
+			final String aName, final String aPath) {
+
+		return ModelGenerator.generateModelFromClassFilesDirectory(aName, aPath,
+				null);
+	}
+
+	public static IIdiomLevelModel generateModelFromClassFilesDirectory(
+			final String aName, final String aPath,
+			final IModelListener aModelListener) {
 
 		return ModelGenerator.generateModelFromDirectory(
-			new CompleteClassFileCreator(new String[] { aPath }, true),
-			aName,
-			aPath,
-			aModelListener);
+				new CompleteClassFileCreator(new String[] { aPath }, true),
+				aName, aPath, aModelListener);
 	}
+
 	public static IIdiomLevelModel generateModelFromCppFilesUsingANTLR(
-		final String aName,
-		final String[] fileNames,
-		final IModelListener aModelListener) {
+			final String aName, final String[] fileNames,
+			final IModelListener aModelListener) {
 
 		ICodeLevelModel codeLevelModel = null;
 		try {
-			final ICodeLevelModelCreator creator =
-				new padl.creator.cppfile.antlr.CPPCreator(fileNames);
+			final ICodeLevelModelCreator creator = new padl.creator.cppfile.antlr.CPPCreator(
+					fileNames);
 			codeLevelModel = Factory.getInstance().createCodeLevelModel(aName);
 			codeLevelModel.addModelListener(aModelListener);
 			codeLevelModel.create(creator);
@@ -260,12 +238,13 @@ public final class ModelGenerator {
 
 		return ModelGenerator.finishModelCreation(codeLevelModel);
 	}
+
 	// TODO Add back this method
 	/*
 	public static IIdiomLevelModel generateModelFromCppFilesUsingEclipse(
 		final String aName,
 		final String aSourceDirectory) {
-
+	
 		return ModelGenerator.generateModelFromCppFilesUsingEclipse(
 			aName,
 			aSourceDirectory,
@@ -278,7 +257,7 @@ public final class ModelGenerator {
 		final String aName,
 		final String aSourceDirectory,
 		final IModelListener aModelListener) {
-
+	
 		ICodeLevelModel codeLevelModel = null;
 		try {
 			final ICodeLevelModelCreator creator =
@@ -293,7 +272,7 @@ public final class ModelGenerator {
 		catch (final CreationException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
-
+	
 		return ModelGenerator.finishModelCreation(codeLevelModel);
 	}
 	*/
@@ -302,7 +281,7 @@ public final class ModelGenerator {
 	public static IIdiomLevelModel generateModelFromCppFilesUsingEclipse(
 		final String aName,
 		final String[] fileNames) {
-
+	
 		return ModelGenerator.generateModelFromCppFilesUsingEclipse(
 			aName,
 			fileNames[0],
@@ -310,14 +289,13 @@ public final class ModelGenerator {
 	}
 	*/
 	public static IIdiomLevelModel generateModelFromCSharpFilesV1(
-		final String aName,
-		final String[] someCSharpFiles,
-		final IModelListener aModelListener) {
+			final String aName, final String[] someCSharpFiles,
+			final IModelListener aModelListener) {
 
 		ICodeLevelModel codeLevelModel = null;
 		try {
-			final ICodeLevelModelCreator creator =
-				new padl.creator.csharpfile.v1.CSharpCreator(someCSharpFiles);
+			final ICodeLevelModelCreator creator = new padl.creator.csharpfile.v1.CSharpCreator(
+					someCSharpFiles);
 			codeLevelModel = Factory.getInstance().createCodeLevelModel(aName);
 			if (aModelListener != null) {
 				codeLevelModel.addModelListener(aModelListener);
@@ -330,15 +308,14 @@ public final class ModelGenerator {
 
 		return ModelGenerator.finishModelCreation(codeLevelModel);
 	}
+
 	public static IIdiomLevelModel generateModelFromCSharpFilesV2(
-		final String aName,
-		final String aSourceFileOrDirectory,
-		final IModelListener aModelListener) {
+			final String aName, final String aSourceFileOrDirectory,
+			final IModelListener aModelListener) {
 
 		ICodeLevelModel codeLevelModel = null;
 		try {
-			final ICodeLevelModelCreator creator =
-				new padl.creator.csharpfile.v2.CSharpCreator(
+			final ICodeLevelModelCreator creator = new padl.creator.csharpfile.v2.CSharpCreator(
 					aSourceFileOrDirectory);
 			codeLevelModel = Factory.getInstance().createCodeLevelModel(aName);
 			if (aModelListener != null) {
@@ -352,14 +329,13 @@ public final class ModelGenerator {
 
 		return ModelGenerator.finishModelCreation(codeLevelModel);
 	}
-	private static IIdiomLevelModel generateModelFromDirectories(
-		final ICodeLevelModelCreator aCreator,
-		final String aName,
-		final String[] someSources,
-		final IModelListener aModelListener) {
 
-		ICodeLevelModel codeLevelModel =
-			Factory.getInstance().createCodeLevelModel(aName);
+	private static IIdiomLevelModel generateModelFromDirectories(
+			final ICodeLevelModelCreator aCreator, final String aName,
+			final String[] someSources, final IModelListener aModelListener) {
+
+		ICodeLevelModel codeLevelModel = Factory.getInstance()
+				.createCodeLevelModel(aName);
 		if (aModelListener != null) {
 			codeLevelModel.addModelListener(aModelListener);
 		}
@@ -367,20 +343,17 @@ public final class ModelGenerator {
 		try {
 			codeLevelModel.create(aCreator);
 
-			final padl.statement.creator.classfiles.ConditionalModelAnnotator annotator =
-				new padl.statement.creator.classfiles.ConditionalModelAnnotator(
+			final padl.statement.creator.classfiles.ConditionalModelAnnotator annotator = new padl.statement.creator.classfiles.ConditionalModelAnnotator(
 					someSources);
-			final ICodeLevelModel annotatedCodeLevelModel1 =
-				(ICodeLevelModel) annotator.invoke(codeLevelModel);
+			final ICodeLevelModel annotatedCodeLevelModel1 = (ICodeLevelModel) annotator
+					.invoke(codeLevelModel);
 
-			final padl.statement.creator.classfiles.LOCModelAnnotator annotator2 =
-				new padl.statement.creator.classfiles.LOCModelAnnotator(
+			final padl.statement.creator.classfiles.LOCModelAnnotator annotator2 = new padl.statement.creator.classfiles.LOCModelAnnotator(
 					someSources);
-			codeLevelModel =
-				(ICodeLevelModel) annotator2.invoke(annotatedCodeLevelModel1);
+			codeLevelModel = (ICodeLevelModel) annotator2
+					.invoke(annotatedCodeLevelModel1);
 
-			final IIdiomLevelModel model =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+			final IIdiomLevelModel model = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(codeLevelModel);
 
 			return model;
@@ -393,42 +366,32 @@ public final class ModelGenerator {
 		}
 		return null;
 	}
+
 	private static IIdiomLevelModel generateModelFromDirectories(
-		final ICodeLevelModelCreator aCreator,
-		final String[] someSources) {
+			final ICodeLevelModelCreator aCreator, final String[] someSources) {
 
-		return ModelGenerator.generateModelFromDirectories(
-			aCreator,
-			"",
-			someSources,
-			null);
+		return ModelGenerator.generateModelFromDirectories(aCreator, "",
+				someSources, null);
 	}
+
 	private static IIdiomLevelModel generateModelFromDirectory(
-		final ICodeLevelModelCreator aCreator,
-		final String aPath) {
+			final ICodeLevelModelCreator aCreator, final String aPath) {
 
-		return ModelGenerator.generateModelFromDirectories(
-			aCreator,
-			"",
-			new String[] { aPath },
-			null);
+		return ModelGenerator.generateModelFromDirectories(aCreator, "",
+				new String[] { aPath }, null);
 	}
+
 	private static IIdiomLevelModel generateModelFromDirectory(
-		final ICodeLevelModelCreator aCreator,
-		final String aName,
-		final String aPath,
-		final IModelListener aModelListener) {
+			final ICodeLevelModelCreator aCreator, final String aName,
+			final String aPath, final IModelListener aModelListener) {
 
-		return ModelGenerator.generateModelFromDirectories(
-			aCreator,
-			aName,
-			new String[] { aPath },
-			aModelListener);
+		return ModelGenerator.generateModelFromDirectories(aCreator, aName,
+				new String[] { aPath }, aModelListener);
 	}
+
 	public static IIdiomLevelModel generateModelFromEclipseProject(
-		final String aName,
-		final String aPath,
-		final IModelListener aModelListener) {
+			final String aName, final String aPath,
+			final IModelListener aModelListener) {
 
 		// I find out the output directory 
 		// and the list of JAR files (if any).
@@ -439,18 +402,17 @@ public final class ModelGenerator {
 			final List dirAndJARPathsList = new ArrayList();
 			final File projectPathFile = new File(aPath);
 			final String projectFiletPath = projectPathFile.getParent() + '/';
-			final File classPathFile =
-				new File(projectFiletPath + "/.classpath");
-			final BufferedReader reader =
-				new BufferedReader(new FileReader(classPathFile));
+			final File classPathFile = new File(
+					projectFiletPath + "/.classpath");
+			final BufferedReader reader = new BufferedReader(
+					new FileReader(classPathFile));
 			String line;
 			while ((line = reader.readLine()) != null) {
 				int index;
 				if ((index = line.indexOf(ModelGenerator.OUTPUT)) > -1) {
-					dirAndJARPathsList.add(projectFiletPath
-							+ line.substring(
-								index + ModelGenerator.OUTPUT.length(),
-								line.lastIndexOf("\"")) + '/');
+					dirAndJARPathsList.add(projectFiletPath + line.substring(
+							index + ModelGenerator.OUTPUT.length(),
+							line.lastIndexOf("\"")) + '/');
 				}
 				//	else if (
 				//		(index = line.indexOf(EclipseJDTCreator.LIB)) > -1) {
@@ -463,21 +425,20 @@ public final class ModelGenerator {
 			}
 			reader.close();
 
-			final String[] dirAndJARPathsArray =
-				new String[dirAndJARPathsList.size()];
+			final String[] dirAndJARPathsArray = new String[dirAndJARPathsList
+					.size()];
 			dirAndJARPathsList.toArray(dirAndJARPathsArray);
 
-			final ICodeLevelModel codeLevelModel =
-				Factory.getInstance().createCodeLevelModel(aName);
+			final ICodeLevelModel codeLevelModel = Factory.getInstance()
+					.createCodeLevelModel(aName);
 			if (aModelListener != null) {
 				codeLevelModel.addModelListener(aModelListener);
 			}
-			final CompleteClassFileCreator classFileCreator =
-				new CompleteClassFileCreator(dirAndJARPathsArray, true);
+			final CompleteClassFileCreator classFileCreator = new CompleteClassFileCreator(
+					dirAndJARPathsArray, true);
 			codeLevelModel.create(classFileCreator);
 
-			final IIdiomLevelModel model =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+			final IIdiomLevelModel model = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(codeLevelModel);
 
 			return model;
@@ -497,143 +458,145 @@ public final class ModelGenerator {
 
 		return null;
 	}
-	public static IIdiomLevelModel generateModelFromEclipseProject(
-		final String aName,
-		final String[] fileNames) {
 
-		return ModelGenerator.generateModelFromEclipseProject(
-			aName,
-			fileNames[0],
-			null);
+	public static IIdiomLevelModel generateModelFromEclipseProject(
+			final String aName, final String[] fileNames) {
+
+		return ModelGenerator.generateModelFromEclipseProject(aName,
+				fileNames[0], null);
 	}
+
 	public static IIdiomLevelModel generateModelFromJAR(final String aJARFile) {
 		return ModelGenerator.generateModelFromJAR("", aJARFile, null);
 	}
-	public static IIdiomLevelModel generateModelFromJAR(
-		final String aName,
-		final String aJARFile) {
+
+	public static IIdiomLevelModel generateModelFromJAR(final String aName,
+			final String aJARFile) {
 
 		return ModelGenerator.generateModelFromJAR(aName, aJARFile, null);
 	}
-	public static IIdiomLevelModel generateModelFromJAR(
-		final String aName,
-		final String aJARFile,
-		final IModelListener aModelListener) {
 
-		return ModelGenerator.generateModelFromClassFilesDirectories(
-			aName,
-			aJARFile,
-			aModelListener);
+	public static IIdiomLevelModel generateModelFromJAR(final String aName,
+			final String aJARFile, final IModelListener aModelListener) {
+
+		return ModelGenerator.generateModelFromClassFilesDirectories(aName,
+				aJARFile, aModelListener);
 	}
-	public static IIdiomLevelModel generateModelFromJARs(
-		final String aName,
-		final String aPath,
-		final IModelListener aModelListener) {
+
+	public static IIdiomLevelModel generateModelFromJARs(final String aName,
+			final String aPath, final IModelListener aModelListener) {
 
 		final List jarFiles = new ArrayList();
 		ModelGenerator.extractFilesFromDir(aPath, ".jar", jarFiles);
 
 		final String[] listOfJARFiles = new String[jarFiles.size()];
 		jarFiles.toArray(listOfJARFiles);
-		return ModelGenerator.generateModelFromClassFilesDirectories(
-			aName,
-			listOfJARFiles,
-			aModelListener);
+		return ModelGenerator.generateModelFromClassFilesDirectories(aName,
+				listOfJARFiles, aModelListener);
 	}
+
+	public static IIdiomLevelModel generateModelFromJARs(final String aName,
+			final String[] someJARs, final IModelListener aModelListener) {
+
+		return ModelGenerator.generateModelFromClassFilesDirectories(aName,
+				someJARs, aModelListener);
+	}
+
 	public static IIdiomLevelModel generateModelFromJARs(
-		final String aName,
-		final String[] someJARs,
-		final IModelListener aModelListener) {
+			final String[] someJARs) {
+		return ModelGenerator.generateModelFromClassFilesDirectories("",
+				someJARs, null);
+	}
 
-		return ModelGenerator.generateModelFromClassFilesDirectories(
-			aName,
-			someJARs,
-			aModelListener);
-	}
-	public static IIdiomLevelModel generateModelFromJARs(final String[] someJARs) {
-		return ModelGenerator.generateModelFromClassFilesDirectories(
-			"",
-			someJARs,
-			null);
-	}
 	public static IIdiomLevelModel generateModelFromJavaFilesDirectoriesUsingEclipse(
-		final String aSourceRootPath) {
+			final String aSourceRootPath) {
 
 		return ModelGenerator.generateModelFromDirectories(
-			new padl.creator.javafile.eclipse.CompleteJavaFileCreator(
-				aSourceRootPath,
-				""),
-			new String[] { aSourceRootPath });
+				new padl.creator.javafile.eclipse.CompleteJavaFileCreator(
+						aSourceRootPath, ""),
+				new String[] { aSourceRootPath });
 	}
+
 	public static IIdiomLevelModel generateModelFromJavaFilesDirectoriesUsingEclipse(
-		final String aName,
-		final String aSourceRootPath,
-		final String[] someSources,
-		final IModelListener aModelListener) {
+			final String aName, final String aSourceRootPath,
+			final String[] someSources, final IModelListener aModelListener) {
 
 		return ModelGenerator.generateModelFromDirectories(
-			new padl.creator.javafile.eclipse.CompleteJavaFileCreator(
-				aSourceRootPath,
-				"",
-				someSources),
-			aName,
-			someSources,
-			aModelListener);
+				new padl.creator.javafile.eclipse.CompleteJavaFileCreator(
+						aSourceRootPath, "", someSources),
+				aName, someSources, aModelListener);
 	}
+
 	public static IIdiomLevelModel generateModelFromJavaFilesDirectoriesUsingEclipse(
-		final String aName,
-		final String[] someSources) {
+			final String aName, final String[] someSources) {
 
 		final List javaFilesList = new ArrayList();
 		for (int i = 0; i < someSources.length; i++) {
 			final String path = someSources[i];
 			ModelGenerator.extractFilesFromDir(path, ".java", javaFilesList);
 		}
-		final String[] javaFilesArray =
-			(String[]) javaFilesList.toArray(new String[javaFilesList.size()]);
+		final String[] javaFilesArray = (String[]) javaFilesList
+				.toArray(new String[javaFilesList.size()]);
 
 		return ModelGenerator.generateModelFromDirectories(
-			new padl.creator.javafile.eclipse.CompleteJavaFileCreator(
-				someSources,
-				new String[0],
-				javaFilesArray),
-			aName,
-			someSources,
-			null);
-	}
-	public static IIdiomLevelModel generateModelFromJavaFilesDirectoryUsingEclipse(
-		final String aPath) {
-
-		return ModelGenerator
-			.generateModelFromDirectory(
 				new padl.creator.javafile.eclipse.CompleteJavaFileCreator(
-					aPath,
-					""),
+						someSources, new String[0], javaFilesArray),
+				aName, someSources, null);
+	}
+
+	public static IIdiomLevelModel generateModelFromJavaFilesDirectoryUsingEclipse(
+			final String aPath) {
+
+		return ModelGenerator.generateModelFromDirectory(
+				new padl.creator.javafile.eclipse.CompleteJavaFileCreator(aPath,
+						""),
 				aPath);
 	}
-	public static IIdiomLevelModel generateModelFromJavaFilesDirectoryUsingEclipse(
-		final String aName,
-		final String aPath,
-		final IModelListener aModelListener) {
 
-		return ModelGenerator
-			.generateModelFromDirectory(
-				new padl.creator.javafile.eclipse.CompleteJavaFileCreator(
-					aPath,
-					""),
-				aName,
-				aPath,
-				aModelListener);
+	public static IIdiomLevelModel generateModelFromJavaFilesDirectoryUsingEclipse(
+			final String aName, final String aPath,
+			final IModelListener aModelListener) {
+
+		return ModelGenerator.generateModelFromDirectory(
+				new padl.creator.javafile.eclipse.CompleteJavaFileCreator(aPath,
+						""),
+				aName, aPath, aModelListener);
 	}
+
 	public static IIdiomLevelModel generateModelFromJavaFilesDirectoryUsingJavaC(
-		final String aName,
-		final String aPath,
-		final IModelListener aModelListener) {
+			final String aName, final String[] someSources) {
+
+		// Yann 24/05/11: Hidden knowledge
+		// I know that the first path in someSources is actually
+		// the "main" path where the rest of the files are...
+		// TODO Make a better .ptidej format and change AbstractRepresentationWindow accordingly
+
+		final String sourcePath = someSources[0];
+		final String[] filesInThePath = Arrays.copyOfRange(someSources, 1,
+				someSources.length);
 
 		ICodeLevelModel codeLevelModel = null;
 		try {
-			final ICodeLevelModelCreator creator =
-				new padl.creator.javafile.javac.JavaFileCreator(aPath);
+			final ICodeLevelModelCreator creator = new padl.creator.javafile.javac.JavaFileCreator(
+					sourcePath, filesInThePath);
+			codeLevelModel = Factory.getInstance().createCodeLevelModel(aName);
+			codeLevelModel.create(creator);
+		}
+		catch (final CreationException e) {
+			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+		}
+
+		return ModelGenerator.finishModelCreation(codeLevelModel);
+	}
+
+	public static IIdiomLevelModel generateModelFromJavaFilesDirectoryUsingJavaC(
+			final String aName, final String aPath,
+			final IModelListener aModelListener) {
+
+		ICodeLevelModel codeLevelModel = null;
+		try {
+			final ICodeLevelModelCreator creator = new padl.creator.javafile.javac.JavaFileCreator(
+					aPath);
 			codeLevelModel = Factory.getInstance().createCodeLevelModel(aName);
 			codeLevelModel.addModelListener(aModelListener);
 			codeLevelModel.create(creator);
@@ -644,16 +607,15 @@ public final class ModelGenerator {
 
 		return ModelGenerator.finishModelCreation(codeLevelModel);
 	}
-	public static IIdiomLevelModel generateModelFromMSEFiles(
-		final String aName,
-		final String[] someFiles) {
+
+	public static IIdiomLevelModel generateModelFromMSEFiles(final String aName,
+			final String[] someFiles) {
 
 		return ModelGenerator.generateModelFromMSEFiles(aName, someFiles, null);
 	}
-	public static IIdiomLevelModel generateModelFromMSEFiles(
-		final String aName,
-		final String[] someFiles,
-		final IModelListener aModelListener) {
+
+	public static IIdiomLevelModel generateModelFromMSEFiles(final String aName,
+			final String[] someFiles, final IModelListener aModelListener) {
 
 		ICodeLevelModel codeLevelModel = null;
 		try {

@@ -22,9 +22,11 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
+
 import javax.swing.JInternalFrame;
 import javax.swing.SwingWorker;
 import javax.swing.tree.DefaultMutableTreeNode;
+
 import padl.event.EventGenerator;
 import padl.generator.helper.ModelGenerator;
 import padl.kernel.IAbstractModel;
@@ -572,7 +574,8 @@ public abstract class AbstractRepresentationWindow extends JInternalFrame
 				//				.getDisplayName(), filesArray);
 				final SwingWorker worker =
 					new Worker(
-						"generateModelFromJavaFilesDirectoriesUsingEclipse",
+						// "generateModelFromJavaFilesDirectoriesUsingEclipse",
+							"generateModelFromJavaFilesDirectoryUsingJavaC",
 						filesArray,
 						namesArray,
 						Builder
@@ -683,7 +686,9 @@ public abstract class AbstractRepresentationWindow extends JInternalFrame
 						.getName()) + ']';
 		this.setTitle(title);
 	}
+
 	protected abstract void setSourceModelSpecifics();
+
 	public final void setVisibleElements(final int someVisibleElements) {
 		this.visibleElements = someVisibleElements;
 		this.refresh();
