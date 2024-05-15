@@ -32,9 +32,12 @@
 package padl.creator.javafile.javac.util;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 import java.util.StringTokenizer;
+
 import jct.kernel.*;
 import jct.util.IJCTContainer;
 import padl.kernel.Constants;
@@ -71,21 +74,37 @@ import util.io.ProxyConsole;
 public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 	private final IFactory factory;
 	private final ICodeLevelModel model;
-	private final Map<IJCTElement, IConstituent> translator =
-		new HashMap<IJCTElement, IConstituent>();
+	private final Map<IJCTElement, IConstituent> translator = new HashMap<IJCTElement, IConstituent>();
+	private final StringBuffer errorMessage = new StringBuffer();
+	private final Set<String> errorMessages = new HashSet<>();
 
 	public JCTtoPADLTranslator(final ICodeLevelModel aCodeLevelModel) {
 		this.model = aCodeLevelModel;
 		this.factory = aCodeLevelModel.getFactory();
 	}
 
+	private void copyComments(final IJCTSourceCodePart aSourceCodePart,
+			final IConstituent aConstituent) {
+
+		final StringBuffer comments = new StringBuffer();
+		final Iterator<IJCTComment> iterator = aSourceCodePart.getComments()
+				.iterator();
+		while (iterator.hasNext()) {
+			final IJCTComment comment = (IJCTComment) iterator.next();
+			comments.append(comment.getText());
+			if (iterator.hasNext()) {
+				comments.append('\n');
+			}
+		}
+		aConstituent.setComment(comments.toString());
+	}
+
 	public ICodeLevelModel getModel() {
 		return this.model;
 	}
 
-	private IPackage getPackageFromModel(
-		final String aName,
-		final boolean isGhost) {
+	private IPackage getPackageFromModel(final String aName,
+			final boolean isGhost) {
 
 		if (aName == null) {
 			return this.factory.createPackageDefault();
@@ -99,11 +118,10 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		while (tokeniser.hasMoreTokens()) {
 			final String subpackageName = (String) tokeniser.nextToken();
 
-			if (currentContainer.doesContainConstituentWithName(subpackageName
-				.toCharArray())) {
+			if (currentContainer.doesContainConstituentWithName(
+					subpackageName.toCharArray())) {
 
-				p =
-					(IPackage) currentContainer
+				p = (IPackage) currentContainer
 						.getConstituentFromName(subpackageName.toCharArray());
 				currentContainer = p;
 			}
@@ -114,28 +132,24 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 						p = this.factory.createPackageDefault();
 					}
 					else if (isGhost) {
-						p =
-							this.factory.createPackageGhost(subpackageName
-								.toCharArray());
+						p = this.factory.createPackageGhost(
+								subpackageName.toCharArray());
 					}
 					else {
-						p =
-							this.factory.createPackage(subpackageName
-								.toCharArray());
+						p = this.factory
+								.createPackage(subpackageName.toCharArray());
 					}
 					((IAbstractModel) currentContainer).addConstituent(p);
 					currentContainer = p;
 				}
 				else {
 					if (isGhost) {
-						p =
-							this.factory.createPackageGhost(subpackageName
-								.toCharArray());
+						p = this.factory.createPackageGhost(
+								subpackageName.toCharArray());
 					}
 					else {
-						p =
-							this.factory.createPackage(subpackageName
-								.toCharArray());
+						p = this.factory
+								.createPackage(subpackageName.toCharArray());
 					}
 					((IPackage) currentContainer).addConstituent(p);
 					currentContainer = p;
@@ -146,104 +160,95 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		return p;
 	}
 
-	public IConstituent visitAnd(final IJCTAnd aJCTAnd, final Object aParameter) {
+	public IConstituent visitAnd(final IJCTAnd aJCTAnd,
+			final Object aParameter) {
 		return null;
 	}
 
 	public IConstituent visitAndAssignment(
-		final IJCTAndAssignment aJCTAndAssignment,
-		final Object aParameter) {
+			final IJCTAndAssignment aJCTAndAssignment,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitArrayAccess(
-		final IJCTArrayAccess aJCTArrayAccess,
-		final Object aParameter) {
+	public IConstituent visitArrayAccess(final IJCTArrayAccess aJCTArrayAccess,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitArrayType(
-		final IJCTArrayType aJCTArrayType,
-		final Object aParameter) {
+	public IConstituent visitArrayType(final IJCTArrayType aJCTArrayType,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitAssert(
-		final IJCTAssert aJCTAssert,
-		final Object aParameter) {
+	public IConstituent visitAssert(final IJCTAssert aJCTAssert,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitAssignment(
-		final IJCTAssignment aJCTAssignment,
-		final Object aParameter) {
+	public IConstituent visitAssignment(final IJCTAssignment aJCTAssignment,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitBitwiseComplement(
-		final IJCTBitwiseComplement aJCTBitwiseComplement,
-		final Object aParameter) {
+			final IJCTBitwiseComplement aJCTBitwiseComplement,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitBlock(
-		final IJCTBlock aJCTBlock,
-		final Object aParameter) {
+	public IConstituent visitBlock(final IJCTBlock aJCTBlock,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitBooleanLiteral(
-		final IJCTBooleanLiteral aJCTBooleanLiteral,
-		final Object aParameter) {
+			final IJCTBooleanLiteral aJCTBooleanLiteral,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitBreak(
-		final IJCTBreak aJCTBreak,
-		final Object aParameter) {
+	public IConstituent visitBreak(final IJCTBreak aJCTBreak,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitCase(
-		final IJCTCase aJCTCase,
-		final Object aParameter) {
+	public IConstituent visitCase(final IJCTCase aJCTCase,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitCast(
-		final IJCTCast aJCTCast,
-		final Object aParameter) {
+	public IConstituent visitCast(final IJCTCast aJCTCast,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitCatch(
-		final IJCTCatch aJCTCatch,
-		final Object aParameter) {
+	public IConstituent visitCatch(final IJCTCatch aJCTCatch,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitCharacterLiteral(
-		final IJCTCharacterLiteral aJCTCharacterLiteral,
-		final Object aParameter) {
+			final IJCTCharacterLiteral aJCTCharacterLiteral,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitClass(
-		final IJCTClass aJCTClass,
-		final Object aParameter) {
+	public IConstituent visitClass(final IJCTClass aJCTClass,
+			final Object aParameter) {
 
 		if (this.translator.get(aJCTClass) != null) {
 			return this.translator.get(aJCTClass);
@@ -252,51 +257,48 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		final char[] id = aJCTClass.getFQN().toCharArray();
 		final char[] name = aJCTClass.getName().toCharArray();
 		// TODO: This is the most ridiculous use of the ?: operator... replace with proper conditionals.
-		final IFirstClassEntity c =
-			aJCTClass.isStatic() == null // The casts are just a workaround for a bug of javac
-			? (aJCTClass.getIsGhost() ? this.factory.createGhost(id, name)
-					: (IFirstClassEntity) (aJCTClass.getIsInterface() ? this.factory
-						.createInterface(id, name) : this.factory.createClass(
-						id,
-						name)))
-					: (aJCTClass.getIsGhost() ? (IFirstClassEntity) this.factory
-						.createMemberGhost(id, name) : (aJCTClass
-						.getIsInterface() ? (IFirstClassEntity) this.factory
-						.createMemberInterface(id, name) : this.factory
-						.createMemberClass(id, name)));
+		final IFirstClassEntity c = aJCTClass.isStatic() == null // The casts are just a workaround for a bug of javac
+				? (aJCTClass.getIsGhost() ? this.factory.createGhost(id, name)
+						: (IFirstClassEntity) (aJCTClass.getIsInterface()
+								? this.factory.createInterface(id, name)
+								: this.factory.createClass(id, name)))
+				: (aJCTClass.getIsGhost()
+						? (IFirstClassEntity) this.factory.createMemberGhost(id,
+								name)
+						: (aJCTClass.getIsInterface()
+								? (IFirstClassEntity) this.factory
+										.createMemberInterface(id, name)
+								: this.factory.createMemberClass(id, name)));
 
 		this.translator.put(aJCTClass, c);
 
 		for (final JCTModifiers m : aJCTClass.getModifiers()) {
 			switch (m) {
-				case ABSTRACT :
-					c.setAbstract(true);
-					break;
-				case FINAL :
-					c.setFinal(true);
-					break;
-				case PRIVATE :
-					c.setPrivate(true);
-					break;
-				case PROTECTED :
-					c.setProtected(true);
-					break;
-				case PUBLIC :
-					c.setPublic(true);
-					break;
-				case STATIC :
-					c.setStatic(true);
-					break;
-				default :
+			case ABSTRACT:
+				c.setAbstract(true);
+				break;
+			case FINAL:
+				c.setFinal(true);
+				break;
+			case PRIVATE:
+				c.setPrivate(true);
+				break;
+			case PROTECTED:
+				c.setProtected(true);
+				break;
+			case PUBLIC:
+				c.setPublic(true);
+				break;
+			case STATIC:
+				c.setStatic(true);
+				break;
+			default:
 			}
 		}
 
 		if (null != aJCTClass.getDirectSuperClass()) {
-			final IFirstClassEntity inherited =
-				(IFirstClassEntity) aJCTClass
-					.getDirectSuperClass()
-					.getSelector()
-					.getElement()
+			final IFirstClassEntity inherited = (IFirstClassEntity) aJCTClass
+					.getDirectSuperClass().getSelector().getElement()
 					.accept(this, aParameter);
 			if (c != inherited) {
 				c.addInheritedEntity(inherited);
@@ -304,29 +306,24 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		}
 
 		for (final IJCTClassType type : aJCTClass
-			.getDirectlyImplementedInterfaces()) {
+				.getDirectlyImplementedInterfaces()) {
 
 			if (aJCTClass.getIsInterface()) {
-				c.addInheritedEntity((IFirstClassEntity) type
-					.getSelector()
-					.getElement()
-					.accept(this, aParameter));
+				c.addInheritedEntity((IFirstClassEntity) type.getSelector()
+						.getElement().accept(this, aParameter));
 			}
 			else {
-				final IFirstClassEntity interfaceActor =
-					(IFirstClassEntity) type
-						.getSelector()
-						.getElement()
-						.accept(this, aParameter);
-				((IInterfaceImplementer) c)
-					.addImplementedInterface((IInterfaceActor) interfaceActor);
+				final IFirstClassEntity interfaceActor = (IFirstClassEntity) type
+						.getSelector().getElement().accept(this, aParameter);
+				((IInterfaceImplementer) c).addImplementedInterface(
+						(IInterfaceActor) interfaceActor);
 			}
 		}
 
 		boolean hasAnyDeclaredConstructor = false;
 		for (final IJCTClassMember cm : aJCTClass.getDeclaredMembers()) {
-			final IConstituentOfEntity entity =
-				(IConstituentOfEntity) cm.accept(this, aParameter);
+			final IConstituentOfEntity entity = (IConstituentOfEntity) cm
+					.accept(this, aParameter);
 			// TODO: This test should not exist!
 			if (entity != null
 					&& !c.doesContainConstituentWithID(entity.getID())) {
@@ -345,36 +342,34 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		// from Java source as from Class files, I add a
 		// default constructor if needed.
 		if (!hasAnyDeclaredConstructor) {
-			final IConstructor constructor =
-				this.factory.createConstructor("<init>()".toCharArray(), name);
+			final IConstructor constructor = this.factory
+					.createConstructor("<init>()".toCharArray(), name);
 			c.addConstituent(constructor);
 		}
 
 		return c;
 	}
 
-	public IConstituent visitClassType(
-		final IJCTClassType aJCTClassType,
-		final Object aParameter) {
+	public IConstituent visitClassType(final IJCTClassType aJCTClassType,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitComment(
-		final IJCTComment aJCTComment,
-		final Object aParameter) {
+	public IConstituent visitComment(final IJCTComment aJCTComment,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitCompilationUnit(
-		final IJCTCompilationUnit aJCTCompilationUnit,
-		final Object aParameter) {
+			final IJCTCompilationUnit aJCTCompilationUnit,
+			final Object aParameter) {
 
 		final IPackage packaje = (IPackage) aParameter;
 		for (final IJCTClass c : aJCTCompilationUnit.getClazzs()) {
-			final IConstituentOfModel entity =
-				(IConstituentOfModel) c.accept(this, aParameter);
+			final IConstituentOfModel entity = (IConstituentOfModel) c
+					.accept(this, aParameter);
 
 			if (!packaje.doesContainConstituentWithID(entity.getID())) {
 				packaje.addConstituent(entity);
@@ -384,65 +379,62 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 	}
 
 	public IConstituent visitConditionalAnd(
-		final IJCTConditionalAnd aJCTConditionalAnd,
-		final Object aParameter) {
+			final IJCTConditionalAnd aJCTConditionalAnd,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitConditionalOperator(
-		final IJCTConditionalOperator aJCTConditionalOperator,
-		final Object aParameter) {
+			final IJCTConditionalOperator aJCTConditionalOperator,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitConditionalOr(
-		final IJCTConditionalOr aJCTConditionalOr,
-		final Object aParameter) {
+			final IJCTConditionalOr aJCTConditionalOr,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitContinue(
-		final IJCTContinue aJCTContinue,
-		final Object aParameter) {
+	public IConstituent visitContinue(final IJCTContinue aJCTContinue,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitDivide(
-		final IJCTDivide aJCTDivide,
-		final Object aParameter) {
+	public IConstituent visitDivide(final IJCTDivide aJCTDivide,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitDivideAssignment(
-		final IJCTDivideAssignment aJCTDivideAssignment,
-		final Object aParameter) {
+			final IJCTDivideAssignment aJCTDivideAssignment,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitDoubleLiteral(
-		final IJCTDoubleLiteral aJCTDoubleLiteral,
-		final Object aParameter) {
+			final IJCTDoubleLiteral aJCTDoubleLiteral,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitDoWhile(
-		final IJCTDoWhile aJCTDoWhile,
-		final Object aParameter) {
+	public IConstituent visitDoWhile(final IJCTDoWhile aJCTDoWhile,
+			final Object aParameter) {
 
 		try {
 			if (null != this.translator.get(aJCTDoWhile)) {
 				return this.translator.get(aJCTDoWhile);
 			}
 
-			final IIfInstruction f =
-				((StatementFactory) StatementFactory.getInstance())
+			final IIfInstruction f = ((StatementFactory) StatementFactory
+					.getInstance())
 					.createIfInstruction(aJCTDoWhile.toString().toCharArray());
 
 			return f;
@@ -455,62 +447,57 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 	}
 
 	public IConstituent visitEmptyStatement(
-		final IJCTEmptyStatement aJCTEmptyStatement,
-		final Object aParameter) {
+			final IJCTEmptyStatement aJCTEmptyStatement,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitEnhancedFor(
-		final IJCTEnhancedFor aJCTEnhancedFor,
-		final Object aParameter) {
+	public IConstituent visitEnhancedFor(final IJCTEnhancedFor aJCTEnhancedFor,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitEqualTo(
-		final IJCTEqualTo aJCTEqualTo,
-		final Object aParameter) {
+	public IConstituent visitEqualTo(final IJCTEqualTo aJCTEqualTo,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitErroneousExpression(
-		final IJCTErroneousExpression aJCTErroneousExpression,
-		final Object aParameter) {
+			final IJCTErroneousExpression aJCTErroneousExpression,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitErroneousSelector(
-		final IJCTErroneousSelector<?> aJCTErroneousSelector,
-		final Object aParameter) {
+			final IJCTErroneousSelector<?> aJCTErroneousSelector,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitExpressionStatement(
-		final IJCTExpressionStatement aJCTExpressionStatement,
-		final Object aParameter) {
+			final IJCTExpressionStatement aJCTExpressionStatement,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitField(
-		final IJCTField aJCTField,
-		final Object aParameter) {
+	public IConstituent visitField(final IJCTField aJCTField,
+			final Object aParameter) {
 
 		try {
 			if (null != this.translator.get(aJCTField)) {
 				return this.translator.get(aJCTField);
 			}
 
-			final IField f =
-				this.factory.createField(
+			final IField f = this.factory.createField(
 					aJCTField.getID().toCharArray(),
 					aJCTField.getName().toCharArray(),
-					aJCTField.getType().getSourceCode().toCharArray(),
-					1);
+					aJCTField.getType().getSourceCode().toCharArray(), 1);
 
 			f.setName(aJCTField.getName().toCharArray());
 			if (Util.isArrayOrCollection(f.getType())) {
@@ -519,25 +506,25 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 
 			for (final JCTModifiers mod : aJCTField.getModifiers()) {
 				switch (mod) {
-					case ABSTRACT :
-						f.setAbstract(true);
-						break;
-					case FINAL :
-						f.setFinal(true);
-						break;
-					case PRIVATE :
-						f.setPrivate(true);
-						break;
-					case PROTECTED :
-						f.setProtected(true);
-						break;
-					case PUBLIC :
-						f.setPublic(true);
-						break;
-					case STATIC :
-						f.setStatic(true);
-						break;
-					default :
+				case ABSTRACT:
+					f.setAbstract(true);
+					break;
+				case FINAL:
+					f.setFinal(true);
+					break;
+				case PRIVATE:
+					f.setPrivate(true);
+					break;
+				case PROTECTED:
+					f.setProtected(true);
+					break;
+				case PUBLIC:
+					f.setPublic(true);
+					break;
+				case STATIC:
+					f.setStatic(true);
+					break;
+				default:
 				}
 			}
 
@@ -552,20 +539,20 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 	}
 
 	public IConstituent visitFloatLiteral(
-		final IJCTFloatLiteral aJCTFloatLiteral,
-		final Object aParameter) {
+			final IJCTFloatLiteral aJCTFloatLiteral, final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitFor(final IJCTFor aJCTFor, final Object aParameter) {
+	public IConstituent visitFor(final IJCTFor aJCTFor,
+			final Object aParameter) {
 		try {
 			if (null != this.translator.get(aJCTFor)) {
 				return this.translator.get(aJCTFor);
 			}
 
-			final IIfInstruction f =
-				((StatementFactory) StatementFactory.getInstance())
+			final IIfInstruction f = ((StatementFactory) StatementFactory
+					.getInstance())
 					.createIfInstruction(aJCTFor.toString().toCharArray());
 
 			return f;
@@ -577,16 +564,15 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		return null;
 	}
 
-	public IConstituent visitGreaterThan(
-		final IJCTGreaterThan aJCTGreaterThan,
-		final Object aParameter) {
+	public IConstituent visitGreaterThan(final IJCTGreaterThan aJCTGreaterThan,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitGreaterThanOrEqual(
-		final IJCTGreaterThanOrEqual aJCTGreaterThanOrEqual,
-		final Object aParameter) {
+			final IJCTGreaterThanOrEqual aJCTGreaterThanOrEqual,
+			final Object aParameter) {
 
 		return null;
 	}
@@ -597,8 +583,8 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 				return this.translator.get(aJCTIf);
 			}
 
-			final IIfInstruction f =
-				((StatementFactory) StatementFactory.getInstance())
+			final IIfInstruction f = ((StatementFactory) StatementFactory
+					.getInstance())
 					.createIfInstruction(aJCTIf.toString().toCharArray());
 
 			return f;
@@ -610,93 +596,85 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		return null;
 	}
 
-	public IConstituent visitImport(
-		final IJCTImport aJCTImport,
-		final Object aParameter) {
+	public IConstituent visitImport(final IJCTImport aJCTImport,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitInstanceOf(
-		final IJCTInstanceOf aJCTInstanceOf,
-		final Object aParameter) {
+	public IConstituent visitInstanceOf(final IJCTInstanceOf aJCTInstanceOf,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitIntegerLiteral(
-		final IJCTIntegerLiteral aJCTIntegerLiteral,
-		final Object aParameter) {
+			final IJCTIntegerLiteral aJCTIntegerLiteral,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitIntersectionType(
-		final IJCTIntersectionType aJCTIntersectionType,
-		final Object aParameter) {
+			final IJCTIntersectionType aJCTIntersectionType,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitLabel(
-		final IJCTLabel aJCTLabel,
-		final Object aParameter) {
+	public IConstituent visitLabel(final IJCTLabel aJCTLabel,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitLeftShift(
-		final IJCTLeftShift aJCTLeftShift,
-		final Object aParameter) {
+	public IConstituent visitLeftShift(final IJCTLeftShift aJCTLeftShift,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitLeftShiftAssignment(
-		final IJCTLeftShiftAssignment aJCTLeftShiftAssignment,
-		final Object aParameter) {
+			final IJCTLeftShiftAssignment aJCTLeftShiftAssignment,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitLessThan(
-		final IJCTLessThan aJCTLess,
-		final Object aParameter) {
+	public IConstituent visitLessThan(final IJCTLessThan aJCTLess,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitLessThanOrEqual(
-		final IJCTLessThanOrEqual aJCTLessThanOrEqual,
-		final Object aParameter) {
+			final IJCTLessThanOrEqual aJCTLessThanOrEqual,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitLogicalComplement(
-		final IJCTLogicalComplement aJCTLogicalComplement,
-		final Object p) {
+			final IJCTLogicalComplement aJCTLogicalComplement, final Object p) {
 
 		return null;
 	}
 
-	public IConstituent visitLongLiteral(
-		final IJCTLongLiteral aJCTLongLiteral,
-		final Object aParameter) {
+	public IConstituent visitLongLiteral(final IJCTLongLiteral aJCTLongLiteral,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public <Element extends IJCTClassMember> IConstituent visitMemberSelector(
-		final IJCTMemberSelector<Element> aJCTMemberSelector,
-		final Object aParameter) {
+			final IJCTMemberSelector<Element> aJCTMemberSelector,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitMethod(
-		final IJCTMethod aJCTMethod,
-		final Object aParameter) {
+	public IConstituent visitMethod(final IJCTMethod aJCTMethod,
+			final Object aParameter) {
 
 		if (null != this.translator.get(aJCTMethod)) {
 			return this.translator.get(aJCTMethod);
@@ -704,60 +682,48 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 
 		final IOperation m;
 		if (aJCTMethod.getName().equals("<init>")) {
-			m =
-				this.factory.createConstructor(
-					aJCTMethod.getID().toCharArray(),
+			m = this.factory.createConstructor(aJCTMethod.getID().toCharArray(),
 					aJCTMethod.getName().toCharArray());
 		}
 		else {
-			if (aJCTMethod.getName().equals("addElement")) {
-				ProxyConsole.getInstance().debugOutput().println("addElement");
-			}
-			m =
-				this.factory.createMethod(
-					aJCTMethod.getID().toCharArray(),
+			m = this.factory.createMethod(aJCTMethod.getID().toCharArray(),
 					aJCTMethod.getName().toCharArray());
 		}
 
 		for (final JCTModifiers mod : aJCTMethod.getModifiers()) {
 			switch (mod) {
-				case ABSTRACT :
-					m.setAbstract(true);
-					break;
-				case FINAL :
-					m.setFinal(true);
-					break;
-				case PRIVATE :
-					m.setPrivate(true);
-					break;
-				case PROTECTED :
-					m.setProtected(true);
-					break;
-				case PUBLIC :
-					m.setPublic(true);
-					break;
-				case STATIC :
-					m.setStatic(true);
-					break;
-				default :
+			case ABSTRACT:
+				m.setAbstract(true);
+				break;
+			case FINAL:
+				m.setFinal(true);
+				break;
+			case PRIVATE:
+				m.setPrivate(true);
+				break;
+			case PROTECTED:
+				m.setProtected(true);
+				break;
+			case PUBLIC:
+				m.setPublic(true);
+				break;
+			case STATIC:
+				m.setStatic(true);
+				break;
+			default:
 			}
 		}
 
 		m.setName(aJCTMethod.getName().toCharArray());
 
 		if (aJCTMethod.getReturnType() != null && m instanceof IMethod) {
-			((IMethod) m).setReturnType(aJCTMethod
-				.getReturnType()
-				.getSourceCode()
-				.toCharArray());
+			((IMethod) m).setReturnType(
+					aJCTMethod.getReturnType().getSourceCode().toCharArray());
 		}
 
 		for (final IJCTVariable v : aJCTMethod.getParameters()) {
-			IEntity entity =
-				(IEntity) this.model.getTopLevelEntityFromID(v
-					.getType()
-					.getSourceCode()
-					.toCharArray());
+			IEntity entity = (IEntity) this.model.getTopLevelEntityFromID(
+					v.getType().getSourceCode().toCharArray());
 			// TODO: This test should not exist!
 			// Yann 2010/06/21: Silly test?
 			// Indeed, the null test below forces to look
@@ -773,36 +739,39 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 					// I assume that this is the first 
 					// time that this class is met...
 					// TODO: Is it always true?
-					final IPackage packageJavaLang =
-						this.getPackageFromModel("java.lang", false);
-					entity =
-						Factory.getInstance().createGhost(
+					final IPackage packageJavaLang = this
+							.getPackageFromModel("java.lang", false);
+					entity = Factory.getInstance().createGhost(
 							"java.lang.Void".toCharArray(),
 							"Void".toCharArray());
 					packageJavaLang.addConstituent(entity);
 				}
 				else {
-					ProxyConsole
-						.getInstance()
-						.debugOutput()
-						.println(
-							"Missing source-code type "
-									+ v.getType().getSourceCode());
+					this.errorMessage.setLength(0);
+					this.errorMessage.append(this.getClass().getName());
+					this.errorMessage.append(" is missing source-code type: ");
+					this.errorMessage.append(v.getType().getSourceCode());
+
+					final String errorString = this.errorMessage.toString();
+					if (!this.errorMessages.contains(errorString)) {
+						this.errorMessages.add(errorString);
+						ProxyConsole.getInstance().debugOutput()
+								.println(errorString);
+					}
 				}
 			}
 
 			if (entity != null) {
 				m.addConstituent((IConstituentOfOperation) this.factory
-					.createParameter(entity, 0));
+						.createParameter(entity, 0));
 			}
 		}
 
-		for (final IJCTStatement statement : aJCTMethod
-			.getBody()
-			.getStatements()) {
+		for (final IJCTStatement statement : aJCTMethod.getBody()
+				.getStatements()) {
 
-			final IConstituentOfOperation operation =
-				(IConstituentOfOperation) statement.accept(this, aParameter);
+			final IConstituentOfOperation operation = (IConstituentOfOperation) statement
+					.accept(this, aParameter);
 			// TODO: This test should not exist!
 			if (operation != null) {
 				m.addConstituent(operation);
@@ -818,65 +787,60 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 
 		return m;
 	}
+
 	public IConstituent visitMethodInvocation(
-		final IJCTMethodInvocation aJCTMethodInvocation,
-		final Object aParameter) {
+			final IJCTMethodInvocation aJCTMethodInvocation,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitMinus(
-		final IJCTMinus aJCTMinus,
-		final Object aParameter) {
+	public IConstituent visitMinus(final IJCTMinus aJCTMinus,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitMinusAssignment(
-		final IJCTMinusAssignment aJCTMinusAssignment,
-		final Object aParameter) {
+			final IJCTMinusAssignment aJCTMinusAssignment,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitMultiply(
-		final IJCTMultiply aJCTMultiply,
-		final Object aParameter) {
+	public IConstituent visitMultiply(final IJCTMultiply aJCTMultiply,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitMultiplyAssignment(
-		final IJCTMultiplyAssignment aJCTMultiplyAssignment,
-		final Object aParameter) {
+			final IJCTMultiplyAssignment aJCTMultiplyAssignment,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitNewArray(
-		final IJCTNewArray aJCTNewArray,
-		final Object aParameter) {
+	public IConstituent visitNewArray(final IJCTNewArray aJCTNewArray,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitNewClass(
-		final IJCTNewClass aJCTNewClass,
-		final Object aParameter) {
+	public IConstituent visitNewClass(final IJCTNewClass aJCTNewClass,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitNotEqualTo(
-		final IJCTNotEqualTo aJCTNotEqualTo,
-		final Object aParameter) {
+	public IConstituent visitNotEqualTo(final IJCTNotEqualTo aJCTNotEqualTo,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitNullLiteral(
-		final IJCTNullLiteral aJCTNullLiteral,
-		final Object aParameter) {
+	public IConstituent visitNullLiteral(final IJCTNullLiteral aJCTNullLiteral,
+			final Object aParameter) {
 
 		return null;
 	}
@@ -886,35 +850,30 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 	}
 
 	public IConstituent visitOrAssignment(
-		final IJCTOrAssignment aJCTOrAssignment,
-		final Object aParameter) {
+			final IJCTOrAssignment aJCTOrAssignment, final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitOther(
-		final IJCTElement aJCTElement,
-		final Object aParameter) {
+	public IConstituent visitOther(final IJCTElement aJCTElement,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	@SuppressWarnings("unchecked")
-	public IConstituent visitPackage(
-		final IJCTPackage aJCTPackage,
-		final Object aParameter) {
+	public IConstituent visitPackage(final IJCTPackage aJCTPackage,
+			final Object aParameter) {
 
 		// Yann 2009/07/22: Use?
 		// Why is there an Object passed as parameter?
 		// TODO: Looks weird, smells weird... probably to be removed!
 
-		final IPackage p =
-			this.getPackageFromModel(
-				aJCTPackage.getName(),
+		final IPackage p = this.getPackageFromModel(aJCTPackage.getName(),
 				aJCTPackage.getIsGhost());
 
 		for (final IJCTCompilationUnit cu : ((IJCTContainer<IJCTCompilationUnit>) aJCTPackage)
-			.getEnclosedElements()) {
+				.getEnclosedElements()) {
 			if (null != cu) {
 				cu.accept(this, p);
 			}
@@ -925,107 +884,100 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		return null;
 	}
 
-	public IConstituent visitParameter(
-		final IJCTParameter aJCTParameter,
-		final Object aParameter) {
+	public IConstituent visitParameter(final IJCTParameter aJCTParameter,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitParenthesis(
-		final IJCTParenthesis AJCTParenthesis,
-		final Object aParameter) {
+	public IConstituent visitParenthesis(final IJCTParenthesis AJCTParenthesis,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitPlus(
-		final IJCTPlus aJCTPlus,
-		final Object aParameter) {
+	public IConstituent visitPlus(final IJCTPlus aJCTPlus,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitPlusAssignment(
-		final IJCTPlusAssignment aJCTPlusAssignment,
-		final Object aParameter) {
+			final IJCTPlusAssignment aJCTPlusAssignment,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitPostfixDecrement(
-		final IJCTPostfixDecrement aJCTPostfixDecrement,
-		final Object aParameter) {
+			final IJCTPostfixDecrement aJCTPostfixDecrement,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitPostfixIncrement(
-		final IJCTPostfixIncrement aJCTPostfixIncrement,
-		final Object aParameter) {
+			final IJCTPostfixIncrement aJCTPostfixIncrement,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitPrefixDecrement(
-		final IJCTPrefixDecrement aJCTPrefixDecrement,
-		final Object aParameter) {
+			final IJCTPrefixDecrement aJCTPrefixDecrement,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitPrefixIncrement(
-		final IJCTPrefixIncrement aJCTPrefixIncrement,
-		final Object aParameter) {
+			final IJCTPrefixIncrement aJCTPrefixIncrement,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitPrimitiveType(
-		final IJCTPrimitiveType aJCTPrimitiveType,
-		final Object aParameter) {
+			final IJCTPrimitiveType aJCTPrimitiveType,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitRemainder(
-		final IJCTRemainder aJCTRemainder,
-		final Object aParameter) {
+	public IConstituent visitRemainder(final IJCTRemainder aJCTRemainder,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitRemainderAssignment(
-		final IJCTRemainderAssignment aJCTRemainderAssignment,
-		final Object aParameter) {
+			final IJCTRemainderAssignment aJCTRemainderAssignment,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitReturn(
-		final IJCTReturn aJCTReturn,
-		final Object aParameter) {
+	public IConstituent visitReturn(final IJCTReturn aJCTReturn,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitRightShift(
-		final IJCTRightShift aJCTRightShift,
-		final Object aParameter) {
+	public IConstituent visitRightShift(final IJCTRightShift aJCTRightShift,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitRightShiftAssignment(
-		final IJCTRightShiftAssignment aJCTRightShiftAssignment,
-		final Object aParameter) {
+			final IJCTRightShiftAssignment aJCTRightShiftAssignment,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitRootNode(
-		final IJCTRootNode aJCTRootNote,
-		final Object aParameter) {
+	public IConstituent visitRootNode(final IJCTRootNode aJCTRootNote,
+			final Object aParameter) {
 
 		// Yann 2009/07/22: Use?
 		// Why is there an Object passed as parameter?
@@ -1051,40 +1003,38 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 	}
 
 	public <Element extends IJCTIdentifiable> IConstituent visitSimpleIdentifier(
-		final IJCTSimpleSelector<Element> aJCTSimpleSelector,
-		final Object aParameter) {
+			final IJCTSimpleSelector<Element> aJCTSimpleSelector,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public <Element extends IJCTIdentifiable> IConstituent visitSimpleSelector(
-		final IJCTSimpleSelector<Element> aJCTSimpleSelector,
-		final Object aParameter) {
+			final IJCTSimpleSelector<Element> aJCTSimpleSelector,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitStringLiteral(
-		final IJCTStringLiteral aJCTStringLiteral,
-		final Object aParameter) {
+			final IJCTStringLiteral aJCTStringLiteral,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitSwitch(
-		final IJCTSwitch aJCTSwitch,
-		final Object aParameter) {
+	public IConstituent visitSwitch(final IJCTSwitch aJCTSwitch,
+			final Object aParameter) {
 
 		try {
 			if (null != this.translator.get(aJCTSwitch)) {
 				return this.translator.get(aJCTSwitch);
 			}
 
-			final ISwitchInstruction f =
-				((StatementFactory) StatementFactory.getInstance())
-					.createSwitchInstruction(aJCTSwitch
-						.toString()
-						.toCharArray(), aJCTSwitch.getCases().size());
+			final ISwitchInstruction f = ((StatementFactory) StatementFactory
+					.getInstance()).createSwitchInstruction(
+							aJCTSwitch.toString().toCharArray(),
+							aJCTSwitch.getCases().size());
 
 			return f;
 		}
@@ -1095,54 +1045,50 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		return null;
 	}
 
-	public IConstituent visitSynchronized(
-		final IJCTSynchronized t,
-		final Object aParameter) {
+	public IConstituent visitSynchronized(final IJCTSynchronized t,
+			final Object aParameter) {
 		return null;
 	}
 
-	public IConstituent visitThrow(
-		final IJCTThrow aJCTThrow,
-		final Object aParameter) {
-
-		return null;
-	}
-
-	public IConstituent visitTry(final IJCTTry aJCTTry, final Object aParameter) {
-		return null;
-	}
-
-	public IConstituent visitUnaryMinus(
-		final IJCTUnaryMinus aJCTUnaryMinus,
-		final Object aParameter) {
+	public IConstituent visitThrow(final IJCTThrow aJCTThrow,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitUnaryPlus(
-		final IJCTUnaryPlus aJCTUnaryPlus,
-		final Object aParameter) {
+	public IConstituent visitTry(final IJCTTry aJCTTry,
+			final Object aParameter) {
+		return null;
+	}
+
+	public IConstituent visitUnaryMinus(final IJCTUnaryMinus aJCTUnaryMinus,
+			final Object aParameter) {
+
+		return null;
+	}
+
+	public IConstituent visitUnaryPlus(final IJCTUnaryPlus aJCTUnaryPlus,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitUnsignedRightShift(
-		final IJCTUnsignedRightShift aJCTUnsignedRightShift,
-		final Object aParameter) {
+			final IJCTUnsignedRightShift aJCTUnsignedRightShift,
+			final Object aParameter) {
 
 		return null;
 	}
 
 	public IConstituent visitUnsignedRightShiftAssignment(
-		final IJCTUnsignedRightShiftAssignment aJCTUnsignedRightShiftAssignment,
-		final Object aParameter) {
+			final IJCTUnsignedRightShiftAssignment aJCTUnsignedRightShiftAssignment,
+			final Object aParameter) {
 
 		return null;
 	}
 
-	public IConstituent visitVariable(
-		final IJCTVariable aJCTVariable,
-		final Object aParameter) {
+	public IConstituent visitVariable(final IJCTVariable aJCTVariable,
+			final Object aParameter) {
 
 		//	try {
 		//		if (null != this.translator.get(aJCTVariable)) {
@@ -1192,17 +1138,16 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		return null;
 	}
 
-	public IConstituent visitWhile(
-		final IJCTWhile aJCTWhile,
-		final Object aParameter) {
+	public IConstituent visitWhile(final IJCTWhile aJCTWhile,
+			final Object aParameter) {
 
 		try {
 			if (null != this.translator.get(aJCTWhile)) {
 				return this.translator.get(aJCTWhile);
 			}
 
-			final IIfInstruction f =
-				((StatementFactory) StatementFactory.getInstance())
+			final IIfInstruction f = ((StatementFactory) StatementFactory
+					.getInstance())
 					.createIfInstruction(aJCTWhile.toString().toCharArray());
 
 			return f;
@@ -1214,31 +1159,15 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		return null;
 	}
 
-	public IConstituent visitXor(final IJCTXor aJCTXor, final Object aParameter) {
+	public IConstituent visitXor(final IJCTXor aJCTXor,
+			final Object aParameter) {
 		return null;
 	}
 
 	public IConstituent visitXorAssignment(
-		final IJCTXorAssignment aJCTXorAssignment,
-		final Object aParameter) {
+			final IJCTXorAssignment aJCTXorAssignment,
+			final Object aParameter) {
 
 		return null;
-	}
-
-	private void copyComments(
-		final IJCTSourceCodePart aSourceCodePart,
-		final IConstituent aConstituent) {
-
-		final StringBuffer comments = new StringBuffer();
-		final Iterator<IJCTComment> iterator =
-			aSourceCodePart.getComments().iterator();
-		while (iterator.hasNext()) {
-			final IJCTComment comment = (IJCTComment) iterator.next();
-			comments.append(comment.getText());
-			if (iterator.hasNext()) {
-				comments.append('\n');
-			}
-		}
-		aConstituent.setComment(comments.toString());
 	}
 }

@@ -37,11 +37,9 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -407,7 +405,7 @@ public class JCTCreatorFromSourceCode
 	private final Map<Element, IJCTIdentifiable> identifiables = new HashMap<Element, IJCTIdentifiable>();
 
 	private final Set<CompilationUnitTree> cus;
-	private final List<String> errorMessages = new ArrayList<>();
+	private final Set<String> errorMessages = new HashSet<>();
 
 	protected JCTCreatorFromSourceCode(final IJCTRootNode root,
 			final JavacElements elements, final JavacTrees trees,
@@ -999,11 +997,11 @@ public class JCTCreatorFromSourceCode
 				this.errorMessage.append(" must handle modifier: ");
 				this.errorMessage.append(mod);
 
-				if (!this.errorMessages
-						.contains(this.errorMessage.toString())) {
-					this.errorMessages.add(this.errorMessage.toString());
-					ProxyConsole.getInstance().errorOutput()
-							.println(this.errorMessage);
+				final String errorString = this.errorMessage.toString();
+				if (!this.errorMessages.contains(errorString)) {
+					this.errorMessages.add(errorString);
+					ProxyConsole.getInstance().debugOutput()
+							.println(errorString);
 				}
 			}
 
@@ -1709,11 +1707,11 @@ public class JCTCreatorFromSourceCode
 				this.errorMessage.append(" must handle modifier: ");
 				this.errorMessage.append(mod);
 
-				if (!this.errorMessages
-						.contains(this.errorMessage.toString())) {
-					this.errorMessages.add(this.errorMessage.toString());
-					ProxyConsole.getInstance().errorOutput()
-							.println(this.errorMessage);
+				final String errorString = this.errorMessage.toString();
+				if (!this.errorMessages.contains(errorString)) {
+					this.errorMessages.add(errorString);
+					ProxyConsole.getInstance().debugOutput()
+							.println(errorString);
 				}
 			}
 

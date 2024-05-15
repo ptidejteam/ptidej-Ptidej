@@ -19,8 +19,8 @@
  */
 package padl.creator.javafile.javac.test.simple;
 
-import java.util.Iterator;
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.javafile.javac.JavaFileCreator;
 import padl.kernel.IClass;
@@ -31,8 +31,7 @@ import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
 
 public class Test1 extends TestCase {
-	private static final String PATH =
-		"../PADL Creator JavaFile (JavaC)/target/test-classes/";
+	private static final String PATH = "../PADL Creator JavaFile (JavaC)/target/test-classes/";
 	private static final String FILE = Test1.PATH + "CreatorJava.java";
 
 	private static ICodeLevelModel CodeLevelModel;
@@ -40,72 +39,49 @@ public class Test1 extends TestCase {
 	public Test1(final String name) {
 		super(name);
 	}
+
 	protected void setUp() {
 		if (Test1.CodeLevelModel == null) {
 			try {
-				Test1.CodeLevelModel =
-					Factory.getInstance().createCodeLevelModel("");
-				Test1.CodeLevelModel.create(new JavaFileCreator(
-					Test1.PATH,
-					new String[] { Test1.FILE }));
+				Test1.CodeLevelModel = Factory.getInstance()
+						.createCodeLevelModel("");
+				Test1.CodeLevelModel.create(new JavaFileCreator(Test1.PATH,
+						new String[] { Test1.FILE }));
 			}
 			catch (final CreationException e) {
 				e.printStackTrace();
 			}
 		}
 	}
+
 	public void testA() {
-		Assert.assertEquals(
-			"Number of classes",
-			1,
-			Test1.CodeLevelModel.getNumberOfTopLevelEntities(IClass.class));
+		Assert.assertEquals("Number of classes", 1,
+				Test1.CodeLevelModel.getNumberOfTopLevelEntities(IClass.class));
 	}
+
 	public void testB() {
-		IFirstClassEntity entity = null;
-		final Iterator<?> iterator =
-			Test1.CodeLevelModel.getIteratorOnTopLevelEntities();
-		while (iterator.hasNext()) {
-			final IFirstClassEntity e = (IFirstClassEntity) iterator.next();
-			if (e instanceof IClass) {
-				entity = e;
-				break;
-			}
-		}
+		final IFirstClassEntity entity = Test1.CodeLevelModel
+				.getTopLevelEntityFromID("padl.creator.CreatorJava");
 		Assert.assertNotNull("Class CreatorJava does not exist", entity);
-		Assert.assertEquals(
-			"Class CreatorJava name",
-			"CreatorJava",
-			entity.getDisplayName());
-		Assert
-			.assertEquals(
-				"Class CreatorJava comment",
+		Assert.assertEquals("Class CreatorJava name", "CreatorJava",
+				entity.getDisplayName());
+		final String comment = entity.getComment().replaceAll("\\r\\n?", "\\n");
+		Assert.assertEquals("Class CreatorJava comment",
 				"*\n * This class is used to create a PADL Model, from a set of Java Source Files, using JCT.\n *\n * @author Mathieu Lemoine\n ",
-				entity.getComment());
+				comment);
 	}
+
 	public void testC() {
-		IFirstClassEntity entity = null;
-		final Iterator<?> iterator =
-			Test1.CodeLevelModel.getIteratorOnTopLevelEntities();
-		while (iterator.hasNext()) {
-			final IFirstClassEntity e = (IFirstClassEntity) iterator.next();
-			if (e instanceof IClass) {
-				entity = e;
-				break;
-			}
-		}
-		final IConstructor constructor =
-			(IConstructor) entity.getConstituentFromID(new char[] { '<', 'i',
-					'n', 'i', 't', '>', '(', 'j', 'a', 'v', 'a', 'x', '.', 't',
-					'o', 'o', 'l', 's', '.', 'D', 'i', 'a', 'g', 'n', 'o', 's',
-					't', 'i', 'c', 'L', 'i', 's', 't', 'e', 'n', 'e', 'r', ',',
-					' ', 'j', 'a', 'v', 'a', '.', 'l', 'a', 'n', 'g', '.', 'I',
-					't', 'e', 'r', 'a', 'b', 'l', 'e', ',', ' ', 'L', 'j', 'a',
-					'v', 'a', '.', 'i', 'o', '.', 'F', 'i', 'l', 'e', ')' });
+		final IFirstClassEntity entity = Test1.CodeLevelModel
+				.getTopLevelEntityFromID("padl.creator.CreatorJava");
+		final IConstructor constructor = (IConstructor) entity
+				.getConstituentFromID(
+						"<init>(javax.tools.DiagnosticListener, java.lang.Iterable, Ljava.io.File)");
 		Assert.assertNotNull("Constructor does not exist", constructor);
-		Assert
-			.assertEquals(
-				"Constructor comment",
+		final String comment = constructor.getComment().replaceAll("\\r\\n?",
+				"\\n");
+		Assert.assertEquals("Constructor comment",
 				"*\n	 * @param files List of Path to each of the java source file want to put in the PADL Model.\n	 * @param diag DiagnosticListener used to report error during compilation pass.\n	 * @param options Options to pass to JavaC, splited as in a command line.\n	 ",
-				constructor.getComment());
+				comment);
 	}
 }
