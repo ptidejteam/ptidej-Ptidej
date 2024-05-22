@@ -33,20 +33,20 @@ public class ArgoUML020Test extends TestCase {
 	public ArgoUML020Test(String name) {
 		super(name);
 	}
+
 	protected void setUp() {
 		if (ArgoUML020Test.OriginalModel == null) {
 			try {
 				System.out.println("Creating model...");
 				final long beginning = System.currentTimeMillis();
 
-				ArgoUML020Test.OriginalModel =
-					Factory.getInstance().createCodeLevelModel("ArgoUML v0.20");
+				ArgoUML020Test.OriginalModel = Factory.getInstance()
+						.createCodeLevelModel("ArgoUML v0.20");
 				((ICodeLevelModel) ArgoUML020Test.OriginalModel)
-					.create(new LightClassFileCreator(
-						new String[] { "../../P-MARt Workspace/ArgoUML v0.20/bin/" },
-						true));
-				ArgoUML020Test.OriginalModel =
-					new AACRelationshipsAnalysis()
+						.create(new LightClassFileCreator(new String[] {
+								"../../P-MARt Workspace/ArgoUML v0.20/bin/" },
+								true));
+				ArgoUML020Test.OriginalModel = new AACRelationshipsAnalysis()
 						.invoke(ArgoUML020Test.OriginalModel);
 
 				final long end = System.currentTimeMillis();
@@ -61,31 +61,31 @@ public class ArgoUML020Test extends TestCase {
 				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 			}
 
-			ArgoUML020Test.SerialisedFileName =
-				JOSSerialiser.getInstance().serialiseWithAutomaticNaming(
-					ArgoUML020Test.OriginalModel,
-					"../PADL Serialiser JOS Tests/rsc/");
-			ArgoUML020Test.SerialisedModel =
-				JOSSerialiser.getInstance().deserialise(
-					ArgoUML020Test.SerialisedFileName);
+			ArgoUML020Test.SerialisedFileName = JOSSerialiser.getInstance()
+					.serialiseWithAutomaticNaming(ArgoUML020Test.OriginalModel,
+							"../PADL Serialiser JOS/target/test-classes/");
+			ArgoUML020Test.SerialisedModel = JOSSerialiser.getInstance()
+					.deserialise(ArgoUML020Test.SerialisedFileName);
 		}
 	}
+
 	protected void tearDown() {
 		final File serialisedFile = new File(ArgoUML020Test.SerialisedFileName);
 		serialisedFile.delete();
 
-		final File serialisedHelperFile =
-			new File(ArgoUML020Test.SerialisedFileName
-					+ TransientFieldManager.METHOD_INVOCATION_EXTENSION);
+		final File serialisedHelperFile = new File(
+				ArgoUML020Test.SerialisedFileName
+						+ TransientFieldManager.METHOD_INVOCATION_EXTENSION);
 		serialisedHelperFile.delete();
 	}
+
 	public void testNames() {
-		Assert.assertEquals(
-			ArgoUML020Test.OriginalModel.getDisplayName(),
-			ArgoUML020Test.SerialisedModel.getDisplayName());
+		Assert.assertEquals(ArgoUML020Test.OriginalModel.getDisplayName(),
+				ArgoUML020Test.SerialisedModel.getDisplayName());
 	}
+
 	public void testComparator() {
-		ArgoUML020Test.OriginalModel.walk(new ModelComparator(
-			ArgoUML020Test.SerialisedModel));
+		ArgoUML020Test.OriginalModel
+				.walk(new ModelComparator(ArgoUML020Test.SerialisedModel));
 	}
 }

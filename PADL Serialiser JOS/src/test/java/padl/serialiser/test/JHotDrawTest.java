@@ -57,7 +57,7 @@ public class JHotDrawTest extends TestCase {
 			System.out.println(" ms.");
 			JHotDrawTest.SerialisedFileName = JOSSerialiser.getInstance()
 					.serialiseWithAutomaticNaming(JHotDrawTest.OriginalModel,
-							"../PADL Serialiser JOS Tests/rsc/");
+							"../PADL Serialiser JOS/target/test-classes/");
 			JHotDrawTest.SerialisedModel = JOSSerialiser.getInstance()
 					.deserialise(JHotDrawTest.SerialisedFileName);
 		}

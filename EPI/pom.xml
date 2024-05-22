@@ -77,7 +77,7 @@
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-solver-metrics</artifactId>
+			<artifactId>demima-solver-fingerprints</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 

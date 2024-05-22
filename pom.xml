@@ -19,7 +19,8 @@
 		<module>DeMIMA UI</module>
 		<module>DeMIMA UI Analyses</module>
 		<module>DeMIMA UI AspectJ</module>
-		<module>DeMIMA UI C++</module>
+		<!-- TODO Add this module                      -->
+		<!-- <module>DeMIMA UI C++</module>            -->
 		<module>DeMIMA UI Layouts</module>
 		<module>DeMIMA UI Primitives AWT</module>
 		<!-- TODO Add this module                      -->
