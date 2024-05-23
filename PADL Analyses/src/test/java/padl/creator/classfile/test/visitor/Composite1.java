@@ -29,7 +29,8 @@ import padl.visitor.IGenerator;
 import util.io.ProxyDisk;
 
 public class Composite1 extends ClassFilePrimitive {
-	private static final String EXPECTED_FILE_PATH = "../PADL Analyses/target/test-classes/padl/creator/classfile/test/visitor/Composite1.expected.txt";
+	private static final String EXPECTED_FILE_PATH_SRC = "../PADL Analyses/src/test/resources/padl/creator/classfile/test/visitor/Composite1.expected.txt";
+	private static final String EXPECTED_FILE_PATH_TST = "../PADL Analyses/target/test-classes/padl/creator/classfile/test/visitor/Composite1.expected.txt";
 
 	private static IAbstractLevelModel AbstractLevelModel;
 
@@ -54,21 +55,27 @@ public class Composite1 extends ClassFilePrimitive {
 	}
 
 	// FLAKY TEST
+	// TODO Make it steady!
 	public void testVisitor() {
 		try {
 			final IGenerator generator = new SimpleGenerator();
 			Composite1.AbstractLevelModel.generate(generator);
 
 			// To generate a new expected file.
-			//	final FileWriter writer =
-			//		ProxyDisk.getInstance().fileAbsoluteOutput(
-			//			Composite1.EXPECTED_FILE_PATH);
-			//	writer.write(Composite1.SIMPLE_GENERATOR.getCode());
-			//	writer.close();
+			/*
+			FileWriter writer = ProxyDisk.getInstance()
+					.fileAbsoluteOutput(Composite1.EXPECTED_FILE_PATH_SRC);
+			writer.write(generator.getCode());
+			writer.close();
+			writer = ProxyDisk.getInstance()
+					.fileAbsoluteOutput(Composite1.EXPECTED_FILE_PATH_TST);
+			writer.write(generator.getCode());
+			writer.close();
+			*/
 
 			final LineNumberReader reader = new LineNumberReader(
-					ProxyDisk.getInstance()
-							.fileAbsoluteInput(Composite1.EXPECTED_FILE_PATH));
+					ProxyDisk.getInstance().fileAbsoluteInput(
+							Composite1.EXPECTED_FILE_PATH_TST));
 
 			int i = 0;
 			final StringTokenizer tokenizer = new StringTokenizer(
