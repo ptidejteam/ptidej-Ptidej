@@ -65,7 +65,7 @@ public class Test1 extends TestCase {
 		Assert.assertNotNull("Class CreatorJava does not exist", entity);
 		Assert.assertEquals("Class CreatorJava name", "CreatorJava",
 				entity.getDisplayName());
-		final String comment = entity.getComment().replaceAll("\\r\\n?", "\\n");
+		final String comment = entity.getComment().replaceAll("\\r\\n?", "\n");
 		Assert.assertEquals("Class CreatorJava comment",
 				"*\n * This class is used to create a PADL Model, from a set of Java Source Files, using JCT.\n *\n * @author Mathieu Lemoine\n ",
 				comment);
@@ -79,7 +79,7 @@ public class Test1 extends TestCase {
 						"<init>(javax.tools.DiagnosticListener, java.lang.Iterable, Ljava.io.File)");
 		Assert.assertNotNull("Constructor does not exist", constructor);
 		final String comment = constructor.getComment().replaceAll("\\r\\n?",
-				"\\n");
+				"\n");
 		Assert.assertEquals("Constructor comment",
 				"*\n	 * @param files List of Path to each of the java source file want to put in the PADL Model.\n	 * @param diag DiagnosticListener used to report error during compilation pass.\n	 * @param options Options to pass to JavaC, splited as in a command line.\n	 ",
 				comment);

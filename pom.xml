@@ -50,7 +50,7 @@
 		<module>PADL Creator XMI</module>
 		<module>PADL Design Motifs</module>
 		<module>PADL Generator</module>
-		<module>PADL Generator PageRank</module>
+		<!-- <module>PADL Generator PageRank</module> -->
 		<module>PADL Micro-pattern Analysis</module>
 		<module>PADL Refactorings</module>
 		<module>PADL Serialiser DB4O</module>
