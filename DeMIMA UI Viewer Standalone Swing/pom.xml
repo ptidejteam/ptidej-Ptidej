@@ -220,11 +220,13 @@
 			java.lang.NoSuchMethodError: 'org.eclipse.core.runtime.SubMonitor
 		org.eclipse.core.runtime.SubMonitor.split(int)' 
 		-->
+		<!-- 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
 			<artifactId>demima-ui-cpp</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+		-->
 
 		<!--
 		These two last dependencies MUST COME LAST because they bring with them
