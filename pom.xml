@@ -50,6 +50,10 @@
 		<module>PADL Creator XMI</module>
 		<module>PADL Design Motifs</module>
 		<module>PADL Generator</module>
+<<<<<<< HEAD
+=======
+		<!-- TODO Add this module                     -->
+>>>>>>> branch 'master' of https://github.com/ptidejteam/ptidej-Ptidej.git
 		<!-- <module>PADL Generator PageRank</module> -->
 		<module>PADL Micro-pattern Analysis</module>
 		<module>PADL Refactorings</module>
