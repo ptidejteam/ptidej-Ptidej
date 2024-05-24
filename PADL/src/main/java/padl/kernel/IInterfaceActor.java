@@ -18,6 +18,7 @@ import java.util.Iterator;
  * @since  2009/05/01
  *
  */
+// TODO Reassess the usefulness of this interface
 public interface IInterfaceActor extends IFirstClassEntity {
 	Iterator getIteratorOnImplementingClasses();
 }
