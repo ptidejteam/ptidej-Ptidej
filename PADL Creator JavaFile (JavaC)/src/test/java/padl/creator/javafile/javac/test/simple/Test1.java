@@ -33,6 +33,8 @@ import padl.kernel.impl.Factory;
 public class Test1 extends TestCase {
 	private static final String PATH = "../PADL Creator JavaFile (JavaC)/target/test-classes/";
 	private static final String FILE = Test1.PATH + "CreatorJava.java";
+	private static final String TEST_B = "*\n * This class is used to create a PADL Model, from a set of Java Source Files, using JCT.\n *\n * @author Mathieu Lemoine\n ";
+	private static final String TEST_C = "*\n	 * @param files List of Path to each of the java source file want to put in the PADL Model.\n	 * @param diag DiagnosticListener used to report error during compilation pass.\n	 * @param options Options to pass to JavaC, splited as in a command line.\n	 ";
 
 	private static ICodeLevelModel CodeLevelModel;
 
@@ -65,9 +67,9 @@ public class Test1 extends TestCase {
 		Assert.assertNotNull("Class CreatorJava does not exist", entity);
 		Assert.assertEquals("Class CreatorJava name", "CreatorJava",
 				entity.getDisplayName());
-		final String comment = entity.getComment().replaceAll("\\r\\n?", "\\n");
+		final String comment = entity.getComment().replaceAll("\\r", "").replaceAll("\\n", "");
 		Assert.assertEquals("Class CreatorJava comment",
-				"*\n * This class is used to create a PADL Model, from a set of Java Source Files, using JCT.\n *\n * @author Mathieu Lemoine\n ",
+				Test1.TEST_B.replaceAll("\\r", "").replaceAll("\\n", ""),
 				comment);
 	}
 
@@ -78,10 +80,9 @@ public class Test1 extends TestCase {
 				.getConstituentFromID(
 						"<init>(javax.tools.DiagnosticListener, java.lang.Iterable, Ljava.io.File)");
 		Assert.assertNotNull("Constructor does not exist", constructor);
-		final String comment = constructor.getComment().replaceAll("\\r\\n?",
-				"\\n");
+		final String comment = constructor.getComment().replaceAll("\\r", "").replaceAll("\\n", "");
 		Assert.assertEquals("Constructor comment",
-				"*\n	 * @param files List of Path to each of the java source file want to put in the PADL Model.\n	 * @param diag DiagnosticListener used to report error during compilation pass.\n	 * @param options Options to pass to JavaC, splited as in a command line.\n	 ",
+				Test1.TEST_C.replaceAll("\\r", "").replaceAll("\\n", ""),
 				comment);
 	}
 }
