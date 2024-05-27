@@ -32,15 +32,15 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/Caffeine"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Caffeine Analyses"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Caffeine Tests"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL JNI"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL JNI Tests"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
