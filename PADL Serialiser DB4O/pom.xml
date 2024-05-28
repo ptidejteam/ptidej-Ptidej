@@ -12,6 +12,7 @@
 
 	<groupId>net.ptidej.padl</groupId>
 	<artifactId>padl-serialiser-db4o</artifactId>
+	<name>PADL Serialiser DB4O</name>
 
 	<!-- To install db4o-7.12.132.14217-all-java5.jar and make it available -->
 	<build>

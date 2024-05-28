@@ -12,6 +12,7 @@
 
 	<groupId>net.ptidej.padl</groupId>
 	<artifactId>padl-refactorings</artifactId>
+	<name>PADL Refactorings</name>
 
 	<build>
 		<plugins>

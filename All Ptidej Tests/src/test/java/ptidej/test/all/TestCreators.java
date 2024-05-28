@@ -16,6 +16,7 @@ import junit.framework.TestSuite;
 import padl.creator.aolfile.test.TestCreatorAOL;
 import padl.creator.aspectj.test.TestCreatorAspectJ;
 import padl.creator.classfile.test.TestCreatorClassFile;
+import padl.creator.cppfile.antlr.test.TestCreatorCPPFileUsingANTLR;
 import padl.creator.javafile.eclipse.test.TestCreatorJavaFileUsingEclipse;
 import padl.creator.javafile.javac.test.TestCreatorJavaFileUsingJavaC;
 import padl.creator.msefile.test.TestCreatorMSE;
@@ -37,6 +38,7 @@ public final class TestCreators extends TestSuite {
 		suite.addTest(TestCreatorAspectJ.suite());
 		suite.addTestSuite(TestCreatorCSharpV1.class);
 		suite.addTestSuite(TestCreatorCSharpv2.class);
+		suite.addTest(TestCreatorCPPFileUsingANTLR.suite());
 		// TODO Add test suite
 		//	suite.addTest(TestCreatorCPPFileUsingEclipse.suite());
 		suite.addTest(TestCreatorClassFile.suite());

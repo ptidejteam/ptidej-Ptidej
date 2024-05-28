@@ -12,6 +12,7 @@
 
 	<groupId>net.ptidej.padl</groupId>
 	<artifactId>padl-creator-xmi</artifactId>
+	<name>PADL Creator XMI</name>
 
 	<build>
 		<plugins>

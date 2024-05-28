@@ -47,7 +47,7 @@ public class TestCsegment2 extends CppPrimitive {
 			try {
 				codeLevelModel
 					.create(new CPPCreator(
-						new String[] { "../PADL Creator C++ Tests/rsc/csegment2.cpp" }));
+						new String[] { "../PADL Creator C++ (ANTLR)/target/test-classes/csegment2.cpp" }));
 			}
 			catch (final CreationException e) {
 				e.printStackTrace();

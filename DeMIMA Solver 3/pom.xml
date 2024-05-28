@@ -12,6 +12,7 @@
 
 	<groupId>net.ptidej.demima</groupId>
 	<artifactId>demima-solver-3</artifactId>
+	<name>DeMIMA Solver 3</name>
 
 	<build>
 		<plugins>

@@ -12,6 +12,7 @@
 
 	<groupId>net.ptidej.padl</groupId>
 	<artifactId>padl-serialiser-jos</artifactId>
+	<name>PADL Serialiser JOS</name>
 
 	<build>
 		<plugins>

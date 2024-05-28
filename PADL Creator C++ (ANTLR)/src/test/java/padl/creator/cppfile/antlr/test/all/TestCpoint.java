@@ -43,7 +43,7 @@ public class TestCpoint extends CppPrimitive {
 			try {
 				codeLevelModel
 					.create(new CPPCreator(
-						new String[] { "../PADL Creator C++ Tests/rsc/Cpoint.cpp" }));
+						new String[] { "../PADL Creator C++ (ANTLR)/target/test-classes/Cpoint.cpp" }));
 			}
 			catch (final CreationException e) {
 				e.printStackTrace();

@@ -49,7 +49,7 @@ public class TestInheritance extends CppPrimitive {
 				CppPrimitive.getFactory().createCodeLevelModel("her.cpp");
 			try {
 				codeLevelModel.create(new CPPCreator(
-					new String[] { "../PADL Creator C++ Tests/rsc/her.cpp" }));
+					new String[] { "../PADL Creator C++ (ANTLR)/target/test-classes/her.cpp" }));
 			}
 			catch (final CreationException e) {
 				e.printStackTrace();
