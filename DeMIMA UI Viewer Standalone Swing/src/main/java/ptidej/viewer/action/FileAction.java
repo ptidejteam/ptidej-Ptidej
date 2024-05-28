@@ -12,6 +12,7 @@ package ptidej.viewer.action;
 
 import java.awt.Frame;
 import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.geom.AffineTransform;
 import java.io.File;
@@ -29,6 +30,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import java.util.StringTokenizer;
+
+import javax.imageio.ImageIO;
 import javax.swing.AbstractAction;
 import org.apache.batik.anim.dom.SVGDOMImplementation;
 import org.apache.batik.svggen.SVGGraphics2D;
@@ -40,6 +43,8 @@ import org.apache.batik.transcoder.TranscoderOutput;
 import org.apache.batik.transcoder.image.JPEGTranscoder;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
+
+import padl.analysis.plantUMLGenerator.plantUMLToImageConversion;
 import padl.kernel.IAbstractModel;
 import padl.util.ExternalDataProcessor;
 import ptidej.ui.awt.occurrence.PrimitiveFactory;
@@ -87,6 +92,9 @@ public class FileAction extends AbstractAction {
 		}
 		else if (action.equals(Resources.LOAD_DUAL_HIERARCHICAL_PROJECT)) {
 			this.loadDualHierarchicalProject();
+		}
+		else if (action.equals(Resources.LOAD_PLANTUML_PROJECT)) {
+			this.loadPlantUMLProject();
 		}
 		else if (action.equals(Resources.LOAD_EXTRINSIC)) {
 			this.loadExtrinsicData();
@@ -494,6 +502,25 @@ public class FileAction extends AbstractAction {
 		DesktopPane.getInstance().createHierarchicalModelWindow();
 		this.processSelectedFile(file);
 	}
+	private void loadPlantUMLProject() {
+		final File file =
+				Utils.loadDirectory(DesktopFrame.getInstance(), enabled, "Select Compiled Class Directory","class", "CLASS File");
+		if (file == null) {
+			return;
+		}
+        if (new plantUMLToImageConversion().plantUMLImageGenerator(file)) {
+            System.out.println("Image generation successful");
+			final String filePath =
+					util.io.Files.normalizePath("../OutputUML.png")
+							+ File.separatorChar;
+            DesktopPane.getInstance().setPlantUMLImagePath(filePath);
+        } else {
+            System.out.println("Image generation failure, check console log.");
+}
+		DesktopPane.getInstance().createPlantUMLModelWindow();
+		this.processSelectedFile(IRepresentation.TYPE_JAVA_CLASSFILES,file);			// filetype and path since we are loading a directory
+	}
+
 	private void processSelectedFile(final File file) {
 		final IAWTRepresentation window =
 			DesktopPane.getInstance().getAbstractRepresentationWindow();

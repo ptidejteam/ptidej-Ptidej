@@ -1628,6 +1628,11 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				{
 						"ptidej.viewer.ui.ToolBar::CMD_LOAD_DUAL_HIERARCHICAL_PROJECT_ICON",
 						"OpenDualHierarchical24.gif" },
+				{ "ptidej.viewer.ui.ToolBar::CMD_LOAD_PLANTUML_PROJECT",
+						"Load PlantUML Project" },
+				{
+				"ptidej.viewer.ui.ToolBar::CMD_LOAD_PLANTUML_PROJECT_ICON",
+						"OpenHierarchical24.gif" },				
 				{ "ptidej.viewer.ui.ToolBar::CMD_ADD", "Add File ..." },
 				{ "ptidej.viewer.ui.ToolBar::CMD_SAVE_ALL", "Save All" },
 				{ "ptidej.viewer.ui.ToolBar::CMD_SAVE_ACTIVE", "Save" },

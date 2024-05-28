@@ -31,6 +31,7 @@ import ptidej.viewer.ui.window.RuleCardWindow;
 import ptidej.viewer.ui.window.SourceDualHierarchicalModelWindow;
 import ptidej.viewer.ui.window.SourceGraphicalModelWindow;
 import ptidej.viewer.ui.window.SourceHierarchicalModelWindow;
+import ptidej.viewer.ui.window.SourcePlantUMLModelWindow;
 import ptidej.viewer.utils.Resources;
 
 public class DesktopPane extends JDesktopPane {
@@ -56,7 +57,7 @@ public class DesktopPane extends JDesktopPane {
 	private final List ruleCardListeners;
 	private int solver;
 	private final List sourceModelListeners;
-
+	private  String plantUMLImagePath; // file path for plantUMLImagePath
 	private DesktopPane() {
 		this.setBackground(Color.GRAY);
 
@@ -124,6 +125,21 @@ public class DesktopPane extends JDesktopPane {
 		// the window because its opening will trigger any other window
 		// to deactivate and, thus, set currentDesktopWindow to null!
 		this.currentDesktopWindow = window;
+	}
+	public void createPlantUMLModelWindow() {
+
+		final AbstractRepresentationWindow window =
+			new SourcePlantUMLModelWindow();
+		this.currentDesktopWindow = window;
+		this.setWindowProperties(window);
+
+		this.currentDesktopWindow = window;
+	}
+	public String getPlantUMLImagePath() {
+		return plantUMLImagePath;
+	}
+	public void setPlantUMLImagePath(String plantUMLImagePath) {
+		this.plantUMLImagePath = plantUMLImagePath;
 	}
 	public void createRuleCardWindow(
 		final File ruleCardFile,
