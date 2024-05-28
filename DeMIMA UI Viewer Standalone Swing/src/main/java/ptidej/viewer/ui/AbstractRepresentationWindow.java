@@ -58,6 +58,8 @@ import util.io.ProxyConsole;
 /**
  * @author Yann-Gaël Guéhéneuc
  * @since  2007/08/31
+ * @author Vishnu Rameshbabu
+ * @since 2024/05/10
  */
 public abstract class AbstractRepresentationWindow extends JInternalFrame
 		implements IAWTRepresentation, IWindow {

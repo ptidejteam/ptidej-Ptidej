@@ -27,8 +27,8 @@
 				<version>3.13.0</version>
 				<configuration>
 					<release combine.self="override" />
-					<source>1.4</source>
-					<target>1.4</target>
+					<source>21</source>
+					<target>21</target>
 					<compilerId>eclipse</compilerId>
 				</configuration>
 				<dependencies>
@@ -70,6 +70,28 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>3.1.1</version>
+				<executions>
+					<execution>
+						<id>install-plantUML</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<configuration>
+							<file>src/main/resources/plantuml-mit-1.2024.4.jar</file>
+							<groupId>net.sourceforget.plantUML</groupId>
+							<artifactId>plantUML</artifactId>
+							<version>1.0</version>
+							<packaging>jar</packaging>
+							<generatePom>true</generatePom>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -81,13 +103,21 @@
 			<artifactId>cpl-core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-
+				<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-classfile</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforget.plantUML</groupId>
+			<artifactId>plantUML</artifactId>
+			<version>1.0</version>
+		</dependency>
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-design-motifs</artifactId>
