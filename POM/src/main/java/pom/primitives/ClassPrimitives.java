@@ -46,13 +46,7 @@ public class ClassPrimitives extends Primitives {
 
 	private Operators operators = Operators.getInstance();
 
-	/**
-	 * Constructor Initializes the instance and handles an instance of the model
-	 * 
-	 * @param introspector
-	 */
 	private ClassPrimitives() {
-		super();
 	}
 
 	/**

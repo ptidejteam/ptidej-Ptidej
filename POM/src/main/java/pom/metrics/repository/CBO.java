@@ -27,6 +27,7 @@ import padl.kernel.IFirstClassEntity;
 import pom.metrics.IBinaryMetric;
 import pom.metrics.IMetric;
 import pom.metrics.IUnaryMetric;
+import pom.util.CacheManager;
 
 public class CBO extends AbstractMetric implements IMetric, IUnaryMetric,
 		IBinaryMetric {
@@ -92,7 +93,7 @@ public class CBO extends AbstractMetric implements IMetric, IUnaryMetric,
 		// by using whatever value is available in the cache.
 
 		double cboInValue = 0;
-		if (this.cacheManager.isBinaryMetricValueInCache(
+		if (CacheManager.getInstance(anAbstractModel).isBinaryMetricValueInCache(
 			CBO.CBOinMetric,
 			anEntityA,
 			anEntityB)) {
@@ -117,7 +118,7 @@ public class CBO extends AbstractMetric implements IMetric, IUnaryMetric,
 		}
 
 		double cboOutValue = 0;
-		if (this.cacheManager.isBinaryMetricValueInCache(
+		if (CacheManager.getInstance(anAbstractModel).isBinaryMetricValueInCache(
 			CBO.CBOoutMetric,
 			anEntityA,
 			anEntityB)) {

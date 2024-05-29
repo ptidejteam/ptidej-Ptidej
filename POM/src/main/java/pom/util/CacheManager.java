@@ -12,39 +12,50 @@ package pom.util;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import padl.kernel.IAbstractModel;
 import padl.kernel.IConstituent;
 import padl.kernel.IFirstClassEntity;
 import pom.metrics.IBinaryMetric;
 import pom.metrics.IMetric;
 
 public class CacheManager {
-	private static CacheManager UniqueInstance;
-	public static CacheManager getInstance() {
-		if (CacheManager.UniqueInstance == null) {
-			CacheManager.UniqueInstance = new CacheManager();
+	private static Map MapOfUniqueInstance;
+
+	public static CacheManager getInstance(
+			final IAbstractModel anAbstractModel) {
+
+		if (CacheManager.MapOfUniqueInstance == null) {
+			CacheManager.MapOfUniqueInstance = new HashMap();
 		}
-		return CacheManager.UniqueInstance;
+
+		final Integer abstractModelUniqueID = Integer
+				.valueOf(anAbstractModel.hashCode());
+		if (!CacheManager.MapOfUniqueInstance
+				.containsKey(abstractModelUniqueID)) {
+			CacheManager.MapOfUniqueInstance.put(abstractModelUniqueID,
+					new CacheManager());
+		}
+		return (CacheManager) CacheManager.MapOfUniqueInstance
+				.get(abstractModelUniqueID);
 	}
 
 	private final Map cache;
+
 	private CacheManager() {
 		this.cache = new HashMap();
 	}
-	public void cacheBinaryMetricValue(
-		final IBinaryMetric aMetric,
-		final IFirstClassEntity anEntity,
-		final IFirstClassEntity anotherEntity,
-		final double aValue) {
+
+	public void cacheBinaryMetricValue(final IBinaryMetric aMetric,
+			final IFirstClassEntity anEntity,
+			final IFirstClassEntity anotherEntity, final double aValue) {
 
 		if (aMetric.isSymmetrical()) {
-			if (!this.isBinaryMetricValueInCache(
-				aMetric,
-				anotherEntity,
-				anEntity)) {
+			if (!this.isBinaryMetricValueInCache(aMetric, anotherEntity,
+					anEntity)) {
 
-				this.cache.put(
-					this.getBinaryMetricKey(aMetric, anEntity, anotherEntity),
-					Double.valueOf(aValue));
+				this.cache.put(this.getBinaryMetricKey(aMetric, anEntity,
+						anotherEntity), Double.valueOf(aValue));
 			}
 		}
 		else {
@@ -54,29 +65,27 @@ public class CacheManager {
 			//		anotherEntity), Double.valueOf(aValue));
 		}
 	}
-	public void cachePrimitiveResult(
-		final String aMethodName,
-		final IConstituent aConstituent,
-		final IConstituent anotherConstituent,
-		final Object aValue) {
+
+	public void cachePrimitiveResult(final String aMethodName,
+			final IConstituent aConstituent,
+			final IConstituent anotherConstituent, final Object aValue) {
 
 		//	this.cache.put(this.getPrimitiveKey(
 		//		aMethodName,
 		//		aConstituent,
 		//		anotherConstituent), aValue);
 	}
-	public void cacheUnaryMetricValue(
-		final IMetric aMetric,
-		final IFirstClassEntity anEntity,
-		final double aValue) {
 
-		this.cache.put(this.getUnaryMetricKey(aMetric, anEntity), Double.valueOf(
-			aValue));
+	public void cacheUnaryMetricValue(final IMetric aMetric,
+			final IFirstClassEntity anEntity, final double aValue) {
+
+		this.cache.put(this.getUnaryMetricKey(aMetric, anEntity),
+				Double.valueOf(aValue));
 	}
-	private String getBinaryMetricKey(
-		final IBinaryMetric aMetric,
-		final IFirstClassEntity anEntity,
-		final IFirstClassEntity anotherEntity) {
+
+	private String getBinaryMetricKey(final IBinaryMetric aMetric,
+			final IFirstClassEntity anEntity,
+			final IFirstClassEntity anotherEntity) {
 
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append(aMetric.getClass().getName());
@@ -84,10 +93,10 @@ public class CacheManager {
 		buffer.append(anotherEntity.getID());
 		return buffer.toString();
 	}
-	private String getPrimitiveKey(
-		final String aMethodName,
-		final IConstituent aConstituent,
-		final IConstituent anotherConstituent) {
+
+	private String getPrimitiveKey(final String aMethodName,
+			final IConstituent aConstituent,
+			final IConstituent anotherConstituent) {
 
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append(aMethodName);
@@ -95,15 +104,16 @@ public class CacheManager {
 		buffer.append(anotherConstituent.getID());
 		return buffer.toString();
 	}
-	private String getUnaryMetricKey(
-		final IMetric aMetric,
-		final IFirstClassEntity anEntity) {
+
+	private String getUnaryMetricKey(final IMetric aMetric,
+			final IFirstClassEntity anEntity) {
 
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append(aMetric.getClass().getName());
 		buffer.append(anEntity.getID());
 		return buffer.toString();
 	}
+
 	//	public boolean isAsymetricalBinaryMetricValueInCache(
 	//		final Class aMetric,
 	//		final IEntity anEntity,
@@ -119,57 +129,49 @@ public class CacheManager {
 	//			anEntity,
 	//			anotherEntity));
 	//	}
-	public boolean isBinaryMetricValueInCache(
-		final IBinaryMetric aMetric,
-		final IFirstClassEntity anEntity,
-		final IFirstClassEntity anotherEntity) {
+	public boolean isBinaryMetricValueInCache(final IBinaryMetric aMetric,
+			final IFirstClassEntity anEntity,
+			final IFirstClassEntity anotherEntity) {
 
 		if (aMetric.isSymmetrical()) {
-			return this.cache.containsKey(this.getBinaryMetricKey(
-				aMetric,
-				anEntity,
-				anotherEntity))
-					|| this.cache.containsKey(this.getBinaryMetricKey(
-						aMetric,
-						anotherEntity,
-						anEntity));
+			return this.cache.containsKey(
+					this.getBinaryMetricKey(aMetric, anEntity, anotherEntity))
+					|| this.cache.containsKey(this.getBinaryMetricKey(aMetric,
+							anotherEntity, anEntity));
 		}
 		else {
-			return this.cache.containsKey(this.getBinaryMetricKey(
-				aMetric,
-				anEntity,
-				anotherEntity));
+			return this.cache.containsKey(
+					this.getBinaryMetricKey(aMetric, anEntity, anotherEntity));
 		}
 	}
-	public boolean isUnaryMetricValueInCache(
-		final IMetric aMetric,
-		final IFirstClassEntity anEntity) {
+
+	public boolean isUnaryMetricValueInCache(final IMetric aMetric,
+			final IFirstClassEntity anEntity) {
 
 		return this.cache
-			.containsKey(this.getUnaryMetricKey(aMetric, anEntity));
+				.containsKey(this.getUnaryMetricKey(aMetric, anEntity));
 	}
-	public double retrieveBinaryMetricValue(
-		final IBinaryMetric aMetric,
-		final IFirstClassEntity anEntity,
-		final IFirstClassEntity anotherEntity) {
+
+	public double retrieveBinaryMetricValue(final IBinaryMetric aMetric,
+			final IFirstClassEntity anEntity,
+			final IFirstClassEntity anotherEntity) {
 
 		if (aMetric.isSymmetrical()) {
 			try {
 				return this.retrieveMetricValueFromCache(this
-					.getBinaryMetricKey(aMetric, anEntity, anotherEntity));
+						.getBinaryMetricKey(aMetric, anEntity, anotherEntity));
 			}
 			catch (final NoSuchValueInCacheException e) {
 				return this.retrieveMetricValueFromCache(this
-					.getBinaryMetricKey(aMetric, anotherEntity, anEntity));
+						.getBinaryMetricKey(aMetric, anotherEntity, anEntity));
 			}
 		}
 		else {
-			return this.retrieveMetricValueFromCache(this.getBinaryMetricKey(
-				aMetric,
-				anEntity,
-				anotherEntity));
+			return this.retrieveMetricValueFromCache(
+					this.getBinaryMetricKey(aMetric, anEntity, anotherEntity));
 		}
 	}
+
 	private double retrieveMetricValueFromCache(final String aKey) {
 		final Double value = (Double) this.cache.get(aKey);
 		if (value != null) {
@@ -179,16 +181,15 @@ public class CacheManager {
 			throw new NoSuchValueInCacheException(aKey);
 		}
 	}
-	public Object retrievePrimitiveResult(
-		final String aMethodName,
-		final IConstituent aConstituent,
-		final IConstituent anotherConstituent) {
+
+	public Object retrievePrimitiveResult(final String aMethodName,
+			final IConstituent aConstituent,
+			final IConstituent anotherConstituent) {
 
 		return this.retrievePrimitiveResultFromCache(this.getPrimitiveKey(
-			aMethodName,
-			aConstituent,
-			anotherConstituent));
+				aMethodName, aConstituent, anotherConstituent));
 	}
+
 	private Object retrievePrimitiveResultFromCache(final String aKey) {
 		final Object value = this.cache.get(aKey);
 		if (value != null) {
@@ -198,12 +199,11 @@ public class CacheManager {
 			throw new NoSuchValueInCacheException(aKey);
 		}
 	}
-	public double retrieveUnaryMetricValue(
-		final IMetric aMetric,
-		final IFirstClassEntity anEntity) {
 
-		return this.retrieveMetricValueFromCache(this.getUnaryMetricKey(
-			aMetric,
-			anEntity));
+	public double retrieveUnaryMetricValue(final IMetric aMetric,
+			final IFirstClassEntity anEntity) {
+
+		return this.retrieveMetricValueFromCache(
+				this.getUnaryMetricKey(aMetric, anEntity));
 	}
 }

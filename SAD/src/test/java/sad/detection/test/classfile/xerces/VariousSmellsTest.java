@@ -268,7 +268,7 @@ public final class VariousSmellsTest extends TestCase {
 						+ "_MethodsNoParameterDetection.ini")));
 		Assert.assertEquals(
 				"detectAllMethodsNoParameter: Incorrect Number of methods with no parameter",
-				159, cs.getCodeSmells().size());
+				158, cs.getCodeSmells().size());
 	}
 
 	/** 

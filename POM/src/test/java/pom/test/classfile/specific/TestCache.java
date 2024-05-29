@@ -100,7 +100,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Is value in cache?",
 				CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isUnaryMetricValueInCache(
 						TestCache.CBOMetric,
 						TestCache.Model
@@ -110,7 +110,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Is value in cache?",
 				CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isUnaryMetricValueInCache(
 						TestCache.CBOMetric,
 						TestCache.Model
@@ -120,7 +120,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Is value in cache?",
 				CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOMetric,
 						TestCache.Model
@@ -132,7 +132,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Is value in cache?",
 				CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOMetric,
 						TestCache.Model
@@ -144,7 +144,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should NOT be in cache",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isUnaryMetricValueInCache(
 						TestCache.CBOMetric,
 						TestCache.Model
@@ -154,7 +154,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should NOT be in cache",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOMetric,
 						TestCache.Model
@@ -167,7 +167,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should be in cache",
 				CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isUnaryMetricValueInCache(
 						TestCache.CBOinMetric,
 						TestCache.Model
@@ -177,7 +177,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should be in cache",
 				CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isUnaryMetricValueInCache(
 						TestCache.CBOinMetric,
 						TestCache.Model
@@ -187,7 +187,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should NOT be in cache",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOinMetric,
 						TestCache.Model
@@ -198,7 +198,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Is value in cache?",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOinMetric,
 						TestCache.Model
@@ -210,7 +210,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Is value in cache?",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOinMetric,
 						TestCache.Model
@@ -221,7 +221,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should NOT be in cache",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOinMetric,
 						TestCache.Model
@@ -233,7 +233,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Is value in cache?",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOinMetric,
 						TestCache.Model
@@ -244,7 +244,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should NOT be in cache",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOinMetric,
 						TestCache.Model
@@ -256,7 +256,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should NOT be in cache",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isUnaryMetricValueInCache(
 						TestCache.CBOinMetric,
 						TestCache.Model
@@ -266,7 +266,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should NOT be in cache",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOinMetric,
 						TestCache.Model
@@ -279,7 +279,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should be in cache",
 				CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isUnaryMetricValueInCache(
 						TestCache.CBOoutMetric,
 						TestCache.Model
@@ -289,7 +289,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should be in cache",
 				CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isUnaryMetricValueInCache(
 						TestCache.CBOoutMetric,
 						TestCache.Model
@@ -299,7 +299,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should NOT be in cache",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOoutMetric,
 						TestCache.Model
@@ -310,7 +310,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Is value in cache?",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOoutMetric,
 						TestCache.Model
@@ -322,7 +322,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Is value in cache?",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOoutMetric,
 						TestCache.Model
@@ -333,7 +333,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should NOT be in cache",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOoutMetric,
 						TestCache.Model
@@ -345,7 +345,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Is value in cache?",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOoutMetric,
 						TestCache.Model
@@ -356,7 +356,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should NOT be in cache",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOoutMetric,
 						TestCache.Model
@@ -368,7 +368,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should NOT be in cache",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isUnaryMetricValueInCache(
 						TestCache.CBOoutMetric,
 						TestCache.Model
@@ -378,7 +378,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Value should NOT be in cache",
 				!CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOoutMetric,
 						TestCache.Model
@@ -391,7 +391,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Is value in cache?",
 				CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOMetric,
 						TestCache.Model
@@ -403,7 +403,7 @@ public class TestCache extends TestCase {
 			.assertTrue(
 				"Is value in cache?",
 				CacheManager
-					.getInstance()
+					.getInstance(TestCache.Model)
 					.isBinaryMetricValueInCache(
 						TestCache.CBOMetric,
 						TestCache.Model
