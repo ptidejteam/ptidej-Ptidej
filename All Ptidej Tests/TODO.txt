@@ -21,6 +21,8 @@ Find an alternative to using the `com.sun.tools.javac` library, which is interna
 
 Add GitHub Actions to compile/test the whole project
 
+ProxyConsole could use Log4J
+
 
 
 All Ptidej Tests, make "mvn test" pass
