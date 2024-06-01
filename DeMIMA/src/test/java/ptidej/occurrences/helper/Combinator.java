@@ -13,6 +13,7 @@ package ptidej.occurrences.helper;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -32,56 +33,53 @@ public class Combinator {
 	public static void main(final String[] args) {
 		final String aName = "JHotDraw v5.4b1";
 		final String aClassPath = "../../P-MARt Workspace/JHotDraw v5.4b1/bin/";
-		final String someOccurrencesFile =
-			"rsc/JSME'08 (bis)/ConstraintResults in JHotDraw v5.4b1 for Command.ini";
-		final String anOutputFile =
-			"rsc/JSME'08 (bis)/Cleaned ConstraintResults in JHotDraw v5.4b1 for Command.ini";
+		final String someOccurrencesFile = "rsc/JSME'08 (bis)/ConstraintResults in JHotDraw v5.4b1 for Command.ini";
+		final String anOutputFile = "rsc/JSME'08 (bis)/Cleaned ConstraintResults in JHotDraw v5.4b1 for Command.ini";
 
 		try {
-			final ICodeLevelModel codeLevelModel =
-				Factory.getInstance().createCodeLevelModel(aName);
+			final ICodeLevelModel codeLevelModel = Factory.getInstance()
+					.createCodeLevelModel(aName);
 			codeLevelModel.create(new CompleteClassFileCreator(
-				new String[] { aClassPath },
-				true));
+					new String[] { aClassPath }, true));
 
 			final Properties occurrencesProperties = new Properties();
 			occurrencesProperties
-				.load(new FileInputStream(someOccurrencesFile));
+					.load(new FileInputStream(someOccurrencesFile));
 			final OccurrenceBuilder builder = OccurrenceBuilder.getInstance();
-			final Occurrence[] canonicalStaticOccurrences =
-				builder.getCanonicalOccurrences(occurrencesProperties);
+			final Occurrence[] canonicalStaticOccurrences = builder
+					.getCanonicalOccurrences(occurrencesProperties);
 
 			System.out.println("Number of canonical static occurrences: "
 					+ canonicalStaticOccurrences.length);
 
-			final IFirstClassEntity superEntity =
-				codeLevelModel
-					.getTopLevelEntityFromID("CH.ifa.draw.application.DrawApplication");
+			final IFirstClassEntity superEntity = codeLevelModel
+					.getTopLevelEntityFromID(
+							"CH.ifa.draw.application.DrawApplication");
 			final List validOccurrences = new ArrayList();
 			for (int i = 0; i < canonicalStaticOccurrences.length; i++) {
 				final Occurrence occurrence = canonicalStaticOccurrences[i];
-				final OccurrenceComponent occurrenceComponent =
-					occurrence.getComponent("client".toCharArray());
-				final String clientClass =
-					occurrenceComponent.getDisplayValue();
-				final IFirstClassEntity client =
-					codeLevelModel.getTopLevelEntityFromID(clientClass);
+				final OccurrenceComponent occurrenceComponent = occurrence
+						.getComponent("client".toCharArray());
+				final String clientClass = occurrenceComponent
+						.getDisplayValue();
+				final IFirstClassEntity client = codeLevelModel
+						.getTopLevelEntityFromID(clientClass);
 
-				if (client != null
-						&& (client.equals(superEntity) || Util
-							.isEntityInheritingFrom(client, superEntity))) {
+				if (client != null && (client.equals(superEntity)
+						|| Util.isEntityInheritingFrom(client, superEntity))) {
 					validOccurrences.add(occurrence);
 				}
 			}
 
 			System.out.println("Number of valid static occurrences: "
 					+ validOccurrences.size());
-			final Occurrence[] validOccurrencesArray =
-				new Occurrence[validOccurrences.size()];
+			final Occurrence[] validOccurrencesArray = new Occurrence[validOccurrences
+					.size()];
 			validOccurrences.toArray(validOccurrencesArray);
-			Occurrence.print(validOccurrencesArray, ProxyDisk
-				.getInstance()
-				.fileTempOutput(anOutputFile));
+			final Writer w = ProxyDisk.getInstance()
+					.fileTempOutput(anOutputFile);
+			Occurrence.print(validOccurrencesArray, w);
+			w.close();
 		}
 		catch (final CreationException e) {
 			e.printStackTrace();

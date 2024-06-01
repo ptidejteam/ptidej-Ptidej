@@ -121,6 +121,7 @@ public class ReducedDomainBuilder {
 				if (rule.compute(this.metrics, this.abstractLevelModel,
 						firstClassEntity)) {
 
+					this.abstractLevelModel.removeTopLevelEntityFromID(firstClassEntity.getID());
 					newCodeLevelModel.addConstituent(firstClassEntity);
 				}
 			}

@@ -70,9 +70,7 @@ public final class Occurrence {
 				}
 				out.write('\n');
 			}
-
 			out.flush();
-			out.close();
 		}
 		catch (final IOException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());

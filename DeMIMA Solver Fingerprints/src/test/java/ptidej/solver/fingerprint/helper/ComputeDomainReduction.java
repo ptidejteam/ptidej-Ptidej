@@ -18,7 +18,7 @@ import util.io.ProxyDisk;
  * @author Jean-Yves Guyomarc'h
  * @since 2004/11/12
  */
-public class ComputeDomainReduction extends TestSolver {
+public class ComputeDomainReduction extends Solver {
 	public ComputeDomainReduction(
 		final String path,
 		final String name,
@@ -37,12 +37,12 @@ public class ComputeDomainReduction extends TestSolver {
 		try {
 			if (mode == Logger.WITH_RULES) {
 				motif =
-					Class.forName(TestSolver.FingerprintPackageName
+					Class.forName(Solver.FingerprintPackageName
 							+ this.getMotifName());
 			}
 			else {
 				motif =
-					Class.forName(TestSolver.NoFingerprintPackageName
+					Class.forName(Solver.NoFingerprintPackageName
 							+ this.getMotifName());
 			}
 		}
@@ -108,7 +108,7 @@ public class ComputeDomainReduction extends TestSolver {
 
 		final PrintWriter out =
 			new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-				"rsc/DomainReductionFor" + junit.getMotifName() + "2.txt"));
+				"DomainReductionFor" + junit.getMotifName() + "2.txt"));
 
 		ganttProject.computeDomainReduction(out);
 		out.println("--------------------------------------------------\n");

@@ -1,6 +1,8 @@
 Remove CFParse
 	Use util.lang.CFParseBCELConvertor?
 
+Add disabled tests in projects, e.g., the many non-run tests in "DeMIMA Solver Fingerprints"
+
 Fix tests in "PADL Creator C++ (Eclipse)"
 Add tests to "Creator MSE"
 Add tests to "PADL Generator PageRank"
@@ -9,7 +11,6 @@ Clean test outputs
 
 Maven-ise Caffeine
 
-Change char encoding to UTF-8
 Remove compilation warnings
 
 Fix extremely slow and memory-consuming running of Ptidej from JAR
@@ -22,9 +23,3 @@ Find an alternative to using the `com.sun.tools.javac` library, which is interna
 Add GitHub Actions to compile/test the whole project
 
 ProxyConsole could use Log4J
-
-
-
-All Ptidej Tests, make "mvn test" pass
-	JUnit already does, so why not in Maven?
-		Because PtidejSolver.exe is (1) in a JAR and (2) a DOS program (that cannot be run on Linux)...

@@ -509,7 +509,7 @@ public class Problem extends PalmProblem {
 
 	//	public void setReader(final String fileNameReader) {
 	//		try {
-	//			this.reader = new FileReader("rsc/" + fileNameReader);
+	//			this.reader = new FileReader(ProxyDisk.getInstance().fileTempOutput("result/" + fileNameReader));
 	//		}
 	//		catch (final FileNotFoundException e) {
 	//			e.printStackTrace(Output.getInstance().errorOutput());

@@ -79,7 +79,7 @@ public class Logger {
 		return min + "'" + sec;
 	}
 	public void print() {
-		final String fileName = "rsc/" + this.title + " (summary).txt";
+		final String fileName = this.title + " (summary).txt";
 		final PrintWriter out =
 			new PrintWriter(ProxyDisk.getInstance().fileTempOutput(fileName));
 

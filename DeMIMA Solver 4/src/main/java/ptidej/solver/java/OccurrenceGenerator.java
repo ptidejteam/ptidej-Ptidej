@@ -39,6 +39,7 @@ import util.io.ReaderInputStream;
 public final class OccurrenceGenerator {
 	public static final int PROBLEM_AC4 = 0;
 	public static final int PROBLEM_CUSTOM = 1;
+	private static final String PACKAGE_NAME_PROBLEMS = "ptidej.solver.java.problem.";
 
 	private static OccurrenceGenerator UniqueInstance;
 
@@ -86,7 +87,7 @@ public final class OccurrenceGenerator {
 
 		try {
 			final StringBuffer buffer = new StringBuffer();
-			buffer.append("ptidej.solver.problem.");
+			buffer.append(OccurrenceGenerator.PACKAGE_NAME_PROBLEMS);
 			buffer.append(motifName);
 			buffer.append("Motif");
 			final Class<?> chosenPattern = Class.forName(buffer.toString());

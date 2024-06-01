@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * @author Jean-Yves Guillomarc'h
  * @since 2004/11/12
  */
-public class FastComputeSolutions extends TestSolver {
+public class FastComputeSolutions extends Solver {
 	public FastComputeSolutions(
 		final String path,
 		final String name,
@@ -35,12 +35,12 @@ public class FastComputeSolutions extends TestSolver {
 		try {
 			if (mode == Logger.WITH_RULES) {
 				motif =
-					Class.forName(TestSolver.FingerprintPackageName
+					Class.forName(Solver.FingerprintPackageName
 							+ this.getMotifName());
 			}
 			else {
 				motif =
-					Class.forName(TestSolver.NoFingerprintPackageName
+					Class.forName(Solver.NoFingerprintPackageName
 							+ this.getMotifName());
 			}
 		}
