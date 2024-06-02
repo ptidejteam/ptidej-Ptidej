@@ -23,3 +23,5 @@ Find an alternative to using the `com.sun.tools.javac` library, which is interna
 Add GitHub Actions to compile/test the whole project
 
 ProxyConsole could use Log4J
+
+Identify, analyse, visualise, and remove dependencies among tests/projects due to sharing paths, e.g., "/PADL Analyses/src/test/java/padl/creator/classfile/test/visitor/Composite1.java" accesses "../PADL Creator ClassFile/target/test-classes/padl/example/composite1/" 
