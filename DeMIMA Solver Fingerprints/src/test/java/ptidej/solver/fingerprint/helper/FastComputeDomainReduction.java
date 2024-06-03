@@ -19,7 +19,7 @@ import util.io.ProxyDisk;
  * @author Jean-Yves Guillomarc'h
  * @since 2004/11/12
  */
-public class FastComputeDomainReduction extends TestSolver {
+public class FastComputeDomainReduction extends Solver {
 
 	public FastComputeDomainReduction(
 		final String path,
@@ -39,12 +39,12 @@ public class FastComputeDomainReduction extends TestSolver {
 		try {
 			if (mode == Logger.WITH_RULES) {
 				motif =
-					Class.forName(TestSolver.FingerprintPackageName
+					Class.forName(Solver.FingerprintPackageName
 							+ this.getMotifName());
 			}
 			else {
 				motif =
-					Class.forName(TestSolver.NoFingerprintPackageName
+					Class.forName(Solver.NoFingerprintPackageName
 							+ this.getMotifName());
 			}
 		}
@@ -94,7 +94,7 @@ public class FastComputeDomainReduction extends TestSolver {
 		try {
 			final PrintWriter out =
 				new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-					"rsc/DomainReductionFor" + compute.getMotifName() + "On"
+					"DomainReductionFor" + compute.getMotifName() + "On"
 							+ compute.getProgramName() + ".txt"));
 			compute.computeDomainReduction(out);
 			out.flush();

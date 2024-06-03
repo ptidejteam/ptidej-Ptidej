@@ -39,6 +39,7 @@
 		<module>PADL Creator AspectJ</module>
 		<module>PADL Creator C# v1</module>
 		<module>PADL Creator C# v2</module>
+		<module>PADL Creator C++ (ANTLR)</module>
 		<!-- TODO Add this module                        -->
 		<!-- <module>PADL Creator C++ (Eclipse)</module> -->
 		<module>PADL Creator ClassFile</module>

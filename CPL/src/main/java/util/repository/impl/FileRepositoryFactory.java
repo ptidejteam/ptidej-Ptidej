@@ -14,6 +14,8 @@ import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.Map;
@@ -38,36 +40,43 @@ public class FileRepositoryFactory {
 		// If this system property is set, then I use it and assume
 		// that it points to the JAR-in-JAR :-)
 		final String pathToJarInJar = System.getenv("ptidej.jarinjar.path");
+		if (pathToJarInJar != null) {
+			return new File(pathToJarInJar);
+		}
 
-		String path;
-		if (pathToJarInJar == null) {
-			// Yann 2013/07/06: Crapy piece of code because of Sun!
-			// See http://stackoverflow.com/questions/4114702/how-to-get-name-of-jar-which-is-a-desktop-application-run-from
-			path = aRepository.getClass().getProtectionDomain().getCodeSource()
-					.getLocation().getPath();
-			final File tentativePath = new File(path);
-			if (tentativePath.isDirectory()) {
+		// Yann 2013/07/06: Crappy piece of code because of Sun!
+		// See http://stackoverflow.com/questions/4114702/how-to-get-name-of-jar-which-is-a-desktop-application-run-from
+		try {
+			final URI pathURI = aRepository.getClass().getProtectionDomain()
+					.getCodeSource().getLocation().toURI();
+			File pathFile = new File(pathURI);
+			if (pathFile.isDirectory()) {
+				ProxyConsole.getInstance().warningOutput()
+						.print(FileRepositoryFactory.class.getName());
+				ProxyConsole.getInstance().warningOutput()
+						.print(" has for running path: ");
+				ProxyConsole.getInstance().warningOutput().println(pathFile);
 			}
 			else {
-				try {
-					path = URLDecoder.decode(path, "UTF-8").substring(1);
-				}
-				catch (final UnsupportedEncodingException e) {
-					e.printStackTrace(ProxyConsole.getInstance().errorOutput());
-				}
+				pathFile = new File(
+						URLDecoder.decode(pathURI.getPath(), "UTF-8"));
+				ProxyConsole.getInstance().warningOutput()
+						.print(FileRepositoryFactory.class.getName());
+				ProxyConsole.getInstance().warningOutput()
+						.print(" has for running URI: ");
+				ProxyConsole.getInstance().warningOutput().println(pathFile);
 			}
+
+			return pathFile;
 		}
-		else {
-			path = pathToJarInJar;
+		catch (final UnsupportedEncodingException | URISyntaxException e) {
+			ProxyConsole.getInstance().errorOutput()
+					.print(FileRepositoryFactory.class.getName());
+			ProxyConsole.getInstance().errorOutput().print(": ");
+			ProxyConsole.getInstance().errorOutput().print(e.getMessage());
 		}
 
-		ProxyConsole.getInstance().warningOutput()
-				.print(FileRepositoryFactory.class.getName());
-		ProxyConsole.getInstance().warningOutput()
-				.print(" has for running path: ");
-		ProxyConsole.getInstance().warningOutput().println(path);
-
-		return new File(path);
+		return new File(System.getProperty("user.dir"));
 	}
 
 	private Map<IRepository, IFileRepository> repositories = new HashMap<IRepository, IFileRepository>();

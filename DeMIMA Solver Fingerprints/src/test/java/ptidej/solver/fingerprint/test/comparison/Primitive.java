@@ -87,7 +87,7 @@ abstract class Primitive extends TestCase {
 			final Occurrence[] sol) {
 
 		final PrintWriter out = new PrintWriter(ProxyDisk.getInstance()
-				.fileTempOutput("rsc\\" + testName + ".txt"));
+				.fileTempOutput(testName + ".txt"));
 		out.println("Solutions for : " + testName + "\n");
 		for (int i = 0; i < sol.length; i++) {
 			out.println(sol[i]);

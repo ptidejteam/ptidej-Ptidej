@@ -37,7 +37,7 @@ public class DesignMotifIdentificationCallerSimple {
 	public static void main(final String[] args) throws FileNotFoundException,
 			IOException {
 
-		final String path = "../DeMIMA Solver Tests/rsc/JHotDraw v5.2.jar";
+		final String path = "../DeMIMA Solver 4/src/test/resources/JHotDraw v5.2.jar";
 		final String name = "JHotDraw v5.2.ini";
 
 		final IIdiomLevelModel idiomLevelModel =

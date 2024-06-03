@@ -213,6 +213,12 @@
 			<version>1.16</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>batik-codec</artifactId>
+			<version>1.16</version>
+		</dependency>
+
 		<!--
 		This one dependency MUST COME BEFORE LAST because it bring with it
 		org.eclipse.equinox.common_3.6, which itself bring with it an old

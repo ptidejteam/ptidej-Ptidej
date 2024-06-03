@@ -36,11 +36,6 @@ abstract class AbstractMetric {
 	private final String name;
 
 	/**
-	 * Cache manager.
-	 */
-	protected final CacheManager cacheManager;
-
-	/**
 	 * ClassPrimitives that allows to extract primitives from the model.
 	 * (The model is the analysed program (or a set of classes) and described by
 	 * the metamodel.)
@@ -83,20 +78,19 @@ abstract class AbstractMetric {
 		this.operators = Operators.getInstance();
 		this.classPrimitives = ClassPrimitives.getInstance();
 		this.methodPrimitives = MethodPrimitives.getInstance();
-		this.cacheManager = CacheManager.getInstance();
 	}
 	public final double compute(
 		final IAbstractModel anAbstractModel,
 		final IFirstClassEntity anEntity) {
 
 		try {
-			return this.cacheManager.retrieveUnaryMetricValue(
+			return CacheManager.getInstance(anAbstractModel).retrieveUnaryMetricValue(
 				(IMetric) this,
 				anEntity);
 		}
 		catch (final NoSuchValueInCacheException e) {
 			double result = this.concretelyCompute(anAbstractModel, anEntity);
-			this.cacheManager.cacheUnaryMetricValue(
+			CacheManager.getInstance(anAbstractModel).cacheUnaryMetricValue(
 				(IMetric) this,
 				anEntity,
 				result);
@@ -109,7 +103,7 @@ abstract class AbstractMetric {
 		final IFirstClassEntity anotherEntity) {
 
 		try {
-			return this.cacheManager.retrieveBinaryMetricValue(
+			return CacheManager.getInstance(anAbstractModel).retrieveBinaryMetricValue(
 				(IBinaryMetric) this,
 				anEntity,
 				anotherEntity);
@@ -118,7 +112,7 @@ abstract class AbstractMetric {
 			double result =
 				this
 					.concretelyCompute(anAbstractModel, anEntity, anotherEntity);
-			this.cacheManager.cacheBinaryMetricValue(
+			CacheManager.getInstance(anAbstractModel).cacheBinaryMetricValue(
 				(IBinaryMetric) this,
 				anEntity,
 				anotherEntity,

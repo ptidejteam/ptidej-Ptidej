@@ -627,7 +627,7 @@ public class SimpleSmellDetection {
 				final Class<?> problemClass;
 
 				problemClass =
-					Class.forName("ptidej.solver.problem." + motifName
+					Class.forName("ptidej.solver.java.problem." + motifName
 							+ "Motif");
 
 				final Method getProblemMethod =

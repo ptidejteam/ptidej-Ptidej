@@ -255,13 +255,14 @@ public class DesignMotifIdentificationCallerForPatternsAndTests {
 
 				final Class problemClass;
 				if (isAOL) {
+					// TODO Is this block still needed?
 					problemClass =
-						Class.forName("ptidej.solver.problem.aol." + motifName
+						Class.forName("ptidej.solver.java.problem.aol." + motifName
 								+ "Motif");
 				}
 				else {
 					problemClass =
-						Class.forName("ptidej.solver.problem." + motifName
+						Class.forName("ptidej.solver.java.problem." + motifName
 								+ "Motif");
 				}
 				final Method getProblemMethod =

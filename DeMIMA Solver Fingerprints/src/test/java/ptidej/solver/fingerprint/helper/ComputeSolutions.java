@@ -14,7 +14,7 @@ package ptidej.solver.fingerprint.helper;
  * @author Jean-Yves Guyomarc'h
  * @since 2004/11/12
  */
-public class ComputeSolutions extends TestSolver {
+public class ComputeSolutions extends Solver {
 	public ComputeSolutions(
 		final String path,
 		final String name,
@@ -33,12 +33,12 @@ public class ComputeSolutions extends TestSolver {
 		try {
 			if (mode == Logger.WITH_RULES) {
 				motif =
-					Class.forName(TestSolver.FingerprintPackageName
+					Class.forName(Solver.FingerprintPackageName
 							+ this.getMotifName());
 			}
 			else {
 				motif =
-					Class.forName(TestSolver.NoFingerprintPackageName
+					Class.forName(Solver.NoFingerprintPackageName
 							+ this.getMotifName());
 			}
 		}

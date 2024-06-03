@@ -30,145 +30,99 @@ import pom.util.NoSuchValueInCacheException;
  */
 public class MethodPrimitives extends Primitives {
 	private static MethodPrimitives UniqueInstance;
+
 	public static MethodPrimitives getInstance() {
 		if (MethodPrimitives.UniqueInstance == null) {
 			MethodPrimitives.UniqueInstance = new MethodPrimitives();
 		}
 		return MethodPrimitives.UniqueInstance;
 	}
-	private final CacheManager cacheManger;
 
 	private MethodPrimitives() {
-		super();
-		this.cacheManger = CacheManager.getInstance();
 	}
-	public int numberOfUsesByFieldsOrMethods(
-		final IFirstClassEntity anEntity,
-		final IFirstClassEntity anotherEntity) {
 
-		try {
-			return ((Integer) this.cacheManger.retrievePrimitiveResult(
-				"countNumberOfUsesByFieldsOrMethods",
-				anEntity,
-				anotherEntity)).intValue();
+	public int numberOfUsesByFieldsOrMethods(final IFirstClassEntity anEntity,
+			final IFirstClassEntity anotherEntity) {
+
+		final List invokedMethod = new ArrayList();
+		final List usedFields = new ArrayList();
+
+		final Iterator iteratorOnAbstractMethods = anEntity
+				.getIteratorOnConstituents(IOperation.class);
+		while (iteratorOnAbstractMethods.hasNext()) {
+			final IOperation method = (IOperation) iteratorOnAbstractMethods
+					.next();
+			invokedMethod.addAll(this
+					.listOfSisterMethodCalledByMethod(anotherEntity, method));
+			usedFields.addAll(
+					this.listOfFieldsUsedByMethod(anotherEntity, method));
 		}
-		catch (final NoSuchValueInCacheException e) {
-			final List invokedMethod = new ArrayList();
-			final List usedFields = new ArrayList();
 
-			final Iterator iteratorOnAbstractMethods =
-				anEntity.getIteratorOnConstituents(IOperation.class);
-			while (iteratorOnAbstractMethods.hasNext()) {
-				final IOperation method =
-					(IOperation) iteratorOnAbstractMethods.next();
-				invokedMethod.addAll(this.listOfSisterMethodCalledByMethod(
-					anotherEntity,
-					method));
-				usedFields.addAll(this.listOfFieldsUsedByMethod(
-					anotherEntity,
-					method));
-			}
-
-			int result = invokedMethod.size() + usedFields.size();
-			this.cacheManger.cachePrimitiveResult(
-				"countNumberOfUsesByFieldsOrMethods",
-				anEntity,
-				anotherEntity,
-				Integer.valueOf(result));
-			return result;
-		}
+		int result = invokedMethod.size() + usedFields.size();
+		return result;
 	}
+
 	/*
 	 * Farouk 2004/04/02, 14h52 
 	 * Modified to consider multiple access to fields.
 	 */
-	public List listOfFieldsUsedByMethod(
-		final IFirstClassEntity anEntity,
-		final IOperation aMethod) {
+	public List listOfFieldsUsedByMethod(final IFirstClassEntity anEntity,
+			final IOperation aMethod) {
 
-		try {
-			return (List) this.cacheManger.retrievePrimitiveResult(
-				"listFieldsUsedByMethod",
-				anEntity,
-				aMethod);
-		}
-		catch (final NoSuchValueInCacheException e) {
-			final ClassPrimitives classPrimitives =
-				ClassPrimitives.getInstance();
-			final List usedFields = new ArrayList();
-			final List entityFields =
-				classPrimitives.listOfImplementedFields(anEntity);
+		final ClassPrimitives classPrimitives = ClassPrimitives.getInstance();
+		final List usedFields = new ArrayList();
+		final List entityFields = classPrimitives
+				.listOfImplementedFields(anEntity);
 
-			for (final Iterator iteratorOnConstituents =
-				aMethod.getIteratorOnConstituents(); iteratorOnConstituents
-				.hasNext();) {
-				final IConstituentOfOperation element =
-					(IConstituentOfOperation) iteratorOnConstituents.next();
-				if (element instanceof IMethodInvocation) {
-					final IMethodInvocation mi = (IMethodInvocation) element;
+		for (final Iterator iteratorOnConstituents = aMethod
+				.getIteratorOnConstituents(); iteratorOnConstituents
+						.hasNext();) {
+			final IConstituentOfOperation element = (IConstituentOfOperation) iteratorOnConstituents
+					.next();
+			if (element instanceof IMethodInvocation) {
+				final IMethodInvocation mi = (IMethodInvocation) element;
 
-					//				mi.getFieldDeclaringEntity()
-					//				mi.getFirstCallingField()
+				//				mi.getFieldDeclaringEntity()
+				//				mi.getFirstCallingField()
 
-					final Iterator iterCallingField =
-						mi.getIteratorOnCallingFields();
-					while (iterCallingField.hasNext()) {
-						final IField aField = (IField) iterCallingField.next();
-						if (aField != null) {
-							if (entityFields.contains(aField)) {
-								usedFields.add(aField);
-							}
+				final Iterator iterCallingField = mi
+						.getIteratorOnCallingFields();
+				while (iterCallingField.hasNext()) {
+					final IField aField = (IField) iterCallingField.next();
+					if (aField != null) {
+						if (entityFields.contains(aField)) {
+							usedFields.add(aField);
 						}
 					}
 				}
 			}
-
-			this.cacheManger.cachePrimitiveResult(
-				"listFieldsUsedByMethod",
-				anEntity,
-				aMethod,
-				usedFields);
-			return usedFields;
 		}
+
+		return usedFields;
 	}
+
 	public List listOfSisterMethodCalledByMethod(
-		final IFirstClassEntity anEntity,
-		final IOperation aMethod) {
+			final IFirstClassEntity anEntity, final IOperation aMethod) {
 
-		try {
-			return (List) this.cacheManger.retrievePrimitiveResult(
-				"listOfSisterMethodCalledByMethod",
-				anEntity,
-				aMethod);
-		}
-		catch (final NoSuchValueInCacheException e) {
-			final List invokedMethods = new ArrayList();
-			final Collection concreteMethods =
-				ClassPrimitives
-					.getInstance()
-					.listOfOverriddenAndConcreteMethods(anEntity);
+		final List invokedMethods = new ArrayList();
+		final Collection concreteMethods = ClassPrimitives.getInstance()
+				.listOfOverriddenAndConcreteMethods(anEntity);
 
-			final Iterator iteratorOnMethodInvocations =
-				aMethod.getIteratorOnConstituents(IMethodInvocation.class);
-			while (iteratorOnMethodInvocations.hasNext()) {
-				final IMethodInvocation mi =
-					(IMethodInvocation) iteratorOnMethodInvocations.next();
+		final Iterator iteratorOnMethodInvocations = aMethod
+				.getIteratorOnConstituents(IMethodInvocation.class);
+		while (iteratorOnMethodInvocations.hasNext()) {
+			final IMethodInvocation mi = (IMethodInvocation) iteratorOnMethodInvocations
+					.next();
 
-				if (mi.getTargetEntity() != null
-						&& mi.getTargetEntity().equals(anEntity)) {
+			if (mi.getTargetEntity() != null
+					&& mi.getTargetEntity().equals(anEntity)) {
 
-					if (concreteMethods.contains(mi.getCalledMethod())) {
-						invokedMethods.add(mi.getCalledMethod());
-					}
+				if (concreteMethods.contains(mi.getCalledMethod())) {
+					invokedMethods.add(mi.getCalledMethod());
 				}
 			}
-
-			this.cacheManger.cachePrimitiveResult(
-				"listOfSisterMethodCalledByMethod",
-				anEntity,
-				aMethod,
-				invokedMethods);
-			return invokedMethods;
 		}
+
+		return invokedMethods;
 	}
 }

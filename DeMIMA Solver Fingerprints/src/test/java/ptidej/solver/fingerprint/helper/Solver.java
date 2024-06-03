@@ -41,11 +41,9 @@ import choco.util.IntIterator;
 /**
  * @author Jean-Yves Guyomarc'h
  */
-public abstract class TestSolver {
-	protected static final String FingerprintPackageName =
-		"ptidej.solver.fingerprint.problem.";
-	protected static final String NoFingerprintPackageName =
-		"ptidej.solver.problem.";
+public abstract class Solver {
+	protected static final String FingerprintPackageName = "ptidej.solver.fingerprint.problem.";
+	protected static final String NoFingerprintPackageName = "ptidej.solver.java.problem.";
 
 	private List allEntities;
 	private ICodeLevelModel codeLevelModel;
@@ -56,11 +54,8 @@ public abstract class TestSolver {
 	private ReducedDomainBuilder rdb;
 	private String testName;
 
-	public TestSolver(
-		final String path,
-		final String[] packageNames,
-		final String testName,
-		final String motifName) {
+	public Solver(final String path, final String[] packageNames,
+			final String testName, final String motifName) {
 
 		this.path = path;
 		this.packageNames = packageNames;
@@ -68,17 +63,17 @@ public abstract class TestSolver {
 		this.motifName = motifName;
 		this.logger = new Logger(this.testName);
 	}
+
 	private void checkVariables(final IntVar[] vars, final Problem problem) {
 		for (int i = 0; i < vars.length; i++) {
-			this.logger.addVar(
-				vars[i].toString(),
-				vars[i].getDomainSize(),
-				(((double) (problem.getAllEntities().size() - (double) vars[i]
-					.getDomainSize()) / (double) problem
-					.getAllEntities()
-					.size()) * 100.0));
+			this.logger.addVar(vars[i].toString(), vars[i].getDomainSize(),
+					(((double) (problem.getAllEntities().size()
+							- (double) vars[i].getDomainSize())
+							/ (double) problem.getAllEntities().size())
+							* 100.0));
 		}
 	}
+
 	public void computeDomainReduction(final PrintWriter output) {
 		try {
 			this.createModel();
@@ -86,12 +81,10 @@ public abstract class TestSolver {
 			// Get Problem
 			output.print("Domain reduction for ");
 			output.println(this.testName);
-			final Problem problem =
-				(Problem) this
-					.getMotif(Logger.WITH_RULES)
-					.getMethod(
-						"getProblem",
-						new Class[] { List.class, ReducedDomainBuilder.class })
+			final Problem problem = (Problem) this.getMotif(Logger.WITH_RULES)
+					.getMethod("getProblem",
+							new Class[] { List.class,
+									ReducedDomainBuilder.class })
 					.invoke(null, new Object[] { this.allEntities, this.rdb });
 
 			output.print("Original domain size: ");
@@ -104,17 +97,13 @@ public abstract class TestSolver {
 				output.print(": ");
 				output.print(vars[i].getDomainSize());
 				output.print(" (");
-				output
-					.print((((double) (problem.getAllEntities().size() - (double) vars[i]
-						.getDomainSize()) / (double) problem
-						.getAllEntities()
-						.size()) * 100.0));
+				output.print((((double) (problem.getAllEntities().size()
+						- (double) vars[i].getDomainSize())
+						/ (double) problem.getAllEntities().size()) * 100.0));
 				output.println("% of reduction)");
 
-				if (vars[i].getDomainSize() > 0
-						&& vars[i].getDomainSize() < problem
-							.getAllEntities()
-							.size()) {
+				if (vars[i].getDomainSize() > 0 && vars[i]
+						.getDomainSize() < problem.getAllEntities().size()) {
 
 					final IntDomain domain = vars[i].getDomain();
 					final IntIterator iterator = domain.getIterator();
@@ -136,27 +125,25 @@ public abstract class TestSolver {
 			e.printStackTrace(System.err);
 		}
 	}
+
 	public void computeSolutions() {
 		final Occurrence[] solutionsWithRules = computeSolutionsWithRules();
-		final Occurrence[] solutionWithoutRules =
-			computeSolutionsWithoutRules();
+		final Occurrence[] solutionWithoutRules = computeSolutionsWithoutRules();
 
-		this.logger.setIncluded(this.numIncluded(
-			solutionsWithRules,
-			solutionWithoutRules));
+		this.logger.setIncluded(
+				this.numIncluded(solutionsWithRules, solutionWithoutRules));
 
-		final Occurrence[] excludedSolutions =
-			this.excluded(solutionsWithRules, solutionWithoutRules);
-		System.out.println("Number of excluded solutions: "
-				+ excludedSolutions.length);
-		this.printSolution(excludedSolutions, this.testName
-				+ " (excluded solutions)");
+		final Occurrence[] excludedSolutions = this.excluded(solutionsWithRules,
+				solutionWithoutRules);
+		System.out.println(
+				"Number of excluded solutions: " + excludedSolutions.length);
+		this.printSolution(excludedSolutions,
+				this.testName + " (excluded solutions)");
 		this.logger.print();
 	}
-	public Occurrence[] computeSolutions(
-		final int loggerMode,
-		final Class[] problemArgsTypes,
-		final Object[] problemArgs) {
+
+	public Occurrence[] computeSolutions(final int loggerMode,
+			final Class[] problemArgsTypes, final Object[] problemArgs) {
 
 		Occurrence[] nonGhostSol = null;
 		try {
@@ -167,9 +154,7 @@ public abstract class TestSolver {
 			this.logger.setStart(System.currentTimeMillis());
 
 			// Get Problem
-			final Problem problem =
-				(Problem) this
-					.getMotif(loggerMode)
+			final Problem problem = (Problem) this.getMotif(loggerMode)
 					.getMethod("getProblem", problemArgsTypes)
 					.invoke(null, problemArgs);
 			this.logger.setProblemCreation(System.currentTimeMillis());
@@ -187,20 +172,20 @@ public abstract class TestSolver {
 			this.logger.setEndProcess(System.currentTimeMillis());
 			this.logger.setNumSolutions(solutions.length);
 			nonGhostSol = this.removeGhostSolution(solutions);
-			this.logger.setGhostedSolutions(solutions.length
-					- nonGhostSol.length);
+			this.logger
+					.setGhostedSolutions(solutions.length - nonGhostSol.length);
 
 			if (loggerMode == Logger.WITHOUT_RULES) {
-				this.printSolution(nonGhostSol, this.testName
-						+ " (solutions without rules)");
-				this.printSolution(solutions, this.testName
-						+ " (all solutions without rules)");
+				this.printSolution(nonGhostSol,
+						this.testName + " (solutions without rules)");
+				this.printSolution(solutions,
+						this.testName + " (all solutions without rules)");
 			}
 			else {
-				this.printSolution(nonGhostSol, this.testName
-						+ " (solutions with rules)");
-				this.printSolution(solutions, this.testName
-						+ " (all solutions with rules)");
+				this.printSolution(nonGhostSol,
+						this.testName + " (solutions with rules)");
+				this.printSolution(solutions,
+						this.testName + " (all solutions with rules)");
 			}
 		}
 		catch (final InvocationTargetException e) {
@@ -221,40 +206,40 @@ public abstract class TestSolver {
 
 		return nonGhostSol;
 	}
+
 	private Occurrence[] computeSolutionsWithoutRules() {
 		this.createModel();
-		return this.computeSolutions(
-			Logger.WITHOUT_RULES,
-			new Class[] { List.class },
-			new Object[] { this.allEntities });
+		return this.computeSolutions(Logger.WITHOUT_RULES,
+				new Class[] { List.class }, new Object[] { this.allEntities });
 	}
+
 	private Occurrence[] computeSolutionsWithRules() {
 		this.createModel();
-		return this.computeSolutions(Logger.WITH_RULES, new Class[] {
-				List.class, ReducedDomainBuilder.class }, new Object[] {
-				this.allEntities, this.rdb });
+		return this.computeSolutions(Logger.WITH_RULES,
+				new Class[] { List.class, ReducedDomainBuilder.class },
+				new Object[] { this.allEntities, this.rdb });
 	}
+
 	private void createModel() {
 		String[] computePaths = null;
 
 		if (this.packageNames != null) {
 			computePaths = new String[this.packageNames.length];
 			for (int i = 0; i < this.packageNames.length; i++)
-				computePaths[i] =
-					this.path + this.packageNames[i].replace('.', '/');
+				computePaths[i] = this.path
+						+ this.packageNames[i].replace('.', '/');
 		}
 		else {
 			computePaths = new String[1];
 			computePaths[0] = this.path;
 		}
 
-		this.codeLevelModel =
-			Factory.getInstance().createCodeLevelModel(this.testName);
+		this.codeLevelModel = Factory.getInstance()
+				.createCodeLevelModel(this.testName);
 
 		try {
-			this.codeLevelModel.create(new CompleteClassFileCreator(
-				computePaths,
-				true));
+			this.codeLevelModel
+					.create(new CompleteClassFileCreator(computePaths, true));
 		}
 		catch (final CreationException e) {
 			e.printStackTrace();
@@ -266,38 +251,37 @@ public abstract class TestSolver {
 			// Yann 2005/10/12: Iterator!
 			// I have now an iterator able to iterate over a
 			// specified type of constituent of a list.
-			final Iterator entities =
-				this.codeLevelModel
+			final Iterator entities = this.codeLevelModel
 					.getIteratorOnConstituents(IFirstClassEntity.class);
 			while (entities.hasNext()) {
-				final IFirstClassEntity firstClassEntity =
-					(IFirstClassEntity) entities.next();
+				final IFirstClassEntity firstClassEntity = (IFirstClassEntity) entities
+						.next();
 				final String entityName = firstClassEntity.getDisplayName();
-				final String packageName =
-					entityName.substring(0, entityName.lastIndexOf('.'));
+				final String packageName = entityName.substring(0,
+						entityName.lastIndexOf('.'));
 				boolean toBeRemoved = true;
-				for (int i = 0; i < this.packageNames.length && toBeRemoved; i++) {
+				for (int i = 0; i < this.packageNames.length
+						&& toBeRemoved; i++) {
 					if (packageName.equals(this.packageNames[i])) {
 						toBeRemoved = false;
 					}
 				}
 				if (toBeRemoved) {
-					this.codeLevelModel.removeConstituentFromID(entityName
-						.toCharArray());
+					this.codeLevelModel
+							.removeConstituentFromID(entityName.toCharArray());
 				}
 			}
 		}
 		this.rdb = new ReducedDomainBuilder(this.codeLevelModel);
 		this.allEntities = Manager.build(this.codeLevelModel);
 	}
-	private Occurrence[] excluded(
-		final Occurrence[] included,
-		final Occurrence[] includer) {
+
+	private Occurrence[] excluded(final Occurrence[] included,
+			final Occurrence[] includer) {
 		final ArrayList excluded = new ArrayList();
 		for (int i = 0; i < includer.length; i++) {
-			if (!OccurrenceComparator.getInstance().belongsTo(
-				includer[i],
-				included)) {
+			if (!OccurrenceComparator.getInstance().belongsTo(includer[i],
+					included)) {
 				excluded.add(includer[i]);
 			}
 		}
@@ -307,41 +291,36 @@ public abstract class TestSolver {
 		}
 		return tmp;
 	}
+
 	public abstract Class getMotif(final int mode);
+
 	public String getMotifName() {
 		return this.motifName;
 	}
+
 	public String getProgramName() {
 		return this.testName;
 	}
-	private int numIncluded(
-		final Occurrence[] included,
-		final Occurrence[] includer) {
+
+	private int numIncluded(final Occurrence[] included,
+			final Occurrence[] includer) {
 		int cpt_included = 0;
 		for (int i = 0; i < included.length; i++) {
-			if (OccurrenceComparator.getInstance().belongsTo(
-				included[i],
-				includer)) {
+			if (OccurrenceComparator.getInstance().belongsTo(included[i],
+					includer)) {
 				cpt_included++;
 			}
 		}
 		return cpt_included;
 	}
+
 	private void printSolution(final Occurrence[] sol, final String testName) {
-		//	final PrintWriter out =
-		//		new PrintWriter(
-		//			new BufferedWriter(
-		//				new FileWriter("rsc/" + testName + ".txt")));
-		//	for (int i = 0; i < sol.length; i++) {
-		//		out.println(sol[i]);
-		//	}
-		//	out.flush();
-		//	out.close();
-		final PrintWriter out =
-			new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-				"rsc/" + testName + ".txt"));
-		Occurrence.print(sol, out);
+		final PrintWriter w = new PrintWriter(
+				ProxyDisk.getInstance().fileTempOutput(testName + ".txt"));
+		Occurrence.print(sol, w);
+		w.close();
 	}
+
 	private Occurrence[] removeGhostSolution(final Occurrence[] solutions) {
 		final ArrayList sol = new ArrayList();
 		for (int i = 0; i < solutions.length; i++) {
@@ -350,7 +329,8 @@ public abstract class TestSolver {
 			while (iter.hasNext()) {
 				// TEST IF INSTANCE OF GHOST
 				OccurrenceComponent sc = (OccurrenceComponent) iter.next();
-				if (this.codeLevelModel.getConstituentFromName(sc.getValue()) instanceof IGhost) {
+				if (this.codeLevelModel.getConstituentFromName(
+						sc.getValue()) instanceof IGhost) {
 					ghosted = true;
 				}
 			}
@@ -365,6 +345,7 @@ public abstract class TestSolver {
 
 		return solTmp;
 	}
+
 	private Occurrence[] solve(final Problem problem) throws IOException {
 		// Solve
 		final StringWriter writer = new StringWriter();
@@ -373,12 +354,11 @@ public abstract class TestSolver {
 		// problem.combinatorialAutomaticSolve(true);
 
 		final Properties properties = new Properties();
-		properties.load(new ReaderInputStream(new StringReader(writer
-			.getBuffer()
-			.toString())));
+		properties.load(new ReaderInputStream(
+				new StringReader(writer.getBuffer().toString())));
 
-		final OccurrenceBuilder solutionBuilder =
-			OccurrenceBuilder.getInstance();
+		final OccurrenceBuilder solutionBuilder = OccurrenceBuilder
+				.getInstance();
 
 		return solutionBuilder.getCanonicalOccurrences(properties);
 	}

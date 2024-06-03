@@ -65,13 +65,16 @@ public class FileAction extends AbstractAction {
 	private static final long serialVersionUID = -5999604008088129163L;
 
 	private static FileAction UniqueInstance;
+
 	public static FileAction getInstance() {
-		return (FileAction.UniqueInstance == null) ? FileAction.UniqueInstance =
-			new FileAction() : FileAction.UniqueInstance;
+		return (FileAction.UniqueInstance == null)
+				? FileAction.UniqueInstance = new FileAction()
+				: FileAction.UniqueInstance;
 	}
 
 	private FileAction() {
 	}
+
 	public void actionPerformed(final ActionEvent anActionEvent) {
 		final String action = anActionEvent.getActionCommand();
 
@@ -100,111 +103,110 @@ public class FileAction extends AbstractAction {
 			this.loadExtrinsicData();
 		}
 		else if (action.equals(Resources.ECLIPSE_JDT_PROJECT)) {
-			final File file =
-				this.selectFile(MultilingualManager.getString(
-					"ADD_ECLIPSE_JDT_PROJECT",
-					FileAction.class), "project", MultilingualManager
-					.getString(
-						"TYPE_ECLIPSE_JDT_PROJECT_NAME",
-						FileAction.class), false);
-			this.processSelectedFile(
-				IRepresentation.TYPE_ECLIPSE_JDT_PROJECT,
-				file);
+			final File file = this.selectFile(
+					MultilingualManager.getString(
+							"ADD_ECLIPSE_JDT_PROJECT", FileAction.class),
+					"project",
+					MultilingualManager.getString(
+							"TYPE_ECLIPSE_JDT_PROJECT_NAME", FileAction.class),
+					false);
+			this.processSelectedFile(IRepresentation.TYPE_ECLIPSE_JDT_PROJECT,
+					file);
 		}
 		else if (action.equals(Resources.MSE_FILE)) {
-			final File file =
-				this.selectFile(MultilingualManager.getString(
-					"ADD_MSE_FILE",
-					FileAction.class), "mse", MultilingualManager.getString(
-					"TYPE_MSE_NAME",
-					FileAction.class), false);
+			final File file = this.selectFile(
+					MultilingualManager.getString("ADD_MSE_FILE",
+							FileAction.class),
+					"mse", MultilingualManager.getString("TYPE_MSE_NAME",
+							FileAction.class),
+					false);
 			this.processSelectedFile(IRepresentation.TYPE_MSE, file);
 		}
 		else if (action.equals(Resources.PTIDEJ_FILE)) {
-			final File file =
-				this.selectFile(MultilingualManager.getString(
-					"ADD_PTIDEJ_FILE",
-					FileAction.class), "ptidej", MultilingualManager.getString(
-					"TYPE_PTIDEJ_NAME",
-					FileAction.class), false);
+			final File file = this.selectFile(
+					MultilingualManager.getString("ADD_PTIDEJ_FILE",
+							FileAction.class),
+					"ptidej", MultilingualManager.getString("TYPE_PTIDEJ_NAME",
+							FileAction.class),
+					false);
 			this.processSelectedFile(file);
 		}
 		else if (action.equals(Resources.ASPECTJ_FILE)) {
-			final File file =
-				this.selectFile(MultilingualManager.getString(
-					"ADD_ASPECTJ_FILE",
-					FileAction.class), "lst", MultilingualManager.getString(
-					"TYPE_ASPECTJ_NAME",
-					FileAction.class), false);
+			final File file = this.selectFile(
+					MultilingualManager.getString("ADD_ASPECTJ_FILE",
+							FileAction.class),
+					"lst", MultilingualManager.getString("TYPE_ASPECTJ_NAME",
+							FileAction.class),
+					false);
 			this.processSelectedFile(IRepresentation.TYPE_ASPECTJ, file);
 		}
 		else if (action.equals(Resources.JAVA_CLASS_FILE)) {
-			final File file =
-				this.selectFile(MultilingualManager.getString(
-					"ADD_JAVA_FILE",
-					FileAction.class), "class", MultilingualManager.getString(
-					"TYPE_JAVA_NAME",
-					FileAction.class), true);
-			this
-				.processSelectedFile(IRepresentation.TYPE_JAVA_CLASSFILES, file);
+			final File file = this.selectFile(
+					MultilingualManager.getString("ADD_JAVA_FILE",
+							FileAction.class),
+					"class", MultilingualManager.getString("TYPE_JAVA_NAME",
+							FileAction.class),
+					true);
+			this.processSelectedFile(IRepresentation.TYPE_JAVA_CLASSFILES,
+					file);
 		}
 		else if (action.equals(Resources.JAVA_ARCHIVE_FILE)) {
-			final File file =
-				this.selectFile(MultilingualManager.getString(
-					"ADD_JAR_FILE",
-					FileAction.class), "jar", MultilingualManager.getString(
-					"TYPE_JAVA_NAME",
-					FileAction.class), false);
-			this
-				.processSelectedFile(IRepresentation.TYPE_JAVA_CLASSFILES, file);
+			final File file = this.selectFile(
+					MultilingualManager.getString("ADD_JAR_FILE",
+							FileAction.class),
+					"jar", MultilingualManager.getString("TYPE_JAVA_NAME",
+							FileAction.class),
+					false);
+			this.processSelectedFile(IRepresentation.TYPE_JAVA_CLASSFILES,
+					file);
 		}
 		else if (action.equals(Resources.JAVA_SOURCE_FILE)) {
-			final File file =
-				this.selectFile(MultilingualManager.getString(
-					"ADD_JAVA_SOURCE_FILE",
-					FileAction.class), "java", MultilingualManager.getString(
-					"TYPE_JAVA_NAME",
-					FileAction.class), true);
+			final File file = this.selectFile(
+					MultilingualManager.getString("ADD_JAVA_SOURCE_FILE",
+							FileAction.class),
+					"java", MultilingualManager.getString("TYPE_JAVA_NAME",
+							FileAction.class),
+					true);
 			this.processSelectedFile(IRepresentation.TYPE_JAVA_JAVAFILES, file);
 		}
 		else if (action.equals(Resources.CPP_FILE)) {
-			final File file =
-				this.selectFile(MultilingualManager.getString(
-					"ADD_CPP_FILE",
-					FileAction.class), "cpp", MultilingualManager.getString(
-					"TYPE_CPP_NAME",
-					FileAction.class), true);
+			final File file = this.selectFile(
+					MultilingualManager.getString("ADD_CPP_FILE",
+							FileAction.class),
+					"cpp", MultilingualManager.getString("TYPE_CPP_NAME",
+							FileAction.class),
+					true);
 			this.processSelectedFile(IRepresentation.TYPE_CPP, file);
 		}
 		else if (action.equals(Resources.AOL_CODE_FILE)) {
-			final File file =
-				this.selectFile(MultilingualManager.getString(
-					"ADD_AOL_CODE_FILE",
-					FileAction.class), "aol", MultilingualManager.getString(
-					"TYPE_AOL_CODE_NAME",
-					FileAction.class), false);
+			final File file = this.selectFile(
+					MultilingualManager.getString("ADD_AOL_CODE_FILE",
+							FileAction.class),
+					"aol", MultilingualManager.getString("TYPE_AOL_CODE_NAME",
+							FileAction.class),
+					false);
 			this.processSelectedFile(IRepresentation.TYPE_AOL_CODE, file);
 		}
 		else if (action.equals(Resources.AOL_IDIOM_FILE)) {
-			final File file =
-				this.selectFile(MultilingualManager.getString(
-					"ADD_AOL_IDIOM_FILE",
-					FileAction.class), "aol", MultilingualManager.getString(
-					"TYPE_AOL_IDIOM_NAME",
-					FileAction.class), false);
+			final File file = this.selectFile(
+					MultilingualManager.getString("ADD_AOL_IDIOM_FILE",
+							FileAction.class),
+					"aol", MultilingualManager.getString("TYPE_AOL_IDIOM_NAME",
+							FileAction.class),
+					false);
 			this.processSelectedFile(IRepresentation.TYPE_AOL_IDIOM, file);
 		}
 		else if (action.equals(Resources.CLOSE_ALL)) {
 			DesktopPane.getInstance().removeAll();
 		}
 		else if (action.equals(Resources.CLOSE_ACTIVE)) {
-			final AbstractRepresentationWindow window =
-				DesktopPane.getInstance().getAbstractRepresentationWindow();
+			final AbstractRepresentationWindow window = DesktopPane
+					.getInstance().getAbstractRepresentationWindow();
 			DesktopPane.getInstance().remove(window);
 		}
 		else if (action.equals(Resources.CLOSE_ALL_EXPECT_ACTIVE)) {
-			final AbstractRepresentationWindow window =
-				DesktopPane.getInstance().getAbstractRepresentationWindow();
+			final AbstractRepresentationWindow window = DesktopPane
+					.getInstance().getAbstractRepresentationWindow();
 			DesktopPane.getInstance().removeAll();
 			DesktopPane.getInstance().add(window);
 		}
@@ -224,6 +226,7 @@ public class FileAction extends AbstractAction {
 			System.exit(0);
 		}
 	}
+
 	private void build(final IAWTRepresentation aRepresentation) {
 		((AbstractRepresentationWindow) aRepresentation).build();
 
@@ -235,163 +238,150 @@ public class FileAction extends AbstractAction {
 		//	DesktopPane.getInstance().notifySourceModelAvailability(
 		//		new SourceModelEvent(DesktopPane.getInstance().getModelWindow()));
 	}
+
 	private void createDualHierarchicalProject() {
-		final String name =
-			new NameDialog((Frame) DesktopFrame.getInstance(), "Project name")
-				.getName();
+		final String name = new NameDialog((Frame) DesktopFrame.getInstance(),
+				"Project name").getName();
 		if (!name.equals("")) {
 			DesktopPane.getInstance().createDualHierarchicalModelWindow();
-			DesktopPane
-				.getInstance()
-				.getAbstractRepresentationWindow()
-				.setTitle(name);
+			DesktopPane.getInstance().getAbstractRepresentationWindow()
+					.setTitle(name);
 		}
 	}
+
 	private void createGraphicalProject() {
-		final String name =
-			new NameDialog((Frame) DesktopFrame.getInstance(), "Project name")
-				.getName();
+		final String name = new NameDialog((Frame) DesktopFrame.getInstance(),
+				"Project name").getName();
 		if (!name.equals("")) {
 			DesktopPane.getInstance().createGraphicalModelWindow();
-			DesktopPane
-				.getInstance()
-				.getAbstractRepresentationWindow()
-				.setTitle(name);
+			DesktopPane.getInstance().getAbstractRepresentationWindow()
+					.setTitle(name);
 		}
 	}
+
 	private void createHierarchicalProject() {
-		final String name =
-			new NameDialog((Frame) DesktopFrame.getInstance(), "Project name")
-				.getName();
+		final String name = new NameDialog((Frame) DesktopFrame.getInstance(),
+				"Project name").getName();
 		if (!name.equals("")) {
 			DesktopPane.getInstance().createHierarchicalModelWindow();
-			DesktopPane
-				.getInstance()
-				.getAbstractRepresentationWindow()
-				.setTitle(name);
+			DesktopPane.getInstance().getAbstractRepresentationWindow()
+					.setTitle(name);
 		}
 	}
+
 	private void exportSVG() {
-		final AbstractRepresentationWindow window =
-			DesktopPane.getInstance().getAbstractRepresentationWindow();
-		if (window != null) {
-			final File file =
-				this.selectFile("SVG Export", "svg", "SVG File", false);
+		final AbstractRepresentationWindow window = DesktopPane.getInstance()
+				.getAbstractRepresentationWindow();
+		if (window == null) {
+			return;
+		}
 
-			if (file != null) {
-				// Get a DOMImplementation.
-				final DOMImplementation domImpl =
-					SVGDOMImplementation.getDOMImplementation();
-				final String svgNS = SVGDOMImplementation.SVG_NAMESPACE_URI;
+		final File file = this.selectFile("SVG Export", "svg", "SVG File",
+				false);
+		if (file == null) {
+			return;
+		}
 
-				// Create an instance of org.w3c.dom.Document.
-				final Document document =
-					domImpl.createDocument(svgNS, "svg", null);
-
-				// Create an instance of the SVG Generator.
-				final SVGGraphics2D svgGenerator = new SVGGraphics2D(document);
-
-				// Ask the test to render into the SVG Graphics2D implementation.
-				final PrimitiveFactory primitiveFactory =
-					(PrimitiveFactory) window.getPrimitiveFactory();
-				final Graphics oldGraphics = primitiveFactory.getGraphics();
-				primitiveFactory.setGraphics(svgGenerator);
-				window.getAWTCanvas().paint(svgGenerator);
-				primitiveFactory.setGraphics(oldGraphics);
-
-				// Yann 2010/02/07: Size!
-				// I set the size of the SVG graphic.
-				//	final Element svgRoot = document.getDocumentElement();
-				//	svgRoot.setAttributeNS(null, "width", String.valueOf(window
-				//		.getCanvas()
-				//		.getDimension().width));
-				//	svgRoot.setAttributeNS(null, "height", String.valueOf(window
-				//		.getCanvas()
-				//		.getDimension().height));
-				svgGenerator
-					.setSVGCanvasSize(window.getCanvas().getDimension());
-				svgGenerator.transform(AffineTransform.getScaleInstance(
-					2.0,
-					2.0));
-				svgGenerator.dispose();
-
-				//	// Yann 2010/02/007: Populating the document...
-				//	// Apparently, the "document" is only used as a factory
-				//	// and does not get populated by the SVGGraphics2D, so
-				//	// I must force its "populating"... 
-				//	// See https://issues.apache.org/bugzilla/show_bug.cgi?id=21259
-				//	final Element root = document.getDocumentElement();
-				//	svgGenerator.getRoot(root);
-
-				// Finally, stream out SVG to the standard 
-				// output using UTF-8 encoding.
-				try {
-					final boolean useCSS = true;
-					// we want to use CSS style attributes
-					final Writer out =
-						new OutputStreamWriter(
-							new FileOutputStream(file),
-							"UTF-8");
-					svgGenerator.stream(out, useCSS);
-					out.flush();
-					out.close();
-
-					try {
-						Thread.sleep(1000);
-					}
-					catch (final InterruptedException e) {
-						e.printStackTrace();
-					}
-
-					// Yann 2010/02/07: Good measure!
-					// For good measure, I also generate a PNG
-					// version of the image with the same name..
-					// Create a JPEG transcoder
-					final JPEGTranscoder t = new JPEGTranscoder();
-					t.addTranscodingHint(JPEGTranscoder.KEY_QUALITY, Float.valueOf(
-						1));
-					t.addTranscodingHint(
-						SVGAbstractTranscoder.KEY_HEIGHT,
-						Float.valueOf(window.getCanvas().getDimension().height));
-					t.addTranscodingHint(
-						SVGAbstractTranscoder.KEY_WIDTH,
-						Float.valueOf(window.getCanvas().getDimension().width));
-					final TranscoderInput input =
-						new TranscoderInput(new FileReader(file));
-					final OutputStream ostream =
-						new FileOutputStream(file.getAbsoluteFile() + ".jpg");
-					final TranscoderOutput output =
-						new TranscoderOutput(ostream);
-					t.transcode(input, output);
-					ostream.flush();
-					ostream.close();
-				}
-				catch (final FileNotFoundException e) {
-					e.printStackTrace();
-				}
-				catch (final UnsupportedEncodingException e) {
-					e.printStackTrace();
-				}
-				catch (final SVGGraphics2DIOException e) {
-					e.printStackTrace();
-				}
-				catch (final IOException e) {
-					e.printStackTrace();
-				}
-				catch (final TranscoderException e) {
-					e.printStackTrace();
-				}
+		String filePathWithoutExtension = file.getAbsolutePath();
+		if (filePathWithoutExtension.endsWith(".svg")) {
+			final int posLastDot = filePathWithoutExtension.lastIndexOf('.');
+			if (posLastDot > -1) {
+				filePathWithoutExtension = filePathWithoutExtension.substring(0,
+						posLastDot);
 			}
 		}
+
+		// Get a DOMImplementation.
+		final DOMImplementation domImpl = SVGDOMImplementation
+				.getDOMImplementation();
+		final String svgNS = SVGDOMImplementation.SVG_NAMESPACE_URI;
+
+		// Create an instance of org.w3c.dom.Document.
+		final Document document = domImpl.createDocument(svgNS, "svg", null);
+
+		// Create an instance of the SVG Generator.
+		final SVGGraphics2D svgGenerator = new SVGGraphics2D(document);
+
+		// Ask the test to render into the SVG Graphics2D implementation.
+		final PrimitiveFactory primitiveFactory = (PrimitiveFactory) window
+				.getPrimitiveFactory();
+		final Graphics oldGraphics = primitiveFactory.getGraphics();
+		primitiveFactory.setGraphics(svgGenerator);
+		window.getAWTCanvas().paint(svgGenerator);
+		primitiveFactory.setGraphics(oldGraphics);
+
+		// Yann 2010/02/07: Size!
+		// I set the size of the SVG graphic.
+		//	final Element svgRoot = document.getDocumentElement();
+		//	svgRoot.setAttributeNS(null, "width", String.valueOf(window
+		//		.getCanvas()
+		//		.getDimension().width));
+		//	svgRoot.setAttributeNS(null, "height", String.valueOf(window
+		//		.getCanvas()
+		//		.getDimension().height));
+		svgGenerator.setSVGCanvasSize(window.getCanvas().getDimension());
+		svgGenerator.transform(AffineTransform.getScaleInstance(2.0, 2.0));
+		svgGenerator.dispose();
+
+		//	// Yann 2010/02/007: Populating the document...
+		//	// Apparently, the "document" is only used as a factory
+		//	// and does not get populated by the SVGGraphics2D, so
+		//	// I must force its "populating"... 
+		//	// See https://issues.apache.org/bugzilla/show_bug.cgi?id=21259
+		//	final Element root = document.getDocumentElement();
+		//	svgGenerator.getRoot(root);
+
+		// Finally, stream out SVG to the standard 
+		// output using UTF-8 encoding.
+		try {
+			// we want to use CSS style attributes
+			final Writer out = new OutputStreamWriter(
+					new FileOutputStream(filePathWithoutExtension + ".svg"),
+					"UTF-8");
+			svgGenerator.stream(out, true);
+			out.flush();
+			out.close();
+
+			// Yann 2010/02/07: Good measure!
+			// For good measure, I also generate a PNG
+			// version of the image with the same name..
+
+			// Create a JPEG transcoder
+			final JPEGTranscoder t = new JPEGTranscoder();
+			t.addTranscodingHint(JPEGTranscoder.KEY_QUALITY, Float.valueOf(1));
+			t.addTranscodingHint(SVGAbstractTranscoder.KEY_HEIGHT,
+					Float.valueOf(window.getCanvas().getDimension().height));
+			t.addTranscodingHint(SVGAbstractTranscoder.KEY_WIDTH,
+					Float.valueOf(window.getCanvas().getDimension().width));
+			final TranscoderInput input = new TranscoderInput(
+					new FileReader(filePathWithoutExtension + ".svg"));
+			final OutputStream ostream = new FileOutputStream(
+					filePathWithoutExtension + ".jpg");
+			final TranscoderOutput output = new TranscoderOutput(ostream);
+			t.transcode(input, output);
+			ostream.flush();
+			ostream.close();
+		}
+		catch (final FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		catch (final UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		catch (final SVGGraphics2DIOException e) {
+			e.printStackTrace();
+		}
+		catch (final IOException e) {
+			e.printStackTrace();
+		}
+		catch (final TranscoderException e) {
+			e.printStackTrace();
+		}
 	}
+
 	private void loadDualHierarchicalProject() {
-		final File file =
-			Utils.loadFile(
-				DesktopFrame.getInstance(),
-				false,
-				"Choose Ptidej project file",
-				"ptidej",
-				"Ptidej project files");
+		final File file = Utils.loadFile(DesktopFrame.getInstance(), false,
+				"Choose Ptidej project file", "ptidej", "Ptidej project files");
 		if (file == null) {
 			return;
 		}
@@ -409,27 +399,23 @@ public class FileAction extends AbstractAction {
 		DesktopPane.getInstance().createDualHierarchicalModelWindow();
 		this.processSelectedFile(file);
 	}
+
 	private void loadExtrinsicData() {
-		final AbstractRepresentationWindow window =
-			DesktopPane.getInstance().getAbstractRepresentationWindow();
+		final AbstractRepresentationWindow window = DesktopPane.getInstance()
+				.getAbstractRepresentationWindow();
 
 		// TODO: The path must not be harcoded, an improvement will be to
 		// save the last accessed path somewhere to reuse it.
-		final File iniFile =
-			Utils.loadFile(
-				DesktopFrame.getInstance(),
-				false,
-				"Choose an PADL file",
-				"padl",
-				"PADL files");
+		final File iniFile = Utils.loadFile(DesktopFrame.getInstance(), false,
+				"Choose an PADL file", "padl", "PADL files");
 		if (iniFile == null) {
 			return;
 		}
 		this.loadExtrinsicData(window, iniFile);
 	}
-	private void loadExtrinsicData(
-		final AbstractRepresentationWindow window,
-		final File anIniFile) {
+
+	private void loadExtrinsicData(final AbstractRepresentationWindow window,
+			final File anIniFile) {
 		try {
 			final Properties properties = new Properties();
 			properties.load(new FileInputStream(anIniFile));
@@ -452,14 +438,10 @@ public class FileAction extends AbstractAction {
 			ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 	}
+
 	private void loadGraphicalProject() {
-		final File file =
-			Utils.loadFile(
-				DesktopFrame.getInstance(),
-				false,
-				"Choose Ptidej project file",
-				"ptidej",
-				"Ptidej project files");
+		final File file = Utils.loadFile(DesktopFrame.getInstance(), false,
+				"Choose Ptidej project file", "ptidej", "Ptidej project files");
 		if (file == null) {
 			return;
 		}
@@ -477,14 +459,10 @@ public class FileAction extends AbstractAction {
 		DesktopPane.getInstance().createGraphicalModelWindow();
 		this.processSelectedFile(file);
 	}
+
 	private void loadHierarchicalProject() {
-		final File file =
-			Utils.loadFile(
-				DesktopFrame.getInstance(),
-				false,
-				"Choose Ptidej project file",
-				"ptidej",
-				"Ptidej project files");
+		final File file = Utils.loadFile(DesktopFrame.getInstance(), false,
+				"Choose Ptidej project file", "ptidej", "Ptidej project files");
 		if (file == null) {
 			return;
 		}
@@ -502,6 +480,7 @@ public class FileAction extends AbstractAction {
 		DesktopPane.getInstance().createHierarchicalModelWindow();
 		this.processSelectedFile(file);
 	}
+
 	private void loadPlantUMLProject() {
 		final File file =
 				Utils.loadDirectory(DesktopFrame.getInstance(), enabled, "Select Compiled Class Directory","class", "CLASS File");
@@ -522,8 +501,8 @@ public class FileAction extends AbstractAction {
 	}
 
 	private void processSelectedFile(final File file) {
-		final IAWTRepresentation window =
-			DesktopPane.getInstance().getAbstractRepresentationWindow();
+		final IAWTRepresentation window = DesktopPane.getInstance()
+				.getAbstractRepresentationWindow();
 
 		final String parentPath = file.getParentFile().getAbsolutePath();
 		final Properties properties = new Properties();
@@ -559,10 +538,8 @@ public class FileAction extends AbstractAction {
 			else if (!fileTypeName.equals("Classpath")
 					&& !PROJECT_FILE_HEADER.startsWith(fileTypeName)) {
 
-				final StringTokenizer files =
-					new StringTokenizer(
-						properties.getProperty(fileTypeName),
-						";");
+				final StringTokenizer files = new StringTokenizer(
+						properties.getProperty(fileTypeName), ";");
 				while (files.hasMoreTokens()) {
 					// Yann 2003/10/24: Relativity!
 					// I allow both absolute and relative path in a
@@ -577,8 +554,8 @@ public class FileAction extends AbstractAction {
 				}
 			}
 		}
-		final Iterator iteratorOnFileTypes =
-			window.getSourceFileTypes().iterator();
+		final Iterator iteratorOnFileTypes = window.getSourceFileTypes()
+				.iterator();
 		while (iteratorOnFileTypes.hasNext()) {
 			final String fileType = (String) iteratorOnFileTypes.next();
 			final Iterator interatorOnNames = names.iterator();
@@ -590,6 +567,7 @@ public class FileAction extends AbstractAction {
 
 		this.build(window);
 	}
+
 	private void processSelectedFile(final String fileType, final File file) {
 		if (file != null) {
 			// Yann 2013/05/23: Directory vs. File vs. Files vs. Directories
@@ -597,18 +575,15 @@ public class FileAction extends AbstractAction {
 			// the ModelGenerator handle the cases as it pleases... It is its
 			// responsibility to do whatever it takes!
 			// this.processSelectedFile0(fileType, file);
-			final String path =
-				util.io.Files.normalizePath(file.getAbsolutePath())
-						+ File.separatorChar;
-			DesktopPane
-				.getInstance()
-				.getAbstractRepresentationWindow()
-				.addSourceFile(fileType, path);
-			this.build(DesktopPane
-				.getInstance()
-				.getAbstractRepresentationWindow());
+			final String path = util.io.Files
+					.normalizePath(file.getAbsolutePath()) + File.separatorChar;
+			DesktopPane.getInstance().getAbstractRepresentationWindow()
+					.addSourceFile(fileType, path);
+			this.build(DesktopPane.getInstance()
+					.getAbstractRepresentationWindow());
 		}
 	}
+
 	//	private void processSelectedFile0(final String fileType, final File file) {
 	//		if (file.isFile()) {
 	//			final String path =
@@ -626,36 +601,32 @@ public class FileAction extends AbstractAction {
 	//			}
 	//		}
 	//	}
-	private File selectFile(
-		final String fileTypeDescription,
-		final String fileExtensionName,
-		final String fileTypeName,
-		final boolean directory) {
+	private File selectFile(final String fileTypeDescription,
+			final String fileExtensionName, final String fileTypeName,
+			final boolean directory) {
 
 		// Yann 2013/08/07: Model combination
 		// Although PADL is made to be multi-language and addable,
 		// right now each window will contain only one model.
-		if (DesktopPane.getInstance().getAbstractRepresentationWindow() == null) {
+		if (DesktopPane.getInstance()
+				.getAbstractRepresentationWindow() == null) {
 			this.createHierarchicalProject();
-			if (DesktopPane.getInstance().getAbstractRepresentationWindow() == null) {
+			if (DesktopPane.getInstance()
+					.getAbstractRepresentationWindow() == null) {
 				return null;
 			}
 		}
 
 		final File file;
 		if (directory) {
-			file =
-				Utils.loadDirectory(
-					DesktopFrame.getInstance(),
-					false,
-					"Choose " + fileTypeDescription,
-					fileExtensionName,
+			file = Utils.loadDirectory(DesktopFrame.getInstance(), false,
+					"Choose " + fileTypeDescription, fileExtensionName,
 					fileTypeName);
 		}
 		else {
-			file =
-				Utils.loadFile(DesktopFrame.getInstance(), false, "Choose "
-						+ fileTypeDescription, fileExtensionName, fileTypeName);
+			file = Utils.loadFile(DesktopFrame.getInstance(), false,
+					"Choose " + fileTypeDescription, fileExtensionName,
+					fileTypeName);
 		}
 		return file;
 	}
