@@ -90,6 +90,8 @@
 			<groupId>com.db4o</groupId>
 			<artifactId>all</artifactId>
 			<version>7.12.132.14217-all-java5</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/resources/db4o-7.12.132.14217-all-java5.jar</systemPath>
 		</dependency>
 
 		<!-- Test dependencies -->
