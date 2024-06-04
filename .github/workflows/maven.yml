@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up Maven
-      uses: hb0730/maven-action@latest
+      uses: hb0730/maven-action@v1.0.2
       with:
         maven-version: 3.9.7
         maven-file: ${{ runner.temp }}/apache-maven-3.9.7-bin.tar.gz
