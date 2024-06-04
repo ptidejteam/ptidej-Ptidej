@@ -10,11 +10,6 @@
 	<name>Ptidej Tool Suite</name>
 	<packaging>pom</packaging>
 
-	<properties>
-	   <maven.compiler.source>21</maven.compiler.source>
-	   <maven.compiler.target>21</maven.compiler.target>
- 	</properties>
-
 	<modules>
 		<module>CPL</module>
 		<module>DeMIMA</module>
@@ -74,6 +69,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.release>21</maven.compiler.release>
+		<maven.compiler.source>21</maven.compiler.source>
+	   	<maven.compiler.target>21</maven.compiler.target>
 		<maven.compiler.release.next>22</maven.compiler.release.next>
 		<maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
 	</properties>
