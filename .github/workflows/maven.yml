@@ -26,7 +26,7 @@ jobs:
       with:
         java-package: 'jdk'
         java-version: '21'
-        distribution: 'temurin'
+        distribution: 'corretto'
         cache: maven
     - name: Build with Maven
       run: mvn clean install
