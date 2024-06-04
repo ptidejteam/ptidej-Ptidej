@@ -22,11 +22,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up Maven
-      uses: hb0730/maven-action@v1.0.2
+      uses: s4u/setup-maven-action@< version >
       with:
+        java-version: 21
         maven-version: 3.9.7
-        maven-file: ${{ runner.temp }}/apache-maven-3.9.7-bin.tar.gz
-        url: https://downloads.apache.org/maven/maven-3/3.9.7/binaries/apache-maven-3.9.7-bin.tar.gz
+        
     - name: Set up JDK 21
       uses: actions/setup-java@v4
       with:
