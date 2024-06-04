@@ -10,6 +10,11 @@
 	<name>Ptidej Tool Suite</name>
 	<packaging>pom</packaging>
 
+	<properties>
+	   <maven.compiler.source>21</maven.compiler.source>
+	   <maven.compiler.target>21</maven.compiler.target>
+ 	</properties>
+
 	<modules>
 		<module>CPL</module>
 		<module>DeMIMA</module>
