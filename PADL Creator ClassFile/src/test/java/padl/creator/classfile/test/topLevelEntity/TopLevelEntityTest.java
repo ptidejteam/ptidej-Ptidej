@@ -40,7 +40,7 @@ public class TopLevelEntityTest extends TestCase {
 
 		try {
 			model.create(new CompleteClassFileCreator(new String[] {
-					"../PADL Creator ClassFile/target/test-classes/TopLevelEntities/swing 1.3.1/" },
+					"../PADL Creator ClassFile/target/test-classes/topLevelEntities/swing 1.3.1/" },
 					true));
 		}
 		catch (final CreationException e) {
@@ -62,7 +62,7 @@ public class TopLevelEntityTest extends TestCase {
 
 		try {
 			model.create(new CompleteClassFileCreator(new String[] {
-					"../PADL Creator ClassFile/target/test-classes/TopLevelEntities/rt 1.3.1/" },
+					"../PADL Creator ClassFile/target/test-classes/topLevelEntities/rt 1.3.1/" },
 					true));
 		}
 		catch (final CreationException e) {
@@ -84,7 +84,7 @@ public class TopLevelEntityTest extends TestCase {
 
 		try {
 			model.create(new CompleteClassFileCreator(new String[] {
-					"../PADL Creator ClassFile/target/test-classes/TopLevelEntities/swing 1.3.1/" },
+					"../PADL Creator ClassFile/target/test-classes/topLevelEntities/swing 1.3.1/" },
 					true));
 		}
 		catch (final CreationException e) {
