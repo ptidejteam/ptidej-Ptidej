@@ -83,7 +83,7 @@
 						</goals>
 						<configuration>
 							<file>src/main/resources/plantuml-mit-1.2024.4.jar</file>
-							<groupId>com.ibm.toad</groupId>
+							<groupId>net.sourceforget.plantUML</groupId>
 							<artifactId>plantUML</artifactId>
 							<version>1.0</version>
 							<packaging>jar</packaging>
@@ -109,7 +109,7 @@
 			<version>1.0.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.ibm.toad</groupId>
+			<groupId>net.sourceforget.plantUML</groupId>
 			<artifactId>plantUML</artifactId>
 			<version>1.0</version>
 		</dependency>

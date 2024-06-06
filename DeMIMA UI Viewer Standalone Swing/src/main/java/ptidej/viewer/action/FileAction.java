@@ -44,7 +44,6 @@ import org.apache.batik.transcoder.image.JPEGTranscoder;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 
-import padl.analysis.plantUMLGenerator.plantUMLToImageConversion;
 import padl.kernel.IAbstractModel;
 import padl.util.ExternalDataProcessor;
 import ptidej.ui.awt.occurrence.PrimitiveFactory;
@@ -53,12 +52,16 @@ import ptidej.viewer.awt.IAWTRepresentation;
 import ptidej.viewer.ui.AbstractRepresentationWindow;
 import ptidej.viewer.ui.DesktopFrame;
 import ptidej.viewer.ui.DesktopPane;
+import ptidej.viewer.ui.window.SourcePlantUMLModelWindow;
 import ptidej.viewer.utils.Resources;
 import ptidej.viewer.utils.Utils;
 import util.awt.NameDialog;
 import util.io.ProxyConsole;
 import util.multilingual.MultilingualManager;
-
+/**
+ * @author Vishnu Rameshbabu
+ * @since 2024/05/10
+ */
 public class FileAction extends AbstractAction {
 	private static final String PROJECT_FILE_HEADER = "[Ptidej Project]";
 	private static final String PROJECT_NAME_KEY = "Name";
@@ -480,24 +483,25 @@ public class FileAction extends AbstractAction {
 		DesktopPane.getInstance().createHierarchicalModelWindow();
 		this.processSelectedFile(file);
 	}
-
 	private void loadPlantUMLProject() {
 		final File file =
-				Utils.loadDirectory(DesktopFrame.getInstance(), enabled, "Select Compiled Class Directory","class", "CLASS File");
+				Utils.loadFile(DesktopFrame.getInstance(), false,
+						"Choose Ptidej project file", "ptidej", "Ptidej project files");
 		if (file == null) {
 			return;
 		}
-        if (new plantUMLToImageConversion().plantUMLImageGenerator(file)) {
-            System.out.println("Image generation successful");
-			final String filePath =
-					util.io.Files.normalizePath("../OutputUML.png")
-							+ File.separatorChar;
-            DesktopPane.getInstance().setPlantUMLImagePath(filePath);
-        } else {
-            System.out.println("Image generation failure, check console log.");
-}
+
+		final Properties properties = new Properties();
+		try {
+			properties.load(new FileInputStream(file));
+		}
+		catch (final IOException e) {
+			// No file found.
+			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			return;
+		}
 		DesktopPane.getInstance().createPlantUMLModelWindow();
-		this.processSelectedFile(IRepresentation.TYPE_JAVA_CLASSFILES,file);			// filetype and path since we are loading a directory
+		this.processSelectedFile(file);		
 	}
 
 	private void processSelectedFile(final File file) {

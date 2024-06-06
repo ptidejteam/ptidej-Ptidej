@@ -17,6 +17,10 @@ import ptidej.viewer.ui.rulecard.IRuleCardListener;
 import ptidej.viewer.ui.rulecard.RuleCardEvent;
 
 public class DesktopPaneTest extends TestCase{
+	/**
+	 * @author Vishnu Rameshbabu
+	 * @since 2024/05/14
+	 */
 	DesktopPane desktopPane =  DesktopPane.getInstance();
 	final ICanvasListener aCanvasListener = null;
 	final IGraphModelListener aGraphModelListener = null;
@@ -28,7 +32,6 @@ public class DesktopPaneTest extends TestCase{
 	final char[] patternName = null;
 	final int problem = 0;
 	private int solver = 2;
-	private  String plantUMLImagePath = "../OutputUML.png\\";
 	private  SourcePlantUMLModelWindow plantUML = null;
 	protected void setUp() {
 		desktopPane.setRuleCardEvent(aRuleCardEvent);
@@ -37,7 +40,6 @@ public class DesktopPaneTest extends TestCase{
 		desktopPane.setPatternName(patternName);
 		desktopPane.setProblem(problem);
 		desktopPane.setSolver(solver);
-		desktopPane.setPlantUMLImagePath(plantUMLImagePath);
 		desktopPane.createPlantUMLModelWindow();
 		plantUML = new SourcePlantUMLModelWindow();
 	}
@@ -52,7 +54,7 @@ public class DesktopPaneTest extends TestCase{
 		}
 	@Test(expected = IIOException.class)
 	public void testCaseCreatePlantUMLImage() {
-		desktopPane.setPlantUMLImagePath("../InvalidPath.txt\\");
+		((SourcePlantUMLModelWindow) desktopPane.getInstance().getAbstractRepresentationWindow()).setImagePath("../InvalidPath.txt\\");
 		plantUML = new SourcePlantUMLModelWindow();
 		
 	}

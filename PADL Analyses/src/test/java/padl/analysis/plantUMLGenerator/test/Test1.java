@@ -17,7 +17,10 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IIdiomLevelModel;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
-
+/**
+ * @author Vishnu Rameshbabu
+ * @since 2024/05/10
+ */
 public class Test1 extends TestCase{
 	
 	private static ICodeLevelModel intendedCodeLevelModel;
@@ -43,9 +46,7 @@ public class Test1 extends TestCase{
 			PlantUMLGenerator PlantUMLGeneratorNew = new PlantUMLGenerator();
 			intendedIdiomLevelModel.generate(PlantUMLGeneratorNew);
 			String umlContent = (String) PlantUMLGeneratorNew.getCode();
-		//	String [] getNameOfDirectories = filePath.split("/");	
 			String timeStampForUMLTextFile =  new Timestamp(System.currentTimeMillis()).toString().split(" ")[0];
-		//	String nameOfGeneratedUML = getNameOfDirectories[getNameOfDirectories.length-1] + "_" + getNameOfDirectories[getNameOfDirectories.length-2] + "_" + timeStampForUMLTextFile;
 			System.out.println(timeStampForUMLTextFile);
 			Test1.generatedUMLContent =  umlContent;
 			System.out.println("Generated UML Content");
