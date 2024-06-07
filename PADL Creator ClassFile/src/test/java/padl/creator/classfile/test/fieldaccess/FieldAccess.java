@@ -31,7 +31,7 @@ public final class FieldAccess extends TestCase {
 		this.codeLevelModel = Factory.getInstance().createCodeLevelModel("FieldAccess");
 
 		this.codeLevelModel.create(new CompleteClassFileCreator(
-				new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/fieldAccess/Test.class" }));
+				new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/fieldaccess/Test.class" }));
 	}
 
 	public void testFieldAccess() {

@@ -256,7 +256,7 @@ public class DuplicationTest extends TestCase {
 		final String sourcePath =
 				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
 		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/Packaje1/Packaje1.java" };
+			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/packaje1/Packaje1.java" };
 
 		final String classPathEntry = "";
 
