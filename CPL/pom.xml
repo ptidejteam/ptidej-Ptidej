@@ -48,6 +48,8 @@
 			<groupId>com.ibm.toad</groupId>
 			<artifactId>cfparse</artifactId>
 			<version>1.0</version>
+			<scope>system</scope>
+    			<systemPath>${project.basedir}/src/main/resources/cfparse.jar</systemPath>
 		</dependency>
 
 		<dependency>
