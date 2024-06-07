@@ -27,8 +27,8 @@
 				<version>3.13.0</version>
 				<configuration>
 					<release combine.self="override" />
-					<source>21</source>
-					<target>21</target>
+					<source>1.4</source>
+					<target>1.4</target>
 					<compilerId>eclipse</compilerId>
 				</configuration>
 				<dependencies>
