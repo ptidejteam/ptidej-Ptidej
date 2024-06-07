@@ -48,7 +48,7 @@ public class PlantUMLGenerator implements IGenerator {
 		this.plantUMLBuilder.append("\n@startuml\n");
 	}
 
-	@Override
+	
 	public String getCode() {
 
 		return this.plantUMLBuilder.toString();
@@ -63,7 +63,7 @@ public class PlantUMLGenerator implements IGenerator {
 	public void visit(IRelationship relationship) {
 	}
 
-	@Override
+	
 	public void visit(final IAggregation aggregation) {
 		if (currentEntity != null) {
 			this.plantUMLBuilderRelationship.append(currentEntity.getName()).append(" o-- ")
@@ -71,7 +71,7 @@ public class PlantUMLGenerator implements IGenerator {
 		}
 	}
 
-	@Override
+	
 	public void visit(IAssociation association) {
 		if (currentEntity != null) {
 			plantUMLBuilderRelationship.append("\n").append(currentEntity.getName()).append(" -- ")
@@ -80,7 +80,7 @@ public class PlantUMLGenerator implements IGenerator {
 
 	}
 
-	@Override
+	
 	public void visit(IComposition composition) {
 		if (currentEntity != null) {
 			plantUMLBuilderRelationship.append("\n").append(currentEntity.getName()).append(" *-- ")
@@ -93,33 +93,33 @@ public class PlantUMLGenerator implements IGenerator {
 
 	}
 
-	@Override
+	
 	public void visit(IField aField) {
 
 	}
 
-	@Override
+	
 	public void visit(IMethodInvocation aMethodInvocation) {
 
 	}
 
-	@Override
+	
 	public void visit(IParameter aParameter) {
 
 	}
 
-	@Override
+	
 	public void open(IAbstractModel model) {
 
 	}
 
-	@Override
+	
 	public void close(IAbstractModel model) {
 		this.plantUMLBuilder.append("\n" + this.plantUMLBuilderRelationship.toString() + "\n");
 		this.plantUMLBuilder.append("@enduml");
 	}
 
-	@Override
+	
 	public void open(IClass cls) {
 		currentEntity = cls;
 		String className = String.valueOf(cls.getName());
@@ -165,13 +165,13 @@ public class PlantUMLGenerator implements IGenerator {
 
 	}
 
-	@Override
+	
 	public void close(IClass cls) {
 		currentEntity = null;
 		this.plantUMLBuilder.append("\n}\n");
 	}
 
-	@Override
+	
 	public void open(IInterface iInterface) {
 
 		String interfaceName = String.valueOf(iInterface.getName());
@@ -206,155 +206,155 @@ public class PlantUMLGenerator implements IGenerator {
 		}
 	}
 
-	@Override
+	
 	public void close(IInterface iface) {
 
 		this.plantUMLBuilder.append("\n}\n");
 	}
 
-	@Override
+	
 	public void open(IMethod method) {
 
 	}
 
-	@Override
+	
 	public void close(IMethod method) {
 
 	}
 
-	@Override
+	
 	public void open(IPackage pkg) {
 
 	}
 
-	@Override
+	
 	public void close(IPackage pkg) {
 
 	}
 
-	@Override
+	
 	public void close(IConstructor aConstructor) {
 
 	}
 
-	@Override
+	
 	public void close(IDelegatingMethod aDelegatingMethod) {
 
 	}
 
-	@Override
+	
 	public void close(IGetter aGetter) {
 
 	}
 
-	@Override
+	
 	public void close(IGhost aGhost) {
 
 	}
 
-	@Override
+	
 	public void close(IMemberClass aMemberClass) {
 
 	}
 
-	@Override
+	
 	public void close(IMemberGhost aMemberGhost) {
 
 		// plantUMLBuilder.append("// close member ghost
 		// ").append(aMemberGhost.getDisplayName()).append("\n");
 	}
 
-	@Override
+	
 	public void close(IMemberInterface aMemberInterface) {
 
 	}
 
-	@Override
+	
 	public void close(IPackageDefault aPackage) {
 
 	}
 
-	@Override
+	
 	public void close(ISetter aSetter) {
 
 	}
 
-	@Override
+	
 	public void open(IConstructor aConstructor) {
 
 	}
 
-	@Override
+	
 	public void open(IDelegatingMethod aDelegatingMethod) {
 
 	}
 
-	@Override
+	
 	public void open(IGetter aGetter) {
 
 	}
 
-	@Override
+	
 	public void open(IGhost aGhost) {
 
 	}
 
-	@Override
+	
 	public void open(IMemberClass aMemberClass) {
 
 	}
 
-	@Override
+	
 	public String getName() {
 		return "PlantUMLGenerator";
 	}
 
-	@Override
+	
 	public void open(IMemberGhost aMemberGhost) {
 
 	}
 
-	@Override
+	
 	public void open(IMemberInterface aMemberInterface) {
 
 	}
 
-	@Override
+	
 	public void open(IPackageDefault aPackage) {
 
 	}
 
-	@Override
+	
 	public void open(ISetter aSetter) {
 
 	}
 
-	@Override
+	
 	public void reset() {
 		plantUMLBuilder.setLength(0);
 
 	}
 
-	@Override
+	
 	public void visit(IContainerAggregation aContainerAggregation) {
 
 	}
 
-	@Override
+	
 	public void visit(IContainerComposition aContainerComposition) {
 
 	}
 
-	@Override
+	
 	public void visit(IPrimitiveEntity aPrimitiveEntity) {
 	}
 
-	@Override
+	
 	public void visit(IUseRelationship aUse) {
 
 	}
 
-	@Override
+	
 	public final void unknownConstituentHandler(final String aCalledMethodName, final IConstituent aConstituent) {
 
 		ProxyConsole.getInstance().debugOutput().print(this.getClass().getName());
