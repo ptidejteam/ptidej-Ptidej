@@ -129,7 +129,7 @@ public class PlantUMLGenerator implements IGenerator {
 		}
 		this.plantUMLBuilder.append("class " + className + " {");
 		plantUMLBuilder.append("\n");
-		Iterator<?> iterator = cls.getIteratorOnInheritedEntities();
+		Iterator iterator = cls.getIteratorOnInheritedEntities();
 		if (iterator.hasNext()) {
 			while (iterator.hasNext()) {
 				IFirstClassEntity entity = (IFirstClassEntity) iterator.next();
@@ -179,7 +179,7 @@ public class PlantUMLGenerator implements IGenerator {
 		this.plantUMLBuilder.append("\n");
 		this.plantUMLBuilder.append("interface " + interfaceName + " {\n");
 
-		Iterator<?> iterator = iInterface.getIteratorOnConstituents();
+		Iterator iterator = iInterface.getIteratorOnConstituents();
 		if (iterator.hasNext()) {
 			while (iterator.hasNext()) {
 				IConstituent constituent = (IConstituent) iterator.next();
