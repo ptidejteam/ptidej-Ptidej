@@ -48,6 +48,9 @@ public class ActionsRepository {
 			actionsGroup.put(
 				Resources.LOAD_HIERARCHICAL_PROJECT,
 				FileAction.getInstance());
+			actionsGroup.put(
+					Resources.LOAD_PLANTUML_PROJECT,
+					FileAction.getInstance());
 			actionsGroup
 				.put(Resources.LOAD_EXTRINSIC, FileAction.getInstance());
 			actionsGroup.put(Resources.AOL_CODE_FILE, FileAction.getInstance());

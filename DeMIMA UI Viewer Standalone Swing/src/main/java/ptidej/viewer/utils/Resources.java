@@ -246,7 +246,8 @@ public final class Resources {
 	public static final String VISITORS = "VISITORS";
 	public static final String WALKERS = "WALKERS";
 	public static final String WINDOW = "WINDOW";
-
+	public static final String LOAD_PLANTUML_PROJECT = "LOAD_PLANTUML_PROJECT";
+	
 	public static String getButtonIconPath(final String aKey, final Class aClass) {
 		return getButtonText(aKey.concat(ICON), aClass);
 	}

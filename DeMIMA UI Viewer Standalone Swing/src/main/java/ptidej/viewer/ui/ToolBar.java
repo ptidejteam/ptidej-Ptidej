@@ -54,6 +54,10 @@ public class ToolBar extends JToolBar {
 			Resources.LOAD_DUAL_HIERARCHICAL_PROJECT,
 			Resources.FILE,
 			true);
+		this.addToolbarButton(
+				Resources.LOAD_PLANTUML_PROJECT,
+				Resources.FILE,
+				true);
 		this.addSeparator();
 
 		this.dropdown =
