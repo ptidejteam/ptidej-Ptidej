@@ -12,6 +12,7 @@ package ptidej.viewer.action;
 
 import java.awt.Frame;
 import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.geom.AffineTransform;
 import java.io.File;
@@ -29,6 +30,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import java.util.StringTokenizer;
+
+import javax.imageio.ImageIO;
 import javax.swing.AbstractAction;
 import org.apache.batik.anim.dom.SVGDOMImplementation;
 import org.apache.batik.svggen.SVGGraphics2D;
@@ -40,6 +43,7 @@ import org.apache.batik.transcoder.TranscoderOutput;
 import org.apache.batik.transcoder.image.JPEGTranscoder;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
+
 import padl.kernel.IAbstractModel;
 import padl.util.ExternalDataProcessor;
 import ptidej.ui.awt.occurrence.PrimitiveFactory;
@@ -48,12 +52,16 @@ import ptidej.viewer.awt.IAWTRepresentation;
 import ptidej.viewer.ui.AbstractRepresentationWindow;
 import ptidej.viewer.ui.DesktopFrame;
 import ptidej.viewer.ui.DesktopPane;
+import ptidej.viewer.ui.window.SourcePlantUMLModelWindow;
 import ptidej.viewer.utils.Resources;
 import ptidej.viewer.utils.Utils;
 import util.awt.NameDialog;
 import util.io.ProxyConsole;
 import util.multilingual.MultilingualManager;
-
+/**
+ * @author Vishnu Rameshbabu
+ * @since 2024/05/10
+ */
 public class FileAction extends AbstractAction {
 	private static final String PROJECT_FILE_HEADER = "[Ptidej Project]";
 	private static final String PROJECT_NAME_KEY = "Name";
@@ -90,6 +98,9 @@ public class FileAction extends AbstractAction {
 		}
 		else if (action.equals(Resources.LOAD_DUAL_HIERARCHICAL_PROJECT)) {
 			this.loadDualHierarchicalProject();
+		}
+		else if (action.equals(Resources.LOAD_PLANTUML_PROJECT)) {
+			this.loadPlantUMLProject();
 		}
 		else if (action.equals(Resources.LOAD_EXTRINSIC)) {
 			this.loadExtrinsicData();
@@ -471,6 +482,26 @@ public class FileAction extends AbstractAction {
 
 		DesktopPane.getInstance().createHierarchicalModelWindow();
 		this.processSelectedFile(file);
+	}
+	private void loadPlantUMLProject() {
+		final File file =
+				Utils.loadFile(DesktopFrame.getInstance(), false,
+						"Choose Ptidej project file", "ptidej", "Ptidej project files");
+		if (file == null) {
+			return;
+		}
+
+		final Properties properties = new Properties();
+		try {
+			properties.load(new FileInputStream(file));
+		}
+		catch (final IOException e) {
+			// No file found.
+			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			return;
+		}
+		DesktopPane.getInstance().createPlantUMLModelWindow();
+		this.processSelectedFile(file);		
 	}
 
 	private void processSelectedFile(final File file) {

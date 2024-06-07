@@ -31,8 +31,13 @@ import ptidej.viewer.ui.window.RuleCardWindow;
 import ptidej.viewer.ui.window.SourceDualHierarchicalModelWindow;
 import ptidej.viewer.ui.window.SourceGraphicalModelWindow;
 import ptidej.viewer.ui.window.SourceHierarchicalModelWindow;
+import ptidej.viewer.ui.window.SourcePlantUMLModelWindow;
 import ptidej.viewer.utils.Resources;
 
+/**
+ * @author Vishnu Rameshbabu
+ * @since 2024/05/10
+ */
 public class DesktopPane extends JDesktopPane {
 
 	private static final long serialVersionUID = 1L;
@@ -56,7 +61,6 @@ public class DesktopPane extends JDesktopPane {
 	private final List ruleCardListeners;
 	private int solver;
 	private final List sourceModelListeners;
-
 	private DesktopPane() {
 		this.setBackground(Color.GRAY);
 
@@ -64,20 +68,20 @@ public class DesktopPane extends JDesktopPane {
 		this.graphModelListeners = new ArrayList();
 		this.ruleCardListeners = new ArrayList();
 		this.sourceModelListeners = new ArrayList();
-	}
-	public void addCanvasListener(final ICanvasListener aCanvasListener) {
+	}																		
+	public void addCanvasListener(final ICanvasListener aCanvasListener) {			// This listener is intended for the entire application not for a specific window
 		this.canvasListeners.add(aCanvasListener);
 	}
 	public void addGraphModelListener(
-		final IGraphModelListener aGraphModelListener) {
+		final IGraphModelListener aGraphModelListener) {							// This listener is intended for the entire application not for a specific window
 
 		this.graphModelListeners.add(aGraphModelListener);
 	}
-	public void addRuleCardListener(final IRuleCardListener aRuleCardListener) {
+	public void addRuleCardListener(final IRuleCardListener aRuleCardListener) {	// This listener is intended for the entire application not for a specific window	
 		this.ruleCardListeners.add(aRuleCardListener);
 	}
 	public void addSourceModelListener(
-		final ISourceModelListener aSourceModelListener) {
+		final ISourceModelListener aSourceModelListener) {							// This listener is intended for the entire application not for a specific window
 
 		this.sourceModelListeners.add(aSourceModelListener);
 	}
@@ -123,6 +127,15 @@ public class DesktopPane extends JDesktopPane {
 		// Subtlety: I must set the currentDesktopWindow after opening
 		// the window because its opening will trigger any other window
 		// to deactivate and, thus, set currentDesktopWindow to null!
+		this.currentDesktopWindow = window;
+	}
+	public void createPlantUMLModelWindow() {
+
+		final AbstractRepresentationWindow window =
+			new SourcePlantUMLModelWindow();
+		this.currentDesktopWindow = window;
+		this.setWindowProperties(window);
+
 		this.currentDesktopWindow = window;
 	}
 	public void createRuleCardWindow(

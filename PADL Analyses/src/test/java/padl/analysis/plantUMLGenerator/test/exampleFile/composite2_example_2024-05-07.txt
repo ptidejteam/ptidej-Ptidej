@@ -1,0 +1,71 @@
+
+@startuml
+
+abstract class AbstractDocument {
+
+}
+
+class Document {
+
+}
+
+abstract class Element {
+
+}
+
+class IndentedParagraph {
+
+}
+
+class Main {
+
+}
+
+class Paragraph {
+
+}
+
+class Title {
+
+}
+
+
+AbstractDocument -- Object
+
+AbstractDocument -- PrintStream
+AbstractDocument o-- PrintStream : aggregation
+
+Document -- Object
+
+Document -- Vector
+
+Document -- Vector
+Document o-- Vector : aggregation
+
+Document -- Element
+
+AbstractDocument --^ Element
+Element -- AbstractDocument
+
+Paragraph --^ IndentedParagraph
+IndentedParagraph -- Paragraph
+
+Main -- Object
+
+Main -- Paragraph
+
+Main -- IndentedParagraph
+
+Main -- Element
+
+Main -- Document
+
+Main -- Title
+
+Element --^ Paragraph
+Paragraph -- Element
+
+Element --^ Title
+Title -- Element
+
+@enduml
