@@ -112,6 +112,8 @@
 			<groupId>net.sourceforget.plantUML</groupId>
 			<artifactId>plantUML</artifactId>
 			<version>1.0</version>
+			<scope>system</scope>
+    			<systemPath>${project.basedir}/src/main/resources/plantuml-mit-1.2024.4.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
