@@ -103,7 +103,7 @@
 			<artifactId>cpl-core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-				<dependency>
+		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-creator-classfile</artifactId>
 			<version>1.0.0</version>
@@ -112,6 +112,8 @@
 			<groupId>net.sourceforget.plantUML</groupId>
 			<artifactId>plantUML</artifactId>
 			<version>1.0</version>
+			<scope>system</scope>
+ 			<systemPath>${project.basedir}/src/main/resources/plantuml-mit-1.2024.4.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
