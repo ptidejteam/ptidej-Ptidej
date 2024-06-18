@@ -77,19 +77,25 @@ public class Test1 extends TestCase {
         StringBuffer fileContents = new StringBuffer();
 
         BufferedReader reader = null;
+        
+        try {
+            reader = new BufferedReader(new FileReader(path));
+            String line;
+            boolean firstLine = false;
 
-        reader = new BufferedReader(new FileReader(path));
-        String line;
-        boolean firstLine = false;
+            // Read the file line by line
+            while ((line = reader.readLine()) != null) {
+                if (firstLine) {
+                    fileContents.append(System.getProperty("line.separator"));
+                }
+                fileContents.append(line);
+                firstLine = true;
 
-        // Read the file line by line
-        while ((line = reader.readLine()) != null) {
-            if (firstLine) {
-                fileContents.append(System.getProperty("line.separator"));
             }
-            fileContents.append(line);
-            firstLine = true;
-
+        } finally {
+            if (reader != null) {
+                reader.close();
+            }
         }
 
         // Convert the StringBuilder to a String
