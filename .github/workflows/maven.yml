@@ -33,4 +33,7 @@ jobs:
         java-version: 21
         maven-version: '3.9.6'
       
-    - run: mvn clean validate install --file pom.xml
+    - run: |
+        mvn clean
+        mvn validate
+        mvn install
