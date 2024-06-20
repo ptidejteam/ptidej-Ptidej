@@ -103,21 +103,13 @@
 			<artifactId>cpl-core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-				<dependency>
-			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-creator-classfile</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>net.sourceforget.plantUML</groupId>
-			<artifactId>plantUML</artifactId>
-			<version>1.0</version>
-		</dependency>
+
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-design-motifs</artifactId>
@@ -128,6 +120,12 @@
 			<groupId>org.apache.bcel</groupId>
 			<artifactId>bcel</artifactId>
 			<version>5.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforget.plantUML</groupId>
+			<artifactId>plantUML</artifactId>
+			<version>1.0</version>
 		</dependency>
 
 		<!-- Test dependencies -->

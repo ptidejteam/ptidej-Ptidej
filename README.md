@@ -26,14 +26,16 @@ The source code of the Ptidej Tool Suite is open and released under the GNU Publ
 
 ## How do I set it up?
 
-To build the whole project, use : 
+To build the whole project, use: 
 ```bash
+mvn dependency:purge-local-repository -DactTransitively=false -DreResolve=false
 mvn clean
 mvn validate
 mvn install
 ```
 
-- `mvn validate` installs 3rd party JARs, like `cfparse`.
+- `mvn dependency:purge-local-repository -DactTransitively=false -DreResolve=false` cleans your local Maven repository.
+- `mvn validate` installs 3rd party JARs, like `cfparse` and `db4o`.
 - `mvn install` compiles, tests, packages, and installs all the sub-projects.
 
 After executing these commands, run:
