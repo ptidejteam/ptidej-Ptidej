@@ -18,7 +18,7 @@
  * 
  * All Rights Reserved.
  */
-package caffeine.test.interactiondiagram1;
+package caffeine.test.interactiondiagram2;
 
 import caffeine.Caffeine;
 import caffeine.Constants;
@@ -33,12 +33,13 @@ public final class CaffeineLauncher extends Primitive {
 			Caffeine
 				.getUniqueInstance()
 				.start(
-				// "../Caffeine Tests/src/caffeine/test/interactiondiagram1/Test.trace",
-					"../Caffeine Tests/src/caffeine/test/interactiondiagram1/Rules.pl",
+				// "../Caffeine Tests/src/caffeine/test/interactiondiagram2/Test.trace",
+					"../Caffeine Tests/src/test/java/caffeine/test/interactiondiagram2/Rules.pl",
 					"../Caffeine/cfparse.jar;../Caffeine/javassist.jar;../Caffeine/bin;../Caffeine Tests/bin",
-					"caffeine.test.interactiondiagram1.Main",
-					new String[] { "caffeine.test.interactiondiagram1.*" },
-					Constants.ANALYSIS_CONTROLLED_EVENTS);
+					"caffeine.test.interactiondiagram2.Main",
+					new String[] { "caffeine.test.interactiondiagram2.*" },
+					Constants.GENERATE_METHOD_ENTRY_EVENT
+							| Constants.GENERATE_METHOD_EXIT_EVENT);
 		}
 		catch (final Exception e) {
 			this.setProgramTerminated(true);

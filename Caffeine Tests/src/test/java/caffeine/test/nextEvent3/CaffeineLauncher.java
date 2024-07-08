@@ -38,7 +38,7 @@ public final class CaffeineLauncher extends Primitive {
 				.getUniqueInstance()
 				.start(
 				// "../Caffeine Tests/src/caffeine/test/nextEvent3/Test.trace",
-					"../Caffeine Tests/src/caffeine/test/nextEvent3/SomeEvents.pl",
+					"../Caffeine Tests/src/test/java/caffeine/test/nextEvent3/SomeEvents.pl",
 					"../Caffeine/cfparse.jar;../Caffeine/javassist.jar;../Caffeine/bin;../Caffeine Tests/bin",
 					"caffeine.test.nextEvent3.SimpleExample",
 					new String[] { "caffeine.test.nextEvent3.*" },
