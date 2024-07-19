@@ -17,9 +17,16 @@ import java.io.Writer;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.util.StackLocatorUtil;
+
 /**
  * @author Yann-Gaël Guéhéneuc
- * @since  2004/07/15
+ * @since 2004/07/15
+ * 
+ * @author Vishnu Rameshbabu
+ * @since 2024/07/11
  */
 public class ProxyConsole {
 	private static ProxyConsole UniqueInstance;
@@ -36,20 +43,23 @@ public class ProxyConsole {
 	private PrintWriter errorOutput;
 	private PrintWriter normalOutput;
 	private PrintWriter warningOutput;
+	private PrintWriter traceOutput;
+	private static  final String DEBUG = "debug";
+	private static final String INFO = "info";
+	private static final String WARN = "warn";
+	private static final String TRACE = "trace";
+	private static final String ERROR = "error";
 
 	private ProxyConsole() {
-		// this.setDebugOutput(new NullWriter());
-		this.setDebugOutput(
-				new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
-		this.setErrorOutput(
-				new AutoFlushPrintWriter(new OutputStreamWriter(System.err)));
-		this.setNormalOutput(
-				new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
-		this.setWarningOutput(
-				new AutoFlushPrintWriter(new OutputStreamWriter(System.err)));
+		this.setDebugOutput(new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
+		this.setErrorOutput(new AutoFlushPrintWriter(new OutputStreamWriter(System.err)));
+		this.setNormalOutput(new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
+		this.setWarningOutput(new AutoFlushPrintWriter(new OutputStreamWriter(System.err)));
+		this.setTraceOutput(new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
 	}
 
 	public PrintWriter debugOutput() {
+
 		return this.debugOutput;
 	}
 
@@ -69,15 +79,15 @@ public class ProxyConsole {
 				writer.write(object.toString());
 				writer.write('\n');
 				writer.flush();
-			}
-			catch (final IOException e) {
+			} catch (final IOException e) {
 				e.printStackTrace();
 			}
 		}
 	}
 
 	private void setDebugOutput(final PrintWriter messageWriter) {
-		this.debugOutput = messageWriter;
+
+		this.debugOutput = new MultiChannelPrintWriter(new LoggerPrintWriter(DEBUG), messageWriter);
 	}
 
 	public void setDebugOutput(final Writer messageWriter) {
@@ -85,7 +95,7 @@ public class ProxyConsole {
 	}
 
 	private void setErrorOutput(final PrintWriter messageWriter) {
-		this.errorOutput = messageWriter;
+		this.errorOutput = new MultiChannelPrintWriter(new LoggerPrintWriter(ERROR), messageWriter);
 	}
 
 	public void setErrorOutput(final Writer messageWriter) {
@@ -94,14 +104,14 @@ public class ProxyConsole {
 		// given to it at startup, through its Adaptor (see for example
 		// padl.creator.cppfile.eclipse.misc.EclipseCPPParserAdaptor).
 		// It closes the writer at
-		//	EclipseLogWriter.setOutput(File, Writer, boolean) line: 331
+		// EclipseLogWriter.setOutput(File, Writer, boolean) line: 331
 		// So, I make sure that it cannot close MY writers using my own
 		// UnclosablePrintWriter.
 		this.setErrorOutput(new UnclosablePrintWriter(messageWriter));
 	}
 
 	private void setNormalOutput(final PrintWriter messageWriter) {
-		this.normalOutput = messageWriter;
+		this.normalOutput = new MultiChannelPrintWriter(new LoggerPrintWriter(INFO), messageWriter);
 	}
 
 	public void setNormalOutput(final Writer messageWriter) {
@@ -110,14 +120,18 @@ public class ProxyConsole {
 		// given to it at startup, through its Adaptor (see for example
 		// padl.creator.cppfile.eclipse.misc.EclipseCPPParserAdaptor).
 		// It closes the writer at
-		//	EclipseLogWriter.setOutput(File, Writer, boolean) line: 331
+		// EclipseLogWriter.setOutput(File, Writer, boolean) line: 331
 		// So, I make sure that it cannot close MY writers using my own
 		// UnclosablePrintWriter.
 		this.setNormalOutput(new UnclosablePrintWriter(messageWriter));
 	}
 
 	private void setWarningOutput(final PrintWriter messageWriter) {
-		this.warningOutput = messageWriter;
+		this.warningOutput = new MultiChannelPrintWriter(new LoggerPrintWriter(WARN), messageWriter);
+	}
+
+	public Logger getLoggerInstance() {
+		return LogManager.getLogger(StackLocatorUtil.getCallerClass(2));
 	}
 
 	public void setWarningOutput(final Writer messageWriter) {
@@ -126,5 +140,16 @@ public class ProxyConsole {
 
 	public PrintWriter warningOutput() {
 		return this.warningOutput;
+	}
+	private void setTraceOutput(final PrintWriter messageWriter) {
+
+		this.traceOutput = new MultiChannelPrintWriter(new LoggerPrintWriter(TRACE), messageWriter);
+	}
+
+	public void setTraceOutput(final Writer messageWriter) {
+		this.setTraceOutput(new UnclosablePrintWriter(messageWriter));
+	}
+	public PrintWriter traceOutput() {
+		return this.traceOutput;
 	}
 }
