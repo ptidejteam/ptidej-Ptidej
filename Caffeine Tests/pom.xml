@@ -46,10 +46,27 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.3.0</version>
+				<configuration>
+					<excludes>
+						<exclude>TestCaffeine.java</exclude>
+					</excludes>
+					<includes>
+						<include>caffeine/test/multithreading1/CaffeineLauncher.java</include>
+						<include>caffeine/test/interactiondiagram1/CaffeineLauncher.java</include>
+						<include>caffeine/test/interactiondiagram2/CaffeineLauncher.java</include>
+						<include>caffeine/test/multithreading2/CaffeineLauncher.java</include>
+						<include>caffeine/test/nextEvent2/CaffeineLauncher.java</include>
+						<include>caffeine/test/nextEvent3/CaffeineLauncher.java</include>
+						<include>caffeine/test/collection/CaffeineLauncher.java</include>
+						<include>caffeine/test/association1/CaffeineLauncher.java</include>
+						<include>caffeine/test/association2/CaffeineLauncher.java</include>
+						<include>caffeine/test/array/CaffeineLauncher.java</include>
+					</includes>
+				</configuration>
+
 			</plugin>
 		</plugins>
 	</build>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
