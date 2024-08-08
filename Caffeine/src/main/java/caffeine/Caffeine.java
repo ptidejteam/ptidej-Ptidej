@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
 import java.io.Writer;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -66,7 +67,7 @@ public final class Caffeine {
 		return buffer.toString();
 	}
 
-	public static Caffeine getUniqueInstance() {
+	public synchronized static Caffeine getUniqueInstance() {
 		if (Caffeine.UNIQUE_INSTANCE == null) {
 			Caffeine.UNIQUE_INSTANCE = new Caffeine();
 		}
@@ -118,7 +119,7 @@ public final class Caffeine {
 		}
 
 		// Yann 2003/07/31: Listener.
-		// I notify all the listerners that a new
+		// I notify all the listeners that a new
 		// engine has been initialized.
 		final Iterator iterator = this.caffeineListerners.iterator();
 		while (iterator.hasNext()) {
@@ -137,13 +138,15 @@ public final class Caffeine {
 			final StringBuffer query = new StringBuffer();
 			query.append(Caffeine.getStreamContent(Engine.class.getResourceAsStream("Query.pl")));
 			this.engine.openQuery(JIPTerm.parseQuery(query.toString()));
+			System.out.println(query.toString());
+			
 		} catch (final JIPSyntaxErrorException jipsee) {
 			System.err.println("Error while querying the engine.");
 			jipsee.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 
 		// Yann 2003/07/31: Listener.
-		// I notify all the listerners that a new
+		// I notify all the listeners that a new
 		// engine has been started.
 		final Iterator iterator = this.caffeineListerners.iterator();
 		while (iterator.hasNext()) {
@@ -253,7 +256,8 @@ public final class Caffeine {
 	public void start(final String ruleFileName, final String classPath, final String mainClassName,
 			final String[] classNameFilter, final int requiredEventMask, final String[][] fieldAccesses) {
 
-		this.start("Caffeine.trace", ruleFileName, classPath, mainClassName, classNameFilter, requiredEventMask, fieldAccesses);
+		this.start("Caffeine.trace", ruleFileName, classPath, mainClassName, classNameFilter, requiredEventMask,
+				fieldAccesses);
 	}
 
 	public void start(final String ruleFileName, final String classPath, final String mainClassName,

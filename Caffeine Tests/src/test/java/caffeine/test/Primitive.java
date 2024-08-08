@@ -62,9 +62,11 @@ public class Primitive extends TestCase {
 			private LineNumberReader lineNumberReader;
 
 			public void engineInitialized(final Engine engine) {
+				System.out.println();
 			}
 
 			public void engineStarted(final Engine engine) {
+				System.out.println();
 				// Yann 2003/08/12: Exception.
 				// To ease the development of tests, I only
 				// warn the user if a "Test.trace" file cannot
@@ -86,6 +88,7 @@ public class Primitive extends TestCase {
 
 			public void engineTerminated(JIPTerm solution, Engine engine,
 					long time, long steps) {
+				System.out.println();
 
 				// Yann 2003/08/12: Test!
 				// If a file named "Test.solution" exists,
@@ -240,7 +243,7 @@ public class Primitive extends TestCase {
 			}
 
 			// Yann 2013/04/27: Cleanup!
-			// I ddid not forget to stop Caffeine to be sure
+			// I did not forget to stop Caffeine to be sure
 			// that the event manager, the dynamically-created
 			// JVM, and so on are thrown out before the next
 			// tests... but I must also wait a bit to prevent
