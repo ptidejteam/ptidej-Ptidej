@@ -11,6 +11,10 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>Caffeine</module>
+		<module>Caffeine Analyses</module>
+		<module>Caffeine Examples</module>
+		<module>Caffeine Tests</module>
 		<module>CPL</module>
 		<module>DeMIMA</module>
 		<module>DeMIMA Solver 3</module>

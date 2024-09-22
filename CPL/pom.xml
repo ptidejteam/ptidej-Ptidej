@@ -43,6 +43,8 @@
 	</build>
 
 	<dependencies>
+
+		<!-- Main dependencies -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
@@ -71,6 +73,14 @@
 			<version>6.7.0</version>
 		</dependency>
 
+		<!-- Test dependencies -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.9.1</version>
+			<scope>test</scope>
+		</dependency>
+		
 	</dependencies>
 
 </project>

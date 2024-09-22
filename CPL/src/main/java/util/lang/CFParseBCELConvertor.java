@@ -15,6 +15,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
+
 import org.apache.bcel.classfile.Constant;
 import org.apache.bcel.classfile.ConstantClass;
 import org.apache.bcel.classfile.ConstantDouble;
@@ -31,9 +32,7 @@ import org.apache.bcel.classfile.Field;
 import org.apache.bcel.classfile.JavaClass;
 import org.apache.bcel.classfile.Method;
 import org.apache.bcel.generic.Type;
-import util.io.ProxyConsole;
-import util.io.ReaderInputStream;
-import util.io.WriterOutputStream;
+
 import com.ibm.toad.cfparse.ClassFile;
 import com.ibm.toad.cfparse.ConstantPool;
 import com.ibm.toad.cfparse.ConstantPoolEntry;
@@ -46,14 +45,17 @@ import com.ibm.toad.cfparse.attributes.CodeAttrInfo;
 import com.ibm.toad.cfparse.attributes.LineNumberAttrInfo;
 import com.ibm.toad.cfparse.attributes.LocalVariableAttrInfo;
 
+import util.io.ProxyConsole;
+import util.io.ReaderInputStream;
+import util.io.WriterOutputStream;
+
 /**
  * @author	Yann-Gaël Guéhéneuc
  * @since	2006/07/27
  */
 public class CFParseBCELConvertor {
-	private static void addFields(
-		final ClassFile aClassFile,
-		final JavaClass aJavaClass) {
+	private static void addFields(final ClassFile aClassFile,
+			final JavaClass aJavaClass) {
 
 		final Field[] fields = aJavaClass.getFields();
 		for (int index = 0; index < fields.length; index++) {
@@ -62,12 +64,11 @@ public class CFParseBCELConvertor {
 			if (field.getName().indexOf('$') == -1) {
 				final FieldInfoList fieldInfoList = aClassFile.getFields();
 				if (field.isStatic()) {
-					fieldInfoList.addStatic(
-						aClassFile,
-						Modifier.toString(field.getModifiers()) + ' '
-								+ field.getType().toString() + " "
-								+ field.getName() + '='
-								+ field.getConstantValue());
+					fieldInfoList.addStatic(aClassFile,
+							Modifier.toString(field.getModifiers()) + ' '
+									+ field.getType().toString() + " "
+									+ field.getName() + '='
+									+ field.getConstantValue());
 				}
 				else {
 					// Yann 2006/07/31: Bug in CFParse!
@@ -81,9 +82,9 @@ public class CFParseBCELConvertor {
 			}
 		}
 	}
-	private static void addInterfaces(
-		final ClassFile aClassFile,
-		final JavaClass aJavaClass) {
+
+	private static void addInterfaces(final ClassFile aClassFile,
+			final JavaClass aJavaClass) {
 
 		try {
 			final JavaClass[] interfaces = aJavaClass.getInterfaces();
@@ -98,9 +99,9 @@ public class CFParseBCELConvertor {
 			cnfe.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 	}
-	private static void addMethods(
-		final ClassFile aClassFile,
-		final JavaClass aJavaClass) {
+
+	private static void addMethods(final ClassFile aClassFile,
+			final JavaClass aJavaClass) {
 
 		final Method[] methods = aJavaClass.getMethods();
 		for (int index = 0; index < methods.length; index++) {
@@ -120,8 +121,8 @@ public class CFParseBCELConvertor {
 			// signature to avoid problems...
 			final StringBuffer methodSignature = new StringBuffer();
 			if (method.getAccessFlags() > 0) {
-				methodSignature.append(Modifier.toString(method
-					.getAccessFlags()));
+				methodSignature
+						.append(Modifier.toString(method.getAccessFlags()));
 				methodSignature.append(' ');
 			}
 			methodSignature.append(method.getReturnType().toString());
@@ -140,8 +141,8 @@ public class CFParseBCELConvertor {
 			methodSignature.append(')');
 
 			final MethodInfoList methodInfoList = aClassFile.getMethods();
-			final MethodInfo methodInfo =
-				methodInfoList.add(methodSignature.toString());
+			final MethodInfo methodInfo = methodInfoList
+					.add(methodSignature.toString());
 			methodInfo.setAccess(method.getAccessFlags());
 			final String[] argsString = new String[args.length];
 			for (int i = 0; i < args.length; i++) {
@@ -158,8 +159,8 @@ public class CFParseBCELConvertor {
 			final int idxDescriptor = cp.find(1, methodInfo.getDesc());
 			final StringBuffer buffer = new StringBuffer(methodInfo.getDesc());
 			buffer.insert(buffer.lastIndexOf(")"), ")");
-			((ConstantPool.Utf8Entry) cp.get(idxDescriptor)).setValue(buffer
-				.toString());
+			((ConstantPool.Utf8Entry) cp.get(idxDescriptor))
+					.setValue(buffer.toString());
 
 			methodInfo.setReturnType(method.getReturnType().toString());
 
@@ -167,78 +168,70 @@ public class CFParseBCELConvertor {
 			// method from the method from BCEL!!
 			final AttrInfoList attrInfoList = methodInfo.getAttrs();
 			if (method.getCode() != null) {
-				final CodeAttrInfo codeAttributeInfo =
-					(CodeAttrInfo) attrInfoList.get("Code");
+				final CodeAttrInfo codeAttributeInfo = (CodeAttrInfo) attrInfoList
+						.get("Code");
 				codeAttributeInfo.setCode(method.getCode().getCode());
 				codeAttributeInfo.setMaxLocals(method.getCode().getMaxLocals());
 				codeAttributeInfo.setMaxStack(method.getCode().getMaxStack());
 
 				if (method.getLineNumberTable() != null) {
-					final LineNumberAttrInfo lineNumberAttrInfo =
-						(LineNumberAttrInfo) codeAttributeInfo.getAttrs().add(
-							"LineNumberTable");
+					final LineNumberAttrInfo lineNumberAttrInfo = (LineNumberAttrInfo) codeAttributeInfo
+							.getAttrs().add("LineNumberTable");
 					try {
 						final StringWriter stringWriter = new StringWriter();
-						final DataOutputStream dataOutput =
-							new DataOutputStream(new WriterOutputStream(
-								stringWriter));
-						dataOutput.writeInt(method
-							.getLineNumberTable()
-							.getLength());
-						final int tableLength =
-							method.getLineNumberTable().getTableLength();
+						final DataOutputStream dataOutput = new DataOutputStream(
+								new WriterOutputStream(stringWriter));
+						dataOutput.writeInt(
+								method.getLineNumberTable().getLength());
+						final int tableLength = method.getLineNumberTable()
+								.getTableLength();
 						dataOutput.writeShort(tableLength);
 						for (int i = 0; i < tableLength; i++) {
 							method.getLineNumberTable().getLineNumberTable()[i]
-								.dump(dataOutput);
+									.dump(dataOutput);
 						}
 						dataOutput.close();
 
 						final String stringInStream = stringWriter.toString();
 
-						final StringReader stringReader =
-							new StringReader(stringInStream);
-						final DataInputStream dataInput =
-							new DataInputStream(new ReaderInputStream(
-								stringReader));
+						final StringReader stringReader = new StringReader(
+								stringInStream);
+						final DataInputStream dataInput = new DataInputStream(
+								new ReaderInputStream(stringReader));
 						lineNumberAttrInfo.read(dataInput);
 						dataInput.close();
 					}
 					catch (final IOException ioe) {
-						ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
+						ioe.printStackTrace(
+								ProxyConsole.getInstance().errorOutput());
 					}
 				}
 
 				if (method.getLocalVariableTable() != null) {
-					final LocalVariableAttrInfo localVariableAttrInfo =
-						(LocalVariableAttrInfo) codeAttributeInfo
-							.getAttrs()
-							.add("LocalVariableTable");
+					final LocalVariableAttrInfo localVariableAttrInfo = (LocalVariableAttrInfo) codeAttributeInfo
+							.getAttrs().add("LocalVariableTable");
 					try {
 						final StringWriter stringWriter = new StringWriter();
-						final DataOutputStream dataOutput =
-							new DataOutputStream(new WriterOutputStream(
-								stringWriter));
-						dataOutput.writeInt(method
-							.getLocalVariableTable()
-							.getLength());
-						final int tableLength =
-							method.getLocalVariableTable().getTableLength();
+						final DataOutputStream dataOutput = new DataOutputStream(
+								new WriterOutputStream(stringWriter));
+						dataOutput.writeInt(
+								method.getLocalVariableTable().getLength());
+						final int tableLength = method.getLocalVariableTable()
+								.getTableLength();
 						dataOutput.writeShort(tableLength);
 						for (int i = 0; i < tableLength; i++) {
-							method
-								.getLocalVariableTable()
-								.getLocalVariableTable()[i].dump(dataOutput);
+							method.getLocalVariableTable()
+									.getLocalVariableTable()[i]
+									.dump(dataOutput);
 						}
 						dataOutput.close();
 
 						final String stringInStream = stringWriter.toString();
 
-						final StringReader stringReader =
-							new StringReader(stringInStream);
-						final DataInputStream dataInput =
-							new DataInputStream(new ReaderInputStream(
-								stringReader));
+						final StringReader stringReader = new StringReader(
+								stringInStream);
+						final DataInputStream dataInput = new DataInputStream(
+								new ReaderInputStream(stringReader));
 						localVariableAttrInfo.read(dataInput);
 						dataInput.close();
 					}
@@ -249,6 +242,7 @@ public class CFParseBCELConvertor {
 			}
 		}
 	}
+
 	public static ClassFile convertClassFile(final JavaClass aJavaClass) {
 		final ClassFile currentClass = new ClassFile();
 
@@ -259,9 +253,8 @@ public class CFParseBCELConvertor {
 		currentClass.setName(aJavaClass.getClassName());
 		currentClass.setSuperName(aJavaClass.getSuperclassName());
 
-		CFParseBCELConvertor.convertConstantPool(
-			aJavaClass,
-			currentClass.getCP());
+		CFParseBCELConvertor.convertConstantPool(aJavaClass,
+				currentClass.getCP());
 
 		CFParseBCELConvertor.addInterfaces(currentClass, aJavaClass);
 		CFParseBCELConvertor.addMethods(currentClass, aJavaClass);
@@ -269,85 +262,74 @@ public class CFParseBCELConvertor {
 
 		return currentClass;
 	}
-	private static com.ibm.toad.cfparse.ConstantPool convertConstantPool(
-		final JavaClass aJavaClass,
-		final com.ibm.toad.cfparse.ConstantPool cfparseCP) {
 
-		final org.apache.bcel.classfile.ConstantPool bcelCP =
-			aJavaClass.getConstantPool();
+	private static com.ibm.toad.cfparse.ConstantPool convertConstantPool(
+			final JavaClass aJavaClass,
+			final com.ibm.toad.cfparse.ConstantPool cfparseCP) {
+
+		final org.apache.bcel.classfile.ConstantPool bcelCP = aJavaClass
+				.getConstantPool();
 
 		final Constant[] constants = bcelCP.getConstantPool();
 		for (int index = 1; index < constants.length; index++) {
 			final Constant constant = constants[index];
 
 			if (constant instanceof ConstantClass) {
-				final String className =
-					((ConstantClass) constant).getBytes(bcelCP).replace(
-						'.',
-						'/');
-				final boolean found =
-					CFParseBCELConvertor.searchFor(
-						cfparseCP,
-						className,
-						ConstantPool.ClassEntry.class);
+				final String className = ((ConstantClass) constant)
+						.getBytes(bcelCP).replace('.', '/');
+				final boolean found = CFParseBCELConvertor.searchFor(cfparseCP,
+						className, ConstantPool.ClassEntry.class);
 				if (!found) {
 					cfparseCP.addClass(className);
 				}
 			}
 			else if (constant instanceof ConstantFieldref) {
-				final int classIndex =
-					((ConstantFieldref) constant).getClassIndex();
-				final ConstantClass classConstant =
-					(ConstantClass) bcelCP.getConstant(classIndex);
-				final ConstantUtf8 classNameUtf8 =
-					(ConstantUtf8) bcelCP.getConstant(classConstant
-						.getNameIndex());
+				final int classIndex = ((ConstantFieldref) constant)
+						.getClassIndex();
+				final ConstantClass classConstant = (ConstantClass) bcelCP
+						.getConstant(classIndex);
+				final ConstantUtf8 classNameUtf8 = (ConstantUtf8) bcelCP
+						.getConstant(classConstant.getNameIndex());
 
-				final int nameAndTypeIndex =
-					((ConstantFieldref) constant).getNameAndTypeIndex();
-				final ConstantNameAndType nameAndTypeConstant =
-					(ConstantNameAndType) bcelCP.getConstant(nameAndTypeIndex);
+				final int nameAndTypeIndex = ((ConstantFieldref) constant)
+						.getNameAndTypeIndex();
+				final ConstantNameAndType nameAndTypeConstant = (ConstantNameAndType) bcelCP
+						.getConstant(nameAndTypeIndex);
 
 				cfparseCP.addField(classNameUtf8.getBytes().replace('.', '/')
 						+ ' ' + nameAndTypeConstant.getName(bcelCP) + ' '
 						+ nameAndTypeConstant.getSignature(bcelCP));
 			}
 			else if (constant instanceof ConstantInterfaceMethodref) {
-				final int classIndex =
-					((ConstantInterfaceMethodref) constant).getClassIndex();
-				final ConstantClass classConstant =
-					(ConstantClass) bcelCP.getConstant(classIndex);
-				final ConstantUtf8 classNameUtf8 =
-					(ConstantUtf8) bcelCP.getConstant(classConstant
-						.getNameIndex());
+				final int classIndex = ((ConstantInterfaceMethodref) constant)
+						.getClassIndex();
+				final ConstantClass classConstant = (ConstantClass) bcelCP
+						.getConstant(classIndex);
+				final ConstantUtf8 classNameUtf8 = (ConstantUtf8) bcelCP
+						.getConstant(classConstant.getNameIndex());
 
-				final int nameAndTypeIndex =
-					((ConstantInterfaceMethodref) constant)
+				final int nameAndTypeIndex = ((ConstantInterfaceMethodref) constant)
 						.getNameAndTypeIndex();
-				final ConstantNameAndType nameAndTypeConstant =
-					(ConstantNameAndType) bcelCP.getConstant(nameAndTypeIndex);
+				final ConstantNameAndType nameAndTypeConstant = (ConstantNameAndType) bcelCP
+						.getConstant(nameAndTypeIndex);
 
-				cfparseCP.addInterface(classNameUtf8.getBytes().replace(
-					'.',
-					'/')
-						+ ' '
-						+ nameAndTypeConstant.getName(bcelCP)
-						+ ' '
-						+ nameAndTypeConstant.getSignature(bcelCP));
+				cfparseCP.addInterface(
+						classNameUtf8.getBytes().replace('.', '/') + ' '
+								+ nameAndTypeConstant.getName(bcelCP) + ' '
+								+ nameAndTypeConstant.getSignature(bcelCP));
 			}
 			else if (constant instanceof ConstantMethodref) {
-				final int classIndex =
-					((ConstantMethodref) constant).getClassIndex();
-				final ConstantClass classConstant =
-					(ConstantClass) bcelCP.getConstant(classIndex);
-				final ConstantUtf8 classNameUtf8 =
-					(ConstantUtf8) bcelCP.getConstant(classConstant
-						.getNameIndex());
+				final int classIndex = ((ConstantMethodref) constant)
+						.getClassIndex();
+				final ConstantClass classConstant = (ConstantClass) bcelCP
+						.getConstant(classIndex);
+				final ConstantUtf8 classNameUtf8 = (ConstantUtf8) bcelCP
+						.getConstant(classConstant.getNameIndex());
 
-				final int nameAndTypeIndex =
-					((ConstantMethodref) constant).getNameAndTypeIndex();
-				final ConstantNameAndType nameAndTypeConstant =
-					(ConstantNameAndType) bcelCP.getConstant(nameAndTypeIndex);
+				final int nameAndTypeIndex = ((ConstantMethodref) constant)
+						.getNameAndTypeIndex();
+				final ConstantNameAndType nameAndTypeConstant = (ConstantNameAndType) bcelCP
+						.getConstant(nameAndTypeIndex);
 
 				cfparseCP.addMethod(classNameUtf8.getBytes().replace('.', '/')
 						+ ' ' + nameAndTypeConstant.getName(bcelCP) + ' '
@@ -366,23 +348,20 @@ public class CFParseBCELConvertor {
 				cfparseCP.addLong(((ConstantLong) constant).getBytes());
 			}
 			else if (constant instanceof ConstantNameAndType) {
-				final ConstantNameAndType constantNameAndType =
-					(ConstantNameAndType) constant;
-				final boolean found =
-					CFParseBCELConvertor.searchFor(
-						cfparseCP,
+				final ConstantNameAndType constantNameAndType = (ConstantNameAndType) constant;
+				final boolean found = CFParseBCELConvertor.searchFor(cfparseCP,
 						constantNameAndType.getName(bcelCP) + ' '
 								+ constantNameAndType.getSignature(bcelCP),
 						ConstantPool.NameAndTypeEntry.class);
 				if (!found) {
 					cfparseCP.addNameAndType(
-						constantNameAndType.getName(bcelCP),
-						constantNameAndType.getSignature(bcelCP));
+							constantNameAndType.getName(bcelCP),
+							constantNameAndType.getSignature(bcelCP));
 				}
 			}
 			else if (constant instanceof ConstantString) {
 				cfparseCP.addString((String) ((ConstantString) constant)
-					.getConstantValue(bcelCP));
+						.getConstantValue(bcelCP));
 			}
 			else if (constant instanceof ConstantUtf8) {
 				final String utf8String = ((ConstantUtf8) constant).getBytes();
@@ -391,16 +370,17 @@ public class CFParseBCELConvertor {
 				}
 			}
 			else {
-				throw new RuntimeException("Unknown constant in constant pool.");
+				// throw new RuntimeException("Unknown constant in constant pool");
+				System.err.println("Unknown constant in constant pool");
 			}
 		}
 
 		return cfparseCP;
 	}
+
 	private static boolean searchFor(
-		final com.ibm.toad.cfparse.ConstantPool aCFParseCP,
-		final String anAttributeName,
-		final Class<?> anAttributeType) {
+			final com.ibm.toad.cfparse.ConstantPool aCFParseCP,
+			final String anAttributeName, final Class<?> anAttributeType) {
 
 		boolean found = false;
 		//	int iterator = 0;
@@ -417,7 +397,7 @@ public class CFParseBCELConvertor {
 		//	}
 		for (int i = 0; i < aCFParseCP.length() && !found; i++) {
 			final ConstantPoolEntry entry = aCFParseCP.get(i);
-			if (entry.getClass().equals(anAttributeType)
+			if (entry != null && entry.getClass().equals(anAttributeType)
 					&& entry.getAsString().endsWith(anAttributeName)) {
 
 				found = true;
