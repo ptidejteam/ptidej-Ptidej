@@ -82,7 +82,7 @@ public final class Caffeine {
 			this.consultStringBuffer = new StringBuffer();
 
 			this.consult(
-				caffeine.logic.Engine.class.getResourceAsStream("Rules.pl"));
+				caffeine.logic.Engine.class.getResourceAsStream("caffeine/logic/Rules.pl"));
 			this.consult(
 				this.getClass().getClassLoader().getResourceAsStream(
 					ruleFileName));
@@ -151,7 +151,7 @@ public final class Caffeine {
 	}
 	private void start() {
 		System.out.println("Caffeine Simulator started.");
-		this.query(caffeine.logic.Engine.class, "Query.pl");
+		this.query(caffeine.logic.Engine.class, "caffeine/logic/Query.pl");
 	}
 	private void consult(final InputStream stream) {
 		try {
