@@ -68,7 +68,8 @@
 		<module>SAD</module>
 		<module>SAD Rules Creator</module>
 		<module>SQUAD</module>
-	</modules>
+        <module>DP-Detector</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
