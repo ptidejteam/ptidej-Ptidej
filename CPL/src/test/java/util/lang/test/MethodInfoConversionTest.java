@@ -20,7 +20,6 @@ import com.ibm.toad.cfparse.MethodInfoList;
  * @author Henrique De Freitas Serra
  * @since  2024/10/11
  */
-
 class MethodInfoConversionTest {
 
 	private static MethodInfo method_CFPARSE;
@@ -28,8 +27,9 @@ class MethodInfoConversionTest {
 
 	@BeforeAll
 	static void setup() throws FileNotFoundException, IOException {
-
-		final String classFile_Path = "../PADL Analyses\\target\\test-classes\\padl\\creator\\classfile\\test\\visitor\\SimpleGenerator.class";
+		// MUST NOT USE OUTSIDE FILES, WHY?
+		// final String classFile_Path = "../PADL Analyses\\target\\test-classes\\padl\\creator\\classfile\\test\\visitor\\SimpleGenerator.class";
+        final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/SimpleGenerator.class";
 		final ClassFile classFile_CFParse_Original = new ClassFile(
 				new FileInputStream(classFile_Path));
 		final MethodInfoList methodInfoList = classFile_CFParse_Original
