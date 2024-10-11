@@ -13,6 +13,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * @author Rushin Makwana
+ * @author Peter Yefi
+ * @since  2024/10/11
+ */
 public class FieldInfoListConversionTest {
 
     @Test

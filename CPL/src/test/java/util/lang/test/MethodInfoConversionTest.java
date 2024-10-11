@@ -15,6 +15,12 @@ import com.ibm.toad.cfparse.ClassFile;
 import com.ibm.toad.cfparse.MethodInfo;
 import com.ibm.toad.cfparse.MethodInfoList;
 
+/**
+ * @author Laurent Voisard
+ * @author Henrique De Freitas Serra
+ * @since  2024/10/11
+ */
+
 class MethodInfoConversionTest {
 
 	private static MethodInfo method_CFPARSE;
