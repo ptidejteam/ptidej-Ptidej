@@ -39,6 +39,9 @@ class CFParseBCELConvertorTest {
 		// assertEquals(classFile_CFParse_Original.getAttrs(), classFile_CFParse_Convert.getAttrs());
 		assertEquals(classFile_CFParse_Original.getName(),
 				classFile_CFParse_Convert.getName());
+
+		assertEquals(classFile_CFParse_Original.getFields(),
+				classFile_CFParse_Convert.getFields());
 	}
 
 }
