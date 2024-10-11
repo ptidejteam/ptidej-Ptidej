@@ -44,7 +44,7 @@ public class ProxyConsole {
 	private PrintWriter normalOutput;
 	private PrintWriter warningOutput;
 	private PrintWriter traceOutput;
-	private static  final String DEBUG = "debug";
+	private static final String DEBUG = "debug";
 	private static final String INFO = "info";
 	private static final String WARN = "warn";
 	private static final String TRACE = "trace";
@@ -86,7 +86,8 @@ public class ProxyConsole {
 	}
 
 	private void setDebugOutput(final PrintWriter messageWriter) {
-		this.debugOutput = new MultiChannelPrintWriter(new LoggerPrintWriter(DEBUG), messageWriter);
+
+		this.debugOutput = new MultiChannelPrintWriter(new PrintWriter(new LoggerWriter(DEBUG)), messageWriter);
 	}
 
 	public void setDebugOutput(final Writer messageWriter) {
@@ -94,7 +95,7 @@ public class ProxyConsole {
 	}
 
 	private void setErrorOutput(final PrintWriter messageWriter) {
-		this.errorOutput = new MultiChannelPrintWriter(new LoggerPrintWriter(ERROR), messageWriter);
+		this.errorOutput = new MultiChannelPrintWriter(new PrintWriter(new LoggerWriter(ERROR)), messageWriter);
 	}
 
 	public void setErrorOutput(final Writer messageWriter) {
@@ -110,7 +111,8 @@ public class ProxyConsole {
 	}
 
 	private void setNormalOutput(final PrintWriter messageWriter) {
-		this.normalOutput = new MultiChannelPrintWriter(new LoggerPrintWriter(INFO), messageWriter);
+		this.normalOutput = new MultiChannelPrintWriter(new PrintWriter(new LoggerWriter(INFO)
+				), messageWriter);
 	}
 
 	public void setNormalOutput(final Writer messageWriter) {
@@ -126,11 +128,7 @@ public class ProxyConsole {
 	}
 
 	private void setWarningOutput(final PrintWriter messageWriter) {
-		this.warningOutput = new MultiChannelPrintWriter(new LoggerPrintWriter(WARN), messageWriter);
-	}
-
-	public Logger getLoggerInstance() {
-		return LogManager.getLogger(StackLocatorUtil.getCallerClass(2));
+		this.warningOutput = new MultiChannelPrintWriter(new PrintWriter(new LoggerWriter(WARN)), messageWriter);
 	}
 
 	public void setWarningOutput(final Writer messageWriter) {
@@ -140,14 +138,16 @@ public class ProxyConsole {
 	public PrintWriter warningOutput() {
 		return this.warningOutput;
 	}
+
 	private void setTraceOutput(final PrintWriter messageWriter) {
 
-		this.traceOutput = new MultiChannelPrintWriter(new LoggerPrintWriter(TRACE), messageWriter);
+		this.traceOutput = new MultiChannelPrintWriter(new PrintWriter(new LoggerWriter(TRACE)), messageWriter);
 	}
 
 	public void setTraceOutput(final Writer messageWriter) {
 		this.setTraceOutput(new UnclosablePrintWriter(messageWriter));
 	}
+
 	public PrintWriter traceOutput() {
 		return this.traceOutput;
 	}
