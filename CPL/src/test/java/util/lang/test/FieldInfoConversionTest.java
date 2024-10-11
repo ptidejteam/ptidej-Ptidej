@@ -38,24 +38,6 @@ class FieldInfoConversionTest {
 				field_BCEL.getType().getClassName());
 	}
 
-	@Test
-	void test2() throws FileNotFoundException, IOException {
-		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
 
-		final ClassFile classFile_CFParse_Original = new ClassFile(
-				new FileInputStream(classFile_Path));
-		final FieldInfoList fieldInfoList = classFile_CFParse_Original
-				.getFields();
-		final FieldInfo fieldInfo_CFPARSE_ORIGINAL = fieldInfoList.get(0);
-
-		final FieldInfo fieldInfo_BCEL_CONVERTED = new FieldInfo(aaa, bbb, ccc, ddd...);
-		
-		Assertions.assertEquals(fieldInfo_CFPARSE_ORIGINAL.getAccess(), fieldInfo_BCEL_CONVERTED.getAccess());
-		Assertions.assertEquals(fieldInfo_CFPARSE_ORIGINAL.getAccess(), fieldInfo_BCEL_CONVERTED.getAccess());
-		Assertions.assertEquals(fieldInfo_CFPARSE_ORIGINAL.getAccess(), fieldInfo_BCEL_CONVERTED.getAccess());
-		Assertions.assertEquals(fieldInfo_CFPARSE_ORIGINAL.getAccess(), fieldInfo_BCEL_CONVERTED.getAccess());
-		Assertions.assertEquals(fieldInfo_CFPARSE_ORIGINAL.getAccess(), fieldInfo_BCEL_CONVERTED.getAccess());
-		Assertions.assertEquals(fieldInfo_CFPARSE_ORIGINAL.getAccess(), fieldInfo_BCEL_CONVERTED.getAccess());
-	}
 
 }
