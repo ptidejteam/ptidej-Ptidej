@@ -23,7 +23,7 @@ class InterfaceListConversionTest {
 
 	@Test
 	void testLengh() throws FileNotFoundException, IOException, ClassNotFoundException {
-		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/IClass.class";
+		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
 
 		final ClassFile classFile_CFParse_Original = new ClassFile(new FileInputStream(classFile_Path));
 
@@ -39,7 +39,7 @@ class InterfaceListConversionTest {
 
 	@Test
 	void testGet() throws FileNotFoundException, IOException, ClassNotFoundException {
-		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/IClass.class";
+		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
 
 		final ClassFile classFile_CFParse_Original = new ClassFile(new FileInputStream(classFile_Path));
 
@@ -59,7 +59,7 @@ class InterfaceListConversionTest {
 
 	@Test
 	void testAdd() throws FileNotFoundException, IOException, ClassNotFoundException {
-		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/IClass.class";
+		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
 
 		final ClassFile classFile_CFParse_Original = new ClassFile(new FileInputStream(classFile_Path));
 
@@ -81,7 +81,7 @@ class InterfaceListConversionTest {
 
 	@Test
 	void testGetName() throws FileNotFoundException, IOException, ClassNotFoundException {
-		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/IClass.class";
+		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
 
 		final ClassFile classFile_CFParse_Original = new ClassFile(new FileInputStream(classFile_Path));
 
@@ -102,7 +102,7 @@ class InterfaceListConversionTest {
 
 	@Test
 	void testSort() throws FileNotFoundException, IOException, ClassNotFoundException {
-		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/IClass.class";
+		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
 
 		final ClassFile classFile_CFParse_Original = new ClassFile(new FileInputStream(classFile_Path));
 
