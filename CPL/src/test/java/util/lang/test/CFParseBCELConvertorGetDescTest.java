@@ -16,7 +16,7 @@ import util.lang.CFParseBCELConvertor;
 /**
  * @since 2024/10/11
  * @author Rushin Dipak Makwana
- * @Nicolas C. Rousse
+ * @author Nicolas C. Rousse
  */
 class CFParseBCELConvertorTest3 {
     private ClassFile classFile_CFParse_Original;
