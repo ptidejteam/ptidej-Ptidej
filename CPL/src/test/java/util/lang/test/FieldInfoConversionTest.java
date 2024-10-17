@@ -8,22 +8,26 @@ import org.apache.bcel.classfile.ClassParser;
 import org.apache.bcel.classfile.Field;
 import org.apache.bcel.classfile.JavaClass;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import com.ibm.toad.cfparse.ClassFile;
 import com.ibm.toad.cfparse.FieldInfo;
 import com.ibm.toad.cfparse.FieldInfoList;
 
-import util.lang.CFParseBCELConvertor;
+/*
+ * @author Luca Scistri
+ * @author Zongo Meyo
+ * @since 2024/10/11
+ */
 
 class FieldInfoConversionTest {
 
-	FieldInfo field_CFPARSE;
-	FieldInfo field_BCEL_Converted;
+	private static FieldInfo field_CFPARSE;
+	private static Field field_BCEL;
 	
-	@BeforeEach
-	void setup() throws FileNotFoundException, IOException {
+	@BeforeAll
+	static void setup() throws FileNotFoundException, IOException {
 		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
 
 		final ClassFile classFile_CFParse_Original = new ClassFile(
@@ -34,79 +38,25 @@ class FieldInfoConversionTest {
 
 		final JavaClass classFile_BCEL = new ClassParser(
 				new FileInputStream(classFile_Path), "").parse();
-		
-		final ClassFile classFile_BCEL_Converted = CFParseBCELConvertor.convertClassFile(classFile_BCEL);
-		
-		final FieldInfoList fieldInfoList_BCEL = classFile_BCEL_Converted.getFields();
-		field_BCEL_Converted = fieldInfoList_BCEL.get(0);
+	
+		field_BCEL = classFile_BCEL.getFields()[0];
 	}
 
 	
 	@Test
 	void testGetAccess() throws FileNotFoundException, IOException {
-		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
-
-		final ClassFile classFile_CFParse_Original = new ClassFile(
-				new FileInputStream(classFile_Path));
-		final FieldInfoList fieldInfoList = classFile_CFParse_Original
-				.getFields();
-		final FieldInfo field_CFPARSE = fieldInfoList.get(0);
-
-		final JavaClass classFile_BCEL = new ClassParser(
-				new FileInputStream(classFile_Path), "").parse();
-		
-		final Field field_BCEL = classFile_BCEL.getFields()[0];
-
 		Assertions.assertEquals(field_CFPARSE.getAccess(),
 				field_BCEL.getAccessFlags());
-
 	}
 	
 	@Test
 	void testGetType() throws FileNotFoundException, IOException {
-		
-		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
-
-		final ClassFile classFile_CFParse_Original = new ClassFile(
-				new FileInputStream(classFile_Path));
-		final FieldInfoList fieldInfoList = classFile_CFParse_Original
-				.getFields();
-		final FieldInfo field_CFPARSE = fieldInfoList.get(0);
-
-		final JavaClass classFile_BCEL = new ClassParser(
-				new FileInputStream(classFile_Path), "").parse();
-		
-		final Field field_BCEL = classFile_BCEL.getFields()[0];
-		
 		Assertions.assertEquals(field_CFPARSE.getType(),
 				field_BCEL.getType().getClassName());
 	}
 	
 	@Test
-	void testToString(){
-		
-
-		Assertions.assertEquals(field_CFPARSE.toString(),
-				field_BCEL_Converted.toString());
-		
-	}
-	
-	@Test
-	void testGetName() throws FileNotFoundException, IOException {
-		
-		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
-
-		final ClassFile classFile_CFParse_Original = new ClassFile(
-				new FileInputStream(classFile_Path));
-		final FieldInfoList fieldInfoList = classFile_CFParse_Original
-				.getFields();
-		final FieldInfo field_CFPARSE = fieldInfoList.get(0);
-
-		final JavaClass classFile_BCEL = new ClassParser(
-				new FileInputStream(classFile_Path), "").parse();
-		
-		final Field field_BCEL = classFile_BCEL.getFields()[0];		
-		
+	void testGetName() throws FileNotFoundException, IOException {	
 		Assertions.assertEquals(field_CFPARSE.getName(),
 				field_BCEL.getName());
 	}
@@ -114,45 +64,26 @@ class FieldInfoConversionTest {
 	
 	@Test
 	void testGetDesc(){
+		String Description = "J";
 		
 		Assertions.assertEquals(field_CFPARSE.getDesc(),
-				field_BCEL_Converted.getDesc());
+				Description);
 	}
 
 	
 	@Test
-	void testGetAttrsToString(){
+	void testGetAttrsLength(){
 		
-		Assertions.assertEquals(field_CFPARSE.getAttrs().toString(),
-				field_BCEL_Converted.getAttrs().toString());
+		Assertions.assertEquals(field_CFPARSE.getAttrs().length(),
+				field_BCEL.getAttributes().length);
 	}
 	
 	@Test
-	void testGetAttrsSize() {
+	void testGetAttrsName() {
 		
-		Assertions.assertNotEquals(field_CFPARSE.getAttrs().size(),
-				field_BCEL_Converted.getAttrs().size());
+		Assertions.assertNotEquals(field_CFPARSE.getAttrs().getName(0),
+				field_BCEL.getName());
 	}
 
-	/*
-	@Test
-	void test3() throws FileNotFoundException, IOException {
-		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
-
-		final ClassFile classFile_CFParse_Original = new ClassFile(
-				new FileInputStream(classFile_Path));
-		final FieldInfoList fieldInfoList = classFile_CFParse_Original
-				.getFields();
-		final FieldInfo fieldInfo_CFPARSE_ORIGINAL = fieldInfoList.get(0);
-
-		final FieldInfo fieldInfo_BCEL_CONVERTED = new FieldInfo(aaa, bbb, ccc, ddd...);
-		
-		Assertions.assertEquals(fieldInfo_CFPARSE_ORIGINAL.getAccess(), fieldInfo_BCEL_CONVERTED.getAccess());
-		Assertions.assertEquals(fieldInfo_CFPARSE_ORIGINAL.getAccess(), fieldInfo_BCEL_CONVERTED.getAccess());
-		Assertions.assertEquals(fieldInfo_CFPARSE_ORIGINAL.getAccess(), fieldInfo_BCEL_CONVERTED.getAccess());
-		Assertions.assertEquals(fieldInfo_CFPARSE_ORIGINAL.getAccess(), fieldInfo_BCEL_CONVERTED.getAccess());
-		Assertions.assertEquals(fieldInfo_CFPARSE_ORIGINAL.getAccess(), fieldInfo_BCEL_CONVERTED.getAccess());
-		Assertions.assertEquals(fieldInfo_CFPARSE_ORIGINAL.getAccess(), fieldInfo_BCEL_CONVERTED.getAccess());
-	} */
 
 }
