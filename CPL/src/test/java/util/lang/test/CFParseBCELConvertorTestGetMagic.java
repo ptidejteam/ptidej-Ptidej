@@ -21,6 +21,11 @@ import com.ibm.toad.cfparse.MethodInfoList;
 
 import util.lang.CFParseBCELConvertor;
 
+
+/**
+ * @author Luca Scistri
+ * @since 2024/10/17
+ */
 class CFParseBCELConvertorTestGetMagic {
 	private ClassFile classFile_CFParse_Original;
 	private ClassFile classFile_CFParse_Converted;
@@ -71,8 +76,6 @@ class CFParseBCELConvertorTestGetMagic {
 			final MethodInfo method_CFParse_Original = methodInfoList_CFParse_Original.get(i);
 			final MethodInfo method_CFParse_Converted = methodInfoList_CFParse_Converted.get(i);
 			
-			System.out.println(method_CFParse_Original.getAttrs().toString());
-			
 			assertEquals(
 					method_CFParse_Original.getAbout(),
 					method_CFParse_Converted.getAbout());
@@ -98,25 +101,5 @@ class CFParseBCELConvertorTestGetMagic {
 			
 		}
 		
-		
-		/*
-		MethodInfo[] methodInfo_CFParse_Original = new MethodInfo[numMethods];
-		MethodInfo[] methodInfo_CFParse_Converted = new MethodInfo[numMethods];
-		
-		for (int i = 0; i<numMethods; i++) {
-			methodInfo_CFParse_Original[i] = methodInfoList_CFParse_Original.get(i);
-			methodInfo_CFParse_Converted[i] = methodInfoList_CFParse_Converted.get(i);
-		}
-		
-		
-		
-		Assertions.assertArrayEquals(
-				methodInfo_CFParse_Original,
-				methodInfo_CFParse_Converted);
-		
-		assertEquals(
-				this.classFile_CFParse_Original.getMethods(),
-				this.classFile_CFParse_Converted.getMethods());
-		*/
 	}
 }
