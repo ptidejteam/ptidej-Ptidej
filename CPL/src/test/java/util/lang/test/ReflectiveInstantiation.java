@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 
 import com.ibm.toad.cfparse.ClassFile;
 import com.ibm.toad.cfparse.ConstantPool;
-import com.ibm.toad.cfparse.ConstantPoolEntry;
 import com.ibm.toad.cfparse.FieldInfo;
 import com.ibm.toad.cfparse.FieldInfoList;
 
@@ -28,39 +27,36 @@ class ReflectiveInstantiation {
 		final ClassFile classFile_CFParse_Original = new ClassFile(
 				new FileInputStream(classFile_Path));
 
-		final int numberOfCPEntries = classFile_CFParse_Original.getCP()
-				.length();
-		System.out.println(numberOfCPEntries);
-		for (int i = 0; i < numberOfCPEntries; i++) {
-			final ConstantPoolEntry cpEntry = classFile_CFParse_Original.getCP()
-					.get(i);
-			System.out.println("====== " + i);
-			if (cpEntry != null) {
-				System.out.println(cpEntry.getAsJava());
-				final int[] indices = cpEntry.getIndices();
-				for (int j = 0; indices != null && j < indices.length; j++) {
-					int k = indices[j];
-					System.out.println(k);
-				}
-			}
-			else {
-				System.out.println("null?");
-			}
-		}
-		final FieldInfoList fieldInfoList = classFile_CFParse_Original
+		final FieldInfoList fieldInfoList_CFParse_Original = classFile_CFParse_Original
 				.getFields();
-		final FieldInfo fieldInfo_CFParse_Original = fieldInfoList.get(0);
+		final FieldInfo fieldInfo_CFParse_Original = fieldInfoList_CFParse_Original
+				.get(0);
 
-		final ConstantPool constantPool = new ConstantPool();
+		final ClassFile classFile_CFParse_BCEL = new ClassFile();
+		final ConstantPool constantPool_CFParse_BCEL = classFile_CFParse_BCEL
+				.getCP();
 
 		final Class<FieldInfo> fieldInfoClass = FieldInfo.class;
 		final Constructor<FieldInfo> constructor = fieldInfoClass
 				.getDeclaredConstructor(ClassFile.class, ConstantPool.class,
 						String.class);
 		constructor.setAccessible(true);
-		final FieldInfo fieldInfo_CFParse_BCEL = constructor.newInstance(null, null, "");
+		final FieldInfo fieldInfo_CFParse_BCEL = constructor.newInstance(
+				classFile_CFParse_BCEL, constantPool_CFParse_BCEL,
+				"private static final long serialVersionUID = 3685715927255933454");
 
-		Assertions.assertEquals(fieldInfo_CFParse_Original.getAccess(),fieldInfo_CFParse_BCEL.getAccess());
+		Assertions.assertEquals(fieldInfo_CFParse_Original.getAccess(),
+				fieldInfo_CFParse_BCEL.getAccess());
+		Assertions.assertEquals(fieldInfo_CFParse_Original.getDesc(),
+				fieldInfo_CFParse_BCEL.getDesc());
+		Assertions.assertEquals(fieldInfo_CFParse_Original.getName(),
+				fieldInfo_CFParse_BCEL.getName());
+		Assertions.assertEquals(fieldInfo_CFParse_Original.getType(),
+				fieldInfo_CFParse_BCEL.getType());
+		Assertions.assertEquals(fieldInfo_CFParse_Original.getAttrs().length(),
+				fieldInfo_CFParse_BCEL.getAttrs().length());
+		Assertions.assertEquals(fieldInfo_CFParse_Original.getAttrs().get(0).getName(),
+				fieldInfo_CFParse_BCEL.getAttrs().get(0).getName());
 	}
 
 }
