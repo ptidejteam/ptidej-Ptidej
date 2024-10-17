@@ -58,9 +58,9 @@ class ReflectiveInstantiation {
 				.getDeclaredConstructor(ClassFile.class, ConstantPool.class,
 						String.class);
 		constructor.setAccessible(true);
-		// final FieldInfo fieldInfo_CFParse_BCEL = constructor.newInstance(null, null, "");
+		final FieldInfo fieldInfo_CFParse_BCEL = constructor.newInstance(null, null, "");
 
-		// Assertions.assertEquals(fieldInfo_CFParse_Original.getAccess(),fieldInfo_CFParse_BCEL.getAccess());
+		Assertions.assertEquals(fieldInfo_CFParse_Original.getAccess(),fieldInfo_CFParse_BCEL.getAccess());
 	}
 
 }
