@@ -100,7 +100,7 @@ public class BCELInstructionFinder implements Visitor {
 			ProxyConsole.getInstance().debugOutput()
 					.print(this.getClass().getName());
 			ProxyConsole.getInstance().debugOutput()
-					.print(" cannot find instuctions in method \"");
+					.print(" cannot find instructions in method \"");
 			ProxyConsole.getInstance().debugOutput().print(aClassId);
 			ProxyConsole.getInstance().debugOutput().print('.');
 			ProxyConsole.getInstance().debugOutput().print(aMethodId);
