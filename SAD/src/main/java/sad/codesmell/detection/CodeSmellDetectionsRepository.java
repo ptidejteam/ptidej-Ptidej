@@ -60,7 +60,8 @@ public class CodeSmellDetectionsRepository implements IRepository {
 			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
 					"sad.codesmell.detection.ICodeSmellDetection",
 					FileRepositoryFactory.getInstance().getFileRepository(this)
-							.getFiles(),
+							.getFiles("sad/codesmell/detection/repository/",
+									".class"),
 					"sad.codesmell.detection.repository", ".class");
 
 			// For debugging on MacOS X only!

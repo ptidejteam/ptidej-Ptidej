@@ -91,6 +91,7 @@ public final class SubtypeLoader {
 		}
 	}
 
+	// TODO: Make it private
 	public static ClassFile[] loadSubtypeFromFile(final String supertypeName,
 			final String file, final String extension) {
 
@@ -119,8 +120,7 @@ public final class SubtypeLoader {
 		return results;
 	}
 
-	// TODO: David made this method public
-	public static void loadSubtypeFromStream(final String supertypeName,
+	private static void loadSubtypeFromStream(final String supertypeName,
 			final List<ClassFile> currentListOfClasses,
 			final InputStream inputStream) throws IOException {
 
@@ -141,7 +141,6 @@ public final class SubtypeLoader {
 					&& !isSuperInterfaceFound; i++) {
 
 				if (currentClass.getInterfaces().get(i).equals(supertypeName)) {
-
 					currentListOfClasses.add(currentClass);
 					isSuperInterfaceFound = true;
 				}
@@ -177,7 +176,7 @@ public final class SubtypeLoader {
 		return results;
 	}
 
-	public static ClassFile[] loadSubtypesFromJar(final ClassFile supertype,
+	public static ClassFile[] loadSubtypesFromJar(final String supertypeName,
 			final String jarFileName, final String extension) {
 
 		try {
@@ -207,10 +206,10 @@ public final class SubtypeLoader {
 						final ClassFile currentClass = new ClassFile(
 								inputStream);
 
-						if (supertype == null
+						if (supertypeName == null
 								|| currentClass.getSuperName() != null
 										&& currentClass.getSuperName()
-												.equals(supertype.getName())) {
+												.equals(supertypeName)) {
 
 							currentListOfClasses.add(currentClass);
 						}
@@ -219,7 +218,7 @@ public final class SubtypeLoader {
 							for (int i = 0; i < currentClass.getInterfaces()
 									.length() && !isSuperInterfaceFound; i++) {
 								if (currentClass.getInterfaces().get(i)
-										.equals(supertype.getName())) {
+										.equals(supertypeName)) {
 
 									currentListOfClasses.add(currentClass);
 									isSuperInterfaceFound = true;
@@ -252,7 +251,7 @@ public final class SubtypeLoader {
 	}
 
 	public static ClassFile[] loadSubtypesFromJarInputStream(
-			final ClassFile supertype, final JarInputStream jarInputStream,
+			final String supertypeName, final JarInputStream jarInputStream,
 			final String extension) {
 
 		try {
@@ -281,10 +280,10 @@ public final class SubtypeLoader {
 						final ClassFile currentClass = new ClassFile(
 								inputStream);
 
-						if (supertype == null
+						if (supertypeName == null
 								|| currentClass.getSuperName() != null
 										&& currentClass.getSuperName()
-												.equals(supertype.getName())) {
+												.equals(supertypeName)) {
 
 							currentListOfClasses.add(currentClass);
 						}
@@ -293,7 +292,7 @@ public final class SubtypeLoader {
 							for (int i = 0; i < currentClass.getInterfaces()
 									.length() && !isSuperInterfaceFound; i++) {
 								if (currentClass.getInterfaces().get(i)
-										.equals(supertype.getName())) {
+										.equals(supertypeName)) {
 
 									currentListOfClasses.add(currentClass);
 									isSuperInterfaceFound = true;

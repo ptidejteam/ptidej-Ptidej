@@ -48,7 +48,8 @@ public class ViewerExtensionsRepository implements IRepository {
 			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
 					"ptidej.viewer.extension.IViewerExtension",
 					FileRepositoryFactory.getInstance().getFileRepository(this)
-							.getFiles(),
+							.getFiles("ptidej/viewer/extension/repository/",
+									".class"),
 					"ptidej.viewer.extension.repository", ".class");
 			final List listOfExtensions = new ArrayList(classFiles.length);
 			for (int i = 0; i < classFiles.length; i++) {

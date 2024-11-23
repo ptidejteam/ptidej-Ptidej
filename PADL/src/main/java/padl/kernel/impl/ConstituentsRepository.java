@@ -10,16 +10,18 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
+import com.ibm.toad.cfparse.ClassFile;
+
 import util.io.ProxyConsole;
 import util.io.SubtypeLoader;
 import util.repository.FileAccessException;
 import util.repository.IFileRepository;
 import util.repository.IRepository;
 import util.repository.impl.FileRepositoryFactory;
-import com.ibm.toad.cfparse.ClassFile;
 
 public class ConstituentsRepository implements IRepository {
 	private static ConstituentsRepository UniqueInstance;
+
 	public static ConstituentsRepository getInstance() {
 		if (ConstituentsRepository.UniqueInstance == null) {
 			ConstituentsRepository.UniqueInstance = new ConstituentsRepository();
@@ -30,17 +32,17 @@ public class ConstituentsRepository implements IRepository {
 
 	private ClassFile[] elements;
 	private ClassFile[] entities;
+
 	private ConstituentsRepository() {
 	}
+
 	public ClassFile[] getElements() {
 		if (this.elements == null) {
 			try {
-				this.elements =
-					SubtypeLoader.loadSubtypesFromStream(
-						"padl.kernel.IElementMarker",
-						this.getFileRepository().getFiles(),
-						"padl.kernel.impl",
-						".class");
+				this.elements = SubtypeLoader.loadSubtypesFromStream(
+						"padl.kernel.IElementMarker", this.getFileRepository()
+								.getFiles("padl/kernel/impl/", ".class"),
+						"padl.kernel.impl", ".class");
 			}
 			catch (final FileAccessException e) {
 				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
@@ -48,15 +50,14 @@ public class ConstituentsRepository implements IRepository {
 		}
 		return this.elements;
 	}
+
 	public ClassFile[] getEntities() {
 		if (this.elements == null) {
 			try {
-				this.entities =
-					SubtypeLoader.loadSubtypesFromStream(
-						"padl.kernel.IEntityMarker",
-						this.getFileRepository().getFiles(),
-						"padl.kernel.impl",
-						".class");
+				this.entities = SubtypeLoader.loadSubtypesFromStream(
+						"padl.kernel.IEntityMarker", this.getFileRepository()
+								.getFiles("padl/kernel/impl/", ".class"),
+						"padl.kernel.impl", ".class");
 			}
 			catch (final FileAccessException e) {
 				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
@@ -64,9 +65,11 @@ public class ConstituentsRepository implements IRepository {
 		}
 		return this.entities;
 	}
+
 	private IFileRepository getFileRepository() {
 		return FileRepositoryFactory.getInstance().getFileRepository(this);
 	}
+
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append("Type Repository:\n\tEntities\n");

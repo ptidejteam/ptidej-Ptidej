@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarException;
 import java.util.jar.JarFile;
+
 import util.io.NamedInputStream;
 import util.io.ProxyConsole;
 import util.repository.IFileRepository;
@@ -29,38 +30,47 @@ import util.repository.IFileRepository;
 class JarFileRepository implements IFileRepository {
 	private static String JarFile;
 	private static JarFileRepository UniqueInstance;
+
 	// TODO Should not be a false Singleton!
 	public static JarFileRepository getInstance(final String aJARFile) {
 		if (JarFileRepository.UniqueInstance == null
 				|| JarFileRepository.JarFile != aJARFile) {
 
 			JarFileRepository.JarFile = aJARFile;
-			JarFileRepository.UniqueInstance =
-				new JarFileRepository(JarFileRepository.JarFile);
+			JarFileRepository.UniqueInstance = new JarFileRepository(
+					JarFileRepository.JarFile);
 		}
 		return JarFileRepository.UniqueInstance;
 	}
 
-	private final NamedInputStream[] fileStreams;
-	private JarFileRepository(final String aJARFile) {
-		ProxyConsole
-			.getInstance()
-			.warningOutput()
-			.print(this.getClass().getName());
-		ProxyConsole
-			.getInstance()
-			.warningOutput()
-			.print(" is the current repository on: ");
-		ProxyConsole.getInstance().warningOutput().println(aJARFile);
+	final List<String> listOfStreamsNames = new ArrayList<String>();
+	final List<NamedInputStream> listOfStreams = new ArrayList<NamedInputStream>();
 
-		final List<NamedInputStream> listOfStreams = new ArrayList<NamedInputStream>();
+	private JarFileRepository(final String aJARFile) {
+		ProxyConsole.getInstance().warningOutput()
+				.print(this.getClass().getName());
+		ProxyConsole.getInstance().warningOutput()
+				.print(" is the current repository on: ");
+		ProxyConsole.getInstance().warningOutput().println(aJARFile);
+	}
+
+	public NamedInputStream[] getFiles(final String aPath,
+			final String anExtension) {
+
 		try {
-			final JarFile jarFile = new JarFile(aJARFile);
+			final JarFile jarFile = new JarFile(JarFileRepository.JarFile);
 			final Enumeration<?> entries = jarFile.entries();
 			while (entries.hasMoreElements()) {
 				final JarEntry entry = (JarEntry) entries.nextElement();
-				listOfStreams.add(new NamedInputStream(entry.getName(), jarFile
-					.getInputStream(entry)));
+				final String entryName = entry.getName();
+
+				if (!this.listOfStreamsNames.contains(entryName)
+						&& entryName.startsWith(aPath)) {
+
+					this.listOfStreamsNames.add(entryName);
+					this.listOfStreams.add(new NamedInputStream(entryName,
+							jarFile.getInputStream(entry)));
+				}
 			}
 			jarFile.close();
 		}
@@ -73,13 +83,11 @@ class JarFileRepository implements IFileRepository {
 		catch (final IOException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
-		this.fileStreams = new NamedInputStream[listOfStreams.size()];
-		listOfStreams.toArray(this.fileStreams);
+
+		return this.listOfStreams.toArray(new NamedInputStream[0]);
 	}
-	public NamedInputStream[] getFiles() {
-		return this.fileStreams;
-	}
+
 	public String toString() {
-		return this.fileStreams.length + " files in repository.";
+		return this.listOfStreams.size() + " files in repository.";
 	}
 }

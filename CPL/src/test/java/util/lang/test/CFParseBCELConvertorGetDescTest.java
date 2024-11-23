@@ -1,13 +1,10 @@
 package util.lang.test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 
 import org.apache.bcel.classfile.ClassParser;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
 
 import com.ibm.toad.cfparse.ClassFile;
 
@@ -22,8 +19,7 @@ class CFParseBCELConvertorGetDescTest {
 	private ClassFile classFile_CFParse_Original;
 	private ClassFile classFile_CFParse_Converted;
 
-	@BeforeEach
-	void setUp() throws IOException {
+	public void setUp() throws IOException {
 		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
 
 		this.classFile_CFParse_Original = new ClassFile(
@@ -35,35 +31,30 @@ class CFParseBCELConvertorGetDescTest {
 								.parse());
 	}
 
-	@Test
-	void testGetAccess() {
-		assertEquals(this.classFile_CFParse_Original.getAccess(),
+	public void testGetAccess() {
+		Assert.assertEquals(this.classFile_CFParse_Original.getAccess(),
 				this.classFile_CFParse_Converted.getAccess());
 	}
 
-	@Test
-	void testGetAttrs() {
+	public void testGetAttrs() {
 		// assertEquals(this.classFile_CFParse_Original.getAttrs(), this.classFile_CFParse_Converted.getAttrs());
 	}
 
-	@Test
-	void testGetName() {
-		assertEquals(this.classFile_CFParse_Original.getName(),
+	public void testGetName() {
+		Assert.assertEquals(this.classFile_CFParse_Original.getName(),
 				this.classFile_CFParse_Converted.getName());
 	}
 
-	@Test
-	void testGetFields() {
-		assertEquals(
+	public void testGetFields() {
+		Assert.assertEquals(
 				this.classFile_CFParse_Original.getFields().get(0).toString(),
 				this.classFile_CFParse_Converted.getFields().get(0).toString());
 	}
 
-	@Test
-	void testGetDesc() {
+	public void testGetDesc() {
 		int fieldCount = this.classFile_CFParse_Original.getFields().length();
 		for (int i = 0; i < fieldCount; i++) {
-			assertEquals(
+			Assert.assertEquals(
 					this.classFile_CFParse_Original.getFields().get(i)
 							.getDesc(),
 					this.classFile_CFParse_Converted.getFields().get(i)

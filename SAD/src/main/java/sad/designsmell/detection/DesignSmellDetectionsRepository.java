@@ -61,7 +61,8 @@ public class DesignSmellDetectionsRepository implements IRepository {
 			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
 					"sad.designsmell.detection.IDesignSmellDetection",
 					FileRepositoryFactory.getInstance().getFileRepository(this)
-							.getFiles(),
+							.getFiles("sad/designsmell/detection/repository/",
+									".class"),
 					"sad.designsmell.detection.repository", ".class");
 
 			final Set codeSmells = new TreeSet(new Comparator() {

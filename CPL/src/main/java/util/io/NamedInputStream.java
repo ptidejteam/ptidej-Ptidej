@@ -32,7 +32,6 @@ public class NamedInputStream {
 	private final String fileName;
 
 	public NamedInputStream(final String aFileName, final InputStream aStream) {
-
 		this.fileName = Files.normalizePath(aFileName);
 		byte[] array1 = new byte[NamedInputStream.BYTE_ARRAY_SIZE];
 		int b = 0;
@@ -48,8 +47,8 @@ public class NamedInputStream {
 			while ((b = aStream.read()) != -1) {
 				array1[i++] = (byte) b;
 				if (i == array1.length) {
-					final byte[] array2 =
-						new byte[i * NamedInputStream.BYTE_ARRAY_INCREMENT];
+					final byte[] array2 = new byte[i
+							* NamedInputStream.BYTE_ARRAY_INCREMENT];
 					System.arraycopy(array1, 0, array2, 0, i);
 					array1 = array2;
 				}
@@ -62,12 +61,15 @@ public class NamedInputStream {
 		this.bytes = new byte[i];
 		System.arraycopy(array1, 0, this.bytes, 0, i);
 	}
+
 	public String getName() {
 		return this.fileName;
 	}
+
 	public InputStream getStream() {
 		return new ByteArrayInputStream(this.bytes);
 	}
+
 	public String toString() {
 		return this.getName();
 	}

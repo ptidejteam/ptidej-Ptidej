@@ -71,5 +71,7 @@ Configuration\ Area
 Temp/
 Ptidej.log
 Maven.log
+log4j.log
 
+# Specific to MacOS
 **/.DS_Store

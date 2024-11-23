@@ -50,8 +50,9 @@ public class AnalysesRepository implements IRepository {
 		// from the applet viewer.
 		try {
 			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
-					"padl.analysis.IAnalysis", FileRepositoryFactory
-							.getInstance().getFileRepository(this).getFiles(),
+					"padl.analysis.IAnalysis",
+					FileRepositoryFactory.getInstance().getFileRepository(this)
+							.getFiles("padl/analysis/repository/", ".class"),
 					"padl.analysis.repository", ".class");
 			final List listOfAnalyses = new ArrayList(classFiles.length);
 			for (int i = 0; i < classFiles.length; i++) {
