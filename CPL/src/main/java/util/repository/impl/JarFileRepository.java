@@ -52,10 +52,6 @@ class JarFileRepository implements IFileRepository {
 		ProxyConsole.getInstance().warningOutput()
 				.print(" is the current repository on: ");
 		ProxyConsole.getInstance().warningOutput().println(aJARFile);
-	}
-
-	public NamedInputStream[] getFiles(final String aPath,
-			final String anExtension) {
 
 		try {
 			final JarFile jarFile = new JarFile(JarFileRepository.JarFile);
@@ -64,9 +60,7 @@ class JarFileRepository implements IFileRepository {
 				final JarEntry entry = (JarEntry) entries.nextElement();
 				final String entryName = entry.getName();
 
-				if (!this.listOfStreamsNames.contains(entryName)
-						&& entryName.startsWith(aPath)) {
-
+				if (!this.listOfStreamsNames.contains(entryName)) {
 					this.listOfStreamsNames.add(entryName);
 					this.listOfStreams.add(new NamedInputStream(entryName,
 							jarFile.getInputStream(entry)));
@@ -83,6 +77,10 @@ class JarFileRepository implements IFileRepository {
 		catch (final IOException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
+	}
+
+	public NamedInputStream[] getFiles(final String aPath,
+			final String anExtension) {
 
 		return this.listOfStreams.toArray(new NamedInputStream[0]);
 	}
