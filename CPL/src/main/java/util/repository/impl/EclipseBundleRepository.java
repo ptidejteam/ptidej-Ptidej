@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Iterator;
+
 import util.io.NamedInputStream;
 import util.io.ProxyConsole;
 import util.repository.IFileRepository;
@@ -49,17 +50,19 @@ class EclipseBundleRepository implements IFileRepository {
 		this(EclipseBundleRepository.class.getClassLoader(), bundleNames);
 	}
 
-	public EclipseBundleRepository(
-		final ClassLoader cl,
-		final Collection<?> bundleNames) throws Exception {
+	public EclipseBundleRepository(final ClassLoader cl,
+			final Collection<?> bundleNames) throws Exception {
 
 		this.cl = cl;
-		final Collection<NamedInputStream> listOfStreams = this.getStreams(bundleNames);
+		final Collection<NamedInputStream> listOfStreams = this
+				.getStreams(bundleNames);
 		this.fileStreams = new NamedInputStream[listOfStreams.size()];
 		listOfStreams.toArray(this.fileStreams);
 	}
 
-	public NamedInputStream[] getFiles() {
+	public NamedInputStream[] getFiles(final String aPath,
+			final String anExtension) {
+
 		return this.fileStreams;
 	}
 
@@ -67,55 +70,40 @@ class EclipseBundleRepository implements IFileRepository {
 		return this.fileStreams.length + " files in repository.";
 	}
 
-	private Collection<NamedInputStream> getStreams(final Collection<?> bundleNames)
-			throws Exception {
+	private Collection<NamedInputStream> getStreams(
+			final Collection<?> bundleNames) throws Exception {
 		Collection<NamedInputStream> streams = new ArrayList<NamedInputStream>();
 
 		try {
 			final Iterator<?> iteratorOnBundleNames = bundleNames.iterator();
 			while (iteratorOnBundleNames.hasNext()) {
 				final String bundleName = (String) iteratorOnBundleNames.next();
-				final Class<?> platformClass =
-					this.cl.loadClass("org.eclipse.core.runtime.Platform");
-				final Class<?> bundleClass =
-					this.cl.loadClass("org.osgi.framework.Bundle");
+				final Class<?> platformClass = this.cl
+						.loadClass("org.eclipse.core.runtime.Platform");
+				final Class<?> bundleClass = this.cl
+						.loadClass("org.osgi.framework.Bundle");
 				//	final Class fileLocatorClass =
 				//		this.cl.loadClass("org.eclipse.core.runtime.FileLocator");
-				final Class<?> abstractBundleClass =
-					this.cl
-						.loadClass("org.eclipse.osgi.framework.internal.core.AbstractBundle");
-				final Class<?> bundleDataClass =
-					this.cl
-						.loadClass("org.eclipse.osgi.framework.adaptor.BundleData");
+				final Class<?> abstractBundleClass = this.cl.loadClass(
+						"org.eclipse.osgi.framework.internal.core.AbstractBundle");
+				final Class<?> bundleDataClass = this.cl.loadClass(
+						"org.eclipse.osgi.framework.adaptor.BundleData");
 
-				final Method getBundle =
-					platformClass.getDeclaredMethod(
-						"getBundle",
-						new Class[] { String.class });
-				final Method asLocalURL =
-					platformClass.getDeclaredMethod(
-						"asLocalURL",
-						new Class[] { URL.class });
-				final Method getResource =
-					bundleClass.getDeclaredMethod(
-						"getResource",
-						new Class[] { String.class });
-				final Method getBundleData =
-					abstractBundleClass.getDeclaredMethod(
-						"getBundleData",
-						new Class[0]);
-				final Method getEntryPaths =
-					bundleDataClass.getDeclaredMethod(
-						"getEntryPaths",
-						new Class[] { String.class });
-				final Method getEntry =
-					bundleDataClass.getDeclaredMethod(
-						"getEntry",
-						new Class[] { String.class });
+				final Method getBundle = platformClass.getDeclaredMethod(
+						"getBundle", new Class[] { String.class });
+				final Method asLocalURL = platformClass.getDeclaredMethod(
+						"asLocalURL", new Class[] { URL.class });
+				final Method getResource = bundleClass.getDeclaredMethod(
+						"getResource", new Class[] { String.class });
+				final Method getBundleData = abstractBundleClass
+						.getDeclaredMethod("getBundleData", new Class[0]);
+				final Method getEntryPaths = bundleDataClass.getDeclaredMethod(
+						"getEntryPaths", new Class[] { String.class });
+				final Method getEntry = bundleDataClass.getDeclaredMethod(
+						"getEntry", new Class[] { String.class });
 
-				final Object bundle =
-					getBundle
-						.invoke(platformClass, new Object[] { bundleName });
+				final Object bundle = getBundle.invoke(platformClass,
+						new Object[] { bundleName });
 
 				// Method toFileURL = fileLocatorClass.getDeclaredMethod(
 				// "toFileURL", URL.class);
@@ -124,29 +112,23 @@ class EclipseBundleRepository implements IFileRepository {
 				}
 
 				System.out.println("Loading: " + bundle);
-				URL urlURL =
-					(URL) getResource.invoke(bundle, new Object[] { "/bin" });
+				URL urlURL = (URL) getResource.invoke(bundle,
+						new Object[] { "/bin" });
 				System.out.println("Loading: " + urlURL);
 				if (urlURL == null) {
 					System.currentTimeMillis();
 				}
 				Object bundleData = getBundleData.invoke(bundle, new Object[0]);
 
-				final Enumeration<?> entries =
-					(Enumeration<?>) getEntryPaths.invoke(
-						bundleData,
-						new Object[] { "." });
+				final Enumeration<?> entries = (Enumeration<?>) getEntryPaths
+						.invoke(bundleData, new Object[] { "." });
 
 				while (entries.hasMoreElements()) {
 					String entry = (String) entries.nextElement();
 
-					final URL entryURL =
-						(URL) getEntry.invoke(
-							bundleData,
+					final URL entryURL = (URL) getEntry.invoke(bundleData,
 							new Object[] { entry });
-					final URL localURL =
-						(URL) asLocalURL.invoke(
-							platformClass,
+					final URL localURL = (URL) asLocalURL.invoke(platformClass,
 							new Object[] { entryURL });
 
 					System.out.println("Entry: " + entry);
@@ -156,8 +138,8 @@ class EclipseBundleRepository implements IFileRepository {
 					if (entry.equals("./bin/")) {
 						String localFile = localURL.getFile();
 						System.out.println(localFile);
-						EclipseBundleRepository.injectStreams(new File(
-							localFile), streams);
+						EclipseBundleRepository
+								.injectStreams(new File(localFile), streams);
 						System.out.println("current size: " + streams.size());
 					}
 				}
@@ -166,14 +148,14 @@ class EclipseBundleRepository implements IFileRepository {
 		catch (final Exception e) {
 			System.err.println("Error");
 			throw new Exception(
-				"Eclipse project cannot be parsed correctly. Check configuration",
-				e);
+					"Eclipse project cannot be parsed correctly. Check configuration",
+					e);
 		}
 		return streams;
 	}
-	private static final void injectStreams(
-		final File theCurrentDirectory,
-		final Collection<NamedInputStream> aListOfFiles) {
+
+	private static final void injectStreams(final File theCurrentDirectory,
+			final Collection<NamedInputStream> aListOfFiles) {
 
 		final String[] files = theCurrentDirectory.list();
 		if (files == null) {
@@ -187,14 +169,16 @@ class EclipseBundleRepository implements IFileRepository {
 				FileInputStream fileInputStream = null;
 				try {
 					fileInputStream = new FileInputStream(file);
-					aListOfFiles.add(new NamedInputStream(file
-						.getCanonicalPath(), fileInputStream));
+					aListOfFiles.add(new NamedInputStream(
+							file.getCanonicalPath(), fileInputStream));
 				}
 				catch (final FileNotFoundException fnfe) {
-					fnfe.printStackTrace(ProxyConsole.getInstance().errorOutput());
+					fnfe.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
 				}
 				catch (final IOException ioe) {
-					ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
+					ioe.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
 				}
 				finally {
 					if (fileInputStream != null) {
@@ -202,8 +186,8 @@ class EclipseBundleRepository implements IFileRepository {
 							fileInputStream.close();
 						}
 						catch (IOException ioe) {
-							ProxyConsole.getInstance().errorOutput().println(
-								"Warning: cannot close file!");
+							ProxyConsole.getInstance().errorOutput()
+									.println("Warning: cannot close file!");
 						}
 					}
 				}

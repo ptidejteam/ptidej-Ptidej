@@ -1,13 +1,10 @@
 package util.lang.test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 
 import org.apache.bcel.classfile.ClassParser;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
 
 import com.ibm.toad.cfparse.ClassFile;
 
@@ -17,8 +14,7 @@ class CFParseBCELConvertorTest1 {
 	private ClassFile classFile_CFParse_Original;
 	private ClassFile classFile_CFParse_Converted;
 
-	@BeforeEach
-	void setUp() throws IOException {
+	public void setUp() throws IOException {
 		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/SimpleGenerator.class";
 
 		this.classFile_CFParse_Original = new ClassFile(
@@ -30,31 +26,27 @@ class CFParseBCELConvertorTest1 {
 								.parse());
 	}
 
-	@Test
-	void testGetName() {
-		assertEquals(this.classFile_CFParse_Original.getName(),
+	public void testGetName() {
+		Assert.assertEquals(this.classFile_CFParse_Original.getName(),
 				this.classFile_CFParse_Converted.getName());
 
 	}
 
-	@Test
-	void testGetAccess() {
-		assertEquals(this.classFile_CFParse_Original.getName(),
+	public void testGetAccess() {
+		Assert.assertEquals(this.classFile_CFParse_Original.getName(),
 				this.classFile_CFParse_Converted.getName());
 
-		assertEquals(
+		Assert.assertEquals(
 				this.classFile_CFParse_Original.getFields().get(0).toString(),
 				this.classFile_CFParse_Converted.getFields().get(0).toString());
 	}
 
-	@Test
-	void testGetAttrs() {
-		// assertEquals(this.classFile_CFParse_Original.getAttrs(), this.classFile_CFParse_Converted.getAttrs());
+	public void testGetAttrs() {
+		// Assert.assertEquals(this.classFile_CFParse_Original.getAttrs(), this.classFile_CFParse_Converted.getAttrs());
 	}
 
-	@Test
-	void testGetFields() {
-		assertEquals(
+	public void testGetFields() {
+		Assert.assertEquals(
 				this.classFile_CFParse_Original.getFields().get(0).toString(),
 				this.classFile_CFParse_Converted.getFields().get(0).toString());
 	}

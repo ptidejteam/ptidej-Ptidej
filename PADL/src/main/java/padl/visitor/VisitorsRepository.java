@@ -12,16 +12,19 @@ package padl.visitor;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.ibm.toad.cfparse.ClassFile;
+
 import util.io.ProxyConsole;
 import util.io.SubtypeLoader;
 import util.multilingual.MultilingualManager;
 import util.repository.FileAccessException;
 import util.repository.IRepository;
 import util.repository.impl.FileRepositoryFactory;
-import com.ibm.toad.cfparse.ClassFile;
 
 public class VisitorsRepository implements IRepository {
 	private static VisitorsRepository UniqueInstance;
+
 	public static VisitorsRepository getInstance() {
 		if (VisitorsRepository.UniqueInstance == null) {
 			VisitorsRepository.UniqueInstance = new VisitorsRepository();
@@ -36,27 +39,27 @@ public class VisitorsRepository implements IRepository {
 
 	private IGenerator[] generators;
 	private IWalker[] walkers;
+
 	private VisitorsRepository() {
 		// Yann 2003/10/14: Demo!
 		// I must catch the AccessControlException
 		// thrown when attempting loading extensions
 		// from the applet viewer.
 		try {
-			final ClassFile[] classFilesGenerators =
-				SubtypeLoader.loadSubtypesFromStream(
-					"padl.visitor.IGenerator",
-					FileRepositoryFactory
-						.getInstance()
-						.getFileRepository(this)
-						.getFiles(),
-					"padl.visitor.repository",
-					".class");
-			final List listOfGenerators =
-				new ArrayList(classFilesGenerators.length);
+			final ClassFile[] classFilesGenerators = SubtypeLoader
+					.loadSubtypesFromStream("padl.visitor.IGenerator",
+							FileRepositoryFactory.getInstance()
+									.getFileRepository(this)
+									.getFiles("padl/visitor/repository/",
+											".class"),
+							"padl.visitor.repository", ".class");
+			final List listOfGenerators = new ArrayList(
+					classFilesGenerators.length);
 			for (int i = 0; i < classFilesGenerators.length; i++) {
 				try {
-					listOfGenerators.add((IGenerator) Class.forName(
-						classFilesGenerators[i].getName()).newInstance());
+					listOfGenerators.add((IGenerator) Class
+							.forName(classFilesGenerators[i].getName())
+							.newInstance());
 				}
 				// Yann 2003/10/07: Protection!
 				// I want to make sure that any problem in this
@@ -72,36 +75,31 @@ public class VisitorsRepository implements IRepository {
 				//	}
 				//	catch (final NoClassDefFoundError ncdfe) {
 				catch (final Throwable t) {
-					ProxyConsole
-						.getInstance()
-						.errorOutput()
-						.println(
-							MultilingualManager.getString(
-								"LOAD_EXTENSION",
-								VisitorsRepository.class,
-								new Object[] {
-										classFilesGenerators[i].getName(),
-										t.getMessage() }));
+					ProxyConsole.getInstance().errorOutput()
+							.println(MultilingualManager.getString(
+									"LOAD_EXTENSION", VisitorsRepository.class,
+									new Object[] {
+											classFilesGenerators[i].getName(),
+											t.getMessage() }));
 				}
 			}
 
 			this.generators = new IGenerator[listOfGenerators.size()];
 			listOfGenerators.toArray(this.generators);
 
-			final ClassFile[] classFilesWalkers =
-				SubtypeLoader.loadSubtypesFromStream(
-					"padl.visitor.IWalker",
-					FileRepositoryFactory
-						.getInstance()
-						.getFileRepository(this)
-						.getFiles(),
-					"padl.visitor.repository",
-					".class");
+			final ClassFile[] classFilesWalkers = SubtypeLoader
+					.loadSubtypesFromStream("padl.visitor.IWalker",
+							FileRepositoryFactory.getInstance()
+									.getFileRepository(this)
+									.getFiles("padl/visitor/repository/",
+											".class"),
+							"padl.visitor.repository", ".class");
 			final List listOfWalkers = new ArrayList(classFilesWalkers.length);
 			for (int i = 0; i < classFilesWalkers.length; i++) {
 				try {
-					listOfWalkers.add((IWalker) Class.forName(
-						classFilesWalkers[i].getName()).newInstance());
+					listOfWalkers.add((IWalker) Class
+							.forName(classFilesWalkers[i].getName())
+							.newInstance());
 				}
 				// Yann 2003/10/07: Protection!
 				// I want to make sure that any problem in this
@@ -117,15 +115,12 @@ public class VisitorsRepository implements IRepository {
 				//	}
 				//	catch (final NoClassDefFoundError ncdfe) {
 				catch (final Throwable t) {
-					ProxyConsole
-						.getInstance()
-						.errorOutput()
-						.println(
-							MultilingualManager.getString(
-								"LOAD_EXTENSION",
-								VisitorsRepository.class,
-								new Object[] { classFilesWalkers[i].getName(),
-										t.getMessage() }));
+					ProxyConsole.getInstance().errorOutput()
+							.println(MultilingualManager.getString(
+									"LOAD_EXTENSION", VisitorsRepository.class,
+									new Object[] {
+											classFilesWalkers[i].getName(),
+											t.getMessage() }));
 				}
 			}
 
@@ -137,12 +132,15 @@ public class VisitorsRepository implements IRepository {
 			this.walkers = new IWalker[0];
 		}
 	}
+
 	public IGenerator[] getGenerators() {
 		return this.generators;
 	}
+
 	public IWalker[] getWalkers() {
 		return this.walkers;
 	}
+
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append("Visitor Repository:\n");

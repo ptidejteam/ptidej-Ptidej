@@ -47,7 +47,7 @@ public class UILayoutsRepository implements IRepository {
 			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
 					"ptidej.ui.layout.IUILayout",
 					FileRepositoryFactory.getInstance().getFileRepository(this)
-							.getFiles(),
+							.getFiles("ptidej/ui/layout/repository/", ".class"),
 					"ptidej.ui.layout.repository", ".class");
 			final List listOfAnalyses = new ArrayList(classFiles.length);
 			for (int i = 0; i < classFiles.length; i++) {

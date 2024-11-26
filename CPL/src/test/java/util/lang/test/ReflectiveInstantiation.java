@@ -6,8 +6,7 @@ import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
 
 import com.ibm.toad.cfparse.ClassFile;
 import com.ibm.toad.cfparse.ConstantPool;
@@ -16,8 +15,7 @@ import com.ibm.toad.cfparse.FieldInfoList;
 
 class ReflectiveInstantiation {
 
-	@Test
-	void test1()
+	public void test1()
 			throws FileNotFoundException, IOException, NoSuchMethodException,
 			SecurityException, InstantiationException, IllegalAccessException,
 			IllegalArgumentException, InvocationTargetException {
@@ -45,17 +43,18 @@ class ReflectiveInstantiation {
 				classFile_CFParse_BCEL, constantPool_CFParse_BCEL,
 				"private static final long serialVersionUID = 3685715927255933454");
 
-		Assertions.assertEquals(fieldInfo_CFParse_Original.getAccess(),
+		Assert.assertEquals(fieldInfo_CFParse_Original.getAccess(),
 				fieldInfo_CFParse_BCEL.getAccess());
-		Assertions.assertEquals(fieldInfo_CFParse_Original.getDesc(),
+		Assert.assertEquals(fieldInfo_CFParse_Original.getDesc(),
 				fieldInfo_CFParse_BCEL.getDesc());
-		Assertions.assertEquals(fieldInfo_CFParse_Original.getName(),
+		Assert.assertEquals(fieldInfo_CFParse_Original.getName(),
 				fieldInfo_CFParse_BCEL.getName());
-		Assertions.assertEquals(fieldInfo_CFParse_Original.getType(),
+		Assert.assertEquals(fieldInfo_CFParse_Original.getType(),
 				fieldInfo_CFParse_BCEL.getType());
-		Assertions.assertEquals(fieldInfo_CFParse_Original.getAttrs().length(),
+		Assert.assertEquals(fieldInfo_CFParse_Original.getAttrs().length(),
 				fieldInfo_CFParse_BCEL.getAttrs().length());
-		Assertions.assertEquals(fieldInfo_CFParse_Original.getAttrs().get(0).getName(),
+		Assert.assertEquals(
+				fieldInfo_CFParse_Original.getAttrs().get(0).getName(),
 				fieldInfo_CFParse_BCEL.getAttrs().get(0).getName());
 	}
 
