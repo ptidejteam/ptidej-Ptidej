@@ -13,12 +13,15 @@ package padl.kernel.impl;
 import padl.kernel.IConstituent;
 import padl.kernel.IEntity;
 import padl.kernel.IParameter;
+import padl.kernel.exception.ModelDeclarationException;
 import padl.util.Util;
 
 public class Parameter extends Element implements IParameter {
 	private static final long serialVersionUID = -1688444809285895471L;
 	private int cardinality = 1;
 	private IEntity type;
+	private int dimension;
+	private boolean hasDimension = false;
 
 	public Parameter(
 		final IEntity anEntity,
@@ -34,6 +37,17 @@ public class Parameter extends Element implements IParameter {
 		this.setType(aType);
 		this.setNameFromType(aType);
 		this.cardinality = aCardinality;
+	}
+	public Parameter(
+		final IEntity aType,
+		final char[] aName,
+		final int aCardinality,
+		final int aDimension) {
+		
+		this(aType, aCardinality);
+		this.setName(aName);
+		this.dimension = aDimension;
+		this.hasDimension = true;
 	}
 	//	public Parameter(final String aName, final String aType) {
 	//		super("Parameter");
@@ -69,8 +83,28 @@ public class Parameter extends Element implements IParameter {
 	//
 	//		return cleanString;
 	//	}
+	
+	/**
+	 * Returns the cardinality (i.e. one or many)
+	 */
 	public int getCardinality() {
 		return this.cardinality;
+	}
+	/**
+	 * Returns the "true" dimension.
+	 * For instance:
+	 * int 		has dimension 1
+	 * int[] 	has dimension 2
+	 * int[][]	has dimension 3...
+	 */
+	public int getDimension() {
+		if (this.hasDimension) {
+			return this.dimension;
+		}
+		throw new ModelDeclarationException(
+			"Parameter " +
+			this.getDisplayName() +
+			" has no declared dimensions");
 	}
 	public String getDisplayTypeName() {
 		return String.valueOf(this.getTypeName());
@@ -80,9 +114,6 @@ public class Parameter extends Element implements IParameter {
 	}
 	public char[] getTypeName() {
 		return this.type.getID();
-	}
-	public void setCardinality(final int aCardinality) {
-		this.cardinality = aCardinality;
 	}
 	public void setNameFromType(final IConstituent aType) {
 		final char[] beautyName =
@@ -100,8 +131,10 @@ public class Parameter extends Element implements IParameter {
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append(this.getTypeName());
-		for (int i = 1; i < this.cardinality; i++) {
-			buffer.append("[]");
+		if (hasDimension) {
+			for (int i = 1; i < this.dimension; i++) {
+				buffer.append("[]");
+			}
 		}
 		buffer.append(' ');
 		buffer.append(this.getName());

@@ -267,9 +267,6 @@ public class SystematicUMLElementGenerator implements IWalker {
 				aParameter.getType(),
 				aParameter.getName(),
 				aParameter.getCardinality());
-		// Yann 2004/08/07: Parameter cardinality!
-		// I don't forget to set the parameter cardinality...
-		newParameter.setCardinality(aParameter.getCardinality());
 		this.newMethod.addConstituent(newParameter);
 	}
 	public void visit(final IPrimitiveEntity aPrimitiveEntity) {

@@ -99,7 +99,7 @@ public class MethodInvocationUtils {
 			// Yann: May use a Ghost with no name (empty string) when parsing Foutse's "colossus" data!
 			// TODO: Understand why it could be null...
 			if (paramEntity != null && !typeBinding.isCapture()) {
-				final int paramDim = PadlParserUtil.getDim(typeBinding);
+				final int paramDim = PadlParserUtil.getCardinality(typeBinding);
 				final IParameter param =
 					aPadlModel.getFactory().createParameter(
 						paramEntity,
@@ -302,7 +302,7 @@ public class MethodInvocationUtils {
 			final ITypeBinding fieldTypeBinding = variableBinding.getType();
 			final String fieldType =
 				PadlParserUtil.getTypeName(fieldTypeBinding, true);
-			final int cardinality = PadlParserUtil.getDim(fieldTypeBinding);
+			final int cardinality = PadlParserUtil.getCardinality(fieldTypeBinding);
 			field =
 				aPadlModel.getFactory().createField(
 					fieldID.toCharArray(),
