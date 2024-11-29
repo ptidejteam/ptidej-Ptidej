@@ -25,6 +25,7 @@ import padl.kernel.impl.Factory;
  * @since  2005/10/02
  * @deprecated Because the PADL meta-model now supports packages natively. 
  */
+@Deprecated
 public class PackageIdentifierAnalysis implements IAnalysis {
 	private static String getPackageName(final IFirstClassEntity anEntity) {
 		return anEntity.getDisplayID().substring(

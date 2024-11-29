@@ -43,7 +43,7 @@ public class DesignMotifsRepository implements IRepository {
 	private DesignMotifsRepository() {
 		ClassFile[] classFiles;
 		try {
-			classFiles = SubtypeLoader.loadSubtypesFromStream(
+			classFiles = SubtypeLoader.loadSubtypesFromStreams(
 					"padl.motif.IDesignMotifModel",
 					FileRepositoryFactory.getInstance().getFileRepository(this)
 							.getFiles("padl/motif/repository/", ".class"),

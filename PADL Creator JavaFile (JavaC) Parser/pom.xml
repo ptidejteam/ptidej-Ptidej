@@ -22,9 +22,13 @@
 				<version>3.8.1</version>
 				<configuration>
 					<release combine.self="override" />
+					<!-- Eclipse is creating problems again wrt. Maven.
+					It seem to only supports preview features for the
+					latest JDK, not the current one... -->
 					<source>${maven.compiler.release}</source>
 					<target>${maven.compiler.release}</target>
 					<compilerArgs>
+						<arg>-proc:none</arg>
 						<arg>--enable-preview</arg>
 						<arg>
 							--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>

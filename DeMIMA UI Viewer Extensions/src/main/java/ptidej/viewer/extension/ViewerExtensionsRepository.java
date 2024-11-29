@@ -45,7 +45,7 @@ public class ViewerExtensionsRepository implements IRepository {
 		// thrown when attempting loading extensions
 		// from the applet viewer.
 		try {
-			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
+			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStreams(
 					"ptidej.viewer.extension.IViewerExtension",
 					FileRepositoryFactory.getInstance().getFileRepository(this)
 							.getFiles("ptidej/viewer/extension/repository/",

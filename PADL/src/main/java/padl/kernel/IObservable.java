@@ -26,6 +26,7 @@ public interface IObservable {
 	 *  @deprecated
 	 *  TODO Remove method fireModelChange(), should not be replaced by anything!
 	 */
+	@Deprecated
 	void fireModelChange(final String anEventType, final IEvent anEvent);
 	Iterator getIteratorOnModelListeners();
 	void removeModelListener(final IModelListener aModelListener);
