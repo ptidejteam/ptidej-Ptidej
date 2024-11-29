@@ -41,7 +41,7 @@ public class PQMODRepository implements IRepository {
 	private PQMODRepository() {
 		final List<IQualityAttribute> listOfQualityAttributes = new ArrayList<IQualityAttribute>();
 		try {
-			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
+			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStreams(
 					"squad.quality.IQualityAttribute",
 					FileRepositoryFactory.getInstance().getFileRepository(this)
 							.getFiles("squad/quality/pqmod/repository/",
