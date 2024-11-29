@@ -16,6 +16,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 import util.io.NamedInputStream;
 import util.io.ProxyConsole;
 import util.repository.FileAccessException;
@@ -27,9 +28,9 @@ import util.repository.IRepository;
  * @since  2004/07/21
  */
 class FileFolderRepository implements IFileRepository {
-	private static final void storeFiles(
-		final File theCurrentDirectory,
-		final List<NamedInputStream> aListOfFiles) throws FileAccessException {
+	private static final void storeFiles(final File theCurrentDirectory,
+			final List<NamedInputStream> aListOfFiles)
+			throws FileAccessException {
 
 		final String[] files = theCurrentDirectory.list();
 		if (files == null) {
@@ -38,9 +39,8 @@ class FileFolderRepository implements IFileRepository {
 					+ theCurrentDirectory.getAbsolutePath());
 		}
 		for (int i = 0; i < files.length; i++) {
-			final File file =
-				new File(theCurrentDirectory.getAbsolutePath()
-						+ File.separatorChar + files[i]);
+			final File file = new File(theCurrentDirectory.getAbsolutePath()
+					+ File.separatorChar + files[i]);
 			if (file.isFile()) {
 				// Stephane 2008/07/16: Too many FIS open!
 				// The following code closes unused FIS
@@ -48,18 +48,16 @@ class FileFolderRepository implements IFileRepository {
 				FileInputStream fileInputStream = null;
 				try {
 					fileInputStream = new FileInputStream(file);
-					aListOfFiles.add(new NamedInputStream(file
-						.getCanonicalPath(), fileInputStream));
+					aListOfFiles.add(new NamedInputStream(
+							file.getCanonicalPath(), fileInputStream));
 				}
 				catch (final FileNotFoundException fnfe) {
-					fnfe.printStackTrace(ProxyConsole
-						.getInstance()
-						.errorOutput());
+					fnfe.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
 				}
 				catch (final IOException ioe) {
-					ioe.printStackTrace(ProxyConsole
-						.getInstance()
-						.errorOutput());
+					ioe.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
 				}
 				finally {
 					if (fileInputStream != null) {
@@ -67,14 +65,10 @@ class FileFolderRepository implements IFileRepository {
 							fileInputStream.close();
 						}
 						catch (final IOException ioe) {
-							ProxyConsole
-								.getInstance()
-								.warningOutput()
-								.print(FileFolderRepository.class.getName());
-							ProxyConsole
-								.getInstance()
-								.warningOutput()
-								.println(" cannot close a file!");
+							ProxyConsole.getInstance().warningOutput().print(
+									FileFolderRepository.class.getName());
+							ProxyConsole.getInstance().warningOutput()
+									.println(" cannot close a file!");
 						}
 					}
 				}
@@ -84,7 +78,9 @@ class FileFolderRepository implements IFileRepository {
 			}
 		}
 	}
-	private static final NamedInputStream[] getMetaModelFiles(final Class<? extends IRepository> aClass)
+
+	private static final NamedInputStream[] getMetaModelFiles(
+			final Class<? extends IRepository> aClass)
 			throws FileAccessException {
 
 		// Yann 2004/07/28: Demo!
@@ -100,21 +96,17 @@ class FileFolderRepository implements IFileRepository {
 		directory.append(aClass.getPackage().getName().replace('.', '/'));
 		String finalDirectory = directory.toString().replace('\\', '/');
 
-		ProxyConsole
-			.getInstance()
-			.warningOutput()
-			.print(FileFolderRepository.class.getName());
-		ProxyConsole
-			.getInstance()
-			.warningOutput()
-			.print(" is the current repository on: ");
+		ProxyConsole.getInstance().warningOutput()
+				.print(FileFolderRepository.class.getName());
+		ProxyConsole.getInstance().warningOutput()
+				.print(" is the current repository on: ");
 		ProxyConsole.getInstance().warningOutput().println(finalDirectory);
 
 		final File directoryFile = new File(finalDirectory);
 		final List<NamedInputStream> listOfFiles = new ArrayList<NamedInputStream>();
 		FileFolderRepository.storeFiles(directoryFile, listOfFiles);
-		final NamedInputStream[] arrayOfFiles =
-			new NamedInputStream[listOfFiles.size()];
+		final NamedInputStream[] arrayOfFiles = new NamedInputStream[listOfFiles
+				.size()];
 		listOfFiles.toArray(arrayOfFiles);
 		return arrayOfFiles;
 		//	}
@@ -122,18 +114,25 @@ class FileFolderRepository implements IFileRepository {
 		//		return new NamedInputStream[0];
 		//	}
 	}
+
 	private NamedInputStream[] fileStreams;
 	private final IRepository locator;
+
 	public FileFolderRepository(final IRepository aLocator) {
 		this.locator = aLocator;
 	}
-	public NamedInputStream[] getFiles() throws FileAccessException {
+
+	public NamedInputStream[] getFiles(final String aPath,
+			final String anExtension) throws FileAccessException {
+
+		// TODO Is it still necessary?
 		if (this.fileStreams == null) {
-			this.fileStreams =
-				FileFolderRepository.getMetaModelFiles(this.locator.getClass());
+			this.fileStreams = FileFolderRepository
+					.getMetaModelFiles(this.locator.getClass());
 		}
 		return this.fileStreams;
 	}
+
 	public String toString() {
 		return this.fileStreams.length + " files in repository.";
 	}

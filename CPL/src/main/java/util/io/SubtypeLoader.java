@@ -44,154 +44,166 @@ public final class SubtypeLoader {
 	}
 
 	public static ClassFile[] loadRecursivelySubtypesFromDir(
-			final String supertypeName, final String directory,
-			final String extension) {
+			final String aSuperTypeName, final String aDirectoryName,
+			final String aFileExtension) {
 
-		final File currentDirectory = new File(directory);
+		final File currentDirectory = new File(aDirectoryName);
 		final String currentList[] = currentDirectory.list();
 
 		if (currentList == null || currentList.length == 0) {
 			ProxyConsole.getInstance().warningOutput()
 					.println(MultilingualManager.getString(
 							"Err_FILES_NOT_FOUND", SubtypeLoader.class,
-							new Object[] { directory }));
+							new Object[] { aDirectoryName }));
 			return new ClassFile[0];
 		}
 
-		final List<ClassFile> currentListOfClasses = new ArrayList<ClassFile>(
+		final List<ClassFile> aListOfClasses = new ArrayList<ClassFile>(
 				currentList.length);
 		for (int x = 0; x < currentList.length; x++) {
-			final String itemName = directory + currentList[x];
+			final String itemName = aDirectoryName + currentList[x];
 
 			if (new File(itemName).isFile()) {
-				currentListOfClasses
+				aListOfClasses
 						.addAll(Arrays.asList(SubtypeLoader.loadSubtypeFromFile(
-								supertypeName, itemName, extension)));
+								aSuperTypeName, itemName, aFileExtension)));
 			}
 			else if (new File(itemName).isDirectory()) {
-				currentListOfClasses.addAll(Arrays.asList(SubtypeLoader
-						.loadRecursivelySubtypesFromDir(supertypeName,
-								itemName + File.separatorChar, extension)));
+				aListOfClasses.addAll(Arrays
+						.asList(SubtypeLoader.loadRecursivelySubtypesFromDir(
+								aSuperTypeName, itemName + File.separatorChar,
+								aFileExtension)));
 			}
 		}
 
-		if (currentListOfClasses.size() == 0) {
+		if (aListOfClasses.size() == 0) {
 			ProxyConsole.getInstance().warningOutput()
 					.println(MultilingualManager.getString(
 							"Err_FILES_NOT_FOUND", SubtypeLoader.class,
-							new Object[] { directory }));
+							new Object[] { aDirectoryName }));
 			return new ClassFile[0];
 		}
 		else {
-			final ClassFile[] results = new ClassFile[currentListOfClasses
-					.size()];
-			currentListOfClasses.toArray(results);
+			final ClassFile[] results = new ClassFile[aListOfClasses.size()];
+			aListOfClasses.toArray(results);
 			Arrays.sort(results, new ClassNameAlphabeticalComparator());
 			return results;
 		}
 	}
 
-	public static ClassFile[] loadSubtypeFromFile(final String supertypeName,
-			final String file, final String extension) {
+	// TODO: Make it private
+	public static ClassFile[] loadSubtypeFromFile(final String aSuperTypeName,
+			final String aFileName, final String aFileExtension) {
 
-		final List<ClassFile> currentListOfClasses = new ArrayList<ClassFile>();
-		if (file.endsWith(extension)) {
+		final List<ClassFile> aListOfClasses = new ArrayList<ClassFile>();
+		if (aFileName.endsWith(aFileExtension)) {
 			ProxyConsole.getInstance().debugOutput()
 					.println(MultilingualManager.getString("LOADING_FROM",
-							SubtypeLoader.class, new Object[] { file }));
+							SubtypeLoader.class, new Object[] { aFileName }));
 
 			try {
-				final InputStream inputStream = new FileInputStream(file);
-				SubtypeLoader.loadSubtypeFromStream(supertypeName,
-						currentListOfClasses, inputStream);
-				inputStream.close();
+				final InputStream anInputStream = new FileInputStream(
+						aFileName);
+				SubtypeLoader.loadSubtypeFromStream(aSuperTypeName,
+						aListOfClasses,
+						new NamedInputStream(aFileName, anInputStream));
+				anInputStream.close();
 			}
 			catch (final Exception e) {
-				ProxyConsole.getInstance().errorOutput().print(e.getMessage());
+				ProxyConsole.getInstance().errorOutput().print(e);
 				ProxyConsole.getInstance().errorOutput()
 						.print(": Exception while reading file: ");
-				ProxyConsole.getInstance().errorOutput().println(file);
+				ProxyConsole.getInstance().errorOutput().println(aFileName);
 			}
 		}
 
-		final ClassFile[] results = new ClassFile[currentListOfClasses.size()];
-		currentListOfClasses.toArray(results);
+		final ClassFile[] results = new ClassFile[aListOfClasses.size()];
+		aListOfClasses.toArray(results);
 		return results;
 	}
 
-	// TODO: David made this method public
-	public static void loadSubtypeFromStream(final String supertypeName,
-			final List<ClassFile> currentListOfClasses,
-			final InputStream inputStream) throws IOException {
+	private static void loadSubtypeFromStream(final String aSuperTypeName,
+			final List<ClassFile> aListOfClasses,
+			final NamedInputStream aNamedInputStream) throws IOException {
 
-		final ClassFile currentClass = new ClassFile(inputStream);
+		final InputStream inputStream1 = aNamedInputStream.getStream();
+		final ClassFile currentClass_CFPARSE = new ClassFile(inputStream1);
+		inputStream1.close();
 
-		//	final ClassParser parser = new ClassParser(inputStream, file);
-		//	final ClassFile currentClass =
-		//		CFParseBCELConvertor.convertClassFile(parser.parse());
+		/*
+		// TODO Implement the converter so that it provides class
+		// files equivalent to the ones obtained from CFParse.
+		final InputStream inputStream2 = aNamedInputStream.getStream();
+		final ClassParser parser = new ClassParser(inputStream2, "");
+		final JavaClass javaClass = parser.parse();
+		final ClassFile currentClass_BCEL = CFParseBCELConvertor
+				.convertClassFile(javaClass);
+		inputStream2.close();
+		*/
 
-		if (supertypeName == null
-				|| currentClass.getSuperName().equals(supertypeName)) {
+		final ClassFile currentClass = currentClass_CFPARSE;
+		if (aSuperTypeName == null
+				|| currentClass.getSuperName().equals(aSuperTypeName)) {
 
-			currentListOfClasses.add(currentClass);
+			aListOfClasses.add(currentClass);
 		}
 		else {
 			boolean isSuperInterfaceFound = false;
 			for (int i = 0; i < currentClass.getInterfaces().length()
 					&& !isSuperInterfaceFound; i++) {
 
-				if (currentClass.getInterfaces().get(i).equals(supertypeName)) {
-
-					currentListOfClasses.add(currentClass);
+				if (currentClass.getInterfaces().get(i)
+						.equals(aSuperTypeName)) {
+					aListOfClasses.add(currentClass);
 					isSuperInterfaceFound = true;
 				}
 			}
 		}
 	}
 
-	public static ClassFile[] loadSubtypesFromDir(final String supertypeName,
-			final String directory, final String extension) {
+	public static ClassFile[] loadSubtypesFromDir(final String aSuperTypeName,
+			final String aDirectoryName, final String aFileExtension) {
 
-		final File currentDirectory = new File(directory);
+		final File currentDirectory = new File(aDirectoryName);
 		final String currentList[] = currentDirectory
-				.list(new ExtensionBasedFilenameFilter(extension));
+				.list(new ExtensionBasedFilenameFilter(aFileExtension));
 		if (currentList == null || currentList.length == 0) {
 			ProxyConsole.getInstance().warningOutput()
 					.println(MultilingualManager.getString(
 							"Err_FILES_NOT_FOUND", SubtypeLoader.class,
-							new Object[] { directory }));
+							new Object[] { aDirectoryName }));
 			return new ClassFile[0];
 		}
 
-		final List<ClassFile> currentListOfClasses = new ArrayList<ClassFile>(
+		final List<ClassFile> aListOfClasses = new ArrayList<ClassFile>(
 				currentList.length);
 		for (int x = 0; x < currentList.length; x++) {
-			currentListOfClasses.addAll(Arrays
-					.asList(SubtypeLoader.loadSubtypeFromFile(supertypeName,
-							directory + currentList[x], extension)));
+			aListOfClasses.addAll(Arrays
+					.asList(SubtypeLoader.loadSubtypeFromFile(aSuperTypeName,
+							aDirectoryName + currentList[x], aFileExtension)));
 		}
 
-		final ClassFile[] results = new ClassFile[currentListOfClasses.size()];
-		currentListOfClasses.toArray(results);
+		final ClassFile[] results = new ClassFile[aListOfClasses.size()];
+		aListOfClasses.toArray(results);
 		Arrays.sort(results, new ClassNameAlphabeticalComparator());
 		return results;
 	}
 
-	public static ClassFile[] loadSubtypesFromJar(final ClassFile supertype,
-			final String jarFileName, final String extension) {
+	public static ClassFile[] loadSubtypesFromJar(final String aSuperTypeName,
+			final String aJARFileName, final String aFileExtension) {
 
 		try {
-			final JarFile currentJarFile = new JarFile(jarFileName);
+			final JarFile currentJarFile = new JarFile(aJARFileName);
 			if (currentJarFile.size() == 0) {
 				ProxyConsole.getInstance().errorOutput()
 						.println(MultilingualManager.getString(
 								"Err_READING_FILE", SubtypeLoader.class,
-								new Object[] { jarFileName }));
+								new Object[] { aJARFileName }));
 				currentJarFile.close();
 				throw new RuntimeException("JAR file has size 0!?");
 			}
 
-			final List<ClassFile> currentListOfClasses = new ArrayList<ClassFile>();
+			final List<ClassFile> aListOfClasses = new ArrayList<ClassFile>();
 			final Enumeration<?> classList = currentJarFile.entries();
 
 			while (classList.hasMoreElements()) {
@@ -200,34 +212,34 @@ public final class SubtypeLoader {
 							.nextElement();
 
 					if (!jarEntry.isDirectory()
-							&& jarEntry.getName().endsWith(extension)) {
+							&& jarEntry.getName().endsWith(aFileExtension)) {
 
-						final InputStream inputStream = currentJarFile
+						final InputStream anInputStream = currentJarFile
 								.getInputStream(jarEntry);
 						final ClassFile currentClass = new ClassFile(
-								inputStream);
+								anInputStream);
 
-						if (supertype == null
+						if (aSuperTypeName == null
 								|| currentClass.getSuperName() != null
 										&& currentClass.getSuperName()
-												.equals(supertype.getName())) {
+												.equals(aSuperTypeName)) {
 
-							currentListOfClasses.add(currentClass);
+							aListOfClasses.add(currentClass);
 						}
 						else {
 							boolean isSuperInterfaceFound = false;
 							for (int i = 0; i < currentClass.getInterfaces()
 									.length() && !isSuperInterfaceFound; i++) {
 								if (currentClass.getInterfaces().get(i)
-										.equals(supertype.getName())) {
+										.equals(aSuperTypeName)) {
 
-									currentListOfClasses.add(currentClass);
+									aListOfClasses.add(currentClass);
 									isSuperInterfaceFound = true;
 								}
 							}
 						}
 
-						inputStream.close();
+						anInputStream.close();
 					}
 				}
 				catch (final Exception e) {
@@ -236,83 +248,82 @@ public final class SubtypeLoader {
 			}
 			currentJarFile.close();
 
-			final ClassFile[] results = new ClassFile[currentListOfClasses
-					.size()];
-			currentListOfClasses.toArray(results);
+			final ClassFile[] results = new ClassFile[aListOfClasses.size()];
+			aListOfClasses.toArray(results);
 			Arrays.sort(results, new ClassNameAlphabeticalComparator());
 			return results;
 		}
 		catch (final IOException ioe) {
 			ProxyConsole.getInstance().errorOutput()
 					.println(MultilingualManager.getString("Err_READING_FILE",
-							SubtypeLoader.class, new Object[] { jarFileName }));
+							SubtypeLoader.class,
+							new Object[] { aJARFileName }));
 			ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
 			throw new RuntimeException(ioe);
 		}
 	}
 
 	public static ClassFile[] loadSubtypesFromJarInputStream(
-			final ClassFile supertype, final JarInputStream jarInputStream,
-			final String extension) {
+			final String aSuperTypeName, final JarInputStream aJARInputStream,
+			final String aFileExtension) {
 
 		try {
-			if (jarInputStream.available() == 0) {
+			if (aJARInputStream.available() == 0) {
 				ProxyConsole.getInstance().errorOutput()
 						.println(MultilingualManager.getString(
 								"Err_READING_STREAM", SubtypeLoader.class,
 								new Object[] { "jar input stream" }));
-				jarInputStream.close();
+				aJARInputStream.close();
 				throw new RuntimeException("No data available");
 			}
 
-			final List<ClassFile> currentListOfClasses = new ArrayList<ClassFile>();
+			final List<ClassFile> aListOfClasses = new ArrayList<ClassFile>();
 
-			for (JarEntry jarEntry = jarInputStream
-					.getNextJarEntry(); jarEntry != null; jarEntry = jarInputStream
+			for (JarEntry jarEntry = aJARInputStream
+					.getNextJarEntry(); jarEntry != null; jarEntry = aJARInputStream
 							.getNextJarEntry()) {
 				try {
 					if (!jarEntry.isDirectory()
-							&& jarEntry.getName().endsWith(extension)) {
+							&& jarEntry.getName().endsWith(aFileExtension)) {
 
-						final InputStream inputStream = jarInputStream;
-						/*						 final BufferedInputStream inputStream =
-														new BufferedInputStream(jarInputStream,(int) jarEntry.getSize());
+						final InputStream anInputStream = aJARInputStream;
+						/*						 final BufferedInputStream anInputStream =
+														new BufferedInputStream(aJARInputStream,(int) jarEntry.getSize());
 						*/
 						final ClassFile currentClass = new ClassFile(
-								inputStream);
+								anInputStream);
 
-						if (supertype == null
+						if (aSuperTypeName == null
 								|| currentClass.getSuperName() != null
 										&& currentClass.getSuperName()
-												.equals(supertype.getName())) {
+												.equals(aSuperTypeName)) {
 
-							currentListOfClasses.add(currentClass);
+							aListOfClasses.add(currentClass);
 						}
 						else {
 							boolean isSuperInterfaceFound = false;
 							for (int i = 0; i < currentClass.getInterfaces()
 									.length() && !isSuperInterfaceFound; i++) {
 								if (currentClass.getInterfaces().get(i)
-										.equals(supertype.getName())) {
+										.equals(aSuperTypeName)) {
 
-									currentListOfClasses.add(currentClass);
+									aListOfClasses.add(currentClass);
 									isSuperInterfaceFound = true;
 								}
 							}
 						}
 					}
 
-					jarInputStream.closeEntry();
+					aJARInputStream.closeEntry();
 				}
 				catch (final Exception e) {
 					e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 				}
 			}
-			jarInputStream.close();
+			aJARInputStream.close();
 
-			final ClassFile[] results = new ClassFile[currentListOfClasses
-					.size()];
-			currentListOfClasses.toArray(results);
+			final ClassFile[] results = new ClassFile[aListOfClasses.size()];
+			aListOfClasses.toArray(results);
 			Arrays.sort(results, new ClassNameAlphabeticalComparator());
 			return results;
 		}
@@ -326,11 +337,12 @@ public final class SubtypeLoader {
 		}
 	}
 
-	public static ClassFile[] loadSubtypesFromStream(final String supertypeName,
-			final NamedInputStream[] files, final String packageName,
-			final String extension) {
+	public static ClassFile[] loadSubtypesFromStreams(
+			final String aSuperTypeName,
+			final NamedInputStream[] someNamedInputStreams,
+			final String aPackageName, final String aFileExtension) {
 
-		final String directory = packageName.replace('.',
+		final String aDirectoryName = aPackageName.replace('.',
 				util.io.Files.getSeparatorChar())
 				+ util.io.Files.getSeparatorChar();
 
@@ -338,44 +350,45 @@ public final class SubtypeLoader {
 		//	ProxyConsole.getInstance().errorOutput().println(
 		//		util.io.Files.getSeparatorChar());
 		//	ProxyConsole.getInstance().errorOutput().println(File.separatorChar);
-		//	ProxyConsole.getInstance().errorOutput().print("directory = ");
-		//	ProxyConsole.getInstance().errorOutput().println(directory);
+		//	ProxyConsole.getInstance().errorOutput().print("aDirectoryName = ");
+		//	ProxyConsole.getInstance().errorOutput().println(aDirectoryName);
 
-		final List<ClassFile> currentListOfClasses = new ArrayList<ClassFile>();
-		for (int i = 0; i < files.length; i++) {
+		final List<ClassFile> aListOfClasses = new ArrayList<ClassFile>();
+		for (int i = 0; i < someNamedInputStreams.length; i++) {
 			// For debugging on MacOS X only!
 			//	ProxyConsole
 			//		.getInstance()
 			//		.errorOutput()
-			//		.print("files[i].getName() = ");
+			//		.print("someNamedInputStreams[i].getName() = ");
 			//	ProxyConsole
 			//		.getInstance()
 			//		.errorOutput()
-			//		.println(files[i].getName());
+			//		.println(someNamedInputStreams[i].getName());
 
-			if (files[i].getName().endsWith(extension)
-					&& files[i].getName().indexOf(directory) > -1) {
+			if (someNamedInputStreams[i].getName().endsWith(aFileExtension)
+					&& someNamedInputStreams[i].getName()
+							.indexOf(aDirectoryName) > -1) {
 
 				ProxyConsole.getInstance().debugOutput()
 						.println(MultilingualManager.getString("LOADING_FROM",
-								SubtypeLoader.class,
-								new Object[] { files[i].getName() }));
+								SubtypeLoader.class, new Object[] {
+										someNamedInputStreams[i].getName() }));
 				try {
-					SubtypeLoader.loadSubtypeFromStream(supertypeName,
-							currentListOfClasses, files[i].getStream());
+					SubtypeLoader.loadSubtypeFromStream(aSuperTypeName,
+							aListOfClasses, someNamedInputStreams[i]);
 				}
 				catch (final IOException e) {
-					ProxyConsole.getInstance().errorOutput()
-							.print(e.getMessage());
+					ProxyConsole.getInstance().errorOutput().print(e);
 					ProxyConsole.getInstance().errorOutput()
 							.print(": Exception while reading file: ");
-					ProxyConsole.getInstance().errorOutput().println(files[i]);
+					ProxyConsole.getInstance().errorOutput()
+							.println(someNamedInputStreams[i]);
 				}
 			}
 		}
 
-		final ClassFile[] results = new ClassFile[currentListOfClasses.size()];
-		currentListOfClasses.toArray(results);
+		final ClassFile[] results = new ClassFile[aListOfClasses.size()];
+		aListOfClasses.toArray(results);
 		Arrays.sort(results, new ClassNameAlphabeticalComparator());
 		return results;
 	}

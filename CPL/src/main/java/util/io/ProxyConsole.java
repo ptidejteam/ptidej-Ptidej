@@ -17,10 +17,6 @@ import java.io.Writer;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.util.StackLocatorUtil;
-
 /**
  * @author Yann-Gaël Guéhéneuc
  * @since 2004/07/15
@@ -51,11 +47,16 @@ public class ProxyConsole {
 	private static final String ERROR = "error";
 
 	private ProxyConsole() {
-		this.setDebugOutput(new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
-		this.setErrorOutput(new AutoFlushPrintWriter(new OutputStreamWriter(System.err)));
-		this.setNormalOutput(new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
-		this.setWarningOutput(new AutoFlushPrintWriter(new OutputStreamWriter(System.err)));
-		this.setTraceOutput(new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
+		this.setDebugOutput(
+				new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
+		this.setErrorOutput(
+				new AutoFlushPrintWriter(new OutputStreamWriter(System.err)));
+		this.setNormalOutput(
+				new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
+		this.setWarningOutput(
+				new AutoFlushPrintWriter(new OutputStreamWriter(System.err)));
+		this.setTraceOutput(
+				new AutoFlushPrintWriter(new OutputStreamWriter(System.out)));
 	}
 
 	public PrintWriter debugOutput() {
@@ -79,7 +80,8 @@ public class ProxyConsole {
 				writer.write(object.toString());
 				writer.write('\n');
 				writer.flush();
-			} catch (final IOException e) {
+			}
+			catch (final IOException e) {
 				e.printStackTrace();
 			}
 		}
@@ -87,7 +89,8 @@ public class ProxyConsole {
 
 	private void setDebugOutput(final PrintWriter messageWriter) {
 
-		this.debugOutput = new MultiChannelPrintWriter(new PrintWriter(new LoggerWriter(DEBUG)), messageWriter);
+		this.debugOutput = new MultiChannelPrintWriter(
+				new PrintWriter(new LoggerWriter(DEBUG)), messageWriter);
 	}
 
 	public void setDebugOutput(final Writer messageWriter) {
@@ -95,7 +98,8 @@ public class ProxyConsole {
 	}
 
 	private void setErrorOutput(final PrintWriter messageWriter) {
-		this.errorOutput = new MultiChannelPrintWriter(new PrintWriter(new LoggerWriter(ERROR)), messageWriter);
+		this.errorOutput = new MultiChannelPrintWriter(
+				new PrintWriter(new LoggerWriter(ERROR)), messageWriter);
 	}
 
 	public void setErrorOutput(final Writer messageWriter) {
@@ -111,8 +115,8 @@ public class ProxyConsole {
 	}
 
 	private void setNormalOutput(final PrintWriter messageWriter) {
-		this.normalOutput = new MultiChannelPrintWriter(new PrintWriter(new LoggerWriter(INFO)
-				), messageWriter);
+		this.normalOutput = new MultiChannelPrintWriter(
+				new PrintWriter(new LoggerWriter(INFO)), messageWriter);
 	}
 
 	public void setNormalOutput(final Writer messageWriter) {
@@ -128,7 +132,8 @@ public class ProxyConsole {
 	}
 
 	private void setWarningOutput(final PrintWriter messageWriter) {
-		this.warningOutput = new MultiChannelPrintWriter(new PrintWriter(new LoggerWriter(WARN)), messageWriter);
+		this.warningOutput = new MultiChannelPrintWriter(
+				new PrintWriter(new LoggerWriter(WARN)), messageWriter);
 	}
 
 	public void setWarningOutput(final Writer messageWriter) {
@@ -141,7 +146,8 @@ public class ProxyConsole {
 
 	private void setTraceOutput(final PrintWriter messageWriter) {
 
-		this.traceOutput = new MultiChannelPrintWriter(new PrintWriter(new LoggerWriter(TRACE)), messageWriter);
+		this.traceOutput = new MultiChannelPrintWriter(
+				new PrintWriter(new LoggerWriter(TRACE)), messageWriter);
 	}
 
 	public void setTraceOutput(final Writer messageWriter) {

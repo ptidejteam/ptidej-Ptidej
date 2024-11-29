@@ -1,6 +1,5 @@
 package util.io;
 
-import java.io.IOException;
 /*
  * 
  * @author Vishnu Rameshbabu
@@ -19,7 +18,8 @@ public class MultiChannelPrintWriter extends PrintWriter {
 		super(writer, true);
 	}
 
-	public MultiChannelPrintWriter(final PrintWriter writer1, final PrintWriter writer2) {
+	public MultiChannelPrintWriter(final PrintWriter writer1,
+			final PrintWriter writer2) {
 		super(writer2, true);
 		this.printWriter1 = writer1;
 		this.printWriter2 = writer2;
@@ -44,7 +44,7 @@ public class MultiChannelPrintWriter extends PrintWriter {
 		StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
 		String className = stackTrace[3].getClassName();
 		ThreadContext.put("className", className);
-		
+
 		this.printWriter1.print(message);
 		this.printWriter2.print(message);
 	}
@@ -53,7 +53,7 @@ public class MultiChannelPrintWriter extends PrintWriter {
 		StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
 		String className = stackTrace[3].getClassName();
 		ThreadContext.put("className", className);
-		
+
 		this.printWriter1.println(charc);
 		this.printWriter2.println(charc);
 	}
@@ -62,7 +62,7 @@ public class MultiChannelPrintWriter extends PrintWriter {
 		StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
 		String className = stackTrace[3].getClassName();
 		ThreadContext.put("className", className);
-		
+
 		this.printWriter1.println(message);
 		this.printWriter2.println(message);
 	}

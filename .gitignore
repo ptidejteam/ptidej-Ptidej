@@ -69,7 +69,7 @@ local.properties
 # Specific to Ptidej
 Configuration\ Area
 Temp/
-Ptidej.log
-Maven.log
+**/*.log
 
+# Specific to MacOS
 **/.DS_Store

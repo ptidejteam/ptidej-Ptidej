@@ -49,10 +49,11 @@ public class UIAnalysesRepository implements IRepository {
 		// thrown when attempting loading analyses
 		// from the applet viewer.
 		try {
-			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
+			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStreams(
 					"ptidej.ui.analysis.IUIAnalysis",
 					FileRepositoryFactory.getInstance().getFileRepository(this)
-							.getFiles(),
+							.getFiles("ptidej/ui/analysis/repository/",
+									".class"),
 					"ptidej.ui.analysis.repository", ".class");
 			final List listOfAnalyses = new ArrayList(classFiles.length);
 			for (int i = 0; i < classFiles.length; i++) {

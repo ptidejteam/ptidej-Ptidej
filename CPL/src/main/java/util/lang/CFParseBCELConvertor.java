@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
 
+import org.apache.bcel.Const;
 import org.apache.bcel.classfile.Constant;
 import org.apache.bcel.classfile.ConstantClass;
 import org.apache.bcel.classfile.ConstantDouble;
@@ -60,15 +61,58 @@ public class CFParseBCELConvertor {
 		final Field[] fields = aJavaClass.getFields();
 		for (int index = 0; index < fields.length; index++) {
 			final Field field = fields[index];
+			final String fieldType = field.getType().toString();
+			final String fieldName = field.getName();
+			final String fieldDeclaration = Modifier.toString(
+					field.getModifiers()) + ' ' + fieldType + " " + fieldName;
 
-			if (field.getName().indexOf('$') == -1) {
+			if (fieldName.indexOf('$') == -1) {
 				final FieldInfoList fieldInfoList = aClassFile.getFields();
 				if (field.isStatic()) {
-					fieldInfoList.addStatic(aClassFile,
-							Modifier.toString(field.getModifiers()) + ' '
-									+ field.getType().toString() + " "
-									+ field.getName() + '='
-									+ field.getConstantValue());
+					if (fieldType.equals("java.lang.String")) {
+						fieldInfoList.addStatic(aClassFile,
+								fieldDeclaration + "=\"\"");
+					}
+					else if (fieldType.equals("boolean")) {
+						fieldInfoList.addStatic(aClassFile,
+								fieldDeclaration + "=false");
+					}
+					else if (fieldType.equals("byte")) {
+						fieldInfoList.addStatic(aClassFile,
+								fieldDeclaration + "=0");
+					}
+					else if (fieldType.equals("char")) {
+						fieldInfoList.addStatic(aClassFile, fieldDeclaration
+								+ "=\'"
+								+ (char) Integer.valueOf(
+										field.getConstantValue().toString())
+										.intValue()
+								+ '\'');
+					}
+					else if (fieldType.equals("double")) {
+						fieldInfoList.addStatic(aClassFile,
+								fieldDeclaration + "=0");
+					}
+					else if (fieldType.equals("float")) {
+						fieldInfoList.addStatic(aClassFile,
+								fieldDeclaration + "=0.0f");
+					}
+					else if (fieldType.equals("int")) {
+						fieldInfoList.addStatic(aClassFile,
+								fieldDeclaration + "=0");
+					}
+					else if (fieldType.equals("long")) {
+						fieldInfoList.addStatic(aClassFile,
+								fieldDeclaration + "=0");
+					}
+					else if (fieldType.equals("short")) {
+						fieldInfoList.addStatic(aClassFile,
+								fieldDeclaration + "=0");
+					}
+					else {
+						fieldInfoList.addStatic(aClassFile, fieldDeclaration
+								+ '=' + field.getConstantValue());
+					}
 				}
 				else {
 					// Yann 2006/07/31: Bug in CFParse!
@@ -369,9 +413,22 @@ public class CFParseBCELConvertor {
 					cfparseCP.addUtf8(utf8String);
 				}
 			}
+			else if (constant == null) {
+				// Yann 24/11/24: Null-able?
+				// For some reasons, BCEL constant pool contains null values,
+				// which I just ignore but should probably try to understand.
+			}
 			else {
 				// throw new RuntimeException("Unknown constant in constant pool");
-				System.err.println("Unknown constant in constant pool");
+				ProxyConsole.getInstance().errorOutput().print(
+						"util.lang.CFParseBCELConvertor.convertConstantPool(JavaClass, ConstantPool): constant ");
+				ProxyConsole.getInstance().errorOutput()
+						.print(constant.getTag());
+				ProxyConsole.getInstance().errorOutput().print(" (");
+				ProxyConsole.getInstance().errorOutput()
+						.print(Const.getConstantName(constant.getTag()));
+				ProxyConsole.getInstance().errorOutput()
+						.println(") is not (yet?) handled");
 			}
 		}
 

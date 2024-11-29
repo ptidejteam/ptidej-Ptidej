@@ -25,5 +25,6 @@ import util.io.NamedInputStream;
  * to find the files they need.
  */
 public interface IFileRepository {
-	NamedInputStream[] getFiles() throws FileAccessException;
+	NamedInputStream[] getFiles(final String aPath, final String anExtension)
+			throws FileAccessException;
 }

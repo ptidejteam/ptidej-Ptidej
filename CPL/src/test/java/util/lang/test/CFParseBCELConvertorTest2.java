@@ -1,13 +1,10 @@
 package util.lang.test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 
 import org.apache.bcel.classfile.ClassParser;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
 
 import com.ibm.toad.cfparse.ClassFile;
 
@@ -17,7 +14,7 @@ class CFParseBCELConvertorTest2 {
 	private ClassFile classFile_CFParse_Original;
 	private ClassFile classFile_CFParse_Converted;
 
-	@BeforeEach
+	public 
 	void setUp() throws IOException {
 		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
 
@@ -30,26 +27,26 @@ class CFParseBCELConvertorTest2 {
 								.parse());
 	}
 
-	@Test
+	public 
 	void testGetAccess() {
-		assertEquals(this.classFile_CFParse_Original.getAccess(),
+		Assert.assertEquals(this.classFile_CFParse_Original.getAccess(),
 				this.classFile_CFParse_Converted.getAccess());
 	}
 
-	@Test
+	public 
 	void testGetAttrs() {
-		// assertEquals(this.classFile_CFParse_Original.getAttrs(), this.classFile_CFParse_Converted.getAttrs());
+		// Assert.assertEquals(this.classFile_CFParse_Original.getAttrs(), this.classFile_CFParse_Converted.getAttrs());
 	}
 
-	@Test
+	public 
 	void testGetName() {
-		assertEquals(this.classFile_CFParse_Original.getName(),
+		Assert.assertEquals(this.classFile_CFParse_Original.getName(),
 				this.classFile_CFParse_Converted.getName());
 	}
 
-	@Test
+	public 
 	void testGetFields() {
-		assertEquals(
+		Assert.assertEquals(
 				this.classFile_CFParse_Original.getFields().get(0).toString(),
 				this.classFile_CFParse_Converted.getFields().get(0).toString());
 	}

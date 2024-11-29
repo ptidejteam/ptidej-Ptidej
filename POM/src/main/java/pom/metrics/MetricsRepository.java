@@ -49,9 +49,10 @@ public class MetricsRepository implements IRepository {
 	private MetricsRepository() {
 		final ClassFile[] classFiles;
 		try {
-			classFiles = SubtypeLoader.loadSubtypesFromStream(
-					"pom.metrics.IMetric", FileRepositoryFactory.getInstance()
-							.getFileRepository(this).getFiles(),
+			classFiles = SubtypeLoader.loadSubtypesFromStreams(
+					"pom.metrics.IMetric",
+					FileRepositoryFactory.getInstance().getFileRepository(this)
+							.getFiles("pom/metrics/repository/", ".class"),
 					"pom.metrics.repository", ".class");
 		}
 		catch (final FileAccessException e) {
