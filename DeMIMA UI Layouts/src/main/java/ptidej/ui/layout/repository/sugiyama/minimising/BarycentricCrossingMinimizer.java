@@ -16,6 +16,7 @@ package ptidej.ui.layout.repository.sugiyama.minimising;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
+
 import ptidej.ui.layout.repository.sugiyama.SettingValue;
 import ptidej.ui.layout.repository.sugiyama.graph.INode;
 import ptidej.ui.layout.repository.sugiyama.graph.Node;
@@ -49,9 +50,8 @@ public class BarycentricCrossingMinimizer {
 	/**
 	 * 
 	 */
-	public BarycentricCrossingMinimizer(
-		final List aGraphNode,
-		final int anNbLevels) {
+	public BarycentricCrossingMinimizer(final List aGraphNode,
+			final int anNbLevels) {
 
 		this.nodeMatrix = new Node[0][0];
 		this.graphNode = aGraphNode;
@@ -59,6 +59,7 @@ public class BarycentricCrossingMinimizer {
 	}
 
 	private boolean debugging = false;
+
 	private void printDebugMessage(String message) {
 		if (this.debugging)
 			System.out.println(message);
@@ -103,10 +104,8 @@ public class BarycentricCrossingMinimizer {
 		// if we have only two levels
 		// we aply for two levels' methods
 		if (this.nodeMatrix.length == 2) {
-			final Matrix bestMat =
-				this.twoLevelsCrossingNbReduction(
-					this.nodeMatrix[0],
-					this.nodeMatrix[1]);
+			final Matrix bestMat = this.twoLevelsCrossingNbReduction(
+					this.nodeMatrix[0], this.nodeMatrix[1]);
 
 			this.nodeMatrix[1] = bestMat.getDownLevel();
 			bestMatrix = this.nodeMatrix;
@@ -117,8 +116,8 @@ public class BarycentricCrossingMinimizer {
 			int roundsWhithoutProgress = 0;
 			int roundsReversion = 0;
 			// 28-07-2006
-			int maxRoundsWhithoutProgress =
-				SettingValue.getMaxNbRoundsWhithoutProgress();
+			int maxRoundsWhithoutProgress = SettingValue
+					.getMaxNbRoundsWhithoutProgress();
 
 			final INode[][] tmpNodeMatrix = this.nodeMatrix;
 
@@ -138,18 +137,18 @@ public class BarycentricCrossingMinimizer {
 						final INode[] aFixedLayer = tmpNodeMatrix[i];
 						final INode[] aMovableLayer = tmpNodeMatrix[i + 1];
 
-						final Matrix currentMatrix =
-							new Matrix(aFixedLayer, aMovableLayer);
+						final Matrix currentMatrix = new Matrix(aFixedLayer,
+								aMovableLayer);
 						// we get the row ordring because it's the order 
 						// of the down level in the currentMatrix that are reordred!
-						final Matrix downLevelMatrixOrdred =
-							currentMatrix.getBarycentricRowOrdringMatrix();
+						final Matrix downLevelMatrixOrdred = currentMatrix
+								.getBarycentricRowOrdringMatrix();
 
 						printDebugMessage("6.1.1.i.2 : " + i);
 
 						// a new Matrix is build whith the new orders!
-						tmpNodeMatrix[i + 1] =
-							downLevelMatrixOrdred.getDownLevel();
+						tmpNodeMatrix[i + 1] = downLevelMatrixOrdred
+								.getDownLevel();
 					}
 
 					// the first layer still Not reordred
@@ -162,12 +161,12 @@ public class BarycentricCrossingMinimizer {
 						final INode[] aMovableLayer = tmpNodeMatrix[i - 1];
 						final INode[] aFixedLayer = tmpNodeMatrix[i];
 
-						final Matrix currentMatrix =
-							new Matrix(aMovableLayer, aFixedLayer);
+						final Matrix currentMatrix = new Matrix(aMovableLayer,
+								aFixedLayer);
 						// we get the column ordring because it's the order 
 						// of the up level in the currentMatrix that are reordred!
-						final Matrix upLevelMatrixOrdred =
-							currentMatrix.getBarycentricColumnOrdringMatrix();
+						final Matrix upLevelMatrixOrdred = currentMatrix
+								.getBarycentricColumnOrdringMatrix();
 						// System.out.println("6.1.1.i.2 : " + i);
 						// a new Matrix is build whith the new orders!
 
@@ -201,8 +200,8 @@ public class BarycentricCrossingMinimizer {
 					else {
 						printDebugMessage("roundsWhithoutProgress : "
 								+ roundsWhithoutProgress);
-						printDebugMessage("roundsReversion : "
-								+ roundsReversion);
+						printDebugMessage(
+								"roundsReversion : " + roundsReversion);
 						roundsWhithoutProgress++;
 						roundsReversion++;
 
@@ -228,34 +227,28 @@ public class BarycentricCrossingMinimizer {
 						// downward
 						for (int i = 0; i < this.nodeMatrix.length - 1; i++) {
 							printDebugMessage("6.1.4");
-							Matrix currentMatrix =
-								new Matrix(
-									tmpNodeMatrix[i],
+							Matrix currentMatrix = new Matrix(tmpNodeMatrix[i],
 									tmpNodeMatrix[i + 1]);
 							// Reordring!
-							Matrix downMatrixReOrdred =
-								currentMatrix
+							Matrix downMatrixReOrdred = currentMatrix
 									.getBarycentricRowReversedOrdringMatrix();
 
-							tmpNodeMatrix[i + 1] =
-								downMatrixReOrdred.getDownLevel();
+							tmpNodeMatrix[i + 1] = downMatrixReOrdred
+									.getDownLevel();
 						}
 
 						// upward
 						printDebugMessage("6.1.5");
 						for (int i = this.nodeMatrix.length - 1; i > 0; i--) {
 							// System.out.println("6.1.1.i.1 : " + i);
-							Matrix currentMatrix =
-								new Matrix(
-									tmpNodeMatrix[i - 1],
-									tmpNodeMatrix[i]);
+							Matrix currentMatrix = new Matrix(
+									tmpNodeMatrix[i - 1], tmpNodeMatrix[i]);
 							// Reordring!
-							Matrix upLevelMatrixReOrdred =
-								currentMatrix
+							Matrix upLevelMatrixReOrdred = currentMatrix
 									.getBarycentricColumnReversedOrdringMatrix();
 
-							tmpNodeMatrix[i - 1] =
-								upLevelMatrixReOrdred.getUpLevel();
+							tmpNodeMatrix[i - 1] = upLevelMatrixReOrdred
+									.getUpLevel();
 						}
 					}
 
@@ -329,6 +322,7 @@ public class BarycentricCrossingMinimizer {
 	 * for nLevels hierarchies
 	 *
 	 */
+	@Deprecated
 	public void nLevelsCrossingNbReductionDownUp() {
 		fillMatrix(); // fill the inial matrix
 		// down
@@ -337,9 +331,7 @@ public class BarycentricCrossingMinimizer {
 
 			printDebugMessage("6.1.1.i.1 : " + i);
 
-			Matrix tmpMatrix =
-				twoLevelsCrossingNbReduction(
-					this.nodeMatrix[i],
+			Matrix tmpMatrix = twoLevelsCrossingNbReduction(this.nodeMatrix[i],
 					this.nodeMatrix[i + 1]);
 
 			printDebugMessage("6.1.1.i.2 : " + i);
@@ -352,10 +344,8 @@ public class BarycentricCrossingMinimizer {
 		printDebugMessage("6.1.2");
 
 		for (int i = this.nodeMatrix.length - 1; i > 0; i--) {
-			Matrix tmpMatrix =
-				twoLevelsCrossingNbReduction(
-					this.nodeMatrix[i - 1],
-					this.nodeMatrix[i]);
+			Matrix tmpMatrix = twoLevelsCrossingNbReduction(
+					this.nodeMatrix[i - 1], this.nodeMatrix[i]);
 			this.nodeMatrix[i - 1] = tmpMatrix.getUpLevel();
 		}
 	}
@@ -369,9 +359,8 @@ public class BarycentricCrossingMinimizer {
 	 * @return the Matrix containing the less 
 	 * best crossing number
 	 */
-	private Matrix twoLevelsCrossingNbReduction(
-		final INode[] aFixedLAyer,
-		final INode[] aMovableLayer) {
+	private Matrix twoLevelsCrossingNbReduction(final INode[] aFixedLAyer,
+			final INode[] aMovableLayer) {
 
 		int maxNbIterationPhase2 = SettingValue.getMaxNbIterationPhase2();
 		Matrix initialMatrix = new Matrix(aFixedLAyer, aMovableLayer);
@@ -426,8 +415,7 @@ public class BarycentricCrossingMinimizer {
 				printDebugMessage("6.1.1.i.1.6.maxNbIterationPhase1 :  "
 						+ maxNbIterationPhase1);
 
-			}
-			while (maxNbIterationPhase1 != 0 && !(initialMatrix.equals(m2)));
+			} while (maxNbIterationPhase1 != 0 && !(initialMatrix.equals(m2)));
 
 			Matrix m3 = m2.getBarycentricRowReversedOrdringMatrix();
 
@@ -457,7 +445,6 @@ public class BarycentricCrossingMinimizer {
 	 *
 	 */
 	private void fillMatrix() {
-
 		printDebugMessage("fill Matrix!");
 
 		// 1- from the list of all nodes make : 

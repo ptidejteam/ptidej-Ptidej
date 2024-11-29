@@ -27,17 +27,17 @@ public final class FieldInfo {
 	private int d_idxName;
 	private int d_idxDescriptor;
 	private AttrInfoList d_attrs;
-	FieldInfo(
-		final ClassFile classfile,
-		final ConstantPool constantpool,
-		String s) {
 
+	FieldInfo(final ClassFile classfile, final ConstantPool constantpool,
+			final String s_original) {
+
+		String s = s_original;
 		this.d_cp = constantpool;
 		s = s.trim();
 		this.d_accessFlags = Access.getFromString(s);
 		if (!Access.isStatic(this.d_accessFlags)) {
 			throw new BadJavaError(
-				"Incorrect method for non-static initialiser");
+					"Incorrect method for non-static initialiser");
 		}
 		int i;
 		int j;
@@ -57,7 +57,7 @@ public final class FieldInfo {
 		final String s2 = s.substring(k + 1).trim();
 		if (!Character.isJavaIdentifierStart(s2.charAt(0))) {
 			throw new BadJavaError(
-				"Bad Field Description : Invalid field identifier");
+					"Bad Field Description : Invalid field identifier");
 		}
 		stringbuffer.append(s2.charAt(0));
 		for (int i1 = 1; i1 < s2.length(); i1++) {
@@ -70,7 +70,7 @@ public final class FieldInfo {
 		}
 		if (l == 0) {
 			throw new BadJavaError(
-				"Bad Field Description : Static definition with no initialiser");
+					"Bad Field Description : Static definition with no initialiser");
 		}
 		final String s3 = stringbuffer.toString();
 		if (s3.equals("")) {
@@ -89,12 +89,12 @@ public final class FieldInfo {
 		String s5 = s2.substring(l).trim();
 		if (s5.charAt(0) != '=') {
 			throw new BadJavaError(
-				"Bad Field Description: Incorrect initializer");
+					"Bad Field Description: Incorrect initializer");
 		}
 		s5 = s5.substring(1).trim();
 		if (Access.isFinal(this.d_accessFlags)) {
-			final ConstantValueAttrInfo constantvalueattrinfo =
-				(ConstantValueAttrInfo) this.d_attrs.add("ConstantValue");
+			final ConstantValueAttrInfo constantvalueattrinfo = (ConstantValueAttrInfo) this.d_attrs
+					.add("ConstantValue");
 			if (s4.equals("B")) {
 				final byte byte0 = Byte.parseByte(s5);
 				constantvalueattrinfo.set(byte0);
@@ -102,7 +102,7 @@ public final class FieldInfo {
 			else if (s4.equals("C")) {
 				if (s5.charAt(0) != '\'') {
 					throw new BadJavaError(
-						"Bad Field Description: unquoted character");
+							"Bad Field Description: unquoted character");
 				}
 				constantvalueattrinfo.set(s5.charAt(1));
 			}
@@ -135,7 +135,7 @@ public final class FieldInfo {
 					if (s5.charAt(0) != '"'
 							|| s5.charAt(s5.length() - 1) != '"') {
 						throw new BadJavaError(
-							"Bad Field Description: unquoted String");
+								"Bad Field Description: unquoted String");
 					}
 					constantvalueattrinfo.set(s5.substring(1, s5.length() - 1));
 				}
@@ -154,7 +154,7 @@ public final class FieldInfo {
 			}
 			else {
 				throw new BadJavaError(
-					"Cannot initialise final variable of type " + s1);
+						"Cannot initialise final variable of type " + s1);
 			}
 		}
 		else {
@@ -169,13 +169,14 @@ public final class FieldInfo {
 			if (methodinfo == null) {
 				methodinfo = methodinfolist.add("static void <clinit>()");
 			}
-			final CodeAttrInfo codeattrinfo =
-				(CodeAttrInfo) methodinfo.getAttrs().get("Code");
-			final MutableCodeSegment mutablecodesegment =
-				new MutableCodeSegment(this.d_cp, codeattrinfo, false);
+			final CodeAttrInfo codeattrinfo = (CodeAttrInfo) methodinfo
+					.getAttrs().get("Code");
+			final MutableCodeSegment mutablecodesegment = new MutableCodeSegment(
+					this.d_cp, codeattrinfo, false);
 			mutablecodesegment
-				.setInstructionFactory(new StringInstructionFactory());
-			final Vector<BaseInstruction> vector = mutablecodesegment.getInstructions();
+					.setInstructionFactory(new StringInstructionFactory());
+			final Vector<BaseInstruction> vector = mutablecodesegment
+					.getInstructions();
 
 			if (vector.lastElement().toString().trim().equals("return")) {
 				vector.removeElement(vector.lastElement());
@@ -184,104 +185,98 @@ public final class FieldInfo {
 			try {
 				if (s4.equals("B")) {
 					final byte byte1 = Byte.parseByte(s5);
-					BaseInstruction baseinstruction =
-						mutablecodesegment.create("bipush #" + byte1);
+					BaseInstruction baseinstruction = mutablecodesegment
+							.create("bipush #" + byte1);
 					vector.addElement(baseinstruction);
-					baseinstruction =
-						mutablecodesegment.create("putstatic byte "
-								+ classfile.getName() + "." + s3);
+					baseinstruction = mutablecodesegment.create(
+							"putstatic byte " + classfile.getName() + "." + s3);
 					vector.addElement(baseinstruction);
 				}
 				else if (s4.equals("C")) {
 					if (s5.charAt(0) != '\'') {
 						throw new BadJavaError(
-							"Bad Field Description: unquoted character");
+								"Bad Field Description: unquoted character");
 					}
-					BaseInstruction baseinstruction1 =
-						mutablecodesegment.create("bipush #" + s5.charAt(0));
+					BaseInstruction baseinstruction1 = mutablecodesegment
+							.create("bipush #" + s5.charAt(0));
 					vector.addElement(baseinstruction1);
-					baseinstruction1 =
-						mutablecodesegment.create("putstatic char "
-								+ classfile.getName() + "." + s3);
+					baseinstruction1 = mutablecodesegment.create(
+							"putstatic char " + classfile.getName() + "." + s3);
 					vector.addElement(baseinstruction1);
 				}
 				else if (s4.equals("D")) {
 					final double d1 = Double.parseDouble(s5);
-					BaseInstruction baseinstruction2 =
-						mutablecodesegment.create("ldc2_w D" + d1);
+					BaseInstruction baseinstruction2 = mutablecodesegment
+							.create("ldc2_w D" + d1);
 					vector.addElement(baseinstruction2);
-					baseinstruction2 =
-						mutablecodesegment.create("putstatic double "
-								+ classfile.getName() + "." + s3);
+					baseinstruction2 = mutablecodesegment
+							.create("putstatic double " + classfile.getName()
+									+ "." + s3);
 					vector.addElement(baseinstruction2);
 				}
 				else if (s4.equals("F")) {
 					final float f1 = Float.parseFloat(s5);
-					BaseInstruction baseinstruction3 =
-						mutablecodesegment.create("ldc F" + f1);
+					BaseInstruction baseinstruction3 = mutablecodesegment
+							.create("ldc F" + f1);
 					vector.addElement(baseinstruction3);
-					baseinstruction3 =
-						mutablecodesegment.create("putstatic float "
-								+ classfile.getName() + "." + s3);
+					baseinstruction3 = mutablecodesegment
+							.create("putstatic float " + classfile.getName()
+									+ "." + s3);
 					vector.addElement(baseinstruction3);
 				}
 				else if (s4.equals("I")) {
 					final int i2 = Integer.parseInt(s5);
-					BaseInstruction baseinstruction4 =
-						mutablecodesegment.create("bipush #" + i2);
+					BaseInstruction baseinstruction4 = mutablecodesegment
+							.create("bipush #" + i2);
 					vector.addElement(baseinstruction4);
-					baseinstruction4 =
-						mutablecodesegment.create("putstatic int "
-								+ classfile.getName() + "." + s3);
+					baseinstruction4 = mutablecodesegment.create(
+							"putstatic int " + classfile.getName() + "." + s3);
 					vector.addElement(baseinstruction4);
 				}
 				else if (s4.equals("J")) {
 					final long l2 = Long.parseLong(s5);
-					BaseInstruction baseinstruction5 =
-						mutablecodesegment.create("ldc2_w L" + l2);
+					BaseInstruction baseinstruction5 = mutablecodesegment
+							.create("ldc2_w L" + l2);
 					vector.addElement(baseinstruction5);
-					baseinstruction5 =
-						mutablecodesegment.create("putstatic long "
-								+ classfile.getName() + "." + s3);
+					baseinstruction5 = mutablecodesegment.create(
+							"putstatic long " + classfile.getName() + "." + s3);
 					vector.addElement(baseinstruction5);
 				}
 				else if (s4.equals("S")) {
 					final short word1 = Short.parseShort(s5);
-					BaseInstruction baseinstruction6 =
-						mutablecodesegment.create("bipush #" + word1);
+					BaseInstruction baseinstruction6 = mutablecodesegment
+							.create("bipush #" + word1);
 					vector.addElement(baseinstruction6);
-					baseinstruction6 =
-						mutablecodesegment.create("putstatic short "
-								+ classfile.getName() + "." + s3);
+					baseinstruction6 = mutablecodesegment
+							.create("putstatic short " + classfile.getName()
+									+ "." + s3);
 					vector.addElement(baseinstruction6);
 				}
 				else if (s4.equals("Z")) {
 					final boolean flag1 = Boolean.valueOf(s5).booleanValue();
-					BaseInstruction baseinstruction7 =
-						mutablecodesegment.create(flag1 ? "iconst_1"
-								: "iconst_0");
+					BaseInstruction baseinstruction7 = mutablecodesegment
+							.create(flag1 ? "iconst_1" : "iconst_0");
 					vector.addElement(baseinstruction7);
-					baseinstruction7 =
-						mutablecodesegment.create("putstatic boolean "
-								+ classfile.getName() + "." + s3);
+					baseinstruction7 = mutablecodesegment
+							.create("putstatic boolean " + classfile.getName()
+									+ "." + s3);
 					vector.addElement(baseinstruction7);
 				}
 				else if (s4.equals("Ljava/lang/String;")) {
-					BaseInstruction baseinstruction8 =
-						mutablecodesegment.create("ldc " + s5);
+					BaseInstruction baseinstruction8 = mutablecodesegment
+							.create("ldc " + s5);
 					vector.addElement(baseinstruction8);
-					baseinstruction8 =
-						mutablecodesegment.create("putstatic java.lang.String "
-								+ classfile.getName() + "." + s3);
+					baseinstruction8 = mutablecodesegment
+							.create("putstatic java.lang.String "
+									+ classfile.getName() + "." + s3);
 					vector.addElement(baseinstruction8);
 				}
 				else if (s4.charAt(0) == 'L') {
-					BaseInstruction baseinstruction8 =
-						mutablecodesegment.create("aconst_null");
+					BaseInstruction baseinstruction8 = mutablecodesegment
+							.create("aconst_null");
 					vector.addElement(baseinstruction8);
-					baseinstruction8 =
-						mutablecodesegment.create("putstatic " + s1 + " "
-								+ classfile.getName() + "." + s3);
+					baseinstruction8 = mutablecodesegment.create("putstatic "
+							+ s1 + " " + classfile.getName() + "." + s3);
 					vector.addElement(baseinstruction8);
 				}
 				else if (s4.charAt(0) == '[') {
@@ -292,7 +287,7 @@ public final class FieldInfo {
 				}
 				else {
 					throw new BadJavaError(
-						"Cannot initialise variable of type " + s1);
+							"Cannot initialise variable of type " + s1);
 				}
 				vector.addElement(mutablecodesegment.create("return"));
 			}
@@ -300,14 +295,14 @@ public final class FieldInfo {
 				throw new BadJavaError("Unparsed initialiser <" + s5 + ">");
 			}
 			catch (final InstructionFormatException instructionformatexception) {
-				throw new BadJavaError(
-					"Bad Instruction in static initialiser <"
-							+ instructionformatexception + ">");
+				throw new BadJavaError("Bad Instruction in static initialiser <"
+						+ instructionformatexception + ">");
 			}
 			codeattrinfo.setCode(mutablecodesegment.getCode());
 			codeattrinfo.setExceptions(mutablecodesegment.getExcTable());
 		}
 	}
+
 	FieldInfo(final ConstantPool constantpool) {
 		this.d_cp = constantpool;
 		this.d_accessFlags = -1;
@@ -315,6 +310,7 @@ public final class FieldInfo {
 		this.d_idxDescriptor = -1;
 		this.d_attrs = new AttrInfoList(constantpool, 2);
 	}
+
 	FieldInfo(final ConstantPool constantpool, String s) {
 		this.d_cp = constantpool;
 		s = s.trim();
@@ -364,47 +360,59 @@ public final class FieldInfo {
 		}
 		this.d_attrs = new AttrInfoList(constantpool, 2);
 	}
+
 	public int getAccess() {
 		return this.d_accessFlags;
 	}
+
 	public AttrInfoList getAttrs() {
 		return this.d_attrs;
 	}
+
 	public String getDesc() {
 		return this.d_cp.getAsString(this.d_idxDescriptor);
 	}
+
 	public String getName() {
 		return this.d_cp.getAsString(this.d_idxName);
 	}
+
 	public String getType() {
-		return CPUtils.internal2java(this.d_cp
-			.getAsString(this.d_idxDescriptor));
+		return CPUtils
+				.internal2java(this.d_cp.getAsString(this.d_idxDescriptor));
 	}
+
 	void read(final DataInputStream datainputstream) throws IOException {
 		this.d_accessFlags = datainputstream.readShort();
 		this.d_idxName = datainputstream.readShort();
 		this.d_idxDescriptor = datainputstream.readShort();
 		this.d_attrs.read(datainputstream);
 	}
+
 	public void setAccess(final int i) {
 		this.d_accessFlags = i;
 	}
+
 	public void setAttrs(final AttrInfoList attrinfolist) {
 		this.d_attrs = attrinfolist;
 	}
+
 	public void setName(final String s) {
 		((ConstantPool.Utf8Entry) this.d_cp.get(this.d_idxName)).setValue(s);
 	}
+
 	public void setType(final String s) {
 		final String s1 = CPUtils.java2internal(s);
 		((ConstantPool.Utf8Entry) this.d_cp.get(this.d_idxDescriptor))
-			.setValue(s1);
+				.setValue(s1);
 	}
+
 	void sort(final int ai[]) {
 		this.d_idxName = ai[this.d_idxName];
 		this.d_idxDescriptor = ai[this.d_idxDescriptor];
 		this.d_attrs.sort(ai);
 	}
+
 	public String toString() {
 		final StringBuffer stringbuffer = new StringBuffer();
 		if (Access.isPublic(this.d_accessFlags)) {
@@ -439,6 +447,7 @@ public final class FieldInfo {
 
 		return stringbuffer.toString();
 	}
+
 	BitSet uses() {
 		final BitSet bitset = new BitSet(this.d_cp.length());
 		bitset.set(this.d_idxName);
@@ -446,6 +455,7 @@ public final class FieldInfo {
 		bitset.or(this.d_attrs.uses());
 		return bitset;
 	}
+
 	void write(final DataOutputStream dataoutputstream) throws IOException {
 		dataoutputstream.writeShort(this.d_accessFlags);
 		dataoutputstream.writeShort(this.d_idxName);

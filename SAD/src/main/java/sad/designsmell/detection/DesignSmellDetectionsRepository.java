@@ -58,7 +58,7 @@ public class DesignSmellDetectionsRepository implements IRepository {
 
 	private DesignSmellDetectionsRepository() {
 		try {
-			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
+			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStreams(
 					"sad.designsmell.detection.IDesignSmellDetection",
 					FileRepositoryFactory.getInstance().getFileRepository(this)
 							.getFiles("sad/designsmell/detection/repository/",

@@ -47,7 +47,7 @@ public class VisitorsRepository implements IRepository {
 		// from the applet viewer.
 		try {
 			final ClassFile[] classFilesGenerators = SubtypeLoader
-					.loadSubtypesFromStream("padl.visitor.IGenerator",
+					.loadSubtypesFromStreams("padl.visitor.IGenerator",
 							FileRepositoryFactory.getInstance()
 									.getFileRepository(this)
 									.getFiles("padl/visitor/repository/",
@@ -88,7 +88,7 @@ public class VisitorsRepository implements IRepository {
 			listOfGenerators.toArray(this.generators);
 
 			final ClassFile[] classFilesWalkers = SubtypeLoader
-					.loadSubtypesFromStream("padl.visitor.IWalker",
+					.loadSubtypesFromStreams("padl.visitor.IWalker",
 							FileRepositoryFactory.getInstance()
 									.getFileRepository(this)
 									.getFiles("padl/visitor/repository/",

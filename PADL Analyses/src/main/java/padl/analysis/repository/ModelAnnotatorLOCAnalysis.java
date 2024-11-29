@@ -40,6 +40,7 @@ import util.io.ProxyConsole;
  * @deprecated in favor of the new set of projects "PADL Statement Creator".
  * @since 2008/10/13
  */
+@Deprecated
 public class ModelAnnotatorLOCAnalysis implements IAnalysis {
 	private final BCELInstructionFinder instFinder;
 

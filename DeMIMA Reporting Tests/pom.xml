@@ -1,5 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>jasperreports</groupId>
 	<artifactId>jasperreports</artifactId>
@@ -18,7 +19,8 @@
 	<scm>
 		<connection>scm:svn:http://scm.jasperforge.org/svn/repos/jasperreports</connection>
 		<tag>jr-3-0-1</tag>
-		<url>http://jasperforge.org/sf/scm/do/viewRepositorySource/projects.jasperreports/scm.jasperreports</url>
+		<url>
+			http://jasperforge.org/sf/scm/do/viewRepositorySource/projects.jasperreports/scm.jasperreports</url>
 	</scm>
 	<repositories>
 		<repository>
@@ -39,6 +41,7 @@
 			</resource>
 		</resources>
 		<plugins>
+			<!--
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -47,6 +50,7 @@
 					<target>1.4</target>
 				</configuration>
 			</plugin>
+			-->
 		</plugins>
 	</build>
 	<dependencies>
