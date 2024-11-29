@@ -41,7 +41,7 @@ public final class AdapterMotif {
 			new Variable(pb, "target", true, Manager.build(rdg
 				.computeReducedDomain(Rule.A_T)));
 		final Variable adapter = new Variable(pb, "adapter", true);
-		final Variable adaptee = new Variable(pb, "adpatee", true);
+		final Variable adaptee = new Variable(pb, "adaptee", true);
 		final Variable client = new Variable(pb, "client", true);
 
 		pb.addVar(target);
