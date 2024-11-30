@@ -49,7 +49,7 @@ public class MicroPatternDetectionsRepository implements IRepository {
 			// from the applet viewer.
 			try {
 				final ClassFile[] classFiles = SubtypeLoader
-						.loadSubtypesFromStream(
+						.loadSubtypesFromStreams(
 								"padl.micropattern.IMicroPatternDetection",
 								FileRepositoryFactory.getInstance()
 										.getFileRepository(this).getFiles(

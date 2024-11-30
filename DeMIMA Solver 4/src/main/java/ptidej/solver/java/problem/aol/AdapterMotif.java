@@ -35,7 +35,7 @@ public final class AdapterMotif {
 		final Variable client = new Variable(pb, "client", false);
 		final Variable target = new Variable(pb, "target", true);
 		final Variable adapter = new Variable(pb, "adapter", false);
-		final Variable adaptee = new Variable(pb, "adpatee", false);
+		final Variable adaptee = new Variable(pb, "adaptee", false);
 
 		pb.addVar(target);
 		pb.addVar(adapter);

@@ -16,6 +16,16 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.13.0</version>
+				<configuration>
+					<compilerArgs>
+						<arg>-proc:none</arg>
+					</compilerArgs>
+				</configuration>
+			</plugin>
 			<!-- Must generate the test-jar for the tests in All Ptidej Tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -33,7 +43,7 @@
 	</build>
 
 	<dependencies>
-		
+
 		<!-- Main dependecy -->
 		<dependency>
 			<groupId>net.ptidej.modec</groupId>

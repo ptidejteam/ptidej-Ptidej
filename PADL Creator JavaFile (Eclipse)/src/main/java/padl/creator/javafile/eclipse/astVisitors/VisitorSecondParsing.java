@@ -582,13 +582,13 @@ public class VisitorSecondParsing extends ExtendedASTVisitor {
 		else {
 			final String typeName = PadlParserUtil.getTypeName(type, true);
 			final String fieldName = node.getName().toString();
-			final int dim = PadlParserUtil.getDim(type);
+			final int cardinality = PadlParserUtil.getCardinality(type);
 			final IField field =
 				this.padlModel.getFactory().createField(
 					fieldName.toCharArray(),
 					fieldName.toCharArray(),
 					typeName.toCharArray(),
-					dim);
+					cardinality);
 
 			field.setVisibility(((FieldDeclaration) node.getParent())
 				.getModifiers());

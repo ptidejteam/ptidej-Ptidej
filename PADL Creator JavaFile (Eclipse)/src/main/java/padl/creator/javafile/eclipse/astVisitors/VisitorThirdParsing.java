@@ -966,7 +966,7 @@ public class VisitorThirdParsing extends ExtendedASTVisitor {
 		else if (expression != null
 				&& expression.resolveTypeBinding() != null) {
 			cardinality = PadlParserUtil
-					.getDim(expression.resolveTypeBinding());
+					.getCardinality(expression.resolveTypeBinding());
 		}
 		else {
 			cardinality = Constants.CARDINALITY_ONE;
@@ -1326,7 +1326,7 @@ public class VisitorThirdParsing extends ExtendedASTVisitor {
 			return;
 		}
 
-		final int cardinality = PadlParserUtil.getDim(typeBinding);
+		final int cardinality = PadlParserUtil.getCardinality(typeBinding);
 		final int visibility = this.myCurrentOperation.getVisibility();
 		final IMethodInvocation methodInvocation = this.padlModel.getFactory()
 				.createMethodInvocation(type, cardinality, visibility,

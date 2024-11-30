@@ -44,7 +44,7 @@ public class UILayoutsRepository implements IRepository {
 		// thrown when attempting loading analyses
 		// from the applet viewer.
 		try {
-			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStream(
+			final ClassFile[] classFiles = SubtypeLoader.loadSubtypesFromStreams(
 					"ptidej.ui.layout.IUILayout",
 					FileRepositoryFactory.getInstance().getFileRepository(this)
 							.getFiles("ptidej/ui/layout/repository/", ".class"),

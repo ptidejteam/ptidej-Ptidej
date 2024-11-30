@@ -39,7 +39,7 @@ public class ConstituentsRepository implements IRepository {
 	public ClassFile[] getElements() {
 		if (this.elements == null) {
 			try {
-				this.elements = SubtypeLoader.loadSubtypesFromStream(
+				this.elements = SubtypeLoader.loadSubtypesFromStreams(
 						"padl.kernel.IElementMarker", this.getFileRepository()
 								.getFiles("padl/kernel/impl/", ".class"),
 						"padl.kernel.impl", ".class");
@@ -54,7 +54,7 @@ public class ConstituentsRepository implements IRepository {
 	public ClassFile[] getEntities() {
 		if (this.elements == null) {
 			try {
-				this.entities = SubtypeLoader.loadSubtypesFromStream(
+				this.entities = SubtypeLoader.loadSubtypesFromStreams(
 						"padl.kernel.IEntityMarker", this.getFileRepository()
 								.getFiles("padl/kernel/impl/", ".class"),
 						"padl.kernel.impl", ".class");

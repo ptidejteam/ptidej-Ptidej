@@ -19,6 +19,7 @@ public final class AnalysisEvent implements IEvent {
 	/**
 	 * @deprecated by AnalysisEvent(final char[])
 	 */
+	@Deprecated
 	public AnalysisEvent(final String aName) {
 		this.name = aName.toCharArray();
 		this.elementType = new char[0];
@@ -26,6 +27,7 @@ public final class AnalysisEvent implements IEvent {
 	/**
 	 * @deprecated by AnalysisEvent(final char[], final char[])
 	 */
+	@Deprecated
 	public AnalysisEvent(final char[] aName) {
 		this.name = aName;
 		this.elementType = new char[0];
