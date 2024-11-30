@@ -63,7 +63,7 @@ public final class POMCalculator implements IWalker {
 			"COMPUTE_TIME",
 			POMCalculator.class,
 			new Object[] {
-					new Long(System.currentTimeMillis() - this.startTime),
+					Long.valueOf(System.currentTimeMillis() - this.startTime),
 					this.excelOutput }));
 	}
 	public void close(final IClass aClass) {

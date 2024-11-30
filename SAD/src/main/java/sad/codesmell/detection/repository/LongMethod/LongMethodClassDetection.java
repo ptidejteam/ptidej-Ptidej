@@ -71,14 +71,14 @@ public class LongMethodClassDetection extends AbstractCodeSmellDetection impleme
 				final IClass aClass = (IClass) entity;
 				IClass classOfLongMethodClass = null;
 				IMethod LongMethodClass = null;
-				Integer longValue = new Integer(0);
+				Integer longValue = Integer.valueOf(0);
 	
 				// for each class, we get the LongMethodClass
 				final Iterator iter2 = aClass.getIteratorOnConstituents(IMethod.class);
 				while (iter2.hasNext()) {
 					final IMethod aMethod = (IMethod) iter2.next();
 					if (!aMethod.isAbstract() && (aMethod.getVisibility() & Modifier.NATIVE) == 0) {
-						final Integer value = new Integer(aMethod.getCodeLines().length);
+						final Integer value = Integer.valueOf(aMethod.getCodeLines().length);
 		
 						if (!(value == null)) {
 							if (value.compareTo(longValue) > 0) {
@@ -94,7 +94,7 @@ public class LongMethodClassDetection extends AbstractCodeSmellDetection impleme
 							// longest method
 							mapOfClassesWithValues.put(
 								classOfLongMethodClass,
-								new Double[] {new Double(longValue.doubleValue()), new Double(0)});
+								new Double[] {Double.valueOf(longValue.doubleValue()), Double.valueOf(0)});
 						}
 					}
 				}// End of iterator of methods
@@ -124,8 +124,8 @@ public class LongMethodClassDetection extends AbstractCodeSmellDetection impleme
 				
 
 HashMap thresholdMap = new HashMap();
-thresholdMap.put("METHOD_LOC_UpperQuartile", new Double(boxPlot.getUpperQuartile()));
-thresholdMap.put("METHOD_LOC_MaxBound", new Double(boxPlot.getMaxBound()));
+thresholdMap.put("METHOD_LOC_UpperQuartile", Double.valueOf(boxPlot.getUpperQuartile()));
+thresholdMap.put("METHOD_LOC_MaxBound", Double.valueOf(boxPlot.getMaxBound()));
 				mp.addProperty(new MetricProperty("LOC", LOC, thresholdMap));
 				classProp.addProperty(mp);
 				

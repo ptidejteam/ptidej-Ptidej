@@ -55,7 +55,7 @@ public class CacheManager {
 					anEntity)) {
 
 				this.cache.put(this.getBinaryMetricKey(aMetric, anEntity,
-						anotherEntity), new Double(aValue));
+						anotherEntity), Double.valueOf(aValue));
 			}
 		}
 		else {
@@ -80,7 +80,7 @@ public class CacheManager {
 			final IFirstClassEntity anEntity, final double aValue) {
 
 		this.cache.put(this.getUnaryMetricKey(aMetric, anEntity),
-				new Double(aValue));
+				Double.valueOf(aValue));
 	}
 
 	private String getBinaryMetricKey(final IBinaryMetric aMetric,

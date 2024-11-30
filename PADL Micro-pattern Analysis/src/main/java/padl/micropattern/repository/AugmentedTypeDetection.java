@@ -89,7 +89,7 @@ public final class AugmentedTypeDetection extends AbstractMicroPatternDetection
 								.getDisplayTypeName());
 							typeMap.put(
 								((IField) anOtherEntity).getDisplayTypeName(),
-								new Integer(intValue));
+								Integer.valueOf(intValue));
 
 							if (intValue == 3) {
 								AugmentedField = true;
@@ -98,7 +98,7 @@ public final class AugmentedTypeDetection extends AbstractMicroPatternDetection
 						else {
 							typeMap.put(
 								((IField) anOtherEntity).getDisplayTypeName(),
-								new Integer(1));
+								Integer.valueOf(1));
 						}
 					}
 				}

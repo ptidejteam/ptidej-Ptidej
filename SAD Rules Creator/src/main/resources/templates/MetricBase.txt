@@ -12,7 +12,7 @@ final Set <CODESMELL>ClassesFound = new HashSet();
 
 				<METRIC_COMPUTING>
 				//final double <METRIC> = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("<METRIC>")).compute(anAbstractLevelModel, aClass);
-				//mapOf<CODESMELL>Values.put(aClass, new Double(<METRIC>));
+				//mapOf<CODESMELL>Values.put(aClass, Double.valueOf(<METRIC>));
 			}
 		}
 

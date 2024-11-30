@@ -76,7 +76,7 @@ public class ParentClassProvidesProtectedDetection extends AbstractCodeSmellDete
 							new ClassProperty(aClass));
 						
 						HashMap thresholdMap = new HashMap();
-						thresholdMap.put("USELESS", new Double(1.0));
+						thresholdMap.put("USELESS", Double.valueOf(1.0));
 						
 						dc.getClassProperty().addProperty(new MetricProperty("USELESS", 
 							((IUnaryMetric) MetricsRepository.getInstance().getMetric("USELESS")).compute(anAbstractLevelModel, aClass), thresholdMap));

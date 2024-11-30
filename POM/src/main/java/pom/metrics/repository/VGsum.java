@@ -41,7 +41,7 @@ public class VGsum extends AbstractMetric implements IMetric, IUnaryMetric {
 		}
 
 		public Object getResult() {
-			return new Integer(this.mcCabe);
+			return Integer.valueOf(this.mcCabe);
 		}
 
 		public final void unknownConstituentHandler(

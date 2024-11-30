@@ -71,14 +71,14 @@ public class LongMethodDetection extends AbstractCodeSmellDetection implements I
 				final IClass aClass = (IClass) entity;
 				IClass classOfLongMethod = null;
 				IMethod LongMethod = null;
-				Integer longValue = new Integer(0);
+				Integer longValue = Integer.valueOf(0);
 	
 				// for each class, we get the LongMethod
 				final Iterator iter2 = aClass.getIteratorOnConstituents(IMethod.class);
 				while (iter2.hasNext()) {
 					final IMethod aMethod = (IMethod) iter2.next();
 					if (!aMethod.isAbstract() && (aMethod.getVisibility() & Modifier.NATIVE) == 0) {
-						final Integer value = new Integer(aMethod.getCodeLines().length);
+						final Integer value = Integer.valueOf(aMethod.getCodeLines().length);
 		
 						if (!(value == null)) {
 							if (value.compareTo(longValue) > 0) {
@@ -94,7 +94,7 @@ public class LongMethodDetection extends AbstractCodeSmellDetection implements I
 							// longest method
 							mapOfClassesWithValues.put(
 								classOfLongMethod,
-								new Double[] {new Double(longValue.doubleValue()), new Double(0)});
+								new Double[] {Double.valueOf(longValue.doubleValue()), Double.valueOf(0)});
 						}
 					}
 				}// End of iterator of methods
@@ -124,7 +124,7 @@ public class LongMethodDetection extends AbstractCodeSmellDetection implements I
 				
 
 HashMap thresholdMap = new HashMap();
-thresholdMap.put("METHOD_LOC_MaxBound", new Double(boxPlot.getMaxBound()));
+thresholdMap.put("METHOD_LOC_MaxBound", Double.valueOf(boxPlot.getMaxBound()));
 				mp.addProperty(new MetricProperty("LOC", LOC, thresholdMap));
 				classProp.addProperty(mp);
 				

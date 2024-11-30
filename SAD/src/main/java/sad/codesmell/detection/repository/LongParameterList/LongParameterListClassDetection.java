@@ -74,9 +74,9 @@ public class LongParameterListClassDetection extends AbstractCodeSmellDetection 
 
 				
 	final double NOParam = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(anAbstractLevelModel, aClass);
-	mapOfLongParameterListClassValues.put(aClass, new Double[] {new Double(NOParam), new Double(0)});
+	mapOfLongParameterListClassValues.put(aClass, new Double[] {Double.valueOf(NOParam), Double.valueOf(0)});
 				//final double NOParam = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(anAbstractLevelModel, aClass);
-				//mapOfLongParameterListClassValues.put(aClass, new Double(NOParam));
+				//mapOfLongParameterListClassValues.put(aClass, Double.valueOf(NOParam));
 			}
 		}
 
@@ -99,7 +99,7 @@ public class LongParameterListClassDetection extends AbstractCodeSmellDetection 
 	final double NOParam = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(anAbstractLevelModel, aLongParameterListClassClass);
 
 HashMap thresholdMap = new HashMap();
-thresholdMap.put("NOParam_MaxBound", new Double(boxPlot.getMaxBound()));
+thresholdMap.put("NOParam_MaxBound", Double.valueOf(boxPlot.getMaxBound()));
 					final Double fuzziness = ((Double[])mapOfLongParameterListClassClassesFromBoxPlot.get(aLongParameterListClassClass))[1];
 					classProp.addProperty(new MetricProperty("NOParam", 
 						NOParam, 

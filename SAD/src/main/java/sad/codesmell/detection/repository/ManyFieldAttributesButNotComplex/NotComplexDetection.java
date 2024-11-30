@@ -74,9 +74,9 @@ public class NotComplexDetection extends AbstractCodeSmellDetection implements I
 
 				
 	final double WMC = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("WMC")).compute(anAbstractLevelModel, aClass);
-	mapOfNotComplexValues.put(aClass, new Double[] {new Double(WMC), new Double(0)});
+	mapOfNotComplexValues.put(aClass, new Double[] {Double.valueOf(WMC), Double.valueOf(0)});
 				//final double WMC = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("WMC")).compute(anAbstractLevelModel, aClass);
-				//mapOfNotComplexValues.put(aClass, new Double(WMC));
+				//mapOfNotComplexValues.put(aClass, Double.valueOf(WMC));
 			}
 		}
 
@@ -99,8 +99,8 @@ public class NotComplexDetection extends AbstractCodeSmellDetection implements I
 	final double WMC = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("WMC")).compute(anAbstractLevelModel, aNotComplexClass);
 
 HashMap thresholdMap = new HashMap();
-thresholdMap.put("WMC_MinBound", new Double(boxPlot.getMinBound()));
-thresholdMap.put("WMC_LowerQuartile", new Double(boxPlot.getLowerQuartile()));
+thresholdMap.put("WMC_MinBound", Double.valueOf(boxPlot.getMinBound()));
+thresholdMap.put("WMC_LowerQuartile", Double.valueOf(boxPlot.getLowerQuartile()));
 					final Double fuzziness = ((Double[])mapOfNotComplexClassesFromBoxPlot.get(aNotComplexClass))[1];
 					classProp.addProperty(new MetricProperty("WMC", 
 						WMC, 

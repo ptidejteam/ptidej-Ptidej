@@ -75,9 +75,9 @@ public class LargeClassDetection extends AbstractCodeSmellDetection implements I
 				
 	final double NMD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(anAbstractLevelModel, aClass);
 	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aClass);
-	mapOfLargeClassValues.put(aClass, new Double[] {new Double (NMD + NAD), new Double(0)});
+	mapOfLargeClassValues.put(aClass, new Double[] {Double.valueOf (NMD + NAD), Double.valueOf(0)});
 				//final double NMD_NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD_NAD")).compute(anAbstractLevelModel, aClass);
-				//mapOfLargeClassValues.put(aClass, new Double(NMD_NAD));
+				//mapOfLargeClassValues.put(aClass, Double.valueOf(NMD_NAD));
 			}
 		}
 
@@ -101,8 +101,8 @@ public class LargeClassDetection extends AbstractCodeSmellDetection implements I
 	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aLargeClassClass);
 
 HashMap thresholdMap = new HashMap();
-thresholdMap.put("NMD_NAD_LowerQuartile", new Double(boxPlot.getLowerQuartile()));
-thresholdMap.put("NMD_NAD_InterQuartileRange", new Double(boxPlot.getInterQuartileRange()));
+thresholdMap.put("NMD_NAD_LowerQuartile", Double.valueOf(boxPlot.getLowerQuartile()));
+thresholdMap.put("NMD_NAD_InterQuartileRange", Double.valueOf(boxPlot.getInterQuartileRange()));
 					final Double fuzziness = ((Double[])mapOfLargeClassClassesFromBoxPlot.get(aLargeClassClass))[1];
 					classProp.addProperty(new MetricProperty("NMD_NAD", 
 						NMD+NAD, 

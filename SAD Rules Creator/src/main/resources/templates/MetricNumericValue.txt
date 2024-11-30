@@ -14,7 +14,7 @@ final Set classes<CODESMELL> = new HashSet();
 							new ClassProperty(aClass));
 						
 						HashMap thresholdMap = new HashMap();
-						thresholdMap.put("<METRIC>", new Double(<NUMERIC_VALUE>));
+						thresholdMap.put("<METRIC>", Double.valueOf(<NUMERIC_VALUE>));
 						
 						dc.getClassProperty().addProperty(new MetricProperty("<METRIC>", 
 							((IUnaryMetric) MetricsRepository.getInstance().getMetric("<METRIC>")).compute(anAbstractLevelModel, aClass), thresholdMap));

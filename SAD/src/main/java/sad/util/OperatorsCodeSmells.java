@@ -110,7 +110,7 @@ public final class OperatorsCodeSmells {
 	//
 	//		return resultOfIntersection;
 	//	}
-
+	@Deprecated
 	public ICodeSmell intersectionCodeSmell(
 		final ICodeSmell csA,
 		final ICodeSmell csB) {

@@ -52,7 +52,7 @@ public class TestOperators extends TestCase {
 		super.setUp();
 		this.setA = new ArrayList(this.A.length);
 		for (int i = 0; i < this.A.length; i++) {
-			this.setA.add(i, new Integer(this.A[i]));
+			this.setA.add(i, Integer.valueOf(this.A[i]));
 		}
 		//		System.out.print("A:");		
 		//		displayArrayList(setA);		
@@ -60,7 +60,7 @@ public class TestOperators extends TestCase {
 
 		this.setB = new ArrayList(this.B.length);
 		for (int i = 0; i < this.B.length; i++) {
-			this.setB.add(i, new Integer(this.B[i]));
+			this.setB.add(i, Integer.valueOf(this.B[i]));
 		}
 		//		System.out.print("B:");
 		//		displayArrayList(setB);
@@ -116,19 +116,19 @@ public class TestOperators extends TestCase {
 	}
 
 	public final void testBelongTo() {
-		assertTrue(this.operators.belongTo(new Integer(7), this.setA));
-		assertTrue(!this.operators.belongTo(new Integer(0), this.setB));
+		assertTrue(this.operators.belongTo(Integer.valueOf(7), this.setA));
+		assertTrue(!this.operators.belongTo(Integer.valueOf(0), this.setB));
 	}
 
 	public final void testIncludeOrEqual() {
 		int[] array = { 10, 11, 12, 13, 14 };
 		this.setA.removeAll(arrayToList(array));
-		this.setB.remove(new Integer(15));
+		this.setB.remove(Integer.valueOf(15));
 		Assert.assertTrue(this.operators.includeOrEqual(this.setB, this.setA));
 	}
 
 	public final void testInclude() {
-		this.setB.remove(new Integer(15));
+		this.setB.remove(Integer.valueOf(15));
 		Assert.assertTrue(this.operators.include(this.setB, this.setA));
 	}
 
@@ -148,7 +148,7 @@ public class TestOperators extends TestCase {
 	ArrayList arrayToList(int[] array) {
 		ArrayList result = new ArrayList();
 		for (int i = 0; i < array.length; i++)
-			result.add(i, new Integer(array[i]));
+			result.add(i, Integer.valueOf(array[i]));
 		return result;
 	}
 

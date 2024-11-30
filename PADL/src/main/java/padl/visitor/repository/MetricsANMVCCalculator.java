@@ -63,7 +63,7 @@ public class MetricsANMVCCalculator implements IWalker {
 				"Average Number of Member Variables per Class: " + this.anmvc);
 	}
 	public void close(final IClass aClass) {
-		this.numberOfFieldsPerClass.add(new Integer(this.numberOfFields));
+		this.numberOfFieldsPerClass.add(Integer.valueOf(this.numberOfFields));
 	}
 	public void close(final IConstructor aConstructor) {
 	}
@@ -93,7 +93,7 @@ public class MetricsANMVCCalculator implements IWalker {
 		return "ANMV metric";
 	}
 	public Object getResult() {
-		return new Integer(this.anmvc);
+		return Integer.valueOf(this.anmvc);
 	}
 	public void open(final IAbstractModel anAbstractModel) {
 		this.numberOfFieldsPerClass = new Vector();

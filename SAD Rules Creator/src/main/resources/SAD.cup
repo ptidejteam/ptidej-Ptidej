@@ -204,23 +204,23 @@ content_rule    ::= operator:op string:op1 string:op2
 
 operator        ::= INTER
 					 {:
-						RESULT = new Integer(Constants.OPERATOR_INTER);
+						RESULT = Integer.valueOf(Constants.OPERATOR_INTER);
 					:}
 					 | UNION
 					 {:
-						RESULT = new Integer(Constants.OPERATOR_UNION);
+						RESULT = Integer.valueOf(Constants.OPERATOR_UNION);
 					:}
 					 | DIFF
 					 {:
-						RESULT = new Integer(Constants.OPERATOR_DIFF);
+						RESULT = Integer.valueOf(Constants.OPERATOR_DIFF);
 					 :}
 					 | INCL
 					 {:
-						RESULT = new Integer(Constants.OPERATOR_INCL);
+						RESULT = Integer.valueOf(Constants.OPERATOR_INCL);
 					 :}
 					 | NEG
 					 {:
-						RESULT = new Integer(Constants.OPERATOR_NEG);
+						RESULT = Integer.valueOf(Constants.OPERATOR_NEG);
 					 :};
 
 /* --------- ATTRIBUTES --------- */
@@ -284,7 +284,7 @@ attribute           ::= LPAREN METRIC TWO_DOT id_metric:newMetric COLON comparis
 						:}
 						| LPAREN STRUCT TWO_DOT id_struct_param:st COLON string:val RPAREN
 	                    {:
-	                    	final IStruct struct = Factory.getInstance().createStruct("STRUCT." + Math.random(), ((Integer)st).intValue(), new Integer(val).intValue());
+	                    	final IStruct struct = Factory.getInstance().createStruct("STRUCT." + Math.random(), ((Integer)st).intValue(), Integer.valueOf(val).intValue());
 							this.parser.addToListOfAttributes(struct);
     	                :}
     	                | LPAREN STRUCT TWO_DOT id_struct_noparam:st RPAREN 
@@ -315,75 +315,75 @@ id_metric           ::= id_metric:op1 PLUS id_metric:op2
 					  
 value_ordi          ::= VERY_HIGH
 					 {:
-						RESULT = new Integer(Constants.VERY_HIGH);
+						RESULT = Integer.valueOf(Constants.VERY_HIGH);
 					:}
 					 | HIGH
 					 {: 
-						RESULT = new Integer(Constants.HIGH);
+						RESULT = Integer.valueOf(Constants.HIGH);
 					:}
 					 | MEDIUM
 					 {:
-						RESULT = new Integer(Constants.MEDIUM);
+						RESULT = Integer.valueOf(Constants.MEDIUM);
 					:} 
 					 | LOW
 					 {:
-						RESULT = new Integer(Constants.LOW);
+						RESULT = Integer.valueOf(Constants.LOW);
 					:}
 					 | VERY_LOW
 					 {:
-						RESULT = new Integer(Constants.VERY_LOW);
+						RESULT = Integer.valueOf(Constants.VERY_LOW);
 					:}
 					 | NONE
 					 {:
-						RESULT = new Integer(Constants.NONE);
+						RESULT = Integer.valueOf(Constants.NONE);
 					:}
 					| string:dv
 					 {:
-					 	RESULT = new Double(dv);
+					 	RESULT = Double.valueOf(dv);
 					 :} ;
 
 comparison_operator ::= INF
 					 {:
-						RESULT = new Integer(Constants.INF);
+						RESULT = Integer.valueOf(Constants.INF);
 					:}
 					 | INF_EQ
 					 {: 
-						RESULT = new Integer(Constants.INF_EQ);
+						RESULT = Integer.valueOf(Constants.INF_EQ);
 					:}
 					 | EQ
 					 {:
-						RESULT = new Integer(Constants.EQ);
+						RESULT = Integer.valueOf(Constants.EQ);
 					:} 
 					 | SUP
 					 {:
-						RESULT = new Integer(Constants.SUP);
+						RESULT = Integer.valueOf(Constants.SUP);
 					:}
 					 | SUP_EQ
 					 {:
-						RESULT = new Integer(Constants.SUP_EQ);
+						RESULT = Integer.valueOf(Constants.SUP_EQ);
 					:}
 					 | NOT_EQ
 					 {:
-						RESULT = new Integer(Constants.NOT_EQ);
+						RESULT = Integer.valueOf(Constants.NOT_EQ);
 					 :} ;
 		
 fuzziness			::= string:value
 					 {:
-						RESULT = new Double(value);
+						RESULT = Double.valueOf(value);
 					:} ;
 					
 								
 id_semantic         ::= CLASSNAME
 					 {:
-						RESULT = new Integer(Constants.CLASS_NAME);
+						RESULT = Integer.valueOf(Constants.CLASS_NAME);
 					:}
 					 | METHODNAME:sy
 					 {:
-						RESULT = new Integer(Constants.METHOD_NAME);
+						RESULT = Integer.valueOf(Constants.METHOD_NAME);
 					:}
 					 | FIELDNAME:sy
 					 {:
-						RESULT = new Integer(Constants.FIELD_NAME);;
+						RESULT = Integer.valueOf(Constants.FIELD_NAME);;
 					 :};
 					
 value_semantic      ::= LBRACE cont_value_semantic RBRACE;
@@ -398,46 +398,46 @@ cont_value_semantic ::= string:value_semantic
 								
 id_struct_param		::= METHOD_ACCESSOR
 					{:
-						RESULT = new Integer(Constants.METHOD_ACCESSOR);
+						RESULT = Integer.valueOf(Constants.METHOD_ACCESSOR);
 					:}
 					| PRIVATE_FIELD
 					{:
-						RESULT = new Integer(Constants.PRIVATE_FIELD);
+						RESULT = Integer.valueOf(Constants.PRIVATE_FIELD);
 					:}
 					| PUBLIC_FIELD
 					{:
-						RESULT = new Integer(Constants.PUBLIC_FIELD);
+						RESULT = Integer.valueOf(Constants.PUBLIC_FIELD);
 					:}
 					| MULTIPLE_INTERFACE
 					{:
-						RESULT = new Integer(Constants.MULTIPLE_INTERFACE);
+						RESULT = Integer.valueOf(Constants.MULTIPLE_INTERFACE);
 					:}
 					| GLOBAL_VARIABLE
 					{:
-						RESULT = new Integer(Constants.GLOBAL_VARIABLE);
+						RESULT = Integer.valueOf(Constants.GLOBAL_VARIABLE);
 					:}
 					| IS_ABSTRACT
 					{:
-						RESULT = new Integer(Constants.IS_ABSTRACT);
+						RESULT = Integer.valueOf(Constants.IS_ABSTRACT);
 					:};
 
 /*value_struct	    ::= string:value
 					 {:
-						RESULT = new Integer(value);
+						RESULT = Integer.valueOf(value);
 					:};*/
 	
 					
 id_struct_noparam	::= METHOD_NO_PARAM
 					{:
-						RESULT = new Integer(Constants.METHOD_NO_PARAM);
+						RESULT = Integer.valueOf(Constants.METHOD_NO_PARAM);
 					:}
 					| DIFFERENT_PARAMETER
 					{:
-						RESULT = new Integer(Constants.DIFFERENT_PARAMETER);
+						RESULT = Integer.valueOf(Constants.DIFFERENT_PARAMETER);
 					:}
 					| ONE_METHOD
 					{:
-						RESULT = new Integer(Constants.ONE_METHOD);
+						RESULT = Integer.valueOf(Constants.ONE_METHOD);
 					:};
 
 /* --------- RELATIONSHIPS --------- */
@@ -494,36 +494,36 @@ relationship        ::= name_relation:nr TWO_DOT string:name FROM TWO_DOT string
 					:};
 name_relation       ::= ASSOC
 					{:
-                    	RESULT = new Integer(Constants.RELATION_ASSOC);
+                    	RESULT = Integer.valueOf(Constants.RELATION_ASSOC);
                     :}
                        | AGGREG
                     {:
-                    	RESULT = new Integer(Constants.RELATION_AGGREG);
+                    	RESULT = Integer.valueOf(Constants.RELATION_AGGREG);
                     :}
                       | COMPOS
                     {:
-                    	RESULT = new Integer(Constants.RELATION_COMPOS);
+                    	RESULT = Integer.valueOf(Constants.RELATION_COMPOS);
                     :}
                       | INHERIT
                     {:
-                    	RESULT = new Integer(Constants.RELATION_INHERIT);
+                    	RESULT = Integer.valueOf(Constants.RELATION_INHERIT);
                     :};
                     
 cardinality         ::= ONE
 					{:
-						RESULT = new Integer(Constants.CARDINALITY_ONE);
+						RESULT = Integer.valueOf(Constants.CARDINALITY_ONE);
 					:} 
 					| MANY 
 					{:
-						RESULT = new Integer(Constants.CARDINALITY_MANY);
+						RESULT = Integer.valueOf(Constants.CARDINALITY_MANY);
 					:}
 					| ONE_OR_MANY 
 					{:
-						RESULT = new Integer(Constants.CARDINALITY_ONE_OR_MANY);
+						RESULT = Integer.valueOf(Constants.CARDINALITY_ONE_OR_MANY);
 					:}
 					| OPTIONNALY_ONE
 					{:
-						RESULT = new Integer(Constants.CARDINALITY_OPTIONNALY_ONE);
+						RESULT = Integer.valueOf(Constants.CARDINALITY_OPTIONNALY_ONE);
 					:};
 
 /*-------------------------- STRINGS ------------------------*/

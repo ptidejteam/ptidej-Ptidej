@@ -487,7 +487,7 @@ public class PriorityHorizentalSolver extends HorizentalSolver {
 				final INode node = super.matrix[i][j];
 				if (node instanceof DummyNode) {
 					// contain the index of all dummy of that level
-					dummyList.add(new Integer(j));
+					dummyList.add(Integer.valueOf(j));
 				}
 				else {
 					int priority = computeLowerConnectivity(i, j);
@@ -525,7 +525,7 @@ public class PriorityHorizentalSolver extends HorizentalSolver {
 				final INode node = super.matrix[i][j];
 				if (node instanceof DummyNode) {
 					// contain the index of all dummy of that level
-					dummyList.add(new Integer(j));
+					dummyList.add(Integer.valueOf(j));
 				}
 				else {
 					int priority = computeUpperConnectivity(i, j);

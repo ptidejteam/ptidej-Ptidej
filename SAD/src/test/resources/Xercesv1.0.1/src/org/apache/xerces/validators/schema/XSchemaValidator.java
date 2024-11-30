@@ -3126,7 +3126,7 @@ public class XSchemaValidator implements XMLValidator {
             fRegistry.put("string", new StringValidator());
             fRegistry.put("decimal", new DecimalValidator());
             fRegistry.put("float", new FloatValidator());
-            fRegistry.put("double", new DoubleValidator());
+            fRegistry.put("double", Double.valueOfValidator());
             //REVISIT - enable the below
             //fRegistry.put("binary", new BinaryValidator());
             //fRegistry.put("date", new DateValidator());
