@@ -8,9 +8,10 @@ import org.junit.Assert;
 
 import com.ibm.toad.cfparse.ClassFile;
 
+import junit.framework.TestCase;
 import util.lang.CFParseBCELConvertor;
 
-class CFParseBCELConvertorTest1 {
+public class CFParseBCELConvertorTest1 extends TestCase {
 	private ClassFile classFile_CFParse_Original;
 	private ClassFile classFile_CFParse_Converted;
 

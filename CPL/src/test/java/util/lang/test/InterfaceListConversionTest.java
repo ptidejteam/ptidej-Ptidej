@@ -17,8 +17,9 @@ import com.ibm.toad.cfparse.InterfaceList;
  * @since 2024/10/11
  */
 
-class InterfaceListConversionTest {
+import junit.framework.TestCase;
 
+public class InterfaceListConversionTest extends TestCase {
 	public void testLengh()
 			throws FileNotFoundException, IOException, ClassNotFoundException {
 		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
@@ -79,14 +80,14 @@ class InterfaceListConversionTest {
 		final JavaClass[] interfacesList_BCEL = classFile_BCEL.getInterfaces();
 		int initialNumInterfaces_CFParse = interfaceList_CFParse.length();
 		int initialNumInterfaces_BCEL = interfacesList_BCEL.length;
+		Assert.assertEquals(initialNumInterfaces_CFParse,
+				initialNumInterfaces_BCEL);
 
-		String newInterface = "com/example/NewInterface";
+		final String newInterface = "com/example/NewInterface";
 		interfaceList_CFParse.add(newInterface);
-
 		int updatedNumInterfaces_CFParse = interfaceList_CFParse.length();
 		Assert.assertEquals(initialNumInterfaces_CFParse + 1,
 				updatedNumInterfaces_CFParse);
-
 	}
 
 	public void testGetName()
@@ -147,5 +148,4 @@ class InterfaceListConversionTest {
 				"The sorted interface names from CFParse should match those from BCEL.",
 				interfaces_BCEL, interfaces_CFParse);
 	}
-
 }

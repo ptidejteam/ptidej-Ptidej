@@ -13,13 +13,14 @@ import com.ibm.toad.cfparse.ClassFile;
 import com.ibm.toad.cfparse.FieldInfo;
 import com.ibm.toad.cfparse.FieldInfoList;
 
+import junit.framework.TestCase;
+
 /**
  * @author Rushin Makwana
  * @author Peter Yefi
  * @since  2024/10/11
  */
-public class FieldInfoListConversionTest {
-
+public class FieldInfoListConversionTest extends TestCase {
 	public void test1() throws FileNotFoundException, IOException {
 		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
 
@@ -42,16 +43,17 @@ public class FieldInfoListConversionTest {
 			final FieldInfo field_CFParse = fieldInfoList_CFParse.get(i);
 			final Field field_BCEL = fields_BCEL[i];
 
-			Assert.assertEquals(fieldInfoList_CFParse.getFieldName(i),
-					fields_BCEL[i].getName(), "Field names do not match");
-			Assert.assertEquals(fieldInfoList_CFParse.get(i).getType(),
-					fields_BCEL[i].getType().getClassName(),
-					"Field values types do not match");
+			Assert.assertEquals("Field names do not match",
+					fieldInfoList_CFParse.getFieldName(i),
+					fields_BCEL[i].getName());
+			Assert.assertEquals("Field values types do not match",
+					fieldInfoList_CFParse.get(i).getType(),
+					fields_BCEL[i].getType().getClassName());
 			Assert.assertEquals("Access flags do not match for field " + i,
 					field_CFParse.getAccess(), field_BCEL.getAccessFlags());
-			Assert.assertEquals(field_CFParse.getType(),
-					field_BCEL.getType().getClassName(),
-					"Types do not match for field " + i);
+			Assert.assertEquals("Types do not match for field " + i,
+					field_CFParse.getType(),
+					field_BCEL.getType().getClassName());
 		}
 
 		//        Assert.assertEquals(field_CFPARSE.getAccess(),

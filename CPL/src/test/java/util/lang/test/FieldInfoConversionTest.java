@@ -13,18 +13,18 @@ import com.ibm.toad.cfparse.ClassFile;
 import com.ibm.toad.cfparse.FieldInfo;
 import com.ibm.toad.cfparse.FieldInfoList;
 
+import junit.framework.TestCase;
+
 /*
  * @author Luca Scistri
  * @author Zongo Meyo
  * @since 2024/10/11
  */
-
-class FieldInfoConversionTest {
-
+public class FieldInfoConversionTest extends TestCase {
 	private static FieldInfo field_CFPARSE;
 	private static Field field_BCEL;
 
-	public void setup() throws FileNotFoundException, IOException {
+	public void setUp() throws FileNotFoundException, IOException {
 		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
 
 		final ClassFile classFile_CFParse_Original = new ClassFile(
@@ -68,5 +68,4 @@ class FieldInfoConversionTest {
 		Assert.assertNotEquals(field_CFPARSE.getAttrs().getName(0),
 				field_BCEL.getName());
 	}
-
 }

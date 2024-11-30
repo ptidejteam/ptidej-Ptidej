@@ -17,7 +17,7 @@ import util.lang.CFParseBCELConvertor;
  * @author Luca Scistri
  * @since 2024/10/17
  */
-public class CFParseBCELConvertorTestGetMagic extends TestCase {
+public class CFParseBCELConvertorGetMagicTest extends TestCase {
 	private ClassFile classFile_CFParse_Original;
 	private ClassFile classFile_CFParse_Converted;
 
