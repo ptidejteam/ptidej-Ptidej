@@ -74,9 +74,9 @@ public class ManyAttributesDetection extends AbstractCodeSmellDetection implemen
 
 				
 	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aClass);
-	mapOfManyAttributesValues.put(aClass, new Double[] {Double.valueOf(NAD), Double.valueOf(0)});
+	mapOfManyAttributesValues.put(aClass, new Double[] {new Double(NAD), new Double(0)});
 				//final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aClass);
-				//mapOfManyAttributesValues.put(aClass, Double.valueOf(NAD));
+				//mapOfManyAttributesValues.put(aClass, new Double(NAD));
 			}
 		}
 
@@ -99,7 +99,7 @@ public class ManyAttributesDetection extends AbstractCodeSmellDetection implemen
 	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aManyAttributesClass);
 
 HashMap thresholdMap = new HashMap();
-thresholdMap.put("NAD_MaxBound", Double.valueOf(boxPlot.getMaxBound()));
+thresholdMap.put("NAD_MaxBound", new Double(boxPlot.getMaxBound()));
 					final Double fuzziness = ((Double[])mapOfManyAttributesClassesFromBoxPlot.get(aManyAttributesClass))[1];
 					classProp.addProperty(new MetricProperty("NAD", 
 						NAD, 

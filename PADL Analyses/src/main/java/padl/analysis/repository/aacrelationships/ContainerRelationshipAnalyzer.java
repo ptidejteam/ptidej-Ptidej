@@ -213,7 +213,7 @@ final class ContainerRelationshipAnalyzer {
 							.substring(Constants.GETTERS_CARDINALITY_MANY[i]
 								.length())
 								+ ":void",
-						Integer.valueOf(visibility));
+						new Integer(visibility));
 				}
 				else if (Util.isPrimtiveType(arguments[0])) {
 					aMapOfRemovers.put(
@@ -221,7 +221,7 @@ final class ContainerRelationshipAnalyzer {
 							.substring(Constants.GETTERS_CARDINALITY_MANY[i]
 								.length())
 								+ ':' + returnType,
-						Integer.valueOf(visibility));
+						new Integer(visibility));
 				}
 				else {
 					aMapOfRemovers.put(
@@ -229,7 +229,7 @@ final class ContainerRelationshipAnalyzer {
 							.substring(Constants.GETTERS_CARDINALITY_MANY[i]
 								.length())
 								+ ":" + String.valueOf(arguments[0]),
-						Integer.valueOf(visibility));
+						new Integer(visibility));
 				}
 
 				return true;
@@ -258,7 +258,7 @@ final class ContainerRelationshipAnalyzer {
 				aMapOfRemovers.put(
 					currentName.substring(Constants.GETTERS_CARDINALITY_ONE[i]
 						.length()) + ':' + returnType,
-					Integer.valueOf(visibility));
+					new Integer(visibility));
 
 				return true;
 			}
@@ -295,7 +295,7 @@ final class ContainerRelationshipAnalyzer {
 								+ ':'
 								+ String
 									.valueOf(arguments[arguments.length - 1]),
-						Integer.valueOf(visibility));
+						new Integer(visibility));
 				}
 				else {
 					aMapOfAdders.put(
@@ -303,7 +303,7 @@ final class ContainerRelationshipAnalyzer {
 							.substring(Constants.SETTERS_CARDINALITY_MANY[i]
 								.length())
 								+ ":void",
-						Integer.valueOf(visibility));
+						new Integer(visibility));
 				}
 
 				return true;
@@ -336,7 +336,7 @@ final class ContainerRelationshipAnalyzer {
 				aMapOfAdders.put(
 					currentName.substring(Constants.SETTERS_CARDINALITY_ONE[i]
 						.length()) + ':' + String.valueOf(arguments[0]),
-					Integer.valueOf(visibility));
+					new Integer(visibility));
 
 				return true;
 			}

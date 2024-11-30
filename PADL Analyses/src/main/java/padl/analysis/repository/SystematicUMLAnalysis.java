@@ -79,7 +79,7 @@ public final class SystematicUMLAnalysis implements IAnalysis, IHelpURL {
 				.getString(
 					"ANALYSIS_TIME",
 					SystematicUMLAnalysis.class,
-					new Object[] { Long.valueOf(System.currentTimeMillis()
+					new Object[] { new Long(System.currentTimeMillis()
 							- startTime) }));
 
 			return newIdiomLevelModel;

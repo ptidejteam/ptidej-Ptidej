@@ -75,9 +75,9 @@ public class FewMethodsDetection extends AbstractCodeSmellDetection implements I
 				
 	final double NMD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(anAbstractLevelModel, aClass);
 	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aClass);
-	mapOfFewMethodsValues.put(aClass, new Double[] {new Double (NMD + NAD), Double.valueOf(0)});
+	mapOfFewMethodsValues.put(aClass, new Double[] {new Double (NMD + NAD), new Double(0)});
 				//final double NMD_NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD_NAD")).compute(anAbstractLevelModel, aClass);
-				//mapOfFewMethodsValues.put(aClass, Double.valueOf(NMD_NAD));
+				//mapOfFewMethodsValues.put(aClass, new Double(NMD_NAD));
 			}
 		}
 
@@ -101,8 +101,8 @@ public class FewMethodsDetection extends AbstractCodeSmellDetection implements I
 	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aFewMethodsClass);
 
 HashMap thresholdMap = new HashMap();
-thresholdMap.put("NMD_NAD_MinBound", Double.valueOf(boxPlot.getMinBound()));
-thresholdMap.put("NMD_NAD_LowerQuartile", Double.valueOf(boxPlot.getLowerQuartile()));
+thresholdMap.put("NMD_NAD_MinBound", new Double(boxPlot.getMinBound()));
+thresholdMap.put("NMD_NAD_LowerQuartile", new Double(boxPlot.getLowerQuartile()));
 					final Double fuzziness = ((Double[])mapOfFewMethodsClassesFromBoxPlot.get(aFewMethodsClass))[1];
 					classProp.addProperty(new MetricProperty("NMD_NAD", 
 						NMD+NAD, 

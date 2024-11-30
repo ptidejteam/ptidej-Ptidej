@@ -74,9 +74,9 @@ public class LowCohesionDetection extends AbstractCodeSmellDetection implements 
 
 				
 	final double LCOM5 = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("LCOM5")).compute(anAbstractLevelModel, aClass);
-	mapOfLowCohesionValues.put(aClass, new Double[] {Double.valueOf(LCOM5), Double.valueOf(0)});
+	mapOfLowCohesionValues.put(aClass, new Double[] {new Double(LCOM5), new Double(0)});
 				//final double LCOM5 = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("LCOM5")).compute(anAbstractLevelModel, aClass);
-				//mapOfLowCohesionValues.put(aClass, Double.valueOf(LCOM5));
+				//mapOfLowCohesionValues.put(aClass, new Double(LCOM5));
 			}
 		}
 
@@ -99,7 +99,7 @@ public class LowCohesionDetection extends AbstractCodeSmellDetection implements 
 	final double LCOM5 = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("LCOM5")).compute(anAbstractLevelModel, aLowCohesionClass);
 
 HashMap thresholdMap = new HashMap();
-thresholdMap.put("LCOM5_MaxBound", Double.valueOf(boxPlot.getMaxBound()));
+thresholdMap.put("LCOM5_MaxBound", new Double(boxPlot.getMaxBound()));
 					final Double fuzziness = ((Double[])mapOfLowCohesionClassesFromBoxPlot.get(aLowCohesionClass))[1];
 					classProp.addProperty(new MetricProperty("LCOM5", 
 						LCOM5, 

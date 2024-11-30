@@ -221,13 +221,13 @@ public class BoxPlot {
 				if (((Double[]) this.mapOfEntities.get(entity))[0]
 					.doubleValue() < max) {
 					((Double[]) this.mapOfEntities.get(entity))[1] =
-						Double.valueOf((max - ((Double[]) this.mapOfEntities
+						new Double((max - ((Double[]) this.mapOfEntities
 							.get(entity))[0].doubleValue())
 								* 100 / this.fuzziness);
 				}
 				else {
 					((Double[]) this.mapOfEntities.get(entity))[1] =
-						Double.valueOf(100);
+						new Double(100);
 				}
 
 				map.put(entity, this.mapOfEntities.get(entity));
@@ -280,13 +280,13 @@ public class BoxPlot {
 				if (((Double[]) this.mapOfEntities.get(entity))[0]
 					.doubleValue() < val) {
 					((Double[]) this.mapOfEntities.get(entity))[1] =
-						Double.valueOf((val - ((Double[]) this.mapOfEntities
+						new Double((val - ((Double[]) this.mapOfEntities
 							.get(entity))[0].doubleValue())
 								* 100 / this.fuzziness);
 				}
 				else {
 					((Double[]) this.mapOfEntities.get(entity))[1] =
-						Double.valueOf(100);
+						new Double(100);
 				}
 
 				map.put(entity, this.mapOfEntities.get(entity));

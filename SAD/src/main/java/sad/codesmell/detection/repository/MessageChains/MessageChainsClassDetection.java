@@ -76,7 +76,7 @@ public class MessageChainsClassDetection extends AbstractCodeSmellDetection impl
 							new ClassProperty(aClass));
 						
 						HashMap thresholdMap = new HashMap();
-						thresholdMap.put("NOTI", Double.valueOf(4.0));
+						thresholdMap.put("NOTI", new Double(4.0));
 						
 						dc.getClassProperty().addProperty(new MetricProperty("NOTI", 
 							((IUnaryMetric) MetricsRepository.getInstance().getMetric("NOTI")).compute(anAbstractLevelModel, aClass), thresholdMap));

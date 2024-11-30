@@ -75,9 +75,9 @@ public class ChildClassDetection extends AbstractCodeSmellDetection implements I
 				
 	final double NMD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(anAbstractLevelModel, aClass);
 	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aClass);
-	mapOfChildClassValues.put(aClass, new Double[] {new Double (NMD + NAD), Double.valueOf(0)});
+	mapOfChildClassValues.put(aClass, new Double[] {new Double (NMD + NAD), new Double(0)});
 				//final double NMD_NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD_NAD")).compute(anAbstractLevelModel, aClass);
-				//mapOfChildClassValues.put(aClass, Double.valueOf(NMD_NAD));
+				//mapOfChildClassValues.put(aClass, new Double(NMD_NAD));
 			}
 		}
 
@@ -101,8 +101,8 @@ public class ChildClassDetection extends AbstractCodeSmellDetection implements I
 	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aChildClassClass);
 
 HashMap thresholdMap = new HashMap();
-thresholdMap.put("NMD_NAD_UpperQuartile", Double.valueOf(boxPlot.getUpperQuartile()));
-thresholdMap.put("NMD_NAD_MaxBound", Double.valueOf(boxPlot.getMaxBound()));
+thresholdMap.put("NMD_NAD_UpperQuartile", new Double(boxPlot.getUpperQuartile()));
+thresholdMap.put("NMD_NAD_MaxBound", new Double(boxPlot.getMaxBound()));
 					final Double fuzziness = ((Double[])mapOfChildClassClassesFromBoxPlot.get(aChildClassClass))[1];
 					classProp.addProperty(new MetricProperty("NMD_NAD", 
 						NMD+NAD, 

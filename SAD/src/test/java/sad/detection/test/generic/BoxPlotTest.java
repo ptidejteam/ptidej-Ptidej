@@ -46,15 +46,15 @@ public final class BoxPlotTest extends TestCase {
 			final char[] id = (Double.toString(BoxPlotTest.DoubleValues1[i])
 					+ " (" + i + ')').toCharArray();
 			BoxPlotTest.Data1.put(Factory.getInstance().createGhost(id, id),
-					new Double[] { Double.valueOf(BoxPlotTest.DoubleValues1[i]),
-							Double.valueOf(0) });
+					new Double[] { new Double(BoxPlotTest.DoubleValues1[i]),
+							new Double(0) });
 		}
 		for (int i = 0; i < BoxPlotTest.DoubleValues2.length; i++) {
 			final char[] id = (Double.toString(BoxPlotTest.DoubleValues2[i])
 					+ " (" + i + ')').toCharArray();
 			BoxPlotTest.Data2.put(Factory.getInstance().createGhost(id, id),
-					new Double[] { Double.valueOf(BoxPlotTest.DoubleValues2[i]),
-							Double.valueOf(0) });
+					new Double[] { new Double(BoxPlotTest.DoubleValues2[i]),
+							new Double(0) });
 		}
 	}
 

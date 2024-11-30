@@ -101,7 +101,7 @@ public class DecimalValidator implements InternalDatatypeValidator {
 	public void validate(String content) throws InvalidDatatypeValueException {
 	    double d = 0;
         try {
-            d = Double.valueOf(content).doubleValue();
+            d = new Double(content).doubleValue();
         } catch (NumberFormatException nfe) {
             throw new InvalidDatatypeValueException(
 				getErrorString(DatatypeMessageProvider.NotDecimal,
@@ -127,7 +127,7 @@ public class DecimalValidator implements InternalDatatypeValidator {
     	    value = (String) facets.get(key);   
 	        double decimalValue = 0;
 	        try {
-	            decimalValue = Double.valueOf(value).doubleValue();
+	            decimalValue = new Double(value).doubleValue();
 	        } catch (NumberFormatException nfe) {
                 facetsAreConsistent = false;
 	        }
@@ -211,7 +211,7 @@ public class DecimalValidator implements InternalDatatypeValidator {
 	        fEnumValues = new double[v.size()];
 	        for (int i = 0; i < v.size(); i++)
 	            try {
-	                fEnumValues[i] = Double.valueOf((String) v.elementAt(i)).doubleValue();
+	                fEnumValues[i] = new Double((String) v.elementAt(i)).doubleValue();
 	                boundsCheck(fEnumValues[i]);
 	            } catch (InvalidDatatypeValueException idve) {
 	                throw new IllegalFacetValueException(
@@ -255,7 +255,7 @@ public class DecimalValidator implements InternalDatatypeValidator {
             throw new InvalidDatatypeValueException(
 				getErrorString(DatatypeMessageProvider.OutOfBounds,
 							   DatatypeMessageProvider.MSG_NONE,
-							   new Object [] { Double.valueOf(d) }));
+							   new Object [] { new Double(d) }));
     }
     
     private void enumCheck(double v) throws InvalidDatatypeValueException {
@@ -265,7 +265,7 @@ public class DecimalValidator implements InternalDatatypeValidator {
         throw new InvalidDatatypeValueException(
 			getErrorString(DatatypeMessageProvider.NotAnEnumValue,
 						   DatatypeMessageProvider.MSG_NONE,
-						   new Object [] { Double.valueOf(v) }));
+						   new Object [] { new Double(v) }));
     }
 
     /**

@@ -40,8 +40,8 @@ import util.io.ProxyConsole;
  */
 public class PlantUMLGenerator implements IGenerator {
 
-	protected final StringBuilder plantUMLBuilder = new StringBuilder();
-	protected final StringBuilder plantUMLBuilderRelationship = new StringBuilder();
+	protected final StringBuffer plantUMLBuilder = new StringBuffer();
+	protected final StringBuffer plantUMLBuilderRelationship = new StringBuffer();
 	private IFirstClassEntity currentEntity;
 
 	public PlantUMLGenerator() {

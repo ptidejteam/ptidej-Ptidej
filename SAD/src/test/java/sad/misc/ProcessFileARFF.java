@@ -108,11 +108,11 @@ public class ProcessFileARFF {
 			final Integer currentNbBugs =
 				(Integer) this.classesNbBugs.get(correctNameOfClass);
 			final Integer anIntegerNbBugs =
-				Integer.valueOf(currentNbBugs.intValue() + nbBugs);
+				new Integer(currentNbBugs.intValue() + nbBugs);
 			this.classesNbBugs.put(correctNameOfClass, anIntegerNbBugs);
 		}
 		else {
-			final Integer anIntegerNbBugs = Integer.valueOf(nbBugs);
+			final Integer anIntegerNbBugs = new Integer(nbBugs);
 			this.classesNbBugs.put(correctNameOfClass, anIntegerNbBugs);
 		}
 

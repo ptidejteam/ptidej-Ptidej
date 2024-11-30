@@ -83,11 +83,11 @@ public final class OADymPPaCGenerator implements IWalker {
 				final int oldWeight =
 					((Integer) this.interClassRelationships
 						.get(relationshipName)).intValue();
-				this.interClassRelationships.put(relationshipName, Integer.valueOf(
+				this.interClassRelationships.put(relationshipName, new Integer(
 					oldWeight + weight));
 			}
 			else {
-				this.interClassRelationships.put(relationshipName, Integer.valueOf(
+				this.interClassRelationships.put(relationshipName, new Integer(
 					weight));
 			}
 		}

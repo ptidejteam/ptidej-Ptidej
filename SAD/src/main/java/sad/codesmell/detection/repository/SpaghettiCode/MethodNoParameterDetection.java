@@ -76,7 +76,7 @@ public class MethodNoParameterDetection extends AbstractCodeSmellDetection imple
 							new ClassProperty(aClass));
 						
 						HashMap thresholdMap = new HashMap();
-						thresholdMap.put("NOParam", Double.valueOf(5.0));
+						thresholdMap.put("NOParam", new Double(5.0));
 						
 						dc.getClassProperty().addProperty(new MetricProperty("NOParam", 
 							((IUnaryMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(anAbstractLevelModel, aClass), thresholdMap));

@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Timestamp;
-import java.util.Scanner;
 
 import org.junit.Assert;
 
@@ -43,7 +42,7 @@ public class Test1 extends TestCase {
 		try {
 			BufferedReader readText = new BufferedReader(new FileReader(new File(
 					plantUMLGeneratedFiles)));
-			StringBuilder textBuilder = new StringBuilder();
+			StringBuffer textBuilder = new StringBuffer();
 			String fileLine;
 			while ((fileLine = readText.readLine()) != null) {
 				textBuilder.append(fileLine);
@@ -52,10 +51,10 @@ public class Test1 extends TestCase {
 			if (readText != null)
 				readText.close();
 			Test1.testAgainstUMLContent = textBuilder.toString();
-			Test1.testAgainstUMLContent = Test1.testAgainstUMLContent.replace("\r","").replaceFirst("[\n]+$", "");
+			Test1.testAgainstUMLContent = Test1.testAgainstUMLContent.replace('\r','\0').replaceFirst("[\n]+$", "");
 			readText = new BufferedReader(new FileReader(new File(
 					plantUMLGeneratedFileIncorrect1)));
-			textBuilder = new StringBuilder();
+			textBuilder = new StringBuffer();
 			fileLine = new String();
 			while ((fileLine = readText.readLine()) != null) {
 				textBuilder.append(fileLine);
@@ -64,7 +63,7 @@ public class Test1 extends TestCase {
 			if (readText != null)
 				readText.close();
 			Test1.testAgainstPlantUMLGeneratedFileIncorrect1 = textBuilder.toString();
-			Test1.testAgainstPlantUMLGeneratedFileIncorrect1 = Test1.testAgainstPlantUMLGeneratedFileIncorrect1.replace("\r","").replaceFirst("[\n]+$", "");
+			Test1.testAgainstPlantUMLGeneratedFileIncorrect1 = Test1.testAgainstPlantUMLGeneratedFileIncorrect1.replace('\r','\0').replaceFirst("[\n]+$", "");
 			ProxyConsole.getInstance().normalOutput().println("Test against UML Content");
 			ProxyConsole.getInstance().normalOutput().println(testAgainstUMLContent);
 			Test1.intendedCodeLevelModel = Factory.getInstance().createCodeLevelModel("");

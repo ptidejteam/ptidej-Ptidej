@@ -36,7 +36,7 @@ public class Parents {
 	public void add(final INode aParent) {
 		this.parents.add(aParent);
 		// -1 for not set yet
-		this.channels.add(Integer.valueOf(-1));
+		this.channels.add(new Integer(-1));
 	}
 	public boolean remove(final INode aParent) {
 		// here a special attention to keep informations
@@ -75,7 +75,7 @@ public class Parents {
 		int parentIndex = this.parents.indexOf(aParent);
 		// if parent not found! 
 		// return -1
-		this.channels.set(parentIndex, Integer.valueOf(aChannel));
+		this.channels.set(parentIndex, new Integer(aChannel));
 	}
 	public int getChannel(final INode aParent) {
 		int parentIndex = this.parents.indexOf(aParent);

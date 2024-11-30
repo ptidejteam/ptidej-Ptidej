@@ -29,8 +29,8 @@ public class CacheManager {
 			CacheManager.MapOfUniqueInstance = new HashMap();
 		}
 
-		final Integer abstractModelUniqueID = Integer
-				.valueOf(anAbstractModel.hashCode());
+		final Integer abstractModelUniqueID = new Integer
+				(anAbstractModel.hashCode());
 		if (!CacheManager.MapOfUniqueInstance
 				.containsKey(abstractModelUniqueID)) {
 			CacheManager.MapOfUniqueInstance.put(abstractModelUniqueID,
@@ -55,7 +55,7 @@ public class CacheManager {
 					anEntity)) {
 
 				this.cache.put(this.getBinaryMetricKey(aMetric, anEntity,
-						anotherEntity), Double.valueOf(aValue));
+						anotherEntity), new Double(aValue));
 			}
 		}
 		else {
@@ -80,7 +80,7 @@ public class CacheManager {
 			final IFirstClassEntity anEntity, final double aValue) {
 
 		this.cache.put(this.getUnaryMetricKey(aMetric, anEntity),
-				Double.valueOf(aValue));
+				new Double(aValue));
 	}
 
 	private String getBinaryMetricKey(final IBinaryMetric aMetric,

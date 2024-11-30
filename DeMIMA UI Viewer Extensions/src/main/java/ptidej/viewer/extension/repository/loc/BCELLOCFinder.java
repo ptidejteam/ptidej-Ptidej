@@ -101,7 +101,7 @@ public class BCELLOCFinder implements Visitor {
 			line = reader.readLine();
 		} while (line != null);
 
-		return Integer.valueOf(count);
+		return new Integer(count);
 	}
 
 	public Integer getInstructionCount(final String aClassId,

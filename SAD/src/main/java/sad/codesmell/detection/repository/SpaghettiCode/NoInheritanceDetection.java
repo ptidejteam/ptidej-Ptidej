@@ -76,7 +76,7 @@ public class NoInheritanceDetection extends AbstractCodeSmellDetection implement
 							new ClassProperty(aClass));
 						
 						HashMap thresholdMap = new HashMap();
-						thresholdMap.put("DIT", Double.valueOf(2.0));
+						thresholdMap.put("DIT", new Double(2.0));
 						
 						dc.getClassProperty().addProperty(new MetricProperty("DIT", 
 							((IUnaryMetric) MetricsRepository.getInstance().getMetric("DIT")).compute(anAbstractLevelModel, aClass), thresholdMap));

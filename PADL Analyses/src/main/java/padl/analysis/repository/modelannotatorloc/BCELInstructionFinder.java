@@ -88,7 +88,7 @@ public class BCELInstructionFinder implements Visitor {
 		}
 		while (line != null);
 
-		return Integer.valueOf(count);
+		return new Integer(count);
 	}
 	public Integer getInstructionCount(
 		final String aClassId,

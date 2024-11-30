@@ -74,9 +74,9 @@ public class RareOverridingDetection extends AbstractCodeSmellDetection implemen
 
 				
 	final double IR = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("IR")).compute(anAbstractLevelModel, aClass);
-	mapOfRareOverridingValues.put(aClass, new Double[] {Double.valueOf(IR), Double.valueOf(0)});
+	mapOfRareOverridingValues.put(aClass, new Double[] {new Double(IR), new Double(0)});
 				//final double IR = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("IR")).compute(anAbstractLevelModel, aClass);
-				//mapOfRareOverridingValues.put(aClass, Double.valueOf(IR));
+				//mapOfRareOverridingValues.put(aClass, new Double(IR));
 			}
 		}
 
@@ -99,8 +99,8 @@ public class RareOverridingDetection extends AbstractCodeSmellDetection implemen
 	final double IR = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("IR")).compute(anAbstractLevelModel, aRareOverridingClass);
 
 HashMap thresholdMap = new HashMap();
-thresholdMap.put("IR_MinBound", Double.valueOf(boxPlot.getMinBound()));
-thresholdMap.put("IR_LowerQuartile", Double.valueOf(boxPlot.getLowerQuartile()));
+thresholdMap.put("IR_MinBound", new Double(boxPlot.getMinBound()));
+thresholdMap.put("IR_LowerQuartile", new Double(boxPlot.getLowerQuartile()));
 					final Double fuzziness = ((Double[])mapOfRareOverridingClassesFromBoxPlot.get(aRareOverridingClass))[1];
 					classProp.addProperty(new MetricProperty("IR", 
 						IR, 

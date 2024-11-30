@@ -245,7 +245,7 @@ public final class MetricsComplexityCalculator implements IWalker {
 		final double S = this.computeStructuralComplexity();
 		final double D = this.computeDataComplexity();
 
-		return Double.valueOf(S + D);
+		return new Double(S + D);
 	}
 	public void open(final IAbstractModel p) {
 		this.reset();

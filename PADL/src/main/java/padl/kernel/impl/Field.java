@@ -62,7 +62,7 @@ public class Field extends Element implements IElementMarker, IField {
 			throw new ModelDeclarationException(MultilingualManager.getString(
 				"CARDINALITY",
 				IField.class,
-				new Object[] { Integer.valueOf(cardinality) }));
+				new Object[] { new Integer(cardinality) }));
 		}
 
 		this.cardinality = cardinality;

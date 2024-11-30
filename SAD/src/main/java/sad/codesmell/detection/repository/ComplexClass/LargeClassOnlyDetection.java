@@ -64,9 +64,9 @@ public class LargeClassOnlyDetection extends AbstractCodeSmellDetection
 						.getInstance().getMetric("NAD"))
 						.compute(anAbstractLevelModel, aClass);
 				mapOfLargeClassOnlyValues.put(aClass, new Double[] {
-						Double.valueOf(NMD + NAD), Double.valueOf(0) });
+						new Double(NMD + NAD), new Double(0) });
 				//final double NMD_NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD_NAD")).compute(anAbstractLevelModel, aClass);
-				//mapOfLargeClassOnlyValues.put(aClass, Double.valueOf(NMD_NAD));
+				//mapOfLargeClassOnlyValues.put(aClass, new Double(NMD_NAD));
 			}
 		}
 
@@ -95,7 +95,7 @@ public class LargeClassOnlyDetection extends AbstractCodeSmellDetection
 
 					HashMap thresholdMap = new HashMap();
 					thresholdMap.put("NMD_NAD_MaxBound",
-							Double.valueOf(boxPlot.getMaxBound()));
+							new Double(boxPlot.getMaxBound()));
 					final Double fuzziness = ((Double[]) mapOfLargeClassOnlyClassesFromBoxPlot
 							.get(aLargeClassOnlyClass))[1];
 					classProp.addProperty(new MetricProperty("NMD_NAD",

@@ -74,9 +74,9 @@ public class ComplexClassOnlyDetection extends AbstractCodeSmellDetection implem
 
 				
 	final double McCabe = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("McCabe")).compute(anAbstractLevelModel, aClass);
-	mapOfComplexClassOnlyValues.put(aClass, new Double[] {Double.valueOf(McCabe), Double.valueOf(0)});
+	mapOfComplexClassOnlyValues.put(aClass, new Double[] {new Double(McCabe), new Double(0)});
 				//final double McCabe = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("McCabe")).compute(anAbstractLevelModel, aClass);
-				//mapOfComplexClassOnlyValues.put(aClass, Double.valueOf(McCabe));
+				//mapOfComplexClassOnlyValues.put(aClass, new Double(McCabe));
 			}
 		}
 
@@ -99,7 +99,7 @@ public class ComplexClassOnlyDetection extends AbstractCodeSmellDetection implem
 	final double McCabe = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("McCabe")).compute(anAbstractLevelModel, aComplexClassOnlyClass);
 
 HashMap thresholdMap = new HashMap();
-thresholdMap.put("McCabe_MaxBound", Double.valueOf(boxPlot.getMaxBound()));
+thresholdMap.put("McCabe_MaxBound", new Double(boxPlot.getMaxBound()));
 					final Double fuzziness = ((Double[])mapOfComplexClassOnlyClassesFromBoxPlot.get(aComplexClassOnlyClass))[1];
 					classProp.addProperty(new MetricProperty("McCabe", 
 						McCabe, 

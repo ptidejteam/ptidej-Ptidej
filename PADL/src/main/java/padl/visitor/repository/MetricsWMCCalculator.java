@@ -54,7 +54,7 @@ public final class MetricsWMCCalculator implements IWalker {
 			.println(
 				"WMC --> For class:" + this.enclosingClass.getDisplayID()
 						+ ", number of methods = " + this.numberOfMethods);
-		this.wmcPerClass.put(this.enclosingClass.getID(), Integer.valueOf(
+		this.wmcPerClass.put(this.enclosingClass.getID(), new Integer(
 			this.numberOfMethods));
 	}
 	public void close(final IConstructor aConstructor) {

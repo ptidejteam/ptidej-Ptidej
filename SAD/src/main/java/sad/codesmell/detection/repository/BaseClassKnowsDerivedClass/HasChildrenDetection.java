@@ -76,7 +76,7 @@ public class HasChildrenDetection extends AbstractCodeSmellDetection implements 
 							new ClassProperty(aClass));
 						
 						HashMap thresholdMap = new HashMap();
-						thresholdMap.put("NOC", Double.valueOf(1.0));
+						thresholdMap.put("NOC", new Double(1.0));
 						
 						dc.getClassProperty().addProperty(new MetricProperty("NOC", 
 							((IUnaryMetric) MetricsRepository.getInstance().getMetric("NOC")).compute(anAbstractLevelModel, aClass), thresholdMap));

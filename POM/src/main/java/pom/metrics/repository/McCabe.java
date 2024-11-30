@@ -32,7 +32,7 @@ public class McCabe extends AbstractMetric implements IMetric, IUnaryMetric, IDe
 			return "McCabe Computer";
 		}
 		public Object getResult() {
-			return Integer.valueOf(this.mcCabe);
+			return new Integer(this.mcCabe);
 		}
 		
 		public final void unknownConstituentHandler(
