@@ -319,7 +319,7 @@ public class CodeSmellGenerator implements IVisitor {
 								+ "\")).compute(anAbstractLevelModel, aClass);");
 
 					temp.append("\n	mapOf" + aCodeSmellName
-							+ "Values.put(aClass, new Double[] {new Double (");
+							+ "Values.put(aClass, new Double[] {Double.valueOf (");
 					temp.append(name1 + " + " + name2 + "), Double.valueOf(0)});");
 				}
 				else {

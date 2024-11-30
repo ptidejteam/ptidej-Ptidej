@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Timestamp;
-import java.util.Scanner;
 
 import org.junit.Assert;
 
@@ -41,9 +40,9 @@ public class Test1 extends TestCase {
 
 	protected void setUp() {
 		try {
-			BufferedReader readText = new BufferedReader(new FileReader(new File(
-					plantUMLGeneratedFiles)));
-			StringBuilder textBuilder = new StringBuilder();
+			BufferedReader readText = new BufferedReader(
+					new FileReader(new File(plantUMLGeneratedFiles)));
+			StringBuffer textBuilder = new StringBuffer();
 			String fileLine;
 			while ((fileLine = readText.readLine()) != null) {
 				textBuilder.append(fileLine);
@@ -52,10 +51,11 @@ public class Test1 extends TestCase {
 			if (readText != null)
 				readText.close();
 			Test1.testAgainstUMLContent = textBuilder.toString();
-			Test1.testAgainstUMLContent = Test1.testAgainstUMLContent.replace("\r","").replaceFirst("[\n]+$", "");
-			readText = new BufferedReader(new FileReader(new File(
-					plantUMLGeneratedFileIncorrect1)));
-			textBuilder = new StringBuilder();
+			Test1.testAgainstUMLContent = Test1.testAgainstUMLContent
+					.replace("\r", "").replaceFirst("[\n]+$", "");
+			readText = new BufferedReader(
+					new FileReader(new File(plantUMLGeneratedFileIncorrect1)));
+			textBuilder = new StringBuffer();
 			fileLine = new String();
 			while ((fileLine = readText.readLine()) != null) {
 				textBuilder.append(fileLine);
@@ -63,22 +63,33 @@ public class Test1 extends TestCase {
 			}
 			if (readText != null)
 				readText.close();
-			Test1.testAgainstPlantUMLGeneratedFileIncorrect1 = textBuilder.toString();
-			Test1.testAgainstPlantUMLGeneratedFileIncorrect1 = Test1.testAgainstPlantUMLGeneratedFileIncorrect1.replace("\r","").replaceFirst("[\n]+$", "");
-			ProxyConsole.getInstance().normalOutput().println("Test against UML Content");
-			ProxyConsole.getInstance().normalOutput().println(testAgainstUMLContent);
-			Test1.intendedCodeLevelModel = Factory.getInstance().createCodeLevelModel("");
-			Test1.intendedCodeLevelModel.create(new CompleteClassFileCreator(new String[] { filePath }, true));
-			intendedIdiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis().invoke(intendedCodeLevelModel);
+			Test1.testAgainstPlantUMLGeneratedFileIncorrect1 = textBuilder
+					.toString();
+			Test1.testAgainstPlantUMLGeneratedFileIncorrect1 = Test1.testAgainstPlantUMLGeneratedFileIncorrect1
+					.replace("\r", "").replaceFirst("[\n]+$", "");
+			ProxyConsole.getInstance().normalOutput()
+					.println("Test against UML Content");
+			ProxyConsole.getInstance().normalOutput()
+					.println(testAgainstUMLContent);
+			Test1.intendedCodeLevelModel = Factory.getInstance()
+					.createCodeLevelModel("");
+			Test1.intendedCodeLevelModel.create(new CompleteClassFileCreator(
+					new String[] { filePath }, true));
+			intendedIdiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
+					.invoke(intendedCodeLevelModel);
 			PlantUMLGenerator PlantUMLGeneratorNew = new PlantUMLGenerator();
 			intendedIdiomLevelModel.generate(PlantUMLGeneratorNew);
 			String umlContent = (String) PlantUMLGeneratorNew.getCode();
-			String timeStampForUMLTextFile = new Timestamp(System.currentTimeMillis()).toString().split(" ")[0];
+			String timeStampForUMLTextFile = new Timestamp(
+					System.currentTimeMillis()).toString().split(" ")[0];
 			System.out.println(timeStampForUMLTextFile);
 			Test1.generatedUMLContent = umlContent;
-			ProxyConsole.getInstance().normalOutput().println("Generated UML Content");
-			ProxyConsole.getInstance().normalOutput().println(Test1.generatedUMLContent);
-		} catch (CreationException e) {
+			ProxyConsole.getInstance().normalOutput()
+					.println("Generated UML Content");
+			ProxyConsole.getInstance().normalOutput()
+					.println(Test1.generatedUMLContent);
+		}
+		catch (CreationException e) {
 			e.printStackTrace();
 		}
 		catch (IOException e) {
@@ -92,11 +103,13 @@ public class Test1 extends TestCase {
 
 	public void testGeneratedUMLContent() {
 		Assert.assertEquals(Test1.testAgainstUMLContent, generatedUMLContent);
-		Assert.assertNotEquals(Test1.testAgainstUMLContent, (generatedUMLContent + "test"));
+		Assert.assertNotEquals(Test1.testAgainstUMLContent,
+				(generatedUMLContent + "test"));
 	}
 
 	public void testGeneratedUMLContentIncorrect() {
-		Assert.assertNotEquals(Test1.testAgainstPlantUMLGeneratedFileIncorrect1, (generatedUMLContent + "test"));
+		Assert.assertNotEquals(Test1.testAgainstPlantUMLGeneratedFileIncorrect1,
+				(generatedUMLContent + "test"));
 	}
 
 }

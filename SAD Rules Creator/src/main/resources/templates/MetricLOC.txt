@@ -9,14 +9,14 @@
 				final IClass aClass = (IClass) entity;
 				IClass classOf<CODESMELL> = null;
 				IMethod <CODESMELL> = null;
-				Integer longValue = new Integer(0);
+				Integer longValue = Integer.valueOf(0);
 	
 				// for each class, we get the <CODESMELL>
 				final Iterator iter2 = aClass.getIteratorOnConstituents(IMethod.class);
 				while (iter2.hasNext()) {
 					final IMethod aMethod = (IMethod) iter2.next();
 					if (!aMethod.isAbstract() && (aMethod.getVisibility() & Modifier.NATIVE) == 0) {
-						final Integer value = new Integer(aMethod.getCodeLines().length);
+						final Integer value = Integer.valueOf(aMethod.getCodeLines().length);
 		
 						if (!(value == null)) {
 							if (value.compareTo(longValue) > 0) {
@@ -32,7 +32,7 @@
 							// longest method
 							mapOfClassesWithValues.put(
 								classOf<CODESMELL>,
-								new Double[] {new Double(longValue.doubleValue()), new Double(0)});
+								new Double[] { Double.valueOf(longValue.doubleValue()), Double.valueOf(0) });
 						}
 					}
 				}// End of iterator of methods

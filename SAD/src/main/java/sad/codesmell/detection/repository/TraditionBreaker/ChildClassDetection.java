@@ -75,7 +75,7 @@ public class ChildClassDetection extends AbstractCodeSmellDetection implements I
 				
 	final double NMD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(anAbstractLevelModel, aClass);
 	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aClass);
-	mapOfChildClassValues.put(aClass, new Double[] {new Double (NMD + NAD), Double.valueOf(0)});
+	mapOfChildClassValues.put(aClass, new Double[] {Double.valueOf (NMD + NAD), Double.valueOf(0)});
 				//final double NMD_NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD_NAD")).compute(anAbstractLevelModel, aClass);
 				//mapOfChildClassValues.put(aClass, Double.valueOf(NMD_NAD));
 			}

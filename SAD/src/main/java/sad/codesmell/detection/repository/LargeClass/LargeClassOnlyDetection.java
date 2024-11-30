@@ -75,7 +75,7 @@ public class LargeClassOnlyDetection extends AbstractCodeSmellDetection implemen
 				
 	final double NMD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(anAbstractLevelModel, aClass);
 	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aClass);
-	mapOfLargeClassOnlyValues.put(aClass, new Double[] {new Double (NMD + NAD), Double.valueOf(0)});
+	mapOfLargeClassOnlyValues.put(aClass, new Double[] {Double.valueOf (NMD + NAD), Double.valueOf(0)});
 				//final double NMD_NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD_NAD")).compute(anAbstractLevelModel, aClass);
 				//mapOfLargeClassOnlyValues.put(aClass, Double.valueOf(NMD_NAD));
 			}

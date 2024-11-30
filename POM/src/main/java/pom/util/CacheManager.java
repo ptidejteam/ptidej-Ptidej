@@ -29,8 +29,8 @@ public class CacheManager {
 			CacheManager.MapOfUniqueInstance = new HashMap();
 		}
 
-		final Integer abstractModelUniqueID = Integer
-				.valueOf(anAbstractModel.hashCode());
+		final Integer abstractModelUniqueID = new Integer
+				(anAbstractModel.hashCode());
 		if (!CacheManager.MapOfUniqueInstance
 				.containsKey(abstractModelUniqueID)) {
 			CacheManager.MapOfUniqueInstance.put(abstractModelUniqueID,
