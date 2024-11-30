@@ -33,3 +33,8 @@
 [DEBUG] 2024-11-29 21:55:31.939 [main] [ptidej.ui.Utils] -   (
 [DEBUG] 2024-11-29 21:55:31.940 [main] [ptidej.ui.Utils] -  PtidejIcon.png
 [DEBUG] 2024-11-29 21:55:31.940 [main] [ptidej.ui.Utils] -  )
+[DEBUG] 2024-11-30 13:55:32.458 [main] [ptidej.ui.Utils] -  ptidej.ui.Utils
+[DEBUG] 2024-11-30 13:55:32.464 [main] [ptidej.ui.Utils] -   uses the image URL: 
+[DEBUG] 2024-11-30 13:55:32.464 [main] [ptidej.ui.Utils] -   (
+[DEBUG] 2024-11-30 13:55:32.465 [main] [ptidej.ui.Utils] -  PtidejIcon.png
+[DEBUG] 2024-11-30 13:55:32.465 [main] [ptidej.ui.Utils] -  )

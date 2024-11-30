@@ -9,13 +9,14 @@ import com.ibm.toad.cfparse.ClassFile;
 import com.ibm.toad.cfparse.ConstantPool;
 
 import junit.framework.TestCase;
+import util.lang.CFParseBCELConvertor;
 
 /* *
  * @author Peter Yefi
  * @author Vishnu Rameshbabu
  */
 
-public class CFParseBCELConvertorConstantPoolTest extends TestCase {
+public class ConstantPoolConversionTest extends TestCase {
 	private ClassFile classFile_CFParse_Original;
 	private ClassFile classFile_CFParse_Converted;
 
@@ -25,7 +26,7 @@ public class CFParseBCELConvertorConstantPoolTest extends TestCase {
 		this.classFile_CFParse_Original = new ClassFile(
 				new FileInputStream(classFile_Path));
 
-		this.classFile_CFParse_Converted = CFParseBCELConvertorConstantPool
+		this.classFile_CFParse_Converted = CFParseBCELConvertor
 				.convertClassFile(
 						new ClassParser(new FileInputStream(classFile_Path), "")
 								.parse());

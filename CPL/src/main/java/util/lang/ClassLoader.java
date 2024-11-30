@@ -15,22 +15,25 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
+
 import util.io.ProxyConsole;
 import util.multilingual.MultilingualManager;
 
 public class ClassLoader extends java.lang.ClassLoader {
 	private final String directory;
 
-	public ClassLoader(
-		final java.lang.ClassLoader parent,
-		final String directory) {
+	public ClassLoader(final java.lang.ClassLoader parent,
+			final String directory) {
 
 		super(parent);
 		this.directory = directory;
 	}
 
-	private Class<?> defineClasses(final String name, final InputStream inputStream) {
+	private Class<?> defineClasses(final String name,
+			final InputStream inputStream) {
 		try {
 			int b;
 			int length = 0;
@@ -65,6 +68,7 @@ public class ClassLoader extends java.lang.ClassLoader {
 			return null;
 		}
 	}
+
 	protected Class<?> findClass(final String name) {
 		Class<?> newClass = null;
 		try {
@@ -72,22 +76,17 @@ public class ClassLoader extends java.lang.ClassLoader {
 			newClass = super.findClass(name);
 		}
 		catch (final ClassNotFoundException cnfe) {
-			final String osName =
-				this.directory + name.replace('.', '/') + ".class";
+			final String osName = this.directory + name.replace('.', '/')
+					+ ".class";
 
 			try {
 				final FileInputStream fis = new FileInputStream(osName);
 				newClass = this.defineClasses(name, fis);
 			}
 			catch (final ClassFormatError cfe) {
-				ProxyConsole
-					.getInstance()
-					.errorOutput()
-					.print(
-						MultilingualManager.getString(
-							"Err_FILE",
-							ClassLoader.class,
-							new Object[] { osName }));
+				ProxyConsole.getInstance().errorOutput()
+						.print(MultilingualManager.getString("Err_FILE",
+								ClassLoader.class, new Object[] { osName }));
 				cfe.printStackTrace(ProxyConsole.getInstance().errorOutput());
 			}
 			catch (final FileNotFoundException fnfe) {
@@ -97,15 +96,19 @@ public class ClassLoader extends java.lang.ClassLoader {
 
 		return newClass;
 	}
+
 	protected URL findResource(final String name) {
 		URL url = super.findResource(name);
 
 		if (url == null) {
 			try {
-				url = new URL("file", "", "/" + this.directory);
+				url = new URI("file", "", "/" + this.directory).toURL();
 			}
 			catch (final MalformedURLException mfue) {
 				mfue.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			}
+			catch (final URISyntaxException use) {
+				use.printStackTrace(ProxyConsole.getInstance().errorOutput());
 			}
 		}
 

@@ -15,7 +15,7 @@ import com.ibm.toad.cfparse.FieldInfoList;
 
 import junit.framework.TestCase;
 
-public class ReflectiveInstantiation extends TestCase {
+public class ReflectiveInstantiationTest extends TestCase {
 	public void test1()
 			throws FileNotFoundException, IOException, NoSuchMethodException,
 			SecurityException, InstantiationException, IllegalAccessException,

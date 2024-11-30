@@ -1,4 +1,4 @@
-package util.lang.test;
+package util.io.test;
 
 import java.io.IOException;
 

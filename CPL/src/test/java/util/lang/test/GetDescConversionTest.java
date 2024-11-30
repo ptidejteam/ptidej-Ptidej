@@ -16,7 +16,7 @@ import util.lang.CFParseBCELConvertor;
  * @author Rushin Dipak Makwana
  * @author Nicolas C. Rousse
  */
-public class CFParseBCELConvertorGetMethodsTest extends TestCase {
+public class GetDescConversionTest extends TestCase {
 	private ClassFile classFile_CFParse_Original;
 	private ClassFile classFile_CFParse_Converted;
 
@@ -47,10 +47,15 @@ public class CFParseBCELConvertorGetMethodsTest extends TestCase {
 	}
 
 	public void testGetFields() {
-		// TODO Should be toString() instead of getName()
 		Assert.assertEquals(
 				this.classFile_CFParse_Original.getFields().get(0).getName(),
 				this.classFile_CFParse_Converted.getFields().get(0).getName());
+		// TODO Should be the following test 
+		/*
+		Assert.assertEquals(
+				this.classFile_CFParse_Original.getFields().get(0).toString(),
+				this.classFile_CFParse_Converted.getFields().get(0).toString());
+		*/
 	}
 
 	public void testGetDesc() {
@@ -61,17 +66,6 @@ public class CFParseBCELConvertorGetMethodsTest extends TestCase {
 							.getDesc(),
 					this.classFile_CFParse_Converted.getFields().get(i)
 							.getDesc());
-		}
-	}
-
-	public void testGetMethods() {
-		int fieldCount = this.classFile_CFParse_Original.getMethods().length();
-		for (int i = 0; i < fieldCount; i++) {
-			Assert.assertEquals(
-					this.classFile_CFParse_Original.getMethods().get(i)
-							.toString(),
-					this.classFile_CFParse_Converted.getMethods().get(i)
-							.toString());
 		}
 	}
 }

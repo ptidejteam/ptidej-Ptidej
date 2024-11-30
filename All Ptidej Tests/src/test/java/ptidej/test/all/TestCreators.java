@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.test.all;
 
+import cpl.test.TestCPL;
 import jct.test.TestCreatorJavaFileUsingJavaCParser;
 import junit.framework.Test;
 import junit.framework.TestSuite;
@@ -33,6 +34,8 @@ import test.TestCreatorJavaFileUsingEclipseParser;
 public final class TestCreators extends TestSuite {
 	public static Test suite() {
 		final TestCreators suite = new TestCreators();
+
+		suite.addTest(TestCPL.suite());
 
 		suite.addTest(TestCreatorAOL.suite());
 		suite.addTest(TestCreatorAspectJ.suite());

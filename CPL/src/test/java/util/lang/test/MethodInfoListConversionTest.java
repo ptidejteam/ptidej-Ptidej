@@ -15,7 +15,7 @@ import com.ibm.toad.cfparse.MethodInfoList;
 
 import junit.framework.TestCase;
 
-public class MethodInfoListTest extends TestCase {
+public class MethodInfoListConversionTest extends TestCase {
 	public void test1() throws FileNotFoundException, IOException {
 		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
 

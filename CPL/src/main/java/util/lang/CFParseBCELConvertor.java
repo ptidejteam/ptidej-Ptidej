@@ -29,6 +29,7 @@ import org.apache.bcel.classfile.ConstantMethodref;
 import org.apache.bcel.classfile.ConstantNameAndType;
 import org.apache.bcel.classfile.ConstantString;
 import org.apache.bcel.classfile.ConstantUtf8;
+import org.apache.bcel.classfile.ConstantValue;
 import org.apache.bcel.classfile.Field;
 import org.apache.bcel.classfile.JavaClass;
 import org.apache.bcel.classfile.Method;
@@ -59,71 +60,132 @@ public class CFParseBCELConvertor {
 			final JavaClass aJavaClass) {
 
 		final Field[] fields = aJavaClass.getFields();
+		final StringBuffer fieldDeclaration = new StringBuffer();
+		final FieldInfoList fieldInfoList = aClassFile.getFields();
+
 		for (int index = 0; index < fields.length; index++) {
 			final Field field = fields[index];
 			final String fieldType = field.getType().toString();
 			final String fieldName = field.getName();
-			final String fieldDeclaration = Modifier.toString(
-					field.getModifiers()) + ' ' + fieldType + " " + fieldName;
+			final ConstantValue fieldValue = field.getConstantValue();
 
 			if (fieldName.indexOf('$') == -1) {
-				final FieldInfoList fieldInfoList = aClassFile.getFields();
+				fieldDeclaration
+						.append(Modifier.toString(field.getModifiers()));
+				fieldDeclaration.append(' ');
+				fieldDeclaration.append(fieldType);
+
 				if (field.isStatic()) {
-					if (fieldType.equals("java.lang.String")) {
-						fieldInfoList.addStatic(aClassFile,
-								fieldDeclaration + "=\"\"");
-					}
-					else if (fieldType.equals("boolean")) {
-						fieldInfoList.addStatic(aClassFile,
-								fieldDeclaration + "=false");
-					}
-					else if (fieldType.equals("byte")) {
-						fieldInfoList.addStatic(aClassFile,
-								fieldDeclaration + "=0");
-					}
-					else if (fieldType.equals("char")) {
-						fieldInfoList.addStatic(aClassFile, fieldDeclaration
-								+ "=\'"
-								+ (char) Integer.valueOf(
-										field.getConstantValue().toString())
-										.intValue()
-								+ '\'');
-					}
-					else if (fieldType.equals("double")) {
-						fieldInfoList.addStatic(aClassFile,
-								fieldDeclaration + "=0");
-					}
-					else if (fieldType.equals("float")) {
-						fieldInfoList.addStatic(aClassFile,
-								fieldDeclaration + "=0.0f");
-					}
-					else if (fieldType.equals("int")) {
-						fieldInfoList.addStatic(aClassFile,
-								fieldDeclaration + "=0");
-					}
-					else if (fieldType.equals("long")) {
-						fieldInfoList.addStatic(aClassFile,
-								fieldDeclaration + "=0");
-					}
-					else if (fieldType.equals("short")) {
-						fieldInfoList.addStatic(aClassFile,
-								fieldDeclaration + "=0");
-					}
-					else {
-						fieldInfoList.addStatic(aClassFile, fieldDeclaration
-								+ '=' + field.getConstantValue());
-					}
+					fieldDeclaration.append(' ');
+					fieldDeclaration.append(fieldName);
 				}
 				else {
 					// Yann 2006/07/31: Bug in CFParse!
-					// I must add a '_' in front of the field
-					// name because CFParse eats the first 
-					// letter away...
-					fieldInfoList.add(Modifier.toString(field.getModifiers())
-							+ ' ' + field.getType().toString() + " _"
-							+ field.getName());
+					// I must add a '_' in front of the field name 
+					// because CFParse eats the first letter away...
+					fieldDeclaration.append(" _");
+					fieldDeclaration.append(fieldName);
+				}
+
+				fieldDeclaration.append('=');
+				if (fieldType.equals("java.lang.String")) {
+					if (fieldValue == null) {
+						fieldDeclaration.append("\"\"");
+					}
+					else {
+						fieldDeclaration.append('\"');
+						fieldDeclaration.append(fieldValue.toString());
+						fieldDeclaration.append('\"');
+					}
+				}
+				else if (fieldType.equals("boolean")) {
+					if (fieldValue == null) {
+						fieldDeclaration.append("false");
+					}
+					else {
+						fieldDeclaration.append(fieldValue.toString());
+					}
+				}
+				else if (fieldType.equals("byte")) {
+					if (fieldValue == null) {
+						fieldDeclaration.append('0');
+					}
+					else {
+						fieldDeclaration.append(fieldValue.toString());
+					}
+				}
+				else if (fieldType.equals("char")) {
+					if (fieldValue == null) {
+						fieldDeclaration.append('0');
+					}
+					else {
+						fieldDeclaration.append('\'');
+						fieldDeclaration.append(fieldValue.toString());
+						fieldDeclaration.append('\'');
+					}
+				}
+				else if (fieldType.equals("double")) {
+					if (fieldValue == null) {
+						fieldDeclaration.append('0');
+					}
+					else {
+						fieldDeclaration.append(fieldValue.toString());
+					}
+				}
+				else if (fieldType.equals("float")) {
+					if (fieldValue == null) {
+						fieldDeclaration.append("0.0f");
+					}
+					else {
+						fieldDeclaration.append(fieldValue.toString());
+					}
+				}
+				else if (fieldType.equals("int")) {
+					if (fieldValue == null) {
+						fieldDeclaration.append('0');
+					}
+					else {
+						fieldDeclaration.append(fieldValue.toString());
+					}
+				}
+				else if (fieldType.equals("long")) {
+					if (fieldValue == null) {
+						fieldDeclaration.append('0');
+					}
+					else {
+						fieldDeclaration.append(fieldValue.toString());
+					}
+				}
+				else if (fieldType.equals("short")) {
+					if (fieldValue == null) {
+						fieldDeclaration.append('0');
+					}
+					else {
+						fieldDeclaration.append(fieldValue.toString());
+					}
+				}
+				else {
+					if (fieldValue == null) {
+						fieldDeclaration.append("null");
+					}
+					else {
+						fieldDeclaration.append(fieldValue.toString());
+					}
+				}
+
+				if (field.isStatic()) {
+					fieldInfoList.addStatic(aClassFile,
+							fieldDeclaration.toString());
+				}
+				else {
+					fieldInfoList.add(fieldDeclaration.toString());
 				}
 			}
+			else {
+				// Nothing to do?
+			}
+
+			fieldDeclaration.setLength(0);
 		}
 	}
 
