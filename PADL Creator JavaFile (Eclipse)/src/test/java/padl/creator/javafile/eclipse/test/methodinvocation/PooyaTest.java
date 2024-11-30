@@ -34,7 +34,7 @@ public class PooyaTest extends TestCase {
 		Assert.assertNotNull(entity);
 
 		final IMethod method =
-			(IMethod) entity.getConstituentFromID("MazMaz(int[], int[])");
+			(IMethod) entity.getConstituentFromID("MazMaz(int, int)");
 		Assert.assertNotNull(method);
 
 		Assert.assertEquals(method.getNumberOfConstituents(), 2);

@@ -283,6 +283,14 @@ public class Factory implements IFactory, Serializable {
 
 		return new Parameter(aType, aCardinality);
 	}
+	public IParameter createParameter(
+		final IEntity aType,
+		final char[] aName,
+		final int aCardinality,
+		final int aDimension) {
+		
+		return new Parameter(aType, aName, aCardinality, aDimension);
+	}
 	public IPrimitiveEntity createPrimitiveEntity(
 		final char[] aPrimitiveEntityName) {
 

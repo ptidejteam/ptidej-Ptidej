@@ -259,16 +259,12 @@ public class PadlParserUtil {
 	}
 
 	/**
-	 * Return the dimension of a type
+	 * Returns the cardinality of a type (one or many)
 	 * 
 	 * @param aTypeBinding
 	 * @return
 	 */
-	public static int getDim(final ITypeBinding aTypeBinding) {
-		if (aTypeBinding.isArray()) {
-			return Constants.CARDINALITY_MANY;
-		}
-
+	public static int getCardinality(final ITypeBinding aTypeBinding) {
 		ITypeBinding typeBinding = aTypeBinding;
 		if (aTypeBinding.isParameterizedType()) {
 			typeBinding = aTypeBinding.getErasure();
@@ -280,6 +276,24 @@ public class PadlParserUtil {
 		}
 		else {
 			return Constants.CARDINALITY_ONE;
+		}
+	}
+	
+	/**
+	 * Returns the dimension of a type
+	 * int		has dimension 0
+	 * int[]	has dimension 1
+	 * int[][]	has dimension 2...
+	 * 
+	 * @param aTypeBinding
+	 * @return
+	 */
+	public static int getDimension(final ITypeBinding aTypeBinding) {
+		if (aTypeBinding.isArray()) {
+			return aTypeBinding.getDimensions();
+		}
+		else {
+			return getCardinality(aTypeBinding) - 1;
 		}
 	}
 
@@ -493,18 +507,29 @@ public class PadlParserUtil {
 				// Yann: May be null when parsing Foutse's Eclipse data!
 				// TODO: Understand why it could be null...
 				if (entity != null) {
-					// Yann 2015/04/15: Dimensions!
-					// I don't forget to add +1 because
-					//	int 	has for cardinality 1
-					//	int[]	has for cardinality 2
-					//	int[][]	has for cardniality 3
-					//	...
-					final int dim = PadlParserUtil.getDim(type) + 1;
-					final IParameter parameter =
-						model.getFactory().createParameter(
-							entity,
-							var.getName().toString().toCharArray(),
-							dim);
+					final IParameter parameter;
+					final int cardinality = PadlParserUtil.getCardinality(type);
+					if (type.isArray()) {
+						// Yann 2015/04/15: Dimensions!
+						// I don't forget to add +1 because
+						//	int 	has for cardinality 1
+						//	int[]	has for cardinality 2
+						//	int[][]	has for cardniality 3
+						//	...
+						final int dimension = PadlParserUtil.getDimension(type) + 1;
+						parameter =
+								model.getFactory().createParameter(
+									entity,
+									var.getName().toString().toCharArray(),
+									cardinality,
+									dimension);
+					} else {
+						parameter =
+							model.getFactory().createParameter(
+								entity,
+								var.getName().toString().toCharArray(),
+								cardinality);
+					}
 
 					parameter.setVisibility(var.getModifiers());
 					// I will use the field comment of param to register the
@@ -513,7 +538,7 @@ public class PadlParserUtil {
 					// computation, I will delete it
 					// This for having the same information with padl .class
 					// Aminata 05/05/11
-					parameter.setComment(Integer.toString(dim));
+					parameter.setComment(Integer.toString(cardinality));
 					listOfParameters.add(parameter);
 				}
 			}
