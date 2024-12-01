@@ -20,22 +20,28 @@ The source code of the Ptidej Tool Suite is open and released under the GNU Publ
 
 ## What do I need?
 
-- Maven version 3.9.6
-- Java 21 (but not more recent because of some mismatch with Eclipse)
+- Java 21 and its JDK
+- Maven version 3.9.6+
+- Eclipse 2024-03 (4.31.0)
+
+(You must use Eclipse 2024-03 to benefit from JDK 21 support _and_ from the previews of JDK 22, no earlier or later version. Eclipse only allows previews for the latest JDK that it supports.)
 
 ## How do I set it up?
 
 To build the whole project, use: 
 ```bash
-mvn dependency:purge-local-repository -DactTransitively=false -DreResolve=false
 mvn clean
 mvn validate
 mvn install
 ```
 
-- `mvn dependency:purge-local-repository -DactTransitively=false -DreResolve=false` cleans your local Maven repository.
+where:
+
 - `mvn validate` installs 3rd party JARs, like `cfparse` and `db4o`.
 - `mvn install` compiles, tests, packages, and installs all the sub-projects.
+
+You could also use the following command to clean your local Maven repository:
+`mvn dependency:purge-local-repository -DactTransitively=false -DreResolve=false`.
 
 After executing these commands, run:
 ```bash
@@ -51,9 +57,9 @@ This JAR launches a Swing GUI to interact with the Ptidej Tool Suite.
 
 ## Troubleshooting
 
-Some sub-projects must be compiled towards bytecode for Java 1.4. This requirement is enforced in the appropriate `pom.xml` files. The whole projects and some sub-projects also require specific `--add-exports` and `--add-opens` arguments to the JVM, which are also already set in the corresponding `pom.xml` files. These arguments are:
+Some sub-projects require the features previewed in JDK 21 (which may become available in JDK 22). Thus, tests and programs require adding the JVM argument `--enable-preview` to the command line. The whole projects and some sub-projects also require specific `--add-exports` and `--add-opens` arguments to the JVM, which are also already set in the corresponding `pom.xml` files. Therefore, the JVM arguments are:
 
-```--add-exports jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED --add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED```
+```--enable-preview --add-exports jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED --add-exports jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED --add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED```
 
 ## Guidelines
 
@@ -64,20 +70,14 @@ Some sub-projects must be compiled towards bytecode for Java 1.4. This requireme
 ### TODO
 
 In some order of importance:
-- Migrate the use of the `cfparse` library to the `bcel` [library](https://mvnrepository.com/artifact/org.apache.bcel/bcel)
-  - Use `util.lang.CFParseBCELConvertor`?
 - Fix tests in `PADL Creator C++ (Eclipse)`
 - Add tests to `Creator MSE`
 - Add tests to `PADL Generator PageRank`
 - Clean test outputs
   - Fix/hide any exceptions
-- Maven-ise `Caffeine`
-- Change the encoding from **windows-1252** to **UTF-8**
 - Refactoring the code to make full use of Java 17
 - Remove compilation warnings
-- Fix extremely slow and memory-consuming running of Ptidej from JAR
-  - `java -jar "DeMIMA UI Viewer Standalone Swing/target/demima-ui-viewer-swing-1.0.0-jar-with-dependencies.jar"`
 - Fix JPG export from the menu Export SVG in `...Swing`
 - Simplify and update "About" in `...Swing`
 - Find an alternative to using the `com.sun.tools.javac` library, which is internal to the JDK.
-- Add GitHub Actions to compile/test the whole project
+- Modularise Ptidej to benefit from the Java Platform Module System.
