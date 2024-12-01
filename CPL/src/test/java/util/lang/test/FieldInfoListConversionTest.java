@@ -26,8 +26,6 @@ public class FieldInfoListConversionTest extends TestCase {
 
 		final ClassFile classFile_CFParse_Original = new ClassFile(
 				new FileInputStream(classFile_Path));
-		final FieldInfoList fieldInfoList = classFile_CFParse_Original
-				.getFields();
 		final FieldInfoList fieldInfoList_CFParse = classFile_CFParse_Original
 				.getFields();
 

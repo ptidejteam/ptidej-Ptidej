@@ -91,13 +91,7 @@ public class ImmutableCodeSegment {
 			++var3;
 			JVMInstruction var6 = JVMInstruction.d_instrTable[var5];
 			int var7 = var6.len();
-			// Yann 24/11/28: "New" "invokedynamic" JVM instruction
-			// To accommodate the new "invokedynamic" JVM instruction
-			// (since Java 7), I changed the test from
-			// 		if (var7 == 0) {
-			// to what it is now because, in case of invokedynamic,
-			// var7 == -1 (not 0) for some reason unknown to me.
-			if (var7 < 1) {
+			if (var7 == 0) {
 				switch (var5) {
 				case 170: // tableswitch = 170 (0xaa)
 				case 171: // lookupswitch = 171 (0xab)
@@ -131,7 +125,7 @@ public class ImmutableCodeSegment {
 	}
 
 	void sprintOperand(StringBuffer var1, int var2, char var3) {
-		boolean var4 = false;
+		// boolean var4 = false;
 		int var5;
 		switch (var3) {
 		case '0':
@@ -191,10 +185,10 @@ public class ImmutableCodeSegment {
 
 	public static CodeViewer getViewer() {
 		return new CodeViewer() {
-			InstructionFactory d_if;
+			// InstructionFactory d_if;
 
 			public void setInstructionType(InstructionFactory var1) {
-				this.d_if = var1;
+				// this.d_if = var1;
 			}
 
 			public String view(ConstantPool var1, byte[] var2,

@@ -325,15 +325,15 @@ public final class ConstantPool {
 
 	// Yann 24/11/28: "New" constant pool entry since Java 7 
 	public final class InvokeDynamic extends ConstantPoolEntry {
-		private int d_idxName;
-		private int d_idxType;
+		private int d_idxBootstrapMethod;
+		private int d_idxNameAndType;
 		// $FF: synthetic field
 		final ConstantPool this$0;
 
 		InvokeDynamic(ConstantPool var1, int var2, int var3) {
 			(this.this$0 = var1).getClass();
-			this.d_idxName = var2;
-			this.d_idxType = var3;
+			this.d_idxBootstrapMethod = var2;
+			this.d_idxNameAndType = var3;
 		}
 
 		public boolean equals(Object var1) {
@@ -343,49 +343,52 @@ public final class ConstantPool {
 			else {
 				ConstantPoolEntry var2 = (ConstantPoolEntry) var1;
 				int[] var3 = var2.getIndices();
-				return this.this$0.get(this.d_idxName)
+				return this.this$0.get(this.d_idxBootstrapMethod)
 						.equals(this.this$0.get(var3[0]))
-						&& this.this$0.get(this.d_idxType)
+						&& this.this$0.get(this.d_idxNameAndType)
 								.equals(this.this$0.get(var3[1]));
 			}
 		}
 
 		public String getAsJava() {
-			return this.getNameAsJava() + "." + this.getTypeAsJava();
+			ConstantPool.NameAndTypeEntry var1 = (ConstantPool.NameAndTypeEntry) this.this$0
+					.get(this.d_idxNameAndType);
+			String var2 = var1.getTypeAsJava();
+			String var3 = var1.getNameAsJava();
+			return var2 + " " + this.this$0.getAsJava(this.d_idxBootstrapMethod)
+					+ "." + var3;
 		}
 
 		public String getAsString() {
-			return this.this$0.getAsString(this.d_idxName) + " "
-					+ this.this$0.getAsString(this.d_idxType);
+			// Yann 24/11/30: No BootstrapMethods Attribute
+			// I don't create/populate the BootstrapMethods attribute,
+			// so there's nothing to do right now with the index at
+			// "this.d_idxBootstrapMethod".
+			//		return this.this$0.getAsString(this.d_idxBootstrapMethod) + " "
+			//				+ this.this$0.getAsString(this.d_idxNameAndType);
+			// TODO Create the BootstrapMethods attribute
+			return this.this$0.getAsString(this.d_idxNameAndType);
 		}
 
 		public int[] getIndices() {
-			return new int[] { this.d_idxName, this.d_idxType };
-		}
-
-		String getNameAsJava() {
-			return this.this$0.getAsString(this.d_idxName);
-		}
-
-		String getTypeAsJava() {
-			return CPUtils
-					.internal2java(this.this$0.getAsString(this.d_idxType));
+			return new int[] { this.d_idxBootstrapMethod,
+					this.d_idxNameAndType };
 		}
 
 		void setIndices(int[] var1) {
-			this.d_idxName = var1[0];
-			this.d_idxType = var1[1];
+			this.d_idxBootstrapMethod = var1[0];
+			this.d_idxNameAndType = var1[1];
 		}
 
 		public String toString() {
-			return "InvokeDynamic: " + this.d_idxName + " " + this.d_idxType
-					+ " (" + this.getAsJava() + ")";
+			return "InvokeDynamic: " + this.d_idxBootstrapMethod + " "
+					+ this.d_idxNameAndType + " (" + this.getAsJava() + ")";
 		}
 
 		void write(DataOutputStream var1) throws IOException {
 			var1.writeByte(18);
-			var1.writeShort(this.d_idxName);
-			var1.writeShort(this.d_idxType);
+			var1.writeShort(this.d_idxBootstrapMethod);
+			var1.writeShort(this.d_idxNameAndType);
 		}
 	}
 
@@ -598,10 +601,12 @@ public final class ConstantPool {
 		}
 
 		String getNameAsJava() {
+			// TODO Is this method necessary?
 			return this.this$0.getAsString(this.d_idxDescriptor);
 		}
 
 		String getTypeAsJava() {
+			// TODO Is this method necessary?
 			return CPUtils.internal2java(
 					this.this$0.getAsString(this.d_idxDescriptor));
 		}
@@ -1058,7 +1063,7 @@ public final class ConstantPool {
 					.getIndices()[1]];
 			String var7 = var5.getAsString();
 			int var8 = 0;
-			boolean var9 = false;
+			// boolean var9 = false;
 			StringBuffer var10 = new StringBuffer();
 
 			while (true) {
@@ -1084,7 +1089,7 @@ public final class ConstantPool {
 						var14 = var15;
 					}
 
-					var9 = true;
+					// var9 = true;
 				}
 
 				var10.append(var14);
@@ -1171,6 +1176,19 @@ public final class ConstantPool {
 	}
 
 	public String getAsString(int var1) {
+		// Yann 24/11/30: Bug?
+		// It used to be simply:
+		//		return this.get(var1).getAsString();
+		// TODO Why is this test necessary?
+		/*
+		final ConstantPoolEntry entry = this.get(var1);
+		if (entry == null) {
+			return this.get(0).getAsString();
+		}
+		else {
+			return this.get(var1).getAsString();
+		}
+		*/
 		return this.get(var1).getAsString();
 	}
 
@@ -1349,12 +1367,12 @@ public final class ConstantPool {
 	}
 
 	public void removeAll() {
-		ConstantPoolEntry[] var1 = new ConstantPoolEntry[] {
-				new ConstantPool.Utf8Entry("<dummy Entry>") };
 		this.d_numConstants = 1;
+		this.d_constants = new ConstantPoolEntry[1];
+		this.d_constants[0] = new ConstantPool.Utf8Entry("<dummy Entry>");
 		this.d_hashN2C = new HashMap();
 		this.d_hashC2i = new HashMap();
-	}
+}
 
 	private void resize() {
 		ConstantPoolEntry[] var1 = new ConstantPoolEntry[this.d_numConstants

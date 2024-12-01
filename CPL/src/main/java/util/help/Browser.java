@@ -11,6 +11,7 @@
 package util.help;
 
 import java.io.IOException;
+
 import util.io.ProxyConsole;
 import util.multilingual.MultilingualManager;
 
@@ -70,7 +71,8 @@ public class Browser {
 			if (windows) {
 				// cmd = 'rundll32 url.dll,FileProtocolHandler http://...'
 				cmd = Browser.WIN_PATH + " " + Browser.WIN_FLAG + " " + url;
-				Runtime.getRuntime().exec(cmd);
+				Runtime.getRuntime().exec(new String[] { Browser.WIN_PATH,
+						Browser.WIN_FLAG, url });
 			}
 
 			// Under Mac Os X we run the url whith the default Browser
@@ -79,7 +81,8 @@ public class Browser {
 
 				// we invoke the command string : "open -a /Applications/Safari.app [url]"
 				cmd = "open -a /Applications/Safari.app" + " " + url;
-				Runtime.getRuntime().exec(cmd);
+				Runtime.getRuntime().exec(new String[] { "open", "-a",
+						"/Applications/Safari.app", url });
 			}
 
 			// TODO : i did not deleted the debug messages
@@ -95,10 +98,11 @@ public class Browser {
 				// check for an exit value.  If the exit command is 0,
 				// it worked, otherwise we need to start the browser.
 				// cmd = 'netscape -remote openURL(http://www.javaworld.com)'
-				cmd =
-					Browser.UNIX_PATH + " " + Browser.UNIX_FLAG + "(" + url
-							+ ")";
-				final Process p = Runtime.getRuntime().exec(cmd);
+				cmd = Browser.UNIX_PATH + " " + Browser.UNIX_FLAG + "(" + url
+						+ ")";
+				final Process p = Runtime.getRuntime()
+						.exec(new String[] { Browser.UNIX_PATH,
+								Browser.UNIX_FLAG + "(" + url + ")" });
 				try {
 					// wait for exit code -- if it's 0, command worked,
 					// otherwise we need to start the browser up.
@@ -107,17 +111,14 @@ public class Browser {
 						// Command failed, start up the browser
 						// cmd = 'netscape http://www.javaworld.com'
 						cmd = Browser.UNIX_PATH + " " + url;
-						Runtime.getRuntime().exec(cmd);
+						Runtime.getRuntime()
+								.exec(new String[] { Browser.UNIX_PATH, url });
 					}
 				}
 				catch (final InterruptedException x) {
-					ProxyConsole
-						.getInstance()
-						.errorOutput()
-						.print(
-							MultilingualManager.getString(
-								"Err_BRINGING_BROWSER",
-								Browser.class));
+					ProxyConsole.getInstance().errorOutput()
+							.print(MultilingualManager.getString(
+									"Err_BRINGING_BROWSER", Browser.class));
 					ProxyConsole.getInstance().errorOutput().println(cmd);
 					x.printStackTrace(ProxyConsole.getInstance().errorOutput());
 				}
@@ -125,13 +126,8 @@ public class Browser {
 		}
 		catch (final IOException x) {
 			// couldn't exec browser
-			ProxyConsole
-				.getInstance()
-				.errorOutput()
-				.print(
-					MultilingualManager.getString(
-						"Err_INVOKE_BROWSER",
-						Browser.class));
+			ProxyConsole.getInstance().errorOutput().print(MultilingualManager
+					.getString("Err_INVOKE_BROWSER", Browser.class));
 			ProxyConsole.getInstance().errorOutput().println(cmd);
 			x.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
@@ -159,8 +155,7 @@ public class Browser {
 	 * Simple example.
 	 */
 	public static void main(final String[] args) {
-		Browser.displayURL(MultilingualManager.getString(
-			"BROWSER_URL",
-			Browser.class));
+		Browser.displayURL(
+				MultilingualManager.getString("BROWSER_URL", Browser.class));
 	}
 }

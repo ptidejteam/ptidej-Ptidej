@@ -66,7 +66,6 @@ public class ConstantPoolConversionTest extends TestCase {
 	public void testGetCP() {
 		//	assertEquals(this.classFile_CFParse_Original.getCP().length(),this.classFile_CFParse_Converted.getCP().length());
 		ConstantPool cpOriginal = this.classFile_CFParse_Original.getCP();
-		int lengthOriginal = 1;
 		String[] cpOriginalArray = cpOriginal.toString().trim().split("\n");
 		for (String cpOriginalArrayVal : cpOriginalArray) {
 			if (!cpOriginalArrayVal.equals("CONSTANT POOL:")) {
