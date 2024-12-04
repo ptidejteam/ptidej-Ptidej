@@ -33,10 +33,16 @@ package padl.creator.javafile.javac;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.SimpleFileVisitor;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 import javax.tools.DiagnosticListener;
@@ -50,6 +56,7 @@ import padl.creator.javafile.javac.util.JCTtoPADLTranslator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.ICodeLevelModelCreator;
 import padl.kernel.exception.CreationException;
+import util.io.ProxyConsole;
 import util.lang.OpenedModulesGuard;
 
 /**
@@ -114,10 +121,43 @@ public class JavaFileCreator implements ICodeLevelModelCreator {
 	private void initialise(final List<String> options,
 			final String aSourcePath, final String[] someFilesInThePath) {
 
+		// Yann 24/12/03: Recursivity
+		// To simplify the use of this creator, if the array
+		// someFilesInThePath is empty, then I look for Java
+		// files into aSourcePath, else I use these files.
+		final String[] filePaths;
+		if (someFilesInThePath.length == 0) {
+			final List<String> filePathsList = new ArrayList<>();
+			try {
+				Files.walkFileTree(Path.of(aSourcePath),
+						new SimpleFileVisitor<Path>() {
+							@Override
+							public FileVisitResult visitFile(final Path file,
+									final BasicFileAttributes attrs)
+									throws IOException {
+
+								Objects.requireNonNull(file);
+								Objects.requireNonNull(attrs);
+
+								filePathsList.add(file.toString());
+
+								return FileVisitResult.CONTINUE;
+							}
+						});
+			}
+			catch (final IOException e) {
+				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			}
+			filePaths = filePathsList.toArray(new String[0]);
+		}
+		else {
+			filePaths = someFilesInThePath;
+		}
+
 		this.options = options;
-		final File[] files = new File[someFilesInThePath.length];
-		for (int i = 0; i < someFilesInThePath.length; i++) {
-			files[i] = new File(someFilesInThePath[i]);
+		final File[] files = new File[filePaths.length];
+		for (int i = 0; i < filePaths.length; i++) {
+			files[i] = new File(filePaths[i]);
 		}
 		this.files = files;
 

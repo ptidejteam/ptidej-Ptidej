@@ -1,0 +1,3 @@
+[Ptidej Project]
+Name = PADL
+JavaSourcefilesIdiomModel = ../../../PADL/src/main/java/padl/kernel/;

@@ -45,6 +45,7 @@ import jct.kernel.IJCTComment;
 import jct.kernel.IJCTCompilationUnit;
 import jct.kernel.IJCTSourceCodePart;
 import jct.util.IJCTContainer;
+import util.io.ProxyConsole;
 
 /**
  * This class attach the comments within each
@@ -55,16 +56,29 @@ public class JCTCommentAttachor extends JCTMap<Void, Void> {
 
 	private int getAbsoluteOffset(final IJCTSourceCodePart scp,
 			final IJCTCompilationUnit cu) {
+
 		Integer offset = this.cache.get(scp);
-		if (scp.getEnclosingCompilationUnit() != cu)
-			throw new IllegalArgumentException(
-					"scp (" + scp + ") must be enclosed in " + cu);
-		if (null == offset)
+
+		if (scp.getEnclosingCompilationUnit() != cu) {
+			// TODO This should never happened!
+			// But it happens when loading all the Java files under "/PADL/src/main/java/padl/kernel/"
+			ProxyConsole.getInstance().errorOutput().print(
+					"jct.tools.JCTCommentAttachor.getAbsoluteOffset(): source code part should enclosed in ");
+			ProxyConsole.getInstance().errorOutput().println(cu);
+			offset = 0;
+		}
+
+		if (null == offset) {
 			this.cache.put(scp, offset = scp.getStoredSourceCodeOffset(cu));
-		if (null == offset)
-			throw new IllegalArgumentException(
-					"scp (" + scp + ") must be enclosed in " + cu
-							+ " and contains stored source code data");
+		}
+
+		if (null == offset) {
+			// TODO This should never happened!
+			// But it happens when loading all the Java files under "/PADL/src/main/java/padl/kernel/"
+			ProxyConsole.getInstance().errorOutput().println(
+					"jct.tools.JCTCommentAttachor.getAbsoluteOffset(): source code part should contain source code data!");
+			offset = 0;
+		}
 
 		return offset;
 	}
@@ -137,15 +151,30 @@ class ConstituentOffsetOrder implements Comparator<IJCTSourceCodePart> {
 
 	private int getAbsoluteOffset(final IJCTSourceCodePart scp) {
 		Integer offset = this.cache.get(scp);
-		if (scp.getEnclosingCompilationUnit() != this.compilationUnit)
-			throw new IllegalArgumentException("scp (" + scp
-					+ ") must be enclosed in " + this.compilationUnit);
-		if (null == offset)
+
+		if (scp.getEnclosingCompilationUnit() != this.compilationUnit) {
+			// TODO This should never happened!
+			// But it happens when loading all the Java files under "/PADL/src/main/java/padl/kernel/"
+			ProxyConsole.getInstance().errorOutput().print(
+					"jct.tools.ConstituentOffsetOrder.getAbsoluteOffset(): source code part should enclosed in ");
+			ProxyConsole.getInstance().errorOutput()
+					.println(this.compilationUnit);
+			offset = 0;
+		}
+
+		if (null == offset) {
 			this.cache.put(scp, offset = scp
 					.getStoredSourceCodeOffset(this.compilationUnit));
-		if (null == offset)
-			throw new IllegalArgumentException(
-					"scp (" + scp + ") must contain stored source code data");
+		}
+
+		if (null == offset) {
+			// TODO This should never happened!
+			// But it happens when loading all the Java files under "/PADL/src/main/java/padl/kernel/"
+			ProxyConsole.getInstance().errorOutput().println(
+					"jct.tools.ConstituentOffsetOrder.getAbsoluteOffset(): source code part should contain source code data!");
+			offset = 0;
+		}
+
 		return offset;
 	}
 
