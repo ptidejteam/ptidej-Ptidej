@@ -75,7 +75,7 @@ In some order of importance:
 - Add tests to `PADL Generator PageRank`
 - Clean test outputs
   - Fix/hide any exceptions
-- Refactoring the code to make full use of Java 17
+- Refactoring the code to make full use of Java 21
 - Remove compilation warnings
 - Fix JPG export from the menu Export SVG in `...Swing`
 - Simplify and update "About" in `...Swing`
