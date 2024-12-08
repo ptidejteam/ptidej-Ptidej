@@ -10,6 +10,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.BitSet;
 import java.util.Vector;
+
 import com.ibm.toad.cfparse.attributes.AttrInfoList;
 import com.ibm.toad.cfparse.attributes.CodeAttrInfo;
 import com.ibm.toad.cfparse.attributes.ConstantValueAttrInfo;
@@ -160,13 +161,15 @@ public final class FieldInfo {
 		else {
 			final MethodInfoList methodinfolist = classfile.getMethods();
 			MethodInfo methodinfo = null;
+			boolean found = false;
 			for (int k1 = 0; k1 < methodinfolist.length(); k1++) {
 				methodinfo = methodinfolist.get(k1);
 				if (methodinfo.getName().equals("<clinit>")) {
+					found = true;
 					break;
 				}
 			}
-			if (methodinfo == null) {
+			if (!found) {
 				methodinfo = methodinfolist.add("static void <clinit>()");
 			}
 			final CodeAttrInfo codeattrinfo = (CodeAttrInfo) methodinfo
@@ -178,7 +181,9 @@ public final class FieldInfo {
 			final Vector<BaseInstruction> vector = mutablecodesegment
 					.getInstructions();
 
-			if (vector.lastElement().toString().trim().equals("return")) {
+			if (!vector.isEmpty() && vector.lastElement().toString().trim()
+					.equals("return")) {
+
 				vector.removeElement(vector.lastElement());
 			}
 
@@ -197,8 +202,13 @@ public final class FieldInfo {
 						throw new BadJavaError(
 								"Bad Field Description: unquoted character");
 					}
+					// Yann 24/12/06: Bug in original CFParse?
+					// The code used to use s5.charAt(0) instead of s5.charAt(1),
+					// which doesn't make sense because, by definition of the if
+					// statement above, the char at 0 is always "'", which is not
+					// a valid value for a bipush JVM instruction.
 					BaseInstruction baseinstruction1 = mutablecodesegment
-							.create("bipush #" + s5.charAt(0));
+							.create("bipush #" + s5.charAt(1));
 					vector.addElement(baseinstruction1);
 					baseinstruction1 = mutablecodesegment.create(
 							"putstatic char " + classfile.getName() + "." + s3);

@@ -17,6 +17,7 @@ import java.io.StringReader;
 import java.io.StringWriter;
 
 import org.apache.bcel.Const;
+import org.apache.bcel.classfile.Attribute;
 import org.apache.bcel.classfile.Constant;
 import org.apache.bcel.classfile.ConstantClass;
 import org.apache.bcel.classfile.ConstantDouble;
@@ -31,6 +32,8 @@ import org.apache.bcel.classfile.ConstantString;
 import org.apache.bcel.classfile.ConstantUtf8;
 import org.apache.bcel.classfile.ConstantValue;
 import org.apache.bcel.classfile.Field;
+import org.apache.bcel.classfile.InnerClass;
+import org.apache.bcel.classfile.InnerClasses;
 import org.apache.bcel.classfile.JavaClass;
 import org.apache.bcel.classfile.Method;
 import org.apache.bcel.generic.Type;
@@ -38,14 +41,17 @@ import org.apache.bcel.generic.Type;
 import com.ibm.toad.cfparse.ClassFile;
 import com.ibm.toad.cfparse.ConstantPool;
 import com.ibm.toad.cfparse.ConstantPoolEntry;
+import com.ibm.toad.cfparse.FieldInfo;
 import com.ibm.toad.cfparse.FieldInfoList;
 import com.ibm.toad.cfparse.InterfaceList;
 import com.ibm.toad.cfparse.MethodInfo;
 import com.ibm.toad.cfparse.MethodInfoList;
 import com.ibm.toad.cfparse.attributes.AttrInfoList;
 import com.ibm.toad.cfparse.attributes.CodeAttrInfo;
+import com.ibm.toad.cfparse.attributes.InnerClassesAttrInfo;
 import com.ibm.toad.cfparse.attributes.LineNumberAttrInfo;
 import com.ibm.toad.cfparse.attributes.LocalVariableAttrInfo;
+import com.ibm.toad.cfparse.attributes.SourceFileAttrInfo;
 
 import util.io.ProxyConsole;
 import util.io.ReaderInputStream;
@@ -56,6 +62,132 @@ import util.io.WriterOutputStream;
  * @since	2006/07/27
  */
 public class CFParseBCELConvertor {
+	private static void addConstantPool(final JavaClass aJavaClass,
+			final com.ibm.toad.cfparse.ConstantPool cfparseCP) {
+
+		final org.apache.bcel.classfile.ConstantPool bcelCP = aJavaClass
+				.getConstantPool();
+
+		final Constant[] constants = bcelCP.getConstantPool();
+		for (int index = 1; index < constants.length; index++) {
+			final Constant constant = constants[index];
+
+			if (constant instanceof ConstantClass) {
+				final String className = ((ConstantClass) constant)
+						.getBytes(bcelCP).replace('.', '/');
+				final boolean found = CFParseBCELConvertor.searchFor(cfparseCP,
+						className, ConstantPool.ClassEntry.class);
+				if (!found) {
+					cfparseCP.addClass(className);
+				}
+			}
+			else if (constant instanceof ConstantFieldref) {
+				final int classIndex = ((ConstantFieldref) constant)
+						.getClassIndex();
+				final ConstantClass classConstant = (ConstantClass) bcelCP
+						.getConstant(classIndex);
+				final ConstantUtf8 classNameUtf8 = (ConstantUtf8) bcelCP
+						.getConstant(classConstant.getNameIndex());
+
+				final int nameAndTypeIndex = ((ConstantFieldref) constant)
+						.getNameAndTypeIndex();
+				final ConstantNameAndType nameAndTypeConstant = (ConstantNameAndType) bcelCP
+						.getConstant(nameAndTypeIndex);
+
+				cfparseCP.addField(classNameUtf8.getBytes().replace('.', '/')
+						+ ' ' + nameAndTypeConstant.getName(bcelCP) + ' '
+						+ nameAndTypeConstant.getSignature(bcelCP));
+			}
+			else if (constant instanceof ConstantInterfaceMethodref) {
+				final int classIndex = ((ConstantInterfaceMethodref) constant)
+						.getClassIndex();
+				final ConstantClass classConstant = (ConstantClass) bcelCP
+						.getConstant(classIndex);
+				final ConstantUtf8 classNameUtf8 = (ConstantUtf8) bcelCP
+						.getConstant(classConstant.getNameIndex());
+
+				final int nameAndTypeIndex = ((ConstantInterfaceMethodref) constant)
+						.getNameAndTypeIndex();
+				final ConstantNameAndType nameAndTypeConstant = (ConstantNameAndType) bcelCP
+						.getConstant(nameAndTypeIndex);
+
+				cfparseCP.addMethod(classNameUtf8.getBytes().replace('.', '/')
+						+ ' ' + nameAndTypeConstant.getName(bcelCP) + ' '
+						+ nameAndTypeConstant.getSignature(bcelCP));
+			}
+			else if (constant instanceof ConstantMethodref) {
+				final int classIndex = ((ConstantMethodref) constant)
+						.getClassIndex();
+				final ConstantClass classConstant = (ConstantClass) bcelCP
+						.getConstant(classIndex);
+				final ConstantUtf8 classNameUtf8 = (ConstantUtf8) bcelCP
+						.getConstant(classConstant.getNameIndex());
+
+				final int nameAndTypeIndex = ((ConstantMethodref) constant)
+						.getNameAndTypeIndex();
+				final ConstantNameAndType nameAndTypeConstant = (ConstantNameAndType) bcelCP
+						.getConstant(nameAndTypeIndex);
+
+				cfparseCP.addMethod(classNameUtf8.getBytes().replace('.', '/')
+						+ ' ' + nameAndTypeConstant.getName(bcelCP) + ' '
+						+ nameAndTypeConstant.getSignature(bcelCP));
+			}
+			else if (constant instanceof ConstantDouble) {
+				cfparseCP.addDouble(((ConstantDouble) constant).getBytes());
+			}
+			else if (constant instanceof ConstantFloat) {
+				cfparseCP.addFloat(((ConstantFloat) constant).getBytes());
+			}
+			else if (constant instanceof ConstantInteger) {
+				cfparseCP.addInteger(((ConstantInteger) constant).getBytes());
+			}
+			else if (constant instanceof ConstantLong) {
+				cfparseCP.addLong(((ConstantLong) constant).getBytes());
+			}
+			else if (constant instanceof ConstantNameAndType) {
+				final ConstantNameAndType constantNameAndType = (ConstantNameAndType) constant;
+				final boolean found = CFParseBCELConvertor.searchFor(cfparseCP,
+						constantNameAndType.getName(bcelCP) + ' '
+								+ constantNameAndType.getSignature(bcelCP),
+						ConstantPool.NameAndTypeEntry.class);
+				if (!found) {
+					cfparseCP.addNameAndType(
+							constantNameAndType.getName(bcelCP),
+							constantNameAndType.getSignature(bcelCP));
+				}
+			}
+			else if (constant instanceof ConstantString) {
+				cfparseCP.addString((String) ((ConstantString) constant)
+						.getConstantValue(bcelCP));
+			}
+			else if (constant instanceof ConstantUtf8) {
+				final String utf8String = ((ConstantUtf8) constant).getBytes();
+				if (cfparseCP.find(1, utf8String) == -1) {
+					cfparseCP.addUtf8(utf8String);
+				}
+			}
+			else if (constant == null) {
+				// Yann 24/11/24: Null-able?
+				// For some reasons, BCEL constant pool contains null values,
+				// which I just ignore but should probably try to understand.
+				ProxyConsole.getInstance().errorOutput().println(
+						"util.lang.CFParseBCELConvertor.convertConstantPool(JavaClass, ConstantPool): null constant!?");
+			}
+			else {
+				// throw new RuntimeException("Unknown constant in constant pool");
+				ProxyConsole.getInstance().errorOutput().print(
+						"util.lang.CFParseBCELConvertor.convertConstantPool(JavaClass, ConstantPool): constant ");
+				ProxyConsole.getInstance().errorOutput()
+						.print(constant.getTag());
+				ProxyConsole.getInstance().errorOutput().print(" (");
+				ProxyConsole.getInstance().errorOutput()
+						.print(Const.getConstantName(constant.getTag()));
+				ProxyConsole.getInstance().errorOutput()
+						.println(") is not (yet?) handled");
+			}
+		}
+	}
+
 	private static void addFields(final ClassFile aClassFile,
 			final JavaClass aJavaClass) {
 
@@ -69,140 +201,201 @@ public class CFParseBCELConvertor {
 			final String fieldName = field.getName();
 			final ConstantValue fieldValue = field.getConstantValue();
 
-			if (fieldName.indexOf('$') == -1) {
-				fieldDeclaration
-						.append(Modifier.toString(field.getModifiers()));
+			fieldDeclaration.append(Modifier.toString(field.getModifiers()));
+			fieldDeclaration.append(' ');
+			fieldDeclaration.append(fieldType);
+
+			if (field.isStatic()) {
 				fieldDeclaration.append(' ');
-				fieldDeclaration.append(fieldType);
+				fieldDeclaration.append(fieldName);
+			}
+			else {
+				// Yann 2006/07/31: Bug in CFParse!
+				// I must add a '_' in front of the field name 
+				// because CFParse eats the first letter away...
+				fieldDeclaration.append(" _");
+				fieldDeclaration.append(fieldName);
+			}
 
-				if (field.isStatic()) {
-					fieldDeclaration.append(' ');
-					fieldDeclaration.append(fieldName);
+			fieldDeclaration.append('=');
+			if (fieldType.equals("java.lang.String")) {
+				if (fieldValue == null) {
+					fieldDeclaration.append("\"\"");
 				}
 				else {
-					// Yann 2006/07/31: Bug in CFParse!
-					// I must add a '_' in front of the field name 
-					// because CFParse eats the first letter away...
-					fieldDeclaration.append(" _");
-					fieldDeclaration.append(fieldName);
+					fieldDeclaration.append('\"');
+					fieldDeclaration.append(fieldValue.toString());
+					fieldDeclaration.append('\"');
 				}
-
-				fieldDeclaration.append('=');
-				if (fieldType.equals("java.lang.String")) {
-					if (fieldValue == null) {
-						fieldDeclaration.append("\"\"");
-					}
-					else {
-						fieldDeclaration.append('\"');
-						fieldDeclaration.append(fieldValue.toString());
-						fieldDeclaration.append('\"');
-					}
-				}
-				else if (fieldType.equals("boolean")) {
-					if (fieldValue == null) {
-						fieldDeclaration.append("false");
-					}
-					else {
-						fieldDeclaration.append(fieldValue.toString());
-					}
-				}
-				else if (fieldType.equals("byte")) {
-					if (fieldValue == null) {
-						fieldDeclaration.append('0');
-					}
-					else {
-						fieldDeclaration.append(fieldValue.toString());
-					}
-				}
-				else if (fieldType.equals("char")) {
-					if (fieldValue == null) {
-						fieldDeclaration.append('0');
-					}
-					else {
-						fieldDeclaration.append('\'');
-						fieldDeclaration.append(fieldValue.toString());
-						fieldDeclaration.append('\'');
-					}
-				}
-				else if (fieldType.equals("double")) {
-					if (fieldValue == null) {
-						fieldDeclaration.append('0');
-					}
-					else {
-						fieldDeclaration.append(fieldValue.toString());
-					}
-				}
-				else if (fieldType.equals("float")) {
-					if (fieldValue == null) {
-						fieldDeclaration.append("0.0f");
-					}
-					else {
-						fieldDeclaration.append(fieldValue.toString());
-					}
-				}
-				else if (fieldType.equals("int")) {
-					if (fieldValue == null) {
-						fieldDeclaration.append('0');
-					}
-					else {
-						fieldDeclaration.append(fieldValue.toString());
-					}
-				}
-				else if (fieldType.equals("long")) {
-					if (fieldValue == null) {
-						fieldDeclaration.append('0');
-					}
-					else {
-						fieldDeclaration.append(fieldValue.toString());
-					}
-				}
-				else if (fieldType.equals("short")) {
-					if (fieldValue == null) {
-						fieldDeclaration.append('0');
-					}
-					else {
-						fieldDeclaration.append(fieldValue.toString());
-					}
+			}
+			else if (fieldType.equals("boolean")) {
+				if (fieldValue == null) {
+					fieldDeclaration.append("false");
 				}
 				else {
-					if (fieldValue == null) {
-						fieldDeclaration.append("null");
-					}
-					else {
-						fieldDeclaration.append(fieldValue.toString());
-					}
+					fieldDeclaration.append(fieldValue.toString());
 				}
-
-				if (field.isStatic()) {
-					fieldInfoList.addStatic(aClassFile,
-							fieldDeclaration.toString());
+			}
+			else if (fieldType.equals("byte")) {
+				if (fieldValue == null) {
+					fieldDeclaration.append('0');
 				}
 				else {
-					fieldInfoList.add(fieldDeclaration.toString());
+					fieldDeclaration.append(fieldValue.toString());
+				}
+			}
+			else if (fieldType.equals("char")) {
+				if (fieldValue == null) {
+					fieldDeclaration.append("\'0\'");
+				}
+				else {
+					fieldDeclaration.append('\'');
+					fieldDeclaration.append(fieldValue.toString());
+					fieldDeclaration.append('\'');
+				}
+			}
+			else if (fieldType.equals("double")) {
+				if (fieldValue == null) {
+					fieldDeclaration.append('0');
+				}
+				else {
+					fieldDeclaration.append(fieldValue.toString());
+				}
+			}
+			else if (fieldType.equals("float")) {
+				if (fieldValue == null) {
+					fieldDeclaration.append("0.0f");
+				}
+				else {
+					fieldDeclaration.append(fieldValue.toString());
+				}
+			}
+			else if (fieldType.equals("int")) {
+				if (fieldValue == null) {
+					fieldDeclaration.append('0');
+				}
+				else {
+					fieldDeclaration.append(fieldValue.toString());
+				}
+			}
+			else if (fieldType.equals("long")) {
+				if (fieldValue == null) {
+					fieldDeclaration.append('0');
+				}
+				else {
+					fieldDeclaration.append(fieldValue.toString());
+				}
+			}
+			else if (fieldType.equals("short")) {
+				if (fieldValue == null) {
+					fieldDeclaration.append('0');
+				}
+				else {
+					fieldDeclaration.append(fieldValue.toString());
 				}
 			}
 			else {
-				// Nothing to do?
+				if (fieldValue == null) {
+					fieldDeclaration.append("null");
+				}
+				else {
+					fieldDeclaration.append(fieldValue.toString());
+				}
+			}
+
+			final FieldInfo fieldInfo;
+			if (field.isStatic()) {
+				fieldInfo = fieldInfoList.addStatic(aClassFile,
+						fieldDeclaration.toString());
+			}
+			else {
+				fieldInfo = fieldInfoList.add(fieldDeclaration.toString());
+			}
+			if (field.isSynthetic()) {
+				fieldInfo.getAttrs().add("Synthetic");
 			}
 
 			fieldDeclaration.setLength(0);
 		}
 	}
 
+	private static void addInnerClasses(final ClassFile aClassFile,
+			final JavaClass aJavaClass) {
+
+		final Attribute[] attributes = aJavaClass.getAttributes();
+		for (int i = 0; i < attributes.length; i++) {
+			final Attribute attribute = attributes[i];
+			if (attribute instanceof InnerClasses) {
+				final AttrInfoList attrInfoList = aClassFile.getAttrs();
+				final InnerClassesAttrInfo innerClassesAttrInfo = (InnerClassesAttrInfo) attrInfoList
+						.add("InnerClasses");
+				final InnerClasses innerClassesAttr = (InnerClasses) attribute;
+				final InnerClass[] innerClassesArray = innerClassesAttr
+						.getInnerClasses();
+				try {
+					final StringWriter stringWriter = new StringWriter();
+					final DataOutputStream dataOutput = new DataOutputStream(
+							new WriterOutputStream(stringWriter));
+					dataOutput.writeInt(innerClassesAttr.getLength());
+					dataOutput.writeShort(
+							innerClassesAttr.getInnerClasses().length);
+					for (int j = 0; j < innerClassesArray.length; j++) {
+						final InnerClass innerClass = innerClassesArray[j];
+
+						/*
+						final String innerClassName = ((ConstantUtf8) aJavaClass
+								.getConstantPool()
+								.getConstant(((ConstantClass) aJavaClass
+										.getConstantPool()
+										.getConstant(innerClass
+												.getInnerClassIndex()))
+										.getNameIndex()))
+								.getBytes();
+						*/
+
+						// I can't just do that because the index in the
+						// BCEL classfile are not the same as the ones in
+						// under-construction CFParse classfile, although
+						// they should... but could?
+						// TODO Find a way to have the same indexes or recompute the right indexes
+						// dataOutput.writeShort(innerClass.getInnerClassIndex());
+						dataOutput.writeShort(0);
+						// dataOutput.writeShort(innerClass.getOuterClassIndex());
+						dataOutput.writeShort(0);
+						// dataOutput.writeShort(innerClass.getInnerNameIndex());
+						dataOutput.writeShort(0);
+						dataOutput.writeShort(innerClass.getInnerAccessFlags());
+					}
+					dataOutput.close();
+
+					final String stringInStream = stringWriter.toString();
+					final StringReader stringReader = new StringReader(
+							stringInStream);
+					final DataInputStream dataInput = new DataInputStream(
+							new ReaderInputStream(stringReader));
+					innerClassesAttrInfo.read(dataInput);
+					dataInput.close();
+				}
+				catch (final IOException ioe) {
+					ioe.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
+				}
+			}
+		}
+	}
+
 	private static void addInterfaces(final ClassFile aClassFile,
 			final JavaClass aJavaClass) {
 
-		try {
-			final JavaClass[] interfaces = aJavaClass.getInterfaces();
-			for (int index = 0; index < interfaces.length; index++) {
-				final JavaClass interfaze = interfaces[index];
+		// I mustn't use aJavaClass.getInterfaces() because this method
+		// looks for the interfaces in its repository and, if they are
+		// not present, would throw a ClassNotFoundException.
+		final String[] interfaces = aJavaClass.getInterfaceNames();
+		for (int index = 0; index < interfaces.length; index++) {
+			final String interfaze = interfaces[index];
 
-				final InterfaceList interfaceList = aClassFile.getInterfaces();
-				interfaceList.add(interfaze.getClassName());
-			}
-		}
-		catch (final ClassNotFoundException cnfe) {
-			cnfe.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			final InterfaceList interfaceList = aClassFile.getInterfaces();
+			interfaceList.add(interfaze);
 		}
 	}
 
@@ -299,7 +492,6 @@ public class CFParseBCELConvertor {
 						dataOutput.close();
 
 						final String stringInStream = stringWriter.toString();
-
 						final StringReader stringReader = new StringReader(
 								stringInStream);
 						final DataInputStream dataInput = new DataInputStream(
@@ -333,7 +525,6 @@ public class CFParseBCELConvertor {
 						dataOutput.close();
 
 						final String stringInStream = stringWriter.toString();
-
 						final StringReader stringReader = new StringReader(
 								stringInStream);
 						final DataInputStream dataInput = new DataInputStream(
@@ -349,152 +540,72 @@ public class CFParseBCELConvertor {
 		}
 	}
 
+	private static void addClassFileAttributes(final ClassFile aClassFile,
+			final JavaClass aJavaClass) {
+
+		final Attribute[] attributes = aJavaClass.getAttributes();
+		for (int i = 0; i < attributes.length; i++) {
+			final Attribute attribute = attributes[i];
+			if (attribute.getName().equals("BootstrapMethods")) {
+				// TODO Complete the NestHost attribute with an index to the host class 
+				aClassFile.getAttrs().add("BootstrapMethods");
+			}
+			else if (attribute.getName().equals("Deprecated")) {
+				aClassFile.getAttrs().add("Deprecated");
+			}
+			else if (attribute.getName().equals("EnclosingMethod")) {
+				// TODO Complete the EnclosingMethod attribute with indexes on the enclosing class and method of this classfile
+				aClassFile.getAttrs().add("EnclosingMethod");
+			}
+			else if (attribute.getName().equals("NestHost")) {
+				// TODO Complete the NestHost attribute with an index to the host class 
+				aClassFile.getAttrs().add("NestHost");
+			}
+			else if (attribute.getName().equals("NestMembers")) {
+				// TODO Complete the NestHost attribute with an index to the host class 
+				aClassFile.getAttrs().add("NestMembers");
+			}
+			else if (attribute.getName().equals("Signature")) {
+				// TODO Complete the Signature attribute with an index to the signature of this class 
+				aClassFile.getAttrs().add("Signature");
+			}
+			else if (attribute.getName().equals("SourceFile")) {
+				final String fileName = aJavaClass.getSourceFileName();
+				final SourceFileAttrInfo sourceFileAttrInfo = (SourceFileAttrInfo) aClassFile
+						.getAttrs().add("SourceFile");
+				sourceFileAttrInfo.set(fileName);
+			}
+			else if (attribute.getName().equals("InnerClasses")) {
+				// Will be treated later by addInnerClasses(...)
+			}
+			else {
+				System.out.println("Nothing to do!?");
+			}
+		}
+	}
+
 	public static ClassFile convertClassFile(final JavaClass aJavaClass) {
 		final ClassFile currentClass = new ClassFile();
 
 		currentClass.setAccess(aJavaClass.getAccessFlags());
+		// No need to test the magic number because
+		// "The first four bytes of every class file are always 0xCAFEBABE."
 		// currentClass.setMagic();
 		currentClass.setMajor(aJavaClass.getMajor());
 		currentClass.setMinor(aJavaClass.getMinor());
 		currentClass.setName(aJavaClass.getClassName());
 		currentClass.setSuperName(aJavaClass.getSuperclassName());
 
-		CFParseBCELConvertor.convertConstantPool(aJavaClass,
-				currentClass.getCP());
+		CFParseBCELConvertor.addClassFileAttributes(currentClass, aJavaClass);
+
+		CFParseBCELConvertor.addConstantPool(aJavaClass, currentClass.getCP());
 
 		CFParseBCELConvertor.addInterfaces(currentClass, aJavaClass);
+		CFParseBCELConvertor.addInnerClasses(currentClass, aJavaClass);
 		CFParseBCELConvertor.addMethods(currentClass, aJavaClass);
 		CFParseBCELConvertor.addFields(currentClass, aJavaClass);
 
 		return currentClass;
-	}
-
-	private static com.ibm.toad.cfparse.ConstantPool convertConstantPool(
-			final JavaClass aJavaClass,
-			final com.ibm.toad.cfparse.ConstantPool cfparseCP) {
-
-		final org.apache.bcel.classfile.ConstantPool bcelCP = aJavaClass
-				.getConstantPool();
-
-		final Constant[] constants = bcelCP.getConstantPool();
-		for (int index = 1; index < constants.length; index++) {
-			final Constant constant = constants[index];
-
-			if (constant instanceof ConstantClass) {
-				final String className = ((ConstantClass) constant)
-						.getBytes(bcelCP).replace('.', '/');
-				final boolean found = CFParseBCELConvertor.searchFor(cfparseCP,
-						className, ConstantPool.ClassEntry.class);
-				if (!found) {
-					cfparseCP.addClass(className);
-				}
-			}
-			else if (constant instanceof ConstantFieldref) {
-				final int classIndex = ((ConstantFieldref) constant)
-						.getClassIndex();
-				final ConstantClass classConstant = (ConstantClass) bcelCP
-						.getConstant(classIndex);
-				final ConstantUtf8 classNameUtf8 = (ConstantUtf8) bcelCP
-						.getConstant(classConstant.getNameIndex());
-
-				final int nameAndTypeIndex = ((ConstantFieldref) constant)
-						.getNameAndTypeIndex();
-				final ConstantNameAndType nameAndTypeConstant = (ConstantNameAndType) bcelCP
-						.getConstant(nameAndTypeIndex);
-
-				cfparseCP.addField(classNameUtf8.getBytes().replace('.', '/')
-						+ ' ' + nameAndTypeConstant.getName(bcelCP) + ' '
-						+ nameAndTypeConstant.getSignature(bcelCP));
-			}
-			else if (constant instanceof ConstantInterfaceMethodref) {
-				final int classIndex = ((ConstantInterfaceMethodref) constant)
-						.getClassIndex();
-				final ConstantClass classConstant = (ConstantClass) bcelCP
-						.getConstant(classIndex);
-				final ConstantUtf8 classNameUtf8 = (ConstantUtf8) bcelCP
-						.getConstant(classConstant.getNameIndex());
-
-				final int nameAndTypeIndex = ((ConstantInterfaceMethodref) constant)
-						.getNameAndTypeIndex();
-				final ConstantNameAndType nameAndTypeConstant = (ConstantNameAndType) bcelCP
-						.getConstant(nameAndTypeIndex);
-
-				cfparseCP.addInterface(
-						classNameUtf8.getBytes().replace('.', '/') + ' '
-								+ nameAndTypeConstant.getName(bcelCP) + ' '
-								+ nameAndTypeConstant.getSignature(bcelCP));
-			}
-			else if (constant instanceof ConstantMethodref) {
-				final int classIndex = ((ConstantMethodref) constant)
-						.getClassIndex();
-				final ConstantClass classConstant = (ConstantClass) bcelCP
-						.getConstant(classIndex);
-				final ConstantUtf8 classNameUtf8 = (ConstantUtf8) bcelCP
-						.getConstant(classConstant.getNameIndex());
-
-				final int nameAndTypeIndex = ((ConstantMethodref) constant)
-						.getNameAndTypeIndex();
-				final ConstantNameAndType nameAndTypeConstant = (ConstantNameAndType) bcelCP
-						.getConstant(nameAndTypeIndex);
-
-				cfparseCP.addMethod(classNameUtf8.getBytes().replace('.', '/')
-						+ ' ' + nameAndTypeConstant.getName(bcelCP) + ' '
-						+ nameAndTypeConstant.getSignature(bcelCP));
-			}
-			else if (constant instanceof ConstantDouble) {
-				cfparseCP.addDouble(((ConstantDouble) constant).getBytes());
-			}
-			else if (constant instanceof ConstantFloat) {
-				cfparseCP.addFloat(((ConstantFloat) constant).getBytes());
-			}
-			else if (constant instanceof ConstantInteger) {
-				cfparseCP.addInteger(((ConstantInteger) constant).getBytes());
-			}
-			else if (constant instanceof ConstantLong) {
-				cfparseCP.addLong(((ConstantLong) constant).getBytes());
-			}
-			else if (constant instanceof ConstantNameAndType) {
-				final ConstantNameAndType constantNameAndType = (ConstantNameAndType) constant;
-				final boolean found = CFParseBCELConvertor.searchFor(cfparseCP,
-						constantNameAndType.getName(bcelCP) + ' '
-								+ constantNameAndType.getSignature(bcelCP),
-						ConstantPool.NameAndTypeEntry.class);
-				if (!found) {
-					cfparseCP.addNameAndType(
-							constantNameAndType.getName(bcelCP),
-							constantNameAndType.getSignature(bcelCP));
-				}
-			}
-			else if (constant instanceof ConstantString) {
-				cfparseCP.addString((String) ((ConstantString) constant)
-						.getConstantValue(bcelCP));
-			}
-			else if (constant instanceof ConstantUtf8) {
-				final String utf8String = ((ConstantUtf8) constant).getBytes();
-				if (cfparseCP.find(1, utf8String) == -1) {
-					cfparseCP.addUtf8(utf8String);
-				}
-			}
-			else if (constant == null) {
-				// Yann 24/11/24: Null-able?
-				// For some reasons, BCEL constant pool contains null values,
-				// which I just ignore but should probably try to understand.
-			}
-			else {
-				// throw new RuntimeException("Unknown constant in constant pool");
-				ProxyConsole.getInstance().errorOutput().print(
-						"util.lang.CFParseBCELConvertor.convertConstantPool(JavaClass, ConstantPool): constant ");
-				ProxyConsole.getInstance().errorOutput()
-						.print(constant.getTag());
-				ProxyConsole.getInstance().errorOutput().print(" (");
-				ProxyConsole.getInstance().errorOutput()
-						.print(Const.getConstantName(constant.getTag()));
-				ProxyConsole.getInstance().errorOutput()
-						.println(") is not (yet?) handled");
-			}
-		}
-
-		return cfparseCP;
 	}
 
 	private static boolean searchFor(

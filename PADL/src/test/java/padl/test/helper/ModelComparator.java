@@ -217,12 +217,6 @@ public class ModelComparator implements IWalker {
 		final IConstituent aConstituent,
 		final IConstituent anotherConstituent) {
 
-		if (!aConstituent
-			.getClass()
-			.getName()
-			.equals(anotherConstituent.getClass().getName())) {
-			System.out.println("");
-		}
 		Assert.assertNotNull("A constituent should not be null", aConstituent);
 		Assert.assertNotNull(
 			"Another constituent should not be null (in comparison to "

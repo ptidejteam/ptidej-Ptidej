@@ -1372,7 +1372,7 @@ public final class ConstantPool {
 		this.d_constants[0] = new ConstantPool.Utf8Entry("<dummy Entry>");
 		this.d_hashN2C = new HashMap();
 		this.d_hashC2i = new HashMap();
-}
+	}
 
 	private void resize() {
 		ConstantPoolEntry[] var1 = new ConstantPoolEntry[this.d_numConstants

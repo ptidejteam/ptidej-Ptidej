@@ -8,18 +8,19 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.BitSet;
+
 import com.ibm.toad.cfparse.ConstantPool;
 import com.ibm.toad.cfparse.utils.CPUtils;
 
 public final class LocalVariableAttrInfo extends AttrInfo {
 	private int d_numVars;
 	private int d_varTable[];
-	LocalVariableAttrInfo(
-		final ConstantPool constantpool,
-		final int i,
-		final int j) {
+
+	LocalVariableAttrInfo(final ConstantPool constantpool, final int i,
+			final int j) {
 		super(constantpool, i, j);
 	}
+
 	public int getEndPC(final int i) {
 		if (i < 0 || i >= this.d_numVars) {
 			return -1;
@@ -30,6 +31,7 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 			return j + k;
 		}
 	}
+
 	public int getStartPC(final int i) {
 		if (i < 0 || i >= this.d_numVars) {
 			return -1;
@@ -39,6 +41,7 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 			return j;
 		}
 	}
+
 	public String getVarName(final int i) {
 		if (i < 0 || i >= this.d_numVars) {
 			return "";
@@ -48,6 +51,7 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 			return super.d_cp.getAsString(j);
 		}
 	}
+
 	public int getVarNum(final int i) {
 		if (i < 0 || i >= this.d_numVars) {
 			return -1;
@@ -57,6 +61,7 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 			return j;
 		}
 	}
+
 	public String getVarType(final int i) {
 		if (i < 0 || i >= this.d_numVars) {
 			return "";
@@ -66,9 +71,12 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 			return CPUtils.internal2java(super.d_cp.getAsString(j));
 		}
 	}
+
 	public int length() {
 		return this.d_numVars;
 	}
+
+	// Yann: changed from protected to public
 	public void read(final DataInputStream datainputstream) throws IOException {
 		super.d_len = datainputstream.readInt();
 		this.d_numVars = datainputstream.readShort();
@@ -81,6 +89,7 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 			this.d_varTable[i] = datainputstream.readShort();
 		}
 	}
+
 	protected void sort(final int ai[]) {
 		super.sort(ai);
 		for (int i = 0; i < this.d_varTable.length; i++) {
@@ -89,10 +98,11 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 			}
 		}
 	}
+
 	public String toString() {
-		final StringBuffer stringbuffer =
-			new StringBuffer(this.sindent() + "Attribute: "
-					+ super.d_cp.getAsString(super.d_idxName) + ": \n");
+		final StringBuffer stringbuffer = new StringBuffer(
+				this.sindent() + "Attribute: "
+						+ super.d_cp.getAsString(super.d_idxName) + ": \n");
 		for (int i = 0; i < this.d_varTable.length;) {
 			final int j = this.d_varTable[i++];
 			final int k = this.d_varTable[i++];
@@ -106,6 +116,7 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 		}
 		return stringbuffer.toString();
 	}
+
 	protected BitSet uses() {
 		final BitSet bitset = super.uses();
 		for (int i = 0; i < this.d_varTable.length; i++) {
@@ -115,6 +126,7 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 		}
 		return bitset;
 	}
+
 	protected void write(final DataOutputStream dataoutputstream)
 			throws IOException {
 		dataoutputstream.writeShort(super.d_idxName);

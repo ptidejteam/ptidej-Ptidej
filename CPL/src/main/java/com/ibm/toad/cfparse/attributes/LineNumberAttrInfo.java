@@ -7,15 +7,19 @@ package com.ibm.toad.cfparse.attributes;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+
 import com.ibm.toad.cfparse.ConstantPool;
 
 public final class LineNumberAttrInfo extends AttrInfo {
 	private int d_numVars;
 	private int d_varTable[];
-	LineNumberAttrInfo(final ConstantPool constantpool, final int i, final int j) {
+
+	LineNumberAttrInfo(final ConstantPool constantpool, final int i,
+			final int j) {
 		super(constantpool, i, j);
 		this.d_numVars = 0;
 	}
+
 	public void add(final int i, final int j) {
 		for (int k = 0; k < this.d_numVars; k++) {
 			if (this.d_varTable[2 * k] == j) {
@@ -31,10 +35,12 @@ public final class LineNumberAttrInfo extends AttrInfo {
 		this.d_varTable[this.d_numVars * 2 + 1] = i;
 		this.d_numVars++;
 	}
+
 	public void clear() {
 		this.d_numVars = 0;
 		this.d_varTable = null;
 	}
+
 	public int getLineNumber(final int i) {
 		if (i < 0 || i >= this.d_numVars) {
 			return -1;
@@ -43,6 +49,7 @@ public final class LineNumberAttrInfo extends AttrInfo {
 			return this.d_varTable[2 * i + 1];
 		}
 	}
+
 	public int getStartPC(final int i) {
 		if (i < 0 || i >= this.d_numVars) {
 			return -1;
@@ -51,9 +58,12 @@ public final class LineNumberAttrInfo extends AttrInfo {
 			return this.d_varTable[2 * i];
 		}
 	}
+
 	public int length() {
 		return this.d_numVars;
 	}
+
+	// Yann: changed from protected to public
 	public void read(final DataInputStream datainputstream) throws IOException {
 		super.d_len = datainputstream.readInt();
 		this.d_numVars = datainputstream.readShort();
@@ -66,6 +76,7 @@ public final class LineNumberAttrInfo extends AttrInfo {
 			this.d_varTable[i] = datainputstream.readShort();
 		}
 	}
+
 	private void resize() {
 		final int ai[] = new int[this.d_numVars * 2 + 10];
 		if (this.d_varTable != null) {
@@ -73,6 +84,7 @@ public final class LineNumberAttrInfo extends AttrInfo {
 		}
 		this.d_varTable = ai;
 	}
+
 	public void setLineNumber(final int i, final int j) {
 		if (i < 0 || i >= this.d_numVars) {
 			return;
@@ -82,6 +94,7 @@ public final class LineNumberAttrInfo extends AttrInfo {
 			return;
 		}
 	}
+
 	public void setStartPC(final int i, final int j) {
 		if (i < 0 || i >= this.d_numVars) {
 			return;
@@ -91,21 +104,24 @@ public final class LineNumberAttrInfo extends AttrInfo {
 			return;
 		}
 	}
+
 	protected int size() {
 		return 8 + this.d_numVars * 4;
 	}
+
 	public String toString() {
-		final StringBuffer stringbuffer =
-			new StringBuffer(this.sindent() + "Attribute: "
-					+ super.d_cp.getAsString(super.d_idxName) + ": \n");
+		final StringBuffer stringbuffer = new StringBuffer(
+				this.sindent() + "Attribute: "
+						+ super.d_cp.getAsString(super.d_idxName) + ": \n");
 		for (int i = 0; i < this.d_numVars; i++) {
 			final int j = this.d_varTable[i * 2];
 			final int k = this.d_varTable[i * 2 + 1];
-			stringbuffer.append(this.sindent() + "  line " + k + ": " + j
-					+ "\n");
+			stringbuffer
+					.append(this.sindent() + "  line " + k + ": " + j + "\n");
 		}
 		return stringbuffer.toString();
 	}
+
 	protected void write(final DataOutputStream dataoutputstream)
 			throws IOException {
 		dataoutputstream.writeShort(super.d_idxName);

@@ -23,8 +23,12 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarInputStream;
 
+import org.apache.bcel.classfile.ClassParser;
+import org.apache.bcel.classfile.JavaClass;
+
 import com.ibm.toad.cfparse.ClassFile;
 
+import util.lang.CFParseBCELConvertor;
 import util.multilingual.MultilingualManager;
 
 public final class SubtypeLoader {
@@ -130,16 +134,20 @@ public final class SubtypeLoader {
 		final ClassFile currentClass_CFPARSE = new ClassFile(inputStream1);
 		inputStream1.close();
 
-		/*
-		// TODO Implement the converter so that it provides class
-		// files equivalent to the ones obtained from CFParse.
 		final InputStream inputStream2 = aNamedInputStream.getStream();
 		final ClassParser parser = new ClassParser(inputStream2, "");
 		final JavaClass javaClass = parser.parse();
 		final ClassFile currentClass_BCEL = CFParseBCELConvertor
 				.convertClassFile(javaClass);
 		inputStream2.close();
-		*/
+
+		if (!currentClass_CFPARSE.equals(currentClass_BCEL)) {
+			ProxyConsole.getInstance().debugOutput()
+					.print("(Beware that the classfile of ");
+			ProxyConsole.getInstance().debugOutput()
+					.print(currentClass_BCEL.getName());
+			ProxyConsole.getInstance().debugOutput().println(" is incomplete!)");
+		}
 
 		final ClassFile currentClass = currentClass_CFPARSE;
 		if (aSuperTypeName == null
@@ -287,8 +295,9 @@ public final class SubtypeLoader {
 							&& jarEntry.getName().endsWith(aFileExtension)) {
 
 						final InputStream anInputStream = aJARInputStream;
-						/*						 final BufferedInputStream anInputStream =
-														new BufferedInputStream(aJARInputStream,(int) jarEntry.getSize());
+						/*
+						final BufferedInputStream anInputStream = new BufferedInputStream(
+								aJARInputStream, (int) jarEntry.getSize());
 						*/
 						final ClassFile currentClass = new ClassFile(
 								anInputStream);

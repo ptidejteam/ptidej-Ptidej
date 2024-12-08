@@ -34,12 +34,8 @@ public class CFParseBCELConvertorTest1 extends TestCase {
 	}
 
 	public void testGetAccess() {
-		Assert.assertEquals(this.classFile_CFParse_Original.getName(),
-				this.classFile_CFParse_Converted.getName());
-
-		Assert.assertEquals(
-				this.classFile_CFParse_Original.getFields().get(0).toString(),
-				this.classFile_CFParse_Converted.getFields().get(0).toString());
+		Assert.assertEquals(this.classFile_CFParse_Original.getAccess(),
+				this.classFile_CFParse_Converted.getAccess());
 	}
 
 	public void testGetAttrs() {

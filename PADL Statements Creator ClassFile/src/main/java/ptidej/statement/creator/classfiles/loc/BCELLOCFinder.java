@@ -18,6 +18,10 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.bcel.classfile.AnnotationDefault;
+import org.apache.bcel.classfile.AnnotationEntry;
+import org.apache.bcel.classfile.Annotations;
+import org.apache.bcel.classfile.BootstrapMethods;
 import org.apache.bcel.classfile.Code;
 import org.apache.bcel.classfile.CodeException;
 import org.apache.bcel.classfile.ConstantClass;
@@ -26,14 +30,20 @@ import org.apache.bcel.classfile.ConstantFieldref;
 import org.apache.bcel.classfile.ConstantFloat;
 import org.apache.bcel.classfile.ConstantInteger;
 import org.apache.bcel.classfile.ConstantInterfaceMethodref;
+import org.apache.bcel.classfile.ConstantInvokeDynamic;
 import org.apache.bcel.classfile.ConstantLong;
+import org.apache.bcel.classfile.ConstantMethodHandle;
+import org.apache.bcel.classfile.ConstantMethodType;
 import org.apache.bcel.classfile.ConstantMethodref;
+import org.apache.bcel.classfile.ConstantModule;
 import org.apache.bcel.classfile.ConstantNameAndType;
+import org.apache.bcel.classfile.ConstantPackage;
 import org.apache.bcel.classfile.ConstantPool;
 import org.apache.bcel.classfile.ConstantString;
 import org.apache.bcel.classfile.ConstantUtf8;
 import org.apache.bcel.classfile.ConstantValue;
 import org.apache.bcel.classfile.Deprecated;
+import org.apache.bcel.classfile.EnclosingMethod;
 import org.apache.bcel.classfile.ExceptionTable;
 import org.apache.bcel.classfile.Field;
 import org.apache.bcel.classfile.InnerClass;
@@ -43,7 +53,11 @@ import org.apache.bcel.classfile.LineNumber;
 import org.apache.bcel.classfile.LineNumberTable;
 import org.apache.bcel.classfile.LocalVariable;
 import org.apache.bcel.classfile.LocalVariableTable;
+import org.apache.bcel.classfile.LocalVariableTypeTable;
 import org.apache.bcel.classfile.Method;
+import org.apache.bcel.classfile.MethodParameters;
+import org.apache.bcel.classfile.ParameterAnnotationEntry;
+import org.apache.bcel.classfile.ParameterAnnotations;
 import org.apache.bcel.classfile.Signature;
 import org.apache.bcel.classfile.SourceFile;
 import org.apache.bcel.classfile.StackMap;
@@ -204,5 +218,75 @@ public class BCELLOCFinder implements Visitor {
 	public void visitSynthetic(final Synthetic aSynthetic) {
 	}
 	public void visitUnknown(final Unknown aUnknown) {
+	}
+	@Override
+	public void visitAnnotation(Annotations obj) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void visitAnnotationDefault(AnnotationDefault obj) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void visitAnnotationEntry(AnnotationEntry obj) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void visitBootstrapMethods(BootstrapMethods obj) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void visitConstantInvokeDynamic(ConstantInvokeDynamic obj) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void visitConstantMethodHandle(ConstantMethodHandle obj) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void visitConstantMethodType(ConstantMethodType obj) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void visitConstantModule(ConstantModule constantModule) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void visitConstantPackage(ConstantPackage constantPackage) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void visitEnclosingMethod(EnclosingMethod obj) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void visitLocalVariableTypeTable(LocalVariableTypeTable obj) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void visitMethodParameters(MethodParameters obj) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void visitParameterAnnotation(ParameterAnnotations obj) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void visitParameterAnnotationEntry(ParameterAnnotationEntry obj) {
+		// TODO Auto-generated method stub
+		
 	}
 }

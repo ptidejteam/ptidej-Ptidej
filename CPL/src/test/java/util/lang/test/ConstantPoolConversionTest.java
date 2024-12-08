@@ -98,7 +98,6 @@ public class ConstantPoolConversionTest extends TestCase {
 				//			}
 
 			}
-
 		}
 	}
 
