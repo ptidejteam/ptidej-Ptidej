@@ -65,8 +65,11 @@ public class CFParseBCELConvertor {
 	private static void addConstantPool(final JavaClass aJavaClass,
 			final com.ibm.toad.cfparse.ConstantPool cfparseCP) {
 
+
 		final org.apache.bcel.classfile.ConstantPool bcelCP = aJavaClass
 				.getConstantPool();
+
+
 
 		final Constant[] constants = bcelCP.getConstantPool();
 		for (int index = 1; index < constants.length; index++) {
