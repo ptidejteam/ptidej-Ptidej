@@ -20,6 +20,7 @@
 		<module>DeMIMA Solver 3</module>
 		<module>DeMIMA Solver 4</module>
 		<module>DeMIMA Solver Fingerprints</module>
+		<module>DeMIMA Solver Occurrence Generator</module>
 		<module>DeMIMA UI</module>
 		<module>DeMIMA UI Analyses</module>
 		<module>DeMIMA UI AspectJ</module>

@@ -8,7 +8,7 @@
  * Contributors:
  *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
  ******************************************************************************/
-package sad.detection.generators.old;
+package sad.detection.helpers.old;
 
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
