@@ -8,7 +8,7 @@
  * Contributors:
  *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
  ******************************************************************************/
-package ptidej.occurrences.helper;
+package ptidej.detection.helpers;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

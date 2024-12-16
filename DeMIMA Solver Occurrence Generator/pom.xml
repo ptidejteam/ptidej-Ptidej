@@ -25,8 +25,50 @@
 		</dependency>
 
 		<dependency>
+			<groupId>net.ptidej.cpl</groupId>
+			<artifactId>cpl-core</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-core</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-generator</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>net.ptidej.demima</groupId>
 			<artifactId>demima-core</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-3</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-4</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-fingerprints</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>

@@ -8,7 +8,7 @@
  * Contributors:
  *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
  ******************************************************************************/
-package sad.detection.generators;
+package sad.detection.helpers;
 
 import java.io.File;
 import java.io.FilenameFilter;

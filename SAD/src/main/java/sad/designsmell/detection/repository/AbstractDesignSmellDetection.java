@@ -43,7 +43,7 @@ public abstract class AbstractDesignSmellDetection {
 			if (this.setOfDesignSmells == null) {
 				aWriter.println();
 				aWriter
-					.println("# Method performDetection() must be called before outputing results.");
+					.println("# Method detect() must be called before outputing results.");
 				aWriter.println();
 			}
 			else {
