@@ -56,6 +56,7 @@ import com.ibm.toad.cfparse.attributes.SourceFileAttrInfo;
 import util.io.ProxyConsole;
 import util.io.ReaderInputStream;
 import util.io.WriterOutputStream;
+import util.lang.visitor.converter.CFParseBCELConverterVisitor;
 
 /**
  * @author	Yann-Gaël Guéhéneuc
@@ -604,6 +605,15 @@ public class CFParseBCELConvertor {
 		CFParseBCELConvertor.addInnerClasses(currentClass, aJavaClass);
 		CFParseBCELConvertor.addMethods(currentClass, aJavaClass);
 		CFParseBCELConvertor.addFields(currentClass, aJavaClass);
+
+		return currentClass;
+	}
+
+	public static ClassFile convertClassFileUsingVisitor(final JavaClass aJavaClass) {
+		final ClassFile currentClass = new ClassFile();
+
+		CFParseBCELConverterVisitor visitor = new CFParseBCELConverterVisitor(currentClass, aJavaClass);
+		aJavaClass.accept(visitor);
 
 		return currentClass;
 	}
