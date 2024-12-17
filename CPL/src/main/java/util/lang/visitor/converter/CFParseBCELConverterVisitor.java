@@ -18,14 +18,13 @@ public class CFParseBCELConverterVisitor implements Visitor {
     private com.ibm.toad.cfparse.ClassFile currentClass;
     private org.apache.bcel.classfile.JavaClass aJavaClass;
     public CFParseBCELConverterVisitor(
-            com.ibm.toad.cfparse.ClassFile currentClass,
-            org.apache.bcel.classfile.JavaClass aJavaClass) {
+            com.ibm.toad.cfparse.ClassFile currentClass) {
         this.currentClass = currentClass;
-        this.aJavaClass = aJavaClass;
     }
 
     @Override
     public void visitJavaClass(JavaClass aJavaClass) {
+        this.aJavaClass = aJavaClass;
         currentClass.setAccess(aJavaClass.getAccessFlags());
         // No need to test the magic number because
         // "The first four bytes of every class file are always 0xCAFEBABE."
@@ -40,7 +39,11 @@ public class CFParseBCELConverterVisitor implements Visitor {
         for (int i = 0; i < attributes.length; i++) {
             final Attribute attribute = attributes[i];
 
+            // skipping the InnerClasses attribute since
+            // the BCEL to CFParse converter does it too.
+            // Laurent Voisard 12/17/2024
             if(attribute instanceof InnerClasses) continue;
+
             attribute.accept(this);
         }
 
@@ -49,12 +52,13 @@ public class CFParseBCELConverterVisitor implements Visitor {
         final String[] interfaces = aJavaClass.getInterfaceNames();
         for (int index = 0; index < interfaces.length; index++) {
             final String interfaze = interfaces[index];
-
-            final InterfaceList interfaceList = currentClass.getInterfaces();
-            interfaceList.add(interfaze);
+            currentClass.getInterfaces().add(interfaze);
         }
 
 
+        // now we only look at the InnerClasses Attrib to match
+        // the BCEL to CFParse logic
+        // Laurent Voisard 12/17/2024
         for (int i = 0; i < attributes.length; i++) {
             final Attribute attribute = attributes[i];
             if(attribute instanceof InnerClasses) {
