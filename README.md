@@ -3,6 +3,7 @@
 [![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 ![Java](https://img.shields.io/badge/Java-orange)
 ![Apache Maven](https://github.com/ptidejteam/ptidej-Ptidej/actions/workflows/maven.yml/badge.svg)
+[![CO₂ Shield](https://img.shields.io/badge/CO₂-C_0.42g-C89806)](https://overbrowsing.com/projects/co2-shield)
 
 In the Ptidej Team (Pattern Trace Identification, Detection, and Enhancement in Java), we aim at developing theories, methods, 
 and tools, to evaluate and improve the quality of object-oriented programs by promoting the use of idioms, design patterns, 
