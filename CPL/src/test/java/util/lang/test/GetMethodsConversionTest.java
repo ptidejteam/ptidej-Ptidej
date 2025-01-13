@@ -9,7 +9,7 @@ import org.junit.Assert;
 import com.ibm.toad.cfparse.ClassFile;
 
 import junit.framework.TestCase;
-import util.lang.CFParseBCELConvertor;
+import util.lang.CFParseBCELConvertorAdhoc;
 
 /**
  * @since 2024/10/11
@@ -26,7 +26,7 @@ public class GetMethodsConversionTest extends TestCase {
 		this.classFile_CFParse_Original = new ClassFile(
 				new FileInputStream(classFile_Path));
 
-		this.classFile_CFParse_Converted = CFParseBCELConvertor
+		this.classFile_CFParse_Converted = CFParseBCELConvertorAdhoc
 				.convertClassFile(
 						new ClassParser(new FileInputStream(classFile_Path), "")
 								.parse());

@@ -49,4 +49,20 @@ public class SubtypeLoaderTest extends TestCase {
 				rawCode);
 		Assert.assertNotNull(immutableCodeSegment);
 	}
+
+	public void test4() throws IOException {
+		final String classFile_Path = "../CPL/src/test/resources/Random ClassFiles/DefaultEditorKit$InsertBreakAction.class";
+		final ClassFile[] classFiles = SubtypeLoader.loadSubtypeFromFile(
+				"javax.swing.text.TextAction", classFile_Path, ".class");
+
+		Assert.assertEquals(1, classFiles.length);
+	}
+
+	public void test5() throws IOException {
+		final String classFile_Path = "../CPL/src/test/resources/Random ClassFiles/Double.class";
+		final ClassFile[] classFiles = SubtypeLoader.loadSubtypeFromFile(
+				"java.lang.Number", classFile_Path, ".class");
+
+		Assert.assertEquals(1, classFiles.length);
+	}
 }

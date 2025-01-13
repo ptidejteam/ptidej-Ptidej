@@ -473,38 +473,3 @@ public final class FieldInfo {
 		this.d_attrs.write(dataoutputstream);
 	}
 }
-
-/***** DECOMPILATION REPORT *****
-
-	DECOMPILED FROM: C:\Documents and Settings\Yann\Workspaces 2\Ptidej\CPL\cfparse.jar
-
-
-	TOTAL TIME: 120 ms
-
-
-	JAD REPORTED MESSAGES/ERRORS:
-
-Method toString
-Method <init>
-Method <init>
-Method <init>
-Method read
-Method getAccess
-Method sort
-Method setAccess
-Method getDesc
-Method write
-Method getAttrs
-Method setAttrs
-Method uses
-Method getName
-Method getType
-Method setName
-Method setType
-
-	EXIT STATUS:	0
-
-
-	CAUGHT EXCEPTIONS:
-
- ********************************/

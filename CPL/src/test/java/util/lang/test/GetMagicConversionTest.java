@@ -11,7 +11,7 @@ import com.ibm.toad.cfparse.MethodInfo;
 import com.ibm.toad.cfparse.MethodInfoList;
 
 import junit.framework.TestCase;
-import util.lang.CFParseBCELConvertor;
+import util.lang.CFParseBCELConvertorAdhoc;
 
 /**
  * @author Luca Scistri
@@ -27,7 +27,7 @@ public class GetMagicConversionTest extends TestCase {
 		this.classFile_CFParse_Original = new ClassFile(
 				new FileInputStream(classFile_Path));
 
-		this.classFile_CFParse_Converted = CFParseBCELConvertor
+		this.classFile_CFParse_Converted = CFParseBCELConvertorAdhoc
 				.convertClassFile(
 						new ClassParser(new FileInputStream(classFile_Path), "")
 								.parse());

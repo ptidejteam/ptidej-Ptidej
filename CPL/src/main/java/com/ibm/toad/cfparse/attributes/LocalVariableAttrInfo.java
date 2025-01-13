@@ -137,33 +137,3 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 		}
 	}
 }
-
-/***** DECOMPILATION REPORT *****
-
-	DECOMPILED FROM: C:\Documents and Settings\Yann\Workspaces 2\Ptidej\CPL\cfparse.jar
-
-
-	TOTAL TIME: 70 ms
-
-
-	JAD REPORTED MESSAGES/ERRORS:
-
-Method getEndPC
-Method toString
-Method <init>
-Method read
-Method sort
-Method getVarType
-Method getVarName
-Method getStartPC
-Method write
-Method getVarNum
-Method uses
-Method length
-
-	EXIT STATUS:	0
-
-
-	CAUGHT EXCEPTIONS:
-
- ********************************/

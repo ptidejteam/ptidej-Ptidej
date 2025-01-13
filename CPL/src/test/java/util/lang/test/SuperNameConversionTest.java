@@ -8,7 +8,7 @@ import org.apache.bcel.classfile.ClassParser;
 import com.ibm.toad.cfparse.ClassFile;
 
 import junit.framework.TestCase;
-import util.lang.CFParseBCELConvertor;
+import util.lang.CFParseBCELConvertorAdhoc;
 
 public class SuperNameConversionTest extends TestCase {
 	private ClassFile classFile_CFParse_Original;
@@ -20,7 +20,7 @@ public class SuperNameConversionTest extends TestCase {
 		this.classFile_CFParse_Original = new ClassFile(
 				new FileInputStream(classFile_Path));
 
-		this.classFile_CFParse_Converted = CFParseBCELConvertor
+		this.classFile_CFParse_Converted = CFParseBCELConvertorAdhoc
 				.convertClassFile(
 						new ClassParser(new FileInputStream(classFile_Path), "")
 								.parse());

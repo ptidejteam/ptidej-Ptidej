@@ -132,34 +132,3 @@ public final class LineNumberAttrInfo extends AttrInfo {
 		}
 	}
 }
-
-/***** DECOMPILATION REPORT *****
-
-	DECOMPILED FROM: C:\Documents and Settings\Yann\Workspaces 2\Ptidej\CPL\cfparse.jar
-
-
-	TOTAL TIME: 60 ms
-
-
-	JAD REPORTED MESSAGES/ERRORS:
-
-Method setLineNumber
-Method getLineNumber
-Method toString
-Method <init>
-Method read
-Method add
-Method size
-Method resize
-Method getStartPC
-Method setStartPC
-Method write
-Method clear
-Method length
-
-	EXIT STATUS:	0
-
-
-	CAUGHT EXCEPTIONS:
-
- ********************************/

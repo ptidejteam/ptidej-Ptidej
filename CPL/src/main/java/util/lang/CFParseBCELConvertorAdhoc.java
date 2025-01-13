@@ -25,7 +25,10 @@ import org.apache.bcel.classfile.ConstantFieldref;
 import org.apache.bcel.classfile.ConstantFloat;
 import org.apache.bcel.classfile.ConstantInteger;
 import org.apache.bcel.classfile.ConstantInterfaceMethodref;
+import org.apache.bcel.classfile.ConstantInvokeDynamic;
 import org.apache.bcel.classfile.ConstantLong;
+import org.apache.bcel.classfile.ConstantMethodHandle;
+import org.apache.bcel.classfile.ConstantMethodType;
 import org.apache.bcel.classfile.ConstantMethodref;
 import org.apache.bcel.classfile.ConstantNameAndType;
 import org.apache.bcel.classfile.ConstantString;
@@ -61,10 +64,57 @@ import util.io.WriterOutputStream;
  * @author	Yann-Gaël Guéhéneuc
  * @since	2006/07/27
  */
-public class CFParseBCELConvertor {
-	private static void addConstantPool(final JavaClass aJavaClass,
-			final com.ibm.toad.cfparse.ConstantPool cfparseCP) {
+public class CFParseBCELConvertorAdhoc {
+	private static void addAttributes(final ClassFile aClassFile,
+			final JavaClass aJavaClass) {
 
+		final Attribute[] attributes = aJavaClass.getAttributes();
+		for (int i = 0; i < attributes.length; i++) {
+			final Attribute attribute = attributes[i];
+			if (attribute.getName().equals("BootstrapMethods")) {
+				// TODO Complete the NestHost attribute with an index to the host class 
+				aClassFile.getAttrs().add("BootstrapMethods");
+			}
+			else if (attribute.getName().equals("Deprecated")) {
+				aClassFile.getAttrs().add("Deprecated");
+			}
+			else if (attribute.getName().equals("EnclosingMethod")) {
+				// TODO Complete the EnclosingMethod attribute with indexes on the enclosing class and method of this classfile
+				aClassFile.getAttrs().add("EnclosingMethod");
+			}
+			else if (attribute.getName().equals("NestHost")) {
+				// TODO Complete the NestHost attribute with an index to the host class 
+				aClassFile.getAttrs().add("NestHost");
+			}
+			else if (attribute.getName().equals("NestMembers")) {
+				// TODO Complete the NestHost attribute with an index to the host class 
+				aClassFile.getAttrs().add("NestMembers");
+			}
+			else if (attribute.getName().equals("Signature")) {
+				// TODO Complete the Signature attribute with an index to the signature of this class 
+				aClassFile.getAttrs().add("Signature");
+			}
+			else if (attribute.getName().equals("SourceFile")) {
+				final String fileName = aJavaClass.getSourceFileName();
+				final SourceFileAttrInfo sourceFileAttrInfo = (SourceFileAttrInfo) aClassFile
+						.getAttrs().add("SourceFile");
+				sourceFileAttrInfo.set(fileName);
+			}
+			else if (attribute.getName().equals("InnerClasses")) {
+				aClassFile.getAttrs().add("InnerClasses");
+				CFParseBCELConvertorAdhoc.handleInnerClasses(
+						(InnerClasses) attribute, aClassFile);
+			}
+			else {
+				System.out.println("Nothing to do!?");
+			}
+		}
+	}
+
+	private static void addConstants(final ClassFile aClassFile,
+			final JavaClass aJavaClass) {
+
+		final ConstantPool cfparseCP = aClassFile.getCP();
 		final org.apache.bcel.classfile.ConstantPool bcelCP = aJavaClass
 				.getConstantPool();
 
@@ -72,15 +122,21 @@ public class CFParseBCELConvertor {
 		for (int index = 1; index < constants.length; index++) {
 			final Constant constant = constants[index];
 
+			// ClassEntry
 			if (constant instanceof ConstantClass) {
 				final String className = ((ConstantClass) constant)
 						.getBytes(bcelCP).replace('.', '/');
-				final boolean found = CFParseBCELConvertor.searchFor(cfparseCP,
+				final boolean found = CFParseBCELConvertorAdhoc.searchFor(cfparseCP,
 						className, ConstantPool.ClassEntry.class);
 				if (!found) {
 					cfparseCP.addClass(className);
 				}
 			}
+			// DoubleEntry
+			else if (constant instanceof ConstantDouble) {
+				cfparseCP.addDouble(((ConstantDouble) constant).getBytes());
+			}
+			// FieldrefEntry
 			else if (constant instanceof ConstantFieldref) {
 				final int classIndex = ((ConstantFieldref) constant)
 						.getClassIndex();
@@ -98,6 +154,15 @@ public class CFParseBCELConvertor {
 						+ ' ' + nameAndTypeConstant.getName(bcelCP) + ' '
 						+ nameAndTypeConstant.getSignature(bcelCP));
 			}
+			// FloatEntry
+			else if (constant instanceof ConstantFloat) {
+				cfparseCP.addFloat(((ConstantFloat) constant).getBytes());
+			}
+			// IntegerEntry
+			else if (constant instanceof ConstantInteger) {
+				cfparseCP.addInteger(((ConstantInteger) constant).getBytes());
+			}
+			// InterfaceMethodrefEntry
 			else if (constant instanceof ConstantInterfaceMethodref) {
 				final int classIndex = ((ConstantInterfaceMethodref) constant)
 						.getClassIndex();
@@ -111,10 +176,83 @@ public class CFParseBCELConvertor {
 				final ConstantNameAndType nameAndTypeConstant = (ConstantNameAndType) bcelCP
 						.getConstant(nameAndTypeIndex);
 
-				cfparseCP.addMethod(classNameUtf8.getBytes().replace('.', '/')
-						+ ' ' + nameAndTypeConstant.getName(bcelCP) + ' '
-						+ nameAndTypeConstant.getSignature(bcelCP));
+				cfparseCP.addInterface(
+						classNameUtf8.getBytes().replace('.', '/') + ' '
+								+ nameAndTypeConstant.getName(bcelCP) + ' '
+								+ nameAndTypeConstant.getSignature(bcelCP));
 			}
+			// InvokeDynamicEntry
+			else if (constant instanceof ConstantInvokeDynamic) {
+				// TODO Fix bootstrap method index
+				final int nameAndTypeIndex = ((ConstantInvokeDynamic) constant)
+						.getNameAndTypeIndex();
+				final ConstantNameAndType nameAndTypeConstant = (ConstantNameAndType) bcelCP
+						.getConstant(nameAndTypeIndex);
+				final String name = nameAndTypeConstant.getName(bcelCP);
+				final String signature = nameAndTypeConstant
+						.getSignature(bcelCP);
+				int indexNameAndType = cfparseCP.find(
+						ConstantPool.CONSTANT_NameAndType, name, signature);
+				if (indexNameAndType == -1) {
+					indexNameAndType = cfparseCP.addNameAndType(name,
+							signature);
+				}
+				cfparseCP.addInvokeDynamic(0, indexNameAndType);
+			}
+			// LongEntry
+			else if (constant instanceof ConstantLong) {
+				cfparseCP.addLong(((ConstantLong) constant).getBytes());
+			}
+			// MethodHandleEntry
+			else if (constant instanceof ConstantMethodHandle) {
+				final ConstantMethodHandle methodHandle = (ConstantMethodHandle) constant;
+				final int referenceKind = methodHandle.getReferenceKind();
+				final int referenceIndex = methodHandle.getReferenceIndex();
+				if (referenceKind == Const.REF_getField
+						|| referenceKind == Const.REF_getStatic
+						|| referenceKind == Const.REF_putField
+						|| referenceKind == Const.REF_putStatic) {
+
+					// CONSTANT_Fieldref_info
+					final ConstantFieldref cfr = bcelCP
+							.getConstant(referenceIndex);
+					final int classIndex = cfr.getClassIndex();
+					final ConstantClass classConstant = (ConstantClass) bcelCP
+							.getConstant(classIndex);
+					final ConstantUtf8 classNameUtf8 = (ConstantUtf8) bcelCP
+							.getConstant(classConstant.getNameIndex());
+
+					final int nameAndTypeIndex = cfr.getNameAndTypeIndex();
+					final ConstantNameAndType nameAndTypeConstant = (ConstantNameAndType) bcelCP
+							.getConstant(nameAndTypeIndex);
+
+					// "9padl/kernel/impl/Constituent cachedAcceptClassNames Ljava/util/Map;"
+					// TODO Test
+					final int newIndex = cfparseCP.find(9,
+							classNameUtf8.getBytes() + " "
+									+ nameAndTypeConstant.getName(bcelCP) + " "
+									+ nameAndTypeConstant.getSignature(bcelCP));
+					cfparseCP.addMethodHandle(referenceKind, newIndex);
+				}
+				else if (referenceKind == Const.REF_invokeVirtual
+						|| referenceKind == Const.REF_newInvokeSpecial) {
+					// CONSTANT_Methodref_info
+					// TODO Implement
+				}
+				else if (referenceKind == Const.REF_invokeStatic
+						|| referenceKind == Const.REF_invokeSpecial) {
+					// CONSTANT_Methodref_info or CONSTANT_InterfaceMethodref_info
+					// TODO Implement
+				}
+				else if (referenceKind == Const.REF_invokeInterface) {
+					// CONSTANT_InterfaceMethodref_info
+					// TODO Implement
+				}
+				else {
+					// Impossible?
+				}
+			}
+			// MethodrefEntry
 			else if (constant instanceof ConstantMethodref) {
 				final int classIndex = ((ConstantMethodref) constant)
 						.getClassIndex();
@@ -132,21 +270,15 @@ public class CFParseBCELConvertor {
 						+ ' ' + nameAndTypeConstant.getName(bcelCP) + ' '
 						+ nameAndTypeConstant.getSignature(bcelCP));
 			}
-			else if (constant instanceof ConstantDouble) {
-				cfparseCP.addDouble(((ConstantDouble) constant).getBytes());
+			// MethodTypeEntry
+			else if (constant instanceof ConstantMethodType) {
+				// TODO Implement
+				System.out.println();
 			}
-			else if (constant instanceof ConstantFloat) {
-				cfparseCP.addFloat(((ConstantFloat) constant).getBytes());
-			}
-			else if (constant instanceof ConstantInteger) {
-				cfparseCP.addInteger(((ConstantInteger) constant).getBytes());
-			}
-			else if (constant instanceof ConstantLong) {
-				cfparseCP.addLong(((ConstantLong) constant).getBytes());
-			}
+			// NameAndTypeEntry
 			else if (constant instanceof ConstantNameAndType) {
 				final ConstantNameAndType constantNameAndType = (ConstantNameAndType) constant;
-				final boolean found = CFParseBCELConvertor.searchFor(cfparseCP,
+				final boolean found = CFParseBCELConvertorAdhoc.searchFor(cfparseCP,
 						constantNameAndType.getName(bcelCP) + ' '
 								+ constantNameAndType.getSignature(bcelCP),
 						ConstantPool.NameAndTypeEntry.class);
@@ -156,27 +288,43 @@ public class CFParseBCELConvertor {
 							constantNameAndType.getSignature(bcelCP));
 				}
 			}
+			// StringEntry
 			else if (constant instanceof ConstantString) {
-				cfparseCP.addString((String) ((ConstantString) constant)
-						.getConstantValue(bcelCP));
+				// Yann 24/12/09: Escaping!
+				// When addString() and addUtf8() are used, they escape the strings
+				// given to them as parameters. I must thus escape the strings given
+				// to find() to make sure that I look for the string added earlier.
+				final String utf8String = ((ConstantString) constant)
+						.getBytes(bcelCP);
+				final String escapedString = CFParseBCELConvertorAdhoc
+						.escape(utf8String);
+				if (cfparseCP.find(ConstantPool.CONSTANT_String,
+						escapedString) == -1) {
+					cfparseCP.addString(utf8String);
+				}
 			}
+			// Utf8Entry
 			else if (constant instanceof ConstantUtf8) {
 				final String utf8String = ((ConstantUtf8) constant).getBytes();
-				if (cfparseCP.find(1, utf8String) == -1) {
+				final String escapedString = CFParseBCELConvertorAdhoc
+						.escape(utf8String);
+				if (cfparseCP.find(ConstantPool.CONSTANT_Utf8,
+						escapedString) == -1) {
 					cfparseCP.addUtf8(utf8String);
 				}
 			}
 			else if (constant == null) {
 				// Yann 24/11/24: Null-able?
-				// For some reasons, BCEL constant pool contains null values,
-				// which I just ignore but should probably try to understand.
-				ProxyConsole.getInstance().errorOutput().println(
-						"util.lang.CFParseBCELConvertor.convertConstantPool(JavaClass, ConstantPool): null constant!?");
+				// BCEL constant pool contains null values,
+				// which I just ignore because their pertain
+				// to Double and Long, which require two ints.
+				//	ProxyConsole.getInstance().errorOutput().println(
+				//			"util.lang.CFParseBCELConvertor.convertConstants(JavaClass, ConstantPool): null constant!?");
 			}
 			else {
 				// throw new RuntimeException("Unknown constant in constant pool");
 				ProxyConsole.getInstance().errorOutput().print(
-						"util.lang.CFParseBCELConvertor.convertConstantPool(JavaClass, ConstantPool): constant ");
+						"util.lang.CFParseBCELConvertor.convertConstants(JavaClass, ConstantPool): constant ");
 				ProxyConsole.getInstance().errorOutput()
 						.print(constant.getTag());
 				ProxyConsole.getInstance().errorOutput().print(" (");
@@ -312,75 +460,13 @@ public class CFParseBCELConvertor {
 				fieldInfo = fieldInfoList.add(fieldDeclaration.toString());
 			}
 			if (field.isSynthetic()) {
-				fieldInfo.getAttrs().add("Synthetic");
+				// Not needed?
+				//	fieldInfo.getAttrs().add("Synthetic");
+				fieldInfo
+						.setAccess(fieldInfo.getAccess() + Const.ACC_SYNTHETIC);
 			}
 
 			fieldDeclaration.setLength(0);
-		}
-	}
-
-	private static void addInnerClasses(final ClassFile aClassFile,
-			final JavaClass aJavaClass) {
-
-		final Attribute[] attributes = aJavaClass.getAttributes();
-		for (int i = 0; i < attributes.length; i++) {
-			final Attribute attribute = attributes[i];
-			if (attribute instanceof InnerClasses) {
-				final AttrInfoList attrInfoList = aClassFile.getAttrs();
-				final InnerClassesAttrInfo innerClassesAttrInfo = (InnerClassesAttrInfo) attrInfoList
-						.add("InnerClasses");
-				final InnerClasses innerClassesAttr = (InnerClasses) attribute;
-				final InnerClass[] innerClassesArray = innerClassesAttr
-						.getInnerClasses();
-				try {
-					final StringWriter stringWriter = new StringWriter();
-					final DataOutputStream dataOutput = new DataOutputStream(
-							new WriterOutputStream(stringWriter));
-					dataOutput.writeInt(innerClassesAttr.getLength());
-					dataOutput.writeShort(
-							innerClassesAttr.getInnerClasses().length);
-					for (int j = 0; j < innerClassesArray.length; j++) {
-						final InnerClass innerClass = innerClassesArray[j];
-
-						/*
-						final String innerClassName = ((ConstantUtf8) aJavaClass
-								.getConstantPool()
-								.getConstant(((ConstantClass) aJavaClass
-										.getConstantPool()
-										.getConstant(innerClass
-												.getInnerClassIndex()))
-										.getNameIndex()))
-								.getBytes();
-						*/
-
-						// I can't just do that because the index in the
-						// BCEL classfile are not the same as the ones in
-						// under-construction CFParse classfile, although
-						// they should... but could?
-						// TODO Find a way to have the same indexes or recompute the right indexes
-						// dataOutput.writeShort(innerClass.getInnerClassIndex());
-						dataOutput.writeShort(0);
-						// dataOutput.writeShort(innerClass.getOuterClassIndex());
-						dataOutput.writeShort(0);
-						// dataOutput.writeShort(innerClass.getInnerNameIndex());
-						dataOutput.writeShort(0);
-						dataOutput.writeShort(innerClass.getInnerAccessFlags());
-					}
-					dataOutput.close();
-
-					final String stringInStream = stringWriter.toString();
-					final StringReader stringReader = new StringReader(
-							stringInStream);
-					final DataInputStream dataInput = new DataInputStream(
-							new ReaderInputStream(stringReader));
-					innerClassesAttrInfo.read(dataInput);
-					dataInput.close();
-				}
-				catch (final IOException ioe) {
-					ioe.printStackTrace(
-							ProxyConsole.getInstance().errorOutput());
-				}
-			}
 		}
 	}
 
@@ -449,22 +535,14 @@ public class CFParseBCELConvertor {
 				argsString[i] = arg.toString();
 			}
 			methodInfo.setParams(argsString);
-
-			// Yann 2006/07/31: Bug in CFParse!
-			// I must add a dummy ')' because there is a bug
-			// in the MethodInfo.setReturnType() method that
-			// eats away one ')'....
-			final ConstantPool cp = aClassFile.getCP();
-			final int idxDescriptor = cp.find(1, methodInfo.getDesc());
-			final StringBuffer buffer = new StringBuffer(methodInfo.getDesc());
-			buffer.insert(buffer.lastIndexOf(")"), ")");
-			((ConstantPool.Utf8Entry) cp.get(idxDescriptor))
-					.setValue(buffer.toString());
-
-			methodInfo.setReturnType(method.getReturnType().toString());
+			// Yann 24/12/10: Unnecessary and broken?
+			// I shouldn't call this method because it breaks the constant
+			// describing the signature of the method, for example "()V"
+			// becomes "(V" after calling it!
+			//		methodInfo.setReturnType(method.getReturnType().toString());
 
 			// TODO: Add other attributes to the CFParse classfile
-			// method from the method from BCEL!!
+			// method from the method from BCEL and adjust indices!
 			final AttrInfoList attrInfoList = methodInfo.getAttrs();
 			if (method.getCode() != null) {
 				final CodeAttrInfo codeAttributeInfo = (CodeAttrInfo) attrInfoList
@@ -540,72 +618,140 @@ public class CFParseBCELConvertor {
 		}
 	}
 
-	private static void addClassFileAttributes(final ClassFile aClassFile,
-			final JavaClass aJavaClass) {
-
-		final Attribute[] attributes = aJavaClass.getAttributes();
-		for (int i = 0; i < attributes.length; i++) {
-			final Attribute attribute = attributes[i];
-			if (attribute.getName().equals("BootstrapMethods")) {
-				// TODO Complete the NestHost attribute with an index to the host class 
-				aClassFile.getAttrs().add("BootstrapMethods");
-			}
-			else if (attribute.getName().equals("Deprecated")) {
-				aClassFile.getAttrs().add("Deprecated");
-			}
-			else if (attribute.getName().equals("EnclosingMethod")) {
-				// TODO Complete the EnclosingMethod attribute with indexes on the enclosing class and method of this classfile
-				aClassFile.getAttrs().add("EnclosingMethod");
-			}
-			else if (attribute.getName().equals("NestHost")) {
-				// TODO Complete the NestHost attribute with an index to the host class 
-				aClassFile.getAttrs().add("NestHost");
-			}
-			else if (attribute.getName().equals("NestMembers")) {
-				// TODO Complete the NestHost attribute with an index to the host class 
-				aClassFile.getAttrs().add("NestMembers");
-			}
-			else if (attribute.getName().equals("Signature")) {
-				// TODO Complete the Signature attribute with an index to the signature of this class 
-				aClassFile.getAttrs().add("Signature");
-			}
-			else if (attribute.getName().equals("SourceFile")) {
-				final String fileName = aJavaClass.getSourceFileName();
-				final SourceFileAttrInfo sourceFileAttrInfo = (SourceFileAttrInfo) aClassFile
-						.getAttrs().add("SourceFile");
-				sourceFileAttrInfo.set(fileName);
-			}
-			else if (attribute.getName().equals("InnerClasses")) {
-				// Will be treated later by addInnerClasses(...)
-			}
-			else {
-				System.out.println("Nothing to do!?");
-			}
-		}
-	}
-
 	public static ClassFile convertClassFile(final JavaClass aJavaClass) {
 		final ClassFile currentClass = new ClassFile();
 
-		currentClass.setAccess(aJavaClass.getAccessFlags());
-		// No need to test the magic number because
-		// "The first four bytes of every class file are always 0xCAFEBABE."
-		// currentClass.setMagic();
-		currentClass.setMajor(aJavaClass.getMajor());
+		/*
+		 * How the "parser" of CFParse proceeds:
+		 *		this.d_magic = var3.readInt();
+		 *		this.d_minorVersion = var3.readShort();
+		 *		this.d_majorVersion = var3.readShort();
+		 *		this.d_constants.read(var3);
+		 *		this.d_accessFlags = var3.readShort();
+		 *		this.d_thisClass = var3.readShort();
+		 *		this.d_superClass = var3.readShort();
+		 *		this.d_interfaces.read(var3);
+		 *		this.d_fields.read(var3);
+		 *		this.d_methods.read(var3);
+		 *		this.d_attributes.read(var3);
+		 */
+
+		currentClass.setMagic(0xCAFEBABE);
 		currentClass.setMinor(aJavaClass.getMinor());
+		currentClass.setMajor(aJavaClass.getMajor());
+		currentClass.setAccess(aJavaClass.getAccessFlags());
 		currentClass.setName(aJavaClass.getClassName());
 		currentClass.setSuperName(aJavaClass.getSuperclassName());
 
-		CFParseBCELConvertor.addClassFileAttributes(currentClass, aJavaClass);
-
-		CFParseBCELConvertor.addConstantPool(aJavaClass, currentClass.getCP());
-
-		CFParseBCELConvertor.addInterfaces(currentClass, aJavaClass);
-		CFParseBCELConvertor.addInnerClasses(currentClass, aJavaClass);
-		CFParseBCELConvertor.addMethods(currentClass, aJavaClass);
-		CFParseBCELConvertor.addFields(currentClass, aJavaClass);
+		CFParseBCELConvertorAdhoc.addConstants(currentClass, aJavaClass);
+		CFParseBCELConvertorAdhoc.addInterfaces(currentClass, aJavaClass);
+		CFParseBCELConvertorAdhoc.addMethods(currentClass, aJavaClass);
+		CFParseBCELConvertorAdhoc.addFields(currentClass, aJavaClass);
+		CFParseBCELConvertorAdhoc.addAttributes(currentClass, aJavaClass);
 
 		return currentClass;
+	}
+
+	/**
+	 * From https://stackoverflow.com/questions/2406121/how-do-i-escape-a-string-in-java
+	 * 
+	 * escape()
+	 *
+	 * Escape a give String to make it safe to be printed or stored.
+	 *
+	 * @param s The input String.
+	 * @return The output String.
+	 **/
+	private static String escape(final String s) {
+		return s.replace("\\", "\\\\").replace("\t", "\\t").replace("\b", "\\b")
+				.replace("\n", "\\n").replace("\r", "\\r").replace("\f", "\\f")
+				.replace("\'", "\\'") // <== not necessary
+				.replace("\"", "\\\"");
+	}
+
+	private static void handleInnerClasses(final InnerClasses aInnerClassesAttr,
+			final ClassFile aClassFile) {
+
+		final ConstantPool cfparseCP = aClassFile.getCP();
+		final org.apache.bcel.classfile.ConstantPool bcelCP = aInnerClassesAttr
+				.getConstantPool();
+
+		final AttrInfoList attrInfoList = aClassFile.getAttrs();
+		final InnerClassesAttrInfo innerClassesAttrInfo = (InnerClassesAttrInfo) attrInfoList
+				.get("InnerClasses");
+		final InnerClass[] innerClassesArray = aInnerClassesAttr
+				.getInnerClasses();
+		try {
+			final StringWriter stringWriter = new StringWriter();
+			final DataOutputStream dataOutput = new DataOutputStream(
+					new WriterOutputStream(stringWriter));
+			dataOutput.writeInt(aInnerClassesAttr.getLength());
+			dataOutput.writeShort(aInnerClassesAttr.getInnerClasses().length);
+			for (int j = 0; j < innerClassesArray.length; j++) {
+				final InnerClass innerClass = innerClassesArray[j];
+
+				final String nameInnerClass = bcelCP
+						.getConstantUtf8(((ConstantClass) bcelCP
+								.getConstant(innerClass.getInnerClassIndex()))
+								.getNameIndex())
+						.getBytes();
+				int indexInnerClass = cfparseCP
+						.find(ConstantPool.CONSTANT_Class, nameInnerClass);
+				if (indexInnerClass == -1) {
+					indexInnerClass = cfparseCP.addClass(nameInnerClass);
+				}
+				dataOutput.writeShort(indexInnerClass);
+
+				final int outerClassIndex = innerClass.getOuterClassIndex();
+				final int indexOuterClass;
+				if (outerClassIndex == 0) {
+					indexOuterClass = 0;
+				}
+				else {
+					final String nameOuterClass = bcelCP.getConstantUtf8(
+							((ConstantClass) bcelCP.getConstant(
+									innerClass.getOuterClassIndex()))
+									.getNameIndex())
+							.getBytes();
+					indexOuterClass = cfparseCP
+							.find(ConstantPool.CONSTANT_Class, nameOuterClass);
+					if (indexOuterClass == -1) {
+						cfparseCP.addClass(nameOuterClass);
+					}
+				}
+				dataOutput.writeShort(indexOuterClass);
+
+				final int innerNameIndex = innerClass.getInnerNameIndex();
+				final int indexInnerName;
+				if (innerNameIndex == 0) {
+					indexInnerName = 0;
+				}
+				else {
+					final String nameInnerName = bcelCP
+							.getConstantUtf8(innerClass.getInnerNameIndex())
+							.getBytes();
+					indexInnerName = cfparseCP.find(ConstantPool.CONSTANT_Utf8,
+							nameInnerName);
+					if (indexOuterClass == -1) {
+						cfparseCP.addUtf8(nameInnerName);
+					}
+				}
+				dataOutput.writeShort(indexInnerName);
+
+				dataOutput.writeShort(innerClass.getInnerAccessFlags());
+			}
+			dataOutput.close();
+
+			final String stringInStream = stringWriter.toString();
+			final StringReader stringReader = new StringReader(stringInStream);
+			final DataInputStream dataInput = new DataInputStream(
+					new ReaderInputStream(stringReader));
+			innerClassesAttrInfo.read(dataInput);
+			dataInput.close();
+		}
+		catch (final IOException ioe) {
+			ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
+		}
 	}
 
 	private static boolean searchFor(

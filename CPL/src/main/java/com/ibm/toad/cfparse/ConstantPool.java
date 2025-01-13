@@ -17,6 +17,7 @@ public final class ConstantPool {
 	public final class ClassEntry extends ConstantPoolEntry {
 		private int d_index;
 		// $FF: synthetic field
+		// TODO Remove all such fields, they are not necessary
 		final ConstantPool this$0;
 
 		ClassEntry(ConstantPool var1, int var2) {
@@ -29,10 +30,17 @@ public final class ConstantPool {
 				return false;
 			}
 			else {
-				ConstantPoolEntry var2 = (ConstantPoolEntry) var1;
+				ConstantPool.ClassEntry var2 = (ConstantPool.ClassEntry) var1;
 				int[] var3 = var2.getIndices();
+				// Yann 24/12/10: It takes two to know...
+				// The original code use to assume that we're comparing entries
+				// from the same constant pool! But I want also to be able to
+				// compare entries between constant pools, so I must cast and
+				// use var2 in the argument of equals().
+				//		return this.this$0.get(this.d_index)
+				//				.equals(this.this$0.get(var3[0]));
 				return this.this$0.get(this.d_index)
-						.equals(this.this$0.get(var3[0]));
+						.equals(var2.this$0.get(var3[0]));
 			}
 		}
 
@@ -78,8 +86,11 @@ public final class ConstantPool {
 		}
 
 		public boolean equals(Object var1) {
-			return var1 instanceof ConstantPool.DoubleEntry && this.toString()
-					.equals(((ConstantPool.DoubleEntry) var1).toString());
+			// Yann 24/12/10: NaN
+			// We must compare strings because NaN != NaN.
+			return var1 instanceof ConstantPool.DoubleEntry
+					&& this.getAsString().equals(
+							((ConstantPool.DoubleEntry) var1).getAsString());
 		}
 
 		public String getAsJava() {
@@ -129,12 +140,12 @@ public final class ConstantPool {
 				return false;
 			}
 			else {
-				ConstantPoolEntry var2 = (ConstantPoolEntry) var1;
+				ConstantPool.FieldrefEntry var2 = (ConstantPool.FieldrefEntry) var1;
 				int[] var3 = var2.getIndices();
 				return this.this$0.get(this.d_idxClass)
-						.equals(this.this$0.get(var3[0]))
+						.equals(var2.this$0.get(var3[0]))
 						&& this.this$0.get(this.d_idxNameAndType)
-								.equals(this.this$0.get(var3[1]));
+								.equals(var2.this$0.get(var3[1]));
 			}
 		}
 
@@ -181,9 +192,8 @@ public final class ConstantPool {
 		}
 
 		public boolean equals(Object var1) {
-			return var1 instanceof ConstantPool.FloatEntry
-					&& this.d_float == ((ConstantPool.FloatEntry) var1)
-							.getValue();
+			return var1 instanceof ConstantPool.FloatEntry && this.getAsString()
+					.equals(((ConstantPool.FloatEntry) var1).getAsString());
 		}
 
 		public String getAsJava() {
@@ -221,8 +231,8 @@ public final class ConstantPool {
 
 		public boolean equals(Object var1) {
 			return var1 instanceof ConstantPool.IntegerEntry
-					&& this.d_integer == ((ConstantPool.IntegerEntry) var1)
-							.getValue();
+					&& this.getAsString().equals(
+							((ConstantPool.IntegerEntry) var1).getAsString());
 		}
 
 		public String getAsJava() {
@@ -268,12 +278,12 @@ public final class ConstantPool {
 				return false;
 			}
 			else {
-				ConstantPoolEntry var2 = (ConstantPoolEntry) var1;
+				ConstantPool.InterfaceMethodrefEntry var2 = (ConstantPool.InterfaceMethodrefEntry) var1;
 				int[] var3 = var2.getIndices();
 				return this.this$0.get(this.d_idxClass)
-						.equals(this.this$0.get(var3[0]))
+						.equals(var2.this$0.get(var3[0]))
 						&& this.this$0.get(this.d_idxNameAndType)
-								.equals(this.this$0.get(var3[1]));
+								.equals(var2.this$0.get(var3[1]));
 			}
 		}
 
@@ -324,29 +334,37 @@ public final class ConstantPool {
 	}
 
 	// Yann 24/11/28: "New" constant pool entry since Java 7 
-	public final class InvokeDynamic extends ConstantPoolEntry {
+	public final class InvokeDynamicEntry extends ConstantPoolEntry {
 		private int d_idxBootstrapMethod;
 		private int d_idxNameAndType;
 		// $FF: synthetic field
 		final ConstantPool this$0;
 
-		InvokeDynamic(ConstantPool var1, int var2, int var3) {
+		InvokeDynamicEntry(ConstantPool var1, int var2, int var3) {
 			(this.this$0 = var1).getClass();
 			this.d_idxBootstrapMethod = var2;
 			this.d_idxNameAndType = var3;
 		}
 
 		public boolean equals(Object var1) {
-			if (!(var1 instanceof ConstantPool.InvokeDynamic)) {
+			if (!(var1 instanceof ConstantPool.InvokeDynamicEntry)) {
 				return false;
 			}
 			else {
-				ConstantPoolEntry var2 = (ConstantPoolEntry) var1;
+				ConstantPool.InvokeDynamicEntry var2 = (ConstantPool.InvokeDynamicEntry) var1;
 				int[] var3 = var2.getIndices();
+				// We do not test the bootstrap method
+				// because CFParse do not handle them
+				// and they could be simply "null".
+				// TODO Create the BootstrapMethods attribute and add this test back 
+				/*
 				return this.this$0.get(this.d_idxBootstrapMethod)
-						.equals(this.this$0.get(var3[0]))
+						.equals(var2.this$0.get(var3[0]))
 						&& this.this$0.get(this.d_idxNameAndType)
-								.equals(this.this$0.get(var3[1]));
+								.equals(var2.this$0.get(var3[1]));
+				*/
+				return this.this$0.get(this.d_idxNameAndType)
+						.equals(var2.this$0.get(var3[1]));
 			}
 		}
 
@@ -400,9 +418,8 @@ public final class ConstantPool {
 		}
 
 		public boolean equals(Object var1) {
-			return var1 instanceof ConstantPool.LongEntry
-					&& this.d_long == ((ConstantPool.LongEntry) var1)
-							.getValue();
+			return var1 instanceof ConstantPool.LongEntry && this.getAsString()
+					.equals(((ConstantPool.LongEntry) var1).getAsString());
 		}
 
 		public String getAsJava() {
@@ -432,13 +449,13 @@ public final class ConstantPool {
 	}
 
 	// Yann 24/11/28: "New" constant pool entry since Java 7 
-	public final class MethodHandle extends ConstantPoolEntry {
+	public final class MethodHandleEntry extends ConstantPoolEntry {
 		private int d_idxReference;
 		private int d_Kind;
 		// $FF: synthetic field
 		final ConstantPool this$0;
 
-		MethodHandle(ConstantPool var1, int var2, int var3) {
+		MethodHandleEntry(ConstantPool var1, int var2, int var3) {
 			(this.this$0 = var1).getClass();
 			this.d_Kind = var2;
 			this.d_idxReference = var3;
@@ -449,12 +466,12 @@ public final class ConstantPool {
 				return false;
 			}
 			else {
-				ConstantPoolEntry var2 = (ConstantPoolEntry) var1;
+				ConstantPool.NameAndTypeEntry var2 = (ConstantPool.NameAndTypeEntry) var1;
 				int[] var3 = var2.getIndices();
 				return this.this$0.get(this.d_Kind)
-						.equals(this.this$0.get(var3[0]))
+						.equals(var2.this$0.get(var3[0]))
 						&& this.this$0.get(this.d_idxReference)
-								.equals(this.this$0.get(var3[1]));
+								.equals(var2.this$0.get(var3[1]));
 			}
 		}
 
@@ -510,12 +527,12 @@ public final class ConstantPool {
 				return false;
 			}
 			else {
-				ConstantPoolEntry var2 = (ConstantPoolEntry) var1;
+				ConstantPool.MethodrefEntry var2 = (ConstantPool.MethodrefEntry) var1;
 				int[] var3 = var2.getIndices();
 				return this.this$0.get(this.d_idxClass)
-						.equals(this.this$0.get(var3[0]))
+						.equals(var2.this$0.get(var3[0]))
 						&& this.this$0.get(this.d_idxNameAndType)
-								.equals(this.this$0.get(var3[1]));
+								.equals(var2.this$0.get(var3[1]));
 			}
 		}
 
@@ -566,25 +583,25 @@ public final class ConstantPool {
 	}
 
 	// Yann 24/11/28: "New" constant pool entry since Java 7 
-	public final class MethodType extends ConstantPoolEntry {
+	public final class MethodTypeEntry extends ConstantPoolEntry {
 		private int d_idxDescriptor;
 		// $FF: synthetic field
 		final ConstantPool this$0;
 
-		MethodType(ConstantPool var1, int var2) {
+		MethodTypeEntry(ConstantPool var1, int var2) {
 			(this.this$0 = var1).getClass();
 			this.d_idxDescriptor = var2;
 		}
 
 		public boolean equals(Object var1) {
-			if (!(var1 instanceof ConstantPool.MethodType)) {
+			if (!(var1 instanceof ConstantPool.MethodTypeEntry)) {
 				return false;
 			}
 			else {
-				ConstantPoolEntry var2 = (ConstantPoolEntry) var1;
+				ConstantPool.MethodTypeEntry var2 = (ConstantPool.MethodTypeEntry) var1;
 				int[] var3 = var2.getIndices();
 				return this.this$0.get(this.d_idxDescriptor)
-						.equals(this.this$0.get(var3[0]));
+						.equals(var2.this$0.get(var3[0]));
 			}
 		}
 
@@ -643,12 +660,12 @@ public final class ConstantPool {
 				return false;
 			}
 			else {
-				ConstantPoolEntry var2 = (ConstantPoolEntry) var1;
+				ConstantPool.NameAndTypeEntry var2 = (ConstantPool.NameAndTypeEntry) var1;
 				int[] var3 = var2.getIndices();
 				return this.this$0.get(this.d_idxName)
-						.equals(this.this$0.get(var3[0]))
+						.equals(var2.this$0.get(var3[0]))
 						&& this.this$0.get(this.d_idxType)
-								.equals(this.this$0.get(var3[1]));
+								.equals(var2.this$0.get(var3[1]));
 			}
 		}
 
@@ -706,10 +723,10 @@ public final class ConstantPool {
 				return false;
 			}
 			else {
-				ConstantPoolEntry var2 = (ConstantPoolEntry) var1;
+				ConstantPool.StringEntry var2 = (ConstantPool.StringEntry) var1;
 				int[] var3 = var2.getIndices();
 				return this.this$0.get(this.d_index)
-						.equals(this.this$0.get(var3[0]));
+						.equals(var2.this$0.get(var3[0]));
 			}
 		}
 
@@ -750,7 +767,7 @@ public final class ConstantPool {
 
 		public boolean equals(Object var1) {
 			return var1 instanceof ConstantPool.Utf8Entry && this.d_rewrite
-					.equals(((ConstantPool.Utf8Entry) var1).getAsString());
+					.equals(((ConstantPool.Utf8Entry) var1).d_rewrite);
 		}
 
 		public String getAsJava() {
@@ -841,11 +858,8 @@ public final class ConstantPool {
 	public static final int CONSTANT_Utf8 = 1;
 
 	private ConstantPoolEntry[] d_constants;
-
 	private HashMap d_hashC2i;
-
 	private HashMap d_hashN2C;
-
 	private int d_numConstants;
 
 	public ConstantPool() {
@@ -880,11 +894,14 @@ public final class ConstantPool {
 		String var3 = var1.substring(var1.indexOf(" ") + 1,
 				var1.lastIndexOf(" "));
 		String var4 = var1.substring(var1.lastIndexOf(" ") + 1, var1.length());
+
+		// Declaring class
 		int var5 = this.find(7, var2);
 		if (var5 == -1) {
 			var5 = this.addClass(var2);
 		}
 
+		// Declared field
 		int var6 = this.find(12, var3 + " " + var4);
 		if (var6 == -1) {
 			var6 = this.addNameAndType(var3, var4);
@@ -921,6 +938,13 @@ public final class ConstantPool {
 				new ConstantPool.InterfaceMethodrefEntry(this, var5, var6));
 	}
 
+	public int addInvokeDynamic(final int bootstrapMethodIndex,
+			final int nameAndTypeIndex) {
+
+		return this.addNewElement(new ConstantPool.InvokeDynamicEntry(this,
+				bootstrapMethodIndex, nameAndTypeIndex));
+	}
+
 	public int addLong(long var1) {
 		return this.addNewElement(new ConstantPool.LongEntry(var1));
 	}
@@ -944,6 +968,17 @@ public final class ConstantPool {
 				new ConstantPool.MethodrefEntry(this, var5, var6));
 	}
 
+	public int addMethodHandle(final int referenceKind,
+			final int referenceIndex) {
+		return this.addNewElement(new ConstantPool.MethodHandleEntry(this,
+				referenceKind, referenceIndex));
+	}
+
+	public int addMethodType(final int utf8Entry) {
+		return this.addNewElement(
+				new ConstantPool.MethodTypeEntry(this, utf8Entry));
+	}
+
 	public int addNameAndType(String var1, String var2) {
 		int var3 = this.find(1, var1);
 		if (var3 == -1) {
@@ -960,6 +995,13 @@ public final class ConstantPool {
 	}
 
 	private int addNewElement(ConstantPoolEntry var1) {
+		// Yann 24/12/10: Duplications!
+		// Do not add twice any entry...
+		int index = this.find(var1);
+		if (index > -1) {
+			return index;
+		}
+
 		if (this.d_constants == null
 				|| this.d_numConstants == this.d_constants.length) {
 			this.resize();
@@ -967,6 +1009,8 @@ public final class ConstantPool {
 
 		this.d_constants[this.d_numConstants] = var1;
 		int var2 = this.d_numConstants++;
+		// Long and Double, why is this needed?
+		// TODO Is this necessary? Could we do without it?
 		if (var1 instanceof ConstantPool.LongEntry
 				|| var1 instanceof ConstantPool.DoubleEntry) {
 			if (this.d_numConstants == this.d_constants.length) {
@@ -1167,6 +1211,22 @@ public final class ConstantPool {
 		return var3;
 	}
 
+	public int find(int var1, String var2, String var3) {
+		int var4 = -1;
+		ConstantPoolEntry var5 = (ConstantPoolEntry) this.d_hashN2C
+				.get(var1 + var2 + ' ' + var3);
+		if (var5 != null) {
+			Integer var6 = (Integer) this.d_hashC2i.get(var5);
+			if (var6 == null) {
+				System.out.println("Whoops: " + var5);
+			}
+
+			var4 = var6;
+		}
+
+		return var4;
+	}
+
 	public ConstantPoolEntry get(int var1) {
 		return this.d_constants[var1];
 	}
@@ -1176,19 +1236,6 @@ public final class ConstantPool {
 	}
 
 	public String getAsString(int var1) {
-		// Yann 24/11/30: Bug?
-		// It used to be simply:
-		//		return this.get(var1).getAsString();
-		// TODO Why is this test necessary?
-		/*
-		final ConstantPoolEntry entry = this.get(var1);
-		if (entry == null) {
-			return this.get(0).getAsString();
-		}
-		else {
-			return this.get(var1).getAsString();
-		}
-		*/
 		return this.get(var1).getAsString();
 	}
 
@@ -1260,7 +1307,6 @@ public final class ConstantPool {
 						Integer.valueOf(var2));
 			}
 		}
-
 	}
 
 	private boolean readConstant(DataInputStream var1, int var2)
@@ -1324,18 +1370,19 @@ public final class ConstantPool {
 		case 15:
 			byte var0 = var1.readByte();
 			var5 = var1.readShort();
-			this.d_constants[var2] = new ConstantPool.MethodHandle(this, var0,
-					var5);
+			this.d_constants[var2] = new ConstantPool.MethodHandleEntry(this,
+					var0, var5);
 			break;
 		case 16:
 			var4 = var1.readShort();
-			this.d_constants[var2] = new ConstantPool.MethodType(this, var4);
+			this.d_constants[var2] = new ConstantPool.MethodTypeEntry(this,
+					var4);
 			break;
 		case 18:
 			var4 = var1.readShort();
 			var5 = var1.readShort();
-			this.d_constants[var2] = new ConstantPool.InvokeDynamic(this, var4,
-					var5);
+			this.d_constants[var2] = new ConstantPool.InvokeDynamicEntry(this,
+					var4, var5);
 			break;
 
 		// No constant pool tags or missing tags
@@ -1353,6 +1400,8 @@ public final class ConstantPool {
 			break;
 		}
 
+		// Long and Double, why is this needed?
+		// TODO Is this necessary? Could we do without it?
 		return var3 == 6 || var3 == 5;
 	}
 

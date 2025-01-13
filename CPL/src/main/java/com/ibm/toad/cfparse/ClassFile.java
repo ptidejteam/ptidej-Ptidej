@@ -79,8 +79,13 @@ public final class ClassFile {
 		this(var1, (ConstantPool) null);
 	}
 
+	// Yann 24/12/07: Equality is hard!
+	// I create this method to compare to instances of ClassFile,
+	// and it's hard to compare them because they can be "same",
+	// but not one-to-one matching...
 	@Override
 	public boolean equals(final Object o) {
+
 		if (!(o instanceof ClassFile)) {
 			return false;
 		}
@@ -118,7 +123,7 @@ public final class ClassFile {
 		final int numInterfacesOfOther = interfacesListOfOther.length();
 		equalSuperInterfaces &= numInterfacesOfThis == numInterfacesOfOther;
 
-		for (int i = 0; i < numInterfacesOfThis; i++) {
+		for (int i = 0; equalSuperInterfaces && i < numInterfacesOfThis; i++) {
 			final String interfaceOfThis = interfaceListOfThis.get(i);
 			final String interfaceOfOther = interfacesListOfOther.get(i);
 
@@ -126,21 +131,26 @@ public final class ClassFile {
 		}
 
 		// Constant pool
-		boolean equalConstantPools = true;
+		boolean equalConstants = true;
 		final ConstantPool cpOfThis = this.getCP();
 		final ConstantPool cpOfOther = other.getCP();
 		final int numCPEntriesOfThis = cpOfThis.length();
 		final int numCPEntriesOfOther = cpOfOther.length();
-		equalConstantPools &= numCPEntriesOfThis == numCPEntriesOfOther;
+		// BCEL-built classfiles may have slightly different constants than compiler-generated ones don't
+		// 	equalConstants &= numCPEntriesOfThis <= numCPEntriesOfOther;
 
-		/*
-		for (int i = 0; i < numCPEntriesOfThis; i++) {
-			final String cpEntryOfThis = cpOfThis.getAsString(i);
-			final String cpEntryOfOther = cpOfOther.getAsString(i);
-		
-			equalConstantPools &= cpEntryOfThis.equals(cpEntryOfOther);
+		// I skip the first constant pool entry because it's always "<dummy Entry>"
+		for (int i = 1; equalConstants && i < numCPEntriesOfThis; i++) {
+			final ConstantPoolEntry cpEntryOfThis = cpOfThis.get(i);
+			if (cpEntryOfThis == null) {
+				continue;
+			}
+			final int index = cpOfOther.find(cpEntryOfThis);
+			if (index > 0) {
+				final ConstantPoolEntry cpEntryOfOther = cpOfOther.get(index);
+				equalConstants &= cpEntryOfThis.equals(cpEntryOfOther);
+			}
 		}
-		*/
 
 		// Attributes
 		boolean equalAttributes = true;
@@ -150,12 +160,19 @@ public final class ClassFile {
 		final int numAttrsOfOther = attrListOfOther.length();
 		equalAttributes &= numAttrsOfThis == numAttrsOfOther;
 
-		for (int i = 0; i < numAttrsOfThis; i++) {
+		for (int i = 0; equalAttributes && i < numAttrsOfThis; i++) {
 			final AttrInfo attrInfoOfThis = attrListOfThis.get(i);
 			final AttrInfo attrInfoOfOther = attrListOfOther.get(i);
 
-			equalAttributes &= attrInfoOfThis.toString()
-					.equals(attrInfoOfOther.toString());
+			// TODO Remove these conditions by implementing fully util.lang.CFParseBCELConvertor.addAttributes(ClassFile, JavaClass)
+			if (!attrInfoOfThis.getName().equals("BootstrapMethods")
+					&& !attrInfoOfThis.getName().equals("EnclosingMethod")
+					&& !attrInfoOfThis.getName().equals("NestHost")
+					&& !attrInfoOfThis.getName().equals("NestMembers")
+					&& !attrInfoOfThis.getName().equals("Signature")) {
+				equalAttributes &= attrInfoOfThis.toString()
+						.equals(attrInfoOfOther.toString());
+			}
 		}
 
 		// Fields
@@ -166,7 +183,7 @@ public final class ClassFile {
 		final int numFieldsOfOther = fieldListOfOther.length();
 		equalFields &= numFieldsOfThis == numFieldsOfOther;
 
-		for (int i = 0; i < numFieldsOfThis; i++) {
+		for (int i = 0; equalFields && i < numFieldsOfThis; i++) {
 			final FieldInfo fieldOfThis = fieldListOfThis.get(i);
 			final FieldInfo fieldOfOther = fieldListOfOther.get(i);
 
@@ -182,14 +199,15 @@ public final class ClassFile {
 		final MethodInfoList methodListOfOther = other.getMethods();
 		final int numMethodOfThis = methodListOfThis.length();
 		final int numMethodOfOther = methodListOfOther.length();
-		equalMethods &= numMethodOfThis == numMethodOfOther;
+		// BCEL-built classfiles may have a <clinit> than compiler-generated ones don't
+		equalMethods &= numMethodOfThis <= numMethodOfOther;
 
-		for (int i = 0; i < numMethodOfThis; i++) {
+		for (int i = 0; equalMethods && i < numMethodOfThis; i++) {
 			final MethodInfo methodOfThis = methodListOfThis.get(i);
 			final MethodInfo methodOfOther = methodListOfOther.get(i);
 
 			// TODO Re-enable this test and fix the difference between CFParse and BCEL (BCEL has sometimes longer bytecode sizes)  
-			// equalMethods &= methodOfThis.getAbout().equals(methodOfOther.getAbout());
+			// 	equalMethods &= methodOfThis.getAbout().equals(methodOfOther.getAbout());
 			equalMethods &= methodOfThis.getAccess() == methodOfOther
 					.getAccess();
 			equalMethods &= methodOfThis.getDesc()
@@ -202,10 +220,9 @@ public final class ClassFile {
 					.equals(methodOfOther.getReturnType());
 		}
 
-		// TODO Re-enable tests of the constant pools 
 		final boolean equal = equalClassFiles && equalSuperNames
-				&& equalSuperInterfaces // && equalConstantPools 
-				&& equalAttributes && equalFields && equalMethods;
+				&& equalSuperInterfaces && equalConstants && equalAttributes
+				&& equalFields && equalMethods;
 		return equal;
 	}
 

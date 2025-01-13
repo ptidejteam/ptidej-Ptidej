@@ -28,7 +28,8 @@ import org.apache.bcel.classfile.JavaClass;
 
 import com.ibm.toad.cfparse.ClassFile;
 
-import util.lang.CFParseBCELConvertor;
+import util.lang.CFParseBCELConvertorAdhoc;
+import util.lang.CFParseBCELConvertorVisitor;
 import util.multilingual.MultilingualManager;
 
 public final class SubtypeLoader {
@@ -130,26 +131,38 @@ public final class SubtypeLoader {
 			final List<ClassFile> aListOfClasses,
 			final NamedInputStream aNamedInputStream) throws IOException {
 
+		final InputStream inputStream0 = aNamedInputStream.getStream();
+		final ClassFile currentClass_CFPARSE = new ClassFile(inputStream0);
+		inputStream0.close();
+
 		final InputStream inputStream1 = aNamedInputStream.getStream();
-		final ClassFile currentClass_CFPARSE = new ClassFile(inputStream1);
+		final ClassParser parser = new ClassParser(inputStream1, "");
+		final JavaClass javaClass = parser.parse();
+		final ClassFile currentClass_BCEL1 = CFParseBCELConvertorAdhoc
+				.convertClassFile(javaClass);
+		final ClassFile currentClass_BCEL2 = CFParseBCELConvertorVisitor
+				.convertClassFile(javaClass);
 		inputStream1.close();
 
-		final InputStream inputStream2 = aNamedInputStream.getStream();
-		final ClassParser parser = new ClassParser(inputStream2, "");
-		final JavaClass javaClass = parser.parse();
-		final ClassFile currentClass_BCEL = CFParseBCELConvertor
-				.convertClassFile(javaClass);
-		inputStream2.close();
-
-		if (!currentClass_CFPARSE.equals(currentClass_BCEL)) {
+		ClassFile currentClass;
+		if (currentClass_CFPARSE.equals(currentClass_BCEL1)) {
+			currentClass = currentClass_BCEL1;
+		}
+		else if (currentClass_CFPARSE.equals(currentClass_BCEL2)) {
+			currentClass = currentClass_BCEL2;
+		}
+		else {
 			ProxyConsole.getInstance().debugOutput()
 					.print("(Beware that the classfile of ");
 			ProxyConsole.getInstance().debugOutput()
-					.print(currentClass_BCEL.getName());
-			ProxyConsole.getInstance().debugOutput().println(" is incomplete!)");
+					.print(currentClass_BCEL1.getName());
+			ProxyConsole.getInstance().debugOutput()
+					.println(" is incomplete!)");
+			currentClass = currentClass_CFPARSE;
 		}
 
-		final ClassFile currentClass = currentClass_CFPARSE;
+		// Force the use of CFParse for the moment...
+		currentClass = currentClass_CFPARSE;
 		if (aSuperTypeName == null
 				|| currentClass.getSuperName().equals(aSuperTypeName)) {
 
