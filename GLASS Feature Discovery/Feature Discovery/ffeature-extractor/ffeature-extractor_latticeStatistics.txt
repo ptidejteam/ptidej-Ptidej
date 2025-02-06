@@ -1,0 +1,5 @@
+#nodes : 10
+#adhoc : 2
+#subclass : 1
+#interface : 5
+#aggregations : 0

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="Features extraction Set"
+            visible="true"
+            id="ffeature-extractor.actionSet">
+         <menu
+               label="Sample &amp;Menu"
+               id="sampleMenu">
+            <separator
+                  name="sampleGroup">
+            </separator>
+         </menu>
+         <action
+               label="Features extraction "
+               icon="icons/featureExtractionicon.png"
+               class="ffeatureextractor.actions.FeatureExtractionAction"
+               tooltip="Features extraction "
+               menubarPath="sampleMenu/sampleGroup"
+               toolbarPath="sampleGroup"
+               id="ffeatureextractor.actions.FeatureExtractionAction">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="ffeatureextractor.viewpart.LatticeGraph"
+            id="ffeatureExtractor.viewpart.LatticeGraph"
+            name="Lattice Graph"
+            restorable="true">
+      </view>
+      <view
+            class="ffeatureextractor.viewpart.LatticeNode"
+            id="ffeatureExtractor.viewpart.LatticeNode"
+            name="Lattice Node"
+            restorable="true">
+      </view>
+   </extension>
+  
+
+
+
+<extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="ffeatureextractor.commands.FeatureExtractionCommand"
+            id="ffeatureextractor.commands.FeatureExtractionCommand"
+            name="Sample Command">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer#PopupMenu?after=additions">
+         <menu
+               id="org.ecilpse.ui.navigator.ProjectExplorer.featureExtraction"
+               label="Feature extraction">
+            <command
+                  commandId="ffeatureextractor.commands.FeatureExtractionCommand"
+                  icon="icons/icons/featureExtractionicon.png"
+                  label="Generate Lattice"
+                  style="push">
+                   <visibleWhen>
+                  <with  variable="selection" checkEnabled="false">>
+                            <iterate ifEmpty="false"
+                        operator="or">
+                     <instanceof
+                           value="org.eclipse.core.resources.IProject"/>
+                  </iterate>
+                  </with>
+               </visibleWhen>
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         id="eclipsefeaturediscovery1"
+         name="Eclipse for features discovery"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="featues">
+         <property
+               name="windowImages"
+               value="eclipse16.png,eclipse32.png,eclipse48.png">
+         </property>
+         <property
+               name="aboutText"
+               value="%productBlurb">
+         </property>
+         <property
+               name="aboutImage"
+               value="eclipse_lg.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="ffffff">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="2,290,450,10">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,265,320,25">
+         </property>
+         <property
+               name="appName"
+               value="featues">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="eclipsefeaturediscovery1"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="%productName">
+         <property
+               name="windowImages"
+               value="eclipse16.png,eclipse32.png,eclipse48.png">
+         </property>
+         <property
+               name="aboutText"
+               value="%productBlurb">
+         </property>
+         <property
+               name="aboutImage"
+               value="eclipse_lg.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="ffffff">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="2,290,450,10">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,265,320,25">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="eclipse-feature-discovery"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="featues">
+         <property
+               name="windowImages"
+               value="eclipse16.png,eclipse32.png,eclipse48.png">
+         </property>
+         <property
+               name="aboutText"
+               value="%productBlurb">
+         </property>
+         <property
+               name="aboutImage"
+               value="eclipse_lg.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="ffffff">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="2,290,450,10">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,265,320,25">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+ 
+</plugin>

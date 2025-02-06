@@ -1,0 +1,336 @@
+[
+  {
+    "types": [],
+    "ID": 0,
+    "children": [
+      {
+        "name": "0",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[ca.uqam.latece.aspects.extractor.lattice.visitors.impl.Token, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.Type]",
+        "intent": "[boolean isArray()]",
+        "ID": 92952938,
+        "children": []
+      },
+      {
+        "name": "1",
+        "types": [
+          {
+            "FeatureTypeName": "FULL_EXTENT_FULL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+            "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor2",
+            "coverage": 0.1
+          }
+        ],
+        "extent": "[ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor2, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.PrettyPrinter, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.TypeResolver]",
+        "intent": "[void onNode(Node node)]",
+        "ID": 74680085,
+        "children": []
+      },
+      {
+        "name": "3",
+        "types": [
+          {
+            "FeatureTypeName": "FULL_EXTENT_FULL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+            "anchor": "ca.uqam.latece.aspects.extractor.lattice.model.Lattice",
+            "coverage": 1.0
+          }
+        ],
+        "extent": "[ca.uqam.latece.aspects.extractor.lattice.model.Lattice, ca.uqam.latece.aspects.extractor.lattice.model.impl.LatticeImpl]",
+        "intent": "[LatticeNode getBottom(), LatticeNode getTop(), void acceptBottomVisitor(Visitor aVisitor), void acceptTopVisitor(Visitor aVisitor), void setBottom(LatticeNode bottom), void setTop(LatticeNode top)]",
+        "ID": 3179873,
+        "children": []
+      },
+      {
+        "name": "9",
+        "types": [
+          {
+            "FeatureTypeName": "FULL_EXTENT_FULL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+            "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.Visitor",
+            "coverage": 0.14285715
+          },
+          {
+            "FeatureTypeName": "PARTIAL_EXTENT_PARTIAL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+            "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.impl.LatticePrettyPrinter",
+            "coverage": 0.071428575
+          },
+          {
+            "FeatureTypeName": "PARTIAL_EXTENT_FULL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+            "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor",
+            "coverage": 0.11111111
+          }
+        ],
+        "extent": "[ca.uqam.latece.aspects.extractor.lattice.visitors.Visitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.BucketFillerVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.ComplexPurgeExtentsVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.FeatureDetectorVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.LatticeGraphGenerator, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.LatticePrettyPrinter, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.PrintCandidatesVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.PurgeExtentsVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.SimplePurgeExtentsVisitor]",
+        "intent": "[void processNode(LatticeNode node)]",
+        "ID": 157007945,
+        "children": [
+          {
+            "name": "27",
+            "types": [
+              {
+                "FeatureTypeName": "FULL_EXTENT_FULL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+                "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.Visitor",
+                "coverage": 0.2857143
+              },
+              {
+                "FeatureTypeName": "PARTIAL_EXTENT_PARTIAL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+                "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.impl.LatticePrettyPrinter",
+                "coverage": 0.14285715
+              },
+              {
+                "FeatureTypeName": "PARTIAL_EXTENT_FULL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+                "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor",
+                "coverage": 0.22222222
+              }
+            ],
+            "extent": "[ca.uqam.latece.aspects.extractor.lattice.visitors.Visitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.BucketFillerVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.LatticePrettyPrinter, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.PrintCandidatesVisitor]",
+            "intent": "[void processNode(LatticeNode node), void processVisitedNode(LatticeNode node)]",
+            "ID": 63255986,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "10",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[ca.uqam.latece.aspects.extractor.Main, ca.uqam.latece.aspects.extractor.tests.lattice.TestBuildingLattices, ca.uqam.latece.aspects.extractor.tests.relations.TestRelations]",
+        "intent": "[void main(String[] args)]",
+        "ID": 223017602,
+        "children": []
+      },
+      {
+        "name": "11",
+        "types": [
+          {
+            "FeatureTypeName": "PARTIAL_EXTENT_PARTIAL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+            "anchor": "ca.uqam.latece.aspects.extractor.lattice.model.LatticeNode",
+            "coverage": 0.04
+          }
+        ],
+        "extent": "[ca.uqam.latece.aspects.extractor.input.impl.MultipleInheritanceRecord, ca.uqam.latece.aspects.extractor.lattice.graph.model.Node, ca.uqam.latece.aspects.extractor.lattice.model.LatticeNode, ca.uqam.latece.aspects.extractor.lattice.model.impl.LatticeNodeImpl]",
+        "intent": "[String getName()]",
+        "ID": 41027308,
+        "children": [
+          {
+            "name": "35",
+            "types": [
+              {
+                "FeatureTypeName": "PARTIAL_EXTENT_PARTIAL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+                "anchor": "ca.uqam.latece.aspects.extractor.lattice.model.LatticeNode",
+                "coverage": 0.16
+              }
+            ],
+            "extent": "[ca.uqam.latece.aspects.extractor.lattice.graph.model.Node, ca.uqam.latece.aspects.extractor.lattice.model.LatticeNode, ca.uqam.latece.aspects.extractor.lattice.model.impl.LatticeNodeImpl]",
+            "intent": "[List\u003cNodeFeatureType\u003e getTypes(), String getName(), void setName(String name), void setTypes(List\u003cNodeFeatureType\u003e types)]",
+            "ID": 263416521,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "16",
+        "types": [
+          {
+            "FeatureTypeName": "ADHOC",
+            "coverage": 0.0
+          }
+        ],
+        "extent": "[ca.uqam.latece.aspects.extractor.input.impl.ReverseInheritanceRelationBuilder, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.PurgeExtentsVisitor]",
+        "intent": "[IJavaProject getJavaProject()]",
+        "ID": 236277377,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "0",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[ca.uqam.latece.aspects.extractor.lattice.visitors.impl.Token, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.Type]",
+    "intent": "[boolean isArray()]",
+    "ID": 92952938,
+    "children": []
+  },
+  {
+    "name": "1",
+    "types": [
+      {
+        "FeatureTypeName": "FULL_EXTENT_FULL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+        "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor2",
+        "coverage": 0.1
+      }
+    ],
+    "extent": "[ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor2, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.PrettyPrinter, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.TypeResolver]",
+    "intent": "[void onNode(Node node)]",
+    "ID": 74680085,
+    "children": []
+  },
+  {
+    "name": "3",
+    "types": [
+      {
+        "FeatureTypeName": "FULL_EXTENT_FULL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+        "anchor": "ca.uqam.latece.aspects.extractor.lattice.model.Lattice",
+        "coverage": 1.0
+      }
+    ],
+    "extent": "[ca.uqam.latece.aspects.extractor.lattice.model.Lattice, ca.uqam.latece.aspects.extractor.lattice.model.impl.LatticeImpl]",
+    "intent": "[LatticeNode getBottom(), LatticeNode getTop(), void acceptBottomVisitor(Visitor aVisitor), void acceptTopVisitor(Visitor aVisitor), void setBottom(LatticeNode bottom), void setTop(LatticeNode top)]",
+    "ID": 3179873,
+    "children": []
+  },
+  {
+    "name": "9",
+    "types": [
+      {
+        "FeatureTypeName": "FULL_EXTENT_FULL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+        "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.Visitor",
+        "coverage": 0.14285715
+      },
+      {
+        "FeatureTypeName": "PARTIAL_EXTENT_PARTIAL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+        "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.impl.LatticePrettyPrinter",
+        "coverage": 0.071428575
+      },
+      {
+        "FeatureTypeName": "PARTIAL_EXTENT_FULL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+        "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor",
+        "coverage": 0.11111111
+      }
+    ],
+    "extent": "[ca.uqam.latece.aspects.extractor.lattice.visitors.Visitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.BucketFillerVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.ComplexPurgeExtentsVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.FeatureDetectorVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.LatticeGraphGenerator, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.LatticePrettyPrinter, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.PrintCandidatesVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.PurgeExtentsVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.SimplePurgeExtentsVisitor]",
+    "intent": "[void processNode(LatticeNode node)]",
+    "ID": 157007945,
+    "children": [
+      {
+        "name": "27",
+        "types": [
+          {
+            "FeatureTypeName": "FULL_EXTENT_FULL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+            "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.Visitor",
+            "coverage": 0.2857143
+          },
+          {
+            "FeatureTypeName": "PARTIAL_EXTENT_PARTIAL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+            "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.impl.LatticePrettyPrinter",
+            "coverage": 0.14285715
+          },
+          {
+            "FeatureTypeName": "PARTIAL_EXTENT_FULL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+            "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor",
+            "coverage": 0.22222222
+          }
+        ],
+        "extent": "[ca.uqam.latece.aspects.extractor.lattice.visitors.Visitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.BucketFillerVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.LatticePrettyPrinter, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.PrintCandidatesVisitor]",
+        "intent": "[void processNode(LatticeNode node), void processVisitedNode(LatticeNode node)]",
+        "ID": 63255986,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "10",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[ca.uqam.latece.aspects.extractor.Main, ca.uqam.latece.aspects.extractor.tests.lattice.TestBuildingLattices, ca.uqam.latece.aspects.extractor.tests.relations.TestRelations]",
+    "intent": "[void main(String[] args)]",
+    "ID": 223017602,
+    "children": []
+  },
+  {
+    "name": "11",
+    "types": [
+      {
+        "FeatureTypeName": "PARTIAL_EXTENT_PARTIAL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+        "anchor": "ca.uqam.latece.aspects.extractor.lattice.model.LatticeNode",
+        "coverage": 0.04
+      }
+    ],
+    "extent": "[ca.uqam.latece.aspects.extractor.input.impl.MultipleInheritanceRecord, ca.uqam.latece.aspects.extractor.lattice.graph.model.Node, ca.uqam.latece.aspects.extractor.lattice.model.LatticeNode, ca.uqam.latece.aspects.extractor.lattice.model.impl.LatticeNodeImpl]",
+    "intent": "[String getName()]",
+    "ID": 41027308,
+    "children": [
+      {
+        "name": "35",
+        "types": [
+          {
+            "FeatureTypeName": "PARTIAL_EXTENT_PARTIAL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+            "anchor": "ca.uqam.latece.aspects.extractor.lattice.model.LatticeNode",
+            "coverage": 0.16
+          }
+        ],
+        "extent": "[ca.uqam.latece.aspects.extractor.lattice.graph.model.Node, ca.uqam.latece.aspects.extractor.lattice.model.LatticeNode, ca.uqam.latece.aspects.extractor.lattice.model.impl.LatticeNodeImpl]",
+        "intent": "[List\u003cNodeFeatureType\u003e getTypes(), String getName(), void setName(String name), void setTypes(List\u003cNodeFeatureType\u003e types)]",
+        "ID": 263416521,
+        "children": []
+      }
+    ]
+  },
+  {
+    "name": "16",
+    "types": [
+      {
+        "FeatureTypeName": "ADHOC",
+        "coverage": 0.0
+      }
+    ],
+    "extent": "[ca.uqam.latece.aspects.extractor.input.impl.ReverseInheritanceRelationBuilder, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.PurgeExtentsVisitor]",
+    "intent": "[IJavaProject getJavaProject()]",
+    "ID": 236277377,
+    "children": []
+  },
+  {
+    "name": "27",
+    "types": [
+      {
+        "FeatureTypeName": "FULL_EXTENT_FULL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+        "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.Visitor",
+        "coverage": 0.2857143
+      },
+      {
+        "FeatureTypeName": "PARTIAL_EXTENT_PARTIAL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+        "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.impl.LatticePrettyPrinter",
+        "coverage": 0.14285715
+      },
+      {
+        "FeatureTypeName": "PARTIAL_EXTENT_FULL_BEHAVIOR_EXPLICIT_CLASS_SUBCLASS_REDEFINITIONS",
+        "anchor": "ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor",
+        "coverage": 0.22222222
+      }
+    ],
+    "extent": "[ca.uqam.latece.aspects.extractor.lattice.visitors.Visitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.AbstractVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.BucketFillerVisitor, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.LatticePrettyPrinter, ca.uqam.latece.aspects.extractor.lattice.visitors.impl.PrintCandidatesVisitor]",
+    "intent": "[void processNode(LatticeNode node), void processVisitedNode(LatticeNode node)]",
+    "ID": 63255986,
+    "children": []
+  },
+  {
+    "name": "35",
+    "types": [
+      {
+        "FeatureTypeName": "PARTIAL_EXTENT_PARTIAL_BEHAVIOR_EXPLICIT_INTERFACE_IMPLEMENTATIONS",
+        "anchor": "ca.uqam.latece.aspects.extractor.lattice.model.LatticeNode",
+        "coverage": 0.16
+      }
+    ],
+    "extent": "[ca.uqam.latece.aspects.extractor.lattice.graph.model.Node, ca.uqam.latece.aspects.extractor.lattice.model.LatticeNode, ca.uqam.latece.aspects.extractor.lattice.model.impl.LatticeNodeImpl]",
+    "intent": "[List\u003cNodeFeatureType\u003e getTypes(), String getName(), void setName(String name), void setTypes(List\u003cNodeFeatureType\u003e types)]",
+    "ID": 263416521,
+    "children": []
+  }
+]

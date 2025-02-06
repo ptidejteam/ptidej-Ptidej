@@ -1,0 +1,48 @@
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.Driver.<init>()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.Driver.licenseClass()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.MachineOperator.<init>()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.MachineOperator.assemblyLine()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.Machinery.<init>()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.Machinery.capabilities()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.Machinery.model()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.Machinery.schedule()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.Machinery.serialNumber()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.MachineryTool.<init>()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.MachineryTool.assemblyLine()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.Manager.<init>()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.Manager.departement()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.Personel.<init>()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.Personel.name()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.Personel.ssn()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.Ressource.<init>()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.RollingStock.<init>()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.RollingStock.licenseClass()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.ShopFloorStaff.<init>()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.ShopFloorStaff.capabilities()"
+ptidej.statement.creator.classfiles.conditionals.BCELInstructionFinder cannot find instructions in method "testPackage.impl.ShopFloorStaff.schedule()"
+Done building lattice!
+0[[testPackage.IRessource, testPackage.impl.Driver, testPackage.impl.MachineOperator, testPackage.impl.Machinery, testPackage.impl.MachineryTool, testPackage.impl.Manager, testPackage.impl.Personel, testPackage.impl.Ressource, testPackage.impl.RollingStock, testPackage.impl.ShopFloorStaff],[]]
+ITS CHILDREN:=================
+	->1[[testPackage.IRessource, testPackage.impl.MachineOperator, testPackage.impl.Machinery, testPackage.impl.MachineryTool, testPackage.impl.Personel, testPackage.impl.Ressource, testPackage.impl.ShopFloorStaff],[java.lang.String assemblyLine()]]
+	->ITS CHILDREN:=================
+	->	->2[[testPackage.IRessource, testPackage.impl.Machinery, testPackage.impl.Personel, testPackage.impl.Ressource, testPackage.impl.ShopFloorStaff],[java.lang.Integer capabilities(), java.lang.String assemblyLine(), java.lang.String licenseClass(), java.lang.String schedule()]]
+	->	->ITS CHILDREN:=================
+	->	->	->3[[testPackage.IRessource, testPackage.impl.Personel, testPackage.impl.Ressource],[java.lang.Integer capabilities(), java.lang.Integer ssn(), java.lang.String assemblyLine(), java.lang.String departement(), java.lang.String licenseClass(), java.lang.String name(), java.lang.String schedule()]]
+	->	->	->ITS CHILDREN:=================
+	->	->	->	->4[[testPackage.IRessource, testPackage.impl.Ressource],[java.lang.Integer capabilities(), java.lang.Integer serialNumber(), java.lang.Integer ssn(), java.lang.String assemblyLine(), java.lang.String departement(), java.lang.String licenseClass(), java.lang.String model(), java.lang.String name(), java.lang.String schedule()]]
+	->	->	->5[[testPackage.IRessource, testPackage.impl.Machinery, testPackage.impl.Ressource],[java.lang.Integer capabilities(), java.lang.Integer serialNumber(), java.lang.String assemblyLine(), java.lang.String licenseClass(), java.lang.String model(), java.lang.String schedule()]]
+	->	->	->ITS CHILDREN:=================
+	->	->	->	->4[...,...]
+	->6[[testPackage.IRessource, testPackage.impl.Manager, testPackage.impl.Personel, testPackage.impl.Ressource],[java.lang.String departement()]]
+	->ITS CHILDREN:=================
+	->	->3[...,...]
+	->7[[testPackage.IRessource, testPackage.impl.Driver, testPackage.impl.Machinery, testPackage.impl.Personel, testPackage.impl.Ressource, testPackage.impl.RollingStock, testPackage.impl.ShopFloorStaff],[java.lang.String licenseClass()]]
+	->ITS CHILDREN:=================
+	->	->2[...,...]
+Done printing lattice!
+Printing candidate nodes
+	->	->3[[testPackage.impl.Machinery, testPackage.impl.ShopFloorStaff],[java.lang.Integer capabilities(), java.lang.String assemblyLine(), java.lang.String licenseClass(), java.lang.String schedule()]]
+###########feature  ## ADHOC
+	  	  FEATURE TYPE:  ## ADHOC
+	->	->3[...,...]
+Done printing candidate nodes!

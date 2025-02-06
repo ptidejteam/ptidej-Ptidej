@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ffeature-extractor
+Bundle-SymbolicName: ffeature-extractor-plugin;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: ffeature_extractor.Activator
+Bundle-Vendor: hafedh mili - LATECE
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.jdt.core;bundle-version="3.7.1",
+ org.eclipse.core.resources;bundle-version="3.7.100",
+ org.eclipse.zest.core;bundle-version="1.5.300",
+ org.eclipse.zest.layouts;bundle-version="1.1.300",
+ org.eclipse.swt,
+ org.eclipse.ui.views,
+ org.eclipse.jface,
+ org.eclipse.draw2d,
+ org.eclipse.ui.ide.application;bundle-version="1.3.900",
+ com.google.gson;bundle-version="2.8.9"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib/ffeature-extractor.jar,
+ .

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="featues" uid="featuresDesc" id="ffeature-extractor-plugin.eclipsefeaturediscovery1" application="org.eclipse.ui.ide.workbench" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="eclipse_lg.png"/>
+      <text>
+         %productBlurb
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-consoleLog
+      </programArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="eclipse16.png" i32="eclipse32.png" i48="eclipse48.png"/>
+
+   <splash
+      startupProgressRect="2,290,450,10"
+      startupMessageRect="7,265,320,25"
+      startupForegroundColor="ffffff" />
+   <plugins>
+      <plugin id="ffeature-extractor-plugin"/>
+   </plugins>
+
+
+</product>
