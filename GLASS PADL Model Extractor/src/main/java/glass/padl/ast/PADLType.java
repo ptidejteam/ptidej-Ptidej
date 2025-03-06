@@ -132,5 +132,10 @@ abstract public class PADLType implements IType {
 		String entityName = splitPackages[splitPackages.length - 1];
 		return this.getFullyQualifiedName().equals(entityName);
 	}
+	
+	@Override
+	public String toString() {
+		return this.getElementName();
+	}
 
 }

@@ -35,6 +35,8 @@
 		<module>DeMIMA UI Viewer Extensions</module>
 		<module>DeMIMA UI Viewer Standalone Swing</module>
 		<module>EPI</module>
+		<module>GLASS</module>
+		<module>GLASS PADL Model Extractor</module>
 		<module>JChoco</module>
 		<module>MoDeC Metamodel</module>
 		<module>MoDeC Solver</module>

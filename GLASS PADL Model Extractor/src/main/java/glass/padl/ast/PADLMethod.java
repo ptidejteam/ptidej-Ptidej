@@ -118,5 +118,10 @@ public class PADLMethod implements IMethod{
 	public boolean isConstructor() {
 		return false;
 	}
+	
+	@Override
+	public String toString() {
+		return this.getSignature();
+	}
 
 }

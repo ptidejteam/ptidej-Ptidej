@@ -41,10 +41,10 @@ public class Main
 
 		
     	
-        String filePath_test = "../prototype.padl/src/test/ressources/testProject/src";
-        String filePath = "C:\\Users\\notuk\\git\\ptidej-Ptidej\\GLASS Feature Discovery\\featurediscovery\\qualitativeEvaluation\\data\\input projects\\javawebmail-0.7\\src";
+        String filePath_test = "C:\\Users\\notuk\\eclipse-workspace\\TestFeature1\\src";
+        //String filePath = "C:\\Users\\notuk\\git\\ptidej-Ptidej\\GLASS Feature Discovery\\featurediscovery\\qualitativeEvaluation\\data\\input projects\\javawebmail-0.7\\src";
         String projectName = "javawebmail";
-        IProject project = new PADLProject(filePath);
+        IProject project = new PADLProject(filePath_test);
         
         /*
         Collection<IType> definedTypes = project.getDefinedTypes();
@@ -53,7 +53,7 @@ public class Main
         }
         System.out.println(definedTypes.size());
          */
-        /*
+        
         IRelationBuilder relationBuilder = new UsualRelationBuilder();
         IRelation relation = relationBuilder.buildRelationFrom(project);
         
@@ -67,9 +67,9 @@ public class Main
 		lattice.acceptTopVisitor(printer);
 
 		System.out.println("Done printing lattice!");
-        */
         
         
+        /*
 		IRelationBuilder relationBuilder = new ReverseInheritanceRelationBuilder();
 		IRelation relation = relationBuilder.buildRelationFrom(project);
 		//System.out.println("Done building relation!");
@@ -110,7 +110,7 @@ public class Main
 		FileOutputStream fos;
 		ObjectOutputStream oos;
 		try {
-			fos = new FileOutputStream(filePath.toString()+"/"+projectName+"_"+"lattice.ltc");
+			fos = new FileOutputStream(filePath_test.toString()+"/"+projectName+"_"+"lattice.ltc");
 			oos = new ObjectOutputStream(fos);
 			oos.writeObject(printCandidatesVisitor.getNodes());
 			oos.close();
@@ -119,7 +119,7 @@ public class Main
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+		*/
     }
     
 }

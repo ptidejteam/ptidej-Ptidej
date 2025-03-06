@@ -14,7 +14,7 @@
   </parent>
 
 
-  <name>glass-core</name>
+  <name>GLASS</name>
   <url>http://maven.apache.org</url>
 
   <properties>

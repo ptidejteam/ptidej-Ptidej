@@ -11,6 +11,7 @@
   <groupId>net.ptidej.glass</groupId>
   <artifactId>glass-padl</artifactId>
   <version>0.4</version>
+  <name>GLASS PADL Model Extractor</name>
   
   
   <properties>

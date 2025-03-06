@@ -15,8 +15,8 @@ import glass.lattice.model.IRelation;
 import glass.lattice.model.IRelationBuilder;
 
 /**
- * Class responsible for building the 'usual' binary relation, where each class is in relation with the
- * methods that are defined for that class
+ * Class responsible for building the 'classical' binary relation, where each class is in relation with the
+ * methods that are accessible from that class
  * 
  * @author Luca Scistri
  */
@@ -43,12 +43,14 @@ public class UsualRelationBuilder implements IRelationBuilder{
 		
 		for (IType type : definedTypes) {
 			IMethod[] typeDomainInterface = domainInterface(definedTypes, type);
-			domainInterfaces.put(type, typeDomainInterface);
+			this.setReferencePoint(typeDomainInterface);
+			IMethod[] newDomainInterface = this.modifyDomainWithReference(typeDomainInterface);
+			domainInterfaces.put(type, newDomainInterface);
 			if (typeDomainInterface == null) {
 				System.out.println("Type " + type + " has null domain interface");
 			}
 		}
-		return null;
+		return buildImageFrom(domainInterfaces);
 	}
 	
 	protected IRelation buildImageFrom(HashMap<IType, IMethod[]> interfaces) {
@@ -62,6 +64,33 @@ public class UsualRelationBuilder implements IRelationBuilder{
 			}
 		}
 		return relation;
+	}
+	
+	private void setReferencePoint(IMethod[] typeDomainInterface) {
+		for (IMethod method : typeDomainInterface) {
+			String key = method.getSignature();
+			MethodEntry entry = methodImplementations.get(key);
+			if (entry == null) {
+				entry = new MethodEntry(method);
+				methodImplementations.put(key, entry);
+			} else {
+				entry.addImplementation(method);
+			}
+		}
+	}
+	
+	private IMethod[] modifyDomainWithReference(IMethod[] typeDomainInterface) {
+		IMethod[] newDomainInterface = new IMethod[typeDomainInterface.length];
+		for (int i = 0; i<typeDomainInterface.length; i++) {
+			String key = typeDomainInterface[i].getSignature();
+			MethodEntry entry = methodImplementations.get(key);
+			if (entry == null) {
+				System.out.println("Entry null, should not be happening");
+			} else {
+				newDomainInterface[i] = entry.method;
+			}
+		}
+		return newDomainInterface;
 	}
 	
 	/**
