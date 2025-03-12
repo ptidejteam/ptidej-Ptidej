@@ -147,8 +147,8 @@ public class RefactoringMethod {
 		return visitedList;
 	}
 
-	//private boolean doesMethodInvoquedInClass(
-	protected boolean doesMethodInvoquedInClass(
+	//private boolean doesMethodInvokedInClass(
+	protected boolean doesMethodInvokedInClass(
 		String theMethodID,
 		IClass sourceClass) {
 		final Iterator iteratorOnMethods =

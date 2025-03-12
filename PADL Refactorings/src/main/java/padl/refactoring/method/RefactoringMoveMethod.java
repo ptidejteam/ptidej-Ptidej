@@ -47,7 +47,7 @@ public class RefactoringMoveMethod extends RefactoringMethod {
 			//				theMethod,
 			//				theMethod.getName());
 
-			if (!doesMethodInvoquedInClass(
+			if (!doesMethodInvokedInClass(
 				theMethod.getDisplayID(),
 				sourceClass)) {
 
@@ -106,6 +106,9 @@ public class RefactoringMoveMethod extends RefactoringMethod {
 			else
 				// TODO: Add "{" and "}" even if there is only one statement.
 				// TODO: You could use you own exception here?
+				// Henrique: Could not found single if statements
+				// Changed the invoke method name doesMethodInvokedInClass()
+				// The own exception can be the same code with different name?
 				throw new ModelDeclarationException(
 					"Refactoring Move Method  is impossible to apply because "
 							+ theMethod.getDisplayName()
@@ -162,7 +165,7 @@ public class RefactoringMoveMethod extends RefactoringMethod {
 					theMethod.getDisplayName());
 
 			// TODO: "Invoqued" is "Invoked" :-)
-			if (!doesMethodInvoquedInClass(
+			if (!doesMethodInvokedInClass(
 				theMethod.getDisplayID(),
 				sourceClass)) {
 
