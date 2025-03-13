@@ -20,12 +20,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set up JDK 21
     - uses: actions/checkout@v4
       uses: actions/setup-java@v3
       with:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
-    - name: Run the Maven validation
     - run: mvn --batch-mode --update-snapshots clean install validate
