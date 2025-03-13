@@ -28,12 +28,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      uses: s4u/setup-maven-action@v1.13.0
-      with:
-        java-version: 21
-        maven-version: '3.9.6'
-      
-    - run: |
-        mvn clean
-        mvn validate
-        mvn install
+    - run: mvn --batch-mode --update-snapshots clean install validate
