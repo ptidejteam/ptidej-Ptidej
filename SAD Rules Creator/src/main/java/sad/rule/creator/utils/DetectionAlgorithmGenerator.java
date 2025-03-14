@@ -23,10 +23,23 @@ import com.sun.tools.javac.Main;
 public class DetectionAlgorithmGenerator {
 	public static void deleteDetectionAlgorithm(final String defectName) {
 		// TODO: Add error check
-		DetectionAlgorithmGenerator.deleteDir(new File(
-			"../SAD/src/sad/antipattern/detection/" + defectName));
-		DetectionAlgorithmGenerator.deleteDir(new File(
-			"../SAD/src/sad/codesmell/detection/" + defectName));
+		// Added 3 errors checks here
+		if (defectName == null || defectName.isEmpty()) {
+            System.err.println("❌ Error: Defect name is null or empty.");
+            return;
+        }
+		boolean deletedAntipattern = deleteDir(new File(
+            "../SAD/src/sad/antipattern/detection/" + defectName));
+
+        boolean deletedCodeSmell = deleteDir(new File(
+            "../SAD/src/sad/codesmell/detection/" + defectName));
+
+        if (!deletedAntipattern || !deletedCodeSmell) {
+            System.err.println("⚠ Warning: Some directories could not be deleted for defect: " + defectName);
+        } else {
+            System.out.println("✅ Successfully deleted detection algorithm for: " + defectName);
+        }
+			
 	}
 	// Deletes all files and subdirectories under dir.
 	// Returns true if all deletions were successful.

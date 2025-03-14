@@ -16,7 +16,8 @@ import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.impl.Factory;
 import padl.micropatterns.helper.MicroPatternDetector;
-
+import util.io.ProxyConsole;
+import padl.kernel.exception.CreationException;
 /**
  * @author tanterij
  */
@@ -40,9 +41,11 @@ public class TestFunctionObject extends TestCase {
 					.create(new CompleteClassFileCreator(
 						new String[] { "../PADL Micro-pattern Analysis/target/test-classes/padl/micropatterns/examples/FunctionObject.class", }));
 			}
-			catch (Exception e) {
+			catch (CreationException e) {
 				// TODO: handle exception
-			}
+				// Added already created CreationException from padl.kernel.exception.CreationException;
+				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+				}
 
 			this.currentDetector = new MicroPatternDetector(codeLevelModel);
 		}

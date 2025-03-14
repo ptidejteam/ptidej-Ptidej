@@ -37,7 +37,7 @@ public class RefactoringPushDownMethod extends RefactoringMethod {
 		final IMethod theMethod =
 			this.getMethodToRefactor(superClass.getDisplayName(), nameMethod);
 		if (theMethod != null) {
-			if (!doesMethodInvoquedInClass(theMethod.getDisplayID(), superClass)) {
+			if (!doesMethodInvokedInClass(theMethod.getDisplayID(), superClass)) {
 				if (doesNewMethodExist(
 					subClass.getDisplayID(),
 					theMethod.getDisplayName())) {
@@ -93,7 +93,7 @@ public class RefactoringPushDownMethod extends RefactoringMethod {
 		if (theMethod != null) {
 			final String aNewMethod =
 				this.createNewMethodSignature(theMethod, nameMethod);
-			if (!doesMethodInvoquedInClass(aNewMethod, superClass)) {
+			if (!doesMethodInvokedInClass(aNewMethod, superClass)) {
 				if (doesNewMethodExistWithOverloading(
 					subClass.getDisplayID(),
 					aNewMethod)) {

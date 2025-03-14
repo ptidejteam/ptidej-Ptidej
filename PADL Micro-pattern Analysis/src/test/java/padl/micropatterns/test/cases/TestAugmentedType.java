@@ -11,11 +11,14 @@
 package padl.micropatterns.test.cases;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
+import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
 import padl.micropatterns.helper.MicroPatternDetector;
+import util.io.ProxyConsole;
 
 /**
  * @author tanterij
@@ -40,9 +43,11 @@ public class TestAugmentedType extends TestCase {
 					.create(new CompleteClassFileCreator(
 						new String[] { "../PADL Micro-pattern Analysis/target/test-classes/padl/micropatterns/examples/AugmentedType.class", }));
 			}
-			catch (Exception e) {
+			catch (CreationException e) {
 				// TODO: handle exception
-			}
+				// Added already created CreationException from padl.kernel.exception.CreationException;
+				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+				}
 
 			this.currentDetector = new MicroPatternDetector(codeLevelModel);
 		}

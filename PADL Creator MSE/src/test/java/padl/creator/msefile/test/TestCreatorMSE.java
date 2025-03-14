@@ -8,7 +8,8 @@ public class TestCreatorMSE extends TestSuite {
 		final TestCreatorMSE suite = new TestCreatorMSE();
 
 		suite.addTestSuite(Test1.class);
-
+		suite.addTestSuite(Test2.class);
+		
 		return suite;
 	}
 }

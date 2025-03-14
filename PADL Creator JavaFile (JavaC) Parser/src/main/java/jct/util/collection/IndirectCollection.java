@@ -54,23 +54,25 @@ public class IndirectCollection<T> extends AbstractCollection<T> implements
 		private int m_collection_index = 0;
 		private Iterator<T> m_it;
 		private SoftReference<Iterator<T>> m_next_it =
-			new SoftReference<Iterator<T>>(null);
+			new SoftReference<>(null);
 
 		InternalIterator(final Iterator<T> it) {
 			this.m_it = it;
 		}
 
+                @Override
 		public boolean hasNext() {
 			final Iterator<T> it = this.p_getNextValidIterator();
 
 			if (null == it)
 				return false;
 			else {
-				this.m_next_it = new SoftReference<Iterator<T>>(it);
+				this.m_next_it = new SoftReference<>(it);
 				return true;
 			}
 		}
 
+                @Override
 		public T next() {
 			Iterator<T> it = this.m_next_it.get();
 
@@ -80,7 +82,7 @@ public class IndirectCollection<T> extends AbstractCollection<T> implements
 					throw new NoSuchElementException();
 			}
 			else
-				this.m_next_it = new SoftReference<Iterator<T>>(null);
+				this.m_next_it = new SoftReference<>(null);
 
 			return (this.m_it = it).next();
 		}

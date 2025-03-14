@@ -16,7 +16,8 @@ import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.impl.Factory;
 import padl.micropatterns.helper.MicroPatternDetector;
-
+import util.io.ProxyConsole;
+import padl.kernel.exception.CreationException;
 /**
  * @author tanterij
  */
@@ -41,9 +42,11 @@ public class TestImmutable extends TestCase {
 					.create(new CompleteClassFileCreator(
 						new String[] { "../PADL Micro-pattern Analysis/target/test-classes/padl/micropatterns/examples/Immutable.class", }));
 			}
-			catch (Exception e) {
+			catch (CreationException e) {
 				// TODO: handle exception
-			}
+				// Added already created CreationException from padl.kernel.exception.CreationException;
+				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+				}
 
 			this.currentDetector = new MicroPatternDetector(codeLevelModel);
 		}
@@ -53,7 +56,8 @@ public class TestImmutable extends TestCase {
 		// TODO: Joiner does not currently produce the
 		// right results due to limitation in the PADL 
 		// meta-model.
-		// Assert.assertEquals("Immutable", 1, this.currentDetector.getNumberOfImmutable());
+		// Henrique: Until PADL is fixed, this commented test will not work?
+		//  Assert.assertEquals("Immutable", 1, this.currentDetector.getNumberOfImmutable());
 		Assert.assertEquals(
 			"Immutable",
 			0,
