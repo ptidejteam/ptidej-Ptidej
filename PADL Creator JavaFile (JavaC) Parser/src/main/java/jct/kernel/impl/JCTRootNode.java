@@ -609,13 +609,7 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 					IJCTClass.class,
 					true));
 			default :
-				// Yann 2010/0619: Speed-up!
-				// By making the following changes, I removed
-				// a performance bottleneck: when creating a model
-				// for Juzzle, the old code used to spend 262s in
-				// this loop, while the new code spends about 9s
-				// here... Quite an improvement!
-				// TODO: Check if the other uses of IndirectCollection could be optimised?
+
 				//	for (final IJCTElement e : new IndirectCollection<IJCTElement>(
 				//		this.getEnclosedElements(),
 				//		this.getOrphans())) {

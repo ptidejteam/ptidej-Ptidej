@@ -221,7 +221,7 @@ public class Window extends Frame implements ActionListener {
 				this.RCreator =
 					new RULECreator(new String[] { this.tLoad.getText() });
 				this.RCreator.parse();
-				//TODO: Naouel this.updateWindow(this.RCreator.parser.ruleCard);
+				//Not implemented: Naouel this.updateWindow(this.RCreator.parser.ruleCard);
 
 				//final RULECreator ruleCreator = new RULECreator(new String [] {tLoad.getText()});
 

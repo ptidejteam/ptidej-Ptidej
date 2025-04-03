@@ -244,6 +244,7 @@ public final class CPPParser implements CPPParserConstants {
 	// This method will fixed any inheritance create with the ghost
 	private static void replaceGhost(final IFirstClassEntity anEntity)
 			throws ParseException {
+	
 		final IFirstClassEntity entity =
 			(IFirstClassEntity) CPPParser
 				.createAndGetDefaultPackage()
@@ -253,6 +254,7 @@ public final class CPPParser implements CPPParserConstants {
 		if (entity != null && entity instanceof IGhost) {
 			final char[] tempId = entity.getID();
 			// Remove the Ghost from the model
+			
 			CPPParser.createAndGetDefaultPackage().removeConstituentFromID(
 				tempId);
 
@@ -261,7 +263,9 @@ public final class CPPParser implements CPPParserConstants {
 				CPPParser
 					.createAndGetDefaultPackage()
 					.getIteratorOnConstituents();
+			
 			while (tempListEntities.hasNext()) {
+				
 				final IFirstClassEntity tempEntity =
 					(IFirstClassEntity) tempListEntities.next();
 
@@ -271,15 +275,18 @@ public final class CPPParser implements CPPParserConstants {
 				while (tempListOfElement.hasNext()) {
 					final IElement tempElement =
 						(IElement) tempListOfElement.next();
-
+		
 					// If we find a relationship
 					if (tempElement instanceof IRelationship) {
 						final IRelationship tempLink =
 							(IRelationship) tempElement;
+				
+
 						if (Arrays.equals(tempId, tempLink
 							.getTargetEntity()
 							.getID())) {
-							tempLink.setTargetEntity(anEntity);
+							System.out.println("Ghost found, trying to set target entity,but method was removed here: " + tempLink.getClass().getName());
+							
 						}
 					}
 				}

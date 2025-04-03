@@ -236,8 +236,8 @@ public class RefactoringRenameMethod extends RefactoringMethod {
 	 * 
 	 * @throws ModelDeclarationException
 	 */
-	// TODO: Maybe rename in "renameMethodWithPropagationToHierarchyAndOverloadedMethods"?
-	public void renameMethodWithPropagationToHierarchyAcceptOverloading(
+	
+	public void renameMethodWithPropagation(
 		final String className,
 		final String methodName,
 		final String newName) throws ModelDeclarationException {

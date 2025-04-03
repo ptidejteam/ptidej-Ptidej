@@ -24,6 +24,7 @@ public class AddedClass extends ClassAdapter implements IClass {
 	public AddedClass(final IClass aClass) {
 		super(aClass);
 	}
+
 	public IConstituent getClone() {
 		return new AddedClass((IClass) super.getClone());
 	}
