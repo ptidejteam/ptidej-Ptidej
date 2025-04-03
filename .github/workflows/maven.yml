@@ -20,20 +20,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Check out the code
+      uses: actions/checkout@v4
     - name: Set up JDK 21
       uses: actions/setup-java@v3
       with:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      uses: s4u/setup-maven-action@v1.13.0
-      with:
-        java-version: 21
-        maven-version: '3.9.6'
-      
-    - run: |
+    - name: Build and validate with Maven
+      run: |
         mvn clean
         mvn validate
         mvn install
