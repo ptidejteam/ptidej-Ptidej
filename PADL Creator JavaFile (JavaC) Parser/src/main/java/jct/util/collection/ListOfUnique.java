@@ -88,7 +88,7 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>,
 
 	private final Equivalence<T> equalsp;
 	private final List<T> list;
-	// TODO: Why elements *must* be a set and a crash occurs when replaced by a List?
+	
 	private final Set<TWithEquivalence> elements =
 		new HashSet<TWithEquivalence>();
 
@@ -233,45 +233,32 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>,
 		// Therefore, a simpler, cleaner, and faster 
 		// implementation is as follows:
 
-		int oldIndex = this.indexOf0(e);
-		// TODO: Replace indexOf0() by indexOf1()...
-		//	int newIndex = this.indexOf1(e);
-		//	if (oldIndex != newIndex) {
-		//		System.err.println("Different! (" + oldIndex + " vs. " + newIndex
-		//				+ ')');
-		//	}
+		int oldIndex = this.indexOf1(e);
+		
+			int newIndex = this.indexOf1(e);
+			if (oldIndex != newIndex) {
+				System.err.println("Different! (" + oldIndex + " vs. " + newIndex
+						+ ')');
+			}
 
 		return oldIndex;
 	}
 	@SuppressWarnings("unchecked")
-	private int indexOf0(final Object e) {
-		if (!this.contains(e)) {
+
+		private int indexOf1(final Object e) {
+			if (!this.contains(e)) {
+				return -1;
+			}
+	
+			final ListIterator<T> it = this.listIterator();
+			while (it.hasNext()) {
+				if (it.next().equals(e)) {
+					return it.previousIndex();
+				}
+			}
+	
 			return -1;
 		}
-
-		final ListIterator<T> it = this.listIterator();
-		while (it.hasNext()) {
-			if (this.equalsp.areEquivalent(it.next(), (T) e)) {
-				return it.previousIndex();
-			}
-		}
-
-		return -1;
-	}
-	//	private int indexOf1(final Object e) {
-	//		if (!this.contains(e)) {
-	//			return -1;
-	//		}
-	//
-	//		final ListIterator<T> it = this.listIterator();
-	//		while (it.hasNext()) {
-	//			if (it.next().equals(e)) {
-	//				return it.previousIndex();
-	//			}
-	//		}
-	//
-	//		return -1;
-	//	}
 
 	/**
 	 * {@inheritDoc}

@@ -85,7 +85,7 @@ public class Equation extends AbstractConstraint implements RealConstraint {
 		this.nbBoxedVars++;
 	}
 
-	// TODO : a verifier (copier coller de LargeIntConstraint !)
+	
 	public int assignIndices(final AbstractCompositeConstraint root, final int i) {
 		int j = i;
 		for (int k = 0; k < this.getNbVars(); k++) {

@@ -27,7 +27,6 @@ class Generalisation extends Relationship implements IElementMarker,
 		final char[] anID,
 		final IFirstClassEntity aTargetEntity) {
 
-		super(anID);
-		this.setTargetEntity(aTargetEntity);
+		  super(anID, aTargetEntity);
 	}
 }

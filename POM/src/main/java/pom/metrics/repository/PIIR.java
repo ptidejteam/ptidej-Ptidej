@@ -42,7 +42,8 @@ import pom.metrics.IUnaryMetric;
  * Modifications made to fit the new architecture
  */
 public class PIIR extends AbstractMetric implements IMetric, IUnaryMetric, IDependencyIndependentMetric {
-	// TODO: Is this the best way to implement this metrics???
+	//  Is this the best way to implement this metrics???
+	
 	protected double concretelyCompute(
 		final IAbstractModel anAbstractModel,
 		final IFirstClassEntity anEntity) {

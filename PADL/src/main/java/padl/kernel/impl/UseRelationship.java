@@ -24,10 +24,7 @@ class UseRelationship extends Relationship implements IElementMarker,
 		final IFirstClassEntity aTargetEntity,
 		final int aCardinality) {
 
-		super(anID);
-
-		// The order of the following lines is very fragile!
-		this.setTargetEntity(aTargetEntity);
+		  super(anID, aTargetEntity);
 		this.setCardinality(aCardinality);
 		// Yann 2004/12/19: Name and ID.
 		// I set the name of the relationship according to its

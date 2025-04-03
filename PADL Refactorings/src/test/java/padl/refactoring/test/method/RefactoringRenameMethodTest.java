@@ -412,7 +412,7 @@ public final class RefactoringRenameMethodTest extends TestCase {
 				}
 				try {
 					refactoringMethod
-						.renameMethodWithPropagationToHierarchyAcceptOverloading(
+						.renameMethodWithPropagation(
 							"acme.GifEncoder",
 							"encodeStart",
 							"char_init");

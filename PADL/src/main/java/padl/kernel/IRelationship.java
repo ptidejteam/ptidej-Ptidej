@@ -20,5 +20,5 @@ public interface IRelationship extends IElement {
 
 	IFirstClassEntity getTargetEntity();
 
-	void setTargetEntity(final IFirstClassEntity anEntity);
+	
 }

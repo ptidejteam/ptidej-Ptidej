@@ -13,6 +13,7 @@ package padl.refactoring.method;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IClass;
 import padl.kernel.IFirstClassEntity;
@@ -45,57 +46,71 @@ public class RefactoringMethod {
 		this.abstractLevelModel = anAbstractLevelModel;
 	}
 
-	public List getListOfClassesOfHierarchy(
-		final Iterator list,
-		final IClassComparator aComparator) {
+	public List getListOfClassesOfHierarchy(final Iterator list, final IClassComparator aComparator) {
 
 		final List listOfClasses = new ArrayList();
 		return getListOfClassesOfHierarchy(listOfClasses, list, aComparator);
 	}
 
-	private List getListOfClassesOfHierarchy(
-		final List visitedList,
-		final Iterator list,
-		final IClassComparator aComparator) {
+	protected boolean doesMethodInvoquedInClass(String theMethodID, IClass sourceClass) {
+		final Iterator iteratorOnMethods = sourceClass.getIteratorOnConstituents(IMethod.class);
+		while (iteratorOnMethods.hasNext()) {
+			final IMethod method = (IMethod) iteratorOnMethods.next();
+			if (!method.getID().equals(theMethodID)) {
+				final Iterator iteratorOnInvocations = method.getIteratorOnConstituents(IMethodInvocation.class);
+				while (iteratorOnInvocations.hasNext()) {
+					final IMethodInvocation methodInvocation = (IMethodInvocation) iteratorOnInvocations.next();
+					if (methodInvocation != null) {
+						if (methodInvocation.equals(theMethodID)) {
+							// return true;
+
+							// if (methodInvocation.getCalledMethod().equals(theMethodID)){
+							// return true;
+							// RESTE A BIEN VeRIFIER
+							// if (methodInvocation.getCalledMethod().equals(theMethodID)){
+
+							return true;
+
+						}
+					}
+				}
+			}
+		}
+		return false;
+	}
+
+	private List getListOfClassesOfHierarchy(final List visitedList, final Iterator list,
+			final IClassComparator aComparator) {
 
 		final Iterator iterator = list;
-		//		final List resultsList = new ArrayList();
-		//		resultsList = visitedList;
+		// final List resultsList = new ArrayList();
+		// resultsList = visitedList;
 		while (iterator.hasNext()) {
-			final IFirstClassEntity firstClassEntity =
-				(IFirstClassEntity) iterator.next();
+			final IFirstClassEntity firstClassEntity = (IFirstClassEntity) iterator.next();
 
 			if (firstClassEntity instanceof IClass) {
 				if (aComparator.check(firstClassEntity.getDisplayName())) {
 					visitedList.clear();
 					return visitedList;
 				}
-				//				if (!resultsList.contains(entity)) {
-				//					resultsList.add(entity);
-				//				}	
+				// if (!resultsList.contains(entity)) {
+				// resultsList.add(entity);
+				// }
 				if (!this.doesClassExistInList(visitedList, firstClassEntity)) {
-					//if (!visitedList.contains(entity)) {
+					// if (!visitedList.contains(entity)) {
 					visitedList.add(firstClassEntity);
 
-					final Iterator listOfInheritedEntities =
-						firstClassEntity.getIteratorOnInheritedEntities();
-					//			   	list.addAll(listOfInheritedEntities);
-					//				visitedList.addAll(this.getListOfClassesOfHierarchy(visitedList,
-					//						listOfInheritedEntities, aComparator));
-					this.getListOfClassesOfHierarchy(
-						visitedList,
-						listOfInheritedEntities,
-						aComparator);
+					final Iterator listOfInheritedEntities = firstClassEntity.getIteratorOnInheritedEntities();
+					// list.addAll(listOfInheritedEntities);
+					// visitedList.addAll(this.getListOfClassesOfHierarchy(visitedList,
+					// listOfInheritedEntities, aComparator));
+					this.getListOfClassesOfHierarchy(visitedList, listOfInheritedEntities, aComparator);
 
-					final Iterator listOfInheritingEntities =
-						firstClassEntity.getIteratorOnInheritingEntities();
-					//				list.add(listOfInheritingEntities);
-					//				visitedList.addAll(this.getListOfClassesOfHierarchy(visitedList,
-					//						listOfInheritingEntities, aComparator));
-					this.getListOfClassesOfHierarchy(
-						visitedList,
-						listOfInheritingEntities,
-						aComparator);
+					final Iterator listOfInheritingEntities = firstClassEntity.getIteratorOnInheritingEntities();
+					// list.add(listOfInheritingEntities);
+					// visitedList.addAll(this.getListOfClassesOfHierarchy(visitedList,
+					// listOfInheritingEntities, aComparator));
+					this.getListOfClassesOfHierarchy(visitedList, listOfInheritingEntities, aComparator);
 				}
 
 			}
@@ -104,42 +119,32 @@ public class RefactoringMethod {
 		return visitedList;
 	}
 
-	public List getlistOfInterfaces(
-		final Iterator list,
-		final IClassComparator aComparator) {
+	public List getlistOfInterfaces(final Iterator list, final IClassComparator aComparator) {
 
 		List listOfInterfaces = new ArrayList();
 		// TODO: Add "this." when appropriate.
 		return getlistOfInterfaces(listOfInterfaces, list, aComparator);
 	}
 
-	private List getlistOfInterfaces(
-		final List visitedList,
-		final Iterator list,
-		final IClassComparator aComparator) {
+	private List getlistOfInterfaces(final List visitedList, final Iterator list, final IClassComparator aComparator) {
 
 		final Iterator iterator = list;
 		while (iterator.hasNext()) {
-			final IFirstClassEntity firstClassEntity =
-				(IFirstClassEntity) iterator.next();
+			final IFirstClassEntity firstClassEntity = (IFirstClassEntity) iterator.next();
 
 			if (firstClassEntity instanceof IInterface) {
 				if (aComparator.check(firstClassEntity.getDisplayName())) {
 					visitedList.clear();
 					return visitedList;
 				}
-				//				if (!this.doesClassExistInListOfinterface(
-				//					visitedList,
-				//					(IInterface) entity)) {
+				// if (!this.doesClassExistInListOfinterface(
+				// visitedList,
+				// (IInterface) entity)) {
 				if (!visitedList.contains(firstClassEntity)) {
 					visitedList.add(firstClassEntity);
 
-					final Iterator listOfImplementedEntities =
-						firstClassEntity.getIteratorOnInheritedEntities();
-					this.getlistOfInterfaces(
-						visitedList,
-						listOfImplementedEntities,
-						aComparator);
+					final Iterator listOfImplementedEntities = firstClassEntity.getIteratorOnInheritedEntities();
+					this.getlistOfInterfaces(visitedList, listOfImplementedEntities, aComparator);
 
 				}
 			}
@@ -147,28 +152,23 @@ public class RefactoringMethod {
 		return visitedList;
 	}
 
-	//private boolean doesMethodInvokedInClass(
-	protected boolean doesMethodInvokedInClass(
-		String theMethodID,
-		IClass sourceClass) {
-		final Iterator iteratorOnMethods =
-			sourceClass.getIteratorOnConstituents(IMethod.class);
+	// private boolean doesMethodInvokedInClass(
+	protected boolean doesMethodInvokedInClass(String theMethodID, IClass sourceClass) {
+		final Iterator iteratorOnMethods = sourceClass.getIteratorOnConstituents(IMethod.class);
 		while (iteratorOnMethods.hasNext()) {
 			final IMethod method = (IMethod) iteratorOnMethods.next();
 			if (!method.getID().equals(theMethodID)) {
-				final Iterator iteratorOnInvocations =
-					method.getIteratorOnConstituents(IMethodInvocation.class);
+				final Iterator iteratorOnInvocations = method.getIteratorOnConstituents(IMethodInvocation.class);
 				while (iteratorOnInvocations.hasNext()) {
-					final IMethodInvocation methodInvocation =
-						(IMethodInvocation) iteratorOnInvocations.next();
+					final IMethodInvocation methodInvocation = (IMethodInvocation) iteratorOnInvocations.next();
 					if (methodInvocation != null) {
 						if (methodInvocation.equals(theMethodID)) {
-							//							return true;
+							// return true;
 
-							//					if (methodInvocation.getCalledMethod().equals(theMethodID)){
-							//						return true;
-							//    RESTE A BIEN VeRIFIER
-							//if (methodInvocation.getCalledMethod().equals(theMethodID)){
+							// if (methodInvocation.getCalledMethod().equals(theMethodID)){
+							// return true;
+							// RESTE A BIEN VeRIFIER
+							// if (methodInvocation.getCalledMethod().equals(theMethodID)){
 
 							return true;
 
@@ -181,14 +181,9 @@ public class RefactoringMethod {
 	}
 
 	// private IMethod getMethodToRefactor(
-	public IMethod getMethodToRefactor(
-		final String className,
-		final String nameMethod) {
-		final IFirstClassEntity aClass =
-			(IFirstClassEntity) this.abstractLevelModel
-				.getTopLevelEntityFromID(className);
-		final Iterator iterator =
-			aClass.getConcurrentIteratorOnConstituents(IMethod.class);
+	public IMethod getMethodToRefactor(final String className, final String nameMethod) {
+		final IFirstClassEntity aClass = (IFirstClassEntity) this.abstractLevelModel.getTopLevelEntityFromID(className);
+		final Iterator iterator = aClass.getConcurrentIteratorOnConstituents(IMethod.class);
 		while (iterator.hasNext()) {
 			IMethod aMethod = (IMethod) iterator.next();
 
@@ -199,25 +194,15 @@ public class RefactoringMethod {
 		return null;
 	}
 
-	public String createNewMethodSignature(
-		final IMethod theMethod,
-		final String newName) {
+	public String createNewMethodSignature(final IMethod theMethod, final String newName) {
 
-		IMethod method =
-			Factory.getInstance().createMethod(
-				newName.toCharArray(),
-				newName.toCharArray());
+		IMethod method = Factory.getInstance().createMethod(newName.toCharArray(), newName.toCharArray());
 
-		final Iterator iteratorOnParameters =
-			theMethod.getIteratorOnConstituents(IParameter.class);
+		final Iterator iteratorOnParameters = theMethod.getIteratorOnConstituents(IParameter.class);
 		while (iteratorOnParameters.hasNext()) {
-			final IParameter oldParameter =
-				(IParameter) iteratorOnParameters.next();
-			final IParameter newParameter =
-				Factory.getInstance().createParameter(
-					oldParameter.getType(),
-					oldParameter.getName(),
-					oldParameter.getCardinality());
+			final IParameter oldParameter = (IParameter) iteratorOnParameters.next();
+			final IParameter newParameter = Factory.getInstance().createParameter(oldParameter.getType(),
+					oldParameter.getName(), oldParameter.getCardinality());
 			method.addConstituent(newParameter);
 
 			method.setVisibility(theMethod.getVisibility());
@@ -225,15 +210,11 @@ public class RefactoringMethod {
 		return method.getDisplayID();
 	}
 
-	public IClass getClassContainsMethodToRefactor(
-		final String className,
-		final String nameMethod) {
+	public IClass getClassContainsMethodToRefactor(final String className, final String nameMethod) {
 
-		final IClass aClass =
-			(IClass) this.abstractLevelModel.getTopLevelEntityFromID(className);
+		final IClass aClass = (IClass) this.abstractLevelModel.getTopLevelEntityFromID(className);
 
-		final Iterator iterator =
-			aClass.getConcurrentIteratorOnConstituents(IMethod.class);
+		final Iterator iterator = aClass.getConcurrentIteratorOnConstituents(IMethod.class);
 		while (iterator.hasNext()) {
 			IMethod aMethod = (IMethod) iterator.next();
 
@@ -245,18 +226,14 @@ public class RefactoringMethod {
 	}
 
 	/**
-	 * Cette methode permet de verifier que newName n'existe pas dans une classe
-	 * en supportant la surcharge des methodes
+	 * Cette methode permet de verifier que newName n'existe pas dans une classe en
+	 * supportant la surcharge des methodes
 	 */
-	public boolean doesNewMethodExistWithOverloading(
-		String anID,
-		final String newMethod) {
+	public boolean doesNewMethodExistWithOverloading(String anID, final String newMethod) {
 
-		final IFirstClassEntity firstClassEntity =
-			(IFirstClassEntity) this.abstractLevelModel
+		final IFirstClassEntity firstClassEntity = (IFirstClassEntity) this.abstractLevelModel
 				.getTopLevelEntityFromID(anID);
-		final Iterator iterator =
-			firstClassEntity.getIteratorOnConstituents(IMethod.class);
+		final Iterator iterator = firstClassEntity.getIteratorOnConstituents(IMethod.class);
 		while (iterator.hasNext()) {
 
 			IMethod aMethod = (IMethod) iterator.next();
@@ -266,6 +243,7 @@ public class RefactoringMethod {
 		}
 		return false;
 	}
+
 	/**
 	 * Cette methode permet de verifier que newName n'existe pas dans une classe
 	 * sans supporter la surcharge des methodes
@@ -273,11 +251,9 @@ public class RefactoringMethod {
 
 	// private boolean doesNewMethodExist(
 	protected boolean doesNewMethodExist(final String anID, final String newName) {
-		final IFirstClassEntity firstClassEntity =
-			(IFirstClassEntity) this.abstractLevelModel
+		final IFirstClassEntity firstClassEntity = (IFirstClassEntity) this.abstractLevelModel
 				.getTopLevelEntityFromID(anID);
-		final Iterator iterator =
-			firstClassEntity.getIteratorOnConstituents(IMethod.class);
+		final Iterator iterator = firstClassEntity.getIteratorOnConstituents(IMethod.class);
 		while (iterator.hasNext()) {
 
 			IMethod aMethod = (IMethod) iterator.next();
@@ -287,9 +263,7 @@ public class RefactoringMethod {
 		return false;
 	}
 
-	private boolean doesClassExistInList(
-		List list,
-		IFirstClassEntity firstClassEntity) {
+	private boolean doesClassExistInList(List list, IFirstClassEntity firstClassEntity) {
 		final Iterator iterator = list.iterator();
 		while (iterator.hasNext()) {
 			final IClass theEntity = (IClass) iterator.next();
@@ -303,81 +277,61 @@ public class RefactoringMethod {
 	}
 
 	/**
-	 * cette methode verifie que le nouveau nom newName n'existe pas dans la
-	 * liste des classes de l'hierarchie d'heritage passee en parametre. Elle
-	 * retourne true si newName existe deje et n'accepte pas la surcharge des
-	 * methodes
+	 * cette methode verifie que le nouveau nom newName n'existe pas dans la liste
+	 * des classes de l'hierarchie d'heritage passee en parametre. Elle retourne
+	 * true si newName existe deje et n'accepte pas la surcharge des methodes
 	 */
 
 	// private boolean doesNewMethodExist(
 	protected List doesNewMethodExist(final Iterator list, final String newName) {
-		final List listOfClassesOfHierarchy =
-			this.getListOfClassesOfHierarchy(list, new IClassComparator() {
-				public boolean check(final String anID) {
-					return RefactoringMethod.this.doesNewMethodExist(
-						anID,
-						newName);
-				}
-			});
+		final List listOfClassesOfHierarchy = this.getListOfClassesOfHierarchy(list, new IClassComparator() {
+			public boolean check(final String anID) {
+				return RefactoringMethod.this.doesNewMethodExist(anID, newName);
+			}
+		});
 		// return !listOfClassesOfHierarchy.isEmpty();
 		return listOfClassesOfHierarchy;
 	}
 
 	// private boolean doesNewMethodExistInHierarchyofInterface(
-	protected List doesNewMethodExistInHierarchyofInterface(
-		final Iterator list,
-		final String newMethod) {
+	protected List doesNewMethodExistInHierarchyofInterface(final Iterator list, final String newMethod) {
 
-		final List listOfInterfaces =
-			this.getlistOfInterfaces(list, new IClassComparator() {
-				public boolean check(final String anID) {
-					return RefactoringMethod.this.doesNewMethodExist(
-						anID,
-						newMethod);
-				}
-			});
+		final List listOfInterfaces = this.getlistOfInterfaces(list, new IClassComparator() {
+			public boolean check(final String anID) {
+				return RefactoringMethod.this.doesNewMethodExist(anID, newMethod);
+			}
+		});
 
 		// return !listOfInterfaces.isEmpty();
 		return listOfInterfaces;
 	}
 
-	protected List doesNewMethodExistInHierarchyofInterfaceWithOverloading(
-		final Iterator list,
-		final String aNewMethodSignature) {
+	protected List doesNewMethodExistInHierarchyofInterfaceWithOverloading(final Iterator list,
+			final String aNewMethodSignature) {
 
-		final List listOfInterfaces =
-			this.getlistOfInterfaces(list, new IClassComparator() {
-				public boolean check(final String anID) {
-					return RefactoringMethod.this
-						.doesNewMethodExistWithOverloading(
-							anID,
-							aNewMethodSignature);
-				}
-			});
+		final List listOfInterfaces = this.getlistOfInterfaces(list, new IClassComparator() {
+			public boolean check(final String anID) {
+				return RefactoringMethod.this.doesNewMethodExistWithOverloading(anID, aNewMethodSignature);
+			}
+		});
 
 		// return !listOfInterfaces.isEmpty();
 		return listOfInterfaces;
 	}
 
 	/**
-	 * cette methode verifie que le nouveau nom newName n'existe pas dans la
-	 * liste des classes de l'hierarchie d'heritage passee en parametre. Elle
-	 * retourne true si newName existe deje et accepte la surcharge des methodes
+	 * cette methode verifie que le nouveau nom newName n'existe pas dans la liste
+	 * des classes de l'hierarchie d'heritage passee en parametre. Elle retourne
+	 * true si newName existe deje et accepte la surcharge des methodes
 	 */
 
 	// private List doesNewMethodExistWithOverloading(
-	protected List doesNewMethodExistWithOverloading(
-		final Iterator list,
-		final String newMethodSignature) {
-		final List listOfClassesOfHierarchy =
-			this.getListOfClassesOfHierarchy(list, new IClassComparator() {
-				public boolean check(final String anID) {
-					return RefactoringMethod.this
-						.doesNewMethodExistWithOverloading(
-							anID,
-							newMethodSignature);
-				}
-			});
+	protected List doesNewMethodExistWithOverloading(final Iterator list, final String newMethodSignature) {
+		final List listOfClassesOfHierarchy = this.getListOfClassesOfHierarchy(list, new IClassComparator() {
+			public boolean check(final String anID) {
+				return RefactoringMethod.this.doesNewMethodExistWithOverloading(anID, newMethodSignature);
+			}
+		});
 		// return !listOfClassesOfHierarchy.isEmpty();
 		return listOfClassesOfHierarchy;
 	}

@@ -26,10 +26,11 @@ abstract class Relationship extends Element implements IElementMarker,
 
 	private static final long serialVersionUID = -5857707891166836532L;
 	private int cardinality;
-	private IFirstClassEntity targetEntity;
+	private final IFirstClassEntity targetEntity;
 
-	public Relationship(final char[] anID) {
-		super(anID);
+	public Relationship(final char[] anID, final IFirstClassEntity aTargetEntity) {
+	    super(anID);
+	    this.targetEntity = aTargetEntity;
 	}
 	public int getCardinality() {
 		return this.cardinality;
@@ -38,9 +39,8 @@ abstract class Relationship extends Element implements IElementMarker,
 		return this.targetEntity;
 	}
 	public void performCloneSession() {
-		super.performCloneSession();
-		final IUseRelationship clone = (IUseRelationship) this.getClone();
-		clone.setTargetEntity((IFirstClassEntity) this.targetEntity.getClone());
+	    super.performCloneSession();
+	   
 	}
 	public void setCardinality(int aCardinality) {
 		if (aCardinality < 1) {
@@ -52,9 +52,7 @@ abstract class Relationship extends Element implements IElementMarker,
 
 		this.cardinality = aCardinality;
 	}
-	public void setTargetEntity(final IFirstClassEntity anEntity) {
-		this.targetEntity = anEntity;
-	}
+	
 	public String toString() {
 		if (Constants.DEBUG) {
 			ProxyConsole.getInstance().debugOutput().print("// ");

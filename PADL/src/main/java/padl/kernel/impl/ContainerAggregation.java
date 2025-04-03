@@ -289,18 +289,7 @@ class ContainerAggregation extends Association implements IElementMarker,
 		}
 	}
 
-	public void setTargetEntity(final IFirstClassEntity anEntity) {
-		super.setTargetEntity(anEntity);
-
-		// Yann 2001/07/31: Robustness?
-		// This could happen when cloning a
-		// partial subset of the model.
-		if (anEntity != null) {
-			if (this.isFromVoid) {
-				this.updateAssociation();
-			}
-		}
-	}
+	
 
 	public void setVisibility(int visibility) {
 		super.setVisibility(visibility);
