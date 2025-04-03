@@ -30,6 +30,6 @@ jobs:
         cache: maven
     - name: Build and validate with Maven
       run: |
-        mvn clean
-        mvn validate
-        mvn install
+        mvn --batch-mode clean
+        mvn --batch-mode validate
+        mvn --batch-mode install
