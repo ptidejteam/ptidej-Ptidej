@@ -53,7 +53,7 @@ public class FieldInfoListConversionTest extends TestCase {
 					field_CFParse.getType(),
 					field_BCEL.getType().getClassName());
 		}
-
+//		Henrique 4/18/2025 Dont know what to do here
 		//        Assert.assertEquals(field_CFPARSE.getAccess(),
 		//                field_BCEL.getAccessFlags());
 		//

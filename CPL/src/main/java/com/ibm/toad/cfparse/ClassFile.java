@@ -27,7 +27,7 @@ public final class ClassFile {
 	private int d_superClass;
 	private ConstantPool d_constants;
 	private InterfaceList d_interfaces;
-	private FieldInfoList d_fields;
+	public FieldInfoList d_fields;
 	private MethodInfoList d_methods;
 	private AttrInfoList d_attributes;
 
@@ -54,6 +54,7 @@ public final class ClassFile {
 		var1.append("\n");
 		var1.append("" + this.d_interfaces + "\n" + this.d_fields + "\n"
 				+ this.d_methods + "\n" + this.d_attributes + "\n");
+	
 		return var1.toString();
 	}
 
@@ -165,14 +166,10 @@ public final class ClassFile {
 			final AttrInfo attrInfoOfOther = attrListOfOther.get(i);
 
 			// TODO Remove these conditions by implementing fully util.lang.CFParseBCELConvertor.addAttributes(ClassFile, JavaClass)
-			if (!attrInfoOfThis.getName().equals("BootstrapMethods")
-					&& !attrInfoOfThis.getName().equals("EnclosingMethod")
-					&& !attrInfoOfThis.getName().equals("NestHost")
-					&& !attrInfoOfThis.getName().equals("NestMembers")
-					&& !attrInfoOfThis.getName().equals("Signature")) {
+			
 				equalAttributes &= attrInfoOfThis.toString()
-						.equals(attrInfoOfOther.toString());
-			}
+					.equals(attrInfoOfOther.toString());
+			
 		}
 
 		// Fields
@@ -316,6 +313,7 @@ public final class ClassFile {
 	}
 
 	public AttrInfoList getAttrs() {
+		
 		return this.d_attributes;
 	}
 

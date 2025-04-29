@@ -40,6 +40,23 @@ public final class LineNumberAttrInfo extends AttrInfo {
 		this.d_numVars = 0;
 		this.d_varTable = null;
 	}
+	public void setFromBCEL(org.apache.bcel.classfile.LineNumberTable table) {
+	    if (table == null) {
+	        this.clear();
+	        return;
+	    }
+
+	    org.apache.bcel.classfile.LineNumber[] lines = table.getLineNumberTable();
+	    this.d_numVars = lines.length;
+	    this.d_varTable = new int[this.d_numVars * 2];
+
+	    for (int i = 0; i < this.d_numVars; i++) {
+	        this.d_varTable[i * 2] = lines[i].getStartPC();
+	        this.d_varTable[i * 2 + 1] = lines[i].getLineNumber();
+	    }
+
+	    this.d_len = 2 + this.d_numVars * 4;
+	}
 
 	public int getLineNumber(final int i) {
 		if (i < 0 || i >= this.d_numVars) {

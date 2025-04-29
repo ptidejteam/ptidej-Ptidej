@@ -12,13 +12,24 @@ import java.util.BitSet;
 import com.ibm.toad.cfparse.ConstantPool;
 import com.ibm.toad.cfparse.utils.CPUtils;
 
-public final class LocalVariableAttrInfo extends AttrInfo {
+public final class LocalVariableTypeAttrInfo extends AttrInfo {
 	private int d_numVars;
 	private int d_varTable[];
 
-	LocalVariableAttrInfo(final ConstantPool constantpool, final int i,
+	LocalVariableTypeAttrInfo(final ConstantPool constantpool, final int i,
 			final int j) {
 		super(constantpool, i, j);
+	}
+
+	public int getEndPC(final int i) {
+		if (i < 0 || i >= this.d_numVars) {
+			return -1;
+		}
+		else {
+			final int j = this.d_varTable[5 * i];
+			final int k = this.d_varTable[5 * i + 1];
+			return j + k;
+		}
 	}
 	public void add(int startPC, int length, int nameIdx, int descIdx, int slot) {
 	    if (this.d_varTable == null) {
@@ -41,13 +52,12 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 	    this.d_len = 2 + this.d_numVars * 10;
 	}
 
-	public void setFromBCEL(org.apache.bcel.classfile.LocalVariableTable bcelTable) {
+	public void setFromBCEL(org.apache.bcel.classfile.LocalVariableTypeTable bcelTable) {
 	    if (bcelTable == null) {
-	        
 	        return;
 	    }
 
-	    org.apache.bcel.classfile.LocalVariable[] vars = bcelTable.getLocalVariableTable();
+	    org.apache.bcel.classfile.LocalVariable[] vars = bcelTable.getLocalVariableTypeTable();
 	    this.d_numVars = vars.length;
 	    this.d_varTable = new int[this.d_numVars * 5]; // Each variable uses 5 fields!
 
@@ -60,17 +70,6 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 	    }
 
 	    this.d_len = 2 + this.d_numVars * 10;
-	}
-
-	public int getEndPC(final int i) {
-		if (i < 0 || i >= this.d_numVars) {
-			return -1;
-		}
-		else {
-			final int j = this.d_varTable[5 * i];
-			final int k = this.d_varTable[5 * i + 1];
-			return j + k;
-		}
 	}
 
 	public int getStartPC(final int i) {

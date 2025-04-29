@@ -64,7 +64,7 @@ public class ConstantPoolConversionTest extends TestCase {
 	}
 
 	public void testGetCP() {
-		//	assertEquals(this.classFile_CFParse_Original.getCP().length(),this.classFile_CFParse_Converted.getCP().length());
+			assertEquals(this.classFile_CFParse_Original.getCP().length(),this.classFile_CFParse_Converted.getCP().length());
 		ConstantPool cpOriginal = this.classFile_CFParse_Original.getCP();
 		String[] cpOriginalArray = cpOriginal.toString().trim().split("\n");
 		for (String cpOriginalArrayVal : cpOriginalArray) {
@@ -89,20 +89,20 @@ public class ConstantPoolConversionTest extends TestCase {
 					assertEquals(this.constantPoolConverter(
 							cpOriginalArrayValInnerLoop[3]), true);
 				}
-				//				else if(classType.equals("Methodref:")) {
-				//					assertEquals(this.constantPoolConverter(cpOriginalArrayValInnerLoop[2]),true);
-				//				}
-				//				else if(classType.equals("InterfaceMethodref:")) {
-				//					assertEquals(this.constantPoolConverter(cpOriginalArrayValInnerLoop[2]),true);
-				//				}
-				//			}
+								else if(classType.equals("Methodref:")) {
+									assertEquals(this.constantPoolConverter(cpOriginalArrayValInnerLoop[2]),true);
+								}
+								else if(classType.equals("InterfaceMethodref:")) {
+									assertEquals(this.constantPoolConverter(cpOriginalArrayValInnerLoop[2]),true);
+								}
+						
 
 			}
 		}
 	}
 
 	public void testGetAttrs() {
-		// assertEquals(this.classFile_CFParse_Original.getAttrs(), this.classFile_CFParse_Converted.getAttrs());
+		 assertEquals(this.classFile_CFParse_Original.getAttrs().toString(), this.classFile_CFParse_Converted.getAttrs().toString());
 	}
 
 	public void testGetFields() {

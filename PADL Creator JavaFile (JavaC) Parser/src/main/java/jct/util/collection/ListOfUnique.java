@@ -46,12 +46,13 @@ import jct.util.equiv.Equivalence;
 import jct.util.equiv.NaturalEquivalence;
 
 /**
- * This class implements a List that does not allow any of its elements to be equal.
- * The elements must be such that they could be used in a HashSet.
- * Implemented as a Decorator.
- * Use an {@link java.util.ArrayList} if not used as a Decorator.
+ * This class implements a List that does not allow any of its elements to be
+ * equal. The elements must be such that they could be used in a HashSet.
+ * Implemented as a Decorator. Use an {@link java.util.ArrayList} if not used as
+ * a Decorator.
  *
- * If used as a decorator, the decorated list must be used via the decorated version.
+ * If used as a decorator, the decorated list must be used via the decorated
+ * version.
  *
  * The methods add and set do not throw exception but move the element if it is
  * already present in the list.
@@ -59,8 +60,7 @@ import jct.util.equiv.NaturalEquivalence;
  * This class implements the methods size, get, set, add and remove of
  * {@link java.util.AbstractList}, and override contains.
  */
-public class ListOfUnique<T> extends AbstractList<T> implements List<T>,
-		Set<T>, Serializable {
+public class ListOfUnique<T> extends AbstractList<T> implements List<T>, Set<T>, Serializable {
 
 	private static final long serialVersionUID = 4131860927985341538L;
 
@@ -76,9 +76,7 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>,
 		@Override
 		public boolean equals(Object o) {
 			return (o instanceof ListOfUnique<?>.TWithEquivalence)
-					&& this.equalsp.areEquivalent(
-						this.object,
-						((TWithEquivalence) o).object);
+					&& this.equalsp.areEquivalent(this.object, ((TWithEquivalence) o).object);
 		}
 
 		public int hashCode() {
@@ -88,41 +86,30 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>,
 
 	private final Equivalence<T> equalsp;
 	private final List<T> list;
-	
-	private final Set<TWithEquivalence> elements =
-		new HashSet<TWithEquivalence>();
 
-	private ListOfUnique(
-		final List<T> list,
-		final Equivalence<T> equalsp,
-		final boolean removeDuplicatedElements) {
+	private final Set<TWithEquivalence> elements = new HashSet<TWithEquivalence>();
+
+	private ListOfUnique(final List<T> list, final Equivalence<T> equalsp, final boolean removeDuplicatedElements) {
 
 		this.list = list;
 		this.equalsp = equalsp;
 
 		for (final T e : list)
-			if (!this.elements.add(new TWithEquivalence(e))
-					&& !removeDuplicatedElements)
+			if (!this.elements.add(new TWithEquivalence(e)) && !removeDuplicatedElements)
 				throw new IllegalArgumentException(
-					"To decorate a List as a List of Unique, the list must not contains duplicated elements.");
+						"To decorate a List as a List of Unique, the list must not contains duplicated elements.");
 	}
 
-	private ListOfUnique(
-		final List<T> list,
-		final boolean removeDuplicatedElements) {
+	private ListOfUnique(final List<T> list, final boolean removeDuplicatedElements) {
 		this(list, new NaturalEquivalence<T>(), removeDuplicatedElements);
 	}
 
-	public static <T> ListOfUnique<T> decorateList(
-		final List<T> list,
-		final Equivalence<T> equalsp,
-		final boolean removeDuplicatedElements) {
+	public static <T> ListOfUnique<T> decorateList(final List<T> list, final Equivalence<T> equalsp,
+			final boolean removeDuplicatedElements) {
 		return new ListOfUnique<T>(list, equalsp, removeDuplicatedElements);
 	}
 
-	public static <T> ListOfUnique<T> decorateList(
-		final List<T> list,
-		final boolean removeDuplicatedElements) {
+	public static <T> ListOfUnique<T> decorateList(final List<T> list, final boolean removeDuplicatedElements) {
 		return new ListOfUnique<T>(list, removeDuplicatedElements);
 	}
 
@@ -159,8 +146,7 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>,
 			final int old_index = this.indexOf(e);
 			this.list.set(i, e);
 			this.list.remove(old_index);
-		}
-		else {
+		} else {
 			this.list.set(i, e);
 			this.elements.add(new TWithEquivalence(e));
 		}
@@ -174,8 +160,7 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>,
 			final int old_index = this.indexOf(e);
 			this.list.add(i, e);
 			this.list.remove(old_index);
-		}
-		else {
+		} else {
 			this.elements.add(new TWithEquivalence(e));
 			this.list.add(e);
 		}
@@ -193,6 +178,7 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>,
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @param e musts be of type T, otherwise, result is undefined.
 	 */
 	@SuppressWarnings("unchecked")
@@ -203,65 +189,66 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>,
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @param e musts be of type T, otherwise, result is undefined.
 	 */
 	@Override
 	public int indexOf(final Object e) {
 		// Yann 2010/06/21: Performance!
 		// The code used to read like the following:
-		//	if (!this.contains(e)) {
-		//		return -1;
-		//	}
+		// if (!this.contains(e)) {
+		// return -1;
+		// }
 		//
-		//	final ListIterator<T> it = this.listIterator();
-		//	while (it.hasNext()) {
-		//		if (this.equalsp.areEquivalent(it.next(), (T) e)) {
-		//			return it.previousIndex();
-		//		}
-		//	}
+		// final ListIterator<T> it = this.listIterator();
+		// while (it.hasNext()) {
+		// if (this.equalsp.areEquivalent(it.next(), (T) e)) {
+		// return it.previousIndex();
+		// }
+		// }
 		//
-		//	return -1;
-		// and to use object equalsp of type Equivalence, 
+		// return -1;
+		// and to use object equalsp of type Equivalence,
 		// which is an interface whose purpose is to unify
 		// and abstract the comparison of objects. This class
 		// has several implementation but, after several test,
-		// it appears that only its Identity<T> and 
-		// NaturalEquivalence<T> implementations were used. 
+		// it appears that only its Identity<T> and
+		// NaturalEquivalence<T> implementations were used.
 		// These two implementations basically abstract the
 		// == and equals() comparisons, which are alreay
 		// abstracted by equals() (overloaded if necessary).
-		// Therefore, a simpler, cleaner, and faster 
+		// Therefore, a simpler, cleaner, and faster
 		// implementation is as follows:
 
 		int oldIndex = this.indexOf1(e);
-		
-			int newIndex = this.indexOf1(e);
-			if (oldIndex != newIndex) {
-				System.err.println("Different! (" + oldIndex + " vs. " + newIndex
-						+ ')');
-			}
+
+		int newIndex = this.indexOf1(e);
+		if (oldIndex != newIndex) {
+			System.err.println("Different! (" + oldIndex + " vs. " + newIndex + ')');
+		}
 
 		return oldIndex;
 	}
-	@SuppressWarnings("unchecked")
 
-		private int indexOf1(final Object e) {
-			if (!this.contains(e)) {
-				return -1;
-			}
-	
-			final ListIterator<T> it = this.listIterator();
-			while (it.hasNext()) {
-				if (it.next().equals(e)) {
-					return it.previousIndex();
-				}
-			}
-	
+	@SuppressWarnings("unchecked")
+	private int indexOf1(final Object e) {
+		if (!this.contains(e)) {
 			return -1;
 		}
 
+		final ListIterator<T> it = this.listIterator();
+		while (it.hasNext()) {
+			if (it.next().equals(e)) {
+				return it.previousIndex();
+			}
+		}
+
+		return -1;
+	}
+
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @param e musts be of type T, otherwise, result is undefined.
 	 */
 	@SuppressWarnings("unchecked")
@@ -280,7 +267,9 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>,
 
 	/**
 	 * {@inheritDoc}
-	 * @param o musts be a {@code List<T>} when it's a List, otherwise, result is undefined.
+	 * 
+	 * @param o musts be a {@code List<T>} when it's a List, otherwise, result is
+	 *          undefined.
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
@@ -307,6 +296,7 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>,
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @param o musts be of type T, otherwise, result is undefined.
 	 */
 	@SuppressWarnings("unchecked")
