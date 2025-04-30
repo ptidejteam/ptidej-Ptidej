@@ -47,6 +47,8 @@ import org.apache.bcel.classfile.Method;
 import org.apache.bcel.classfile.NestMembers;
 import org.apache.bcel.classfile.RuntimeInvisibleAnnotations;
 import org.apache.bcel.classfile.Signature;
+import org.apache.bcel.classfile.StackMap;
+import org.apache.bcel.classfile.StackMapEntry;
 import org.apache.bcel.generic.Type;
 
 import com.ibm.toad.cfparse.ClassFile;
@@ -834,7 +836,7 @@ public class CFParseBCELConvertorAdhoc {
 								ProxyConsole.getInstance().errorOutput());
 					}
 				}
-
+				
 				if (method.getLocalVariableTable() != null) {
 					final LocalVariableAttrInfo localVariableAttrInfo = 
 						(LocalVariableAttrInfo) codeAttributeInfo.getAttrs().add("LocalVariableTable");
@@ -848,16 +850,33 @@ public class CFParseBCELConvertorAdhoc {
 						final int tableLength = method.getLocalVariableTable().getTableLength();
 						dataOutput.writeShort(tableLength);
 						for (int i = 0; i < tableLength; i++) {
-							method.getLocalVariableTable()
-								.getLocalVariableTable()[i]
-								.dump(dataOutput);
+							final var var = method.getLocalVariableTable().getLocalVariableTable()[i];
+
+							// Fix name index
+							final String name = var.getName();
+							int nameIndex = aClassFile.getCP().find(ConstantPool.CONSTANT_Utf8, name);
+							if (nameIndex == -1) nameIndex = aClassFile.getCP().addUtf8(name);
+
+							// Fix type index (descriptor)
+							final String signature = var.getSignature();
+							int sigIndex = aClassFile.getCP().find(ConstantPool.CONSTANT_Utf8, signature);
+							if (sigIndex == -1) sigIndex = aClassFile.getCP().addUtf8(signature);
+
+							// Write manually using CFParse-corrected indices
+							dataOutput.writeShort(var.getStartPC());
+							dataOutput.writeShort(var.getLength());
+							dataOutput.writeShort(nameIndex);
+							dataOutput.writeShort(sigIndex);
+							dataOutput.writeShort(var.getIndex());
 						}
+
 						dataOutput.close();
 
 						final StringReader stringReader = new StringReader(stringWriter.toString());
 						final DataInputStream dataInput = new DataInputStream(
 							new ReaderInputStream(stringReader));
 						localVariableAttrInfo.read(dataInput);
+						
 						dataInput.close();
 
 						
@@ -869,6 +888,8 @@ public class CFParseBCELConvertorAdhoc {
 					
 					
 				}
+				
+				
 				
 				
 				if (method.getExceptionTable() != null && method.getExceptionTable().getLength() > 0) {
@@ -987,9 +1008,42 @@ public class CFParseBCELConvertorAdhoc {
 						} catch (IOException ioe) {
 							ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
 						}
-					}
-					
+					}else if (attr instanceof StackMap smt) {
+						final com.ibm.toad.cfparse.attributes.StackMapTableAttrInfo cfparseAttr =
+							    (com.ibm.toad.cfparse.attributes.StackMapTableAttrInfo)
+							    codeAttributeInfo.getAttrs().add("StackMapTable");
 
+							try {
+							    StackMapEntry[] entries = smt.getStackMap();
+
+							    ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+							    DataOutputStream dataOut = new DataOutputStream(byteOut);
+
+							    // attribute_length = 2 (num_entries) + sum of entry sizes
+							    ByteArrayOutputStream contentOut = new ByteArrayOutputStream();
+							    DataOutputStream contentDataOut = new DataOutputStream(contentOut);
+
+							    contentDataOut.writeShort(entries.length); // number_of_entries
+							    for (StackMapEntry entry : entries) {
+							        entry.dump(contentDataOut); // write each entry
+							    }
+
+							    contentDataOut.close();
+
+							    byte[] contentBytes = contentOut.toByteArray();
+							    dataOut.writeInt(contentBytes.length); // d_len = real content size
+							    dataOut.write(contentBytes);
+
+							    dataOut.close();
+
+							    DataInputStream in = new DataInputStream(new ByteArrayInputStream(byteOut.toByteArray()));
+							    cfparseAttr.read(in);
+							    in.close();
+
+							} catch (IOException e) {
+							    e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+							}
+						}
 				}
 //				Reorder the ATTRIBUTES
 //				Henrique 4/22/2025 for testing purposes, if ATTRIBUTES: is required to be followed by the below, then use this

@@ -27,6 +27,7 @@ import util.lang.test.CFParseBCELConvertorTestVisitor3;
 import util.lang.test.CFParseBCELConvertorTestVisitor4;
 import util.lang.test.CFParseBCELConvertorTestVisitor5;
 import util.lang.test.CFParseBCELConvertorTestVisitor6;
+import util.lang.test.CFParseBCELConvertorTestVisitor7;
 import util.lang.test.MethodInfoConversionTest;
 import util.lang.test.MethodInfoConversionTest2;
 import util.lang.test.MethodInfoConversionTest3;
@@ -88,7 +89,7 @@ public class TestCPL extends TestSuite {
 		suite.addTestSuite(CFParseBCELConvertorTestVisitor4.class);	
 		suite.addTestSuite(CFParseBCELConvertorTestVisitor5.class);	
 		suite.addTestSuite(CFParseBCELConvertorTestVisitor6.class);	
-		
+		suite.addTestSuite(CFParseBCELConvertorTestVisitor7.class);	
 //		
 
 		suite.addTestSuite(MethodInfoListConversionTest.class);

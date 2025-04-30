@@ -24,12 +24,53 @@ public final class FullClass<T extends Number> extends SuperClass implements Run
         var localVar = "test";
         System.out.println(param + " " + another);
     }
-
+    public class LambdaTest {
+        Runnable r = () -> System.out.println("test");
+    }
     @Override
     public void run() {
         System.out.println("Running");
     }
 
+    public void stackMapExample(int x) {
+        if (x > 0) {
+            System.out.println("Positive");
+        } else {
+            System.out.println("Non-positive");
+        }
+    }
+
+    public void methodWithParams(String firstParam, int count) {}
+
+    private class SyntheticHolder {
+        private void callLambda() {
+            Runnable r = () -> System.out.println("Synthetic");
+        }
+    }
+
+    
+    public <E extends Throwable> void genericThrows() throws E {}
+
+    
+    enum AdvancedEnum {
+        A {
+            @Override
+            public String toString() {
+                return "A!";
+            }
+        },
+        B;
+    }
+
+    
+    class BridgeExample extends GenericBase<String> {
+        @Override
+        public String getValue() { return "ok"; }
+    }
+
+    class GenericBase<T> {
+        public T getValue() { return null; }
+    }
 
     @Marker
     public void anotherMethod() throws IllegalArgumentException, IllegalStateException {

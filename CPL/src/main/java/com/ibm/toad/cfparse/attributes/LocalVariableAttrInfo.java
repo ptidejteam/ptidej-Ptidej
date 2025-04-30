@@ -50,14 +50,19 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 	    org.apache.bcel.classfile.LocalVariable[] vars = bcelTable.getLocalVariableTable();
 	    this.d_numVars = vars.length;
 	    this.d_varTable = new int[this.d_numVars * 5]; // Each variable uses 5 fields!
-
 	    for (int i = 0; i < this.d_numVars; i++) {
-	        this.d_varTable[i * 5 + 0] = vars[i].getStartPC();
-	        this.d_varTable[i * 5 + 1] = vars[i].getLength();
-	        this.d_varTable[i * 5 + 2] = this.d_cp.addUtf8(vars[i].getName());
-	        this.d_varTable[i * 5 + 3] = this.d_cp.addUtf8(vars[i].getSignature());
-	        this.d_varTable[i * 5 + 4] = vars[i].getIndex();
+	    	this.d_varTable[i * 5 + 0] = vars[i].getStartPC();
+	    	this.d_varTable[i * 5 + 1] = vars[i].getLength();
+	    	this.d_varTable[i * 5 + 2] = this.d_cp.addUtf8(vars[i].getName());
+
+	    	String descriptor = vars[i].getConstantPool().constantToString(
+	    	    vars[i].getSignatureIndex(), org.apache.bcel.Const.CONSTANT_Utf8
+	    	);
+	    	this.d_varTable[i * 5 + 3] = this.d_cp.addUtf8(descriptor);
+
+	    	this.d_varTable[i * 5 + 4] = vars[i].getIndex();
 	    }
+
 
 	    this.d_len = 2 + this.d_numVars * 10;
 	}
@@ -145,15 +150,24 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 				this.sindent() + "Attribute: "
 						+ super.d_cp.getAsString(super.d_idxName) + ": \n");
 		for (int i = 0; i < this.d_varTable.length;) {
-			final int j = this.d_varTable[i++];
-			final int k = this.d_varTable[i++];
-			final int l = this.d_varTable[i++];
-			final int i1 = this.d_varTable[i++];
-			final int j1 = this.d_varTable[i++];
-			final String s = CPUtils.internal2java(super.d_cp.getAsString(i1));
-			stringbuffer.append(this.sindent() + "  " + s + " "
-					+ super.d_cp.getAsString(l) + " pc=" + j + " length=" + k
-					+ " slot=" + j1 + "\n");
+			final int startPC = this.d_varTable[i++];
+			final int length = this.d_varTable[i++];
+			final int nameIdx = this.d_varTable[i++];
+			final int typeIdx = this.d_varTable[i++];
+			final int slot = this.d_varTable[i++];
+
+			String nameStr = super.d_cp.getAsString(nameIdx);
+			String typeRaw = super.d_cp.getAsString(typeIdx);
+			String typeStr = CPUtils.internal2java(typeRaw);
+
+			System.out.println("🔍 LocalVar:");
+			System.out.println("  Name index: " + nameIdx + " → " + nameStr);
+			System.out.println("  Type index: " + typeIdx + " → " + typeRaw + " → " + typeStr);
+			System.out.println("  pc=" + startPC + " length=" + length + " slot=" + slot);
+
+	
+			stringbuffer.append(this.sindent() + "  " + typeStr + " " + nameStr + " pc=" + startPC + " length=" + length + " slot=" + slot + "\n");
+
 		}
 		return stringbuffer.toString();
 	}

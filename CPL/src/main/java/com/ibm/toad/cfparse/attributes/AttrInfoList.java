@@ -62,6 +62,7 @@ public final class AttrInfoList {
 			case "Signature" -> new SignatureAttrInfo(d_cp, idxName, d_depth);
 			case "LocalVariableTypeTable" -> new LocalVariableTypeAttrInfo(d_cp, idxName, d_depth);
 			case "RuntimeInvisibleAnnotations" -> new RuntimeInvisibleAnnotationsAttrInfo(d_cp, idxName, d_depth);
+			case "StackMapTable" -> new StackMapTableAttrInfo(d_cp, idxName, d_depth);
 //			
 		
 			case "InnerClasses" -> new InnerClassesAttrInfo(d_cp, idxName, d_depth);
@@ -123,6 +124,7 @@ public final class AttrInfoList {
 				case "LocalVariableTypeTable" -> new LocalVariableTypeAttrInfo(d_cp, idxName, d_depth);
 				case "Exceptions" -> new ExceptionsAttrInfo(d_cp, idxName, d_depth);
 				case "RuntimeInvisibleAnnotations" -> new RuntimeInvisibleAnnotationsAttrInfo(d_cp, idxName, d_depth);
+				case "StackMapTable" -> new StackMapTableAttrInfo(d_cp, idxName, d_depth);
 //				
 
 				

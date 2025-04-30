@@ -92,7 +92,7 @@ import com.ibm.toad.cfparse.attributes.NestMembersAttrInfo;
 import com.ibm.toad.cfparse.attributes.RuntimeInvisibleAnnotationsAttrInfo;
 import com.ibm.toad.cfparse.attributes.SignatureAttrInfo;
 import com.ibm.toad.cfparse.attributes.SourceFileAttrInfo;
-
+import com.ibm.toad.cfparse.attributes.StackMapTableAttrInfo;
 
 import util.io.ProxyConsole;
 
@@ -357,6 +357,16 @@ public class CFParseBCELConvertorVisitor {
 		                }
 		            }
 		        }
+		        if (attribute instanceof Signature sigAttrBCEL) {
+		            int sigUtf8Index = this.currentClass.getCP().addUtf8(sigAttrBCEL.getSignature());
+
+		            SignatureAttrInfo sigAttr =
+		                (SignatureAttrInfo) fieldInfo.getAttrs().add("Signature");
+
+		            sigAttr.set(sigUtf8Index);
+		        }
+
+		        
 		    }
 
 		    this.currentClass.getFields().add(fieldInfo);
@@ -530,35 +540,14 @@ public class CFParseBCELConvertorVisitor {
 		                cfLocal.setFromBCEL(bcelLocal);
 		            } else if (innerAttr instanceof LocalVariableTypeTable bcelLocalType && cfAttr instanceof LocalVariableTypeAttrInfo cfLocalType) {
 		                cfLocalType.setFromBCEL(bcelLocalType);
-		            }else  if (innerAttr instanceof org.apache.bcel.classfile.StackMap stackMap) {
-                        byte[] stackBytes = new byte[stackMap.getLength()]; 
+		            }else if(innerAttr instanceof StackMap bcelStackMap && cfAttr instanceof StackMapTableAttrInfo cfStackMap){
+		        	
+		        			
+		        			cfStackMap.setFromBCEL(bcelStackMap);
 
-                       
-                        methodSignature.append("        Attribsute: \n");
-                        methodSignature.append("        name: StackMapTable  ");
-                        methodSignature.append("bytes (")
-                            .append(stackBytes.length)
-                            .append("): ");
-
-                        try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                             DataOutputStream dos = new DataOutputStream(baos)) {
-                            stackMap.dump(dos); 
-                            byte[] fullBytes = baos.toByteArray();
-
-                          
-                            byte[] actualBytes = Arrays.copyOfRange(fullBytes, 6, fullBytes.length);
-
-                            for (int i = 0; i < actualBytes.length; i++) {
-                               
-                            	methodSignature.append(Integer.toHexString(actualBytes[i] & 0xFF)).append(" ");
-
-                            }
-                          
-                        } catch (IOException e) {
-                        	methodSignature.append("[Error dumping StackMapTable]");
-                        }
-                    }
-		        }
+		        		}		        
+		            }
+		        
 		    }
 
 		    // 4. add Exceptions if exists
@@ -669,7 +658,6 @@ public class CFParseBCELConvertorVisitor {
 		}
 		@Override
 		public void visitSignature(final Signature obj) {
-		    final SignatureAttrInfo sigAttrInfo = (SignatureAttrInfo) this.currentClass.getAttrs().add("Signature");
 
 		    final String signatureString = obj.getSignature();
 
@@ -678,6 +666,7 @@ public class CFParseBCELConvertorVisitor {
 		        sigIndex = this.currentClass.getCP().addUtf8(signatureString);
 		    }
 
+		    final SignatureAttrInfo sigAttrInfo = (SignatureAttrInfo) this.currentClass.getAttrs().add("Signature");
 		    sigAttrInfo.set(sigIndex);
 		}
 
