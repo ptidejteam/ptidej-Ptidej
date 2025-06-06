@@ -93,14 +93,15 @@ public final class CPUtils {
       } else {
          StringBuffer var1 = new StringBuffer();
          descriptor2java(var0, 0, var1);
-         return var1.toString();
+         String varString =  var1.toString();
+         return varString;
       }
    }
 
    public static String[] getMethodParams(String var0) {
       byte var1 = 0;
       if (var0.charAt(var1) != '(') {
-         System.out.println("Error: couldn't translate <" + var0 + "> to Java representation");
+       
          return null;
       } else {
          int var2 = 0;
@@ -317,7 +318,7 @@ public final class CPUtils {
       for(var3 = ""; var0.charAt(var1) == '['; ++var1) {
          var3 = var3 + "[]";
       }
-
+    
       label37:
       switch(var0.charAt(var1)) {
       case 'B':
@@ -368,7 +369,7 @@ public final class CPUtils {
          var2.append("boolean");
          break;
       default:
-         System.out.println("Error: couldn't translate <" + var0 + "> to Java representation");
+        
          return var0.length();
       }
 

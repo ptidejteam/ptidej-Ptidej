@@ -10,8 +10,8 @@ import com.ibm.toad.cfparse.ConstantPool;
 import com.ibm.toad.cfparse.utils.Access;
 
 public final class InnerClassesAttrInfo extends AttrInfo {
-	private int d_numInnerClasses;
-	private int[] d_innerClasses;
+	public int d_numInnerClasses;
+	public int[] d_innerClasses;
 
 	public boolean isAnonymous(int var1) {
 		if (var1 >= 0 && var1 < this.d_numInnerClasses) {
@@ -58,6 +58,7 @@ public final class InnerClassesAttrInfo extends AttrInfo {
 
 	// Yann: changed from protected to public
 	public void read(DataInputStream var1) throws IOException {
+		
 		super.d_len = var1.readInt();
 		this.d_numInnerClasses = var1.readShort();
 		// D.assert(super.d_len == 2 + this.d_numInnerClasses * 8, "d_len != 2 + (d_numInnerClasses * 8)\n" + super.d_len + " != 2 + (" + this.d_numInnerClasses + "* 8)\n");

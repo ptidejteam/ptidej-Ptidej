@@ -10,12 +10,15 @@
  ******************************************************************************/
 package util.lang;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
-
+import java.util.Arrays;
+import org.apache.bcel.classfile.BootstrapMethods;
 import org.apache.bcel.Const;
 import org.apache.bcel.classfile.Attribute;
 import org.apache.bcel.classfile.Constant;
@@ -34,11 +37,18 @@ import org.apache.bcel.classfile.ConstantNameAndType;
 import org.apache.bcel.classfile.ConstantString;
 import org.apache.bcel.classfile.ConstantUtf8;
 import org.apache.bcel.classfile.ConstantValue;
+import org.apache.bcel.classfile.ExceptionTable;
 import org.apache.bcel.classfile.Field;
 import org.apache.bcel.classfile.InnerClass;
 import org.apache.bcel.classfile.InnerClasses;
 import org.apache.bcel.classfile.JavaClass;
+import org.apache.bcel.classfile.LocalVariableTypeTable;
 import org.apache.bcel.classfile.Method;
+import org.apache.bcel.classfile.NestMembers;
+import org.apache.bcel.classfile.RuntimeInvisibleAnnotations;
+import org.apache.bcel.classfile.Signature;
+import org.apache.bcel.classfile.StackMap;
+import org.apache.bcel.classfile.StackMapEntry;
 import org.apache.bcel.generic.Type;
 
 import com.ibm.toad.cfparse.ClassFile;
@@ -49,11 +59,21 @@ import com.ibm.toad.cfparse.FieldInfoList;
 import com.ibm.toad.cfparse.InterfaceList;
 import com.ibm.toad.cfparse.MethodInfo;
 import com.ibm.toad.cfparse.MethodInfoList;
+import com.ibm.toad.cfparse.attributes.AttrInfo;
 import com.ibm.toad.cfparse.attributes.AttrInfoList;
+import com.ibm.toad.cfparse.attributes.BCELUtils;
+import com.ibm.toad.cfparse.attributes.BootstrapMethodsAttrInfo;
 import com.ibm.toad.cfparse.attributes.CodeAttrInfo;
+import com.ibm.toad.cfparse.attributes.ConstantValueAttrInfo;
+import com.ibm.toad.cfparse.attributes.ExceptionAttrInfo;
+import com.ibm.toad.cfparse.attributes.ExceptionsAttrInfo;
 import com.ibm.toad.cfparse.attributes.InnerClassesAttrInfo;
 import com.ibm.toad.cfparse.attributes.LineNumberAttrInfo;
 import com.ibm.toad.cfparse.attributes.LocalVariableAttrInfo;
+import com.ibm.toad.cfparse.attributes.LocalVariableTypeAttrInfo;
+import com.ibm.toad.cfparse.attributes.NestMembersAttrInfo;
+import com.ibm.toad.cfparse.attributes.RuntimeInvisibleAnnotationsAttrInfo;
+import com.ibm.toad.cfparse.attributes.SignatureAttrInfo;
 import com.ibm.toad.cfparse.attributes.SourceFileAttrInfo;
 
 import util.io.ProxyConsole;
@@ -67,14 +87,16 @@ import util.io.WriterOutputStream;
 public class CFParseBCELConvertorAdhoc {
 	private static void addAttributes(final ClassFile aClassFile,
 			final JavaClass aJavaClass) {
-
+		
 		final Attribute[] attributes = aJavaClass.getAttributes();
 		for (int i = 0; i < attributes.length; i++) {
 			final Attribute attribute = attributes[i];
+			
 			if (attribute.getName().equals("BootstrapMethods")) {
-				// TODO Complete the NestHost attribute with an index to the host class 
-				aClassFile.getAttrs().add("BootstrapMethods");
+			    aClassFile.getAttrs().add("BootstrapMethods");
+			    handleBootstrapMethods((BootstrapMethods) attribute, aClassFile); 
 			}
+
 			else if (attribute.getName().equals("Deprecated")) {
 				aClassFile.getAttrs().add("Deprecated");
 			}
@@ -87,20 +109,26 @@ public class CFParseBCELConvertorAdhoc {
 				aClassFile.getAttrs().add("NestHost");
 			}
 			else if (attribute.getName().equals("NestMembers")) {
-				// TODO Complete the NestHost attribute with an index to the host class 
+				
 				aClassFile.getAttrs().add("NestMembers");
+				handleNestMembers((NestMembers) attribute, aClassFile);
 			}
+
 			else if (attribute.getName().equals("Signature")) {
-				// TODO Complete the Signature attribute with an index to the signature of this class 
-				aClassFile.getAttrs().add("Signature");
+			    handleSignature((Signature) attribute, aClassFile);
 			}
+
+
+
 			else if (attribute.getName().equals("SourceFile")) {
+			
 				final String fileName = aJavaClass.getSourceFileName();
 				final SourceFileAttrInfo sourceFileAttrInfo = (SourceFileAttrInfo) aClassFile
 						.getAttrs().add("SourceFile");
 				sourceFileAttrInfo.set(fileName);
 			}
 			else if (attribute.getName().equals("InnerClasses")) {
+			
 				aClassFile.getAttrs().add("InnerClasses");
 				CFParseBCELConvertorAdhoc.handleInnerClasses(
 						(InnerClasses) attribute, aClassFile);
@@ -110,6 +138,125 @@ public class CFParseBCELConvertorAdhoc {
 			}
 		}
 	}
+	
+	private static void handleSignature(final Signature sigAttr, final ClassFile aClassFile) {
+	    final AttrInfoList attrList = aClassFile.getAttrs();
+	    final SignatureAttrInfo sigInfo = (SignatureAttrInfo) attrList.add("Signature");
+
+	    final String signature = sigAttr.getSignature(); 
+	    final ConstantPool cp = aClassFile.getCP();
+
+	    int sigIndex = cp.find(ConstantPool.CONSTANT_Utf8, signature);
+	    if (sigIndex == -1) {
+	        sigIndex = cp.addUtf8(signature);
+	    }
+
+
+	    try {
+	        final StringWriter writer = new StringWriter();
+	        final DataOutputStream out = new DataOutputStream(new WriterOutputStream(writer));
+	        out.writeInt(2);
+	        out.writeShort(sigIndex); // SignatureAttrInfo expects a u2 index
+	        out.close();
+
+	        final StringReader reader = new StringReader(writer.toString());
+	        final DataInputStream in = new DataInputStream(new ReaderInputStream(reader));
+	        sigInfo.read(in);
+	        in.close();
+	    } catch (IOException e) {
+	        e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+	    }
+	}
+
+	
+//	Henrique 4/21/2025
+	private static void handleBootstrapMethods(final BootstrapMethods attribute, final ClassFile aClassFile) {
+		final AttrInfoList attrInfoList = aClassFile.getAttrs();
+		AttrInfo attr = attrInfoList.get("BootstrapMethods");
+
+		if (attr instanceof BootstrapMethodsAttrInfo bootstrapAttr) {
+			try {
+			
+				final StringWriter writer = new StringWriter();
+				final DataOutputStream out = new DataOutputStream(new WriterOutputStream(writer));
+
+				final org.apache.bcel.classfile.BootstrapMethod[] methods = attribute.getBootstrapMethods();
+
+				int byteLength = 2; 
+				for (org.apache.bcel.classfile.BootstrapMethod m : methods) {
+					byteLength += 4 + 2 * m.getNumBootstrapArguments();
+				}
+
+				out.writeInt(byteLength); // attribute_length
+				out.writeShort(methods.length);
+				for (org.apache.bcel.classfile.BootstrapMethod m : methods) {
+					out.writeShort(m.getBootstrapMethodRef());
+					out.writeShort(m.getNumBootstrapArguments());
+					for (int arg : m.getBootstrapArguments()) {
+						out.writeShort(arg);
+					}
+				}
+				out.close();
+
+				
+				final StringReader reader = new StringReader(writer.toString());
+				final DataInputStream in = new DataInputStream(new ReaderInputStream(reader));
+				bootstrapAttr.read(in);
+				in.close();
+
+			} catch (IOException e) {
+				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			}
+		}
+	}
+
+
+
+	private static void handleNestMembers(final NestMembers aNestMembersAttr, final ClassFile aClassFile) {
+//		HENRIQUE 4/11/2025
+	
+		final ConstantPool cfparseCP = aClassFile.getCP();
+		final org.apache.bcel.classfile.ConstantPool bcelCP = aNestMembersAttr.getConstantPool();
+
+		final AttrInfoList attrInfoList = aClassFile.getAttrs();
+		final NestMembersAttrInfo nestMembersAttrInfo = (NestMembersAttrInfo) attrInfoList.get("NestMembers");
+
+		try {
+			final StringWriter stringWriter = new StringWriter();
+			final DataOutputStream dataOutput = new DataOutputStream(new WriterOutputStream(stringWriter));
+
+			final int[] members = aNestMembersAttr.getClasses();
+			dataOutput.writeInt(2 + 2 * members.length); // attribute_length
+			dataOutput.writeShort(members.length);
+
+		
+			for (int classIndex : members) {
+				
+				final String className = bcelCP
+					.getConstantUtf8(((ConstantClass) bcelCP.getConstant(classIndex)).getNameIndex())
+					.getBytes();
+
+			
+				int cfparseIndex = classIndex; 
+
+				
+
+				dataOutput.writeShort(cfparseIndex);
+			}
+
+
+
+			dataOutput.close();
+
+			final StringReader stringReader = new StringReader(stringWriter.toString());
+			final DataInputStream dataInput = new DataInputStream(new ReaderInputStream(stringReader));
+			nestMembersAttrInfo.read(dataInput);
+			dataInput.close();
+		} catch (final IOException ioe) {
+			ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
+		}
+	}
+
 
 	private static void addConstants(final ClassFile aClassFile,
 			final JavaClass aJavaClass) {
@@ -119,9 +266,10 @@ public class CFParseBCELConvertorAdhoc {
 				.getConstantPool();
 
 		final Constant[] constants = bcelCP.getConstantPool();
+	
 		for (int index = 1; index < constants.length; index++) {
 			final Constant constant = constants[index];
-
+			
 			// ClassEntry
 			if (constant instanceof ConstantClass) {
 				final String className = ((ConstantClass) constant)
@@ -129,7 +277,9 @@ public class CFParseBCELConvertorAdhoc {
 				final boolean found = CFParseBCELConvertorAdhoc.searchFor(cfparseCP,
 						className, ConstantPool.ClassEntry.class);
 				if (!found) {
+					
 					cfparseCP.addClass(className);
+					
 				}
 			}
 			// DoubleEntry
@@ -149,10 +299,11 @@ public class CFParseBCELConvertorAdhoc {
 						.getNameAndTypeIndex();
 				final ConstantNameAndType nameAndTypeConstant = (ConstantNameAndType) bcelCP
 						.getConstant(nameAndTypeIndex);
-
-				cfparseCP.addField(classNameUtf8.getBytes().replace('.', '/')
-						+ ' ' + nameAndTypeConstant.getName(bcelCP) + ' '
-						+ nameAndTypeConstant.getSignature(bcelCP));
+			
+					cfparseCP.addField(classNameUtf8.getBytes().replace('.', '/')
+							+ ' ' + nameAndTypeConstant.getName(bcelCP) + ' '
+							+ nameAndTypeConstant.getSignature(bcelCP));
+				
 			}
 			// FloatEntry
 			else if (constant instanceof ConstantFloat) {
@@ -273,7 +424,7 @@ public class CFParseBCELConvertorAdhoc {
 			// MethodTypeEntry
 			else if (constant instanceof ConstantMethodType) {
 				// TODO Implement
-				System.out.println();
+			
 			}
 			// NameAndTypeEntry
 			else if (constant instanceof ConstantNameAndType) {
@@ -352,7 +503,7 @@ public class CFParseBCELConvertorAdhoc {
 			fieldDeclaration.append(Modifier.toString(field.getModifiers()));
 			fieldDeclaration.append(' ');
 			fieldDeclaration.append(fieldType);
-
+			
 			if (field.isStatic()) {
 				fieldDeclaration.append(' ');
 				fieldDeclaration.append(fieldName);
@@ -367,14 +518,40 @@ public class CFParseBCELConvertorAdhoc {
 
 			fieldDeclaration.append('=');
 			if (fieldType.equals("java.lang.String")) {
-				if (fieldValue == null) {
-					fieldDeclaration.append("\"\"");
+				if (fieldType.equals("java.lang.String")) {
+					if (fieldType.equals("java.lang.String")) {
+					    if (fieldValue == null) {
+					        fieldDeclaration.append("\"\"");
+					    } else {
+					      //Henrique 4/21/2025 fixed typo with a replace
+					        int index1 = fieldValue.getConstantValueIndex();
+
+					    
+					        Constant c = aJavaClass.getConstantPool().getConstant(index1);
+					        if (c instanceof ConstantString) {
+					            ConstantString cs = (ConstantString) c;
+
+					       
+					            int stringIndex = cs.getStringIndex();
+					            ConstantUtf8 utf8 = (ConstantUtf8) aJavaClass.getConstantPool().getConstant(stringIndex);
+
+					         
+					            String value = utf8.getBytes()
+					                .replace("\\", "\\\\")
+					                .replace("\"", "\\\"");
+
+					            fieldDeclaration.append('"').append(value).append('"');
+					        } else {
+					           
+					            fieldDeclaration.append("\"\"");
+					        }
+					    }
+					}
+
+
 				}
-				else {
-					fieldDeclaration.append('\"');
-					fieldDeclaration.append(fieldValue.toString());
-					fieldDeclaration.append('\"');
-				}
+
+
 			}
 			else if (fieldType.equals("boolean")) {
 				if (fieldValue == null) {
@@ -403,6 +580,7 @@ public class CFParseBCELConvertorAdhoc {
 				}
 			}
 			else if (fieldType.equals("double")) {
+				
 				if (fieldValue == null) {
 					fieldDeclaration.append('0');
 				}
@@ -458,15 +636,87 @@ public class CFParseBCELConvertorAdhoc {
 			}
 			else {
 				fieldInfo = fieldInfoList.add(fieldDeclaration.toString());
+				
 			}
+			
+			
+			if (field.getConstantValue() != null) {
+				AttrInfoList attrList = fieldInfo.getAttrs();
+				ConstantValueAttrInfo constantAttr = (ConstantValueAttrInfo) attrList.get("ConstantValue");
+				if (constantAttr == null) {
+					constantAttr = (ConstantValueAttrInfo) attrList.add("ConstantValue");
+				}
+
+				
+			
+				int index2 = field.getConstantValue().getConstantValueIndex();
+				Constant c = aJavaClass.getConstantPool().getConstant(index2);
+
+				if (c instanceof ConstantInteger) {
+					constantAttr.set(((ConstantInteger) c).getBytes());
+				} else if (c instanceof ConstantLong) {
+					constantAttr.set(((ConstantLong) c).getBytes());
+				} else if (c instanceof ConstantFloat) {
+					constantAttr.set(((ConstantFloat) c).getBytes());
+				} else if (c instanceof ConstantDouble) {
+					constantAttr.set(((ConstantDouble) c).getBytes());
+				} else if (c instanceof ConstantString) {
+					int stringIndex = ((ConstantString) c).getStringIndex();
+					String value = ((ConstantUtf8) aJavaClass.getConstantPool().getConstant(stringIndex)).getBytes();
+					constantAttr.set(value);
+				} else {
+					System.err.println("❌ Unsupported constant type: " + c.getClass());
+				}
+			}
+			
+			if (field.getGenericSignature() != null) {
+			    AttrInfoList attrList = fieldInfo.getAttrs();
+			    
+		
+
+			    SignatureAttrInfo signatureAttr = (SignatureAttrInfo) attrList.get("Signature");
+			    if (signatureAttr == null) {
+			        signatureAttr = (SignatureAttrInfo) attrList.add("Signature");
+			    }
+
+			    final String sig = field.getGenericSignature();
+
+			    ConstantPool cp = aClassFile.getCP();
+			    int sigIndex = cp.find(ConstantPool.CONSTANT_Utf8, sig);
+			    if (sigIndex == -1) {
+			        sigIndex = cp.addUtf8(sig);
+			    }
+
+			    try {
+			        StringWriter writer = new StringWriter();
+			        DataOutputStream out = new DataOutputStream(new WriterOutputStream(writer));
+			        out.writeInt(2);        
+			        out.writeShort(sigIndex); 
+			        out.close();
+
+			        StringReader reader = new StringReader(writer.toString());
+			        DataInputStream in = new DataInputStream(new ReaderInputStream(reader));
+			        signatureAttr.read(in);
+			        in.close();
+			    } catch (IOException e) {
+			        e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			    }
+
+			 
+			}
+
+
 			if (field.isSynthetic()) {
-				// Not needed?
-				//	fieldInfo.getAttrs().add("Synthetic");
+				// Not needed? -Someone
+				//	Don't know if is needed but i made sure this works, so if is needed, it will be used - Henrique 4/22/2025		
+					fieldInfo.getAttrs().add("Synthetic");
 				fieldInfo
 						.setAccess(fieldInfo.getAccess() + Const.ACC_SYNTHETIC);
 			}
 
+
 			fieldDeclaration.setLength(0);
+			
 		}
 	}
 
@@ -535,6 +785,10 @@ public class CFParseBCELConvertorAdhoc {
 				argsString[i] = arg.toString();
 			}
 			methodInfo.setParams(argsString);
+			
+			
+
+			
 			// Yann 24/12/10: Unnecessary and broken?
 			// I shouldn't call this method because it breaks the constant
 			// describing the signature of the method, for example "()V"
@@ -582,43 +836,231 @@ public class CFParseBCELConvertorAdhoc {
 								ProxyConsole.getInstance().errorOutput());
 					}
 				}
-
+				
 				if (method.getLocalVariableTable() != null) {
-					final LocalVariableAttrInfo localVariableAttrInfo = (LocalVariableAttrInfo) codeAttributeInfo
-							.getAttrs().add("LocalVariableTable");
+					final LocalVariableAttrInfo localVariableAttrInfo = 
+						(LocalVariableAttrInfo) codeAttributeInfo.getAttrs().add("LocalVariableTable");
+
 					try {
 						final StringWriter stringWriter = new StringWriter();
 						final DataOutputStream dataOutput = new DataOutputStream(
-								new WriterOutputStream(stringWriter));
-						dataOutput.writeInt(
-								method.getLocalVariableTable().getLength());
-						final int tableLength = method.getLocalVariableTable()
-								.getTableLength();
+							new WriterOutputStream(stringWriter));
+					
+						dataOutput.writeInt(method.getLocalVariableTable().getLength());
+						final int tableLength = method.getLocalVariableTable().getTableLength();
 						dataOutput.writeShort(tableLength);
 						for (int i = 0; i < tableLength; i++) {
-							method.getLocalVariableTable()
-									.getLocalVariableTable()[i]
-									.dump(dataOutput);
+							final var var = method.getLocalVariableTable().getLocalVariableTable()[i];
+
+							// Fix name index
+							final String name = var.getName();
+							int nameIndex = aClassFile.getCP().find(ConstantPool.CONSTANT_Utf8, name);
+							if (nameIndex == -1) nameIndex = aClassFile.getCP().addUtf8(name);
+
+							// Fix type index (descriptor)
+							final String signature = var.getSignature();
+							int sigIndex = aClassFile.getCP().find(ConstantPool.CONSTANT_Utf8, signature);
+							if (sigIndex == -1) sigIndex = aClassFile.getCP().addUtf8(signature);
+
+							// Write manually using CFParse-corrected indices
+							dataOutput.writeShort(var.getStartPC());
+							dataOutput.writeShort(var.getLength());
+							dataOutput.writeShort(nameIndex);
+							dataOutput.writeShort(sigIndex);
+							dataOutput.writeShort(var.getIndex());
 						}
+
 						dataOutput.close();
 
-						final String stringInStream = stringWriter.toString();
-						final StringReader stringReader = new StringReader(
-								stringInStream);
+						final StringReader stringReader = new StringReader(stringWriter.toString());
 						final DataInputStream dataInput = new DataInputStream(
-								new ReaderInputStream(stringReader));
+							new ReaderInputStream(stringReader));
 						localVariableAttrInfo.read(dataInput);
+						
 						dataInput.close();
+
+						
+						
+
+					} catch (IOException ioe) {
+						ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
 					}
-					catch (final IOException ioe) {
-						ioe.printStackTrace();
+					
+					
+				}
+				
+				
+				
+				
+				if (method.getExceptionTable() != null && method.getExceptionTable().getLength() > 0) {
+				    try {
+				        int[] bcelIndexes = method.getExceptionTable().getExceptionIndexTable();
+				        String[] classNames = Arrays.stream(bcelIndexes)
+				            .mapToObj(i -> method.getConstantPool().getConstantString(i, Const.CONSTANT_Class))
+				            .toArray(String[]::new);
+
+				        int[] cfparseIndexes = Arrays.stream(classNames)
+				            .mapToInt(aClassFile.getCP()::addClass)
+				            .toArray();
+
+				       
+				        ExceptionsAttrInfo exceptionsAttr = (ExceptionsAttrInfo) methodInfo.getAttrs().add("Exceptions");
+
+				      
+				        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+				        DataOutputStream out = new DataOutputStream(baos);
+
+				        out.writeInt(2 + 2 * cfparseIndexes.length); // d_len
+				        out.writeShort(cfparseIndexes.length); 
+				        for (int index1 : cfparseIndexes) {
+				            out.writeShort(index1);
+				        }
+				        out.close();
+
+				       
+				        ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
+				        DataInputStream in = new DataInputStream(bais);
+				        exceptionsAttr.read(in);
+				        in.close();
+
+				    } catch (IOException e) {
+				        e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+				    }
+				}
+
+
+				
+				
+
+				if (method.getGenericSignature() != null) {
+					SignatureAttrInfo signatureAttr = (SignatureAttrInfo) methodInfo.getAttrs().add("Signature");
+					try {
+						StringWriter writer = new StringWriter();
+						DataOutputStream out = new DataOutputStream(new WriterOutputStream(writer));
+						int sigIndex = aClassFile.getCP().addUtf8(method.getGenericSignature());
+						out.writeInt(2);
+						out.writeShort(sigIndex);
+						out.close();
+						
+						DataInputStream in = new DataInputStream(new ReaderInputStream(new StringReader(writer.toString())));
+						signatureAttr.read(in);
+						in.close();
+					} catch (IOException e) {
+						e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 					}
 				}
+				if (method.getAnnotationEntries() != null && method.getAnnotationEntries().length > 0) {
+				    try {
+				        AttrInfoList attrList = methodInfo.getAttrs();
+				        RuntimeInvisibleAnnotationsAttrInfo annotationAttr =
+				            (RuntimeInvisibleAnnotationsAttrInfo) attrList.add("RuntimeInvisibleAnnotations");
+
+				        ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+				        DataOutputStream dataOut = new DataOutputStream(byteOut);
+
+				        int numAnnotations = method.getAnnotationEntries().length;
+				        dataOut.writeInt(2 + numAnnotations * 4); // total length: 2 + n * 4 (each annotation = 4 bytes)
+				        dataOut.writeShort(numAnnotations);
+
+				        for (org.apache.bcel.classfile.AnnotationEntry entry : method.getAnnotationEntries()) {
+				            int typeIndex = aClassFile.getCP().addUtf8(entry.getAnnotationType());
+				            dataOut.writeShort(typeIndex);        // annotation type index
+				            dataOut.writeShort(0);                // num element_value_pairs (0)
+				        }
+
+				        dataOut.close();
+
+				        DataInputStream dataIn = new DataInputStream(
+				            new ByteArrayInputStream(byteOut.toByteArray()));
+				        annotationAttr.read(dataIn);
+				        dataIn.close();
+
+				    } catch (IOException e) {
+				        e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+				    }
+				}
+
+
+
+				for (org.apache.bcel.classfile.Attribute attr : method.getCode().getAttributes()) {
+					if (attr instanceof LocalVariableTypeTable localTypeTable) {
+						
+						LocalVariableTypeAttrInfo cfparseLocalType = 
+							(LocalVariableTypeAttrInfo) codeAttributeInfo.getAttrs().add("LocalVariableTypeTable");
+
+						try {
+							StringWriter stringWriter = new StringWriter();
+							DataOutputStream dataOutput = new DataOutputStream(new WriterOutputStream(stringWriter));
+
+							dataOutput.writeInt(localTypeTable.getLength()); // attribute_length
+							int tableLength = localTypeTable.getTableLength();
+							dataOutput.writeShort(tableLength);
+							for (int i = 0; i < tableLength; i++) {
+								localTypeTable.getLocalVariableTypeTable()[i].dump(dataOutput);
+							}
+							dataOutput.close();
+
+							StringReader stringReader = new StringReader(stringWriter.toString());
+							DataInputStream dataInput = new DataInputStream(new ReaderInputStream(stringReader));
+							cfparseLocalType.read(dataInput);
+							dataInput.close();
+
+						} catch (IOException ioe) {
+							ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
+						}
+					}else if (attr instanceof StackMap smt) {
+						final com.ibm.toad.cfparse.attributes.StackMapTableAttrInfo cfparseAttr =
+							    (com.ibm.toad.cfparse.attributes.StackMapTableAttrInfo)
+							    codeAttributeInfo.getAttrs().add("StackMapTable");
+
+							try {
+							    StackMapEntry[] entries = smt.getStackMap();
+
+							    ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+							    DataOutputStream dataOut = new DataOutputStream(byteOut);
+
+							    // attribute_length = 2 (num_entries) + sum of entry sizes
+							    ByteArrayOutputStream contentOut = new ByteArrayOutputStream();
+							    DataOutputStream contentDataOut = new DataOutputStream(contentOut);
+
+							    contentDataOut.writeShort(entries.length); // number_of_entries
+							    for (StackMapEntry entry : entries) {
+							        entry.dump(contentDataOut); // write each entry
+							    }
+
+							    contentDataOut.close();
+
+							    byte[] contentBytes = contentOut.toByteArray();
+							    dataOut.writeInt(contentBytes.length); // d_len = real content size
+							    dataOut.write(contentBytes);
+
+							    dataOut.close();
+
+							    DataInputStream in = new DataInputStream(new ByteArrayInputStream(byteOut.toByteArray()));
+							    cfparseAttr.read(in);
+							    in.close();
+
+							} catch (IOException e) {
+							    e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+							}
+						}
+				}
+//				Reorder the ATTRIBUTES
+//				Henrique 4/22/2025 for testing purposes, if ATTRIBUTES: is required to be followed by the below, then use this
+//				SOmetimes is not required, why?
+//				methodInfo.getAttrs().reorderByPriority(new String[] {
+//						"Exceptions",
+//					    "Signature",
+//					    "RuntimeInvisibleAnnotations"
+//					});
+//				methodInfo.setAccess(method.getAccessFlags());
+
 			}
 		}
 	}
 
 	public static ClassFile convertClassFile(final JavaClass aJavaClass) {
+		
 		final ClassFile currentClass = new ClassFile();
 
 		/*
@@ -645,7 +1087,7 @@ public class CFParseBCELConvertorAdhoc {
 
 		CFParseBCELConvertorAdhoc.addConstants(currentClass, aJavaClass);
 		CFParseBCELConvertorAdhoc.addInterfaces(currentClass, aJavaClass);
-		CFParseBCELConvertorAdhoc.addMethods(currentClass, aJavaClass);
+	CFParseBCELConvertorAdhoc.addMethods(currentClass, aJavaClass);
 		CFParseBCELConvertorAdhoc.addFields(currentClass, aJavaClass);
 		CFParseBCELConvertorAdhoc.addAttributes(currentClass, aJavaClass);
 
@@ -671,7 +1113,7 @@ public class CFParseBCELConvertorAdhoc {
 
 	private static void handleInnerClasses(final InnerClasses aInnerClassesAttr,
 			final ClassFile aClassFile) {
-
+		
 		final ConstantPool cfparseCP = aClassFile.getCP();
 		final org.apache.bcel.classfile.ConstantPool bcelCP = aInnerClassesAttr
 				.getConstantPool();

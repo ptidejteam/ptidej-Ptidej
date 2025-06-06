@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 import org.apache.bcel.classfile.ClassParser;
+import org.junit.Assert;
 
 import com.ibm.toad.cfparse.ClassFile;
 
@@ -32,7 +33,7 @@ public class SuperNameConversionTest extends TestCase {
 	}
 
 	public void testGetAttrs() {
-		// assertEquals(this.classFile_CFParse_Original.getAttrs(), this.classFile_CFParse_Converted.getAttrs());
+		 Assert.assertEquals(this.classFile_CFParse_Original.getAttrs().toString(), this.classFile_CFParse_Converted.getAttrs().toString());
 	}
 
 	public void testGetSuperName() {
@@ -41,11 +42,11 @@ public class SuperNameConversionTest extends TestCase {
 	}
 
 	public void testGetSourceFileName() {
-		// TODO Should pass!
-		/*
+	
+		
 		assertEquals(this.classFile_CFParse_Original.getSourceFilename(),
 				this.classFile_CFParse_Converted.getSourceFilename());
-		*/
+		
 	}
 
 	public void testGetName() {

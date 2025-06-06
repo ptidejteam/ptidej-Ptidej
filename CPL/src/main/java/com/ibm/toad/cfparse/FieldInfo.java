@@ -25,8 +25,8 @@ import com.ibm.toad.cfparse.utils.CPUtils;
 public final class FieldInfo {
 	private final ConstantPool d_cp;
 	private int d_accessFlags;
-	private int d_idxName;
-	private int d_idxDescriptor;
+	public int d_idxName;
+	public int d_idxDescriptor;
 	private AttrInfoList d_attrs;
 
 	FieldInfo(final ClassFile classfile, final ConstantPool constantpool,
@@ -313,7 +313,7 @@ public final class FieldInfo {
 		}
 	}
 
-	FieldInfo(final ConstantPool constantpool) {
+	public FieldInfo(final ConstantPool constantpool) {
 		this.d_cp = constantpool;
 		this.d_accessFlags = -1;
 		this.d_idxName = -1;

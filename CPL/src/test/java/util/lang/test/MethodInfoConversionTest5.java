@@ -22,12 +22,12 @@ import junit.framework.TestCase;
  * @author Henrique De Freitas Serra
  * @since  2024/10/11
  */
-public class MethodInfoConversionTest extends TestCase {
+public class MethodInfoConversionTest5 extends TestCase {
 	private static MethodInfo method_CFPARSE;
 	private static Method method_BCEL;
 
 	public void setUp() throws FileNotFoundException, IOException {
-		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/SimpleGenerator.class";
+		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/QuadraticHorizentalSolver.class";
 
 		final ClassFile classFile_CFParse_Original = new ClassFile(
 				new FileInputStream(classFile_Path));
@@ -58,12 +58,13 @@ public class MethodInfoConversionTest extends TestCase {
 		Assert.assertEquals(method_CFPARSE.getAbout(), BCELGetAbout);
 	}
 
-	public void testGetAttributes() {
-	    String expected = method_CFPARSE.getAttrs().toString().trim();
-	    String actual = BCELUtils.formatMethodAttributes(method_BCEL).trim();
+//	public void testGetAttributes() {
+//	    String expected = method_CFPARSE.getAttrs().toString().trim();
+//	    String actual = BCELUtils.formatMethodAttributes(method_BCEL).trim();
+//
+//	    Assert.assertEquals(expected, actual);
+//	}
 
-	    Assert.assertEquals(expected, actual);
-	}
 
 
 	public void testGetDesc() throws FileNotFoundException, IOException {

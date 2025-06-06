@@ -4,7 +4,10 @@ package com.ibm.toad.cfparse;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.BitSet;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Vector;
 
 import com.ibm.toad.cfparse.ConstantPool.Utf8Entry;
@@ -18,8 +21,8 @@ import com.ibm.toad.cfparse.utils.CPUtils;
 public final class MethodInfo {
 	private ConstantPool d_cp;
 	private int d_accessFlags;
-	private int d_idxName;
-	private int d_idxDescriptor;
+	public int d_idxName;
+	public int d_idxDescriptor;
 	private AttrInfoList d_attrs;
 
 	public void setReturnType(String var1) {
@@ -48,6 +51,7 @@ public final class MethodInfo {
 			}
 		}
 	}
+	
 
 	public String toString() {
 		StringBuffer var1 = new StringBuffer();
@@ -106,10 +110,12 @@ public final class MethodInfo {
 
 		var1.append(var4 + " " + this.d_cp.getAsString(this.d_idxName) + var5
 				+ "\n" + this.d_attrs);
+		
+
 		return var1.toString();
 	}
 
-	MethodInfo(ConstantPool var1) {
+	public MethodInfo(ConstantPool var1) {
 		this.d_cp = var1;
 		this.d_accessFlags = -1;
 		this.d_idxName = -1;

@@ -75,9 +75,8 @@ public class GetMagicConversionTest extends TestCase {
 					method_CFParse_Converted.getParams());
 			Assert.assertEquals(method_CFParse_Original.getReturnType(),
 					method_CFParse_Converted.getReturnType());
-			// As long as we are confident that toString is reliable, the test is fine
-			// TODO Add this test back after having fixed the converter
-			// Assert.assertEquals(method_CFParse_Original.getAttrs().toString(), method_CFParse_Converted.getAttrs().toString());
+
+			 Assert.assertEquals(method_CFParse_Original.getAttrs().toString(), method_CFParse_Converted.getAttrs().toString());
 		}
 	}
 }

@@ -2,6 +2,8 @@ package util.lang.test;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 
 import org.apache.bcel.classfile.ClassParser;
 import org.junit.Assert;
@@ -17,7 +19,7 @@ public class CFParseBCELConvertorTest2 extends TestCase {
 
 	public void setUp() throws IOException {
 		final String classFile_Path = "../CPL/target/test-classes/Random ClassFiles/NameDialog.class";
-
+		
 		this.classFile_CFParse_Original = new ClassFile(
 				new FileInputStream(classFile_Path));
 
@@ -28,29 +30,33 @@ public class CFParseBCELConvertorTest2 extends TestCase {
 	}
 
 	public void testGetAccess() {
+	
 		Assert.assertEquals(this.classFile_CFParse_Original.getAccess(),
 				this.classFile_CFParse_Converted.getAccess());
 	}
 
 	public void testGetAttrs() {
-		// Assert.assertEquals(this.classFile_CFParse_Original.getAttrs(), this.classFile_CFParse_Converted.getAttrs());
+//		HENRIQUE 4/11/2025
+//		All tests from cpl to get attrs, i changed to use .toString(), why? Bytes are exactly the same, so
+//	make sense to use .toString()?
+
+	 Assert.assertEquals(this.classFile_CFParse_Original.getAttrs().toString(), this.classFile_CFParse_Converted.getAttrs().toString());
 	}
 
 	public void testGetName() {
+		
 		Assert.assertEquals(this.classFile_CFParse_Original.getName(),
 				this.classFile_CFParse_Converted.getName());
 	}
 
 	public void testGetFields() {
-		Assert.assertEquals(
-				this.classFile_CFParse_Original.getFields().get(0).getName(),
-				this.classFile_CFParse_Converted.getFields().get(0).getName());
-		// TODO Should be this test
-		/*
+		
+	
+
 		Assert.assertEquals(
 				this.classFile_CFParse_Original.getFields().get(0).toString(),
 				this.classFile_CFParse_Converted.getFields().get(0).toString());
-		*/
+		
 	}
 
 }
