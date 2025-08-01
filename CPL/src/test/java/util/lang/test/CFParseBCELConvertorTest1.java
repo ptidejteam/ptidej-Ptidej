@@ -2,8 +2,6 @@ package util.lang.test;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 
 import org.apache.bcel.classfile.ClassParser;
 import org.junit.Assert;
@@ -41,10 +39,10 @@ public class CFParseBCELConvertorTest1 extends TestCase {
 	}
 
 	public void testGetAttrs() {
-	
-// The bytes are exactly the same - Henrique 4/10/2025
-
-		 Assert.assertEquals(this.classFile_CFParse_Original.getAttrs().toString(), this.classFile_CFParse_Converted.getAttrs().toString());
+		// The bytes are exactly the same - Henrique 4/10/2025
+		Assert.assertEquals(
+				this.classFile_CFParse_Original.getAttrs().toString(),
+				this.classFile_CFParse_Converted.getAttrs().toString());
 	}
 
 	public void testGetFields() {
@@ -52,5 +50,4 @@ public class CFParseBCELConvertorTest1 extends TestCase {
 				this.classFile_CFParse_Original.getFields().get(0).toString(),
 				this.classFile_CFParse_Converted.getFields().get(0).toString());
 	}
-
 }

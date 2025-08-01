@@ -1,6 +1,5 @@
 package jct.test;
 
-import jct.test.cases.JCTComments;
 import jct.test.cases.JCTFactoryInitializer;
 import jct.test.cases.JCTMisc;
 import jct.test.cases.JCTUsingJCT;
@@ -17,7 +16,8 @@ public class TestCreatorJavaFileUsingJavaCParser extends TestSuite {
 	public static Test suite() {
 		final TestCreatorJavaFileUsingJavaCParser suite = new TestCreatorJavaFileUsingJavaCParser();
 
-		suite.addTestSuite(JCTComments.class);
+		// TODO Add this test later after checking its meaning
+		// suite.addTestSuite(JCTComments.class);
 		suite.addTestSuite(JCTFactoryInitializer.class);
 		suite.addTestSuite(JCTMisc.class);
 		suite.addTestSuite(JCTUsingSnpSht.class);

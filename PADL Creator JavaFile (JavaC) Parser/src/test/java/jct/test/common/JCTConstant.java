@@ -42,8 +42,8 @@ public interface JCTConstant {
 	String TST_PATH = "../PADL Creator JavaFile (JavaC) Parser/src/test/java/";
 
 	// From padl.creator.javafile.javac.JavaFileCreator.initialise(String, String[])
-	List<String> OPTIONS = Arrays.asList(new String[] { "--enable-preview", "--release", "21",
-			"-classpath", SRC_PATH, "-d", TMP_PATH });
+	List<String> OPTIONS = Arrays
+			.asList(new String[] { "-classpath", SRC_PATH, "-d", TMP_PATH });
 
 	String MISC_DIR = "jct/test/rsc/misc/";
 	String SER_FILE = "jct/test/rsc/jct/JCT.ser";

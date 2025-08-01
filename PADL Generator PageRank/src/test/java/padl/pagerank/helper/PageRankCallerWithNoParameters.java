@@ -13,7 +13,9 @@ package padl.pagerank.helper;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.Writer;
+
 import org.junit.Assert;
+
 import padl.generator.helper.ModelGenerator;
 import padl.kernel.IIdiomLevelModel;
 import padl.pagerank.PageRankRankingGenerator;
@@ -24,29 +26,26 @@ import util.io.ProxyConsole;
 import util.io.ProxyDisk;
 
 public class PageRankCallerWithNoParameters {
-	public static void callForSomeClassFiles(
-		final String[] someNames,
-		final String[] somePaths) {
+	public static void callForSomeClassFiles(final String[] someNames,
+			final String[] somePaths) {
 
 		Assert.assertEquals(someNames.length, somePaths.length);
 
-		final IGenerator generator =
-			new InputDataGeneratorWith9Relations(false, true);
+		final IGenerator generator = new InputDataGeneratorWith9Relations(false,
+				true);
 
 		for (int i = 0; i < someNames.length; i++) {
 			final String name = someNames[i];
 
-			final IIdiomLevelModel idomLevelModel =
-				ModelGenerator.generateModelFromClassFilesDirectory(
-					name,
-					somePaths[i]);
+			final IIdiomLevelModel idomLevelModel = ModelGenerator
+					.generateModelFromClassFilesDirectory(name, somePaths[i]);
 
 			final long startTime = System.currentTimeMillis();
 			idomLevelModel.generate(generator);
 			try {
 				final String outputFile = "rsc/" + name + ".txt";
-				final Writer fw =
-					ProxyDisk.getInstance().fileTempOutput(outputFile);
+				final Writer fw = ProxyDisk.getInstance()
+						.fileTempOutput(outputFile);
 				final BufferedWriter out = new BufferedWriter(fw);
 				out.write(generator.getCode());
 				out.close();
@@ -55,34 +54,25 @@ public class PageRankCallerWithNoParameters {
 			catch (final IOException e) {
 				e.printStackTrace();
 			}
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.print("Model generated in ");
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.print(System.currentTimeMillis() - startTime);
+			ProxyConsole.getInstance().debugOutput()
+					.print("Model generated in ");
+			ProxyConsole.getInstance().debugOutput()
+					.print(System.currentTimeMillis() - startTime);
 			ProxyConsole.getInstance().debugOutput().println(" ms.");
 		}
 	}
-	public static void callForSomeCPPFiles(
-		final String aName,
-		final String aPath,
-		final IGenerator aGenerator,
-		final Writer aResultWriter) {
+
+	public static void callForSomeCPPFiles(final String aName,
+			final String aPath, final IGenerator aGenerator,
+			final Writer aResultWriter) {
 
 		long startTime = System.currentTimeMillis();
-		final IIdiomLevelModel idomLevelModel = null;
-		// TODO Add this code back
-		//	ModelGenerator.generateModelFromCppFilesUsingEclipse(
-		//		aName,
-		//		new String[] { aPath });
+		final IIdiomLevelModel idomLevelModel = ModelGenerator
+				.generateModelFromCppFilesUsingANTLR(aName,
+						new String[] { aPath }, null);
 		ProxyConsole.getInstance().debugOutput().print("Model generated in ");
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(System.currentTimeMillis() - startTime);
+		ProxyConsole.getInstance().debugOutput()
+				.print(System.currentTimeMillis() - startTime);
 		ProxyConsole.getInstance().debugOutput().println(" ms.");
 
 		startTime = System.currentTimeMillis();
@@ -94,20 +84,18 @@ public class PageRankCallerWithNoParameters {
 			e.printStackTrace();
 		}
 		ProxyConsole.getInstance().debugOutput().print("Model analysed in ");
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(System.currentTimeMillis() - startTime);
+		ProxyConsole.getInstance().debugOutput()
+				.print(System.currentTimeMillis() - startTime);
 		ProxyConsole.getInstance().debugOutput().println(" ms.");
 	}
-	public static void callForSomeCPPFiles(
-		final String[] someNames,
-		final String[] somePaths) {
+
+	public static void callForSomeCPPFiles(final String[] someNames,
+			final String[] somePaths) {
 
 		Assert.assertEquals(someNames.length, somePaths.length);
 
-		final IGenerator generator =
-			new InputDataGeneratorWith9Relations(false, true);
+		final IGenerator generator = new InputDataGeneratorWith9Relations(false,
+				true);
 
 		for (int i = 0; i < someNames.length; i++) {
 			final String name = someNames[i];
@@ -117,11 +105,8 @@ public class PageRankCallerWithNoParameters {
 			try {
 				final Writer fw = ProxyDisk.getInstance().fileTempOutput(file);
 				final BufferedWriter out = new BufferedWriter(fw);
-				PageRankCallerWithNoParameters.callForSomeCPPFiles(
-					name,
-					path,
-					generator,
-					out);
+				PageRankCallerWithNoParameters.callForSomeCPPFiles(name, path,
+						generator, out);
 				out.close();
 				generator.reset();
 			}
@@ -130,6 +115,7 @@ public class PageRankCallerWithNoParameters {
 			}
 		}
 	}
+
 	public static void main(final String[] args) {
 		//	PageRankRankingGenerator.getInstance().generateModelFromDir(
 		//		"D:/Software/P-MARt Workspace/Rhino v1.4R3/bin/",
@@ -919,12 +905,12 @@ public class PageRankCallerWithNoParameters {
 		//				"D:/Software/C++ Programs/Chrome/Chrome v15.0.837.0/browser/" };
 
 		final String[] names = new String[] { "files_before", "files_after" };
-		final String[] paths =
-			new String[] { "C:/Data/Change Types/files_before/",
-					"C:/Data/Change Types/files_after/" };
+		final String[] paths = new String[] {
+				"C:/Data/Change Types/files_before/",
+				"C:/Data/Change Types/files_after/" };
 
-		final IGenerator generator =
-			new InputDataGeneratorWith9RelationsForCPP(false, true);
+		final IGenerator generator = new InputDataGeneratorWith9RelationsForCPP(
+				false, true);
 
 		for (int i = 1; i < names.length; i++) {
 			final IIdiomLevelModel idiomLevelModel1 = null;
@@ -932,16 +918,14 @@ public class PageRankCallerWithNoParameters {
 			//	ModelGenerator.generateModelFromCppFilesUsingEclipse(
 			//		names[i - 1],
 			//		new String[] { paths[i - 1] });
-			
+
 			final IIdiomLevelModel idiomLevelModel2 = null;
 			// TODO Add this code back
 			//	ModelGenerator.generateModelFromCppFilesUsingEclipse(
 			//		names[i],
 			//		new String[] { paths[i] });
 			PageRankRankingGenerator.getInstance().compareModels(
-				idiomLevelModel1,
-				idiomLevelModel2,
-				generator);
+					idiomLevelModel1, idiomLevelModel2, generator);
 		}
 	}
 }

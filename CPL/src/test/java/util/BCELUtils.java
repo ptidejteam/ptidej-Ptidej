@@ -1,4 +1,4 @@
-package com.ibm.toad.cfparse.attributes;
+package util;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;

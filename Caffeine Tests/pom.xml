@@ -23,7 +23,7 @@
 				<configuration>
 					<!-- <debug>true</debug> -->
 					<!-- <optimize>false</optimize> -->
-					<release>21</release>
+					<release>24</release>
 					<compilerArgs>
 						<arg>-proc:none</arg>
 					</compilerArgs>
