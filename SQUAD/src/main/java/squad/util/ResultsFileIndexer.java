@@ -17,6 +17,7 @@ import java.io.LineNumberReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 import java.util.Vector;
+
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -86,11 +87,9 @@ public class ResultsFileIndexer {
 
 				for (int i = 0; i < this.eltFields.size(); i++) {
 
-					doc.add(new Field(
-						(String) this.eltFields.elementAt(i),
-						ucharFields[i],
-						Field.Store.COMPRESS,
-						Field.Index.TOKENIZED));
+					doc.add(new Field((String) this.eltFields.elementAt(i),
+							ucharFields[i], Field.Store.COMPRESS,
+							Field.Index.TOKENIZED));
 
 				}
 				this.writer.addDocument(doc);
@@ -103,9 +102,9 @@ public class ResultsFileIndexer {
 			System.out.println("Could not add: " + fileName);
 		}
 		finally {
-			fr.close();
+			if (fr != null) {
+				fr.close();
+			}
 		}
-
 	}
-
 }

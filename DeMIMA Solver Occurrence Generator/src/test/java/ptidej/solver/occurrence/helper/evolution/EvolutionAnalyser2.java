@@ -172,22 +172,21 @@ public class EvolutionAnalyser2 {
 			try {
 				printStream = new PrintStream(new FileOutputStream(
 						EvolutionAnalyser2.FILE_ROOT + programName + ".csv"));
+
+				final Map matrixVersionsbyAntipatterns = (Map) this.matrixProgramsbyVersionsbyAntipatterns
+						.get(programName);
+
+				this.printNameProgramVersions(programName, printStream,
+						matrixVersionsbyAntipatterns);
+
+				this.printNumberOfAntipatternsByVersion(printStream,
+						matrixVersionsbyAntipatterns);
+
+				printStream.println();
 			}
 			catch (final FileNotFoundException e) {
 				e.printStackTrace();
 			}
-			// printStream.println(programName);
-
-			final Map matrixVersionsbyAntipatterns = (Map) this.matrixProgramsbyVersionsbyAntipatterns
-					.get(programName);
-
-			this.printNameProgramVersions(programName, printStream,
-					matrixVersionsbyAntipatterns);
-
-			this.printNumberOfAntipatternsByVersion(printStream,
-					matrixVersionsbyAntipatterns);
-
-			printStream.println();
 		}
 	}
 

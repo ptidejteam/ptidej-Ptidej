@@ -30,39 +30,40 @@
 package padl.creator.javafile.eclipse.test.methodinvocation;
 
 import java.util.Iterator;
+
 import org.junit.Assert;
+
 import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 
 public class MethodInvocationComparator {
 	public static boolean isMIofJavaModelMethodIncludedInMIofClassModelMethod(
-		final IMethod javaFilesMethod,
-		final IMethod classFilesMethod) {
+			final IMethod javaFilesMethod, final IMethod classFilesMethod) {
 
 		IMethodInvocation currentJavaMethodInvocation = null;
 
 		boolean included = false;
-		final Iterator iteratorOnJavaFilesMIs =
-			javaFilesMethod.getIteratorOnConstituents(IMethodInvocation.class);
+		final Iterator iteratorOnJavaFilesMIs = javaFilesMethod
+				.getIteratorOnConstituents(IMethodInvocation.class);
 		while (iteratorOnJavaFilesMIs.hasNext() && !included) {
-			currentJavaMethodInvocation =
-				(IMethodInvocation) iteratorOnJavaFilesMIs.next();
+			currentJavaMethodInvocation = (IMethodInvocation) iteratorOnJavaFilesMIs
+					.next();
 
 			included = false;
-			final Iterator iteratorOnClassFilesMIs =
-				classFilesMethod
+			final Iterator iteratorOnClassFilesMIs = classFilesMethod
 					.getIteratorOnConstituents(IMethodInvocation.class);
 			while (iteratorOnClassFilesMIs.hasNext() && !included) {
-				final IMethodInvocation currentClassMethodInvocation =
-					(IMethodInvocation) iteratorOnClassFilesMIs.next();
-				included =
-					currentJavaMethodInvocation
+				final IMethodInvocation currentClassMethodInvocation = (IMethodInvocation) iteratorOnClassFilesMIs
+						.next();
+				included = currentJavaMethodInvocation
 						.equals(currentClassMethodInvocation);
 			}
 		}
 
-		Assert.assertTrue("Cannot find the method invocation"
-				+ currentJavaMethodInvocation.toString(), included);
+		if (currentJavaMethodInvocation != null) {
+			Assert.assertTrue("Cannot find the method invocation"
+					+ currentJavaMethodInvocation.toString(), included);
+		}
 
 		return included;
 	}

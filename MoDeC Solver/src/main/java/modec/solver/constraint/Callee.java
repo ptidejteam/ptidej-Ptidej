@@ -32,12 +32,9 @@ import modec.metamodel.ScenarioDiagram;
 /**
  * @author Janice Ng
  */
-public class Callee
-	extends AbstractPalmBinIntConstraint
-	implements Constraint {
+public class Callee extends AbstractPalmBinIntConstraint implements Constraint {
 
 	private ScenarioDiagram sd;
-	
 
 	//	public static void main(final String[] args) {
 	//		final PalmProblem problem = new PalmProblem();
@@ -100,12 +97,8 @@ public class Callee
 	//
 	//	}
 
-	public Callee(
-		IntVar v0,
-		IntVar v1,
-		ScenarioDiagram sd,
-		List componentsMessages,
-		List allClassifiers) {
+	public Callee(IntVar v0, IntVar v1, ScenarioDiagram sd,
+			List componentsMessages, List allClassifiers) {
 		this.v0 = v0;
 		this.v1 = v1;
 		this.sd = sd;
@@ -119,7 +112,7 @@ public class Callee
 			boolean toBeRemoved = true;
 
 			while (iterator0.hasNext() /*&& toBeRemoved*/
-				) {
+			) {
 				final int index_e0 = iterator0.next();
 
 				if (index_e0 > -1) {
@@ -128,28 +121,23 @@ public class Callee
 					//System.out.println("Msg : " + idxMsg + "\nCallee : " + callee);
 
 					if (idxMsg instanceof Operation
-						&& callee instanceof Instance
-						&& this.v1
-							.getDomain() //.contains(this.sd.getCalleeIdx(callee))) {
-							.contains(
-							this.sd.getClassifierIdx(callee))) {
+							&& callee instanceof Instance && this.v1.getDomain() //.contains(this.sd.getCalleeIdx(callee))) {
+									.contains(
+											this.sd.getClassifierIdx(callee))) {
 						toBeRemoved = false;
 					}
 
 					//System.out.println("Allo !");
 
 					if (toBeRemoved) {
-						choco.palm.explain.Explanation expl =
-							((PalmProblem) this.getProblem()).makeExplanation();
-						((PalmConstraintPlugin) this.getPlugIn()).self_explain(
-							expl);
-						((PalmIntVar) this.v1).self_explain(
-							PalmIntDomain.DOM,
-							expl);
-						((PalmIntVar) this.v0).removeVal(
-							index_e0,
-							this.cIdx0,
-							expl);
+						choco.palm.explain.Explanation expl = ((PalmProblem) this
+								.getProblem()).makeExplanation();
+						((PalmConstraintPlugin) this.getPlugIn())
+								.self_explain(expl);
+						((PalmIntVar) this.v1).self_explain(PalmIntDomain.DOM,
+								expl);
+						((PalmIntVar) this.v0).removeVal(index_e0, this.cIdx0,
+								expl);
 					}
 				}
 			}
@@ -161,38 +149,38 @@ public class Callee
 			boolean toBeRemoved = true;
 
 			while (iterator1.hasNext() /* && toBeRemoved*/
-				) {
+			) {
 				final int index_e1 = iterator1.next();
 
 				if (index_e1 > -1) {
 					//Classifier callee = this.sd.getIdxCallee(index_e1);
 					Classifier callee = this.sd.getIdxClassifier(index_e1);
-					List calledMessages =
-						this.sd.getDestinationCalledMessages(callee);
-					if(calledMessages == null)
-						System.out.println(callee);
-					Iterator it = calledMessages.iterator();
+					List calledMessages = this.sd
+							.getDestinationCalledMessages(callee);
 
-					while (it.hasNext() && toBeRemoved) {
-						Message msg = (Message) it.next();
-						if (msg instanceof Operation
-							&& this.v0.getDomain().contains(
-								this.sd.getMessageIdx(msg))) {
-							toBeRemoved = false;
-						}
+					if (calledMessages == null) {
+						System.out.println(callee);
 					}
-					if (toBeRemoved) {
-						choco.palm.explain.Explanation expl =
-							((PalmProblem) this.getProblem()).makeExplanation();
-						((PalmConstraintPlugin) this.getPlugIn()).self_explain(
-							expl);
-						((PalmIntVar) this.v0).self_explain(
-							PalmIntDomain.DOM,
-							expl);
-						((PalmIntVar) this.v1).removeVal(
-							index_e1,
-							this.cIdx1,
-							expl);
+					else {
+						final Iterator it = calledMessages.iterator();
+
+						while (it.hasNext() && toBeRemoved) {
+							final Message msg = (Message) it.next();
+							if (msg instanceof Operation && this.v0.getDomain()
+									.contains(this.sd.getMessageIdx(msg))) {
+								toBeRemoved = false;
+							}
+						}
+						if (toBeRemoved) {
+							choco.palm.explain.Explanation expl = ((PalmProblem) this
+									.getProblem()).makeExplanation();
+							((PalmConstraintPlugin) this.getPlugIn())
+									.self_explain(expl);
+							((PalmIntVar) this.v0)
+									.self_explain(PalmIntDomain.DOM, expl);
+							((PalmIntVar) this.v1).removeVal(index_e1,
+									this.cIdx1, expl);
+						}
 					}
 				}
 			}
@@ -203,9 +191,10 @@ public class Callee
 	 * @see choco.palm.integer.PalmIntVarListener#awakeOnRestoreVal(int, int)
 	 */
 	public void awakeOnRestoreVal(int idx, int val)
-		throws ContradictionException {
+			throws ContradictionException {
 		propagate();
 	}
+
 	/* (non-Javadoc)
 	 * @see choco.palm.integer.PalmIntVarListener#whyIsTrue()
 	 */
@@ -213,6 +202,7 @@ public class Callee
 
 		return null;
 	}
+
 	/* (non-Javadoc)
 	 * @see choco.palm.integer.PalmIntVarListener#whyIsFalse()
 	 */
@@ -220,6 +210,7 @@ public class Callee
 
 		return null;
 	}
+
 	/* (non-Javadoc)
 	 * @see choco.Constraint#isSatisfied()
 	 */

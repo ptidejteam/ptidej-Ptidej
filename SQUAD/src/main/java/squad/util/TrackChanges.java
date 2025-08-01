@@ -22,9 +22,11 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.TreeSet;
+
 import org.apache.lucene.queryParser.ParseException;
 import org.jdom2.Element;
 import org.jdom2.input.SAXBuilder;
+
 import util.io.ProxyDisk;
 
 public class TrackChanges {
@@ -33,8 +35,8 @@ public class TrackChanges {
 	 * @param args
 	 */
 	@SuppressWarnings("unused")
-	public static void main(String[] args) throws FileNotFoundException,
-			IOException, ParseException {
+	public static void main(String[] args)
+			throws FileNotFoundException, IOException, ParseException {
 		// TODO Auto-generated method stub
 		List<?> files = new ArrayList<Object>();
 		TreeSet<String> Classes = new TreeSet<String>();
@@ -43,8 +45,7 @@ public class TrackChanges {
 
 		LineNumberReader fr = null;
 		try {
-			fr =
-				new LineNumberReader(new FileReader(
+			fr = new LineNumberReader(new FileReader(
 					"D:/Documents/Workspace/changes/classes.txt"));
 			String line;
 			while ((line = fr.readLine()) != null) {
@@ -57,24 +58,20 @@ public class TrackChanges {
 			System.out.println("Could not add lines");
 		}
 		finally {
-			fr.close();
+			if (fr != null) {
+				fr.close();
+			}
 		}
 
 		trk.outputPast(
-			"D:/Software/Tests Workspace/foutsekh-program-BugDefects/rsc/",
-			"D:/Documents/Workspace/changes/argouml/argouml-svn-mirror",
-			"org",
-			"argouml v0.19.8",
-			"2005-08-11",
-			Classes);
+				"D:/Software/Tests Workspace/foutsekh-program-BugDefects/rsc/",
+				"D:/Documents/Workspace/changes/argouml/argouml-svn-mirror",
+				"org", "argouml v0.19.8", "2005-08-11", Classes);
 
 		trk.outputFutur(
-			"D:/Software/Tests Workspace/foutsekh-program-BugDefects/rsc/",
-			"D:/Documents/Workspace/changes/argouml/argouml-svn-mirror",
-			"org",
-			"argouml v0.19.8",
-			"2005-08-11",
-			Classes);
+				"D:/Software/Tests Workspace/foutsekh-program-BugDefects/rsc/",
+				"D:/Documents/Workspace/changes/argouml/argouml-svn-mirror",
+				"org", "argouml v0.19.8", "2005-08-11", Classes);
 		//trk.outputFutur("D:/Software/Tests Workspace/foutsekh-program-BugDefects/rsc/", "D:/Documents/Workspace/changes/xalan_java/xalan_java-svn-mirror","org" ,"xalan", "2006-03-01");
 
 		//trk.output("D:/Software/Tests Workspace/foutsekh-program-BugDefects/rsc/", "D:/Documents/Workspace/changes/argouml/argouml-svn-mirror","org/", "argouml");
@@ -93,6 +90,7 @@ public class TrackChanges {
 		System.out.println(getdateFirstrevisionCVS(root1));
 		*/
 	}
+
 	static org.jdom2.Document document;
 
 	static Element racine;
@@ -168,6 +166,7 @@ public class TrackChanges {
 
 		return firstDate;
 	}
+
 	/*
 	 *  get first revision date CVS files
 	 * 
@@ -252,6 +251,7 @@ public class TrackChanges {
 
 		return lastDate;
 	}
+
 	/*
 	 *  get first revision date CVS files
 	 * 
@@ -320,7 +320,8 @@ public class TrackChanges {
 	 * get number of revisions after given date
 	 * 
 	 */
-	public static int getNbRevisionsBeforeDate(String xlgfile, String VersionDt) {
+	public static int getNbRevisionsBeforeDate(String xlgfile,
+			String VersionDt) {
 
 		Date dt = extractDate(VersionDt);
 		List<Date> dates = new ArrayList<Date>();
@@ -354,9 +355,8 @@ public class TrackChanges {
 	 * 
 	 */
 
-	public static int getNbRevisionsBeforeDateCVS(
-		String xlgfile,
-		String VersionDt) {
+	public static int getNbRevisionsBeforeDateCVS(String xlgfile,
+			String VersionDt) {
 		Date dt = extractDate(VersionDt);
 
 		int numEntries = 0;
@@ -379,7 +379,8 @@ public class TrackChanges {
 			//courant.getContent(1).getValue() permet d'acceder au champ date
 			if (((String) courant.getName()).equalsIgnoreCase("entry") &&
 
-			(extractDate(courant.getContent(1).getValue())).before(dt)) {
+					(extractDate(courant.getContent(1).getValue()))
+							.before(dt)) {
 				numEntries = numEntries + 1;
 				//	System.out.println(courant.getContent(1).getValue());
 			}
@@ -393,7 +394,8 @@ public class TrackChanges {
 	 * get number of revisions after given date
 	 * 
 	 */
-	public static int getNbRevisionsAfterDate(String xlgfile, String VersionDt) {
+	public static int getNbRevisionsAfterDate(String xlgfile,
+			String VersionDt) {
 
 		Date dt = extractDate(VersionDt);
 		List<Date> dates = new ArrayList<Date>();
@@ -427,9 +429,8 @@ public class TrackChanges {
 	 * 
 	 */
 
-	public static int getNbRevisionsAfterDateCVS(
-		String xlgfile,
-		String VersionDt) {
+	public static int getNbRevisionsAfterDateCVS(String xlgfile,
+			String VersionDt) {
 		Date dt = extractDate(VersionDt);
 
 		int numEntries = 0;
@@ -452,7 +453,7 @@ public class TrackChanges {
 			//courant.getContent(1).getValue() permet d'acceder au champ date
 			if (((String) courant.getName()).equalsIgnoreCase("entry") &&
 
-			(extractDate(courant.getContent(1).getValue())).after(dt)) {
+					(extractDate(courant.getContent(1).getValue())).after(dt)) {
 				numEntries = numEntries + 1;
 				//	System.out.println(courant.getContent(1).getValue());
 			}
@@ -527,14 +528,15 @@ public class TrackChanges {
 		return xlgfiles;
 	}
 
-	private String getFileName(final String xlgFileName, final String delimiter) {
+	private String getFileName(final String xlgFileName,
+			final String delimiter) {
 		final String substring1 = delimiter;
 		//+ "/src/";
 		final String substring2 = ".xlg";
 		final int begin = xlgFileName.indexOf(substring1);
 		final int end = xlgFileName.indexOf(substring2);
-		final String aFileName =
-			xlgFileName.substring(begin + substring1.length(), end);
+		final String aFileName = xlgFileName
+				.substring(begin + substring1.length(), end);
 		return delimiter + aFileName;
 	}
 
@@ -543,45 +545,37 @@ public class TrackChanges {
 	 * 
 	 */
 
-	public void outputPast(
-		String outputDir,
-		String inputDir,
-		final String delimiter,
-		String progName,
-		String versionDt,
-		TreeSet<String> Classes) throws IOException, ParseException {
+	public void outputPast(String outputDir, String inputDir,
+			final String delimiter, String progName, String versionDt,
+			TreeSet<String> Classes) throws IOException, ParseException {
 
 		try {
-			final Writer output =
-				ProxyDisk.getInstance().fileTempOutput(outputDir + "NbofRevisionBeforeRelPerClasses in"
-						+ progName + ".csv");
-			output
-				.write("#" + progName + ", nb_changes, nb_changes_per_month ");
+			final Writer output = ProxyDisk.getInstance().fileTempOutput(
+					outputDir + "NbofRevisionBeforeRelPerClasses in" + progName
+							+ ".csv");
+			output.write(
+					"#" + progName + ", nb_changes, nb_changes_per_month ");
 			output.flush();
 			List<String> files = new ArrayList<String>();
 
 			List<String> xlgfiles = this.extractXlgFromDir(inputDir, files);
 			for (int i = 0; i < xlgfiles.size(); i++) {
-				if (Classes.contains(this.getFileName(
-					(String) xlgfiles.get(i),
-					delimiter).replace('/', '.'))) {
+				if (Classes.contains(
+						this.getFileName((String) xlgfiles.get(i), delimiter)
+								.replace('/', '.'))) {
 					//List<String> dat = this.getChangePeriodOfClass(xlgfiles.get(i));
-					float period =
-						extractDate(versionDt).getTime()
-								- getdateFirstrevision((String) xlgfiles.get(i))
+					float period = extractDate(versionDt).getTime()
+							- getdateFirstrevision((String) xlgfiles.get(i))
 									.getTime();
-					float fq =
-						(2629800000.0f) * (getNbRevisionsBeforeDate(
-							(String) xlgfiles.get(i),
-							versionDt) / period);
+					float fq = (2629800000.0f) * (getNbRevisionsBeforeDate(
+							(String) xlgfiles.get(i), versionDt) / period);
 
-					output.write(this.getFileName(
-						(String) xlgfiles.get(i),
-						delimiter).replace('/', '.')
-							+ ","
-							+ getNbRevisionsBeforeDate(
-								(String) xlgfiles.get(i),
-								versionDt) + "," + fq);
+					output.write(this
+							.getFileName((String) xlgfiles.get(i), delimiter)
+							.replace('/', '.') + ","
+							+ getNbRevisionsBeforeDate((String) xlgfiles.get(i),
+									versionDt)
+							+ "," + fq);
 					output.flush();
 				}
 			}
@@ -597,46 +591,38 @@ public class TrackChanges {
 	 * 
 	 */
 
-	public void outputFutur(
-		String outputDir,
-		String inputDir,
-		final String delimiter,
-		String progName,
-		String versionDt,
-		TreeSet<String> Classes) throws IOException, ParseException {
+	public void outputFutur(String outputDir, String inputDir,
+			final String delimiter, String progName, String versionDt,
+			TreeSet<String> Classes) throws IOException, ParseException {
 
 		try {
-			final Writer output =
-				ProxyDisk.getInstance().fileTempOutput(
+			final Writer output = ProxyDisk.getInstance().fileTempOutput(
 					outputDir + "NbofRevisionAfterRelPerClasses in" + progName
 							+ ".csv");
-			output
-				.write("#" + progName + ", nb_changes, nb_changes_per_month ");
+			output.write(
+					"#" + progName + ", nb_changes, nb_changes_per_month ");
 			output.flush();
 			List<String> files = new ArrayList<String>();
 
 			List<String> xlgfiles = this.extractXlgFromDir(inputDir, files);
 			for (int i = 0; i < xlgfiles.size(); i++) {
-				if (Classes.contains(this.getFileName(
-					(String) xlgfiles.get(i),
-					delimiter).replace('/', '.'))) {
+				if (Classes.contains(
+						this.getFileName((String) xlgfiles.get(i), delimiter)
+								.replace('/', '.'))) {
 
 					//List<String> dat = this.getChangePeriodOfClass(xlgfiles.get(i));
-					float period =
-						getdateLastrevision((String) xlgfiles.get(i)).getTime()
-								- extractDate(versionDt).getTime();
-					float fq =
-						(2629800000.0f) * (getNbRevisionsAfterDate(
-							(String) xlgfiles.get(i),
-							versionDt) / period);
+					float period = getdateLastrevision((String) xlgfiles.get(i))
+							.getTime() - extractDate(versionDt).getTime();
+					float fq = (2629800000.0f)
+							* (getNbRevisionsAfterDate((String) xlgfiles.get(i),
+									versionDt) / period);
 
-					output.write(this.getFileName(
-						(String) xlgfiles.get(i),
-						delimiter).replace('/', '.')
-							+ ","
-							+ getNbRevisionsAfterDate(
-								(String) xlgfiles.get(i),
-								versionDt) + "," + fq);
+					output.write(this
+							.getFileName((String) xlgfiles.get(i), delimiter)
+							.replace('/', '.') + ","
+							+ getNbRevisionsAfterDate((String) xlgfiles.get(i),
+									versionDt)
+							+ "," + fq);
 					output.flush();
 
 				}
@@ -655,21 +641,16 @@ public class TrackChanges {
 	 * 
 	 */
 
-	public void outputCVSFutur(
-		String outputDir,
-		String inputDir,
-		final String delimiter,
-		String progName,
-		String versionDt,
-		TreeSet<?> Classes) throws IOException, ParseException {
+	public void outputCVSFutur(String outputDir, String inputDir,
+			final String delimiter, String progName, String versionDt,
+			TreeSet<?> Classes) throws IOException, ParseException {
 
 		try {
-			final Writer output =
-				ProxyDisk.getInstance().fileTempOutput(
+			final Writer output = ProxyDisk.getInstance().fileTempOutput(
 					outputDir + "NbofRevisionAfterRelPerClasses in" + progName
 							+ ".csv");
-			output
-				.write("#" + progName + ", nb_changes, nb_changes_per_month ");
+			output.write(
+					"#" + progName + ", nb_changes, nb_changes_per_month ");
 			output.flush();
 			List<String> files = new ArrayList<String>();
 
@@ -677,21 +658,19 @@ public class TrackChanges {
 			for (int i = 0; i < xlgfiles.size(); i++) {
 
 				//List<String> dat = this.getChangePeriodOfClass(xlgfiles.get(i));
-				float period =
-					getdateLastrevisionCVS((String) xlgfiles.get(i)).getTime()
-							- extractDate(versionDt).getTime();
-				float fq =
-					(2629800000.0f) * (getNbRevisionsAfterDateCVS(
-						(String) xlgfiles.get(i),
-						versionDt) / period);
+				float period = getdateLastrevisionCVS((String) xlgfiles.get(i))
+						.getTime() - extractDate(versionDt).getTime();
+				float fq = (2629800000.0f)
+						* (getNbRevisionsAfterDateCVS((String) xlgfiles.get(i),
+								versionDt) / period);
 
-				output.write(this.getFileName(
-					(String) xlgfiles.get(i),
-					delimiter).replace('/', '.')
-						+ ","
-						+ getNbRevisionsAfterDateCVS(
-							(String) xlgfiles.get(i),
-							versionDt) + "," + fq);
+				output.write(
+						this.getFileName((String) xlgfiles.get(i), delimiter)
+								.replace('/', '.')
+								+ ","
+								+ getNbRevisionsAfterDateCVS(
+										(String) xlgfiles.get(i), versionDt)
+								+ "," + fq);
 				output.flush();
 
 			}
@@ -708,21 +687,16 @@ public class TrackChanges {
 	 * output of changes when coming from a cvs
 	 * 
 	 */
-	public void outputCVSPast(
-		String outputDir,
-		String inputDir,
-		final String delimiter,
-		String progName,
-		String versionDt,
-		TreeSet<?> Classes) throws IOException, ParseException {
+	public void outputCVSPast(String outputDir, String inputDir,
+			final String delimiter, String progName, String versionDt,
+			TreeSet<?> Classes) throws IOException, ParseException {
 
 		try {
-			final Writer output =
-				ProxyDisk.getInstance().fileTempOutput(
+			final Writer output = ProxyDisk.getInstance().fileTempOutput(
 					outputDir + "NbofRevisionBeforeRelPerClasses in" + progName
 							+ ".csv");
-			output
-				.write("#" + progName + ", nb_changes, nb_changes_per_month ");
+			output.write(
+					"#" + progName + ", nb_changes, nb_changes_per_month ");
 			output.flush();
 			List<String> files = new ArrayList<String>();
 
@@ -730,26 +704,23 @@ public class TrackChanges {
 			for (int i = 0; i < xlgfiles.size(); i++) {
 
 				// List<Element> dat = this.getNumEntriesForClassCVS(xlgfiles.get(i));
-				if (Classes.contains(this.getFileName(
-					(String) xlgfiles.get(i),
-					delimiter).replace('/', '.'))) {
+				if (Classes.contains(
+						this.getFileName((String) xlgfiles.get(i), delimiter)
+								.replace('/', '.'))) {
 
-					float period =
-						extractDate(versionDt).getTime()
-								- getdateFirstrevisionCVS(
-									(String) xlgfiles.get(i)).getTime();
-					float fq =
-						(2629800000.0f) * (getNbRevisionsBeforeDateCVS(
-							(String) xlgfiles.get(i),
-							versionDt) / period);
+					float period = extractDate(versionDt).getTime()
+							- getdateFirstrevisionCVS((String) xlgfiles.get(i))
+									.getTime();
+					float fq = (2629800000.0f) * (getNbRevisionsBeforeDateCVS(
+							(String) xlgfiles.get(i), versionDt) / period);
 
-					output.write(this.getFileName(
-						(String) xlgfiles.get(i),
-						delimiter).replace('/', '.')
+					output.write(this
+							.getFileName((String) xlgfiles.get(i), delimiter)
+							.replace('/', '.')
 							+ ","
 							+ getNbRevisionsBeforeDateCVS(
-								(String) xlgfiles.get(i),
-								versionDt) + "," + fq);
+									(String) xlgfiles.get(i), versionDt)
+							+ "," + fq);
 					output.flush();
 				}
 			}

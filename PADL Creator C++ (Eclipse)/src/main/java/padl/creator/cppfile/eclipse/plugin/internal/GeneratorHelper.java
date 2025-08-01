@@ -13,6 +13,7 @@ package padl.creator.cppfile.eclipse.plugin.internal;
 import java.util.Arrays;
 import java.util.Set;
 import java.util.Stack;
+
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.cdt.core.dom.ast.DOMException;
@@ -59,6 +60,7 @@ import org.eclipse.cdt.core.dom.ast.cpp.ICPPMethodSpecialization;
 import org.eclipse.cdt.core.dom.ast.cpp.ICPPNamespace;
 import org.eclipse.cdt.core.dom.ast.cpp.ICPPParameter;
 import org.eclipse.cdt.core.dom.ast.cpp.ICPPVariable;
+
 import padl.cpp.kernel.ICPPFactoryEclipse;
 import padl.cpp.kernel.IEnum;
 import padl.cpp.kernel.IEnumValue;
@@ -95,28 +97,25 @@ class GeneratorHelper {
 	private final Set<IASTTranslationUnit> astTranslationUnits;
 	private final ICodeLevelModel codeLevelModel;
 
-	GeneratorHelper(
-		final Set<IASTTranslationUnit> someASTTranslationUnits,
-		final ICodeLevelModel aCodeLevelModel) {
+	GeneratorHelper(final Set<IASTTranslationUnit> someASTTranslationUnits,
+			final ICodeLevelModel aCodeLevelModel) {
 
 		this.astTranslationUnits = someASTTranslationUnits;
 		this.codeLevelModel = aCodeLevelModel;
 	}
-	private void addEntityToModel(
-		final Accumulator anAccumulator,
-		final ICPPClassType aCPPEntity,
-		final ICodeLevelModel aCodeLevelModel,
-		final Stack<IContainer> someContainers) throws DOMException {
 
-		this.addEntityToModelOrMemberToClass(
-			anAccumulator,
-			aCPPEntity,
-			someContainers);
+	private void addEntityToModel(final Accumulator anAccumulator,
+			final ICPPClassType aCPPEntity,
+			final ICodeLevelModel aCodeLevelModel,
+			final Stack<IContainer> someContainers) throws DOMException {
+
+		this.addEntityToModelOrMemberToClass(anAccumulator, aCPPEntity,
+				someContainers);
 	}
+
 	private void addEntityToModelOrMemberToClass(
-		final Accumulator anAccumulator,
-		final ICPPClassType aCPPEntity,
-		final Stack<IContainer> someContainers) {
+			final Accumulator anAccumulator, final ICPPClassType aCPPEntity,
+			final Stack<IContainer> someContainers) {
 
 		final IContainer container = someContainers.peek();
 
@@ -161,27 +160,24 @@ class GeneratorHelper {
 		if (type == ICPPASTCompositeTypeSpecifier.k_class) {
 			if (container instanceof IFirstClassEntity) {
 				if (Utils.isInterface(aCPPEntity)) {
-					entity =
-						((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
+					entity = ((ICPPFactoryEclipse) CPPFactoryEclipse
+							.getInstance())
 							.createMemberInterface(memberID, name);
 				}
 				else {
-					entity =
-						((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-							.createMemberClass(memberID, name);
+					entity = ((ICPPFactoryEclipse) CPPFactoryEclipse
+							.getInstance()).createMemberClass(memberID, name);
 					entity.setAbstract(Utils.isAbstract(aCPPEntity));
 				}
 			}
 			else {
 				if (Utils.isInterface(aCPPEntity)) {
-					entity =
-						((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-							.createInterface(id, name);
+					entity = ((ICPPFactoryEclipse) CPPFactoryEclipse
+							.getInstance()).createInterface(id, name);
 				}
 				else {
-					entity =
-						((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-							.createClass(id, name);
+					entity = ((ICPPFactoryEclipse) CPPFactoryEclipse
+							.getInstance()).createClass(id, name);
 					entity.setAbstract(Utils.isAbstract(aCPPEntity));
 					entity.equals(entity);
 				}
@@ -190,16 +186,16 @@ class GeneratorHelper {
 		else if (type == IASTCompositeTypeSpecifier.k_struct) {
 			if (container instanceof IFirstClassEntity) {
 				entity = ((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-					.createMemberStructure(memberID);
+						.createMemberStructure(memberID);
 			}
 			else {
 				entity = ((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-					.createStructure(id);
+						.createStructure(id);
 			}
 		}
 		else if (type == IASTCompositeTypeSpecifier.k_union) {
 			entity = ((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-				.createUnion(id);
+					.createUnion(id);
 		}
 		else {
 			entity = null;
@@ -209,14 +205,14 @@ class GeneratorHelper {
 		container.addConstituent(entity);
 		anAccumulator.addClassTypes(aCPPEntity, entity);
 	}
-	private void addEnumerationToModel(
-		final ICPPEnumeration aCPPEnumeration,
-		final Stack<IContainer> someContainers) throws DOMException {
+
+	private void addEnumerationToModel(final ICPPEnumeration aCPPEnumeration,
+			final Stack<IContainer> someContainers) throws DOMException {
 
 		final IContainer container = someContainers.peek();
 
-		char[] id =
-			Utils.getQualifiedName(aCPPEnumeration.getQualifiedNameCharArray());
+		char[] id = Utils
+				.getQualifiedName(aCPPEnumeration.getQualifiedNameCharArray());
 		// It is possible for the name to be empty, 
 		// for enumeration for example
 		if (id.length == 0) {
@@ -224,14 +220,13 @@ class GeneratorHelper {
 		}
 
 		if (!container.doesContainConstituentWithID(id)) {
-			final IEnum enumeration =
-				((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-					.createEnum(id);
+			final IEnum enumeration = ((ICPPFactoryEclipse) CPPFactoryEclipse
+					.getInstance()).createEnum(id);
 
 			for (final IEnumerator enumerator : aCPPEnumeration
-				.getEnumerators()) {
-				final IEnumValue anEnumValue =
-					((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
+					.getEnumerators()) {
+				final IEnumValue anEnumValue = ((ICPPFactoryEclipse) CPPFactoryEclipse
+						.getInstance())
 						.createEnumValue(enumerator.getName().toCharArray());
 				enumeration.addConstituent(anEnumValue);
 			}
@@ -239,32 +234,28 @@ class GeneratorHelper {
 			container.addConstituent(enumeration);
 		}
 	}
-	void addFieldToClass(
-		final ICPPVariable aCPPVariable,
-		final IFirstClassEntity aFirstClassEntity) {
+
+	void addFieldToClass(final ICPPVariable aCPPVariable,
+			final IFirstClassEntity aFirstClassEntity) {
 
 		final Stack<IContainer> temporaryStack = new Stack<IContainer>();
 		temporaryStack.push(aFirstClassEntity);
 		this.addVariableToModelOrFieldToClass(aCPPVariable, temporaryStack);
 	}
-	private void addFunctionToModel(
-		final Accumulator anAccumulator,
-		final ICPPFunction aCPPFunction,
-		final IASTStatement aBodyStatement,
-		final ICodeLevelModel aCodeLevelModel,
-		final Stack<IContainer> someContainers) throws DOMException {
 
-		this.addFunctionToModelOrMethodToClass(
-			anAccumulator,
-			aCPPFunction,
-			aBodyStatement,
-			someContainers);
+	private void addFunctionToModel(final Accumulator anAccumulator,
+			final ICPPFunction aCPPFunction, final IASTStatement aBodyStatement,
+			final ICodeLevelModel aCodeLevelModel,
+			final Stack<IContainer> someContainers) throws DOMException {
+
+		this.addFunctionToModelOrMethodToClass(anAccumulator, aCPPFunction,
+				aBodyStatement, someContainers);
 	}
+
 	private void addFunctionToModelOrMethodToClass(
-		final Accumulator anAccumulator,
-		final ICPPFunction aCPPFunction,
-		final IASTStatement aBodyStatement,
-		final Stack<IContainer> someContainers) {
+			final Accumulator anAccumulator, final ICPPFunction aCPPFunction,
+			final IASTStatement aBodyStatement,
+			final Stack<IContainer> someContainers) {
 
 		final IContainer container = someContainers.peek();
 
@@ -275,20 +266,16 @@ class GeneratorHelper {
 		// For some reasons, sometimes CDT adds the string
 		// CPPMETHOD at the end of a function signature,
 		// when the aCPPFunction is a PDOMCPPMethod.
-		final String stringID =
-			String.valueOf(Utils.computeSignature(aCPPFunction));
-		final char[] id = stringID
-			.replaceAll("const ", "")
-			.replaceAll(", \\.\\.\\.", "")
-			.replaceAll(" CPPMETHOD", "")
-			.replaceAll("/", "US")
-			.replaceAll("#", "NUM")
-			.toCharArray();
+		final String stringID = String
+				.valueOf(Utils.computeSignature(aCPPFunction));
+		final char[] id = stringID.replaceAll("const ", "")
+				.replaceAll(", \\.\\.\\.", "").replaceAll(" CPPMETHOD", "")
+				.replaceAll("/", "US").replaceAll("#", "NUM").toCharArray();
 
 		final char[] name;
 		try {
-			name =
-				Utils.getSimpleName(aCPPFunction.getQualifiedNameCharArray());
+			name = Utils
+					.getSimpleName(aCPPFunction.getQualifiedNameCharArray());
 		}
 		catch (final DOMException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
@@ -313,13 +300,11 @@ class GeneratorHelper {
 		if (container.doesContainConstituentWithID(id)) {
 			// Ugly duplication with similar code at the
 			// end of this method... TODO Remove duplication
-			final IOperation padlFunction =
-				(IOperation) container.getConstituentFromID(id);
+			final IOperation padlFunction = (IOperation) container
+					.getConstituentFromID(id);
 			if (container instanceof IFirstClassEntity) {
-				anAccumulator.addFunction(
-					aCPPFunction,
-					(IFirstClassEntity) container,
-					padlFunction);
+				anAccumulator.addFunction(aCPPFunction,
+						(IFirstClassEntity) container, padlFunction);
 			}
 			else {
 				anAccumulator.addFunction(aCPPFunction, null, padlFunction);
@@ -328,144 +313,119 @@ class GeneratorHelper {
 		}
 
 		final char[] returnTypeName = Utils
-			.getInterestingTypeName(aCPPFunction.getType().getReturnType())
-			.toCharArray();
+				.getInterestingTypeName(aCPPFunction.getType().getReturnType())
+				.toCharArray();
 
 		final IOperation padlFunction;
 		// Yann 2013/06/27: Method vs. Function
 		// Right now, I only build methods (constructor, destructor, and method)
 		// when the enclosing first-class entity exists, else I built a function.
 		if (aCPPFunction instanceof ICPPConstructor) {
-			padlFunction =
-				((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-					.createConstructor(id, name);
+			padlFunction = ((ICPPFactoryEclipse) CPPFactoryEclipse
+					.getInstance()).createConstructor(id, name);
 			Utils.setVisibility(padlFunction, (ICPPMember) aCPPFunction);
 		}
 		else if (aCPPFunction instanceof ICPPMethod
 				&& ((ICPPMethod) aCPPFunction).isDestructor()) {
 
-			padlFunction =
-				((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-					.createDestructor(id, name);
+			padlFunction = ((ICPPFactoryEclipse) CPPFactoryEclipse
+					.getInstance()).createDestructor(id, name);
 			Utils.setVisibility(padlFunction, (ICPPMember) aCPPFunction);
 		}
 		else if (aCPPFunction instanceof ICPPMethod) {
-			padlFunction =
-				((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-					.createMethod(id, name);
+			padlFunction = ((ICPPFactoryEclipse) CPPFactoryEclipse
+					.getInstance()).createMethod(id, name);
 			// Create the return type if it does not exist.
-			final IEntity returnTypeEntity =
-				SearchHelper.getExistingContainerOrCreateGhost(
-					this.codeLevelModel,
-					someContainers,
-					returnTypeName,
-					false);
+			final IEntity returnTypeEntity = SearchHelper
+					.getExistingContainerOrCreateGhost(this.codeLevelModel,
+							someContainers, returnTypeName, false);
 			((IMethod) padlFunction).setReturnType(returnTypeEntity.getName());
 			Utils.setVisibility(padlFunction, (ICPPMember) aCPPFunction);
 		}
 		else if (aCPPFunction instanceof ICPPFunction) {
 			// Global function
-			padlFunction =
-				((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-					.createGlobalFunction(id, name);
+			padlFunction = ((ICPPFactoryEclipse) CPPFactoryEclipse
+					.getInstance()).createGlobalFunction(id, name);
 			((IGlobalFunction) padlFunction).setReturnType(returnTypeName);
+
+			padlFunction.setStatic(aCPPFunction.isStatic());
+
+			if (container instanceof IFirstClassEntity) {
+				anAccumulator.addFunction(aCPPFunction,
+						(IFirstClassEntity) container, padlFunction);
+			}
+			else {
+				anAccumulator.addFunction(aCPPFunction, null, padlFunction);
+			}
+
+			// Yann 2014/0417: Anti-patterns!
+			// I need to set the lines of code of the methods
+			// to allow the identification of some anti-patterns
+			// like LongMethod and SpaghettiCode. This seems the
+			// best place to do so :-)
+			Utils.addStatementsToFunction(aBodyStatement, padlFunction);
+
+			container.addConstituent(padlFunction);
 		}
 		else {
 			padlFunction = null;
-			Utils.reportUnknownType(
-				GeneratorHelper.class,
-				"operation",
-				id,
-				aCPPFunction.getClass());
+			Utils.reportUnknownType(GeneratorHelper.class, "operation", id,
+					aCPPFunction.getClass());
 		}
-
-		padlFunction.setStatic(aCPPFunction.isStatic());
-
-		if (container instanceof IFirstClassEntity) {
-			anAccumulator.addFunction(
-				aCPPFunction,
-				(IFirstClassEntity) container,
-				padlFunction);
-		}
-		else {
-			anAccumulator.addFunction(aCPPFunction, null, padlFunction);
-		}
-
-		// Yann 2014/0417: Anti-patterns!
-		// I need to set the lines of code of the methods
-		// to allow the identification of some anti-patterns
-		// like LongMethod and SpaghettiCode. This seems the
-		// best place to do so :-)
-		Utils.addStatementsToFunction(aBodyStatement, padlFunction);
-
-		container.addConstituent(padlFunction);
 	}
-	void addMemberToClass(
-		final Accumulator anAccumulator,
-		final ICPPClassType aCPPClassType,
-		final IFirstClassEntity aFirstClassEntity) {
+
+	void addMemberToClass(final Accumulator anAccumulator,
+			final ICPPClassType aCPPClassType,
+			final IFirstClassEntity aFirstClassEntity) {
 
 		final Stack<IContainer> temporaryStack = new Stack<IContainer>();
 		temporaryStack.push(aFirstClassEntity);
-		this.addEntityToModelOrMemberToClass(
-			anAccumulator,
-			aCPPClassType,
-			temporaryStack);
+		this.addEntityToModelOrMemberToClass(anAccumulator, aCPPClassType,
+				temporaryStack);
 	}
-	void addMethodToClass(
-		final Accumulator anAccumulator,
-		final ICPPMethod aMethod,
-		final IASTStatement aBodyStatement,
-		final IFirstClassEntity aFirstClassEntity) {
+
+	void addMethodToClass(final Accumulator anAccumulator,
+			final ICPPMethod aMethod, final IASTStatement aBodyStatement,
+			final IFirstClassEntity aFirstClassEntity) {
 
 		final Stack<IContainer> temporaryStack = new Stack<IContainer>();
 		temporaryStack.push(aFirstClassEntity);
-		this.addFunctionToModelOrMethodToClass(
-			anAccumulator,
-			aMethod,
-			aBodyStatement,
-			temporaryStack);
+		this.addFunctionToModelOrMethodToClass(anAccumulator, aMethod,
+				aBodyStatement, temporaryStack);
 	}
-	void addParameterToOperation(
-		final Accumulator anAccumulator,
-		final ICPPParameter aCPPParameter,
-		final IOperation aPADLOperation) {
+
+	void addParameterToOperation(final Accumulator anAccumulator,
+			final ICPPParameter aCPPParameter,
+			final IOperation aPADLOperation) {
 
 		try {
 			final IType parameterType = aCPPParameter.getType();
-			final IType realParameterType =
-				Utils.getInterestingType(parameterType);
-			final IEntity parameterEntity =
-				SearchHelper.getExistingContainerOrCreateGhost(
-					this.codeLevelModel,
-					anAccumulator,
-					realParameterType);
+			final IType realParameterType = Utils
+					.getInterestingType(parameterType);
+			final IEntity parameterEntity = SearchHelper
+					.getExistingContainerOrCreateGhost(this.codeLevelModel,
+							anAccumulator, realParameterType);
 
 			if (parameterEntity != null) {
-				final String parameterTypeName =
-					parameterType.toString().replaceAll("const ", "");
+				final String parameterTypeName = parameterType.toString()
+						.replaceAll("const ", "");
 				final char[] parameterName = aCPPParameter.getNameCharArray();
 				final int cardinality = Utils.getCardinality(aCPPParameter);
 
 				final IParameter padlParameter;
 				final int indexOfSpace;
 				if ((indexOfSpace = parameterTypeName.indexOf(' ')) > -1) {
-					final char[] parameterQualification =
-						parameterTypeName.substring(indexOfSpace).toCharArray();
-					padlParameter =
-						((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-							.createParameter(
-								parameterEntity,
-								parameterName,
-								parameterQualification,
-								cardinality);
+					final char[] parameterQualification = parameterTypeName
+							.substring(indexOfSpace).toCharArray();
+					padlParameter = ((ICPPFactoryEclipse) CPPFactoryEclipse
+							.getInstance()).createParameter(parameterEntity,
+									parameterName, parameterQualification,
+									cardinality);
 				}
 				else {
-					padlParameter =
-						CPPFactoryEclipse.getInstance().createParameter(
-							parameterEntity,
-							parameterName,
-							cardinality);
+					padlParameter = CPPFactoryEclipse.getInstance()
+							.createParameter(parameterEntity, parameterName,
+									cardinality);
 				}
 
 				aPADLOperation.addConstituent(padlParameter);
@@ -486,16 +446,17 @@ class GeneratorHelper {
 			// case indeed!
 		}
 	}
-	private void addVariableToModel(
-		final ICPPVariable aCPPVariable,
-		final ICodeLevelModel aCodeLevelModel,
-		Stack<IContainer> someContainers) throws DOMException {
+
+	private void addVariableToModel(final ICPPVariable aCPPVariable,
+			final ICodeLevelModel aCodeLevelModel,
+			Stack<IContainer> someContainers) throws DOMException {
 
 		this.addVariableToModelOrFieldToClass(aCPPVariable, someContainers);
 	}
+
 	private void addVariableToModelOrFieldToClass(
-		final ICPPVariable aCPPVariable,
-		final Stack<IContainer> someContainers) {
+			final ICPPVariable aCPPVariable,
+			final Stack<IContainer> someContainers) {
 
 		final IContainer container = someContainers.peek();
 
@@ -507,20 +468,16 @@ class GeneratorHelper {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 			throw new RuntimeException(e);
 		}
-		final String fieldTypeName =
-			Utils.getInterestingTypeName(aCPPVariable.getType());
+		final String fieldTypeName = Utils
+				.getInterestingTypeName(aCPPVariable.getType());
 		final String fieldName = qualifiedNameRow[qualifiedNameRow.length - 1];
 		final String id = fieldTypeName + '.' + fieldName;
-		final IEntity fieldTypeEntity =
-			SearchHelper.getExistingContainerOrCreateGhost(
-				this.codeLevelModel,
-				someContainers,
-				fieldTypeName,
-				false);
+		final IEntity fieldTypeEntity = SearchHelper
+				.getExistingContainerOrCreateGhost(this.codeLevelModel,
+						someContainers, fieldTypeName, false);
 
-		if (Arrays.equals(
-			((IConstituent) container).getName(),
-			fieldName.toCharArray())) {
+		if (Arrays.equals(((IConstituent) container).getName(),
+				fieldName.toCharArray())) {
 
 			// It is possible but really I don't understand why:
 			// see Chrome/browser/render_widget_host_hwnd.h:class RenderWidgetHostHWND
@@ -534,44 +491,37 @@ class GeneratorHelper {
 				&& !(container instanceof IPackage)) {
 
 			field = ((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-				.createField(
-					id.toCharArray(),
-					fieldName.toCharArray(),
-					fieldTypeEntity.getName(),
-					cardinality);
+					.createField(id.toCharArray(), fieldName.toCharArray(),
+							fieldTypeEntity.getName(), cardinality);
 			Utils.setVisibility(field, (ICPPMember) aCPPVariable);
 		}
 		else if (aCPPVariable instanceof ICPPVariable
 				|| container instanceof IPackage) {
 
 			field = ((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-				.createGlobalField(
-					id.toCharArray(),
-					fieldName.toCharArray(),
-					fieldTypeEntity.getName(),
-					cardinality);
+					.createGlobalField(id.toCharArray(),
+							fieldName.toCharArray(), fieldTypeEntity.getName(),
+							cardinality);
 		}
 
 		Utils.setConst(field, aCPPVariable);
 		container.addConstituent(field);
 	}
-	void convertDeclaration(
-		final Accumulator anAccumulator,
-		final IASTDeclSpecifier aDeclaration,
-		final Stack<IContainer> someContainers) throws DOMException {
+
+	void convertDeclaration(final Accumulator anAccumulator,
+			final IASTDeclSpecifier aDeclaration,
+			final Stack<IContainer> someContainers) throws DOMException {
 
 		final IBinding binding;
 
 		// Get the binding
 		if (aDeclaration instanceof ICPPASTCompositeTypeSpecifier) {
-			final ICPPASTCompositeTypeSpecifier compositeTypeSpecifier =
-				(ICPPASTCompositeTypeSpecifier) aDeclaration;
+			final ICPPASTCompositeTypeSpecifier compositeTypeSpecifier = (ICPPASTCompositeTypeSpecifier) aDeclaration;
 			binding = compositeTypeSpecifier.getName().resolveBinding();
 		}
 		else if (aDeclaration instanceof ICPPASTEnumerationSpecifier) {
-			binding = ((ICPPASTEnumerationSpecifier) aDeclaration)
-				.getName()
-				.resolveBinding();
+			binding = ((ICPPASTEnumerationSpecifier) aDeclaration).getName()
+					.resolveBinding();
 		}
 		else if (aDeclaration instanceof ICPPASTNamedTypeSpecifier) {
 			// This seems to the the case of "friend class VCFilter;"
@@ -603,11 +553,8 @@ class GeneratorHelper {
 			binding = null;
 		}
 		else {
-			Utils.reportUnknownType(
-				GeneratorHelper.class,
-				"specifier",
-				aDeclaration.getRawSignature(),
-				aDeclaration.getClass());
+			Utils.reportUnknownType(GeneratorHelper.class, "specifier",
+					aDeclaration.getRawSignature(), aDeclaration.getClass());
 			binding = null;
 		}
 
@@ -618,32 +565,23 @@ class GeneratorHelper {
 			}
 			else {
 				final ICPPClassType classType = (ICPPClassType) binding;
-				this.addEntityToModel(
-					anAccumulator,
-					classType,
-					this.codeLevelModel,
-					someContainers);
+				this.addEntityToModel(anAccumulator, classType,
+						this.codeLevelModel, someContainers);
 			}
 		}
 		else if (binding instanceof ICPPFunction) {
 			// TODO This is from a declaration, not a definition, necessary?
 			// http://stackoverflow.com/a/1410632/2256758
 			final ICPPFunction function = (ICPPFunction) binding;
-			final IASTStatement body =
-				Utils.getBody(this.astTranslationUnits, function);
-			this.addFunctionToModel(
-				anAccumulator,
-				function,
-				body,
-				this.codeLevelModel,
-				someContainers);
+			final IASTStatement body = Utils.getBody(this.astTranslationUnits,
+					function);
+			this.addFunctionToModel(anAccumulator, function, body,
+					this.codeLevelModel, someContainers);
 		}
 		else if (binding instanceof ICPPField) {
 			// Do nothing.
-			this.addVariableToModel(
-				(ICPPVariable) binding,
-				this.codeLevelModel,
-				someContainers);
+			this.addVariableToModel((ICPPVariable) binding, this.codeLevelModel,
+					someContainers);
 		}
 		else if (binding instanceof ITypedef) {
 			// Do nothing.
@@ -652,32 +590,26 @@ class GeneratorHelper {
 			// Do nothing.
 		}
 		else if (binding instanceof ICPPEnumeration) {
-			this.addEnumerationToModel(
-				(ICPPEnumeration) binding,
-				someContainers);
+			this.addEnumerationToModel((ICPPEnumeration) binding,
+					someContainers);
 		}
 		else if (binding instanceof IProblemBinding) {
 			// Do nothing.
 		}
 		else if (binding != null) {
-			Utils.reportUnknownType(
-				GeneratorHelper.class,
-				"binding",
-				aDeclaration.getRawSignature(),
-				aDeclaration.getClass());
+			Utils.reportUnknownType(GeneratorHelper.class, "binding",
+					aDeclaration.getRawSignature(), aDeclaration.getClass());
 		}
 	}
-	void convertDeclaration(
-		final Accumulator anAccumulator,
-		final IASTFunctionCallExpression aDeclaration,
-		final Stack<IContainer> someContainers) throws DOMException {
+
+	void convertDeclaration(final Accumulator anAccumulator,
+			final IASTFunctionCallExpression aDeclaration,
+			final Stack<IContainer> someContainers) throws DOMException {
 
 		// First, deal with the calling operation.
-		final IOperation callingOperation =
-			SearchHelper.getExistingOperationOrCreateGhost(
-				this.codeLevelModel,
-				anAccumulator,
-				aDeclaration);
+		final IOperation callingOperation = SearchHelper
+				.getExistingOperationOrCreateGhost(this.codeLevelModel,
+						anAccumulator, aDeclaration);
 		if (callingOperation == null) {
 			// It is possible that the call is "outside" of any function
 			// in the case of the initialisation of a variable as in:
@@ -691,24 +623,22 @@ class GeneratorHelper {
 		final IOperation calledOperation;
 		final IFirstClassEntity targetEntity;
 		{
-			final IASTExpression calledFunctionNameExpression =
-				aDeclaration.getFunctionNameExpression();
+			final IASTExpression calledFunctionNameExpression = aDeclaration
+					.getFunctionNameExpression();
 			final IASTName calledFunctionName;
 			if (calledFunctionNameExpression instanceof ICPPASTFieldReference) {
-				calledFunctionName =
-					((ICPPASTFieldReference) calledFunctionNameExpression)
+				calledFunctionName = ((ICPPASTFieldReference) calledFunctionNameExpression)
 						.getFieldName();
 			}
 			else if (calledFunctionNameExpression instanceof IASTIdExpression) {
-				calledFunctionName =
-					((IASTIdExpression) calledFunctionNameExpression).getName();
+				calledFunctionName = ((IASTIdExpression) calledFunctionNameExpression)
+						.getName();
 			}
 			else {
-				Utils.reportUnknownType(
-					GeneratorHelper.class,
-					"function-name expression",
-					calledFunctionNameExpression.getRawSignature(),
-					calledFunctionNameExpression.getClass());
+				Utils.reportUnknownType(GeneratorHelper.class,
+						"function-name expression",
+						calledFunctionNameExpression.getRawSignature(),
+						calledFunctionNameExpression.getClass());
 				return;
 			}
 
@@ -719,12 +649,12 @@ class GeneratorHelper {
 				return;
 			}
 			else if (calledFunction instanceof ICPPFunction) {
-				calledFunctionNameName =
-					((ICPPFunction) calledFunction).getNameCharArray();
-				calledOperation =
-					anAccumulator.getOperation((ICPPFunction) calledFunction);
+				calledFunctionNameName = ((ICPPFunction) calledFunction)
+						.getNameCharArray();
+				calledOperation = anAccumulator
+						.getOperation((ICPPFunction) calledFunction);
 				targetEntity = anAccumulator
-					.getFirstClassEntity((ICPPFunction) calledFunction);
+						.getFirstClassEntity((ICPPFunction) calledFunction);
 			}
 			else if (calledFunction instanceof ICPPNamespace) {
 				// Yes, it can happen! For some reason, 
@@ -735,29 +665,27 @@ class GeneratorHelper {
 			}
 			else {
 				if (calledFunctionName instanceof ICPPASTQualifiedName) {
-					calledFunctionNameName = Utils.getQualifiedName(
-						Utils.getQualifiedName(
-							(ICPPASTQualifiedName) calledFunctionName));
+					calledFunctionNameName = Utils
+							.getQualifiedName(Utils.getQualifiedName(
+									(ICPPASTQualifiedName) calledFunctionName));
 				}
 				else {
 					calledFunctionNameName = calledFunctionName.toCharArray();
 				}
 
-				final String pathOfCalledFunction =
-					SearchHelper.getExistingOperationOrCreateGhost(
-						this.codeLevelModel,
-						someContainers,
-						Utils.buildGlobalFunctionID(calledFunctionNameName));
+				final String pathOfCalledFunction = SearchHelper
+						.getExistingOperationOrCreateGhost(this.codeLevelModel,
+								someContainers, Utils.buildGlobalFunctionID(
+										calledFunctionNameName));
 				try {
 					calledOperation = (IOperation) Finder
-						.find(pathOfCalledFunction, this.codeLevelModel);
+							.find(pathOfCalledFunction, this.codeLevelModel);
 					if (calledOperation instanceof IGlobalFunction) {
 						targetEntity = (IFirstClassEntity) calledOperation;
 					}
 					else {
 						targetEntity = (IFirstClassEntity) Finder.findContainer(
-							pathOfCalledFunction,
-							this.codeLevelModel);
+								pathOfCalledFunction, this.codeLevelModel);
 					}
 				}
 				catch (final FormatException e) {
@@ -767,11 +695,8 @@ class GeneratorHelper {
 				}
 			}
 			if (calledOperation == null) {
-				Utils.reportUnknownType(
-					GeneratorHelper.class,
-					"operation",
-					calledFunctionNameName,
-					calledFunction.getClass());
+				Utils.reportUnknownType(GeneratorHelper.class, "operation",
+						calledFunctionNameName, calledFunction.getClass());
 				return;
 			}
 		}
@@ -782,32 +707,26 @@ class GeneratorHelper {
 
 		final int visibility = callingOperation.getVisibility();
 		final int cardinality = Constants.CARDINALITY_ONE;
-		final int type = Utils.getMethodInvocationType(
-			callingOperation,
-			calledOperation,
-			isFromField);
+		final int type = Utils.getMethodInvocationType(callingOperation,
+				calledOperation, isFromField);
 
-		final IMethodInvocation methodInvocation =
-			((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-				.createMethodInvocation(
-					type,
-					cardinality,
-					visibility,
-					targetEntity);
+		final IMethodInvocation methodInvocation = ((ICPPFactoryEclipse) CPPFactoryEclipse
+				.getInstance()).createMethodInvocation(type, cardinality,
+						visibility, targetEntity);
 		methodInvocation.setCalledMethod(calledOperation);
 		callingOperation.addConstituent(methodInvocation);
 	}
-	void convertDeclaration(
-		final Accumulator anAccumulator,
-		final IASTSimpleDeclaration aDeclaration,
-		final Stack<IContainer> someContainers) throws DOMException {
+
+	void convertDeclaration(final Accumulator anAccumulator,
+			final IASTSimpleDeclaration aDeclaration,
+			final Stack<IContainer> someContainers) throws DOMException {
 
 		// Management of global variables only.
 		// Here variables must be declared directly
 		// in a translation unit or inside a namespace.
 		if (!(aDeclaration.getParent() instanceof ICPPASTNamespaceDefinition
 				|| aDeclaration
-					.getParent() instanceof ICPPASTTranslationUnit)) {
+						.getParent() instanceof ICPPASTTranslationUnit)) {
 
 			return;
 		}
@@ -832,10 +751,8 @@ class GeneratorHelper {
 				// I "PROCESS_SKIP" the visit of IASTDeclSpecifier in
 				// VisitorTopLevelDeclarations.visit(IASTDeclSpecifier).
 				try {
-					this.addVariableToModel(
-						(ICPPVariable) declaratorBinding,
-						this.codeLevelModel,
-						someContainers);
+					this.addVariableToModel((ICPPVariable) declaratorBinding,
+							this.codeLevelModel, someContainers);
 				}
 				catch (final ModelDeclarationException e) {
 					// Do nothing: we are facing a variable already added
@@ -854,14 +771,12 @@ class GeneratorHelper {
 				else {
 					cardinality = Constants.CARDINALITY_ONE;
 				}
-				final char[] fieldName =
-					Utils.convertSeparators(declaratorName.toCharArray());
+				final char[] fieldName = Utils
+						.convertSeparators(declaratorName.toCharArray());
 				final char[] fieldTypeName;
 				if (specifier instanceof ICPPASTCompositeTypeSpecifier) {
-					final IBinding binding =
-						((ICPPASTCompositeTypeSpecifier) specifier)
-							.getName()
-							.getBinding();
+					final IBinding binding = ((ICPPASTCompositeTypeSpecifier) specifier)
+							.getName().getBinding();
 					if (binding instanceof ICPPClassType) {
 						// Yann 2013/09/11: Strange code...
 						// I am not comfortable with that piece of code! Even
@@ -875,26 +790,22 @@ class GeneratorHelper {
 						//	final IFirstClassEntity entity =
 						//		anAccumulator
 						//			.getFirstClassEntity((ICPPClassType) binding);
-						final IFirstClassEntity entity =
-							(IFirstClassEntity) SearchHelper
+						final IFirstClassEntity entity = (IFirstClassEntity) SearchHelper
 								.getExistingContainerOrCreateGhost(
-									this.codeLevelModel,
-									anAccumulator,
-									(ICPPClassType) binding);
+										this.codeLevelModel, anAccumulator,
+										(ICPPClassType) binding);
 						fieldTypeName = entity.getID();
 					}
 					else {
-						Utils.reportUnknownType(
-							GeneratorHelper.class,
-							"binding",
-							binding.toString(),
-							binding.getClass());
+						Utils.reportUnknownType(GeneratorHelper.class,
+								"binding", binding.toString(),
+								binding.getClass());
 						fieldTypeName = new char[0];
 					}
 				}
 				else if (specifier instanceof ICPPASTNamedTypeSpecifier) {
-					final IASTName fieldType =
-						((ICPPASTNamedTypeSpecifier) specifier).getName();
+					final IASTName fieldType = ((ICPPASTNamedTypeSpecifier) specifier)
+							.getName();
 					// At this point, I cannot ask the name for its binding,
 					// it would be null, so I know that I must find the
 					// corresponding entity or create a ghost.
@@ -913,11 +824,8 @@ class GeneratorHelper {
 						// Do nothing.
 					}
 					else {
-						Utils.reportUnknownType(
-							GeneratorHelper.class,
-							"name",
-							fieldTypeName,
-							fieldType.getClass());
+						Utils.reportUnknownType(GeneratorHelper.class, "name",
+								fieldTypeName, fieldType.getClass());
 					}
 				}
 				else if (specifier instanceof ICPPASTElaboratedTypeSpecifier) {
@@ -931,44 +839,38 @@ class GeneratorHelper {
 				else if (specifier instanceof ICPPASTSimpleDeclSpecifier) {
 					// Basic type.
 					fieldTypeName = ((IASTSimpleDeclSpecifier) specifier)
-						.getRawSignature()
-						.toCharArray();
+							.getRawSignature().toCharArray();
 				}
 				else if (specifier instanceof ICPPASTLinkageSpecification) {
 					fieldTypeName = Utils.PROBLEM_TYPE.toCharArray();
 				}
 				else {
-					Utils.reportUnknownType(
-						GeneratorHelper.class,
-						"specifier",
-						specifier.getRawSignature(),
-						specifier.getClass());
+					Utils.reportUnknownType(GeneratorHelper.class, "specifier",
+							specifier.getRawSignature(), specifier.getClass());
 					fieldTypeName = Utils.PROBLEM_TYPE.toCharArray();
 				}
 
 				// I remove any qualifier from the type name,
 				// such as static or const.
-				char[] cleanedFieldTypeName = Utils
-					.convertSeparators(Utils.removeQualifiers(fieldTypeName));
+				char[] cleanedFieldTypeName = Utils.convertSeparators(
+						Utils.removeQualifiers(fieldTypeName));
 
 				if (Utils.isQualifiedName(cleanedFieldTypeName)) {
-					final char[][] qualifiedNameOfFieldType =
-						Utils.getQualifiedName(cleanedFieldTypeName);
-					final IEntity fieldTypeEntity =
-						SearchHelper.getExistingContainerOrCreateGhost(
-							this.codeLevelModel,
-							someContainers,
-							qualifiedNameOfFieldType,
-							false);
+					final char[][] qualifiedNameOfFieldType = Utils
+							.getQualifiedName(cleanedFieldTypeName);
+					final IEntity fieldTypeEntity = SearchHelper
+							.getExistingContainerOrCreateGhost(
+									this.codeLevelModel, someContainers,
+									qualifiedNameOfFieldType, false);
 					fieldTypeEntity
-						.setStatic(Utils.isStatic(cleanedFieldTypeName));
+							.setStatic(Utils.isStatic(cleanedFieldTypeName));
 					cleanedFieldTypeName = fieldTypeEntity.getID();
 				}
 
 				final IContainer container;
 				if (Utils.isQualifiedName(fieldName)) {
-					final char[][] qualifiedNameOfEnclosingContainer =
-						Utils.getQualifiedType(fieldName);
+					final char[][] qualifiedNameOfEnclosingContainer = Utils
+							.getQualifiedType(fieldName);
 					// Yann 2014/04/21: Global variable!
 					// Here, I know that I am dealing with a gobal variable,
 					// declared either in a translation unit or in a namespace.
@@ -982,28 +884,23 @@ class GeneratorHelper {
 					//			qualifiedNameOfEnclosingType,
 					//			false);
 					container = SearchHelper
-						.findContainerOrCreateGhostInModelRecursively(
-							this.codeLevelModel,
-							qualifiedNameOfEnclosingContainer,
-							false);
+							.findContainerOrCreateGhostInModelRecursively(
+									this.codeLevelModel,
+									qualifiedNameOfEnclosingContainer, false);
 				}
 				else {
 					container = (IContainer) this.codeLevelModel
-						.getConstituentFromID(Constants.DEFAULT_PACKAGE_ID);
+							.getConstituentFromID(Constants.DEFAULT_PACKAGE_ID);
 				}
 
-				final char[] id =
-					Utils.buildID(cleanedFieldTypeName, fieldName);
+				final char[] id = Utils.buildID(cleanedFieldTypeName,
+						fieldName);
 				if (!container.doesContainConstituentWithID(id)) {
 					// It is possible that the constituent already exists
 					// if its binding existed in the previous phase.
-					final IGlobalField field =
-						((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-							.createGlobalField(
-								id,
-								fieldName,
-								fieldTypeName,
-								cardinality);
+					final IGlobalField field = ((ICPPFactoryEclipse) CPPFactoryEclipse
+							.getInstance()).createGlobalField(id, fieldName,
+									fieldTypeName, cardinality);
 					container.addConstituent(field);
 				}
 
@@ -1045,15 +942,14 @@ class GeneratorHelper {
 			}
 		}
 	}
-	void convertDeclaration(
-		final Accumulator anAccumulator,
-		final ICPPASTFunctionDefinition aDefinition,
-		final Stack<IContainer> someContainers) throws DOMException {
 
-		final ICPPASTFunctionDefinition functionDefinition =
-			(ICPPASTFunctionDefinition) aDefinition;
-		final IBinding binding =
-			functionDefinition.getDeclarator().getName().resolveBinding();
+	void convertDeclaration(final Accumulator anAccumulator,
+			final ICPPASTFunctionDefinition aDefinition,
+			final Stack<IContainer> someContainers) throws DOMException {
+
+		final ICPPASTFunctionDefinition functionDefinition = (ICPPASTFunctionDefinition) aDefinition;
+		final IBinding binding = functionDefinition.getDeclarator().getName()
+				.resolveBinding();
 		if (binding instanceof ICPPFunction) {
 			final IBinding owner = binding.getOwner();
 			if (owner instanceof ICPPClassType) {
@@ -1069,41 +965,34 @@ class GeneratorHelper {
 				// do with the build PADL equivalent anyways...
 			}
 			else {
-				this.addFunctionToModel(
-					anAccumulator,
-					(ICPPFunction) binding,
-					aDefinition.getBody(),
-					this.codeLevelModel,
-					someContainers);
+				this.addFunctionToModel(anAccumulator, (ICPPFunction) binding,
+						aDefinition.getBody(), this.codeLevelModel,
+						someContainers);
 			}
 		}
 		else {
-			Utils.reportUnknownType(
-				GeneratorHelper.class,
-				"function definition",
-				binding.getName(),
-				binding.getClass());
+			Utils.reportUnknownType(GeneratorHelper.class,
+					"function definition", binding.getName(),
+					binding.getClass());
 		}
 	}
-	void convertDeclaration(
-		final Accumulator anAccumulator,
-		final ICPPASTNamespaceDefinition aDeclaration,
-		final Stack<IContainer> someContainers) {
+
+	void convertDeclaration(final Accumulator anAccumulator,
+			final ICPPASTNamespaceDefinition aDeclaration,
+			final Stack<IContainer> someContainers) {
 
 		IContainer container = someContainers.peek();
 		// If the current container is the default package,
 		// I add the new package (if one must be created)
 		// into the code-level model.
-		if (container.equals(
-			this.codeLevelModel
+		if (container.equals(this.codeLevelModel
 				.getConstituentFromID(Constants.DEFAULT_PACKAGE_ID))) {
 
 			container = this.codeLevelModel;
 		}
 
 		final IBinding binding = ((ICPPASTNamespaceDefinition) aDeclaration)
-			.getName()
-			.resolveBinding();
+				.getName().resolveBinding();
 		final String namespaceName = binding.getName();
 		final char[] id;
 		if (StringUtils.EMPTY.equals(namespaceName)) {
@@ -1119,22 +1008,21 @@ class GeneratorHelper {
 		// already exists, do nothing, just reuse the one
 		// created the first time.
 		if (container.doesContainConstituentWithID(id)) {
-			final IContainer existingPackage =
-				(IContainer) container.getConstituentFromID(id);
+			final IContainer existingPackage = (IContainer) container
+					.getConstituentFromID(id);
 			someContainers.push(existingPackage);
 			return;
 		}
 
-		final IPackage newPackage =
-			((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-				.createPackage(id);
+		final IPackage newPackage = ((ICPPFactoryEclipse) CPPFactoryEclipse
+				.getInstance()).createPackage(id);
 		container.addConstituent(newPackage);
 		someContainers.push(newPackage);
 	}
-	void convertDeclaration(
-		final Accumulator accumulator,
-		final ICPPASTUsingDeclaration aDeclaration,
-		final Stack<IContainer> someContainers) {
+
+	void convertDeclaration(final Accumulator accumulator,
+			final ICPPASTUsingDeclaration aDeclaration,
+			final Stack<IContainer> someContainers) {
 
 		// Examples: using ::f;  
 		//           using A::g;
@@ -1146,28 +1034,28 @@ class GeneratorHelper {
 		//	- namespace::type:innertype::...
 		// WTF is C++?
 	}
-	void convertDeclaration(
-		final Accumulator accumulator,
-		final ICPPASTUsingDirective aDeclaration,
-		final Stack<IContainer> someContainers) {
+
+	void convertDeclaration(final Accumulator accumulator,
+			final ICPPASTUsingDirective aDeclaration,
+			final Stack<IContainer> someContainers) {
 
 		// Example: using namespace std;
 		// Here, I am sure that the name (even
 		// qualified), is the name of a package.
 		IContainer container = this.codeLevelModel;
-		final char[][] names = Utils
-			.getQualifiedName(aDeclaration.getQualifiedName().toCharArray());
+		final char[][] names = Utils.getQualifiedName(
+				aDeclaration.getQualifiedName().toCharArray());
 		for (int i = 0; i < names.length; i++) {
 			final char[] name = names[i];
 			char[] id = name;
 			if (i > 0) {
-				id = ArrayUtils
-					.addAll(ArrayUtils.add(id, Utils.SEPARATOR), name);
+				id = ArrayUtils.addAll(ArrayUtils.add(id, Utils.SEPARATOR),
+						name);
 			}
 			if (!container.doesContainConstituentWithID(id)) {
 				container.addConstituent(
-					((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
-						.createPackageGhost(id));
+						((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
+								.createPackageGhost(id));
 			}
 			container = (IContainer) container.getConstituentFromName(name);
 		}

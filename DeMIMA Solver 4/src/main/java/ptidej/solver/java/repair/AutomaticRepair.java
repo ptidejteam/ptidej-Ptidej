@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
-import util.io.ProxyConsole;
 import choco.AbstractConstraint;
 import choco.ContradictionException;
 import choco.integer.IntVar;
@@ -29,6 +28,7 @@ import ptidej.solver.java.Branching;
 import ptidej.solver.java.Constraint;
 import ptidej.solver.java.Problem;
 import ptidej.solver.java.Solver;
+import util.io.ProxyConsole;
 
 /**
  * Writen in CLAIRE by
@@ -48,11 +48,11 @@ public class AutomaticRepair extends MemoryRepair {
 	}
 
 	public ArrayList[] ptidejSelectDecisionToUndo(
-		final Explanation anExplanation) throws PalmContradiction {
+			final Explanation anExplanation) throws PalmContradiction {
 
 		if (this.jPtidejBranching == null) {
-			this.jPtidejBranching =
-				((Solver) this.getManager()).getNextBranching();
+			this.jPtidejBranching = ((Solver) this.getManager())
+					.getNextBranching();
 		}
 
 		final ArrayList[] results = { new ArrayList(), new ArrayList() };
@@ -64,18 +64,16 @@ public class AutomaticRepair extends MemoryRepair {
 		// I compute the best constraint to be changed
 		// in a smarter way... Taking care of dealing
 		// with assignations first...
-		final ArrayList overConstrainingConstraints =
-			new ArrayList(anExplanation.toSet());
-		Collections.sort(
-			overConstrainingConstraints,
-			new BetterConstraintComparator());
+		final ArrayList overConstrainingConstraints = new ArrayList(
+				anExplanation.toSet());
+		Collections.sort(overConstrainingConstraints,
+				new BetterConstraintComparator());
 		AbstractConstraint newBestConstraint = null;
 		final Iterator iterator = overConstrainingConstraints.iterator();
 		while (iterator.hasNext() && newBestConstraint == null) {
 			final AbstractConstraint ct = (AbstractConstraint) iterator.next();
-			if (!(ct instanceof Constraint)
-					|| (ct instanceof Constraint && ((Constraint) ct)
-						.getNextConstraint() != null)) {
+			if (!(ct instanceof Constraint) || (ct instanceof Constraint
+					&& ((Constraint) ct).getNextConstraint() != null)) {
 
 				newBestConstraint = ct;
 			}
@@ -84,8 +82,8 @@ public class AutomaticRepair extends MemoryRepair {
 		// with a next weaker one, I then grab the first
 		// one to be there...
 		if (newBestConstraint == null) {
-			newBestConstraint =
-				(AbstractConstraint) overConstrainingConstraints.get(0);
+			newBestConstraint = (AbstractConstraint) overConstrainingConstraints
+					.get(0);
 		}
 
 		//	final AbstractConstraint oldBestConstraint =
@@ -99,8 +97,8 @@ public class AutomaticRepair extends MemoryRepair {
 
 		final AbstractConstraint constraint = newBestConstraint;
 		// If the weight of the constconstraintraint is 0, I just relax it.
-		PalmConstraintPlugin plug =
-			(PalmConstraintPlugin) constraint.getPlugIn();
+		PalmConstraintPlugin plug = (PalmConstraintPlugin) constraint
+				.getPlugIn();
 		if (plug.getWeight() == 0) {
 			results[0].add(constraint);
 		}
@@ -130,10 +128,9 @@ public class AutomaticRepair extends MemoryRepair {
 				plug = (PalmConstraintPlugin) constraint.getPlugIn();
 				if (plug.getWeight() < this.getProblem().getMaxRelaxLevel()) {
 
-					final Constraint currentConstraint =
-						(Constraint) constraint;
-					final String nextConstraint =
-						currentConstraint.getNextConstraint();
+					final Constraint currentConstraint = (Constraint) constraint;
+					final String nextConstraint = currentConstraint
+							.getNextConstraint();
 					if (nextConstraint != null) {
 						// I instantiate the next constraint using reflection.
 						final ArrayList args = new ArrayList();
@@ -145,53 +142,51 @@ public class AutomaticRepair extends MemoryRepair {
 						args.add(Integer.valueOf(plug.getWeight()));
 						args.add(currentConstraint.getApproximations());
 
-						final Class nClass =
-							currentConstraint
+						final Class nClass = currentConstraint
 								.getNextConstraintConstructor(nextConstraint);
-						final Constructor[] constructors =
-							nClass.getConstructors();
+						final Constructor[] constructors = nClass
+								.getConstructors();
 						final Constructor constr = constructors[0];
 						Constraint nextCt = null;
 						try {
-							nextCt =
-								(Constraint) constr.newInstance(args.toArray());
+							nextCt = (Constraint) constr
+									.newInstance(args.toArray());
 						}
 						catch (IllegalArgumentException e) {
-							e.printStackTrace(ProxyConsole
-								.getInstance()
-								.errorOutput());
+							e.printStackTrace(
+									ProxyConsole.getInstance().errorOutput());
 						}
 						catch (InstantiationException e) {
-							e.printStackTrace(ProxyConsole
-								.getInstance()
-								.errorOutput());
+							e.printStackTrace(
+									ProxyConsole.getInstance().errorOutput());
 						}
 						catch (IllegalAccessException e) {
-							e.printStackTrace(ProxyConsole
-								.getInstance()
-								.errorOutput());
+							e.printStackTrace(
+									ProxyConsole.getInstance().errorOutput());
 						}
 						catch (InvocationTargetException e) {
-							e.printStackTrace(ProxyConsole
-								.getInstance()
-								.errorOutput());
+							e.printStackTrace(
+									ProxyConsole.getInstance().errorOutput());
 						}
-						((PalmConstraintPlugin) nextCt.getPlugIn())
-							.setWeight(plug.getWeight());
 
-						message.append("# Removed constraint: ");
-						message.append(currentConstraint.getSymbol());
-						message.append(": ");
-						message.append(currentConstraint.getName());
-						message
-							.append("\n# Constraint replaced with this weaker constraint:\n#\t");
-						message.append(nextCt.getSymbol());
-						message.append(": ");
-						message.append(nextCt.getName());
-						message.append('\n');
+						if (nextCt != null) {
+							((PalmConstraintPlugin) nextCt.getPlugIn())
+									.setWeight(plug.getWeight());
 
-						results[0].add(constraint);
-						results[1].add(nextCt);
+							message.append("# Removed constraint: ");
+							message.append(currentConstraint.getSymbol());
+							message.append(": ");
+							message.append(currentConstraint.getName());
+							message.append(
+									"\n# Constraint replaced with this weaker constraint:\n#\t");
+							message.append(nextCt.getSymbol());
+							message.append(": ");
+							message.append(nextCt.getName());
+							message.append('\n');
+
+							results[0].add(constraint);
+							results[1].add(nextCt);
+						}
 					}
 
 					xCommand.append(currentConstraint.getXCommand());
@@ -220,18 +215,16 @@ public class AutomaticRepair extends MemoryRepair {
 			// the constraint of max weight. 
 
 			if (removedConstraints.size() > 0) {
-				Collections.sort(
-					removedConstraints,
-					new BetterConstraintComparator());
+				Collections.sort(removedConstraints,
+						new BetterConstraintComparator());
 				// Constraints led to contradictions.
 				// I only add to the user-relaxed constraint list those constraints
 				// that are defined by the user (weight > 0).
-				plug =
-					(PalmConstraintPlugin) ((AbstractConstraint) removedConstraints
+				plug = (PalmConstraintPlugin) ((AbstractConstraint) removedConstraints
 						.get(0)).getPlugIn();
 				if (plug.getWeight() > 0) {
-					results[1].add((AbstractConstraint) removedConstraints
-						.get(0));
+					results[1].add(
+							(AbstractConstraint) removedConstraints.get(0));
 					removedConstraints.remove(0);
 				}
 			}
@@ -240,8 +233,8 @@ public class AutomaticRepair extends MemoryRepair {
 		// The search stops if no constraint was 
 		// withdrawn or added to the current problem.
 		if (results[0].size() == 0 && results[1].size() == 0) {
-			final PalmEngine pe =
-				(PalmEngine) this.getProblem().getPropagationEngine();
+			final PalmEngine pe = (PalmEngine) this.getProblem()
+					.getPropagationEngine();
 			try {
 				pe.raiseSystemContradiction();
 			}

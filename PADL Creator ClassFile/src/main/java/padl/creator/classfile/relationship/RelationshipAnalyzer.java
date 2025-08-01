@@ -496,7 +496,9 @@ public class RelationshipAnalyzer {
 					// The idea is to remember if a static array is
 					// used just before an instance method invocation,
 					// then a dedicated IMetodInvocation is created.
-					if (foundArrayStaticOrNot && foundArrayLoad) {
+					if (foundArrayStaticOrNot && foundArrayLoad
+							&& foundFieldStaticOrNot != null) {
+
 						methodInvocation = new ExtendedMethodInvocation(
 								this.codeLevelModel.getFactory(), currentEntity,
 								currentMethod,

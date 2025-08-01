@@ -16,7 +16,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import util.io.ProxyConsole;
 import choco.ContradictionException;
 import choco.integer.IntVar;
 import choco.palm.explain.PalmConstraintPlugin;
@@ -30,6 +29,7 @@ import ptidej.solver.java.Variable;
 import ptidej.solver.java.approximation.DefaultNoApproximations;
 import ptidej.solver.java.approximation.IApproximations;
 import ptidej.solver.java.domain.Entity;
+import util.io.ProxyConsole;
 
 /**
  * Writen in CLAIRE by
@@ -39,8 +39,8 @@ import ptidej.solver.java.domain.Entity;
  * @author Salim Bensemmane
  * @author Fayeal Skhiri
  */
-public abstract class BinaryCounterConstraint extends
-		AbstractPalmLargeIntConstraint implements Constraint {
+public abstract class BinaryCounterConstraint
+		extends AbstractPalmLargeIntConstraint implements Constraint {
 	public static Set getTheList(Entity e, String fieldName) {
 		//allReachableSuperEntities
 
@@ -50,23 +50,24 @@ public abstract class BinaryCounterConstraint extends
 		Set list = null;
 		try {
 			method = aClass.getMethod(methodeName, (Class[]) null);
-
-			//										
 		}
 		catch (final Exception e1) {
 			e1.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
-		try {
-			list = (Set) method.invoke(e, (Object[]) null);
-		}
-		catch (final IllegalArgumentException e2) {
-			e2.printStackTrace(ProxyConsole.getInstance().errorOutput());
-		}
-		catch (final IllegalAccessException e2) {
-			e2.printStackTrace(ProxyConsole.getInstance().errorOutput());
-		}
-		catch (final InvocationTargetException e2) {
-			e2.printStackTrace(ProxyConsole.getInstance().errorOutput());
+
+		if (method != null) {
+			try {
+				list = (Set) method.invoke(e, (Object[]) null);
+			}
+			catch (final IllegalArgumentException e2) {
+				e2.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			}
+			catch (final IllegalAccessException e2) {
+				e2.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			}
+			catch (final InvocationTargetException e2) {
+				e2.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			}
 		}
 
 		return list;
@@ -76,54 +77,61 @@ public abstract class BinaryCounterConstraint extends
 	private String command = null;
 	private String fieldName = null;
 
-	public BinaryCounterConstraint(
-		final int n,
-		final String name,
-		final String command,
-		final Variable v0,
-		final Variable v1,
-		final PalmIntVar counter,
-		final int weight) {
+	public BinaryCounterConstraint(final int n, final String name,
+			final String command, final Variable v0, final Variable v1,
+			final PalmIntVar counter, final int weight) {
 
 		super(n);
 		this.getName();
 		this.command = command;
 		this.vars = new IntVar[] { v0, v1, counter };
 	}
+
 	public void awakeOnRem(int idx, int index_e) {
 		this.propagate();
 	}
+
 	public void awakeOnRestoreVal(int idx, int val)
 			throws ContradictionException {
 		this.propagate();
 	}
+
 	public void doAwake() throws ContradictionException {
 		this.propagate();
 	}
+
 	public IApproximations getApproximations() {
 		return DefaultNoApproximations.getDefaultApproximations();
 	}
+
 	protected String getFieldName() {
 		return this.fieldName;
 	}
+
 	public String getName() {
 		return null;
 	}
+
 	public String getNextConstraint() {
 		return null;
 	}
+
 	public Class getNextConstraintConstructor(String nextConstraint) {
 		return null;
 	}
+
 	public String getSymbol() {
 		return null;
 	}
+
 	public int getWeight() {
 		return 0;
 	}
+
 	public String getXCommand() {
 		return this.command;
 	}
+
 	public boolean isSatisfied() {
 		return false;
 	}
@@ -154,14 +162,12 @@ public abstract class BinaryCounterConstraint extends
 			}
 
 			if (toBeRemoved) {
-				choco.palm.explain.Explanation expl =
-					((Problem) this.getProblem()).makeExplanation();
+				choco.palm.explain.Explanation expl = ((Problem) this
+						.getProblem()).makeExplanation();
 				((PalmConstraintPlugin) this.getPlugIn()).self_explain(expl);
 				((Variable) this.vars[1]).self_explain(PalmIntDomain.DOM, expl);
-				((Variable) this.vars[0]).removeVal(
-					index_e0,
-					this.cIndices[0],
-					expl);
+				((Variable) this.vars[0]).removeVal(index_e0, this.cIndices[0],
+						expl);
 			}
 
 		} //end of cleaning the  v0 domain
@@ -187,31 +193,34 @@ public abstract class BinaryCounterConstraint extends
 			}
 
 			if (toBeRemoved) {
-				choco.palm.explain.Explanation expl =
-					((Problem) this.getProblem()).makeExplanation();
+				choco.palm.explain.Explanation expl = ((Problem) this
+						.getProblem()).makeExplanation();
 				((PalmConstraintPlugin) this.getPlugIn()).self_explain(expl);
 				((Variable) this.vars[0]).self_explain(PalmIntDomain.DOM, expl);
-				((Variable) this.vars[1]).removeVal(
-					index_e1,
-					this.cIndices[1],
-					expl);
+				((Variable) this.vars[1]).removeVal(index_e1, this.cIndices[1],
+						expl);
 			}
 
 		} //end of cleaning the  v1 domain
 
 	}
+
 	protected void setFieldName(String fieldName) {
 		this.fieldName = fieldName;
 	}
+
 	protected void setStrict(boolean flag) {
 
 	}
+
 	protected String setSymbol(String symbol) {
 		return null;
 	}
+
 	public Set whyIsFalse() {
 		return null;
 	}
+
 	public Set whyIsTrue() {
 		return null;
 	}

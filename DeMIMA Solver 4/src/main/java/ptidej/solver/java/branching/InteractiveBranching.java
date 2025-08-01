@@ -15,8 +15,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
-import util.io.ProxyConsole;
-import util.multilingual.MultilingualManager;
 import choco.ContradictionException;
 import choco.integer.IntVar;
 import choco.integer.var.IntDomain;
@@ -27,6 +25,8 @@ import choco.util.IntIterator;
 import ptidej.solver.java.Branching;
 import ptidej.solver.java.Problem;
 import ptidej.solver.java.Variable;
+import util.io.ProxyConsole;
+import util.multilingual.MultilingualManager;
 
 /**
  * Writen in CLAIRE by
@@ -45,19 +45,17 @@ public class InteractiveBranching extends Branching {
 		String outputText = "";
 
 		this.setSolutionNumber(this.getSolutionNumber() + 1);
-		System.out.print(MultilingualManager.getString(
-			"SOL",
-			InteractiveBranching.class,
-			new Object[] { Integer.valueOf(this.getSolutionNumber()) }));
+		System.out.print(MultilingualManager.getString("SOL",
+				InteractiveBranching.class,
+				new Object[] { Integer.valueOf(this.getSolutionNumber()) }));
 
 		IntVar[] vars = pb.getVars();
 		for (int i = 0; i < vars.length; ++i) {
 			IntVar var = vars[i];
 			if (var.isInstantiated()) {
 
-				outputText =
-					outputText + "\t" + var.toString() + " = "
-							+ allEntities.get(var.getValue()).toString() + "  ";
+				outputText = outputText + "\t" + var.toString() + " = "
+						+ allEntities.get(var.getValue()).toString() + "  ";
 			}
 			else {
 				int nbROTW = 0;
@@ -66,10 +64,9 @@ public class InteractiveBranching extends Branching {
 				while (itr.hasNext()) {
 					int value = itr.next();
 					nbROTW = nbROTW++;
-					outputText =
-						outputText + "\t" + var.toString() + "-" + nbROTW
-								+ " = " + allEntities.get(value).toString()
-								+ "\n";
+					outputText = outputText + "\t" + var.toString() + "-"
+							+ nbROTW + " = " + allEntities.get(value).toString()
+							+ "\n";
 				}
 
 			}
@@ -77,11 +74,10 @@ public class InteractiveBranching extends Branching {
 		}
 
 		System.out.println(outputText + "\n");
-		System.out.println(MultilingualManager.getString(
-			"ANOTHER_SOL",
-			InteractiveBranching.class));
-		BufferedReader keyBoard =
-			new BufferedReader(new InputStreamReader(System.in));
+		System.out.println(MultilingualManager.getString("ANOTHER_SOL",
+				InteractiveBranching.class));
+		BufferedReader keyBoard = new BufferedReader(
+				new InputStreamReader(System.in));
 		String choix = null;
 		try {
 			choix = keyBoard.readLine();
@@ -90,7 +86,7 @@ public class InteractiveBranching extends Branching {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 
-		if (choix.equals("n")) {
+		if (choix != null && choix.equals("n")) {
 			try {
 				pe.raiseSystemContradiction();
 			}

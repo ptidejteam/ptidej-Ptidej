@@ -442,15 +442,17 @@ public final class OccurrenceBuilder {
 				(IFirstClassEntity) listOfInheritedEntities.next();
 
 			// No more superclass or the superclass
-			// exists in the pattern model.
+			// exists in the pattern model or it's
+			// a Ghost.
 			if (superclass == null || this.belongsTo(superclass, aMotifModel)
 					|| superclass instanceof IGhost) {
 
 				// Yann 2014/05/09: Cloning is perfect!
 				// Seriously, I should not add the inherited entity
 				// if it has already been added thanks to the cloning.
-				if (firstClassEntity.getInheritedEntityFromID(superclass
-					.getID()) != null) {
+				if (superclass != null && 
+					firstClassEntity.getInheritedEntityFromID(
+							superclass.getID()) != null) {
 
 					return null;
 				}

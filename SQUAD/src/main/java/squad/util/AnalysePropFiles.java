@@ -19,6 +19,7 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.TreeSet;
 import java.util.Vector;
+
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
@@ -33,6 +34,7 @@ import org.apache.lucene.search.Query;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.store.LockObtainFailedException;
+
 import util.io.ProxyDisk;
 
 @SuppressWarnings("unused")
@@ -80,12 +82,11 @@ public class AnalysePropFiles {
 				//					.indexFileOrDirectory("D:/Documents/Workspace/Defects evolution/Eclipse JDT/jdtclasses-"
 				//							+ version + "/blob.probs");
 				if (!(version.equals("J_1_0_1") || version.equals("J_2_9_0")
-						|| version.equals("J_2_9_1") || version
-					.equals("J_1_1_0"))) {
-					MergeChangesAndProbs(
-						dirName,
-						"D:/Documents/Workspace/Defects evolution/Xerces-"
-								+ version);
+						|| version.equals("J_2_9_1")
+						|| version.equals("J_1_1_0"))) {
+					MergeChangesAndProbs(dirName,
+							"D:/Documents/Workspace/Defects evolution/Xerces-"
+									+ version);
 				}
 			}
 		}
@@ -124,11 +125,8 @@ public class AnalysePropFiles {
 
 				String[] ucharFields = line.split(",", 3);
 
-				doc.add(new Field(
-					"Entity",
-					ucharFields[0],
-					Field.Store.COMPRESS,
-					Field.Index.TOKENIZED));
+				doc.add(new Field("Entity", ucharFields[0],
+						Field.Store.COMPRESS, Field.Index.TOKENIZED));
 
 				// now i extract probabilities from the second field
 				String substring1 = "TRUE=";
@@ -138,28 +136,21 @@ public class AnalysePropFiles {
 
 				int begin1 = ucharFields[2].indexOf(substring1);
 				int end1 = ucharFields[2].indexOf(substring2);
-				String ProbTrue =
-					ucharFields[2]
+				String ProbTrue = ucharFields[2]
 						.substring(begin1 + substring1.length(), end1);
 
 				int begin2 = ucharFields[1].indexOf(substring3);
-				String ProbFalse =
-					ucharFields[1].substring(begin2 + substring3.length());
+				String ProbFalse = ucharFields[1]
+						.substring(begin2 + substring3.length());
 				//				System.out.println("Name:" + ucharFields[0]);
 				//				System.out.println("Prop true:" + ProbTrue);
 				//				System.out.println("Prop false:" + ProbFalse);
 
-				doc.add(new Field(
-					"PropTrue",
-					ProbTrue,
-					Field.Store.COMPRESS,
-					Field.Index.TOKENIZED));
+				doc.add(new Field("PropTrue", ProbTrue, Field.Store.COMPRESS,
+						Field.Index.TOKENIZED));
 
-				doc.add(new Field(
-					"PropFalse",
-					ProbFalse,
-					Field.Store.COMPRESS,
-					Field.Index.TOKENIZED));
+				doc.add(new Field("PropFalse", ProbFalse, Field.Store.COMPRESS,
+						Field.Index.TOKENIZED));
 
 				this.writer.addDocument(doc);
 			}
@@ -171,10 +162,13 @@ public class AnalysePropFiles {
 			System.out.println("Could not add: " + fileName);
 		}
 		finally {
-			fr.close();
+			if (fr != null) {
+				fr.close();
+			}
 		}
 
 	}
+
 	/*
 	 * Merge all the results
 	 * 
@@ -183,10 +177,8 @@ public class AnalysePropFiles {
 			throws FileNotFoundException, CorruptIndexException, IOException {
 		final Analyzer analyser = new StandardAnalyzer();
 		final Vector<String> versions = new Vector<String>();
-		final Writer out =
-			ProxyDisk.getInstance().fileTempOutput(
-				"Analysis/Blobs_all.csv",
-				false);
+		final Writer out = ProxyDisk.getInstance()
+				.fileTempOutput("Analysis/Blobs_all.csv", false);
 		String header = "Entity";
 		final File pathFile = new File(dirName);
 		final String[] subPaths = pathFile.list();
@@ -197,8 +189,8 @@ public class AnalysePropFiles {
 
 			if (file.isDirectory() && (begin != -1)) {
 				//System.out.println(fileName);	
-				header =
-					header + "," + fileName.substring(begin + "-".length());
+				header = header + ","
+						+ fileName.substring(begin + "-".length());
 				versions.addElement(fileName.substring(begin + "-".length()));
 			}
 		}
@@ -226,8 +218,7 @@ public class AnalysePropFiles {
 					//							"D:/Documents/Workspace/Defects evolution/Xerces-"
 					//									+ fileName.substring(begin + "-".length())
 					//									+ "/blob.probs"));
-					fr =
-						new LineNumberReader(new FileReader(
+					fr = new LineNumberReader(new FileReader(
 							"D:/Documents/Workspace/Defects evolution/Eclipse JDT/jdtclasses-"
 									+ fileName.substring(begin + "-".length())
 									+ "/blob.probs"));
@@ -249,14 +240,14 @@ public class AnalysePropFiles {
 								//										.getDirectory("D:/Documents/Workspace/Defects evolution/Analysis/index"
 								//												+ (String) versions
 								//													.elementAt(j) + ".dat");
-								final Directory index =
-									FSDirectory
-										.getDirectory("D:/Documents/Workspace/Defects evolution/Eclipse JDT/Analysis/index"
-												+ (String) versions
-													.elementAt(j) + ".dat");
+								final Directory index = FSDirectory
+										.getDirectory(
+												"D:/Documents/Workspace/Defects evolution/Eclipse JDT/Analysis/index"
+														+ (String) versions
+																.elementAt(j)
+														+ ".dat");
 
-								Query q =
-									new QueryParser("Entity", analyser)
+								Query q = new QueryParser("Entity", analyser)
 										.parse(ucharFields[0]);
 
 								IndexSearcher s = new IndexSearcher(index);
@@ -267,7 +258,7 @@ public class AnalysePropFiles {
 
 									res = res + ","
 
-									+ " N/C";
+											+ " N/C";
 
 								}
 								else {
@@ -282,11 +273,11 @@ public class AnalysePropFiles {
 									}
 								}
 
-							}//end for all the versions 
+							} //end for all the versions 
 							out.write(res + '\n');
 							out.flush();
 
-						}// end of the if test on ClassSet
+						} // end of the if test on ClassSet
 
 					}
 
@@ -295,7 +286,9 @@ public class AnalysePropFiles {
 					e.printStackTrace();
 				}
 				finally {
-					fr.close();
+					if (fr != null) {
+						fr.close();
+					}
 				}
 			}
 		}
@@ -336,28 +329,24 @@ public class AnalysePropFiles {
 			FileVer = ProbRepName.substring(begin + "-".length());
 		}
 
-		String[] LoCalVers =
-			new String[] {
-					(String) (versions.elementAt(versions.indexOf(FileVer) - 1)),
-					FileVer };
+		String[] LoCalVers = new String[] {
+				(String) (versions.elementAt(versions.indexOf(FileVer) - 1)),
+				FileVer };
 
-		final Writer out =
-			ProxyDisk.getInstance().fileTempOutput(
-				"Changes and Blobs/BlobsProb_" + FileVer + ".csv",
-				false);
+		final Writer out = ProxyDisk.getInstance().fileTempOutput(
+				"Changes and Blobs/BlobsProb_" + FileVer + ".csv", false);
 		// I transformed the versions to fit the one of Stephane's files....
 
-		String TrsfrdVer0 =
-			(LoCalVers[0].substring(LoCalVers[0].indexOf("J_") + "J_".length()))
+		String TrsfrdVer0 = (LoCalVers[0]
+				.substring(LoCalVers[0].indexOf("J_") + "J_".length()))
 				.replace('_', '.');
-		String TrsfrdVer1 =
-			(LoCalVers[1].substring(LoCalVers[1].indexOf("J_") + "J_".length()))
+		String TrsfrdVer1 = (LoCalVers[1]
+				.substring(LoCalVers[1].indexOf("J_") + "J_".length()))
 				.replace('_', '.');
 
 		//System.out.println(TrsfrdVer0+ "-" + TrsfrdVer1);
 
-		DataFileTableModel changes =
-			new DataFileTableModel(
+		DataFileTableModel changes = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/Xerces-class-struct-evol/class-evolution-"
 						+ TrsfrdVer0 + "-" + TrsfrdVer1 + ".csv");
 		for (int i = 0; i < changes.getColumnCount(); i++) {
@@ -379,14 +368,12 @@ public class AnalysePropFiles {
 			}
 
 			for (int j = 0; j < LoCalVers.length; j++) {
-				final Directory index =
-					FSDirectory
-						.getDirectory("D:/Documents/Workspace/Defects evolution/Analysis/index"
+				final Directory index = FSDirectory.getDirectory(
+						"D:/Documents/Workspace/Defects evolution/Analysis/index"
 								+ LoCalVers[j] + ".dat");
 
-				Query q =
-					new QueryParser("Entity", analyser).parse((String) changes
-						.getValueAt(r, 0));
+				Query q = new QueryParser("Entity", analyser)
+						.parse((String) changes.getValueAt(r, 0));
 
 				IndexSearcher s = new IndexSearcher(index);
 
@@ -396,7 +383,7 @@ public class AnalysePropFiles {
 
 					resLine = resLine
 
-					+ " N/C,";
+							+ " N/C,";
 
 				}
 				else {
@@ -407,11 +394,11 @@ public class AnalysePropFiles {
 					}
 				}
 
-			}//end of the two versions 
+			} //end of the two versions 
 			out.write(resLine + '\n');
 			out.flush();
 
-		}// end of the table
+		} // end of the table
 
 		out.close();
 

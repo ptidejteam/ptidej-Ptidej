@@ -15,6 +15,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.LineNumberReader;
 import java.util.ArrayList;
+
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -75,47 +76,23 @@ public class CsvFileIndexer {
 
 				String[] ucharFields = line.split(",", 8);
 
-				doc.add(new Field(
-					"number",
-					ucharFields[0],
-					Field.Store.COMPRESS,
-					Field.Index.TOKENIZED));
-				doc.add(new Field(
-					"version1",
-					ucharFields[1],
-					Field.Store.COMPRESS,
-					Field.Index.TOKENIZED));
-				doc.add(new Field(
-					"version2",
-					ucharFields[2],
-					Field.Store.COMPRESS,
-					Field.Index.TOKENIZED));
-				doc.add(new Field(
-					"filename",
-					ucharFields[3],
-					Field.Store.COMPRESS,
-					Field.Index.TOKENIZED));
-				doc.add(new Field(
-					"time",
-					ucharFields[4],
-					Field.Store.COMPRESS,
-					Field.Index.TOKENIZED));
-				doc.add(new Field(
-					"author",
-					ucharFields[5],
-					Field.Store.COMPRESS,
-					Field.Index.TOKENIZED));
-				doc.add(new Field(
-					"type",
-					ucharFields[6],
-					Field.Store.COMPRESS,
-					Field.Index.TOKENIZED));
+				doc.add(new Field("number", ucharFields[0],
+						Field.Store.COMPRESS, Field.Index.TOKENIZED));
+				doc.add(new Field("version1", ucharFields[1],
+						Field.Store.COMPRESS, Field.Index.TOKENIZED));
+				doc.add(new Field("version2", ucharFields[2],
+						Field.Store.COMPRESS, Field.Index.TOKENIZED));
+				doc.add(new Field("filename", ucharFields[3],
+						Field.Store.COMPRESS, Field.Index.TOKENIZED));
+				doc.add(new Field("time", ucharFields[4], Field.Store.COMPRESS,
+						Field.Index.TOKENIZED));
+				doc.add(new Field("author", ucharFields[5],
+						Field.Store.COMPRESS, Field.Index.TOKENIZED));
+				doc.add(new Field("type", ucharFields[6], Field.Store.COMPRESS,
+						Field.Index.TOKENIZED));
 
-				doc.add(new Field(
-					"id",
-					ucharFields[7],
-					Field.Store.COMPRESS,
-					Field.Index.TOKENIZED));
+				doc.add(new Field("id", ucharFields[7], Field.Store.COMPRESS,
+						Field.Index.TOKENIZED));
 
 				this.writer.addDocument(doc);
 			}
@@ -127,8 +104,9 @@ public class CsvFileIndexer {
 			System.out.println("Could not add: " + fileName);
 		}
 		finally {
-			fr.close();
+			if (fr != null) {
+				fr.close();
+			}
 		}
-
 	}
 }

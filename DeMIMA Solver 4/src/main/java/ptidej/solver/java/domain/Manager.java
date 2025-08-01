@@ -228,35 +228,40 @@ public class Manager {
 				}
 				catch (final NoSuchMethodException e) {
 				}
-				try {
-					// Yann 2007/08/31: isAbstract & Co.
-					// I now manage the case of the boolean fields.
-					name.setLength(0);
-					name.append(fieldName);
 
-					getter = Entity.class.getMethod(name.toString(),
-							new Class[0]);
+				if (getter == null) {
+					try {
+						// Yann 2007/08/31: isAbstract & Co.
+						// I now manage the case of the boolean fields.
+						name.setLength(0);
+						name.append(fieldName);
 
-				}
-				catch (final SecurityException e) {
-				}
-				catch (final NoSuchMethodException e) {
+						getter = Entity.class.getMethod(name.toString(),
+								new Class[0]);
+
+					}
+					catch (final SecurityException e) {
+					}
+					catch (final NoSuchMethodException e) {
+					}
 				}
 
-				try {
-					value.setLength(0);
-					value.append(
-							getter.invoke(listOfEntities.get(i), new Object[0])
-									.toString());
-				}
-				catch (final IllegalArgumentException e) {
-					e.printStackTrace();
-				}
-				catch (final IllegalAccessException e) {
-					e.printStackTrace();
-				}
-				catch (final InvocationTargetException e) {
-					e.printStackTrace();
+				if (getter != null) {
+					try {
+						value.setLength(0);
+						value.append(getter
+								.invoke(listOfEntities.get(i), new Object[0])
+								.toString());
+					}
+					catch (final IllegalArgumentException e) {
+						e.printStackTrace();
+					}
+					catch (final IllegalAccessException e) {
+						e.printStackTrace();
+					}
+					catch (final InvocationTargetException e) {
+						e.printStackTrace();
+					}
 				}
 
 				properties.put(key.toString(), value.toString());

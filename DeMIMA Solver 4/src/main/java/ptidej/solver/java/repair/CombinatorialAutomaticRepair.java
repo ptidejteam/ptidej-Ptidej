@@ -15,7 +15,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import util.io.ProxyConsole;
 import choco.AbstractConstraint;
 import choco.ContradictionException;
 import choco.integer.IntVar;
@@ -28,6 +27,7 @@ import ptidej.solver.java.Branching;
 import ptidej.solver.java.Constraint;
 import ptidej.solver.java.Problem;
 import ptidej.solver.java.Solver;
+import util.io.ProxyConsole;
 
 /**
  * Writen in CLAIRE by
@@ -46,10 +46,8 @@ public class CombinatorialAutomaticRepair extends MemoryRepair {
 			throws PalmContradiction {
 
 		final ArrayList[] re = { new ArrayList(), new ArrayList() };
-		final AbstractConstraint ct =
-			(AbstractConstraint) Collections.min(
-				explanation.toSet(),
-				new BetterConstraintComparator());
+		final AbstractConstraint ct = (AbstractConstraint) Collections
+				.min(explanation.toSet(), new BetterConstraintComparator());
 		final int weight = ((PalmConstraintPlugin) ct.getPlugIn()).getWeight();
 
 		// For now, I suppose that nextContraint is a string.
@@ -69,8 +67,8 @@ public class CombinatorialAutomaticRepair extends MemoryRepair {
 				// [0] Removing: ~S (~S) // ct, getSymbol(ct.thisConstraint),
 				re[0].add(ct);
 
-				final Branching nextBranching =
-					((Solver) this.getManager()).getNextBranching();
+				final Branching nextBranching = ((Solver) this.getManager())
+						.getNextBranching();
 				String message = nextBranching.getMessage();
 				int percentage = nextBranching.getWeight();
 
@@ -92,15 +90,14 @@ public class CombinatorialAutomaticRepair extends MemoryRepair {
 				args.add(((Constraint) ct).getApproximations());
 
 				// I instantiate the next constraint using reflection.
-				final Class nClass =
-					((Constraint) ct)
+				final Class nClass = ((Constraint) ct)
 						.getNextConstraintConstructor(nextConstraint);
 				final Constructor[] constructors = nClass.getConstructors();
 				final Constructor constr = constructors[0];
 				AbstractConstraint nextCt = null;
 				try {
-					nextCt =
-						(AbstractConstraint) constr.newInstance(args.toArray());
+					nextCt = (AbstractConstraint) constr
+							.newInstance(args.toArray());
 				}
 				catch (IllegalArgumentException e) {
 					e.printStackTrace(ProxyConsole.getInstance().errorOutput());
@@ -115,34 +112,28 @@ public class CombinatorialAutomaticRepair extends MemoryRepair {
 					e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 				}
 
-				message =
-					message
-							+ "# Solution without constraint:\n#\t"
-							+ ((Constraint) ct).getSymbol()
-							+ ": "
-							+ name
+				if (nextCt != null) {
+					message = message + "# Solution without constraint:\n#\t"
+							+ ((Constraint) ct).getSymbol() + ": " + name
 							+ "\n# Constraint replaced with this weaker constraint:\n#\t"
 							+ ((Constraint) nextCt).getSymbol() + ": "
 							+ nextName + '\n';
 
-				nextBranching.setMessage(message);
-				nextBranching.setWeight(percentage);
+					nextBranching.setMessage(message);
+					nextBranching.setWeight(percentage);
 
-				//				System.out.println(
-				//					"---- \nTrying weaker constraint\n" + message);
-
-				// I post the next constraint.
-				re[1].add(nextCt);
+					// I post the next constraint.
+					re[1].add(nextCt);
+				}
 			}
 			else {
-				final Branching nextBranching =
-					((Solver) this.getManager()).getNextBranching();
+				final Branching nextBranching = ((Solver) this.getManager())
+						.getNextBranching();
 				String message = nextBranching.getMessage();
-				message =
-					message + "# Solution without constraint:\n#\t"
-							+ ((Constraint) ct).getSymbol() + ": "
-							+ ((Constraint) ct).getName()
-							+ "\n# No more weaker constraint to try.\n";
+				message = message + "# Solution without constraint:\n#\t"
+						+ ((Constraint) ct).getSymbol() + ": "
+						+ ((Constraint) ct).getName()
+						+ "\n# No more weaker constraint to try.\n";
 				nextBranching.setMessage(message);
 
 				re[0].add(ct);
@@ -154,8 +145,8 @@ public class CombinatorialAutomaticRepair extends MemoryRepair {
 		}
 
 		if (re[0].size() == 0 && re[1].size() == 0) {
-			final PalmEngine pe =
-				(PalmEngine) (this.getProblem()).getPropagationEngine();
+			final PalmEngine pe = (PalmEngine) (this.getProblem())
+					.getPropagationEngine();
 			try {
 				pe.raiseSystemContradiction();
 			}

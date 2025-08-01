@@ -24,6 +24,7 @@ import java.util.TreeSet;
 import java.util.Vector;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.index.CorruptIndexException;
@@ -34,6 +35,7 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IEntity;
@@ -86,13 +88,12 @@ public class PrintSystemClasses {
 		//		csvoutput(index, args[0], fileName, destFile, classNamesFile, path);
 
 		String path = "rsc/Yann-DECOR/DataBases";
-		final Directory index =
-			FSDirectory.getDirectory(path + "/index" + args[0] + ".dat");
-		String fileName =
-			"rsc/Yann-DECOR/DataBases/Results of Azureus.v" + args[0] + ".csv";
-		String destFile =
-			"rsc/Yann-DECOR/Results/TotalResults of Azureus.v" + args[0]
-					+ ".csv";
+		final Directory index = FSDirectory
+				.getDirectory(path + "/index" + args[0] + ".dat");
+		String fileName = "rsc/Yann-DECOR/DataBases/Results of Azureus.v"
+				+ args[0] + ".csv";
+		String destFile = "rsc/Yann-DECOR/Results/TotalResults of Azureus.v"
+				+ args[0] + ".csv";
 
 		String classNamesFile = "rsc/Yann-DECOR/Classes/ClassNamesAzureus.csv";
 
@@ -105,13 +106,9 @@ public class PrintSystemClasses {
 	 * This method prints csv files for each version of a system while taking into account its history
 	 */
 
-	public static void csvoutput(
-		Directory index,
-		String version,
-		String fileName,
-		String destFile,
-		String classNamesFile,
-		String path) throws IOException, ParseException {
+	public static void csvoutput(Directory index, String version,
+			String fileName, String destFile, String classNamesFile,
+			String path) throws IOException, ParseException {
 		LineNumberReader fr = null;
 		try {
 
@@ -123,8 +120,8 @@ public class PrintSystemClasses {
 				locFields.add(st1.nextToken());
 
 			Object[] eltFields = getColumNames(path);
-			final Writer out =
-				ProxyDisk.getInstance().fileTempOutput(destFile, false);
+			final Writer out = ProxyDisk.getInstance().fileTempOutput(destFile,
+					false);
 
 			out.write("Class");
 			out.flush();
@@ -160,10 +157,8 @@ public class PrintSystemClasses {
 
 							if (locFields.contains(eltFields[j])) {
 
-								tab[j] =
-									tab[j]
-											+ Integer.parseInt((hits.doc(k)
-												.get((String) eltFields[j]))
+								tab[j] = tab[j] + Integer.parseInt(
+										(hits.doc(k).get((String) eltFields[j]))
 												.trim());
 							}
 							else {
@@ -206,21 +201,17 @@ public class PrintSystemClasses {
 			System.out.println("Could not append file: " + fileName);
 		}
 		finally {
-			fr.close();
-
+			if (fr != null) {
+				fr.close();
+			}
 		}
-
 	}
 
 	/** This method is for Eclipse, where I analyze the kernel (equinoxe) with plugins one at the time
 	 */
 	@SuppressWarnings("unused")
-	public static void printTotalClasses(
-		String dirName,
-		final String aName,
-		List<String> files,
-		String t,
-		String file) {
+	public static void printTotalClasses(String dirName, final String aName,
+			List<String> files, String t, String file) {
 
 		final CallSmellDetection detection = new CallSmellDetection();
 		TreeSet<?> cls = new TreeSet<Object>();
@@ -250,10 +241,8 @@ public class PrintSystemClasses {
 		if (elsefiles.size() > 0) {
 			for (int i = 0; i < elsefiles.size(); i++) {
 
-				printCodelevelModel(
-					CallSmellDetection.createArrayOfJars(equinoxfiles, elsefiles.get(i)),
-					aName,
-					file);
+				printCodelevelModel(CallSmellDetection.createArrayOfJars(
+						equinoxfiles, elsefiles.get(i)), aName, file);
 				//// printing metrics values
 				//				printCodelevelModelMetrics(detection.createArrayOfJars(
 				//					equinoxfiles,
@@ -264,9 +253,8 @@ public class PrintSystemClasses {
 		}
 		else {
 			printCodelevelModel(
-				CallSmellDetection.createArrayOfJars(equinoxfiles),
-				aName,
-				file);
+					CallSmellDetection.createArrayOfJars(equinoxfiles), aName,
+					file);
 
 			//			// printing metrics values
 			//			printCodelevelModelMetrics(
@@ -284,28 +272,26 @@ public class PrintSystemClasses {
 	 * @param file
 	 */
 
-	public static void printCodelevelModel(
-		final String[] someJARFiles,
-		final String aName,
-		String file) {
+	public static void printCodelevelModel(final String[] someJARFiles,
+			final String aName, String file) {
 		try {
-			ICodeLevelModel codeLevelModel =
-				Factory.getInstance().createCodeLevelModel(aName);
-			codeLevelModel.create(new CompleteClassFileCreator(
-				someJARFiles,
-				true));
+			ICodeLevelModel codeLevelModel = Factory.getInstance()
+					.createCodeLevelModel(aName);
+			codeLevelModel
+					.create(new CompleteClassFileCreator(someJARFiles, true));
 
 			Iterator<?> iter = codeLevelModel.getIteratorOnTopLevelEntities();
 
 			try {
-				final Writer out =
-					ProxyDisk.getInstance().fileTempOutput(file, true);
+				final Writer out = ProxyDisk.getInstance().fileTempOutput(file,
+						true);
 
 				while (iter.hasNext()) {
 
 					IEntity anElement = (IEntity) iter.next();
 
-					if (containsOrgEclipse(anElement.getDisplayName()) == true) {
+					if (containsOrgEclipse(
+							anElement.getDisplayName()) == true) {
 						out.write(anElement.getDisplayName());
 						out.flush();
 						out.write('\n');
@@ -334,17 +320,13 @@ public class PrintSystemClasses {
 	 * @param cls
 	 */
 
-	public static void printCodelevelModelMetrics(
-		final String[] someJARFiles,
-		final String aName,
-		String file,
-		TreeSet<String> cls) {
-		ICodeLevelModel codeLevelModel =
-			Factory.getInstance().createCodeLevelModel(aName);
+	public static void printCodelevelModelMetrics(final String[] someJARFiles,
+			final String aName, String file, TreeSet<String> cls) {
+		ICodeLevelModel codeLevelModel = Factory.getInstance()
+				.createCodeLevelModel(aName);
 		try {
-			codeLevelModel.create(new CompleteClassFileCreator(
-				someJARFiles,
-				true));
+			codeLevelModel
+					.create(new CompleteClassFileCreator(someJARFiles, true));
 		}
 		catch (final CreationException e) {
 			e.printStackTrace();
@@ -357,13 +339,13 @@ public class PrintSystemClasses {
 			System.err.println("--");
 		}
 		else {
-			final MetricsRepository metricsRepository =
-				MetricsRepository.getInstance();
+			final MetricsRepository metricsRepository = MetricsRepository
+					.getInstance();
 			final StringBuffer output = new StringBuffer();
 
 			{
-				final IUnaryMetric[] metrics =
-					metricsRepository.getUnaryMetrics();
+				final IUnaryMetric[] metrics = metricsRepository
+						.getUnaryMetrics();
 				for (int i = 0; i < metrics.length; i++) {
 					final IUnaryMetric unaryMetric = metrics[i];
 					final String metricName = unaryMetric.getName();
@@ -376,12 +358,12 @@ public class PrintSystemClasses {
 			}
 
 			// Metric Values.
-			final Iterator<?> entityIterator =
-				codeLevelModel.getIteratorOnTopLevelEntities();
+			final Iterator<?> entityIterator = codeLevelModel
+					.getIteratorOnTopLevelEntities();
 
 			while (entityIterator.hasNext()) {
-				final IFirstClassEntity entity =
-					(IFirstClassEntity) entityIterator.next();
+				final IFirstClassEntity entity = (IFirstClassEntity) entityIterator
+						.next();
 
 				if (!(entity instanceof IGhost)
 						&& (containsOrgEclipse(entity.getDisplayName()) == true)
@@ -389,19 +371,17 @@ public class PrintSystemClasses {
 
 					cls.add(entity.getDisplayName());
 
-					final IUnaryMetric[] metrics =
-						metricsRepository.getUnaryMetrics();
+					final IUnaryMetric[] metrics = metricsRepository
+							.getUnaryMetrics();
 					for (int i = 0; i < metrics.length; i++) {
 						final IUnaryMetric metric = metrics[i];
 						final String metricName = metric.getName();
 						System.out.print(metricName);
 						System.out.print(", ");
 						try {
-							final double value =
-								((IUnaryMetric) metricsRepository
-									.getMetric(metricName)).compute(
-									codeLevelModel,
-									entity);
+							final double value = ((IUnaryMetric) metricsRepository
+									.getMetric(metricName))
+									.compute(codeLevelModel, entity);
 							output.append(value);
 						}
 						catch (final Exception e) {
@@ -423,8 +403,8 @@ public class PrintSystemClasses {
 			}
 
 			try {
-				final Writer out =
-					ProxyDisk.getInstance().fileTempOutput(file, true);
+				final Writer out = ProxyDisk.getInstance().fileTempOutput(file,
+						true);
 
 				out.write(output.toString());
 				out.flush();
@@ -449,8 +429,8 @@ public class PrintSystemClasses {
 			throws FileNotFoundException, CorruptIndexException, IOException {
 		List<String> lcls = new ArrayList<String>();
 		try {
-			final LineNumberReader inputFileReader =
-				new LineNumberReader(new FileReader(inputFilePath));
+			final LineNumberReader inputFileReader = new LineNumberReader(
+					new FileReader(inputFilePath));
 			String line = null;
 
 			while ((line = inputFileReader.readLine()) != null) {
@@ -483,8 +463,8 @@ public class PrintSystemClasses {
 	 */
 
 	@SuppressWarnings("unused")
-	private static void indexFiles(String path) throws IOException,
-			ParseException {
+	private static void indexFiles(String path)
+			throws IOException, ParseException {
 
 		final File pathFile = new File(path);
 
@@ -494,9 +474,8 @@ public class PrintSystemClasses {
 
 			if (fileName.endsWith(".csv") == true) {
 
-				ResultsFileIndexer csvindex =
-					new ResultsFileIndexer(path + "/index"
-							+ getFileVersion(fileName) + ".dat");
+				ResultsFileIndexer csvindex = new ResultsFileIndexer(
+						path + "/index" + getFileVersion(fileName) + ".dat");
 				csvindex.indexFileOrDirectory(fileName);
 
 			}
@@ -657,13 +636,13 @@ public class PrintSystemClasses {
 		final String substring2 = ".csv";
 		final int begin = FileName.indexOf(substring1);
 		final int end = FileName.indexOf(substring2);
-		final String aFileVersion =
-			FileName.substring(begin + substring1.length(), end);
+		final String aFileVersion = FileName
+				.substring(begin + substring1.length(), end);
 		return aFileVersion;
 	}
 
-	private static Object[] getColumNames(String path) throws IOException,
-			ParseException {
+	private static Object[] getColumNames(String path)
+			throws IOException, ParseException {
 		LineNumberReader fr = null;
 
 		TreeSet<String> col = new TreeSet<String>();
@@ -677,8 +656,8 @@ public class PrintSystemClasses {
 
 				if (fileName.endsWith(".csv") == true) {
 					fr = new LineNumberReader(new FileReader(fileName));
-					StringTokenizer st1 =
-						new StringTokenizer(fr.readLine(), ",");
+					StringTokenizer st1 = new StringTokenizer(fr.readLine(),
+							",");
 					while (st1.hasMoreTokens())
 						col.add(st1.nextToken());
 
@@ -690,9 +669,10 @@ public class PrintSystemClasses {
 			e.printStackTrace();
 		}
 		finally {
-			fr.close();
+			if (fr != null) {
+				fr.close();
+			}
 		}
-
 		col.remove("Class");
 		return col.toArray();
 	}

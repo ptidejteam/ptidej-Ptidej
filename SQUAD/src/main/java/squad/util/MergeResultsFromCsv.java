@@ -22,6 +22,7 @@ import java.util.TreeSet;
 import java.util.Vector;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.queryParser.ParseException;
 
@@ -32,6 +33,7 @@ public class MergeResultsFromCsv {
 	 */
 	private static Pattern pattern;
 	private static Matcher matcher;
+
 	public static void main(String[] args) throws IOException, ParseException {
 		// TODO Auto-generated method stub
 
@@ -40,8 +42,7 @@ public class MergeResultsFromCsv {
 		indexFiles(path);
 		*/
 		final String t = "org.eclipse(.[a-z]*)+";
-		String path =
-			"D:/Software/Tests Workspace/foutsekh-program-BugDefects/rsc/Bugs/issues/test";
+		String path = "D:/Software/Tests Workspace/foutsekh-program-BugDefects/rsc/Bugs/issues/test";
 
 		printDefectedClasses(path, path, "Eclipse", t);
 
@@ -53,9 +54,9 @@ public class MergeResultsFromCsv {
 		//	.getDirectory("rsc/Results/index0.dat");
 		/*final Analyzer analyser = new StandardAnalyzer();
 		Query q = new QueryParser("class", analyser).parse("org.*");
-
+		
 		IndexSearcher s = new IndexSearcher(index);
-
+		
 		Hits hits = s.search(q);
 		System.out.println("Found " + hits.length() + " hits.");
 		for (int i = 0; i < hits.length(); ++i) {
@@ -70,43 +71,38 @@ public class MergeResultsFromCsv {
 		final String substring2 = ".csv";
 		final int begin = FileName.indexOf(substring1);
 		final int end = FileName.indexOf(substring2);
-		final String aFileVersion =
-			FileName.substring(begin + substring1.length(), end);
+		final String aFileVersion = FileName
+				.substring(begin + substring1.length(), end);
 		return aFileVersion;
 	}
 
 	/*private static void indexFiles(String path) throws IOException,
 		ParseException {
-
+	
 		final File pathFile = new File(path);
-
+	
 		final String[] subPaths = pathFile.list();
 		for (int i = 0; i < subPaths.length; i++) {
 			final String fileName = path + "/" + subPaths[i];
-
+	
 			if (fileName.endsWith(".csv") == true) {
-
+	
 				ResultsFileIndexer csvindex = new ResultsFileIndexer(
 					"rsc/Results/index" + getFileVersion(fileName) + ".dat");
 				csvindex.indexFileOrDirectory(fileName);
-
+	
 			}
 		}
-
+	
 	}
-	*/private static void printDefectedClasses(
-		String path,
-		String outputDir,
-		String progName,
-		String t) throws IOException, ParseException {
+	*/private static void printDefectedClasses(String path, String outputDir,
+			String progName, String t) throws IOException, ParseException {
 
 		TreeSet<String> defectClasses = new TreeSet<String>();
 
 		try {
-			FileOutputStream output =
-				new FileOutputStream(outputDir
-						+ "/TotalNbDefectsBugsPerClasses in" + progName
-						+ ".csv");
+			FileOutputStream output = new FileOutputStream(outputDir
+					+ "/TotalNbDefectsBugsPerClasses in" + progName + ".csv");
 
 			//			if (!output.exists()) {
 			//				output.createNewFile();
@@ -139,11 +135,9 @@ public class MergeResultsFromCsv {
 	 * Print defected classes from a file
 	 * 
 	 */
-	public static void printFile(
-		String fileName,
-		TreeSet<String> defectClasses,
-		String t) throws FileNotFoundException, CorruptIndexException,
-			IOException {
+	public static void printFile(String fileName, TreeSet<String> defectClasses,
+			String t)
+			throws FileNotFoundException, CorruptIndexException, IOException {
 
 		LineNumberReader fr = null;
 		try {
@@ -194,9 +188,9 @@ public class MergeResultsFromCsv {
 			e.printStackTrace();
 		}
 		finally {
-			fr.close();
+			if (fr != null) {
+				fr.close();
+			}
 		}
-
 	}
-
 }

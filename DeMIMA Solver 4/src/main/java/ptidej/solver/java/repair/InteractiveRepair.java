@@ -19,8 +19,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
-import util.io.ProxyConsole;
-import util.multilingual.MultilingualManager;
 import choco.AbstractConstraint;
 import choco.integer.IntVar;
 import choco.palm.explain.Explanation;
@@ -30,6 +28,8 @@ import ptidej.solver.java.Branching;
 import ptidej.solver.java.Constraint;
 import ptidej.solver.java.Problem;
 import ptidej.solver.java.Solver;
+import util.io.ProxyConsole;
+import util.multilingual.MultilingualManager;
 
 /**
  * Writen in CLAIRE by
@@ -49,8 +49,7 @@ public class InteractiveRepair extends MemoryRepair {
 		// and the added constraint on the second.
 		ArrayList[] re = { new ArrayList(), new ArrayList() };
 
-		AbstractConstraint ct =
-			(AbstractConstraint) Collections.min(
+		AbstractConstraint ct = (AbstractConstraint) Collections.min(
 				expl.toSet(),
 				new choco.palm.explain.BetterConstraintComparator());
 		PalmConstraintPlugin plug1 = (PalmConstraintPlugin) ct.getPlugIn();
@@ -70,12 +69,10 @@ public class InteractiveRepair extends MemoryRepair {
 				cts.add((AbstractConstraint) iterator.next());
 			}
 
-			Collections.sort(
-				cts,
-				new choco.palm.explain.BetterConstraintComparator());
-			System.out.print(MultilingualManager.getString(
-				"NO_MORE_SOL",
-				InteractiveRepair.class));
+			Collections.sort(cts,
+					new choco.palm.explain.BetterConstraintComparator());
+			System.out.print(MultilingualManager.getString("NO_MORE_SOL",
+					InteractiveRepair.class));
 			if (cts.size() > 1)
 				System.out.println("s : ");
 			else
@@ -83,30 +80,27 @@ public class InteractiveRepair extends MemoryRepair {
 
 			//we print the listing of the constarints to be removed 
 			for (int i = 0; i < cts.size(); i++) {
-				PalmConstraintPlugin plug2 =
-					(PalmConstraintPlugin) ((AbstractConstraint) cts.get(i))
-						.getPlugIn();
-				System.out.println(i + "  "
-						+ ((Constraint) cts.get(i)).getSymbol() + ":"
-						+ ((Constraint) cts.get(i)).getName() + ' ' + "weight "
-						+ plug2.getWeight());
-				String nextConstraint =
-					((Constraint) cts.get(i)).getNextConstraint();
+				PalmConstraintPlugin plug2 = (PalmConstraintPlugin) ((AbstractConstraint) cts
+						.get(i)).getPlugIn();
+				System.out.println(
+						i + "  " + ((Constraint) cts.get(i)).getSymbol() + ":"
+								+ ((Constraint) cts.get(i)).getName() + ' '
+								+ "weight " + plug2.getWeight());
+				String nextConstraint = ((Constraint) cts.get(i))
+						.getNextConstraint();
 
 				// print the next constraint(if exist) of each constraint of the above listing 
 				if (nextConstraint != null) {
 					System.out.println(MultilingualManager.getString(
-						"TO_BE_REPLACED",
-						InteractiveRepair.class,
-						new Object[] { nextConstraint.substring(25) }));
+							"TO_BE_REPLACED", InteractiveRepair.class,
+							new Object[] { nextConstraint.substring(25) }));
 				}
 			}
-			System.out.println(MultilingualManager.getString(
-				"WHICH_TO_RELAX",
-				InteractiveRepair.class));
+			System.out.println(MultilingualManager.getString("WHICH_TO_RELAX",
+					InteractiveRepair.class));
 
-			BufferedReader keyBoard =
-				new BufferedReader(new InputStreamReader(System.in));
+			BufferedReader keyBoard = new BufferedReader(
+					new InputStreamReader(System.in));
 			int selectC = -1;
 			try {
 				String choix = keyBoard.readLine();
@@ -122,8 +116,8 @@ public class InteractiveRepair extends MemoryRepair {
 				re[0].add(constraint);
 
 				String nextConstraint = constraint.getNextConstraint();
-				Branching nextBranching =
-					((Solver) this.getManager()).getNextBranching();
+				Branching nextBranching = ((Solver) this.getManager())
+						.getNextBranching();
 				int percentage = nextBranching.getWeight();
 				String commande = ((Constraint) constraint).getXCommand();
 				String nom = ((Constraint) constraint).getName();
@@ -138,43 +132,40 @@ public class InteractiveRepair extends MemoryRepair {
 
 				if (nextConstraint != null) {
 					//Instantiation of the next constraint by reflection
-					Class nClass =
-						((Constraint) constraint)
+					Class nClass = ((Constraint) constraint)
 							.getNextConstraintConstructor(nextConstraint);
 					Constructor[] constructeurs = nClass.getConstructors();
 					Constructor constr = constructeurs[0];
 					AbstractConstraint nextConstraintInst = null;
 					try {
-						nextConstraintInst =
-							(AbstractConstraint) constr.newInstance(args
-								.toArray());
+						nextConstraintInst = (AbstractConstraint) constr
+								.newInstance(args.toArray());
 					}
 					catch (IllegalArgumentException e) {
-						e.printStackTrace(ProxyConsole
-							.getInstance()
-							.errorOutput());
+						e.printStackTrace(
+								ProxyConsole.getInstance().errorOutput());
 					}
 					catch (InstantiationException e) {
-						e.printStackTrace(ProxyConsole
-							.getInstance()
-							.errorOutput());
+						e.printStackTrace(
+								ProxyConsole.getInstance().errorOutput());
 					}
 					catch (IllegalAccessException e) {
-						e.printStackTrace(ProxyConsole
-							.getInstance()
-							.errorOutput());
+						e.printStackTrace(
+								ProxyConsole.getInstance().errorOutput());
 					}
 					catch (InvocationTargetException e) {
-						e.printStackTrace(ProxyConsole
-							.getInstance()
-							.errorOutput());
+						e.printStackTrace(
+								ProxyConsole.getInstance().errorOutput());
 					}
-					PalmConstraintPlugin plugX =
-						(PalmConstraintPlugin) constraint.getPlugIn();
-					PalmConstraintPlugin plugY =
-						(PalmConstraintPlugin) nextConstraintInst.getPlugIn();
-					plugY.setWeight(plugX.getWeight());
-					re[1].add(nextConstraintInst);
+
+					if (nextConstraintInst != null) {
+						final PalmConstraintPlugin plugX = (PalmConstraintPlugin) constraint
+								.getPlugIn();
+						final PalmConstraintPlugin plugY = (PalmConstraintPlugin) nextConstraintInst
+								.getPlugIn();
+						plugY.setWeight(plugX.getWeight());
+						re[1].add(nextConstraintInst);
+					}
 				}
 
 			}
@@ -183,48 +174,39 @@ public class InteractiveRepair extends MemoryRepair {
 			//precedement withdrawn to the problem
 
 			if (this.getRemovedConstraints().size() > 0) {
-				Collections.sort(
-					this.getRemovedConstraints(),
-					new choco.palm.explain.BetterConstraintComparator());
+				Collections.sort(this.getRemovedConstraints(),
+						new choco.palm.explain.BetterConstraintComparator());
 				int selectC2 = 0;
 				while (selectC2 != -1
 						&& this.getRemovedConstraints().size() > 0) {
 					System.out.println(MultilingualManager.getString(
-						"CONST_CONTRADICTION",
-						InteractiveRepair.class));
-					for (int i = 0; i < this.getRemovedConstraints().size(); i++) {
-						PalmConstraintPlugin plug3 =
-							(PalmConstraintPlugin) ((AbstractConstraint) this
-								.getRemovedConstraints()
-								.get(i)).getPlugIn();
-						System.out.println(i
-								+ ":"
-								+ ((Constraint) this
-									.getRemovedConstraints()
-									.get(i)).getSymbol()
-								+ ((Constraint) this
-									.getRemovedConstraints()
-									.get(i)).getName() + ' ' + "weight "
-								+ plug3.getWeight());
+							"CONST_CONTRADICTION", InteractiveRepair.class));
+					for (int i = 0; i < this.getRemovedConstraints()
+							.size(); i++) {
+						PalmConstraintPlugin plug3 = (PalmConstraintPlugin) ((AbstractConstraint) this
+								.getRemovedConstraints().get(i)).getPlugIn();
+						System.out.println(i + ":"
+								+ ((Constraint) this.getRemovedConstraints()
+										.get(i)).getSymbol()
+								+ ((Constraint) this.getRemovedConstraints()
+										.get(i)).getName()
+								+ ' ' + "weight " + plug3.getWeight());
 					}
 
 					System.out.println(MultilingualManager.getString(
-						"WHICH_TO_PUT_BACK",
-						InteractiveRepair.class));
+							"WHICH_TO_PUT_BACK", InteractiveRepair.class));
 
 					try {
 						String choix2 = keyBoard.readLine();
 						selectC2 = Integer.parseInt(choix2);
 					}
 					catch (IOException e) {
-						e.printStackTrace(ProxyConsole
-							.getInstance()
-							.errorOutput());
+						e.printStackTrace(
+								ProxyConsole.getInstance().errorOutput());
 					}
 					if (selectC2 != -1) {
-						Constraint addedConstraint =
-							(Constraint) this.getRemovedConstraints().get(
-								selectC2);
+						Constraint addedConstraint = (Constraint) this
+								.getRemovedConstraints().get(selectC2);
 						re[1].add(addedConstraint);
 						this.getRemovedConstraints().remove(selectC2);
 					}

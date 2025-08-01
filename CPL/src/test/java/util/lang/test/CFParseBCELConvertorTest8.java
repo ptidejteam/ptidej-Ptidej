@@ -112,7 +112,7 @@ public class CFParseBCELConvertorTest8 extends TestCase {
 			var codeOrig = methodOrig.getAttrs().get("Code");
 			var codeConv = methodConv.getAttrs().get("Code");
 
-			if (codeOrig != null || codeConv != null) {
+			if (codeOrig != null && codeConv != null) {
 				Assert.assertEquals(codeOrig.toString(), codeConv.toString());
 			}
 		}

@@ -76,7 +76,7 @@ public class AspectCreator implements ICodeLevelModelCreator {
 					"System temp directory unreachable.");
 		}
 
-		if (!lst.exists() || !lst.isFile()) {
+		if (lst == null || !lst.exists() || !lst.isFile()) {
 			throw new AspectCreationException("lst file does not exists.");
 		}
 		if (classpath != null) {

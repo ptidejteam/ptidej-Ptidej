@@ -70,37 +70,44 @@ public abstract class BinaryConstraint extends AbstractPalmBinIntConstraint
 				e1.printStackTrace(ProxyConsole.getInstance().errorOutput());
 			}
 
-			try {
-				list = (Set) method.invoke(anEntity, (Object[]) null);
-			}
-			catch (final IllegalArgumentException e2) {
-				e2.printStackTrace(ProxyConsole.getInstance().errorOutput());
-			}
-			catch (final IllegalAccessException e2) {
-				e2.printStackTrace(ProxyConsole.getInstance().errorOutput());
-			}
-			catch (final InvocationTargetException e2) {
-				e2.printStackTrace(ProxyConsole.getInstance().errorOutput());
-			}
+			if (method != null) {
+				try {
+					list = (Set) method.invoke(anEntity, (Object[]) null);
+				}
+				catch (final IllegalArgumentException e2) {
+					e2.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
+				}
+				catch (final IllegalAccessException e2) {
+					e2.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
+				}
+				catch (final InvocationTargetException e2) {
+					e2.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
+				}
 
-			// Yann 2007/02/26: Negation!
-			// I know handle directly negative constraint.
-			// But this implementation is highly inefficient.
-			if (isNegativeConstraint) {
-				final List allEntities = aListOfAllEntities;
-				final Set substractionSet = new HashSet(allEntities);
-				substractionSet.removeAll(list);
-				list = substractionSet;
-			}
+				// Yann 2007/02/26: Negation!
+				// I know handle directly negative constraint.
+				// But this implementation is highly inefficient.
+				if (isNegativeConstraint) {
+					final List allEntities = aListOfAllEntities;
+					final Set substractionSet = new HashSet(allEntities);
+					substractionSet.removeAll(list);
+					list = substractionSet;
+				}
 
-			final Set listOfIndices = new HashSet(list.size());
-			final Iterator iterator = list.iterator();
-			while (iterator.hasNext()) {
-				final Entity entity = (Entity) iterator.next();
-				listOfIndices.add(aListOfAllEntities.indexOf(entity));
-			}
+				if (list != null) {
+					final Set listOfIndices = new HashSet(list.size());
+					final Iterator iterator = list.iterator();
+					while (iterator.hasNext()) {
+						final Entity entity = (Entity) iterator.next();
+						listOfIndices.add(aListOfAllEntities.indexOf(entity));
+					}
 
-			BinaryConstraint.EntityListCache.put(key, listOfIndices);
+					BinaryConstraint.EntityListCache.put(key, listOfIndices);
+				}
+			}
 		}
 
 		final Set list = (Set) BinaryConstraint.EntityListCache.get(key);

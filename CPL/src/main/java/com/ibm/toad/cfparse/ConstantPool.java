@@ -1219,9 +1219,12 @@ public final class ConstantPool {
 			Integer var5 = (Integer) this.d_hashC2i.get(var4);
 			if (var5 == null) {
 				System.out.println("Whoops: " + var4);
+				var3 = -1;
 			}
-
-			var3 = var5;
+			else
+			{
+				var3 = var5;
+			}
 		}
 
 		return var3;
@@ -1235,9 +1238,12 @@ public final class ConstantPool {
 			Integer var6 = (Integer) this.d_hashC2i.get(var5);
 			if (var6 == null) {
 				System.out.println("Whoops: " + var5);
+				var4 = -1;
 			}
-
-			var4 = var6;
+			else
+			{
+				var4 = var6;
+			}
 		}
 
 		return var4;

@@ -7,7 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL Design Motifs"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/SAD Tests"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/SAD"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/PADL Generator"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/POM"/>
@@ -17,6 +16,5 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/CPL"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/DeMIMA"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/DeMIMA Solver 4"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/DeMIMA Solver Tests"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
