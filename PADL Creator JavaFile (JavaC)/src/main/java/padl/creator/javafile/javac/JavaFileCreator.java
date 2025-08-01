@@ -183,8 +183,7 @@ public class JavaFileCreator implements ICodeLevelModelCreator {
 	private void initialise(String aSourcePath, String[] someFilesInThePath) {
 		// From jct.test.common.JCTConstant.OPTIONS
 		this.initialise(
-				Arrays.asList(new String[] { "--enable-preview", "--release",
-						"21", "-classpath",
+				Arrays.asList(new String[] { "-classpath",
 						System.getProperty("java.class.path", ".") + ":"
 								+ aSourcePath,
 						"-d", "tmp/" }),

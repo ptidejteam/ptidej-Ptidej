@@ -34,25 +34,23 @@ public class CFParseBCELConvertorTestVisitor2 extends TestCase {
 	}
 
 	public void testGetAccess() {
-		
 		Assert.assertEquals(this.classFile_CFParse_Original.getAccess(),
 				this.classFile_CFParse_Converted.getAccess());
 	}
 
 	public void testGetAttrs() {
-	
-		Assert.assertEquals(this.classFile_CFParse_Original.getAttrs().toString(),
+		Assert.assertEquals(
+				this.classFile_CFParse_Original.getAttrs().toString(),
 				this.classFile_CFParse_Converted.getAttrs().toString());
 	}
-	
-//	public void testFull() {
-//		
-//		Assert.assertEquals(this.classFile_CFParse_Original.toString(),
-//				this.classFile_CFParse_Converted.toString());
-//	}
+
+	//	public void testFull() {
+	//		
+	//		Assert.assertEquals(this.classFile_CFParse_Original.toString(),
+	//				this.classFile_CFParse_Converted.toString());
+	//	}
+
 	public void testGetMethods() {
-		
-		
 		int fieldCount = this.classFile_CFParse_Original.getMethods().length();
 		for (int i = 0; i < fieldCount; i++) {
 			Assert.assertEquals(
@@ -61,7 +59,7 @@ public class CFParseBCELConvertorTestVisitor2 extends TestCase {
 					this.classFile_CFParse_Converted.getMethods().get(i)
 							.toString());
 		}
-		
+
 	}
 
 	public void testGetFields() {

@@ -129,7 +129,6 @@ import com.sun.source.tree.ProvidesTree;
 import com.sun.source.tree.RequiresTree;
 import com.sun.source.tree.ReturnTree;
 import com.sun.source.tree.StatementTree;
-import com.sun.source.tree.StringTemplateTree;
 import com.sun.source.tree.SwitchExpressionTree;
 import com.sun.source.tree.SwitchTree;
 import com.sun.source.tree.SynchronizedTree;
@@ -1607,12 +1606,6 @@ public class JCTCreatorFromSourceCode
 			aJCTReturn.setReturnedExpression(
 					(IJCTExpression) node.getExpression().accept(this, p));
 		return this.putSourceCodePosition(aJCTReturn, node);
-	}
-
-	@Override
-	public IJCTElement visitStringTemplate(final StringTemplateTree node,
-			final Object p) {
-		return null;
 	}
 
 	@Override

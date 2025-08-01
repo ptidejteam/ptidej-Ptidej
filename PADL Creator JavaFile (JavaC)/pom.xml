@@ -19,46 +19,29 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
-				<configuration>
-					<release combine.self="override" />
-					<!-- Eclipse is creating problems again wrt. Maven.
-					It seem to only supports preview features for the
-					latest JDK, not the current one... -->
-					<source>${maven.compiler.release}</source>
-					<target>${maven.compiler.release}</target>
-					<compilerArgs>
-						<arg>-proc:none</arg>
-						<arg>--enable-preview</arg>
-					</compilerArgs>
-				</configuration>
+				<version>3.14.0</version>
 			</plugin>
 			<!-- Must export/open some hidden package to run PADL Creator
 			JavaFile (JavaC) -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.5</version>
+				<version>3.5.3</version>
 				<configuration>
 					<argLine>
-						--enable-preview
 						--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
 					</argLine>
-					<excludes>
-						<!-- Excluded on purpose -->
-						<exclude>TestCreatorJavaFileUsingJavaC.java</exclude>
-					</excludes>
 				</configuration>
 			</plugin>
 			<!-- Must generate the test-jar for dependent tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.3.0</version>
+				<version>3.4.2</version>
 				<executions>
 					<execution>
 						<goals>
@@ -96,7 +79,7 @@
 			<artifactId>padl-statements</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-
+		
 		<!-- Test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>

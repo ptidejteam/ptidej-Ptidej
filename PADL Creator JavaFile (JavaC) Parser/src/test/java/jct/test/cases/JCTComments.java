@@ -57,7 +57,7 @@ public final class JCTComments extends TestCase {
 
 	public JCTComments(final String name) {
 		super(name);
-		this.srcPath = JCTConstant.TST_PATH + JCTConstant.MISC_DIR;
+		this.srcPath = JCTConstant.REF_PATH + JCTConstant.MISC_DIR;
 		this.tmpDir = JCTConstant.TMP_PATH;
 	}
 

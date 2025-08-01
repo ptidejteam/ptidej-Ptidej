@@ -13,9 +13,9 @@ import org.junit.Assert;
 import com.ibm.toad.cfparse.ClassFile;
 import com.ibm.toad.cfparse.MethodInfo;
 import com.ibm.toad.cfparse.MethodInfoList;
-import com.ibm.toad.cfparse.attributes.BCELUtils;
 
 import junit.framework.TestCase;
+import util.BCELUtils;
 
 /**
  * @author Laurent Voisard
