@@ -25,6 +25,7 @@ At minimum
 - Java 21 and its JDK
 - Maven version 3.9.6
 - Eclipse 2024-03 (4.31.0)
+
 Tested with
 - Java 24 and its JDK
 - Maven version 3.9.9
