@@ -64,7 +64,6 @@ import org.apache.bcel.classfile.MethodParameters;
 import org.apache.bcel.classfile.NestMembers;
 import org.apache.bcel.classfile.ParameterAnnotationEntry;
 import org.apache.bcel.classfile.ParameterAnnotations;
-import org.apache.bcel.classfile.RuntimeInvisibleAnnotations;
 import org.apache.bcel.classfile.Signature;
 import org.apache.bcel.classfile.SourceFile;
 import org.apache.bcel.classfile.StackMap;
@@ -84,7 +83,6 @@ import com.ibm.toad.cfparse.attributes.BootstrapMethodsAttrInfo;
 import com.ibm.toad.cfparse.attributes.CodeAttrInfo;
 import com.ibm.toad.cfparse.attributes.ConstantValueAttrInfo;
 import com.ibm.toad.cfparse.attributes.ExceptionsAttrInfo;
-import com.ibm.toad.cfparse.attributes.InnerClassesAttrInfo;
 import com.ibm.toad.cfparse.attributes.LineNumberAttrInfo;
 import com.ibm.toad.cfparse.attributes.LocalVariableAttrInfo;
 import com.ibm.toad.cfparse.attributes.LocalVariableTypeAttrInfo;
@@ -94,11 +92,11 @@ import com.ibm.toad.cfparse.attributes.SignatureAttrInfo;
 import com.ibm.toad.cfparse.attributes.SourceFileAttrInfo;
 import com.ibm.toad.cfparse.attributes.StackMapTableAttrInfo;
 
-import util.io.ProxyConsole;
-
 /**
  * @author	Yann-Gaël Guéhéneuc
  * @since	2006/07/27
+ * @author	Henrique De Freitas Serra
+ * @since	2025/04/01
  */
 public class CFParseBCELConvertorVisitor {
 	private static class JavaClassVisitor implements Visitor {
@@ -128,53 +126,52 @@ public class CFParseBCELConvertorVisitor {
 
 		@Override
 		public void visitBootstrapMethods(final BootstrapMethods obj) {
-		    final BootstrapMethodsAttrInfo attr =
-		        (BootstrapMethodsAttrInfo) this.currentClass
-		            .getAttrs()
-		            .add("BootstrapMethods");
+			final BootstrapMethodsAttrInfo attr = (BootstrapMethodsAttrInfo) this.currentClass
+					.getAttrs().add("BootstrapMethods");
 
-		    final BootstrapMethod[] bcelMethods = obj.getBootstrapMethods();
-		    
-		    try {
-		        java.io.StringWriter stringWriter = new java.io.StringWriter();
-		        java.io.DataOutputStream dataOutput = new java.io.DataOutputStream(
-		            new util.io.WriterOutputStream(stringWriter));
+			final BootstrapMethod[] bcelMethods = obj.getBootstrapMethods();
 
-		        // Write total length
-		        int byteLength = 2; // u2 num_bootstrap_methods
-		        for (BootstrapMethod bm : bcelMethods) {
-		            byteLength += 4 + 2 * bm.getNumBootstrapArguments();
-		        }
+			try {
+				java.io.StringWriter stringWriter = new java.io.StringWriter();
+				java.io.DataOutputStream dataOutput = new java.io.DataOutputStream(
+						new util.io.WriterOutputStream(stringWriter));
 
-		        dataOutput.writeInt(byteLength);
-		        dataOutput.writeShort(bcelMethods.length);
+				// Write total length
+				int byteLength = 2; // u2 num_bootstrap_methods
+				for (BootstrapMethod bm : bcelMethods) {
+					byteLength += 4 + 2 * bm.getNumBootstrapArguments();
+				}
 
-		        for (BootstrapMethod bm : bcelMethods) {
-		            dataOutput.writeShort(bm.getBootstrapMethodRef());
-		            dataOutput.writeShort(bm.getNumBootstrapArguments());
-		            for (int arg : bm.getBootstrapArguments()) {
-		                dataOutput.writeShort(arg);
-		            }
-		        }
+				dataOutput.writeInt(byteLength);
+				dataOutput.writeShort(bcelMethods.length);
 
-		        dataOutput.close();
+				for (BootstrapMethod bm : bcelMethods) {
+					dataOutput.writeShort(bm.getBootstrapMethodRef());
+					dataOutput.writeShort(bm.getNumBootstrapArguments());
+					for (int arg : bm.getBootstrapArguments()) {
+						dataOutput.writeShort(arg);
+					}
+				}
 
-		        java.io.StringReader stringReader = new java.io.StringReader(stringWriter.toString());
-		        java.io.DataInputStream dataInput = new java.io.DataInputStream(
-		            new util.io.ReaderInputStream(stringReader));
-		        attr.read(dataInput);
-		        dataInput.close();
+				dataOutput.close();
 
-		    } catch (IOException e) {
-		        e.printStackTrace(util.io.ProxyConsole.getInstance().errorOutput());
-		    }
+				java.io.StringReader stringReader = new java.io.StringReader(
+						stringWriter.toString());
+				java.io.DataInputStream dataInput = new java.io.DataInputStream(
+						new util.io.ReaderInputStream(stringReader));
+				attr.read(dataInput);
+				dataInput.close();
+
+			}
+			catch (IOException e) {
+				e.printStackTrace(
+						util.io.ProxyConsole.getInstance().errorOutput());
+			}
 		}
-
-
 
 		@Override
 		public void visitCode(final Code obj) {
-//			
+			//			
 
 		}
 
@@ -308,152 +305,148 @@ public class CFParseBCELConvertorVisitor {
 
 		@Override
 		public void visitDeprecated(final Deprecated obj) {
-		    this.currentClass.getAttrs().add("Deprecated");
+			this.currentClass.getAttrs().add("Deprecated");
 		}
-
 
 		@Override
 		public void visitEnclosingMethod(final EnclosingMethod obj) {
-		    this.currentClass.getAttrs().add("EnclosingMethod");
+			this.currentClass.getAttrs().add("EnclosingMethod");
 		}
 
 		@Override
 		public void visitExceptionTable(final ExceptionTable obj) {
-		    // Do nothing here
+			// Do nothing here
 		}
-
-		
 
 		@Override
 		public void visitField(final Field obj) {
-		    FieldInfo fieldInfo = new FieldInfo(this.currentClass.getCP());
-		    fieldInfo.setAccess(obj.getAccessFlags());
-		
-		    int nameIdx = this.currentClass.getCP().addUtf8( obj.getName());
-		    int descIdx = this.currentClass.getCP().addUtf8(obj.getSignature());
+			FieldInfo fieldInfo = new FieldInfo(this.currentClass.getCP());
+			fieldInfo.setAccess(obj.getAccessFlags());
 
-		    fieldInfo.d_idxName = nameIdx;
-		    fieldInfo.d_idxDescriptor = descIdx;
+			int nameIdx = this.currentClass.getCP().addUtf8(obj.getName());
+			int descIdx = this.currentClass.getCP().addUtf8(obj.getSignature());
 
-		    for (Attribute attribute : obj.getAttributes()) {
-		        if (attribute instanceof ConstantValue constantValue) {
-		            int constValueIndex = constantValue.getConstantValueIndex();
-		            if (constValueIndex != 0) {
-		                Constant value = obj.getConstantPool().getConstant(constValueIndex);
+			fieldInfo.d_idxName = nameIdx;
+			fieldInfo.d_idxDescriptor = descIdx;
 
-		                ConstantValueAttrInfo cvAttr =
-		                    (ConstantValueAttrInfo) fieldInfo.getAttrs().add("ConstantValue");
+			for (Attribute attribute : obj.getAttributes()) {
+				if (attribute instanceof ConstantValue constantValue) {
+					int constValueIndex = constantValue.getConstantValueIndex();
+					if (constValueIndex != 0) {
+						Constant value = obj.getConstantPool()
+								.getConstant(constValueIndex);
 
-		                // ✅ Now directly set the value
-		                switch (value.getTag()) {
-		                    case Const.CONSTANT_Integer -> cvAttr.set(((ConstantInteger) value).getBytes());
-		                    case Const.CONSTANT_Long -> cvAttr.set(((ConstantLong) value).getBytes());
-		                    case Const.CONSTANT_Float -> cvAttr.set(((ConstantFloat) value).getBytes());
-		                    case Const.CONSTANT_Double -> cvAttr.set(((ConstantDouble) value).getBytes());
-		                    case Const.CONSTANT_String -> cvAttr.set(
-		                        ((ConstantString) value).getBytes(obj.getConstantPool())
-		                    );
-		                    default -> throw new RuntimeException("Unsupported ConstantValue type: " + value.getTag());
-		                }
-		            }
-		        }
-		        if (attribute instanceof Signature sigAttrBCEL) {
-		            int sigUtf8Index = this.currentClass.getCP().addUtf8(sigAttrBCEL.getSignature());
+						ConstantValueAttrInfo cvAttr = (ConstantValueAttrInfo) fieldInfo
+								.getAttrs().add("ConstantValue");
 
-		            SignatureAttrInfo sigAttr =
-		                (SignatureAttrInfo) fieldInfo.getAttrs().add("Signature");
+						// ✅ Now directly set the value
+						switch (value.getTag()) {
+						case Const.CONSTANT_Integer ->
+							cvAttr.set(((ConstantInteger) value).getBytes());
+						case Const.CONSTANT_Long ->
+							cvAttr.set(((ConstantLong) value).getBytes());
+						case Const.CONSTANT_Float ->
+							cvAttr.set(((ConstantFloat) value).getBytes());
+						case Const.CONSTANT_Double ->
+							cvAttr.set(((ConstantDouble) value).getBytes());
+						case Const.CONSTANT_String ->
+							cvAttr.set(((ConstantString) value)
+									.getBytes(obj.getConstantPool()));
+						default -> throw new RuntimeException(
+								"Unsupported ConstantValue type: "
+										+ value.getTag());
+						}
+					}
+				}
+				if (attribute instanceof Signature sigAttrBCEL) {
+					int sigUtf8Index = this.currentClass.getCP()
+							.addUtf8(sigAttrBCEL.getSignature());
 
-		            sigAttr.set(sigUtf8Index);
-		        }
+					SignatureAttrInfo sigAttr = (SignatureAttrInfo) fieldInfo
+							.getAttrs().add("Signature");
 
-		        
-		    }
+					sigAttr.set(sigUtf8Index);
+				}
 
-		    this.currentClass.getFields().add(fieldInfo);
+			}
+
+			this.currentClass.getFields().add(fieldInfo);
 
 		}
-
-
-
-
 
 		@Override
 		public void visitInnerClass(final InnerClass obj) {
 			// TODO Auto-generated method stub
 
 		}
-	
+
 		@Override
 		public void visitInnerClasses(final InnerClasses obj) {
-		    final com.ibm.toad.cfparse.attributes.InnerClassesAttrInfo attr =
-		        (com.ibm.toad.cfparse.attributes.InnerClassesAttrInfo) this.currentClass
-		            .getAttrs()
-		            .add("InnerClasses");
+			final com.ibm.toad.cfparse.attributes.InnerClassesAttrInfo attr = (com.ibm.toad.cfparse.attributes.InnerClassesAttrInfo) this.currentClass
+					.getAttrs().add("InnerClasses");
 
-		    final org.apache.bcel.classfile.InnerClass[] bcelInnerClasses = obj.getInnerClasses();
-		    attr.d_numInnerClasses = bcelInnerClasses.length;
-		    attr.d_innerClasses = new int[bcelInnerClasses.length * 4];
+			final org.apache.bcel.classfile.InnerClass[] bcelInnerClasses = obj
+					.getInnerClasses();
+			attr.d_numInnerClasses = bcelInnerClasses.length;
+			attr.d_innerClasses = new int[bcelInnerClasses.length * 4];
 
-		    for (int i = 0; i < bcelInnerClasses.length; i++) {
-		        final org.apache.bcel.classfile.InnerClass ic = bcelInnerClasses[i];
-		        
-		        // Re-add constants into CFParse ConstantPool
-		        int innerClassIdx = 0;
-		        if (ic.getInnerClassIndex() != 0) {
-		            innerClassIdx = this.currentClass.getCP().addClass(
-		                obj.getConstantPool().getConstantString(ic.getInnerClassIndex(), Const.CONSTANT_Class)
-		            );
-		        }
+			for (int i = 0; i < bcelInnerClasses.length; i++) {
+				final org.apache.bcel.classfile.InnerClass ic = bcelInnerClasses[i];
 
-		        int outerClassIdx = 0;
-		        if (ic.getOuterClassIndex() != 0) {
-		            outerClassIdx = this.currentClass.getCP().addClass(
-		                obj.getConstantPool().getConstantString(ic.getOuterClassIndex(), Const.CONSTANT_Class)
-		            );
-		        }
+				// Re-add constants into CFParse ConstantPool
+				int innerClassIdx = 0;
+				if (ic.getInnerClassIndex() != 0) {
+					innerClassIdx = this.currentClass.getCP()
+							.addClass(obj.getConstantPool().getConstantString(
+									ic.getInnerClassIndex(),
+									Const.CONSTANT_Class));
+				}
 
-		        int innerNameIdx = 0;
-		        if (ic.getInnerNameIndex() != 0) {
-		            innerNameIdx = this.currentClass.getCP().addUtf8(
-		                obj.getConstantPool().getConstantString(ic.getInnerNameIndex(), Const.CONSTANT_Utf8)
-		            );
-		        }
+				int outerClassIdx = 0;
+				if (ic.getOuterClassIndex() != 0) {
+					outerClassIdx = this.currentClass.getCP()
+							.addClass(obj.getConstantPool().getConstantString(
+									ic.getOuterClassIndex(),
+									Const.CONSTANT_Class));
+				}
 
-		        int accessFlags = ic.getInnerAccessFlags();
+				int innerNameIdx = 0;
+				if (ic.getInnerNameIndex() != 0) {
+					innerNameIdx = this.currentClass.getCP()
+							.addUtf8(obj.getConstantPool().getConstantString(
+									ic.getInnerNameIndex(),
+									Const.CONSTANT_Utf8));
+				}
 
-		        attr.d_innerClasses[i * 4 + 0] = innerClassIdx;
-		        attr.d_innerClasses[i * 4 + 1] = outerClassIdx;
-		        attr.d_innerClasses[i * 4 + 2] = innerNameIdx;
-		        attr.d_innerClasses[i * 4 + 3] = accessFlags;
-		    }
+				int accessFlags = ic.getInnerAccessFlags();
+
+				attr.d_innerClasses[i * 4 + 0] = innerClassIdx;
+				attr.d_innerClasses[i * 4 + 1] = outerClassIdx;
+				attr.d_innerClasses[i * 4 + 2] = innerNameIdx;
+				attr.d_innerClasses[i * 4 + 3] = accessFlags;
+			}
 		}
-
-
-
 
 		@Override
 		public void visitJavaClass(final JavaClass obj) {
-		    // Set class name
-		    this.currentClass.setName(obj.getClassName());
-		    this.currentClass.setAccess(obj.getAccessFlags());
+			// Set class name
+			this.currentClass.setName(obj.getClassName());
+			this.currentClass.setAccess(obj.getAccessFlags());
 
-		    // Now manually visit attributes
-		    for (final Attribute attr : obj.getAttributes()) {
-		        attr.accept(this); // Accept this visitor
-		    }
-		    
-		    for (Field field : obj.getFields()) {
-		        field.accept(this); // <-- THIS calls visitField manually!
-		    }
-		    
-		    for(Method method: obj.getMethods()) {
-		    	method.accept(this);
-		    }
-		    
-		    
+			// Now manually visit attributes
+			for (final Attribute attr : obj.getAttributes()) {
+				attr.accept(this); // Accept this visitor
+			}
+
+			for (Field field : obj.getFields()) {
+				field.accept(this); // <-- THIS calls visitField manually!
+			}
+
+			for (Method method : obj.getMethods()) {
+				method.accept(this);
+			}
+
 		}
-
-
 
 		@Override
 		public void visitLineNumber(final LineNumber obj) {
@@ -485,157 +478,183 @@ public class CFParseBCELConvertorVisitor {
 			this.currentClass.getAttrs().add("LocalVariableTypeTable");
 
 		}
+
 		@Override
 		public void visitMethod(final Method obj) {
-		    System.out.println("▶️ Visitando método: " + obj.getName());
+			// 1. Construir assinatura manualmente
+			final StringBuilder methodSignature = new StringBuilder();
 
-		    // 1. Construir assinatura manualmente
-		    final StringBuilder methodSignature = new StringBuilder();
+			if (obj.getAccessFlags() > 0) {
+				methodSignature.append(Modifier.toString(obj.getAccessFlags()));
+				methodSignature.append(' ');
+			}
 
-		    if (obj.getAccessFlags() > 0) {
-		        methodSignature.append(Modifier.toString(obj.getAccessFlags()));
-		        methodSignature.append(' ');
-		    }
+			methodSignature.append(obj.getReturnType().toString());
+			methodSignature.append(' ');
+			methodSignature.append(obj.getName());
+			methodSignature.append('(');
 
-		    methodSignature.append(obj.getReturnType().toString());
-		    methodSignature.append(' ');
-		    methodSignature.append(obj.getName());
-		    methodSignature.append('(');
+			final Type[] args = obj.getArgumentTypes();
+			for (int i = 0; i < args.length; i++) {
+				methodSignature.append(args[i].toString());
+				methodSignature.append(" a").append(i);
+				if (i < args.length - 1) {
+					methodSignature.append(", ");
+				}
+			}
+			methodSignature.append(')');
 
-		    final Type[] args = obj.getArgumentTypes();
-		    for (int i = 0; i < args.length; i++) {
-		        methodSignature.append(args[i].toString());
-		        methodSignature.append(" a").append(i);
-		        if (i < args.length - 1) {
-		            methodSignature.append(", ");
-		        }
-		    }
-		    methodSignature.append(')');
+			// 2. Criar o MethodInfo via .add(signature)
+			MethodInfo methodInfo = this.currentClass.getMethods()
+					.add(methodSignature.toString());
 
-		    // 2. Criar o MethodInfo via .add(signature)
-		    MethodInfo methodInfo = this.currentClass.getMethods().add(methodSignature.toString());
+			methodInfo.setAccess(obj.getAccessFlags());
 
-		    methodInfo.setAccess(obj.getAccessFlags());
+			// 3. if code exist add it
+			if (obj.getCode() != null) {
+				CodeAttrInfo codeAttrInfo = (CodeAttrInfo) methodInfo.getAttrs()
+						.add("Code");
+				// Henrique 4/29/2025 IMPORTANT , needs to clear the previous code,
+				//		        
+				methodInfo.getAttrs().remove("Code");
 
-		    // 3. if code exist add it
-		    if (obj.getCode() != null) {
-		        CodeAttrInfo codeAttrInfo = (CodeAttrInfo) methodInfo.getAttrs().add("Code");
-		        // Henrique 4/29/2025 IMPORTANT , needs to clear the previous code,
-		        //		        
-		        methodInfo.getAttrs().remove("Code"); 
+				codeAttrInfo.setMaxStack(obj.getCode().getMaxStack());
+				codeAttrInfo.setMaxLocals(obj.getCode().getMaxLocals());
+				codeAttrInfo.setCode(obj.getCode().getCode());
 
-		        codeAttrInfo.setMaxStack(obj.getCode().getMaxStack());
-		        codeAttrInfo.setMaxLocals(obj.getCode().getMaxLocals());
-		        codeAttrInfo.setCode(obj.getCode().getCode());
+				// add attributes if exist
+				for (Attribute innerAttr : obj.getCode().getAttributes()) {
+					AttrInfo cfAttr = codeAttrInfo.getAttrs()
+							.add(innerAttr.getName());
 
-		        // add attributes if exist
-		        for (Attribute innerAttr : obj.getCode().getAttributes()) {
-		            AttrInfo cfAttr = codeAttrInfo.getAttrs().add(innerAttr.getName());
+					if (innerAttr instanceof LineNumberTable bcelLine
+							&& cfAttr instanceof LineNumberAttrInfo cfLine) {
+						for (LineNumber ln : bcelLine.getLineNumberTable()) {
+							cfLine.add(ln.getLineNumber(), ln.getStartPC());
+						}
+					}
+					else if (innerAttr instanceof LocalVariableTable bcelLocal
+							&& cfAttr instanceof LocalVariableAttrInfo cfLocal) {
+						cfLocal.setFromBCEL(bcelLocal);
+					}
+					else if (innerAttr instanceof LocalVariableTypeTable bcelLocalType
+							&& cfAttr instanceof LocalVariableTypeAttrInfo cfLocalType) {
+						cfLocalType.setFromBCEL(bcelLocalType);
+					}
+					else if (innerAttr instanceof StackMap bcelStackMap
+							&& cfAttr instanceof StackMapTableAttrInfo cfStackMap) {
 
-		            if (innerAttr instanceof LineNumberTable bcelLine && cfAttr instanceof LineNumberAttrInfo cfLine) {
-		                for (LineNumber ln : bcelLine.getLineNumberTable()) {
-		                    cfLine.add(ln.getLineNumber(), ln.getStartPC());
-		                }
-		            } else if (innerAttr instanceof LocalVariableTable bcelLocal && cfAttr instanceof LocalVariableAttrInfo cfLocal) {
-		                cfLocal.setFromBCEL(bcelLocal);
-		            } else if (innerAttr instanceof LocalVariableTypeTable bcelLocalType && cfAttr instanceof LocalVariableTypeAttrInfo cfLocalType) {
-		                cfLocalType.setFromBCEL(bcelLocalType);
-		            }else if(innerAttr instanceof StackMap bcelStackMap && cfAttr instanceof StackMapTableAttrInfo cfStackMap){
-		        	
-		        			
-		        			cfStackMap.setFromBCEL(bcelStackMap);
+						cfStackMap.setFromBCEL(bcelStackMap);
 
-		        		}		        
-		            }
-		        
-		    }
+					}
+				}
 
-		    // 4. add Exceptions if exists
-		    if (obj.getExceptionTable() != null && obj.getExceptionTable().getLength() > 0) {
-		        try {
-		            int[] bcelIndexes = obj.getExceptionTable().getExceptionIndexTable();
-		            String[] classNames = Arrays.stream(bcelIndexes)
-		                .mapToObj(i -> obj.getConstantPool().getConstantString(i, Const.CONSTANT_Class))
-		                .toArray(String[]::new);
+			}
 
-		            int[] cfparseIndexes = Arrays.stream(classNames)
-		                .mapToInt(this.currentClass.getCP()::addClass)
-		                .toArray();
+			// 4. add Exceptions if exists
+			if (obj.getExceptionTable() != null
+					&& obj.getExceptionTable().getLength() > 0) {
+				try {
+					int[] bcelIndexes = obj.getExceptionTable()
+							.getExceptionIndexTable();
+					String[] classNames = Arrays.stream(bcelIndexes)
+							.mapToObj(i -> obj.getConstantPool()
+									.getConstantString(i, Const.CONSTANT_Class))
+							.toArray(String[]::new);
 
-		            ExceptionsAttrInfo exceptionsAttr = (ExceptionsAttrInfo) methodInfo.getAttrs().add("Exceptions");
+					int[] cfparseIndexes = Arrays.stream(classNames)
+							.mapToInt(this.currentClass.getCP()::addClass)
+							.toArray();
 
-		            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		            DataOutputStream out = new DataOutputStream(baos);
+					ExceptionsAttrInfo exceptionsAttr = (ExceptionsAttrInfo) methodInfo
+							.getAttrs().add("Exceptions");
 
-		            out.writeInt(2 + 2 * cfparseIndexes.length); 
-		            out.writeShort(cfparseIndexes.length); 
-		            for (int index1 : cfparseIndexes) {
-		                out.writeShort(index1);
-		            }
-		            out.close();
+					ByteArrayOutputStream baos = new ByteArrayOutputStream();
+					DataOutputStream out = new DataOutputStream(baos);
 
-		            ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
-		            DataInputStream in = new DataInputStream(bais);
-		            exceptionsAttr.read(in);
-		            in.close();
+					out.writeInt(2 + 2 * cfparseIndexes.length);
+					out.writeShort(cfparseIndexes.length);
+					for (int index1 : cfparseIndexes) {
+						out.writeShort(index1);
+					}
+					out.close();
 
-		        } catch (IOException e) {
-		            e.printStackTrace(util.io.ProxyConsole.getInstance().errorOutput());
-		        }
-		    }
+					ByteArrayInputStream bais = new ByteArrayInputStream(
+							baos.toByteArray());
+					DataInputStream in = new DataInputStream(bais);
+					exceptionsAttr.read(in);
+					in.close();
 
-		    // 5. add Signature if exists
-		    if (obj.getGenericSignature() != null) {
-		        try {
-		            SignatureAttrInfo sigAttr = (SignatureAttrInfo) methodInfo.getAttrs().add("Signature");
+				}
+				catch (IOException e) {
+					e.printStackTrace(
+							util.io.ProxyConsole.getInstance().errorOutput());
+				}
+			}
 
-		            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		            DataOutputStream out = new DataOutputStream(baos);
+			// 5. add Signature if exists
+			if (obj.getGenericSignature() != null) {
+				try {
+					SignatureAttrInfo sigAttr = (SignatureAttrInfo) methodInfo
+							.getAttrs().add("Signature");
 
-		            int sigIndex = this.currentClass.getCP().addUtf8(obj.getGenericSignature());
-		            out.writeInt(2);
-		            out.writeShort(sigIndex);
-		            out.close();
+					ByteArrayOutputStream baos = new ByteArrayOutputStream();
+					DataOutputStream out = new DataOutputStream(baos);
 
-		            ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
-		            DataInputStream in = new DataInputStream(bais);
-		            sigAttr.read(in);
-		            in.close();
-		        } catch (IOException e) {
-		            e.printStackTrace(util.io.ProxyConsole.getInstance().errorOutput());
-		        }
-		    }
+					int sigIndex = this.currentClass.getCP()
+							.addUtf8(obj.getGenericSignature());
+					out.writeInt(2);
+					out.writeShort(sigIndex);
+					out.close();
 
-		    // 6. add RuntimeInvisibleAnnotations if exists
-		    if (obj.getAnnotationEntries() != null && obj.getAnnotationEntries().length > 0) {
-		        try {
-		            RuntimeInvisibleAnnotationsAttrInfo annotationAttr =
-		                (RuntimeInvisibleAnnotationsAttrInfo) methodInfo.getAttrs().add("RuntimeInvisibleAnnotations");
+					ByteArrayInputStream bais = new ByteArrayInputStream(
+							baos.toByteArray());
+					DataInputStream in = new DataInputStream(bais);
+					sigAttr.read(in);
+					in.close();
+				}
+				catch (IOException e) {
+					e.printStackTrace(
+							util.io.ProxyConsole.getInstance().errorOutput());
+				}
+			}
 
-		            ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
-		            DataOutputStream dataOut = new DataOutputStream(byteOut);
+			// 6. add RuntimeInvisibleAnnotations if exists
+			if (obj.getAnnotationEntries() != null
+					&& obj.getAnnotationEntries().length > 0) {
+				try {
+					RuntimeInvisibleAnnotationsAttrInfo annotationAttr = (RuntimeInvisibleAnnotationsAttrInfo) methodInfo
+							.getAttrs().add("RuntimeInvisibleAnnotations");
 
-		            int numAnnotations = obj.getAnnotationEntries().length;
-		            dataOut.writeInt(2 + numAnnotations * 4);
-		            dataOut.writeShort(numAnnotations);
+					ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+					DataOutputStream dataOut = new DataOutputStream(byteOut);
 
-		            for (org.apache.bcel.classfile.AnnotationEntry entry : obj.getAnnotationEntries()) {
-		                int typeIndex = this.currentClass.getCP().addUtf8(entry.getAnnotationType());
-		                dataOut.writeShort(typeIndex);
-		                dataOut.writeShort(0); // zero element_value_pairs
-		            }
+					int numAnnotations = obj.getAnnotationEntries().length;
+					dataOut.writeInt(2 + numAnnotations * 4);
+					dataOut.writeShort(numAnnotations);
 
-		            dataOut.close();
+					for (org.apache.bcel.classfile.AnnotationEntry entry : obj
+							.getAnnotationEntries()) {
+						int typeIndex = this.currentClass.getCP()
+								.addUtf8(entry.getAnnotationType());
+						dataOut.writeShort(typeIndex);
+						dataOut.writeShort(0); // zero element_value_pairs
+					}
 
-		            ByteArrayInputStream byteIn = new ByteArrayInputStream(byteOut.toByteArray());
-		            DataInputStream dataIn = new DataInputStream(byteIn);
-		            annotationAttr.read(dataIn);
-		            dataIn.close();
-		        } catch (IOException e) {
-		            e.printStackTrace(util.io.ProxyConsole.getInstance().errorOutput());
-		        }
-		    }
-		  
+					dataOut.close();
+
+					ByteArrayInputStream byteIn = new ByteArrayInputStream(
+							byteOut.toByteArray());
+					DataInputStream dataIn = new DataInputStream(byteIn);
+					annotationAttr.read(dataIn);
+					dataIn.close();
+				}
+				catch (IOException e) {
+					e.printStackTrace(
+							util.io.ProxyConsole.getInstance().errorOutput());
+				}
+			}
+
 		}
 
 		@Override
@@ -656,34 +675,34 @@ public class CFParseBCELConvertorVisitor {
 			// TODO Auto-generated method stub
 
 		}
+
 		@Override
 		public void visitSignature(final Signature obj) {
 
-		    final String signatureString = obj.getSignature();
+			final String signatureString = obj.getSignature();
 
-		    int sigIndex = this.currentClass.getCP().find(1, signatureString);
-		    if (sigIndex == -1) {
-		        sigIndex = this.currentClass.getCP().addUtf8(signatureString);
-		    }
+			int sigIndex = this.currentClass.getCP().find(1, signatureString);
+			if (sigIndex == -1) {
+				sigIndex = this.currentClass.getCP().addUtf8(signatureString);
+			}
 
-		    final SignatureAttrInfo sigAttrInfo = (SignatureAttrInfo) this.currentClass.getAttrs().add("Signature");
-		    sigAttrInfo.set(sigIndex);
+			final SignatureAttrInfo sigAttrInfo = (SignatureAttrInfo) this.currentClass
+					.getAttrs().add("Signature");
+			sigAttrInfo.set(sigIndex);
 		}
 
 		@Override
 		public void visitNestMembers(final NestMembers obj) {
-			
 
 			final NestMembersAttrInfo attr = (NestMembersAttrInfo) this.currentClass
-				.getAttrs()
-				.add("NestMembers");
+					.getAttrs().add("NestMembers");
 
-			attr.setMembers(obj.getClasses()); 
+			attr.setMembers(obj.getClasses());
 		}
 
 		@Override
 		public void visitSourceFile(final SourceFile obj) {
-			
+
 			final String fileName = obj.getSourceFileName();
 			final SourceFileAttrInfo sourceFileAttrInfo = (SourceFileAttrInfo) this.currentClass
 					.getAttrs().add("SourceFile");
@@ -705,12 +724,12 @@ public class CFParseBCELConvertorVisitor {
 
 		@Override
 		public void visitSynthetic(final Synthetic obj) {
-		    this.currentClass.getAttrs().add("Synthetic");
+			this.currentClass.getAttrs().add("Synthetic");
 		}
 
 		@Override
 		public void visitUnknown(final Unknown obj) {
-		    this.currentClass.getAttrs().add(obj.getName());
+			this.currentClass.getAttrs().add(obj.getName());
 		}
 	}
 
