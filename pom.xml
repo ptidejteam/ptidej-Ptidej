@@ -52,6 +52,7 @@
 		<module>PADL Creator JavaFile (Eclipse) Parser</module>
 		<module>PADL Creator JavaFile (JavaC)</module>
 		<module>PADL Creator JavaFile (JavaC) Parser</module>
+		<module>PADL Creator JavaFile-ClassFile Tests</module>
 		<module>PADL Creator MSE</module>
 		<module>PADL Creator XMI</module>
 		<module>PADL Design Motifs</module>

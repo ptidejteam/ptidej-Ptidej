@@ -37,29 +37,22 @@ package jct.test.rsc.jct.kernel;
  */
 // todo : implements more uncompatibility, like context-dependent modifiers
 // TODO : add public get on flag, make it OR-able, move incompatibility to ClassMember descendants !!
-public enum JCTModifiers
-{
-    ABSTRACT(    0x001),
-    FINAL(       0x002),
-    NATIVE(      0x004),
-    PRIVATE(     0x008),
-    PROTECTED(   0x010),
-    PUBLIC(      0x020),
-    STATIC(      0x040),
-    STRICTFP(    0x080),
-    SYNCHRONIZED(0x100),
-    TRANSIENT(   0x200),
-    VOLATILE(    0x400);
+public enum JCTModifiers {
+	ABSTRACT(0x001), FINAL(0x002), NATIVE(0x004), PRIVATE(0x008),
+	PROTECTED(0x010), PUBLIC(0x020), STATIC(0x040), STRICTFP(0x080),
+	SYNCHRONIZED(0x100), TRANSIENT(0x200), VOLATILE(0x400);
 
-    private final int flag;
+	private final int flag;
 
-    private JCTModifiers(final int flag)
-    { this.flag = flag; }
+	private JCTModifiers(final int flag) {
+		this.flag = flag;
+	}
 
-    /**
-     * Returns the flag of this modifier.
-     * The flags are such that they can be combined using a bit-wise OR (|)
-     */
-    public int getFlag()
-    { return this.flag; }
+	/**
+	 * Returns the flag of this modifier.
+	 * The flags are such that they can be combined using a bit-wise OR (|)
+	 */
+	public int getFlag() {
+		return this.flag;
+	}
 }

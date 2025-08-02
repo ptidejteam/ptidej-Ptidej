@@ -34,26 +34,26 @@ package jct.kernel;
  * Enum containing all the kinds of modifiers in a Javac AST
  * 
  * @author Mathieu Lemoine
+ * @author Yann-Gaël Guéhéneuc
  */
 // todo : implements more uncompatibility, like context-dependent modifiers
 // TODO : add public get on flag, make it OR-able, move incompatibility to
 // ClassMember descendants !!
 public enum JCTModifiers {
-	ABSTRACT(0x001), FINAL(0x002), NATIVE(0x004), PRIVATE(0x008),
-	PROTECTED(0x010), PUBLIC(0x020), STATIC(0x040), STRICTFP(0x080),
-	SYNCHRONIZED(0x100), TRANSIENT(0x200), VOLATILE(0x400), DEFAULT(0x800),
-	SEALED(0x1000);
+	ABSTRACT(0x001, "ABSTRACT"), DEFAULT(0x800, "DEFAULT"),
+	FINAL(0x002, "FINAL"), NATIVE(0x004, "NATIVE"),
+	NONSEALED(0x2000, "NON-SEALED"), PRIVATE(0x008, "PRIVATE"),
+	PROTECTED(0x010, "PROTECTED"), PUBLIC(0x020, "PUBLIC"),
+	SEALED(0x1000, "SEALED"), STATIC(0x040, "STATIC"),
+	STRICTFP(0x080, "STRICTFP"), SYNCHRONIZED(0x100, "SYNCHRONIZED"),
+	TRANSIENT(0x200, "TRANSIENT"), VOLATILE(0x400, "VOLATILE");
 
 	private final int flag;
 
-	private JCTModifiers(final int flag) {
+	private JCTModifiers(final int flag, final String name) {
 		this.flag = flag;
 	}
 
-	/**
-	 * Returns the flag of this modifier. The flags are such that they can be
-	 * combined using a bit-wise OR (|)
-	 */
 	public int getFlag() {
 		return this.flag;
 	}

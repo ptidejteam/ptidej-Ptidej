@@ -740,8 +740,10 @@ public class JCTCreatorFromSourceCode
 					(IJCTClassType) implemented.accept(this, p));
 
 		for (final Modifier m : node.getModifiers().getFlags())
-			aJCTClass.addModifier(
-					JCTModifiers.valueOf(m.toString().toUpperCase()));
+			// Yann 25/08/01: Keywords with hyphens...
+			// Don't get me started on keywords with hyphens in their names!
+			aJCTClass.addModifier(JCTModifiers
+					.valueOf(m.toString().replace("-", "").toUpperCase()));
 
 		for (final Tree member : node.getMembers()) {
 			final IJCTElement aJCTElement = member.accept(this, p);
@@ -974,27 +976,27 @@ public class JCTCreatorFromSourceCode
 			return aJCTIdentifiable;
 		}
 
-		final IJCTMethod m = this.factory
+		final IJCTMethod method = this.factory
 				.createMethod(e.getSimpleName().toString());
-		this.identifiables.put(e, m);
+		this.identifiables.put(e, method);
 
 		if (null != e.asType() && null != e.getReturnType())
-			m.setReturnType(e.getReturnType().accept(this, p));
+			method.setReturnType(e.getReturnType().accept(this, p));
 
-		while (m.getModifiers().size() > 0) {
-			m.removeModifier(m.getModifiers().iterator().next());
+		while (method.getModifiers().size() > 0) {
+			method.removeModifier(method.getModifiers().iterator().next());
 		}
 
-		for (final Modifier mod : e.getModifiers())
+		for (final Modifier m : e.getModifiers())
 			try {
-				m.addModifier(
-						JCTModifiers.valueOf(mod.toString().toUpperCase()));
+				method.addModifier(
+						JCTModifiers.valueOf(m.toString().toUpperCase()));
 			}
 			catch (final IllegalArgumentException iae) {
 				this.errorMessage.setLength(0);
 				this.errorMessage.append(this.getClass().getName());
 				this.errorMessage.append(" must handle modifier: ");
-				this.errorMessage.append(mod);
+				this.errorMessage.append(m);
 
 				final String errorString = this.errorMessage.toString();
 				if (!this.errorMessages.contains(errorString)) {
@@ -1006,14 +1008,14 @@ public class JCTCreatorFromSourceCode
 
 		if (null != e.asType()) {
 			for (final VariableElement v : e.getParameters())
-				m.addParameter((IJCTParameter) v.accept(this, p));
+				method.addParameter((IJCTParameter) v.accept(this, p));
 
 			for (final TypeMirror aTypeMirror : e.getThrownTypes())
-				m.addThrownException(
+				method.addThrownException(
 						(IJCTClassType) aTypeMirror.accept(this, p));
 		}
 
-		return this.putSourceCodePosition(m, e);
+		return this.putSourceCodePosition(method, e);
 	}
 
 	@Override
@@ -1689,16 +1691,15 @@ public class JCTCreatorFromSourceCode
 			c.removeModifier(c.getModifiers().iterator().next());
 		}
 
-		for (final Modifier mod : e.getModifiers())
+		for (final Modifier m : e.getModifiers())
 			try {
-				c.addModifier(
-						JCTModifiers.valueOf(mod.toString().toUpperCase()));
+				c.addModifier(JCTModifiers.valueOf(m.toString().toUpperCase()));
 			}
 			catch (final IllegalArgumentException iae) {
 				this.errorMessage.setLength(0);
 				this.errorMessage.append(this.getClass().getName());
 				this.errorMessage.append(" must handle modifier: ");
-				this.errorMessage.append(mod);
+				this.errorMessage.append(m);
 
 				final String errorString = this.errorMessage.toString();
 				if (!this.errorMessages.contains(errorString)) {

@@ -51,7 +51,7 @@ public final class SerFileGeneratorJCTMisc extends TestCase {
 
 	public SerFileGeneratorJCTMisc(final String name) {
 		super(name);
-		this.srcPath = JCTConstant.SRC_PATH + JCTConstant.MISC_DIR;
+		this.srcPath = JCTConstant.TST_PATH + JCTConstant.MISC_DIR;
 		this.outputPath = JCTConstant.TMP_PATH + JCTConstant.MISC_DIR;
 		this.expectedPath = JCTConstant.REF_PATH + JCTConstant.MISC_DIR;
 		this.tmpDir = new File(JCTConstant.TMP_PATH);

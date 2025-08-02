@@ -43,6 +43,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
+
 import jct.kernel.Constants;
 import jct.kernel.IJCTBlock;
 import jct.kernel.IJCTClassType;
@@ -57,6 +58,7 @@ import jct.kernel.JCTModifiers;
 import jct.kernel.JCTPrimitiveTypes;
 import jct.util.collection.IndirectCollection;
 import jct.util.reference.NotNullableReference;
+import util.io.ProxyConsole;
 
 /**
  * This clas represents a method
@@ -84,20 +86,15 @@ class JCTMethod extends JCTClassMember<IJCTStatement> implements IJCTMethod {
 	/**
 	 * Set of thrown exceptions of this method
 	 */
-	private final Set<IJCTClassType> thrownExceptions =
-		new HashSet<IJCTClassType>();
+	private final Set<IJCTClassType> thrownExceptions = new HashSet<IJCTClassType>();
 
 	JCTMethod(final IJCTRootNode aRootNode, final String name) {
 		super(aRootNode, name);
 		this.returnType = this.getRootNode().getType(JCTPrimitiveTypes.VOID);
-		this.body =
-			this.createInternalReference(this
-				.getRootNode()
-				.getFactory()
-				.createBlock());
+		this.body = this.createInternalReference(
+				this.getRootNode().getFactory().createBlock());
 		super.backpatchElements(new IndirectCollection<IJCTStatement>(
-			this.parameters,
-			this.body));
+				this.parameters, this.body));
 	}
 
 	/**
@@ -119,7 +116,8 @@ class JCTMethod extends JCTClassMember<IJCTStatement> implements IJCTMethod {
 	/**
 	 * Adds a "parameter" at the index (or move it there)
 	 */
-	public void addParameter(final int anIndex, final IJCTParameter aParameter) {
+	public void addParameter(final int anIndex,
+			final IJCTParameter aParameter) {
 		this.parameters.add(anIndex, aParameter);
 	}
 
@@ -276,12 +274,8 @@ class JCTMethod extends JCTClassMember<IJCTStatement> implements IJCTMethod {
 		for (final JCTModifiers m : this.getModifiers())
 			w.append(m.toString().toLowerCase()).append(' ');
 
-		this
-			.getReturnType()
-			.getSourceCode(w)
-			.append(' ')
-			.append(this.getName())
-			.append('(');
+		this.getReturnType().getSourceCode(w).append(' ').append(this.getName())
+				.append('(');
 
 		final Iterator<IJCTParameter> pit = this.getParameters().iterator();
 		while (pit.hasNext()) {
@@ -295,18 +289,15 @@ class JCTMethod extends JCTClassMember<IJCTStatement> implements IJCTMethod {
 
 		if (this.getThrownExceptions().size() > 0) {
 			w.append(" throws ");
-			final SortedSet<IJCTClassType> thrown =
-				new TreeSet<IJCTClassType>(new Comparator<IJCTClassType>() {
-					public int compare(
-						final IJCTClassType o1,
-						final IJCTClassType o2) {
-						return o1
-							.getSelector()
-							.getElement()
-							.getFQN()
-							.compareTo(o2.getSelector().getElement().getFQN());
-					}
-				});
+			final SortedSet<IJCTClassType> thrown = new TreeSet<IJCTClassType>(
+					new Comparator<IJCTClassType>() {
+						public int compare(final IJCTClassType o1,
+								final IJCTClassType o2) {
+							return o1.getSelector().getElement().getFQN()
+									.compareTo(o2.getSelector().getElement()
+											.getFQN());
+						}
+					});
 			thrown.addAll(this.getThrownExceptions());
 
 			final Iterator<IJCTClassType> cit = thrown.iterator();
@@ -325,60 +316,60 @@ class JCTMethod extends JCTClassMember<IJCTStatement> implements IJCTMethod {
 		return w;
 	}
 
-	private static final Map<JCTModifiers, Integer> modifiersIncompatibility =
-		new HashMap<JCTModifiers, Integer>();
+	private static final Map<JCTModifiers, Integer> modifiersIncompatibility = new HashMap<JCTModifiers, Integer>();
 
 	static {
-		JCTMethod.modifiersIncompatibility.put(
-			JCTModifiers.ABSTRACT,
-			JCTModifiers.PRIVATE.getFlag() | JCTModifiers.FINAL.getFlag()
-					| JCTModifiers.STATIC.getFlag()
-					| JCTModifiers.NATIVE.getFlag()
-					| JCTModifiers.STRICTFP.getFlag()
-					| JCTModifiers.SYNCHRONIZED.getFlag());
+		JCTMethod.modifiersIncompatibility.put(JCTModifiers.ABSTRACT,
+				JCTModifiers.PRIVATE.getFlag() | JCTModifiers.FINAL.getFlag()
+						| JCTModifiers.STATIC.getFlag()
+						| JCTModifiers.NATIVE.getFlag()
+						| JCTModifiers.STRICTFP.getFlag()
+						| JCTModifiers.SYNCHRONIZED.getFlag());
 
-		JCTMethod.modifiersIncompatibility.put(
-			JCTModifiers.FINAL,
-			JCTModifiers.ABSTRACT.getFlag());
+		JCTMethod.modifiersIncompatibility.put(JCTModifiers.FINAL,
+				JCTModifiers.ABSTRACT.getFlag());
 
-		JCTMethod.modifiersIncompatibility.put(
-			JCTModifiers.NATIVE,
-			JCTModifiers.STRICTFP.getFlag() | JCTModifiers.ABSTRACT.getFlag());
+		JCTMethod.modifiersIncompatibility.put(JCTModifiers.NATIVE,
+				JCTModifiers.STRICTFP.getFlag()
+						| JCTModifiers.ABSTRACT.getFlag());
 
-		JCTMethod.modifiersIncompatibility.put(
-			JCTModifiers.PRIVATE,
-			JCTModifiers.PROTECTED.getFlag() | JCTModifiers.PUBLIC.getFlag()
-					| JCTModifiers.ABSTRACT.getFlag());
+		JCTMethod.modifiersIncompatibility.put(JCTModifiers.PRIVATE,
+				JCTModifiers.PROTECTED.getFlag() | JCTModifiers.PUBLIC.getFlag()
+						| JCTModifiers.ABSTRACT.getFlag());
 
-		JCTMethod.modifiersIncompatibility.put(
-			JCTModifiers.PROTECTED,
-			JCTModifiers.PRIVATE.getFlag() | JCTModifiers.PUBLIC.getFlag());
+		JCTMethod.modifiersIncompatibility.put(JCTModifiers.PROTECTED,
+				JCTModifiers.PRIVATE.getFlag() | JCTModifiers.PUBLIC.getFlag());
 
-		JCTMethod.modifiersIncompatibility.put(
-			JCTModifiers.PUBLIC,
-			JCTModifiers.PRIVATE.getFlag() | JCTModifiers.PROTECTED.getFlag());
+		JCTMethod.modifiersIncompatibility.put(JCTModifiers.PUBLIC,
+				JCTModifiers.PRIVATE.getFlag()
+						| JCTModifiers.PROTECTED.getFlag());
 
-		JCTMethod.modifiersIncompatibility.put(
-			JCTModifiers.STATIC,
-			JCTModifiers.ABSTRACT.getFlag());
+		JCTMethod.modifiersIncompatibility.put(JCTModifiers.STATIC,
+				JCTModifiers.ABSTRACT.getFlag());
 
-		JCTMethod.modifiersIncompatibility.put(
-			JCTModifiers.STRICTFP,
-			JCTModifiers.ABSTRACT.getFlag() | JCTModifiers.NATIVE.getFlag());
+		JCTMethod.modifiersIncompatibility.put(JCTModifiers.STRICTFP,
+				JCTModifiers.ABSTRACT.getFlag()
+						| JCTModifiers.NATIVE.getFlag());
 
-		JCTMethod.modifiersIncompatibility.put(
-			JCTModifiers.SYNCHRONIZED,
-			JCTModifiers.ABSTRACT.getFlag());
+		JCTMethod.modifiersIncompatibility.put(JCTModifiers.SYNCHRONIZED,
+				JCTModifiers.ABSTRACT.getFlag());
 	};
 
 	@Override
 	protected boolean hasIncompatibleModifier(final JCTModifiers m) {
-		final Integer incompatibility =
-			JCTMethod.modifiersIncompatibility.get(m);
-		if (null == incompatibility)
-			throw new IllegalArgumentException("This modifier (" + m.toString()
-					+ " " + m.getFlag() + ") is not supported by methods.");
-		return (this.getModifierFlags() & incompatibility) != 0;
+		final Integer incompatibility = JCTMethod.modifiersIncompatibility
+				.get(m);
+		if (null == incompatibility) {
+			// Yann 25/08/01: Leniency
+			// Instead of throwing an exception, let's just warn the user...
+			ProxyConsole.getInstance().errorOutput()
+					.println("The modifier " + m.toString() + " (" + m.getFlag()
+							+ ") is not supported by methods");
+			// throw new IllegalArgumentException("The modifier " + m.toString()
+			//		+ " (" + m.getFlag() + ") is not supported by methods");
+		}
+		// return (this.getModifierFlags() & incompatibility) != 0;
+		return false;
 	}
 
 	private static final long serialVersionUID = -8854746396705409982L;

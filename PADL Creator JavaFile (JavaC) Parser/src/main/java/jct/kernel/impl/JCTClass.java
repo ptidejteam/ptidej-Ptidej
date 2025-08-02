@@ -47,6 +47,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
+
 import jct.kernel.Constants;
 import jct.kernel.IJCTClass;
 import jct.kernel.IJCTClassMember;
@@ -61,6 +62,7 @@ import jct.kernel.IJCTVisitor;
 import jct.kernel.JCTKind;
 import jct.kernel.JCTModifiers;
 import jct.util.collection.IndirectCollection;
+import util.io.ProxyConsole;
 
 /**
  * This class represents a (declaration of a) class
@@ -90,8 +92,8 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 	/**
 	 * List of declared members of this class
 	 */
-	private final List<IJCTClassMember> declaredMembers =
-		this.createInternalList();
+	private final List<IJCTClassMember> declaredMembers = this
+			.createInternalList();
 
 	/**
 	 * special members of this class
@@ -106,22 +108,18 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 	/**
 	 * Set of directly implemented interfaces of this class
 	 */
-	private final Set<IJCTClassType> directlyImplementedInterfaces =
-		new HashSet<IJCTClassType>();
+	private final Set<IJCTClassType> directlyImplementedInterfaces = new HashSet<IJCTClassType>();
 
-	JCTClass(
-		final IJCTRootNode aRootNode,
-		final String name,
-		final boolean isInterface,
-		final boolean isGhost) {
+	JCTClass(final IJCTRootNode aRootNode, final String name,
+			final boolean isInterface, final boolean isGhost) {
 		super(aRootNode, name);
 		this.setIsInterface(isInterface);
 		this.setIsGhost(isGhost);
 		this.specialMembers = this.createSpecialMembers();
 		super.backpatchElements(new IndirectCollection<IJCTClassMember>(
-			Collections.unmodifiableCollection(Arrays
-				.asList(this.specialMembers)),
-			this.declaredMembers));
+				Collections.unmodifiableCollection(
+						Arrays.asList(this.specialMembers)),
+				this.declaredMembers));
 	}
 
 	/**
@@ -160,9 +158,8 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 	/**
 	 * Adds a "declared member" at the index (or move it there)
 	 */
-	public void addDeclaredMember(
-		final int anIndex,
-		final IJCTClassMember declaredMember) {
+	public void addDeclaredMember(final int anIndex,
+			final IJCTClassMember declaredMember) {
 		this.declaredMembers.add(anIndex, declaredMember);
 	}
 
@@ -228,8 +225,8 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 	/**
 	 * Cached Class Type
 	 */
-	private transient SoftReference<IJCTClassType> cachedClassType =
-		new SoftReference<IJCTClassType>(null);
+	private transient SoftReference<IJCTClassType> cachedClassType = new SoftReference<IJCTClassType>(
+			null);
 
 	/**
 	 * Returns a new IJCTClassType on this class.
@@ -242,8 +239,8 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 
 		if (null == classType) {
 			final IJCTFactory f = this.getRootNode().getFactory();
-			classType =
-				f.createClassType(f.createSimpleSelector(((IJCTClass) this)));
+			classType = f.createClassType(
+					f.createSimpleSelector(((IJCTClass) this)));
 			this.cachedClassType = new SoftReference<IJCTClassType>(classType);
 		}
 
@@ -273,8 +270,8 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 		IJCTElement t = e;
 		while (null != t) {
 			if (this == t)
-				throw new IllegalArgumentException("Auto-Enclosing class"
-						+ this + " : " + e);
+				throw new IllegalArgumentException(
+						"Auto-Enclosing class" + this + " : " + e);
 
 			t = t.getEnclosingElement();
 		}
@@ -293,14 +290,15 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 		((JCTElement) vThis).updateEnclosingElement(this);
 
 		final IJCTField vSuper = f.createField(Constants.SUPER_NAME);
-		vSuper.setType(this.getDirectSuperClass() != null ? this
-			.getDirectSuperClass() : this.createClassType());
+		vSuper.setType(
+				this.getDirectSuperClass() != null ? this.getDirectSuperClass()
+						: this.createClassType());
 		vSuper.addModifier(JCTModifiers.PRIVATE);
 		vSuper.addModifier(JCTModifiers.FINAL);
 		((JCTElement) vSuper).updateEnclosingElement(this);
 
-		final IJCTClassType tClass =
-			r.getType(Constants.CLASS_BINARYNAME_CLASS, IJCTClassType.class);
+		final IJCTClassType tClass = r.getType(Constants.CLASS_BINARYNAME_CLASS,
+				IJCTClassType.class);
 		final IJCTField vClass = f.createField(Constants.CLASS_NAME);
 		vClass.setType(tClass != null ? tClass : this.createClassType());
 		vClass.addModifier(JCTModifiers.PUBLIC);
@@ -320,10 +318,8 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 		this.isInterface = i;
 
 		if (!this.getIsInterface() && null == this.getDirectSuperClass()) {
-			final IJCTClassType c =
-				this.getRootNode().getType(
-					Constants.CLASS_BINARYNAME_OBJECT,
-					IJCTClassType.class);
+			final IJCTClassType c = this.getRootNode().getType(
+					Constants.CLASS_BINARYNAME_OBJECT, IJCTClassType.class);
 			if (c != null)
 				this.setDirectSuperClass(c);
 		}
@@ -334,10 +330,10 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 			return this.getName();
 
 		if (JCTKind.COMPILATION_UNIT == this.getEnclosingElement().getKind()) {
-			final IJCTPackage p =
-				(IJCTPackage) this.getEnclosingElement().getEnclosingElement();
-			return null == p || p.isUnnamed() ? this.getName() : p.getName()
-					+ Constants.DOT_SEPARATOR + this.getName();
+			final IJCTPackage p = (IJCTPackage) this.getEnclosingElement()
+					.getEnclosingElement();
+			return null == p || p.isUnnamed() ? this.getName()
+					: p.getName() + Constants.DOT_SEPARATOR + this.getName();
 		}
 		else
 			return this.getDirectEnclosingClass().getFQN()
@@ -346,20 +342,18 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 
 	@Override
 	protected List<JCTElementContainer<?>> seePreviousPathStep() {
-		final JCTClass enclosingClass =
-			(JCTClass) this.getDirectEnclosingClass();
+		final JCTClass enclosingClass = (JCTClass) this
+				.getDirectEnclosingClass();
 		final List<JCTElementContainer<?>> list = super.seePreviousPathStep();
 
 		if (null != enclosingClass)
 			list.add(enclosingClass);
 		else if (null != this.getEnclosingElement()
-				&& JCTKind.COMPILATION_UNIT == this
-					.getEnclosingElement()
-					.getKind())
+				&& JCTKind.COMPILATION_UNIT == this.getEnclosingElement()
+						.getKind())
 			if (null != this.getEnclosingElement().getEnclosingElement())
-				list.add((JCTElementContainer<?>) this
-					.getEnclosingElement()
-					.getEnclosingElement());
+				list.add((JCTElementContainer<?>) this.getEnclosingElement()
+						.getEnclosingElement());
 			else
 				list.add((JCTElementContainer<?>) this.getEnclosingElement());
 
@@ -374,14 +368,12 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 		IJCTClassType c = aJCTClassType;
 
 		if (!this.getIsInterface() && null == c)
-			c =
-				this.getRootNode().getType(
-					Constants.CLASS_BINARYNAME_OBJECT,
+			c = this.getRootNode().getType(Constants.CLASS_BINARYNAME_OBJECT,
 					IJCTClassType.class);
 
 		if (c.getSelector().getElement().getIsInterface())
 			throw new IllegalArgumentException(
-				"An interface can not be extended");
+					"An interface can not be extended");
 
 		this.directSuperClass = c;
 
@@ -396,7 +388,7 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 	public void addDirectlyImplementedInterface(final IJCTClassType c) {
 		if (!c.getSelector().getElement().getIsInterface())
 			throw new IllegalArgumentException(
-				"A class cannot be put in the implements list");
+					"A class cannot be put in the implements list");
 
 		this.directlyImplementedInterfaces.add(c);
 	}
@@ -416,13 +408,13 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 		return Collections.unmodifiableCollection(result);
 	}
 
-	public Collection<IJCTField> getFields(
-		final Boolean staticOnly,
-		final boolean includeSpecials) {
+	public Collection<IJCTField> getFields(final Boolean staticOnly,
+			final boolean includeSpecials) {
 		final Collection<IJCTField> result = new LinkedList<IJCTField>();
 
-		for (final IJCTClassMember cm : includeSpecials ? this
-			.getEnclosedElements() : this.getDeclaredMembers())
+		for (final IJCTClassMember cm : includeSpecials
+				? this.getEnclosedElements()
+				: this.getDeclaredMembers())
 			if (cm instanceof IJCTField
 					&& (null == staticOnly || staticOnly.equals(cm.isStatic())))
 				result.add((IJCTField) cm);
@@ -445,35 +437,29 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 		for (final JCTModifiers m : this.getModifiers())
 			w.append(m.toString().toLowerCase()).append(' ');
 
-		w
-			.append(this.getIsInterface() ? "interface" : "class")
-			.append(' ')
-			.append(this.getName());
+		w.append(this.getIsInterface() ? "interface" : "class").append(' ')
+				.append(this.getName());
 
-		if (null != this.getDirectSuperClass()
-				&& !"Ljava.lang.Object".equals(this
-					.getDirectSuperClass()
-					.getTypeName())) {
+		if (null != this.getDirectSuperClass() && !"Ljava.lang.Object"
+				.equals(this.getDirectSuperClass().getTypeName())) {
 			w.append("\nextends ");
 			this.getDirectSuperClass().getSourceCode(w);
 		}
 
 		if (this.getDirectlyImplementedInterfaces().size() > 0) {
-			w.append('\n').append(
-				this.getIsInterface() ? "extends" : "implements").append(' ');
+			w.append('\n')
+					.append(this.getIsInterface() ? "extends" : "implements")
+					.append(' ');
 
-			final SortedSet<IJCTClassType> implemented =
-				new TreeSet<IJCTClassType>(new Comparator<IJCTClassType>() {
-					public int compare(
-						final IJCTClassType o1,
-						final IJCTClassType o2) {
-						return o1
-							.getSelector()
-							.getElement()
-							.getFQN()
-							.compareTo(o2.getSelector().getElement().getFQN());
-					}
-				});
+			final SortedSet<IJCTClassType> implemented = new TreeSet<IJCTClassType>(
+					new Comparator<IJCTClassType>() {
+						public int compare(final IJCTClassType o1,
+								final IJCTClassType o2) {
+							return o1.getSelector().getElement().getFQN()
+									.compareTo(o2.getSelector().getElement()
+											.getFQN());
+						}
+					});
 			implemented.addAll(this.getDirectlyImplementedInterfaces());
 
 			final Iterator<IJCTClassType> it = implemented.iterator();
@@ -492,29 +478,25 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 		return w.append("\n}\n");
 	}
 
-	private static final Map<JCTModifiers, Integer> modifiersIncompatibility =
-		new HashMap<JCTModifiers, Integer>();
+	private static final Map<JCTModifiers, Integer> modifiersIncompatibility = new HashMap<JCTModifiers, Integer>();
 
 	static {
-		JCTClass.modifiersIncompatibility.put(
-			JCTModifiers.ABSTRACT,
-			JCTModifiers.FINAL.getFlag());
+		JCTClass.modifiersIncompatibility.put(JCTModifiers.ABSTRACT,
+				JCTModifiers.FINAL.getFlag());
 
-		JCTClass.modifiersIncompatibility.put(
-			JCTModifiers.FINAL,
-			JCTModifiers.ABSTRACT.getFlag());
+		JCTClass.modifiersIncompatibility.put(JCTModifiers.FINAL,
+				JCTModifiers.ABSTRACT.getFlag());
 
-		JCTClass.modifiersIncompatibility.put(
-			JCTModifiers.PRIVATE,
-			JCTModifiers.PROTECTED.getFlag() | JCTModifiers.PUBLIC.getFlag());
+		JCTClass.modifiersIncompatibility.put(JCTModifiers.PRIVATE,
+				JCTModifiers.PROTECTED.getFlag()
+						| JCTModifiers.PUBLIC.getFlag());
 
-		JCTClass.modifiersIncompatibility.put(
-			JCTModifiers.PROTECTED,
-			JCTModifiers.PRIVATE.getFlag() | JCTModifiers.PUBLIC.getFlag());
+		JCTClass.modifiersIncompatibility.put(JCTModifiers.PROTECTED,
+				JCTModifiers.PRIVATE.getFlag() | JCTModifiers.PUBLIC.getFlag());
 
-		JCTClass.modifiersIncompatibility.put(
-			JCTModifiers.PUBLIC,
-			JCTModifiers.PRIVATE.getFlag() | JCTModifiers.PROTECTED.getFlag());
+		JCTClass.modifiersIncompatibility.put(JCTModifiers.PUBLIC,
+				JCTModifiers.PRIVATE.getFlag()
+						| JCTModifiers.PROTECTED.getFlag());
 
 		JCTClass.modifiersIncompatibility.put(JCTModifiers.STATIC, 0);
 		JCTClass.modifiersIncompatibility.put(JCTModifiers.STRICTFP, 0);
@@ -522,12 +504,19 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 
 	@Override
 	protected boolean hasIncompatibleModifier(final JCTModifiers m) {
-		final Integer incompatibility =
-			JCTClass.modifiersIncompatibility.get(m);
-		if (null == incompatibility)
-			throw new IllegalArgumentException("This modifier (" + m.toString()
-					+ " " + m.getFlag() + ") is not supported by classes.");
-		return (this.getModifierFlags() & incompatibility) != 0;
+		final Integer incompatibility = JCTClass.modifiersIncompatibility
+				.get(m);
+		if (null == incompatibility) {
+			// Yann 25/08/01: Leniency
+			// Instead of throwing an exception, let's just warn the user...
+			ProxyConsole.getInstance().errorOutput()
+					.println("The modifier " + m.toString() + " (" + m.getFlag()
+							+ ") is not supported by classes");
+			// throw new IllegalArgumentException("The modifier " + m.toString()
+			//		+ " (" + m.getFlag() + ") is not supported by classes");
+		}
+		// return (this.getModifierFlags() & incompatibility) != 0;
+		return false;
 	}
 
 	private void readObject(final java.io.ObjectInputStream in)
