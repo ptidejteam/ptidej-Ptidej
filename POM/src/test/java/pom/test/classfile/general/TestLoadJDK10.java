@@ -24,24 +24,29 @@ import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
 import padl.util.ModelStatistics;
 import pom.metrics.IBinaryMetric;
+import pom.metrics.IMetric;
 import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
+import pom.metrics.repository.CBO;
 
 /**
  * @author zaidifar
  * 
- * We consider the package java.lang. The arborescence seems to be good for doing tests.
- * We consider some classes on the middle of the hierarchy. We are using JDK1.2.2. However,
- * a representation of the tree is available at : 
- * http://java.sun.com/j2se/1.3/docs/api/java/lang/package-tree.html
+ *         We consider the package java.lang. The arborescence seems to be good
+ *         for doing tests. We consider some classes on the middle of the
+ *         hierarchy. We are using JDK1.2.2. However, a representation of the
+ *         tree is available at :
+ *         http://java.sun.com/j2se/1.3/docs/api/java/lang/package-tree.html
  * 
  */
 public final class TestLoadJDK10 extends TestCase {
-	private static String root = "../POM/target/test-classes/jdk102.jar";
+	private static String root = "../Ptidej/ptidej-Ptidej/POM/target/test-classes" +
+            "/jdk102.jar";
 
 	public TestLoadJDK10(String aName) {
 		super(aName);
 	}
+
 	public void setUp() throws Exception {
 		super.setUp();
 	}
@@ -49,15 +54,12 @@ public final class TestLoadJDK10 extends TestCase {
 	public void testTimeExecution() {
 		long start = System.currentTimeMillis();
 
-		final ICodeLevelModel codeLevelModel =
-			Factory.getInstance().createCodeLevelModel("test JDK102");
+		final ICodeLevelModel codeLevelModel = Factory.getInstance().createCodeLevelModel("test JDK102");
 		final ModelStatistics modelStatistics = new ModelStatistics();
 		codeLevelModel.addModelListener(modelStatistics);
 		try {
-			codeLevelModel.create(new CompleteClassFileCreator(
-				new String[] { root }));
-		}
-		catch (CreationException ce) {
+			codeLevelModel.create(new CompleteClassFileCreator(new String[] { root }));
+		} catch (CreationException ce) {
 			ce.printStackTrace(System.err);
 		}
 		System.out.println(modelStatistics);
@@ -67,71 +69,93 @@ public final class TestLoadJDK10 extends TestCase {
 		// I have now an iterator able to iterate over a
 		// specified type of constituent of a list.
 		final List listOfEntities = new ArrayList();
-		final Iterator iterator =
-			codeLevelModel.getIteratorOnConstituents(IFirstClassEntity.class);
+		final Iterator iterator = codeLevelModel.getIteratorOnTopLevelEntities();
 		while (iterator.hasNext()) {
-			final IFirstClassEntity firstClassEntity =
-				(IFirstClassEntity) iterator.next();
+			final IFirstClassEntity firstClassEntity = (IFirstClassEntity) iterator.next();
 			if (!(firstClassEntity instanceof IGhost)) {
 				listOfEntities.add(firstClassEntity);
 			}
 		}
-		final IFirstClassEntity[] entities =
-			new IFirstClassEntity[listOfEntities.size()];
+		final IFirstClassEntity[] entities = new IFirstClassEntity[listOfEntities.size()];
 		listOfEntities.toArray(entities);
 
-		final MetricsRepository metricRepository =
-			MetricsRepository.getInstance();
+		final MetricsRepository metricRepository = MetricsRepository.getInstance();
 		System.out.println("Computing unary metrics...");
-		this.computeUnaryMetrics(codeLevelModel, entities, metricRepository);
+		 //this.computeUnaryMetrics(codeLevelModel, entities, metricRepository);
 		System.out.println("Computing binary metrics...");
-		this.computeBinaryMetrics(codeLevelModel, entities, metricRepository);
+		 this.computeBinaryMetrics(codeLevelModel, entities, metricRepository);
 
-		long end = System.currentTimeMillis();
-		long time = (end - start) / 1000;
-		System.out.println("Computation time:" + time);
+//		final IBinaryMetric cbo = (IBinaryMetric) MetricsRepository.getInstance().getMetric("CBO");
+//		final long startTime = System.currentTimeMillis();
+//		final long maxDurationInMs = 60 * 1000;
+//		for (int i = 0; i < entities.length - 1; i++) {
+////			if (System.currentTimeMillis() - startTime > maxDurationInMs) {
+////				System.out.println("Timeout: Terminating binary metric computation after 1 minutes.");
+////				return; // Exit the entire method
+////			}
+//			for (int j = i + 1; j < entities.length; j++) {
+//				final IFirstClassEntity entityA = entities[i];
+//				final IFirstClassEntity entityB = entities[j];
+//
+//				cbo.compute(codeLevelModel, entityA, entityB);
+//			}
+//		}
+//		long end = System.currentTimeMillis();
+//		long time = (end - start) / 1000;
+//		System.out.println("Computation time:" + time);
+//        //System.out.println("Counter:" + Factory.getInstanceCallCount());
 	}
 
-	public void computeUnaryMetrics(
-		final IAbstractLevelModel anAbstractLevelModel,
-		final IFirstClassEntity[] someEntities,
-		final MetricsRepository metricRepository) {
-
+	public void computeUnaryMetrics(final IAbstractLevelModel anAbstractLevelModel, final IFirstClassEntity[] someEntities, final MetricsRepository metricRepository) {
 		IFirstClassEntity entityA;
 		int count = 0;
 		final IUnaryMetric[] metrics = metricRepository.getUnaryMetrics();
+		final long startTime = System.currentTimeMillis();
+		final long maxDurationInMs = 60 * 1000;
 
-		for (int i = 0; i < someEntities.length - 1; i++) {
-			for (int j = i + 1; j < someEntities.length; j++) {
+		for (int i = 0; i < someEntities.length; i++) {
+			if (System.currentTimeMillis() - startTime > maxDurationInMs) {
+				System.out.println("Timeout: Terminating binary metric computation after 1 minutes.");
+				return; // Exit the entire method
+			}
+//			for (int j = i + 1; j < someEntities.length; j++) {
 				entityA = someEntities[i];
 
 				for (int k = 0; k < metrics.length; k++) {
-					final IUnaryMetric binaryMetric = metrics[k];
-					binaryMetric.compute(anAbstractLevelModel, entityA);
+					final IUnaryMetric unaryMetric = metrics[k];
+					System.out.print(unaryMetric.getName() + "(" + entityA.getDisplayName() + ") = ");
+					final double value = unaryMetric.compute(anAbstractLevelModel, entityA);
+					System.out.println(value);
 					System.out.println("1 - " + count++);
 				}
 			}
-		}
+		//}
 	}
-	public void computeBinaryMetrics(
-		final IAbstractLevelModel anAbstractLevelModel,
-		final IFirstClassEntity[] someEntities,
-		final MetricsRepository metricRepository) {
+
+	public void computeBinaryMetrics(final IAbstractLevelModel anAbstractLevelModel,
+			final IFirstClassEntity[] someEntities, final MetricsRepository metricRepository) {
 
 		IFirstClassEntity entityA;
 		IFirstClassEntity entityB;
 		int count = 0;
 		final IBinaryMetric[] metrics = metricRepository.getBinaryMetrics();
+		final long startTime = System.currentTimeMillis();
+		final long maxDurationInMs = 60 * 1000;
 
 		for (int i = 0; i < someEntities.length - 1; i++) {
+			if (System.currentTimeMillis() - startTime > maxDurationInMs) {
+				System.out.println("Timeout: Terminating binary metric computation after 1 minutes.");
+				return; // Exit the entire method
+			}
 			for (int j = i + 1; j < someEntities.length; j++) {
 				entityA = someEntities[i];
 				entityB = someEntities[j];
 
 				for (int k = 0; k < metrics.length; k++) {
 					final IBinaryMetric binaryMetric = metrics[k];
-					binaryMetric
-						.compute(anAbstractLevelModel, entityA, entityB);
+					final double value = binaryMetric.compute(anAbstractLevelModel, entityA, entityB);
+					System.out.println(binaryMetric.getName() + "(" + entityA.getDisplayName() + ", "
+							+ entityB.getDisplayName() + ") = " + value);
 					System.out.println("2 - " + count++);
 				}
 			}
