@@ -40,7 +40,7 @@ import pom.metrics.repository.CBO;
  * 
  */
 public final class TestLoadJDK10 extends TestCase {
-	private static String root = "../Ptidej/ptidej-Ptidej/POM/target/test-classes" +
+	private static String root = "../POM/target/test-classes" +
             "/jdk102.jar";
 
 	public TestLoadJDK10(String aName) {
@@ -81,29 +81,9 @@ public final class TestLoadJDK10 extends TestCase {
 
 		final MetricsRepository metricRepository = MetricsRepository.getInstance();
 		System.out.println("Computing unary metrics...");
-		 //this.computeUnaryMetrics(codeLevelModel, entities, metricRepository);
+		 this.computeUnaryMetrics(codeLevelModel, entities, metricRepository);
 		System.out.println("Computing binary metrics...");
 		 this.computeBinaryMetrics(codeLevelModel, entities, metricRepository);
-
-//		final IBinaryMetric cbo = (IBinaryMetric) MetricsRepository.getInstance().getMetric("CBO");
-//		final long startTime = System.currentTimeMillis();
-//		final long maxDurationInMs = 60 * 1000;
-//		for (int i = 0; i < entities.length - 1; i++) {
-////			if (System.currentTimeMillis() - startTime > maxDurationInMs) {
-////				System.out.println("Timeout: Terminating binary metric computation after 1 minutes.");
-////				return; // Exit the entire method
-////			}
-//			for (int j = i + 1; j < entities.length; j++) {
-//				final IFirstClassEntity entityA = entities[i];
-//				final IFirstClassEntity entityB = entities[j];
-//
-//				cbo.compute(codeLevelModel, entityA, entityB);
-//			}
-//		}
-//		long end = System.currentTimeMillis();
-//		long time = (end - start) / 1000;
-//		System.out.println("Computation time:" + time);
-//        //System.out.println("Counter:" + Factory.getInstanceCallCount());
 	}
 
 	public void computeUnaryMetrics(final IAbstractLevelModel anAbstractLevelModel, final IFirstClassEntity[] someEntities, final MetricsRepository metricRepository) {
@@ -118,7 +98,7 @@ public final class TestLoadJDK10 extends TestCase {
 				System.out.println("Timeout: Terminating binary metric computation after 1 minutes.");
 				return; // Exit the entire method
 			}
-//			for (int j = i + 1; j < someEntities.length; j++) {
+			for (int j = i + 1; j < someEntities.length; j++) {
 				entityA = someEntities[i];
 
 				for (int k = 0; k < metrics.length; k++) {
@@ -129,7 +109,7 @@ public final class TestLoadJDK10 extends TestCase {
 					System.out.println("1 - " + count++);
 				}
 			}
-		//}
+		}
 	}
 
 	public void computeBinaryMetrics(final IAbstractLevelModel anAbstractLevelModel,
