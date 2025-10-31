@@ -10,12 +10,8 @@
  ******************************************************************************/
 package pom.primitives;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+
 import padl.kernel.IClass;
 import padl.kernel.IConstituent;
 import padl.kernel.IElement;
@@ -46,7 +42,10 @@ public class ClassPrimitives extends Primitives {
 
 	private Operators operators = Operators.getInstance();
 
-	private ClassPrimitives() {
+    private static final Map<String, List> ancestorMethodsCache = new HashMap<>();
+
+
+    private ClassPrimitives() {
 	}
 
 	/**
@@ -58,38 +57,39 @@ public class ClassPrimitives extends Primitives {
 	 * @param firstClassEntity
 	 * @return the methods of the ancestor entities considering the entity
 	 */
-	private final List ancestorsMethods(final IFirstClassEntity firstClassEntity) {
-		final List methodAncestors = new ArrayList();
-		final List ancestors =
-			new ArrayList(this.listOfAncestors(firstClassEntity));
+    private final List ancestorsMethods(final IFirstClassEntity firstClassEntity) {
 
-		for (final Iterator iterAncestorEntity = ancestors.iterator(); iterAncestorEntity
-			.hasNext();) {
+        final String cacheKey = new String(firstClassEntity.getID());
 
-			final IFirstClassEntity nextAncestor =
-				(IFirstClassEntity) iterAncestorEntity.next();
+        if (ancestorMethodsCache.containsKey(cacheKey)) {
+            return ancestorMethodsCache.get(cacheKey);
+        }
 
-			for (final Iterator iteratorOnElements =
-				nextAncestor.getIteratorOnConstituents(); iteratorOnElements
-				.hasNext();) {
+        final List methodAncestors = new ArrayList();
+        final List ancestors = new ArrayList(this.listOfAncestors(firstClassEntity));
 
-				final IElement element = (IElement) iteratorOnElements.next();
-				if (element instanceof IMethod
-						&& !methodAncestors.contains(element)) {
+        for (final Iterator iterAncestorEntity = ancestors.iterator(); iterAncestorEntity.hasNext();) {
+            final IFirstClassEntity nextAncestor = (IFirstClassEntity) iterAncestorEntity.next();
 
-					final IMethod method = (IMethod) element;
-					if (!method.isPrivate())
-						// February 17, 2004 - 11h28: Farouk->I take account of
-						// private methods, but inherited methods must be
-						// protected or public.
-						methodAncestors.add(method);
-				}
-			}
-		}
+            for (final Iterator iteratorOnElements = nextAncestor.getIteratorOnConstituents();
+                 iteratorOnElements.hasNext();) {
 
-		return methodAncestors;
-	}
-	/**
+                final IElement element = (IElement) iteratorOnElements.next();
+                if (element instanceof IMethod) {
+                    final IMethod method = (IMethod) element;
+                    if (!method.isPrivate() && !methodAncestors.contains(method)) {
+                        // Keep only non‑private methods and avoid duplicates.
+                        methodAncestors.add(method);
+                    }
+                }
+            }
+        }
+
+        ancestorMethodsCache.put(cacheKey, methodAncestors);
+        return methodAncestors;
+    }
+
+    /**
 	 * @param firstClassEntity TODO
 	 * @author Karim DHAMBRI
 	 * @since 2005/??/??
