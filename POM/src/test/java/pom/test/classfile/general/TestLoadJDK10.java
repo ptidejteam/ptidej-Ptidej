@@ -32,16 +32,15 @@ import pom.metrics.repository.CBO;
 /**
  * @author zaidifar
  * 
- *         We consider the package java.lang. The arborescence seems to be good
- *         for doing tests. We consider some classes on the middle of the
- *         hierarchy. We are using JDK1.2.2. However, a representation of the
- *         tree is available at :
- *         http://java.sun.com/j2se/1.3/docs/api/java/lang/package-tree.html
+ * We consider the package java.lang. The arborescence seems to be good
+ * for doing tests. We consider some classes on the middle of the
+ * hierarchy. We are using JDK1.2.2. However, a representation of the
+ * tree is available at :
+ * http://java.sun.com/j2se/1.3/docs/api/java/lang/package-tree.html
  * 
  */
 public final class TestLoadJDK10 extends TestCase {
-	private static String root = "../POM/target/test-classes" +
-            "/jdk102.jar";
+	private static String root = "../POM/target/test-classes/jdk102.jar";
 
 	public TestLoadJDK10(String aName) {
 		super(aName);
@@ -52,8 +51,6 @@ public final class TestLoadJDK10 extends TestCase {
 	}
 
 	public void testTimeExecution() {
-		long start = System.currentTimeMillis();
-
 		final ICodeLevelModel codeLevelModel = Factory.getInstance().createCodeLevelModel("test JDK102");
 		final ModelStatistics modelStatistics = new ModelStatistics();
 		codeLevelModel.addModelListener(modelStatistics);
@@ -81,23 +78,17 @@ public final class TestLoadJDK10 extends TestCase {
 
 		final MetricsRepository metricRepository = MetricsRepository.getInstance();
 		System.out.println("Computing unary metrics...");
-		 this.computeUnaryMetrics(codeLevelModel, entities, metricRepository);
+		this.computeUnaryMetrics(codeLevelModel, entities, metricRepository);
 		System.out.println("Computing binary metrics...");
-		 this.computeBinaryMetrics(codeLevelModel, entities, metricRepository);
+		this.computeBinaryMetrics(codeLevelModel, entities, metricRepository);
 	}
 
 	public void computeUnaryMetrics(final IAbstractLevelModel anAbstractLevelModel, final IFirstClassEntity[] someEntities, final MetricsRepository metricRepository) {
 		IFirstClassEntity entityA;
 		int count = 0;
 		final IUnaryMetric[] metrics = metricRepository.getUnaryMetrics();
-		final long startTime = System.currentTimeMillis();
-		final long maxDurationInMs = 60 * 1000;
 
 		for (int i = 0; i < someEntities.length; i++) {
-			if (System.currentTimeMillis() - startTime > maxDurationInMs) {
-				System.out.println("Timeout: Terminating binary metric computation after 1 minutes.");
-				return; // Exit the entire method
-			}
 			for (int j = i + 1; j < someEntities.length; j++) {
 				entityA = someEntities[i];
 
@@ -119,14 +110,8 @@ public final class TestLoadJDK10 extends TestCase {
 		IFirstClassEntity entityB;
 		int count = 0;
 		final IBinaryMetric[] metrics = metricRepository.getBinaryMetrics();
-		final long startTime = System.currentTimeMillis();
-		final long maxDurationInMs = 60 * 1000;
 
 		for (int i = 0; i < someEntities.length - 1; i++) {
-			if (System.currentTimeMillis() - startTime > maxDurationInMs) {
-				System.out.println("Timeout: Terminating binary metric computation after 1 minutes.");
-				return; // Exit the entire method
-			}
 			for (int j = i + 1; j < someEntities.length; j++) {
 				entityA = someEntities[i];
 				entityB = someEntities[j];
