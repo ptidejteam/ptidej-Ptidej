@@ -21,15 +21,9 @@ The source code of the Ptidej Tool Suite is open and released under the GNU Publ
 
 ## What do I need?
 
-At minimum
-- Java 21 and its JDK
-- Maven version 3.9.6
-- Eclipse 2024-03 (4.31.0)
-
-Tested with
-- Java 24 and its JDK
+- Java 25 and its JDK
 - Maven version 3.9.9
-- Eclipse 2025-09 (4.37.0 M2)
+- Eclipse 2025-12 (4.38.0 M2)
 
 (Be aware that Eclipse only allows previews for the latest JDK that it supports.)
 
