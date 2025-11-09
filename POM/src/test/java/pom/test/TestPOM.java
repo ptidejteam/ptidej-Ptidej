@@ -29,6 +29,7 @@ import pom.test.classfile.specific.TestNOC;
 import pom.test.classfile.specific.TestUnaryCBO;
 import pom.test.classfile.specific.TestWMC;
 import pom.test.classfile.specific.TestWMC1;
+import util.lang.MavenTestGuard;
 
 /**
  * @author Farouk Zaidi
@@ -39,12 +40,15 @@ public class TestPOM extends TestSuite {
 	public TestPOM() {
 		super();
 	}
+
 	public TestPOM(final Class theClass) {
 		super(theClass);
 	}
+
 	public TestPOM(final String name) {
 		super(name);
 	}
+
 	public static Test suite() {
 		final TestPOM suite = new TestPOM();
 
@@ -52,7 +56,14 @@ public class TestPOM extends TestSuite {
 
 		suite.addTestSuite(TestClassPrimitives.class);
 		suite.addTestSuite(TestCouplingCohesionMetrics.class);
-		suite.addTestSuite(TestLoadJDK10.class);
+		// Yann 25/11/10: Long, too long!
+		// This test takes too long and is not really
+		// necessary to run in GitHub or elsewhere
+		// when compiling/testing with Maven.
+		if (MavenTestGuard.getInstance().isRunningOutsideMavenTest()) {
+			// TODO Re-enable
+			// suite.addTestSuite(TestLoadJDK10.class);
+		}
 		suite.addTestSuite(TestMethodPrimitives.class);
 		suite.addTestSuite(TestMetricRepository.class);
 		suite.addTestSuite(TestNMIandNMOwithPattern4J.class);

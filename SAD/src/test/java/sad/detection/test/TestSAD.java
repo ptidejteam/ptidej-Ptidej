@@ -11,6 +11,7 @@
 package sad.detection.test;
 
 import junit.framework.Test;
+import junit.framework.TestSuite;
 import sad.detection.test.classfile.swt.DetectionAntipatternSWTTest;
 import sad.detection.test.classfile.xerces.SpaghettiCodeTest;
 import sad.detection.test.classfile.xerces.SpaghettiCodeTest2;
@@ -25,7 +26,7 @@ import sad.detection.test.javafile.ideasimsyn.SomeSmellsTest;
  */
 // TODO: Implement and test the tests!
 // Non-fuzzy first, then fuzzy...
-public final class TestSAD extends junit.framework.TestSuite {
+public final class TestSAD extends TestSuite {
 	public static Test suite() {
 		final TestSAD suite = new TestSAD();
 

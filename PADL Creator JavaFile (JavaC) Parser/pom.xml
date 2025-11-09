@@ -22,8 +22,8 @@
 				<version>3.8.1</version>
 				<configuration>
 					<release combine.self="override" />
-					<source>24</source>
-					<target>24</target>
+					<source>25</source>
+					<target>25</target>
 					<compilerArgs>
 						<arg>-proc:none</arg>
 						<arg>

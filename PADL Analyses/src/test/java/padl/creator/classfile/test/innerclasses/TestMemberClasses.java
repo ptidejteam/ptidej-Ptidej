@@ -58,13 +58,13 @@ public class TestMemberClasses extends ClassFilePrimitive {
 
 			TestMemberClasses.Elements =
 				Util
-					.getArrayOfElements(TestMemberClasses.FirstClassEntities[2]);
+					.getArrayOfElements(TestMemberClasses.FirstClassEntities[3]);
 		}
 	}
 	public void testClasses() {
 		Assert.assertEquals(
 			"Number of entities",
-			3,
+			4,
 			TestMemberClasses.FirstClassEntities.length);
 	}
 	public void testMemberClass() {
