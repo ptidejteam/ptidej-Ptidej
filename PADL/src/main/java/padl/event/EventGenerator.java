@@ -12,8 +12,11 @@ package padl.event;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -252,5 +255,9 @@ public class EventGenerator implements IWalker, Serializable {
 	}
 	public final void visit(final IUseRelationship aUse) {
 		this.genetateEventForElement(aUse);
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

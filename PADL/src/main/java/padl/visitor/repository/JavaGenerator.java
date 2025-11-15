@@ -12,6 +12,7 @@ package padl.visitor.repository;
 
 import java.util.Iterator;
 
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -420,5 +421,9 @@ public final class JavaGenerator implements IGenerator {
 	}
 
 	public void visit(final IUseRelationship p) {
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

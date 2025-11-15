@@ -75,9 +75,11 @@ public abstract class Constituent implements IConstituent {
 		this.setName(anID);
 		this.setPath(anID);
 	}
+
 	public void accept(final IVisitor visitor) {
 		this.accept(visitor, "visit");
 	}
+
 	protected void accept(final IVisitor visitor, final String methodName) {
 		// Yann 2015/05/24: Cache reset...
 		// If the visitor has changed, then I reset the cache.

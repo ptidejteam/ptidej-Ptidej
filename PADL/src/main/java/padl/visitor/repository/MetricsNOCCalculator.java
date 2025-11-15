@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.visitor.repository;
 
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -38,6 +39,8 @@ import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
+
+import java.util.Iterator;
 
 public final class MetricsNOCCalculator implements IWalker {
 	private int numberOfAbstractModel;
@@ -172,5 +175,9 @@ public final class MetricsNOCCalculator implements IWalker {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship p) {
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -217,5 +219,9 @@ public final class AACRemover implements IWalker {
 	}
 	public void visit(final IUseRelationship aUse) {
 		((List) this.stackOfListOfRelationsToRemove.peek()).add(aUse.getID());
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

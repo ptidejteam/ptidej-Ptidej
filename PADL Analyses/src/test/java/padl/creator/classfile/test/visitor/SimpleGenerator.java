@@ -15,6 +15,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -357,5 +358,9 @@ public class SimpleGenerator implements IGenerator {
 		this.buffer.append("visit\t");
 		this.buffer.append(aUse.getName());
 		this.buffer.append('\n');
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

@@ -13,6 +13,8 @@ package padl.visitor.repository;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Stack;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -260,5 +262,9 @@ public class TripletDomainSimplifiedGenerator implements IWalker {
 	}
 	public void visit(final IUseRelationship aUse) {
 		this.visit((IRelationship) aUse, " associates ");
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

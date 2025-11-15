@@ -12,6 +12,8 @@ package padl.analysis.repository.systematicuml;
 
 import java.util.Arrays;
 import java.util.Iterator;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.analysis.repository.SystematicUMLAnalysis;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -316,5 +318,9 @@ public class SystematicUMLOperationGenerator implements IWalker {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship aUse) {
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

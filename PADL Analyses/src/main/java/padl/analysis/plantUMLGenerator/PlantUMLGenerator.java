@@ -31,6 +31,8 @@ import padl.kernel.IRelationship;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
 import padl.visitor.IGenerator;
+import padl.visitor.IPruningConditions;
+import padl.visitor.ITraverser;
 import util.io.ProxyConsole;
 
 /**
@@ -41,8 +43,12 @@ public class PlantUMLGenerator implements IGenerator {
 	protected final StringBuffer plantUMLBuilder = new StringBuffer();
 	protected final StringBuffer plantUMLBuilderRelationship = new StringBuffer();
 	private IFirstClassEntity currentEntity;
+	private ITraverser traverser;
+	private IPruningConditions pruningConditions;
 
-	public PlantUMLGenerator() {
+	public PlantUMLGenerator(final ITraverser traverser, final IPruningConditions pruningConditions) {
+		this.traverser = traverser;
+		this.pruningConditions = pruningConditions;
 		this.plantUMLBuilder.append("\n@startuml\n");
 	}
 
@@ -293,7 +299,7 @@ public class PlantUMLGenerator implements IGenerator {
 
 	public void reset() {
 		plantUMLBuilder.setLength(0);
-
+		traverser.reset();
 	}
 
 	public void visit(IContainerAggregation aContainerAggregation) {
@@ -327,5 +333,12 @@ public class PlantUMLGenerator implements IGenerator {
 
 	public Object getResult() {
 		return plantUMLBuilder.toString();
+	}
+
+	public void traverse(final Iterator iterator) {
+
+		this.traverser.traverseNext(this,
+									iterator,
+									pruningConditions);
 	}
 }
