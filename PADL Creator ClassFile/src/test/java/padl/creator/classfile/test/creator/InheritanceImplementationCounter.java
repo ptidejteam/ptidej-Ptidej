@@ -10,6 +10,9 @@
  ******************************************************************************/
 package padl.creator.classfile.test.creator;
 
+import org.apache.commons.lang3.NotImplementedException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -39,12 +42,15 @@ import padl.kernel.IUseRelationship;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
 
+import java.util.Iterator;
+
 /**
  * @author Yann-Gaël Guéhéneuc
  * @since  2007/02/21
  */
 public class InheritanceImplementationCounter implements IWalker {
-	private int numerOfImplementationRelationships;
+    private static final Logger log = LogManager.getLogger(InheritanceImplementationCounter.class);
+    private int numerOfImplementationRelationships;
 	private int numerOfInheritanceRelationships;
 
 	public void close(final IAbstractModel anAbstractModel) {
@@ -192,4 +198,9 @@ public class InheritanceImplementationCounter implements IWalker {
 
 	public void visit(final IUseRelationship aUse) {
 	}
+
+    @Override
+    public void traverse(Iterator iterator) {
+        throw new NotImplementedException();
+    }
 }

@@ -10,8 +10,10 @@
  ******************************************************************************/
 package padl.test.helper;
 
+import org.apache.commons.lang3.NotImplementedException;
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
+import java.util.Iterator;
 import java.util.Stack;
 import org.junit.Assert;
 import padl.kernel.IAbstractModel;
@@ -446,4 +448,9 @@ public class ModelComparator implements IWalker {
 	public final void visit(final IUseRelationship aUseRelationship) {
 		this.visit((IElement) aUseRelationship);
 	}
+
+    @Override
+    public void traverse(Iterator iterator) {
+        throw new  NotImplementedException();
+    }
 }
