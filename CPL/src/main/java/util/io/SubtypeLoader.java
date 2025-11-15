@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -66,7 +67,7 @@ public final class SubtypeLoader {
 		final List<ClassFile> aListOfClasses = new ArrayList<ClassFile>(
 				currentList.length);
 		for (int x = 0; x < currentList.length; x++) {
-			final String itemName = aDirectoryName + currentList[x];
+			final String itemName = Path.of(aDirectoryName,  currentList[x]).toString();
 
 			if (new File(itemName).isFile()) {
 				aListOfClasses
