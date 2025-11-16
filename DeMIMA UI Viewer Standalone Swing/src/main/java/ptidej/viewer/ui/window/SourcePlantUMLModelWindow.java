@@ -38,6 +38,8 @@ import padl.kernel.IAbstractModel;
 import padl.kernel.IConstituent;
 import padl.kernel.IContainer;
 import padl.kernel.IFirstClassEntity;
+import padl.kernel.impl.BreadthFirstTraverser;
+import padl.kernel.impl.PruningConditions;
 import ptidej.ui.awt.AWTCanvas;
 import ptidej.ui.canvas.Canvas;
 import ptidej.ui.kernel.Constituent;
@@ -327,7 +329,7 @@ public class SourcePlantUMLModelWindow extends AbstractRepresentationWindow {
 	public String modelGenerator() throws UnsupportedSourceModelException {
 		String finUMLContent = new String();
 		try {
-			PlantUMLGenerator PlantUMLGeneratorNew = new PlantUMLGenerator();
+			PlantUMLGenerator PlantUMLGeneratorNew = new PlantUMLGenerator(new BreadthFirstTraverser(), new PruningConditions(""));
 			this.getSourceModel().generate(PlantUMLGeneratorNew);
 			System.out.println(PlantUMLGeneratorNew.getCode());
 			String umlContent = (String) PlantUMLGeneratorNew.getCode();

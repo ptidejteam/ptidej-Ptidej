@@ -13,6 +13,8 @@ package ptidej.viewer.extension.repository;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -230,5 +232,9 @@ public final class OADymPPaCGenerator implements IWalker {
 	}
 	public void visit(final IUseRelationship p) {
 		this.addKey(p, OADymPPaCGenerator.USE_WEIGHT);
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

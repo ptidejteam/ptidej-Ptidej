@@ -14,11 +14,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.LineNumberReader;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IClass;
 import padl.kernel.IConstructor;
@@ -182,5 +180,9 @@ public class MethodInvocationDeserialiserHelper extends WalkerAdapter {
 
 			this.completeEntityFieldName.setLength(0);
 		}
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

@@ -15,6 +15,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -574,5 +576,9 @@ public final class UMLScriptGenerator implements IGenerator {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship p) {
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

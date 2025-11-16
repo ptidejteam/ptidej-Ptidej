@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.creator.javafile.eclipse.visitor;
 
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -38,6 +39,8 @@ import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
+
+import java.util.Iterator;
 
 public class Visitor implements IWalker {
 
@@ -312,5 +315,10 @@ public class Visitor implements IWalker {
 	public void visit(final IUseRelationship aUse) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

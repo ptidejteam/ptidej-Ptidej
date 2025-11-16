@@ -13,6 +13,8 @@ package ptidej.viewer.extension.repository;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -277,5 +279,9 @@ public final class InfoVisMatrixGenerator implements IWalker {
 		else {
 			this.addKey(p, InfoVisMatrixGenerator.ZERO_WEIGHT);
 		}
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.viewer.extension.repository;
 
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -42,6 +43,8 @@ import padl.visitor.IWalker;
 import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
 import util.io.ProxyConsole;
+
+import java.util.Iterator;
 
 /**
  * @author Foutse Khomh
@@ -351,5 +354,9 @@ public class QMOODMetrics implements IWalker {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship aUse) {
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

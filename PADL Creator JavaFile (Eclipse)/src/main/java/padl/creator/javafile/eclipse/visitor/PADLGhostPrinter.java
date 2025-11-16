@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.creator.javafile.eclipse.visitor;
 
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -39,6 +40,8 @@ import padl.kernel.IUseRelationship;
 import padl.visitor.IWalker;
 import padl.visitor.repository.JavaGenerator;
 import util.io.ProxyConsole;
+
+import java.util.Iterator;
 
 public class PADLGhostPrinter implements IWalker {
 
@@ -276,5 +279,10 @@ public class PADLGhostPrinter implements IWalker {
 	@Override
 	public void visit(final IUseRelationship aUse) {
 
+	}
+
+	@Override
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

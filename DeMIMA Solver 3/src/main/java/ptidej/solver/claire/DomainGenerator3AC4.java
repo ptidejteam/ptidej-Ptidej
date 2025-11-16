@@ -10,7 +10,10 @@
  ******************************************************************************/
 package ptidej.solver.claire;
 
+import org.apache.commons.lang3.NotImplementedException;
 import padl.motif.visitor.IMotifWalker;
+
+import java.util.Iterator;
 
 public class DomainGenerator3AC4 extends
 		DomainGenerator2AC4 implements IMotifWalker {
@@ -32,5 +35,9 @@ public class DomainGenerator3AC4 extends
 	}
 	public String getName() {
 		return "PtidejSolver 3 AC4 Domain";
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

@@ -10,7 +10,10 @@
  ******************************************************************************/
 package ptidej.solver.claire;
 
+import org.apache.commons.lang3.NotImplementedException;
 import padl.motif.visitor.IMotifGenerator;
+
+import java.util.Iterator;
 
 /**
  * @version	0.1
@@ -27,5 +30,9 @@ public class ConstraintGeneratorAC4 extends
 	}
 	protected String getSuffix() {
 		return "AC4";
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

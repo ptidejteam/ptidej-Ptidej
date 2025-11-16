@@ -16,6 +16,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Stack;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -371,5 +373,9 @@ public class Generator implements IWalker {
 	public void visit(final IUseRelationship aUse) {
 		this.currentEntity.addKnownEntity(this.findEntity(aUse
 			.getTargetEntity()));
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

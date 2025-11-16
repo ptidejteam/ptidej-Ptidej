@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -641,5 +642,9 @@ public class DomainGenerator2Custom extends DomainGenerator implements IMotifWal
 		if (!this.listOfUses.contains(pEntityName)) {
 			this.listOfUses.add(pEntityName);
 		}
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

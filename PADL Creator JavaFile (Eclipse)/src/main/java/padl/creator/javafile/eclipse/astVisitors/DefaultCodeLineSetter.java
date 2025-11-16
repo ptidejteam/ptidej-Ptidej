@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.creator.javafile.eclipse.astVisitors;
 
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IConstituent;
 import padl.kernel.IConstructor;
 import padl.kernel.IDelegatingMethod;
@@ -17,6 +18,8 @@ import padl.kernel.IGetter;
 import padl.kernel.IMethod;
 import padl.kernel.ISetter;
 import padl.util.adapter.WalkerAdapter;
+
+import java.util.Iterator;
 
 public class DefaultCodeLineSetter extends WalkerAdapter {
 	private void open(final IConstituent aConstituent) {
@@ -38,5 +41,9 @@ public class DefaultCodeLineSetter extends WalkerAdapter {
 	}
 	public void open(final ISetter aMethod) {
 		this.open((IConstituent) aMethod);
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

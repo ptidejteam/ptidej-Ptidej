@@ -13,6 +13,8 @@ package ptidej.solver.claire;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -644,5 +646,9 @@ public class DomainGenerator2AC4 extends
 			this.enclosingEntity,
 			p.getTargetEntity(),
 			this.useCouples);
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

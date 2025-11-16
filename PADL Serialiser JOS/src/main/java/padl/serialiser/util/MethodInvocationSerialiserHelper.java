@@ -15,6 +15,8 @@ import java.io.Writer;
 import java.lang.reflect.Field;
 import java.util.Iterator;
 import java.util.Map;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IClass;
 import padl.kernel.IConstructor;
@@ -136,5 +138,9 @@ public class MethodInvocationSerialiserHelper extends WalkerAdapter {
 		catch (final IOException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

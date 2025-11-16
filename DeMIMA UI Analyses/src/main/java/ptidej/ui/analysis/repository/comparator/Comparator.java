@@ -11,6 +11,8 @@
 package ptidej.ui.analysis.repository.comparator;
 
 import java.util.Iterator;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -266,5 +268,9 @@ public final class Comparator implements IWalker {
 	}
 	public void visit(final IUseRelationship aUse) {
 		this.visit((IElement) aUse);
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

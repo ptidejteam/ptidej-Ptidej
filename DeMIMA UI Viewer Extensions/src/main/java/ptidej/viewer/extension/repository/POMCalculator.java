@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.viewer.extension.repository;
 
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -43,6 +44,8 @@ import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
 import util.io.ProxyConsole;
 import util.multilingual.MultilingualManager;
+
+import java.util.Iterator;
 
 /**
  * @author Yann-Gaël Guéhéneuc 
@@ -225,5 +228,9 @@ public final class POMCalculator implements IWalker {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship aUse) {
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

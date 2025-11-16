@@ -13,6 +13,7 @@ package padl.creator.javafile.eclipse.visitor;
 import java.io.PrintWriter;
 import java.util.Iterator;
 
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -376,5 +377,10 @@ public class PADLPrinterVisitor implements IWalker {
 	@Override
 	public void visit(final IUseRelationship aUse) {
 
+	}
+
+	@Override
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

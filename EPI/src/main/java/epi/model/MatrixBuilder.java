@@ -11,6 +11,8 @@
 package epi.model;
 
 import java.util.Iterator;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -215,5 +217,9 @@ public class MatrixBuilder implements IWalker {
 	}
 	public void open(final IAbstractModel anAbstractModel) {
 		// Do nothing.
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

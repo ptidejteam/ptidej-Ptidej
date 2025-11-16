@@ -12,6 +12,9 @@ package padl.creator.aolfile.util;
 
 import java.io.IOException;
 import java.io.Writer;
+import java.util.Iterator;
+
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -189,5 +192,9 @@ public class AggregationVisitor implements IWalker {
 		}
 	}
 	public void visit(final IUseRelationship aUse) {
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 }

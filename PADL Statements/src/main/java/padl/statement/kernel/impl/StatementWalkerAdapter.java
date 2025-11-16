@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.statement.kernel.impl;
 
+import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -39,6 +40,8 @@ import padl.kernel.IUseRelationship;
 import padl.statement.kernel.IIfInstruction;
 import padl.statement.kernel.IStatementWalker;
 import padl.statement.kernel.ISwitchInstruction;
+
+import java.util.Iterator;
 
 public class StatementWalkerAdapter implements IStatementWalker {
 
@@ -257,6 +260,10 @@ public class StatementWalkerAdapter implements IStatementWalker {
 	public void visit(IUseRelationship aUse) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public void traverse(Iterator iterator) {
+		throw new NotImplementedException();
 	}
 
 	public void visit(IIfInstruction anIfInstruction) {
