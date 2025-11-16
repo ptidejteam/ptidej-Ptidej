@@ -70,7 +70,8 @@
 		<module>SAD</module>
 		<module>SAD Rules Creator</module>
 		<module>SQUAD</module>
-	</modules>
+        <module>Delivarable-2</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
