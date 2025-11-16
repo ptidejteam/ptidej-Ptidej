@@ -9,9 +9,9 @@ import java.util.Iterator;
 
 public class DepthFirstTraverser implements ITraverser {
 
-    public void traverseNext(final IVisitor visitor,
-                             final Iterator iterator,
-                             final IPruningConditions pruningConditions) {
+    public void traverse(final IVisitor visitor,
+                         final Iterator iterator,
+                         final IPruningConditions pruningConditions) {
 
         while (iterator.hasNext()) {
             final IConstituent constituent = (IConstituent) iterator.next();
@@ -30,7 +30,7 @@ public class DepthFirstTraverser implements ITraverser {
         }
     }
 
-    public void reset() {
+    public void resetState() {
         // nothing to do
     }
 

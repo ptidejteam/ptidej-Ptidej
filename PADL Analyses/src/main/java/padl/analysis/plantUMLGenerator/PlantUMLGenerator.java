@@ -299,7 +299,7 @@ public class PlantUMLGenerator implements IGenerator {
 
 	public void reset() {
 		plantUMLBuilder.setLength(0);
-		traverser.reset();
+		traverser.resetState();
 	}
 
 	public void visit(IContainerAggregation aContainerAggregation) {
@@ -337,7 +337,7 @@ public class PlantUMLGenerator implements IGenerator {
 
 	public void traverse(final Iterator iterator) {
 
-		this.traverser.traverseNext(this,
+		this.traverser.traverse(this,
 									iterator,
 									pruningConditions);
 	}

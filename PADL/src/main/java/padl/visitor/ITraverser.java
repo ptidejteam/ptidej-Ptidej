@@ -4,9 +4,9 @@ import java.util.Iterator;
 
 public interface ITraverser {
 
-    void traverseNext(final IVisitor visitor,
-                      final Iterator iterator,
-                      final IPruningConditions pruningConditions);
+    void traverse(final IVisitor visitor,
+                  final Iterator iterator,
+                  final IPruningConditions pruningConditions);
 
-    void reset();
+    void resetState();
 }

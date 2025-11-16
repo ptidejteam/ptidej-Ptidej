@@ -15,9 +15,9 @@ public class BreadthFirstTraverser implements ITraverser {
     Queue<IConstituent> queue = new ArrayDeque<>();
     HashSet<IConstituent> visitedConstituents = new HashSet<>();
 
-    public void traverseNext(final IVisitor visitor,
-                             final Iterator iterator,
-                             final IPruningConditions pruningConditions) {
+    public void traverse(final IVisitor visitor,
+                         final Iterator iterator,
+                         final IPruningConditions pruningConditions) {
 
 
 
@@ -51,7 +51,7 @@ public class BreadthFirstTraverser implements ITraverser {
         }
     }
 
-    public void reset() {
+    public void resetState() {
         queue = new ArrayDeque<>();
         visitedConstituents = new HashSet<>();
     }
