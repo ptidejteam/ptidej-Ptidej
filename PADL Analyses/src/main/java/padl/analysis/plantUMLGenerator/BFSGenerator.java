@@ -1,9 +1,47 @@
 package padl.analysis.plantUMLGenerator;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.IdentityHashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
 
-import padl.kernel.*;
+import padl.kernel.IAbstractModel;
+import padl.kernel.IAggregation;
+import padl.kernel.IAssociation;
+import padl.kernel.IClass;
+import padl.kernel.IComposition;
+import padl.kernel.IConstituent;
+import padl.kernel.IConstructor;
+import padl.kernel.IContainerAggregation;
+import padl.kernel.IContainerComposition;
+import padl.kernel.ICreation;
+import padl.kernel.IDelegatingMethod;
+import padl.kernel.IField;
+import padl.kernel.IGetter;
+import padl.kernel.IGhost;
+import padl.kernel.IInterface;
+import padl.kernel.IMemberClass;
+import padl.kernel.IMemberGhost;
+import padl.kernel.IMemberInterface;
+import padl.kernel.IMethod;
+import padl.kernel.IMethodInvocation;
+import padl.kernel.IPackage;
+import padl.kernel.IPackageDefault;
+import padl.kernel.IParameter;
+import padl.kernel.IPrimitiveEntity;
+import padl.kernel.IRelationship;
+import padl.kernel.ISetter;
+import padl.kernel.IUseRelationship;
 import padl.visitor.IGenerator;
+import util.io.ProxyConsole;
+
 
 
 public abstract class BFSGenerator<T extends IGenerator> implements IGenerator {
