@@ -10,6 +10,8 @@ import org.junit.Assert;
 
 import junit.framework.TestCase;
 import padl.analysis.UnsupportedSourceModelException;
+import padl.analysis.plantUMLGenerator.BFSGenerator;
+import padl.analysis.plantUMLGenerator.BFSPlantUMLGenerator;
 import padl.analysis.plantUMLGenerator.PlantUMLGenerator;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
@@ -77,7 +79,8 @@ public class Test1 extends TestCase {
 					new String[] { filePath }, true));
 			intendedIdiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(intendedCodeLevelModel);
-			PlantUMLGenerator PlantUMLGeneratorNew = new PlantUMLGenerator();
+			BFSPlantUMLGenerator PlantUMLGeneratorNew = new BFSPlantUMLGenerator(new PlantUMLGenerator());
+			//PlantUMLGenerator PlantUMLGeneratorNew = new PlantUMLGenerator();
 			intendedIdiomLevelModel.generate(PlantUMLGeneratorNew);
 			String umlContent = (String) PlantUMLGeneratorNew.getCode();
 			String timeStampForUMLTextFile = new Timestamp(
