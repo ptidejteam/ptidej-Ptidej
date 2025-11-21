@@ -11,20 +11,20 @@
 package padl.creator.cppfile.eclipse.test.big;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
-import padl.creator.cppfile.eclipse.misc.EclipseCPPParserCaller;
+import padl.creator.cppfile.eclipse.test.helper.ModelGenerator;
 import padl.kernel.ICodeLevelModel;
 
 public class Crypto extends TestCase {
 	public Crypto(String name) {
 		super(name);
 	}
+
 	public void test1() {
-		final ICodeLevelModel codeLevelModel =
-			EclipseCPPParserCaller
-				.getInstance()
-				.getCodeLevelModelUsingOSGiEmbedded(
-					"../PADL Creator C++ (Eclipse) Tests/data/crypto/");
+		final ICodeLevelModel codeLevelModel = ModelGenerator
+				.generateModelFromCppFilesUsingEclipse("Crypto",
+						"../PADL Creator C++ (Eclipse) Tests/data/crypto/");
 		Assert.assertNotNull("The code-level model is null!", codeLevelModel);
 		Assert.assertTrue(codeLevelModel.getNumberOfTopLevelEntities() > 5000);
 	}

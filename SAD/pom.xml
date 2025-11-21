@@ -116,6 +116,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-core</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 </project>

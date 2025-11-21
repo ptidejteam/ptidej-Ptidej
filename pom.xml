@@ -40,6 +40,7 @@
 		<module>MoDeC Solver</module>
 		<module>PADL</module>
 		<module>PADL Analyses</module>
+		<module>PADL Code-Diagram Comparison</module>
 		<module>PADL Creator AOL</module>
 		<module>PADL Creator AspectJ</module>
 		<module>PADL Creator C# v1</module>
