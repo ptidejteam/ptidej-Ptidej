@@ -42,6 +42,14 @@
 		</dependency>
 
 		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-4</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-core</artifactId>
 			<version>1.0.0</version>
@@ -51,6 +59,13 @@
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-design-motifs</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-xmi</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>

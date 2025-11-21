@@ -149,7 +149,6 @@
 			<version>1.0.0</version>
 		</dependency>
 
-
 		<!-- Test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
