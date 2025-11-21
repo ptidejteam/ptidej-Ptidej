@@ -26,7 +26,8 @@ public class BreadthFirstTraverser implements ITraverser {
             final IConstituent constituent = (IConstituent) iterator.next();
 
             if (!visitedConstituents.contains(constituent)
-                && !pruningConditions.shouldBePruned(constituent)) {
+                && (pruningConditions == null
+                    || !pruningConditions.shouldBePruned(constituent))) {
                 queue.add(constituent);
             }
         }
@@ -35,19 +36,16 @@ public class BreadthFirstTraverser implements ITraverser {
 
             final IConstituent constituent = queue.remove();
 
-            if (!visitedConstituents.contains(constituent)) {
-
-                try {
-                    System.out.println("Visiting: " + constituent.getDisplayName());
-                }
-                catch (Exception ex) {
-                    System.out.println("Visiting: " + constituent.hashCode());
-                }
-
-                constituent.accept(visitor);
-
-                visitedConstituents.add(constituent);
+            try {
+                System.out.println("Visiting: " + constituent.getDisplayName());
             }
+            catch (Exception ex) {
+                System.out.println("Visiting: " + constituent.hashCode());
+            }
+
+            constituent.accept(visitor);
+
+            visitedConstituents.add(constituent);
         }
     }
 

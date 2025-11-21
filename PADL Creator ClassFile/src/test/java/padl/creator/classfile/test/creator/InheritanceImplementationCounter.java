@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.creator.classfile.test.creator;
 
-import org.apache.commons.lang3.NotImplementedException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import padl.kernel.IAbstractModel;
@@ -39,6 +38,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
 
@@ -50,7 +50,8 @@ import java.util.Iterator;
  */
 public class InheritanceImplementationCounter implements IWalker {
     private static final Logger log = LogManager.getLogger(InheritanceImplementationCounter.class);
-    private int numerOfImplementationRelationships;
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
+	private int numerOfImplementationRelationships;
 	private int numerOfInheritanceRelationships;
 
 	public void close(final IAbstractModel anAbstractModel) {
@@ -201,6 +202,9 @@ public class InheritanceImplementationCounter implements IWalker {
 
     @Override
     public void traverse(Iterator iterator) {
-        throw new NotImplementedException();
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
     }
 }

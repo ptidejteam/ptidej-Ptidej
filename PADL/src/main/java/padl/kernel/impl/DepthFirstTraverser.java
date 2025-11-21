@@ -16,7 +16,8 @@ public class DepthFirstTraverser implements ITraverser {
         while (iterator.hasNext()) {
             final IConstituent constituent = (IConstituent) iterator.next();
 
-            if (!pruningConditions.shouldBePruned(constituent)) {
+            if (pruningConditions == null
+                || !pruningConditions.shouldBePruned(constituent)) {
 
                 try {
                     System.out.println("Visiting: " + constituent.getDisplayName());

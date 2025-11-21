@@ -15,7 +15,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
 
-import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -43,6 +42,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.motif.IDesignMotifModel;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
@@ -52,6 +52,7 @@ import util.io.ProxyConsole;
  * @since  2005/08/04
  */
 public final class AACRemover implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private IAbstractModel abstractModel;
 	private final List messageCache;
 	// Yann 2006/02/24: Member entities!
@@ -222,6 +223,9 @@ public final class AACRemover implements IWalker {
 	}
 
 	public void traverse(Iterator iterator) {
-		throw new NotImplementedException();
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

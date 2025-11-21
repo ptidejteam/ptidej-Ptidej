@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.test.helper;
 
-import org.apache.commons.lang3.NotImplementedException;
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.util.Iterator;
@@ -46,6 +45,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
 
@@ -54,6 +54,8 @@ public class ModelComparator implements IWalker {
 	private final Stack stackOfEnclosingConstituentsOfAModel = new Stack();
 	private final Stack stackOfEnclosingConstituentsOfAnotherModel =
 		new Stack();
+
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 
 	public ModelComparator(final IAbstractModel anAbstractModel) {
 		this.anotherAbstractModel = anAbstractModel;
@@ -451,6 +453,9 @@ public class ModelComparator implements IWalker {
 
     @Override
     public void traverse(Iterator iterator) {
-        throw new  NotImplementedException();
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
     }
 }

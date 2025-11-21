@@ -10,18 +10,20 @@
  ******************************************************************************/
 package padl.creator.javafile.eclipse.astVisitors;
 
-import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IConstituent;
 import padl.kernel.IConstructor;
 import padl.kernel.IDelegatingMethod;
 import padl.kernel.IGetter;
 import padl.kernel.IMethod;
 import padl.kernel.ISetter;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.util.adapter.WalkerAdapter;
 
 import java.util.Iterator;
 
 public class DefaultCodeLineSetter extends WalkerAdapter {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
+
 	private void open(final IConstituent aConstituent) {
 		if (!aConstituent.isAbstract()) {
 			aConstituent.setCodeLines(new String[0]);
@@ -44,6 +46,9 @@ public class DefaultCodeLineSetter extends WalkerAdapter {
 	}
 
 	public void traverse(Iterator iterator) {
-		throw new NotImplementedException();
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

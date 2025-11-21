@@ -17,6 +17,7 @@ import padl.kernel.IClass;
 import padl.kernel.IConstituent;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IInterface;
+import padl.kernel.impl.DepthFirstTraverser;
 import util.io.ProxyConsole;
 
 abstract class DomainGenerator {
@@ -130,6 +131,9 @@ abstract class DomainGenerator {
 		}
 		return isSub;
 	}
+
+	protected final DepthFirstTraverser traverser = new DepthFirstTraverser();
+
 	public final void unknownConstituentHandler(
 		final String aCalledMethodName,
 		final IConstituent aConstituent) {

@@ -15,7 +15,6 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -43,6 +42,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
 
@@ -110,6 +110,7 @@ public final class MetricsComplexityCalculator implements IWalker {
 		}
 	}
 
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private final List valuesForAllModules = new ArrayList();
 	private ValuesForModule valuesForCurrentModule;
 	public void close(final IAbstractModel p) {
@@ -342,6 +343,9 @@ public final class MetricsComplexityCalculator implements IWalker {
 	}
 
 	public void traverse(Iterator iterator) {
-		throw new NotImplementedException();
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

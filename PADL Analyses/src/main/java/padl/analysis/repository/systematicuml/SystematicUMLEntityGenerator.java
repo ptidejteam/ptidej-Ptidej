@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.analysis.repository.systematicuml;
 
-import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -40,6 +39,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.motif.IDesignMotifModel;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
@@ -52,6 +52,7 @@ import java.util.Iterator;
  * @since  2004/05/21
  */
 public class SystematicUMLEntityGenerator implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private final IFactory factory;
 	private boolean hasConcreteMethods;
 	private boolean hasFieldAssignments;
@@ -299,6 +300,9 @@ public class SystematicUMLEntityGenerator implements IWalker {
 	}
 
 	public void traverse(Iterator iterator) {
-		throw new NotImplementedException();
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

@@ -14,7 +14,6 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Stack;
 
-import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -43,6 +42,7 @@ import padl.kernel.IPrimitiveEntity;
 import padl.kernel.IRelationship;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.util.Util;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
@@ -52,6 +52,7 @@ import util.io.ProxyConsole;
  * @since  2007/02/01
  */
 public class TripletDomainCompleteGenerator implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private IAbstractModel model;
 	private final StringBuffer output;
 	private Stack stackOfEnclosingEntities;
@@ -267,6 +268,9 @@ public class TripletDomainCompleteGenerator implements IWalker {
 	}
 
 	public void traverse(Iterator iterator) {
-		throw new NotImplementedException();
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

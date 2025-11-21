@@ -16,7 +16,6 @@ import java.lang.reflect.Field;
 import java.util.Iterator;
 import java.util.Map;
 
-import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IClass;
 import padl.kernel.IConstructor;
@@ -31,11 +30,13 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IOperation;
 import padl.kernel.ISetter;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.util.adapter.WalkerAdapter;
 import util.io.ProxyConsole;
 import util.io.ProxyDisk;
 
 public class MethodInvocationSerialiserHelper extends WalkerAdapter {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private IFirstClassEntity enclosingEntity;
 	private IOperation enclosingMethod;
 	private Writer methodInvocationWriter;
@@ -141,6 +142,9 @@ public class MethodInvocationSerialiserHelper extends WalkerAdapter {
 	}
 
 	public void traverse(Iterator iterator) {
-		throw new NotImplementedException();
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

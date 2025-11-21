@@ -16,7 +16,6 @@ import java.io.LineNumberReader;
 import java.lang.reflect.Field;
 import java.util.*;
 
-import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IClass;
 import padl.kernel.IConstructor;
@@ -31,11 +30,13 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IOperation;
 import padl.kernel.ISetter;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.util.adapter.WalkerAdapter;
 import util.io.ProxyConsole;
 import util.io.ProxyDisk;
 
 public class MethodInvocationDeserialiserHelper extends WalkerAdapter {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private final StringBuffer completeEntityFieldName;
 	private IFirstClassEntity enclosingEntity;
 	private IOperation enclosingMethod;
@@ -183,6 +184,9 @@ public class MethodInvocationDeserialiserHelper extends WalkerAdapter {
 	}
 
 	public void traverse(Iterator iterator) {
-		throw new NotImplementedException();
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

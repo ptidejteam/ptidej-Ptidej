@@ -10,7 +10,6 @@
  ******************************************************************************/
 package ptidej.solver.claire;
 
-import org.apache.commons.lang3.NotImplementedException;
 import padl.motif.visitor.IMotifGenerator;
 
 import java.util.Iterator;
@@ -33,6 +32,9 @@ public class ConstraintGeneratorCustom extends
 	}
 
 	public void traverse(Iterator iterator) {
-		throw new NotImplementedException();
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

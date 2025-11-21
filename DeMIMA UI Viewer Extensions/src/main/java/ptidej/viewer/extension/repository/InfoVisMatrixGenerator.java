@@ -14,7 +14,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -43,6 +42,7 @@ import padl.kernel.IPrimitiveEntity;
 import padl.kernel.IRelationship;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import ptidej.ui.IVisibility;
 import util.io.ProxyConsole;
@@ -65,6 +65,7 @@ public final class InfoVisMatrixGenerator implements IWalker {
 	private static final int USE_WEIGHT = 1;
 	private static final int ZERO_WEIGHT = 0;
 
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private IFirstClassEntity enclosingPEntity;
 	private Map interClassRelationships = new HashMap();
 	// Yann 2003/07/23: Visibility!
@@ -282,6 +283,9 @@ public final class InfoVisMatrixGenerator implements IWalker {
 	}
 
 	public void traverse(Iterator iterator) {
-		throw new NotImplementedException();
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

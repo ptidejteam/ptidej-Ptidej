@@ -12,7 +12,6 @@ package padl.visitor.repository;
 
 import java.util.Iterator;
 
-import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -42,12 +41,14 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.util.Util;
 import padl.visitor.IGenerator;
 import util.io.ProxyConsole;
 import util.lang.Modifier;
 
 public final class JavaGenerator implements IGenerator {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private final StringBuffer buffer = new StringBuffer();
 	private int indentation = 0;
 
@@ -424,6 +425,9 @@ public final class JavaGenerator implements IGenerator {
 	}
 
 	public void traverse(Iterator iterator) {
-		throw new NotImplementedException();
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

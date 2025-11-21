@@ -45,6 +45,7 @@ import padl.kernel.IPrimitiveEntity;
 import padl.kernel.IRelationship;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.motif.IDesignMotifModel;
 import padl.util.Util;
 import util.io.ProxyConsole;
@@ -54,6 +55,7 @@ import util.io.ProxyConsole;
 // methods are accessed using reflection (subject to
 // access control).
 abstract class ConstraintGenerator {
+	protected final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private List aggregationTargets = new ArrayList();
 	private StringBuffer buffer = new StringBuffer();
 	private IAbstractModel currentModel;

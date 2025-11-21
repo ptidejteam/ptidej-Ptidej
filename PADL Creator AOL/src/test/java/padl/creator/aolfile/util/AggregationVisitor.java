@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.Iterator;
 
-import org.apache.commons.lang3.NotImplementedException;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -43,6 +42,7 @@ import padl.kernel.IPrimitiveEntity;
 import padl.kernel.IRelationship;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
 import util.io.ProxyDisk;
@@ -52,6 +52,7 @@ import util.io.ProxyDisk;
  * @since  2007/02/04
  */
 public class AggregationVisitor implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private IFirstClassEntity enclosingEntity;
 	private Writer writer;
 
@@ -195,6 +196,9 @@ public class AggregationVisitor implements IWalker {
 	}
 
 	public void traverse(Iterator iterator) {
-		throw new NotImplementedException();
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }
