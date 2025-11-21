@@ -28,8 +28,8 @@ public class PlantUmlGeneratorTests {
 
 		final IWalker walker = new InheritanceImplementationCounter();
 
-		final String path = "D:\\src\\ptidej-Ptidej\\SOEN6461\\target\\classes\\soen6461\\";
-		//final String path = "D:\\src\\ptidej-Ptidej\\PADL\\target\\classes";
+		final String path = "SOEN6461\\target\\classes\\soen6461\\";
+		//final String path = "PADL\\target\\classes";
 
 		try {
 			final ModelStatistics modelStatistics = new ModelStatistics();

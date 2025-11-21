@@ -21,6 +21,8 @@ import util.io.NullWriter;
 import util.io.ProxyConsole;
 
 import java.io.PrintWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class CompleteClassFileCreatorTests {
 
@@ -33,7 +35,7 @@ public class CompleteClassFileCreatorTests {
 		{
 			final IWalker walker = new InheritanceImplementationCounter();
 
-			final String path = "D:\\src\\ptidej-Ptidej\\SOEN6461\\target\\classes\\soen6461\\TestClass.class";
+			final String path = "SOEN6461\\target\\classes\\soen6461\\TestClass.class";
 
 			try {
 				final ModelStatistics modelStatistics = new ModelStatistics();
