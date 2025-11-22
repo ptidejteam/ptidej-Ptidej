@@ -16,9 +16,14 @@ import padl.kernel.IDelegatingMethod;
 import padl.kernel.IGetter;
 import padl.kernel.IMethod;
 import padl.kernel.ISetter;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.util.adapter.WalkerAdapter;
 
+import java.util.Iterator;
+
 public class DefaultCodeLineSetter extends WalkerAdapter {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
+
 	private void open(final IConstituent aConstituent) {
 		if (!aConstituent.isAbstract()) {
 			aConstituent.setCodeLines(new String[0]);
@@ -38,5 +43,12 @@ public class DefaultCodeLineSetter extends WalkerAdapter {
 	}
 	public void open(final ISetter aMethod) {
 		this.open((IConstituent) aMethod);
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

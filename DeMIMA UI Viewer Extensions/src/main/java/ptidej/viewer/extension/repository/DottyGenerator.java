@@ -13,6 +13,7 @@ package ptidej.viewer.extension.repository;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -40,6 +41,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IGenerator;
 import ptidej.ui.IVisibility;
 import util.io.ProxyConsole;
@@ -54,6 +56,7 @@ public final class DottyGenerator implements IGenerator {
 		return entityName.replace('.', '_');
 	}
 
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private Map aggregations = new HashMap();
 	private Map associations = new HashMap();
 	private final StringBuffer buffer = new StringBuffer();
@@ -353,5 +356,12 @@ public final class DottyGenerator implements IGenerator {
 		if ((this.visibleElements & IVisibility.USE_DISPLAY_ELEMENTS) == IVisibility.USE_DISPLAY_ELEMENTS) {
 			this.addRelationshipName(p, this.uses);
 		}
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

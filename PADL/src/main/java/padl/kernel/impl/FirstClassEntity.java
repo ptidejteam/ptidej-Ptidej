@@ -72,16 +72,15 @@ public abstract class FirstClassEntity extends Constituent
 	public FirstClassEntity(final char[] actorID) {
 		super(actorID);
 	}
+
 	public void accept(final IVisitor visitor) {
 		this.accept(visitor, "open");
-		final Iterator iterator = this.getConcurrentIteratorOnConstituents();
-		while (iterator.hasNext()) {
-			final IConstituent constituent = (IConstituent) iterator.next();
-			// System.out.println(constituent.toString());
-			constituent.accept(visitor);
-		}
+
+		visitor.traverse(this.getConcurrentIteratorOnConstituents());
+
 		this.accept(visitor, "close");
 	}
+
 	//	public void addConstituent(final IConstituentOfEntity aConstituent)
 	//			throws ModelDeclarationException {
 	//

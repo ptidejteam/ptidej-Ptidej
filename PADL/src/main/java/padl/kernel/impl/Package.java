@@ -37,14 +37,15 @@ class Package extends Constituent implements IPackage, IPrivateModelObservable {
 	public Package(final char[] anID) {
 		super(anID);
 	}
+
 	public void accept(final IVisitor visitor) {
 		this.accept(visitor, "open");
-		final Iterator iterator = this.getIteratorOnConstituents();
-		while (iterator.hasNext()) {
-			((IConstituent) iterator.next()).accept(visitor);
-		}
+
+		visitor.traverse(this.getIteratorOnConstituents());
+
 		this.accept(visitor, "close");
 	}
+
 	public void addConstituent(final IConstituent aConstituent) {
 		if (aConstituent instanceof IConstituentOfModel) {
 			this.addConstituent((IConstituentOfModel) aConstituent);

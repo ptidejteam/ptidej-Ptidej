@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
+
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -43,6 +44,7 @@ import padl.kernel.IPrimitiveEntity;
 import padl.kernel.IRelationship;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.util.Util;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
@@ -52,6 +54,7 @@ import util.io.ProxyConsole;
  * @since  2008/03/14
  */
 public class MAGMaGenerator implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private final StringBuffer edges;
 	private final StringBuffer header;
 	private List listOfEntities;
@@ -318,5 +321,12 @@ public class MAGMaGenerator implements IWalker {
 	}
 	public void visit(final IUseRelationship aUse) {
 		this.visit((IRelationship) aUse, "Use");
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

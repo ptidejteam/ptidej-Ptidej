@@ -42,6 +42,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.motif.IDesignMotifModel;
 import padl.visitor.IGenerator;
 import util.io.ProxyConsole;
@@ -73,6 +74,7 @@ public class SimpleGenerator implements IGenerator {
 		}
 	}
 
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private final StringBuffer buffer = new StringBuffer();
 
 	public void close(final IAbstractModel anAbstractModel) {
@@ -357,5 +359,12 @@ public class SimpleGenerator implements IGenerator {
 		this.buffer.append("visit\t");
 		this.buffer.append(aUse.getName());
 		this.buffer.append('\n');
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

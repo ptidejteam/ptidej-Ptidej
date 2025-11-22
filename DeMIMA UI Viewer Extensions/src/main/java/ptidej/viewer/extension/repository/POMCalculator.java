@@ -38,17 +38,21 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
 import util.io.ProxyConsole;
 import util.multilingual.MultilingualManager;
 
+import java.util.Iterator;
+
 /**
  * @author Yann-Gaël Guéhéneuc 
  * @since  2004/03/04
  */
 public final class POMCalculator implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private IAbstractModel abstractModel;
 	private StringBuffer excelOutput = new StringBuffer();
 	private StringBuffer listOfMetricNames = new StringBuffer();
@@ -225,5 +229,12 @@ public final class POMCalculator implements IWalker {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship aUse) {
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

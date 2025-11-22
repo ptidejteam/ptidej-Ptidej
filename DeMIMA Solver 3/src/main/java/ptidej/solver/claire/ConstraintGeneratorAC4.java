@@ -12,6 +12,8 @@ package ptidej.solver.claire;
 
 import padl.motif.visitor.IMotifGenerator;
 
+import java.util.Iterator;
+
 /**
  * @version	0.1
  * @author 	Yann-Gaël Guéhéneuc 
@@ -27,5 +29,12 @@ public class ConstraintGeneratorAC4 extends
 	}
 	protected String getSuffix() {
 		return "AC4";
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

@@ -12,6 +12,8 @@ package ptidej.solver.claire;
 
 import padl.motif.visitor.IMotifWalker;
 
+import java.util.Iterator;
+
 public class DomainGenerator3Custom extends
 		DomainGenerator2Custom implements IMotifWalker {
 
@@ -32,5 +34,12 @@ public class DomainGenerator3Custom extends
 	}
 	public String getName() {
 		return "PtidejSolver 3 Custom Domain";
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

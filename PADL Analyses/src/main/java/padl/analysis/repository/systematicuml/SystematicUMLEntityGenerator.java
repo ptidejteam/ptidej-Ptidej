@@ -39,16 +39,20 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.motif.IDesignMotifModel;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
 import util.lang.Modifier;
+
+import java.util.Iterator;
 
 /**
  * @author Yann-Gaël Guéhéneuc
  * @since  2004/05/21
  */
 public class SystematicUMLEntityGenerator implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private final IFactory factory;
 	private boolean hasConcreteMethods;
 	private boolean hasFieldAssignments;
@@ -293,5 +297,12 @@ public class SystematicUMLEntityGenerator implements IWalker {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship aUse) {
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

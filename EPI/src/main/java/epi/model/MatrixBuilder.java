@@ -11,6 +11,7 @@
 package epi.model;
 
 import java.util.Iterator;
+
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -40,6 +41,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.motif.IDesignMotifModel;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
@@ -49,6 +51,7 @@ import util.io.ProxyConsole;
  * @since  2005/04/06
  */
 public class MatrixBuilder implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private IFirstClassEntity keyFirstHalf;
 	private final Matrix matrix;
 	// private IAbstractModel model;
@@ -215,5 +218,12 @@ public class MatrixBuilder implements IWalker {
 	}
 	public void open(final IAbstractModel anAbstractModel) {
 		// Do nothing.
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

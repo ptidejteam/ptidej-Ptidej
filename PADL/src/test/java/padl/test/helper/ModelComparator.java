@@ -12,6 +12,7 @@ package padl.test.helper;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
+import java.util.Iterator;
 import java.util.Stack;
 import org.junit.Assert;
 import padl.kernel.IAbstractModel;
@@ -44,6 +45,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
 
@@ -52,6 +54,8 @@ public class ModelComparator implements IWalker {
 	private final Stack stackOfEnclosingConstituentsOfAModel = new Stack();
 	private final Stack stackOfEnclosingConstituentsOfAnotherModel =
 		new Stack();
+
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 
 	public ModelComparator(final IAbstractModel anAbstractModel) {
 		this.anotherAbstractModel = anAbstractModel;
@@ -446,4 +450,12 @@ public class ModelComparator implements IWalker {
 	public final void visit(final IUseRelationship aUseRelationship) {
 		this.visit((IElement) aUseRelationship);
 	}
+
+    @Override
+    public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
+    }
 }

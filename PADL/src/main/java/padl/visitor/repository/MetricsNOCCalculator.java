@@ -36,10 +36,14 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
 
+import java.util.Iterator;
+
 public final class MetricsNOCCalculator implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private int numberOfAbstractModel;
 	private int numberOfGhost;
 	private int numberOfInterface;
@@ -172,5 +176,12 @@ public final class MetricsNOCCalculator implements IWalker {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship p) {
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

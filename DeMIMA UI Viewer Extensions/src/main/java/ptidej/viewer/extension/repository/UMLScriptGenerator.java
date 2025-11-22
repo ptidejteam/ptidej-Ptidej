@@ -15,6 +15,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -45,6 +46,7 @@ import padl.kernel.IPrimitiveEntity;
 import padl.kernel.IRelationship;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IGenerator;
 import ptidej.ui.IVisibility;
 import util.io.ProxyConsole;
@@ -147,6 +149,7 @@ public final class UMLScriptGenerator implements IGenerator {
 		return listOfSubEntities;
 	}
 
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private final StringBuffer buffer = new StringBuffer();
 	private IAbstractModel currentModel;
 	private final int visibleElements;
@@ -574,5 +577,12 @@ public final class UMLScriptGenerator implements IGenerator {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship p) {
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

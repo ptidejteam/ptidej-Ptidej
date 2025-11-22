@@ -11,6 +11,8 @@
 package padl.visitor.repository;
 
 import java.util.Hashtable;
+import java.util.Iterator;
+
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -37,10 +39,12 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
 
 public final class MetricsWMCCalculator implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private IClass enclosingClass;
 	private int numberOfMethods;
 	private Hashtable wmcPerClass;
@@ -164,5 +168,12 @@ public final class MetricsWMCCalculator implements IWalker {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship p) {
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

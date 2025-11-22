@@ -36,11 +36,15 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import padl.visitor.repository.JavaGenerator;
 import util.io.ProxyConsole;
 
+import java.util.Iterator;
+
 public class PADLGhostPrinter implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 
 	@Override
 	public void close(final IAbstractModel anAbstractModel) {
@@ -276,5 +280,13 @@ public class PADLGhostPrinter implements IWalker {
 	@Override
 	public void visit(final IUseRelationship aUse) {
 
+	}
+
+	@Override
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

@@ -195,12 +195,10 @@ public abstract class AbstractModel implements IAbstractModel {
 	public String generate(final IGenerator aGenerator) {
 		aGenerator.open(this);
 
-		final Iterator iterator = this.getIteratorOnConstituents();
-		while (iterator.hasNext()) {
-			((IConstituent) iterator.next()).accept(aGenerator);
-		}
+		aGenerator.traverse(this.getIteratorOnConstituents());
 
 		aGenerator.close(this);
+
 		return aGenerator.getCode();
 	}
 	public Iterator getConcurrentIteratorOnConstituents() {

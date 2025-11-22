@@ -12,6 +12,7 @@ package padl.visitor.repository;
 
 import java.util.Iterator;
 import java.util.Vector;
+
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -38,6 +39,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
 
@@ -45,6 +47,7 @@ import util.io.ProxyConsole;
  * @author Khashayar Khosravi
  */
 public class MetricsANMVCCalculator implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private int anmvc;
 	private int numberOfFields;
 	private Vector numberOfFieldsPerClass;
@@ -170,5 +173,12 @@ public class MetricsANMVCCalculator implements IWalker {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship aUse) {
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

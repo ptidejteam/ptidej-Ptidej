@@ -16,7 +16,9 @@ import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IIdiomLevelModel;
 import padl.kernel.exception.CreationException;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.kernel.impl.Factory;
+import padl.kernel.impl.PruningConditions;
 import util.io.ProxyConsole;
 
 /**
@@ -77,7 +79,7 @@ public class Test1 extends TestCase {
 					new String[] { filePath }, true));
 			intendedIdiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(intendedCodeLevelModel);
-			PlantUMLGenerator PlantUMLGeneratorNew = new PlantUMLGenerator();
+			PlantUMLGenerator PlantUMLGeneratorNew = new PlantUMLGenerator(new DepthFirstTraverser(), new PruningConditions(""));
 			intendedIdiomLevelModel.generate(PlantUMLGeneratorNew);
 			String umlContent = (String) PlantUMLGeneratorNew.getCode();
 			String timeStampForUMLTextFile = new Timestamp(

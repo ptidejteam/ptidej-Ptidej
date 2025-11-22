@@ -31,6 +31,7 @@ package padl.analysis.repository.modelannotatorloc;
 
 import java.util.Iterator;
 import java.util.Stack;
+
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -59,6 +60,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.motif.IDesignMotifModel;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
@@ -69,6 +71,7 @@ import util.lang.Modifier;
  * @since  2006/03/09
  */
 public class InstructionSetter implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private final BCELInstructionFinder instFinder;
 	private final Stack stackOfEntities;
 
@@ -251,5 +254,12 @@ public class InstructionSetter implements IWalker {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship aUse) {
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

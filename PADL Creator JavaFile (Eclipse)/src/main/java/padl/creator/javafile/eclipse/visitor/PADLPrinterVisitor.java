@@ -40,6 +40,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import util.io.NullWriter;
 import util.io.ProxyConsole;
@@ -47,6 +48,7 @@ import util.io.ProxyDisk;
 import util.io.WriterOutputStream;
 
 public class PADLPrinterVisitor implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private String currentEntity;
 	private String currentPackage = "./result1/";
 	private boolean inFile;
@@ -376,5 +378,13 @@ public class PADLPrinterVisitor implements IWalker {
 	@Override
 	public void visit(final IUseRelationship aUse) {
 
+	}
+
+	@Override
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

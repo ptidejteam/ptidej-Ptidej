@@ -12,6 +12,7 @@ package ptidej.ui.analysis.repository.comparator;
 
 import java.util.Iterator;
 import java.util.Properties;
+
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -39,6 +40,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
 
@@ -47,6 +49,7 @@ import util.io.ProxyConsole;
  * @since  2004/12/20
  */
 public class HighlighterFromClasses implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private IAbstractModel abstractModel;
 	private final Properties differences;
 
@@ -203,5 +206,12 @@ public class HighlighterFromClasses implements IWalker {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship aUse) {
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

@@ -642,4 +642,11 @@ public class DomainGenerator2Custom extends DomainGenerator implements IMotifWal
 			this.listOfUses.add(pEntityName);
 		}
 	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
+	}
 }

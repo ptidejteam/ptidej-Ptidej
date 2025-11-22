@@ -38,16 +38,20 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.visitor.IWalker;
 import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
 import util.io.ProxyConsole;
+
+import java.util.Iterator;
 
 /**
  * @author Foutse Khomh
  * @since  2007/03/01
  */
 public class QMOODMetrics implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private IAbstractModel abstractModel;
 	private StringBuffer excelOutput = new StringBuffer();
 	private StringBuffer listOfMetricNames = new StringBuffer();
@@ -351,5 +355,12 @@ public class QMOODMetrics implements IWalker {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship aUse) {
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

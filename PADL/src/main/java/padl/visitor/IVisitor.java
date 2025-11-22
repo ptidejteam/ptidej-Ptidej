@@ -37,6 +37,8 @@ import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
 
+import java.util.Iterator;
+
 public interface IVisitor {
 	void close(final IAbstractModel anAbstractModel);
 	void close(final IClass aClass);
@@ -90,4 +92,6 @@ public interface IVisitor {
 	// must: like when generating models for MADMatch! 
 	void visit(final IPrimitiveEntity aPrimitiveEntity);
 	void visit(final IUseRelationship aUse);
+
+	void traverse(final Iterator iterator);
 }

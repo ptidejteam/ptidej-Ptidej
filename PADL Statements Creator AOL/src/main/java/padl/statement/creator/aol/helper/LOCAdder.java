@@ -10,7 +10,9 @@
  ******************************************************************************/
 package padl.statement.creator.aol.helper;
 
+import java.util.Iterator;
 import java.util.Map;
+
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -38,10 +40,13 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.statement.creator.aol.IMetricValueAdder;
 import util.io.ProxyConsole;
 
 public class LOCAdder implements IMetricValueAdder {
+
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	// Yann 2008/10/13: Members...
 	// No need to take care of members classes/interfaces
 	// using a Stack because we are in AOL...
@@ -175,5 +180,12 @@ public class LOCAdder implements IMetricValueAdder {
 		// Do nothing for uninteresting primitive types.
 	}
 	public void visit(final IUseRelationship use) {
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

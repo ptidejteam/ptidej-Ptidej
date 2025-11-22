@@ -32,6 +32,7 @@ package ptidej.statement.creator.classfiles.conditionals;
 
 import java.util.Iterator;
 import java.util.Stack;
+
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -61,6 +62,7 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.statement.kernel.IIfInstruction;
 import padl.statement.kernel.IStatementWalker;
 import padl.statement.kernel.ISwitchInstruction;
@@ -72,6 +74,7 @@ import util.lang.Modifier;
  * @since  2006/03/09
  */
 public class InstructionSetter implements IStatementWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private final BCELInstructionFinder instFinder;
 	private final Stack stackOfEntities;
 
@@ -263,5 +266,12 @@ public class InstructionSetter implements IStatementWalker {
 	public void visit(final ISwitchInstruction switchInstruction) {
 	}
 	public void visit(final IUseRelationship aUse) {
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }

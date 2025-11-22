@@ -36,11 +36,16 @@ import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.statement.kernel.IIfInstruction;
 import padl.statement.kernel.IStatementWalker;
 import padl.statement.kernel.ISwitchInstruction;
 
+import java.util.Iterator;
+
 public class StatementWalkerAdapter implements IStatementWalker {
+
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 
 	public Object getResult() {
 		// TODO Auto-generated method stub
@@ -267,6 +272,13 @@ public class StatementWalkerAdapter implements IStatementWalker {
 	public void visit(ISwitchInstruction aSwitchInstruction) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 
 }

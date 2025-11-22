@@ -11,6 +11,7 @@
 package padl.analysis.repository.systematicuml;
 
 import java.util.Iterator;
+
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -42,6 +43,7 @@ import padl.kernel.IPrimitiveEntity;
 import padl.kernel.IRelationship;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
+import padl.kernel.impl.DepthFirstTraverser;
 import padl.motif.IDesignMotifModel;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
@@ -51,6 +53,7 @@ import util.io.ProxyConsole;
  * @since  2004/05/21
  */
 public class SystematicUMLElementGenerator implements IWalker {
+	private final DepthFirstTraverser traverser = new DepthFirstTraverser();
 	private final IFactory factory;
 	private IFirstClassEntity newEntity;
 	private final IIdiomLevelModel newIdiomLevelModel;
@@ -284,5 +287,12 @@ public class SystematicUMLElementGenerator implements IWalker {
 	}
 	public void visit(final IUseRelationship aUse) {
 		this.visit((IRelationship) aUse);
+	}
+
+	public void traverse(Iterator iterator) {
+
+		this.traverser.traverse(this,
+				iterator,
+				null);
 	}
 }
