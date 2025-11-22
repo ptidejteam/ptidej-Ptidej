@@ -12,6 +12,7 @@ package padl.creator.cppfile.eclipse.plugin.internal;
 
 import java.util.HashSet;
 import java.util.Set;
+
 import org.eclipse.cdt.core.CCorePlugin;
 import org.eclipse.cdt.core.dom.ast.ASTVisitor;
 import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
@@ -35,6 +36,7 @@ import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+
 import padl.cpp.kernel.IAmicable;
 import padl.cpp.kernel.IGlobalFunction;
 import padl.cpp.kernel.impl.CPPFactoryEclipse;

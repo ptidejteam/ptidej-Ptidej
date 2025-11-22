@@ -11,20 +11,20 @@
 package padl.creator.cppfile.eclipse.test.big;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
-import padl.creator.cppfile.eclipse.misc.EclipseCPPParserCaller;
+import padl.creator.cppfile.eclipse.test.helper.ModelGenerator;
 import padl.kernel.ICodeLevelModel;
 
 public class ChromeTest extends TestCase {
 	public ChromeTest(String name) {
 		super(name);
 	}
+
 	public void test1() {
-		final ICodeLevelModel codeLevelModel =
-			EclipseCPPParserCaller
-				.getInstance()
-				.getCodeLevelModelUsingOSGiEmbedded(
-					"../PADL Creator C++ (Eclipse) Tests/data/Chrome v1.0.154.53/");
+		final ICodeLevelModel codeLevelModel = ModelGenerator
+				.generateModelFromCppFilesUsingEclipse("ChromeTest",
+						"../PADL Creator C++ (Eclipse) Tests/data/Chrome v1.0.154.53/");
 		Assert.assertNotNull("The code-level model is null!", codeLevelModel);
 		Assert.assertTrue(codeLevelModel.getNumberOfTopLevelEntities() > 5000);
 	}

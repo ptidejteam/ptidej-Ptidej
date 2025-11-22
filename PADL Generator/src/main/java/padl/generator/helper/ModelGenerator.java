@@ -21,6 +21,7 @@ import java.util.List;
 
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
+import padl.cpp.kernel.impl.CPPFactoryEclipse;
 // import padl.cpp.kernel.impl.CPPFactoryEclipse;
 import padl.creator.aolfile.AOLCreator;
 import padl.creator.classfile.CompleteClassFileCreator;
@@ -239,31 +240,23 @@ public final class ModelGenerator {
 		return ModelGenerator.finishModelCreation(codeLevelModel);
 	}
 
-	// TODO Add back this method
-	/*
 	public static IIdiomLevelModel generateModelFromCppFilesUsingEclipse(
-		final String aName,
-		final String aSourceDirectory) {
-	
-		return ModelGenerator.generateModelFromCppFilesUsingEclipse(
-			aName,
-			aSourceDirectory,
-			null);
+			final String aName, final String aSourceDirectory) {
+
+		return ModelGenerator.generateModelFromCppFilesUsingEclipse(aName,
+				aSourceDirectory, null);
 	}
-	*/
-	// TODO Add back this method
-	/*
+
 	public static IIdiomLevelModel generateModelFromCppFilesUsingEclipse(
-		final String aName,
-		final String aSourceDirectory,
-		final IModelListener aModelListener) {
-	
+			final String aName, final String aSourceDirectory,
+			final IModelListener aModelListener) {
+
 		ICodeLevelModel codeLevelModel = null;
 		try {
-			final ICodeLevelModelCreator creator =
-				new padl.creator.cppfile.eclipse.CPPCreator(aSourceDirectory);
-			codeLevelModel =
-				CPPFactoryEclipse.getInstance().createCodeLevelModel(aName);
+			final ICodeLevelModelCreator creator = new padl.creator.cppfile.eclipse.CPPCreator(
+					aSourceDirectory);
+			codeLevelModel = CPPFactoryEclipse.getInstance()
+					.createCodeLevelModel(aName);
 			if (aModelListener != null) {
 				codeLevelModel.addModelListener(aModelListener);
 			}
@@ -272,22 +265,17 @@ public final class ModelGenerator {
 		catch (final CreationException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
-	
+
 		return ModelGenerator.finishModelCreation(codeLevelModel);
 	}
-	*/
-	// TODO Add back this method
-	/*
+
 	public static IIdiomLevelModel generateModelFromCppFilesUsingEclipse(
-		final String aName,
-		final String[] fileNames) {
-	
-		return ModelGenerator.generateModelFromCppFilesUsingEclipse(
-			aName,
-			fileNames[0],
-			null);
+			final String aName, final String[] fileNames) {
+
+		return ModelGenerator.generateModelFromCppFilesUsingEclipse(aName,
+				fileNames[0], null);
 	}
-	*/
+
 	public static IIdiomLevelModel generateModelFromCSharpFilesV1(
 			final String aName, final String[] someCSharpFiles,
 			final IModelListener aModelListener) {
