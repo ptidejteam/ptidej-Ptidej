@@ -68,7 +68,7 @@ public abstract class Operation extends Element implements IOperation, IPrivateM
 	public void accept(final IVisitor visitor) {
 		this.accept(visitor, "open");
 
-		visitor.traverse(this.getIteratorOnConstituents());
+		visitor.traverse(this.getConcurrentIteratorOnConstituents());
 
 		this.accept(visitor, "close");
 	}
