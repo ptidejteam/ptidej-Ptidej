@@ -252,6 +252,24 @@ public class Utils {
 	public static boolean isSpecialMethod(final char[] aMethodName) {
 		return ArrayUtils.indexOf(aMethodName, '<') > -1;
 	}
+	/**
+	 * Luca 2025/11/11: When a public class extends a non-public class, the java compiler 
+	 * adds each public method of the superclass in the classfile of the public subclass,
+	 * and tags each 'new' method as BRIDGE and SYNTHETIC.
+	 * As far as I know, this has always been the case in Java (tested with Java 1.8).
+	 * When building a model, we might want to filter these out.
+	 * This also occurs with generics to deal with type erasure and make sure the
+	 * correct method is called.
+	 * @param extendedMethod
+	 * @return
+	 */
+	public static boolean isSyntheticBridgeMethod(
+			final ExtendedMethodInfo extendedMethod) {
+		final int bitMaskSyntheticBridge = java.lang.classfile.ClassFile.ACC_BRIDGE
+				| java.lang.classfile.ClassFile.ACC_SYNTHETIC;
+		return ((extendedMethod.getVisibility()
+				& bitMaskSyntheticBridge) == bitMaskSyntheticBridge);
+	}
 	private static IFirstClassEntity searchForEnclosedEntity(
 		final IAbstractLevelModel anAbstractModel,
 		final IFirstClassEntity anEnclosingEntity,
