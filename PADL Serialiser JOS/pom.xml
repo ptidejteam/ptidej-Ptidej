@@ -75,6 +75,13 @@
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-javafile-eclipse</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-generator</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>

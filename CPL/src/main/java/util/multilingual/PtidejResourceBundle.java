@@ -270,7 +270,7 @@ public class PtidejResourceBundle extends ListResourceBundle {
 				{
 						"ptidej.solver.java.Problem::PTIDEJ",
 
-						"++ JPtidejSolver v1.5 (February, 2007), Copyright (c) 2001-2013 Y.-G. Guéhéneuc\n++ Constraint programming for design patterns and design defects identification" },
+						"++ JPtidejSolver v1.6 (November, 2025), Copyright (c) 2001-2025 Y.-G. Guéhéneuc\n++ Constraint programming for the identification of occurrences of design patterns and design defects" },
 				{ "ptidej.solver.java.solver.SimpleInteractiveRepair::NO_MORE_SOL",
 
 				"There is no more solution because of the constraints: {0}" },

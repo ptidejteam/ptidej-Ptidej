@@ -24,7 +24,7 @@ public class QMakeTest extends TestCase {
 	public void test1() {
 		final ICodeLevelModel codeLevelModel = ModelGenerator
 				.generateModelFromCppFilesUsingEclipse("QMake",
-						"../PADL Creator C++ (Eclipse) Tests/data/QMake/");
+						"../PADL Creator C++ (Eclipse)/target/test-classes/QMake/");
 		Assert.assertNotNull("The code-level model is null!", codeLevelModel);
 		Assert.assertEquals(846, codeLevelModel.getNumberOfTopLevelEntities());
 	}

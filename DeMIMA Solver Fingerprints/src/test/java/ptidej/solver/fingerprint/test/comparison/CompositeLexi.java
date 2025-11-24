@@ -11,6 +11,7 @@
 package ptidej.solver.fingerprint.test.comparison;
 
 import org.junit.Assert;
+
 import ptidej.solver.Occurrence;
 import ptidej.solver.fingerprint.Rule;
 
@@ -21,27 +22,25 @@ public final class CompositeLexi extends Primitive {
 	public CompositeLexi(final String name) {
 		super(name);
 	}
+
 	protected void setUp() {
 		if (CompositeLexi.BuiltSolutions == null) {
-			CompositeLexi.BuiltSolutions =
-				Primitive.automaticSolve(
+			CompositeLexi.BuiltSolutions = Primitive.automaticSolve(
 					ptidej.solver.fingerprint.problem.CompositeMotif.class,
-					"../Lexi v0.1.1 alph/bin/",
-					"Lexi",
-					Rule.C_LEAF_ROLE_1);
+					"../DeMIMA Solver Fingerprints/target/test-classes/Lexi v0.1.1 alph/bin/",
+					"Lexi", Rule.C_LEAF_ROLE_1);
 		}
+
 		if (CompositeLexi.BuiltSolutionsNoRule == null) {
-			CompositeLexi.BuiltSolutionsNoRule =
-				Primitive.automaticSolve(
+			CompositeLexi.BuiltSolutionsNoRule = Primitive.automaticSolve(
 					ptidej.solver.java.problem.CompositeMotif.class,
-					"../Lexi v0.1.1 alph/bin/",
+					"../DeMIMA Solver Fingerprints/target/test-classes/Lexi v0.1.1 alph/bin/",
 					"Lexi");
 		}
 	}
+
 	public void testNumberSolution() {
-		Assert
-			.assertTrue(
-				"Less solution with rules.",
+		Assert.assertTrue("Less solution with rules.",
 				CompositeLexi.BuiltSolutions.length < CompositeLexi.BuiltSolutionsNoRule.length);
 	}
 }

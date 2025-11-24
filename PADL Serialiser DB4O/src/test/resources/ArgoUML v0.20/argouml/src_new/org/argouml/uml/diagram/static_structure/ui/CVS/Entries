@@ -1,0 +1,23 @@
+/.cvsignore/1.1/Sun Aug 11 07:04:24 2002//TVERSION_0_20_F
+/ClassDiagramRenderer.java/1.47/Sat Dec 10 19:18:24 2005//TVERSION_0_20_F
+/CommentEdge.java/1.13/Sun Nov 13 11:01:17 2005//TVERSION_0_20_F
+/FigClass.java/1.204/Mon Jan 30 10:47:12 2006//TVERSION_0_20_F
+/FigClassifierBox.java/1.19/Thu Nov 17 21:12:18 2005//TVERSION_0_20_F
+/FigComment.java/1.65/Sun Nov 13 11:01:17 2005//TVERSION_0_20_F
+/FigEdgeNote.java/1.28/Sat Nov 19 16:57:40 2005//TVERSION_0_20_F
+/FigFeature.java/1.16/Thu Nov 17 21:12:18 2005//TVERSION_0_20_F
+/FigInstance.java/1.16/Wed Sep  7 21:03:53 2005//TVERSION_0_20_F
+/FigInterface.java/1.139/Mon Jan 30 10:47:12 2006//TVERSION_0_20_F
+/FigLink.java/1.11/Mon Sep 26 10:46:52 2005//TVERSION_0_20_F
+/FigModel.java/1.21/Fri Jul 22 13:59:03 2005//TVERSION_0_20_F
+/FigPackage.java/1.89/Fri Jan 13 22:07:06 2006//TVERSION_0_20_F
+/FigSubsystem.java/1.18/Fri Jul 22 13:59:03 2005//TVERSION_0_20_F
+/SelectionClass.java/1.30/Thu Sep 15 14:28:40 2005//TVERSION_0_20_F
+/SelectionComment.java/1.4/Wed Sep  7 21:03:53 2005//TVERSION_0_20_F
+/SelectionInterface.java/1.34/Sun Nov 13 11:01:17 2005//TVERSION_0_20_F
+/StylePanelFigClass.java/1.18/Sun Nov 13 11:01:17 2005//TVERSION_0_20_F
+/StylePanelFigInterface.java/1.17/Thu May 26 21:35:13 2005//TVERSION_0_20_F
+/StylePanelFigPackage.java/1.4/Sun Nov 13 11:01:17 2005//TVERSION_0_20_F
+/UMLClassDiagram.java/1.82/Sun Nov 13 11:01:17 2005//TVERSION_0_20_F
+/package.html/1.2/Tue Apr 29 19:31:10 2003//TVERSION_0_20_F
+D

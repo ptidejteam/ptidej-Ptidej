@@ -24,7 +24,7 @@ import squad.quality.pqmod.PQMODRepository;
 
 public class Test1 extends TestCase {
 	public void test() {
-		String root = "../DeMIMA/target/classes/";
+		String root = "../SQUAD/target/test-classes/";
 
 		final ICodeLevelModel codeLevelModel = Factory.getInstance()
 				.createCodeLevelModel("Model");

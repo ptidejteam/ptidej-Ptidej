@@ -24,7 +24,7 @@ public class Crypto extends TestCase {
 	public void test1() {
 		final ICodeLevelModel codeLevelModel = ModelGenerator
 				.generateModelFromCppFilesUsingEclipse("Crypto",
-						"../PADL Creator C++ (Eclipse) Tests/data/crypto/");
+						"../PADL Creator C++ (Eclipse)/target/test-classes/crypto/");
 		Assert.assertNotNull("The code-level model is null!", codeLevelModel);
 		Assert.assertTrue(codeLevelModel.getNumberOfTopLevelEntities() > 5000);
 	}

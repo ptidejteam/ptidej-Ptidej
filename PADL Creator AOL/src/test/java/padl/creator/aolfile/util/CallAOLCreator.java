@@ -150,7 +150,7 @@ public class CallAOLCreator {
 		//	aolCreator.create(idiomLevelModel, true, true);
 		aolCreator =
 			new AOLCreator(
-				new String[] { "../PADL Creator AOL Tests/rsc/Chrome/15.0.837.0-cleaned.aol" });
+				new String[] { "../PADL Creator AOL/target/test-classes/Chrome/15.0.837.0-cleaned.aol" });
 		aolCreator.create(codeLevelModel, true, true);
 
 		System.out.println();

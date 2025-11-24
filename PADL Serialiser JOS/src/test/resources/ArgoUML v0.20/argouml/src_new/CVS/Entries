@@ -1,0 +1,12 @@
+/.cvsignore/1.9/Sun Jun 12 09:27:14 2005//TVERSION_0_20_F
+/README.txt/1.9/Sun Sep 25 08:41:13 2005//TVERSION_0_20_F
+/README_COMPILE.txt/1.10/Thu Apr 28 21:22:06 2005//TVERSION_0_20_F
+/argouml.LICENSE.txt/1.4/Sun Aug 14 22:11:55 2005//TVERSION_0_20_F
+/build.bat/1.8/Sun May 15 22:04:01 2005//TVERSION_0_20_F
+/build.sh/1.11/Tue Sep 13 17:07:19 2005//TVERSION_0_20_F
+/build.xml/1.202/Sat Feb  4 15:15:10 2006//TVERSION_0_20_F
+/default.properties/1.144/Wed Feb  8 23:27:55 2006//TVERSION_0_20_F
+D/bin////
+D/org////
+D/templates////
+D/tests////

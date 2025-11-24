@@ -1,0 +1,194 @@
+Release notes (compiled from http://argouml.tigris.org/project_schedule.html)
+
+ArgoUML release 0.14
+Date: 2003-08-17
+ArgoUML release 0.14.1
+Date: 2003-08-22
+
+    * Small fix to allow to run 0.14 from Java Web Start 
+
+ArgoUML release 0.15.1
+Planned date: 2003-09-10
+
+    * Toolbar implemented using Toolbar library (Responsible: Bob Tarling) 
+
+ArgoUML release 0.15.2
+Real date: 2003-11-26
+
+    * Working Java Web Start. (Responsible: Linus Tolke)
+    * New Explorer implementation. (Responsible: Alex Bagehot)
+    * Activity diagrams are working again.
+    * Zoom slider.
+    * Ordering tree items in the Explorer. 
+
+ArgoUML release 0.15.3
+New planned date: 2004-01-31 Actually released on: 2004-02-05
+
+    * New version of GEF (0.10). (Responsible: Bob Tarling)
+    * New version of i18n (0.1.3). (Responsible: Jean-Hugues de Raigniac)
+    * Organizing the languages differently. (Responsible: Linus Tolke)
+    * Checklists enabled again. (Responsible: Linus Tolke) 
+
+ArgoUML release 0.15.4
+Real date: 2004-03-01
+ArgoUML release 0.15.5
+Real date: 2004-04-20
+
+    * New PHP code generator for PHP4 and PHP5 (Responsible: Kai Schröder)
+    * First suggestion at sending non-NSUML events from the Model subsystem. 
+
+ArgoUML release 0.15.6
+New planned date: 2004-05-20 Originally planned date: 2004-05-18
+
+    * New version of GEF. 
+
+ArgoUML release 0.16.alpha1
+Planned date: 2004-06-21 Actual date: 2004-06-22 Announced: 2004-06-27
+
+    * This is the feature freeze point. After this, only DEFECTs can be fixed. 
+
+ArgoUML release 0.16.alpha2
+Originally planned date: 2004-07-01 Planned date: 2004-07-04 (21-23 Swedish time). Actual date: 2004-07-05 (00-01 Swedish time).
+
+    * Not working Sequence diagrams disabled so nobody will try them.
+    * This is the feature freeze release. Only DEFECTs can be fixed. 
+
+ArgoUML release 0.16.beta1
+Planned date: 2004-07-09
+
+    * This is the DEFECTs freeze point. The list of known problems is compiled and the quality assurance work left is only with the already RESOLVED issues. 
+
+ArgoUML release 0.16
+Date: 2004-07-17
+
+Originally planned date: 2004-07-21
+
+Stable release.
+
+    * Sequence diagrams not fixed disabled.
+    * NS-UML still required. 
+
+ArgoUML release 0.16.1
+Planned date: 2004-08-17
+
+Real date: 2004-09-04
+
+Stable release.
+
+    * Same as 0.16 except for a fix to issue 2718 (2731). 
+
+ArgoUML release 0.17.1
+Real date: 2004-09-30 Planned date: 2004-09-30 Originally planned date: 2004-08-09
+
+    * Methods, fields, and classes deprecated in 0.15 and 0.16 removed (as always immediatly after a stable release).
+    * The zargo file format is changed due to addition of elements (Responsible: Michiel van der Wulp, Bob Tarling). 
+
+ArgoUML release 0.17.2
+Published date: 2004-11-19. Released date: 2004-11-17. Orignally planned date: 2004-10-28
+
+    * Swidgets library used. 
+
+ArgoUML release 0.17.3
+Planned date: 2004-12-30
+
+    * New persistence mechanism. 
+
+ArgoUML release 0.17.4
+Planned date: 2005-01-02
+ArgoUML release 0.17.5
+Originally planned date: 2005-02-01 Planned date: 2005-02-13
+ArgoUML release 0.18.alpha1
+Planned date: 2005-02-23
+
+    * This is the feature freeze point. After this, only DEFECTs can be fixed. 
+
+ArgoUML release 0.18.alpha2
+Planned date: 2005-03-02
+
+    * This is a feature freeze release. Only DEFECTs can be fixed. 
+
+ArgoUML release 0.18.alpha3
+Planned date: 2005-03-10
+
+    * This is a feature freeze release. Only DEFECTs can be fixed.
+    * Patched version of GEF. 
+
+ArgoUML release 0.18.beta1
+Planned date: 2005-03-16 Release date: 2005-03-20
+
+    * This is the DEFECTs freeze point. The list of known problems is compiled and the quality assurance work left is only with the already RESOLVED issues.
+    * GEF 0.10.14. (hopefully) 
+
+ArgoUML release 0.18.beta2
+Planned date: 2005-03-23 Release cancelled - Nothing fixed since 0.18.beta1
+
+Reasons to eventually do this are:
+
+    * To verify that GEF 0.10.14 is working correctly?
+    * If there are problems found in the verification of issues that are solved and we are not 100% sure of the solution. 
+
+ArgoUML release 0.18.beta2
+Planned date: 2005-03-30 Real date: 2005-04-03
+
+    * To verify that GEF 0.10.14 is working correctly?
+    * Issue 3172 resolved. 
+
+ArgoUML release 0.18
+Originally Planned date: 2005-04-03 New Planned date: 2005-04-12
+
+    * Stable release.
+    * Last NS-UML version of ArgoUML runnable. 
+
+ArgoUML release 0.18.1
+Planned date: 2005-04-30
+
+    * Buggfix release. 
+
+ArgoUML release 0.19.1
+Planned date: 2005-05-08
+
+    * Model subsystem with the MDR/JMI implementation.
+    * Build scripts for building the MDR implementation in place. 
+
+Once the MDR/JMI implementation is working we will drop NS-UML.
+ArgoUML release 0.19.2
+Planned date: 2005-06-08 Released date: 2005-06-10
+
+    * First non-NS-UML version of ArgoUML startable. The MDR solution is actually not included in this release (it doesn't work well enough). 
+
+ArgoUML release 0.19.3
+Planned date: 2005-07-08
+Released date: 2005-07-20
+
+    * Undo partially working
+    * Popup windows for multiple selections.
+    * MDR version of ArgoUML able to create objects on diagrams. The MDR solution is actually not included in this release (it doesn't work well enough). 
+
+ArgoUML release 0.19.4
+Planned date: 2005-08-20
+ArgoUML release 0.19.5
+Planned date: 2005-09-20
+
+    * MDR version of ArgoUML:
+          o Shipped with base dist
+          o Starts via a shell script/bat...
+          o Loading/saving working 
+
+ArgoUML release 0.19.6
+Planned date: 2005-09-26
+
+    * MDR version of ArgoUML:
+          o Starts via a shell script/bat...
+          o Works also with Java5. 
+
+ArgoUML release 0.19.7
+Originally planned date: 2005-10-20 New planned date: 2005-10-27
+
+    * MDR is made the default storage.
+    * GEF 0.11.2 included. 
+
+ArgoUML release 0.19.8
+Originbally planned date: 2005-11-03 Planned date: 2005-11-07 Release date: 2005-11-08
+
+    * NSUML is removed. 
+

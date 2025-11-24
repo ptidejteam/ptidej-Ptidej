@@ -1,0 +1,77 @@
+
+		             Java Diagram Package 
+				     1.0.1
+
+		     Eric Crahen <crahen@cse.buffalo.edu>
+		  http://www.cse.buffalo.edu/projects/diagram
+
+
+OVERVIEW:
+	
+  This package is 100% pure Java(tm) designed for use with a 1.3 or better JRE.
+  It has been released under the GPL license; see GPL.TXT for details.
+			  
+  The package implements a Swing component that enables the creation of many types
+  of diagram, flowcharts or similar tools. Its designed to be very fast and flexible.
+  The diagram component itself is similar to the JTable in that both components are
+  designed to allow new renderer and editor components to be written to customize its
+  behavoir and appearance easily. The diagram component should be a useful addition
+  to many applications.
+
+  @see AUTHORS 
+   
+EXAMPLES:
+
+  A small UML design tool, named QuickUML has been created the illustrates one possible 
+  use of this diagram package.
+
+BUILDING:
+
+  A Makefile intended for GNU Make is included. It includes options for builing jars
+  for just the diagram package (Diagram-x.y.z.jar) or for the QuickUML tool 
+  (QuickUML-x.y.z.jar). 'make help' will display a breif summary of the options.
+  This Makefile is compatible with the Win32 port of GNU make, see the note in the
+  notes section below.
+
+USING:
+
+  Running the QuickUML example is very easy. After compiling the source you will find
+  the jar files in the lib directory. Using the -jar command you can launch the UML tool.
+
+  'java -jar lib/QuickUML-.x.y.z.jar' 
+
+  Or you can just click on the jar if you've got the proper associations setup in your 
+  desktop environment. 
+
+  The QuickUML jar is standalone and includes all the sources that diagram jar contains
+  to make the easier to use and move around for demonstrations.
+
+DISTRIBUTING:
+
+  To use the diagram component in your own project you should distribute the 
+  diagram-x.y.z.jar file with your code. You can a line similar to:
+
+  Class-Path: Diagram-x.y.z.jar
+
+  to any Manifest files that are used so the user doesn't need to worry about the 
+  classpath.
+
+DOCUMENTATION:
+    
+  The source is documentented and documentation can be generated easily using doxygen
+  (or javadoc, but doxygen is a bit more comprehensive)
+
+NOTES:
+
+  If you find this software useful or have suggestions for improving it please contact
+  me and let me know.
+
+  The Makefile included allows the project to be compiled with GNU make pretty easily.
+  If you're using a Windows OS, you can download a port of the GNU Make for Win32 from
+
+  http://www.cs.buffalo.edu/~crahen/utilities/make-3.76.1.zip
+  ftp://agnes.dida.physik.uni-essen.de/home/janjaap/mingw32/binaries/make-3.76.1.zip
+
+  Jpeg & Gif encoding is provided by ACME Labs http://www.acme.com/java/
+
+  Doxygen can be obtained from http://www.stack.nl/~dimitri/doxygen/ 

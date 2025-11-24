@@ -24,7 +24,7 @@ public class Simple2Test extends TestCase {
 	public void test1() {
 		final ICodeLevelModel codeLevelModel = ModelGenerator
 				.generateModelFromCppFilesUsingEclipse("Simple2Test",
-						"../PADL Creator C++ (Eclipse) Tests/data/Simple2/");
+						"../PADL Creator C++ (Eclipse)/target/test-classes/Simple2/");
 		Assert.assertNotNull("The code-level model is null!", codeLevelModel);
 		Assert.assertEquals(9, codeLevelModel.getNumberOfTopLevelEntities());
 	}

@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Thu Feb 09 00:56:44 CET 2006'>
+  <XMI.header>  <XMI.header>
+    <XMI.documentation>
+      <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
+      <XMI.exporterVersion>0.20.x</XMI.exporterVersion>
+    </XMI.documentation>
+    <XMI.metamodel xmi.name="UML" xmi.version="1.4"/>  </XMI.header>
+</XMI.header>
+  <XMI.content>
+    <UML:Model xmi.id = '.:0000000000000773' name = 'untitledModel' isSpecification = 'false'
+      isRoot = 'false' isLeaf = 'false' isAbstract = 'false'>
+      <UML:Namespace.ownedElement>
+        <UML:Class xmi.id = '.:0000000000000774' name = '' visibility = 'public'
+          isSpecification = 'false' isRoot = 'false' isLeaf = 'false' isAbstract = 'false'
+          isActive = 'false'>
+          <UML:Classifier.feature>
+            <UML:Operation xmi.id = '.:0000000000000776' name = 'newOperation' visibility = 'public'
+              isSpecification = 'false' ownerScope = 'instance' isQuery = 'false' concurrency = 'sequential'
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false'>
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter xmi.id = '.:0000000000000777' name = 'return' isSpecification = 'false'
+                  kind = 'return'>
+                  <UML:Parameter.type>
+                    <UML:Class xmi.idref = '.:000000000000077A'/>
+                  </UML:Parameter.type>
+                </UML:Parameter>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Classifier.feature>
+        </UML:Class>
+        <UML:DataType xmi.id = '.:0000000000000775' name = 'void' isSpecification = 'false'
+          isRoot = 'false' isLeaf = 'false' isAbstract = 'false'/>
+        <UML:Package xmi.id = '.:0000000000000778' name = 'java' isSpecification = 'false'
+          isRoot = 'false' isLeaf = 'false' isAbstract = 'false'>
+          <UML:Namespace.ownedElement>
+            <UML:Package xmi.id = '.:0000000000000779' name = 'lang' isSpecification = 'false'
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false'>
+              <UML:Namespace.ownedElement>
+                <UML:Class xmi.id = '.:000000000000077A' name = 'String' isSpecification = 'false'
+                  isRoot = 'false' isLeaf = 'false' isAbstract = 'false' isActive = 'false'/>
+              </UML:Namespace.ownedElement>
+            </UML:Package>
+          </UML:Namespace.ownedElement>
+        </UML:Package>
+      </UML:Namespace.ownedElement>
+    </UML:Model>
+  </XMI.content>
+</XMI>

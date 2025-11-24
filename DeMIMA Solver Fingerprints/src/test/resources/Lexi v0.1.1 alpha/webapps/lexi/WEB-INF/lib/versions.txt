@@ -1,0 +1,5 @@
+JAR Library Versions
+
+activation.jar			1.0.1
+mail.jar			1.1.3
+ecs.jar				1.3.2
