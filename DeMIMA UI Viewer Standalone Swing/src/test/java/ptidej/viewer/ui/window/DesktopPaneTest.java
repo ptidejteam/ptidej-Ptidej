@@ -1,8 +1,7 @@
 package ptidej.viewer.ui.window;
 
+import java.io.IOException;
 import java.util.Set;
-
-import javax.imageio.IIOException;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -56,7 +55,7 @@ public class DesktopPaneTest extends TestCase {
 		Assert.assertNotNull(plantUML);
 	}
 
-	@Test(expected = IIOException.class)
+	@Test(expected = IOException.class)
 	public void testCaseCreatePlantUMLImage() {
 		((SourcePlantUMLModelWindow) desktopPane.getInstance()
 				.getAbstractRepresentationWindow())

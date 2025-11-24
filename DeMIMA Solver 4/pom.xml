@@ -11,7 +11,7 @@
 	</parent>
 
 	<groupId>net.ptidej.demima</groupId>
-	<artifactId>demima-solver-4</artifactId>
+	<artifactId>demima-solver-java</artifactId>
 	<name>DeMIMA Solver 4</name>
 
 	<build>
