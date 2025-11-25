@@ -20,6 +20,7 @@ import ptidej.solver.fingerprint.test.simple.CompositionTest1;
 import ptidej.solver.fingerprint.test.simple.CompositionTest2;
 import ptidej.solver.fingerprint.test.simple.CompositionTest3;
 import ptidej.solver.fingerprint.test.simple.CompositionTest4;
+import util.lang.MavenTestGuard;
 
 public final class TestPtidejSolverFingerprints extends TestSuite {
 	public TestPtidejSolverFingerprints() {
@@ -37,7 +38,9 @@ public final class TestPtidejSolverFingerprints extends TestSuite {
 		final TestPtidejSolverFingerprints suite = new TestPtidejSolverFingerprints();
 
 		suite.addTestSuite(CompositeComposite2Comparison.class);
-		suite.addTestSuite(CompositeJUnit.class);
+		if (MavenTestGuard.getInstance().isRunningOutsideMavenTest()) {
+			suite.addTestSuite(CompositeJUnit.class);
+		}
 		// Tests taking a long time, also missing class files
 		//		suite.addTestSuite(CompositeJHotDraw.class);
 		//		suite.addTestSuite(CompositeLexi.class);
