@@ -24,7 +24,7 @@ public class Simple1Test extends TestCase {
 	public void test1OSGiEmbedded() {
 		final ICodeLevelModel codeLevelModel = ModelGenerator
 				.generateModelFromCppFilesUsingEclipse("Simple1Test",
-						"../PADL Creator C++ (Eclipse) Tests/data/Simple/");
+						"../PADL Creator C++ (Eclipse)/target/test-classes/Simple/");
 		Assert.assertNotNull("The code-level model is null!", codeLevelModel);
 		Assert.assertEquals(9, codeLevelModel.getNumberOfTopLevelEntities());
 	}

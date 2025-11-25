@@ -11,6 +11,7 @@
 package ptidej.solver.fingerprint.test.comparison;
 
 import org.junit.Assert;
+
 import ptidej.solver.Occurrence;
 import ptidej.solver.fingerprint.Rule;
 
@@ -21,27 +22,25 @@ public final class CompositeQuickUml extends Primitive {
 	public CompositeQuickUml(final String name) {
 		super(name);
 	}
+
 	protected void setUp() {
 		if (CompositeQuickUml.BuiltSolutions == null) {
-			CompositeQuickUml.BuiltSolutions =
-				Primitive.automaticSolve(
+			CompositeQuickUml.BuiltSolutions = Primitive.automaticSolve(
 					ptidej.solver.fingerprint.problem.CompositeMotif.class,
-					"../QuickUML 2001/bin/",
-					"QuickUML",
-					Rule.C_LEAF_ROLE_1);
+					"../DeMIMA Solver Fingerprints/target/test-classes/QuickUML 2001/bin/",
+					"QuickUML", Rule.C_LEAF_ROLE_1);
 		}
+
 		if (CompositeQuickUml.BuiltSolutionsNoRule == null) {
-			CompositeQuickUml.BuiltSolutionsNoRule =
-				Primitive.automaticSolve(
+			CompositeQuickUml.BuiltSolutionsNoRule = Primitive.automaticSolve(
 					ptidej.solver.java.problem.CompositeMotif.class,
-					"../QuickUML 2001/bin/",
+					"../DeMIMA Solver Fingerprints/target/test-classes/QuickUML 2001/bin/",
 					"QuickUML");
 		}
 	}
+
 	public void testNumberSolution() {
-		Assert
-			.assertTrue(
-				"Less solution with rules.",
+		Assert.assertTrue("Less solution with rules.",
 				CompositeQuickUml.BuiltSolutions.length < CompositeQuickUml.BuiltSolutionsNoRule.length);
 	}
 }

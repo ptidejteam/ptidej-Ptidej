@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="argouml-csharp/src"/>
+	<classpathentry kind="src" path="argouml-mdr/src"/>
+	<classpathentry kind="src" path="argouml/modules/classfile/src"/>
+	<classpathentry kind="src" path="argouml/modules/cpp/src"/>
+	<classpathentry kind="src" path="argouml/modules/idl/src"/>
+	<classpathentry kind="src" path="argouml/modules/php/src"/>
+	<classpathentry kind="src" path="argouml/src_new"/>
+	<classpathentry kind="src" path="argouml/src/model/src"/>
+	<classpathentry kind="lib" path="lib/antlrall-2.7.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/gef-0.11.2.jar"/>
+	<classpathentry kind="lib" path="lib/jmi-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/jmi.jar"/>
+	<classpathentry kind="lib" path="lib/jmiuml-1.4di.jar"/>
+	<classpathentry kind="lib" path="lib/jmiutils.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.6.jar"/>
+	<classpathentry kind="lib" path="lib/mdr.jar"/>
+	<classpathentry kind="lib" path="lib/mof.jar"/>
+	<classpathentry kind="lib" path="lib/nsuml-0.4.20_modified.jar"/>
+	<classpathentry kind="lib" path="lib/ocl-argo-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/org-netbeans-api-mdr.jar"/>
+	<classpathentry kind="lib" path="lib/org-netbeans-jmi-javamodel.jar"/>
+	<classpathentry kind="lib" path="lib/swidgets-0.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/toolbar-1.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/org-openide-util.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_17"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

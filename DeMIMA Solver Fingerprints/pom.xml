@@ -12,7 +12,7 @@
 
 	<groupId>net.ptidej.demima</groupId>
 	<artifactId>demima-solver-fingerprints</artifactId>
-	<name>DeMIMA Solver Metrics</name>
+	<name>DeMIMA Solver Fingerprints</name>
 
 	<build>
 		<plugins>
@@ -38,6 +38,21 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
+			    <configuration>
+					<forkCount>1</forkCount>
+			        <!-- <argLine>-Xmx8G</argLine> -->
+					<excludes>
+						<!-- I must exclude anything inside coming from -->
+						<!-- src/test/resources/JUnit v3.7/bin/junit    -->
+						<exclude>bin/junit/**/*.class</exclude>
+						<exclude>CompositeJUnit.java</exclude>
+					</excludes>
+			    </configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -76,7 +91,7 @@
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-solver-4</artifactId>
+			<artifactId>demima-solver-java</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 
@@ -105,7 +120,7 @@
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-solver-4</artifactId>
+			<artifactId>demima-solver-java</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>

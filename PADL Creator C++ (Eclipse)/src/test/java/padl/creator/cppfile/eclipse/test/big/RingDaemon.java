@@ -24,7 +24,7 @@ public class RingDaemon extends TestCase {
 	public void test1() {
 		final ICodeLevelModel codeLevelModel = ModelGenerator
 				.generateModelFromCppFilesUsingEclipse("RingDaemon",
-						"../PADL Creator C++ (Eclipse) Tests/data/ring-daemon-master/src/");
+						"../PADL Creator C++ (Eclipse)/target/test-classes/ring-daemon-master/src/");
 		Assert.assertNotNull("The code-level model is null!", codeLevelModel);
 		Assert.assertTrue(codeLevelModel.getNumberOfTopLevelEntities() > 3000);
 	}

@@ -30,7 +30,7 @@ public class Compare extends ClassFilePrimitive {
 		super(aName);
 	}
 	public void testCompare() {
-		final String path = "../DeMIMA/target/test-classes/ptidej/example/composite2/";
+		final String path = "../PADL Creator ClassFile/target/test-classes/padl/example/composite2/";
 		final ICodeLevelModel codeLevelModel =
 			Factory.getInstance().createCodeLevelModel(path);
 		final ModelStatistics patternStatistics = new ModelStatistics();

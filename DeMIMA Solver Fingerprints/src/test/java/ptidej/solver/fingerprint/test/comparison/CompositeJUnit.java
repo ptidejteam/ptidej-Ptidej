@@ -11,6 +11,7 @@
 package ptidej.solver.fingerprint.test.comparison;
 
 import org.junit.Assert;
+
 import ptidej.solver.Occurrence;
 import ptidej.solver.fingerprint.Rule;
 
@@ -21,28 +22,25 @@ public final class CompositeJUnit extends Primitive {
 	public CompositeJUnit(final String name) {
 		super(name);
 	}
+
 	protected void setUp() {
-		if (CompositeJUnit.BuiltSolutions == null) {
-			CompositeJUnit.BuiltSolutions =
-				Primitive.automaticSolve(
-					ptidej.solver.fingerprint.problem.CompositeMotif.class,
-					"../JUnit v3.7/bin/",
-					"JUnit",
-					Rule.C_LEAF_ROLE_1);
-		}
 		if (CompositeJUnit.BuiltSolutionsNoRule == null) {
-			CompositeJUnit.BuiltSolutionsNoRule =
-				Primitive.automaticSolve(
+			CompositeJUnit.BuiltSolutionsNoRule = Primitive.automaticSolve(
 					ptidej.solver.java.problem.CompositeMotif.class,
-					"../JUnit v3.7/bin/",
+					"../DeMIMA Solver Fingerprints/target/test-classes/JUnit v3.7/bin/",
 					"JUnit");
+		}
+
+		if (CompositeJUnit.BuiltSolutions == null) {
+			CompositeJUnit.BuiltSolutions = Primitive.automaticSolve(
+					ptidej.solver.fingerprint.problem.CompositeMotif.class,
+					"../DeMIMA Solver Fingerprints/target/test-classes/JUnit v3.7/bin/",
+					"JUnit", Rule.C_LEAF_ROLE_1);
 		}
 	}
 
 	public void testNumberSolution() {
-		Assert
-			.assertTrue(
-				"Less solution with rules.",
+		Assert.assertTrue("Less solution with rules.",
 				CompositeJUnit.BuiltSolutions.length < CompositeJUnit.BuiltSolutionsNoRule.length);
 	}
 }

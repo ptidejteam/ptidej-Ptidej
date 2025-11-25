@@ -30,7 +30,7 @@ public class FieldAccessTest extends TestCase {
 		if (FieldAccessTest.IdiomLevelModel == null) {
 			FieldAccessTest.IdiomLevelModel = ModelGenerator
 					.generateModelFromCppFilesUsingEclipse("Funny",
-							"../PADL Creator C++ (Eclipse) Tests/data/FieldAccess/");
+							"../PADL Creator C++ (Eclipse)/target/test-classes/FieldAccess/");
 		}
 	}
 

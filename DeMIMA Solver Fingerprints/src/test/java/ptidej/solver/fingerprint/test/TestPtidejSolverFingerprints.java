@@ -12,10 +12,15 @@ package ptidej.solver.fingerprint.test;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
+import ptidej.solver.fingerprint.test.comparison.CompositeComposite2Comparison;
+import ptidej.solver.fingerprint.test.comparison.CompositeJUnit;
+import ptidej.solver.fingerprint.test.complex.CompositeComposite1;
+import ptidej.solver.fingerprint.test.complex.CompositeComposite2;
 import ptidej.solver.fingerprint.test.simple.CompositionTest1;
 import ptidej.solver.fingerprint.test.simple.CompositionTest2;
 import ptidej.solver.fingerprint.test.simple.CompositionTest3;
 import ptidej.solver.fingerprint.test.simple.CompositionTest4;
+import util.lang.MavenTestGuard;
 
 public final class TestPtidejSolverFingerprints extends TestSuite {
 	public TestPtidejSolverFingerprints() {
@@ -32,14 +37,16 @@ public final class TestPtidejSolverFingerprints extends TestSuite {
 	public static Test suite() {
 		final TestPtidejSolverFingerprints suite = new TestPtidejSolverFingerprints();
 
-		// TODO Add these tests back
-		//		suite.addTestSuite(CompositeComposite2Comparison.class);
+		suite.addTestSuite(CompositeComposite2Comparison.class);
+		if (MavenTestGuard.getInstance().isRunningOutsideMavenTest()) {
+			suite.addTestSuite(CompositeJUnit.class);
+		}
+		// Tests taking a long time, also missing class files
 		//		suite.addTestSuite(CompositeJHotDraw.class);
-		//		suite.addTestSuite(CompositeJUnit.class);
 		//		suite.addTestSuite(CompositeLexi.class);
 		//		suite.addTestSuite(CompositeQuickUml.class);
-		//		suite.addTestSuite(CompositeComposite1.class);
-		//		suite.addTestSuite(CompositeComposite2.class);
+		suite.addTestSuite(CompositeComposite1.class);
+		suite.addTestSuite(CompositeComposite2.class);
 		suite.addTestSuite(CompositionTest1.class);
 		suite.addTestSuite(CompositionTest2.class);
 		suite.addTestSuite(CompositionTest3.class);

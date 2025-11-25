@@ -72,7 +72,7 @@ public abstract class BinaryConstraint extends AbstractPalmBinIntConstraint
 
 			if (method != null) {
 				try {
-					list = (Set) method.invoke(anEntity, (Object[]) null);
+					list = (Set) method.invoke(anEntity, new Object[0]);
 				}
 				catch (final IllegalArgumentException e2) {
 					e2.printStackTrace(

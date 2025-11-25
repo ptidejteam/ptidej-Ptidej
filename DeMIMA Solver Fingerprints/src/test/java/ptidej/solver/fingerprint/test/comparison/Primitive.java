@@ -10,10 +10,9 @@
  ******************************************************************************/
 package ptidej.solver.fingerprint.test.comparison;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.StringReader;
-import java.io.StringWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Iterator;
@@ -27,12 +26,14 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IGhost;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
+import padl.visitor.IWalker;
 import ptidej.solver.Occurrence;
 import ptidej.solver.OccurrenceBuilder;
 import ptidej.solver.OccurrenceComponent;
 import ptidej.solver.fingerprint.ReducedDomainBuilder;
 import ptidej.solver.fingerprint.Rule;
 import ptidej.solver.java.Problem;
+import ptidej.solver.java.domain.GeneratorExcludingGhosts;
 import ptidej.solver.java.domain.Manager;
 import util.io.ProxyDisk;
 import util.io.ReaderInputStream;
@@ -86,8 +87,8 @@ abstract class Primitive extends TestCase {
 	private static void printSolution(final String testName,
 			final Occurrence[] sol) {
 
-		final PrintWriter out = new PrintWriter(ProxyDisk.getInstance()
-				.fileTempOutput(testName + ".txt"));
+		final PrintWriter out = new PrintWriter(
+				ProxyDisk.getInstance().fileTempOutput(testName + ".txt"));
 		out.println("Solutions for : " + testName + "\n");
 		for (int i = 0; i < sol.length; i++) {
 			out.println(sol[i]);
@@ -99,10 +100,8 @@ abstract class Primitive extends TestCase {
 	private static Occurrence[] solveAndLog(final Class testClass,
 			final String path, final String ilmName, final Rule role) {
 
-		Occurrence[] solutions = new Occurrence[0];
-		ICodeLevelModel codeLevelModel = null;
 		try {
-			codeLevelModel = Factory.getInstance()
+			final ICodeLevelModel codeLevelModel = Factory.getInstance()
 					.createCodeLevelModel(ilmName);
 			try {
 				codeLevelModel.create(new CompleteClassFileCreator(
@@ -112,7 +111,8 @@ abstract class Primitive extends TestCase {
 				e.printStackTrace();
 			}
 
-			Problem problem = null;
+			final IWalker generator = new GeneratorExcludingGhosts();
+			final Problem problem;
 			if (role != null) {
 				final ReducedDomainBuilder rdg = new ReducedDomainBuilder(
 						codeLevelModel);
@@ -121,61 +121,45 @@ abstract class Primitive extends TestCase {
 				final Method problemMethod = testClass.getMethod("getProblem",
 						new Class[] { List.class, ReducedDomainBuilder.class });
 				final Object[] problemArguments = new Object[] {
-						Manager.build(newModel),
+						Manager.build(newModel, generator),
 						new ReducedDomainBuilder(newModel) };
 				problem = (Problem) problemMethod.invoke(null,
 						problemArguments);
 			}
 			else {
-				final ReducedDomainBuilder rdg = new ReducedDomainBuilder(
-						codeLevelModel);
 				final Method problemMethod = testClass.getMethod("getProblem",
-						new Class[] { List.class, ReducedDomainBuilder.class });
+						new Class[] { List.class });
 				final Object[] problemArguments = new Object[] {
-						Manager.build(codeLevelModel), rdg };
+						Manager.build(codeLevelModel, generator) };
 				problem = (Problem) problemMethod.invoke(null,
 						problemArguments);
 			}
 
-			// GC
-			for (int i = 0; i < 5; i++) {
-				System.gc();
-			}
-
-			final StringWriter writer = new StringWriter();
+			final FileWriter writer = ProxyDisk.getInstance()
+					.fileTempOutput(testClass.getName() + ".ini");
 			problem.setWriter(new PrintWriter(writer));
 			problem.combinatorialAutomaticSolve(true);
+			writer.close();
+		}
+		catch (final IllegalAccessException | InvocationTargetException
+				| IOException | NoSuchMethodException e) {
+			e.printStackTrace();
+			return new Occurrence[0];
+		}
 
+		try {
 			final Properties properties = new Properties();
+			properties.load(new ReaderInputStream(ProxyDisk.getInstance()
+					.fileTempInput(testClass.getName() + ".ini")));
 
-			properties.load(new ReaderInputStream(
-					new StringReader(writer.getBuffer().toString())));
-
-			final OccurrenceBuilder solutionBuilder = OccurrenceBuilder
-					.getInstance();
-
-			solutions = solutionBuilder.getCanonicalOccurrences(properties);
-		}
-		catch (final IllegalArgumentException e) {
-			e.printStackTrace();
-		}
-		catch (final SecurityException e) {
-			e.printStackTrace();
-		}
-		catch (final IllegalAccessException e) {
-			e.printStackTrace();
-		}
-		catch (final InvocationTargetException e) {
-			e.printStackTrace();
-		}
-		catch (final NoSuchMethodException e) {
-			e.printStackTrace();
+			final Occurrence[] occurrences = OccurrenceBuilder.getInstance()
+					.getCanonicalOccurrences(properties);
+			return occurrences;
 		}
 		catch (final IOException e) {
 			e.printStackTrace();
+			return new Occurrence[0];
 		}
-
-		return solutions;
 	}
 
 	public Primitive(final String name) {

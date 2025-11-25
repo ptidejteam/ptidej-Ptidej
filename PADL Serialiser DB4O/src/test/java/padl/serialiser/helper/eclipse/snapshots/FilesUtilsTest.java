@@ -11,7 +11,9 @@
 package padl.serialiser.helper.eclipse.snapshots;
 
 import java.io.File;
+
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.generator.helper.utils.FilesUtils;
 

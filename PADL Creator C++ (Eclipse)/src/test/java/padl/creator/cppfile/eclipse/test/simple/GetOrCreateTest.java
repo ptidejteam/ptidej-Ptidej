@@ -27,7 +27,7 @@ public class GetOrCreateTest extends TestCase {
 		if (GetOrCreateTest.CodeLevelModel == null) {
 			GetOrCreateTest.CodeLevelModel = ModelGenerator
 					.generateModelFromCppFilesUsingEclipse("Funny",
-							"../PADL Creator C++ (Eclipse) Tests/data/getOrCreate/");
+							"../PADL Creator C++ (Eclipse)/target/test-classes/getOrCreate/");
 		}
 	}
 

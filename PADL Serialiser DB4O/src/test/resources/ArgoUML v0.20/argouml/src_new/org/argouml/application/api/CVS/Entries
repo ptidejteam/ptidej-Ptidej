@@ -1,0 +1,22 @@
+/.cvsignore/1.1/Sun Aug 11 07:03:55 2002//TVERSION_0_20_F
+/AboutTabPanel.java/1.6/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/Argo.java/1.40/Sun Nov 13 11:01:22 2005//TVERSION_0_20_F
+/ArgoEventListener.java/1.7/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/ArgoModule.java/1.16/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/ArgoSingletonModule.java/1.7/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/CommandLineInterface.java/1.4/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/Configuration.java/1.23/Sun Nov 13 11:01:22 2005//TVERSION_0_20_F
+/ConfigurationKey.java/1.7/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/Pluggable.java/1.11/Fri Nov 19 22:36:10 2004//TVERSION_0_20_F
+/PluggableAboutTab.java/1.6/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/PluggableDiagram.java/1.7/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/PluggableImport.java/1.6/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/PluggableMenu.java/1.12/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/PluggableNotation.java/1.4/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/PluggablePropertyPanel.java/1.9/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/PluggableResourceBundle.java/1.5/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/PluggableSettingsTab.java/1.7/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/QuadrantPanel.java/1.8/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/SettingsTabPanel.java/1.9/Sun Jan  9 14:58:03 2005//TVERSION_0_20_F
+/package.html/1.6/Sun Jul 10 09:13:25 2005//TVERSION_0_20_F
+D

@@ -42,12 +42,13 @@ public class Manager {
 	private static final String NUMBER_OF_ENTITIES = "NumberOfEntities";
 
 	public static List build(final IAbstractModel abstractModel) {
-		final IWalker generator = new Generator();
+		final IWalker generator = new GeneratorIncludingGhosts();
 		return Manager.build(abstractModel, generator);
 	}
 
 	public static List build(final IAbstractModel abstractModel,
 			final IWalker aGenerator) {
+		
 		abstractModel.walk(aGenerator);
 		final List listOfEntities = (List) aGenerator.getResult();
 		return listOfEntities;

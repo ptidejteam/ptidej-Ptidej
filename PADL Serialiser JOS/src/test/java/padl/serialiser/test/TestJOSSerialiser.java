@@ -21,20 +21,22 @@ public class TestJOSSerialiser extends TestSuite {
 	public TestJOSSerialiser() {
 		super();
 	}
+
 	public TestJOSSerialiser(final Class theClass) {
 		super(theClass);
 	}
+
 	public TestJOSSerialiser(final String name) {
 		super(name);
 	}
+
 	public static Test suite() {
 		final TestJOSSerialiser suite = new TestJOSSerialiser();
 
 		suite.addTestSuite(CompositeTest.class);
 		suite.addTestSuite(JHotDrawTest.class);
-		// TODO Add these tests back
-		//		suite.addTestSuite(ArgoUML0198Test.class);
-		//		suite.addTestSuite(ArgoUML020Test.class);
+		suite.addTestSuite(ArgoUML0198Test.class);
+		suite.addTestSuite(ArgoUML020Test.class);
 
 		return suite;
 	}

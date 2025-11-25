@@ -1,0 +1,22 @@
+/.cvsignore/1.1/Sun Aug 11 07:03:59 2002//TVERSION_0_20_F
+/config.lcf/1.1/Wed Sep 26 17:07:43 2001//TVERSION_0_20_F
+/critics.lcf/1.1/Wed Sep 26 17:07:43 2001//TVERSION_0_20_F
+/default.lcf/1.3/Sun Jun 12 18:23:02 2005/-kb/TVERSION_0_20_F
+/default.properties/1.1/Wed Sep 26 17:07:08 2001//TVERSION_0_20_F
+/default_console.lcf/1.1/Sun Feb  9 14:18:43 2003/-kb/TVERSION_0_20_F
+/error.lcf/1.2/Tue Oct  8 20:04:25 2002/-kb/TVERSION_0_20_F
+/error_console.lcf/1.2/Sun Dec 26 14:53:23 2004//TVERSION_0_20_F
+/event.lcf/1.1/Sat Sep 29 01:22:23 2001//TVERSION_0_20_F
+/full.lcf/1.2/Sun Jun 12 18:23:02 2005//TVERSION_0_20_F
+/full_console.lcf/1.3/Thu Mar 20 14:06:51 2003//TVERSION_0_20_F
+/info_console.lcf/1.3/Sat Jan  1 18:23:27 2005/-kb/TVERSION_0_20_F
+/mdr.lcf/1.1/Tue Oct 25 03:17:45 2005//TVERSION_0_20_F
+/model.lcf/1.2/Sun Aug  4 17:44:18 2002//TVERSION_0_20_F
+/modeleventpump.lcf/1.1/Sun Jan 26 16:22:46 2003//TVERSION_0_20_F
+/module.lcf/1.1/Sat Sep 29 01:22:23 2001//TVERSION_0_20_F
+/notation.lcf/1.1/Wed Oct 24 12:32:01 2001//TVERSION_0_20_F
+/notation_plugin.lcf/1.1/Wed Oct 24 12:32:01 2001//TVERSION_0_20_F
+/security.lcf/1.1/Wed Sep 26 17:07:43 2001//TVERSION_0_20_F
+/standard.modules/1.22/Wed Nov  2 18:02:50 2005//TVERSION_0_20_F
+/warn_console.lcf/1.1/Tue Jun 21 15:15:55 2005//TVERSION_0_20_F
+D

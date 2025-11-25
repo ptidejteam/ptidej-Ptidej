@@ -98,9 +98,6 @@ public class DesignSmellDetectionsRepository implements IRepository {
 			this.designSmells = new IDesignSmellDetection[codeSmells.size()];
 			codeSmells.toArray(this.designSmells);
 		}
-		catch (final AccessControlException ace) {
-			this.designSmells = new IDesignSmellDetection[0];
-		}
 		catch (final FileAccessException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 			this.designSmells = new IDesignSmellDetection[0];
