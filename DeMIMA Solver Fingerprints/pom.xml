@@ -45,13 +45,12 @@
 				<version>3.5.3</version>
 			    <configuration>
 					<forkCount>1</forkCount>
-			        <argLine>-Xmx8G</argLine>
+			        <!-- <argLine>-Xmx8G</argLine> -->
 					<excludes>
 						<!-- I must exclude anything inside coming from -->
 						<!-- src/test/resources/JUnit v3.7/bin/junit    -->
-						<exclude>
-							bin/junit/**/*.class
-						</exclude>
+						<exclude>bin/junit/**/*.class</exclude>
+						<exclude>CompositeJUnit.java</exclude>
 					</excludes>
 			    </configuration>
 			</plugin>
