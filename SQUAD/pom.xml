@@ -106,7 +106,7 @@
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-solver-4</artifactId>
+			<artifactId>demima-solver-java</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 

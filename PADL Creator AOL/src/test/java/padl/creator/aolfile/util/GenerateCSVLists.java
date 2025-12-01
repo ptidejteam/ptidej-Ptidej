@@ -203,7 +203,7 @@ public class GenerateCSVLists {
 				System.out.println("Data...");
 				writer =
 					ProxyDisk.getInstance().fileAbsoluteOutput(
-						"../PADL Creator AOL Tests/rst/Data.csv");
+						"../PADL Creator AOL/tmp/Data.csv");
 				writer
 					.write("Class name, Number of fields, Number of methods, Number of associations, Identifiers\n");
 				final Iterator entities =

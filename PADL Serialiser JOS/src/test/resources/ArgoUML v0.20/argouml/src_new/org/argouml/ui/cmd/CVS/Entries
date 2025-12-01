@@ -1,0 +1,27 @@
+/.cvsignore/1.1/Sun Dec 22 00:58:30 2002//TVERSION_0_20_F
+/ActionAboutArgoUML.java/1.4/Thu Apr 28 20:42:11 2005//TVERSION_0_20_F
+/ActionAutoCritique.java/1.5/Sun Nov 13 11:01:25 2005//TVERSION_0_20_F
+/ActionEmailExpert.java/1.7/Thu Apr 28 20:42:11 2005//TVERSION_0_20_F
+/ActionExit.java/1.3/Tue Dec  6 02:09:54 2005//TVERSION_0_20_F
+/ActionFind.java/1.3/Sun Jan  9 14:58:13 2005//TVERSION_0_20_F
+/ActionGotoDiagram.java/1.7/Sun Jan  9 14:58:13 2005//TVERSION_0_20_F
+/ActionNew.java/1.1/Wed May 18 20:27:00 2005//TVERSION_0_20_F
+/ActionNewToDoItem.java/1.6/Thu Apr 28 20:42:11 2005//TVERSION_0_20_F
+/ActionOpenBrowser.java/1.5/Sun Jan  9 14:58:13 2005//TVERSION_0_20_F
+/ActionOpenCritics.java/1.4/Thu Apr 28 20:42:11 2005//TVERSION_0_20_F
+/ActionOpenDecisions.java/1.4/Thu Apr 28 20:45:04 2005//TVERSION_0_20_F
+/ActionOpenGoals.java/1.4/Thu Apr 28 20:45:04 2005//TVERSION_0_20_F
+/ActionPageSetup.java/1.6/Wed May 11 18:55:55 2005//TVERSION_0_20_F
+/ActionPrint.java/1.6/Wed May 11 18:55:55 2005//TVERSION_0_20_F
+/ActionResolve.java/1.5/Sun Jan  9 14:58:13 2005//TVERSION_0_20_F
+/ActionShowXMLDump.java/1.4/Thu Apr 28 20:45:04 2005//TVERSION_0_20_F
+/ActionSnooze.java/1.3/Sun Jan  9 14:58:13 2005//TVERSION_0_20_F
+/ActionSystemInfo.java/1.5/Thu Apr 28 20:45:04 2005//TVERSION_0_20_F
+/CmdSetPreferredSize.java/1.16/Sun Jan  9 14:58:13 2005//TVERSION_0_20_F
+/GenericArgoMenuBar.java/1.33/Fri Dec  2 00:58:18 2005//TVERSION_0_20_F
+/InitMenusLater.java/1.9/Fri Dec  2 00:58:18 2005//TVERSION_0_20_F
+/LastRecentlyUsedMenuList.java/1.4/Sun Jan  9 14:58:13 2005//TVERSION_0_20_F
+/PrintManager.java/1.2/Thu Apr 14 18:29:46 2005//TVERSION_0_20_F
+/ToDoItemAction.java/1.4/Sun Jan  9 14:58:13 2005//TVERSION_0_20_F
+/package.html/1.3/Tue Sep 28 19:45:05 2004//TVERSION_0_20_F
+D

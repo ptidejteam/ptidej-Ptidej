@@ -11,22 +11,24 @@
 package padl.creator.cppfile.eclipse.test.simple;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
-import padl.creator.cppfile.eclipse.misc.EclipseCPPParserCaller;
+import padl.creator.cppfile.eclipse.test.helper.ModelGenerator;
 import padl.kernel.ICodeLevelModel;
 
 public class Simple1Test extends TestCase {
 	public Simple1Test(String name) {
 		super(name);
 	}
+
 	public void test1OSGiEmbedded() {
-		final ICodeLevelModel codeLevelModel = EclipseCPPParserCaller
-			.getInstance()
-			.getCodeLevelModelUsingOSGiEmbedded(
-				"../PADL Creator C++ (Eclipse) Tests/data/Simple/");
+		final ICodeLevelModel codeLevelModel = ModelGenerator
+				.generateModelFromCppFilesUsingEclipse("Simple1Test",
+						"../PADL Creator C++ (Eclipse)/target/test-classes/Simple/");
 		Assert.assertNotNull("The code-level model is null!", codeLevelModel);
 		Assert.assertEquals(9, codeLevelModel.getNumberOfTopLevelEntities());
 	}
+
 	public void test2OSGiRemote() {
 		//	final ICodeLevelModel codeLevelModel =
 		//		EclipseCPPParserCaller

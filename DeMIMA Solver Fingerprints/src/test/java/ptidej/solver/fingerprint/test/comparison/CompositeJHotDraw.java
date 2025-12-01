@@ -14,7 +14,6 @@ import org.junit.Assert;
 
 import ptidej.solver.Occurrence;
 import ptidej.solver.fingerprint.Rule;
-import ptidej.solver.fingerprint.problem.CompositeMotif;
 
 public final class CompositeJHotDraw extends Primitive {
 	private static Occurrence[] BuiltSolutions;
@@ -25,16 +24,18 @@ public final class CompositeJHotDraw extends Primitive {
 	}
 
 	protected void setUp() {
-		if (CompositeJHotDraw.BuiltSolutions == null) {
-			CompositeJHotDraw.BuiltSolutions = Primitive.automaticSolve(
-					CompositeMotif.class,
-					"../DeMIMA Solver Metrics/target/test-classes/JHotDraw v5.1/bin/",
-					"JHotDraw", Rule.C_LEAF_ROLE_1);
-		}
 		if (CompositeJHotDraw.BuiltSolutionsNoRule == null) {
 			CompositeJHotDraw.BuiltSolutionsNoRule = Primitive.automaticSolve(
 					ptidej.solver.java.problem.CompositeMotif.class,
-					"../DeMIMA Solver Metrics/target/test-classes/JHotDraw v5.1/bin/", "JHotDraw");
+					"../DeMIMA Solver Fingerprints/target/test-classes/JHotDraw v5.1/bin/",
+					"JHotDraw");
+		}
+
+		if (CompositeJHotDraw.BuiltSolutions == null) {
+			CompositeJHotDraw.BuiltSolutions = Primitive.automaticSolve(
+					ptidej.solver.fingerprint.problem.CompositeMotif.class,
+					"../DeMIMA Solver Fingerprints/target/test-classes/JHotDraw v5.1/bin/",
+					"JHotDraw", Rule.C_LEAF_ROLE_1);
 		}
 	}
 

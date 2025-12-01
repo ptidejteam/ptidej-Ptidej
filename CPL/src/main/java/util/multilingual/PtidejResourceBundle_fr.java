@@ -358,7 +358,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{
 						"Ptidej Solver 4::Problem::PTIDEJ",
 						new String(
-							"++ JPtidejSolver v1.0 (Decembre, 2004), Copyright (c) 2001-2004 Y.-G. Guéhéneuc\n++ Constraint programming for design patterns and design defects identification") },
+							"++ JPtidejSolver v1.5 (novembre, 2025), Copyright (c) 2001-2025 Y.-G. Guéhéneuc\n++ Programmation par contraites pour l'idenfification d'occurrences de patron de conception et de défauts de conception") },
 				{
 						"Ptidej Solver 4::SimpleInteractiveRepair::NO_MORE_SOL",
 						new String(

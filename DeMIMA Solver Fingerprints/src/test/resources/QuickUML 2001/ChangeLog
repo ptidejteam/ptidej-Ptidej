@@ -1,0 +1,224 @@
+QuickUML v1.3.4:	
+
+	Added array option to Java code generation
+	Java code generation will put file in the right directories based on package names
+	
+	Fixed the dependency renderer.
+	Added a FlatSplitPane, enabling resizable sections in the figure renderers.
+	A FlatSplitPane that controls exactly when the divider size i is set, instead of 
+	relying on property changes and best guesses to actually move the divider (which is how
+	the normal JSplitPane works) is needed to have a single component that is suitable for
+	use in a renderer. SplitPanes are not good candidates for this now since you can not
+	easily predict when they will move thier dividers. To overcome two separate components
+	have been added to handle the editing & rendering differently to make sure the divider 
+	shows up where it should - the ideal sol'n is to fix the splitpane though.
+	
+v1.3.3:	
+
+	Moved the diagram component officially to its own separate GPL'd package.
+	Moved the UML program to its own separate package that uses the the
+	diagram package. 
+
+	The code building has been improved since the first iteration, and
+	should be sufficent for simple UML projects; however that is one area
+	that definently needs some revision in the future.
+	
+v1.3.2:	
+
+	Implemented C++ builder.
+	Added FlatScrollPane/FlatScrollBar/FlatArrowButton for the scroll indicators
+	on the diagram components
+	Added the dependancy tool.
+	
+v1.3.1:	
+
+	Greatly imporved the meta objects & builders used to generate code. More
+	flexible now.
+	
+v1.3.0:	
+
+	TODO: Think of a real name for the project
+
+	Started micro version number
+	Revised the code generation
+	
+v1.2:		
+	Added scaled printing
+	Added font changing
+	Updated serialization mechanism
+	
+v1.1:	
+	Fixed save/restore bug
+	Fixed layout bug on the ClassComponent
+	Fixed resize bug (scroll bars didnt appear as execpted)
+	Added << interface >> label to the InterfaceComponent
+	Added snap-back to scrollable text areas.
+	Renderes use a custom ui to listen for colro changes (decreased # of property listeners)
+	
+v1.0:	
+	Added design model items
+	Smarter link render & editor 
+	Smarter file dialog
+	Updated ui
+	Implemented Scrollable
+	
+v0.9:
+
+	findLink() && findFigure() merged.
+
+	Added editors for Links.
+	Added selection for Links.
+	Added printing.
+	Added smarter file dialogs.
+
+	Updated the selection tool to allow links to be selected
+	Updated the sensetivity of the LinkShappingTool
+	
+	FIXED: FigureDraggingTool had a flaw that cause an excessive number
+	of items to be associated with a link, making a repaint redraw 7 or 8
+	uncessary items (which slowed dragging noticably)
+
+	Updated DiagramUI & Diagram.
+
+	Added ClipboardTool
+	
+	Updated FigureTool to use the prototypes default size
+	Updated intersection check for polylines to elimnate unneeded repaints
+
+	TODO: make render for labels near the sink segment
+v0.8:
+
+	Enhanced renderers to include a decorated bounds to allow areas outside a 
+	figures bounds to be drawn on for arrows, labels etc. (Fixes link painting
+	bug)
+
+	That change also greatly improved the link tool repaints.
+
+	Figures by defaults imposed by the vm have hashcodes based on thier 
+	bounds. In order to map a value to a figure in a model it will need a
+	static hashcode (that won't change w/ the bounds).
+
+	Updated UML application frame.
+
+	Added refresh options to Diagram (fast/slow)
+	
+	TODO: Update the other tools eventually to also take advantage of this 
+	to avoid entire diagram repaints wherever the decorated bounds can be
+	used to repaint instead
+
+	
+v0.7:	
+	
+	Surface removed, no longer neccessary.
+	RepaintManager now used to deal with damage & repainting
+	FigureEditing modified to fit the CellEditor model of swing, editors that
+	already exist for tables & trees can be modifed easily to work with a Diagram
+	FigureEditingTool fixed to allow complex editor components to behave 
+	correctly.
+
+	Updated renderers	
+	Updated editors	
+
+	TODO: Fix link painting bug, links completely vertical or horizontal get
+	draw incorrectly
+
+	TODO: Move some of the damage & repaint logic out of the tools into the ui
+	delegate
+
+	TODO: Add labels to links
+
+v0.6:
+	
+	FigureLayer & LinkLayer have been removed and replace with a single Layer
+	object.
+
+	All the rendering is done by a UI delegate, this uses the normal ComponetUI 
+	framework in Swing. This really organizes the rendering code very nicely.
+	The DiagramUI can be easily swapped in and out to create different views
+	rather than subclassing the Diagram each time a new type of view is needed.
+
+	Complex renderers now work correctly.
+
+	Link renderers updated so that they do not repeatedly create GeneralPath objects
+	to paint.
+	
+	TODO: Remove the need for the need for a Surface class, the Diagram can
+	extend directly from JComponent. Since this has been moved almost entirely to
+	swing it should fit in to the swing framework as much as possible to make it 
+	easier to use and maintian. Since the painting is done by the swing framework
+	instead of a customized AWT mechinism, the only parts of the Surface that are
+	used are the parts used to damage & repaint areas of the Diagram. 
+
+	TODO: If possible, update the damage & repaint mechanisms to use the 
+	RepaintManager where possible.
+	
+	TODO: Revise the Editor components so they fit the swing Editor hierarchy
+	instead of creating a parrallel hierarhcy that does nearly the exact same
+	thing.
+	
+v0.5:
+     
+	Figures rendered with a CellRendererPane. This has almost the exact same
+	function as the FigureLayer (with the exception of z-order tracking) and
+	it makes more sense to reuse what swing provides. The CellRendererPane
+	also solves the problem of rendering components that were complex (with
+	thier own layouts and sub components)
+
+	TODO: Merge the LinkLayer into this. Find a more elgant way to separate
+	links and figures.
+
+	TODO: Shape's generate a hashCode() based on thier current bounds. This needs
+	to change in order to map values to Figures, and in order to serialize or
+	externailze the model correctly.
+	
+v0.4:
+	Link is now a specialization of Figure.
+	
+	DefaultDiagramModel no longer requires that the Figures a Link
+	is attached to also be part of the model - allows for invisible
+	items that make link dragging very simple.
+
+	Tools added, gradually moving each support object into the more 
+	flexible tool package.
+
+	TODO: Update diagram model to reflect links as figures rather than 
+	two seperate entities.
+	
+v0.3:
+   
+	JTable style rendering & editing added.
+	More support objects added
+	
+v0.2:
+	TODO: make lines Figures as well
+	remove connector shape and simply use the figure border. Moving the 
+	connection point should be enough, and is easier to maintain.
+
+	TODO: make support objects tools, more natural for creating 
+	toolbars with buttons for using different support objects.
+
+	Adopted JComponet over Component to take advantage of the optimiztions
+	a JVM can provide in dirty region repaints.
+	
+v0.1:
+
+	Support objects added to insert new behavoir into existing Diagram 
+	components
+	
+	Standalone diagram component created, based on Componet with its own 
+	custom double buffering & repaint mechanizsm.
+         
+	Figure & Lines are separate shapes 
+	Figures have connector shapes in addition to border 
+	(line drawing border)
+
+	Shape extended (Figure) to include a few extra functions and more
+	efficent methods for testing points & bounds.
+
+v0.1:
+	Initial protoype was pure AWT. Based on a Surface component which was
+	just a customized Component with some double buffering, painting, damage
+	and repaint methods.
+
+	Figures were painted as simple shape lists.
+	

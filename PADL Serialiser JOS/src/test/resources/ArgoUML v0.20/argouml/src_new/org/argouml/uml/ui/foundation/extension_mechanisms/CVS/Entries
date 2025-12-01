@@ -1,0 +1,18 @@
+/.cvsignore/1.1/Sun Aug 11 07:04:26 2002//TVERSION_0_20_F
+/ActionNewStereotype.java/1.9/Sun Jan 30 20:48:14 2005//TVERSION_0_20_F
+/ActionNewTagDefinition.java/1.6/Wed Jan 11 22:47:17 2006//TVERSION_0_20_F
+/ActionSetMetaClass.java/1.8/Fri Dec 30 16:06:01 2005//TVERSION_0_20_F
+/ActionSetTagDefinitionMultiplicity.java/1.2/Mon Oct 31 01:51:03 2005//TVERSION_0_20_F
+/ActionSetTagDefinitionOwner.java/1.5/Sun Jan  8 16:32:30 2006//TVERSION_0_20_F
+/ActionSetTagDefinitionType.java/1.1/Wed Jan 11 22:48:05 2006//TVERSION_0_20_F
+/PropPanelStereotype.java/1.54/Sun Nov 13 11:01:21 2005//TVERSION_0_20_F
+/PropPanelTagDefinition.java/1.13/Thu Jan 12 17:28:15 2006//TVERSION_0_20_F
+/UMLMetaClassComboBoxModel.java/1.8/Fri Jan  6 23:53:44 2006//TVERSION_0_20_F
+/UMLTagDefinitionComboBoxModel.java/1.5/Sun Nov 13 11:01:21 2005//TVERSION_0_20_F
+/UMLTagDefinitionListModel.java/1.2/Sun Nov 13 11:01:21 2005//TVERSION_0_20_F
+/UMLTagDefinitionMultiplicityComboBoxModel.java/1.3/Mon Jan  9 18:20:53 2006//TVERSION_0_20_F
+/UMLTagDefinitionOwnerComboBoxModel.java/1.1/Sun Jan  8 14:32:56 2006/-kk/TVERSION_0_20_F
+/UMLTagDefinitionTypeComboBoxModel.java/1.1/Wed Jan 11 22:48:05 2006//TVERSION_0_20_F
+/UMLTagDefinitionTypedValuesListModel.java/1.1/Thu Jan 12 07:07:33 2006//TVERSION_0_20_F
+/package.html/1.2/Tue Apr 29 19:31:12 2003//TVERSION_0_20_F
+D

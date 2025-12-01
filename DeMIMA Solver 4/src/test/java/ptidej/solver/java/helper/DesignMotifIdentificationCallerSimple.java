@@ -23,7 +23,7 @@ import padl.visitor.IWalker;
 import ptidej.solver.Occurrence;
 import ptidej.solver.OccurrenceBuilder;
 import ptidej.solver.java.Problem;
-import ptidej.solver.java.domain.Generator;
+import ptidej.solver.java.domain.GeneratorExcludingGhosts;
 import ptidej.solver.java.domain.Manager;
 import ptidej.solver.java.problem.CompositeMotif;
 import util.io.ProxyDisk;
@@ -42,7 +42,7 @@ public class DesignMotifIdentificationCallerSimple {
 
 		final IIdiomLevelModel idiomLevelModel =
 			ModelGenerator.generateModelFromJAR(path);
-		final IWalker constraintModelBuilder = new Generator();
+		final IWalker constraintModelBuilder = new GeneratorExcludingGhosts();
 		final List listOfModelEntities =
 			Manager.build(idiomLevelModel, constraintModelBuilder);
 		final Problem constraintProblem =

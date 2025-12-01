@@ -24,7 +24,7 @@ public class ClassesTest extends TestCase {
 	public void test1() {
 		final ICodeLevelModel codeLevelModel = ModelGenerator
 				.generateModelFromCppFilesUsingEclipse("Funny",
-						"../PADL Creator C++ (Eclipse) Tests/data/Classes/");
+						"../PADL Creator C++ (Eclipse)/target/test-classes/Classes/");
 		Assert.assertNotNull("The idiom-level model is null!", codeLevelModel);
 		Assert.assertEquals(81, codeLevelModel.getNumberOfTopLevelEntities());
 	}

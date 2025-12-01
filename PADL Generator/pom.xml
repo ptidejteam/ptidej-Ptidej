@@ -76,13 +76,11 @@
 			<version>1.0.0</version>
 		</dependency>
 
-		<!--
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-creator-cpp-eclipse</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-		-->
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
@@ -150,7 +148,6 @@
 			<artifactId>padl-creator-aspectj</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-
 
 		<!-- Test dependencies -->
 		<dependency>

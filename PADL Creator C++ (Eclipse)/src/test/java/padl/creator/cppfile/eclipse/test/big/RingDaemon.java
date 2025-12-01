@@ -11,18 +11,20 @@
 package padl.creator.cppfile.eclipse.test.big;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
-import padl.creator.cppfile.eclipse.misc.EclipseCPPParserCaller;
+import padl.creator.cppfile.eclipse.test.helper.ModelGenerator;
 import padl.kernel.ICodeLevelModel;
 
 public class RingDaemon extends TestCase {
 	public RingDaemon(String name) {
 		super(name);
 	}
+
 	public void test1() {
-		final ICodeLevelModel codeLevelModel =
-			EclipseCPPParserCaller.getInstance().getCodeLevelModelUsingOSGiEmbedded(
-				"../PADL Creator C++ (Eclipse) Tests/data/ring-daemon-master/src/");
+		final ICodeLevelModel codeLevelModel = ModelGenerator
+				.generateModelFromCppFilesUsingEclipse("RingDaemon",
+						"../PADL Creator C++ (Eclipse)/target/test-classes/ring-daemon-master/src/");
 		Assert.assertNotNull("The code-level model is null!", codeLevelModel);
 		Assert.assertTrue(codeLevelModel.getNumberOfTopLevelEntities() > 3000);
 	}

@@ -15,19 +15,22 @@ import java.io.PrintWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Properties;
+
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
+import padl.visitor.IWalker;
 import ptidej.solver.Occurrence;
 import ptidej.solver.OccurrenceBuilder;
 import ptidej.solver.fingerprint.ReducedDomainBuilder;
 import ptidej.solver.fingerprint.problem.CompositeMotif;
 import ptidej.solver.java.Problem;
+import ptidej.solver.java.domain.GeneratorExcludingGhosts;
 import ptidej.solver.java.domain.Manager;
-import ptidej.solver.java.test.example.SolutionReader;
 import util.io.ReaderInputStream;
 
 public class CompositeComposite1 extends TestCase {
@@ -38,38 +41,35 @@ public class CompositeComposite1 extends TestCase {
 	public CompositeComposite1(final String name) {
 		super(name);
 	}
-	protected void setUp() throws IllegalAccessException,
-			InstantiationException {
+
+	protected void setUp()
+			throws IllegalAccessException, InstantiationException {
 
 		if (CompositeComposite1.FoundSolutions == null) {
-			final ICodeLevelModel codeLevelModel =
-				Factory.getInstance().createCodeLevelModel(
-					"ptidej.example.composite1");
+			final ICodeLevelModel codeLevelModel = Factory.getInstance()
+					.createCodeLevelModel("ptidej.example.composite1");
 			try {
 				codeLevelModel
-					.create(new CompleteClassFileCreator(
-						new String[] { "../DeMIMA/target/test-classes/ptidej/example/composite1/" }));
+						.create(new CompleteClassFileCreator(new String[] {
+								"../DeMIMA/target/test-classes/ptidej/example/composite1/" }));
 			}
 			catch (final CreationException e) {
 				e.printStackTrace();
 			}
 
 			// Expected solutions.
-			CompositeComposite1.ExpectedSolutions =
-				SolutionReader.getExpectedSolutions(
-					"Composite1",
-					codeLevelModel);
-			CompositeComposite1.NumberOfExpectedSolutions =
-				SolutionReader.getExpectedNumberOfSolutions(
-					"Composite1",
-					codeLevelModel);
+			CompositeComposite1.ExpectedSolutions = SolutionReader
+					.getExpectedSolutions("Composite1", codeLevelModel);
+			CompositeComposite1.NumberOfExpectedSolutions = SolutionReader
+					.getExpectedNumberOfSolutions("Composite1", codeLevelModel);
 
-			final ReducedDomainBuilder rdg =
-				new ReducedDomainBuilder(codeLevelModel);
+			final IWalker generator = new GeneratorExcludingGhosts();
+			final ReducedDomainBuilder rdg = new ReducedDomainBuilder(
+					codeLevelModel);
 
 			// Solutions found.
-			final Problem problem =
-				CompositeMotif.getProblem(Manager.build(codeLevelModel), rdg);
+			final Problem problem = CompositeMotif
+					.getProblem(Manager.build(codeLevelModel, generator), rdg);
 
 			final StringWriter writer = new StringWriter();
 			problem.setWriter(new PrintWriter(writer));
@@ -77,33 +77,32 @@ public class CompositeComposite1 extends TestCase {
 
 			final Properties properties = new Properties();
 			try {
-				properties.load(new ReaderInputStream(new StringReader(writer
-					.getBuffer()
-					.toString())));
+				properties.load(new ReaderInputStream(
+						new StringReader(writer.getBuffer().toString())));
 			}
 			catch (final IOException e) {
 				e.printStackTrace();
 			}
-			final OccurrenceBuilder solutionBuilder =
-				OccurrenceBuilder.getInstance();
-			CompositeComposite1.FoundSolutions =
-				solutionBuilder.getCanonicalOccurrences(properties);
+			final OccurrenceBuilder solutionBuilder = OccurrenceBuilder
+					.getInstance();
+			CompositeComposite1.FoundSolutions = solutionBuilder
+					.getCanonicalOccurrences(properties);
 		}
 	}
+
 	public void testNumberOfSolutions() {
-		Assert.assertEquals(
-			"Number of solutions",
-			CompositeComposite1.NumberOfExpectedSolutions,
-			CompositeComposite1.FoundSolutions.length);
+		Assert.assertEquals("Number of solutions",
+				CompositeComposite1.NumberOfExpectedSolutions,
+				CompositeComposite1.FoundSolutions.length);
 	}
+
 	public void testSolutions() {
 		for (int i = 0; i < CompositeComposite1.NumberOfExpectedSolutions; i++) {
-			Assert.assertEquals(
-				"",
-				CompositeComposite1.ExpectedSolutions[i],
-				CompositeComposite1.FoundSolutions[i]);
+			Assert.assertEquals("", CompositeComposite1.ExpectedSolutions[i],
+					CompositeComposite1.FoundSolutions[i]);
 		}
 	}
+
 	//	public void testComponentSolutionComponent() {
 	//		final int[] solutionWithAbstractDocument = new int[] { 0, 3, 6, 9 };
 	//		for (int i = 0; i < solutionWithAbstractDocument.length; i++) {

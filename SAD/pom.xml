@@ -110,6 +110,28 @@
 		</dependency>
 
 		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-core</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!--
+		DIRTY HACK (cf. https://wiki.ptidej.net/doku.php?id=dirty_hack)
+		These two last dependencies MUST COME LAST because they bring with them
+		aspectjtools, which itself bring with it an old version of SubMonitor,
+		which leads to
+			java.lang.NoSuchMethodError: 'org.eclipse.core.runtime.SubMonitor
+		org.eclipse.core.runtime.SubMonitor.split(int)' 
+		-->
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-javafile-eclipse</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-generator</artifactId>
 			<version>1.0.0</version>

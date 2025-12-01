@@ -28,7 +28,7 @@ public class TypeNameQualifiers extends TestCase {
 		if (TypeNameQualifiers.CodeLevelModel == null) {
 			TypeNameQualifiers.CodeLevelModel = ModelGenerator
 					.generateModelFromCppFilesUsingEclipse("Funny",
-							"../PADL Creator C++ (Eclipse) Tests/data/TypeNameQualifiers/");
+							"../PADL Creator C++ (Eclipse)/target/test-classes/TypeNameQualifiers/");
 		}
 	}
 

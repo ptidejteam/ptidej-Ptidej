@@ -14,35 +14,34 @@ import org.junit.Assert;
 
 import ptidej.solver.Occurrence;
 import ptidej.solver.fingerprint.Rule;
-import ptidej.solver.fingerprint.problem.CompositeMotif;
 
 public final class CompositeComposite2Comparison extends Primitive {
-	private static Occurrence[] BuiltSolutions;
-	private static Occurrence[] BuiltSolutionsNoRule;
-
 	public CompositeComposite2Comparison(final String name) {
 		super(name);
 	}
 
-	protected void setUp() {
-		if (CompositeComposite2Comparison.BuiltSolutions == null) {
-			CompositeComposite2Comparison.BuiltSolutions = Primitive
-					.automaticSolve(CompositeMotif.class,
-							"../DeMIMA/target/test-classes/ptidej/example/composite2/",
-							"composite2", Rule.C_LEAF_TEST);
-		}
-
-		if (CompositeComposite2Comparison.BuiltSolutionsNoRule == null) {
-			CompositeComposite2Comparison.BuiltSolutionsNoRule = Primitive
-					.automaticSolve(CompositeMotif.class,
-							"../DeMIMA/target/test-classes/ptidej/example/composite2/",
-							"composite2");
-		}
+	public void test1() {
+		final Occurrence[] solutions = Primitive.automaticSolve(
+				ptidej.solver.java.problem.CompositeMotif.class,
+				"../DeMIMA/target/test-classes/ptidej/example/composite2/",
+				"composite2");
+		Assert.assertEquals("Number of solutions", 47, solutions.length);
 	}
 
-	public void test1() {
-		Assert.assertEquals("Number of solutions", 129,
-				CompositeComposite2Comparison.BuiltSolutions.length);
+	public void test2() {
+		final Occurrence[] solutions = Primitive.automaticSolve(
+				ptidej.solver.fingerprint.problem.CompositeMotif.class,
+				"../DeMIMA/target/test-classes/ptidej/example/composite2/",
+				"composite2");
+		Assert.assertEquals("Number of solutions", 40, solutions.length);
+	}
+
+	public void test3() {
+		final Occurrence[] solutions = Primitive.automaticSolve(
+				ptidej.solver.fingerprint.problem.CompositeMotif.class,
+				"../DeMIMA/target/test-classes/ptidej/example/composite2/",
+				"composite2", Rule.C_LEAF_TEST);
+		Assert.assertEquals("Number of solutions", 40, solutions.length);
 	}
 
 }

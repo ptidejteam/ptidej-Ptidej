@@ -11,18 +11,20 @@
 package padl.creator.cppfile.eclipse.test.big;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
-import padl.creator.cppfile.eclipse.misc.EclipseCPPParserCaller;
+import padl.creator.cppfile.eclipse.test.helper.ModelGenerator;
 import padl.kernel.ICodeLevelModel;
 
 public class QMakeTest extends TestCase {
 	public QMakeTest(String name) {
 		super(name);
 	}
+
 	public void test1() {
-		final ICodeLevelModel codeLevelModel =
-			EclipseCPPParserCaller.getInstance().getCodeLevelModelUsingOSGiEmbedded(
-				"../PADL Creator C++ (Eclipse) Tests/data/QMake/");
+		final ICodeLevelModel codeLevelModel = ModelGenerator
+				.generateModelFromCppFilesUsingEclipse("QMake",
+						"../PADL Creator C++ (Eclipse)/target/test-classes/QMake/");
 		Assert.assertNotNull("The code-level model is null!", codeLevelModel);
 		Assert.assertEquals(846, codeLevelModel.getNumberOfTopLevelEntities());
 	}

@@ -24,8 +24,7 @@
 		<module>DeMIMA UI</module>
 		<module>DeMIMA UI Analyses</module>
 		<module>DeMIMA UI AspectJ</module>
-		<!-- TODO Add this module                      -->
-		<!-- <module>DeMIMA UI C++</module>            -->
+		<module>DeMIMA UI C++</module>
 		<module>DeMIMA UI Layouts</module>
 		<module>DeMIMA UI Primitives AWT</module>
 		<!-- TODO Add this module                      -->
@@ -40,13 +39,13 @@
 		<module>MoDeC Solver</module>
 		<module>PADL</module>
 		<module>PADL Analyses</module>
+		<module>PADL Code-Diagram Comparison</module>
 		<module>PADL Creator AOL</module>
 		<module>PADL Creator AspectJ</module>
 		<module>PADL Creator C# v1</module>
 		<module>PADL Creator C# v2</module>
 		<module>PADL Creator C++ (ANTLR)</module>
-		<!-- TODO Add this module                        -->
-		<!-- <module>PADL Creator C++ (Eclipse)</module> -->
+		<module>PADL Creator C++ (Eclipse)</module>
 		<module>PADL Creator ClassFile</module>
 		<module>PADL Creator JavaFile (Eclipse)</module>
 		<module>PADL Creator JavaFile (Eclipse) Parser</module>
@@ -57,8 +56,7 @@
 		<module>PADL Creator XMI</module>
 		<module>PADL Design Motifs</module>
 		<module>PADL Generator</module>
-		<!-- TODO Add this module                     -->
-		<!-- <module>PADL Generator PageRank</module> -->
+		<module>PADL Generator PageRank</module>
 		<module>PADL Micro-pattern Analysis</module>
 		<module>PADL Refactorings</module>
 		<module>PADL Serialiser DB4O</module>

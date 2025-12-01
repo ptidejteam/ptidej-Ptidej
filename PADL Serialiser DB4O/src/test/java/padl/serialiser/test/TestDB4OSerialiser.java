@@ -33,8 +33,7 @@ public class TestDB4OSerialiser extends TestSuite {
 		final TestDB4OSerialiser suite = new TestDB4OSerialiser();
 		suite.addTestSuite(SanityTest.class);
 		suite.addTestSuite(JHotDraw51Test.class);
-		// TODO Add this test
-		//		suite.addTestSuite(ArgoUML020Test.class);
+		suite.addTestSuite(ArgoUML020Test.class);
 		return suite;
 	}
 }

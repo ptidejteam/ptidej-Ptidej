@@ -29,10 +29,11 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.5</version>
+				<version>3.5.3</version>
 				<configuration>
 					<!-- Must export/open some hidden packages -->
 					<argLine>
+						-Xmx8G
 						--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED
@@ -478,14 +479,14 @@
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-solver-3</artifactId>
+			<artifactId>demima-solver-claire</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-solver-3</artifactId>
+			<artifactId>demima-solver-claire</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>
@@ -493,14 +494,14 @@
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-solver-4</artifactId>
+			<artifactId>demima-solver-java</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-solver-4</artifactId>
+			<artifactId>demima-solver-java</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>
