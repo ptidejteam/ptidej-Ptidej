@@ -17,6 +17,7 @@ public final class Access {
 	public static final short ACC_INTERFACE = 512;
 	public static final short ACC_ABSTRACT = 1024;
 	public static final short ACC_STRICT = 2048;
+	public static final short ACC_SYNTHETIC = 4096;
 
 	public static boolean isAbstract(int var0) {
 		return (var0 & 1024) != 0;
@@ -299,6 +300,10 @@ public final class Access {
 	}
 
 	public static boolean isNative(int var0) {
-		return (var0 & 256) != 0;
+		return (var0 & ACC_NATIVE) != 0;
+	}
+
+	public static boolean isSynthetic(int d_accessFlags) {
+		return (d_accessFlags & ACC_SYNTHETIC) != 0;
 	}
 }

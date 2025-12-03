@@ -87,6 +87,10 @@ public final class MethodInfo {
 			var1.append("synchronized ");
 		}
 
+		if (Access.isSynthetic(this.d_accessFlags)) {
+			var1.append("synthetic ");
+		}
+
 		if (Access.isNative(this.d_accessFlags)) {
 			var1.append("native ");
 		}

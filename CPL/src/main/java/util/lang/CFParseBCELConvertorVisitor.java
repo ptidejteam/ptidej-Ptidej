@@ -79,6 +79,7 @@ import com.ibm.toad.cfparse.ConstantPoolEntry;
 import com.ibm.toad.cfparse.FieldInfo;
 import com.ibm.toad.cfparse.MethodInfo;
 import com.ibm.toad.cfparse.attributes.AttrInfo;
+import com.ibm.toad.cfparse.attributes.AttrInfoList;
 import com.ibm.toad.cfparse.attributes.BootstrapMethodsAttrInfo;
 import com.ibm.toad.cfparse.attributes.CodeAttrInfo;
 import com.ibm.toad.cfparse.attributes.ConstantValueAttrInfo;
@@ -505,14 +506,21 @@ public class CFParseBCELConvertorVisitor {
 			methodSignature.append(')');
 
 			// 2. Criar o MethodInfo via .add(signature)
-			MethodInfo methodInfo = this.currentClass.getMethods()
+			final MethodInfo methodInfo = this.currentClass.getMethods()
 					.add(methodSignature.toString());
-
 			methodInfo.setAccess(obj.getAccessFlags());
+			final AttrInfoList attrInfoList = methodInfo.getAttrs();
+
+			// Luca 25/12/01: Synthetic Bridge
+			if (obj.isSynthetic()) {
+				attrInfoList.add("Synthetic");
+				methodInfo.setAccess(
+						methodInfo.getAccess() | Const.ACC_SYNTHETIC);
+			}
 
 			// 3. if code exist add it
 			if (obj.getCode() != null) {
-				CodeAttrInfo codeAttrInfo = (CodeAttrInfo) methodInfo.getAttrs()
+				final CodeAttrInfo codeAttrInfo = (CodeAttrInfo) attrInfoList
 						.add("Code");
 				// Henrique 4/29/2025 IMPORTANT , needs to clear the previous code,
 				//		        

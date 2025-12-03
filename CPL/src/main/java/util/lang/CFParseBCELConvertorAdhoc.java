@@ -805,6 +805,15 @@ public class CFParseBCELConvertorAdhoc {
 			// TODO: Add other attributes to the CFParse classfile
 			// method from the method from BCEL and adjust indices!
 			final AttrInfoList attrInfoList = methodInfo.getAttrs();
+
+			// Luca 25/12/01: Synthetic Bridge
+			if (method.isSynthetic()) {
+				attrInfoList.add("Synthetic");
+				methodInfo.setAccess(
+						methodInfo.getAccess() + Const.ACC_SYNTHETIC);
+			}
+
+			//
 			if (method.getCode() != null) {
 				final CodeAttrInfo codeAttributeInfo = (CodeAttrInfo) attrInfoList
 						.get("Code");
