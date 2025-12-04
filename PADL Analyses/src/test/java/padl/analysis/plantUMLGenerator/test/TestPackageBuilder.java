@@ -23,6 +23,7 @@ public final class TestPackageBuilder extends junit.framework.TestSuite {
 	public static Test suite() {
 		final TestPackageBuilder suite = new TestPackageBuilder();
 		suite.addTest(new TestSuite(Test1.class));
+		suite.addTest(new TestSuite(BFSTest.class));
 		return suite;
 	}
 }
