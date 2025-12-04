@@ -48,11 +48,8 @@ public abstract class BFSGenerator<T extends IGenerator> implements IGenerator {
 
     protected final T delegate;
 
-    // DFS stack for current container parent
     private final Deque<IConstituent> stack = new ArrayDeque<>();
-    // BFS structures: parent -> children
     private final Map<IConstituent, List<IConstituent>> childrenMap = new HashMap<>();
-    // node -> events to replay
     private final Map<IConstituent, List<Runnable>> eventsMap = new IdentityHashMap<>();
 
     public BFSGenerator(T delegate) {
