@@ -30,6 +30,7 @@ public class Test1 extends TestCase {
 	private static String generatedUMLContent;
 	private static String testAgainstUMLContent;
 	private static String filePath = "../DeMIMA/target/test-classes/ptidej/example/composite2/";
+		// TODO Use regular temporary file from ProxyDisk
 	private static String plantUMLGeneratedFiles = "../PADL Analyses/src/test/java/padl/analysis/plantUMLGenerator/test/exampleFile/composite2_example_2024-05-07.txt";
 	private static String plantUMLGeneratedFileIncorrect1 = "../PADL Analyses/src/test/java/padl/analysis/plantUMLGenerator/test/exampleFile/composite2_example_2024-05-07.txt";
 	private static String testAgainstPlantUMLGeneratedFileIncorrect1;
