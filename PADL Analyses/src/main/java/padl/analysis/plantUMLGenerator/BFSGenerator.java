@@ -85,13 +85,11 @@ public abstract class BFSGenerator<T extends IGenerator> implements IGenerator {
 	    while (!queue.isEmpty()) {
 	        IConstituent node = queue.poll();
 	
-	        // first run this node's events (open/visit/close)
 	        List<Runnable> events = eventsMap.get(node);
 	        if (events != null) {
 	            for (Runnable r : events) r.run();
 	        }
 	
-	        // then enqueue children for later processing
 	        List<IConstituent> kids = childrenMap.get(node);
 	        if (kids != null) queue.addAll(kids);
 	    }
