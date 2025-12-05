@@ -12,7 +12,6 @@ package padl.creator.cppfile.eclipse.plugin.internal;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import org.eclipse.cdt.core.CCorePlugin;
 import org.eclipse.cdt.core.dom.ast.ASTVisitor;
 import org.eclipse.cdt.core.dom.ast.IASTTranslationUnit;
@@ -35,8 +34,9 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.CoreException;
-
 import padl.cpp.kernel.IAmicable;
 import padl.cpp.kernel.IGlobalFunction;
 import padl.cpp.kernel.impl.CPPFactoryEclipse;
@@ -141,13 +141,14 @@ public class GeneratorFromCPPProject {
 		final IWorkspace ws = ResourcesPlugin.getWorkspace();
 		final IProject project =
 			ws.getRoot().getProject(Constants.CPP_PROJECT_NAME);
-		try {
-			project.close(Common.NULL_PROGRESS_MONITOR);
-			ws.save(true, Common.NULL_PROGRESS_MONITOR);
-		}
-		catch (final CoreException e) {
-			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
-		}
+        try {
+            final IProgressMonitor pm = new NullProgressMonitor();
+            project.close(pm);
+            ws.save(true, pm);
+        }
+        catch (final CoreException e) {
+            e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+        }
 
 		ProxyConsole.getInstance().normalOutput().println(this.modelStatistics);
 	}
@@ -334,50 +335,52 @@ public class GeneratorFromCPPProject {
 				.getInstance()
 				.debugOutput()
 				.println("Workspace root exist at " + root.getLocationURI());
-			root.refreshLocal(
-				IResource.DEPTH_INFINITE,
-				Common.NULL_PROGRESS_MONITOR);
+            root.refreshLocal(
+                IResource.DEPTH_INFINITE,
+                new NullProgressMonitor());
 		}
 		catch (final CoreException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 
 		final IProject project = root.getProject(Constants.CPP_PROJECT_NAME);
-		try {
-			if (!project.exists()) {
-				project.create(Common.NULL_PROGRESS_MONITOR);
-			}
-			project.open(Common.NULL_PROGRESS_MONITOR);
+        try {
+            final IProgressMonitor pm = new NullProgressMonitor();
+            if (!project.exists()) {
+                project.create(pm);
+            }
+            project.open(pm);
 			ProxyConsole
 				.getInstance()
 				.debugOutput()
 				.println("Is Eclipse project open: " + project.isOpen());
-			project.refreshLocal(
-				IResource.DEPTH_INFINITE,
-				Common.NULL_PROGRESS_MONITOR);
+            project.refreshLocal(
+                IResource.DEPTH_INFINITE,
+                pm);
 		}
 		catch (final CoreException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 
-		this.cppProject =
-			CoreModel.getDefault().getCModel().getCProject(project.getName());
-		try {
-			this.cppProject.open(Common.NULL_PROGRESS_MONITOR);
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.println("Is C++ project open: " + this.cppProject.isOpen());
-			this.cppProject.makeConsistent(Common.NULL_PROGRESS_MONITOR);
-		}
-		catch (final CoreException e) {
-			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
-		}
+        this.cppProject =
+            CoreModel.getDefault().getCModel().getCProject(project.getName());
+        try {
+            final IProgressMonitor pm = new NullProgressMonitor();
+            this.cppProject.open(pm);
+            ProxyConsole
+                .getInstance()
+                .debugOutput()
+                .println("Is C++ project open: " + this.cppProject.isOpen());
+            this.cppProject.makeConsistent(pm);
+        }
+        catch (final CoreException e) {
+            e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+        }
 
 		final IIndexManager manager = CCorePlugin.getIndexManager();
 		manager.reindex(this.cppProject);
-		manager
-			.joinIndexer(IIndexManager.FOREVER, Common.NULL_PROGRESS_MONITOR);
+        manager
+            .joinIndexer(IIndexManager.FOREVER, new NullProgressMonitor());
 		try {
 			this.index = manager.getIndex(this.cppProject);
 			this.index.acquireReadLock();

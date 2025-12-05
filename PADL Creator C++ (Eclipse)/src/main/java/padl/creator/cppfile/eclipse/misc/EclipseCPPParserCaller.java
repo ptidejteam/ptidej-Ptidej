@@ -11,6 +11,7 @@
 package padl.creator.cppfile.eclipse.misc;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
@@ -18,6 +19,7 @@ import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -50,56 +52,122 @@ public final class EclipseCPPParserCaller {
 		return EclipseCPPParserCaller.UniqueInstance;
 	}
 
-	private void configureOSGi(final String aPathToCurrentWorkspace) {
-		try {
-			final File src = new File(aPathToCurrentWorkspace
-					+ Common.EQUINOX_CONFIGURATION_DATA
-					+ Common.EQUINOX_CONFIGURATION_TEMPLATE_CONFIG_FILE);
-			final File dst = new File(
-					aPathToCurrentWorkspace + Common.EQUINOX_CONFIGURATION_DATA
-							+ Common.EQUINOX_CONFIGURATION_CONFIG_FILE);
-			final Writer writer = new FileWriter(dst);
+    private void configureOSGi(final String aPathToCurrentWorkspace) {
+        try {
+            final String cfgRoot = aPathToCurrentWorkspace + Common.EQUINOX_CONFIGURATION_DATA;
+            final File cfgDir = new File(cfgRoot);
+            if (!cfgDir.exists()) {
+                FileUtils.forceMkdir(cfgDir);
+            }
+            // Always clean stale OSGi persisted state to avoid version mismatch errors
+            FileUtils.deleteQuietly(new File(cfgDir, "org.eclipse.osgi"));
 
-			final List<String> placeHolderLines = FileUtils.readLines(src,
-					Charset.defaultCharset());
-			final Iterator<String> iteratorOnPlaceHolderLines = placeHolderLines
-					.iterator();
-			while (iteratorOnPlaceHolderLines.hasNext()) {
-				final String line = (String) iteratorOnPlaceHolderLines.next();
-				final String newLine = line.replace(Common.PLACEHOLDER_TAG,
-						aPathToCurrentWorkspace);
-				writer.write(newLine);
-				writer.write('\n');
-			}
+            final File src = new File(cfgRoot + Common.EQUINOX_CONFIGURATION_TEMPLATE_CONFIG_FILE);
+            // If a template config.ini is available, generate one pointing to this workspace
+            if (src.exists()) {
+                final File dst = new File(cfgRoot + Common.EQUINOX_CONFIGURATION_CONFIG_FILE);
+                try (final Writer writer = new FileWriter(dst)) {
+                    final List<String> placeHolderLines = FileUtils.readLines(src, Charset.defaultCharset());
+                    final Iterator<String> it = placeHolderLines.iterator();
+                    while (it.hasNext()) {
+                        final String line = it.next();
+                        writer.write(line.replace(Common.PLACEHOLDER_TAG, aPathToCurrentWorkspace));
+                        writer.write('\n');
+                    }
+                }
+            } else {
+                ProxyConsole.getInstance().debugOutput()
+                    .println("No template config.ini found; using clean configuration at " + cfgRoot);
+            }
+        } catch (final IOException e) {
+            e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+            throw new RuntimeException(e);
+        }
+    }
 
-			writer.close();
-		}
-		catch (final IOException e) {
-			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
-			throw new RuntimeException(e);
-		}
-	}
+    private static String detectOsArg() {
+        final String osName = System.getProperty("os.name", "").toLowerCase();
+        if (osName.contains("win")) return "win32";
+        if (osName.contains("mac")) return "macosx";
+        if (osName.contains("nux") || osName.contains("nix")) return "linux";
+        return "win32"; // default
+    }
+
+    private static String detectWsArg(final String osArg) {
+        if ("macosx".equals(osArg)) return "cocoa";
+        if ("linux".equals(osArg)) return "gtk";
+        return "win32";
+    }
+
+    private static String detectArchArg() {
+        final String arch = System.getProperty("os.arch", "").toLowerCase();
+        if (arch.contains("64") || arch.contains("amd64") || arch.contains("x86_64")) return "x86_64";
+        if (arch.contains("aarch64")) return "aarch64";
+        return "x86";
+    }
+
+    private static String joinJarPaths(final File dir) {
+        if (dir == null || !dir.isDirectory()) return "";
+        final String sep = System.getProperty("path.separator");
+        final StringBuilder sb = new StringBuilder();
+        final File[] jars = dir.listFiles(new FilenameFilter() {
+            @Override public boolean accept(File d, String name) {
+                return name != null && name.toLowerCase().endsWith(".jar");
+            }
+        });
+        if (jars != null) {
+            for (final File j : jars) {
+                if (sb.length() > 0) sb.append(sep);
+                sb.append(j.getAbsolutePath());
+            }
+        }
+        return sb.toString();
+    }
+
+    private static String buildAdditionalClasspath(final String workspaceRoot) {
+        // workspaceRoot ends with '/'
+        final String libsPath = workspaceRoot + "PADL Creator C++ (Eclipse)/libs/";
+        final String pluginsPath = workspaceRoot + "PADL Creator C++ (Eclipse) Helper/Runtime Libraries/plugins/";
+        final String libs = joinJarPaths(new File(libsPath));
+        final String plugins = joinJarPaths(new File(pluginsPath));
+        final String sep = System.getProperty("path.separator");
+        final StringBuilder sb = new StringBuilder();
+        if (!libs.isEmpty()) sb.append(libs);
+        if (!plugins.isEmpty()) {
+            if (sb.length() > 0) sb.append(sep);
+            sb.append(plugins);
+        }
+        return sb.toString();
+    }
 
 	public void createCodeLevelModelUsingOSGiEmbedded(
 			final String aRootDirectoryContainingCPPFiles,
 			final ICodeLevelModel aCodeLevelModel) {
 
 		final String pathToCurrentWorkspace = this.getPathToCurrentWorkspace();
+		// Prepare serialisation area in case we need to fall back
+		Common.prepareForCodeLevelModel();
 
-		final String[] startupArgs = new String[] { "-application",
-				Common.EQUINOX_LAUNCHER_NAME, "-data",
-				pathToCurrentWorkspace + Common.EQUINOX_RUNTIME_WORKSPACE,
-				"-configuration",
-				"file:" + pathToCurrentWorkspace
-						+ Common.EQUINOX_CONFIGURATION_DATA,
-				"-dev",
-				"file:" + pathToCurrentWorkspace
-						+ Common.EQUINOX_CONFIGURATION_DATA + "dev.properties",
-				// "-consoleLog",
-				Common.ARGUMENT_DIRECTORY_TARGET_CPP_FILES + "="
-						+ aRootDirectoryContainingCPPFiles,
-				Common.ARGUMENT_DIRECTORY_PTIDEJ_WORKSPACE + "="
-						+ pathToCurrentWorkspace };
+        final List<String> argsList = new ArrayList<String>();
+        argsList.add("-application");
+        argsList.add(Common.EQUINOX_LAUNCHER_NAME);
+        argsList.add("-data");
+        argsList.add(pathToCurrentWorkspace + Common.EQUINOX_RUNTIME_WORKSPACE);
+        argsList.add("-configuration");
+        argsList.add("file:" + pathToCurrentWorkspace + Common.EQUINOX_CONFIGURATION_DATA);
+        // Only add -dev if dev.properties exists
+        final File devProps = new File(pathToCurrentWorkspace + Common.EQUINOX_CONFIGURATION_DATA + "dev.properties");
+        if (devProps.exists()) {
+            argsList.add("-dev");
+            argsList.add("file:" + devProps.getPath().replace('\\','/'));
+        }
+        argsList.add(Common.ARGUMENT_DIRECTORY_TARGET_CPP_FILES + "=" + aRootDirectoryContainingCPPFiles);
+        argsList.add(Common.ARGUMENT_DIRECTORY_PTIDEJ_WORKSPACE + "=" + pathToCurrentWorkspace);
+        // Force the launcher to serialise the model, so we can read it back if
+        // EclipseStarter.run does not return the object in-process
+        argsList.add(Common.ARGUMENT_OSGi_RUNNING_IN_REMOTE_JVM + "=" + true);
+
+        final String[] startupArgs = argsList.toArray(new String[0]);
 
 		this.configureOSGi(pathToCurrentWorkspace);
 
@@ -117,10 +185,26 @@ public final class EclipseCPPParserCaller {
 			properties.put(EclipseStarter.PROP_ADAPTOR,
 					"padl.creator.cppfile.eclipse.misc.EclipseCPPParserAdaptor");
 			EclipseStarter.setInitialProperties(properties);
-			final ICodeLevelModel codeLevelModel = (ICodeLevelModel) EclipseStarter
-					.run(startupArgs, null);
+			final Object result = EclipseStarter.run(startupArgs, null);
 			EclipseStarter.shutdown();
-			codeLevelModel.moveIn(aCodeLevelModel);
+			if (result instanceof ICodeLevelModel) {
+				final ICodeLevelModel codeLevelModel = (ICodeLevelModel) result;
+				codeLevelModel.moveIn(aCodeLevelModel);
+			}
+			else {
+				// Fall back to reading the serialised model if available
+				final File serialised = new File(
+						util.io.ProxyDisk.getInstance().directoryTempFile(),
+						Common.SERIALISED_MODEL_FILENAME);
+				if (serialised.exists()) {
+					Common.readCodeLevelModel(aCodeLevelModel);
+				}
+				else {
+					throw new RuntimeException(
+							"Headless Eclipse did not return a model and no serialised model was produced. "
+									+ "Verify -directoryCPPFiles points to existing C++ sources.");
+				}
+			}
 		}
 		catch (final Exception e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
@@ -186,37 +270,60 @@ public final class EclipseCPPParserCaller {
 				.defaultArguments();
 		final StringBuffer arg = new StringBuffer();
 
-		arguments.get("home").setValue("");
+        arguments.get("home").setValue("");
+
+        arg.setLength(0);
+        arg.append("-Dosgi.noShutdown=false ");
+        arg.append("-Dosgi.compatibility.bootdelegation=true ");
+        arg.append("-Xmx2048M ");
+        arg.append("-Dosgi.clean=true ");
+        arg.append("-classpath \"");
+        final String baseCp = System.getProperty("java.class.path");
+        final String extraCp = buildAdditionalClasspath(pathToCurrentWorkspace);
+        if (extraCp.isEmpty()) {
+            arg.append(baseCp);
+        } else {
+            arg.append(baseCp);
+            arg.append(System.getProperty("path.separator"));
+            arg.append(extraCp);
+        }
+        arg.append('\"');
+        arguments.get("options").setValue(arg.toString());
 
 		arg.setLength(0);
-		arg.append("-Dosgi.noShutdown=false ");
-		arg.append("-Dosgi.compatibility.bootdelegation=true ");
-		arg.append("-Xmx2048M ");
-		arg.append("-classpath \"");
-		arg.append(System.getProperty("java.class.path"));
-		arg.append('\"');
-		arguments.get("options").setValue(arg.toString());
-
-		arg.setLength(0);
-		arg.append("org.eclipse.core.runtime.adaptor.EclipseStarter");
-		// Tests for debugging:
+        arg.append("org.eclipse.core.runtime.adaptor.EclipseStarter");
+        // Tests for debugging:
 		//	arg.append("padl.creator.cppfile.eclipse.misc.SimpleStarter");
 		// Shoudn't it be anyways:
 		//	arg.append("org.eclipse.equinox.launcher.Main");
 		arg.append(" -application ");
 		arg.append(Common.EQUINOX_LAUNCHER_NAME);
-		arg.append(" -data \"");
-		arg.append(pathToCurrentWorkspace);
-		arg.append(Common.EQUINOX_RUNTIME_WORKSPACE);
-		arg.append("\"");
-		arg.append(" -configuration \"file:");
-		arg.append(pathToCurrentWorkspace);
-		arg.append(Common.EQUINOX_CONFIGURATION_DATA);
-		arg.append("\"");
-		arg.append(" -dev \"file:");
-		arg.append(pathToCurrentWorkspace);
-		arg.append(Common.EQUINOX_CONFIGURATION_DATA);
-		arg.append("dev.properties\"");
+        arg.append(" -data \"");
+        arg.append(pathToCurrentWorkspace);
+        arg.append(Common.EQUINOX_RUNTIME_WORKSPACE);
+        arg.append("\"");
+        arg.append(" -configuration \"file:");
+        arg.append(pathToCurrentWorkspace);
+        arg.append(Common.EQUINOX_CONFIGURATION_DATA);
+        arg.append("\"");
+        // Only include -dev if available
+        final File devProps = new File(pathToCurrentWorkspace + Common.EQUINOX_CONFIGURATION_DATA + "dev.properties");
+        if (devProps.exists()) {
+            arg.append(" -dev \"file:");
+            arg.append(pathToCurrentWorkspace);
+            arg.append(Common.EQUINOX_CONFIGURATION_DATA);
+            arg.append("dev.properties\"");
+        }
+        // Add OS/WS/ARCH to help Equinox pick correct native fragments
+        final String osArg = detectOsArg();
+        final String wsArg = detectWsArg(osArg);
+        final String archArg = detectArchArg();
+        arg.append(" -os ");
+        arg.append(osArg);
+        arg.append(" -ws ");
+        arg.append(wsArg);
+        arg.append(" -arch ");
+        arg.append(archArg);
 		//	arg.append(" ");
 		//	arg.append(architecture);
 		//	arg.append(" -consoleLog");

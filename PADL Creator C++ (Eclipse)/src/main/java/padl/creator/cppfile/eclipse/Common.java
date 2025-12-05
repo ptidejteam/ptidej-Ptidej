@@ -14,8 +14,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import padl.cpp.kernel.event.CPPEventGenerator;
 import padl.event.IModelListener;
 import padl.kernel.ICodeLevelModel;
@@ -31,8 +29,8 @@ public final class Common {
 	public static final String ARGUMENT_OSGi_RUNNING_IN_REMOTE_JVM =
 		"-isRunningInRemoteJVM";
 	public static final String EQUINOX_CONFIGURATION_CONFIG_FILE = "config.ini";
-	public static final String EQUINOX_CONFIGURATION_DATA =
-		"PADL Creator C++ (Eclipse) Helper/Configuration Area/";
+    public static final String EQUINOX_CONFIGURATION_DATA =
+        "PADL Creator C++ (Eclipse) Helper/Runtime Libraries/configuration/";
 	public static final String EQUINOX_CONFIGURATION_TEMPLATE_CONFIG_FILE =
 		"Paths-placeholder config.ini";
 	// The Launcher name is made of two part: the name of the plug-in
@@ -43,8 +41,8 @@ public final class Common {
 		"PADL_Creator_Cpp_Eclipse.Launcher";
 	public static final String EQUINOX_RUNTIME_WORKSPACE =
 		"PADL Creator C++ (Eclipse) Helper/Runtime Workspace/";
-	public static final IProgressMonitor NULL_PROGRESS_MONITOR =
-		new NullProgressMonitor();
+    // Avoid static initialisation that pulls Eclipse runtime into the caller JVM.
+    // OSGi-side code should create its own progress monitor instances.
 	public static final String PLACEHOLDER_TAG = "@PLACEHOLDER@";
 	public static final String SERIALISED_MODEL_FILENAME =
 		"SerialisedCodeLevelModel.xml";
