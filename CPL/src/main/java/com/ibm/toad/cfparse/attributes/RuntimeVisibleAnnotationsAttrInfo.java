@@ -7,10 +7,10 @@ import java.io.IOException;
 
 import com.ibm.toad.cfparse.ConstantPool;
 
-public final class RuntimeInvisibleAnnotationsAttrInfo extends AttrInfo {
+public final class RuntimeVisibleAnnotationsAttrInfo extends AttrInfo {
 	private byte[] data;
 
-	public RuntimeInvisibleAnnotationsAttrInfo(ConstantPool cp, int nameIndex,
+	public RuntimeVisibleAnnotationsAttrInfo(ConstantPool cp, int nameIndex,
 			int attrLen) {
 
 		super(cp, nameIndex, attrLen);
@@ -18,7 +18,7 @@ public final class RuntimeInvisibleAnnotationsAttrInfo extends AttrInfo {
 
 	@Override
 	public String getName() {
-		return "RuntimeInvisibleAnnotations";
+		return "RuntimeVisibleAnnotations";
 	}
 
 	public void setFromBCEL(
@@ -46,13 +46,13 @@ public final class RuntimeInvisibleAnnotationsAttrInfo extends AttrInfo {
 		}
 		catch (final IOException e) {
 			throw new RuntimeException(
-					"Error copying RuntimeInvisibleAnnotations", e);
+					"Error copying RuntimeVisibleAnnotations", e);
 		}
 	}
 
 	@Override
 	public String toString() {
-		return "name: RuntimeInvisibleAnnotations  bytes (" + this.data.length
+		return "name: RuntimeVisibleAnnotations  bytes (" + this.data.length
 				+ ")";
 	}
 

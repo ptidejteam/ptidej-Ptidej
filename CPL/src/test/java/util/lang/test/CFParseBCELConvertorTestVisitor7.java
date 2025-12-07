@@ -11,7 +11,6 @@ import com.ibm.toad.cfparse.FieldInfo;
 import com.ibm.toad.cfparse.MethodInfo;
 
 import junit.framework.TestCase;
-import util.lang.CFParseBCELConvertorAdhoc;
 import util.lang.CFParseBCELConvertorVisitor;
 
 public class CFParseBCELConvertorTestVisitor7 extends TestCase {
@@ -50,13 +49,15 @@ public class CFParseBCELConvertorTestVisitor7 extends TestCase {
 	}
 
 	public void testGetMethods() {
-		int count = this.classFile_CFParse_Original.getMethods().length();
+		final int count = this.classFile_CFParse_Original.getMethods().length();
 		Assert.assertEquals("Number of methods differ", count,
 				this.classFile_CFParse_Converted.getMethods().length());
 
 		for (int i = 0; i < count; i++) {
-			MethodInfo original = this.classFile_CFParse_Original.getMethods().get(i);
-			MethodInfo converted = this.classFile_CFParse_Converted.getMethods().get(i);
+			final MethodInfo original = this.classFile_CFParse_Original
+					.getMethods().get(i);
+			final MethodInfo converted = this.classFile_CFParse_Converted
+					.getMethods().get(i);
 
 			Assert.assertEquals("Method differs at index " + i,
 					original.toString(), converted.toString());
@@ -64,20 +65,22 @@ public class CFParseBCELConvertorTestVisitor7 extends TestCase {
 	}
 
 	public void testGetFields() {
-		int count = this.classFile_CFParse_Original.getFields().length();
+		final int count = this.classFile_CFParse_Original.getFields().length();
 		Assert.assertEquals("Number of fields differ", count,
 				this.classFile_CFParse_Converted.getFields().length());
 
 		for (int i = 0; i < count; i++) {
-			FieldInfo original = this.classFile_CFParse_Original.getFields().get(i);
-			FieldInfo converted = this.classFile_CFParse_Converted.getFields().get(i);
+			final FieldInfo original = this.classFile_CFParse_Original
+					.getFields().get(i);
+			final FieldInfo converted = this.classFile_CFParse_Converted
+					.getFields().get(i);
 
 			Assert.assertEquals("Field differs at index " + i,
 					original.toString(), converted.toString());
 		}
 	}
 
-	// ⚠️ Só ative este teste se os atributos e constant pool estiverem idênticos
+	// TODO To re-enable
 	// public void testFullToStringComparison() {
 	// 	Assert.assertEquals("Full class toString differs",
 	// 			this.classFile_CFParse_Original.toString(),
