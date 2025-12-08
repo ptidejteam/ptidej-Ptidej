@@ -27,8 +27,8 @@ public class TestCreatorAOL extends TestSuite {
 
 	public static Test suite() {
 		final TestCreatorAOL suite = new TestCreatorAOL();
-		suite.addTestSuite(Test1.class);
-		suite.addTestSuite(Test2.class);
+		suite.addTestSuite(Sanity1Test.class);
+		suite.addTestSuite(Sanity2Test.class);
 		// TODO Add this test
 		//	suite.addTestSuite(TestPierreNCode.class);
 		return suite;

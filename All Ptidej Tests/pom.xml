@@ -43,7 +43,10 @@
 					</argLine>
 					<!-- Excluded on purpose -->
 					<excludes>
-						<exclude>TestAllPtidej.java</exclude>
+						<exclude>**/TestAllPtidej.java</exclude>
+						<exclude>**/TestCreators.java</exclude>
+						<exclude>**/TestDeMIMA.java</exclude>
+						<exclude>**/TestOthers.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

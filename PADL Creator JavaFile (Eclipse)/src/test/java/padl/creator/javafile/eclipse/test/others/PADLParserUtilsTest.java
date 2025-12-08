@@ -54,25 +54,21 @@ public class PADLParserUtilsTest extends TestCase {
 	public void testGetTypeName() {
 		ProxyConsole.getInstance().debugOutput().println("testGetTypeName");
 		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes//sam test data/restlet/";
-		final ICodeLevelModel model =
-			Factory.getInstance().createCodeLevelModel("");
+		final ICodeLevelModel model = Factory.getInstance()
+				.createCodeLevelModel("");
 
 		try {
 			model.create(new CompleteJavaFileCreator(sourcePath, ""));
 
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.println(
-					"getNumberOfTopLevelEntities"
+			ProxyConsole.getInstance().debugOutput()
+					.println("getNumberOfTopLevelEntities"
 							+ model.getNumberOfTopLevelEntities());
-			Assert.assertNotNull(model);
 
+			Assert.assertNotNull(model);
 		}
 		catch (final CreationException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			Assert.assertTrue(false);
 		}
-
 	}
-
 }

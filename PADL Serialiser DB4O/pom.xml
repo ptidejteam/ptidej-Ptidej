@@ -59,6 +59,8 @@
 						--add-opens=java.base/java.util=ALL-UNNAMED
 					</argLine>
 					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/TestDB4OSerialiser.java</exclude>
 						<!-- TODO Add these tests back -->
 						<excludes>FilesUtilsTest.java</excludes>
 						<excludes>ArgoUML020Test.java</excludes>
@@ -82,7 +84,6 @@
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
@@ -153,7 +154,5 @@
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

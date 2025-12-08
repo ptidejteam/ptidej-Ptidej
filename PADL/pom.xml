@@ -56,7 +56,17 @@
 				</dependencies>
 			</plugin>
 			-->
-
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
+				<configuration>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/TestPADL.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
 			<!-- Must generate the test-jar for the tests in DeMIMA Solver 4 and
 			DeMIMA Solver Metrics and otehrs -->
 			<plugin>

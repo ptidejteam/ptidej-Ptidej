@@ -45,9 +45,7 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>TestCreatorAOL.java</exclude>
-						<!-- TODO Make this test pass -->
-						<exclude>TestPierreNCode.java</exclude>
+						<exclude>**/TestCreatorAOL.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

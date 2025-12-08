@@ -12,11 +12,11 @@ package padl.creator.classfile.test;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
-import padl.creator.classfile.test.compare.TestCompare;
-import padl.creator.classfile.test.fieldaccess.TestFieldAccess;
-import padl.creator.classfile.test.inheritance.TestInheritance;
-import padl.creator.classfile.test.methodInvocation.MethodInvocationMissingtest;
-import padl.creator.classfile.test.path.TestPathArgoUML;
+import padl.creator.classfile.test.compare.Compare;
+import padl.creator.classfile.test.fieldaccess.FieldAccessTest;
+import padl.creator.classfile.test.inheritance.Inheritance;
+import padl.creator.classfile.test.methodInvocation.MethodInvocationMissingTest;
+import padl.creator.classfile.test.path.ArgoUMLPathTest;
 import padl.creator.classfile.test.topLevelEntity.TopLevelEntityTest;
 
 /**
@@ -38,12 +38,16 @@ public final class TestCreatorClassFile extends TestSuite {
 	public static Test suite() {
 		final TestCreatorClassFile suite = new TestCreatorClassFile();
 
-		suite.addTest(TestCompare.suite());
-		suite.addTest(TestFieldAccess.suite());
-		suite.addTest(TestInheritance.suite());
-		suite.addTestSuite(MethodInvocationMissingtest.class);
-		suite.addTestSuite(TestPathArgoUML.class);
+		suite.addTestSuite(Compare.class);
+
+		suite.addTestSuite(FieldAccessTest.class);
+
+		suite.addTestSuite(Inheritance.class);
+
+		suite.addTestSuite(MethodInvocationMissingTest.class);
+		suite.addTestSuite(ArgoUMLPathTest.class);
 		suite.addTestSuite(TopLevelEntityTest.class);
+
 		return suite;
 	}
 }

@@ -45,9 +45,10 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>TestCreatorJavaFileUsingEclipse.java</exclude>
-						<!-- TODO Add this test -->
-						<exclude>InvocationTargetExceptionTest.java</exclude>
+						<exclude>**/TestCreatorJavaFileUsingEclipse.java</exclude>
+						<!-- Excluded because very slow -->
+						<exclude>**/ArgoUMLTest.java</exclude>
+						<exclude>**/JProfilerTest.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

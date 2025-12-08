@@ -26,6 +26,17 @@
 					</compilerArgs>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
+				<configuration>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/TestPADLGenerator.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
 			<!-- Must generate the test-jar for the tests in PADL Serialiser
 			DB4O -->
 			<plugin>
@@ -44,7 +55,6 @@
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
@@ -163,7 +173,5 @@
 			<version>1.7.1</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

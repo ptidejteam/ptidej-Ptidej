@@ -22,8 +22,6 @@ import padl.creator.javafile.eclipse.test.TestCreatorJavaFileUsingEclipse;
 import padl.creator.javafile.javac.test.TestCreatorJavaFileUsingJavaC;
 import padl.creator.msefile.test.TestCreatorMSE;
 import padl.creator.test.TestCreatorJavaFilevsClassFile;
-import padl.creator.test.csharpfile.v1.TestCreatorCSharpV1;
-import padl.creator.test.csharpfile.v2.TestCreatorCSharpv2;
 import padl.creator.xmiclassdiagram.test.TestCreatorXMI;
 import test.TestCreatorJavaFileUsingEclipseParser;
 
@@ -39,8 +37,10 @@ public final class TestCreators extends TestSuite {
 
 		suite.addTest(TestCreatorAOL.suite());
 		suite.addTest(TestCreatorAspectJ.suite());
-		suite.addTestSuite(TestCreatorCSharpV1.class);
-		suite.addTestSuite(TestCreatorCSharpv2.class);
+		suite.addTestSuite(
+				padl.creator.test.csharpfile.v1.CreatorCSharpTest.class);
+		suite.addTestSuite(
+				padl.creator.test.csharpfile.v2.CreatorCSharpTest.class);
 		suite.addTest(TestCreatorCPPFileUsingANTLR.suite());
 		// TODO Add test suite
 		//	suite.addTest(TestCreatorCPPFileUsingEclipse.suite());

@@ -7,7 +7,7 @@ public class TestCreatorXMI extends TestSuite {
 	public static Test suite() {
 		final TestCreatorXMI suite = new TestCreatorXMI();
 
-		suite.addTestSuite(ClassDiagram1.class);
+		suite.addTestSuite(ClassDiagram1Test.class);
 
 		return suite;
 	}
