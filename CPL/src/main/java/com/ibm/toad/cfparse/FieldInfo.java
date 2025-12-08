@@ -172,8 +172,7 @@ public final class FieldInfo {
 			if (!found) {
 				methodinfo = methodinfolist.add("static void <clinit>()");
 			}
-			final CodeAttrInfo codeattrinfo = (CodeAttrInfo) methodinfo
-					.getAttrs().get("Code");
+			final CodeAttrInfo codeattrinfo = (CodeAttrInfo) methodinfo.getAttrs().get("Code");
 			final MutableCodeSegment mutablecodesegment = new MutableCodeSegment(
 					this.d_cp, codeattrinfo, false);
 			mutablecodesegment

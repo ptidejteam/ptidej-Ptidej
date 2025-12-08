@@ -38,7 +38,7 @@ public class LOC extends AbstractMetric implements IMetric, IUnaryMetric {
 						&& (method.getVisibility() & Modifier.NATIVE) == 0) {
 
 					final String[] codeLines = method.getCodeLines();
-					if (codeLines.length != 0) {
+					if (codeLines != null && codeLines.length != 0) {
 						loc += method.getCodeLines().length;
 					}
 					else {
