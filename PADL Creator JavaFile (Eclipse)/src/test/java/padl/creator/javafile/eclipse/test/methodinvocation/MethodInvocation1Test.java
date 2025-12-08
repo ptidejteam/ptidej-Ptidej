@@ -24,29 +24,7 @@ public class MethodInvocation1Test extends TestCase {
 		super(name);
 	}
 
-	public void testMethodInvocation() {
-		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
-		final String[] javaFiles = new String[] {
-				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/methodInvocation/" };
-		final String classPathEntry = "";
-		final ICodeLevelModel javaModel = Utils
-				.createCompleteJavaFilesPadlModel("", sourcePath,
-						classPathEntry, javaFiles);
-
-		final IClass javaClass1 = (IClass) javaModel
-				.getTopLevelEntityFromID("padl.example.methodinvocation.A");
-		final IMethod javaMethod1 = (IMethod) javaClass1
-				.getConstituentFromName("main");
-		final int nbJavaMI1 = javaMethod1
-				.getNumberOfConstituents(IMethodInvocation.class);
-
-		final IClass javaClass2 = (IClass) javaModel
-				.getTopLevelEntityFromID("padl.example.methodinvocation.B");
-		final IMethod javaMethod2 = (IMethod) javaClass2
-				.getConstituentFromName("m");
-		final int nbJavaMI2 = javaMethod2
-				.getNumberOfConstituents(IMethodInvocation.class);
-
+	public void testMethodInvocationClassFile() {
 		final String classFiles = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/methodInvocation/bin/";
 		final ICodeLevelModel classModel = Utils
 				.createCompleteJavaClassesPadlModel("",
@@ -67,9 +45,31 @@ public class MethodInvocation1Test extends TestCase {
 				.getNumberOfConstituents(IMethodInvocation.class);
 
 		Assert.assertEquals(8, nbClassMI1);
-		Assert.assertEquals(4, nbJavaMI1);
-
-		Assert.assertEquals(2, nbJavaMI2);
 		Assert.assertEquals(4, nbClassMI2);
+	}
+
+	public void testMethodInvocationJavaFile() {
+		final String sourceDir = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
+		final String javaFiles = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/methodInvocation/";
+		final ICodeLevelModel javaModel = Utils
+				.createCompleteJavaFilesPadlModel("", sourceDir, "",
+						new String[] { javaFiles });
+
+		final IClass javaClass1 = (IClass) javaModel
+				.getTopLevelEntityFromID("padl.example.methodinvocation.A");
+		final IMethod javaMethod1 = (IMethod) javaClass1
+				.getConstituentFromName("main");
+		final int nbJavaMI1 = javaMethod1
+				.getNumberOfConstituents(IMethodInvocation.class);
+
+		final IClass javaClass2 = (IClass) javaModel
+				.getTopLevelEntityFromID("padl.example.methodinvocation.B");
+		final IMethod javaMethod2 = (IMethod) javaClass2
+				.getConstituentFromName("m");
+		final int nbJavaMI2 = javaMethod2
+				.getNumberOfConstituents(IMethodInvocation.class);
+
+		Assert.assertEquals(4, nbJavaMI1);
+		Assert.assertEquals(2, nbJavaMI2);
 	}
 }

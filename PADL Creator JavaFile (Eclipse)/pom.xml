@@ -49,6 +49,8 @@
 						<!-- Excluded because very slow -->
 						<exclude>**/ArgoUMLTest.java</exclude>
 						<exclude>**/JProfilerTest.java</exclude>
+						<!-- Excluded because case-sensitive, i.e., Windows vs. Linux -->
+						<exclude>**/MethodInvocation1Test.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
