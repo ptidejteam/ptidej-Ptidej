@@ -34,6 +34,8 @@
 					<excludes>
 						<!-- Excluded on purpose -->
 						<exclude>**/TestPtidejSolver3.java</exclude>
+						<!-- Excluded because not up-to-date -->
+						<exclude>**/AssociationDistanceComposite2Test.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

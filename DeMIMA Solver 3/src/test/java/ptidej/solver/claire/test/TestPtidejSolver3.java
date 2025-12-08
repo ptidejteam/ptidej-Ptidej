@@ -12,70 +12,70 @@ package ptidej.solver.claire.test;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
-import ptidej.solver.claire.test.approximate.BadComposition;
-import ptidej.solver.claire.test.approximate.BadInheritance;
-import ptidej.solver.claire.test.approximate.Composite;
-import ptidej.solver.claire.test.approximate.Facade;
-import ptidej.solver.claire.test.approximate.FactoryMethod;
-import ptidej.solver.claire.test.approximate.Mediator;
-import ptidej.solver.claire.test.approximate.combinatorial.BadComposition1;
-import ptidej.solver.claire.test.approximate.combinatorial.BadComposition2;
-import ptidej.solver.claire.test.approximate.combinatorial.BadComposition3;
-import ptidej.solver.claire.test.defect.AssociationDistanceAssociationPattern;
-import ptidej.solver.claire.test.defect.InheritanceTreeDepthComposite2;
-import ptidej.solver.claire.test.example.Composite1;
-import ptidej.solver.claire.test.example.Composite2;
-import ptidej.solver.claire.test.example.Composite3;
-import ptidej.solver.claire.test.example.Composite4;
-import ptidej.solver.claire.test.example.Composite5;
-import ptidej.solver.claire.test.roundtrip.CompleteRoundtrip;
-import ptidej.solver.claire.test.roundtrip.HalfRoundtrip;
+import ptidej.solver.claire.test.approximate.BadCompositionTest;
+import ptidej.solver.claire.test.approximate.BadInheritanceTest;
+import ptidej.solver.claire.test.approximate.CompositeTest;
+import ptidej.solver.claire.test.approximate.FacadeTest;
+import ptidej.solver.claire.test.approximate.FactoryMethodTest;
+import ptidej.solver.claire.test.approximate.MediatorTest;
+import ptidej.solver.claire.test.approximate.combinatorial.BadComposition1Test;
+import ptidej.solver.claire.test.approximate.combinatorial.BadComposition2Test;
+import ptidej.solver.claire.test.approximate.combinatorial.BadComposition3Test;
+import ptidej.solver.claire.test.defect.AssociationDistanceAssociationPatternTest;
+import ptidej.solver.claire.test.defect.InheritanceTreeDepthComposite2Test;
+import ptidej.solver.claire.test.example.Composite1Test;
+import ptidej.solver.claire.test.example.Composite2Test;
+import ptidej.solver.claire.test.example.Composite3Test;
+import ptidej.solver.claire.test.example.Composite4Test;
+import ptidej.solver.claire.test.example.Composite5Test;
+import ptidej.solver.claire.test.roundtrip.CompleteRoundtripTest;
+import ptidej.solver.claire.test.roundtrip.HalfRoundtripTest;
 import ptidej.solver.claire.test.simple.CompositionTest;
 import ptidej.solver.claire.test.simple.CreationTest;
 import ptidej.solver.claire.test.simple.GoodInheritanceTest;
 import ptidej.solver.claire.test.simple.IgnoranceTest;
-import ptidej.solver.claire.test.simple.InheritancePath;
+import ptidej.solver.claire.test.simple.InheritancePathTest;
 import ptidej.solver.claire.test.simple.InheritanceTest;
-import ptidej.solver.claire.test.simple.StrictInheritance;
+import ptidej.solver.claire.test.simple.StrictInheritanceTest;
 import ptidej.solver.claire.test.simple.UseTest;
 
 public final class TestPtidejSolver3 extends TestSuite {
 	public static Test suite() {
 		final TestPtidejSolver3 suite = new TestPtidejSolver3();
 
-		suite.addTestSuite(BadComposition.class);
-		suite.addTestSuite(BadInheritance.class);
-		suite.addTestSuite(Composite.class);
-		suite.addTestSuite(Facade.class);
-		suite.addTestSuite(FactoryMethod.class);
-		suite.addTestSuite(Mediator.class);
+		suite.addTestSuite(BadCompositionTest.class);
+		suite.addTestSuite(BadInheritanceTest.class);
+		suite.addTestSuite(CompositeTest.class);
+		suite.addTestSuite(FacadeTest.class);
+		suite.addTestSuite(FactoryMethodTest.class);
+		suite.addTestSuite(MediatorTest.class);
 
-		suite.addTestSuite(BadComposition1.class);
-		suite.addTestSuite(BadComposition2.class);
-		suite.addTestSuite(BadComposition3.class);
+		suite.addTestSuite(BadComposition1Test.class);
+		suite.addTestSuite(BadComposition2Test.class);
+		suite.addTestSuite(BadComposition3Test.class);
 
-		suite.addTestSuite(AssociationDistanceAssociationPattern.class);
+		suite.addTestSuite(AssociationDistanceAssociationPatternTest.class);
 		// TODO Add this test back
 		//		suite.addTestSuite(AssociationDistanceComposite2.class);
-		suite.addTestSuite(InheritanceTreeDepthComposite2.class);
+		suite.addTestSuite(InheritanceTreeDepthComposite2Test.class);
 
-		suite.addTestSuite(Composite1.class);
-		suite.addTestSuite(Composite2.class);
-		suite.addTestSuite(Composite3.class);
-		suite.addTestSuite(Composite4.class);
-		suite.addTestSuite(Composite5.class);
+		suite.addTestSuite(Composite1Test.class);
+		suite.addTestSuite(Composite2Test.class);
+		suite.addTestSuite(Composite3Test.class);
+		suite.addTestSuite(Composite4Test.class);
+		suite.addTestSuite(Composite5Test.class);
 
-		suite.addTestSuite(CompleteRoundtrip.class);
-		suite.addTestSuite(HalfRoundtrip.class);
+		suite.addTestSuite(CompleteRoundtripTest.class);
+		suite.addTestSuite(HalfRoundtripTest.class);
 
 		suite.addTestSuite(CompositionTest.class);
 		suite.addTestSuite(CreationTest.class);
 		suite.addTestSuite(GoodInheritanceTest.class);
 		suite.addTestSuite(IgnoranceTest.class);
 		suite.addTestSuite(InheritanceTest.class);
-		suite.addTestSuite(InheritancePath.class);
+		suite.addTestSuite(InheritancePathTest.class);
 		suite.addTestSuite(UseTest.class);
-		suite.addTestSuite(StrictInheritance.class);
+		suite.addTestSuite(StrictInheritanceTest.class);
 
 		return suite;
 	}
