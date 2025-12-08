@@ -12,9 +12,9 @@ package padl.creator.classfile.test;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
-import padl.creator.classfile.test.compare.Compare;
+import padl.creator.classfile.test.compare.ComparisonTest;
 import padl.creator.classfile.test.fieldaccess.FieldAccessTest;
-import padl.creator.classfile.test.inheritance.Inheritance;
+import padl.creator.classfile.test.inheritance.InheritanceTest;
 import padl.creator.classfile.test.methodInvocation.MethodInvocationMissingTest;
 import padl.creator.classfile.test.path.ArgoUMLPathTest;
 import padl.creator.classfile.test.topLevelEntity.TopLevelEntityTest;
@@ -38,11 +38,11 @@ public final class TestCreatorClassFile extends TestSuite {
 	public static Test suite() {
 		final TestCreatorClassFile suite = new TestCreatorClassFile();
 
-		suite.addTestSuite(Compare.class);
+		suite.addTestSuite(ComparisonTest.class);
 
 		suite.addTestSuite(FieldAccessTest.class);
 
-		suite.addTestSuite(Inheritance.class);
+		suite.addTestSuite(InheritanceTest.class);
 
 		suite.addTestSuite(MethodInvocationMissingTest.class);
 		suite.addTestSuite(ArgoUMLPathTest.class);

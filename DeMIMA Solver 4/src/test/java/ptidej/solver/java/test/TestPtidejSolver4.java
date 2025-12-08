@@ -14,15 +14,15 @@ import junit.framework.Test;
 import ptidej.solver.java.test.example.Composite1FromClassFilesTest;
 import ptidej.solver.java.test.example.Composite1FromJavaFilesTest;
 import ptidej.solver.java.test.manager.ManagerTest;
-import ptidej.solver.java.test.simple.Composition;
+import ptidej.solver.java.test.simple.CompositionTest;
 import ptidej.solver.java.test.simple.CompositionAndInheritanceTest;
-import ptidej.solver.java.test.simple.Creation;
-import ptidej.solver.java.test.simple.GoodInheritance;
-import ptidej.solver.java.test.simple.Ignorance;
-import ptidej.solver.java.test.simple.Inheritance;
-import ptidej.solver.java.test.simple.InheritancePath;
-import ptidej.solver.java.test.simple.StrictInheritance;
-import ptidej.solver.java.test.simple.Use;
+import ptidej.solver.java.test.simple.CreationTest;
+import ptidej.solver.java.test.simple.GoodInheritanceTest;
+import ptidej.solver.java.test.simple.IgnoranceTest;
+import ptidej.solver.java.test.simple.InheritanceTest;
+import ptidej.solver.java.test.simple.InheritancePathTest;
+import ptidej.solver.java.test.simple.StrictInheritanceTest;
+import ptidej.solver.java.test.simple.UseTest;
 
 //import ptidej.solver.test.java.TestJavaPtidejSolver;
 
@@ -38,14 +38,14 @@ public final class TestPtidejSolver4 extends junit.framework.TestSuite {
 		suite.addTestSuite(CompositionAndInheritanceTest.class);
 		suite.addTestSuite(Composite1FromClassFilesTest.class);
 		suite.addTestSuite(Composite1FromJavaFilesTest.class);
-		suite.addTestSuite(Composition.class);
-		suite.addTestSuite(Creation.class);
-		suite.addTestSuite(GoodInheritance.class);
-		suite.addTestSuite(Ignorance.class);
-		suite.addTestSuite(Inheritance.class);
-		suite.addTestSuite(InheritancePath.class);
-		suite.addTestSuite(StrictInheritance.class);
-		suite.addTestSuite(Use.class);
+		suite.addTestSuite(CompositionTest.class);
+		suite.addTestSuite(CreationTest.class);
+		suite.addTestSuite(GoodInheritanceTest.class);
+		suite.addTestSuite(IgnoranceTest.class);
+		suite.addTestSuite(InheritanceTest.class);
+		suite.addTestSuite(InheritancePathTest.class);
+		suite.addTestSuite(StrictInheritanceTest.class);
+		suite.addTestSuite(UseTest.class);
 
 		return suite;
 	}
