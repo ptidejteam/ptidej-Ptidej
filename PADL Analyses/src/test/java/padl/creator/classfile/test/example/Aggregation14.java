@@ -91,7 +91,7 @@ public class Aggregation14 extends ClassFilePrimitive {
 		Assert.assertEquals(
 			"Entity name",
 			"padl.example.aggregation.Aggregation14",
-			Aggregation14.FirstClassEntities[2].getName());
+			Aggregation14.FirstClassEntities[2].getDisplayID());
 	}
 	public void testNumberOfElements() {
 		Assert.assertEquals(

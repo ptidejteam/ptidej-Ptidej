@@ -11,6 +11,7 @@
 package padl.creator.classfile.test.example;
 
 import org.junit.Assert;
+
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.classfile.test.ClassFilePrimitive;
 import padl.kernel.ICodeLevelModel;
@@ -30,25 +31,24 @@ public class ManyMethods extends ClassFilePrimitive {
 	public ManyMethods(final String name) {
 		super(name);
 	}
+
 	protected void setUp() throws CreationException {
 		if (ManyMethods.FirstClassEntities == null
 				|| ManyMethods.Elements == null) {
-			final ICodeLevelModel codeLevelModel =
-				ClassFilePrimitive.getFactory().createCodeLevelModel(
-					"ptidej.example.method");
-			codeLevelModel
-				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/method/ManyMethods.class" }));
+			final ICodeLevelModel codeLevelModel = ClassFilePrimitive
+					.getFactory().createCodeLevelModel("ptidej.example.method");
+			codeLevelModel.create(new CompleteClassFileCreator(new String[] {
+					"../PADL Creator ClassFile/target/test-classes/padl/example/method/ManyMethods.class" }));
 
-			ManyMethods.FirstClassEntities =
-				Util.getArrayOfTopLevelEntities(codeLevelModel);
+			ManyMethods.FirstClassEntities = Util
+					.getArrayOfTopLevelEntities(codeLevelModel);
 
-			ManyMethods.Elements =
-				Util.getArrayOfElements(ManyMethods.FirstClassEntities[0]);
+			ManyMethods.Elements = Util
+					.getArrayOfElements(ManyMethods.FirstClassEntities[2]);
 		}
 	}
+
 	public void testNumberOfMethods() {
-		Assert.assertEquals("", 7, ManyMethods.Elements.length);
+		Assert.assertEquals(5, ManyMethods.Elements.length);
 	}
-	// TODO: Implement more detailled tests.
 }

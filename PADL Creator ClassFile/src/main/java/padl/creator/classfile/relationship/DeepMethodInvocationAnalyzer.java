@@ -1571,9 +1571,9 @@ public class DeepMethodInvocationAnalyzer {
 				aMethodInfo.getDeclaringClassConstantPool());
 
 		// infosOfMethod[1] contains the method signature.
-		int position = index;
 		final int nbArgs = countArgs(infosOfMethod[1]);
 
+		int position = index;
 		if (nbArgs > 0) {
 			couples.addAll(this.popArgs(
 				aMethodInfo,

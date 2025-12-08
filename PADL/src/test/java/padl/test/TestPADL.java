@@ -14,7 +14,7 @@ import junit.framework.Test;
 import junit.framework.TestSuite;
 import padl.kernel.impl.AbstractContainerTest;
 import padl.kernel.impl.MethodInvocationTest;
-import padl.test.defaultpackage.TestDefaultPackage;
+import padl.test.defaultpackage.DefaultPackageTest;
 
 /**
  * @author Yann-Gaël Guéhéneuc
@@ -34,9 +34,11 @@ public final class TestPADL extends TestSuite {
 
 	public static Test suite() {
 		final TestPADL suite = new TestPADL();
+		
 		suite.addTestSuite(AbstractContainerTest.class);
 		suite.addTestSuite(MethodInvocationTest.class);
-		suite.addTestSuite(TestDefaultPackage.class); // Added by Mathieu Lemoine, 2009-05-15
+		suite.addTestSuite(DefaultPackageTest.class); // Added by Mathieu Lemoine, 2009-05-15
+		
 		return suite;
 	}
 }

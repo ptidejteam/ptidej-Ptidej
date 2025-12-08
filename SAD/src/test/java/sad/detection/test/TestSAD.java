@@ -13,8 +13,8 @@ package sad.detection.test;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import sad.detection.test.classfile.swt.DetectionAntipatternSWTTest;
-import sad.detection.test.classfile.xerces.SpaghettiCodeTest;
-import sad.detection.test.classfile.xerces.SpaghettiCodeTest2;
+import sad.detection.test.classfile.xerces.SpaghettiCode1Test;
+import sad.detection.test.classfile.xerces.SpaghettiCode2Test;
 import sad.detection.test.classfile.xerces.VariousSmellsTest;
 import sad.detection.test.comparison.xerces.BlobTest;
 import sad.detection.test.generic.BoxPlotTest;
@@ -31,8 +31,8 @@ public final class TestSAD extends TestSuite {
 		final TestSAD suite = new TestSAD();
 
 		suite.addTestSuite(DetectionAntipatternSWTTest.class);
-		suite.addTestSuite(SpaghettiCodeTest.class);
-		suite.addTestSuite(SpaghettiCodeTest2.class);
+		suite.addTestSuite(SpaghettiCode1Test.class);
+		suite.addTestSuite(SpaghettiCode2Test.class);
 		suite.addTestSuite(VariousSmellsTest.class);
 		suite.addTestSuite(BlobTest.class);
 		// TODO Add these tests back

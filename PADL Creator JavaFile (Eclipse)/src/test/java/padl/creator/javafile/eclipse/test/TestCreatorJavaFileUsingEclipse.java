@@ -31,23 +31,103 @@ package padl.creator.javafile.eclipse.test;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
-import padl.creator.javafile.eclipse.test.advanced.TestAdvanced;
-import padl.creator.javafile.eclipse.test.annotator.TestAnnotator;
-import padl.creator.javafile.eclipse.test.basic.TestBasic;
-import padl.creator.javafile.eclipse.test.comparator.TestComparator;
-import padl.creator.javafile.eclipse.test.methodinvocation.TestMethodInvocations;
-import padl.creator.javafile.eclipse.test.others.TestOthers;
+import padl.creator.javafile.eclipse.test.advanced.DuplicationTest;
+import padl.creator.javafile.eclipse.test.advanced.ExclusionTest;
+import padl.creator.javafile.eclipse.test.advanced.FieldsAndReturnTypesTest;
+import padl.creator.javafile.eclipse.test.advanced.SanityTest;
+import padl.creator.javafile.eclipse.test.advanced.WeirdTest;
+import padl.creator.javafile.eclipse.test.annotator.ConditionalModelAnnotatorTest;
+import padl.creator.javafile.eclipse.test.annotator.LOCModelAnnotatorTest;
+import padl.creator.javafile.eclipse.test.basic.ClassTest;
+import padl.creator.javafile.eclipse.test.basic.IndirectSourcePathTest;
+import padl.creator.javafile.eclipse.test.basic.InterfaceTest;
+import padl.creator.javafile.eclipse.test.basic.LightModelCreatorTest;
+import padl.creator.javafile.eclipse.test.basic.ManyClassesInOneFileTest;
+import padl.creator.javafile.eclipse.test.basic.MemberGhostTest;
+import padl.creator.javafile.eclipse.test.basic.PackagesTest;
+import padl.creator.javafile.eclipse.test.basic.ParametrizedTypesTest;
+import padl.creator.javafile.eclipse.test.basic.RingAndroidJavaClientTest;
+import padl.creator.javafile.eclipse.test.basic.WithAndWithoutSourcePathTest;
+import padl.creator.javafile.eclipse.test.comparator.ClassAndFileConventionTest;
+import padl.creator.javafile.eclipse.test.comparator.LightModelsWithModelComparatorTest;
+import padl.creator.javafile.eclipse.test.comparator.LightModelsWithStatisticVisitorTest;
+import padl.creator.javafile.eclipse.test.comparator.ModelsDifferencesReporterTest;
+import padl.creator.javafile.eclipse.test.methodinvocation.InvocationTargetExceptionTest;
+import padl.creator.javafile.eclipse.test.methodinvocation.JavaFilesModelMethodInvocationExplorerTest;
+import padl.creator.javafile.eclipse.test.methodinvocation.MI_ChainOfMessagesTest;
+import padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassClass1Test;
+import padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassClass2Test;
+import padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassInstanceFieldTest;
+import padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassInstanceTest;
+import padl.creator.javafile.eclipse.test.methodinvocation.MI_Composite4AbstractDocumentTest;
+import padl.creator.javafile.eclipse.test.methodinvocation.MI_FieldAccessTest;
+import padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceClassTest;
+import padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceClass2Test;
+import padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceCreationTest;
+import padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceInstanceFieldTest;
+import padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceInstanceTest;
+import padl.creator.javafile.eclipse.test.methodinvocation.MethodInvocationExplorerTest;
+import padl.creator.javafile.eclipse.test.methodinvocation.PooyaTest;
+import padl.creator.javafile.eclipse.test.others.CompleteCreatorTest;
+import padl.creator.javafile.eclipse.test.others.NesrineTest;
+import padl.creator.javafile.eclipse.test.others.PADLParserUtilsTest;
+import padl.kernel.impl.MethodInvocationTest;
 
 public class TestCreatorJavaFileUsingEclipse extends TestSuite {
 	public static Test suite() {
 		final TestSuite suite = new TestSuite();
 
-		suite.addTest(TestAdvanced.suite());
-		suite.addTest(TestAnnotator.suite());
-		suite.addTest(TestBasic.suite());
-		suite.addTest(TestComparator.suite());
-		suite.addTest(TestMethodInvocations.suite());
-		suite.addTest(TestOthers.suite());
+		suite.addTestSuite(DuplicationTest.class);
+		suite.addTestSuite(ExclusionTest.class);
+		suite.addTestSuite(FieldsAndReturnTypesTest.class);
+		suite.addTestSuite(SanityTest.class);
+		suite.addTestSuite(WeirdTest.class);
+
+		suite.addTestSuite(ConditionalModelAnnotatorTest.class);
+		suite.addTestSuite(LOCModelAnnotatorTest.class);
+
+		// suite.addTestSuite(padl.creator.javafile.eclipse.test.basic.ArgoUMLTest.class);
+		suite.addTestSuite(ClassTest.class);
+		suite.addTestSuite(IndirectSourcePathTest.class);
+		suite.addTestSuite(InterfaceTest.class);
+		// suite.addTestSuite(JProfilerTest.class);
+		suite.addTestSuite(LightModelCreatorTest.class);
+		suite.addTestSuite(ManyClassesInOneFileTest.class);
+		suite.addTestSuite(MemberGhostTest.class);
+		suite.addTestSuite(PackagesTest.class);
+		suite.addTestSuite(ParametrizedTypesTest.class);
+		suite.addTestSuite(RingAndroidJavaClientTest.class);
+		suite.addTestSuite(WithAndWithoutSourcePathTest.class);
+
+		suite.addTestSuite(ClassAndFileConventionTest.class);
+		suite.addTestSuite(LightModelsWithModelComparatorTest.class);
+		suite.addTestSuite(LightModelsWithStatisticVisitorTest.class);
+		suite.addTestSuite(ModelsDifferencesReporterTest.class);
+
+		// suite.addTestSuite(padl.creator.javafile.eclipse.test.methodinvocation.ArgoUMLTest.class);
+		suite.addTestSuite(CompleteCreatorTest.class);
+		suite.addTestSuite(InvocationTargetExceptionTest.class);
+		suite.addTestSuite(JavaFilesModelMethodInvocationExplorerTest.class);
+		suite.addTestSuite(MethodInvocationExplorerTest.class);
+		suite.addTestSuite(MethodInvocationTest.class);
+		suite.addTestSuite(MI_ChainOfMessagesTest.class);
+		suite.addTestSuite(MI_ClassClass1Test.class);
+		suite.addTestSuite(MI_ClassClass2Test.class);
+		suite.addTestSuite(MI_ClassInstanceFieldTest.class);
+		suite.addTestSuite(MI_ClassInstanceTest.class);
+		suite.addTestSuite(MI_Composite4AbstractDocumentTest.class);
+		suite.addTestSuite(MI_FieldAccessTest.class);
+		suite.addTestSuite(MI_InstanceClassTest.class);
+		suite.addTestSuite(MI_InstanceClass2Test.class);
+		suite.addTestSuite(MI_InstanceCreationTest.class);
+		suite.addTestSuite(MI_InstanceInstanceFieldTest.class);
+		suite.addTestSuite(MI_InstanceInstanceTest.class);
+		suite.addTestSuite(PooyaTest.class);
+
+		// suite.addTestSuite(padl.creator.javafile.eclipse.test.others.ArgoUMLTest.class);
+		suite.addTestSuite(CompleteCreatorTest.class);
+		suite.addTestSuite(NesrineTest.class);
+		suite.addTestSuite(PADLParserUtilsTest.class);
 
 		return suite;
 	}

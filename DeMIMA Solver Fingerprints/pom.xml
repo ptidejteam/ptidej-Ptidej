@@ -47,10 +47,13 @@
 					<forkCount>1</forkCount>
 			        <!-- <argLine>-Xmx8G</argLine> -->
 					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/TestPtidejSolverFingerprints.java</exclude>
+						<!-- Excluded because too slow -->
+						<exclude>**/CompositeJUnit.java</exclude>
 						<!-- I must exclude anything inside coming from -->
 						<!-- src/test/resources/JUnit v3.7/bin/junit    -->
-						<exclude>bin/junit/**/*.class</exclude>
-						<exclude>CompositeJUnit.java</exclude>
+						<exclude>**/bin/junit/**/*.class</exclude>
 					</excludes>
 			    </configuration>
 			</plugin>

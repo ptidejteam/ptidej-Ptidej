@@ -33,8 +33,7 @@
 				<configuration>
 					<!-- Excluded on purpose -->
 					<excludes>
-						<exclude>TestJavaParser.java</exclude>
-						<exclude>TestClass1.java</exclude>
+						<exclude>**/TestCreatorJavaFileUsingEclipseParser.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

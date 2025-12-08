@@ -77,7 +77,8 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>Metric Specific for Java/**</exclude>
+						<exclude>**/TestPOM.java</exclude>
+						<exclude>**/Metric Specific for Java/**</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

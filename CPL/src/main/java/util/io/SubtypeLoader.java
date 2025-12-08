@@ -23,8 +23,12 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarInputStream;
 
+import org.apache.bcel.classfile.ClassParser;
+import org.apache.bcel.classfile.JavaClass;
+
 import com.ibm.toad.cfparse.ClassFile;
 
+import util.lang.CFParseBCELConvertorVisitor;
 import util.multilingual.MultilingualManager;
 
 public final class SubtypeLoader {
@@ -130,8 +134,6 @@ public final class SubtypeLoader {
 		final ClassFile currentClass_CFPARSE = new ClassFile(inputStream0);
 		inputStream0.close();
 
-		// TODO Replace above currentClass_CFPARSE by
-		// currentClass_BCEL1 or currentClass_BCEL2
 		/*
 		final InputStream inputStream1 = aNamedInputStream.getStream();
 		final ClassParser parser = new ClassParser(inputStream1, "");
@@ -141,7 +143,7 @@ public final class SubtypeLoader {
 		final ClassFile currentClass_BCEL2 = CFParseBCELConvertorVisitor
 				.convertClassFile(javaClass);
 		inputStream1.close();
-		*/
+		 */
 
 		ClassFile currentClass;
 		/*

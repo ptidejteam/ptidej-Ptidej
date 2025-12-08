@@ -42,9 +42,10 @@ import padl.creator.test.relationships.RelationshipsTest;
 public final class TestCreatorJavaFilevsClassFile extends TestSuite {
 	public static Test suite() {
 		final TestCreatorJavaFilevsClassFile suite = new TestCreatorJavaFilevsClassFile();
-		suite.addTestSuite(padl.creator.test.comparison.jct.Composite1.class);
 		suite.addTestSuite(
-				padl.creator.test.comparison.eclipse.Composite1.class);
+				padl.creator.test.comparison.jct.Composite1Test.class);
+		suite.addTestSuite(
+				padl.creator.test.comparison.eclipse.Composite1Test.class);
 		suite.addTestSuite(NewKeywordsTest.class);
 		suite.addTestSuite(RelationshipsTest.class);
 		return suite;

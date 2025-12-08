@@ -77,8 +77,7 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>TestDup.java</exclude>
-						<exclude>TestNew.java</exclude>
+						<exclude>**/TestPADLAnalyses.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

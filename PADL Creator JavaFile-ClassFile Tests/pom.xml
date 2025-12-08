@@ -54,6 +54,10 @@
 						--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
 					</argLine>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/TestCreatorJavaFilevsClassFile.java</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 		</plugins>
