@@ -45,13 +45,13 @@ public class CFParseBCELConvertorTestVisitor2 extends TestCase {
 	}
 
 	//	public void testFull() {
-	//		
 	//		Assert.assertEquals(this.classFile_CFParse_Original.toString(),
 	//				this.classFile_CFParse_Converted.toString());
 	//	}
 
 	public void testGetMethods() {
-		int fieldCount = this.classFile_CFParse_Original.getMethods().length();
+		final int fieldCount = this.classFile_CFParse_Original.getMethods()
+				.length();
 		for (int i = 0; i < fieldCount; i++) {
 			Assert.assertEquals(
 					this.classFile_CFParse_Original.getMethods().get(i)
@@ -59,7 +59,6 @@ public class CFParseBCELConvertorTestVisitor2 extends TestCase {
 					this.classFile_CFParse_Converted.getMethods().get(i)
 							.toString());
 		}
-
 	}
 
 	public void testGetFields() {

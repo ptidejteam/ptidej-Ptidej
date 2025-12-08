@@ -54,7 +54,7 @@ public final class ClassFile {
 		var1.append("\n");
 		var1.append("" + this.d_interfaces + "\n" + this.d_fields + "\n"
 				+ this.d_methods + "\n" + this.d_attributes + "\n");
-	
+
 		return var1.toString();
 	}
 
@@ -86,14 +86,12 @@ public final class ClassFile {
 	// but not one-to-one matching...
 	@Override
 	public boolean equals(final Object o) {
-
 		if (!(o instanceof ClassFile)) {
 			return false;
 		}
-
 		final ClassFile other = (ClassFile) o;
 
-		// Classfile itself
+		// 1. Itself
 		boolean equalClassFiles = true;
 		equalClassFiles &= this.getAccess() == other.getAccess();
 		equalClassFiles &= this.getMagic() == other.getMagic();
@@ -106,7 +104,7 @@ public final class ClassFile {
 					.equals(other.getSourceFilename());
 		}
 
-		// Superclass
+		// 2. Superclass
 		boolean equalSuperNames = true;
 		if (!this.getName().equals("java.lang.Object")) {
 			// Interestingly, for the class Object itself, CFParse will
@@ -116,7 +114,7 @@ public final class ClassFile {
 			equalSuperNames &= this.getSuperName().equals(other.getSuperName());
 		}
 
-		// Superinterfaces
+		// 3. Superinterfaces
 		boolean equalSuperInterfaces = true;
 		final InterfaceList interfaceListOfThis = this.getInterfaces();
 		final InterfaceList interfacesListOfOther = other.getInterfaces();
@@ -131,7 +129,7 @@ public final class ClassFile {
 			equalSuperInterfaces &= interfaceOfThis.equals(interfaceOfOther);
 		}
 
-		// Constant pool
+		// 4. Constant pool
 		boolean equalConstants = true;
 		final ConstantPool cpOfThis = this.getCP();
 		final ConstantPool cpOfOther = other.getCP();
@@ -153,7 +151,7 @@ public final class ClassFile {
 			}
 		}
 
-		// Attributes
+		// 5. Attributes
 		boolean equalAttributes = true;
 		final AttrInfoList attrListOfThis = this.getAttrs();
 		final AttrInfoList attrListOfOther = other.getAttrs();
@@ -165,14 +163,12 @@ public final class ClassFile {
 			final AttrInfo attrInfoOfThis = attrListOfThis.get(i);
 			final AttrInfo attrInfoOfOther = attrListOfOther.get(i);
 
-			// TODO Remove these conditions by implementing fully util.lang.CFParseBCELConvertor.addAttributes(ClassFile, JavaClass)
-			
-				equalAttributes &= attrInfoOfThis.toString()
+			equalAttributes &= attrInfoOfThis.toString()
 					.equals(attrInfoOfOther.toString());
-			
+
 		}
 
-		// Fields
+		// 6. Fields
 		boolean equalFields = true;
 		final FieldInfoList fieldListOfThis = this.getFields();
 		final FieldInfoList fieldListOfOther = other.getFields();
@@ -190,7 +186,7 @@ public final class ClassFile {
 			equalFields &= fieldOfThis.getType().equals(fieldOfOther.getType());
 		}
 
-		// Methods
+		// 7. Methods
 		boolean equalMethods = true;
 		final MethodInfoList methodListOfThis = this.getMethods();
 		final MethodInfoList methodListOfOther = other.getMethods();
@@ -217,6 +213,7 @@ public final class ClassFile {
 					.equals(methodOfOther.getReturnType());
 		}
 
+		// 9. The End 
 		final boolean equal = equalClassFiles && equalSuperNames
 				&& equalSuperInterfaces && equalConstants && equalAttributes
 				&& equalFields && equalMethods;
@@ -313,7 +310,7 @@ public final class ClassFile {
 	}
 
 	public AttrInfoList getAttrs() {
-		
+
 		return this.d_attributes;
 	}
 

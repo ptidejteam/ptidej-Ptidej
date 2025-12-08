@@ -4,10 +4,7 @@ package com.ibm.toad.cfparse;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.BitSet;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Vector;
 
 import com.ibm.toad.cfparse.ConstantPool.Utf8Entry;
@@ -51,10 +48,10 @@ public final class MethodInfo {
 			}
 		}
 	}
-	
 
 	public String toString() {
-		StringBuffer var1 = new StringBuffer();
+		final StringBuffer var1 = new StringBuffer();
+
 		if (Access.isPublic(this.d_accessFlags)) {
 			var1.append("public ");
 		}
@@ -67,24 +64,24 @@ public final class MethodInfo {
 			var1.append("protected ");
 		}
 
-		if (Access.isFinal(this.d_accessFlags)) {
-			var1.append("final ");
-		}
-
 		if (Access.isStatic(this.d_accessFlags)) {
 			var1.append("static ");
 		}
 
-		if (Access.isVolatile(this.d_accessFlags)) {
-			var1.append("volatile ");
-		}
-
-		if (Access.isTransient(this.d_accessFlags)) {
-			var1.append("transient ");
+		if (Access.isFinal(this.d_accessFlags)) {
+			var1.append("final ");
 		}
 
 		if (Access.isSynchronized(this.d_accessFlags)) {
 			var1.append("synchronized ");
+		}
+
+		if (Access.isBridge(this.d_accessFlags)) {
+			var1.append("/*bridge*/ ");
+		}
+
+		if (Access.isVarArgs(this.d_accessFlags)) {
+			var1.append("/*varargs*/ ");
 		}
 
 		if (Access.isNative(this.d_accessFlags)) {
@@ -95,10 +92,18 @@ public final class MethodInfo {
 			var1.append("abstract ");
 		}
 
-		String var2 = this.d_cp.getAsString(this.d_idxDescriptor);
-		String var3 = CPUtils.method2java(var2);
+		if (Access.isStrict(this.d_accessFlags)) {
+			var1.append("strict ");
+		}
+
+		if (Access.isSynthetic(this.d_accessFlags)) {
+			var1.append("synthetic ");
+		}
+
+		final String var2 = this.d_cp.getAsString(this.d_idxDescriptor);
+		final String var3 = CPUtils.method2java(var2);
+		final int var6 = var3.indexOf(" ");
 		String var4 = "";
-		int var6 = var3.indexOf(" ");
 		String var5;
 		if (var6 == -1) {
 			var5 = var3;
@@ -107,10 +112,8 @@ public final class MethodInfo {
 			var4 = var3.substring(0, var6);
 			var5 = var3.substring(var6 + 1);
 		}
-
 		var1.append(var4 + " " + this.d_cp.getAsString(this.d_idxName) + var5
 				+ "\n" + this.d_attrs);
-		
 
 		return var1.toString();
 	}

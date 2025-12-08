@@ -16,7 +16,6 @@ import com.ibm.toad.cfparse.utils.CPUtils;
 import util.io.ProxyConsole;
 
 public final class ConstantPool {
-	
 	public final class ClassEntry extends ConstantPoolEntry {
 		
 		private int d_index;
@@ -30,7 +29,6 @@ public final class ConstantPool {
 		}
 
 		public boolean equals(Object var1) {
-			
 			if (!(var1 instanceof ConstantPool.ClassEntry)) {
 				return false;
 			}
@@ -74,7 +72,6 @@ public final class ConstantPool {
 		}
 
 		public String toString() {
-			
 			return "Class: " + this.d_index + " (" + this.getAsJava() + ")";
 		}
 

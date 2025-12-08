@@ -61,9 +61,11 @@ import org.apache.bcel.classfile.LocalVariableTable;
 import org.apache.bcel.classfile.LocalVariableTypeTable;
 import org.apache.bcel.classfile.Method;
 import org.apache.bcel.classfile.MethodParameters;
+import org.apache.bcel.classfile.NestHost;
 import org.apache.bcel.classfile.NestMembers;
 import org.apache.bcel.classfile.ParameterAnnotationEntry;
 import org.apache.bcel.classfile.ParameterAnnotations;
+import org.apache.bcel.classfile.Record;
 import org.apache.bcel.classfile.Signature;
 import org.apache.bcel.classfile.SourceFile;
 import org.apache.bcel.classfile.StackMap;
@@ -77,12 +79,14 @@ import com.ibm.toad.cfparse.ClassFile;
 import com.ibm.toad.cfparse.ConstantPool.Utf8Entry;
 import com.ibm.toad.cfparse.ConstantPoolEntry;
 import com.ibm.toad.cfparse.FieldInfo;
+import com.ibm.toad.cfparse.InterfaceList;
 import com.ibm.toad.cfparse.MethodInfo;
 import com.ibm.toad.cfparse.attributes.AttrInfo;
 import com.ibm.toad.cfparse.attributes.BootstrapMethodsAttrInfo;
 import com.ibm.toad.cfparse.attributes.CodeAttrInfo;
 import com.ibm.toad.cfparse.attributes.ConstantValueAttrInfo;
 import com.ibm.toad.cfparse.attributes.ExceptionsAttrInfo;
+import com.ibm.toad.cfparse.attributes.InnerClassesAttrInfo;
 import com.ibm.toad.cfparse.attributes.LineNumberAttrInfo;
 import com.ibm.toad.cfparse.attributes.LocalVariableAttrInfo;
 import com.ibm.toad.cfparse.attributes.LocalVariableTypeAttrInfo;
@@ -91,6 +95,10 @@ import com.ibm.toad.cfparse.attributes.RuntimeInvisibleAnnotationsAttrInfo;
 import com.ibm.toad.cfparse.attributes.SignatureAttrInfo;
 import com.ibm.toad.cfparse.attributes.SourceFileAttrInfo;
 import com.ibm.toad.cfparse.attributes.StackMapTableAttrInfo;
+import com.ibm.toad.cfparse.attributes.UnknownAttrInfo;
+import com.ibm.toad.cfparse.utils.Access;
+
+import util.io.ProxyConsole;
 
 /**
  * @author	Yann-Gaël Guéhéneuc
@@ -108,164 +116,166 @@ public class CFParseBCELConvertorVisitor {
 
 		@Override
 		public void visitAnnotation(final Annotations obj) {
-			// TODO Auto-generated method stub
-
+			// Yann 25/12/06: Annotations
+			// A classfile, since Java 5, can contain
+			// - RuntimeInvisibleAnnotations
+			// - RuntimeVisibleAnnotations
+			// These are not, of course, recognised as such by
+			// CFParse but must be handled as UnknownAttrInfo.
+			/*
+			try {
+				final ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+				final DataOutputStream dataOut = new DataOutputStream(byteOut);
+				final int numAnnotations = obj.getAnnotationEntries().length;
+				dataOut.writeInt(2 + numAnnotations * 4);
+				dataOut.writeShort(numAnnotations);
+			
+				for (final AnnotationEntry entry : obj.getAnnotationEntries()) {
+					final int typeIndex = this.currentClass.getCP()
+							.addUtf8(entry.getAnnotationType());
+					dataOut.writeShort(typeIndex);
+					dataOut.writeShort(0); // zero element_value_pairs
+				}
+				dataOut.close();
+			
+				if (obj.isRuntimeVisible()) {
+					final RuntimeVisibleAnnotationsAttrInfo annotationAttr = (RuntimeVisibleAnnotationsAttrInfo) this.currentClass
+							.getAttrs().add(obj.getName());
+					final ByteArrayInputStream byteIn = new ByteArrayInputStream(
+							byteOut.toByteArray());
+					final DataInputStream dataIn = new DataInputStream(byteIn);
+					annotationAttr.read(dataIn);
+					dataIn.close();
+				}
+				else {
+					final RuntimeInvisibleAnnotationsAttrInfo annotationAttr = (RuntimeInvisibleAnnotationsAttrInfo) this.currentClass
+							.getAttrs().add(obj.getName());
+					final ByteArrayInputStream byteIn = new ByteArrayInputStream(
+							byteOut.toByteArray());
+					final DataInputStream dataIn = new DataInputStream(byteIn);
+					annotationAttr.read(dataIn);
+					dataIn.close();
+				}
+			}
+			catch (final IOException ioe) {
+				ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			}
+			*/
+			this.visitUnknown((Attribute) obj);
 		}
 
 		@Override
 		public void visitAnnotationDefault(final AnnotationDefault obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitAnnotationEntry(final AnnotationEntry obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitBootstrapMethods(final BootstrapMethods obj) {
 			final BootstrapMethodsAttrInfo attr = (BootstrapMethodsAttrInfo) this.currentClass
-					.getAttrs().add("BootstrapMethods");
+					.getAttrs().add(obj.getName());
 
 			final BootstrapMethod[] bcelMethods = obj.getBootstrapMethods();
+			final ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+			final DataOutputStream dataOut = new DataOutputStream(byteOut);
+
+			// Write total length
+			int byteLength = 2; // u2 num_bootstrap_methods
+			for (BootstrapMethod bm : bcelMethods) {
+				byteLength += 4 + 2 * bm.getNumBootstrapArguments();
+			}
 
 			try {
-				java.io.StringWriter stringWriter = new java.io.StringWriter();
-				java.io.DataOutputStream dataOutput = new java.io.DataOutputStream(
-						new util.io.WriterOutputStream(stringWriter));
+				dataOut.writeInt(byteLength);
+				dataOut.writeShort(bcelMethods.length);
 
-				// Write total length
-				int byteLength = 2; // u2 num_bootstrap_methods
-				for (BootstrapMethod bm : bcelMethods) {
-					byteLength += 4 + 2 * bm.getNumBootstrapArguments();
-				}
-
-				dataOutput.writeInt(byteLength);
-				dataOutput.writeShort(bcelMethods.length);
-
-				for (BootstrapMethod bm : bcelMethods) {
-					dataOutput.writeShort(bm.getBootstrapMethodRef());
-					dataOutput.writeShort(bm.getNumBootstrapArguments());
-					for (int arg : bm.getBootstrapArguments()) {
-						dataOutput.writeShort(arg);
+				for (final BootstrapMethod bm : bcelMethods) {
+					dataOut.writeShort(bm.getBootstrapMethodRef());
+					dataOut.writeShort(bm.getNumBootstrapArguments());
+					for (final int arg : bm.getBootstrapArguments()) {
+						dataOut.writeShort(arg);
 					}
 				}
+				dataOut.close();
 
-				dataOutput.close();
-
-				java.io.StringReader stringReader = new java.io.StringReader(
-						stringWriter.toString());
-				java.io.DataInputStream dataInput = new java.io.DataInputStream(
-						new util.io.ReaderInputStream(stringReader));
-				attr.read(dataInput);
-				dataInput.close();
-
+				final ByteArrayInputStream byteIn = new ByteArrayInputStream(
+						byteOut.toByteArray());
+				final DataInputStream dataIn = new DataInputStream(byteIn);
+				attr.read(dataIn);
+				dataIn.close();
 			}
-			catch (IOException e) {
-				e.printStackTrace(
-						util.io.ProxyConsole.getInstance().errorOutput());
+			catch (final IOException ioe) {
+				ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
 			}
 		}
 
 		@Override
 		public void visitCode(final Code obj) {
-			//			
-
 		}
 
 		@Override
 		public void visitCodeException(final CodeException obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantClass(final ConstantClass obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantDouble(final ConstantDouble obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantFieldref(final ConstantFieldref obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantFloat(final ConstantFloat obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantInteger(final ConstantInteger obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantInterfaceMethodref(
 				final ConstantInterfaceMethodref obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantInvokeDynamic(
 				final ConstantInvokeDynamic obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantLong(final ConstantLong obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantMethodHandle(final ConstantMethodHandle obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantMethodref(final ConstantMethodref obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantMethodType(final ConstantMethodType obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantModule(final ConstantModule constantModule) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantNameAndType(final ConstantNameAndType obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantPackage(
 				final ConstantPackage constantPackage) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
@@ -275,12 +285,11 @@ public class CFParseBCELConvertorVisitor {
 
 		@Override
 		public void visitConstantString(final ConstantString obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitConstantUtf8(final ConstantUtf8 obj) {
+			// Use reflection because ConstantPool.addNewElement() is private
 			try {
 				final Constructor<Utf8Entry> constructor = Utf8Entry.class
 						.getDeclaredConstructor(String.class);
@@ -293,24 +302,22 @@ public class CFParseBCELConvertorVisitor {
 					| InstantiationException | IllegalAccessException
 					| IllegalArgumentException | InvocationTargetException e) {
 
-				e.printStackTrace();
+				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 			}
 		}
 
 		@Override
 		public void visitConstantValue(final ConstantValue obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitDeprecated(final Deprecated obj) {
-			this.currentClass.getAttrs().add("Deprecated");
+			this.currentClass.getAttrs().add(obj.getName());
 		}
 
 		@Override
 		public void visitEnclosingMethod(final EnclosingMethod obj) {
-			this.currentClass.getAttrs().add("EnclosingMethod");
+			this.visitUnknown((Attribute) obj);
 		}
 
 		@Override
@@ -320,26 +327,36 @@ public class CFParseBCELConvertorVisitor {
 
 		@Override
 		public void visitField(final Field obj) {
-			FieldInfo fieldInfo = new FieldInfo(this.currentClass.getCP());
+			final FieldInfo fieldInfo = new FieldInfo(
+					this.currentClass.getCP());
 			fieldInfo.setAccess(obj.getAccessFlags());
+			// Luca 25/12/01: Synthetic
+			/*
+			if (obj.isSynthetic()) {
+				fieldInfo.getAttrs().add("Synthetic");
+				fieldInfo.setAccess(
+						fieldInfo.getAccess() | Access.ACC_SYNTHETIC);
+			}
+			*/
 
-			int nameIdx = this.currentClass.getCP().addUtf8(obj.getName());
-			int descIdx = this.currentClass.getCP().addUtf8(obj.getSignature());
-
+			final int nameIdx = this.currentClass.getCP()
+					.addUtf8(obj.getName());
 			fieldInfo.d_idxName = nameIdx;
+			final int descIdx = this.currentClass.getCP()
+					.addUtf8(obj.getSignature());
 			fieldInfo.d_idxDescriptor = descIdx;
 
-			for (Attribute attribute : obj.getAttributes()) {
+			for (final Attribute attribute : obj.getAttributes()) {
 				if (attribute instanceof ConstantValue constantValue) {
 					int constValueIndex = constantValue.getConstantValueIndex();
 					if (constValueIndex != 0) {
 						Constant value = obj.getConstantPool()
 								.getConstant(constValueIndex);
 
-						ConstantValueAttrInfo cvAttr = (ConstantValueAttrInfo) fieldInfo
+						final ConstantValueAttrInfo cvAttr = (ConstantValueAttrInfo) fieldInfo
 								.getAttrs().add("ConstantValue");
 
-						// ✅ Now directly set the value
+						// Now directly set the value
 						switch (value.getTag()) {
 						case Const.CONSTANT_Integer ->
 							cvAttr.set(((ConstantInteger) value).getBytes());
@@ -358,40 +375,33 @@ public class CFParseBCELConvertorVisitor {
 						}
 					}
 				}
-				if (attribute instanceof Signature sigAttrBCEL) {
+				else if (attribute instanceof Signature signature) {
 					int sigUtf8Index = this.currentClass.getCP()
-							.addUtf8(sigAttrBCEL.getSignature());
-
-					SignatureAttrInfo sigAttr = (SignatureAttrInfo) fieldInfo
+							.addUtf8(signature.getSignature());
+					final SignatureAttrInfo sigAttr = (SignatureAttrInfo) fieldInfo
 							.getAttrs().add("Signature");
-
 					sigAttr.set(sigUtf8Index);
 				}
-
 			}
 
 			this.currentClass.getFields().add(fieldInfo);
-
 		}
 
 		@Override
 		public void visitInnerClass(final InnerClass obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitInnerClasses(final InnerClasses obj) {
-			final com.ibm.toad.cfparse.attributes.InnerClassesAttrInfo attr = (com.ibm.toad.cfparse.attributes.InnerClassesAttrInfo) this.currentClass
-					.getAttrs().add("InnerClasses");
+			final InnerClassesAttrInfo attr = (InnerClassesAttrInfo) this.currentClass
+					.getAttrs().add(obj.getName());
 
-			final org.apache.bcel.classfile.InnerClass[] bcelInnerClasses = obj
-					.getInnerClasses();
+			final InnerClass[] bcelInnerClasses = obj.getInnerClasses();
 			attr.d_numInnerClasses = bcelInnerClasses.length;
 			attr.d_innerClasses = new int[bcelInnerClasses.length * 4];
 
 			for (int i = 0; i < bcelInnerClasses.length; i++) {
-				final org.apache.bcel.classfile.InnerClass ic = bcelInnerClasses[i];
+				final InnerClass ic = bcelInnerClasses[i];
 
 				// Re-add constants into CFParse ConstantPool
 				int innerClassIdx = 0;
@@ -433,50 +443,59 @@ public class CFParseBCELConvertorVisitor {
 			this.currentClass.setName(obj.getClassName());
 			this.currentClass.setAccess(obj.getAccessFlags());
 
-			// Now manually visit attributes
+			// Set major/minor version numbers
+			this.currentClass.setMajor(obj.getMajor());
+			this.currentClass.setMinor(obj.getMinor());
+
+			// Set superclass
+			this.currentClass.setSuperName(obj.getSuperclassName());
+
+			// Set interfaces
+			final InterfaceList interfaceList = this.currentClass
+					.getInterfaces();
+			final String[] interfaceNames = obj.getInterfaceNames();
+			for (int i = 0; i < interfaceNames.length; i++) {
+				final String interfaceName = interfaceNames[i];
+				interfaceList.add(interfaceName);
+			}
+
 			for (final Attribute attr : obj.getAttributes()) {
-				attr.accept(this); // Accept this visitor
+				attr.accept(this);
 			}
 
-			for (Field field : obj.getFields()) {
-				field.accept(this); // <-- THIS calls visitField manually!
+			for (final Field field : obj.getFields()) {
+				field.accept(this);
 			}
 
-			for (Method method : obj.getMethods()) {
+			for (final Method method : obj.getMethods()) {
 				method.accept(this);
 			}
-
 		}
 
 		@Override
 		public void visitLineNumber(final LineNumber obj) {
-			this.currentClass.getAttrs().add("LineNumber");
-
+			// Nothing to do?
 		}
 
 		@Override
 		public void visitLineNumberTable(final LineNumberTable obj) {
-			this.currentClass.getAttrs().add("LineNumberTable");
-
+			this.currentClass.getAttrs().add(obj.getName());
 		}
 
 		@Override
 		public void visitLocalVariable(final LocalVariable obj) {
-			this.currentClass.getAttrs().add("LocalVariable");
-
+			this.currentClass.getAttrs().add(obj.getName());
 		}
 
 		@Override
 		public void visitLocalVariableTable(final LocalVariableTable obj) {
-			this.currentClass.getAttrs().add("LocalVariableTable");
-
+			this.currentClass.getAttrs().add(obj.getName());
 		}
 
 		@Override
 		public void visitLocalVariableTypeTable(
 				final LocalVariableTypeTable obj) {
-			this.currentClass.getAttrs().add("LocalVariableTypeTable");
-
+			this.currentClass.getAttrs().add(obj.getName());
 		}
 
 		@Override
@@ -485,7 +504,8 @@ public class CFParseBCELConvertorVisitor {
 			final StringBuilder methodSignature = new StringBuilder();
 
 			if (obj.getAccessFlags() > 0) {
-				methodSignature.append(Modifier.toString(obj.getAccessFlags()));
+				methodSignature
+						.append(Access.getAsString(obj.getAccessFlags()));
 				methodSignature.append(' ');
 			}
 
@@ -505,24 +525,32 @@ public class CFParseBCELConvertorVisitor {
 			methodSignature.append(')');
 
 			// 2. Criar o MethodInfo via .add(signature)
-			MethodInfo methodInfo = this.currentClass.getMethods()
+			final MethodInfo methodInfo = this.currentClass.getMethods()
 					.add(methodSignature.toString());
 
 			methodInfo.setAccess(obj.getAccessFlags());
+			/*
+			// Luca 25/12/01: Synthetic
+			if (obj.isSynthetic()) {
+				methodInfo.getAttrs().add("Synthetic");
+				methodInfo.setAccess(
+						methodInfo.getAccess() | Access.ACC_SYNTHETIC);
+			}
+			*/
 
-			// 3. if code exist add it
+			// 3. If code exist, add it
 			if (obj.getCode() != null) {
-				CodeAttrInfo codeAttrInfo = (CodeAttrInfo) methodInfo.getAttrs()
-						.add("Code");
-				// Henrique 4/29/2025 IMPORTANT , needs to clear the previous code,
-				//		        
+				final CodeAttrInfo codeAttrInfo = (CodeAttrInfo) methodInfo
+						.getAttrs().add("Code");
+				// Henrique 25/04/29
+				// IMPORTANT, must clear the previous code,
 				methodInfo.getAttrs().remove("Code");
 
 				codeAttrInfo.setMaxStack(obj.getCode().getMaxStack());
 				codeAttrInfo.setMaxLocals(obj.getCode().getMaxLocals());
 				codeAttrInfo.setCode(obj.getCode().getCode());
 
-				// add attributes if exist
+				// Add attributes if exist
 				for (Attribute innerAttr : obj.getCode().getAttributes()) {
 					AttrInfo cfAttr = codeAttrInfo.getAttrs()
 							.add(innerAttr.getName());
@@ -543,142 +571,146 @@ public class CFParseBCELConvertorVisitor {
 					}
 					else if (innerAttr instanceof StackMap bcelStackMap
 							&& cfAttr instanceof StackMapTableAttrInfo cfStackMap) {
-
 						cfStackMap.setFromBCEL(bcelStackMap);
-
 					}
 				}
-
 			}
 
-			// 4. add Exceptions if exists
+			// 4. If exceptions exists, add them
 			if (obj.getExceptionTable() != null
 					&& obj.getExceptionTable().getLength() > 0) {
+
 				try {
-					int[] bcelIndexes = obj.getExceptionTable()
+					final int[] bcelIndexes = obj.getExceptionTable()
 							.getExceptionIndexTable();
-					String[] classNames = Arrays.stream(bcelIndexes)
+					final String[] classNames = Arrays.stream(bcelIndexes)
 							.mapToObj(i -> obj.getConstantPool()
 									.getConstantString(i, Const.CONSTANT_Class))
 							.toArray(String[]::new);
-
-					int[] cfparseIndexes = Arrays.stream(classNames)
+					final int[] cfparseIndexes = Arrays.stream(classNames)
 							.mapToInt(this.currentClass.getCP()::addClass)
 							.toArray();
-
-					ExceptionsAttrInfo exceptionsAttr = (ExceptionsAttrInfo) methodInfo
+					final ExceptionsAttrInfo exceptionsAttr = (ExceptionsAttrInfo) methodInfo
 							.getAttrs().add("Exceptions");
 
-					ByteArrayOutputStream baos = new ByteArrayOutputStream();
-					DataOutputStream out = new DataOutputStream(baos);
-
-					out.writeInt(2 + 2 * cfparseIndexes.length);
-					out.writeShort(cfparseIndexes.length);
-					for (int index1 : cfparseIndexes) {
-						out.writeShort(index1);
+					final ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+					final DataOutputStream dataOut = new DataOutputStream(
+							byteOut);
+					dataOut.writeInt(2 + 2 * cfparseIndexes.length);
+					dataOut.writeShort(cfparseIndexes.length);
+					for (final int index : cfparseIndexes) {
+						dataOut.writeShort(index);
 					}
-					out.close();
+					dataOut.close();
 
-					ByteArrayInputStream bais = new ByteArrayInputStream(
-							baos.toByteArray());
-					DataInputStream in = new DataInputStream(bais);
-					exceptionsAttr.read(in);
-					in.close();
-
+					final ByteArrayInputStream byteIn = new ByteArrayInputStream(
+							byteOut.toByteArray());
+					final DataInputStream dataIn = new DataInputStream(byteIn);
+					exceptionsAttr.read(dataIn);
+					dataIn.close();
 				}
-				catch (IOException e) {
-					e.printStackTrace(
-							util.io.ProxyConsole.getInstance().errorOutput());
+				catch (final IOException ioe) {
+					ioe.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
 				}
 			}
 
-			// 5. add Signature if exists
+			// 5. If signature exists, add it
 			if (obj.getGenericSignature() != null) {
 				try {
-					SignatureAttrInfo sigAttr = (SignatureAttrInfo) methodInfo
+					final SignatureAttrInfo sigAttr = (SignatureAttrInfo) methodInfo
 							.getAttrs().add("Signature");
 
-					ByteArrayOutputStream baos = new ByteArrayOutputStream();
-					DataOutputStream out = new DataOutputStream(baos);
-
-					int sigIndex = this.currentClass.getCP()
+					final ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+					final DataOutputStream dataOut = new DataOutputStream(
+							byteOut);
+					final int sigIndex = this.currentClass.getCP()
 							.addUtf8(obj.getGenericSignature());
-					out.writeInt(2);
-					out.writeShort(sigIndex);
-					out.close();
+					dataOut.writeInt(2);
+					dataOut.writeShort(sigIndex);
+					dataOut.close();
 
-					ByteArrayInputStream bais = new ByteArrayInputStream(
-							baos.toByteArray());
-					DataInputStream in = new DataInputStream(bais);
-					sigAttr.read(in);
-					in.close();
+					final ByteArrayInputStream byteIn = new ByteArrayInputStream(
+							byteOut.toByteArray());
+					final DataInputStream dataIn = new DataInputStream(byteIn);
+					sigAttr.read(dataIn);
+					dataIn.close();
 				}
-				catch (IOException e) {
-					e.printStackTrace(
-							util.io.ProxyConsole.getInstance().errorOutput());
+				catch (final IOException ioe) {
+					ioe.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
 				}
 			}
 
-			// 6. add RuntimeInvisibleAnnotations if exists
+			// 6. If RuntimeInvisibleAnnotations exist, add them
+			// TODO Could this piece of code be unified with 
+			// JavaClassVisitor.visitAnnotation(Annotations)?
 			if (obj.getAnnotationEntries() != null
 					&& obj.getAnnotationEntries().length > 0) {
 				try {
-					RuntimeInvisibleAnnotationsAttrInfo annotationAttr = (RuntimeInvisibleAnnotationsAttrInfo) methodInfo
-							.getAttrs().add("RuntimeInvisibleAnnotations");
-
-					ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
-					DataOutputStream dataOut = new DataOutputStream(byteOut);
-
-					int numAnnotations = obj.getAnnotationEntries().length;
+					final ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+					final DataOutputStream dataOut = new DataOutputStream(
+							byteOut);
+					final int numAnnotations = obj
+							.getAnnotationEntries().length;
 					dataOut.writeInt(2 + numAnnotations * 4);
 					dataOut.writeShort(numAnnotations);
 
-					for (org.apache.bcel.classfile.AnnotationEntry entry : obj
+					for (final AnnotationEntry entry : obj
 							.getAnnotationEntries()) {
-						int typeIndex = this.currentClass.getCP()
+						final int typeIndex = this.currentClass.getCP()
 								.addUtf8(entry.getAnnotationType());
 						dataOut.writeShort(typeIndex);
 						dataOut.writeShort(0); // zero element_value_pairs
 					}
-
 					dataOut.close();
 
-					ByteArrayInputStream byteIn = new ByteArrayInputStream(
+					final RuntimeInvisibleAnnotationsAttrInfo annotationAttr = (RuntimeInvisibleAnnotationsAttrInfo) methodInfo
+							.getAttrs().add("RuntimeInvisibleAnnotations");
+					final ByteArrayInputStream byteIn = new ByteArrayInputStream(
 							byteOut.toByteArray());
-					DataInputStream dataIn = new DataInputStream(byteIn);
+					final DataInputStream dataIn = new DataInputStream(byteIn);
 					annotationAttr.read(dataIn);
 					dataIn.close();
 				}
-				catch (IOException e) {
-					e.printStackTrace(
-							util.io.ProxyConsole.getInstance().errorOutput());
+				catch (final IOException ioe) {
+					ioe.printStackTrace(
+							ProxyConsole.getInstance().errorOutput());
 				}
 			}
-
 		}
 
 		@Override
 		public void visitMethodParameters(final MethodParameters obj) {
-			// TODO Auto-generated method stub
+		}
 
+		@Override
+		public void visitNestHost(final NestHost obj) {
+			this.visitUnknown((Attribute) obj);
+		}
+
+		@Override
+		public void visitNestMembers(final NestMembers obj) {
+			final NestMembersAttrInfo attr = (NestMembersAttrInfo) this.currentClass
+					.getAttrs().add(obj.getName());
+			attr.setMembers(obj.getClasses());
 		}
 
 		@Override
 		public void visitParameterAnnotation(final ParameterAnnotations obj) {
-			// TODO Auto-generated method stub
-
 		}
 
 		@Override
 		public void visitParameterAnnotationEntry(
 				final ParameterAnnotationEntry obj) {
-			// TODO Auto-generated method stub
+		}
 
+		public void visitRecord(final Record obj) {
+			this.visitUnknown((Attribute) obj);
 		}
 
 		@Override
 		public void visitSignature(final Signature obj) {
-
 			final String signatureString = obj.getSignature();
 
 			int sigIndex = this.currentClass.getCP().find(1, signatureString);
@@ -687,49 +719,76 @@ public class CFParseBCELConvertorVisitor {
 			}
 
 			final SignatureAttrInfo sigAttrInfo = (SignatureAttrInfo) this.currentClass
-					.getAttrs().add("Signature");
+					.getAttrs().add(obj.getName());
 			sigAttrInfo.set(sigIndex);
 		}
 
 		@Override
-		public void visitNestMembers(final NestMembers obj) {
-
-			final NestMembersAttrInfo attr = (NestMembersAttrInfo) this.currentClass
-					.getAttrs().add("NestMembers");
-
-			attr.setMembers(obj.getClasses());
-		}
-
-		@Override
 		public void visitSourceFile(final SourceFile obj) {
-
 			final String fileName = obj.getSourceFileName();
 			final SourceFileAttrInfo sourceFileAttrInfo = (SourceFileAttrInfo) this.currentClass
-					.getAttrs().add("SourceFile");
+					.getAttrs().add(obj.getName());
 			sourceFileAttrInfo.set(fileName);
 		}
 
 		@Override
 		public void visitStackMap(final StackMap obj) {
-			// TODO Auto-generated method stub
-			this.currentClass.getAttrs().add("StackMap");
-
+			this.currentClass.getAttrs().add(obj.getName());
 		}
 
 		@Override
 		public void visitStackMapEntry(final StackMapEntry obj) {
-			// TODO Auto-generated method stub
-			this.currentClass.getAttrs().add("StackMapEntry");
+			// Nothing to do?
 		}
 
 		@Override
 		public void visitSynthetic(final Synthetic obj) {
-			this.currentClass.getAttrs().add("Synthetic");
+			this.currentClass.getAttrs().add(obj.getName());
+		}
+
+		private void visitUnknown(final Attribute obj) {
+			try {
+				final ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+				final DataOutputStream dataOut = new DataOutputStream(byteOut);
+				obj.dump(dataOut);
+				dataOut.close();
+
+				final UnknownAttrInfo attr = (UnknownAttrInfo) this.currentClass
+						.getAttrs().add(obj.getName());
+				final ByteArrayInputStream byteIn = new ByteArrayInputStream(
+						byteOut.toByteArray(), 2, byteOut.size());
+				final DataInputStream dataIn = new DataInputStream(byteIn);
+				attr.read(dataIn);
+				dataIn.close();
+			}
+			catch (final IOException ioe) {
+				ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			}
 		}
 
 		@Override
 		public void visitUnknown(final Unknown obj) {
-			this.currentClass.getAttrs().add(obj.getName());
+			/*
+			try {
+				final byte[] bytes = obj.getBytes();
+				final ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+				final DataOutputStream dataOut = new DataOutputStream(byteOut);
+				dataOut.writeInt(bytes.length);
+				dataOut.write(bytes);
+			
+				final UnknownAttrInfo attr = (UnknownAttrInfo) this.currentClass
+						.getAttrs().add(obj.getName());
+				final ByteArrayInputStream byteIn = new ByteArrayInputStream(
+						byteOut.toByteArray());
+				final DataInputStream dataIn = new DataInputStream(byteIn);
+				attr.read(dataIn);
+				dataIn.close();
+			}
+			catch (final IOException ioe) {
+				ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
+			}
+			*/
+			this.visitUnknown((Attribute) obj);
 		}
 	}
 

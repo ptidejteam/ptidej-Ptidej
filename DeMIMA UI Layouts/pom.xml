@@ -77,7 +77,6 @@
 	</build>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
 			<artifactId>cpl-core</artifactId>
@@ -97,17 +96,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.12.0</version>
-		</dependency>
-
-		<dependency>
 			<groupId>net.sf.trove4j</groupId>
 			<artifactId>trove4j</artifactId>
 			<version>3.0.3</version>
 		</dependency>
-
 	</dependencies>
-
 </project>
