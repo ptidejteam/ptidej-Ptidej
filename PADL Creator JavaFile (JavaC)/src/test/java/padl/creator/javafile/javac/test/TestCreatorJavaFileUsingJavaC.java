@@ -22,7 +22,7 @@ package padl.creator.javafile.javac.test;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
-import padl.creator.javafile.javac.test.simple.Test1;
+import padl.creator.javafile.javac.test.simple.SanityTest;
 
 public class TestCreatorJavaFileUsingJavaC extends TestSuite {
 	public TestCreatorJavaFileUsingJavaC() {
@@ -36,7 +36,7 @@ public class TestCreatorJavaFileUsingJavaC extends TestSuite {
 	public static Test suite() {
 		final TestCreatorJavaFileUsingJavaC suite =
 			new TestCreatorJavaFileUsingJavaC();
-		suite.addTestSuite(Test1.class);
+		suite.addTestSuite(SanityTest.class);
 		return suite;
 	}
 }

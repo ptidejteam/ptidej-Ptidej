@@ -12,23 +12,23 @@ package pom.test;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
-import pom.test.classfile.general.TestClassPrimitives;
-import pom.test.classfile.general.TestCouplingCohesionMetrics;
-import pom.test.classfile.general.TestLoadJDK10;
-import pom.test.classfile.general.TestMethodPrimitives;
-import pom.test.classfile.general.TestMetricRepository;
-import pom.test.classfile.general.TestNMIandNMOwithPattern4J;
-import pom.test.classfile.general.TestOperators;
-import pom.test.classfile.general.TestUnaryMetrics;
-import pom.test.classfile.specific.TestAID;
-import pom.test.classfile.specific.TestCBO;
-import pom.test.classfile.specific.TestCache;
-import pom.test.classfile.specific.TestDIT;
-import pom.test.classfile.specific.TestNMI;
-import pom.test.classfile.specific.TestNOC;
-import pom.test.classfile.specific.TestUnaryCBO;
-import pom.test.classfile.specific.TestWMC;
-import pom.test.classfile.specific.TestWMC1;
+import pom.test.classfile.general.ClassPrimitivesTest;
+import pom.test.classfile.general.CouplingCohesionMetricsTest;
+import pom.test.classfile.general.JDK10LoadTest;
+import pom.test.classfile.general.MethodPrimitivesTest;
+import pom.test.classfile.general.MetricRepositoryTest;
+import pom.test.classfile.general.Pattern4JNMIandNMOTest;
+import pom.test.classfile.general.OperatorsTest;
+import pom.test.classfile.general.UnaryMetricsTest;
+import pom.test.classfile.specific.AIDTest;
+import pom.test.classfile.specific.CBOTest;
+import pom.test.classfile.specific.CacheTest;
+import pom.test.classfile.specific.DITTest;
+import pom.test.classfile.specific.NMITest;
+import pom.test.classfile.specific.NOCTest;
+import pom.test.classfile.specific.UnaryCBOTest;
+import pom.test.classfile.specific.WMC1Test;
+import pom.test.classfile.specific.WMC2Test;
 import util.lang.MavenTestGuard;
 
 /**
@@ -52,10 +52,10 @@ public class TestPOM extends TestSuite {
 	public static Test suite() {
 		final TestPOM suite = new TestPOM();
 
-		suite.addTestSuite(TestCache.class);
+		suite.addTestSuite(CacheTest.class);
 
-		suite.addTestSuite(TestClassPrimitives.class);
-		suite.addTestSuite(TestCouplingCohesionMetrics.class);
+		suite.addTestSuite(ClassPrimitivesTest.class);
+		suite.addTestSuite(CouplingCohesionMetricsTest.class);
 		// Yann 25/11/10: Long, too long!
 		// This test takes too long and is not really
 		// necessary to run in GitHub or elsewhere
@@ -64,21 +64,21 @@ public class TestPOM extends TestSuite {
 			// TODO Re-enable
 			// suite.addTestSuite(TestLoadJDK10.class);
 		}
-		suite.addTestSuite(TestMethodPrimitives.class);
-		suite.addTestSuite(TestMetricRepository.class);
-		suite.addTestSuite(TestNMIandNMOwithPattern4J.class);
-		suite.addTestSuite(TestOperators.class);
-		suite.addTestSuite(TestUnaryMetrics.class);
+		suite.addTestSuite(MethodPrimitivesTest.class);
+		suite.addTestSuite(MetricRepositoryTest.class);
+		suite.addTestSuite(Pattern4JNMIandNMOTest.class);
+		suite.addTestSuite(OperatorsTest.class);
+		suite.addTestSuite(UnaryMetricsTest.class);
 
-		suite.addTestSuite(TestAID.class);
-		suite.addTestSuite(TestCache.class);
-		suite.addTestSuite(TestCBO.class);
-		suite.addTestSuite(TestDIT.class);
-		suite.addTestSuite(TestNMI.class);
-		suite.addTestSuite(TestNOC.class);
-		suite.addTestSuite(TestUnaryCBO.class);
-		suite.addTestSuite(TestWMC.class);
-		suite.addTestSuite(TestWMC1.class);
+		suite.addTestSuite(AIDTest.class);
+		suite.addTestSuite(CacheTest.class);
+		suite.addTestSuite(CBOTest.class);
+		suite.addTestSuite(DITTest.class);
+		suite.addTestSuite(NMITest.class);
+		suite.addTestSuite(NOCTest.class);
+		suite.addTestSuite(UnaryCBOTest.class);
+		suite.addTestSuite(WMC1Test.class);
+		suite.addTestSuite(WMC2Test.class);
 
 		return suite;
 	}

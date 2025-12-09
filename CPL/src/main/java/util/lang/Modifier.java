@@ -10,6 +10,12 @@
  ******************************************************************************/
 package util.lang;
 
+/**
+ * @deprecated
+ * This class doesn't include the latest modifiers
+ * <p> Use {@link com.ibm.toad.cfparse.utils.Access} instead.
+ */
+@Deprecated(forRemoval = true)
 public class Modifier {
 	public static final int ABSTRACT = 0x00000400;
 	public static final int DEFAULT = 0x00000000;

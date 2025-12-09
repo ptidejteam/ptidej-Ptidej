@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.ptidej.padl</groupId>
-	<artifactId>padl-creator-javafile-classfile</artifactId>
+	<artifactId>padl-creator-javafile-classfile-tests</artifactId>
 	<name>PADL Creator JavaFile-ClassFile Tests</name>
 
 	<parent>
@@ -54,18 +54,28 @@
 						--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
 					</argLine>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/TestCreatorJavaFilevsClassFile.java</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
-
 		<!-- Test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.cpl</groupId>
+			<artifactId>cpl-core</artifactId>
+			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -112,7 +122,5 @@
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

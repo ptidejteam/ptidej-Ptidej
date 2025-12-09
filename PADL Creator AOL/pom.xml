@@ -45,9 +45,7 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>TestCreatorAOL.java</exclude>
-						<!-- TODO Make this test pass -->
-						<exclude>TestPierreNCode.java</exclude>
+						<exclude>**/TestCreatorAOL.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
@@ -55,7 +53,6 @@
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
@@ -75,12 +72,6 @@
 			<version>1.0.0</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.12.0</version>
-		</dependency>
-
 		<!-- Test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -88,7 +79,5 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

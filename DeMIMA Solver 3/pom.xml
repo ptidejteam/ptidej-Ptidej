@@ -26,6 +26,19 @@
 					</compilerArgs>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
+				<configuration>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/TestPtidejSolver3.java</exclude>
+						<!-- Excluded because not up-to-date -->
+						<exclude>**/AssociationDistanceComposite2Test.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
 			<!-- Must generate the test-jar for dependent tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

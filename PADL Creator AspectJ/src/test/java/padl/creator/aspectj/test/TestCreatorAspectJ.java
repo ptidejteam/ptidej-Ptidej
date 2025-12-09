@@ -27,9 +27,11 @@ public class TestCreatorAspectJ extends TestSuite {
 
 	public static Test suite() {
 		final TestCreatorAspectJ suite = new TestCreatorAspectJ();
-		suite.addTestSuite(TestOO.class);
-		suite.addTestSuite(TestAO.class);
-		suite.addTestSuite(TestModelCreation.class);
+		
+		suite.addTestSuite(AOTest.class);
+		suite.addTestSuite(ModelCreationTest.class);
+		suite.addTestSuite(OOTest.class);
+		
 		return suite;
 	}
 }

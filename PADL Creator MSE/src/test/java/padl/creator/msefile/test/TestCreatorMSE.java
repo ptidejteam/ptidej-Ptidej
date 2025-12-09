@@ -7,8 +7,8 @@ public class TestCreatorMSE extends TestSuite {
 	public static Test suite() {
 		final TestCreatorMSE suite = new TestCreatorMSE();
 
-		suite.addTestSuite(Test1.class);
-		suite.addTestSuite(Test2.class);
+		suite.addTestSuite(Sanity1Test.class);
+		suite.addTestSuite(Sanity2Test.class);
 		
 		return suite;
 	}

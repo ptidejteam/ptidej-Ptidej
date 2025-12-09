@@ -14,7 +14,6 @@ import java.io.PrintWriter;
 
 import org.junit.Assert;
 
-import junit.framework.TestCase;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.analysis.repository.ModelAnnotatorLOCAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
@@ -32,7 +31,7 @@ import util.io.ProxyDisk;
  * @author Naouel Moha
  * @since  2005/12/04
  */
-public final class CodeSmellDetectionCalleronArgoUML extends TestCase {
+public final class CodeSmellDetectionCalleronArgoUML {
 	private static IIdiomLevelModel IdiomLevelModel;
 	private static ModelAnnotatorLOCAnalysis Annotator;
 	//	private static MetricRepository Metrics;
@@ -42,7 +41,7 @@ public final class CodeSmellDetectionCalleronArgoUML extends TestCase {
 			.substring(CodeSmellDetectionCalleronArgoUML.MAIN_PATH.length());
 
 	public CodeSmellDetectionCalleronArgoUML(final String name) {
-		super(name);
+		// super(name);
 	}
 
 	protected void setUp() throws Exception {

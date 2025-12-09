@@ -77,8 +77,7 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>TestDup.java</exclude>
-						<exclude>TestNew.java</exclude>
+						<exclude>**/TestPADLAnalyses.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
@@ -108,7 +107,6 @@
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
@@ -126,12 +124,6 @@
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-design-motifs</artifactId>
 			<version>1.0.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.bcel</groupId>
-			<artifactId>bcel</artifactId>
-			<version>6.7.0</version>
 		</dependency>
 
 		<dependency>
@@ -170,7 +162,5 @@
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

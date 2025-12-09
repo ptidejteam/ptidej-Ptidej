@@ -425,26 +425,41 @@ public final class FieldInfo {
 
 	public String toString() {
 		final StringBuffer stringbuffer = new StringBuffer();
+
 		if (Access.isPublic(this.d_accessFlags)) {
 			stringbuffer.append("public ");
 		}
-		else if (Access.isPrivate(this.d_accessFlags)) {
+
+		if (Access.isPrivate(this.d_accessFlags)) {
 			stringbuffer.append("private ");
 		}
-		else if (Access.isProtected(this.d_accessFlags)) {
+
+		if (Access.isProtected(this.d_accessFlags)) {
 			stringbuffer.append("protected ");
 		}
-		else if (Access.isFinal(this.d_accessFlags)) {
-			stringbuffer.append("final ");
-		}
-		else if (Access.isStatic(this.d_accessFlags)) {
+
+		if (Access.isStatic(this.d_accessFlags)) {
 			stringbuffer.append("static ");
 		}
-		else if (Access.isVolatile(this.d_accessFlags)) {
+
+		if (Access.isFinal(this.d_accessFlags)) {
+			stringbuffer.append("final ");
+		}
+
+		if (Access.isVolatile(this.d_accessFlags)) {
 			stringbuffer.append("volatile ");
 		}
-		else if (Access.isTransient(this.d_accessFlags)) {
+
+		if (Access.isTransient(this.d_accessFlags)) {
 			stringbuffer.append("transient ");
+		}
+
+		if (Access.isSynchronized(this.d_accessFlags)) {
+			stringbuffer.append("synthetic ");
+		}
+
+		if (Access.isEnum(this.d_accessFlags)) {
+			stringbuffer.append("enum ");
 		}
 
 		final String s = this.d_cp.getAsString(this.d_idxDescriptor);

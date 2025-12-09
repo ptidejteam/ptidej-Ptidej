@@ -51,6 +51,10 @@
 						--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
 					</argLine>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/TestCreatorJavaFileUsingJavaCParser.java</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 			<!-- Must generate the test-jar for dependent tests -->

@@ -47,7 +47,7 @@
 				<version>3.5.3</version>
 				<configuration>
 					<excludes>
-						<exclude>TestCaffeine.java</exclude>
+						<exclude>**/TestCaffeine.java</exclude>
 					</excludes>
 					<includes>
 						<include>
