@@ -73,12 +73,30 @@ public abstract class FirstClassEntity extends Constituent
 		super(actorID);
 	}
 	public void accept(final IVisitor visitor) {
+		if (visitor instanceof padl.visitor.ISelectiveVisitor) {
+			this.acceptSelective((padl.visitor.ISelectiveVisitor) visitor);
+		}
+		else {
+			this.accept(visitor, "open");
+			final Iterator iterator = this.getConcurrentIteratorOnConstituents();
+			while (iterator.hasNext()) {
+				final IConstituent constituent = (IConstituent) iterator.next();
+				constituent.accept(visitor);
+			}
+			this.accept(visitor, "close");
+		}
+	}
+	private void acceptSelective(final padl.visitor.ISelectiveVisitor visitor) {
+		if (!visitor.shouldVisit(this)) {
+			return;
+		}
 		this.accept(visitor, "open");
-		final Iterator iterator = this.getConcurrentIteratorOnConstituents();
-		while (iterator.hasNext()) {
-			final IConstituent constituent = (IConstituent) iterator.next();
-			// System.out.println(constituent.toString());
-			constituent.accept(visitor);
+		if (visitor.shouldDescend(this)) {
+			final Iterator iterator = this.getConcurrentIteratorOnConstituents();
+			while (iterator.hasNext()) {
+				final IConstituent constituent = (IConstituent) iterator.next();
+				constituent.accept(visitor);
+			}
 		}
 		this.accept(visitor, "close");
 	}
