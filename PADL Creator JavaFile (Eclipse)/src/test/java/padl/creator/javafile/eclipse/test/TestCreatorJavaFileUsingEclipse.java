@@ -61,8 +61,8 @@ import padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassInstanceField
 import padl.creator.javafile.eclipse.test.methodinvocation.MI_ClassInstanceTest;
 import padl.creator.javafile.eclipse.test.methodinvocation.MI_Composite4AbstractDocumentTest;
 import padl.creator.javafile.eclipse.test.methodinvocation.MI_FieldAccessTest;
-import padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceClassTest;
 import padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceClass2Test;
+import padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceClassTest;
 import padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceCreationTest;
 import padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceInstanceFieldTest;
 import padl.creator.javafile.eclipse.test.methodinvocation.MI_InstanceInstanceTest;
@@ -75,7 +75,8 @@ import padl.kernel.impl.MethodInvocationTest;
 
 public class TestCreatorJavaFileUsingEclipse extends TestSuite {
 	public static Test suite() {
-		final TestSuite suite = new TestSuite();
+		final TestCreatorJavaFileUsingEclipse suite = new TestCreatorJavaFileUsingEclipse();
+		suite.setName(TestCreatorJavaFileUsingEclipse.class.getName());
 
 		suite.addTestSuite(DuplicationTest.class);
 		suite.addTestSuite(ExclusionTest.class);

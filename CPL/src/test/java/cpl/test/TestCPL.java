@@ -38,19 +38,9 @@ import util.lang.test.ReflectiveInstantiationTest;
 import util.lang.test.SuperNameConversionTest;
 
 public class TestCPL extends TestSuite {
-	public TestCPL() {
-	}
-
-	public TestCPL(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestCPL(final String name) {
-		super(name);
-	}
-
 	public static Test suite() {
 		final TestCPL suite = new TestCPL();
+		suite.setName(TestCPL.class.getName());
 
 		suite.addTestSuite(ConstantPoolConversion1Test.class);
 		suite.addTestSuite(GetDescConversionTest.class);

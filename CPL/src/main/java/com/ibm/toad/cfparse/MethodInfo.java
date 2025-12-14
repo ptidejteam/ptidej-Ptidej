@@ -15,6 +15,8 @@ import com.ibm.toad.cfparse.utils.Access;
 import com.ibm.toad.cfparse.utils.BadJavaError;
 import com.ibm.toad.cfparse.utils.CPUtils;
 
+import util.io.ProxyConsole;
+
 public final class MethodInfo {
 	private ConstantPool d_cp;
 	private int d_accessFlags;
@@ -237,7 +239,8 @@ public final class MethodInfo {
 
 		Vector var5 = new Vector();
 		if (var4.charAt(0) != '(') {
-			System.out.println("Bad parameter String");
+			ProxyConsole.getInstance().errorOutput()
+					.println("Bad parameter string");
 		}
 
 		int var6 = var4.indexOf(")");

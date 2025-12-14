@@ -22,19 +22,9 @@ import ptidej.solver.fingerprint.test.simple.Composition3Test;
 import ptidej.solver.fingerprint.test.simple.Composition4Test;
 
 public final class TestPtidejSolverFingerprints extends TestSuite {
-	public TestPtidejSolverFingerprints() {
-	}
-
-	public TestPtidejSolverFingerprints(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestPtidejSolverFingerprints(final String name) {
-		super(name);
-	}
-
 	public static Test suite() {
 		final TestPtidejSolverFingerprints suite = new TestPtidejSolverFingerprints();
+		suite.setName(TestPtidejSolverFingerprints.class.getName());
 
 		suite.addTestSuite(CompositeComposite2ComparisonTest.class);
 		// The following test takes a long time...

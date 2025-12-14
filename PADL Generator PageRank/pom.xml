@@ -26,7 +26,18 @@
 					</compilerArgs>
 				</configuration>
 			</plugin>
-			<!-- Must generate the test-jar for dependent tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
+				<configuration>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/*Test.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<!-- Must generate the test-jar for the tests in All Ptidej Tests and others -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -39,24 +50,10 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.5.3</version>
-				<configuration>
-					<excludes>
-						<!-- Excluded on purpose -->
-						<exclude>**/TestPADLGeneratorPageRank.java</exclude>
-						<!-- TODO Fix and re-enable this test -->
-						<exclude>**/SanityTest.java</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
@@ -96,7 +93,5 @@
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

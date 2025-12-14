@@ -126,7 +126,8 @@ public class CFParseBCELConvertorAdhoc {
 						(InnerClasses) attribute, aClassFile);
 			}
 			else {
-				System.out.println("Nothing to do!?");
+				ProxyConsole.getInstance().debugOutput()
+						.println("Nothing to do!?");
 			}
 		}
 	}

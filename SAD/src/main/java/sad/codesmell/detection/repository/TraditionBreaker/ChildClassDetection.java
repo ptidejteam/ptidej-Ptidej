@@ -40,7 +40,6 @@ import sad.codesmell.detection.ICodeSmellDetection;
 import sad.codesmell.detection.repository.AbstractCodeSmellDetection;
 import sad.kernel.impl.CodeSmell;
 import sad.util.BoxPlot;
-import util.lang.Modifier;
 import util.io.ProxyConsole;
 
 /**

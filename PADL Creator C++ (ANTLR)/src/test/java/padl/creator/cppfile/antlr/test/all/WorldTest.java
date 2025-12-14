@@ -12,6 +12,8 @@ package padl.creator.cppfile.antlr.test.all;
 
 import org.junit.Assert;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import net.jcip.annotations.NotThreadSafe;
 import padl.creator.cppfile.antlr.CPPCreator;
 import padl.creator.cppfile.antlr.test.CppPrimitive;
@@ -29,7 +31,6 @@ import padl.kernel.cpp.antlr.IGlobalField;
 import padl.kernel.cpp.antlr.IStructure;
 import padl.kernel.exception.CreationException;
 import padl.util.Util;
-import util.lang.Modifier;
 
 /**
  * @author robidose
@@ -74,14 +75,14 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Class name", "Game",
 				((IClass) WorldTest.FirstClassEntities[0]).getDisplayName());
 
-		Assert.assertEquals("Class type", Modifier.PUBLIC,
+		Assert.assertEquals("Class type", Access.ACC_PUBLIC,
 				((IClass) WorldTest.FirstClassEntities[0]).getVisibility());
 
 		//---------------------------------------
 		Assert.assertEquals("Class name", "Team",
 				((IClass) WorldTest.FirstClassEntities[1]).getDisplayName());
 
-		Assert.assertEquals("Class type", Modifier.PUBLIC,
+		Assert.assertEquals("Class type", Access.ACC_PUBLIC,
 				((IClass) WorldTest.FirstClassEntities[1]).getVisibility());
 	}
 
@@ -89,7 +90,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Enum name", "continent",
 				((IEnum) WorldTest.FirstClassEntities[2]).getDisplayName());
 
-		Assert.assertEquals("Enum type", Modifier.PUBLIC,
+		Assert.assertEquals("Enum type", Access.ACC_PUBLIC,
 				((IEnum) WorldTest.FirstClassEntities[2]).getVisibility());
 	}
 
@@ -98,7 +99,7 @@ public class WorldTest extends CppPrimitive {
 				((IStructure) WorldTest.FirstClassEntities[4])
 						.getDisplayName());
 
-		Assert.assertEquals("Struct type", Modifier.PUBLIC,
+		Assert.assertEquals("Struct type", Access.ACC_PUBLIC,
 				((IStructure) WorldTest.FirstClassEntities[4]).getVisibility());
 	}
 
@@ -114,7 +115,7 @@ public class WorldTest extends CppPrimitive {
 		// TODO Is this a flaky test?
 		// It test successfully in Eclipse but reports 2 (i.e., PRIVATE) in Maven
 		/*
-		Assert.assertEquals("GlobalField access", Modifier.PUBLIC,
+		Assert.assertEquals("GlobalField access", Access.ACC_PUBLIC,
 				((IGlobalField) TestWorld.FirstClassEntities[3])
 						.getVisibility());
 		*/
@@ -125,7 +126,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Constr Name", "Game",
 				WorldTest.Elements1[2].getDisplayName());
 
-		Assert.assertEquals("Constr Access", Modifier.PUBLIC,
+		Assert.assertEquals("Constr Access", Access.ACC_PUBLIC,
 				((IConstructor) WorldTest.Elements1[2]).getVisibility());
 
 		// TODO: Fix the bug!
@@ -138,7 +139,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Constr Name", "Game",
 				WorldTest.Elements1[3].getDisplayName());
 
-		Assert.assertEquals("Constr Access", Modifier.PUBLIC,
+		Assert.assertEquals("Constr Access", Access.ACC_PUBLIC,
 				((IConstructor) WorldTest.Elements1[3]).getVisibility());
 
 		// TODO: Fix the bug!
@@ -156,7 +157,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Method Return Type", "Team *",
 				((IMethod) WorldTest.Elements1[6]).getDisplayReturnType());
 
-		Assert.assertEquals("Method Access", Modifier.PUBLIC,
+		Assert.assertEquals("Method Access", Access.ACC_PUBLIC,
 				((IMethod) WorldTest.Elements1[6]).getVisibility());
 
 		Assert.assertEquals("Method # Parameters", 0,
@@ -169,7 +170,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Method Return Type", "Team *",
 				((IMethod) WorldTest.Elements1[8]).getDisplayReturnType());
 
-		Assert.assertEquals("Method Access", Modifier.PUBLIC,
+		Assert.assertEquals("Method Access", Access.ACC_PUBLIC,
 				((IMethod) WorldTest.Elements1[8]).getVisibility());
 
 		Assert.assertEquals("Method # Parameters", 0,
@@ -182,7 +183,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Method Return Type", "Team *",
 				((IMethod) WorldTest.Elements1[9]).getDisplayReturnType());
 
-		Assert.assertEquals("Method Access", Modifier.PUBLIC,
+		Assert.assertEquals("Method Access", Access.ACC_PUBLIC,
 				((IMethod) WorldTest.Elements1[9]).getVisibility());
 
 		Assert.assertEquals("Method # Parameters", 0,
@@ -195,7 +196,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Method Return Type", "void",
 				((IMethod) WorldTest.Elements1[10]).getDisplayReturnType());
 
-		Assert.assertEquals("Method Access", Modifier.PUBLIC,
+		Assert.assertEquals("Method Access", Access.ACC_PUBLIC,
 				((IMethod) WorldTest.Elements1[10]).getVisibility());
 
 		Assert.assertEquals("Method # Parameters", 0,
@@ -208,7 +209,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Method Return Type", "void",
 				((IMethod) WorldTest.Elements1[11]).getDisplayReturnType());
 
-		Assert.assertEquals("Method Access", Modifier.PUBLIC,
+		Assert.assertEquals("Method Access", Access.ACC_PUBLIC,
 				((IMethod) WorldTest.Elements1[11]).getVisibility());
 
 		Assert.assertEquals("Method # Parameters", 0,
@@ -221,7 +222,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Method Return Type", "void",
 				((IMethod) WorldTest.Elements1[12]).getDisplayReturnType());
 
-		Assert.assertEquals("Method Access", Modifier.PUBLIC,
+		Assert.assertEquals("Method Access", Access.ACC_PUBLIC,
 				((IMethod) WorldTest.Elements1[12]).getVisibility());
 
 		Assert.assertEquals("Method # Parameters", 0,
@@ -238,7 +239,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Field Type", "Team *",
 				((IField) WorldTest.Elements1[0]).getDisplayTypeName());
 
-		Assert.assertEquals("Field Access", Modifier.PROTECTED,
+		Assert.assertEquals("Field Access", Access.ACC_PROTECTED,
 				((IField) WorldTest.Elements1[0]).getVisibility());
 
 		//---------------------------------------
@@ -248,7 +249,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Field Type", "int",
 				((IField) WorldTest.Elements1[1]).getDisplayTypeName());
 
-		Assert.assertEquals("Field Access", Modifier.PROTECTED,
+		Assert.assertEquals("Field Access", Access.ACC_PROTECTED,
 				((IField) WorldTest.Elements1[1]).getVisibility());
 
 		//---------------------------------------
@@ -258,7 +259,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Field Type", "Team *",
 				((IField) WorldTest.Elements1[4]).getDisplayTypeName());
 
-		Assert.assertEquals("Field Access", Modifier.PROTECTED,
+		Assert.assertEquals("Field Access", Access.ACC_PROTECTED,
 				((IField) WorldTest.Elements1[4]).getVisibility());
 
 		//---------------------------------------
@@ -268,7 +269,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Field Type", "int",
 				((IField) WorldTest.Elements1[5]).getDisplayTypeName());
 
-		Assert.assertEquals("Field Access", Modifier.PROTECTED,
+		Assert.assertEquals("Field Access", Access.ACC_PROTECTED,
 				((IField) WorldTest.Elements1[5]).getVisibility());
 
 		//---------------------------------------
@@ -278,7 +279,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Field Type", "teamtype",
 				((IField) WorldTest.Elements1[7]).getDisplayTypeName());
 
-		Assert.assertEquals("Field Access", Modifier.PROTECTED,
+		Assert.assertEquals("Field Access", Access.ACC_PROTECTED,
 				((IField) WorldTest.Elements1[7]).getVisibility());
 	}
 
@@ -296,7 +297,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Constr Name", "Team",
 				WorldTest.Elements2[2].getDisplayName());
 
-		Assert.assertEquals("Constr Access", Modifier.PUBLIC,
+		Assert.assertEquals("Constr Access", Access.ACC_PUBLIC,
 				((IConstructor) WorldTest.Elements2[2]).getVisibility());
 
 		// TODO: Fix the bug!
@@ -308,7 +309,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Constr Name", "Team",
 				WorldTest.Elements2[1].getDisplayName());
 
-		Assert.assertEquals("Constr Access", Modifier.PUBLIC,
+		Assert.assertEquals("Constr Access", Access.ACC_PUBLIC,
 				((IConstructor) WorldTest.Elements2[1]).getVisibility());
 
 		// TODO: Fix the bug!
@@ -321,7 +322,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Constr Name", "Team",
 				WorldTest.Elements2[0].getDisplayName());
 
-		Assert.assertEquals("Constr Access", Modifier.PUBLIC,
+		Assert.assertEquals("Constr Access", Access.ACC_PUBLIC,
 				((IConstructor) WorldTest.Elements2[0]).getVisibility());
 
 		// TODO: Fix the bug!
@@ -340,7 +341,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Field Type", "char",
 				((IField) WorldTest.Elements2[3]).getDisplayTypeName());
 
-		Assert.assertEquals("Field Access", Modifier.PROTECTED,
+		Assert.assertEquals("Field Access", Access.ACC_PROTECTED,
 				((IField) WorldTest.Elements2[3]).getVisibility());
 
 		//---------------------------------------
@@ -350,7 +351,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Field Type", "int",
 				((IField) WorldTest.Elements2[4]).getDisplayTypeName());
 
-		Assert.assertEquals("Field Access", Modifier.PROTECTED,
+		Assert.assertEquals("Field Access", Access.ACC_PROTECTED,
 				((IField) WorldTest.Elements2[4]).getVisibility());
 
 		//---------------------------------------
@@ -360,7 +361,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Field Type", "continent",
 				((IField) WorldTest.Elements2[5]).getDisplayTypeName());
 
-		Assert.assertEquals("Field Access", Modifier.PROTECTED,
+		Assert.assertEquals("Field Access", Access.ACC_PROTECTED,
 				((IField) WorldTest.Elements2[5]).getVisibility());
 
 		//---------------------------------------
@@ -370,7 +371,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Field Type", "int",
 				((IField) WorldTest.Elements2[12]).getDisplayTypeName());
 
-		Assert.assertEquals("Field Access", Modifier.PROTECTED,
+		Assert.assertEquals("Field Access", Access.ACC_PROTECTED,
 				((IField) WorldTest.Elements2[12]).getVisibility());
 
 		//---------------------------------------
@@ -380,7 +381,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Field Type", "teamtype",
 				((IField) WorldTest.Elements2[13]).getDisplayTypeName());
 
-		Assert.assertEquals("Field Access", Modifier.PROTECTED,
+		Assert.assertEquals("Field Access", Access.ACC_PROTECTED,
 				((IField) WorldTest.Elements2[13]).getVisibility());
 
 		//---------------------------------------
@@ -390,7 +391,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Field Type", "int * *",
 				((IField) WorldTest.Elements2[14]).getDisplayTypeName());
 
-		Assert.assertEquals("Field Access", Modifier.PROTECTED,
+		Assert.assertEquals("Field Access", Access.ACC_PROTECTED,
 				((IField) WorldTest.Elements2[14]).getVisibility());
 
 		//---------------------------------------
@@ -400,7 +401,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Field Type", "int",
 				((IField) WorldTest.Elements2[18]).getDisplayTypeName());
 
-		Assert.assertEquals("Field Access", Modifier.PROTECTED,
+		Assert.assertEquals("Field Access", Access.ACC_PROTECTED,
 				((IField) WorldTest.Elements2[18]).getVisibility());
 	}
 
@@ -412,7 +413,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Method Return Type", "continent",
 				((IMethod) WorldTest.Elements2[6]).getDisplayReturnType());
 
-		Assert.assertEquals("Method Access", Modifier.PUBLIC,
+		Assert.assertEquals("Method Access", Access.ACC_PUBLIC,
 				((IMethod) WorldTest.Elements2[6]).getVisibility());
 
 		Assert.assertEquals("Method # Parameters", 0,
@@ -425,7 +426,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Method Return Type", "char *",
 				((IMethod) WorldTest.Elements2[7]).getDisplayReturnType());
 
-		Assert.assertEquals("Method Access", Modifier.PUBLIC,
+		Assert.assertEquals("Method Access", Access.ACC_PUBLIC,
 				((IMethod) WorldTest.Elements2[7]).getVisibility());
 
 		Assert.assertEquals("Method # Parameters", 0,
@@ -438,7 +439,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Method Return Type", "int",
 				((IMethod) WorldTest.Elements2[8]).getDisplayReturnType());
 
-		Assert.assertEquals("Method Access", Modifier.PUBLIC,
+		Assert.assertEquals("Method Access", Access.ACC_PUBLIC,
 				((IMethod) WorldTest.Elements2[8]).getVisibility());
 
 		Assert.assertEquals("Method # Parameters", 0,
@@ -451,7 +452,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Method Return Type", "int",
 				((IMethod) WorldTest.Elements2[9]).getDisplayReturnType());
 
-		Assert.assertEquals("Method Access", Modifier.PUBLIC,
+		Assert.assertEquals("Method Access", Access.ACC_PUBLIC,
 				((IMethod) WorldTest.Elements2[9]).getVisibility());
 
 		Assert.assertEquals("Method # Parameters", 0,
@@ -464,7 +465,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Method Return Type", "int",
 				((IMethod) WorldTest.Elements2[10]).getDisplayReturnType());
 
-		Assert.assertEquals("Method Access", Modifier.PUBLIC,
+		Assert.assertEquals("Method Access", Access.ACC_PUBLIC,
 				((IMethod) WorldTest.Elements2[10]).getVisibility());
 
 		Assert.assertEquals("Method # Parameters", 0,
@@ -477,7 +478,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Method Return Type", "void",
 				((IMethod) WorldTest.Elements2[11]).getDisplayReturnType());
 
-		Assert.assertEquals("Method Access", Modifier.PUBLIC,
+		Assert.assertEquals("Method Access", Access.ACC_PUBLIC,
 				((IMethod) WorldTest.Elements2[11]).getVisibility());
 
 		Assert.assertEquals("Method # Parameters", 0,
@@ -490,7 +491,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Method Return Type", "void",
 				((IMethod) WorldTest.Elements2[17]).getDisplayReturnType());
 
-		Assert.assertEquals("Method Access", Modifier.PUBLIC,
+		Assert.assertEquals("Method Access", Access.ACC_PUBLIC,
 				((IMethod) WorldTest.Elements2[17]).getVisibility());
 
 		Assert.assertEquals("Method # Parameters", 1,
@@ -502,7 +503,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Destr Name", "~Team",
 				WorldTest.Elements2[19].getDisplayName());
 
-		Assert.assertEquals("Destr Access", Modifier.PUBLIC,
+		Assert.assertEquals("Destr Access", Access.ACC_PUBLIC,
 				((IDestructor) WorldTest.Elements2[19]).getVisibility());
 
 		// TODO: Fix the bug!
@@ -515,7 +516,7 @@ public class WorldTest extends CppPrimitive {
 		Assert.assertEquals("Destr Name", "~Team",
 				WorldTest.Elements2[20].getDisplayName());
 
-		Assert.assertEquals("Destr Access", Modifier.PUBLIC,
+		Assert.assertEquals("Destr Access", Access.ACC_PUBLIC,
 				((IDestructor) WorldTest.Elements2[20]).getVisibility());
 
 		// TODO: Fix the bug!

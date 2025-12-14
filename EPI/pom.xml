@@ -33,7 +33,7 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>**/TestEPI.java</exclude>
+						<exclude>**/*Test.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
@@ -55,7 +55,6 @@
 	</build>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
 			<artifactId>cpl-core</artifactId>
@@ -91,7 +90,5 @@
 			<artifactId>demima-solver-fingerprints</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-
 	</dependencies>
-
 </project>

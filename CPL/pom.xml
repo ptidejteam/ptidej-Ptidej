@@ -33,7 +33,7 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>**/TestCPL.java</exclude>
+						<exclude>**/*Test.java</exclude>
 						<!-- Excluded because resources, not test -->
 						<exclude>**/Convertors Comparison/**</exclude>
 					</excludes>

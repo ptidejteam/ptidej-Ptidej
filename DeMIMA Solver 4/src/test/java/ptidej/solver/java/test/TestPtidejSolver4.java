@@ -14,13 +14,13 @@ import junit.framework.Test;
 import ptidej.solver.java.test.example.Composite1FromClassFilesTest;
 import ptidej.solver.java.test.example.Composite1FromJavaFilesTest;
 import ptidej.solver.java.test.manager.ManagerTest;
-import ptidej.solver.java.test.simple.CompositionTest;
 import ptidej.solver.java.test.simple.CompositionAndInheritanceTest;
+import ptidej.solver.java.test.simple.CompositionTest;
 import ptidej.solver.java.test.simple.CreationTest;
 import ptidej.solver.java.test.simple.GoodInheritanceTest;
 import ptidej.solver.java.test.simple.IgnoranceTest;
-import ptidej.solver.java.test.simple.InheritanceTest;
 import ptidej.solver.java.test.simple.InheritancePathTest;
+import ptidej.solver.java.test.simple.InheritanceTest;
 import ptidej.solver.java.test.simple.StrictInheritanceTest;
 import ptidej.solver.java.test.simple.UseTest;
 
@@ -33,6 +33,7 @@ import ptidej.solver.java.test.simple.UseTest;
 public final class TestPtidejSolver4 extends junit.framework.TestSuite {
 	public static Test suite() {
 		final TestPtidejSolver4 suite = new TestPtidejSolver4();
+		suite.setName(TestPtidejSolver4.class.getName());
 
 		suite.addTestSuite(ManagerTest.class);
 		suite.addTestSuite(CompositionAndInheritanceTest.class);
@@ -48,16 +49,5 @@ public final class TestPtidejSolver4 extends junit.framework.TestSuite {
 		suite.addTestSuite(UseTest.class);
 
 		return suite;
-	}
-
-	public TestPtidejSolver4() {
-	}
-
-	public TestPtidejSolver4(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestPtidejSolver4(final String name) {
-		super(name);
 	}
 }

@@ -24,26 +24,13 @@ import padl.creator.classfile.test.topLevelEntity.TopLevelEntityTest;
  * @since  2004/01/25
  */
 public final class TestCreatorClassFile extends TestSuite {
-	public TestCreatorClassFile() {
-	}
-
-	public TestCreatorClassFile(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestCreatorClassFile(final String name) {
-		super(name);
-	}
-
 	public static Test suite() {
 		final TestCreatorClassFile suite = new TestCreatorClassFile();
+		suite.setName(TestCreatorClassFile.class.getName());
 
 		suite.addTestSuite(ComparisonTest.class);
-
 		suite.addTestSuite(FieldAccessTest.class);
-
 		suite.addTestSuite(InheritanceTest.class);
-
 		suite.addTestSuite(MethodInvocationMissingTest.class);
 		suite.addTestSuite(ArgoUMLPathTest.class);
 		suite.addTestSuite(TopLevelEntityTest.class);

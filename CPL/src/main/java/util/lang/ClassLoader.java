@@ -48,7 +48,6 @@ public class ClassLoader extends java.lang.ClassLoader {
 				length++;
 			}
 
-			System.out.println(name);
 			final Class<?> newClass = this.defineClass(name, bytes, 0, length);
 			return newClass;
 		}

@@ -32,6 +32,9 @@ package ptidej.viewer.extension.repository.conditionals;
 
 import java.util.Iterator;
 import java.util.Stack;
+
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -65,7 +68,6 @@ import padl.statement.kernel.IIfInstruction;
 import padl.statement.kernel.IStatementWalker;
 import padl.statement.kernel.ISwitchInstruction;
 import util.io.ProxyConsole;
-import util.lang.Modifier;
 
 /**
  * @author Yann-Gaël Guéhéneuc 
@@ -76,7 +78,8 @@ public class InstructionSetter implements IStatementWalker {
 	private Stack stackOfEntities;
 	private Stack stackOfEntityNames;
 
-	public InstructionSetter(final BCELInstructionFinder aBCELInstructionFinder) {
+	public InstructionSetter(
+			final BCELInstructionFinder aBCELInstructionFinder) {
 		this.instFinder = aBCELInstructionFinder;
 		this.stackOfEntities = new Stack();
 		this.stackOfEntityNames = new Stack();
@@ -84,18 +87,24 @@ public class InstructionSetter implements IStatementWalker {
 
 	public void close(final IAbstractModel anAbstractModel) {
 	}
+
 	public void close(final IClass aClass) {
 		this.stackOfEntities.pop();
 		this.stackOfEntityNames.pop();
 	}
+
 	public void close(final IConstructor aConstructor) {
 	}
+
 	public void close(final IDelegatingMethod aDelegatingMethod) {
 	}
+
 	public void close(final IGetter aGetter) {
 	}
+
 	public void close(final IGhost aGhost) {
 	}
+
 	public void close(final IInterface anInterface) {
 		// Yann 2007/03/06: Member classes in interface...
 		// In QuickUML 2001, a member class Entry is
@@ -103,12 +112,15 @@ public class InstructionSetter implements IStatementWalker {
 		this.stackOfEntities.pop();
 		this.stackOfEntityNames.pop();
 	}
+
 	public void close(final IMemberClass aMemberClass) {
 		this.stackOfEntities.pop();
 		this.stackOfEntityNames.pop();
 	}
+
 	public void close(final IMemberGhost aMemberGhost) {
 	}
+
 	public void close(final IMemberInterface aMemberInterface) {
 		// Yann 2007/03/06: Member classes in interface...
 		// In QuickUML 2001, a member class Entry is
@@ -116,47 +128,63 @@ public class InstructionSetter implements IStatementWalker {
 		this.stackOfEntities.pop();
 		this.stackOfEntityNames.pop();
 	}
+
 	public void close(final IMethod aMethod) {
 	}
+
 	public void close(final IPackage aPackage) {
 	}
+
 	public void close(final IPackageDefault aPackage) {
 	}
+
 	public void close(final ISetter aSetter) {
 	}
+
 	public String getName() {
 		return "Setter of conditional instructions";
 	}
+
 	public Object getResult() {
 		return null;
 	}
+
 	public void open(final IAbstractModel anAbstractModel) {
 	}
+
 	public void open(final IClass aClass) {
 		this.stackOfEntities.push(aClass);
 		this.stackOfEntityNames.push(aClass.getID());
 	}
+
 	public void open(final IConstructor aConstructor) {
 		this.open((IOperation) aConstructor);
 	}
+
 	public void open(final IDelegatingMethod aDelegatingMethod) {
 		this.open((IOperation) aDelegatingMethod);
 	}
+
 	public void open(final IGetter aGetter) {
 		this.open((IOperation) aGetter);
 	}
+
 	public void open(final IGhost aGhost) {
 	}
+
 	public void open(final IInterface anInterface) {
 		this.stackOfEntities.push(anInterface);
 		this.stackOfEntityNames.push(anInterface.getID());
 	}
+
 	public void open(final IMemberClass aMemberClass) {
 		this.stackOfEntities.push(aMemberClass.getName());
 		this.stackOfEntityNames.push(aMemberClass.getName());
 	}
+
 	public void open(final IMemberGhost aMemberGhost) {
 	}
+
 	public void open(final IMemberInterface aMemberInterface) {
 		// Yann 2007/03/06: Member classes in interface...
 		// In QuickUML 2001, a member class Entry is
@@ -164,14 +192,16 @@ public class InstructionSetter implements IStatementWalker {
 		this.stackOfEntities.push(aMemberInterface.getName());
 		this.stackOfEntityNames.push(aMemberInterface.getName());
 	}
+
 	public void open(final IMethod aMethod) {
 		this.open((IOperation) aMethod);
 	}
+
 	private void open(final IOperation aMethod) {
 		// Yann: 2007/03/16: Ghosts!
 		// The stack can be empty because we don't deal with Ghosts.
 		if (!this.stackOfEntities.empty() && !aMethod.isAbstract()
-				&& !Modifier.isNative(aMethod.getVisibility())) {
+				&& !Access.isNative(aMethod.getVisibility())) {
 
 			final StringBuffer buffer = new StringBuffer();
 			final Iterator iterator = this.stackOfEntityNames.iterator();
@@ -183,10 +213,9 @@ public class InstructionSetter implements IStatementWalker {
 				}
 			}
 
-			final IConstituentOfOperation[] conditionalInstructions =
-				this.instFinder.getConditionalInstructions(
-					buffer.toString(),
-					aMethod.getDisplayID());
+			final IConstituentOfOperation[] conditionalInstructions = this.instFinder
+					.getConditionalInstructions(buffer.toString(),
+							aMethod.getDisplayID());
 
 			if (conditionalInstructions == null) {
 				//	System.err.print(
@@ -201,73 +230,83 @@ public class InstructionSetter implements IStatementWalker {
 				// compatibility problem! We can remove
 				// this method and obtain a clean model :-)
 				((IFirstClassEntity) this.stackOfEntities.peek())
-					.removeConstituentFromID(aMethod.getID());
+						.removeConstituentFromID(aMethod.getID());
 			}
 			else {
 				for (int i = 0; i < conditionalInstructions.length; i++) {
-					final IConstituentOfOperation conditionalInstruction =
-						conditionalInstructions[i];
+					final IConstituentOfOperation conditionalInstruction = conditionalInstructions[i];
 					aMethod.addConstituent(conditionalInstruction);
 				}
 			}
 		}
 	}
+
 	public void open(final IPackage aPackage) {
 	}
+
 	public void open(final IPackageDefault aPackage) {
 	}
+
 	public void open(final ISetter aSetter) {
 		this.open((IOperation) aSetter);
 	}
+
 	public void reset() {
 		this.stackOfEntities.clear();
 		this.stackOfEntityNames.clear();
 	}
-	public final void unknownConstituentHandler(
-		final String aCalledMethodName,
-		final IConstituent aConstituent) {
 
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(this.getClass().getName());
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(" does not know what to do for \"");
+	public final void unknownConstituentHandler(final String aCalledMethodName,
+			final IConstituent aConstituent) {
+
+		ProxyConsole.getInstance().debugOutput()
+				.print(this.getClass().getName());
+		ProxyConsole.getInstance().debugOutput()
+				.print(" does not know what to do for \"");
 		ProxyConsole.getInstance().debugOutput().print(aCalledMethodName);
 		ProxyConsole.getInstance().debugOutput().print("\" (");
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(aConstituent.getDisplayID());
+		ProxyConsole.getInstance().debugOutput()
+				.print(aConstituent.getDisplayID());
 		ProxyConsole.getInstance().debugOutput().println(')');
 	}
+
 	public void visit(final IAggregation anAggregation) {
 	}
+
 	public void visit(final IAssociation anAssociation) {
 	}
+
 	public void visit(final IComposition aComposition) {
 	}
+
 	public void visit(final IContainerAggregation aContainerAggregation) {
 	}
+
 	public void visit(final IContainerComposition aContainerComposition) {
 	}
+
 	public void visit(final ICreation aCreation) {
 	}
+
 	public void visit(final IField aField) {
 	}
+
 	public void visit(final IIfInstruction anIfInstruction) {
 	}
+
 	public void visit(final IMethodInvocation aMethodInvocation) {
 	}
+
 	public void visit(final IParameter aParameter) {
 	}
+
 	public void visit(final IPrimitiveEntity aPrimitiveEntity) {
 		// Do nothing for uninteresting primitive types.
 	}
+
 	public void visit(final ISwitchInstruction switchInstruction) {
 	}
+
 	public void visit(final IUseRelationship aUse) {
 	}
 }

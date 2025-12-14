@@ -24,11 +24,10 @@ import sad.detection.test.javafile.ideasimsyn.SomeSmellsTest;
  * @author Yann-Gaël Guéhéneuc
  * @since  2004/01/25
  */
-// TODO: Implement and test the tests!
-// Non-fuzzy first, then fuzzy...
 public final class TestSAD extends TestSuite {
 	public static Test suite() {
 		final TestSAD suite = new TestSAD();
+		suite.setName(TestSAD.class.getName());
 
 		suite.addTestSuite(DetectionAntipatternSWTTest.class);
 		suite.addTestSuite(SpaghettiCode1Test.class);
@@ -43,17 +42,5 @@ public final class TestSAD extends TestSuite {
 		suite.addTestSuite(SomeSmellsTest.class);
 
 		return suite;
-	}
-
-	public TestSAD() {
-		// Empty block.
-	}
-
-	public TestSAD(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestSAD(final String name) {
-		super(name);
 	}
 }

@@ -19,6 +19,7 @@ import padl.analysis.repository.SystematicUMLAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.IAbstractModel;
 import padl.kernel.ICodeLevelModel;
+import padl.kernel.IFirstClassEntity;
 import padl.kernel.IIdiomLevelModel;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
@@ -39,28 +40,38 @@ public class SanityTest extends TestCase {
 
 	protected void setUp() {
 		if (SanityTest.ResultingAbstractModel == null) {
-			SanityTest.OriginalCodeLevelModel = Factory.getInstance().createCodeLevelModel("SystematicUML Test 1");
+			SanityTest.OriginalCodeLevelModel = Factory.getInstance()
+					.createCodeLevelModel("SystematicUML Test 1");
 			try {
-				SanityTest.OriginalCodeLevelModel.create(new CompleteClassFileCreator(
-						new String[] { "target/test-classes/padl/analysis/systematicuml/data/" }));
+				SanityTest.OriginalCodeLevelModel
+						.create(new CompleteClassFileCreator(new String[] {
+								"../PADL Analyses/target/test-classes/padl/analysis/systematicuml/data/" }));
 				SanityTest.OriginalIdiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 						.invoke(SanityTest.OriginalCodeLevelModel);
-				SanityTest.ResultingAbstractModel = new SystematicUMLAnalysis().invoke(SanityTest.OriginalIdiomLevelModel);
-			} catch (final CreationException e) {
+				SanityTest.ResultingAbstractModel = new SystematicUMLAnalysis()
+						.invoke(SanityTest.OriginalIdiomLevelModel);
+			}
+			catch (final CreationException e) {
 				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
-			} catch (final UnsupportedSourceModelException e) {
+			}
+			catch (final UnsupportedSourceModelException e) {
 				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 			}
 		}
 	}
 
 	public void testNumberOfEntities() {
-		Assert.assertEquals("Number of entities", SanityTest.OriginalCodeLevelModel.getNumberOfTopLevelEntities(),
-				SanityTest.ResultingAbstractModel.getNumberOfTopLevelEntities());
+		Assert.assertEquals("Number of entities",
+				SanityTest.OriginalCodeLevelModel.getNumberOfTopLevelEntities(),
+				SanityTest.ResultingAbstractModel
+						.getNumberOfTopLevelEntities());
 	}
 
 	public void testEnumeration() {
-		Assert.assertEquals("ClassH_Enumeration", "<<enumeration>>\nClassH_Enumeration", SanityTest.ResultingAbstractModel
-				.getTopLevelEntityFromID("padl.analysis.systematicuml.data.ClassH_Enumeration").getDisplayName());
+		final IFirstClassEntity entity = SanityTest.ResultingAbstractModel
+				.getTopLevelEntityFromID(
+						"padl.analysis.systematicuml.data.ClassH_Enumeration");
+		Assert.assertEquals("ClassH_Enumeration",
+				"<<enumeration>>\nClassH_Enumeration", entity.getDisplayName());
 	}
 }

@@ -17,19 +17,9 @@ import junit.framework.TestSuite;
  * @author yann
  */
 public class TestPADLJNI extends TestSuite {
-	public TestPADLJNI() {
-	}
-
-	public TestPADLJNI(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestPADLJNI(final String name) {
-		super(name);
-	}
-
 	public static Test suite() {
 		final TestPADLJNI suite = new TestPADLJNI();
+		suite.setName(TestPADLJNI.class.getName());
 
 		suite.addTestSuite(JNIGlobalFunction.class);
 		suite.addTestSuite(JNIMethodMissed.class);

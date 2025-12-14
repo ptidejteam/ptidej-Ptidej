@@ -12,6 +12,8 @@ package padl.creator.classfile.test.example;
 
 import org.junit.Assert;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
@@ -27,7 +29,6 @@ import padl.kernel.IIdiomLevelModel;
 import padl.kernel.IUseRelationship;
 import padl.kernel.exception.CreationException;
 import padl.util.Util;
-import util.lang.Modifier;
 
 /**
  * @version	0.2
@@ -60,8 +61,8 @@ public class Aggregation10Test extends ClassFilePrimitive {
 			Aggregation10Test.FirstClassEntities = Util
 					.getArrayOfTopLevelEntities(idiomLevelModel);
 
-			Aggregation10Test.Elements = Util
-					.getArrayOfElements(Aggregation10Test.FirstClassEntities[3]);
+			Aggregation10Test.Elements = Util.getArrayOfElements(
+					Aggregation10Test.FirstClassEntities[3]);
 		}
 	}
 
@@ -78,8 +79,8 @@ public class Aggregation10Test extends ClassFilePrimitive {
 				IAggregation.class,
 				Aggregation10Test.Elements[elementPosition].getClass());
 		Assert.assertEquals("Aggregation visibility",
-				Modifier.toString(Modifier.DEFAULT),
-				Modifier.toString(Aggregation10Test.Elements[elementPosition]
+				Access.getAsString(Access.ACC_NONE),
+				Access.getAsString(Aggregation10Test.Elements[elementPosition]
 						.getVisibility()));
 		Assert.assertEquals("Aggregation cardinality",
 				Constants.CARDINALITY_MANY,
@@ -100,10 +101,8 @@ public class Aggregation10Test extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association link type",
 				IAssociation.class,
 				Aggregation10Test.Elements[elementPosition].getClass());
-		Assert.assertEquals("Association link visibility",
-				Modifier.toString(Modifier.DEFAULT),
-				Modifier.toString(Aggregation10Test.Elements[elementPosition]
-						.getVisibility()));
+		Assert.assertEquals("Association link visibility", Access.getAsString(Access.ACC_NONE),
+				Access.getAsString(Aggregation10Test.Elements[elementPosition].getVisibility()));
 		Assert.assertEquals("Association link cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) Aggregation10Test.Elements[elementPosition])
@@ -125,11 +124,12 @@ public class Aggregation10Test extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association link type",
 				IAssociation.class, Aggregation10Test.Elements[1].getClass());
 		Assert.assertEquals("Association link visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(Aggregation10Test.Elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC), Access.getAsString(
+						Aggregation10Test.Elements[1].getVisibility()));
 		Assert.assertEquals("Association link cardinality",
 				Constants.CARDINALITY_ONE,
-				((IAssociation) Aggregation10Test.Elements[1]).getCardinality());
+				((IAssociation) Aggregation10Test.Elements[1])
+						.getCardinality());
 		Assert.assertEquals("Association link name",
 				"padl.kernel.impl.Association:java.lang.Object:1",
 				Aggregation10Test.Elements[1].getDisplayName());
@@ -146,8 +146,8 @@ public class Aggregation10Test extends ClassFilePrimitive {
 				IUseRelationship.class,
 				Aggregation10Test.Elements[elementPosition].getClass());
 		Assert.assertEquals("Use link visibility",
-				Modifier.toString(Modifier.DEFAULT),
-				Modifier.toString(Aggregation10Test.Elements[elementPosition]
+				Access.getAsString(Access.ACC_NONE),
+				Access.getAsString(Aggregation10Test.Elements[elementPosition]
 						.getVisibility()));
 		Assert.assertEquals("Use link cardinality", Constants.CARDINALITY_ONE,
 				((IUseRelationship) Aggregation10Test.Elements[elementPosition])
@@ -207,8 +207,8 @@ public class Aggregation10Test extends ClassFilePrimitive {
 	//	}
 	public void testStaticField() {
 		Assert.assertEquals("Static field visibility",
-				Modifier.toString(Modifier.PRIVATE),
-				Modifier.toString(Aggregation10Test.Elements[6].getVisibility()));
+				Access.getAsString(Access.ACC_PRIVATE), Access.getAsString(
+						Aggregation10Test.Elements[6].getVisibility()));
 		Assert.assertEquals("Static field type", "java.util.List",
 				((IField) Aggregation10Test.Elements[6]).getDisplayTypeName());
 		Assert.assertEquals("Static field name", "listOfAs",

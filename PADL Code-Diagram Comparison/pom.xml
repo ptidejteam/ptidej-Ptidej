@@ -30,8 +30,8 @@
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
+		<!-- None on purpose   -->
 
 		<!-- Test dependencies -->
 		<dependency>
@@ -84,7 +84,5 @@
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

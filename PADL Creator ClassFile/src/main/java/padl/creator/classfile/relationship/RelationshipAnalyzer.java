@@ -45,7 +45,6 @@ import padl.kernel.IRelationship;
 import padl.kernel.impl.Factory;
 import padl.util.Util;
 import util.io.ProxyConsole;
-import util.lang.Modifier;
 
 /**
  * @author Yann-Gal Guhneuc
@@ -1007,7 +1006,7 @@ public class RelationshipAnalyzer {
 							.createField(usedFieldName.toCharArray(),
 									usedFieldName.toCharArray(),
 									fieldType.toCharArray(), cardinality);
-					aCallingField.setVisibility(Modifier.PUBLIC);
+					aCallingField.setVisibility(Access.ACC_PUBLIC);
 					entityDeclaringField.addConstituent(aCallingField);
 				}
 				callingFields.add(aCallingField);

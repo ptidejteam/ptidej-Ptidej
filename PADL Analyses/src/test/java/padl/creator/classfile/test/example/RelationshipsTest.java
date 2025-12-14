@@ -12,6 +12,8 @@ package padl.creator.classfile.test.example;
 
 import org.junit.Assert;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
@@ -28,7 +30,6 @@ import padl.kernel.IIdiomLevelModel;
 import padl.kernel.IUseRelationship;
 import padl.kernel.exception.CreationException;
 import padl.util.Util;
-import util.lang.Modifier;
 
 /**
  * @version	0.2
@@ -62,11 +63,12 @@ public class RelationshipsTest extends ClassFilePrimitive {
 
 	public void testCreationLink_INSTANCE_CREATION_2() {
 		int index;
-		for (index = 0; !RelationshipsTest.FirstClassEntities[index].getDisplayID()
+		for (index = 0; !RelationshipsTest.FirstClassEntities[index]
+				.getDisplayID()
 				.equals("padl.example.relationship.CreationLink_INSTANCE_CREATION_2"); index++)
 			;
-		final IElement[] elements = Util
-				.getArrayOfElements(RelationshipsTest.FirstClassEntities[index]);
+		final IElement[] elements = Util.getArrayOfElements(
+				RelationshipsTest.FirstClassEntities[index]);
 
 		Assert.assertEquals("Identified elements", 4, elements.length);
 
@@ -76,8 +78,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[1].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[1]).getCardinality());
@@ -93,8 +95,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Creation relationship type",
 				ICreation.class, elements[3].getClass());
 		Assert.assertEquals("Creation relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[3].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[3].getVisibility()));
 		Assert.assertEquals("Creation relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((ICreation) elements[3]).getCardinality());
@@ -143,8 +145,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[1].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[1]).getCardinality());
@@ -156,8 +158,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 				((IAssociation) elements[1]).getTargetEntity().getDisplayID());
 
 		Assert.assertEquals("Static field visibility",
-				Modifier.toString(Modifier.PRIVATE | Modifier.STATIC),
-				Modifier.toString(elements[2].getVisibility()));
+				Access.getAsString(Access.ACC_PRIVATE | Access.ACC_STATIC),
+				Access.getAsString(elements[2].getVisibility()));
 		Assert.assertEquals("Static field type", "padl.example.relationship.A",
 				((IField) elements[2]).getDisplayTypeName());
 		Assert.assertEquals("Static field name", "a",
@@ -168,8 +170,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Use relationship type",
 				IUseRelationship.class, elements[4].getClass());
 		Assert.assertEquals("Use relationship visibility",
-				Modifier.toString(Modifier.PUBLIC | Modifier.STATIC),
-				Modifier.toString(elements[4].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC | Access.ACC_STATIC),
+				Access.getAsString(elements[4].getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IUseRelationship) elements[4]).getCardinality());
@@ -184,8 +186,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Aggregation relationship type",
 				IAggregation.class, elements[5].getClass());
 		Assert.assertEquals("Aggregation relationship visibility",
-				Modifier.toString(Modifier.PUBLIC | Modifier.STATIC),
-				Modifier.toString(elements[5].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC | Access.ACC_STATIC),
+				Access.getAsString(elements[5].getVisibility()));
 		Assert.assertEquals("Aggregation relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAggregation) elements[5]).getCardinality());
@@ -199,8 +201,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IUseRelationship.class, elements[6].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC | Modifier.STATIC),
-				Modifier.toString(elements[6].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC | Access.ACC_STATIC),
+				Access.getAsString(elements[6].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IUseRelationship) elements[6]).getCardinality());
@@ -228,8 +230,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[1].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[1]).getCardinality());
@@ -241,8 +243,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 				((IAssociation) elements[1]).getTargetEntity().getDisplayID());
 
 		Assert.assertEquals("Static field visibility",
-				Modifier.toString(Modifier.PRIVATE | Modifier.STATIC),
-				Modifier.toString(elements[2].getVisibility()));
+				Access.getAsString(Access.ACC_PRIVATE | Access.ACC_STATIC),
+				Access.getAsString(elements[2].getVisibility()));
 		Assert.assertEquals("Static field type", "padl.example.relationship.A",
 				((IField) elements[2]).getDisplayTypeName());
 		Assert.assertEquals("Static field name", "a",
@@ -253,8 +255,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Use relationship type",
 				IUseRelationship.class, elements[4].getClass());
 		Assert.assertEquals("Use relationship visibility",
-				Modifier.toString(Modifier.PUBLIC | Modifier.STATIC),
-				Modifier.toString(elements[4].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC | Access.ACC_STATIC),
+				Access.getAsString(elements[4].getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IUseRelationship) elements[4]).getCardinality());
@@ -269,8 +271,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Aggregation relationship type",
 				IUseRelationship.class, elements[5].getClass());
 		Assert.assertEquals("Aggregation relationship visibility",
-				Modifier.toString(Modifier.PUBLIC | Modifier.STATIC),
-				Modifier.toString(elements[5].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC | Access.ACC_STATIC),
+				Access.getAsString(elements[5].getVisibility()));
 		Assert.assertEquals("Aggregation relationship cardinality",
 				Constants.CARDINALITY_MANY,
 				((IUseRelationship) elements[5]).getCardinality());
@@ -288,7 +290,7 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		//		IAssociation.class,
 		//		elements[6].getClass());
 		//	Assert.assertEquals("Association relationship visibility", Modifier
-		//		.toString(Modifier.PUBLIC | Modifier.STATIC), Modifier
+		//		.toString(Access.ACC_PUBLIC | Access.ACC_STATIC), Modifier
 		//		.toString(elements[6].getVisibility()));
 		//	Assert.assertEquals(
 		//		"Association relationship cardinality",
@@ -320,8 +322,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[1].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[1]).getCardinality());
@@ -333,8 +335,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 				((IAssociation) elements[1]).getTargetEntity().getDisplayID());
 
 		Assert.assertEquals("Instance field visibility",
-				Modifier.toString(Modifier.PRIVATE),
-				Modifier.toString(elements[2].getVisibility()));
+				Access.getAsString(Access.ACC_PRIVATE),
+				Access.getAsString(elements[2].getVisibility()));
 		Assert.assertEquals("Instance field type",
 				"padl.example.relationship.A",
 				((IField) elements[2]).getDisplayTypeName());
@@ -346,8 +348,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Aggregation type",
 				IAssociation.class, elements[4].getClass());
 		Assert.assertEquals("Aggregation visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[4].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[4].getVisibility()));
 		Assert.assertEquals("Aggregation cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[4]).getCardinality());
@@ -360,8 +362,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAggregation.class, elements[5].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[5].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[5].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAggregation) elements[5]).getCardinality());
@@ -389,8 +391,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[1].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[1]).getCardinality());
@@ -402,8 +404,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 				((IAssociation) elements[1]).getTargetEntity().getDisplayID());
 
 		Assert.assertEquals("Private field visibility",
-				Modifier.toString(Modifier.PRIVATE),
-				Modifier.toString(elements[2].getVisibility()));
+				Access.getAsString(Access.ACC_PRIVATE),
+				Access.getAsString(elements[2].getVisibility()));
 		Assert.assertEquals("Private field type", "padl.example.relationship.A",
 				((IField) elements[2]).getDisplayTypeName());
 		Assert.assertEquals("Private field name", "a",
@@ -414,8 +416,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Aggregation type",
 				IAssociation.class, elements[4].getClass());
 		Assert.assertEquals("Aggregation visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[4].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[4].getVisibility()));
 		Assert.assertEquals("Aggregation cardinality",
 				Constants.CARDINALITY_MANY,
 				((IAssociation) elements[4]).getCardinality());
@@ -428,8 +430,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAggregation.class, elements[5].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[5].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[5].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_MANY,
 				((IAggregation) elements[5]).getCardinality());
@@ -462,8 +464,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[1].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[1]).getCardinality());
@@ -480,8 +482,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[3].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC | Modifier.STATIC),
-				Modifier.toString(elements[3].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC | Access.ACC_STATIC),
+				Access.getAsString(elements[3].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_MANY,
 				((IAssociation) elements[3]).getCardinality());
@@ -495,8 +497,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Use relationship type",
 				IUseRelationship.class, elements[4].getClass());
 		Assert.assertEquals("Use relationship visibility",
-				Modifier.toString(Modifier.PUBLIC | Modifier.STATIC),
-				Modifier.toString(elements[4].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC | Access.ACC_STATIC),
+				Access.getAsString(elements[4].getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
 				Constants.CARDINALITY_MANY,
 				((IUseRelationship) elements[4]).getCardinality());
@@ -523,8 +525,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[1].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[1]).getCardinality());
@@ -541,8 +543,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[3].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC | Modifier.STATIC),
-				Modifier.toString(elements[3].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC | Access.ACC_STATIC),
+				Access.getAsString(elements[3].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[3]).getCardinality());
@@ -556,8 +558,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Use relationship type",
 				IUseRelationship.class, elements[4].getClass());
 		Assert.assertEquals("Use relationship visibility",
-				Modifier.toString(Modifier.PUBLIC | Modifier.STATIC),
-				Modifier.toString(elements[4].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC | Access.ACC_STATIC),
+				Access.getAsString(elements[4].getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IUseRelationship) elements[4]).getCardinality());
@@ -574,8 +576,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		//		elements[5].getClass());
 		//	Assert.assertEquals(
 		//		"Association relationship visibility",
-		//		Modifier.toString(Modifier.PUBLIC | Modifier.STATIC),
-		//		Modifier.toString(elements[5].getVisibility()));
+		//		Access.getAsString(Access.ACC_PUBLIC | Access.ACC_STATIC),
+		//		Access.getAsString(elements[5].getVisibility()));
 		//	Assert.assertEquals(
 		//		"Association relationship cardinality",
 		//		1,
@@ -605,8 +607,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[1].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[1]).getCardinality());
@@ -623,8 +625,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[3].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[3].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[3].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[3]).getCardinality());
@@ -638,8 +640,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Use relationship type",
 				IUseRelationship.class, elements[4].getClass());
 		Assert.assertEquals("Use relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[4].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[4].getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IUseRelationship) elements[4]).getCardinality());
@@ -656,8 +658,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		//		elements[5].getClass());
 		//	Assert.assertEquals(
 		//		"Association relationship visibility",
-		//		Modifier.toString(Modifier.PUBLIC),
-		//		Modifier.toString(elements[5].getVisibility()));
+		//		Access.getAsString(Access.ACC_PUBLIC),
+		//		Access.getAsString(elements[5].getVisibility()));
 		//	Assert.assertEquals(
 		//		"Association relationship cardinality",
 		//		1,
@@ -674,8 +676,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 
 	public void testJavaLangObject() {
 		int index;
-		for (index = 0; !RelationshipsTest.FirstClassEntities[index].getDisplayID()
-				.equals("java.lang.Object"); index++)
+		for (index = 0; !RelationshipsTest.FirstClassEntities[index]
+				.getDisplayID().equals("java.lang.Object"); index++)
 			;
 		Assert.assertEquals("Identified elements", 2,
 				RelationshipsTest.FirstClassEntities[index]
@@ -684,11 +686,12 @@ public class RelationshipsTest extends ClassFilePrimitive {
 
 	public void testUseRelationship_CLASS_CLASS_2() {
 		int index;
-		for (index = 0; !RelationshipsTest.FirstClassEntities[index].getDisplayID()
+		for (index = 0; !RelationshipsTest.FirstClassEntities[index]
+				.getDisplayID()
 				.equals("padl.example.relationship.UseRelationship_CLASS_CLASS_2"); index++)
 			;
-		final IElement[] elements = Util
-				.getArrayOfElements(RelationshipsTest.FirstClassEntities[index]);
+		final IElement[] elements = Util.getArrayOfElements(
+				RelationshipsTest.FirstClassEntities[index]);
 
 		Assert.assertEquals("Identified elements", 4, elements.length);
 
@@ -698,8 +701,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[1].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[1]).getCardinality());
@@ -715,8 +718,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Use relationship type",
 				IUseRelationship.class, elements[3].getClass());
 		Assert.assertEquals("Use relationship visibility",
-				Modifier.toString(Modifier.PUBLIC | Modifier.STATIC),
-				Modifier.toString(elements[3].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC | Access.ACC_STATIC),
+				Access.getAsString(elements[3].getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IUseRelationship) elements[3]).getCardinality());
@@ -730,11 +733,12 @@ public class RelationshipsTest extends ClassFilePrimitive {
 
 	public void testUseRelationship_INSTANCE_CLASS_1() {
 		int index;
-		for (index = 0; !RelationshipsTest.FirstClassEntities[index].getDisplayID()
+		for (index = 0; !RelationshipsTest.FirstClassEntities[index]
+				.getDisplayID()
 				.equals("padl.example.relationship.UseRelationship_INSTANCE_CLASS_1"); index++)
 			;
-		final IElement[] elements = Util
-				.getArrayOfElements(RelationshipsTest.FirstClassEntities[index]);
+		final IElement[] elements = Util.getArrayOfElements(
+				RelationshipsTest.FirstClassEntities[index]);
 
 		Assert.assertEquals("Identified elements", 4, elements.length);
 
@@ -744,8 +748,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[1].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[1]).getCardinality());
@@ -761,8 +765,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Use relationship type",
 				IUseRelationship.class, elements[3].getClass());
 		Assert.assertEquals("Use relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[3].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[3].getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IUseRelationship) elements[3]).getCardinality());
@@ -776,11 +780,12 @@ public class RelationshipsTest extends ClassFilePrimitive {
 
 	public void testUseRelationship_INSTANCE_CLASS_2() {
 		int index;
-		for (index = 0; !RelationshipsTest.FirstClassEntities[index].getDisplayID()
+		for (index = 0; !RelationshipsTest.FirstClassEntities[index]
+				.getDisplayID()
 				.equals("padl.example.relationship.UseRelationship_INSTANCE_CLASS_2"); index++)
 			;
-		final IElement[] elements = Util
-				.getArrayOfElements(RelationshipsTest.FirstClassEntities[index]);
+		final IElement[] elements = Util.getArrayOfElements(
+				RelationshipsTest.FirstClassEntities[index]);
 
 		Assert.assertEquals("Identified elements", 4, elements.length);
 
@@ -790,8 +795,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[1].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[1]).getCardinality());
@@ -807,8 +812,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Use relationship type",
 				IUseRelationship.class, elements[3].getClass());
 		Assert.assertEquals("Use relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[3].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[3].getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IUseRelationship) elements[3]).getCardinality());
@@ -822,11 +827,12 @@ public class RelationshipsTest extends ClassFilePrimitive {
 
 	public void testUseRelationship_INSTANCE_CLASS_3() {
 		int index;
-		for (index = 0; !RelationshipsTest.FirstClassEntities[index].getDisplayID()
+		for (index = 0; !RelationshipsTest.FirstClassEntities[index]
+				.getDisplayID()
 				.equals("padl.example.relationship.UseRelationship_INSTANCE_CLASS_3"); index++)
 			;
-		final IElement[] elements = Util
-				.getArrayOfElements(RelationshipsTest.FirstClassEntities[index]);
+		final IElement[] elements = Util.getArrayOfElements(
+				RelationshipsTest.FirstClassEntities[index]);
 
 		Assert.assertEquals("Identified elements", 4, elements.length);
 
@@ -836,8 +842,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, elements[1].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) elements[1]).getCardinality());
@@ -853,8 +859,8 @@ public class RelationshipsTest extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Use relationship type",
 				IUseRelationship.class, elements[3].getClass());
 		Assert.assertEquals("Use relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(elements[3].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(elements[3].getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IUseRelationship) elements[3]).getCardinality());

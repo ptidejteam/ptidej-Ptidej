@@ -13,12 +13,14 @@ package padl.kernel.impl;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.kernel.IClass;
 import padl.kernel.IElement;
 import padl.kernel.IEntityMarker;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IInterface;
-import util.lang.Modifier;
 
 class Interface extends AbstractInterface implements IEntityMarker, IInterface {
 	private static final long serialVersionUID = 3362527126531938666L;
@@ -32,14 +34,17 @@ class Interface extends AbstractInterface implements IEntityMarker, IInterface {
 	public Interface(final char[] anID, final char[] aName) {
 		super(anID, aName);
 	}
+
 	public void addConstituent(final IElement anElement) {
 		anElement.setAbstract(true);
 		super.addConstituent(anElement);
 	}
+
 	public void endCloneSession() {
 		super.endCloneSession();
 		this.shouldImplementEventList.clear();
 	}
+
 	public void startCloneSession() {
 		super.startCloneSession();
 
@@ -52,17 +57,18 @@ class Interface extends AbstractInterface implements IEntityMarker, IInterface {
 			currentTarget.addImplementedInterface(clonedPInterface);
 		}
 	}
+
 	public String toString() {
 		final StringBuffer codeEq = new StringBuffer();
-		codeEq.append(Modifier.toString(this.getVisibility()));
+		codeEq.append(Access.getClassAsString(this.getVisibility()));
 		codeEq.append(" interface ");
 		codeEq.append(getName());
 		final Iterator iterator = this.getIteratorOnInheritedEntities();
 		if (iterator.hasNext()) {
 			codeEq.append(" extends ");
 			while (iterator.hasNext()) {
-				codeEq
-					.append(((IFirstClassEntity) (iterator.next())).getName());
+				codeEq.append(
+						((IFirstClassEntity) (iterator.next())).getName());
 				if (iterator.hasNext())
 					codeEq.append(", ");
 			}

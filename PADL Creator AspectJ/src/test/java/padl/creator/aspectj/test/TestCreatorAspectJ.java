@@ -14,24 +14,14 @@ import junit.framework.Test;
 import junit.framework.TestSuite;
 
 public class TestCreatorAspectJ extends TestSuite {
-	public TestCreatorAspectJ() {
-	}
-
-	public TestCreatorAspectJ(final Class<?> theClass) {
-		super(theClass);
-	}
-
-	public TestCreatorAspectJ(final String name) {
-		super(name);
-	}
-
 	public static Test suite() {
 		final TestCreatorAspectJ suite = new TestCreatorAspectJ();
-		
+		suite.setName(TestCreatorAspectJ.class.getName());
+
 		suite.addTestSuite(AOTest.class);
 		suite.addTestSuite(ModelCreationTest.class);
 		suite.addTestSuite(OOTest.class);
-		
+
 		return suite;
 	}
 }

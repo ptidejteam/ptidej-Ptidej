@@ -26,11 +26,23 @@
 					</compilerArgs>
 				</configuration>
 			</plugin>
+			<!-- Must generate the test-jar for the tests in All Ptidej Tests and others -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.3.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependecy -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
@@ -85,7 +97,5 @@
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

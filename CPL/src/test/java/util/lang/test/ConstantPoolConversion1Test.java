@@ -51,15 +51,15 @@ public class ConstantPoolConversion1Test extends TestCase {
 	private boolean constantPoolConverter(String constantPoolStringOriginal) {
 		if (this.classFile_CFParse_Converted.getCP().toString()
 				.indexOf(constantPoolStringOriginal) >= 0) {
-			System.out.println(constantPoolStringOriginal + " "
-					+ this.classFile_CFParse_Converted.getCP().toString()
-							.indexOf(constantPoolStringOriginal));
+			//	System.out.println(constantPoolStringOriginal + " "
+			//			+ this.classFile_CFParse_Converted.getCP().toString()
+			//					.indexOf(constantPoolStringOriginal));
 			return true;
 		}
 		else {
-			System.out.println(constantPoolStringOriginal + " "
-					+ this.classFile_CFParse_Converted.getCP().toString()
-							.indexOf(constantPoolStringOriginal));
+			//	System.out.println(constantPoolStringOriginal + " "
+			//			+ this.classFile_CFParse_Converted.getCP().toString()
+			//					.indexOf(constantPoolStringOriginal));
 			return false;
 		}
 	}
@@ -75,31 +75,30 @@ public class ConstantPoolConversion1Test extends TestCase {
 						.split(" ");
 				String classType = cpOriginalArrayValInnerLoop[1];
 				if (classType.equals("Class:")) {
-					assertEquals(this.constantPoolConverter(
+					Assert.assertEquals(this.constantPoolConverter(
 							cpOriginalArrayValInnerLoop[3]), true);
 				}
 
 				else if (classType.equals("Utf8:")) {
-					System.out.println(this.constantPoolConverter(
-							cpOriginalArrayValInnerLoop[2]));
-					assertEquals(this.constantPoolConverter(
+					//	System.out.println(this.constantPoolConverter(
+					//			cpOriginalArrayValInnerLoop[2]));
+					Assert.assertEquals(this.constantPoolConverter(
 							cpOriginalArrayValInnerLoop[2]), true);
 				}
 				else if (classType.equals("String:")) {
-					System.out.println(this.constantPoolConverter(
-							cpOriginalArrayValInnerLoop[3]));
-					assertEquals(this.constantPoolConverter(
+					//	System.out.println(this.constantPoolConverter(
+					//			cpOriginalArrayValInnerLoop[3]));
+					Assert.assertEquals(this.constantPoolConverter(
 							cpOriginalArrayValInnerLoop[3]), true);
 				}
 				else if (classType.equals("Methodref:")) {
-					assertEquals(this.constantPoolConverter(
+					Assert.assertEquals(this.constantPoolConverter(
 							cpOriginalArrayValInnerLoop[2]), true);
 				}
 				else if (classType.equals("InterfaceMethodref:")) {
-					assertEquals(this.constantPoolConverter(
+					Assert.assertEquals(this.constantPoolConverter(
 							cpOriginalArrayValInnerLoop[2]), true);
 				}
-
 			}
 		}
 	}

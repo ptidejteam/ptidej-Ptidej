@@ -10,10 +10,11 @@
  ******************************************************************************/
 package ptidej.test.all;
 
-import epi.test.TestEPI;
+import caffeine.test.TestCaffeine;
+import cpl.test.TestCPL;
+import jct.test.TestCreatorJavaFileUsingJavaCParser;
 import junit.framework.Test;
 import junit.framework.TestSuite;
-import modec.solver.constraint.test.TestMoDecSolver;
 import padl.analysis.test.TestPADLAnalyses;
 import padl.generator.test.TestPADLGenerator;
 import padl.micropatterns.test.TestMicroPatterns;
@@ -23,8 +24,10 @@ import padl.serialiser.test.TestDB4OSerialiser;
 import padl.serialiser.test.TestJOSSerialiser;
 import padl.test.TestPADL;
 import pom.test.TestPOM;
+import ptidej.ui.kernel.builder.test.AspectJBuilderTest;
 import sad.detection.test.TestSAD;
 import squad.test.TestSQUAD;
+import test.TestCreatorJavaFileUsingEclipseParser;
 
 /**
  * @author Yann-Gaël Guéhéneuc
@@ -33,11 +36,10 @@ import squad.test.TestSQUAD;
 public final class TestOthers extends TestSuite {
 	public static Test suite() {
 		final TestOthers suite = new TestOthers();
+		suite.setName(TestOthers.class.getName());
 
-		// TODO Maven-ise Caffeine
-		//		suite.addTest(TestCaffeine.suite());
-		suite.addTest(TestEPI.suite());
-		suite.addTest(TestMoDecSolver.suite());
+		suite.addTest(TestCPL.suite());
+		suite.addTest(TestCaffeine.suite());
 		suite.addTest(TestPADL.suite());
 		suite.addTest(TestPADLAnalyses.suite());
 		suite.addTest(TestPADLGenerator.suite());
@@ -51,6 +53,11 @@ public final class TestOthers extends TestSuite {
 		suite.addTest(TestPOM.suite());
 		suite.addTest(TestSAD.suite());
 		suite.addTest(TestSQUAD.suite());
+
+		suite.addTestSuite(AspectJBuilderTest.class);
+
+		suite.addTest(TestCreatorJavaFileUsingEclipseParser.suite());
+		suite.addTest(TestCreatorJavaFileUsingJavaCParser.suite());
 
 		return suite;
 	}

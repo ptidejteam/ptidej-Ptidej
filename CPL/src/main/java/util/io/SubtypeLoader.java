@@ -134,13 +134,13 @@ public final class SubtypeLoader {
 		final ClassFile currentClass_CFPARSE = new ClassFile(inputStream0);
 		inputStream0.close();
 
-		/*
 		final InputStream inputStream1 = aNamedInputStream.getStream();
 		final ClassParser parser = new ClassParser(inputStream1, "");
 		final JavaClass javaClass = parser.parse();
-		final ClassFile currentClass_BCEL1 = CFParseBCELConvertorAdhoc
+		final ClassFile currentClass_BCEL1 = CFParseBCELConvertorVisitor
 				.convertClassFile(javaClass);
-		final ClassFile currentClass_BCEL2 = CFParseBCELConvertorVisitor
+		/*
+		final ClassFile currentClass_BCEL2 = CFParseBCELConvertorAdhoc
 				.convertClassFile(javaClass);
 		inputStream1.close();
 		 */

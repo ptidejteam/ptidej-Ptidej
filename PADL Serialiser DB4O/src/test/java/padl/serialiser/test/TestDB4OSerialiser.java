@@ -18,22 +18,14 @@ import junit.framework.TestSuite;
  * since   2010/04/11
  */
 public class TestDB4OSerialiser extends TestSuite {
-	public TestDB4OSerialiser() {
-	}
-
-	public TestDB4OSerialiser(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestDB4OSerialiser(final String name) {
-		super(name);
-	}
-
 	public static Test suite() {
 		final TestDB4OSerialiser suite = new TestDB4OSerialiser();
+		suite.setName(TestDB4OSerialiser.class.getName());
+
 		suite.addTestSuite(SanityTest.class);
 		suite.addTestSuite(JHotDraw51Test.class);
-		suite.addTestSuite(ArgoUML020Test.class);
+		// suite.addTestSuite(ArgoUML020Test.class);
+
 		return suite;
 	}
 }

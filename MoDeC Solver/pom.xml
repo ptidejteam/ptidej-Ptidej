@@ -33,7 +33,7 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>**/TestMoDecSolver.java</exclude>
+						<exclude>**/*Test.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
@@ -54,7 +54,6 @@
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependecy -->
 		<dependency>
 			<groupId>net.ptidej.modec</groupId>
@@ -75,6 +74,5 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 </project>

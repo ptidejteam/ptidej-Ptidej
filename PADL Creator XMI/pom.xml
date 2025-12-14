@@ -52,7 +52,7 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>**/TestCreatorXMI.java</exclude>
+						<exclude>**/*Test.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
@@ -73,7 +73,6 @@
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
@@ -100,6 +99,5 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 </project>

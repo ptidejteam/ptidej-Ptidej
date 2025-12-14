@@ -14,7 +14,6 @@
 	<artifactId>padl-serialiser-db4o</artifactId>
 	<name>PADL Serialiser DB4O</name>
 
-	<!-- To install db4o-7.12.132.14217-all-java5.jar and make it available -->
 	<build>
 		<plugins>
 			<plugin>
@@ -27,6 +26,21 @@
 					</compilerArgs>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
+				<configuration>
+					<argLine>
+						--add-opens=java.base/java.util=ALL-UNNAMED
+					</argLine>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/*Test.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<!-- To install db4o-7.12.132.14217-all-java5.jar and make it available -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-install-plugin</artifactId>
@@ -49,23 +63,6 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.5.3</version>
-				<configuration>
-					<argLine>
-						--add-opens=java.base/java.util=ALL-UNNAMED
-					</argLine>
-					<excludes>
-						<!-- Excluded on purpose -->
-						<exclude>**/TestDB4OSerialiser.java</exclude>
-						<!-- TODO Add these tests back -->
-						<excludes>FilesUtilsTest.java</excludes>
-						<excludes>ArgoUML020Test.java</excludes>
-					</excludes>
-				</configuration>
 			</plugin>
 			<!-- Must generate the test-jar for dependent tests -->
 			<plugin>
