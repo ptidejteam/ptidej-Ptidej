@@ -53,7 +53,7 @@
 					</argLine>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>**/TestCreatorJavaFileUsingJavaCParser.java</exclude>
+						<exclude>**/*Test.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
@@ -96,5 +96,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 </project>

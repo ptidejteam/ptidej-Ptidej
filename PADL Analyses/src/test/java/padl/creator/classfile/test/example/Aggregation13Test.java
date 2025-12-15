@@ -11,6 +11,9 @@
 package padl.creator.classfile.test.example;
 
 import org.junit.Assert;
+
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
@@ -26,7 +29,6 @@ import padl.kernel.IIdiomLevelModel;
 import padl.kernel.IUseRelationship;
 import padl.kernel.exception.CreationException;
 import padl.util.Util;
-import util.lang.Modifier;
 
 /**
  * @author 	Yann-Gaël Guéhéneuc
@@ -39,67 +41,59 @@ public class Aggregation13Test extends ClassFilePrimitive {
 	public Aggregation13Test(final String name) {
 		super(name);
 	}
-	protected void setUp() throws CreationException,
-			UnsupportedSourceModelException {
+
+	protected void setUp()
+			throws CreationException, UnsupportedSourceModelException {
 
 		if (Aggregation13Test.FirstClassEntities == null
 				|| Aggregation13Test.Elements == null) {
 
-			final ICodeLevelModel codeLevelModel =
-				ClassFilePrimitive.getFactory().createCodeLevelModel(
-					"ptidej.example.aggregations");
-			codeLevelModel
-				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/aggregation/Aggregation13.class" }));
+			final ICodeLevelModel codeLevelModel = ClassFilePrimitive
+					.getFactory()
+					.createCodeLevelModel("ptidej.example.aggregations");
+			codeLevelModel.create(new CompleteClassFileCreator(new String[] {
+					"../PADL Creator ClassFile/target/test-classes/padl/example/aggregation/Aggregation13.class" }));
 
-			final IIdiomLevelModel idiomLevelModel =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+			final IIdiomLevelModel idiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(codeLevelModel);
 
-			Aggregation13Test.FirstClassEntities =
-				Util.getArrayOfTopLevelEntities(idiomLevelModel);
+			Aggregation13Test.FirstClassEntities = Util
+					.getArrayOfTopLevelEntities(idiomLevelModel);
 
-			Aggregation13Test.Elements =
-				Util.getArrayOfElements(Aggregation13Test.FirstClassEntities[2]);
+			Aggregation13Test.Elements = Util.getArrayOfElements(
+					Aggregation13Test.FirstClassEntities[2]);
 		}
 	}
+
 	public void testAddAAggregation() {
-		ClassFilePrimitive.assertAssigable(
-			"Use relationship type",
-			IUseRelationship.class,
-			Aggregation13Test.Elements[6].getClass());
-		Assert.assertEquals(
-			"Use relationship visibility",
-			Modifier.toString(Modifier.DEFAULT),
-			Modifier.toString(Aggregation13Test.Elements[6].getVisibility()));
-		Assert.assertEquals(
-			"Use relationship cardinality",
-			1,
-			((IUseRelationship) Aggregation13Test.Elements[6]).getCardinality());
-		Assert
-			.assertEquals(
-				"Use relationship name",
+		ClassFilePrimitive.assertAssigable("Use relationship type",
+				IUseRelationship.class,
+				Aggregation13Test.Elements[6].getClass());
+		Assert.assertEquals("Use relationship visibility",
+				Access.getAsString(Access.ACC_NONE), Access.getAsString(
+						Aggregation13Test.Elements[6].getVisibility()));
+		Assert.assertEquals("Use relationship cardinality", 1,
+				((IUseRelationship) Aggregation13Test.Elements[6])
+						.getCardinality());
+		Assert.assertEquals("Use relationship name",
 				"padl.kernel.impl.UseRelationship:padl.example.aggregation.A:1+padl.kernel.impl.UseRelationship:padl.example.aggregation.A:1+padl.kernel.impl.UseRelationship:padl.example.aggregation.A:1+padl.kernel.impl.UseRelationship:padl.example.aggregation.A:1",
 				Aggregation13Test.Elements[6].getDisplayName());
-		Assert.assertEquals(
-			"Use relationship target",
-			"padl.example.aggregation.A",
-			((IUseRelationship) Aggregation13Test.Elements[6])
-				.getTargetEntity()
-				.getDisplayID());
+		Assert.assertEquals("Use relationship target",
+				"padl.example.aggregation.A",
+				((IUseRelationship) Aggregation13Test.Elements[6])
+						.getTargetEntity().getDisplayID());
 	}
+
 	public void testAddAMethod() {
-		Assert.assertEquals(
-			"Method addA()",
-			"addA",
-			Aggregation13Test.Elements[5].getDisplayName());
+		Assert.assertEquals("Method addA()", "addA",
+				Aggregation13Test.Elements[5].getDisplayName());
 	}
+
 	public void testAddAnotherA() {
-		Assert.assertEquals(
-			"Method addAnotherA()",
-			"addAnotherA",
-			Aggregation13Test.Elements[7].getDisplayName());
+		Assert.assertEquals("Method addAnotherA()", "addAnotherA",
+				Aggregation13Test.Elements[7].getDisplayName());
 	}
+
 	//	public void testAddAnotherAAggregation() {
 	//		Aggregation13.assertAssigable(
 	//			"Use relationship type",
@@ -125,87 +119,70 @@ public class Aggregation13Test extends ClassFilePrimitive {
 	//				.getDisplayName());
 	//	}
 	public void testConstructor() {
-		Assert.assertEquals(
-			"Constructor",
-			"Aggregation13",
-			Aggregation13Test.Elements[0].getDisplayName());
+		Assert.assertEquals("Constructor", "Aggregation13",
+				Aggregation13Test.Elements[0].getDisplayName());
 	}
+
 	public void testConstructorAssociation() {
-		ClassFilePrimitive.assertAssigable(
-			"Association type",
-			IAssociation.class,
-			Aggregation13Test.Elements[1].getClass());
-		Assert.assertEquals(
-			"Association visibility",
-			Modifier.toString(Modifier.PUBLIC),
-			Modifier.toString(Aggregation13Test.Elements[1].getVisibility()));
-		Assert.assertEquals(
-			"Association cardinality",
-			Constants.CARDINALITY_ONE,
-			((IAssociation) Aggregation13Test.Elements[1]).getCardinality());
-		Assert.assertEquals(
-			"Association name",
-			"padl.kernel.impl.Association:java.lang.Object:1",
-			Aggregation13Test.Elements[1].getDisplayName());
-		Assert.assertEquals(
-			"Association target",
-			"java.lang.Object",
-			((IAssociation) Aggregation13Test.Elements[1])
-				.getTargetEntity()
-				.getDisplayID());
+		ClassFilePrimitive.assertAssigable("Association type",
+				IAssociation.class, Aggregation13Test.Elements[1].getClass());
+		Assert.assertEquals("Association visibility",
+				Access.getAsString(Access.ACC_PUBLIC), Access.getAsString(
+						Aggregation13Test.Elements[1].getVisibility()));
+		Assert.assertEquals("Association cardinality",
+				Constants.CARDINALITY_ONE,
+				((IAssociation) Aggregation13Test.Elements[1])
+						.getCardinality());
+		Assert.assertEquals("Association name",
+				"padl.kernel.impl.Association:java.lang.Object:1",
+				Aggregation13Test.Elements[1].getDisplayName());
+		Assert.assertEquals("Association target", "java.lang.Object",
+				((IAssociation) Aggregation13Test.Elements[1]).getTargetEntity()
+						.getDisplayID());
 	}
+
 	public void testContainerAggregation0() {
 		ClassFilePrimitive.assertAssigable(
-			"ContainerAggregation relationship type",
-			IContainerAggregation.class,
-			Aggregation13Test.Elements[3].getClass());
-		Assert.assertEquals(
-			"ContainerAggregation relationship visibility",
-			Modifier.toString(Modifier.DEFAULT),
-			Modifier.toString(Aggregation13Test.Elements[3].getVisibility()));
-		Assert.assertEquals(
-			"ContainerAggregation relationship cardinality",
-			Constants.CARDINALITY_MANY,
-			((IContainerAggregation) Aggregation13Test.Elements[3])
-				.getCardinality());
-		Assert
-			.assertEquals(
-				"ContainerAggregation relationship name",
+				"ContainerAggregation relationship type",
+				IContainerAggregation.class,
+				Aggregation13Test.Elements[3].getClass());
+		Assert.assertEquals("ContainerAggregation relationship visibility",
+				Access.getAsString(Access.ACC_NONE), Access.getAsString(
+						Aggregation13Test.Elements[3].getVisibility()));
+		Assert.assertEquals("ContainerAggregation relationship cardinality",
+				Constants.CARDINALITY_MANY,
+				((IContainerAggregation) Aggregation13Test.Elements[3])
+						.getCardinality());
+		Assert.assertEquals("ContainerAggregation relationship name",
 				"padl.kernel.impl.ContainerAggregation:padl.example.aggregation.A:2",
 				Aggregation13Test.Elements[3].getDisplayName());
-		Assert.assertEquals(
-			"ContainerAggregation relationship target",
-			"padl.example.aggregation.A",
-			((IContainerAggregation) Aggregation13Test.Elements[3])
-				.getTargetEntity()
-				.getDisplayID());
+		Assert.assertEquals("ContainerAggregation relationship target",
+				"padl.example.aggregation.A",
+				((IContainerAggregation) Aggregation13Test.Elements[3])
+						.getTargetEntity().getDisplayID());
 	}
+
 	public void testContainerAggregation1() {
 		ClassFilePrimitive.assertAssigable(
-			"ContainerAggregation relationship type",
-			IContainerAggregation.class,
-			Aggregation13Test.Elements[4].getClass());
-		Assert.assertEquals(
-			"ContainerAggregation relationship visibility",
-			Modifier.toString(Modifier.DEFAULT),
-			Modifier.toString(Aggregation13Test.Elements[4].getVisibility()));
-		Assert.assertEquals(
-			"ContainerAggregation relationship cardinality",
-			Constants.CARDINALITY_MANY,
-			((IContainerAggregation) Aggregation13Test.Elements[4])
-				.getCardinality());
-		Assert
-			.assertEquals(
-				"ContainerAggregation relationship name",
+				"ContainerAggregation relationship type",
+				IContainerAggregation.class,
+				Aggregation13Test.Elements[4].getClass());
+		Assert.assertEquals("ContainerAggregation relationship visibility",
+				Access.getAsString(Access.ACC_NONE), Access.getAsString(
+						Aggregation13Test.Elements[4].getVisibility()));
+		Assert.assertEquals("ContainerAggregation relationship cardinality",
+				Constants.CARDINALITY_MANY,
+				((IContainerAggregation) Aggregation13Test.Elements[4])
+						.getCardinality());
+		Assert.assertEquals("ContainerAggregation relationship name",
 				"padl.kernel.impl.ContainerAggregation:padl.example.aggregation.A:2",
 				Aggregation13Test.Elements[4].getDisplayName());
-		Assert.assertEquals(
-			"ContainerAggregation relationship target",
-			"padl.example.aggregation.A",
-			((IContainerAggregation) Aggregation13Test.Elements[4])
-				.getTargetEntity()
-				.getDisplayID());
+		Assert.assertEquals("ContainerAggregation relationship target",
+				"padl.example.aggregation.A",
+				((IContainerAggregation) Aggregation13Test.Elements[4])
+						.getTargetEntity().getDisplayID());
 	}
+
 	//	public void testGetAUseRelationship() {
 	//		Aggregation13.assertAssigable(
 	//			"Use relationship type",
@@ -231,11 +208,10 @@ public class Aggregation13Test extends ClassFilePrimitive {
 	//				.getDisplayName());
 	//	}
 	public void testGetAMethod() {
-		Assert.assertEquals(
-			"Method getA()",
-			"getA",
-			Aggregation13Test.Elements[8].getDisplayName());
+		Assert.assertEquals("Method getA()", "getA",
+				Aggregation13Test.Elements[8].getDisplayName());
 	}
+
 	//	public void testGetAnotherAUseRelationship() {
 	//		Aggregation13.assertAssigable(
 	//			"Use relationship type",
@@ -261,43 +237,36 @@ public class Aggregation13Test extends ClassFilePrimitive {
 	//				.getDisplayName());
 	//	}
 	public void testGetAnotherAMethod() {
-		Assert.assertEquals(
-			"Method getAnotherA()",
-			"getAnotherA",
-			Aggregation13Test.Elements[10].getDisplayName());
+		Assert.assertEquals("Method getAnotherA()", "getAnotherA",
+				Aggregation13Test.Elements[10].getDisplayName());
 	}
+
 	public void testInstanceField() {
-		Assert.assertEquals(
-			"Instance field visibility",
-			Modifier.toString(Modifier.PRIVATE),
-			Modifier.toString(Aggregation13Test.Elements[2].getVisibility()));
-		Assert.assertEquals(
-			"Instance field type",
-			"padl.example.aggregation.A",
-			((IField) Aggregation13Test.Elements[2]).getDisplayTypeName());
-		Assert.assertEquals(
-			"Instance field name",
-			"a",
-			Aggregation13Test.Elements[2].getDisplayName());
+		Assert.assertEquals("Instance field visibility",
+				Access.getAsString(Access.ACC_PRIVATE), Access.getAsString(
+						Aggregation13Test.Elements[2].getVisibility()));
+		Assert.assertEquals("Instance field type", "padl.example.aggregation.A",
+				((IField) Aggregation13Test.Elements[2]).getDisplayTypeName());
+		Assert.assertEquals("Instance field name", "a",
+				Aggregation13Test.Elements[2].getDisplayName());
 	}
+
 	public void testMainEntityName() {
-		Assert.assertEquals(
-			"Entity name",
-			"padl.example.aggregation.Aggregation13",
-			Aggregation13Test.FirstClassEntities[2].getDisplayID());
+		Assert.assertEquals("Entity name",
+				"padl.example.aggregation.Aggregation13",
+				Aggregation13Test.FirstClassEntities[2].getDisplayID());
 	}
+
 	public void testNumberOfElements() {
-		Assert.assertEquals(
-			"Number of elements",
-			13,
-			Aggregation13Test.Elements.length);
+		Assert.assertEquals("Number of elements", 13,
+				Aggregation13Test.Elements.length);
 	}
+
 	public void testNumberOfEntities() {
-		Assert.assertEquals(
-			"Number of entities",
-			3,
-			Aggregation13Test.FirstClassEntities.length);
+		Assert.assertEquals("Number of entities", 3,
+				Aggregation13Test.FirstClassEntities.length);
 	}
+
 	//	public void testRemoveAUseRelationship() {
 	//		Aggregation13.assertAssigable(
 	//			"Use relationship type",
@@ -323,11 +292,10 @@ public class Aggregation13Test extends ClassFilePrimitive {
 	//				.getDisplayName());
 	//	}
 	public void testRemoveAMethod() {
-		Assert.assertEquals(
-			"Method removeA()",
-			"removeA",
-			Aggregation13Test.Elements[11].getDisplayName());
+		Assert.assertEquals("Method removeA()", "removeA",
+				Aggregation13Test.Elements[11].getDisplayName());
 	}
+
 	//	public void testRemoveAnotherAUseRelationship() {
 	//		Aggregation13.assertAssigable(
 	//			"Use relationship type",
@@ -353,10 +321,8 @@ public class Aggregation13Test extends ClassFilePrimitive {
 	//				.getDisplayName());
 	//	}
 	public void testRemoveAnotherAMethod() {
-		Assert.assertEquals(
-			"Method removeAnotherA()",
-			"removeAnotherA",
-			Aggregation13Test.Elements[12].getDisplayName());
+		Assert.assertEquals("Method removeAnotherA()", "removeAnotherA",
+				Aggregation13Test.Elements[12].getDisplayName());
 	}
 	//	public void testRemoveAnotherAUseRelationship() {
 	//		Aggregation13.assertAssigable(

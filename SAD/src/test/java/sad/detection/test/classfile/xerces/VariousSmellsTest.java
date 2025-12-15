@@ -344,39 +344,4 @@ public final class VariousSmellsTest extends TestCase {
 	//			"detectAllClassUsePolymorphism: Incorrect Number of classes that use polymorphism",
 	//			41, cs.getSetOfSmells().size());
 	//	}
-	//	public static Test suite() {
-	//		TestSuite suite = new TestSuite();
-	//
-	//		suite.addTest(new DetectionCodeSmellTest(
-	//			"testDetectAllClassGlobalVariable"));
-	//		suite
-	//			.addTest(new DetectionCodeSmellTest("testDetectAllClassOneMethod"));
-	//		suite.addTest(new DetectionCodeSmellTest(
-	//			"testDetectAllClassPrivateField"));
-	//		suite
-	//			.addTest(new DetectionCodeSmellTest("testDetectAllControllerClass"));
-	//		suite.addTest(new DetectionCodeSmellTest("testDetectAllDataClass"));
-	//		suite.addTest(new DetectionCodeSmellTest("testDetectAllFunctionClass"));
-	//		suite.addTest(new DetectionCodeSmellTest("testDetectAllLargeClass"));
-	//		suite.addTest(new DetectionCodeSmellTest("testDetectAllLeafClass"));
-	//		suite.addTest(new DetectionCodeSmellTest("testDetectAllLongMethods"));
-	//		suite.addTest(new DetectionCodeSmellTest("testDetectAllLowCohesion"));
-	//		suite.addTest(new DetectionCodeSmellTest(
-	//			"testDetectAllMethodsNoParameter"));
-	//		suite.addTest(new DetectionCodeSmellTest(
-	//			"testDetectAllMultipleInterface"));
-	//		suite.addTest(new DetectionCodeSmellTest(
-	//			"testDetectAllClassNoInheritance"));
-	//		suite.addTest(new DetectionCodeSmellTest(
-	//			"testDetectAllClassNoPolymorphism"));
-	//		suite.addTest(new DetectionCodeSmellTest(
-	//			"testDetectAllClassProcessClass"));
-	//		suite.addTest(new DetectionCodeSmellTest("testDetectAllSmallClass"));
-	//		suite
-	//			.addTest(new DetectionCodeSmellTest("testDetectAllStatelessClass"));
-	//		suite.addTest(new DetectionCodeSmellTest(
-	//			"testDetectAllClassUsePolymorphism"));
-	//
-	//		return suite;
-	//	}
 }

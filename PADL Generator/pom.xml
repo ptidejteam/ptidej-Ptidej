@@ -33,7 +33,7 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>**/TestPADLGenerator.java</exclude>
+						<exclude>**/*Test.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

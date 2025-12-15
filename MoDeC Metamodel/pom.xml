@@ -30,14 +30,11 @@
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
 			<artifactId>cpl-core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-
 	</dependencies>
-
 </project>

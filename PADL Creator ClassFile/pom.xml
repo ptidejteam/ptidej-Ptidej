@@ -33,7 +33,7 @@
 				<configuration>
 					<!-- Excluded on purpose -->
 					<excludes>
-						<exclude>**/TestCreatorClassFile.java</exclude>
+						<exclude>**/*Test.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

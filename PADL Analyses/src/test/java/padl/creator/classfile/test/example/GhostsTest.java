@@ -69,7 +69,7 @@ public class GhostsTest extends ClassFilePrimitive {
 			9,
 			GhostsTest.FirstClassEntities.length);
 		Assert.assertEquals(
-			"public synchronized class Simple extends Object",
+			"public /*super*/ synchronized class Simple extends Object",
 			GhostsTest.FirstClassEntities[8].toString());
 		Assert.assertEquals(
 			"public ghost Object;",

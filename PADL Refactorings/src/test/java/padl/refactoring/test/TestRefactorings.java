@@ -10,33 +10,26 @@
  ******************************************************************************/
 package padl.refactoring.test;
 
+import junit.framework.Test;
 import padl.refactoring.test.method.RefactoringMoveMethodTest;
 import padl.refactoring.test.method.RefactoringPullUpMethodTest;
 import padl.refactoring.test.method.RefactoringPushDownMethodTest;
 import padl.refactoring.test.method.RefactoringRenameMethodTest;
-import junit.framework.Test;
 
 /**
  * @author Yann-Gaël Guéhéneuc
  * @since  2006/08/08
  */
 public final class TestRefactorings extends junit.framework.TestSuite {
-	public TestRefactorings() {
-	}
-	public TestRefactorings(final Class theClass) {
-		super(theClass);
-	}
-	public TestRefactorings(final String name) {
-		super(name);
-	}
 	public static Test suite() {
 		final TestRefactorings suite = new TestRefactorings();
-		
+		suite.setName(TestRefactorings.class.getName());
+
 		suite.addTestSuite(RefactoringMoveMethodTest.class);
 		suite.addTestSuite(RefactoringPullUpMethodTest.class);
 		suite.addTestSuite(RefactoringPushDownMethodTest.class);
 		suite.addTestSuite(RefactoringRenameMethodTest.class);
-		
+
 		return suite;
 	}
 }

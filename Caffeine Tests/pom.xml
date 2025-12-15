@@ -10,7 +10,7 @@
 		<version>1.0.0</version>
 	</parent>
 
-	<groupId>net.ptidej.caffeine-tests</groupId>
+	<groupId>net.ptidej.caffeine</groupId>
 	<artifactId>caffeine-tests</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
@@ -23,7 +23,7 @@
 				<configuration>
 					<!-- <debug>true</debug> -->
 					<!-- <optimize>false</optimize> -->
-					<release>24</release>
+					<release>${maven.compiler.release}</release>
 					<compilerArgs>
 						<arg>-proc:none</arg>
 					</compilerArgs>
@@ -47,34 +47,15 @@
 				<version>3.5.3</version>
 				<configuration>
 					<excludes>
-						<exclude>**/TestCaffeine.java</exclude>
+						<exclude>**/*Test.java</exclude>
 					</excludes>
-					<includes>
-						<include>
-							caffeine/test/multithreading1/CaffeineLauncher.java</include>
-						<include>
-							caffeine/test/interactiondiagram1/CaffeineLauncher.java</include>
-						<include>
-							caffeine/test/interactiondiagram2/CaffeineLauncher.java</include>
-						<include>
-							caffeine/test/multithreading2/CaffeineLauncher.java</include>
-						<include>caffeine/test/nextEvent2/CaffeineLauncher.java</include>
-						<include>caffeine/test/nextEvent3/CaffeineLauncher.java</include>
-						<include>caffeine/test/collection/CaffeineLauncher.java</include>
-						<include>
-							caffeine/test/association1/CaffeineLauncher.java</include>
-						<include>
-							caffeine/test/association2/CaffeineLauncher.java</include>
-						<include>caffeine/test/array/CaffeineLauncher.java</include>
-					</includes>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
-
-		<!-- Test dependecy -->
+		<!-- Test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -84,10 +65,9 @@
 
 		<dependency>
 			<groupId>net.ptidej.caffeine</groupId>
-			<artifactId>caffeine</artifactId>
+			<artifactId>caffeine-core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 </project>

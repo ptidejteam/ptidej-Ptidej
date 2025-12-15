@@ -48,12 +48,7 @@
 			        <!-- <argLine>-Xmx8G</argLine> -->
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>**/TestPtidejSolverFingerprints.java</exclude>
-						<!-- Excluded because too slow -->
-						<exclude>**/CompositeJHotDrawTest.java</exclude>
-						<exclude>**/CompositeJUnitTest.java</exclude>
-						<exclude>**/CompositeLexiTest.java</exclude>
-						<exclude>**/CompositeQuickUMLTest.java</exclude>
+						<exclude>**/*Test.java</exclude>
 						<!-- I must exclude anything inside coming from -->
 						<!-- src/test/resources/JUnit v3.7/bin/junit    -->
 						<exclude>**/bin/junit/**/*.class</exclude>

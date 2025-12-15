@@ -12,6 +12,8 @@ package padl.visitor.repository;
 
 import java.util.Iterator;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -44,7 +46,6 @@ import padl.kernel.IUseRelationship;
 import padl.util.Util;
 import padl.visitor.IGenerator;
 import util.io.ProxyConsole;
-import util.lang.Modifier;
 
 public final class JavaGenerator implements IGenerator {
 	private final StringBuffer buffer = new StringBuffer();
@@ -124,7 +125,7 @@ public final class JavaGenerator implements IGenerator {
 			this.buffer.append(" */\n");
 			Util.addTabs(this.indentation, this.buffer);
 		}
-		this.buffer.append(Modifier.toString(p.getVisibility()));
+		this.buffer.append(Access.getAsString(p.getVisibility()));
 	}
 
 	public String getCode() {

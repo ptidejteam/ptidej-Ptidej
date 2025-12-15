@@ -17,6 +17,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IClass;
 import padl.kernel.IElement;
@@ -40,7 +42,6 @@ import sad.codesmell.detection.ICodeSmellDetection;
 import sad.codesmell.detection.repository.AbstractCodeSmellDetection;
 import sad.kernel.impl.CodeSmell;
 import sad.util.BoxPlot;
-import util.lang.Modifier;
 import util.io.ProxyConsole;
 
 /**
@@ -77,7 +78,7 @@ public class LongMethodDetection extends AbstractCodeSmellDetection implements I
 				final Iterator iter2 = aClass.getIteratorOnConstituents(IMethod.class);
 				while (iter2.hasNext()) {
 					final IMethod aMethod = (IMethod) iter2.next();
-					if (!aMethod.isAbstract() && (aMethod.getVisibility() & Modifier.NATIVE) == 0) {
+					if (!aMethod.isAbstract() && !Access.isNative(aMethod.getVisibility())) {
 						final Integer value = Integer.valueOf(aMethod.getCodeLines().length);
 		
 						if (!(value == null)) {

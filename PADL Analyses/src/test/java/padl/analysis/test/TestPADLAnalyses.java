@@ -14,10 +14,10 @@ import junit.framework.Test;
 import padl.analysis.aac.test.Aggregation_CLASS_CLASS_FROM_FIELD_1_Test;
 import padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test;
 import padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_2_Test;
-import padl.creator.classfile.test.example.Aggregation1Test;
 import padl.creator.classfile.test.example.Aggregation10Test;
 import padl.creator.classfile.test.example.Aggregation11Test;
 import padl.creator.classfile.test.example.Aggregation13Test;
+import padl.creator.classfile.test.example.Aggregation1Test;
 import padl.creator.classfile.test.example.AggregationsTest;
 import padl.creator.classfile.test.example.Association_INSTANCE_INSTANCE_2_Test;
 import padl.creator.classfile.test.example.ChainOfMessagesTest;
@@ -34,11 +34,11 @@ import padl.creator.classfile.test.example.SuperEntitiesConnectionsTest;
 import padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_1_Test;
 import padl.creator.classfile.test.example.UseRelationship_CLASS_CLASS_3_Test;
 import padl.creator.classfile.test.innerclasses.InnerClassesTest;
-import padl.creator.classfile.test.innerclasses.MemberClassesTest;
 import padl.creator.classfile.test.innerclasses.MemberClasses2Test;
 import padl.creator.classfile.test.innerclasses.MemberClasses3Test;
 import padl.creator.classfile.test.innerclasses.MemberClasses4Test;
 import padl.creator.classfile.test.innerclasses.MemberClasses5Test;
+import padl.creator.classfile.test.innerclasses.MemberClassesTest;
 import padl.creator.classfile.test.innerclasses.MemberEntitiesTest;
 import padl.creator.classfile.test.innerclasses.MemberInterfacesTest;
 import padl.creator.classfile.test.method.MethodInclusionTest;
@@ -48,10 +48,9 @@ import padl.creator.classfile.test.syntheticBridge.SyntheticBridgeTest;
 import padl.creator.classfile.test.visitor.Composite1Test;
 import padl.test.clone.CloneTest;
 import padl.test.clone.CopyInTest;
-import padl.test.listeners.ListenersTest;
 import padl.test.remove.ConstituentRemoveTest;
-import padl.test.remove.RemoveTest;
 import padl.test.remove.RemoveAndIteratorTest;
+import padl.test.remove.RemoveTest;
 import padl.test.setter.GetterTest;
 import padl.test.setter.SetterTest;
 
@@ -60,19 +59,9 @@ import padl.test.setter.SetterTest;
  * @since 2004/11/11
  */
 public final class TestPADLAnalyses extends junit.framework.TestSuite {
-	public TestPADLAnalyses() {
-	}
-
-	public TestPADLAnalyses(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestPADLAnalyses(final String name) {
-		super(name);
-	}
-
 	public static Test suite() {
 		final TestPADLAnalyses suite = new TestPADLAnalyses();
+		suite.setName(TestPADLAnalyses.class.getName());
 
 		suite.addTestSuite(Aggregation_CLASS_CLASS_FROM_FIELD_1_Test.class);
 		suite.addTestSuite(Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.class);

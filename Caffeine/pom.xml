@@ -10,7 +10,7 @@
 		<version>1.0.0</version>
 	</parent>
 	<groupId>net.ptidej.caffeine</groupId>
-	<artifactId>caffeine</artifactId>
+	<artifactId>caffeine-core</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build>
 		<plugins>
@@ -19,7 +19,9 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.13.0</version>
 				<configuration>
-					<release>24</release>
+					<!-- <debug>true</debug> -->
+					<!-- <optimize>false</optimize> -->
+					<release>${maven.compiler.release}</release>
 					<compilerArgs>
 						<arg>-proc:none</arg>
 					</compilerArgs>
@@ -75,7 +77,6 @@
 							<generatePom>true</generatePom>
 						</configuration>
 					</execution>
-
 				</executions>
 			</plugin>
 		</plugins>

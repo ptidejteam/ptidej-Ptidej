@@ -13,6 +13,8 @@ package padl.kernel.impl;
 import java.util.Iterator;
 import java.util.List;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.event.IEvent;
 import padl.event.IModelListener;
 import padl.kernel.Constants;
@@ -24,7 +26,6 @@ import padl.kernel.IFilter;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.exception.ModelDeclarationException;
 import padl.util.Util;
-import util.lang.Modifier;
 import util.multilingual.MultilingualManager;
 
 class ContainerAggregation extends Association implements IElementMarker,
@@ -289,8 +290,6 @@ class ContainerAggregation extends Association implements IElementMarker,
 		}
 	}
 
-	
-
 	public void setVisibility(int visibility) {
 		super.setVisibility(visibility);
 		this.updateAssociation();
@@ -373,13 +372,13 @@ class ContainerAggregation extends Association implements IElementMarker,
 		// The getter method (respectively setter method) might
 		// be abstract if the aggregation has been inferred from
 		// the methods parameters (in an interface, for example).
-		if (!Modifier.isAbstract(this.getVisibility())) {
+		if (!Access.isAbstract(this.getVisibility())) {
 			this.originGetterMethod.resetCodeLines();
 		}
 
 		this.originSetterMethod = new Method(ContainerAggregation.ID3);
 		this.originSetterMethod.setVisibility(this.getVisibility());
-		if (!Modifier.isAbstract(this.getVisibility())) {
+		if (!Access.isAbstract(this.getVisibility())) {
 			this.originSetterMethod.resetCodeLines();
 		}
 

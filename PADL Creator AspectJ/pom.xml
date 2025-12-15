@@ -33,7 +33,7 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>**/TestCreatorAspectJ.java</exclude>
+						<exclude>**/*Test.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
@@ -77,7 +77,6 @@
 	</profiles>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
@@ -112,7 +111,5 @@
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

@@ -11,6 +11,9 @@
 package padl.creator.classfile.test.example;
 
 import org.junit.Assert;
+
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
@@ -24,7 +27,6 @@ import padl.kernel.IIdiomLevelModel;
 import padl.kernel.IUseRelationship;
 import padl.kernel.exception.CreationException;
 import padl.util.Util;
-import util.lang.Modifier;
 
 /**
  * @version	0.2
@@ -38,137 +40,125 @@ public class UseRelationship_CLASS_CLASS_1_Test extends ClassFilePrimitive {
 	public UseRelationship_CLASS_CLASS_1_Test(final String name) {
 		super(name);
 	}
-	protected void setUp() throws CreationException,
-			UnsupportedSourceModelException {
+
+	protected void setUp()
+			throws CreationException, UnsupportedSourceModelException {
 
 		if (UseRelationship_CLASS_CLASS_1_Test.FirstClassEntities == null
 				|| UseRelationship_CLASS_CLASS_1_Test.Elements == null) {
 
-			final ICodeLevelModel codeLevelModel =
-				ClassFilePrimitive.getFactory().createCodeLevelModel(
-					"ptidej.example.relationship");
-			codeLevelModel
-				.create(new CompleteClassFileCreator(
-					new String[] { "../PADL Creator ClassFile/target/test-classes/padl/example/relationship/UseRelationship_CLASS_CLASS_1.class" }));
+			final ICodeLevelModel codeLevelModel = ClassFilePrimitive
+					.getFactory()
+					.createCodeLevelModel("ptidej.example.relationship");
+			codeLevelModel.create(new CompleteClassFileCreator(new String[] {
+					"../PADL Creator ClassFile/target/test-classes/padl/example/relationship/UseRelationship_CLASS_CLASS_1.class" }));
 
-			final IIdiomLevelModel idiomLevelModel =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+			final IIdiomLevelModel idiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(codeLevelModel);
 
-			UseRelationship_CLASS_CLASS_1_Test.FirstClassEntities =
-				Util.getArrayOfTopLevelEntities(idiomLevelModel);
+			UseRelationship_CLASS_CLASS_1_Test.FirstClassEntities = Util
+					.getArrayOfTopLevelEntities(idiomLevelModel);
 
-			UseRelationship_CLASS_CLASS_1_Test.Elements =
-				Util
-					.getArrayOfElements(UseRelationship_CLASS_CLASS_1_Test.FirstClassEntities[2]);
+			UseRelationship_CLASS_CLASS_1_Test.Elements = Util
+					.getArrayOfElements(
+							UseRelationship_CLASS_CLASS_1_Test.FirstClassEntities[2]);
 		}
 	}
+
 	public void testConstructor() {
-		Assert.assertEquals(
-			"Constructor",
-			"UseRelationship_CLASS_CLASS_1",
-			UseRelationship_CLASS_CLASS_1_Test.Elements[0].getDisplayName());
+		Assert.assertEquals("Constructor", "UseRelationship_CLASS_CLASS_1",
+				UseRelationship_CLASS_CLASS_1_Test.Elements[0]
+						.getDisplayName());
 	}
+
 	public void testAssociation1() {
-		ClassFilePrimitive.assertAssigable(
-			"Association relationship type",
-			IAssociation.class,
-			UseRelationship_CLASS_CLASS_1_Test.Elements[1].getClass());
-		Assert.assertEquals(
-			"Association relationship visibility",
-			Modifier.toString(Modifier.PUBLIC),
-			Modifier.toString(UseRelationship_CLASS_CLASS_1_Test.Elements[1]
-				.getVisibility()));
-		Assert.assertEquals(
-			"Association relationship cardinality",
-			Constants.CARDINALITY_ONE,
-			((IAssociation) UseRelationship_CLASS_CLASS_1_Test.Elements[1])
-				.getCardinality());
-		Assert.assertEquals(
-			"Association relationship name",
-			"padl.kernel.impl.Association:java.lang.Object:1",
-			UseRelationship_CLASS_CLASS_1_Test.Elements[1].getDisplayName());
-		Assert.assertEquals(
-			"Use relationship target",
-			"java.lang.Object",
-			((IAssociation) UseRelationship_CLASS_CLASS_1_Test.Elements[1])
-				.getTargetEntity()
-				.getDisplayID());
+		ClassFilePrimitive.assertAssigable("Association relationship type",
+				IAssociation.class,
+				UseRelationship_CLASS_CLASS_1_Test.Elements[1].getClass());
+		Assert.assertEquals("Association relationship visibility",
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(
+						UseRelationship_CLASS_CLASS_1_Test.Elements[1]
+								.getVisibility()));
+		Assert.assertEquals("Association relationship cardinality",
+				Constants.CARDINALITY_ONE,
+				((IAssociation) UseRelationship_CLASS_CLASS_1_Test.Elements[1])
+						.getCardinality());
+		Assert.assertEquals("Association relationship name",
+				"padl.kernel.impl.Association:java.lang.Object:1",
+				UseRelationship_CLASS_CLASS_1_Test.Elements[1]
+						.getDisplayName());
+		Assert.assertEquals("Use relationship target", "java.lang.Object",
+				((IAssociation) UseRelationship_CLASS_CLASS_1_Test.Elements[1])
+						.getTargetEntity().getDisplayID());
 	}
+
 	public void testMethod() {
-		Assert.assertEquals(
-			"Method",
-			"foo",
-			UseRelationship_CLASS_CLASS_1_Test.Elements[2].getDisplayName());
+		Assert.assertEquals("Method", "foo",
+				UseRelationship_CLASS_CLASS_1_Test.Elements[2]
+						.getDisplayName());
 	}
+
 	public void testUseRelationship() {
-		ClassFilePrimitive.assertAssigable(
-			"Use relationship type",
-			IUseRelationship.class,
-			UseRelationship_CLASS_CLASS_1_Test.Elements[3].getClass());
-		Assert.assertEquals(
-			"Use relationship visibility",
-			Modifier.toString(Modifier.PUBLIC | Modifier.STATIC),
-			Modifier.toString(UseRelationship_CLASS_CLASS_1_Test.Elements[3]
-				.getVisibility()));
-		Assert.assertEquals(
-			"Use relationship cardinality",
-			Constants.CARDINALITY_ONE,
-			((IUseRelationship) UseRelationship_CLASS_CLASS_1_Test.Elements[3])
-				.getCardinality());
-		Assert.assertEquals(
-			"Use relationship name",
-			"padl.kernel.impl.UseRelationship:padl.example.relationship.A:1",
-			UseRelationship_CLASS_CLASS_1_Test.Elements[3].getDisplayName());
-		Assert.assertEquals(
-			"Use relationship target",
-			"padl.example.relationship.A",
-			((IUseRelationship) UseRelationship_CLASS_CLASS_1_Test.Elements[3])
-				.getTargetEntity()
-				.getDisplayID());
+		ClassFilePrimitive.assertAssigable("Use relationship type",
+				IUseRelationship.class,
+				UseRelationship_CLASS_CLASS_1_Test.Elements[3].getClass());
+		Assert.assertEquals("Use relationship visibility",
+				Access.getAsString(Access.ACC_PUBLIC | Access.ACC_STATIC),
+				Access.getAsString(
+						UseRelationship_CLASS_CLASS_1_Test.Elements[3]
+								.getVisibility()));
+		Assert.assertEquals("Use relationship cardinality",
+				Constants.CARDINALITY_ONE,
+				((IUseRelationship) UseRelationship_CLASS_CLASS_1_Test.Elements[3])
+						.getCardinality());
+		Assert.assertEquals("Use relationship name",
+				"padl.kernel.impl.UseRelationship:padl.example.relationship.A:1",
+				UseRelationship_CLASS_CLASS_1_Test.Elements[3]
+						.getDisplayName());
+		Assert.assertEquals("Use relationship target",
+				"padl.example.relationship.A",
+				((IUseRelationship) UseRelationship_CLASS_CLASS_1_Test.Elements[3])
+						.getTargetEntity().getDisplayID());
 	}
+
 	public void testAssociation2() {
-		ClassFilePrimitive.assertAssigable(
-			"Association relationship type",
-			IAssociation.class,
-			UseRelationship_CLASS_CLASS_1_Test.Elements[4].getClass());
-		Assert.assertEquals(
-			"Association relationship visibility",
-			Modifier.toString(Modifier.PUBLIC | Modifier.STATIC),
-			Modifier.toString(UseRelationship_CLASS_CLASS_1_Test.Elements[4]
-				.getVisibility()));
-		Assert.assertEquals(
-			"Association relationship cardinality",
-			Constants.CARDINALITY_ONE,
-			((IAssociation) UseRelationship_CLASS_CLASS_1_Test.Elements[4])
-				.getCardinality());
-		Assert.assertEquals(
-			"Association relationship name",
-			"padl.kernel.impl.Association:padl.example.relationship.A:1",
-			UseRelationship_CLASS_CLASS_1_Test.Elements[4].getDisplayName());
-		Assert.assertEquals(
-			"Use relationship target",
-			"padl.example.relationship.A",
-			((IAssociation) UseRelationship_CLASS_CLASS_1_Test.Elements[4])
-				.getTargetEntity()
-				.getDisplayID());
+		ClassFilePrimitive.assertAssigable("Association relationship type",
+				IAssociation.class,
+				UseRelationship_CLASS_CLASS_1_Test.Elements[4].getClass());
+		Assert.assertEquals("Association relationship visibility",
+				Access.getAsString(Access.ACC_PUBLIC | Access.ACC_STATIC),
+				Access.getAsString(
+						UseRelationship_CLASS_CLASS_1_Test.Elements[4]
+								.getVisibility()));
+		Assert.assertEquals("Association relationship cardinality",
+				Constants.CARDINALITY_ONE,
+				((IAssociation) UseRelationship_CLASS_CLASS_1_Test.Elements[4])
+						.getCardinality());
+		Assert.assertEquals("Association relationship name",
+				"padl.kernel.impl.Association:padl.example.relationship.A:1",
+				UseRelationship_CLASS_CLASS_1_Test.Elements[4]
+						.getDisplayName());
+		Assert.assertEquals("Use relationship target",
+				"padl.example.relationship.A",
+				((IAssociation) UseRelationship_CLASS_CLASS_1_Test.Elements[4])
+						.getTargetEntity().getDisplayID());
 	}
+
 	public void testMainEntityName() {
-		Assert.assertEquals(
-			"Entity name",
-			"padl.example.relationship.UseRelationship_CLASS_CLASS_1",
-			UseRelationship_CLASS_CLASS_1_Test.FirstClassEntities[2].getDisplayID());
+		Assert.assertEquals("Entity name",
+				"padl.example.relationship.UseRelationship_CLASS_CLASS_1",
+				UseRelationship_CLASS_CLASS_1_Test.FirstClassEntities[2]
+						.getDisplayID());
 	}
+
 	public void testNumberOfElements() {
-		Assert.assertEquals(
-			"Number of elements",
-			5,
-			UseRelationship_CLASS_CLASS_1_Test.Elements.length);
+		Assert.assertEquals("Number of elements", 5,
+				UseRelationship_CLASS_CLASS_1_Test.Elements.length);
 	}
+
 	public void testNumberOfEntities() {
-		Assert.assertEquals(
-			"Number of entities",
-			3,
-			UseRelationship_CLASS_CLASS_1_Test.FirstClassEntities.length);
+		Assert.assertEquals("Number of entities", 3,
+				UseRelationship_CLASS_CLASS_1_Test.FirstClassEntities.length);
 	}
 }

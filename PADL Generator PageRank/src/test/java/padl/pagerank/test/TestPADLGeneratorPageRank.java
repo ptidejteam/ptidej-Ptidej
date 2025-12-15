@@ -17,23 +17,13 @@ import junit.framework.TestSuite;
  * @author yann
  */
 public class TestPADLGeneratorPageRank extends TestSuite {
-	public TestPADLGeneratorPageRank() {
-	}
-
-	public TestPADLGeneratorPageRank(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestPADLGeneratorPageRank(final String name) {
-		super(name);
-	}
-
 	public static Test suite() {
 		final TestPADLGeneratorPageRank suite = new TestPADLGeneratorPageRank();
+		suite.setName(TestPADLGeneratorPageRank.class.getName());
 
 		// TODO Add this test back
 		//		suite.addTestSuite(CPPTest.class);
-		
+
 		return suite;
 	}
 }

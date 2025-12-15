@@ -14,11 +14,10 @@ import junit.framework.Test;
 import junit.framework.TestSuite;
 import pom.test.classfile.general.ClassPrimitivesTest;
 import pom.test.classfile.general.CouplingCohesionMetricsTest;
-import pom.test.classfile.general.JDK10LoadTest;
 import pom.test.classfile.general.MethodPrimitivesTest;
 import pom.test.classfile.general.MetricRepositoryTest;
-import pom.test.classfile.general.Pattern4JNMIandNMOTest;
 import pom.test.classfile.general.OperatorsTest;
+import pom.test.classfile.general.Pattern4JNMIandNMOTest;
 import pom.test.classfile.general.UnaryMetricsTest;
 import pom.test.classfile.specific.AIDTest;
 import pom.test.classfile.specific.CBOTest;
@@ -37,20 +36,9 @@ import util.lang.MavenTestGuard;
  * since   2004-02-16
  */
 public class TestPOM extends TestSuite {
-	public TestPOM() {
-		super();
-	}
-
-	public TestPOM(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestPOM(final String name) {
-		super(name);
-	}
-
 	public static Test suite() {
 		final TestPOM suite = new TestPOM();
+		suite.setName(TestPOM.class.getName());
 
 		suite.addTestSuite(CacheTest.class);
 

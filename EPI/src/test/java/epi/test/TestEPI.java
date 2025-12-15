@@ -18,22 +18,14 @@ import junit.framework.Test;
  * @author Yann-Gaël Guéhéneuc
  * @since  2004/01/25
  */
-// TODO: Implement and test the tests!
-// Non-fuzzy first, then fuzzy...
 public final class TestEPI extends junit.framework.TestSuite {
-	public TestEPI() {
-		//empty block
-	}
-	public TestEPI(final Class theClass) {
-		super(theClass);
-	}
-	public TestEPI(final String name) {
-		super(name);
-	}
 	public static Test suite() {
 		final TestEPI suite = new TestEPI();
+		suite.setName(TestEPI.class.getName());
+
 		suite.addTestSuite(JavaAWTTest.class);
 		suite.addTestSuite(JavaSwingTest.class);
+
 		return suite;
 	}
 }

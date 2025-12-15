@@ -15,7 +15,6 @@
 	<name>DeMIMA Occurrence Generator</name>
 
 	<dependencies>
-
 		<!-- Test dependecy -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -72,7 +71,5 @@
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

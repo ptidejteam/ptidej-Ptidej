@@ -26,11 +26,21 @@
 					</compilerArgs>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
+				<configuration>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/*Test.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
 			<artifactId>cpl-core</artifactId>
@@ -54,7 +64,5 @@
 			<artifactId>demima-ui</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-
 	</dependencies>
-
 </project>

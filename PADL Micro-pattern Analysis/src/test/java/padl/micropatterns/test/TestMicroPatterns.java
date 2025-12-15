@@ -10,6 +10,8 @@
  ******************************************************************************/
 package padl.micropatterns.test;
 
+import junit.framework.Test;
+import junit.framework.TestSuite;
 import padl.micropatterns.test.cases.AugmentedTypeTest;
 import padl.micropatterns.test.cases.BoxTest;
 import padl.micropatterns.test.cases.CanopyTest;
@@ -38,54 +40,45 @@ import padl.micropatterns.test.cases.StateMachineTest;
 import padl.micropatterns.test.cases.StatelessTest;
 import padl.micropatterns.test.cases.TaxonormyTest;
 import padl.micropatterns.test.cases.TraitTest;
-import junit.framework.Test;
-import junit.framework.TestSuite;
 
 /**
  * @author tanterij
  * @author Yann
  */
 public class TestMicroPatterns extends TestSuite {
-	public TestMicroPatterns() {
-	}
-	public TestMicroPatterns(final Class theClass) {
-		super(theClass);
-	}
-	public TestMicroPatterns(final String name) {
-		super(name);
-	}
 	public static Test suite() {
 		final TestMicroPatterns suite = new TestMicroPatterns();
+		suite.setName(TestMicroPatterns.class.getName());
 
-		suite.addTest(new TestSuite(RepositoryTest.class));
+		suite.addTestSuite(RepositoryTest.class);
+		suite.addTestSuite(DesignatorTest.class);
+		suite.addTestSuite(TaxonormyTest.class);
+		suite.addTestSuite(JoinerTest.class);
+		suite.addTestSuite(PoolTest.class);
+		suite.addTestSuite(FunctionPointerTest.class);
+		suite.addTestSuite(FunctionObjectTest.class);
+		suite.addTestSuite(CobolLikeTest.class);
+		suite.addTestSuite(StatelessTest.class);
+		suite.addTestSuite(CommonStateTest.class);
+		suite.addTestSuite(ImmutableTest.class);
+		suite.addTestSuite(RestrictedCreationTest.class);
+		suite.addTestSuite(SamplerTest.class);
+		suite.addTestSuite(BoxTest.class);
+		suite.addTestSuite(CanopyTest.class);
+		suite.addTestSuite(CompoundBoxTest.class);
+		suite.addTestSuite(RecordTest.class);
+		suite.addTestSuite(DataManagerTest.class);
+		suite.addTestSuite(SinkTest.class);
+		suite.addTestSuite(OutlineTest.class);
+		suite.addTestSuite(TraitTest.class);
+		suite.addTestSuite(StateMachineTest.class);
+		suite.addTestSuite(PureTypeTest.class);
+		suite.addTestSuite(AugmentedTypeTest.class);
+		suite.addTestSuite(PseudoClassTest.class);
+		suite.addTestSuite(ImplementorTest.class);
+		suite.addTestSuite(OverriderTest.class);
+		suite.addTestSuite(ExtenderTest.class);
 
-		suite.addTest(new TestSuite(DesignatorTest.class));
-		suite.addTest(new TestSuite(TaxonormyTest.class));
-		suite.addTest(new TestSuite(JoinerTest.class));
-		suite.addTest(new TestSuite(PoolTest.class));
-		suite.addTest(new TestSuite(FunctionPointerTest.class));
-		suite.addTest(new TestSuite(FunctionObjectTest.class));
-		suite.addTest(new TestSuite(CobolLikeTest.class));
-		suite.addTest(new TestSuite(StatelessTest.class));
-		suite.addTest(new TestSuite(CommonStateTest.class));
-		suite.addTest(new TestSuite(ImmutableTest.class));
-		suite.addTest(new TestSuite(RestrictedCreationTest.class));
-		suite.addTest(new TestSuite(SamplerTest.class));
-		suite.addTest(new TestSuite(BoxTest.class));
-		suite.addTest(new TestSuite(CanopyTest.class));
-		suite.addTest(new TestSuite(CompoundBoxTest.class));
-		suite.addTest(new TestSuite(RecordTest.class));
-		suite.addTest(new TestSuite(DataManagerTest.class));
-		suite.addTest(new TestSuite(SinkTest.class));
-		suite.addTest(new TestSuite(OutlineTest.class));
-		suite.addTest(new TestSuite(TraitTest.class));
-		suite.addTest(new TestSuite(StateMachineTest.class));
-		suite.addTest(new TestSuite(PureTypeTest.class));
-		suite.addTest(new TestSuite(AugmentedTypeTest.class));
-		suite.addTest(new TestSuite(PseudoClassTest.class));
-		suite.addTest(new TestSuite(ImplementorTest.class));
-		suite.addTest(new TestSuite(OverriderTest.class));
-		suite.addTest(new TestSuite(ExtenderTest.class));
 		return suite;
 	}
 }

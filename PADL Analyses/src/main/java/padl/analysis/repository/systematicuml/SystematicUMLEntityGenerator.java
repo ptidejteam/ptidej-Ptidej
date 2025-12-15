@@ -10,6 +10,8 @@
  ******************************************************************************/
 package padl.analysis.repository.systematicuml;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -42,7 +44,6 @@ import padl.kernel.IUseRelationship;
 import padl.motif.IDesignMotifModel;
 import padl.visitor.IWalker;
 import util.io.ProxyConsole;
-import util.lang.Modifier;
 
 /**
  * @author Yann-Gaël Guéhéneuc
@@ -61,10 +62,9 @@ public class SystematicUMLEntityGenerator implements IWalker {
 	private final IIdiomLevelModel newIdiomLevelModel;
 	private final SystematicUMLStatistics statistics;
 
-	public SystematicUMLEntityGenerator(
-		final IFactory aFactory,
-		final IIdiomLevelModel anIdiomLevelModel,
-		final SystematicUMLStatistics aStatistics) {
+	public SystematicUMLEntityGenerator(final IFactory aFactory,
+			final IIdiomLevelModel anIdiomLevelModel,
+			final SystematicUMLStatistics aStatistics) {
 
 		this.factory = aFactory;
 		this.newIdiomLevelModel = anIdiomLevelModel;
@@ -73,20 +73,24 @@ public class SystematicUMLEntityGenerator implements IWalker {
 
 	public void close(final IAbstractModel anAbstractModel) {
 	}
+
 	public void close(final IClass aClass) {
-		final IClass newClass =
-			this.factory.createClass(aClass.getID(), aClass.getName());
+		final IClass newClass = this.factory.createClass(aClass.getID(),
+				aClass.getName());
 		this.close(aClass, newClass);
 	}
+
 	public void close(final IConstructor aConstructor) {
 	}
+
 	public void close(final IDelegatingMethod aDelegatingMethod) {
 	}
+
 	public void close(final IDesignMotifModel aPatternModel) {
 	}
-	private void close(
-		final IFirstClassEntity originalEntity,
-		final IFirstClassEntity newEntity) {
+
+	private void close(final IFirstClassEntity originalEntity,
+			final IFirstClassEntity newEntity) {
 
 		final StringBuffer displayName = new StringBuffer();
 		// If an entity is either an interface or an abstract class...
@@ -134,43 +138,53 @@ public class SystematicUMLEntityGenerator implements IWalker {
 		newEntity.setDisplayName(displayName.toString());
 		this.newIdiomLevelModel.addConstituent(newEntity);
 	}
+
 	public void close(final IGetter aGetter) {
 	}
+
 	public void close(final IGhost aGhost) {
-		this.newIdiomLevelModel.addConstituent(this.factory.createGhost(
-			aGhost.getID(),
-			aGhost.getName()));
+		this.newIdiomLevelModel.addConstituent(
+				this.factory.createGhost(aGhost.getID(), aGhost.getName()));
 	}
+
 	public void close(final IInterface anInterface) {
-		final IInterface newInterface =
-			this.factory.createInterface(
-				anInterface.getID(),
-				anInterface.getName());
+		final IInterface newInterface = this.factory
+				.createInterface(anInterface.getID(), anInterface.getName());
 		this.close(anInterface, newInterface);
 	}
+
 	public void close(final IMemberClass aMemberClass) {
 		this.close((IClass) aMemberClass);
 	}
+
 	public void close(final IMemberGhost aMemberGhost) {
 		this.close((IClass) aMemberGhost);
 	}
+
 	public void close(final IMemberInterface aMemberInterface) {
 		this.close((IInterface) aMemberInterface);
 	}
+
 	public void close(final IMethod aMethod) {
 	}
+
 	public void close(final IPackage aPackage) {
 	}
+
 	public void close(final IPackageDefault aPackage) {
 	}
+
 	public void close(final ISetter aSetter) {
 	}
+
 	public String getName() {
 		return "SystematicUMLAnalisysEntityGenerator";
 	}
+
 	public Object getResult() {
 		return this.newIdiomLevelModel;
 	}
+
 	private void open() {
 		this.hasConcreteMethods = false;
 		this.hasInstanceMethods = false;
@@ -180,37 +194,49 @@ public class SystematicUMLEntityGenerator implements IWalker {
 		this.hasFields = false;
 		this.hasFieldAssignments = false;
 	}
+
 	public void open(final IAbstractModel anAbstractModel) {
 	}
+
 	public void open(final IClass aClass) {
 		this.open();
 	}
+
 	public void open(final IConstructor aConstructor) {
 		this.isMethod = false;
 	}
+
 	public void open(final IDelegatingMethod aDelegatingMethod) {
 		this.open((IMethod) aDelegatingMethod);
 	}
+
 	public void open(final IDesignMotifModel aPatternModel) {
 	}
+
 	public void open(final IGetter aGetter) {
 		this.open((IMethod) aGetter);
 	}
+
 	public void open(final IGhost aGhost) {
 		this.open();
 	}
+
 	public void open(final IInterface anInterface) {
 		this.open();
 	}
+
 	public void open(final IMemberClass aMemberClass) {
 		this.open();
 	}
+
 	public void open(final IMemberGhost aMemberGhost) {
 		this.open();
 	}
+
 	public void open(final IMemberInterface aMemberInterface) {
 		this.open();
 	}
+
 	public void open(final IMethod aMethod) {
 		if (!aMethod.isAbstract()) {
 			this.hasConcreteMethods = true;
@@ -223,50 +249,55 @@ public class SystematicUMLEntityGenerator implements IWalker {
 			this.isMethod = true;
 		}
 	}
+
 	public void open(final IPackage aPackage) {
 	}
+
 	public void open(final IPackageDefault aPackage) {
 	}
+
 	public void open(final ISetter aSetter) {
 		this.open((IMethod) aSetter);
 	}
+
 	public void reset() {
 	}
-	public final void unknownConstituentHandler(
-		final String aCalledMethodName,
-		final IConstituent aConstituent) {
 
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(this.getClass().getName());
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(" does not know what to do for \"");
+	public final void unknownConstituentHandler(final String aCalledMethodName,
+			final IConstituent aConstituent) {
+
+		ProxyConsole.getInstance().debugOutput()
+				.print(this.getClass().getName());
+		ProxyConsole.getInstance().debugOutput()
+				.print(" does not know what to do for \"");
 		ProxyConsole.getInstance().debugOutput().print(aCalledMethodName);
 		ProxyConsole.getInstance().debugOutput().print("\" (");
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(aConstituent.getDisplayID());
+		ProxyConsole.getInstance().debugOutput()
+				.print(aConstituent.getDisplayID());
 		ProxyConsole.getInstance().debugOutput().println(')');
 	}
+
 	public void visit(final IAggregation anAggregation) {
 	}
+
 	public void visit(final IAssociation anAssociation) {
 	}
+
 	public void visit(final IComposition aComposition) {
 	}
+
 	public void visit(final IContainerAggregation aContainerAggregation) {
 	}
+
 	public void visit(final IContainerComposition aContainerComposition) {
 	}
+
 	public void visit(final ICreation aCreation) {
 	}
+
 	public void visit(final IField aField) {
 		if (!aField.isPublic() || !aField.isStatic()
-				|| !Modifier.isFinal(aField.getVisibility())) {
+				|| !Access.isFinal(aField.getVisibility())) {
 
 			this.hasPublicStaticFinalFieldsOnly = false;
 		}
@@ -275,23 +306,24 @@ public class SystematicUMLEntityGenerator implements IWalker {
 		}
 		this.hasFields = true;
 	}
+
 	public void visit(final IMethodInvocation aMethodInvocation) {
 		if (this.isMethod) {
-			if (aMethodInvocation.getCalledMethod() != null
-					&& aMethodInvocation
-						.getCalledMethod()
-						.getDisplayName()
-						.equals("=")) {
+			if (aMethodInvocation.getCalledMethod() != null && aMethodInvocation
+					.getCalledMethod().getDisplayName().equals("=")) {
 
 				this.hasFieldAssignments = true;
 			}
 		}
 	}
+
 	public void visit(final IParameter aParameter) {
 	}
+
 	public void visit(final IPrimitiveEntity aPrimitiveEntity) {
 		// Do nothing for uninteresting primitive types.
 	}
+
 	public void visit(final IUseRelationship aUse) {
 	}
 }

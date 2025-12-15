@@ -11,6 +11,7 @@ public final class Access {
 	public static final short ACC_FINAL = 16;
 	public static final short ACC_INTERFACE = 512;
 	public static final short ACC_NATIVE = 256;
+	public static final short ACC_NONE = 0;
 	public static final short ACC_PRIVATE = 2;
 	public static final short ACC_PROTECTED = 4;
 	public static final short ACC_PUBLIC = 1;
@@ -34,9 +35,11 @@ public final class Access {
 			var1 = var1 + "/*annotation*/ ";
 		}
 
-		if (Access.isClass(var0)) {
-			var1 = var1 + "class ";
-		}
+		// Yann 25/12/12: Class and Interfaces
+		// I don't display these "modifiers" because they are not really modifiers...
+		//	if (Access.isClass(var0)) {
+		//		var1 = var1 + "class ";
+		//	}
 
 		if (Access.isEnum(var0)) {
 			var1 = var1 + "enum ";
@@ -46,9 +49,11 @@ public final class Access {
 			var1 = var1 + "final ";
 		}
 
-		if (Access.isInterface(var0)) {
-			var1 = var1 + "interface ";
-		}
+		// Yann 25/12/12: Class and Interfaces
+		// I don't display these "modifiers" because they are not really modifiers...
+		//	if (Access.isInterface(var0)) {
+		//		var1 = var1 + "interface ";
+		//	}
 
 		if (Access.isNative(var0)) {
 			var1 = var1 + "native ";
@@ -94,7 +99,7 @@ public final class Access {
 			var1 = var1 + "volatile ";
 		}
 
-		return var1;
+		return var1.trim();
 	}
 
 	public static String getClassAsString(int var0) {
@@ -136,7 +141,7 @@ public final class Access {
 			var1 = var1 + "class ";
 		}
 
-		return var1;
+		return var1.trim();
 	}
 
 	public static String getFieldAsString(int var0) {

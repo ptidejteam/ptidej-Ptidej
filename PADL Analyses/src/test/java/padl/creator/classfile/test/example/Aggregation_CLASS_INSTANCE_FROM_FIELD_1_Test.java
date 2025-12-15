@@ -12,6 +12,8 @@ package padl.creator.classfile.test.example;
 
 import org.junit.Assert;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
@@ -27,7 +29,6 @@ import padl.kernel.IIdiomLevelModel;
 import padl.kernel.IUseRelationship;
 import padl.kernel.exception.CreationException;
 import padl.util.Util;
-import util.lang.Modifier;
 
 /**
  * @version	0.2
@@ -70,10 +71,11 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test
 	public void testAggregation() {
 		ClassFilePrimitive.assertAssigable("Aggregation link type",
 				IAggregation.class,
-				Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.Elements[5].getClass());
+				Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.Elements[5]
+						.getClass());
 		Assert.assertEquals("Aggregation link visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(
 						Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.Elements[5]
 								.getVisibility()));
 		Assert.assertEquals("Aggregation link cardinality",
@@ -92,10 +94,11 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test
 	public void testAssociation() {
 		ClassFilePrimitive.assertAssigable("Association link type",
 				IAssociation.class,
-				Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.Elements[1].getClass());
+				Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.Elements[1]
+						.getClass());
 		Assert.assertEquals("Association link visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(
 						Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.Elements[1]
 								.getVisibility()));
 		Assert.assertEquals("Association link cardinality",
@@ -121,10 +124,11 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test
 	public void testFooAssociation() {
 		ClassFilePrimitive.assertAssigable("Association link type",
 				IUseRelationship.class,
-				Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.Elements[6].getClass());
+				Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.Elements[6]
+						.getClass());
 		Assert.assertEquals("Association link visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(
 						Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.Elements[6]
 								.getVisibility()));
 		Assert.assertEquals("Association link cardinality",
@@ -143,10 +147,11 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test
 	public void testUseRelationship() {
 		ClassFilePrimitive.assertAssigable("Use relationship type",
 				IUseRelationship.class,
-				Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.Elements[4].getClass());
+				Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.Elements[4]
+						.getClass());
 		Assert.assertEquals("Use relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(
+				Access.getAsString(Access.ACC_PUBLIC),
+				Access.getAsString(
 						Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.Elements[4]
 								.getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
@@ -188,8 +193,8 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test
 
 	public void testStaticField() {
 		Assert.assertEquals("Static field visibility",
-				Modifier.toString(Modifier.PRIVATE | Modifier.STATIC),
-				Modifier.toString(
+				Access.getAsString(Access.ACC_PRIVATE | Access.ACC_STATIC),
+				Access.getAsString(
 						Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test.Elements[2]
 								.getVisibility()));
 		Assert.assertEquals("Static field type", "padl.example.relationship.A",

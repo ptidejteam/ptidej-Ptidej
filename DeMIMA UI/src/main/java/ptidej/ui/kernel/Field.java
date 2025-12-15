@@ -10,29 +10,35 @@
  ******************************************************************************/
 package ptidej.ui.kernel;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.kernel.IField;
 import ptidej.ui.primitive.IPrimitiveFactory;
-import util.lang.Modifier;
 
 public final class Field extends Element {
 	private IField field;
 
-	public Field(final IPrimitiveFactory primitiveFactory, final IField pField) {
+	public Field(final IPrimitiveFactory primitiveFactory,
+			final IField pField) {
 		super(primitiveFactory);
 		this.field = pField;
 	}
+
 	public void build() {
 		// Nothing to do.
 	}
+
 	public String getName() {
 		return this.field.getDisplayName();
 	}
+
 	public void paint(int xOffset, int yOffset) {
 		// Nothing to do.
 	}
+
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
-		buffer.append(Modifier.toString(this.field.getVisibility()));
+		buffer.append(Access.getFieldAsString(this.field.getVisibility()));
 		buffer.append(' ');
 		buffer.append(this.field.getType());
 		buffer.append(' ');

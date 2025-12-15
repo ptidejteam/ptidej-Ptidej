@@ -33,10 +33,7 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>**/TestJOSSerialiser.java</exclude>
-						<!-- Excluded because too slow -->
-						<exclude>**/ArgoUML0198Test.java</exclude>
-						<exclude>**/ArgoUML020Test.java</exclude>
+						<exclude>**/*Test.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>

@@ -33,7 +33,7 @@
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
-						<exclude>**/TestPtidejSolver3.java</exclude>
+						<exclude>**/*Test.java</exclude>
 						<!-- Excluded because not up-to-date -->
 						<exclude>**/AssociationDistanceComposite2Test.java</exclude>
 					</excludes>

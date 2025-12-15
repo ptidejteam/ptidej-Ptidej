@@ -21,24 +21,14 @@ import padl.test.defaultpackage.DefaultPackageTest;
  * @since 2004/01/25
  */
 public final class TestPADL extends TestSuite {
-	public TestPADL() {
-	}
-
-	public TestPADL(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestPADL(final String name) {
-		super(name);
-	}
-
 	public static Test suite() {
 		final TestPADL suite = new TestPADL();
-		
+		suite.setName(TestPADL.class.getName());
+
 		suite.addTestSuite(AbstractContainerTest.class);
 		suite.addTestSuite(MethodInvocationTest.class);
 		suite.addTestSuite(DefaultPackageTest.class); // Added by Mathieu Lemoine, 2009-05-15
-		
+
 		return suite;
 	}
 }

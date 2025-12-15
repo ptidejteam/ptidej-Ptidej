@@ -12,6 +12,8 @@ package padl.creator.classfile.test.example;
 
 import org.junit.Assert;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
@@ -26,7 +28,6 @@ import padl.kernel.IFirstClassEntity;
 import padl.kernel.IIdiomLevelModel;
 import padl.kernel.exception.CreationException;
 import padl.util.Util;
-import util.lang.Modifier;
 
 /**
  * @author 	Yann-Gaël Guéhéneuc
@@ -71,8 +72,8 @@ public class Aggregation1Test extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association relationship type",
 				IAssociation.class, Aggregation1Test.Elements[1].getClass());
 		Assert.assertEquals("Association relationship visibility",
-				Modifier.toString(Modifier.PUBLIC),
-				Modifier.toString(Aggregation1Test.Elements[1].getVisibility()));
+				Access.getAsString(Access.ACC_PUBLIC), Access.getAsString(
+						Aggregation1Test.Elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) Aggregation1Test.Elements[1]).getCardinality());
@@ -80,8 +81,9 @@ public class Aggregation1Test extends ClassFilePrimitive {
 				"padl.kernel.impl.Association:java.lang.Object:1",
 				Aggregation1Test.Elements[1].getDisplayName());
 		Assert.assertEquals("Association relationship target",
-				"java.lang.Object", ((IAssociation) Aggregation1Test.Elements[1])
-						.getTargetEntity().getDisplayID());
+				"java.lang.Object",
+				((IAssociation) Aggregation1Test.Elements[1]).getTargetEntity()
+						.getDisplayID());
 	}
 
 	public void testConstructor() {
@@ -95,8 +97,8 @@ public class Aggregation1Test extends ClassFilePrimitive {
 				IContainerAggregation.class,
 				Aggregation1Test.Elements[3].getClass());
 		Assert.assertEquals("ContainerAggregation relationship visibility",
-				Modifier.toString(Modifier.DEFAULT),
-				Modifier.toString(Aggregation1Test.Elements[3].getVisibility()));
+				Access.getAsString(Access.ACC_NONE), Access.getAsString(
+						Aggregation1Test.Elements[3].getVisibility()));
 		Assert.assertEquals("ContainerAggregation relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IContainerAggregation) Aggregation1Test.Elements[3])
@@ -112,8 +114,8 @@ public class Aggregation1Test extends ClassFilePrimitive {
 
 	public void testField() {
 		Assert.assertEquals("Field visibility",
-				Modifier.toString(Modifier.PRIVATE),
-				Modifier.toString(Aggregation1Test.Elements[2].getVisibility()));
+				Access.getAsString(Access.ACC_PRIVATE), Access.getAsString(
+						Aggregation1Test.Elements[2].getVisibility()));
 		Assert.assertEquals("Field type", "padl.example.aggregation.A",
 				((IField) Aggregation1Test.Elements[2]).getDisplayTypeName());
 		Assert.assertEquals("Field name", "a",
@@ -124,8 +126,8 @@ public class Aggregation1Test extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Use relationship type",
 				IAssociation.class, Aggregation1Test.Elements[5].getClass());
 		Assert.assertEquals("Use relationship visibility",
-				Modifier.toString(Modifier.DEFAULT),
-				Modifier.toString(Aggregation1Test.Elements[5].getVisibility()));
+				Access.getAsString(Access.ACC_NONE), Access.getAsString(
+						Aggregation1Test.Elements[5].getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
 				Constants.CARDINALITY_ONE,
 				((IAssociation) Aggregation1Test.Elements[5]).getCardinality());

@@ -200,18 +200,18 @@ public class ConvertorsComparisonTest extends TestCase {
 		final int numCPEntriesOfThis = cpOfThis.length();
 		final int numCPEntriesOfOther = cpOfOther.length();
 		// BCEL-built classfiles may have slightly different constants than compiler-generated ones don't
-		// 	equalConstants &= numCPEntriesOfThis <= numCPEntriesOfOther;
+		//	equalConstants &= numCPEntriesOfThis <= numCPEntriesOfOther;
 
 		// I skip the first constant pool entry because it's always "<dummy Entry>"
 		for (int i = 1; equalConstants && i < numCPEntriesOfThis; i++) {
 			final ConstantPoolEntry cpEntryOfThis = cpOfThis.get(i);
-			if (cpEntryOfThis == null) {
-				continue;
-			}
-			final int index = cpOfOther.find(cpEntryOfThis);
-			if (index > 0) {
-				final ConstantPoolEntry cpEntryOfOther = cpOfOther.get(index);
-				equalConstants &= cpEntryOfThis.equals(cpEntryOfOther);
+			if (cpEntryOfThis != null) {
+				final int index = cpOfOther.find(cpEntryOfThis);
+				if (index > 0) {
+					final ConstantPoolEntry cpEntryOfOther = cpOfOther
+							.get(index);
+					equalConstants &= cpEntryOfThis.equals(cpEntryOfOther);
+				}
 			}
 		}
 
@@ -261,7 +261,6 @@ public class ConvertorsComparisonTest extends TestCase {
 	}
 
 	private boolean compare6Fields(final ClassFile one, final ClassFile other) {
-
 		// 6. Fields
 		boolean equalFields = true;
 		final FieldInfoList fieldListOfThis = one.getFields();
@@ -299,8 +298,8 @@ public class ConvertorsComparisonTest extends TestCase {
 			final MethodInfo methodOfThis = methodListOfThis.get(i);
 			final MethodInfo methodOfOther = methodListOfOther.get(i);
 
-			// TODO Re-enable this test and fix the difference between CFParse and BCEL (BCEL has sometimes longer bytecode sizes)  
-			// 	equalMethods &= methodOfThis.getAbout().equals(methodOfOther.getAbout());
+			equalMethods &= methodOfThis.getAbout()
+					.equals(methodOfOther.getAbout());
 			equalMethods &= methodOfThis.getAccess() == methodOfOther
 					.getAccess();
 			equalMethods &= methodOfThis.getDesc()

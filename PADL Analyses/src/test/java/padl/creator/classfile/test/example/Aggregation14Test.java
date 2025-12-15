@@ -12,6 +12,8 @@ package padl.creator.classfile.test.example;
 
 import org.junit.Assert;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
@@ -24,7 +26,6 @@ import padl.kernel.IFirstClassEntity;
 import padl.kernel.IIdiomLevelModel;
 import padl.kernel.exception.CreationException;
 import padl.util.Util;
-import util.lang.Modifier;
 
 /**
  * @author 	Yann-Gaël Guéhéneuc
@@ -70,7 +71,7 @@ public class Aggregation14Test extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association type",
 				IAssociation.class, Aggregation14Test.Elements[1].getClass());
 		Assert.assertEquals("Association visibility",
-				Modifier.toString(Modifier.PUBLIC), Modifier.toString(
+				Access.getAsString(Access.ACC_PUBLIC), Access.getAsString(
 						Aggregation14Test.Elements[1].getVisibility()));
 		Assert.assertEquals("Association cardinality",
 				Constants.CARDINALITY_ONE,
@@ -109,7 +110,7 @@ public class Aggregation14Test extends ClassFilePrimitive {
 		ClassFilePrimitive.assertAssigable("Association type",
 				IAssociation.class, Aggregation14Test.Elements[3].getClass());
 		Assert.assertEquals("Association visibility",
-				Modifier.toString(Modifier.DEFAULT), Modifier.toString(
+				Access.getAsString(Access.ACC_NONE), Access.getAsString(
 						Aggregation14Test.Elements[3].getVisibility()));
 		Assert.assertEquals("Association cardinality",
 				Constants.CARDINALITY_ONE,

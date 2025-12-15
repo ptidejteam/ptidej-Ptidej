@@ -12,6 +12,8 @@ package padl.creator.test.newkeywords;
 
 import org.junit.Assert;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import junit.framework.TestCase;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.javafile.eclipse.CompleteJavaFileCreator;
@@ -22,7 +24,6 @@ import padl.kernel.IInterface;
 import padl.kernel.IMethod;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
-import util.lang.Modifier;
 
 public class NewKeywordsTest extends TestCase {
 
@@ -85,9 +86,9 @@ public class NewKeywordsTest extends TestCase {
 		// From java.lang.reflect.Method.isDefault()
 		// "Default methods are public non-abstract instance methods
 		// declared in an interface."
-		Assert.assertTrue(Modifier.isPublic(method.getVisibility()));
-		Assert.assertFalse(Modifier.isAbstract(method.getVisibility()));
-		Assert.assertFalse(Modifier.isStatic(method.getVisibility()));
+		Assert.assertTrue(Access.isPublic(method.getVisibility()));
+		Assert.assertFalse(Access.isAbstract(method.getVisibility()));
+		Assert.assertFalse(Access.isStatic(method.getVisibility()));
 		Assert.assertTrue(entity instanceof IInterface);
 	}
 

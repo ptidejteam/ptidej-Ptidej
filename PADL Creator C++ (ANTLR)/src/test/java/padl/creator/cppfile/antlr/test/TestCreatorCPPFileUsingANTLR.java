@@ -23,23 +23,13 @@ import padl.kernel.cpp.antlr.impl.CPPFactoryANTLR;
  * @author robidose
  */
 public class TestCreatorCPPFileUsingANTLR extends TestSuite {
-	public TestCreatorCPPFileUsingANTLR() {
-	}
-
-	public TestCreatorCPPFileUsingANTLR(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestCreatorCPPFileUsingANTLR(final String name) {
-		super(name);
-	}
-
 	public static Test suite() {
 		// TODO Remove and move to the tests
 		CppPrimitive
 				.setFactory((ICPPFactoryANTLR) CPPFactoryANTLR.getInstance());
 
 		final TestCreatorCPPFileUsingANTLR suite = new TestCreatorCPPFileUsingANTLR();
+		suite.setName(TestCreatorCPPFileUsingANTLR.class.getName());
 
 		suite.addTestSuite(WorldTest.class);
 		suite.addTestSuite(InheritanceTest.class);

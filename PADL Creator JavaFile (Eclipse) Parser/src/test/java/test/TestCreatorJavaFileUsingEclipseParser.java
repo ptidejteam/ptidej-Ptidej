@@ -14,19 +14,9 @@ import junit.framework.Test;
 import junit.framework.TestSuite;
 
 public class TestCreatorJavaFileUsingEclipseParser extends TestSuite {
-	public TestCreatorJavaFileUsingEclipseParser() {
-	}
-
-	public TestCreatorJavaFileUsingEclipseParser(final Class<?> theClass) {
-		super(theClass);
-	}
-
-	public TestCreatorJavaFileUsingEclipseParser(final String name) {
-		super(name);
-	}
-
 	public static Test suite() {
 		final TestCreatorJavaFileUsingEclipseParser suite = new TestCreatorJavaFileUsingEclipseParser();
+		suite.setName(TestCreatorJavaFileUsingEclipseParser.class.getName());
 
 		suite.addTestSuite(ConciseParsingTest.class);
 		suite.addTestSuite(FileListJavaProjectTest.class);

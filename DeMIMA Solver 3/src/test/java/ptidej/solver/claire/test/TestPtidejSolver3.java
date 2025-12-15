@@ -42,6 +42,7 @@ import ptidej.solver.claire.test.simple.UseTest;
 public final class TestPtidejSolver3 extends TestSuite {
 	public static Test suite() {
 		final TestPtidejSolver3 suite = new TestPtidejSolver3();
+		suite.setName(TestPtidejSolver3.class.getName());
 
 		suite.addTestSuite(BadCompositionTest.class);
 		suite.addTestSuite(BadInheritanceTest.class);
@@ -56,7 +57,7 @@ public final class TestPtidejSolver3 extends TestSuite {
 
 		suite.addTestSuite(AssociationDistanceAssociationPatternTest.class);
 		// TODO Add this test back
-		//		suite.addTestSuite(AssociationDistanceComposite2.class);
+		//	suite.addTestSuite(AssociationDistanceComposite2.class);
 		suite.addTestSuite(InheritanceTreeDepthComposite2Test.class);
 
 		suite.addTestSuite(Composite1Test.class);
@@ -78,16 +79,5 @@ public final class TestPtidejSolver3 extends TestSuite {
 		suite.addTestSuite(StrictInheritanceTest.class);
 
 		return suite;
-	}
-
-	public TestPtidejSolver3() {
-	}
-
-	public TestPtidejSolver3(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestPtidejSolver3(final String name) {
-		super(name);
 	}
 }
