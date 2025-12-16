@@ -10,7 +10,7 @@
  ******************************************************************************/
 package ptidej.solver.java.test;
 
-import junit.framework.Test;
+import junit.framework.TestSuite;
 import ptidej.solver.java.test.example.Composite1FromClassFilesTest;
 import ptidej.solver.java.test.example.Composite1FromJavaFilesTest;
 import ptidej.solver.java.test.manager.ManagerTest;
@@ -24,14 +24,12 @@ import ptidej.solver.java.test.simple.InheritanceTest;
 import ptidej.solver.java.test.simple.StrictInheritanceTest;
 import ptidej.solver.java.test.simple.UseTest;
 
-//import ptidej.solver.test.java.TestJavaPtidejSolver;
-
 /**
  * @author Yann-Gaël Guéhéneuc 
  * @since 2004/09/19
  */
-public final class TestPtidejSolver4 extends junit.framework.TestSuite {
-	public static Test suite() {
+public final class TestPtidejSolver4 extends TestSuite {
+	public static TestSuite suite() {
 		final TestPtidejSolver4 suite = new TestPtidejSolver4();
 		suite.setName(TestPtidejSolver4.class.getName());
 

@@ -20,12 +20,11 @@
  */
 package padl.creator.javafile.javac.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import padl.creator.javafile.javac.test.simple.SanityTest;
 
 public class TestCreatorJavaFileUsingJavaC extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreatorJavaFileUsingJavaC suite = new TestCreatorJavaFileUsingJavaC();
 		suite.setName(TestCreatorJavaFileUsingJavaC.class.getName());
 

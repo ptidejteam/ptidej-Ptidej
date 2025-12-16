@@ -10,7 +10,6 @@
  ******************************************************************************/
 package modec.solver.constraint.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 /**
@@ -18,7 +17,7 @@ import junit.framework.TestSuite;
  * @since 2013/04/28
  */
 public final class TestMoDecSolver extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestMoDecSolver suite = new TestMoDecSolver();
 		suite.setName(TestMoDecSolver.class.getName());
 

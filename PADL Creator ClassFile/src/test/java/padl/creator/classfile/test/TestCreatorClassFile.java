@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.creator.classfile.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import padl.creator.classfile.test.compare.ComparisonTest;
 import padl.creator.classfile.test.fieldaccess.FieldAccessTest;
@@ -24,7 +23,7 @@ import padl.creator.classfile.test.topLevelEntity.TopLevelEntityTest;
  * @since  2004/01/25
  */
 public final class TestCreatorClassFile extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreatorClassFile suite = new TestCreatorClassFile();
 		suite.setName(TestCreatorClassFile.class.getName());
 

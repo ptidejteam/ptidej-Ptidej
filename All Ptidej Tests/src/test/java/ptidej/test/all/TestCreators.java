@@ -10,7 +10,6 @@
  ******************************************************************************/
 package ptidej.test.all;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import padl.creator.aolfile.test.TestCreatorAOL;
 import padl.creator.aspectj.test.TestCreatorAspectJ;
@@ -20,6 +19,8 @@ import padl.creator.javafile.eclipse.test.TestCreatorJavaFileUsingEclipse;
 import padl.creator.javafile.javac.test.TestCreatorJavaFileUsingJavaC;
 import padl.creator.msefile.test.TestCreatorMSE;
 import padl.creator.test.TestCreatorJavaFilevsClassFile;
+import padl.creator.test.csharpfile.v1.TestCreatorCSharpV1;
+import padl.creator.test.csharpfile.v2.TestCreatorCSharpV2;
 import padl.creator.xmiclassdiagram.test.TestCreatorXMI;
 
 /**
@@ -27,18 +28,15 @@ import padl.creator.xmiclassdiagram.test.TestCreatorXMI;
  * @since 2013/05/10
  */
 public final class TestCreators extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreators suite = new TestCreators();
 		suite.setName(TestCreators.class.getName());
 
 		suite.addTest(TestCreatorAOL.suite());
 		suite.addTest(TestCreatorAspectJ.suite());
 
-		// TODO Create proper test suites
-		suite.addTestSuite(
-				padl.creator.test.csharpfile.v1.CreatorCSharpTest.class);
-		suite.addTestSuite(
-				padl.creator.test.csharpfile.v2.CreatorCSharpTest.class);
+		suite.addTest(TestCreatorCSharpV1.suite());
+		suite.addTest(TestCreatorCSharpV2.suite());
 
 		suite.addTest(TestCreatorCPPFileUsingANTLR.suite());
 		// TODO Add test suite

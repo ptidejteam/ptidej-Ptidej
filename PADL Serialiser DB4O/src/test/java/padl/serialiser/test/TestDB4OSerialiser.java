@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.serialiser.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 /**
@@ -18,7 +17,7 @@ import junit.framework.TestSuite;
  * since   2010/04/11
  */
 public class TestDB4OSerialiser extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestDB4OSerialiser suite = new TestDB4OSerialiser();
 		suite.setName(TestDB4OSerialiser.class.getName());
 

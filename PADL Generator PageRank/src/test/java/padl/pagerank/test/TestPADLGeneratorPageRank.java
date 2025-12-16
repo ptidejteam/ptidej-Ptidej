@@ -10,14 +10,13 @@
  ******************************************************************************/
 package padl.pagerank.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 /**
  * @author yann
  */
 public class TestPADLGeneratorPageRank extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestPADLGeneratorPageRank suite = new TestPADLGeneratorPageRank();
 		suite.setName(TestPADLGeneratorPageRank.class.getName());
 

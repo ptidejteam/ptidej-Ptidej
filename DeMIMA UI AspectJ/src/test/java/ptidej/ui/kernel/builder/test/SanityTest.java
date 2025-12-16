@@ -36,12 +36,12 @@ import ptidej.ui.kernel.Pointcut;
  * @author Jean-Yves Guyomarc'h
  * @since 2005/08/16
  */
-public class AspectJBuilderTest extends PrimitiveBuilder {
-	public AspectJBuilderTest(final String aName) {
+public class SanityTest extends PrimitiveBuilder {
+	public SanityTest(final String aName) {
 		super(aName);
 	}
 
-	public void testTypematching() {
+	public void testTypeMatching() {
 		final Iterator<IConstituent> iterator = this.getCodeLevelModel()
 				.getIteratorOnConstituents();
 		while (iterator.hasNext()) {

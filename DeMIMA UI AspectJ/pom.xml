@@ -26,7 +26,19 @@
 					</compilerArgs>
 				</configuration>
 			</plugin>
-			<!-- Must generate the test-jar for the tests in All Ptidej Tests and others -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
+				<configuration>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/*Test.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<!-- Must generate the test-jar for the tests in All Ptidej Tests
+			and others -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>

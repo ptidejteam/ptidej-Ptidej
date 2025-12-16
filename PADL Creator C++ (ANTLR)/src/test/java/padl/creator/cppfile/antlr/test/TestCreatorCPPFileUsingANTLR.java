@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.creator.cppfile.antlr.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import padl.creator.cppfile.antlr.test.all.CpointTest;
 import padl.creator.cppfile.antlr.test.all.Csegment2Test;
@@ -23,7 +22,7 @@ import padl.kernel.cpp.antlr.impl.CPPFactoryANTLR;
  * @author robidose
  */
 public class TestCreatorCPPFileUsingANTLR extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		// TODO Remove and move to the tests
 		CppPrimitive
 				.setFactory((ICPPFactoryANTLR) CPPFactoryANTLR.getInstance());

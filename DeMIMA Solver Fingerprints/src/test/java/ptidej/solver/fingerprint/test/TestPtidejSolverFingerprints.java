@@ -10,10 +10,8 @@
  ******************************************************************************/
 package ptidej.solver.fingerprint.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import ptidej.solver.fingerprint.test.comparison.CompositeComposite2ComparisonTest;
-import ptidej.solver.fingerprint.test.comparison.CompositeJUnitTest;
 import ptidej.solver.fingerprint.test.complex.CompositeComposite1Test;
 import ptidej.solver.fingerprint.test.complex.CompositeComposite2Test;
 import ptidej.solver.fingerprint.test.simple.Composition1Test;
@@ -22,7 +20,7 @@ import ptidej.solver.fingerprint.test.simple.Composition3Test;
 import ptidej.solver.fingerprint.test.simple.Composition4Test;
 
 public final class TestPtidejSolverFingerprints extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestPtidejSolverFingerprints suite = new TestPtidejSolverFingerprints();
 		suite.setName(TestPtidejSolverFingerprints.class.getName());
 

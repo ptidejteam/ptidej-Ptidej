@@ -12,14 +12,14 @@ package epi.test;
 
 import epi.test.java.JavaAWTTest;
 import epi.test.java.JavaSwingTest;
-import junit.framework.Test;
+import junit.framework.TestSuite;
 
 /**
  * @author Yann-Gaël Guéhéneuc
  * @since  2004/01/25
  */
-public final class TestEPI extends junit.framework.TestSuite {
-	public static Test suite() {
+public final class TestEPI extends TestSuite {
+	public static TestSuite suite() {
 		final TestEPI suite = new TestEPI();
 		suite.setName(TestEPI.class.getName());
 

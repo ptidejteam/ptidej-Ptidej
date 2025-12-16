@@ -20,8 +20,8 @@ import padl.kernel.exception.CreationException;
 /**
  * TestCase for our CSharp to PADL parser/converter
  */
-public class CreatorCSharpTest extends TestCase {
-	public CreatorCSharpTest(final String aName) {
+public class SanityTest extends TestCase {
+	public SanityTest(final String aName) {
 		super(aName);
 	}
 

@@ -10,11 +10,10 @@
  ******************************************************************************/
 package padl.creator.aspectj.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 public class TestCreatorAspectJ extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreatorAspectJ suite = new TestCreatorAspectJ();
 		suite.setName(TestCreatorAspectJ.class.getName());
 

@@ -1,6 +1,5 @@
 package cpl.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import util.io.test.SubtypeLoaderTest;
 import util.lang.test.CFParseBCELConvertor1Test;
@@ -38,7 +37,7 @@ import util.lang.test.ReflectiveInstantiationTest;
 import util.lang.test.SuperNameConversionTest;
 
 public class TestCPL extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCPL suite = new TestCPL();
 		suite.setName(TestCPL.class.getName());
 

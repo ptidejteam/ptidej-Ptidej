@@ -13,7 +13,6 @@ package ptidej.test.all;
 import caffeine.test.TestCaffeine;
 import cpl.test.TestCPL;
 import jct.test.TestCreatorJavaFileUsingJavaCParser;
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import padl.analysis.test.TestPADLAnalyses;
 import padl.generator.test.TestPADLGenerator;
@@ -24,7 +23,7 @@ import padl.serialiser.test.TestDB4OSerialiser;
 import padl.serialiser.test.TestJOSSerialiser;
 import padl.test.TestPADL;
 import pom.test.TestPOM;
-import ptidej.ui.kernel.builder.test.AspectJBuilderTest;
+import ptidej.ui.kernel.builder.test.TestAspectJBuilder;
 import sad.detection.test.TestSAD;
 import squad.test.TestSQUAD;
 import test.TestCreatorJavaFileUsingEclipseParser;
@@ -34,7 +33,7 @@ import test.TestCreatorJavaFileUsingEclipseParser;
  * @since 2008/12/04
  */
 public final class TestOthers extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestOthers suite = new TestOthers();
 		suite.setName(TestOthers.class.getName());
 
@@ -54,7 +53,7 @@ public final class TestOthers extends TestSuite {
 		suite.addTest(TestSAD.suite());
 		suite.addTest(TestSQUAD.suite());
 
-		suite.addTestSuite(AspectJBuilderTest.class);
+		suite.addTest(TestAspectJBuilder.suite());
 
 		suite.addTest(TestCreatorJavaFileUsingEclipseParser.suite());
 		suite.addTest(TestCreatorJavaFileUsingJavaCParser.suite());

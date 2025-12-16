@@ -10,11 +10,10 @@
  ******************************************************************************/
 package padl.creator.aolfile.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 public class TestCreatorAOL extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreatorAOL suite = new TestCreatorAOL();
 		suite.setName(TestCreatorAOL.class.getName());
 

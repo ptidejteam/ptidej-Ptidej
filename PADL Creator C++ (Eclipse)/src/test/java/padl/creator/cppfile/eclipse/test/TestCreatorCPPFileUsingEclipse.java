@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.creator.cppfile.eclipse.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import padl.creator.cppfile.eclipse.test.big.ChromeTest;
 import padl.creator.cppfile.eclipse.test.big.QMakeTest;
@@ -29,7 +28,7 @@ import padl.creator.cppfile.eclipse.test.simple.StructuresTest;
  *
  */
 public final class TestCreatorCPPFileUsingEclipse extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreatorCPPFileUsingEclipse suite = new TestCreatorCPPFileUsingEclipse();
 		suite.setName(TestCreatorCPPFileUsingEclipse.class.getName());
 

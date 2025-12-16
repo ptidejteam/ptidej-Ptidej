@@ -10,7 +10,6 @@
  ******************************************************************************/
 package pom.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import pom.test.classfile.general.ClassPrimitivesTest;
 import pom.test.classfile.general.CouplingCohesionMetricsTest;
@@ -36,7 +35,7 @@ import util.lang.MavenTestGuard;
  * since   2004-02-16
  */
 public class TestPOM extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestPOM suite = new TestPOM();
 		suite.setName(TestPOM.class.getName());
 
