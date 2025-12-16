@@ -10,7 +10,6 @@
  ******************************************************************************/
 package sad.detection.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import sad.detection.test.classfile.swt.DetectionAntipatternSWTTest;
 import sad.detection.test.classfile.xerces.SpaghettiCode1Test;
@@ -25,7 +24,7 @@ import sad.detection.test.javafile.ideasimsyn.SomeSmellsTest;
  * @since  2004/01/25
  */
 public final class TestSAD extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestSAD suite = new TestSAD();
 		suite.setName(TestSAD.class.getName());
 

@@ -30,7 +30,6 @@
  */
 package padl.creator.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import padl.creator.test.newkeywords.NewKeywordsTest;
 import padl.creator.test.relationships.RelationshipsTest;
@@ -40,7 +39,7 @@ import padl.creator.test.relationships.RelationshipsTest;
  * @since  2004/01/25
  */
 public final class TestCreatorJavaFilevsClassFile extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreatorJavaFilevsClassFile suite = new TestCreatorJavaFilevsClassFile();
 		suite.setName(TestCreatorJavaFilevsClassFile.class.getName());
 

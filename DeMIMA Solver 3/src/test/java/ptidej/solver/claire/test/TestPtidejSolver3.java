@@ -10,7 +10,6 @@
  ******************************************************************************/
 package ptidej.solver.claire.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import ptidej.solver.claire.test.approximate.BadCompositionTest;
 import ptidej.solver.claire.test.approximate.BadInheritanceTest;
@@ -40,7 +39,7 @@ import ptidej.solver.claire.test.simple.StrictInheritanceTest;
 import ptidej.solver.claire.test.simple.UseTest;
 
 public final class TestPtidejSolver3 extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestPtidejSolver3 suite = new TestPtidejSolver3();
 		suite.setName(TestPtidejSolver3.class.getName());
 

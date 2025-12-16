@@ -29,7 +29,6 @@
  */
 package padl.creator.javafile.eclipse.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import padl.creator.javafile.eclipse.test.advanced.DuplicationTest;
 import padl.creator.javafile.eclipse.test.advanced.ExclusionTest;
@@ -74,7 +73,7 @@ import padl.creator.javafile.eclipse.test.others.PADLParserUtilsTest;
 import padl.kernel.impl.MethodInvocationTest;
 
 public class TestCreatorJavaFileUsingEclipse extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreatorJavaFileUsingEclipse suite = new TestCreatorJavaFileUsingEclipse();
 		suite.setName(TestCreatorJavaFileUsingEclipse.class.getName());
 

@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.micropatterns.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import padl.micropatterns.test.cases.AugmentedTypeTest;
 import padl.micropatterns.test.cases.BoxTest;
@@ -46,7 +45,7 @@ import padl.micropatterns.test.cases.TraitTest;
  * @author Yann
  */
 public class TestMicroPatterns extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestMicroPatterns suite = new TestMicroPatterns();
 		suite.setName(TestMicroPatterns.class.getName());
 

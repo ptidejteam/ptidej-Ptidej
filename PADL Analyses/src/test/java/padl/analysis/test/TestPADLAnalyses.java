@@ -10,7 +10,7 @@
  ******************************************************************************/
 package padl.analysis.test;
 
-import junit.framework.Test;
+import junit.framework.TestSuite;
 import padl.analysis.aac.test.Aggregation_CLASS_CLASS_FROM_FIELD_1_Test;
 import padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_1_Test;
 import padl.analysis.aac.test.Aggregation_CLASS_INSTANCE_FROM_FIELD_2_Test;
@@ -59,7 +59,7 @@ import padl.test.setter.SetterTest;
  * @since 2004/11/11
  */
 public final class TestPADLAnalyses extends junit.framework.TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestPADLAnalyses suite = new TestPADLAnalyses();
 		suite.setName(TestPADLAnalyses.class.getName());
 

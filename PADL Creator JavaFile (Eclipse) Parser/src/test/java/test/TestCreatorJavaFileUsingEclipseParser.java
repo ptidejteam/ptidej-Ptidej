@@ -10,11 +10,10 @@
  ******************************************************************************/
 package test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 public class TestCreatorJavaFileUsingEclipseParser extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreatorJavaFileUsingEclipseParser suite = new TestCreatorJavaFileUsingEclipseParser();
 		suite.setName(TestCreatorJavaFileUsingEclipseParser.class.getName());
 

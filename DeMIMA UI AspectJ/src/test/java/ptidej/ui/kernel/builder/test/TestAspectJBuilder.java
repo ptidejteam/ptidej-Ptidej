@@ -8,22 +8,16 @@
  * Contributors:
  *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
  ******************************************************************************/
-package ptidej.test.all;
+package ptidej.ui.kernel.builder.test;
 
 import junit.framework.TestSuite;
 
-/**
- * @author Yann-Gaël Guéhéneuc
- * @since  2008/12/04
- */
-public final class TestAllPtidej extends TestSuite {
+public class TestAspectJBuilder extends TestSuite {
 	public static TestSuite suite() {
-		final TestAllPtidej suite = new TestAllPtidej();
-		suite.setName(TestAllPtidej.class.getName());
+		final TestAspectJBuilder suite = new TestAspectJBuilder();
+		suite.setName(TestAspectJBuilder.class.getName());
 
-		suite.addTest(TestCreators.suite());
-		suite.addTest(TestDeMIMA.suite());
-		suite.addTest(TestOthers.suite());
+		suite.addTestSuite(SanityTest.class);
 
 		return suite;
 	}

@@ -1,10 +1,9 @@
 package padl.creator.msefile.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 public class TestCreatorMSE extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreatorMSE suite = new TestCreatorMSE();
 		suite.setName(TestCreatorMSE.class.getName());
 

@@ -8,22 +8,19 @@
  * Contributors:
  *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
  ******************************************************************************/
-package ptidej.test.all;
+package padl.creator.test.csharpfile.v1;
 
 import junit.framework.TestSuite;
 
 /**
- * @author Yann-Gaël Guéhéneuc
- * @since  2008/12/04
+ * TestCase for our CSharp to PADL parser/converter
  */
-public final class TestAllPtidej extends TestSuite {
+public class TestCreatorCSharpV1 extends TestSuite {
 	public static TestSuite suite() {
-		final TestAllPtidej suite = new TestAllPtidej();
-		suite.setName(TestAllPtidej.class.getName());
+		final TestCreatorCSharpV1 suite = new TestCreatorCSharpV1();
+		suite.setName(TestCreatorCSharpV1.class.getName());
 
-		suite.addTest(TestCreators.suite());
-		suite.addTest(TestDeMIMA.suite());
-		suite.addTest(TestOthers.suite());
+		suite.addTestSuite(SanityTest.class);
 
 		return suite;
 	}

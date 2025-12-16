@@ -11,7 +11,6 @@
 package ptidej.test.all;
 
 import epi.test.TestEPI;
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import modec.solver.constraint.test.TestMoDecSolver;
 import ptidej.solver.claire.test.TestPtidejSolver3;
@@ -24,7 +23,7 @@ import util.lang.MavenTestGuard;
  * @since 2008/12/04
  */
 public final class TestDeMIMA extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestDeMIMA suite = new TestDeMIMA();
 		suite.setName(TestDeMIMA.class.getName());
 

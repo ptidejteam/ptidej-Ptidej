@@ -10,14 +10,13 @@
  ******************************************************************************/
 package padl.generator.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 /**
  * @author yann
  */
 public class TestPADLGenerator extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestPADLGenerator suite = new TestPADLGenerator();
 		suite.setName(TestPADLGenerator.class.getName());
 

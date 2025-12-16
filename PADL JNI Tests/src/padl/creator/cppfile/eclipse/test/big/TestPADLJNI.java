@@ -10,14 +10,13 @@
  ******************************************************************************/
 package padl.creator.cppfile.eclipse.test.big;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 /**
  * @author yann
  */
 public class TestPADLJNI extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestPADLJNI suite = new TestPADLJNI();
 		suite.setName(TestPADLJNI.class.getName());
 

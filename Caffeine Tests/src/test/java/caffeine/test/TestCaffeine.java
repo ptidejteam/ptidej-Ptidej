@@ -20,10 +20,10 @@
  */
 package caffeine.test;
 
-import junit.framework.Test;
+import junit.framework.TestSuite;
 
-public final class TestCaffeine extends junit.framework.TestSuite {
-	public static Test suite() {
+public final class TestCaffeine extends TestSuite {
+	public static TestSuite suite() {
 		final TestCaffeine suite = new TestCaffeine();
 		suite.setName(TestCaffeine.class.getName());
 

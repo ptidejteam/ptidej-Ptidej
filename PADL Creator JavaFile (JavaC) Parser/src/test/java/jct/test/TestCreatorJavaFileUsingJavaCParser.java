@@ -5,7 +5,6 @@ import jct.test.cases.JCTMiscTest;
 import jct.test.cases.JCTUsingJCTTest;
 import jct.test.cases.JCTUsingSnpShtTest;
 import jct.test.listofunique.SanityTest;
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 /**
@@ -13,7 +12,7 @@ import junit.framework.TestSuite;
  * since   2009/03/21
  */
 public class TestCreatorJavaFileUsingJavaCParser extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreatorJavaFileUsingJavaCParser suite = new TestCreatorJavaFileUsingJavaCParser();
 		suite.setName(TestCreatorJavaFileUsingJavaCParser.class.getName());
 

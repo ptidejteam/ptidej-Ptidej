@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import padl.kernel.impl.AbstractContainerTest;
 import padl.kernel.impl.MethodInvocationTest;
@@ -21,7 +20,7 @@ import padl.test.defaultpackage.DefaultPackageTest;
  * @since 2004/01/25
  */
 public final class TestPADL extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestPADL suite = new TestPADL();
 		suite.setName(TestPADL.class.getName());
 
