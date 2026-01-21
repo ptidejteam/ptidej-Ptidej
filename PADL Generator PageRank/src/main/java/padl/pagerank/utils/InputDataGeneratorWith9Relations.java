@@ -378,6 +378,10 @@ public class InputDataGeneratorWith9Relations implements IGenerator {
 		this.close((IPackage) p);
 	}
 
+	public void close(final IPackageGhost aPackageGhost) {
+		this.close((IPackage) aPackageGhost);
+	}
+
 	public void close(final ISetter p) {
 		this.close((IOperation) p);
 	}
