@@ -54,6 +54,7 @@ public class RelationshipAnalyzer {
 	private static final char[] EQUAL_SIGN = "=".toCharArray();
 	private static IMethod ASSIGNMENT_METHOD;
 	private static Map MapOfIDsEntities;
+	private IGhost ghostInSearch;
 
 	private static void addRelationship(final IFirstClassEntity anEntity,
 			final IRelationship aRelationship) {
@@ -907,7 +908,7 @@ public class RelationshipAnalyzer {
 		//		}
 		//	}
 
-		final IOperation calledMethod = this.searchForMethod(usedMethodName,
+		final IOperation calledMethod = this.findOrCreateMethod(usedMethodName,
 				returnType, entityDeclaringMethod);
 
 		if (calledMethod == null) {
@@ -1158,11 +1159,32 @@ public class RelationshipAnalyzer {
 		}
 	}
 
+	private IOperation findOrCreateMethod(final char[] usedMethodName,
+			final char[] returnType,
+			final IFirstClassEntity entityDeclaringMethod) {
+		
+		// Luca 2026/01/23:
+		// Separation between searching and creating a method.
+		// Before, we would sometimes create a method too early and interrupt the search
+		// which leads to the creation of method where they shouldn't be
+		//
+		// When searching, we will encounter the ghost where we could create the method if it is not found
+		// I keep this ghost in memory so we don't have to do a second search when it comes to
+		// actually creating the method (is there a cleaner solution?)
+		this.ghostInSearch = null;
+		
+		IOperation calledMethod = this.searchForMethod(usedMethodName, returnType, entityDeclaringMethod);
+		
+		if (calledMethod == null && this.ghostInSearch != null) {
+			calledMethod = this.createInGhost(usedMethodName, returnType, this.ghostInSearch);
+		}
+		
+		return calledMethod;
+	}
+	
 	private IOperation searchForMethod(final char[] usedMethodName,
 			final char[] returnType,
 			final IFirstClassEntity entityDeclaringMethod) {
-
-		IOperation calledMethod = null;
 
 		// Yann 2006/07/29: Compatiblity!
 		// There is a compatibility issue between classfiles v1.1-
@@ -1207,38 +1229,14 @@ public class RelationshipAnalyzer {
 		// method foo() does not exist in B and thus it would be added!
 		// I modified the test below to add the "instanceof", which
 		// fixes nicely the problem.
-		if (!entityDeclaringMethod.doesContainConstituentWithID(usedMethodName)
+		if (this.ghostInSearch == null
+				&& !entityDeclaringMethod.doesContainConstituentWithID(usedMethodName)
 				&& entityDeclaringMethod instanceof IGhost) {
-
-			// Yann 2004/04/03: Constituent ID!
-			// When creating a new method, we give it a unique actorID.
-			// We must also give it a name without extra parentheses.
-			// TODO: Refactor to remove the call to substring().
-			// Yann 2004/04/09: Modifiers!
-			// When creating a new method, we must also set its modifier:
-			// Test case padl.test.example.Composite1 fails because the
-			// print() method built should be set abstract.
-			// Yann 2004/05/20: Constructors.
-			// If the method is a constructor, its name is
-			// its declaring class name.
-			final char[] name = ArrayUtils.subarray(usedMethodName, 0,
-					ArrayUtils.indexOf(usedMethodName, '('));
-			if (Utils.isSpecialMethod(name)) {
-				// Creates a new constructor that will be added to the ghost
-				calledMethod = this.createConstructor(entityDeclaringMethod,
-						usedMethodName);
-			}
-			else {
-				// Creates a new method that will be added to the ghost
-				calledMethod = this.createMethod(entityDeclaringMethod,
-						usedMethodName, returnType, name);
-			}
-			entityDeclaringMethod.addConstituent(calledMethod);
+			this.ghostInSearch = (IGhost) entityDeclaringMethod;
 		}
-		else {
-			calledMethod = (IOperation) entityDeclaringMethod
-					.getConstituentFromID(usedMethodName);
-		}
+		
+		IOperation calledMethod = (IOperation) entityDeclaringMethod
+				.getConstituentFromID(usedMethodName);;
 
 		// Yann 2006/08/03: Compatibility!
 		// Now that I don't add a method in silly cases, I must
@@ -1278,6 +1276,39 @@ public class RelationshipAnalyzer {
 			}
 		}
 
+		return calledMethod;
+	}
+	
+	private IOperation createInGhost(final char[] usedMethodName,
+			final char[] returnType,
+			final IGhost aGhost) {
+		
+		IOperation calledMethod = null;
+
+		// Yann 2004/04/03: Constituent ID!
+		// When creating a new method, we give it a unique actorID.
+		// We must also give it a name without extra parentheses.
+		// TODO: Refactor to remove the call to substring().
+		// Yann 2004/04/09: Modifiers!
+		// When creating a new method, we must also set its modifier:
+		// Test case padl.test.example.Composite1 fails because the
+		// print() method built should be set abstract.
+		// Yann 2004/05/20: Constructors.
+		// If the method is a constructor, its name is
+		// its declaring class name.
+		final char[] name = ArrayUtils.subarray(usedMethodName, 0,
+				ArrayUtils.indexOf(usedMethodName, '('));
+		if (Utils.isSpecialMethod(name)) {
+			// Creates a new constructor that will be added to the ghost
+			calledMethod = this.createConstructor(aGhost,
+					usedMethodName);
+		}
+		else {
+			// Creates a new method that will be added to the ghost
+			calledMethod = this.createMethod(aGhost,
+					usedMethodName, returnType, name);
+		}
+		aGhost.addConstituent(calledMethod);
 		return calledMethod;
 	}
 }
