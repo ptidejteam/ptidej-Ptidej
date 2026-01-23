@@ -1162,7 +1162,7 @@ public class RelationshipAnalyzer {
 	private IOperation findOrCreateMethod(final char[] usedMethodName,
 			final char[] returnType,
 			final IFirstClassEntity entityDeclaringMethod) {
-		
+
 		// Luca 2026/01/23:
 		// Separation between searching and creating a method.
 		// Before, we would sometimes create a method too early and interrupt the search
@@ -1172,16 +1172,18 @@ public class RelationshipAnalyzer {
 		// I keep this ghost in memory so we don't have to do a second search when it comes to
 		// actually creating the method (is there a cleaner solution?)
 		this.ghostInSearch = null;
-		
-		IOperation calledMethod = this.searchForMethod(usedMethodName, returnType, entityDeclaringMethod);
-		
+
+		IOperation calledMethod = this.searchForMethod(usedMethodName,
+				returnType, entityDeclaringMethod);
+
 		if (calledMethod == null && this.ghostInSearch != null) {
-			calledMethod = this.createInGhost(usedMethodName, returnType, this.ghostInSearch);
+			calledMethod = this.createInGhost(usedMethodName, returnType,
+					this.ghostInSearch);
 		}
-		
+
 		return calledMethod;
 	}
-	
+
 	private IOperation searchForMethod(final char[] usedMethodName,
 			final char[] returnType,
 			final IFirstClassEntity entityDeclaringMethod) {
@@ -1230,13 +1232,15 @@ public class RelationshipAnalyzer {
 		// I modified the test below to add the "instanceof", which
 		// fixes nicely the problem.
 		if (this.ghostInSearch == null
-				&& !entityDeclaringMethod.doesContainConstituentWithID(usedMethodName)
+				&& !entityDeclaringMethod
+						.doesContainConstituentWithID(usedMethodName)
 				&& entityDeclaringMethod instanceof IGhost) {
 			this.ghostInSearch = (IGhost) entityDeclaringMethod;
 		}
-		
+
 		IOperation calledMethod = (IOperation) entityDeclaringMethod
-				.getConstituentFromID(usedMethodName);;
+				.getConstituentFromID(usedMethodName);
+		;
 
 		// Yann 2006/08/03: Compatibility!
 		// Now that I don't add a method in silly cases, I must
@@ -1278,11 +1282,10 @@ public class RelationshipAnalyzer {
 
 		return calledMethod;
 	}
-	
+
 	private IOperation createInGhost(final char[] usedMethodName,
-			final char[] returnType,
-			final IGhost aGhost) {
-		
+			final char[] returnType, final IGhost aGhost) {
+
 		IOperation calledMethod = null;
 
 		// Yann 2004/04/03: Constituent ID!
@@ -1300,13 +1303,12 @@ public class RelationshipAnalyzer {
 				ArrayUtils.indexOf(usedMethodName, '('));
 		if (Utils.isSpecialMethod(name)) {
 			// Creates a new constructor that will be added to the ghost
-			calledMethod = this.createConstructor(aGhost,
-					usedMethodName);
+			calledMethod = this.createConstructor(aGhost, usedMethodName);
 		}
 		else {
 			// Creates a new method that will be added to the ghost
-			calledMethod = this.createMethod(aGhost,
-					usedMethodName, returnType, name);
+			calledMethod = this.createMethod(aGhost, usedMethodName, returnType,
+					name);
 		}
 		aGhost.addConstituent(calledMethod);
 		return calledMethod;
