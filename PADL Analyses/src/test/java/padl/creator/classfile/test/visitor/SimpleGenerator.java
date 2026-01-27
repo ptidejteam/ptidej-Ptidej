@@ -38,6 +38,7 @@ import padl.kernel.IMethodInvocation;
 import padl.kernel.IOperation;
 import padl.kernel.IPackage;
 import padl.kernel.IPackageDefault;
+import padl.kernel.IPackageGhost;
 import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
@@ -159,6 +160,12 @@ public class SimpleGenerator implements IGenerator {
 		this.buffer.append('\n');
 	}
 
+	public void close(final IPackageGhost aPackageGhost) {
+		this.buffer.append("close\t");
+		this.buffer.append(aPackageGhost.getName());
+		this.buffer.append('\n');
+	}
+
 	public void close(final ISetter aSetter) {
 		this.buffer.append("close\t");
 		this.buffer.append(aSetter.getName());
@@ -270,6 +277,12 @@ public class SimpleGenerator implements IGenerator {
 	public void open(final IPackageDefault aPackage) {
 		this.buffer.append("open\t");
 		this.buffer.append(aPackage.getName());
+		this.buffer.append('\n');
+	}
+
+	public void open(final IPackageGhost aPackageGhost) {
+		this.buffer.append("open\t");
+		this.buffer.append(aPackageGhost.getName());
 		this.buffer.append('\n');
 	}
 

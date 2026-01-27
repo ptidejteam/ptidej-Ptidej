@@ -32,6 +32,7 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IPackage;
 import padl.kernel.IPackageDefault;
+import padl.kernel.IPackageGhost;
 import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
@@ -51,8 +52,7 @@ public interface IVisitor {
 	void close(final IMethod aMethod);
 	void close(final IPackage aPackage);
 	void close(final IPackageDefault aPackage);
-	// TODO: Add close(final IPackageGhost aPackageGhost);
-	// void close(final IPackageGhost aPackageGhost);
+ 	void close(final IPackageGhost aPackageGhost);
 	void close(final ISetter aSetter);
 	String getName();
 	void open(final IAbstractModel anAbstractModel);
@@ -68,8 +68,7 @@ public interface IVisitor {
 	void open(final IMethod aMethod);
 	void open(final IPackage aPackage);
 	void open(final IPackageDefault aPackage);
-	// TODO: Add open(final IPackageGhost aPackageGhost);
-	// void open(final IPackageGhost aPackageGhost);
+	void open(final IPackageGhost aPackageGhost);
 	void open(final ISetter aSetter);
 	void reset();
 	void unknownConstituentHandler(
