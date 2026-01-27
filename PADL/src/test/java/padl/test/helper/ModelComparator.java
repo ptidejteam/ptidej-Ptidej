@@ -40,6 +40,7 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IPackage;
 import padl.kernel.IPackageDefault;
+import padl.kernel.IPackageGhost;
 import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
@@ -114,6 +115,8 @@ public class ModelComparator implements IWalker {
 	}
 
 	public final void close(final IPackageDefault aPackage) {
+	}
+	public final void close(final IPackageGhost aPackageGhost) {
 	}
 
 	public final void close(final ISetter aSetter) {
@@ -348,6 +351,9 @@ public class ModelComparator implements IWalker {
 	}
 
 	public final void open(final IPackageDefault aPackage) {
+	}
+
+	public final void open(final IPackageGhost aPackageGhost) {
 	}
 
 	public final void open(final ISetter aSetter) {
