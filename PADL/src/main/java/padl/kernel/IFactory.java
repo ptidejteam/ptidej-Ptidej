@@ -92,11 +92,6 @@ public interface IFactory {
 		final char[] aName,
 		final int aCardinality);
 	IParameter createParameter(final IEntity aType, final int aCardinality);
-	IParameter createParameter(
-		final IEntity aType,
-		final char [] aName,
-		final int aCardinality,
-		final int aDimension);
 	IPrimitiveEntity createPrimitiveEntity(final char[] aPrimitiveEntityName);
 	ISetter createSetter(final char[] anID, final char[] aName);
 	ISetter createSetter(final IMethod aMethod);
