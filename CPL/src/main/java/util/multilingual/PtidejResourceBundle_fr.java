@@ -45,8 +45,6 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 						"CPL::SubtypeLoader::Err_READING_FILE",
 						new String(
 							"Loader: Erreur lors de la lecture du fichier {0}") },
-				{ "CPL::SubtypeLoader::LOADING_FROM",
-						new String("Chargement de : {0} \n") },
 
 				// *********** JChoco ***********
 				{
