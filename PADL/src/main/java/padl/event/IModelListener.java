@@ -36,7 +36,6 @@ public interface IModelListener {
 	void elementSkipped(final AnalysisEvent analisysEvent);
 
 	void entityAdded(final EntityEvent entityEvent);
-	void entityAnalyzed(final AnalysisEvent analisysEvent);
 	void entityIdentified(final IdentificationEvent recognitionEvent);
 	void entityRemoved(final EntityEvent entityEvent);
 	void entitySkipped(final AnalysisEvent analisysEvent);
