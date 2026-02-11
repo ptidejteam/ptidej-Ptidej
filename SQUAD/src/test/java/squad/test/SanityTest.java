@@ -45,12 +45,19 @@ public class SanityTest extends TestCase {
 			final IFirstClassEntity firstClassEntity = (IFirstClassEntity) entityIterator
 					.next();
 			if (!(firstClassEntity instanceof IGhost)) {
-				System.out.println("Computing the reusability for: "
-						+ firstClassEntity.getDisplayName());
-				System.out.println(((INominalQualityAttribute) qualityRepository
-						.getQualityAttribute("Modularity"))
-						.computeNominalValue(codeLevelModel, firstClassEntity));
-
+				// aliiimaher 2026/02/11
+				// Removed console output and added assertions
+				final INominalQualityAttribute modularity = 
+						(INominalQualityAttribute) qualityRepository
+							.getQualityAttribute("Modularity");
+				assertNotNull("Modularity attribute should exist", modularity);
+				
+				final Object value = modularity.computeNominalValue(codeLevelModel, firstClassEntity);
+				assertNotNull("Modularity value should not be null for " + 
+						firstClassEntity.getDisplayName(), value);
+				
+				assertEquals("Unexpected modularity value for " + 
+						firstClassEntity.getDisplayName(), "N", value.toString());
 			}
 		}
 	}
