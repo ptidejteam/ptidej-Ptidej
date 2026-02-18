@@ -15,7 +15,7 @@ import padl.kernel.IGhost;
 import padl.kernel.IPackageDefault;
 import padl.kernel.IPackageGhost;
 
-public class PackageDefault extends Package implements IPackageDefault {
+class PackageDefault extends Package implements IPackageDefault {
 	private static final long serialVersionUID = 5993857112698114446L;
 
 	public PackageDefault() {
