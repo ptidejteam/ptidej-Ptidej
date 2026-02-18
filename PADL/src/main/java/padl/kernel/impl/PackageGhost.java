@@ -13,7 +13,7 @@ package padl.kernel.impl;
 import padl.kernel.IGhost;
 import padl.kernel.IPackageGhost;
 
-public class PackageGhost extends Package implements IPackageGhost {
+class PackageGhost extends Package implements IPackageGhost {
 	private static final long serialVersionUID = 5993857112698114446L;
 	public PackageGhost(final char[] anID) {
 		super(anID);

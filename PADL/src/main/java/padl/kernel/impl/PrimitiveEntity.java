@@ -19,7 +19,7 @@ import padl.kernel.IPrimitiveEntity;
 import padl.path.IConstants;
 import padl.visitor.IVisitor;
 
-public class PrimitiveEntity extends Constituent implements IPrimitiveEntity {
+class PrimitiveEntity extends Constituent implements IPrimitiveEntity {
 	private static final long serialVersionUID = 3604943383503049188L;
 
 	// Yann 2010/10/10: DB4O

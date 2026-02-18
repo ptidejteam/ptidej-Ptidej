@@ -13,7 +13,6 @@ package padl.statement.kernel.impl;
 import padl.kernel.IFactory;
 import padl.kernel.IStatement;
 import padl.kernel.impl.Factory;
-import padl.kernel.impl.Statement;
 import padl.statement.kernel.IIfInstruction;
 import padl.statement.kernel.IStatementFactory;
 import padl.statement.kernel.ISwitchInstruction;
