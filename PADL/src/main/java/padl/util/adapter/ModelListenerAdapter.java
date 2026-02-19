@@ -48,4 +48,7 @@ public class ModelListenerAdapter implements IModelListener {
 	}
 	public void invokeSkipped(final AnalysisEvent analisysEvent) {
 	}
+	@Override
+	public void reset() {
+	}
 }

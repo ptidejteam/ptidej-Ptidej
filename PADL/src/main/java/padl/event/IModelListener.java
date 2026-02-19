@@ -46,4 +46,6 @@ public interface IModelListener {
 	void invokeIdentified(final IdentificationEvent recognitionEvent);
 	void invokeRemoved(final InvokeEvent invokeEvent);
 	void invokeSkipped(final AnalysisEvent analisysEvent);
+	
+	void reset();
 }
