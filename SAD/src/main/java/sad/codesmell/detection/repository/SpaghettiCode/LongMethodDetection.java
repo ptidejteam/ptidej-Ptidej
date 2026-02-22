@@ -1,13 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Public License v2.0
- * which accompanies this distribution, and is available at
- * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * 
- * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
- ******************************************************************************/
 package sad.codesmell.detection.repository.SpaghettiCode;
 
 import java.io.IOException;
@@ -17,14 +7,13 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import com.ibm.toad.cfparse.utils.Access;
-
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IClass;
 import padl.kernel.IElement;
 import padl.kernel.IEntity;
 import padl.kernel.IField;
 import padl.kernel.IGetter;
+import padl.kernel.IGhost;
 import padl.kernel.IInterface;
 import padl.kernel.IMethod;
 import padl.kernel.IParameter;
@@ -42,6 +31,7 @@ import sad.codesmell.detection.ICodeSmellDetection;
 import sad.codesmell.detection.repository.AbstractCodeSmellDetection;
 import sad.kernel.impl.CodeSmell;
 import sad.util.BoxPlot;
+import com.ibm.toad.cfparse.utils.Access;
 import util.io.ProxyConsole;
 
 /**
@@ -68,7 +58,9 @@ public class LongMethodDetection extends AbstractCodeSmellDetection implements I
 		final Iterator iter = anAbstractLevelModel.getIteratorOnTopLevelEntities();
 		while (iter.hasNext()) {
 			final IEntity entity = (IEntity) iter.next();
-			if (entity instanceof IClass) {
+			// Yann 26/02/20: IGhosts are both IClass and IInterface!
+			// I must exclude IGhost when not desirable to be included.
+			if (entity instanceof IClass && !(entity instanceof IGhost)) {
 				final IClass aClass = (IClass) entity;
 				IClass classOfLongMethod = null;
 				IMethod LongMethod = null;
@@ -78,7 +70,7 @@ public class LongMethodDetection extends AbstractCodeSmellDetection implements I
 				final Iterator iter2 = aClass.getIteratorOnConstituents(IMethod.class);
 				while (iter2.hasNext()) {
 					final IMethod aMethod = (IMethod) iter2.next();
-					if (!aMethod.isAbstract() && !Access.isNative(aMethod.getVisibility())) {
+					if (!aMethod.isAbstract() && (aMethod.getVisibility() & Access.ACC_NATIVE) == 0) {
 						final Integer value = Integer.valueOf(aMethod.getCodeLines().length);
 		
 						if (!(value == null)) {
@@ -95,7 +87,7 @@ public class LongMethodDetection extends AbstractCodeSmellDetection implements I
 							// longest method
 							mapOfClassesWithValues.put(
 								classOfLongMethod,
-								new Double[] {Double.valueOf(longValue.doubleValue()), Double.valueOf(0)});
+								new Double[] { Double.valueOf(longValue.doubleValue()), Double.valueOf(0) });
 						}
 					}
 				}// End of iterator of methods

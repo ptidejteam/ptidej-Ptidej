@@ -11,10 +11,12 @@
 package padl.micropattern.repository;
 
 import java.util.Iterator;
+
 import padl.kernel.IClass;
 import padl.kernel.IConstructor;
 import padl.kernel.IField;
 import padl.kernel.IFirstClassEntity;
+import padl.kernel.IGhost;
 import padl.kernel.IInterface;
 import padl.kernel.IOperation;
 import padl.micropattern.IMicroPatternDetection;
@@ -53,8 +55,12 @@ public final class TaxonomyDetection extends AbstractMicroPatternDetection
 	public boolean detect(final IFirstClassEntity anEntity) {
 		int numberOfInterface = 0;
 
-		// Interface and Class can be Taxonormy
-		if ((anEntity instanceof IClass) || (anEntity instanceof IInterface)) {
+		// Interface and Class can be Taxonomy
+		// Yann 26/02/20: IGhosts are both IClass and IInterface!
+		// I must exclude IGhost when not desirable to be included.
+		if (((anEntity instanceof IClass) || (anEntity instanceof IInterface))
+				&& !(anEntity instanceof IGhost)) {
+
 			final Iterator iterator = anEntity.getIteratorOnConstituents();
 
 			while (iterator.hasNext()) {
@@ -70,11 +76,10 @@ public final class TaxonomyDetection extends AbstractMicroPatternDetection
 						if (anOtherEntity instanceof IConstructor) {
 							// BIG HACK - WAZZ UP
 							// TODO: Remove the hack...
-							final IConstructor currentMethod =
-								(IConstructor) anOtherEntity;
+							final IConstructor currentMethod = (IConstructor) anOtherEntity;
 
-							if (!currentMethod.getDisplayID().startsWith(
-								"<init>")) {
+							if (!currentMethod.getDisplayID()
+									.startsWith("<init>")) {
 
 								return false;
 							}
@@ -90,8 +95,8 @@ public final class TaxonomyDetection extends AbstractMicroPatternDetection
 
 			// Looks good so far :)
 			// Count the number of implemented interface
-			final Iterator myIterator =
-				anEntity.getIteratorOnInheritedEntities();
+			final Iterator myIterator = anEntity
+					.getIteratorOnInheritedEntities();
 			while (myIterator.hasNext()) {
 				final Object anOtherEntity = myIterator.next();
 				if (anOtherEntity instanceof IInterface) {
@@ -107,7 +112,9 @@ public final class TaxonomyDetection extends AbstractMicroPatternDetection
 			}
 			else {
 				// An Interface can implement only one interface 
-				if (numberOfInterface == 1) {
+				// Yann 26/02/20: IGhosts are both IClass and IInterface!
+				// Plus the ghost of Object!
+				if (numberOfInterface == 1 + 1) {
 					this.addEntities(anEntity);
 					return true;
 				}

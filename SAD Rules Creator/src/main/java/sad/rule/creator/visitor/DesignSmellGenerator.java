@@ -18,6 +18,8 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.io.Writer;
 import java.util.Iterator;
+
+import sad.rule.creator.Paths;
 import sad.rule.creator.model.IAggregation;
 import sad.rule.creator.model.IAssociation;
 import sad.rule.creator.model.IComposition;
@@ -39,8 +41,8 @@ public class DesignSmellGenerator implements IVisitor {
 	private static final String CLASSNAME_TAG = "<CLASSNAME>";
 	private static final String RULE_FILE_TAG = "<RULE_FILE>";
 
-	private final String codeSmellOutputDir =
-			"../SAD/src/sad/designsmell/detection/repository/";
+	private final String codeSmellOutputDir = Paths.OUTPUT_PATH
+			+ "sad/designsmell/detection/repository/";
 	private IRule currentRule;
 	private IRuleCard currentRuleCard;
 	// We need to get the id of the first rule to return the result on this set
@@ -48,20 +50,18 @@ public class DesignSmellGenerator implements IVisitor {
 	private final StringBuffer generatedCode = new StringBuffer();
 	// We count the number of rules
 	private int nbRules;
-	private final String outputFileName =
-			"../SAD/src/sad/designsmell/detection/repository/";
 	private final String ruleFileName;
 	private final boolean shouldGenerateCode;
-	private final String templatePath =
-			"../SAD Rules Creator/rsc/templates/DesignSmellTemplate.txt";
+	private final String templatePath = Paths.RESOURCES_PATH
+			+ "templates/DesignSmellTemplate.txt";
 
-	public DesignSmellGenerator(
-		final String aFileName,
-		final boolean shouldGenerateCode) {
+	public DesignSmellGenerator(final String aFileName,
+			final boolean shouldGenerateCode) {
 
 		this.ruleFileName = aFileName;
 		this.shouldGenerateCode = shouldGenerateCode;
 	}
+
 	public void close(final IRule aRule) {
 		this.nbRules++;
 		this.outputMessage("close IRule", aRule);
@@ -70,6 +70,7 @@ public class DesignSmellGenerator implements IVisitor {
 			this.firstRule = aRule.getID();
 		}
 	}
+
 	public void close(final IRuleCard aRuleCard) {
 		this.outputMessage("close IRuleCard :", aRuleCard);
 
@@ -77,33 +78,28 @@ public class DesignSmellGenerator implements IVisitor {
 		if (this.shouldGenerateCode) {
 			final StringBuffer tempGeneratedCodeFirst = new StringBuffer();
 			// TODO: Should not be hard-coded!
-			tempGeneratedCodeFirst
-				.append("public void detect(final IAbstractLevelModel anAbstractLevelModel) {\n");
-			tempGeneratedCodeFirst
-				.append("final Set candidateDesignSmells = new HashSet();\n");
+			tempGeneratedCodeFirst.append(
+					"public void detect(final IAbstractLevelModel anAbstractLevelModel) {\n");
+			tempGeneratedCodeFirst.append(
+					"final Set candidateDesignSmells = new HashSet();\n");
 			this.generatedCode.insert(0, tempGeneratedCodeFirst);
 
 			try {
 				final StringBuffer buffer = this.readFile(this.templatePath);
-				this.replaceTAG(
-					buffer,
-					DesignSmellGenerator.CLASSNAME_TAG,
-					aRuleCard.getID());
-				this.replaceTAG(
-					buffer,
-					DesignSmellGenerator.RULE_FILE_TAG,
-					this.ruleFileName);
+				this.replaceTAG(buffer, DesignSmellGenerator.CLASSNAME_TAG,
+						aRuleCard.getID());
+				this.replaceTAG(buffer, DesignSmellGenerator.RULE_FILE_TAG,
+						this.ruleFileName);
 
 				// Ensure the directory is created
 				// Yann 2013/05/30
 				// Not necessary thanks to ProxyDisk 
 				//	(new File(this.outputFileName + aRuleCard.getID())).mkdirs();
 
-				final Writer fw =
-					ProxyDisk.getInstance().fileAbsoluteOutput(
-						this.outputFileName + aRuleCard.getID() + "/"
-								+ aRuleCard.getID() + "Detection.java",
-						false);
+				final Writer fw = ProxyDisk.getInstance()
+						.fileAbsoluteOutput(this.codeSmellOutputDir
+								+ aRuleCard.getID() + "/" + aRuleCard.getID()
+								+ "Detection.java", false);
 				fw.write(buffer.toString());
 				fw.close();
 
@@ -123,22 +119,22 @@ public class DesignSmellGenerator implements IVisitor {
 			tempGeneratedCodeEnd.append("set" + this.firstRule);
 			tempGeneratedCodeEnd.append(".iterator();\n");
 			tempGeneratedCodeEnd.append("while(iterSet.hasNext()) {\n");
-			tempGeneratedCodeEnd
-				.append("final ICodeSmell aCodeSmell = (ICodeSmell) iterSet.next();\n");
-			tempGeneratedCodeEnd
-				.append("final DesignSmell designSmell = new DesignSmell(aCodeSmell);\n");
+			tempGeneratedCodeEnd.append(
+					"final ICodeSmell aCodeSmell = (ICodeSmell) iterSet.next();\n");
+			tempGeneratedCodeEnd.append(
+					"final DesignSmell designSmell = new DesignSmell(aCodeSmell);\n");
 			tempGeneratedCodeEnd.append("designSmell.setName(\"");
 			tempGeneratedCodeEnd.append(aRuleCard.getID());
 			tempGeneratedCodeEnd.append("\");\n");
 			tempGeneratedCodeEnd
-				.append("final String definition = \"To defined\";\n");
+					.append("final String definition = \"To defined\";\n");
 			tempGeneratedCodeEnd
-				.append("designSmell.setDefinition(definition);\n");
+					.append("designSmell.setDefinition(definition);\n");
 			tempGeneratedCodeEnd
-				.append("candidateDesignSmells.add(designSmell);\n");
+					.append("candidateDesignSmells.add(designSmell);\n");
 			tempGeneratedCodeEnd.append("}\n");
-			tempGeneratedCodeEnd
-				.append("this.setSetOfDesignSmells(candidateDesignSmells);\n");
+			tempGeneratedCodeEnd.append(
+					"this.setSetOfDesignSmells(candidateDesignSmells);\n");
 			tempGeneratedCodeEnd.append("}\n");
 			tempGeneratedCodeEnd.append("}\n");
 
@@ -150,11 +146,10 @@ public class DesignSmellGenerator implements IVisitor {
 				// Not necessary thanks to ProxyDisk
 				//	new File(this.outputFileName + aRuleCard.getID()).mkdirs();
 
-				final Writer fw =
-					ProxyDisk.getInstance().fileAbsoluteOutput(
-						this.outputFileName + aRuleCard.getID() + "/"
-								+ aRuleCard.getID() + "Detection.java",
-						true);
+				final Writer fw = ProxyDisk.getInstance()
+						.fileAbsoluteOutput(this.codeSmellOutputDir
+								+ aRuleCard.getID() + "/" + aRuleCard.getID()
+								+ "Detection.java", true);
 				fw.write(this.generatedCode.toString());
 				fw.close();
 			}
@@ -163,6 +158,7 @@ public class DesignSmellGenerator implements IVisitor {
 			}
 		}
 	}
+
 	private int countConstituents(final Iterator iteratorOnConstituents) {
 		int numberOfConstituents = 0;
 		while (iteratorOnConstituents.hasNext()) {
@@ -171,13 +167,13 @@ public class DesignSmellGenerator implements IVisitor {
 		}
 		return numberOfConstituents;
 	}
+
 	private int countNonTerminalRules(final Iterator iteratorOnConstituents) {
 		int numberOfNonTerminalRules = 0;
 		while (iteratorOnConstituents.hasNext()) {
-			final IConstituent constituent =
-				(IConstituent) iteratorOnConstituents.next();
-			if (constituent instanceof IMetric
-					|| constituent instanceof IStruct
+			final IConstituent constituent = (IConstituent) iteratorOnConstituents
+					.next();
+			if (constituent instanceof IMetric || constituent instanceof IStruct
 					|| constituent instanceof ISemantic) {
 
 				numberOfNonTerminalRules++;
@@ -207,19 +203,21 @@ public class DesignSmellGenerator implements IVisitor {
 
 		this.generatedCode.insert(0, tempGeneratedCode);
 	}
+
 	public Object getResult() {
 		return this.generatedCode;
 	}
+
 	public void open(final IRule aRule) {
 		this.outputMessage("open IRule :", aRule);
 
 		if (this.shouldGenerateCode) {
 			this.currentRule = aRule;
 
-			final int numberOfConstituents =
-				this.countConstituents(aRule.getIteratorOnConstituents());
-			final int numberOfXX =
-				this.countNonTerminalRules(aRule.getIteratorOnConstituents());
+			final int numberOfConstituents = this
+					.countConstituents(aRule.getIteratorOnConstituents());
+			final int numberOfXX = this
+					.countNonTerminalRules(aRule.getIteratorOnConstituents());
 			// We are in a leaf
 			if (numberOfConstituents == 0 || numberOfXX == 1) {
 				this.generateRule(aRule);
@@ -229,6 +227,7 @@ public class DesignSmellGenerator implements IVisitor {
 			// RULE : mainClass {INTER LargeClassLowCohesion ControllerClass } ; 
 		}
 	}
+
 	public void open(final IRuleCard aRuleCard) {
 		this.currentRuleCard = aRuleCard;
 		this.outputMessage("open IRuleCard :", aRuleCard);
@@ -238,6 +237,7 @@ public class DesignSmellGenerator implements IVisitor {
 		// Purge output directory
 		new File(this.codeSmellOutputDir + aRuleCard.getID()).delete();
 	}
+
 	private void outputMessage(final String typeElement, final Object o) {
 		if (this.shouldGenerateCode) {
 			System.out.print(typeElement);
@@ -245,12 +245,12 @@ public class DesignSmellGenerator implements IVisitor {
 			System.out.println(o);
 		}
 	}
+
 	private StringBuffer readFile(final String fileName) {
 		final StringBuffer buffer = new StringBuffer();
 		try {
-			final LineNumberReader reader =
-				new LineNumberReader(new InputStreamReader(new FileInputStream(
-					fileName)));
+			final LineNumberReader reader = new LineNumberReader(
+					new InputStreamReader(new FileInputStream(fileName)));
 
 			String readLine;
 			while ((readLine = reader.readLine()) != null) {
@@ -265,44 +265,42 @@ public class DesignSmellGenerator implements IVisitor {
 
 		return buffer;
 	}
-	private void replaceTAG(
-		final StringBuffer source,
-		final String TAG,
-		final String replaceWith) {
+
+	private void replaceTAG(final StringBuffer source, final String TAG,
+			final String replaceWith) {
 
 		while (source.indexOf(TAG) >= 0) {
-			source.replace(
-				source.indexOf(TAG),
-				source.indexOf(TAG) + TAG.length(),
-				replaceWith);
+			source.replace(source.indexOf(TAG),
+					source.indexOf(TAG) + TAG.length(), replaceWith);
 		}
 	}
+
 	public void visit(final IAggregation anAggregation) {
 		this.outputMessage("visit IAggregation :", anAggregation);
 		this.visit((IAssociation) anAggregation);
 	}
+
 	public void visit(final IAssociation anAssociation) {
-		this
-			.outputMessage("visit IAssociation in DesignSmell: ", anAssociation);
+		this.outputMessage("visit IAssociation in DesignSmell: ",
+				anAssociation);
 
 		final StringBuffer tempGeneratedCode = new StringBuffer();
 		tempGeneratedCode.append("\nfinal Set set");
 		tempGeneratedCode.append(this.currentRule.getID());
 
 		// Association 1-n
-		if (this.shouldGenerateCode
-				&& anAssociation.getSourceCardinality() == 1
+		if (this.shouldGenerateCode && anAssociation.getSourceCardinality() == 1
 				&& anAssociation.getTargetCardinality() > 1) {
 
 			tempGeneratedCode
-				.append(" = this.relations.checkAssociationOneToMany(");
+					.append(" = this.relations.checkAssociationOneToMany(");
 		}
 		// Association 1-1
 		else if (this.shouldGenerateCode
 				&& anAssociation.getSourceCardinality() == 1
 				&& anAssociation.getTargetCardinality() == 1) {
 			tempGeneratedCode
-				.append(" = this.relations.checkAssociationOneToOne(");
+					.append(" = this.relations.checkAssociationOneToOne(");
 		}
 
 		tempGeneratedCode.append(Constants.RELATION_ASSOC + ", ");
@@ -319,10 +317,8 @@ public class DesignSmellGenerator implements IVisitor {
 		// Check for RuleGhost in the association
 		if (anAssociation.getSourceConstituent() instanceof IRuleGhost) {
 			// Try to substitute the RuleGhost
-			final IConstituent rule =
-				this.currentRuleCard.getConstituentFromID(anAssociation
-					.getSourceConstituent()
-					.getID());
+			final IConstituent rule = this.currentRuleCard.getConstituentFromID(
+					anAssociation.getSourceConstituent().getID());
 			if (rule != null) {
 				anAssociation.setSourceConstituent(rule);
 			}
@@ -330,19 +326,19 @@ public class DesignSmellGenerator implements IVisitor {
 
 		if (anAssociation.getTargetConstituent() instanceof IRuleGhost) {
 			// Try to substitute the RuleGhost
-			final IConstituent rule =
-				this.currentRuleCard.getConstituentFromID(anAssociation
-					.getTargetConstituent()
-					.getID());
+			final IConstituent rule = this.currentRuleCard.getConstituentFromID(
+					anAssociation.getTargetConstituent().getID());
 			if (rule != null) {
 				anAssociation.setTargetConstituent(rule);
 			}
 		}
 	}
+
 	public void visit(final IComposition aComposition) {
 		this.outputMessage("visit IComposition :", aComposition);
 		this.visit((IAssociation) aComposition);
 	}
+
 	public void visit(final IInheritance anInheritance) {
 		this.outputMessage("visit IInheritance :", anInheritance);
 
@@ -351,12 +347,11 @@ public class DesignSmellGenerator implements IVisitor {
 		tempGeneratedCode.append(this.currentRule.getID());
 
 		// Inheritance 1-1
-		if (this.shouldGenerateCode
-				&& anInheritance.getSourceCardinality() == 1
+		if (this.shouldGenerateCode && anInheritance.getSourceCardinality() == 1
 				&& anInheritance.getTargetCardinality() == 1) {
 
 			tempGeneratedCode
-				.append(" = this.relations.checkAssociationOneToOne(");
+					.append(" = this.relations.checkAssociationOneToOne(");
 		}
 		// Inheritance 1-n
 		else if (this.shouldGenerateCode
@@ -364,7 +359,7 @@ public class DesignSmellGenerator implements IVisitor {
 				&& anInheritance.getTargetCardinality() > 1) {
 
 			tempGeneratedCode
-				.append(" = this.relations.checkAssociationOneToMany(");
+					.append(" = this.relations.checkAssociationOneToMany(");
 		}
 
 		tempGeneratedCode.append(Constants.RELATION_INHERIT + ", ");
@@ -381,10 +376,8 @@ public class DesignSmellGenerator implements IVisitor {
 		// Check for RuleGhost in the association
 		if (anInheritance.getSourceConstituent() instanceof IRuleGhost) {
 			// Try to substitute the RuleGhost
-			final IConstituent rule =
-				this.currentRuleCard.getConstituentFromID(anInheritance
-					.getSourceConstituent()
-					.getID());
+			final IConstituent rule = this.currentRuleCard.getConstituentFromID(
+					anInheritance.getSourceConstituent().getID());
 			if (rule != null) {
 				anInheritance.setSourceConstituent(rule);
 			}
@@ -392,18 +385,18 @@ public class DesignSmellGenerator implements IVisitor {
 
 		if (anInheritance.getTargetConstituent() instanceof IRuleGhost) {
 			// Try to substitute the RuleGhost
-			final IConstituent rule =
-				this.currentRuleCard.getConstituentFromID(anInheritance
-					.getTargetConstituent()
-					.getID());
+			final IConstituent rule = this.currentRuleCard.getConstituentFromID(
+					anInheritance.getTargetConstituent().getID());
 			if (rule != null) {
 				anInheritance.setTargetConstituent(rule);
 			}
 		}
 	}
+
 	public void visit(final IMetric aMetric) {
 		this.outputMessage("visit IMetric : ", aMetric);
 	}
+
 	public void visit(final IOperator anOperator) {
 		this.outputMessage("visit IOperator :", anOperator);
 
@@ -422,7 +415,8 @@ public class DesignSmellGenerator implements IVisitor {
 				if (anOperator.getOperatorType() == Constants.OPERATOR_INTER) {
 					tempGeneratedCode.append("this.operators.intersection(set");
 				}
-				else if (anOperator.getOperatorType() == Constants.OPERATOR_UNION) {
+				else if (anOperator
+						.getOperatorType() == Constants.OPERATOR_UNION) {
 					tempGeneratedCode.append("this.operators.union(set");
 				}
 				tempGeneratedCode.append(anOperator.getOperand1().getID());
@@ -437,10 +431,8 @@ public class DesignSmellGenerator implements IVisitor {
 		// Check for RuleGhost in the Operator
 		if (anOperator.getOperand1() instanceof IRuleGhost) {
 			// Try to substitute the RuleGhost
-			final IConstituent rule =
-				this.currentRuleCard.getConstituentFromID(anOperator
-					.getOperand1()
-					.getID());
+			final IConstituent rule = this.currentRuleCard
+					.getConstituentFromID(anOperator.getOperand1().getID());
 			if (rule != null) {
 				anOperator.setOperand1(rule);
 			}
@@ -448,18 +440,18 @@ public class DesignSmellGenerator implements IVisitor {
 
 		if (anOperator.getOperand2() instanceof IRuleGhost) {
 			// Try to substitute the RuleGhost
-			final IConstituent rule =
-				this.currentRuleCard.getConstituentFromID(anOperator
-					.getOperand2()
-					.getID());
+			final IConstituent rule = this.currentRuleCard
+					.getConstituentFromID(anOperator.getOperand2().getID());
 			if (rule != null) {
 				anOperator.setOperand2(rule);
 			}
 		}
 	}
+
 	public void visit(final ISemantic aSemantic) {
 		this.outputMessage("visit ISemantic : ", aSemantic);
 	}
+
 	public void visit(final IStruct aStruct) {
 		this.outputMessage("visit IStruct : ", aStruct);
 	}

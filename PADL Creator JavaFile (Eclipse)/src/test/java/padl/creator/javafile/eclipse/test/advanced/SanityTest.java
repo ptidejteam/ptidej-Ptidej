@@ -14,6 +14,7 @@ import org.junit.Assert;
 
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
+import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
 
 public class SanityTest extends TestCase {
@@ -25,27 +26,15 @@ public class SanityTest extends TestCase {
 
 	public void testClassesDuplication() {
 		final String sourcePath = "";
-		final String[] javaFiles =
-			new String[] {
-					"../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/padl/example/eclipse/duplication/classes/in/A.java",
-					"../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/padl/example/eclipse/duplication/classes/out/A.java", };
+		final String[] javaFiles = new String[] {
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/padl/example/eclipse/duplication/classes/in/A.java",
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes//PADL testdata/padl/example/eclipse/duplication/classes/out/A.java", };
 		final String classPathEntry = "";
 
-		final ICodeLevelModel model =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				sourcePath,
-				classPathEntry,
-				javaFiles);
+		final ICodeLevelModel model = Utils.createLightJavaFilesPadlModel("",
+				sourcePath, classPathEntry, javaFiles);
 		int nbClasses = 0;
-		try {
-			nbClasses =
-				model.getNumberOfTopLevelEntities(Class
-					.forName("padl.kernel.impl.Class"));
-		}
-		catch (final ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		nbClasses = model.getNumberOfTopLevelEntities(IClass.class);
 		Assert.assertEquals(1, nbClasses);
 	}
 }

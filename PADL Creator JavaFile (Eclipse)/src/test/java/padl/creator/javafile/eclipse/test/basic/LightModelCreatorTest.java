@@ -50,7 +50,6 @@ public class LightModelCreatorTest extends TestCase {
 
 	//creation from all the source code
 	public void testCreateModelFromJavaSourceCode() {
-
 		final String classPathEntry = "";
 		final String sourceCodePath =
 			"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/";
@@ -66,6 +65,5 @@ public class LightModelCreatorTest extends TestCase {
 			model.getNumberOfTopLevelEntities(IClass.class);
 
 		Assert.assertTrue(minimalClassesNumberExpected < classesNumber);
-
 	}
 }

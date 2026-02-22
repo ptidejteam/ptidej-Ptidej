@@ -11,9 +11,11 @@
 package padl.micropattern.repository;
 
 import java.util.Iterator;
+
 import padl.kernel.IClass;
 import padl.kernel.IField;
 import padl.kernel.IFirstClassEntity;
+import padl.kernel.IGhost;
 import padl.kernel.IInterface;
 import padl.kernel.IOperation;
 import padl.micropattern.IMicroPatternDetection;
@@ -44,7 +46,11 @@ public final class PoolDetection extends AbstractMicroPatternDetection
 	 */
 
 	public boolean detect(final IFirstClassEntity anEntity) {
-		if ((anEntity instanceof IClass) || (anEntity instanceof IInterface)) {
+		// Yann 26/02/20: IGhosts are both IClass and IInterface!
+		// I must exclude IGhost when not desirable to be included.
+		if (((anEntity instanceof IClass) || (anEntity instanceof IInterface))
+				&& !(anEntity instanceof IGhost)) {
+
 			final Iterator iterator = anEntity.getIteratorOnConstituents();
 
 			while (iterator.hasNext()) {
@@ -56,17 +62,17 @@ public final class PoolDetection extends AbstractMicroPatternDetection
 
 					// Detect static attribute initialization
 					if (!currentMethod.getDisplayName().equals("<clinit>")
-							&& (!currentMethod.getDisplayID().startsWith(
-								"<init>"))) {
+							&& (!currentMethod.getDisplayID()
+									.startsWith("<init>"))) {
 
 						// The method must be inherited from Object
-						final String methodName =
-							currentMethod.getDisplayName();
+						final String methodName = currentMethod
+								.getDisplayName();
 						if (!((methodName.equals("clone"))
 								|| (methodName.equals("equals"))
 								|| (methodName.equals("finalize"))
-								|| (methodName.equals("hashCode")) || (methodName
-							.equals("toString")))) {
+								|| (methodName.equals("hashCode"))
+								|| (methodName.equals("toString")))) {
 
 							return false;
 						}
@@ -76,7 +82,8 @@ public final class PoolDetection extends AbstractMicroPatternDetection
 				// All Fields must be "static final"
 				if (anOtherEntity instanceof IField) {
 					final IField currentField = (IField) anOtherEntity;
-					if ((!currentField.isStatic()) || (!currentField.isFinal())) {
+					if ((!currentField.isStatic())
+							|| (!currentField.isFinal())) {
 
 						return false;
 					}

@@ -11,8 +11,10 @@
 package padl.micropattern.repository;
 
 import java.util.Iterator;
+
 import padl.kernel.IClass;
 import padl.kernel.IFirstClassEntity;
+import padl.kernel.IGhost;
 import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.micropattern.IMicroPatternDetection;
@@ -33,27 +35,26 @@ public final class SinkDetection extends AbstractMicroPatternDetection
 
 	public boolean detect(final IFirstClassEntity anEntity) {
 		// Only Class can be Sink
-		if (anEntity instanceof IClass) {
-			final Iterator iterator =
-				anEntity.getIteratorOnConstituents(IMethod.class);
+		// Yann 26/02/20: IGhosts are both IClass and IInterface!
+		// I must exclude IGhost when not desirable to be included.
+		if (anEntity instanceof IClass && !(anEntity instanceof IGhost)) {
+			final Iterator iterator = anEntity
+					.getIteratorOnConstituents(IMethod.class);
 			while (iterator.hasNext()) {
 				final Object anOtherEntity = iterator.next();
 				final IMethod currentMethod = (IMethod) anOtherEntity;
 
-				final Iterator invocation =
-					currentMethod.getIteratorOnConstituents();
+				final Iterator invocation = currentMethod
+						.getIteratorOnConstituents();
 				while (invocation.hasNext()) {
 
 					final Object currentItem = invocation.next();
 					if (currentItem instanceof IMethodInvocation) {
 
-						final IMethodInvocation currentInvocation =
-							(IMethodInvocation) currentItem;
+						final IMethodInvocation currentInvocation = (IMethodInvocation) currentItem;
 						if ((currentInvocation.getCalledMethod() != null)
-								&& (!currentInvocation
-									.getCalledMethod()
-									.getDisplayName()
-									.equals("="))) {
+								&& (!currentInvocation.getCalledMethod()
+										.getDisplayName().equals("="))) {
 
 							return false;
 						}

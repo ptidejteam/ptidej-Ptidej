@@ -1,13 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Public License v2.0
- * which accompanies this distribution, and is available at
- * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * 
- * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
- ******************************************************************************/
 package sad.designsmell.detection.repository.MessageChains;
 
 /**
@@ -31,7 +21,6 @@ import sad.designsmell.detection.repository.AbstractDesignSmellDetection;
 import sad.kernel.impl.DesignSmell;
 import sad.util.OperatorsCodeSmells;
 import sad.util.Relationships;
-import util.io.Files;
 
 public class MessageChainsDetection extends AbstractDesignSmellDetection implements IDesignSmellDetection {
 	private final OperatorsCodeSmells operators;

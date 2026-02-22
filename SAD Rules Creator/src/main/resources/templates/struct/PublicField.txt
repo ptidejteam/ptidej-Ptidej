@@ -35,6 +35,7 @@ import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IClass;
 import padl.kernel.IEntity;
 import padl.kernel.IField;
+import padl.kernel.IGhost;
 import sad.codesmell.property.impl.FieldProperty;
 import sad.codesmell.property.impl.MethodProperty;
 import sad.codesmell.property.impl.ClassProperty;
@@ -62,7 +63,9 @@ public class <CODESMELL>Detection extends AbstractCodeSmellDetection implements 
 		final Iterator iter = anAbstractLevelModel.getIteratorOnTopLevelEntities();
 		while (iter.hasNext()) {
 			final IEntity entity = (IEntity) iter.next();
-			if (entity instanceof IClass) {
+			// Yann 26/02/20: IGhosts are both IClass and IInterface!
+			// I must exclude IGhost when not desirable to be included.
+			if (entity instanceof IClass && !(entity instanceof IGhost)) {
 				final IClass aClass = (IClass) entity;
 				final Set setOf<CODESMELL> = new HashSet();
 				int numField = 0;

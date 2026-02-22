@@ -11,9 +11,11 @@
 package padl.micropattern.repository;
 
 import java.util.Iterator;
+
 import padl.kernel.IClass;
 import padl.kernel.IField;
 import padl.kernel.IFirstClassEntity;
+import padl.kernel.IGhost;
 import padl.kernel.IOperation;
 import padl.micropattern.IMicroPatternDetection;
 
@@ -38,7 +40,9 @@ public final class RecordDetection extends AbstractMicroPatternDetection
 
 	public boolean detect(final IFirstClassEntity anEntity) {
 		// Only Class can be Restricted Immutable
-		if (anEntity instanceof IClass) {
+		// Yann 26/02/20: IGhosts are both IClass and IInterface!
+		// I must exclude IGhost when not desirable to be included.
+		if (anEntity instanceof IClass && !(anEntity instanceof IGhost)) {
 			final Iterator iterator = anEntity.getIteratorOnConstituents();
 			while (iterator.hasNext()) {
 				final Object anOtherEntity = iterator.next();
@@ -61,7 +65,7 @@ public final class RecordDetection extends AbstractMicroPatternDetection
 							|| (methodName.equals("finalize"))
 							|| (methodName.equals("hashCode"))
 							|| (methodName.equals("toString")) || (currentMethod
-						.getDisplayID().startsWith("<init>")))) {
+									.getDisplayID().startsWith("<init>")))) {
 
 						return false;
 					}

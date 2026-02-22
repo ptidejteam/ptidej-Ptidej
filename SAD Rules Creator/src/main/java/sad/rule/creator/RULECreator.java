@@ -20,6 +20,7 @@ import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
 import sad.rule.creator.model.IRuleCard;
 import sad.rule.creator.model.IVisitor;
 import sad.rule.creator.visitor.CodeSmellGenerator;
@@ -28,14 +29,12 @@ import util.io.ProxyConsole;
 
 public class RULECreator {
 	public static void main(final String[] args) throws Exception {
-		final String[] listOfRuleCards =
-			new File("../SAD Rules Creator/rsc/").list();
+		final String[] listOfRuleCards = new File(Paths.RESOURCES_PATH).list();
 		for (int i = 0; i < listOfRuleCards.length; i++) {
 			final String ruleCard = listOfRuleCards[i];
 			if (ruleCard.endsWith(".rules")) {
-				final RULECreator ruleCreator =
-					new RULECreator(new String[] { "../SAD Rules Creator/rsc/"
-							+ ruleCard });
+				final RULECreator ruleCreator = new RULECreator(
+						new String[] { Paths.RESOURCES_PATH + ruleCard });
 				ruleCreator.parse();
 			}
 		}
@@ -69,17 +68,18 @@ public class RULECreator {
 	}
 
 	private final String fileName;
+
 	public RULECreator(final String[] fileNames) {
 		// TODO: Must deal with multiple files!
 		this.fileName = fileNames[0];
 	}
+
 	public String[] parse() {
 		final ArrayList listOfRuleCard = new ArrayList();
 
 		try {
-			final LineNumberReader reader =
-				new LineNumberReader(new InputStreamReader(new FileInputStream(
-					this.fileName)));
+			final LineNumberReader reader = new LineNumberReader(
+					new InputStreamReader(new FileInputStream(this.fileName)));
 
 			final StringBuffer buffer = new StringBuffer();
 			String readLine;
@@ -89,30 +89,29 @@ public class RULECreator {
 			}
 			reader.close();
 
-			final RULEParser parser =
-				new RULEParser(new RULELexer(
-					new StringReader(buffer.toString())));
+			final RULEParser parser = new RULEParser(
+					new RULELexer(new StringReader(buffer.toString())));
 			parser.parse();
 			if (parser.hasError()) {
 				return new String[0];
 			}
 
-			final IVisitor visitor =
-				new DesignSmellGenerator(this.fileName, true);
+			final IVisitor visitor = new DesignSmellGenerator(this.fileName,
+					true);
 			final List rulesSet = parser.getRulesSet();
 			final Iterator iterRule = rulesSet.iterator();
 			while (iterRule.hasNext()) {
 				final IRuleCard aRuleCard = (IRuleCard) iterRule.next();
 				aRuleCard.accept(visitor);
 
-				final StringBuffer generatedCode =
-					(StringBuffer) ((DesignSmellGenerator) visitor).getResult();
+				final StringBuffer generatedCode = (StringBuffer) ((DesignSmellGenerator) visitor)
+						.getResult();
 				System.out.println(generatedCode);
 				generatedCode.delete(0, generatedCode.length());
 
 				// ADD TO TEST CodeSmellGenerator
-				final IVisitor visitor2 =
-					new CodeSmellGenerator(aRuleCard.getID());
+				final IVisitor visitor2 = new CodeSmellGenerator(
+						aRuleCard.getID());
 
 				listOfRuleCard.add(aRuleCard.getID());
 
@@ -130,8 +129,7 @@ public class RULECreator {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 
-		final String[] temp =
-			(String[]) listOfRuleCard
+		final String[] temp = (String[]) listOfRuleCard
 				.toArray(new String[listOfRuleCard.size()]);
 		return temp;
 	}

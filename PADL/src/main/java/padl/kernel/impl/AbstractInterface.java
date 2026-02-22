@@ -13,8 +13,9 @@ package padl.kernel.impl;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import padl.kernel.IClass;
 import padl.kernel.IFirstClassEntity;
-import padl.kernel.IInterfaceImplementer;
 import padl.kernel.exception.ModelDeclarationException;
 import util.multilingual.MultilingualManager;
 
@@ -45,7 +46,7 @@ class AbstractInterface extends AbstractClass {
 	*/
 	// David 2013/09/06
 	// Made method public
-	protected void addImplementingClass(final IInterfaceImplementer aClass) {
+	protected void addImplementingClass(final IClass aClass) {
 		if (this.listOfImplementingClasses.contains(aClass)) {
 			// Yann 2010/06/27: MemberClasses!
 			// Now that I deal with MemberClasses, it is possible
@@ -62,7 +63,7 @@ class AbstractInterface extends AbstractClass {
 
 	// David 2013/09/06
 	// Added method removeImplementingClass
-	protected void removeImplementingClass(final IInterfaceImplementer aClass) {
+	protected void removeImplementingClass(final IClass aClass) {
 		this.listOfImplementingClasses.remove(aClass);
 	}
 

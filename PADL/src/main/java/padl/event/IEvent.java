@@ -10,5 +10,8 @@
  ******************************************************************************/
 package padl.event;
 
+import padl.kernel.IContainer;
+
 public interface IEvent {
+	public IContainer getContainer();
 }

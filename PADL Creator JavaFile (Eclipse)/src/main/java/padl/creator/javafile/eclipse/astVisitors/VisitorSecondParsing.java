@@ -39,7 +39,7 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IConstructor;
 import padl.kernel.IField;
 import padl.kernel.IFirstClassEntity;
-import padl.kernel.IInterfaceActor;
+import padl.kernel.IInterface;
 import padl.kernel.IMemberClass;
 import padl.kernel.IMethod;
 import padl.kernel.IOperation;
@@ -276,7 +276,7 @@ public class VisitorSecondParsing extends ExtendedASTVisitor {
 							this.padlModel,
 							this.myCurrentPackage.getDisplayPath());
 
-				if (!(interfaz instanceof IInterfaceActor)) {
+				if (!(interfaz instanceof IInterface)) {
 					// source not well done and class seems be
 					// implemented by a class
 
@@ -286,7 +286,7 @@ public class VisitorSecondParsing extends ExtendedASTVisitor {
 						|| this.myCurrentEntity instanceof IMemberClass) {
 
 					((IClass) this.myCurrentEntity)
-						.addImplementedInterface((IInterfaceActor) interfaz);
+						.addImplementedInterface((IInterface) interfaz);
 				}
 				else {
 					this.myCurrentEntity.addInheritedEntity(interfaz);
@@ -304,7 +304,7 @@ public class VisitorSecondParsing extends ExtendedASTVisitor {
 							((Type) iter.next()).resolveBinding(),
 							this.padlModel,
 							this.myCurrentPackage.getDisplayPath());
-				if (!(interfaz instanceof IInterfaceActor)) {
+				if (!(interfaz instanceof IInterface)) {
 					// source not well done and class seems be
 					// implemented by a class
 
@@ -314,7 +314,7 @@ public class VisitorSecondParsing extends ExtendedASTVisitor {
 						|| this.myCurrentEntity instanceof IMemberClass) {
 
 					((IClass) this.myCurrentEntity)
-						.addImplementedInterface((IInterfaceActor) interfaz);
+						.addImplementedInterface((IInterface) interfaz);
 				}
 				else {
 					this.myCurrentEntity.addInheritedEntity(interfaz);

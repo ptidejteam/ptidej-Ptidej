@@ -10,7 +10,7 @@
  ******************************************************************************/
 package padl.event;
 
-import java.util.List;
+import padl.kernel.IContainer;
 
 public final class AnalysisEvent implements IEvent {
 	private final char[] name;
@@ -24,6 +24,7 @@ public final class AnalysisEvent implements IEvent {
 		this.name = aName.toCharArray();
 		this.elementType = new char[0];
 	}
+
 	/**
 	 * @deprecated by AnalysisEvent(final char[], final char[])
 	 */
@@ -32,22 +33,26 @@ public final class AnalysisEvent implements IEvent {
 		this.name = aName;
 		this.elementType = new char[0];
 	}
+
 	public AnalysisEvent(final char[] aName, final char[] anElementType) {
 		this.name = aName;
 		this.elementType = anElementType;
 	}
+
 	public char[] getConstituentName() {
 		return this.name;
 	}
-	public List getSubmittedConstituents() {
-		return null;
-	}
+
 	public String toString() {
-		final StringBuffer buffer =
-			new StringBuffer(this.name.length + this.elementType.length + 1);
+		final StringBuffer buffer = new StringBuffer(
+				this.name.length + this.elementType.length + 1);
 		buffer.append(this.name);
 		buffer.append(';');
 		buffer.append(this.elementType);
 		return buffer.toString();
+	}
+
+	public IContainer getContainer() {
+		return null;
 	}
 }

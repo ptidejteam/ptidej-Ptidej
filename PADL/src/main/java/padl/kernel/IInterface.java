@@ -15,7 +15,8 @@ import java.util.Iterator;
 /**
  * @author Yann-Gaël Guéhéneuc
  */
-public interface IInterface extends IFirstClassEntity, IInterfaceActor {
+public interface IInterface extends IFirstClassEntity {
 	String LOGO = "\"I\"";
+
 	Iterator getIteratorOnImplementingClasses();
 }

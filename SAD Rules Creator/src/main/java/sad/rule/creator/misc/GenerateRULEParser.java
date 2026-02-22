@@ -15,6 +15,8 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.io.Writer;
+
+import sad.rule.creator.Paths;
 import util.io.ProxyDisk;
 
 /**
@@ -27,14 +29,14 @@ public class GenerateRULEParser {
 				"RULEParser", "-symbols", "RULESymbols", "-interface",
 				"-nonterms", "-progress", "rsc/SAD.cup" });
 
-		final File previousParser =
-			new File("src/rule/creator/RULEParser.java");
+		final File previousParser = new File(
+				Paths.SOURCE_RULE_CREATOR_PATH + "RULEParser.java");
 		previousParser.delete();
 		final File generatedParser = new File("RULEParser.java");
 		generatedParser.renameTo(previousParser);
 
-		final File previousSymbols =
-			new File("src/rule/creator/RULESymbols.java");
+		final File previousSymbols = new File(
+				Paths.SOURCE_RULE_CREATOR_PATH + "RULESymbols.java");
 		previousSymbols.delete();
 		final File generatedSymbols = new File("RULESymbols.java");
 		generatedSymbols.renameTo(previousSymbols);
@@ -43,9 +45,9 @@ public class GenerateRULEParser {
 		 * Some code to replace reference to "java_cup.runtime"
 		 * with "rule.creator.javacup.runtime".
 		 */
-		final LineNumberReader reader =
-			new LineNumberReader(new InputStreamReader(new FileInputStream(
-				"src/rule/creator/RULEParser.java")));
+		final LineNumberReader reader = new LineNumberReader(
+				new InputStreamReader(new FileInputStream(
+						Paths.SOURCE_RULE_CREATOR_PATH + "RULEParser.java")));
 		final StringBuffer buffer = new StringBuffer();
 		String readLine;
 		while ((readLine = reader.readLine()) != null) {
@@ -57,15 +59,12 @@ public class GenerateRULEParser {
 		final String toBeRemovedString = "java_cup.runtime";
 		int pos;
 		while ((pos = buffer.indexOf(toBeRemovedString)) > 0) {
-			buffer.replace(
-				pos,
-				pos + toBeRemovedString.length(),
-				"rule.creator.javacup.runtime");
+			buffer.replace(pos, pos + toBeRemovedString.length(),
+					"rule.creator.javacup.runtime");
 		}
 
-		final Writer writer =
-			ProxyDisk.getInstance().fileAbsoluteOutput(
-				"src/rule/creator/RULEParser.java");
+		final Writer writer = ProxyDisk.getInstance().fileAbsoluteOutput(
+				Paths.SOURCE_RULE_CREATOR_PATH + "RULEParser.java");
 		writer.write(buffer.toString());
 		writer.close();
 	}

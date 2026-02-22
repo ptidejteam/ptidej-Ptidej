@@ -42,6 +42,7 @@ import jct.kernel.*;
 import jct.util.IJCTContainer;
 import padl.kernel.Constants;
 import padl.kernel.IAbstractModel;
+import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IConstituent;
 import padl.kernel.IConstituentOfEntity;
@@ -53,8 +54,7 @@ import padl.kernel.IEntity;
 import padl.kernel.IFactory;
 import padl.kernel.IField;
 import padl.kernel.IFirstClassEntity;
-import padl.kernel.IInterfaceActor;
-import padl.kernel.IInterfaceImplementer;
+import padl.kernel.IInterface;
 import padl.kernel.IMethod;
 import padl.kernel.IOperation;
 import padl.kernel.IPackage;
@@ -315,8 +315,8 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 			else {
 				final IFirstClassEntity interfaceActor = (IFirstClassEntity) type
 						.getSelector().getElement().accept(this, aParameter);
-				((IInterfaceImplementer) c).addImplementedInterface(
-						(IInterfaceActor) interfaceActor);
+				((IClass) c).addImplementedInterface(
+						(IInterface) interfaceActor);
 			}
 		}
 

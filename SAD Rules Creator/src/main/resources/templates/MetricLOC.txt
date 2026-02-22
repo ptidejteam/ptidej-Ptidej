@@ -5,7 +5,9 @@
 		final Iterator iter = anAbstractLevelModel.getIteratorOnTopLevelEntities();
 		while (iter.hasNext()) {
 			final IEntity entity = (IEntity) iter.next();
-			if (entity instanceof IClass) {
+			// Yann 26/02/20: IGhosts are both IClass and IInterface!
+			// I must exclude IGhost when not desirable to be included.
+			if (entity instanceof IClass && !(entity instanceof IGhost)) {
 				final IClass aClass = (IClass) entity;
 				IClass classOf<CODESMELL> = null;
 				IMethod <CODESMELL> = null;
@@ -15,7 +17,7 @@
 				final Iterator iter2 = aClass.getIteratorOnConstituents(IMethod.class);
 				while (iter2.hasNext()) {
 					final IMethod aMethod = (IMethod) iter2.next();
-					if (!aMethod.isAbstract() && (aMethod.getVisibility() & Modifier.NATIVE) == 0) {
+					if (!aMethod.isAbstract() && (aMethod.getVisibility() & Access.ACC_NATIVE) == 0) {
 						final Integer value = Integer.valueOf(aMethod.getCodeLines().length);
 		
 						if (!(value == null)) {

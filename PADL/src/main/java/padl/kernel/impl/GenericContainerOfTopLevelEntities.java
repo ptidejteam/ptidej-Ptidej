@@ -24,12 +24,15 @@ import padl.event.IModelListener;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IConstituent;
 import padl.kernel.IConstituentOfModel;
+import padl.kernel.IContainerTopLevelEntities;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IPackage;
 import padl.util.CharArrayComparator;
 import padl.util.adapter.ModelListenerAdapter;
 
-class GenericContainerOfTopLevelEntities implements Serializable {
+class GenericContainerOfTopLevelEntities
+		implements IContainerTopLevelEntities, Serializable {
+
 	private static final long serialVersionUID = -714741910389826912L;
 
 	private final class ModelListener extends ModelListenerAdapter
@@ -195,8 +198,18 @@ class GenericContainerOfTopLevelEntities implements Serializable {
 		final Iterator iterator = this.mapOfIDsEntities.values().iterator();
 		while (iterator.hasNext()) {
 			final IConstituent constituent = (IConstituent) iterator.next();
-			if (aClass.isAssignableFrom(constituent.getClass())) {
-				number++;
+			// Yann 26/02/20: IGhosts are both IClass and IInterface!
+			// Instead of
+			//	if (aClass.isAssignableFrom(constituent.getClass())) {
+			// I check if one of the (direct) superinterface of the
+			// entity is an exact match for the interface being sought.
+			final java.lang.Class[] directInterfaces = constituent.getClass()
+					.getInterfaces();
+			for (int i = 0; i < directInterfaces.length; i++) {
+				final java.lang.Class interfaz = directInterfaces[i];
+				if (interfaz == aClass) {
+					number++;
+				}
 			}
 		}
 		return number;
@@ -211,6 +224,10 @@ class GenericContainerOfTopLevelEntities implements Serializable {
 		}
 
 		return (IFirstClassEntity) this.mapOfIDsEntities.get(anID);
+	}
+
+	public IFirstClassEntity getTopLevelEntityFromID(final String anID) {
+		return this.getTopLevelEntityFromID(anID.toCharArray());
 	}
 
 	public void removeTopLevelEntityFromID(final char[] anID) {

@@ -25,37 +25,32 @@ public class DesignatorTest extends TestCase {
 	private static MicroPatternDetector detector;
 	private MicroPatternDetector currentDetector;
 
-	public DesignatorTest(String arg0) {
-		super(arg0);
+	public DesignatorTest(final String arg) {
+		super(arg);
 	}
 
 	protected void setUp() {
-
 		if (DesignatorTest.detector == null) {
-			final ICodeLevelModel codeLevelModel =
-				Factory.getInstance().createCodeLevelModel(
-					"ptidej.example.innerclasses");
+			final ICodeLevelModel codeLevelModel = Factory.getInstance()
+					.createCodeLevelModel("ptidej.example.innerclasses");
 			try {
 				codeLevelModel
-					.create(new CompleteClassFileCreator(
-						new String[] {
+						.create(new CompleteClassFileCreator(new String[] {
 								"../PADL Micro-pattern Analysis/target/test-classes/padl/micropatterns/examples/Designator.class",
 								"../PADL Micro-pattern Analysis/target/test-classes/padl/micropatterns/examples/Designator2.class", }));
 			}
-			catch (CreationException e) {
+			catch (final CreationException e) {
 				// TODO: handle exception
 				// Added already created CreationException from padl.kernel.exception.CreationException;
 				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
-				}
+			}
 
 			this.currentDetector = new MicroPatternDetector(codeLevelModel);
 		}
 	}
 
 	public void testDesignator() {
-		Assert.assertEquals(
-			"Designator",
-			1,
-			this.currentDetector.getNumberOfDesignator());
+		Assert.assertEquals("Designator", 1,
+				this.currentDetector.getNumberOfDesignator());
 	}
 }

@@ -14,13 +14,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.kernel.IClass;
 import padl.kernel.IFirstClassEntity;
-import padl.kernel.IInterfaceActor;
-import padl.kernel.IInterfaceImplementer;
+import padl.kernel.IInterface;
 import padl.kernel.exception.ModelDeclarationException;
 import util.multilingual.MultilingualManager;
-import com.ibm.toad.cfparse.utils.Access;
 
 class AbstractClass extends FirstClassEntity {
 	private static final long serialVersionUID = 5923727557416846348L;
@@ -66,7 +67,7 @@ class AbstractClass extends FirstClassEntity {
 	//
 	//		super.addInherits(aPEntity);
 	//	}
-	public void addImplementedInterface(final IInterfaceActor anInterface) {
+	public void addImplementedInterface(final IInterface anInterface) {
 		if (this.listOfImplementedInterfaces.contains(anInterface)) {
 			throw new ModelDeclarationException(
 				MultilingualManager.getString(
@@ -81,7 +82,7 @@ class AbstractClass extends FirstClassEntity {
 		//		new Implementation("I" + anEntity.getConstituentID(), anEntity));
 
 		((AbstractInterface) anInterface)
-			.addImplementingClass((IInterfaceImplementer) this);
+			.addImplementingClass((IClass) this);
 		//	anEntity.addConstituent(
 		//		new Generalisation("G" + this.getConstituentID(), this));
 	}
@@ -91,7 +92,7 @@ class AbstractClass extends FirstClassEntity {
 			this.assumeInterface((Interface) iterator.next());
 		}
 	}
-	public void assumeInterface(final IInterfaceActor anInterface) {
+	public void assumeInterface(final IInterface anInterface) {
 		if (!this.listOfImplementedInterfaces.contains(anInterface)) {
 			throw new ModelDeclarationException(MultilingualManager.getString(
 				"NOT_IMPL",
@@ -110,11 +111,11 @@ class AbstractClass extends FirstClassEntity {
 			this.addConstituent(dupElement);
 		}
 	}
-	public IInterfaceActor getImplementedInterface(final char[] anEntityName) {
+	public IInterface getImplementedInterface(final char[] anEntityName) {
 		final Iterator iterator = this.getIteratorOnImplementedInterfaces();
 		while (iterator.hasNext()) {
-			final IInterfaceActor implementedEntity =
-				(IInterfaceActor) iterator.next();
+			final IInterface implementedEntity =
+				(IInterface) iterator.next();
 			if (Arrays.equals(implementedEntity.getName(), anEntityName)) {
 				return implementedEntity;
 			}
@@ -154,13 +155,13 @@ class AbstractClass extends FirstClassEntity {
 			}
 		}
 	}
-	public void removeImplementedInterface(final IInterfaceActor anInterface) {
+	public void removeImplementedInterface(final IInterface anInterface) {
 		this.listOfImplementedInterfaces.remove(anInterface);
 
 		// Here, we know for sure that anInterface is  
 		// actually an instance of Interface, or do we?
 		((AbstractInterface) anInterface)
-			.removeImplementingClass((IInterfaceImplementer) this);
+			.removeImplementingClass((IClass) this);
 	}
 	public void setAbstract(final boolean aBoolean) {
 		this.forceAbstract = aBoolean;

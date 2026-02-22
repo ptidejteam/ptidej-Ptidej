@@ -21,6 +21,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.Callable;
+
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JSplitPane;
@@ -30,6 +31,7 @@ import javax.swing.event.TreeWillExpandListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.ExpandVetoException;
 import javax.swing.tree.TreeCellRenderer;
+
 import padl.event.IModelListener;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IClass;
@@ -38,7 +40,6 @@ import padl.kernel.IContainer;
 import padl.kernel.IFilter;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IInterface;
-import padl.kernel.IInterfaceImplementer;
 import padl.util.NotFilter;
 import ptidej.ui.awt.AWTCanvas;
 import ptidej.ui.canvas.Canvas;
@@ -120,8 +121,8 @@ public class SourceDualHierarchicalModelWindow extends
 			else if (FilterImplementationClasses.getInstance().isFiltered(
 				firstClassEntity)) {
 
-				final IInterfaceImplementer interfaceImplementer =
-					(IInterfaceImplementer) firstClassEntity;
+				final IClass interfaceImplementer =
+					(IClass) firstClassEntity;
 				// First, implemented interfaces.
 				final Iterator implementedInterfaces =
 					interfaceImplementer.getIteratorOnImplementedInterfaces();

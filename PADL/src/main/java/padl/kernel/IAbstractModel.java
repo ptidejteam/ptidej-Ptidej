@@ -11,28 +11,28 @@
 package padl.kernel;
 
 import java.io.Serializable;
-import java.util.Iterator;
+
 import padl.visitor.IGenerator;
 import padl.visitor.IWalker;
 
 /**
  * @author Yann-Gaël Guéhéneuc
  */
-public interface IAbstractModel extends IContainer, INavigable, IObservable, 
-		Serializable {
+public interface IAbstractModel extends IContainer, IContainerTopLevelEntities,
+		INavigable, IObservable, Serializable {
 
 	void addConstituent(final IConstituentOfModel aConstituent);
+
 	Object clone() throws CloneNotSupportedException;
-	boolean doesContainTopLevelEntityWithID(char[] anID);
+
 	String generate(final IGenerator aBuilder);
+
 	String getDisplayName();
+
 	IFactory getFactory();
-	Iterator getIteratorOnTopLevelEntities();
+
 	char[] getName();
-	int getNumberOfTopLevelEntities();
-	int getNumberOfTopLevelEntities(final java.lang.Class aClass);
-	IFirstClassEntity getTopLevelEntityFromID(final char[] anID);
-	IFirstClassEntity getTopLevelEntityFromID(final String anID);
+
 	// Yann 2013/05/22: Systematic interface
 	// I use the Builder design pattern with the Creators, which
 	// means that I give them a "empty" code-level model as input
@@ -43,7 +43,7 @@ public interface IAbstractModel extends IContainer, INavigable, IObservable,
 	// convience method...
 	// TODO Is it the best way to implement this feature?
 	void moveIn(final IAbstractModel aDestinationModel);
-	void removeTopLevelEntityFromID(final char[] anID);
+
 	// Yann 2013/05/23: Internal stuff!
 	// No need to broadcast this method: it should be only used
 	// by the Factory to attach itself to the abstract-level model.

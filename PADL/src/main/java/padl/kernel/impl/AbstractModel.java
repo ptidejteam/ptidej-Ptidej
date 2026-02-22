@@ -233,9 +233,6 @@ public abstract class AbstractModel implements IAbstractModel {
 	public String getDisplayPath() {
 		return String.valueOf(this.path);
 	}
-	IWalker getEventGenerator() {
-		return this.eventGenerator;
-	}
 	public IFactory getFactory() {
 		return this.factory;
 	}
@@ -293,9 +290,9 @@ public abstract class AbstractModel implements IAbstractModel {
 
 		final AbstractModel destinationModel =
 			(AbstractModel) aDestinationModel;
-		destinationModel.setEventGenerator(this.getEventGenerator());
+		destinationModel.setEventGenerator(this.eventGenerator);
 		destinationModel.setFactory(this.getFactory());
-		aDestinationModel.walk(destinationModel.getEventGenerator());
+		aDestinationModel.walk(destinationModel.eventGenerator);
 	}
 	public void removeConstituentFromID(final char[] anID) {
 		this.container.removeConstituentFromID(anID);

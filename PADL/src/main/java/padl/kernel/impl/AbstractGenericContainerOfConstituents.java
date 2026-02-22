@@ -21,7 +21,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Set;
+
 import org.apache.commons.lang3.ArrayUtils;
+
 import padl.event.ElementEvent;
 import padl.event.EntityEvent;
 import padl.event.IEvent;
@@ -54,9 +56,11 @@ import util.io.ProxyConsole;
 // of Eclipse bundle loader (avoid IllegalAccessError).
 // TODO Is "public" necessary?
 public abstract class AbstractGenericContainerOfConstituents
-		implements Serializable {
+		implements Serializable, IObservable {
 
-	private static class GenericObservable implements Serializable {
+	private static class GenericObservable
+			implements IObservable, Serializable {
+
 		private static final long serialVersionUID = 198074990982735832L;
 		// Yann 2010/10/10: DB4O
 		// Used to be:
@@ -64,17 +68,18 @@ public abstract class AbstractGenericContainerOfConstituents
 		// I removed the final to make DB4O works...
 		// TODO: Understand how to keep it final with DB4O!
 		private Set listOfModelListeners = new HashSet(
-			GenericContainerConstants.INITIAL_SIZE_GENERIC_OBSERVABLE);
+				GenericContainerConstants.INITIAL_SIZE_GENERIC_OBSERVABLE);
 
-		public final boolean addModelListener(
-			final IModelListener aModelListener) {
+		public final void addModelListener(
+				final IModelListener aModelListener) {
 
-			return this.listOfModelListeners.add(aModelListener);
+			this.listOfModelListeners.add(aModelListener);
 		}
+
 		/*
 		public final boolean addModelListeners(
 			final List aListOfModelListeners) {
-
+		
 			final Iterator iterator = aListOfModelListeners.iterator();
 			boolean result = false;
 			while (iterator.hasNext()) {
@@ -84,14 +89,13 @@ public abstract class AbstractGenericContainerOfConstituents
 			return result;
 		}
 		*/
-		public final void fireModelChange(
-			final String eventType,
-			final IEvent modelEvent) {
+		public final void fireModelChange(final String eventType,
+				final IEvent modelEvent) {
 
 			if (this.listOfModelListeners.size() > 0) {
 				// First, I look for the method corresponding to the event type.
-				final Method[] methods =
-					IModelListener.class.getDeclaredMethods();
+				final Method[] methods = IModelListener.class
+						.getDeclaredMethods();
 				Method eventMethod = null;
 				for (int i = 0; i < methods.length
 						&& eventMethod == null; i++) {
@@ -102,50 +106,58 @@ public abstract class AbstractGenericContainerOfConstituents
 
 				// Second, I notify the listeners with the appropriate event.
 				if (eventMethod != null) {
-					final Iterator iterator =
-						this.listOfModelListeners.iterator();
+					final Iterator iterator = this.listOfModelListeners
+							.iterator();
 					while (iterator.hasNext()) {
-						final IModelListener listener =
-							(IModelListener) iterator.next();
+						final IModelListener listener = (IModelListener) iterator
+								.next();
 						if (listener != null) {
 							try {
-								eventMethod.invoke(
-									listener,
-									new Object[] { modelEvent });
+								eventMethod.invoke(listener,
+										new Object[] { modelEvent });
 							}
 							catch (final IllegalAccessException iae) {
-								iae.printStackTrace(
-									ProxyConsole.getInstance().errorOutput());
+								iae.printStackTrace(ProxyConsole.getInstance()
+										.errorOutput());
 							}
 							catch (final InvocationTargetException ite) {
-								ite.printStackTrace(
-									ProxyConsole.getInstance().errorOutput());
+								ite.printStackTrace(ProxyConsole.getInstance()
+										.errorOutput());
 							}
 						}
 					}
 				}
 			}
 		}
+
 		public Iterator getIteratorOnModelListeners() {
 			return this.listOfModelListeners.iterator();
 		}
+
 		protected List getModelListeners() {
 			return new ArrayList(this.listOfModelListeners);
 		}
+
 		public final void removeModelListener(
-			final IModelListener aModelListener) {
+				final IModelListener aModelListener) {
 
 			this.listOfModelListeners.remove(aModelListener);
 		}
+
 		public final void removeModelListeners(
-			final List aListOfModelListeners) {
+				final List aListOfModelListeners) {
 
 			final Iterator iterator = aListOfModelListeners.iterator();
 			while (iterator.hasNext()) {
 				this.removeModelListener((IModelListener) iterator.next());
 			}
 		}
+
+		public void addModelListeners(final List aListOfModelListeners) {
+			this.listOfModelListeners.addAll(aListOfModelListeners);
+		}
 	}
+
 	private class NonConcurrentIterator implements Iterator, Serializable {
 		private static final long serialVersionUID = 1209788683542287364L;
 
@@ -161,12 +173,12 @@ public abstract class AbstractGenericContainerOfConstituents
 
 		private int expectedModCount = 0;
 		private int index = 0;
+
 		public NonConcurrentIterator() {
 		}
 
 		public boolean hasNext() {
-			final boolean hasNext =
-				this.index < AbstractGenericContainerOfConstituents.this.size;
+			final boolean hasNext = this.index < AbstractGenericContainerOfConstituents.this.size;
 			if (!hasNext) {
 				AbstractGenericContainerOfConstituents.this.nciIterating--;
 			}
@@ -175,14 +187,14 @@ public abstract class AbstractGenericContainerOfConstituents
 			}
 			return hasNext;
 		}
+
 		public Object next() {
 			try {
 				if (this.expectedModCount != AbstractGenericContainerOfConstituents.this.nciModCount) {
 					AbstractGenericContainerOfConstituents.this.nciIterating--;
 					throw new ConcurrentModificationException();
 				}
-				final Object next =
-					AbstractGenericContainerOfConstituents.this.constituents[this.index];
+				final Object next = AbstractGenericContainerOfConstituents.this.constituents[this.index];
 				this.index++;
 				AbstractGenericContainerOfConstituents.this.nciIterating++;
 				return next;
@@ -192,12 +204,13 @@ public abstract class AbstractGenericContainerOfConstituents
 				throw new NoSuchElementException();
 			}
 		}
+
 		public void remove() {
 			throw new UnsupportedOperationException();
 		}
+
 		private void reset() {
-			this.expectedModCount =
-				AbstractGenericContainerOfConstituents.this.nciModCount;
+			this.expectedModCount = AbstractGenericContainerOfConstituents.this.nciModCount;
 			this.index = 0;
 		}
 	}
@@ -252,22 +265,24 @@ public abstract class AbstractGenericContainerOfConstituents
 	private int uniqueID;
 
 	public AbstractGenericContainerOfConstituents(
-		final INavigable aContainerConstituent) {
+			final INavigable aContainerConstituent) {
 
 		this.containerConsitituent = aContainerConstituent;
 		this.nciInstance = new NonConcurrentIterator();
 		this.observable = new GenericObservable();
 		this.resetListOfConstituents();
 	}
+
 	public AbstractGenericContainerOfConstituents(
-		final INavigable aContainerConstituent,
-		final int anInitialCapacity) {
+			final INavigable aContainerConstituent,
+			final int anInitialCapacity) {
 
 		this.containerConsitituent = aContainerConstituent;
 		this.nciInstance = new NonConcurrentIterator();
 		this.observable = new GenericObservable();
 		this.resetListOfConstituents(anInitialCapacity);
 	}
+
 	public void addConstituent(final IConstituent aConstituent) {
 		// Yann 2009/05/06: Path
 		// After having removed a constituent from a model,
@@ -281,11 +296,10 @@ public abstract class AbstractGenericContainerOfConstituents
 		// I share the same default package across
 		// models but it does not matter because the
 		// model name does not matter.
-		if (ArrayUtils
-			.contains(aConstituent.getPath(), IConstants.ABSTRACT_MODEL_SYMBOL)
-				&& !Arrays.equals(
-					aConstituent.getID(),
-					Constants.DEFAULT_PACKAGE_ID)) {
+		if (ArrayUtils.contains(aConstituent.getPath(),
+				IConstants.ABSTRACT_MODEL_SYMBOL)
+				&& !Arrays.equals(aConstituent.getID(),
+						Constants.DEFAULT_PACKAGE_ID)) {
 
 			final StringBuffer buffer = new StringBuffer();
 			buffer.append("Shared constituent: ");
@@ -295,7 +309,7 @@ public abstract class AbstractGenericContainerOfConstituents
 			buffer.append(") in ");
 			buffer.append(this.getClass());
 			buffer.append(
-				"\nRemove this consituent from its origin model first before adding it to the current model.");
+					"\nRemove this consituent from its origin model first before adding it to the current model.");
 			throw new ModelDeclarationException(buffer.toString());
 		}
 
@@ -316,12 +330,15 @@ public abstract class AbstractGenericContainerOfConstituents
 
 		this.directlyAddConstituent(aConstituent);
 	}
+
 	public void addModelListener(final IModelListener aModelListener) {
 		// Yann 2016/09/18: Recursion!
 		// I make sure that I recurse into the sub-constituents of
 		// this constituent iff it was the first time that I added
 		// this particular listener to this constituent.
-		if (this.observable.addModelListener(aModelListener)) {
+		if (!this.observable.listOfModelListeners.contains(aModelListener)) {
+			this.observable.addModelListener(aModelListener);
+
 			// Yann 2013/07/18: Delegation!
 			// Now that I properly delegate to a GenericObservable object,
 			// I can use this delegation to also properly propagate the
@@ -335,15 +352,16 @@ public abstract class AbstractGenericContainerOfConstituents
 				final IConstituent constituent = this.constituents[i];
 				if (constituent instanceof IObservable) {
 					((IObservable) constituent)
-						.addModelListener(aModelListener);
+							.addModelListener(aModelListener);
 				}
 				if (constituent instanceof IPrivateModelObservable) {
 					((IPrivateModelObservable) constituent)
-						.addModelListener(aModelListener);
+							.addModelListener(aModelListener);
 				}
 			}
 		}
 	}
+
 	public void addModelListeners(final List aListOfModelListeners) {
 		final Iterator iterator = aListOfModelListeners.iterator();
 		while (iterator.hasNext()) {
@@ -351,8 +369,9 @@ public abstract class AbstractGenericContainerOfConstituents
 			this.addModelListener(listener);
 		}
 	}
+
 	private void addUniqueIDToEnclosedConstituent(
-		final IConstituent aConstituent) {
+			final IConstituent aConstituent) {
 		// Yann 2006/02/24: UniqueID...
 		// I need a UniqueID for IMethodInvocation and IParemeter in IMethod
 		// and for any IRelationship in IEntity. So, when using the method
@@ -363,12 +382,12 @@ public abstract class AbstractGenericContainerOfConstituents
 				&& aConstituent instanceof Constituent) {
 
 			final char[] uniqueID = String.valueOf(this.uniqueID).toCharArray();
-			final int endIndexExclusive =
-				aConstituent.getDisplayID().indexOf(Constants.NUMBER_SEPARATOR);
+			final int endIndexExclusive = aConstituent.getDisplayID()
+					.indexOf(Constants.NUMBER_SEPARATOR);
 			final char[] constituentID;
 			if (endIndexExclusive > 0) {
-				constituentID = ArrayUtils
-					.subarray(aConstituent.getID(), 0, endIndexExclusive);
+				constituentID = ArrayUtils.subarray(aConstituent.getID(), 0,
+						endIndexExclusive);
 			}
 			else {
 				constituentID = aConstituent.getID();
@@ -376,18 +395,11 @@ public abstract class AbstractGenericContainerOfConstituents
 			final char[] newID = new char[constituentID.length
 					+ Constants.NUMBER_SEPARATOR.length() + uniqueID.length];
 			System.arraycopy(constituentID, 0, newID, 0, constituentID.length);
-			System.arraycopy(
-				Constants.NUMBER_SEPARATOR.toCharArray(),
-				0,
-				newID,
-				constituentID.length,
-				Constants.NUMBER_SEPARATOR.length());
-			System.arraycopy(
-				uniqueID,
-				0,
-				newID,
-				constituentID.length + Constants.NUMBER_SEPARATOR.length(),
-				uniqueID.length);
+			System.arraycopy(Constants.NUMBER_SEPARATOR.toCharArray(), 0, newID,
+					constituentID.length, Constants.NUMBER_SEPARATOR.length());
+			System.arraycopy(uniqueID, 0, newID,
+					constituentID.length + Constants.NUMBER_SEPARATOR.length(),
+					uniqueID.length);
 			((Constituent) aConstituent).setID(newID);
 
 			// Yann 2009/06/06: Path!
@@ -395,8 +407,9 @@ public abstract class AbstractGenericContainerOfConstituents
 			((Constituent) aConstituent).setPath(newID);
 		}
 	}
+
 	private void broadcastAdditionOfConstituent(
-		final IConstituent aConstituent) {
+			final IConstituent aConstituent) {
 		// Yann 2004/04/09: Listener!
 		// It is now the responsibility of this class to manage
 		// the listeners and to send the appropriate events when
@@ -405,11 +418,11 @@ public abstract class AbstractGenericContainerOfConstituents
 		// I recursively add the listeners to the constituent that I add...
 		if (aConstituent instanceof IObservable) {
 			((IObservable) aConstituent)
-				.addModelListeners(this.observable.getModelListeners());
+					.addModelListeners(this.observable.getModelListeners());
 		}
 		if (aConstituent instanceof IPrivateModelObservable) {
 			((IPrivateModelObservable) aConstituent)
-				.addModelListeners(this.observable.getModelListeners());
+					.addModelListeners(this.observable.getModelListeners());
 		}
 
 		// Yann 2005/10/07: Packages!
@@ -424,36 +437,29 @@ public abstract class AbstractGenericContainerOfConstituents
 		// type of the added constituent, I do that now in the 
 		// type of the receiving container and in reverse order.
 		if (this.containerConsitituent instanceof IOperation) {
-			this.fireModelChange(
-				IModelListener.INVOKE_ADDED,
-				new InvokeEvent(
-					(IContainer) this.containerConsitituent,
-					(IConstituentOfOperation) aConstituent));
+			this.fireModelChange(IModelListener.INVOKE_ADDED,
+					new InvokeEvent((IContainer) this.containerConsitituent,
+							(IConstituentOfOperation) aConstituent));
 		}
 		else if (this.containerConsitituent instanceof IEntity) {
-			this.fireModelChange(
-				IModelListener.ELEMENT_ADDED,
-				new ElementEvent(
-					(IContainer) this.containerConsitituent,
-					(IConstituentOfEntity) aConstituent));
+			this.fireModelChange(IModelListener.ELEMENT_ADDED,
+					new ElementEvent((IContainer) this.containerConsitituent,
+							(IConstituentOfEntity) aConstituent));
 		}
 		else if (this.containerConsitituent instanceof IPackage) {
-			this.fireModelChange(
-				IModelListener.ENTITY_ADDED,
-				new EntityEvent(
-					(IContainer) this.containerConsitituent,
-					(IConstituentOfModel) aConstituent));
+			this.fireModelChange(IModelListener.ENTITY_ADDED,
+					new EntityEvent((IContainer) this.containerConsitituent,
+							(IConstituentOfModel) aConstituent));
 		}
 		else if (this.containerConsitituent instanceof IAbstractModel) {
-			this.fireModelChange(
-				IModelListener.ENTITY_ADDED,
-				new EntityEvent(
-					(IContainer) this.containerConsitituent,
-					(IConstituentOfModel) aConstituent));
+			this.fireModelChange(IModelListener.ENTITY_ADDED,
+					new EntityEvent((IContainer) this.containerConsitituent,
+							(IConstituentOfModel) aConstituent));
 		}
 	}
+
 	private void broadcastRemovalOfConstituent(
-		final IConstituent aConstituent) {
+			final IConstituent aConstituent) {
 		// Yann 2004/04/09: Listener!
 		// It is now the responsibility of this class to manage
 		// the listeners and to send the appropriate events when
@@ -463,37 +469,32 @@ public abstract class AbstractGenericContainerOfConstituents
 		// remove...
 		if (aConstituent instanceof IObservable) {
 			((IObservable) aConstituent)
-				.removeModelListeners(this.observable.getModelListeners());
+					.removeModelListeners(this.observable.getModelListeners());
 		}
 		if (aConstituent instanceof IPrivateModelObservable) {
 			((IPrivateModelObservable) aConstituent)
-				.removeModelListeners(this.observable.getModelListeners());
+					.removeModelListeners(this.observable.getModelListeners());
 		}
 
 		// Yann 2005/10/07: Packages!
 		// I should distinguish among entities and packages...
 		if (aConstituent instanceof IConstituentOfModel) {
-			this.fireModelChange(
-				IModelListener.ENTITY_REMOVED,
-				new EntityEvent(
-					(IContainer) this.containerConsitituent,
-					(IConstituentOfModel) aConstituent));
+			this.fireModelChange(IModelListener.ENTITY_REMOVED,
+					new EntityEvent((IContainer) this.containerConsitituent,
+							(IConstituentOfModel) aConstituent));
 		}
 		else if (aConstituent instanceof IConstituentOfEntity) {
-			this.fireModelChange(
-				IModelListener.ELEMENT_REMOVED,
-				new ElementEvent(
-					(IContainer) this.containerConsitituent,
-					(IConstituentOfEntity) aConstituent));
+			this.fireModelChange(IModelListener.ELEMENT_REMOVED,
+					new ElementEvent((IContainer) this.containerConsitituent,
+							(IConstituentOfEntity) aConstituent));
 		}
 		else if (aConstituent instanceof IConstituentOfOperation) {
-			this.fireModelChange(
-				IModelListener.INVOKE_REMOVED,
-				new InvokeEvent(
-					(IContainer) this.containerConsitituent,
-					(IConstituentOfOperation) aConstituent));
+			this.fireModelChange(IModelListener.INVOKE_REMOVED,
+					new InvokeEvent((IContainer) this.containerConsitituent,
+							(IConstituentOfOperation) aConstituent));
 		}
 	}
+
 	private final void directlyAddConstituent(final IConstituent aConstituent) {
 		// Yann 2004/12/20: Test and order II!
 		// This method is used to add method invocations to
@@ -506,8 +507,7 @@ public abstract class AbstractGenericContainerOfConstituents
 			this.indexInPrimeNumbersArray++;
 			int newCapacity;
 			if (this.indexInPrimeNumbersArray < GenericContainerConstants.NUMBER_OF_PRIME_NUMBERS) {
-				newCapacity =
-					GenericContainerConstants.PRIME_NUMBERS[this.indexInPrimeNumbersArray];
+				newCapacity = GenericContainerConstants.PRIME_NUMBERS[this.indexInPrimeNumbersArray];
 			}
 			else {
 				newCapacity = oldCapacity
@@ -530,17 +530,19 @@ public abstract class AbstractGenericContainerOfConstituents
 		this.directlyAddConstituentExtra(aConstituent);
 		this.broadcastAdditionOfConstituent(aConstituent);
 	}
+
 	protected void directlyAddConstituentExtra(
-		final IConstituent aConstituent) {
+			final IConstituent aConstituent) {
 		// Default behaviour: do nothing.
 	}
+
 	// Sebastien Colladon 24/04/2012 : Visibility set to public...If you have
 	// more than one ClassLoader then the only methods you can invoke on classes
 	// from other ClassLoaders are public ones because private, package and
 	// protected methods are all inaccessible due to being in a different
 	// package (even when their package has the same name).
 	public final void directlyAddConstituentWithUniqueID(
-		final IConstituent aConstituent) {
+			final IConstituent aConstituent) {
 
 		// Yann 2006/02/24: UniqueID...
 		// I need a UniqueID for IMethodInvocation and IParemeter in IMethod
@@ -549,6 +551,7 @@ public abstract class AbstractGenericContainerOfConstituents
 		this.addUniqueIDToEnclosedConstituent(aConstituent);
 		this.directlyAddConstituent(aConstituent);
 	}
+
 	public boolean doesContainConstituentWithID(final char[] anID) {
 		for (int i = 0; i < this.size; i++) {
 			final IConstituent constituent = this.constituents[i];
@@ -558,14 +561,16 @@ public abstract class AbstractGenericContainerOfConstituents
 		}
 		return false;
 	}
+
 	public boolean doesContainConstituentWithName(final char[] aName) {
 		return this.getConstituentFromName(aName) != null;
 	}
-	public void fireModelChange(
-		final String anEventType,
-		final IEvent anEvent) {
+
+	public void fireModelChange(final String anEventType,
+			final IEvent anEvent) {
 		this.observable.fireModelChange(anEventType, anEvent);
 	}
+
 	public Iterator getConcurrentIteratorOnConstituents() {
 		// Yann 2005/10/12: Iterator!
 		// I replace the list with an iterator, but this
@@ -576,10 +581,11 @@ public abstract class AbstractGenericContainerOfConstituents
 		// (The name of the method is deliberate for consistency
 		// and also as a joke :-).)
 		final IConstituent[] copyOfConstituents = new IConstituent[this.size];
-		System
-			.arraycopy(this.constituents, 0, copyOfConstituents, 0, this.size);
+		System.arraycopy(this.constituents, 0, copyOfConstituents, 0,
+				this.size);
 		return Arrays.asList(copyOfConstituents).iterator();
 	}
+
 	public Iterator getConcurrentIteratorOnConstituents(final IFilter aFilter) {
 		// Yann 2005/10/12: Iterator!
 		// I replace the list with an iterator, but this
@@ -588,15 +594,14 @@ public abstract class AbstractGenericContainerOfConstituents
 		// could be tightly linked with the AbstractContainer
 		// class to prevent too many memory allocation (Singleton).
 		final IConstituent[] copyOfConstituents = new IConstituent[this.size];
-		System
-			.arraycopy(this.constituents, 0, copyOfConstituents, 0, this.size);
-		return Util.getFilteredConstituentsIterator(
-			copyOfConstituents,
-			this.size,
-			aFilter);
+		System.arraycopy(this.constituents, 0, copyOfConstituents, 0,
+				this.size);
+		return Util.getFilteredConstituentsIterator(copyOfConstituents,
+				this.size, aFilter);
 	}
+
 	public Iterator getConcurrentIteratorOnConstituents(
-		final java.lang.Class aConstituentType) {
+			final java.lang.Class aConstituentType) {
 		// Yann 2005/10/12: Iterator!
 		// I replace the list with an iterator, but this
 		// is a major bottleneck in some specific case!
@@ -606,13 +611,12 @@ public abstract class AbstractGenericContainerOfConstituents
 		// (The name of the method is deliberate for consistency
 		// and also as a joke :-).)
 		final IConstituent[] copyOfConstituents = new IConstituent[this.size];
-		System
-			.arraycopy(this.constituents, 0, copyOfConstituents, 0, this.size);
-		return Util.getTypedConstituentsIterator(
-			copyOfConstituents,
-			this.size,
-			aConstituentType);
+		System.arraycopy(this.constituents, 0, copyOfConstituents, 0,
+				this.size);
+		return Util.getTypedConstituentsIterator(copyOfConstituents, this.size,
+				aConstituentType);
 	}
+
 	public IConstituent getConstituentFromID(final char[] anID) {
 		// Yann 2004/12/13: Performances
 		// I cached the actorID to improve performance
@@ -631,9 +635,11 @@ public abstract class AbstractGenericContainerOfConstituents
 		}
 		return null;
 	}
+
 	public IConstituent getConstituentFromID(final String anID) {
 		return this.getConstituentFromID(anID.toCharArray());
 	}
+
 	public IConstituent getConstituentFromName(final char[] aName) {
 		// Yann 2007/11/21: Performances
 		// I cached the actorName to improve performance
@@ -652,9 +658,11 @@ public abstract class AbstractGenericContainerOfConstituents
 		}
 		return null;
 	}
+
 	public IConstituent getConstituentFromName(final String aName) {
 		return this.getConstituentFromName(aName.toCharArray());
 	}
+
 	public Iterator getIteratorOnConstituents() {
 		// Yann 2005/10/12: Iterator!
 		// I replace the list with an iterator, but this
@@ -681,6 +689,7 @@ public abstract class AbstractGenericContainerOfConstituents
 			return this.nciInstance;
 		}
 	}
+
 	public Iterator getIteratorOnConstituents(final IFilter aFilter) {
 		// Yann 2005/10/12: Iterator!
 		// I replace the list with an iterator, but this
@@ -690,13 +699,12 @@ public abstract class AbstractGenericContainerOfConstituents
 		// class to prevent too many memory allocation (Singleton).
 		// TODO: When using an array, the following implementation
 		// is terribly inefficient!! Include directly the filter here.
-		return Util.getFilteredConstituentsIterator(
-			this.constituents,
-			this.size,
-			aFilter);
+		return Util.getFilteredConstituentsIterator(this.constituents,
+				this.size, aFilter);
 	}
+
 	public Iterator getIteratorOnConstituents(
-		final java.lang.Class aConstituentType) {
+			final java.lang.Class aConstituentType) {
 
 		// Yann 2005/10/12: Iterator!
 		// I replace the list with an iterator, but this
@@ -706,26 +714,25 @@ public abstract class AbstractGenericContainerOfConstituents
 		// class to prevent too many memory allocation (Singleton).
 		// TODO: When using an array, the following implementation
 		// is terribly inefficient!! Include directly the filter here.
-		return Util.getTypedConstituentsIterator(
-			this.constituents,
-			this.size,
-			aConstituentType);
+		return Util.getTypedConstituentsIterator(this.constituents, this.size,
+				aConstituentType);
 	}
+
 	public Iterator getIteratorOnModelListeners() {
 		return this.observable.getIteratorOnModelListeners();
 	}
+
 	public int getNumberOfConstituents() {
 		// Yann 2005/10/12: Iterator!
 		// I replace the list with an iterator, but this
 		// is a major bottleneck in some specific case!
 		return this.size;
 	}
+
 	public int getNumberOfConstituents(final java.lang.Class aConstituentType) {
 		// Duc-Loc 2006/01/25: Consistency
 		final Iterator iterator = Util.getTypedConstituentsIterator(
-			this.constituents,
-			this.size,
-			aConstituentType);
+				this.constituents, this.size, aConstituentType);
 
 		int size = 0;
 		while (iterator.hasNext()) {
@@ -737,12 +744,14 @@ public abstract class AbstractGenericContainerOfConstituents
 		// Ask Yann why getTypedConstituentsList() is set to private arrrggg!!!
 		// Because, we don't want to give access to sensible information :-)
 	}
+
 	public void removeConstituentFromID(final char[] anID) {
 		// Yann 2013/07/11: Double search
 		// Why search for the constituent and then iterate through them all again...? 
 		//	this.removeConstituentFromID0(this.getConstituentFromID(anID));
 		this.removeConstituentFromID0(anID);
 	}
+
 	// /**
 	// * This method returns a list of all the
 	// * actors (instances of Entity) added to
@@ -775,12 +784,8 @@ public abstract class AbstractGenericContainerOfConstituents
 		if (index > -1) {
 			final IConstituent constituent = this.constituents[index];
 			if (index < this.size - 1) {
-				System.arraycopy(
-					this.constituents,
-					index + 1,
-					this.constituents,
-					index,
-					this.size - index - 1);
+				System.arraycopy(this.constituents, index + 1,
+						this.constituents, index, this.size - index - 1);
 			}
 			this.size--;
 			this.nciModCount++;
@@ -818,49 +823,46 @@ public abstract class AbstractGenericContainerOfConstituents
 			throw new NoSuchElementException();
 		}
 	}
+
 	public void removeModelListener(final IModelListener aModelListener) {
 		this.observable.removeModelListener(aModelListener);
 	}
+
 	public void removeModelListeners(final List modelListeners) {
 		this.observable.removeModelListeners(modelListeners);
 	}
+
 	public void resetListOfConstituents() {
 		this.resetListOfConstituents(1);
 	}
+
 	private void resetListOfConstituents(final int anInitialCapacity) {
 		// Yann 2004/04/09: Clone!
 		// I make sure that a clone of an abstract level
 		// model gets a new instance of an array list.
 		// (See also method AbstractLevelModel.clone().)
-		this.constituents =
-			new IConstituent[GenericContainerConstants.PRIME_NUMBERS[this.indexInPrimeNumbersArray]];
+		this.constituents = new IConstituent[GenericContainerConstants.PRIME_NUMBERS[this.indexInPrimeNumbersArray]];
 		this.size = 0;
 	}
-	private void updatePathUponAddition(
-		final INavigable aContainer,
-		final IConstituent aConstituent) {
+
+	private void updatePathUponAddition(final INavigable aContainer,
+			final IConstituent aConstituent) {
 
 		final char[] containerPath = aContainer.getPath();
 		final int startIndexInclusive = ArrayUtils.lastIndexOf(
-			aConstituent.getPath(),
-			((Constituent) aConstituent).getPathSymbol()) + 1;
+				aConstituent.getPath(),
+				((Constituent) aConstituent).getPathSymbol()) + 1;
 		final int endIndexExclusive = aConstituent.getPath().length;
 		final char[] constituentPath = ArrayUtils.subarray(
-			aConstituent.getPath(),
-			startIndexInclusive,
-			endIndexExclusive);
+				aConstituent.getPath(), startIndexInclusive, endIndexExclusive);
 
-		final char[] newPath =
-			new char[containerPath.length + 1 + constituentPath.length];
+		final char[] newPath = new char[containerPath.length + 1
+				+ constituentPath.length];
 		System.arraycopy(containerPath, 0, newPath, 0, containerPath.length);
-		newPath[containerPath.length] =
-			((Constituent) aConstituent).getPathSymbol();
-		System.arraycopy(
-			constituentPath,
-			0,
-			newPath,
-			containerPath.length + 1,
-			constituentPath.length);
+		newPath[containerPath.length] = ((Constituent) aConstituent)
+				.getPathSymbol();
+		System.arraycopy(constituentPath, 0, newPath, containerPath.length + 1,
+				constituentPath.length);
 		((Constituent) aConstituent).setPath(newPath);
 
 		// Yann 2013/05/22: Propagation!
@@ -870,16 +872,16 @@ public abstract class AbstractGenericContainerOfConstituents
 		// class Container per se but Constituent plays
 		// its role...
 		if (aConstituent instanceof IContainer) {
-			final Iterator iterator =
-				((IContainer) aConstituent).getIteratorOnConstituents();
+			final Iterator iterator = ((IContainer) aConstituent)
+					.getIteratorOnConstituents();
 			while (iterator.hasNext()) {
 				final Constituent constituent = (Constituent) iterator.next();
-				this.updatePathUponAddition(
-					(INavigable) aConstituent,
-					constituent);
+				this.updatePathUponAddition((INavigable) aConstituent,
+						constituent);
 			}
 		}
 	}
+
 	private void updatePathUponRemoval(final IConstituent aConstituent) {
 		// Yann 2009/05/06: Path
 		// After having removed a constituent from a model,
@@ -890,14 +892,12 @@ public abstract class AbstractGenericContainerOfConstituents
 		// constituents, maybe the clone process should be
 		// involved too... I'll think about it later.
 		final int startIndexInclusive = ArrayUtils.lastIndexOf(
-			aConstituent.getPath(),
-			((Constituent) aConstituent).getPathSymbol()) + 1;
-		final int endIndexExclusive = aConstituent.getPath().length;
-		((Constituent) aConstituent).setPath(
-			ArrayUtils.subarray(
 				aConstituent.getPath(),
-				startIndexInclusive,
-				endIndexExclusive));
+				((Constituent) aConstituent).getPathSymbol()) + 1;
+		final int endIndexExclusive = aConstituent.getPath().length;
+		((Constituent) aConstituent)
+				.setPath(ArrayUtils.subarray(aConstituent.getPath(),
+						startIndexInclusive, endIndexExclusive));
 
 		// Yann 2013/05/22: Propagation!
 		// I should not forget to propagate this change 
@@ -906,8 +906,8 @@ public abstract class AbstractGenericContainerOfConstituents
 		// class Container per se but Constituent plays
 		// its role...
 		if (aConstituent instanceof IContainer) {
-			final Iterator iterator =
-				((IContainer) aConstituent).getIteratorOnConstituents();
+			final Iterator iterator = ((IContainer) aConstituent)
+					.getIteratorOnConstituents();
 			while (iterator.hasNext()) {
 				final Constituent constituent = (Constituent) iterator.next();
 				this.updatePathUponRemoval(constituent);

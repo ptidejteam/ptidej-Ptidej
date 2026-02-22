@@ -15,6 +15,8 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.io.Writer;
+
+import sad.rule.creator.Paths;
 import sad.rule.creator.jlex.JLex;
 import util.io.ProxyDisk;
 
@@ -24,19 +26,21 @@ import util.io.ProxyDisk;
  */
 public class GenerateRULELexer {
 	public static void main(final String[] args) throws Exception {
-		JLex.main(new String[] { "rsc/SAD.lex" });
-		final File previousLexer = new File("src/rule/creator/RULELexer.java");
+		JLex.main(new String[] { Paths.RESOURCES_PATH + "SAD.lex" });
+		final File previousLexer = new File(
+				Paths.SOURCE_RULE_CREATOR_PATH + "RULELexer.java");
 		previousLexer.delete();
-		final File generatedFile = new File("rsc/SAD.lex.java");
+		final File generatedFile = new File(
+				Paths.RESOURCES_PATH + "SAD.lex.java");
 		generatedFile.renameTo(previousLexer);
 
 		/*
 		 * Some code to replace reference to "java_cup.runtime"
 		 * with "rule.creator.javacup.runtime".
 		 */
-		final LineNumberReader reader =
-			new LineNumberReader(new InputStreamReader(new FileInputStream(
-				"src/rule/creator/RULELexer.java")));
+		final LineNumberReader reader = new LineNumberReader(
+				new InputStreamReader(new FileInputStream(
+						Paths.SOURCE_RULE_CREATOR_PATH + "RULELexer.java")));
 		final StringBuffer buffer = new StringBuffer();
 		String readLine;
 		while ((readLine = reader.readLine()) != null) {
@@ -48,15 +52,12 @@ public class GenerateRULELexer {
 		final String toBeRemovedString = "java_cup.runtime";
 		int pos;
 		while ((pos = buffer.indexOf(toBeRemovedString)) > 0) {
-			buffer.replace(
-				pos,
-				pos + toBeRemovedString.length(),
-				"rule.creator.javacup.runtime");
+			buffer.replace(pos, pos + toBeRemovedString.length(),
+					"rule.creator.javacup.runtime");
 		}
 
-		final Writer writer =
-			ProxyDisk.getInstance().fileAbsoluteOutput(
-				"src/rule/creator/RULELexer.java");
+		final Writer writer = ProxyDisk.getInstance().fileAbsoluteOutput(
+				Paths.SOURCE_RULE_CREATOR_PATH + "RULELexer.java");
 		writer.write(buffer.toString());
 		writer.close();
 	}

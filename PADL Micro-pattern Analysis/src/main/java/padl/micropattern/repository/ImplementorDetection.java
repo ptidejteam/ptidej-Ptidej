@@ -11,8 +11,10 @@
 package padl.micropattern.repository;
 
 import java.util.Iterator;
+
 import padl.kernel.IClass;
 import padl.kernel.IFirstClassEntity;
+import padl.kernel.IGhost;
 import padl.kernel.IMethod;
 import padl.micropattern.IMicroPatternDetection;
 
@@ -40,7 +42,10 @@ public final class ImplementorDetection extends AbstractMicroPatternDetection
 		boolean bFound = false;
 
 		// Must be a non-abstract Class
-		if (!((IFirstClassEntity) anEntity).isAbstract()) {
+		// Yann 26/02/20: IGhosts are both IClass and IInterface!
+		// I must exclude IGhost when not desirable to be included.
+		if (!((IFirstClassEntity) anEntity).isAbstract()
+				&& !(anEntity instanceof IGhost)) {
 
 			final Iterator iterator = anEntity.getIteratorOnConstituents();
 			while (iterator.hasNext()) {
@@ -48,23 +53,21 @@ public final class ImplementorDetection extends AbstractMicroPatternDetection
 
 				if (anOtherEntity instanceof IMethod) {
 					if (((IMethod) anOtherEntity).isPublic()
-							&& !((IMethod) anOtherEntity)
-								.getDisplayID()
-								.startsWith("<init>")) {
+							&& !((IMethod) anOtherEntity).getDisplayID()
+									.startsWith("<init>")) {
 
 						// All public method need to be declared abstract in the superclass
-						final Iterator inheritedEntities =
-							anEntity.getIteratorOnInheritedEntities();
+						final Iterator inheritedEntities = anEntity
+								.getIteratorOnInheritedEntities();
 
 						while (inheritedEntities.hasNext() && !bFound) {
-							final IFirstClassEntity aSuperClass =
-								(IFirstClassEntity) inheritedEntities.next();
+							final IFirstClassEntity aSuperClass = (IFirstClassEntity) inheritedEntities
+									.next();
 
 							// Find the method in the superclass
-							final IMethod superClassMethod =
-								(IMethod) aSuperClass
-									.getConstituentFromID(((IMethod) anOtherEntity)
-										.getID());
+							final IMethod superClassMethod = (IMethod) aSuperClass
+									.getConstituentFromID(
+											((IMethod) anOtherEntity).getID());
 							// Must be declared in the superclass and abstract
 							if (superClassMethod != null
 									&& superClassMethod.isAbstract()) {
@@ -73,20 +76,18 @@ public final class ImplementorDetection extends AbstractMicroPatternDetection
 						}
 
 						try {
-							final Iterator inheritedEntities2 =
-								((IClass) anEntity)
+							final Iterator inheritedEntities2 = ((IClass) anEntity)
 									.getIteratorOnImplementedInterfaces();
 
 							while (inheritedEntities2.hasNext() && !bFound) {
-								final IFirstClassEntity aSuperClass =
-									(IFirstClassEntity) inheritedEntities2
+								final IFirstClassEntity aSuperClass = (IFirstClassEntity) inheritedEntities2
 										.next();
 
 								// Find the method in the superinterface
-								final IMethod superClassMethod =
-									(IMethod) aSuperClass
-										.getConstituentFromID(((IMethod) anOtherEntity)
-											.getID());
+								final IMethod superClassMethod = (IMethod) aSuperClass
+										.getConstituentFromID(
+												((IMethod) anOtherEntity)
+														.getID());
 
 								// Must be declared in the superclass and abstract
 								if (superClassMethod != null

@@ -11,23 +11,29 @@
 package padl.event;
 
 import padl.kernel.IAbstractModel;
+import padl.kernel.IContainer;
 import padl.motif.IDesignMotifModel;
 
 public final class PatternEvent implements IEvent {
 	private final IAbstractModel abstractModel;
 	private final IDesignMotifModel patternModel;
 
-	public PatternEvent(
-		final IAbstractModel abstractModel,
-		final IDesignMotifModel patternModel) {
+	public PatternEvent(final IAbstractModel abstractModel,
+			final IDesignMotifModel patternModel) {
 
 		this.abstractModel = abstractModel;
 		this.patternModel = patternModel;
 	}
+
 	public IDesignMotifModel getPatternModel() {
 		return this.patternModel;
 	}
+
 	public IAbstractModel getAbstractModel() {
+		return this.abstractModel;
+	}
+
+	public IContainer getContainer() {
 		return this.abstractModel;
 	}
 }

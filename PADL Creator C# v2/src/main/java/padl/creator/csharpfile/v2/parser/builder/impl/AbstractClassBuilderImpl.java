@@ -20,7 +20,6 @@ import padl.kernel.IEntity;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IGhost;
 import padl.kernel.IInterface;
-import padl.kernel.IInterfaceActor;
 
 /**
  *
@@ -67,7 +66,7 @@ public abstract class AbstractClassBuilderImpl extends AbstractPADLCodeBuilder {
 				if (entity instanceof IClass
 						&& constituent instanceof IInterface) {
 					((IClass) entity)
-						.addImplementedInterface((IInterfaceActor) constituent);
+						.addImplementedInterface((IInterface) constituent);
 				}
 				else {
 					((IClass) entity)

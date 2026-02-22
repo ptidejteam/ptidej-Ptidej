@@ -13,4 +13,5 @@ package padl.kernel;
 public interface INavigable {
 	String getDisplayPath();
 	char[] getPath();
+	char[] getName();
 }

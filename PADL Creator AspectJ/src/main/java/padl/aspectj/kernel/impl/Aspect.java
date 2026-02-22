@@ -11,12 +11,13 @@
 package padl.aspectj.kernel.impl;
 
 import java.util.Iterator;
+
 import padl.aspectj.kernel.IAspect;
 import padl.aspectj.kernel.IAspectElement;
 import padl.kernel.IConstituentOfEntity;
 import padl.kernel.IElement;
 import padl.kernel.IFirstClassEntity;
-import padl.kernel.IInterfaceActor;
+import padl.kernel.IInterface;
 import padl.kernel.exception.ModelDeclarationException;
 import padl.kernel.impl.Class;
 
@@ -29,14 +30,17 @@ class Aspect extends Class implements IAspect {
 	public Aspect(final char[] anID) {
 		super(anID, anID);
 	}
+
 	public Aspect(final char[] anID, final IFirstClassEntity inheritedEntity) {
 		super(anID, anID);
 		this.addInheritedEntity(inheritedEntity);
 	}
+
 	public void addConstituent(final IAspectElement anAspectElement) {
 
 		super.addConstituent(anAspectElement);
 	}
+
 	public void addConstituent(final IConstituentOfEntity aConstituent) {
 		if (aConstituent instanceof IElement
 				|| aConstituent instanceof IAspectElement) {
@@ -44,21 +48,27 @@ class Aspect extends Class implements IAspect {
 		}
 		else {
 			throw new ModelDeclarationException(
-				"Only an element can be added to an entity.");
+					"Only an element can be added to an entity.");
 		}
 	}
+
 	public void addImplementedInterface(final IFirstClassEntity anEntity) {
 	}
+
 	public void addInheritedEntity(final IAspect anAspect) {
 	}
-	public IInterfaceActor getImplementedInterface(final String aName) {
+
+	public IInterface getImplementedInterface(final String aName) {
 		return null;
 	}
+
 	public Iterator<?> getIteratorOnImplementedInterfaces() {
 		return null;
 	}
+
 	public void removeImplementedInterface(final IFirstClassEntity anEntity) {
 	}
+
 	public void removeInheritingEntity(final IFirstClassEntity anEntity) {
 	}
 }

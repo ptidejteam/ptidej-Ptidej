@@ -11,9 +11,7 @@
 package padl.kernel.impl;
 
 import padl.kernel.Constants;
-import padl.kernel.IGhost;
 import padl.kernel.IPackageDefault;
-import padl.kernel.IPackageGhost;
 
 class PackageDefault extends Package implements IPackageDefault {
 	private static final long serialVersionUID = 5993857112698114446L;
@@ -21,12 +19,6 @@ class PackageDefault extends Package implements IPackageDefault {
 	public PackageDefault() {
 		super(Constants.DEFAULT_PACKAGE_ID);
 		this.setName(new char[0]);
-	}
-	public void addConstituent(final IGhost aGhost) {
-		super.addConstituent(aGhost);
-	}
-	public void addConstituent(final IPackageGhost aPackageGhost) {
-		super.addConstituent(aPackageGhost);
 	}
 
 	public String toString(final int tab) {

@@ -14,8 +14,6 @@ package padl.kernel;
  * @author Yann-Gaël Guéhéneuc
  */
 // TODO: Should be renamed IEntityGhost for consistency with IMembreEntityGhost and IPackageGhost. 
-public interface IGhost extends IFirstClassEntity, IInterfaceActor,
-		IInterfaceImplementer {
-
+public interface IGhost extends IClass, IInterface {
 	String LOGO = "\"G\"";
 }

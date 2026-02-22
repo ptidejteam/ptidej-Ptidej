@@ -11,9 +11,11 @@
 package padl.micropattern.repository;
 
 import java.util.Iterator;
+
 import padl.kernel.IClass;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IGetter;
+import padl.kernel.IGhost;
 import padl.kernel.IMethod;
 import padl.kernel.ISetter;
 import padl.micropattern.IMicroPatternDetection;
@@ -37,7 +39,9 @@ public final class DataManagerDetection extends AbstractMicroPatternDetection
 
 	public boolean detect(final IFirstClassEntity anEntity) {
 		// Only Class can be Data Manager
-		if (anEntity instanceof IClass) {
+		// Yann 26/02/20: IGhosts are both IClass and IInterface!
+		// I must exclude IGhost when not desirable to be included.
+		if (anEntity instanceof IClass && !(anEntity instanceof IGhost)) {
 			final Iterator iterator = anEntity.getIteratorOnConstituents();
 			while (iterator.hasNext()) {
 				final Object anOtherEntity = iterator.next();
@@ -46,7 +50,8 @@ public final class DataManagerDetection extends AbstractMicroPatternDetection
 					final IMethod currentMethod = (IMethod) anOtherEntity;
 
 					// The method must be Getter of Setter
-					if (!((currentMethod instanceof IGetter) || (currentMethod instanceof ISetter))) {
+					if (!((currentMethod instanceof IGetter)
+							|| (currentMethod instanceof ISetter))) {
 						return false;
 					}
 				}

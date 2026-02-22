@@ -13,6 +13,7 @@ import padl.kernel.IElement;
 import padl.kernel.IEntity;
 import padl.kernel.IField;
 import padl.kernel.IGetter;
+import padl.kernel.IGhost;
 import padl.kernel.IInterface;
 import padl.kernel.IMethod;
 import padl.kernel.IParameter;
@@ -30,7 +31,7 @@ import sad.codesmell.detection.ICodeSmellDetection;
 import sad.codesmell.detection.repository.AbstractCodeSmellDetection;
 import sad.kernel.impl.CodeSmell;
 import sad.util.BoxPlot;
-import util.lang.Modifier;
+import com.ibm.toad.cfparse.utils.Access;
 import util.io.ProxyConsole;
 
 /**

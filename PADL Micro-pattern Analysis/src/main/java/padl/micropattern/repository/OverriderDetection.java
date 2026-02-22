@@ -11,8 +11,10 @@
 package padl.micropattern.repository;
 
 import java.util.Iterator;
+
 import padl.kernel.IClass;
 import padl.kernel.IFirstClassEntity;
+import padl.kernel.IGhost;
 import padl.kernel.IMethod;
 import padl.micropattern.IMicroPatternDetection;
 
@@ -33,30 +35,30 @@ public final class OverriderDetection extends AbstractMicroPatternDetection
 
 	public boolean detect(final IFirstClassEntity anEntity) {
 		// Must be a Class
-		if (anEntity instanceof IClass) {
-
+		// Yann 26/02/20: IGhosts are both IClass and IInterface!
+		// I must exclude IGhost when not desirable to be included.
+		if (anEntity instanceof IClass && !(anEntity instanceof IGhost)) {
 			final Iterator iterator = anEntity.getIteratorOnConstituents();
 			while (iterator.hasNext()) {
 				final Object anOtherEntity = iterator.next();
 
 				if (anOtherEntity instanceof IMethod) {
 					if (((IMethod) anOtherEntity).isPublic()
-							&& !((IMethod) anOtherEntity)
-								.getDisplayID()
-								.startsWith("<init>")) {
+							&& !((IMethod) anOtherEntity).getDisplayID()
+									.startsWith("<init>")) {
 
 						// All public method must override a non-abstract method of the superclass
-						final Iterator inheritedEntities =
-							anEntity.getIteratorOnInheritedEntities();
+						final Iterator inheritedEntities = anEntity
+								.getIteratorOnInheritedEntities();
 						while (inheritedEntities.hasNext()) {
-							final IFirstClassEntity aSuperClass =
-								(IFirstClassEntity) inheritedEntities.next();
+							final IFirstClassEntity aSuperClass = (IFirstClassEntity) inheritedEntities
+									.next();
 
 							// Find the method in the superclass
-							final IMethod superClassMethod =
-								(IMethod) aSuperClass
-									.getConstituentFromID(((IMethod) anOtherEntity)
-										.getDisplayName() + "()");
+							final IMethod superClassMethod = (IMethod) aSuperClass
+									.getConstituentFromID(
+											((IMethod) anOtherEntity)
+													.getDisplayName() + "()");
 
 							// Must be declared in the superclass and abstract
 							if (superClassMethod == null

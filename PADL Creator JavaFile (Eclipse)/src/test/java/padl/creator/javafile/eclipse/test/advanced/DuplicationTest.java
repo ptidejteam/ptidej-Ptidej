@@ -32,81 +32,44 @@ public class DuplicationTest extends TestCase {
 	// * should be visited
 	// */
 	public void testClassesDuplication() {
-		final String sourcePath =
-				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
-		final String[] javaFiles =
-			new String[] {
-					"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/classes/in/A.java",
-					"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/classes/out/A.java", };
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
+		final String[] javaFiles = new String[] {
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/classes/in/A.java",
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/classes/out/A.java", };
 		final String classPathEntry = "";
 
-		final ICodeLevelModel model =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				sourcePath,
-				classPathEntry,
-				javaFiles);
+		final ICodeLevelModel model = Utils.createLightJavaFilesPadlModel("",
+				sourcePath, classPathEntry, javaFiles);
 		int nbClasses = 0;
-		try {
-			nbClasses =
-				model.getNumberOfTopLevelEntities(Class
-					.forName("padl.kernel.impl.Class"));
-		}
-		catch (final ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		nbClasses = model.getNumberOfTopLevelEntities(IClass.class);
 		Assert.assertEquals(1, nbClasses);
 	}
 
 	public void testClassesDuplication2() {
-		final String sourcePath =
-				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
-		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/classes/script/" };
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
+		final String[] javaFiles = new String[] {
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/classes/script/" };
 		// contains 2 java.lang.Class.java
 		final String classPathEntry = "";
 
-		final ICodeLevelModel model =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				sourcePath,
-				classPathEntry,
-				javaFiles);
+		final ICodeLevelModel model = Utils.createLightJavaFilesPadlModel("",
+				sourcePath, classPathEntry, javaFiles);
 		int nbClasses = 0;
-		try {
-			nbClasses =
-				model.getNumberOfTopLevelEntities(Class
-					.forName("padl.kernel.impl.Class"));
-		}
-		catch (final ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		nbClasses = model.getNumberOfTopLevelEntities(IClass.class);
 		Assert.assertEquals(1, nbClasses);
 	}
 
 	public void testClassesDuplication3() {
-		final String sourcePath =
-				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
-		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/classes/" };
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
+		final String[] javaFiles = new String[] {
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/classes/" };
 		// contains 4 java.lang.Class.java
 		final String classPathEntry = "";
 
-		final ICodeLevelModel model =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				sourcePath,
-				classPathEntry,
-				javaFiles);
+		final ICodeLevelModel model = Utils.createLightJavaFilesPadlModel("",
+				sourcePath, classPathEntry, javaFiles);
 		int nbClasses = 0;
-		try {
-			nbClasses =
-				model.getNumberOfTopLevelEntities(Class
-					.forName("padl.kernel.impl.Class"));
-		}
-		catch (final ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		nbClasses = model.getNumberOfTopLevelEntities(IClass.class);
 		Assert.assertEquals(2, nbClasses);
 	}
 
@@ -116,28 +79,16 @@ public class DuplicationTest extends TestCase {
 	// class ThirdClass
 	// class ThirdClass (node.resolveBinding() == null)
 	public void testClassesDuplication4() {
-		final String sourcePath =
-				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
-		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/classes1/" };
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
+		final String[] javaFiles = new String[] {
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/classes1/" };
 
 		final String classPathEntry = "";
 
-		final ICodeLevelModel model =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				sourcePath,
-				classPathEntry,
-				javaFiles);
+		final ICodeLevelModel model = Utils.createLightJavaFilesPadlModel("",
+				sourcePath, classPathEntry, javaFiles);
 		int nbClasses = 0;
-		try {
-			nbClasses =
-				model.getNumberOfTopLevelEntities(Class
-					.forName("padl.kernel.impl.Class"));
-		}
-		catch (final ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		nbClasses = model.getNumberOfTopLevelEntities(IClass.class);
 		Assert.assertEquals(2, nbClasses);
 	}
 
@@ -145,26 +96,21 @@ public class DuplicationTest extends TestCase {
 	* Member classes with the same name (node.resolveBinding() == null)
 	*/
 	public void testMemberClassesDuplication() {
-		final String sourcePath =
-				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
-		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/memberClasses/$className$.java" };
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
+		final String[] javaFiles = new String[] {
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/memberClasses/$className$.java" };
 
 		final String classPathEntry = "";
 
-		final ICodeLevelModel model =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				sourcePath,
-				classPathEntry,
-				javaFiles);
+		final ICodeLevelModel model = Utils.createLightJavaFilesPadlModel("",
+				sourcePath, classPathEntry, javaFiles);
 
-		final IClass clazz =
-			(IClass) model.getTopLevelEntityFromID("$packageName$.$className$");
+		final IClass clazz = (IClass) model
+				.getTopLevelEntityFromID("$packageName$.$className$");
 
 		try {
-			Assert.assertEquals(5, clazz.getNumberOfConstituents(Class
-				.forName("padl.kernel.impl.MemberClass")));
+			Assert.assertEquals(5, clazz.getNumberOfConstituents(
+					Class.forName("padl.kernel.impl.MemberClass")));
 		}
 		catch (final ClassNotFoundException e) {
 			e.printStackTrace();
@@ -175,27 +121,21 @@ public class DuplicationTest extends TestCase {
 	* Member classes with the same name (node.resolveBinding() == null)
 	*/
 	public void testMemberClassesDuplication1() {
-		final String sourcePath =
-				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
-		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/memberClasses/TestB.java" };
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
+		final String[] javaFiles = new String[] {
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/memberClasses/TestB.java" };
 
 		final String classPathEntry = "";
 
-		final ICodeLevelModel model =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				sourcePath,
-				classPathEntry,
-				javaFiles);
+		final ICodeLevelModel model = Utils.createLightJavaFilesPadlModel("",
+				sourcePath, classPathEntry, javaFiles);
 
-		final IClass clazz =
-			(IClass) model
-				.getTopLevelEntityFromID("padl.example.eclipse.duplication.memberClasses.TestB");
+		final IClass clazz = (IClass) model.getTopLevelEntityFromID(
+				"padl.example.eclipse.duplication.memberClasses.TestB");
 
 		try {
-			Assert.assertEquals(1, clazz.getNumberOfConstituents(Class
-				.forName("padl.kernel.impl.MemberClass")));
+			Assert.assertEquals(1, clazz.getNumberOfConstituents(
+					Class.forName("padl.kernel.impl.MemberClass")));
 		}
 		catch (final ClassNotFoundException e) {
 			e.printStackTrace();
@@ -206,40 +146,34 @@ public class DuplicationTest extends TestCase {
 	 * methods with the same name signature in the same class
 	 */
 	public void testMethodsAndFieldsDuplication() {
-		final String sourcePath =
-				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
-		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/methods/DuplicateMethods.java" };
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
+		final String[] javaFiles = new String[] {
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/methods/DuplicateMethods.java" };
 
 		final String classPathEntry = "";
 
-		final ICodeLevelModel model =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				sourcePath,
-				classPathEntry,
-				javaFiles);
+		final ICodeLevelModel model = Utils.createLightJavaFilesPadlModel("",
+				sourcePath, classPathEntry, javaFiles);
 
 		//contains 2 methods with the same signature
 		//contains 2 fields with the same name (type=null for the second)
-		final IClass clazz =
-			(IClass) model
-				.getTopLevelEntityFromID("padl.example.eclipse.duplication.methods.DuplicateMethods");
+		final IClass clazz = (IClass) model.getTopLevelEntityFromID(
+				"padl.example.eclipse.duplication.methods.DuplicateMethods");
 
 		//contains 2 methods with the same signature
-		final IMemberClass memberClazz =
-			(IMemberClass) clazz
-				.getConstituentFromID("padl.example.eclipse.duplication.methods.DuplicateMethods$Inner");
+		final IMemberClass memberClazz = (IMemberClass) clazz
+				.getConstituentFromID(
+						"padl.example.eclipse.duplication.methods.DuplicateMethods$Inner");
 
 		try {
-			Assert.assertEquals(1, clazz.getNumberOfConstituents(Class
-				.forName("padl.kernel.impl.Method")));
+			Assert.assertEquals(1, clazz.getNumberOfConstituents(
+					Class.forName("padl.kernel.impl.Method")));
 
-			Assert.assertEquals(1, memberClazz.getNumberOfConstituents(Class
-				.forName("padl.kernel.impl.Method")));
+			Assert.assertEquals(1, memberClazz.getNumberOfConstituents(
+					Class.forName("padl.kernel.impl.Method")));
 
-			Assert.assertEquals(1, clazz.getNumberOfConstituents(Class
-				.forName("padl.kernel.impl.Field")));
+			Assert.assertEquals(1, clazz.getNumberOfConstituents(
+					Class.forName("padl.kernel.impl.Field")));
 
 		}
 		catch (final ClassNotFoundException e) {
@@ -253,29 +187,21 @@ public class DuplicationTest extends TestCase {
 	 */
 	public void testPackageWithClasseDuplication1() {
 
-		final String sourcePath =
-				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
-		final String[] javaFiles =
-			new String[] { "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/packaje1/Packaje1.java" };
+		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/";
+		final String[] javaFiles = new String[] {
+				"../PADL Creator JavaFile (Eclipse)/target/test-classes/PADL testdata/padl/example/eclipse/duplication/packaje1/Packaje1.java" };
 
 		final String classPathEntry = "";
 
-		final ICodeLevelModel model =
-			Utils.createLightJavaFilesPadlModel(
-				"",
-				sourcePath,
-				classPathEntry,
-				javaFiles);
+		final ICodeLevelModel model = Utils.createLightJavaFilesPadlModel("",
+				sourcePath, classPathEntry, javaFiles);
 
 		Assert.assertNotNull(PadlParserUtil.getPackage(
-			"padl.example.eclipse.duplication.Packaje1",
-			model));
-		Assert
-			.assertNotNull(model
-				.getTopLevelEntityFromID("padl.example.eclipse.duplication.Packaje1.Packaje1"));
-		Assert
-			.assertTrue(model
-				.getTopLevelEntityFromID("padl.example.eclipse.duplication.Packaje1.Packaje1") instanceof IClass);
+				"padl.example.eclipse.duplication.Packaje1", model));
+		Assert.assertNotNull(model.getTopLevelEntityFromID(
+				"padl.example.eclipse.duplication.Packaje1.Packaje1"));
+		Assert.assertTrue(model.getTopLevelEntityFromID(
+				"padl.example.eclipse.duplication.Packaje1.Packaje1") instanceof IClass);
 
 	}
 

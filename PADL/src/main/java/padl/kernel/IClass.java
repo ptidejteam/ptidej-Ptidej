@@ -10,10 +10,27 @@
  ******************************************************************************/
 package padl.kernel;
 
+import java.util.Iterator;
+
 /**
  * @author Yann-Gaël Guéhéneuc
  */
-public interface IClass extends IFirstClassEntity, IInterfaceImplementer {
+public interface IClass extends IFirstClassEntity {
 	String LOGO = "\"C\"";
+
+	void addImplementedInterface(final IInterface anInterface);
+
+	void assumeAllInterfaces();
+
+	void assumeInterface(final IInterface anInterface);
+
+	IInterface getImplementedInterface(final char[] aName);
+
+	Iterator getIteratorOnImplementedInterfaces();
+
+	int getNumberOfImplementedInterfaces();
+
 	boolean isForceAbstract();
+
+	void removeImplementedInterface(final IInterface anInterface);
 }

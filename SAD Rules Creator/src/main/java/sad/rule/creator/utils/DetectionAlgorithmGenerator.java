@@ -16,31 +16,40 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.sun.tools.javac.Main;
+
+import sad.rule.creator.Paths;
 import sad.rule.creator.RULECreator;
 import util.io.ProxyConsole;
-import com.sun.tools.javac.Main;
 
 public class DetectionAlgorithmGenerator {
 	public static void deleteDetectionAlgorithm(final String defectName) {
 		// TODO: Add error check
 		// Added 3 errors checks here
 		if (defectName == null || defectName.isEmpty()) {
-            System.err.println("❌ Error: Defect name is null or empty.");
-            return;
-        }
+			System.err.println("❌ Error: Defect name is null or empty.");
+			return;
+		}
 		boolean deletedAntipattern = deleteDir(new File(
-            "../SAD/src/sad/antipattern/detection/" + defectName));
+				Paths.OUTPUT_PATH + "sad/antipattern/detection/" + defectName));
 
-        boolean deletedCodeSmell = deleteDir(new File(
-            "../SAD/src/sad/codesmell/detection/" + defectName));
+		boolean deletedCodeSmell = deleteDir(new File(
+				Paths.OUTPUT_PATH + "sad/codesmell/detection/" + defectName));
 
-        if (!deletedAntipattern || !deletedCodeSmell) {
-            System.err.println("⚠ Warning: Some directories could not be deleted for defect: " + defectName);
-        } else {
-            System.out.println("✅ Successfully deleted detection algorithm for: " + defectName);
-        }
-			
+		if (!deletedAntipattern || !deletedCodeSmell) {
+			System.err.println(
+					"⚠ Warning: Some directories could not be deleted for defect: "
+							+ defectName);
+		}
+		else {
+			System.out
+					.println("✅ Successfully deleted detection algorithm for: "
+							+ defectName);
+		}
+
 	}
+
 	// Deletes all files and subdirectories under dir.
 	// Returns true if all deletions were successful.
 	// If a deletion fails, the method stops attempting to delete and returns false.
@@ -48,10 +57,8 @@ public class DetectionAlgorithmGenerator {
 		if (file.isDirectory()) {
 			final String[] children = file.list();
 			for (int i = 0; i < children.length; i++) {
-				final boolean success =
-					DetectionAlgorithmGenerator.deleteDir(new File(
-						file,
-						children[i]));
+				final boolean success = DetectionAlgorithmGenerator
+						.deleteDir(new File(file, children[i]));
 				if (!success) {
 					return false;
 				}
@@ -61,14 +68,18 @@ public class DetectionAlgorithmGenerator {
 		// The directory is now empty so delete it
 		return file.delete();
 	}
-	public static String[] generateDetectionAlgorithm(final String ruleCardPath) {
-		final String outputFileName = "../SAD/src/sad/codesmell/detection/";
-		final String outputAntipatternName =
-			"../SAD/src/sad/antipattern/detection/";
+
+	public static String[] generateDetectionAlgorithm(
+			final String ruleCardPath) {
+
+		final String outputFileName = Paths.OUTPUT_PATH
+				+ "sad/codesmell/detection/";
+		final String outputAntipatternName = Paths.OUTPUT_PATH
+				+ "sad/antipattern/detection/";
 
 		// I create the Rule Card Parser.
-		final RULECreator ruleCreator =
-			new RULECreator(new String[] { ruleCardPath });
+		final RULECreator ruleCreator = new RULECreator(
+				new String[] { ruleCardPath });
 
 		// I parse the rule card.
 		final String[] ruleCards = ruleCreator.parse();
@@ -100,8 +111,8 @@ public class DetectionAlgorithmGenerator {
 					+ ruleCards[fileIndex] + "Detection.java");
 
 			// Dynamicaly build the list of file to compile
-			final File fileUtil =
-				new File(outputFileName + ruleCards[fileIndex]);
+			final File fileUtil = new File(
+					outputFileName + ruleCards[fileIndex]);
 			final File[] files = fileUtil.listFiles();
 			int x = 0;
 
@@ -113,21 +124,21 @@ public class DetectionAlgorithmGenerator {
 				x++;
 			}
 
-			final String[] cmdLineArray =
-				(String[]) cmdLine.toArray(new String[cmdLine.size()]);
+			final String[] cmdLineArray = (String[]) cmdLine
+					.toArray(new String[cmdLine.size()]);
 			Main.compile(cmdLineArray);
 		}
 
 		return ruleCards;
 	}
-	public static void outputRuleCard(
-		final String ruleCardPath,
-		final String content) {
+
+	public static void outputRuleCard(final String ruleCardPath,
+			final String content) {
 
 		try {
 			// Save the file
-			final OutputStreamWriter writer =
-				new OutputStreamWriter(new FileOutputStream(ruleCardPath));
+			final OutputStreamWriter writer = new OutputStreamWriter(
+					new FileOutputStream(ruleCardPath));
 
 			writer.write(content);
 			writer.close();

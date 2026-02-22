@@ -1,13 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Public License v2.0
- * which accompanies this distribution, and is available at
- * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * 
- * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
- ******************************************************************************/
 package sad.codesmell.detection.repository.SpaghettiCode;
 
 import java.io.IOException;
@@ -23,6 +13,7 @@ import padl.kernel.IElement;
 import padl.kernel.IEntity;
 import padl.kernel.IField;
 import padl.kernel.IGetter;
+import padl.kernel.IGhost;
 import padl.kernel.IInterface;
 import padl.kernel.IMethod;
 import padl.kernel.IParameter;
@@ -40,6 +31,7 @@ import sad.codesmell.detection.ICodeSmellDetection;
 import sad.codesmell.detection.repository.AbstractCodeSmellDetection;
 import sad.kernel.impl.CodeSmell;
 import sad.util.BoxPlot;
+import com.ibm.toad.cfparse.utils.Access;
 import util.io.ProxyConsole;
 
 /**
@@ -64,7 +56,9 @@ public class NoInheritanceDetection extends AbstractCodeSmellDetection implement
 		final Iterator iter = anAbstractLevelModel.getIteratorOnTopLevelEntities();
 		while (iter.hasNext()) {
 			final IEntity entity = (IEntity) iter.next();
-			if (entity instanceof IClass) {
+			// Yann 26/02/20: IGhosts are both IClass and IInterface!
+			// I must exclude IGhost when not desirable to be included.
+			if (entity instanceof IClass && !(entity instanceof IGhost)) {
 				final IClass aClass = (IClass) entity;
 				final double DIT = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("DIT")).compute(anAbstractLevelModel, aClass);
 				

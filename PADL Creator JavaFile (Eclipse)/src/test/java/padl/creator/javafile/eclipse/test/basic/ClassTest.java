@@ -62,14 +62,8 @@ public class ClassTest extends TestCase {
 		Assert.assertNull(clazz3);
 
 		final int classesNumber = 2;
-		try {
-			Assert.assertEquals(classesNumber,
-					this.model.getNumberOfTopLevelEntities(
-							Class.forName("padl.kernel.impl.Class")));
-		}
-		catch (final ClassNotFoundException e) {
-			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
-		}
+		Assert.assertEquals(classesNumber,
+				this.model.getNumberOfTopLevelEntities(IClass.class));
 	}
 
 	public void testClassMembers() {

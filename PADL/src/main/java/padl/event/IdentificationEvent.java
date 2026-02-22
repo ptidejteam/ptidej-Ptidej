@@ -10,8 +10,8 @@
  ******************************************************************************/
 package padl.event;
 
-import java.util.List;
 import padl.kernel.IAbstractLevelModel;
+import padl.kernel.IContainer;
 
 public final class IdentificationEvent implements IEvent {
 	private final String recognizedConstituentName;
@@ -19,13 +19,16 @@ public final class IdentificationEvent implements IEvent {
 	public IdentificationEvent(final String recognizedConstituentName) {
 		this.recognizedConstituentName = recognizedConstituentName;
 	}
+
 	public String getConstituentName() {
 		return this.recognizedConstituentName;
 	}
+
 	public IAbstractLevelModel getAbstractModel() {
 		return null;
 	}
-	public List getSubmittedConstituents() {
+
+	public IContainer getContainer() {
 		return null;
 	}
 }

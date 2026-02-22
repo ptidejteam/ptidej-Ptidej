@@ -51,7 +51,7 @@ import padl.kernel.IDelegatingMethod;
 import padl.kernel.IField;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IGhost;
-import padl.kernel.IInterfaceActor;
+import padl.kernel.IInterface;
 import padl.kernel.IMethod;
 import padl.kernel.IPackage;
 import padl.kernel.IParameter;
@@ -609,10 +609,10 @@ abstract class AbstractClassFileCreator {
 
 					if (firstClassEntity instanceof IClass) {
 						((IClass) firstClassEntity).addImplementedInterface(
-								(IInterfaceActor) superEntity);
+								(IInterface) superEntity);
 					}
 					else {
-						((IInterfaceActor) firstClassEntity)
+						((IInterface) firstClassEntity)
 								.addInheritedEntity(superEntity);
 					}
 				}

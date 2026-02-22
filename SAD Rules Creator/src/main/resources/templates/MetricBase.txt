@@ -6,7 +6,9 @@ final Set <CODESMELL>ClassesFound = new HashSet();
 		final Iterator iter = anAbstractLevelModel.getIteratorOnTopLevelEntities();
 		while (iter.hasNext()) {
 			final IEntity entity = (IEntity) iter.next();
-			if (entity instanceof IClass) {
+			// Yann 26/02/20: IGhosts are both IClass and IInterface!
+			// I must exclude IGhost when not desirable to be included.
+			if (entity instanceof IClass && !(entity instanceof IGhost)) {
 				final IClass aClass = (IClass) entity;
 				thereIs<CODESMELL> = true;
 

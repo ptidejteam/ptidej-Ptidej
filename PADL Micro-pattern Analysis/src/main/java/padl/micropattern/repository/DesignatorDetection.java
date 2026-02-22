@@ -11,6 +11,7 @@
 package padl.micropattern.repository;
 
 import java.util.Iterator;
+
 import padl.kernel.IClass;
 import padl.kernel.IField;
 import padl.kernel.IFirstClassEntity;
@@ -45,8 +46,11 @@ public final class DesignatorDetection extends AbstractMicroPatternDetection
 	 *	an important JAVA technique, which is also easily discernible.
 	 */
 
+	// Yann 26/02/20: IGhosts are both IClass and IInterface!
+	// I must exclude IGhost when not desirable to be included.
 	public boolean detect(final IFirstClassEntity anEntity) {
-		if ((anEntity instanceof IClass) || (anEntity instanceof IInterface)) {
+		if (((anEntity instanceof IClass) || (anEntity instanceof IInterface))
+				&& !(anEntity instanceof IGhost)) {
 
 			if (!this.isEmpty(anEntity)) {
 				return false;
@@ -68,9 +72,8 @@ public final class DesignatorDetection extends AbstractMicroPatternDetection
 		while (myIterator.hasNext()) {
 			final Object anOtherEntity = myIterator.next();
 			if (!(anOtherEntity instanceof IGhost)
-					&& !((IFirstClassEntity) anOtherEntity)
-						.getDisplayName()
-						.equals("java.lang.Object")) {
+					&& !((IFirstClassEntity) anOtherEntity).getDisplayName()
+							.equals("java.lang.Object")) {
 				if (!this.isEmpty((IFirstClassEntity) anOtherEntity)) {
 					return false;
 				}
