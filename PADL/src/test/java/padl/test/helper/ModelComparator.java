@@ -171,26 +171,6 @@ public class ModelComparator implements IWalker {
 						if (aConstituentAttributeValue instanceof IConstituent
 								&& anotherConstituentAttributeValue instanceof IConstituent) {
 
-							ProxyConsole
-								.getInstance()
-								.debugOutput()
-								.print("Comparing: ");
-							ProxyConsole
-								.getInstance()
-								.debugOutput()
-								.print(
-									((IConstituent) aConstituentAttributeValue)
-										.getName());
-							ProxyConsole
-								.getInstance()
-								.debugOutput()
-								.print(" with: ");
-							ProxyConsole
-								.getInstance()
-								.debugOutput()
-								.println(
-									((IConstituent) anotherConstituentAttributeValue)
-										.getName());
 							this
 								.compare(
 									(IConstituent) aConstituentAttributeValue,
