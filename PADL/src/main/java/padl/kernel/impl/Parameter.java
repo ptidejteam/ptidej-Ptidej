@@ -13,24 +13,20 @@ package padl.kernel.impl;
 import padl.kernel.IConstituent;
 import padl.kernel.IEntity;
 import padl.kernel.IParameter;
-import padl.kernel.exception.ModelDeclarationException;
 import padl.util.Util;
 
 public class Parameter extends Element implements IParameter {
 	private static final long serialVersionUID = -1688444809285895471L;
 	private int cardinality = 1;
 	private IEntity type;
-	private int dimension;
-	private boolean hasDimension = false;
 
-	public Parameter(
-		final IEntity anEntity,
-		final char[] aName,
-		final int aCardinality) {
+	public Parameter(final IEntity anEntity, final char[] aName,
+			final int aCardinality) {
 
 		this(anEntity, aCardinality);
 		this.setName(aName);
 	}
+
 	public Parameter(final IEntity aType, final int aCardinality) {
 		super("Parameter".toCharArray());
 
@@ -38,17 +34,7 @@ public class Parameter extends Element implements IParameter {
 		this.setNameFromType(aType);
 		this.cardinality = aCardinality;
 	}
-	public Parameter(
-		final IEntity aType,
-		final char[] aName,
-		final int aCardinality,
-		final int aDimension) {
-		
-		this(aType, aCardinality);
-		this.setName(aName);
-		this.dimension = aDimension;
-		this.hasDimension = true;
-	}
+
 	//	public Parameter(final String aName, final String aType) {
 	//		super("Parameter");
 	//
@@ -83,58 +69,49 @@ public class Parameter extends Element implements IParameter {
 	//
 	//		return cleanString;
 	//	}
-	
+
 	/**
-	 * Returns the cardinality (i.e. one or many)
+	 * Returns the cardinality.
+	 * For instance:
+	 *   int 		has dimension 1
+	 *   int[]  	has dimension 2
+	 *   int[][]	has dimension 3...
 	 */
 	public int getCardinality() {
 		return this.cardinality;
 	}
-	/**
-	 * Returns the "true" dimension.
-	 * For instance:
-	 * int 		has dimension 1
-	 * int[] 	has dimension 2
-	 * int[][]	has dimension 3...
-	 */
-	public int getDimension() {
-		if (this.hasDimension) {
-			return this.dimension;
-		}
-		throw new ModelDeclarationException(
-			"Parameter " +
-			this.getDisplayName() +
-			" has no declared dimensions");
-	}
+
 	public String getDisplayTypeName() {
 		return String.valueOf(this.getTypeName());
 	}
+
 	public IEntity getType() {
 		return this.type;
 	}
+
 	public char[] getTypeName() {
 		return this.type.getID();
 	}
+
 	public void setNameFromType(final IConstituent aType) {
-		final char[] beautyName =
-			Util.capitalizeFirstLetter(Util.stripAndCapQualifiedName(this
-				.getTypeName()));
+		final char[] beautyName = Util.capitalizeFirstLetter(
+				Util.stripAndCapQualifiedName(this.getTypeName()));
 		final char[] name = new char[1 + beautyName.length];
 		name[0] = 'a';
 		System.arraycopy(beautyName, 0, name, 1, beautyName.length);
 
 		this.setName(name);
 	}
+
 	public void setType(final IEntity aType) {
 		this.type = aType;
 	}
+
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append(this.getTypeName());
-		if (hasDimension) {
-			for (int i = 1; i < this.dimension; i++) {
-				buffer.append("[]");
-			}
+		for (int i = 1; i < this.cardinality; i++) {
+			buffer.append("[]");
 		}
 		buffer.append(' ');
 		buffer.append(this.getName());
