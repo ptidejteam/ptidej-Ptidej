@@ -21,7 +21,7 @@ import padl.util.CharArrayComparator;
  * @author Yann-Gaël Guéhéneuc
  * @since  2004/04/09
  */
-public class GenericContainerOfNaturallyOrderedConstituents extends
+class GenericContainerOfNaturallyOrderedConstituents extends
 		AbstractGenericContainerOfConstituents {
 
 	private static class NaturalOrderComparator implements Comparator {
