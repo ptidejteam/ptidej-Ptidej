@@ -147,6 +147,8 @@ public class ModelStatistics implements IModelListener {
 			this.numberOfInterfaces++;
 		}
 	}
+	public void entityAnalyzed(final AnalysisEvent analysisEvent) {
+	}
 	public void entityIdentified(final IdentificationEvent recognitionEvent) {
 		ProxyConsole.getInstance().normalOutput().print("Identified: ");
 		ProxyConsole
