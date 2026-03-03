@@ -51,8 +51,9 @@ public class PADLParserUtilsTest extends TestCase {
 	/**
 	 * to handle the null exception found by Sam with the project restlet
 	 */
+	// aliiimaher 26/02/25: added an assertion
+	// and removed verbose printing
 	public void testGetTypeName() {
-		ProxyConsole.getInstance().debugOutput().println("testGetTypeName");
 		final String sourcePath = "../PADL Creator JavaFile (Eclipse)/target/test-classes//sam test data/restlet/";
 		final ICodeLevelModel model = Factory.getInstance()
 				.createCodeLevelModel("");
@@ -60,10 +61,7 @@ public class PADLParserUtilsTest extends TestCase {
 		try {
 			model.create(new CompleteJavaFileCreator(sourcePath, ""));
 
-			ProxyConsole.getInstance().debugOutput()
-					.println("getNumberOfTopLevelEntities"
-							+ model.getNumberOfTopLevelEntities());
-
+			Assert.assertTrue(model.getNumberOfTopLevelEntities() > 0);
 			Assert.assertNotNull(model);
 		}
 		catch (final CreationException e) {
