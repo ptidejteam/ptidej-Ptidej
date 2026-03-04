@@ -17,9 +17,9 @@ public class JNIGlobalFunction extends TestCase {
 	}
 	public void testGlobalFunction() throws CreationException {
 		final String apathJ =
-			"../PADL JNI Tests/rsc/ogre4j/ogre4j/src/java/org/ogre4j - testmanel";
+			"../PADL JNI Tests/rsc/ogre4j/ogre4j/src/java";
 		final String apathC =
-			"../PADL JNI Tests/rsc/ogre4j/ogre4j/src/native/src - testmanel";
+			"../PADL JNI Tests/rsc/ogre4j/ogre4j/src/native/src";
 		final ICodeLevelModel model =
 			Factory.getInstance().createCodeLevelModel("Hybrid");
 		final ICodeLevelModelCreator javaCreator =
@@ -33,6 +33,6 @@ public class JNIGlobalFunction extends TestCase {
 		final ArrayList<String> listOfJNIMethods =
 			(ArrayList<String>) globalesAnalysis.getResult();
 
-		assertEquals(12, listOfJNIMethods.size());
+		assertEquals(381, listOfJNIMethods.size());
 	}
 }

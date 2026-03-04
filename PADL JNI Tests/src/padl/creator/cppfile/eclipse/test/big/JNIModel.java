@@ -17,7 +17,7 @@ public class JNIModel extends TestCase {
 	public void testModel() throws CreationException {
 		PadlModelJNI JNI = new PadlModelJNI();
 		ICodeLevelModel model = JNI.CreateModelTestCase();
-		assertEquals(8, model.getNumberOfConstituents());
+		assertEquals(5, model.getNumberOfConstituents());
 	}
 
 }

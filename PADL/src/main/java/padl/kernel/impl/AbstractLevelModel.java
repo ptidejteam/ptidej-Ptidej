@@ -12,7 +12,6 @@ package padl.kernel.impl;
 
 import padl.kernel.IAbstractLevelModel;
 
-// This class is public only because DesignLevelModel should extend it.
 public class AbstractLevelModel extends AbstractModel implements
 		IAbstractLevelModel {
 

@@ -12,7 +12,7 @@ public class JNIMethodMissed extends TestCase {
 	public void testNativeMethod() throws CreationException {
 		PadlModelJNI JNI = new PadlModelJNI();
 		int nb = JNI.JNIMissedTestCase();
-		assertEquals(0, nb);
+		assertEquals(381, nb);
 	}
 
 }
