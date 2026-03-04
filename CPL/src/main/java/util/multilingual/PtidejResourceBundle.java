@@ -35,8 +35,6 @@ public class PtidejResourceBundle extends ListResourceBundle {
 						"Error while building bytes array." },
 				{ "util.io.SubtypeLoader::Err_FILES_NOT_FOUND",
 						"Loader: No files found into {0}" },
-				{ "util.io.SubtypeLoader::Err_READING_FILE",
-						"Loader: Error while reading file {0}" },
 				{ "util.lang.ClassLoader::Err_FILE",
 						"The file {0} produces an error." },
 
