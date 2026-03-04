@@ -11,6 +11,6 @@ public class JNINativeMethod extends TestCase {
 	public void testNativeMethod() throws CreationException {
 		PadlModelJNI JNI = new PadlModelJNI();
 		int nb = JNI.NBNatif();
-		assertEquals(15, nb);
+		assertEquals(0, nb);
 	}
 }

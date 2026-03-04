@@ -333,8 +333,27 @@ class GeneratorHelper {
 			Utils.setVisibility(padlFunction, (ICPPMember) aCPPFunction);
 		}
 		else if (aCPPFunction instanceof ICPPMethod) {
-			padlFunction = ((ICPPFactoryEclipse) CPPFactoryEclipse
-					.getInstance()).createMethod(id, name);
+			final boolean isGetter =
+				name.length > 3
+						&& String.valueOf(name).startsWith("get")
+						&& aCPPFunction.getType().getParameterTypes().length == 0;
+			final boolean isSetter =
+				name.length > 3
+						&& String.valueOf(name).startsWith("set")
+						&& aCPPFunction.getType().getParameterTypes().length == 1;
+
+			if (isGetter) {
+				padlFunction = CPPFactoryEclipse.getInstance().createGetter(id,
+						name);
+			}
+			else if (isSetter) {
+				padlFunction = CPPFactoryEclipse.getInstance().createSetter(id,
+						name);
+			}
+			else {
+				padlFunction = ((ICPPFactoryEclipse) CPPFactoryEclipse
+						.getInstance()).createMethod(id, name);
+			}
 			// Create the return type if it does not exist.
 			final IEntity returnTypeEntity = SearchHelper
 					.getExistingContainerOrCreateGhost(this.codeLevelModel,
@@ -347,7 +366,14 @@ class GeneratorHelper {
 			padlFunction = ((ICPPFactoryEclipse) CPPFactoryEclipse
 					.getInstance()).createGlobalFunction(id, name);
 			((IGlobalFunction) padlFunction).setReturnType(returnTypeName);
+		}
+		else {
+			padlFunction = null;
+			Utils.reportUnknownType(GeneratorHelper.class, "operation", id,
+					aCPPFunction.getClass());
+		}
 
+		if (padlFunction != null) {
 			padlFunction.setStatic(aCPPFunction.isStatic());
 
 			if (container instanceof IFirstClassEntity) {
@@ -366,11 +392,6 @@ class GeneratorHelper {
 			Utils.addStatementsToFunction(aBodyStatement, padlFunction);
 
 			container.addConstituent(padlFunction);
-		}
-		else {
-			padlFunction = null;
-			Utils.reportUnknownType(GeneratorHelper.class, "operation", id,
-					aCPPFunction.getClass());
 		}
 	}
 
