@@ -42,16 +42,7 @@ public class Sanity1Test extends TestCase {
 		// ✅ Step 7: Invoke parseMSEFile and capture the result
 		Element[] elements = (Element[]) parseMethod.invoke(creator);
 
-		// ✅ Step 8: Debugging output
-		if (elements == null) {
-			System.out.println("❌ Error: elements array is null.");
-		}
-		else {
-			System.out.println("✅ Parsing successful! Number of elements: "
-					+ elements.length);
-		}
-
-		// ✅ Step 9: Assertions
+		// ✅ Step 8: Assertions
 		assertNotNull("Parsing should return non-null elements", elements);
 		assertTrue("There should be at least one element", elements.length > 0);
 	}
