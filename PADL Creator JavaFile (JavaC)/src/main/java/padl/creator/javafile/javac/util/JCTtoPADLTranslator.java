@@ -734,14 +734,31 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 			// unnecessary loop-ups. However, because the
 			// v.getType() is rather poor, I must add check
 			// manually what is being added.
-			if (entity == null && 
-					v.getType().getSourceCode().equals("java.lang.Void")) {
+			if (entity == null) {
+				if (v.getType().getSourceCode().equals("java.lang.Void")) {
+					// I assume that this is the first 
+					// time that this class is met...
+					// TODO: Is it always true?
 					final IPackage packageJavaLang = this
 							.getPackageFromModel("java.lang", false);
 					entity = Factory.getInstance().createGhost(
 							"java.lang.Void".toCharArray(),
 							"Void".toCharArray());
 					packageJavaLang.addConstituent(entity);
+				}
+				else {
+					this.errorMessage.setLength(0);
+					this.errorMessage.append(this.getClass().getName());
+					this.errorMessage.append(" is missing source-code type: ");
+					this.errorMessage.append(v.getType().getSourceCode());
+
+					final String errorString = this.errorMessage.toString();
+					if (!this.errorMessages.contains(errorString)) {
+						this.errorMessages.add(errorString);
+						ProxyConsole.getInstance().debugOutput()
+								.println(errorString);
+					}
+				}
 			}
 
 			if (entity != null) {
