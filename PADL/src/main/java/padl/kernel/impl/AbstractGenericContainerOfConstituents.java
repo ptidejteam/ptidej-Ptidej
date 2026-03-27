@@ -622,14 +622,10 @@ public abstract class AbstractGenericContainerOfConstituents
 		// Yann 2009/04/29: Dirty!
 		// I went back to this solution of using an iterator because
 		// I am now storing the iterator :-)
-		final Iterator iterator = this.getIteratorOnConstituents();
-		while (iterator.hasNext()) {
-			final IConstituent constituent = (IConstituent) iterator.next();
-			if (Arrays.equals(constituent.getID(), anID)) {
-				return constituent;
-			}
-		}
-		return null;
+		return Arrays.stream(this.constituents)
+				.filter(c -> c!=null && Arrays.equals(c.getID(), anID))
+				.findFirst()
+				.orElse(null);
 	}
 	public IConstituent getConstituentFromID(final String anID) {
 		return this.getConstituentFromID(anID.toCharArray());
