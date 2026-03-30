@@ -63,7 +63,7 @@ public abstract class AbstractGenericContainerOfConstituents
 		//	private final List listOfModelListeners =
 		// I removed the final to make DB4O works...
 		// TODO: Understand how to keep it final with DB4O!
-		private Set listOfModelListeners = new HashSet(
+		private Set<IModelListener> listOfModelListeners = new HashSet<>(
 			GenericContainerConstants.INITIAL_SIZE_GENERIC_OBSERVABLE);
 
 		public final boolean addModelListener(
@@ -90,18 +90,17 @@ public abstract class AbstractGenericContainerOfConstituents
 
 			if (this.listOfModelListeners.size() > 0) {
 				// First, I look for the method corresponding to the event type.
-				final Method[] methods =
-					IModelListener.class.getDeclaredMethods();
-				Method eventMethod = null;
-				for (int i = 0; i < methods.length
-						&& eventMethod == null; i++) {
-					if (methods[i].getName().equals(eventType)) {
-						eventMethod = methods[i];
-					}
-				}
+				Method eventMethod = Arrays.stream(IModelListener.class.getDeclaredMethods())
+						.filter(m -> m.getName().equals(eventType))
+						.findFirst()
+						.orElse(null);
 
 				// Second, I notify the listeners with the appropriate event.
 				if (eventMethod != null) {
+					this.listOfModelListeners.stream()
+						.filter(listener -> listener!=null)
+						.forEach(listener -> this.invokeEventMethod(eventMethod, (IModelListener) listener, modelEvent));
+					/*
 					final Iterator iterator =
 						this.listOfModelListeners.iterator();
 					while (iterator.hasNext()) {
@@ -122,15 +121,30 @@ public abstract class AbstractGenericContainerOfConstituents
 									ProxyConsole.getInstance().errorOutput());
 							}
 						}
-					}
+					} */
 				}
 			}
 		}
-		public Iterator getIteratorOnModelListeners() {
+		private void invokeEventMethod(Method eventMethod, IModelListener listener, IEvent modelEvent) {
+			try {
+				eventMethod.invoke(
+					listener,
+					new Object[] { modelEvent });
+			}
+			catch (final IllegalAccessException iae) {
+				iae.printStackTrace(
+					ProxyConsole.getInstance().errorOutput());
+			}
+			catch (final InvocationTargetException ite) {
+				ite.printStackTrace(
+					ProxyConsole.getInstance().errorOutput());
+			}
+		}
+		public Iterator<IModelListener> getIteratorOnModelListeners() {
 			return this.listOfModelListeners.iterator();
 		}
-		protected List getModelListeners() {
-			return new ArrayList(this.listOfModelListeners);
+		protected List<IModelListener> getModelListeners() {
+			return new ArrayList<>(this.listOfModelListeners);
 		}
 		public final void removeModelListener(
 			final IModelListener aModelListener) {
@@ -566,7 +580,7 @@ public abstract class AbstractGenericContainerOfConstituents
 		final IEvent anEvent) {
 		this.observable.fireModelChange(anEventType, anEvent);
 	}
-	public Iterator getConcurrentIteratorOnConstituents() {
+	public Iterator<IConstituent> getConcurrentIteratorOnConstituents() {
 		// Yann 2005/10/12: Iterator!
 		// I replace the list with an iterator, but this
 		// is a major bottleneck in some specific case!
@@ -707,7 +721,7 @@ public abstract class AbstractGenericContainerOfConstituents
 			this.size,
 			aConstituentType);
 	}
-	public Iterator getIteratorOnModelListeners() {
+	public Iterator<IModelListener> getIteratorOnModelListeners() {
 		return this.observable.getIteratorOnModelListeners();
 	}
 	public int getNumberOfConstituents() {
