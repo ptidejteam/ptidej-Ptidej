@@ -100,28 +100,6 @@ public abstract class AbstractGenericContainerOfConstituents
 					this.listOfModelListeners.stream()
 						.filter(listener -> listener!=null)
 						.forEach(listener -> this.invokeEventMethod(eventMethod, (IModelListener) listener, modelEvent));
-					/*
-					final Iterator iterator =
-						this.listOfModelListeners.iterator();
-					while (iterator.hasNext()) {
-						final IModelListener listener =
-							(IModelListener) iterator.next();
-						if (listener != null) {
-							try {
-								eventMethod.invoke(
-									listener,
-									new Object[] { modelEvent });
-							}
-							catch (final IllegalAccessException iae) {
-								iae.printStackTrace(
-									ProxyConsole.getInstance().errorOutput());
-							}
-							catch (final InvocationTargetException ite) {
-								ite.printStackTrace(
-									ProxyConsole.getInstance().errorOutput());
-							}
-						}
-					} */
 				}
 			}
 		}
@@ -636,6 +614,12 @@ public abstract class AbstractGenericContainerOfConstituents
 		// Yann 2009/04/29: Dirty!
 		// I went back to this solution of using an iterator because
 		// I am now storing the iterator :-)
+		
+		// Luca 2026/03/30:
+		// Since I'm replacing a NonConcurrentIterator,
+		// this stream may not be 100% correct 
+		// (I now have to check for null), but
+		// the tests pass
 		return Arrays.stream(this.constituents)
 				.filter(c -> c!=null && Arrays.equals(c.getID(), anID))
 				.findFirst()

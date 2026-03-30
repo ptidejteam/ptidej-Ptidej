@@ -437,17 +437,10 @@ public class Util {
 		final int aSize,
 		final Class aConstituentType) {
 
-		final List list = new ArrayList();
-
-		for (int i = 0; i < aSize; i++) {
-			final IConstituent constituent = someConstituents[i];
-			// TODO: Should it be isAssignableFrom or equals?
-			if (aConstituentType.isAssignableFrom(constituent.getClass())) {
-				list.add(constituent);
-			}
-		}
-
-		return list;
+		return Arrays.stream(someConstituents)
+				.limit(aSize)
+				.filter(constituent -> aConstituentType.isAssignableFrom(constituent.getClass()))
+				.toList();
 	}
 
 	public static boolean isArray(final char[] aTypeName) {
