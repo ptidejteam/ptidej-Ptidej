@@ -80,6 +80,10 @@ public class CFParseBCELConvertorVisitor7Test extends TestCase {
 		}
 	}
 
+	public void testEquals() {
+	    Assert.assertTrue("ClassFile equals() failed",
+	            this.classFile_CFParse_Original.equals(this.classFile_CFParse_Converted));
+	}
 	// TODO To re-enable
 	// public void testFullToStringComparison() {
 	// 	Assert.assertEquals("Full class toString differs",
