@@ -483,7 +483,15 @@ public class VisitorSecondParsing extends ExtendedASTVisitor {
 		}
 
 		this.entityNb++;
+		if (this.entityNb % 1000 == 0) {
+			ProxyConsole
+				.getInstance()
+				.normalOutput()
+				.println(
+					"visited " + this.entityNb + " entities, current entity: "
+							+ node.resolveBinding().getQualifiedName());
 
+		}
 		String qualifiedName = node.resolveBinding().getQualifiedName();
 		final String simpleName = node.getName().toString();
 
