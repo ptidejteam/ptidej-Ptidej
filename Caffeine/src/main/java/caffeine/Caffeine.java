@@ -137,8 +137,10 @@ public final class Caffeine {
 			final StringBuffer query = new StringBuffer();
 			query.append(Caffeine.getStreamContent(Engine.class.getResourceAsStream("Query.pl")));
 			this.engine.openQuery(JIPTerm.parseQuery(query.toString()));
-			System.out.println(query.toString());
-			
+			if (Constants.DEBUG) {
+				System.out.println(query.toString());
+			}
+
 		} catch (final JIPSyntaxErrorException jipsee) {
 			System.err.println("Error while querying the engine.");
 			jipsee.printStackTrace(ProxyConsole.getInstance().errorOutput());
