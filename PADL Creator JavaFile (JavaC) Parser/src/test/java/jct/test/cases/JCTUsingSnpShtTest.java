@@ -35,6 +35,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectStreamClass; //included this package
 
 import org.junit.Assert;
 
@@ -71,7 +72,15 @@ public final class JCTUsingSnpShtTest extends TestCase {
 
 	public void testCreatorAndPrettyPrinter() {
 		try {
-			final ObjectInputStream ois = new ObjectInputStream(new FileInputStream(this.serializedFile));
+			final ObjectInputStream ois = new ObjectInputStream(new FileInputStream(this.serializedFile)) {
+				@Override  //added the overide class resolutiom
+				protected Class<?> resolveClass(ObjectStreamClass desc) throws IOException, ClassNotFoundException {
+					if (desc.getName().equals("util.collection.IndirectCollection")) {
+						return jct.util.collection.IndirectCollection.class;
+					}
+					return super.resolveClass(desc);
+				}
+			};
 			final IJCTRootNode jct = (IJCTRootNode) ois.readObject();
 			ois.close();
 
