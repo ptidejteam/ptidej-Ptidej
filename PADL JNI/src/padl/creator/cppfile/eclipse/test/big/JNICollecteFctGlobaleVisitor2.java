@@ -36,6 +36,7 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IPackage;
 import padl.kernel.IPackageDefault;
+import padl.kernel.IPackageGhost;
 import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
@@ -158,6 +159,11 @@ public class JNICollecteFctGlobaleVisitor2 implements ICPPWalker {
 	}
 
 	@Override
+	public void close(IPackageGhost aPackageGhost) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
 	public void close(ISetter aSetter) {
 		// TODO Auto-generated method stub
 
@@ -233,6 +239,11 @@ public class JNICollecteFctGlobaleVisitor2 implements ICPPWalker {
 	public void open(IPackageDefault aPackage) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void open(IPackageGhost aPackageGhost) {
+		// TODO Auto-generated method stub
 	}
 
 	@Override
