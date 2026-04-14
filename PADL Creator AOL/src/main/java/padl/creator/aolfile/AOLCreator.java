@@ -1078,46 +1078,20 @@ public class AOLCreator implements ICodeLevelModelCreator {
 		return aLevelModel;
 	}
 
+	// aliiimaher 2026/02/09:
+	// I removed the logging part from the "replace" method,
+	// as it was only used for test output and was not necessary.
 	private void replace(
 		final StringBuffer buffer,
 		final String anOldString,
 		final String aNewString) {
 
-		ProxyConsole.getInstance().debugOutput().print("Replacing \"");
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(
-				anOldString.replaceAll("\\n", "\\n").substring(
-					0,
-					Math.min(anOldString.length(), 35)));
-		ProxyConsole.getInstance().debugOutput().print("\" with \"");
-		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print(
-				aNewString.replaceAll("\\n", "\\n").substring(
-					0,
-					Math.min(aNewString.length(), 35)));
-		ProxyConsole.getInstance().debugOutput().print('\"');
-
 		final int length = anOldString.length();
 		int pos = 0;
-		int changeCount = 0;
 		while ((pos = buffer.indexOf(anOldString, pos)) > -1) {
 			buffer.replace(pos, pos + length, aNewString);
 			pos++;
-			changeCount++;
 		}
-		if (changeCount == 0) {
-			ProxyConsole.getInstance().debugOutput().println(" - Not found");
-		}
-		else {
-			ProxyConsole.getInstance().debugOutput().print(" - ");
-			ProxyConsole.getInstance().debugOutput().print(changeCount);
-			ProxyConsole.getInstance().debugOutput().println(" found");
-		}
-		ProxyConsole.getInstance().debugOutput().flush();
 	}
 	//	private void updateModel(
 	//		final IAbstractLevelModel originModel,

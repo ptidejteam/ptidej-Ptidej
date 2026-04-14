@@ -8,16 +8,17 @@
  * Contributors:
  *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
  ******************************************************************************/
-package padl.kernel.impl;
+package padl.statement.kernel.impl;
 
 import padl.kernel.IStatement;
+import padl.kernel.impl.Constituent;
 import padl.path.IConstants;
 
 /**
  * @author tagmouty
  * @author Yann
  */
-public class Statement extends Constituent implements IStatement {
+class Statement extends Constituent implements IStatement {
 	private static final long serialVersionUID = 6348055409249029367L;
 
 	public Statement(char[] anID) {

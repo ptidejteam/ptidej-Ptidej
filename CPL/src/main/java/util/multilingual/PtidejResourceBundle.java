@@ -37,7 +37,6 @@ public class PtidejResourceBundle extends ListResourceBundle {
 						"Loader: No files found into {0}" },
 				{ "util.io.SubtypeLoader::Err_READING_FILE",
 						"Loader: Error while reading file {0}" },
-				{ "util.io.SubtypeLoader::LOADING_FROM", "Loading from: {0}" },
 				{ "util.lang.ClassLoader::Err_FILE",
 						"The file {0} produces an error." },
 
