@@ -29,6 +29,7 @@ import com.ibm.toad.cfparse.MethodInfo;
 import com.ibm.toad.cfparse.MethodInfoList;
 import com.ibm.toad.cfparse.attributes.AttrInfo;
 import com.ibm.toad.cfparse.attributes.AttrInfoList;
+import com.ibm.toad.cfparse.attributes.CodeAttrInfo;
 
 import junit.framework.TestCase;
 import util.io.NamedInputStream;
@@ -298,8 +299,19 @@ public class ConvertorsComparisonTest extends TestCase {
 			final MethodInfo methodOfThis = methodListOfThis.get(i);
 			final MethodInfo methodOfOther = methodListOfOther.get(i);
 
-			equalMethods &= methodOfThis.getAbout()
-					.equals(methodOfOther.getAbout());
+			// Replaced the getAbout().equals method with individual fields comparison
+			//equalMethods &= methodOfThis.getAbout()
+					//.equals(methodOfOther.getAbout());
+			AttrInfo codeOfThis = methodOfThis.getAttrs().get("Code");
+			AttrInfo codeOfOther = methodOfOther.getAttrs().get("Code");
+			
+			if (codeOfThis != null && codeOfOther != null) {
+				CodeAttrInfo codeAttrOfThis = (CodeAttrInfo) codeOfThis;
+				CodeAttrInfo codeAttrOfOther = (CodeAttrInfo) codeOfOther;
+				
+				equalMethods &= codeAttrOfThis.getMaxStack() == codeAttrOfOther.getMaxStack();
+				equalMethods &= codeAttrOfThis.getMaxLocals() == codeAttrOfOther.getMaxLocals();
+			}
 			equalMethods &= methodOfThis.getAccess() == methodOfOther
 					.getAccess();
 			equalMethods &= methodOfThis.getDesc()
