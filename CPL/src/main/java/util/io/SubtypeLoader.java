@@ -55,6 +55,10 @@ public final class SubtypeLoader {
 		final String currentList[] = currentDirectory.list();
 
 		if (currentList == null || currentList.length == 0) {
+			ProxyConsole.getInstance().warningOutput()
+			.println(MultilingualManager.getString(
+					"Err_FILES_NOT_FOUND", SubtypeLoader.class,
+					new Object[] { aDirectoryName }));
 			return new ClassFile[0];
 		}
 
@@ -77,6 +81,10 @@ public final class SubtypeLoader {
 		}
 
 		if (aListOfClasses.size() == 0) {
+			ProxyConsole.getInstance().warningOutput()
+			.println(MultilingualManager.getString(
+					"Err_FILES_NOT_FOUND", SubtypeLoader.class,
+					new Object[] { aDirectoryName }));
 			return new ClassFile[0];
 		}
 		else {
@@ -184,6 +192,10 @@ public final class SubtypeLoader {
 		final String currentList[] = currentDirectory
 				.list(new ExtensionBasedFilenameFilter(aFileExtension));
 		if (currentList == null || currentList.length == 0) {
+			ProxyConsole.getInstance().warningOutput()
+			.println(MultilingualManager.getString(
+					"Err_FILES_NOT_FOUND", SubtypeLoader.class,
+					new Object[] { aDirectoryName }));
 			return new ClassFile[0];
 		}
 
