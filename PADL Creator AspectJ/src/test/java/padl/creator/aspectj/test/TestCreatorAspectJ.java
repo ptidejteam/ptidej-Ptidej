@@ -10,26 +10,17 @@
  ******************************************************************************/
 package padl.creator.aspectj.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 public class TestCreatorAspectJ extends TestSuite {
-	public TestCreatorAspectJ() {
-	}
-
-	public TestCreatorAspectJ(final Class<?> theClass) {
-		super(theClass);
-	}
-
-	public TestCreatorAspectJ(final String name) {
-		super(name);
-	}
-
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreatorAspectJ suite = new TestCreatorAspectJ();
-		suite.addTestSuite(TestOO.class);
-		suite.addTestSuite(TestAO.class);
-		suite.addTestSuite(TestModelCreation.class);
+		suite.setName(TestCreatorAspectJ.class.getName());
+
+		suite.addTestSuite(AOTest.class);
+		suite.addTestSuite(ModelCreationTest.class);
+		suite.addTestSuite(OOTest.class);
+
 		return suite;
 	}
 }

@@ -10,8 +10,9 @@
  ******************************************************************************/
 package ptidej.test.all;
 
-import junit.framework.Test;
+import epi.test.TestEPI;
 import junit.framework.TestSuite;
+import modec.solver.constraint.test.TestMoDecSolver;
 import ptidej.solver.claire.test.TestPtidejSolver3;
 import ptidej.solver.fingerprint.test.TestPtidejSolverFingerprints;
 import ptidej.solver.java.test.TestPtidejSolver4;
@@ -22,9 +23,12 @@ import util.lang.MavenTestGuard;
  * @since 2008/12/04
  */
 public final class TestDeMIMA extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestDeMIMA suite = new TestDeMIMA();
+		suite.setName(TestDeMIMA.class.getName());
 
+		suite.addTest(TestEPI.suite());
+		suite.addTest(TestMoDecSolver.suite());
 		// Yann 24/04/28: Maven and DOS programs
 		// These tests cannot pass because they require executing 
 		// the DOS program PtidejSolver.exe, which is archived into

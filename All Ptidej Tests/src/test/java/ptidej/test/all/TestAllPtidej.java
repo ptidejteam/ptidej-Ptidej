@@ -10,7 +10,6 @@
  ******************************************************************************/
 package ptidej.test.all;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 /**
@@ -18,8 +17,9 @@ import junit.framework.TestSuite;
  * @since  2008/12/04
  */
 public final class TestAllPtidej extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestAllPtidej suite = new TestAllPtidej();
+		suite.setName(TestAllPtidej.class.getName());
 
 		suite.addTest(TestCreators.suite());
 		suite.addTest(TestDeMIMA.suite());

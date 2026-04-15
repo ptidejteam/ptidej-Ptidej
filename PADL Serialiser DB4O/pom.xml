@@ -14,7 +14,6 @@
 	<artifactId>padl-serialiser-db4o</artifactId>
 	<name>PADL Serialiser DB4O</name>
 
-	<!-- To install db4o-7.12.132.14217-all-java5.jar and make it available -->
 	<build>
 		<plugins>
 			<plugin>
@@ -27,6 +26,21 @@
 					</compilerArgs>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
+				<configuration>
+					<argLine>
+						--add-opens=java.base/java.util=ALL-UNNAMED
+					</argLine>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/*Test.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<!-- To install db4o-7.12.132.14217-all-java5.jar and make it available -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-install-plugin</artifactId>
@@ -50,21 +64,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.5</version>
-				<configuration>
-					<argLine>
-						--add-opens=java.base/java.util=ALL-UNNAMED
-					</argLine>
-					<excludes>
-						<!-- TODO Add these tests back -->
-						<excludes>FilesUtilsTest.java</excludes>
-						<excludes>ArgoUML020Test.java</excludes>
-					</excludes>
-				</configuration>
-			</plugin>
 			<!-- Must generate the test-jar for dependent tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -82,7 +81,6 @@
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
@@ -120,6 +118,20 @@
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-classfile</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-javafile-eclipse</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-generator</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
@@ -135,18 +147,9 @@
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-creator-classfile</artifactId>
-			<version>1.0.0</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-analyses</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

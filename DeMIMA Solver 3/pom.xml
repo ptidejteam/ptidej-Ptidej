@@ -11,7 +11,7 @@
 	</parent>
 
 	<groupId>net.ptidej.demima</groupId>
-	<artifactId>demima-solver-3</artifactId>
+	<artifactId>demima-solver-claire</artifactId>
 	<name>DeMIMA Solver 3</name>
 
 	<build>
@@ -24,6 +24,19 @@
 					<compilerArgs>
 						<arg>-proc:none</arg>
 					</compilerArgs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
+				<configuration>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/*Test.java</exclude>
+						<!-- Excluded because not up-to-date -->
+						<exclude>**/AssociationDistanceComposite2Test.java</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 			<!-- Must generate the test-jar for dependent tests -->
@@ -55,8 +68,9 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
-						<version>3.2.5</version>
+						<version>3.5.3</version>
 						<configuration>
+							<!-- Must skip these tests outside of Windows, because they invoke a Windows executable -->
 							<skipTests>true</skipTests>
 						</configuration>
 					</plugin>

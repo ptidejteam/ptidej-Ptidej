@@ -17,6 +17,9 @@ import java.util.Map;
 import org.apache.commons.io.FileUtils;
 import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.Bundle;
+import org.osgi.framework.FrameworkUtil;
 import padl.creator.cppfile.eclipse.Common;
 import padl.creator.cppfile.eclipse.plugin.internal.Constants;
 import padl.creator.cppfile.eclipse.plugin.internal.GeneratorFromCPPProject;
@@ -26,12 +29,11 @@ import util.io.ProxyConsole;
 
 public class Launcher implements IApplication {
 	private static String getArgumentValue(
-		final Map<?, ?> someArguments,
-		final String anArgumentName) {
+			final Map<?, ?> someArguments,
+			final String anArgumentName) {
 
 		String argumentValue = null;
-		final String[] arguments =
-			(String[]) someArguments.get("application.args");
+		final String[] arguments = (String[]) someArguments.get("application.args");
 		for (int i = 0; i < arguments.length; i++) {
 			final String argument = arguments[i];
 			if (argument.startsWith(anArgumentName)) {
@@ -41,35 +43,39 @@ public class Launcher implements IApplication {
 
 		return argumentValue;
 	}
+
 	private boolean areArgumentsEmpty(Map<?, ?> someArguments) {
-		final String[] arguments =
-			(String[]) someArguments.get("application.args");
+		final String[] arguments = (String[]) someArguments.get("application.args");
 		return arguments.length == 0;
 	}
+
 	private File getDirMetadata(final File directoryPtidej) {
 		final File destination = new File(
-			directoryPtidej.getAbsolutePath() + File.separatorChar
-					+ Common.EQUINOX_RUNTIME_WORKSPACE
-					+ Constants.META_DATA_DIRECTORY);
+				directoryPtidej.getAbsolutePath() + File.separatorChar
+						+ Common.EQUINOX_RUNTIME_WORKSPACE
+						+ Constants.META_DATA_DIRECTORY);
 
 		return destination;
 	}
+
 	private File getDirOrigin(final Map<?, ?> someArguments) {
-		final String rootDirectoryContainingCPPFiles =
-			Launcher.getArgumentValue(
+		final String rootDirectoryContainingCPPFiles = Launcher.getArgumentValue(
 				someArguments,
 				Common.ARGUMENT_DIRECTORY_TARGET_CPP_FILES);
 
 		// Yann 2013/05/16: Current working directory
 		// I search for the source folder from the CWD
 		// which is given by System.getProperty("user.dir")
-		File source = new File(
-			System.getProperty("user.dir") + File.separatorChar
-					+ rootDirectoryContainingCPPFiles);
+		File source = new File(rootDirectoryContainingCPPFiles);
+		if (!source.isAbsolute()) {
+			source = new File(
+					System.getProperty("user.dir") + File.separatorChar
+							+ rootDirectoryContainingCPPFiles);
+		}
 		ProxyConsole
-			.getInstance()
-			.debugOutput()
-			.print("Looking for C++ files in ");
+				.getInstance()
+				.debugOutput()
+				.print("Looking for C++ files in ");
 		ProxyConsole.getInstance().debugOutput().println(source);
 		if (!source.exists()) {
 			// Yann 2013/05/16: Relativity!
@@ -78,115 +84,161 @@ public class Launcher implements IApplication {
 			// path and try to locate it... if not, I abort!
 			source = new File(rootDirectoryContainingCPPFiles);
 			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.print("Looking for C++ files in ");
+					.getInstance()
+					.debugOutput()
+					.print("Looking for C++ files in ");
 			ProxyConsole.getInstance().debugOutput().println(source);
 			if (!source.exists()) {
 				ProxyConsole.getInstance().errorOutput().print(
-					"Cannot find the C++ files to analyses in \"");
+						"Cannot find the C++ files to analyses in \"");
 				ProxyConsole.getInstance().errorOutput().print(
-					source.getAbsolutePath());
+						source.getAbsolutePath());
 				ProxyConsole.getInstance().errorOutput().println('\"');
-			}
-			else {
+			} else {
 				ProxyConsole
-					.getInstance()
-					.debugOutput()
-					.println("\tFound C++ files!");
+						.getInstance()
+						.debugOutput()
+						.println("\tFound C++ files!");
 			}
 		}
 
 		return source;
 	}
+
 	private File getDirPtidej(Map<?, ?> someArguments) {
 		final File directoryPtidej = new File(
-			Launcher.getArgumentValue(
-				someArguments,
-				Common.ARGUMENT_DIRECTORY_PTIDEJ_WORKSPACE));
+				Launcher.getArgumentValue(
+						someArguments,
+						Common.ARGUMENT_DIRECTORY_PTIDEJ_WORKSPACE));
 		if (!directoryPtidej.exists()) {
 			ProxyConsole.getInstance().errorOutput().print(
-				"Cannot find the Ptidej Workspace at ");
+					"Cannot find the Ptidej Workspace at ");
 			ProxyConsole.getInstance().errorOutput().println(
-				directoryPtidej.getAbsolutePath() + File.separatorChar);
-		}
-		else {
+					directoryPtidej.getAbsolutePath() + File.separatorChar);
+		} else {
 			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.println("Found Ptidej Workspace!");
+					.getInstance()
+					.debugOutput()
+					.println("Found Ptidej Workspace!");
 		}
 		return directoryPtidej;
 	}
+
 	private File getDirSafe(final File directoryPtidej) {
 		final File destination = new File(
-			directoryPtidej.getAbsolutePath() + File.separatorChar
-					+ Common.EQUINOX_RUNTIME_WORKSPACE
-					+ Constants.SAFE_CPP_PROJECT_NAME);
+				directoryPtidej.getAbsolutePath() + File.separatorChar
+						+ Common.EQUINOX_RUNTIME_WORKSPACE
+						+ Constants.SAFE_CPP_PROJECT_NAME);
 
 		return destination;
 	}
+
 	private File getDirTarget(final File directoryPtidej) {
 		final File destination = new File(
-			directoryPtidej.getAbsolutePath() + File.separatorChar
-					+ Common.EQUINOX_RUNTIME_WORKSPACE
-					+ Constants.CPP_PROJECT_NAME);
+				directoryPtidej.getAbsolutePath() + File.separatorChar
+						+ Common.EQUINOX_RUNTIME_WORKSPACE
+						+ Constants.CPP_PROJECT_NAME);
 
 		return destination;
 	}
+
 	private boolean isRunningInRemoteJVM(Map<?, ?> someArguments) {
 		return Launcher.getArgumentValue(
-			someArguments,
-			Common.ARGUMENT_OSGi_RUNNING_IN_REMOTE_JVM) != null;
+				someArguments,
+				Common.ARGUMENT_OSGi_RUNNING_IN_REMOTE_JVM) != null;
 	}
+
 	private void prepareTargetCPPFiles(
-		final File directorySafeCPPProject,
-		final File directoryOrigin,
-		final File directoryDestination) {
+			final File directorySafeCPPProject,
+			final File directoryOrigin,
+			final File directoryDestination) {
 
 		try {
 			if (directoryDestination.exists()) {
 				ProxyConsole.getInstance().debugOutput().println(
-					"Destination exists at "
-							+ directoryDestination.getAbsolutePath()
-							+ File.separatorChar);
+						"Destination exists at "
+								+ directoryDestination.getAbsolutePath()
+								+ File.separatorChar);
 				FileUtils.deleteQuietly(directoryDestination);
 			}
 			FileUtils
-				.copyDirectory(directorySafeCPPProject, directoryDestination);
+					.copyDirectory(directorySafeCPPProject, directoryDestination);
 
 			FileUtils.copyDirectory(
-				directoryOrigin,
-				directoryDestination,
-				Utils.FILTER_OF_HIDDEN_FILES);
-		}
-		catch (final IOException e) {
+					directoryOrigin,
+					directoryDestination,
+					Utils.FILTER_OF_HIDDEN_FILES);
+		} catch (final IOException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 		ProxyConsole.getInstance().debugOutput().println("Files copied.");
 	}
+
+	private static void ensureBundleStarted(final String aBundleName) {
+		try {
+			Bundle bundle = null;
+			final Bundle currentBundle = FrameworkUtil.getBundle(Launcher.class);
+			if (currentBundle != null) {
+				final BundleContext context = currentBundle.getBundleContext();
+				if (context != null) {
+					final Bundle[] bundles = context.getBundles();
+					for (int i = 0; i < bundles.length; i++) {
+						if (aBundleName.equals(bundles[i].getSymbolicName())) {
+							bundle = bundles[i];
+							break;
+						}
+					}
+				}
+			}
+			if (bundle != null
+					&& bundle.getState() != Bundle.ACTIVE
+					&& bundle.getState() != Bundle.STARTING) {
+				bundle.start();
+			}
+			ProxyConsole.getInstance().debugOutput().println(
+				"Bundle "
+						+ aBundleName
+						+ " state="
+						+ (bundle == null ? "NOT_FOUND" : bundle.getState()));
+		}
+		catch (final Throwable e) {
+			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+		}
+	}
+
+	private static void ensureEclipseRuntimeReady() {
+		ensureBundleStarted("org.eclipse.core.runtime");
+		ensureBundleStarted("org.eclipse.core.resources");
+		ensureBundleStarted("org.eclipse.core.contenttype");
+		ensureBundleStarted("org.eclipse.core.jobs");
+	}
+
 	public Object run(final Object someArguments) {
 		final Map<String, String[]> arguments = new HashMap<String, String[]>();
 		arguments.put("application.args", (String[]) someArguments);
 
 		return this.start(arguments);
 	}
+
 	@Override
 	public Object start(final IApplicationContext anApplicationContext) {
 		final Map<?, ?> arguments = anApplicationContext.getArguments();
 
 		return this.start(arguments);
 	}
+
 	private Object start(final Map<?, ?> someArguments) {
+		ProxyConsole.getInstance().debugOutput().println(
+			"PADL Launcher.start invoked");
 		// For debug purposes...
-		//	ProxyConsole.getInstance().setDebugOutput(
-		//		ProxyConsole.getInstance().errorOutput());
+		// ProxyConsole.getInstance().setDebugOutput(
+		// ProxyConsole.getInstance().errorOutput());
 
 		if (this.areArgumentsEmpty(someArguments)) {
 			ProxyConsole.getInstance().errorOutput().println(
-				"No arguments given to the application, please check your runtime configuration. (application.args = new Sring[0])");
+					"No arguments given to the application, please check your runtime configuration. (application.args = new Sring[0])");
 			throw new RuntimeException(
-				"No arguments given to the application, please check your runtime configuration. (application.args = new Sring[0])");
+					"No arguments given to the application, please check your runtime configuration. (application.args = new Sring[0])");
 		}
 
 		final boolean isInRemoteJVM = this.isRunningInRemoteJVM(someArguments);
@@ -202,24 +254,25 @@ public class Launcher implements IApplication {
 			// In middle of testing, I could not run anymore Eclipse...
 			// Thanks to StackOverflow, I found out that the problem
 			// was this useless .snap file, which I now delete each time.
-			// See http://stackoverflow.com/questions/3505187/eclipse-wont-start-log-error-says-objectnotfoundexception-tree-element
+			// See
+			// http://stackoverflow.com/questions/3505187/eclipse-wont-start-log-error-says-objectnotfoundexception-tree-element
 			FileUtils.deleteQuietly(this.getDirMetadata(directoryPtidej));
 
 			this.prepareTargetCPPFiles(
-				directorySafeCPPProject,
-				directoryOriginCPPFiles,
-				directoryTargetCPPFiles);
+					directorySafeCPPProject,
+					directoryOriginCPPFiles,
+					directoryTargetCPPFiles);
 
 			ProxyConsole.getInstance().debugOutput().println(
-				"Starting creating code-level model from C++ file(s).");
+					"Starting creating code-level model from C++ file(s).");
 
 			try {
-				final GeneratorFromCPPProject generator =
-					new GeneratorFromCPPProject();
+				ensureEclipseRuntimeReady();
+				final GeneratorFromCPPProject generator = new GeneratorFromCPPProject();
 				final ICodeLevelModel model = generator.build();
 
 				ProxyConsole.getInstance().debugOutput().print(
-					"Done creating code-level model from C++ file(s), found ");
+						"Done creating code-level model from C++ file(s), found ");
 
 				if (isInRemoteJVM) {
 					Common.writeCodeLevelModel(model);
@@ -230,14 +283,14 @@ public class Launcher implements IApplication {
 				FileUtils.deleteQuietly(directoryTargetCPPFiles);
 
 				return model;
-			}
-			catch (final Throwable e) {
+			} catch (final Throwable e) {
 				e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 			}
 		}
 
 		return null;
 	}
+
 	@Override
 	public void stop() {
 		ProxyConsole.getInstance().debugOutput().flush();

@@ -37,6 +37,7 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IPackage;
 import padl.kernel.IPackageDefault;
+import padl.kernel.IPackageGhost;
 import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
@@ -415,6 +416,9 @@ public class DomainGenerator2Custom extends DomainGenerator implements IMotifWal
 	public void close(final IPackageDefault aPackage) {
 	}
 
+	public void close(final IPackageGhost aPackageGhost) {
+	}
+
 	public void close(final ISetter aSetter) {
 	}
 
@@ -527,6 +531,9 @@ public class DomainGenerator2Custom extends DomainGenerator implements IMotifWal
 	}
 
 	public void open(final IPackageDefault aPackage) {
+	}
+
+	public void open(final IPackageGhost aPackageGhost) {
 	}
 
 	public void open(final ISetter p) {

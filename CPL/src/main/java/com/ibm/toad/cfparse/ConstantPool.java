@@ -5,20 +5,17 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.HashMap;
 import java.util.Hashtable;
-import java.util.List;
 
 import com.ibm.toad.cfparse.utils.CPUtils;
 
 import util.io.ProxyConsole;
 
 public final class ConstantPool {
-	
 	public final class ClassEntry extends ConstantPoolEntry {
-		
+
 		private int d_index;
 		// $FF: synthetic field
 		// TODO Remove all such fields, they are not necessary
@@ -30,7 +27,6 @@ public final class ConstantPool {
 		}
 
 		public boolean equals(Object var1) {
-			
 			if (!(var1 instanceof ConstantPool.ClassEntry)) {
 				return false;
 			}
@@ -74,7 +70,6 @@ public final class ConstantPool {
 		}
 
 		public String toString() {
-			
 			return "Class: " + this.d_index + " (" + this.getAsJava() + ")";
 		}
 
@@ -828,7 +823,7 @@ public final class ConstantPool {
 				default:
 					var2.append(var1.charAt(var3));
 				}
-				
+
 			}
 
 			return var2.toString();
@@ -883,22 +878,21 @@ public final class ConstantPool {
 	}
 
 	public int addClass(String className) {
-	    className = className.replace('.', '/'); // canonical form
-	    int utf8Index = this.find(ConstantPool.CONSTANT_Utf8, className);
-	    if (utf8Index == -1) {
-	        utf8Index = this.addUtf8(className);
-	    }
+		className = className.replace('.', '/'); // canonical form
+		int utf8Index = this.find(ConstantPool.CONSTANT_Utf8, className);
+		if (utf8Index == -1) {
+			utf8Index = this.addUtf8(className);
+		}
 
+		int classIndex = this.find(ConstantPool.CONSTANT_Class, className);
+		if (classIndex == -1) {
 
-	    int classIndex = this.find(ConstantPool.CONSTANT_Class, className);
-	    if (classIndex == -1) {
-	    
-	        classIndex = this.addNewElement(new ConstantPool.ClassEntry(this, utf8Index));
-	    }
+			classIndex = this.addNewElement(
+					new ConstantPool.ClassEntry(this, utf8Index));
+		}
 
-	    return classIndex;
+		return classIndex;
 	}
-
 
 	public int addDouble(double var1) {
 		return this.addNewElement(new ConstantPool.DoubleEntry(var1));
@@ -1008,7 +1002,6 @@ public final class ConstantPool {
 		return this.addNewElement(
 				new ConstantPool.NameAndTypeEntry(this, var3, var4));
 	}
-	
 
 	private int addNewElement(ConstantPoolEntry var1) {
 		// Yann 24/12/10: Duplications!
@@ -1218,11 +1211,11 @@ public final class ConstantPool {
 		if (var4 != null) {
 			Integer var5 = (Integer) this.d_hashC2i.get(var4);
 			if (var5 == null) {
-				System.out.println("Whoops: " + var4);
+				ProxyConsole.getInstance().errorOutput()
+						.println("Whoops: " + var4);
 				var3 = -1;
 			}
-			else
-			{
+			else {
 				var3 = var5;
 			}
 		}
@@ -1237,11 +1230,11 @@ public final class ConstantPool {
 		if (var5 != null) {
 			Integer var6 = (Integer) this.d_hashC2i.get(var5);
 			if (var6 == null) {
-				System.out.println("Whoops: " + var5);
+				ProxyConsole.getInstance().errorOutput()
+						.println("Whoops: " + var5);
 				var4 = -1;
 			}
-			else
-			{
+			else {
 				var4 = var6;
 			}
 		}

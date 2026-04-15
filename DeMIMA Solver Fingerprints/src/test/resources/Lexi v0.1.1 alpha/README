@@ -1,0 +1,31 @@
+ 
+                               L E X I
+                        Java based Word Processor
+                       
+
+Requirements
+------------
+
+A Java 2 runtime (preferably JDK 1.2.2 from Sun). See
+http://java.sun.com.
+
+How to run
+----------
+
+Run with 
+
+  java -jar bin/Lexi.jar
+
+Under Windows, double-clicking Lexi.jar should do it.
+You can create a shortcut for that file as well.
+
+Contributing/Comments
+---------------------
+
+Please direct comments to the current maintainer,
+Jose Solorzano, at jhsolorz@yahoo.com.
+
+                      --------------------------------
+
+
+

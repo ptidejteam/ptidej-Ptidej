@@ -28,8 +28,8 @@ public class StructuresTest extends TestCase {
 	protected void setUp() throws Exception {
 		if (StructuresTest.CodeLevelModel == null) {
 			StructuresTest.CodeLevelModel = ModelGenerator
-					.generateModelFromCppFilesUsingEclipse("Funny",
-							"../PADL Creator C++ (Eclipse) Tests/data/Structures/");
+					.generateModelFromCppTestResources("Funny",
+							"Structures/");
 		}
 	}
 

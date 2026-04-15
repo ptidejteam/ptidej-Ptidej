@@ -17,120 +17,98 @@ import com.ibm.toad.cfparse.ConstantPool;
  * Henrique, 2025-04-21
  */
 public final class ExceptionsAttrInfo extends AttrInfo {
-
 	private int[] exceptionIndexTable;
 
-	
-	
-	public void setTable(ExceptionTable table) {
+	public void setTable(final ExceptionTable table) {
 		if (table == null || table.getNumberOfExceptions() == 0) {
 			this.exceptionIndexTable = new int[0];
 			this.d_len = 2;
 			return;
 		}
 
-		int[] bcelIndexes = table.getExceptionIndexTable();
+		final int[] bcelIndexes = table.getExceptionIndexTable();
 		this.exceptionIndexTable = new int[bcelIndexes.length];
-
 		for (int i = 0; i < bcelIndexes.length; i++) {
-			
-			
-			String className = table.getConstantPool().getConstantString(bcelIndexes[i], Const.CONSTANT_Class);
-			int cfIndex = this.d_cp.addClass(className); 
+			final String className = table.getConstantPool()
+					.getConstantString(bcelIndexes[i], Const.CONSTANT_Class);
+			final int cfIndex = this.d_cp.addClass(className);
 			this.exceptionIndexTable[i] = cfIndex;
-
-			System.out.println("Index: " + cfIndex);
 		}
 
 		this.d_len = 2 + 2 * exceptionIndexTable.length;
 	}
 
-	public void setFromBCEL(ExceptionTable table, ConstantPool cp) {
-	    if (table == null || table.getNumberOfExceptions() == 0) {
-	        this.exceptionIndexTable = new int[0];
-	        this.d_len = 2;
-	        return;
-	    }
+	public void setFromBCEL(final ExceptionTable table, final ConstantPool cp) {
+		if (table == null || table.getNumberOfExceptions() == 0) {
+			this.exceptionIndexTable = new int[0];
+			this.d_len = 2;
+			return;
+		}
 
-	    int[] bcelIndexes = table.getExceptionIndexTable();
-	    this.exceptionIndexTable = new int[bcelIndexes.length];
+		final int[] bcelIndexes = table.getExceptionIndexTable();
+		this.exceptionIndexTable = new int[bcelIndexes.length];
+		for (int i = 0; i < bcelIndexes.length; i++) {
+			final String className = table.getConstantPool()
+					.getConstantString(bcelIndexes[i], Const.CONSTANT_Class);
+			final int cfIndex = cp.addClass(className);
+			this.exceptionIndexTable[i] = cfIndex;
+		}
 
-	    for (int i = 0; i < bcelIndexes.length; i++) {
-	        String className = table.getConstantPool().getConstantString(bcelIndexes[i], Const.CONSTANT_Class);
-	        int cfIndex = cp.addClass(className);
-	        this.exceptionIndexTable[i] = cfIndex;
-	    }
-
-	    this.d_len = 2 + 2 * exceptionIndexTable.length;
+		this.d_len = 2 + 2 * exceptionIndexTable.length;
 	}
 
-
-
-	public ExceptionsAttrInfo(ConstantPool cp, int nameIndex, int attrLen) {
+	public ExceptionsAttrInfo(final ConstantPool cp, final int nameIndex,
+			final int attrLen) {
 		super(cp, nameIndex, attrLen);
-		
-	
-		
 	}
+
 	@Override
 	protected int size() {
-	    return 6 + 2 * exceptionIndexTable.length;
+		return 6 + 2 * exceptionIndexTable.length;
 	}
-	public void setExceptions(int[] indices) {
+
+	public void setExceptions(final int[] indices) {
 		this.exceptionIndexTable = indices;
-		
-	
 	}
 
 	public int[] getExceptions() {
 		return this.exceptionIndexTable;
 	}
 
-	public void read(DataInput input) throws IOException {
-		ByteArrayOutputStream debugBuffer = new ByteArrayOutputStream();
-		DataOutputStream debugOut = new DataOutputStream(debugBuffer);
+	public void read(final DataInput input) throws IOException {
+		final ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+		final DataOutputStream dataOut = new DataOutputStream(byteOut);
 
 		this.d_len = input.readInt();
-		debugOut.writeInt(this.d_len); 
+		dataOut.writeInt(this.d_len);
 
-		int numberOfExceptions = input.readUnsignedShort();
-		debugOut.writeShort(numberOfExceptions); 
+		final int numberOfExceptions = input.readUnsignedShort();
+		dataOut.writeShort(numberOfExceptions);
 
 		this.exceptionIndexTable = new int[numberOfExceptions];
-
 		for (int i = 0; i < numberOfExceptions; i++) {
-			int index = input.readUnsignedShort();
-			debugOut.writeShort(index);
+			final int index = input.readUnsignedShort();
+			dataOut.writeShort(index);
 			this.exceptionIndexTable[i] = index;
-		
 		}
 
-		debugOut.close();
-		byte[] rawBytes = debugBuffer.toByteArray();
-
-		
+		dataOut.close();
 	}
 
+	public void write(final DataOutput output) throws IOException {
+		final ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+		final DataOutputStream dataOut = new DataOutputStream(byteOut);
 
-
-
-	public void write(DataOutput output) throws IOException {
-		ByteArrayOutputStream buffer = new ByteArrayOutputStream();
-		DataOutputStream debugOut = new DataOutputStream(buffer);
-
-		debugOut.writeInt(2 + 2 * exceptionIndexTable.length);
-		debugOut.writeShort(exceptionIndexTable.length);
+		dataOut.writeInt(2 + 2 * exceptionIndexTable.length);
+		dataOut.writeShort(exceptionIndexTable.length);
 		for (int exceptionIndex : exceptionIndexTable) {
-			debugOut.writeShort(exceptionIndex);
+			dataOut.writeShort(exceptionIndex);
 		}
-		debugOut.close();
+		dataOut.close();
 
-		byte[] rawBytes = buffer.toByteArray();
-	
+		final byte[] rawBytes = byteOut.toByteArray();
 		output.write(rawBytes);
-
 	}
-
 
 	@Override
 	public String getName() {
@@ -139,27 +117,25 @@ public final class ExceptionsAttrInfo extends AttrInfo {
 
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("name: Exceptions  bytes (").append(2 * exceptionIndexTable.length).append("):");
+		final StringBuilder sb = new StringBuilder();
+		sb.append("name: Exceptions  bytes (")
+				.append(2 * exceptionIndexTable.length).append("):");
 
 		for (int index : exceptionIndexTable) {
-		    String exceptionName = d_cp.getAsJava(index);
-		    sb.append(" ").append(exceptionName);
+			String exceptionName = d_cp.getAsJava(index);
+			sb.append(" ").append(exceptionName);
 		}
-
 
 		return sb.toString();
 	}
 
-
-
 	@Override
-	protected void read(DataInputStream input) throws IOException {
+	protected void read(final DataInputStream input) throws IOException {
 		this.read((DataInput) input);
 	}
 
 	@Override
-	protected void write(DataOutputStream output) throws IOException {
+	protected void write(final DataOutputStream output) throws IOException {
 		this.write((DataOutput) output);
 	}
 }

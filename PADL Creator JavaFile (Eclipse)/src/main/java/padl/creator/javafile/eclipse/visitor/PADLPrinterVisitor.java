@@ -36,6 +36,7 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IPackage;
 import padl.kernel.IPackageDefault;
+import padl.kernel.IPackageGhost;
 import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
@@ -134,6 +135,10 @@ public class PADLPrinterVisitor implements IWalker {
 	}
 
 	@Override
+	public void close(final IPackageGhost aPackageGhost) {
+	}
+
+	@Override
 	public void close(final ISetter aSetter) {
 		this.writer.println();
 		this.writer.println("		End of setter " + aSetter.getDisplayName());
@@ -226,6 +231,10 @@ public class PADLPrinterVisitor implements IWalker {
 	public void open(final IPackageDefault aPackage) {
 		this.currentPackage = this.currentPackage + aPackage.getDisplayName()
 				+ "/";
+	}
+
+	@Override
+	public void open(final IPackageGhost aPackageGhost) {
 	}
 
 	@Override

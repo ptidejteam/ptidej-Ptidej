@@ -218,19 +218,6 @@ public class StringBuilder {
 								.get(destination));
 					originEntity.addConstituent(new DummyRelationship(
 						targetEntity));
-					ProxyConsole
-						.getInstance()
-						.debugOutput()
-						.print("Adding dummy relationship between ");
-					ProxyConsole
-						.getInstance()
-						.debugOutput()
-						.print(originEntity.getID());
-					ProxyConsole.getInstance().debugOutput().print(" and ");
-					ProxyConsole
-						.getInstance()
-						.debugOutput()
-						.println(targetEntity.getID());
 					EPIMatrix.incrementValue(originEntity, targetEntity);
 				}
 			};
@@ -345,10 +332,6 @@ public class StringBuilder {
 			final IFirstClassEntity firstClassEntity =
 				(IFirstClassEntity) entityIter.next();
 			if (EPIMatrix.getInRelationNb(firstClassEntity) == 0) {
-				ProxyConsole
-					.getInstance()
-					.debugOutput()
-					.println("Removed: " + firstClassEntity.getDisplayName());
 				anAbstractModel.removeTopLevelEntityFromID(firstClassEntity
 					.getID());
 			}

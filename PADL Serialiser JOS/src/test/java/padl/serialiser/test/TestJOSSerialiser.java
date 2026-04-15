@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.serialiser.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 /**
@@ -18,23 +17,14 @@ import junit.framework.TestSuite;
  * since   2009/03/21
  */
 public class TestJOSSerialiser extends TestSuite {
-	public TestJOSSerialiser() {
-		super();
-	}
-	public TestJOSSerialiser(final Class theClass) {
-		super(theClass);
-	}
-	public TestJOSSerialiser(final String name) {
-		super(name);
-	}
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestJOSSerialiser suite = new TestJOSSerialiser();
+		suite.setName(TestJOSSerialiser.class.getName());
 
 		suite.addTestSuite(CompositeTest.class);
 		suite.addTestSuite(JHotDrawTest.class);
-		// TODO Add these tests back
-		//		suite.addTestSuite(ArgoUML0198Test.class);
-		//		suite.addTestSuite(ArgoUML020Test.class);
+		suite.addTestSuite(ArgoUML0198Test.class);
+		suite.addTestSuite(ArgoUML020Test.class);
 
 		return suite;
 	}

@@ -14,9 +14,7 @@ import java.util.Iterator;
 
 import org.junit.Assert;
 
-import junit.framework.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.IClass;
@@ -252,16 +250,4 @@ public class RefactoringPushDownMethodTest extends TestCase {
 			}
 		}
 	}
-
-	public static Test suite() {
-		TestSuite suite = new TestSuite();
-		suite.addTest(new RefactoringPushDownMethodTest("testPushDownMethod"));
-		//		suite.addTest(new RefactoringPushDownMethodTest(
-		//			"testPushDownMethod2"));
-		//		suite.addTest(new RefactoringPushDownMethodTest(
-		//			"testPushDownMethodAcceptOverloading"));
-
-		return suite;
-	}
-
 }

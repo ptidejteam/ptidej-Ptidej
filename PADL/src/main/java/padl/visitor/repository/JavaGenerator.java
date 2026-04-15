@@ -12,6 +12,8 @@ package padl.visitor.repository;
 
 import java.util.Iterator;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -37,6 +39,7 @@ import padl.kernel.IMethodInvocation;
 import padl.kernel.IOperation;
 import padl.kernel.IPackage;
 import padl.kernel.IPackageDefault;
+import padl.kernel.IPackageGhost;
 import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
@@ -44,7 +47,6 @@ import padl.kernel.IUseRelationship;
 import padl.util.Util;
 import padl.visitor.IGenerator;
 import util.io.ProxyConsole;
-import util.lang.Modifier;
 
 public final class JavaGenerator implements IGenerator {
 	private final StringBuffer buffer = new StringBuffer();
@@ -109,6 +111,9 @@ public final class JavaGenerator implements IGenerator {
 	public void close(final IPackageDefault aPackage) {
 	}
 
+	public void close(final IPackageGhost aPackageGhost) {
+	}
+
 	public void close(final ISetter aSetter) {
 	}
 
@@ -124,7 +129,7 @@ public final class JavaGenerator implements IGenerator {
 			this.buffer.append(" */\n");
 			Util.addTabs(this.indentation, this.buffer);
 		}
-		this.buffer.append(Modifier.toString(p.getVisibility()));
+		this.buffer.append(Access.getAsString(p.getVisibility()));
 	}
 
 	public String getCode() {
@@ -317,6 +322,9 @@ public final class JavaGenerator implements IGenerator {
 	}
 
 	public void open(final IPackageDefault aPackage) {
+	}
+
+	public void open(final IPackageGhost aPackageGhost) {
 	}
 
 	public void open(final ISetter p) {

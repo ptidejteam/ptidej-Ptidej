@@ -1,0 +1,1 @@
+https://archive.eclipse.org/justj/?file=rt/rap/1.5/runtime/RC1-20120521-1618/plugins

@@ -1,0 +1,22 @@
+/.cvsignore/1.1/Sun Aug 11 07:03:55 2002//TVERSION_0_20_F
+/AbstractCognitiveTranslator.java/1.3/Sun Dec 26 15:33:55 2004//TVERSION_0_20_F
+/Decision.java/1.16/Sun Nov 13 11:01:22 2005//TVERSION_0_20_F
+/DecisionModel.java/1.11/Fri Mar 11 08:55:27 2005//TVERSION_0_20_F
+/Designer.java/1.49/Sun Nov 13 11:01:22 2005//TVERSION_0_20_F
+/Goal.java/1.13/Sun Jan  9 14:58:04 2005//TVERSION_0_20_F
+/GoalModel.java/1.7/Sun Jan  9 14:58:04 2005//TVERSION_0_20_F
+/ItemUID.java/1.19/Tue Jul 12 13:59:25 2005//TVERSION_0_20_F
+/ListSet.java/1.5/Sat May 21 17:46:35 2005//TVERSION_0_20_F
+/Offender.java/1.3/Sun Nov 13 11:01:22 2005//TVERSION_0_20_F
+/Poster.java/1.8/Wed Feb 16 23:47:11 2005//TVERSION_0_20_F
+/ResolvedCritic.java/1.14/Sun Feb 20 19:42:11 2005//TVERSION_0_20_F
+/ToDoItem.java/1.23/Mon Jun 20 07:42:04 2005//TVERSION_0_20_F
+/ToDoList.java/1.32/Sun Nov 13 11:01:22 2005//TVERSION_0_20_F
+/ToDoListEvent.java/1.6/Sun Jan  9 14:58:04 2005//TVERSION_0_20_F
+/ToDoListListener.java/1.5/Sun Jan  9 14:58:04 2005//TVERSION_0_20_F
+/Translator.java/1.4/Sun Jan  9 14:58:04 2005//TVERSION_0_20_F
+/UnresolvableException.java/1.3/Sun Jun 29 23:53:42 2003//TVERSION_0_20_F
+/package.html/1.2/Wed Jul 10 07:32:41 2002//TVERSION_0_20_F
+D/checklist////
+D/critics////
+D/ui////

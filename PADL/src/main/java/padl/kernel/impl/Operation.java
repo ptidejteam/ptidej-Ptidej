@@ -13,6 +13,9 @@ package padl.kernel.impl;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.event.IEvent;
 import padl.event.IModelListener;
 import padl.kernel.Constants;
@@ -27,11 +30,11 @@ import padl.kernel.exception.ModelDeclarationException;
 import padl.util.Util;
 import padl.visitor.IVisitor;
 import util.io.ProxyConsole;
-import util.lang.Modifier;
 import util.multilingual.MultilingualManager;
 
 //Sebastien Colladon 23/04/2012 : Change the visibility to public in order to allow other project to extend from this class in the particular case of eclipse bundle loader (avoid IllegalAccessError).
-public abstract class Operation extends Element implements IOperation, IPrivateModelObservable {
+public abstract class Operation extends Element
+		implements IOperation, IPrivateModelObservable {
 	private static final long serialVersionUID = 8145249048497089055L;
 
 	// Yann 2013/07/18: Duplication of intent!
@@ -42,8 +45,8 @@ public abstract class Operation extends Element implements IOperation, IPrivateM
 	// Yann 2009/04/29: Not anymore but...
 	// I don't need the field protected for testing but for
 	// access in padl.cpp.kernel.impl.GlobalFunction...
-	protected AbstractGenericContainerOfConstituents container =
-		new GenericContainerOfInsertionOrderedConstituents(this);
+	protected AbstractGenericContainerOfConstituents container = new GenericContainerOfInsertionOrderedConstituents(
+			this);
 
 	public Operation(final char[] anID) {
 		super(anID);
@@ -54,17 +57,20 @@ public abstract class Operation extends Element implements IOperation, IPrivateM
 		// their names and IDs must include "()".
 		this.updatePathWithParameters();
 	}
+
 	public Operation(final char[] anID, final IMethod anAttachedMethod) {
 		super(anID);
 		this.attachTo(anAttachedMethod);
 		// Useless call?
 		//	this.updatePathWithParameters();
 	}
+
 	public Operation(final IMethod anAttachedMethod) {
 		this(anAttachedMethod.getID(), anAttachedMethod);
 		// Useless call?
 		//	this.updatePathWithParameters();
 	}
+
 	public void accept(final IVisitor visitor) {
 		this.accept(visitor, "open");
 		final Iterator iterator = this.getConcurrentIteratorOnConstituents();
@@ -75,17 +81,19 @@ public abstract class Operation extends Element implements IOperation, IPrivateM
 		}
 		this.accept(visitor, "close");
 	}
+
 	public void addConstituent(final IConstituent aConstituent) {
 		if (aConstituent instanceof IConstituentOfOperation) {
 			this.addConstituent((IConstituentOfOperation) aConstituent);
 		}
 		else {
-			throw new ModelDeclarationException(MultilingualManager.getString(
-				"PARAM_OR_METHOD_ADD",
-				IOperation.class));
+			throw new ModelDeclarationException(MultilingualManager
+					.getString("PARAM_OR_METHOD_ADD", IOperation.class));
 		}
 	}
-	public void addConstituent(final IConstituentOfOperation aMethodConstituent) {
+
+	public void addConstituent(
+			final IConstituentOfOperation aMethodConstituent) {
 		// Yann 2004/07/31: Test and order II!
 		// I cannot use the addConstituent() method here because I don't
 		// want the method invocations to be sorted!
@@ -99,18 +107,23 @@ public abstract class Operation extends Element implements IOperation, IPrivateM
 			this.updatePathWithParameters();
 		}
 	}
+
 	public void addModelListener(final IModelListener aModelListener) {
 		this.container.addModelListener(aModelListener);
 	}
+
 	public void addModelListeners(final List aListOfModelListeners) {
 		this.container.addModelListeners(aListOfModelListeners);
 	}
+
 	public boolean doesContainConstituentWithID(final char[] anID) {
 		return this.container.doesContainConstituentWithID(anID);
 	}
+
 	public boolean doesContainConstituentWithName(final char[] aName) {
 		return this.container.doesContainConstituentWithName(aName);
 	}
+
 	// Farouk 2004/02/13
 	// Method added to compare two methods.
 	/**
@@ -145,15 +158,18 @@ public abstract class Operation extends Element implements IOperation, IPrivateM
 		//	&& this.getNumberOfConstituents(IParameter.class)
 		//		== otherMethod.getNumberOfConstituents(IParameter.class);
 	}
-	public void fireModelChange(final String anEventType, final IEvent anEvent) {
+
+	public void fireModelChange(final String anEventType,
+			final IEvent anEvent) {
 		this.container.fireModelChange(anEventType, anEvent);
 	}
+
 	public String getCallDeclaration() {
 		final StringBuffer codeEq = new StringBuffer();
 		codeEq.append(this.getName());
 		codeEq.append('(');
-		final Iterator iterator =
-			this.getIteratorOnConstituents(IParameter.class);
+		final Iterator iterator = this
+				.getIteratorOnConstituents(IParameter.class);
 		// Yann 2004/04/10: Method invocation!
 		// A method may now contain instances of IMethodInvocation
 		// in addition to instances of IParameter.
@@ -183,48 +199,63 @@ public abstract class Operation extends Element implements IOperation, IPrivateM
 		codeEq.append(')');
 		return codeEq.toString();
 	}
+
 	public Iterator getConcurrentIteratorOnConstituents() {
 		return this.container.getConcurrentIteratorOnConstituents();
 	}
+
 	public Iterator getConcurrentIteratorOnConstituents(final IFilter filter) {
 		return this.container.getConcurrentIteratorOnConstituents();
 	}
+
 	public Iterator getConcurrentIteratorOnConstituents(
-		final java.lang.Class aConstituentType) {
+			final java.lang.Class aConstituentType) {
 
 		return this.container
-			.getConcurrentIteratorOnConstituents(aConstituentType);
+				.getConcurrentIteratorOnConstituents(aConstituentType);
 	}
+
 	public IConstituent getConstituentFromID(final char[] anID) {
 		return this.container.getConstituentFromID(anID);
 	}
+
 	public IConstituent getConstituentFromID(final String anID) {
 		return this.getConstituentFromID(anID.toCharArray());
 	}
+
 	public IConstituent getConstituentFromName(final char[] aName) {
 		return this.container.getConstituentFromName(aName);
 	}
+
 	public IConstituent getConstituentFromName(final String aName) {
 		return this.container.getConstituentFromName(aName.toCharArray());
 	}
+
 	public Iterator getIteratorOnConstituents() {
 		return this.container.getIteratorOnConstituents();
 	}
+
 	public Iterator getIteratorOnConstituents(final IFilter aFilter) {
 		return this.container.getIteratorOnConstituents(aFilter);
 	}
-	public Iterator getIteratorOnConstituents(java.lang.Class aConstituentType) {
+
+	public Iterator getIteratorOnConstituents(
+			java.lang.Class aConstituentType) {
 		return this.container.getIteratorOnConstituents(aConstituentType);
 	}
+
 	public Iterator getIteratorOnModelListeners() {
 		return this.container.getIteratorOnModelListeners();
 	}
+
 	public int getNumberOfConstituents() {
 		return this.container.getNumberOfConstituents();
 	}
+
 	public int getNumberOfConstituents(final java.lang.Class aConstituentType) {
 		return this.container.getNumberOfConstituents(aConstituentType);
 	}
+
 	/**
 	 * This methods is used by the clone protocol.
 	 */
@@ -242,50 +273,52 @@ public abstract class Operation extends Element implements IOperation, IPrivateM
 			constituent.performCloneSession();
 
 			((Operation) this.getClone())
-				.addConstituent(constituent.getClone());
+					.addConstituent(constituent.getClone());
 
 			constituent.endCloneSession();
 		}
 	}
+
 	public void removeConstituentFromID(final char[] anID) {
 		this.container.removeConstituentFromID(anID);
 		this.updatePathWithParameters();
 	}
+
 	public void removeModelListener(final IModelListener aModelListener) {
 		this.container.removeModelListener(aModelListener);
 	}
+
 	public void removeModelListeners(final List aListOfModelListeners) {
 		this.container.removeModelListeners(aListOfModelListeners);
 	}
+
 	public void startCloneSession() {
 		super.startCloneSession();
 		// Yann 2010/10/03: Objects!
 		// The "container" is now an instance of a class
 		// and must be assigned a new instance independently.
 		//	((Operation) this.getClone()).container.resetListOfConstituents();
-		((Operation) this.getClone()).container =
-			new GenericContainerOfInsertionOrderedConstituents(
-				((Operation) this.getClone()));
+		((Operation) this
+				.getClone()).container = new GenericContainerOfInsertionOrderedConstituents(
+						((Operation) this.getClone()));
 
 		// Yann 2015/09/01: Clone of listeners!
 		// I don't forget to clone the listners too...
 		// TODO To implement
 	}
+
 	public String toString() {
 		if (Constants.DEBUG) {
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.println("// Operation.toString()");
+			ProxyConsole.getInstance().debugOutput()
+					.println("// Operation.toString()");
 		}
 		return this.toString(0);
 	}
+
 	public String toString(final int tab) {
 		if (Constants.DEBUG) {
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.println("// Operation.toString(int)");
+			ProxyConsole.getInstance().debugOutput()
+					.println("// Operation.toString(int)");
 		}
 		final StringBuffer codeEq = new StringBuffer();
 		this.toStringStart(tab, codeEq);
@@ -293,10 +326,11 @@ public abstract class Operation extends Element implements IOperation, IPrivateM
 		this.toStringBody(tab, codeEq);
 		return codeEq.toString();
 	}
+
 	protected void toStringBody(final int tab, final StringBuffer codeEq) {
 		codeEq.append(" {\n");
-		final Iterator iterator =
-			this.getIteratorOnConstituents(IMethodInvocation.class);
+		final Iterator iterator = this
+				.getIteratorOnConstituents(IMethodInvocation.class);
 		// Yann 2005/10/12: Iterator!
 		// I have now an iterator able to iterate over a
 		// specified type of constituent of a list.
@@ -310,8 +344,8 @@ public abstract class Operation extends Element implements IOperation, IPrivateM
 		//		}
 		//	}
 		while (iterator.hasNext()) {
-			final IMethodInvocation methodInvocation =
-				(IMethodInvocation) iterator.next();
+			final IMethodInvocation methodInvocation = (IMethodInvocation) iterator
+					.next();
 			Util.addTabs(tab + 1, codeEq);
 			codeEq.append("// Method invocation: ");
 			codeEq.append(methodInvocation.toString());
@@ -329,11 +363,12 @@ public abstract class Operation extends Element implements IOperation, IPrivateM
 		Util.addTabs(tab, codeEq);
 		codeEq.append('}');
 	}
+
 	protected void toStringSignature(final StringBuffer codeEq) {
 		codeEq.append(this.getName());
 		codeEq.append('(');
-		final Iterator iterator =
-			this.getIteratorOnConstituents(IParameter.class);
+		final Iterator iterator = this
+				.getIteratorOnConstituents(IParameter.class);
 		// Yann 2005/10/12: Iterator!
 		// I have now an iterator able to iterate over a
 		// specified type of constituent of a list.
@@ -359,6 +394,7 @@ public abstract class Operation extends Element implements IOperation, IPrivateM
 		}
 		codeEq.append(')');
 	}
+
 	protected void toStringStart(final int tab, final StringBuffer codeEq) {
 		Util.addTabs(tab, codeEq);
 		if (this.getComment() != null) {
@@ -367,11 +403,12 @@ public abstract class Operation extends Element implements IOperation, IPrivateM
 			codeEq.append(" */\n");
 			Util.addTabs(tab, codeEq);
 		}
-		codeEq.append(Modifier.toString(this.getVisibility()));
+		codeEq.append(Access.getMethodAsString(this.getVisibility()));
 		if (this.getVisibility() != 0) {
 			codeEq.append(' ');
 		}
 	}
+
 	private void updatePathWithParameters() {
 		// Yann 2009/09/11: Paths of method need parameters
 		// I add the parameter types to the path of method

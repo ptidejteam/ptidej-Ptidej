@@ -30,7 +30,6 @@
 	</build>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
 			<artifactId>cpl-core</artifactId>
@@ -66,7 +65,5 @@
 			<artifactId>demima-ui-viewer</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-
 	</dependencies>
-
 </project>

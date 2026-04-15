@@ -28,7 +28,6 @@ import org.apache.bcel.classfile.JavaClass;
 
 import com.ibm.toad.cfparse.ClassFile;
 
-import util.lang.CFParseBCELConvertorAdhoc;
 import util.lang.CFParseBCELConvertorVisitor;
 import util.multilingual.MultilingualManager;
 
@@ -96,16 +95,16 @@ public final class SubtypeLoader {
 		}
 	}
 
+	// aliiimaher 2026/02/10:
+	// I removed the logging part from the following method, which was not really useful,
+	// it was just printing the name of the file being loaded.
+	
 	// TODO: Make it private
 	public static ClassFile[] loadSubtypeFromFile(final String aSuperTypeName,
 			final String aFileName, final String aFileExtension) {
 
 		final List<ClassFile> aListOfClasses = new ArrayList<ClassFile>();
 		if (aFileName.endsWith(aFileExtension)) {
-			ProxyConsole.getInstance().debugOutput()
-					.println(MultilingualManager.getString("LOADING_FROM",
-							SubtypeLoader.class, new Object[] { aFileName }));
-
 			try {
 				final InputStream anInputStream = new FileInputStream(
 						aFileName);
@@ -138,13 +137,16 @@ public final class SubtypeLoader {
 		final InputStream inputStream1 = aNamedInputStream.getStream();
 		final ClassParser parser = new ClassParser(inputStream1, "");
 		final JavaClass javaClass = parser.parse();
-		final ClassFile currentClass_BCEL1 = CFParseBCELConvertorAdhoc
+		final ClassFile currentClass_BCEL1 = CFParseBCELConvertorVisitor
 				.convertClassFile(javaClass);
-		final ClassFile currentClass_BCEL2 = CFParseBCELConvertorVisitor
+		/*
+		final ClassFile currentClass_BCEL2 = CFParseBCELConvertorAdhoc
 				.convertClassFile(javaClass);
 		inputStream1.close();
+		 */
 
 		ClassFile currentClass;
+		/*
 		if (currentClass_CFPARSE.equals(currentClass_BCEL1)) {
 			currentClass = currentClass_BCEL1;
 		}
@@ -160,6 +162,7 @@ public final class SubtypeLoader {
 					.println(" is incomplete!)");
 			currentClass = currentClass_CFPARSE;
 		}
+		*/
 
 		// Force the use of CFParse for the moment...
 		currentClass = currentClass_CFPARSE;
@@ -359,6 +362,9 @@ public final class SubtypeLoader {
 		}
 	}
 
+	// aliiimaher 2026/02/10:
+	// I removed the logging part from the following method, which was not really useful,
+	// it was just printing the name of the file being loaded.
 	public static ClassFile[] loadSubtypesFromStreams(
 			final String aSuperTypeName,
 			final NamedInputStream[] someNamedInputStreams,
@@ -391,10 +397,6 @@ public final class SubtypeLoader {
 					&& someNamedInputStreams[i].getName()
 							.indexOf(aDirectoryName) > -1) {
 
-				ProxyConsole.getInstance().debugOutput()
-						.println(MultilingualManager.getString("LOADING_FROM",
-								SubtypeLoader.class, new Object[] {
-										someNamedInputStreams[i].getName() }));
 				try {
 					SubtypeLoader.loadSubtypeFromStream(aSuperTypeName,
 							aListOfClasses, someNamedInputStreams[i]);

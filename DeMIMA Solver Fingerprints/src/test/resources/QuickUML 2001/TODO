@@ -1,0 +1,38 @@
+Enhancements to consider:
+
+Code Generation in the uml tool needs some serious revision. It seems like it 
+could really be much more efficent, and the probably is an entirely better method
+to go about generating code.
+
+Allow editors to evaluate an EventObject when choosing an editing component.
+This would allow a single editor to handle figures clicked in different locations.
+
+Possibily allow renders to refresh the diagram, rather than always refreshing the bounds
+a figure occupies. This would eliminate some unneccearry damage/repant for
+complex figures (like long polylines) when only a portion of the figure has
+actually been changed
+
+Revise the DiagramModel to simlifiy the following scenarios.
+Diagram model should store only figure information (like it does now)
+yet it should remain easy to create adapters from other models for other
+purposes. For instance, a DesignModel (containing information about classes, interfaces,
+etc) should be easy to adapt to one diagram model that shows will create figures for
+those items, while another diagram model might add different figures to display
+the designmodel as a conceptual model.
+
+Once you start to deal with layered models like this, a new mechanism to externailze
+these model effectively is needed. The models themselves can't be externalized by them
+selves, some writer class would be needed to format the actual data and then the
+mulitple associations from that data to different figures in different diagram models.
+
+Update the externalization so it doesn't need to use writeObject/readObject on
+the dataoutput/datainput streams (to avoid the serialization version conflicts)
+
+Consider adding a trasnient layer beneath the link layer in the ui. This would
+allow items to be temporily rendered w/o affectng the model (make drawing links
+not interfere w/ the actual data model since nothing should really change until
+a link is placed)
+
+Think of a more elegnat method for layering renders upon one another. This would help
+to test for effective hit regions and speed up damage/repaint cycles since they could be
+more precise

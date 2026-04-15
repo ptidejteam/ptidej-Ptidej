@@ -11,11 +11,13 @@
 package padl.serialiser.test;
 
 import java.io.File;
+
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
-import padl.creator.classfile.CompleteClassFileCreator;
+import padl.creator.javafile.eclipse.CompleteJavaFileCreator;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IIdiomLevelModel;
@@ -33,23 +35,23 @@ public class ArgoUML020Test extends TestCase {
 	public ArgoUML020Test(String name) {
 		super(name);
 	}
-	protected void setUp() throws CreationException,
-			UnsupportedSourceModelException {
+
+	protected void setUp()
+			throws CreationException, UnsupportedSourceModelException {
 
 		if (ArgoUML020Test.AbstractLevelModel == null) {
 			System.out.println("Creating model...");
 			long beginning = System.currentTimeMillis();
 
 			final ModelStatistics statistics = new ModelStatistics();
-			final ICodeLevelModel codeLevelModel =
-				Factory.getInstance().createCodeLevelModel("ArgoUML v0.20");
+			final ICodeLevelModel codeLevelModel = Factory.getInstance()
+					.createCodeLevelModel("ArgoUML v0.20");
 			codeLevelModel.addModelListener(statistics);
-			codeLevelModel.create(new CompleteClassFileCreator(
-				new String[] { "../../P-MARt Workspace/ArgoUML v0.20/bin/" },
-				true));
+			codeLevelModel.create(new CompleteJavaFileCreator(
+					"../PADL Serialiser DB4O/target/test-classes/ArgoUML v0.20/argouml/src_new/",
+					""));
 
-			ArgoUML020Test.AbstractLevelModel =
-				(IIdiomLevelModel) new AACRelationshipsAnalysis()
+			ArgoUML020Test.AbstractLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
 					.invoke(codeLevelModel);
 
 			long end = System.currentTimeMillis();
@@ -59,9 +61,9 @@ public class ArgoUML020Test extends TestCase {
 			System.out.println(" ms.");
 			beginning = System.currentTimeMillis();
 
-			ArgoUML020Test.SerialisedFileName =
-				DB4OSerialiser.getInstance().serialiseWithAutomaticNaming(
-					ArgoUML020Test.AbstractLevelModel);
+			ArgoUML020Test.SerialisedFileName = DB4OSerialiser.getInstance()
+					.serialiseWithAutomaticNaming(
+							ArgoUML020Test.AbstractLevelModel);
 
 			end = System.currentTimeMillis();
 			System.out.print("Model serialised in ");
@@ -69,9 +71,9 @@ public class ArgoUML020Test extends TestCase {
 			System.out.println(" ms.");
 			beginning = System.currentTimeMillis();
 
-			ArgoUML020Test.SerialisedAbstractLevelModel =
-				(IAbstractLevelModel) DB4OSerialiser.getInstance().deserialise(
-					ArgoUML020Test.SerialisedFileName);
+			ArgoUML020Test.SerialisedAbstractLevelModel = (IAbstractLevelModel) DB4OSerialiser
+					.getInstance()
+					.deserialise(ArgoUML020Test.SerialisedFileName);
 
 			end = System.currentTimeMillis();
 			System.out.print("Model deserialised in ");
@@ -79,20 +81,19 @@ public class ArgoUML020Test extends TestCase {
 			System.out.println(" ms.");
 		}
 	}
+
 	protected void tearDown() {
-		final File serialisedFile =
-			new File(ArgoUML020Test.SerialisedFileName);
+		final File serialisedFile = new File(ArgoUML020Test.SerialisedFileName);
 		serialisedFile.delete();
 	}
+
 	public void testNames() {
-		Assert.assertEquals(
-			ArgoUML020Test.AbstractLevelModel.getDisplayName(),
-			ArgoUML020Test.SerialisedAbstractLevelModel
-				.getDisplayName());
+		Assert.assertEquals(ArgoUML020Test.AbstractLevelModel.getDisplayName(),
+				ArgoUML020Test.SerialisedAbstractLevelModel.getDisplayName());
 	}
+
 	public void testComparator() {
-		ArgoUML020Test.AbstractLevelModel
-			.walk(new ModelComparator(
+		ArgoUML020Test.AbstractLevelModel.walk(new ModelComparator(
 				ArgoUML020Test.SerialisedAbstractLevelModel));
 	}
 }

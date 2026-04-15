@@ -10,7 +10,6 @@
  ******************************************************************************/
 package modec.solver.constraint.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 
 /**
@@ -18,23 +17,12 @@ import junit.framework.TestSuite;
  * @since 2013/04/28
  */
 public final class TestMoDecSolver extends TestSuite {
-
-	public TestMoDecSolver() {
-	}
-
-	public TestMoDecSolver(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestMoDecSolver(final String name) {
-		super(name);
-	}
-
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestMoDecSolver suite = new TestMoDecSolver();
+		suite.setName(TestMoDecSolver.class.getName());
 
-		suite.addTest(new TestSuite(CallerTest.class));
-		suite.addTest(new TestSuite(MessageFollowsImmediatelyTest.class));
+		suite.addTestSuite(CallerTest.class);
+		suite.addTestSuite(MessageFollowsImmediatelyTest.class);
 
 		return suite;
 	}

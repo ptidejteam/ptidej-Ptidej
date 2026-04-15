@@ -20,51 +20,56 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 			final int j) {
 		super(constantpool, i, j);
 	}
-	public void add(int startPC, int length, int nameIdx, int descIdx, int slot) {
-	    if (this.d_varTable == null) {
-	        this.d_varTable = new int[5];
-	        this.d_numVars = 1;
-	    } else {
-	        int[] newTable = new int[this.d_varTable.length + 5];
-	        System.arraycopy(this.d_varTable, 0, newTable, 0, this.d_varTable.length);
-	        this.d_varTable = newTable;
-	        this.d_numVars++;
-	    }
 
-	    int base = (this.d_numVars - 1) * 5;
-	    this.d_varTable[base + 0] = startPC;
-	    this.d_varTable[base + 1] = length;
-	    this.d_varTable[base + 2] = nameIdx;
-	    this.d_varTable[base + 3] = descIdx;
-	    this.d_varTable[base + 4] = slot;
+	public void add(int startPC, int length, int nameIdx, int descIdx,
+			int slot) {
+		if (this.d_varTable == null) {
+			this.d_varTable = new int[5];
+			this.d_numVars = 1;
+		}
+		else {
+			int[] newTable = new int[this.d_varTable.length + 5];
+			System.arraycopy(this.d_varTable, 0, newTable, 0,
+					this.d_varTable.length);
+			this.d_varTable = newTable;
+			this.d_numVars++;
+		}
 
-	    this.d_len = 2 + this.d_numVars * 10;
+		int base = (this.d_numVars - 1) * 5;
+		this.d_varTable[base + 0] = startPC;
+		this.d_varTable[base + 1] = length;
+		this.d_varTable[base + 2] = nameIdx;
+		this.d_varTable[base + 3] = descIdx;
+		this.d_varTable[base + 4] = slot;
+
+		this.d_len = 2 + this.d_numVars * 10;
 	}
 
-	public void setFromBCEL(org.apache.bcel.classfile.LocalVariableTable bcelTable) {
-	    if (bcelTable == null) {
-	        
-	        return;
-	    }
+	public void setFromBCEL(
+			org.apache.bcel.classfile.LocalVariableTable bcelTable) {
+		if (bcelTable == null) {
 
-	    org.apache.bcel.classfile.LocalVariable[] vars = bcelTable.getLocalVariableTable();
-	    this.d_numVars = vars.length;
-	    this.d_varTable = new int[this.d_numVars * 5]; // Each variable uses 5 fields!
-	    for (int i = 0; i < this.d_numVars; i++) {
-	    	this.d_varTable[i * 5 + 0] = vars[i].getStartPC();
-	    	this.d_varTable[i * 5 + 1] = vars[i].getLength();
-	    	this.d_varTable[i * 5 + 2] = this.d_cp.addUtf8(vars[i].getName());
+			return;
+		}
 
-	    	String descriptor = vars[i].getConstantPool().constantToString(
-	    	    vars[i].getSignatureIndex(), org.apache.bcel.Const.CONSTANT_Utf8
-	    	);
-	    	this.d_varTable[i * 5 + 3] = this.d_cp.addUtf8(descriptor);
+		org.apache.bcel.classfile.LocalVariable[] vars = bcelTable
+				.getLocalVariableTable();
+		this.d_numVars = vars.length;
+		this.d_varTable = new int[this.d_numVars * 5]; // Each variable uses 5 fields!
+		for (int i = 0; i < this.d_numVars; i++) {
+			this.d_varTable[i * 5 + 0] = vars[i].getStartPC();
+			this.d_varTable[i * 5 + 1] = vars[i].getLength();
+			this.d_varTable[i * 5 + 2] = this.d_cp.addUtf8(vars[i].getName());
 
-	    	this.d_varTable[i * 5 + 4] = vars[i].getIndex();
-	    }
+			String descriptor = vars[i].getConstantPool().constantToString(
+					vars[i].getSignatureIndex(),
+					org.apache.bcel.Const.CONSTANT_Utf8);
+			this.d_varTable[i * 5 + 3] = this.d_cp.addUtf8(descriptor);
 
+			this.d_varTable[i * 5 + 4] = vars[i].getIndex();
+		}
 
-	    this.d_len = 2 + this.d_numVars * 10;
+		this.d_len = 2 + this.d_numVars * 10;
 	}
 
 	public int getEndPC(final int i) {
@@ -160,13 +165,9 @@ public final class LocalVariableAttrInfo extends AttrInfo {
 			String typeRaw = super.d_cp.getAsString(typeIdx);
 			String typeStr = CPUtils.internal2java(typeRaw);
 
-			System.out.println("🔍 LocalVar:");
-			System.out.println("  Name index: " + nameIdx + " → " + nameStr);
-			System.out.println("  Type index: " + typeIdx + " → " + typeRaw + " → " + typeStr);
-			System.out.println("  pc=" + startPC + " length=" + length + " slot=" + slot);
-
-	
-			stringbuffer.append(this.sindent() + "  " + typeStr + " " + nameStr + " pc=" + startPC + " length=" + length + " slot=" + slot + "\n");
+			stringbuffer.append(this.sindent() + "  " + typeStr + " " + nameStr
+					+ " pc=" + startPC + " length=" + length + " slot=" + slot
+					+ "\n");
 
 		}
 		return stringbuffer.toString();

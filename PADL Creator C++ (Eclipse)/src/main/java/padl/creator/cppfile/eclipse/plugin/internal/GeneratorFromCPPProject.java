@@ -10,6 +10,8 @@
  ******************************************************************************/
 package padl.creator.cppfile.eclipse.plugin.internal;
 
+import java.io.File;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import org.eclipse.cdt.core.CCorePlugin;
@@ -28,13 +30,20 @@ import org.eclipse.cdt.core.index.IIndexManager;
 import org.eclipse.cdt.core.model.CModelException;
 import org.eclipse.cdt.core.model.CoreModel;
 import org.eclipse.cdt.core.model.ICProject;
+import org.eclipse.cdt.core.model.IPathEntry;
 import org.eclipse.cdt.core.model.ITranslationUnit;
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IResourceVisitor;
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.Path;
 import padl.cpp.kernel.IAmicable;
 import padl.cpp.kernel.IGlobalFunction;
 import padl.cpp.kernel.impl.CPPFactoryEclipse;
@@ -47,6 +56,8 @@ import padl.util.ModelStatistics;
 import util.io.ProxyConsole;
 
 public class GeneratorFromCPPProject {
+	private static final String C_NATURE_ID = "org.eclipse.cdt.core.cnature";
+	private static final String CC_NATURE_ID = "org.eclipse.cdt.core.ccnature";
 	private Accumulator accumulator;
 	private Set<IASTTranslationUnit> astTranslationUnits;
 	private ICodeLevelModel codeLevelModel;
@@ -139,13 +150,14 @@ public class GeneratorFromCPPProject {
 		final IWorkspace ws = ResourcesPlugin.getWorkspace();
 		final IProject project =
 			ws.getRoot().getProject(Constants.CPP_PROJECT_NAME);
-		try {
-			project.close(Common.NULL_PROGRESS_MONITOR);
-			ws.save(true, Common.NULL_PROGRESS_MONITOR);
-		}
-		catch (final CoreException e) {
-			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
-		}
+        try {
+            final IProgressMonitor pm = new NullProgressMonitor();
+            project.close(pm);
+            ws.save(true, pm);
+        }
+        catch (final CoreException e) {
+            e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+        }
 
 		ProxyConsole.getInstance().normalOutput().println(this.modelStatistics);
 	}
@@ -332,50 +344,87 @@ public class GeneratorFromCPPProject {
 				.getInstance()
 				.debugOutput()
 				.println("Workspace root exist at " + root.getLocationURI());
-			root.refreshLocal(
-				IResource.DEPTH_INFINITE,
-				Common.NULL_PROGRESS_MONITOR);
+            root.refreshLocal(
+                IResource.DEPTH_INFINITE,
+                new NullProgressMonitor());
 		}
 		catch (final CoreException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 
 		final IProject project = root.getProject(Constants.CPP_PROJECT_NAME);
-		try {
-			if (!project.exists()) {
-				project.create(Common.NULL_PROGRESS_MONITOR);
-			}
-			project.open(Common.NULL_PROGRESS_MONITOR);
+        try {
+            final IProgressMonitor pm = new NullProgressMonitor();
+            if (!project.exists()) {
+            	final File projectDescriptionFile = new File(
+            			root.getLocation().toFile(),
+            			Constants.CPP_PROJECT_NAME
+            					+ File.separatorChar
+            					+ ".project");
+            	if (projectDescriptionFile.isFile()) {
+            		final IProjectDescription projectDescription =
+            				ResourcesPlugin
+            						.getWorkspace()
+            						.loadProjectDescription(
+            								Path.fromOSString(
+            										projectDescriptionFile
+            												.getAbsolutePath()));
+            		project.create(projectDescription, pm);
+            	}
+            	else {
+            		project.create(pm);
+            	}
+            }
+            project.open(pm);
+            this.ensureCPPNatures(project, pm);
 			ProxyConsole
 				.getInstance()
 				.debugOutput()
 				.println("Is Eclipse project open: " + project.isOpen());
-			project.refreshLocal(
-				IResource.DEPTH_INFINITE,
-				Common.NULL_PROGRESS_MONITOR);
+            project.refreshLocal(
+                IResource.DEPTH_INFINITE,
+                pm);
 		}
 		catch (final CoreException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 
-		this.cppProject =
-			CoreModel.getDefault().getCModel().getCProject(project.getName());
-		try {
-			this.cppProject.open(Common.NULL_PROGRESS_MONITOR);
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.println("Is C++ project open: " + this.cppProject.isOpen());
-			this.cppProject.makeConsistent(Common.NULL_PROGRESS_MONITOR);
-		}
-		catch (final CoreException e) {
-			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
-		}
+        this.cppProject =
+            CoreModel.getDefault().getCModel().getCProject(project.getName());
+        try {
+            final IProgressMonitor pm = new NullProgressMonitor();
+            this.cppProject.open(pm);
+            if (this.cppProject.getAllSourceRoots().length == 0) {
+            	final IPathEntry[] entries = new IPathEntry[] {
+            			CoreModel.newSourceEntry(this.cppProject.getPath()),
+            			CoreModel.newMacroEntry(
+            				this.cppProject.getPath(),
+            				"JNIEXPORT",
+            				""),
+            			CoreModel.newMacroEntry(
+            				this.cppProject.getPath(),
+            				"JNICALL",
+            				""),
+            			CoreModel.newMacroEntry(
+            				this.cppProject.getPath(),
+            				"JNIIMPORT",
+            				"") };
+            	CoreModel.setRawPathEntries(this.cppProject, entries, pm);
+            }
+            ProxyConsole
+                .getInstance()
+                .debugOutput()
+                .println("Is C++ project open: " + this.cppProject.isOpen());
+            this.cppProject.makeConsistent(pm);
+        }
+        catch (final CoreException e) {
+            e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+        }
 
 		final IIndexManager manager = CCorePlugin.getIndexManager();
 		manager.reindex(this.cppProject);
-		manager
-			.joinIndexer(IIndexManager.FOREVER, Common.NULL_PROGRESS_MONITOR);
+        manager
+            .joinIndexer(IIndexManager.FOREVER, new NullProgressMonitor());
 		try {
 			this.index = manager.getIndex(this.cppProject);
 			this.index.acquireReadLock();
@@ -394,6 +443,48 @@ public class GeneratorFromCPPProject {
 		this.modelStatistics = new ModelStatistics();
 		this.codeLevelModel.addModelListener(this.modelStatistics);
 	}
+	private void ensureCPPNatures(
+		final IProject aProject,
+		final IProgressMonitor aProgressMonitor) throws CoreException {
+
+		final IProjectDescription description = aProject.getDescription();
+		final Set<String> natureIds = new HashSet<String>(
+			Arrays.asList(description.getNatureIds()));
+		final boolean shouldUpdate =
+			natureIds.add(C_NATURE_ID) | natureIds.add(CC_NATURE_ID);
+		if (shouldUpdate) {
+			description.setNatureIds(natureIds.toArray(new String[0]));
+			aProject.setDescription(description, aProgressMonitor);
+		}
+	}
+	private Set<ITranslationUnit> findTranslationUnitsFromProjectResources(
+		final IProject aProject) {
+
+		final Set<ITranslationUnit> translationUnits =
+			new HashSet<ITranslationUnit>();
+		try {
+			aProject.accept(new IResourceVisitor() {
+				@Override
+				public boolean visit(final IResource aResource)
+						throws CoreException {
+					if (aResource.getType() == IResource.FILE) {
+						final ITranslationUnit translationUnit =
+							(ITranslationUnit) CoreModel.getDefault().create(
+								(IFile) aResource);
+						if (translationUnit != null) {
+							translationUnits.add(translationUnit);
+						}
+					}
+					return true;
+				}
+			});
+		}
+		catch (final CoreException e) {
+			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
+		}
+
+		return translationUnits;
+	}
 	private void visitTranslationUnits(final ASTVisitor aVisitor) {
 		// Yann 2013/07/16: Consistency
 		// I make sure to use exactly the same transitional 
@@ -411,17 +502,29 @@ public class GeneratorFromCPPProject {
 				// There may be no translation units in the root directory
 				// because they may be hidden in subdirectories, like in QT
 				// so I must find them all first...
-				final Set<ITranslationUnit> translationUnits =
-					Utils.findTranslationUnits(this.cppProject
-						.getAllSourceRoots());
-
-				for (final ITranslationUnit unit : translationUnits) {
-					try {
-						final IASTTranslationUnit astTranslationUnit =
-							unit.getAST(this.index, astStyle);
-						this.astTranslationUnits.add(astTranslationUnit);
+					final Set<ITranslationUnit> translationUnits =
+						Utils.findTranslationUnits(this.cppProject
+							.getAllSourceRoots());
+					if (translationUnits.isEmpty()) {
+						ProxyConsole
+							.getInstance()
+							.warningOutput()
+							.println(
+								"No translation unit found from CDT source roots; falling back to project resource scan.");
+						translationUnits.addAll(
+							this.findTranslationUnitsFromProjectResources(
+								this.cppProject.getProject()));
 					}
-					catch (final NullPointerException e) {
+
+					for (final ITranslationUnit unit : translationUnits) {
+						try {
+							final IASTTranslationUnit astTranslationUnit =
+								unit.getAST(this.index, astStyle);
+							if (astTranslationUnit != null) {
+								this.astTranslationUnits.add(astTranslationUnit);
+							}
+						}
+						catch (final NullPointerException e) {
 						// The AST may be null but there does not seem to
 						// exist a reliable way to know in advance whether
 						// it is null or not...

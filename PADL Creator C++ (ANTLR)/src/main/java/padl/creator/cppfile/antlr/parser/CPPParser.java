@@ -19,6 +19,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.creator.cppfile.antlr.CPPCreator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IConstructor;
@@ -36,7 +39,6 @@ import padl.kernel.IUseRelationship;
 import padl.kernel.cpp.antlr.ICPPFactoryANTLR;
 import padl.kernel.cpp.antlr.IDestructor;
 import padl.kernel.cpp.antlr.IGlobalField;
-import util.lang.Modifier;
 
 @SuppressWarnings("rawtypes")
 public final class CPPParser implements CPPParserConstants {
@@ -56,7 +58,7 @@ public final class CPPParser implements CPPParserConstants {
 	//------------------------------------------------------------
 	/* Field and methods to manage the members acces */
 
-	private static int accessFlag = Modifier.PUBLIC;
+	private static int accessFlag = Access.ACC_PUBLIC;
 	private static void setAccess(final int theAccess) {
 		CPPParser.accessFlag = theAccess;
 	}
@@ -1297,7 +1299,7 @@ public final class CPPParser implements CPPParserConstants {
 		/* 2004/08/10 : Ward Flores*/
 
 		IFirstClassEntity entity = null;
-		CPPParser.setAccess(Modifier.PUBLIC);
+		CPPParser.setAccess(Access.ACC_PUBLIC);
 		ClassScope sc = null;
 		Token t;
 		switch ((jj_ntk == -1) ? jj_ntk() : jj_ntk) {
@@ -1749,21 +1751,21 @@ public final class CPPParser implements CPPParserConstants {
 				jj_consume_token(PUBLIC);
 				{
 					if (true)
-						return Modifier.PUBLIC;
+						return Access.ACC_PUBLIC;
 				}
 				break;
 			case PROTECTED :
 				jj_consume_token(PROTECTED);
 				{
 					if (true)
-						return Modifier.PROTECTED;
+						return Access.ACC_PROTECTED;
 				}
 				break;
 			case PRIVATE :
 				jj_consume_token(PRIVATE);
 				{
 					if (true)
-						return Modifier.PRIVATE;
+						return Access.ACC_PRIVATE;
 				}
 				break;
 			default :

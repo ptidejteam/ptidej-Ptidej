@@ -21,7 +21,7 @@ import ptidej.ui.primitive.IPrimitiveFactory;
  * @author Jean-Yves Guyomarc'h
  * @since 2005-08-16
  */
-public class PrimitiveBuilder extends AspectJPrimitive {
+public abstract class PrimitiveBuilder extends AspectJPrimitive {
 	private Builder ajBuilder;
 
 	public PrimitiveBuilder(final String aName) {

@@ -57,11 +57,10 @@ public class Browser {
 	 * or "file://").
 	 */
 	public static void displayURL(final String url) {
-
 		final String os = System.getProperty("os.name");
 		// Modification Done by Mohamed Kahla
 		// 12-08-2006-H1013
-		System.out.println("Os : " + os);
+		ProxyConsole.getInstance().normalOutput().println("Os : " + os);
 
 		// TODO : optimization could be done 
 
@@ -77,7 +76,8 @@ public class Browser {
 
 			// Under Mac Os X we run the url whith the default Browser
 			else if (os.equals("Mac OS X")) {
-				System.out.println("Os detected : " + os);
+				ProxyConsole.getInstance().normalOutput()
+						.println("Os detected : " + os);
 
 				// we invoke the command string : "open -a /Applications/Safari.app [url]"
 				cmd = "open -a /Applications/Safari.app" + " " + url;

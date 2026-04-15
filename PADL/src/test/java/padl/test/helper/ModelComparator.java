@@ -40,6 +40,7 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IPackage;
 import padl.kernel.IPackageDefault;
+import padl.kernel.IPackageGhost;
 import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
@@ -115,6 +116,8 @@ public class ModelComparator implements IWalker {
 
 	public final void close(final IPackageDefault aPackage) {
 	}
+	public final void close(final IPackageGhost aPackageGhost) {
+	}
 
 	public final void close(final ISetter aSetter) {
 		this.close((IElement) aSetter);
@@ -168,26 +171,6 @@ public class ModelComparator implements IWalker {
 						if (aConstituentAttributeValue instanceof IConstituent
 								&& anotherConstituentAttributeValue instanceof IConstituent) {
 
-							ProxyConsole
-								.getInstance()
-								.debugOutput()
-								.print("Comparing: ");
-							ProxyConsole
-								.getInstance()
-								.debugOutput()
-								.print(
-									((IConstituent) aConstituentAttributeValue)
-										.getName());
-							ProxyConsole
-								.getInstance()
-								.debugOutput()
-								.print(" with: ");
-							ProxyConsole
-								.getInstance()
-								.debugOutput()
-								.println(
-									((IConstituent) anotherConstituentAttributeValue)
-										.getName());
 							this
 								.compare(
 									(IConstituent) aConstituentAttributeValue,
@@ -348,6 +331,9 @@ public class ModelComparator implements IWalker {
 	}
 
 	public final void open(final IPackageDefault aPackage) {
+	}
+
+	public final void open(final IPackageGhost aPackageGhost) {
 	}
 
 	public final void open(final ISetter aSetter) {

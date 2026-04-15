@@ -10,13 +10,12 @@
  ******************************************************************************/
 package padl.creator.classfile.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
-import padl.creator.classfile.test.compare.TestCompare;
-import padl.creator.classfile.test.fieldaccess.TestFieldAccess;
-import padl.creator.classfile.test.inheritance.TestInheritance;
-import padl.creator.classfile.test.methodInvocation.MethodInvocationMissingtest;
-import padl.creator.classfile.test.path.TestPathArgoUML;
+import padl.creator.classfile.test.compare.ComparisonTest;
+import padl.creator.classfile.test.fieldaccess.FieldAccessTest;
+import padl.creator.classfile.test.inheritance.InheritanceTest;
+import padl.creator.classfile.test.methodInvocation.MethodInvocationMissingTest;
+import padl.creator.classfile.test.path.ArgoUMLPathTest;
 import padl.creator.classfile.test.topLevelEntity.TopLevelEntityTest;
 
 /**
@@ -24,26 +23,17 @@ import padl.creator.classfile.test.topLevelEntity.TopLevelEntityTest;
  * @since  2004/01/25
  */
 public final class TestCreatorClassFile extends TestSuite {
-	public TestCreatorClassFile() {
-	}
-
-	public TestCreatorClassFile(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestCreatorClassFile(final String name) {
-		super(name);
-	}
-
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreatorClassFile suite = new TestCreatorClassFile();
+		suite.setName(TestCreatorClassFile.class.getName());
 
-		suite.addTest(TestCompare.suite());
-		suite.addTest(TestFieldAccess.suite());
-		suite.addTest(TestInheritance.suite());
-		suite.addTestSuite(MethodInvocationMissingtest.class);
-		suite.addTestSuite(TestPathArgoUML.class);
+		suite.addTestSuite(ComparisonTest.class);
+		suite.addTestSuite(FieldAccessTest.class);
+		suite.addTestSuite(InheritanceTest.class);
+		suite.addTestSuite(MethodInvocationMissingTest.class);
+		suite.addTestSuite(ArgoUMLPathTest.class);
 		suite.addTestSuite(TopLevelEntityTest.class);
+
 		return suite;
 	}
 }

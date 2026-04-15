@@ -11,13 +11,14 @@
 package epi.test.helper;
 
 import java.io.PrintWriter;
-import padl.kernel.IIdiomLevelModel;
-import util.io.ProxyDisk;
+
 import epi.MyMain;
 import epi.solver.Solution;
 import epi.solver.StringBuilder;
 import epi.ui.EPIDialog;
 import epi.ui.SolutionDialog;
+import padl.kernel.IIdiomLevelModel;
+import util.io.ProxyDisk;
 
 /**
  * @author Yann-Gaël Guéhéneuc
@@ -25,9 +26,8 @@ import epi.ui.SolutionDialog;
  */
 public class Adapter {
 	public static void main(final String[] args) {
-		final IIdiomLevelModel model =
-			MyMain.createModel(
-				"../Ptidej Tests/bin/ptidej/example/composite2/",
+		final IIdiomLevelModel model = MyMain.createModel(
+				"../DeMIMA/target/test-classes/ptidej/example/composite2/",
 				null);
 
 		//	try {
@@ -90,9 +90,9 @@ public class Adapter {
 
 		//TODO: if(closewindow et pas solve!)
 		Solution[] sol = inst.getSolutions();
-		PrintWriter out =
-			new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-				"rsc/" + inst.getLogger().getIdentificationName() + ".txt"));
+		PrintWriter out = new PrintWriter(
+				ProxyDisk.getInstance().fileTempOutput("rsc/"
+						+ inst.getLogger().getIdentificationName() + ".txt"));
 		Solution.print(sol, out);
 
 		SolutionDialog inst2 = new SolutionDialog(null, false);

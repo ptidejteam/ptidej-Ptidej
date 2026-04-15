@@ -39,7 +39,7 @@ import junit.framework.TestCase;
  * @author Yann-Gaël Guéhéneuc
  * @version 0.2
  */
-public class Primitive extends TestCase {
+public abstract class Primitive extends TestCase {
 	private static final int JDK_141 = 1;
 	private static final int JDK_142 = 2;
 	private static int CURRENT_JDK = JDK_142;

@@ -10,11 +10,11 @@
  ******************************************************************************/
 package padl.creator.classfile.util;
 
-import util.lang.Modifier;
 import com.ibm.toad.cfparse.ClassFile;
 import com.ibm.toad.cfparse.ConstantPool;
 import com.ibm.toad.cfparse.MethodInfo;
 import com.ibm.toad.cfparse.attributes.AttrInfoList;
+import com.ibm.toad.cfparse.utils.Access;
 
 /**
  * @version	0.1
@@ -29,13 +29,12 @@ public final class ExtendedMethodInfo {
 	private final char[] methodReturnType;
 	private final int methodVisibility;
 
-	public ExtendedMethodInfo(
-		final ClassFile declaringClassFile,
-		final MethodInfo methodInfo) {
+	public ExtendedMethodInfo(final ClassFile declaringClassFile,
+			final MethodInfo methodInfo) {
 
 		this.constantPool = declaringClassFile.getCP();
-		this.declaringClassFileName =
-			declaringClassFile.getName().toCharArray();
+		this.declaringClassFileName = declaringClassFile.getName()
+				.toCharArray();
 		this.methodAttributes = methodInfo.getAttrs();
 		this.methodName = methodInfo.getName().toCharArray();
 		this.methodParameters = new char[methodInfo.getParams().length][];
@@ -47,30 +46,38 @@ public final class ExtendedMethodInfo {
 		this.methodReturnType = methodInfo.getReturnType().toCharArray();
 		this.methodVisibility = methodInfo.getAccess();
 	}
+
 	public AttrInfoList getAttributes() {
 		return this.methodAttributes;
 	}
+
 	public ConstantPool getDeclaringClassConstantPool() {
 		return this.constantPool;
 	}
+
 	public char[] getDeclaringClassName() {
 		return this.declaringClassFileName;
 	}
+
 	public char[] getName() {
 		return this.methodName;
 	}
+
 	public char[][] getParameters() {
 		return this.methodParameters;
 	}
+
 	public char[] getReturnType() {
 		return this.methodReturnType;
 	}
+
 	public int getVisibility() {
 		return this.methodVisibility;
 	}
+
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
-		buffer.append(Modifier.toString(this.getVisibility()));
+		buffer.append(Access.getMethodAsString(this.getVisibility()));
 		buffer.append(' ');
 		buffer.append(this.getReturnType());
 		buffer.append(' ');

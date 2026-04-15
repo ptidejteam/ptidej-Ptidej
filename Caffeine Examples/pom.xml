@@ -31,7 +31,6 @@
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
@@ -41,10 +40,8 @@
 
 		<dependency>
 			<groupId>net.ptidej.caffeine</groupId>
-			<artifactId>caffeine</artifactId>
+			<artifactId>caffeine-core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
 	</dependencies>
-
 </project>

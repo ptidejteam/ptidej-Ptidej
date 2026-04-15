@@ -23,7 +23,7 @@ public final class AttrInfoList {
 	}
 
 	//	Reorder by priority Henrique 4/22/2025
-	public void reorderByPriority(String[] priority) {
+	private void reorderByPriority(String[] priority) {
 		if (d_attrs == null || d_numAttrs == 0)
 			return;
 
@@ -50,13 +50,16 @@ public final class AttrInfoList {
 	}
 
 	public AttrInfo add(String name) {
-		if (d_attrs == null || d_numAttrs == d_attrs.length)
-			resize();
-		int idxName = d_cp.find(ConstantPool.CONSTANT_Utf8, name);
-		if (idxName == -1)
-			idxName = d_cp.addUtf8(name);
+		if (d_attrs == null || d_numAttrs == d_attrs.length) {
+			this.resize();
+		}
 
-		AttrInfo attr = switch (name) {
+		int idxName = d_cp.find(ConstantPool.CONSTANT_Utf8, name);
+		if (idxName == -1) {
+			idxName = d_cp.addUtf8(name);
+		}
+
+		final AttrInfo attr = switch (name) {
 		case "SourceFile" -> new SourceFileAttrInfo(d_cp, idxName, d_depth);
 		case "SourceDir" -> new SourceDirAttrInfo(d_cp, idxName, d_depth);
 		case "ConstantValue" ->
@@ -66,7 +69,6 @@ public final class AttrInfoList {
 			new LineNumberAttrInfo(d_cp, idxName, d_depth);
 		case "LocalVariableTable" ->
 			new LocalVariableAttrInfo(d_cp, idxName, d_depth);
-		//			Henrique 4/22/2025
 		case "Exceptions" -> new ExceptionsAttrInfo(d_cp, idxName, d_depth);
 		case "Signature" -> new SignatureAttrInfo(d_cp, idxName, d_depth);
 		case "LocalVariableTypeTable" ->
@@ -75,17 +77,15 @@ public final class AttrInfoList {
 			new RuntimeInvisibleAnnotationsAttrInfo(d_cp, idxName, d_depth);
 		case "StackMapTable" ->
 			new StackMapTableAttrInfo(d_cp, idxName, d_depth);
-		//			
-
 		case "InnerClasses" -> new InnerClassesAttrInfo(d_cp, idxName, d_depth);
 		case "NestMembers" -> new NestMembersAttrInfo(d_cp, idxName, d_depth);
 		case "Synthetic" -> new SyntheticAttrInfo(d_cp, idxName, d_depth);
 		case "Deprecated" -> new DeprecatedAttrInfo(d_cp, idxName, d_depth);
 		case "BootstrapMethods" ->
 			new BootstrapMethodsAttrInfo(d_cp, idxName, d_depth);
-
 		default -> new UnknownAttrInfo(d_cp, idxName, d_depth);
 		};
+		
 		d_attrs[d_numAttrs++] = attr;
 		return attr;
 	}
@@ -124,9 +124,10 @@ public final class AttrInfoList {
 		d_numAttrs = in.readUnsignedShort();
 		d_attrs = new AttrInfo[d_numAttrs];
 		for (int i = 0; i < d_numAttrs; i++) {
-			int idxName = in.readUnsignedShort();
-			String name = d_cp.getAsString(idxName);
-			AttrInfo attr = switch (name) {
+			final int idxName = in.readUnsignedShort();
+			final String name = d_cp.getAsString(idxName);
+
+			final AttrInfo attr = switch (name) {
 			case "SourceFile" -> new SourceFileAttrInfo(d_cp, idxName, d_depth);
 			case "SourceDir" -> new SourceDirAttrInfo(d_cp, idxName, d_depth);
 			case "ConstantValue" ->
@@ -137,7 +138,6 @@ public final class AttrInfoList {
 				new LineNumberAttrInfo(d_cp, idxName, d_depth);
 			case "LocalVariableTable" ->
 				new LocalVariableAttrInfo(d_cp, idxName, d_depth);
-			//				Henrique 4/22/2025
 			case "Signature" -> new SignatureAttrInfo(d_cp, idxName, d_depth);
 			case "LocalVariableTypeTable" ->
 				new LocalVariableTypeAttrInfo(d_cp, idxName, d_depth);
@@ -146,8 +146,6 @@ public final class AttrInfoList {
 				new RuntimeInvisibleAnnotationsAttrInfo(d_cp, idxName, d_depth);
 			case "StackMapTable" ->
 				new StackMapTableAttrInfo(d_cp, idxName, d_depth);
-			//				
-
 			case "InnerClasses" ->
 				new InnerClassesAttrInfo(d_cp, idxName, d_depth);
 			case "NestMembers" ->
@@ -156,11 +154,10 @@ public final class AttrInfoList {
 			case "Deprecated" -> new DeprecatedAttrInfo(d_cp, idxName, d_depth);
 			case "BootstrapMethods" ->
 				new BootstrapMethodsAttrInfo(d_cp, idxName, d_depth);
-
 			default -> new UnknownAttrInfo(d_cp, idxName, d_depth);
 			};
-			d_attrs[i] = attr;
 
+			d_attrs[i] = attr;
 			attr.read(in);
 		}
 	}

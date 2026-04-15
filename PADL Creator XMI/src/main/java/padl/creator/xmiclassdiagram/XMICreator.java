@@ -15,6 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import com.ibm.toad.cfparse.utils.Access;
 import com.sdmetrics.model.MetaModel;
 import com.sdmetrics.model.MetaModelElement;
 import com.sdmetrics.model.Model;
@@ -45,7 +46,6 @@ import padl.path.Finder;
 import padl.path.FormatException;
 import padl.path.IConstants;
 import util.io.ProxyConsole;
-import util.lang.Modifier;
 
 public final class XMICreator implements IDesignLevelModelCreator {
 	private interface IBuilder {
@@ -123,7 +123,7 @@ public final class XMICreator implements IDesignLevelModelCreator {
 
 			final IConstituent constituent = aBuilder
 					.instantiateTypeOfConstituent(elementID, elementName);
-			constituent.setVisibility(Modifier.fromString(elementVisibility));
+			constituent.setVisibility(Access.getFromString(elementVisibility));
 			// Yann 2015/05/05: Law and order!
 			// It is well possible that I created a (ghost)package with a given
 			// name because this name appeared in the path of a member class...
@@ -256,11 +256,11 @@ public final class XMICreator implements IDesignLevelModelCreator {
 			final String elementID = me.getPlainAttribute("id");
 			int elementVisibility;
 			try {
-				elementVisibility = Modifier
-						.fromString(me.getPlainAttribute("visibility"));
+				elementVisibility = Access
+						.getFromString(me.getPlainAttribute("visibility"));
 			}
 			catch (final IllegalArgumentException e) {
-				elementVisibility = Modifier.PUBLIC;
+				elementVisibility = Access.ACC_PUBLIC;
 			}
 			final String elementTypeAttribute = relations[0]
 					.getPlainAttribute("aggregation");
@@ -338,11 +338,11 @@ public final class XMICreator implements IDesignLevelModelCreator {
 			final String elementID = me.getPlainAttribute("id");
 			int elementVisibility;
 			try {
-				elementVisibility = Modifier
-						.fromString(me.getPlainAttribute("visibility"));
+				elementVisibility = Access
+						.getFromString(me.getPlainAttribute("visibility"));
 			}
 			catch (final IllegalArgumentException e) {
-				elementVisibility = Modifier.PUBLIC;
+				elementVisibility = Access.ACC_PUBLIC;
 			}
 
 			// Source

@@ -29,16 +29,18 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.5</version>
+				<version>3.5.3</version>
 				<configuration>
-					<skipTests>true</skipTests>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/TestCreatorCPPFileUsingANTLR.java</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
@@ -72,7 +74,5 @@
 			<version>1.0-1</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

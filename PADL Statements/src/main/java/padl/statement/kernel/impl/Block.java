@@ -16,7 +16,6 @@ import padl.kernel.IStatement;
 import padl.kernel.impl.AbstractGenericContainerOfConstituents;
 import padl.kernel.impl.GenericContainerConstants;
 import padl.kernel.impl.GenericContainerOfInsertionOrderedConstituents;
-import padl.kernel.impl.Statement;
 import padl.statement.kernel.IBlock;
 
 /**

@@ -26,37 +26,17 @@
 					</compilerArgs>
 				</configuration>
 			</plugin>
-			<!-- Because of CFParse, I must compile towards 1.4 bytecode -->
-			<!-- 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
 				<configuration>
-					<release combine.self="override" />
-					<source>1.4</source>
-					<target>1.4</target>
-					<compilerId>eclipse</compilerId>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/*Test.java</exclude>
+					</excludes>
 				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.codehaus.plexus</groupId>
-						<artifactId>plexus-compiler-eclipse</artifactId>
-						<version>2.15.0</version>
-					</dependency>
-					<dependency>
-						<groupId>org.eclipse.jdt</groupId>
-						<artifactId>ecj</artifactId>
-						<version>3.37.0</version>
-					</dependency>
-				</dependencies>
 			</plugin>
-			-->
-
 			<!-- Must generate the test-jar for dependent tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -74,7 +54,6 @@
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
@@ -110,12 +89,32 @@
 		</dependency>
 
 		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-core</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!--
+		DIRTY HACK (cf. https://wiki.ptidej.net/doku.php?id=dirty_hack)
+		These two last dependencies MUST COME LAST because they bring with them
+		aspectjtools, which itself bring with it an old version of SubMonitor,
+		which leads to
+			java.lang.NoSuchMethodError: 'org.eclipse.core.runtime.SubMonitor
+		org.eclipse.core.runtime.SubMonitor.split(int)' 
+		-->
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-javafile-eclipse</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-generator</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

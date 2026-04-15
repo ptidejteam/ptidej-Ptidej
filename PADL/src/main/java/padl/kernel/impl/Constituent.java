@@ -17,7 +17,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
+
 import org.apache.commons.lang3.ArrayUtils;
+
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.kernel.Constants;
 import padl.kernel.IConstituent;
 import padl.kernel.IConstituentExtension;
@@ -25,9 +29,7 @@ import padl.kernel.exception.ModelDeclarationException;
 import padl.util.Util;
 import padl.visitor.IVisitor;
 import util.io.ProxyConsole;
-import util.lang.Modifier;
 import util.multilingual.MultilingualManager;
-import com.ibm.toad.cfparse.utils.Access;
 
 // TODO: Should we provide to people extending PADL some default
 // implementation of the different Constituent of the meta-model?
@@ -67,17 +69,18 @@ public abstract class Constituent implements IConstituent {
 
 	public Constituent(final char[] anID) {
 		if (anID == null) {
-			throw new ModelDeclarationException(MultilingualManager.getString(
-				"ACTOR_ID_NULL",
-				IConstituent.class));
+			throw new ModelDeclarationException(MultilingualManager
+					.getString("ACTOR_ID_NULL", IConstituent.class));
 		}
 		this.id = anID;
 		this.setName(anID);
 		this.setPath(anID);
 	}
+
 	public void accept(final IVisitor visitor) {
 		this.accept(visitor, "visit");
 	}
+
 	protected void accept(final IVisitor visitor, final String methodName) {
 		// Yann 2015/05/24: Cache reset...
 		// If the visitor has changed, then I reset the cache.
@@ -90,11 +93,10 @@ public abstract class Constituent implements IConstituent {
 
 		this.accept(this.getClass(), visitor, methodName, true);
 	}
-	private boolean accept(
-		final java.lang.Class currentReceiver,
-		final IVisitor visitor,
-		final String methodName,
-		final boolean shouldRecurse) {
+
+	private boolean accept(final java.lang.Class currentReceiver,
+			final IVisitor visitor, final String methodName,
+			final boolean shouldRecurse) {
 
 		// Yann 2003/12/05: Interfaces!
 		// I must match a class a the kernel to the
@@ -110,19 +112,17 @@ public abstract class Constituent implements IConstituent {
 		// and over again.
 		final String className = currentReceiver.getName();
 		if (!Constituent.cachedAcceptClassNames.containsKey(className)) {
-			Constituent.cachedAcceptClassNames.put(
-				className,
-				className.replaceAll(".impl.", ".I"));
+			Constituent.cachedAcceptClassNames.put(className,
+					className.replaceAll(".impl.", ".I"));
 		}
 		String acceptClassName = (String) cachedAcceptClassNames.get(className);
 
 		java.lang.Class argument = null;
 		if (!Constituent.cachedNotFoundClassNames.contains(acceptClassName)) {
 			if (Constituent.cachedCorrespondingInterfaceNames
-				.containsKey(acceptClassName)) {
+					.containsKey(acceptClassName)) {
 
-				acceptClassName =
-					(String) Constituent.cachedCorrespondingInterfaceNames
+				acceptClassName = (String) Constituent.cachedCorrespondingInterfaceNames
 						.get(acceptClassName);
 			}
 
@@ -132,10 +132,7 @@ public abstract class Constituent implements IConstituent {
 				// new java.lang.Class[] { java.lang.Class
 				// .forName(acceptClassName) };
 				// TODO understand the difference between forName and loadClass...
-				argument =
-					visitor
-						.getClass()
-						.getClassLoader()
+				argument = visitor.getClass().getClassLoader()
 						.loadClass(acceptClassName);
 			}
 			catch (final ClassNotFoundException e) {
@@ -149,9 +146,7 @@ public abstract class Constituent implements IConstituent {
 		}
 
 		try {
-			final Method method =
-				visitor.getClass().getMethod(
-					methodName,
+			final Method method = visitor.getClass().getMethod(methodName,
 					new java.lang.Class[] { argument });
 			method.invoke(visitor, new Object[] { this });
 			return true;
@@ -186,27 +181,27 @@ public abstract class Constituent implements IConstituent {
 				int i = 0;
 				while (i < interfaces.length && !foundACandidateReceiver) {
 					final java.lang.Class interfase = interfaces[i];
-					foundACandidateReceiver =
-						this.accept(interfase, visitor, methodName, false);
+					foundACandidateReceiver = this.accept(interfase, visitor,
+							methodName, false);
 					i++;
 				}
 				if (foundACandidateReceiver) {
 					i = i - 1;
-					Constituent.cachedCorrespondingInterfaceNames.put(
-						acceptClassName,
-						interfaces[i].getName());
+					Constituent.cachedCorrespondingInterfaceNames
+							.put(acceptClassName, interfaces[i].getName());
 					return true;
 				}
 				else {
 					Constituent.cachedNotFoundClassNames.add(acceptClassName);
-					visitor.unknownConstituentHandler(methodName + '('
-							+ argument.getName() + ')', this);
+					visitor.unknownConstituentHandler(
+							methodName + '(' + argument.getName() + ')', this);
 				}
 			}
 		}
 
 		return false;
 	}
+
 	public final void addExtension(final IConstituentExtension anExtension) {
 		if (anExtension instanceof IConstituentExtension) {
 			final int minCapacity = this.numberOfExtensions + 1;
@@ -214,17 +209,12 @@ public abstract class Constituent implements IConstituent {
 			if (minCapacity > oldCapacity) {
 				final IConstituentExtension[] oldData = this.extensions;
 				this.indexInPrimeNumbersArray++;
-				int newCapacity =
-					GenericContainerConstants.PRIME_NUMBERS[this.indexInPrimeNumbersArray];
+				int newCapacity = GenericContainerConstants.PRIME_NUMBERS[this.indexInPrimeNumbersArray];
 				if (newCapacity < minCapacity)
 					newCapacity = minCapacity;
 				this.extensions = new IConstituentExtension[newCapacity];
-				System.arraycopy(
-					oldData,
-					0,
-					this.extensions,
-					0,
-					this.numberOfExtensions);
+				System.arraycopy(oldData, 0, this.extensions, 0,
+						this.numberOfExtensions);
 			}
 			this.extensions[this.numberOfExtensions] = anExtension;
 			this.numberOfExtensions++;
@@ -232,41 +222,50 @@ public abstract class Constituent implements IConstituent {
 			anExtension.setExtendedConstituent(this);
 		}
 		else {
-			throw new ModelDeclarationException(anExtension
-				.getClass()
-				.getName() + " must be a subtype of IConstituentExtension");
+			throw new ModelDeclarationException(anExtension.getClass().getName()
+					+ " must be a subtype of IConstituentExtension");
 		}
 	}
+
 	public void endCloneSession() {
 		this.clone = null;
 		// this.clonedBoundEventList.clear();
 		// this.clonedVetoEventList.clear();
 	}
+
 	public boolean equals(final Object obj) {
 		if (!(obj instanceof IConstituent)) {
 			return false;
 		}
 		return Arrays.equals(this.getID(), ((IConstituent) obj).getID());
 	}
+
 	public IConstituent getClone() {
 		return this.clone;
 	}
+
 	public String[] getCodeLines() {
 		return this.codeLines;
 	}
+
 	public String getComment() {
 		return this.comment;
 	}
+
 	public String getDisplayID() {
 		return String.valueOf(this.getID());
 	}
+
 	public String getDisplayName() {
 		return String.valueOf(this.getName());
 	}
+
 	public String getDisplayPath() {
 		return String.valueOf(this.getPath());
 	}
-	public final IConstituentExtension getExtension(final char[] anExtensionName) {
+
+	public final IConstituentExtension getExtension(
+			final char[] anExtensionName) {
 		for (int i = 0; i < this.extensions.length; i++) {
 			final IConstituentExtension extension = this.extensions[i];
 			if (Arrays.equals(extension.getName(), anExtensionName)) {
@@ -275,22 +274,29 @@ public abstract class Constituent implements IConstituent {
 		}
 		return null;
 	}
+
 	public char[] getID() {
 		return this.id;
 	}
+
 	public char[] getName() {
 		return this.name;
 	}
+
 	public char[] getPath() {
 		return this.path;
 	}
+
 	protected abstract char getPathSymbol();
+
 	public int getVisibility() {
 		return this.visibility;
 	}
+
 	public int getWeight() {
 		return this.weight;
 	}
+
 	public int hashCode() {
 		// Yann 2013/09/11: I got caught!
 		// I naively thought that the following call
@@ -300,37 +306,47 @@ public abstract class Constituent implements IConstituent {
 		//	http://stackoverflow.com/questions/744735/java-array-hashcode-implementation
 		return ArrayUtils.hashCode(this.getID());
 	}
+
 	public boolean isAbstract() {
 		return Access.isAbstract(this.visibility);
 	}
+
 	public boolean isFinal() {
 		return Access.isFinal(this.visibility);
 	}
+
 	public boolean isPrivate() {
 		return Access.isPrivate(this.visibility);
 	}
+
 	public boolean isProtected() {
 		return Access.isProtected(this.visibility);
 	}
+
 	public boolean isPublic() {
 		return Access.isPublic(this.visibility);
 	}
+
 	public boolean isStatic() {
 		return Access.isStatic(this.visibility);
 	}
+
 	/**
 	 * This methods is used by the clone protocol.
 	 */
 	public void performCloneSession() {
 	}
+
 	public void resetCodeLines() {
 		this.setCodeLines("");
 	}
+
 	public void setAbstract(final boolean aBoolean) {
-		this
-			.setVisibility(aBoolean ? (this.getVisibility() | Access.ACC_ABSTRACT)
-					: (this.getVisibility() & ~Access.ACC_ABSTRACT));
+		this.setVisibility(
+				aBoolean ? (this.getVisibility() | Access.ACC_ABSTRACT)
+						: (this.getVisibility() & ~Access.ACC_ABSTRACT));
 	}
+
 	public void setCodeLines(final String someCode) {
 		final List listOfLines = new ArrayList();
 		final StringTokenizer tokeniser = new StringTokenizer(someCode, "\n\r");
@@ -342,65 +358,79 @@ public abstract class Constituent implements IConstituent {
 		listOfLines.toArray(arrayOfLines);
 		this.setCodeLines(arrayOfLines);
 	}
+
 	public void setCodeLines(String[] code) {
 		if (this.isAbstract()) {
-			throw new ModelDeclarationException(MultilingualManager.getString(
-				"ELEM_CODE_DEF",
-				IConstituent.class));
+			throw new ModelDeclarationException(MultilingualManager
+					.getString("ELEM_CODE_DEF", IConstituent.class));
 		}
 		this.codeLines = code;
 	}
+
 	public void setComment(final String aComment) {
 		this.comment = aComment;
 	}
+
 	public void setDisplayName(final String aName) {
 		this.name = aName.toCharArray();
 	}
+
 	public void setFinal(final boolean aBoolean) {
 		this.setVisibility(aBoolean ? (this.getVisibility() | Access.ACC_FINAL)
 				: (this.getVisibility() & ~Access.ACC_FINAL));
 	}
+
 	protected void setID(final char[] anID) {
 		this.id = anID;
 	}
+
 	public void setName(final char[] aName) {
 		this.name = aName;
 	}
+
 	void setPath(final char[] aPath) {
 		this.path = aPath;
 	}
+
 	public void setPrivate(final boolean aBoolean) {
-		this
-			.setVisibility(aBoolean ? ((this.getVisibility() | Access.ACC_PRIVATE) & ~(Access.ACC_PUBLIC | Access.ACC_PROTECTED))
-					: (this.getVisibility() & ~Access.ACC_PRIVATE));
+		this.setVisibility(aBoolean
+				? ((this.getVisibility() | Access.ACC_PRIVATE)
+						& ~(Access.ACC_PUBLIC | Access.ACC_PROTECTED))
+				: (this.getVisibility() & ~Access.ACC_PRIVATE));
 	}
+
 	public void setProtected(final boolean aBoolean) {
-		this
-			.setVisibility(aBoolean ? ((this.getVisibility() | Access.ACC_PROTECTED) & ~(Access.ACC_PUBLIC | Access.ACC_PRIVATE))
-					: (this.getVisibility() & ~Access.ACC_PROTECTED));
+		this.setVisibility(aBoolean
+				? ((this.getVisibility() | Access.ACC_PROTECTED)
+						& ~(Access.ACC_PUBLIC | Access.ACC_PRIVATE))
+				: (this.getVisibility() & ~Access.ACC_PROTECTED));
 	}
+
 	public void setPublic(final boolean aBoolean) {
-		this
-			.setVisibility(aBoolean ? ((this.getVisibility() | Access.ACC_PUBLIC) & ~(Access.ACC_PRIVATE | Access.ACC_PROTECTED))
-					: (this.getVisibility() & ~Access.ACC_PUBLIC));
+		this.setVisibility(aBoolean
+				? ((this.getVisibility() | Access.ACC_PUBLIC)
+						& ~(Access.ACC_PRIVATE | Access.ACC_PROTECTED))
+				: (this.getVisibility() & ~Access.ACC_PUBLIC));
 	}
+
 	public void setStatic(final boolean aBoolean) {
-		this
-			.setVisibility(aBoolean ? (this.getVisibility() | Access.ACC_STATIC)
-					: (this.getVisibility() & ~Access.ACC_STATIC));
+		this.setVisibility(aBoolean ? (this.getVisibility() | Access.ACC_STATIC)
+				: (this.getVisibility() & ~Access.ACC_STATIC));
 	}
+
 	public void setVisibility(final int visibility) {
 		if (this.getCodeLines() != null && Access.isAbstract(visibility)) {
 			// Why test getCodeLines() != null here ?
-			throw new ModelDeclarationException(MultilingualManager.getString(
-				"ELEM_ABSTRACT",
-				IConstituent.class));
+			throw new ModelDeclarationException(MultilingualManager
+					.getString("ELEM_ABSTRACT", IConstituent.class));
 		}
 		this.visibility = visibility;
 	}
+
 	public void setWeight(final int weight) {
 		this.weight = weight;
 	}
+
 	/**
 	 * This method performs a shallow copy.
 	 */
@@ -425,9 +455,11 @@ public abstract class Constituent implements IConstituent {
 			cnse.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 	}
+
 	public String toString() {
 		return this.toString(0);
 	}
+
 	public String toString(final int tab) {
 		final StringBuffer codeEq = new StringBuffer();
 		Util.addTabs(tab, codeEq);
@@ -437,7 +469,7 @@ public abstract class Constituent implements IConstituent {
 			codeEq.append(" */\n");
 			Util.addTabs(tab, codeEq);
 		}
-		codeEq.append(Modifier.toString(this.getVisibility()));
+		codeEq.append(Access.getAsString(this.getVisibility()));
 		return codeEq.toString();
 	}
 }

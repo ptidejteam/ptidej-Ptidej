@@ -11,44 +11,49 @@
 package ptidej.ui.kernel;
 
 import java.util.Iterator;
+
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.kernel.IMethod;
 import padl.kernel.IParameter;
 import ptidej.ui.primitive.IPrimitiveFactory;
-import util.lang.Modifier;
 
 public final class Method extends Element {
 	private IMethod method;
 
-	public Method(
-		final IPrimitiveFactory primitiveFactory,
-		final IMethod aMethod) {
+	public Method(final IPrimitiveFactory primitiveFactory,
+			final IMethod aMethod) {
 
 		super(primitiveFactory);
 		this.method = aMethod;
 	}
+
 	public void build() {
 		// Nothing to do.
 	}
+
 	public String getName() {
-		final StringBuffer name =
-			new StringBuffer(this.method.getDisplayName());
+		final StringBuffer name = new StringBuffer(
+				this.method.getDisplayName());
 		name.append("()");
 		return name.toString();
 	}
+
 	public void paint(final int xOffset, final int yOffset) {
 		// Nothing to do.
 	}
+
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
-		buffer.append(Modifier.toString(this.method.getVisibility()));
+		buffer.append(Access.getMethodAsString(this.method.getVisibility()));
 		buffer.append(' ');
 		buffer.append(this.method.getReturnType());
 		buffer.append(' ');
 		buffer.append(this.method.getDisplayName());
 		// buffer.append("(...)");
 		buffer.append('(');
-		final Iterator iterator =
-			this.method.getIteratorOnConstituents(IParameter.class);
+		final Iterator iterator = this.method
+				.getIteratorOnConstituents(IParameter.class);
 		while (iterator.hasNext()) {
 			final IParameter parameter = (IParameter) iterator.next();
 			buffer.append(parameter.getTypeName());

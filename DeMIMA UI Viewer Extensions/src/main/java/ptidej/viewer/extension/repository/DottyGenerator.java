@@ -36,6 +36,7 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IPackage;
 import padl.kernel.IPackageDefault;
+import padl.kernel.IPackageGhost;
 import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
@@ -209,6 +210,8 @@ public final class DottyGenerator implements IGenerator {
 	}
 	public void close(final IPackageDefault p) {
 	}
+	public void close(final IPackageGhost aPackageGhost) {
+	}
 	public void close(final ISetter aSetter) {
 	}
 	public String getCode() {
@@ -284,6 +287,8 @@ public final class DottyGenerator implements IGenerator {
 	public void open(final IPackage p) {
 	}
 	public void open(final IPackageDefault p) {
+	}
+	public void open(final IPackageGhost aPackageGhost) {
 	}
 	public void open(final ISetter p) {
 	}

@@ -33,89 +33,55 @@ import util.multilingual.MultilingualManager;
  * @since  2004/10/15 
  */
 public final class CompositeMotif {
-	public static Problem getProblem(
-		final List allEntities,
-		final ReducedDomainBuilder rdg) {
+	public static Problem getProblem(final List allEntities) {
+		return getProblem(allEntities, null);
+	}
 
-		final Problem pb =
-			new Problem(90, MultilingualManager.getString(
-				"Problem_CDM",
-				CompositeMotif.class), allEntities);
+	public static Problem getProblem(final List allEntities,
+			final ReducedDomainBuilder rdg) {
+
+		final Problem pb = new Problem(90, MultilingualManager
+				.getString("Problem_CDM", CompositeMotif.class), allEntities);
 
 		final Variable component = new Variable(pb, "component", true);
 		final Variable composite = new Variable(pb, "composite", true);
-		final Variable leaf =
-			new Variable(pb, "leaf", true, Manager.build(rdg
-				.computeReducedDomain(Rule.C_LEAF_ROLE_1)));
+		final Variable leaf;
+		if (rdg == null) {
+			leaf = new Variable(pb, "leaf", true);
+		}
+		else {
+			leaf = new Variable(pb, "leaf", true, Manager
+					.build(rdg.computeReducedDomain(Rule.C_LEAF_ROLE_1)));
+		}
 
 		pb.addVar(leaf);
 		pb.addVar(composite);
 		pb.addVar(component);
 
-		final StrictInheritanceConstraint c1 =
-			new StrictInheritanceConstraint(
-				"Composite -|>- Component",
-				"command",
-				composite,
-				component,
-				50,
+		final StrictInheritanceConstraint c1 = new StrictInheritanceConstraint(
+				"Composite -|>- Component", "command", composite, component, 50,
 				DefaultInheritanceApproximations.getDefaultApproximations());
-		final StrictInheritancePathConstraint c2 =
-			new StrictInheritancePathConstraint(
-				"Leaf -|>- Component",
-				"command",
-				leaf,
-				component,
-				100,
+		final StrictInheritancePathConstraint c2 = new StrictInheritancePathConstraint(
+				"Leaf -|>- Component", "command", leaf, component, 100,
 				DefaultNoApproximations.getDefaultApproximations());
-		final ContainerCompositionConstraint c3 =
-			new ContainerCompositionConstraint(
-				"Composite <>--> Component",
-				"command",
-				composite,
-				component,
-				50,
-				DefaultContainerAssociationApproximations
-					.getDefaultApproximations());
-		final IgnoranceConstraint c4 =
-			new IgnoranceConstraint(
-				"Component -/--> Leaf",
-				"command",
-				component,
-				leaf,
-				10,
+		final ContainerCompositionConstraint c3 = new ContainerCompositionConstraint(
+				"Composite <>--> Component", "command", composite, component,
+				50, DefaultContainerAssociationApproximations
+						.getDefaultApproximations());
+		final IgnoranceConstraint c4 = new IgnoranceConstraint(
+				"Component -/--> Leaf", "command", component, leaf, 10,
 				DefaultIgnoranceApproximations.getDefaultApproximations());
-		final IgnoranceConstraint c5 =
-			new IgnoranceConstraint(
-				"Leaf -/--> Composite",
-				"command",
-				leaf,
-				composite,
-				30,
+		final IgnoranceConstraint c5 = new IgnoranceConstraint(
+				"Leaf -/--> Composite", "command", leaf, composite, 30,
 				DefaultIgnoranceApproximations.getDefaultApproximations());
-		final NotEqualConstraint c6 =
-			new NotEqualConstraint(
-				"Component <> Composite",
-				"command",
-				component,
-				composite,
-				100,
+		final NotEqualConstraint c6 = new NotEqualConstraint(
+				"Component <> Composite", "command", component, composite, 100,
 				DefaultNoApproximations.getDefaultApproximations());
-		final NotEqualConstraint c7 =
-			new NotEqualConstraint(
-				"Component <> Leaf",
-				"command",
-				component,
-				leaf,
-				100,
+		final NotEqualConstraint c7 = new NotEqualConstraint(
+				"Component <> Leaf", "command", component, leaf, 100,
 				DefaultNoApproximations.getDefaultApproximations());
-		final NotEqualConstraint c8 =
-			new NotEqualConstraint(
-				"Composite <> Leaf",
-				"command",
-				composite,
-				leaf,
-				100,
+		final NotEqualConstraint c8 = new NotEqualConstraint(
+				"Composite <> Leaf", "command", composite, leaf, 100,
 				DefaultNoApproximations.getDefaultApproximations());
 
 		pb.post(c1);

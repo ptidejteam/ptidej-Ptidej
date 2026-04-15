@@ -12,7 +12,6 @@ package padl.statement.kernel.impl;
 
 import padl.kernel.IMethod;
 import padl.kernel.exception.ModelDeclarationException;
-import padl.kernel.impl.Statement;
 import padl.statement.kernel.IConditional;
 
 abstract class Conditional extends Statement implements IConditional {

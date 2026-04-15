@@ -1,0 +1,21 @@
+/.cvsignore/1.2/Sun Mar 21 17:12:19 2004//TVERSION_0_20_F
+/AnonymousClassCodePiece.java/1.11/Sun Jan  9 14:58:06 2005//TVERSION_0_20_F
+/AttributeCodePiece.java/1.19/Sun Jan 30 20:48:34 2005//TVERSION_0_20_F
+/ClassCodePiece.java/1.14/Sun Jan  9 14:58:06 2005//TVERSION_0_20_F
+/ClassifierEndCodePiece.java/1.17/Sun Jan 30 20:48:34 2005//TVERSION_0_20_F
+/CodeGenerator.java/1.21/Sun Jan 30 20:48:34 2005//TVERSION_0_20_F
+/CodePiece.java/1.5/Sat Sep 11 09:25:57 2004//TVERSION_0_20_F
+/CodePieceCollector.java/1.9/Sun Jan  9 14:58:06 2005//TVERSION_0_20_F
+/CompositeCodePiece.java/1.7/Sun Nov 13 17:57:06 2005//TVERSION_0_20_F
+/GeneratorJava.java/1.129/Wed Jan 25 23:23:15 2006//TVERSION_0_20_F
+/InterfaceCodePiece.java/1.13/Sun Jan  9 14:58:06 2005//TVERSION_0_20_F
+/JavaUML.java/1.14/Thu Jan 20 23:20:51 2005//TVERSION_0_20_F
+/NamedCodePiece.java/1.7/Sun Jan  9 14:58:06 2005//TVERSION_0_20_F
+/OperationCodePiece.java/1.15/Sun Jan 30 20:48:34 2005//TVERSION_0_20_F
+/PackageCodePiece.java/1.13/Sun Jan 30 20:48:34 2005//TVERSION_0_20_F
+/ParseState.java/1.11/Sun Jan 30 20:48:34 2005//TVERSION_0_20_F
+/README/1.1/Mon Mar 11 09:54:17 2002//TVERSION_0_20_F
+/SimpleCodePiece.java/1.4/Sat Sep 11 09:25:57 2004//TVERSION_0_20_F
+/java.g/1.9/Fri Dec  5 07:44:28 2003//TVERSION_0_20_F
+/package.html/1.2/Tue Apr 29 19:31:08 2003//TVERSION_0_20_F
+D

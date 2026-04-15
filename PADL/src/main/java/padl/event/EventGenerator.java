@@ -40,6 +40,7 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IPackage;
 import padl.kernel.IPackageDefault;
+import padl.kernel.IPackageGhost;
 import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
@@ -103,6 +104,10 @@ public class EventGenerator implements IWalker, Serializable {
 	public final void close(final IPackageDefault aPackage) {
 		this.close((IContainer) aPackage);
 	}
+	public final void close(final IPackageGhost aPackage) {
+		this.close((IContainer) aPackage);
+	}
+
 	public final void close(final ISetter aSetter) {
 	}
 	protected final void genetateEventForElement(final IConstituentOfEntity anElement) {
@@ -180,6 +185,10 @@ public class EventGenerator implements IWalker, Serializable {
 	public final void open(final IPackageDefault aPackage) {
 		this.open((IContainer) aPackage);
 	}
+	public final void open(final IPackageGhost aPackage) {
+		this.open((IContainer) aPackage);
+	}
+
 	public final void open(final ISetter aSetter) {
 		this.genetateEventForElement(aSetter);
 	}

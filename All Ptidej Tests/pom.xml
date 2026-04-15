@@ -29,10 +29,11 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.5</version>
+				<version>3.5.3</version>
 				<configuration>
 					<!-- Must export/open some hidden packages -->
 					<argLine>
+						-Xmx8G
 						--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED
@@ -42,7 +43,10 @@
 					</argLine>
 					<!-- Excluded on purpose -->
 					<excludes>
-						<exclude>TestAllPtidej.java</exclude>
+						<exclude>**/TestAllPtidej.java</exclude>
+						<exclude>**/TestCreators.java</exclude>
+						<exclude>**/TestDeMIMA.java</exclude>
+						<exclude>**/TestOthers.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
@@ -50,8 +54,8 @@
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
+		<!-- None on purpose   -->
 
 		<!-- Test dependencies -->
 		<dependency>
@@ -62,10 +66,46 @@
 		</dependency>
 
 		<dependency>
+			<groupId>net.ptidej.caffeine</groupId>
+			<artifactId>caffeine-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.caffeine</groupId>
+			<artifactId>caffeine-tests</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.caffeine</groupId>
+			<artifactId>caffeine-tests</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.cpl</groupId>
+			<artifactId>cpl-core</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
 			<artifactId>cpl-core</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-core</artifactId>
+			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -86,7 +126,30 @@
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-statements</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-statements-creator-aol</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-statements-creator-aol</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-statements-creator-classfile</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
@@ -95,6 +158,7 @@
 			<groupId>net.ptidej.padl</groupId>
 			<artifactId>padl-statements-creator-classfile</artifactId>
 			<version>1.0.0</version>
+			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
 
@@ -237,7 +301,14 @@
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-creator-javafile-classfile</artifactId>
+			<artifactId>padl-creator-javafile-classfile-tests</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.padl</groupId>
+			<artifactId>padl-creator-javafile-classfile-tests</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>
@@ -472,20 +543,12 @@
 			<groupId>net.ptidej.demima</groupId>
 			<artifactId>demima-core</artifactId>
 			<version>1.0.0</version>
-			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-solver-3</artifactId>
-			<version>1.0.0</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-solver-3</artifactId>
+			<artifactId>demima-core</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>
@@ -493,14 +556,29 @@
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-solver-4</artifactId>
+			<artifactId>demima-solver-claire</artifactId>
 			<version>1.0.0</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-solver-4</artifactId>
+			<artifactId>demima-solver-claire</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-java</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-solver-java</artifactId>
 			<version>1.0.0</version>
 			<type>test-jar</type>
 			<scope>test</scope>
@@ -522,8 +600,8 @@
 		</dependency>
 
 		<!--
-		These two last dependencies MUST COME LAST because 
-		they bring with them aspectjtools, which itself bring
+		These last dependencies MUST COME LAST because 
+		they bring with them aspectjtools, which itself brings
 		with it an old version of SubMonitor, which leads to
 			java.lang.NoSuchMethodError: 'org.eclipse.core.runtime.SubMonitor
 		org.eclipse.core.runtime.SubMonitor.split(int)' 
@@ -543,5 +621,34 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-ui-primitives-awt</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-ui-primitives-awt</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-ui-aspectj</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>net.ptidej.demima</groupId>
+			<artifactId>demima-ui-aspectj</artifactId>
+			<version>1.0.0</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 </project>

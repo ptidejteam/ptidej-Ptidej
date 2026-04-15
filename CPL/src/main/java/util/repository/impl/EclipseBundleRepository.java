@@ -111,18 +111,17 @@ class EclipseBundleRepository implements IFileRepository {
 					System.currentTimeMillis();
 				}
 
-				System.out.println("Loading: " + bundle);
-				URL urlURL = (URL) getResource.invoke(bundle,
+				ProxyConsole.getInstance().normalOutput()
+						.println("Loading: " + bundle);
+				final URL urlURL = (URL) getResource.invoke(bundle,
 						new Object[] { "/bin" });
-				System.out.println("Loading: " + urlURL);
-				if (urlURL == null) {
-					System.currentTimeMillis();
-				}
-				Object bundleData = getBundleData.invoke(bundle, new Object[0]);
+				ProxyConsole.getInstance().normalOutput()
+						.println("Loading: " + urlURL);
+				final Object bundleData = getBundleData.invoke(bundle,
+						new Object[0]);
 
 				final Enumeration<?> entries = (Enumeration<?>) getEntryPaths
 						.invoke(bundleData, new Object[] { "." });
-
 				while (entries.hasMoreElements()) {
 					String entry = (String) entries.nextElement();
 
@@ -131,16 +130,21 @@ class EclipseBundleRepository implements IFileRepository {
 					final URL localURL = (URL) asLocalURL.invoke(platformClass,
 							new Object[] { entryURL });
 
-					System.out.println("Entry: " + entry);
-					System.out.println("Elements: " + entryURL);
-					System.out.println("Local: " + localURL);
+					ProxyConsole.getInstance().normalOutput()
+							.println("Entry: " + entry);
+					ProxyConsole.getInstance().normalOutput()
+							.println("Elements: " + entryURL);
+					ProxyConsole.getInstance().normalOutput()
+							.println("Local: " + localURL);
 
 					if (entry.equals("./bin/")) {
-						String localFile = localURL.getFile();
-						System.out.println(localFile);
+						final String localFile = localURL.getFile();
+						ProxyConsole.getInstance().normalOutput()
+								.println(localFile);
 						EclipseBundleRepository
 								.injectStreams(new File(localFile), streams);
-						System.out.println("current size: " + streams.size());
+						ProxyConsole.getInstance().normalOutput()
+								.println("current size: " + streams.size());
 					}
 				}
 			}
@@ -159,7 +163,7 @@ class EclipseBundleRepository implements IFileRepository {
 
 		final String[] files = theCurrentDirectory.list();
 		if (files == null) {
-			System.out.println("Cannot process : "
+			ProxyConsole.getInstance().errorOutput().println("Cannot process : "
 					+ theCurrentDirectory.getAbsolutePath());
 			System.exit(1);
 		}
@@ -193,8 +197,9 @@ class EclipseBundleRepository implements IFileRepository {
 				}
 			}
 			else {
-				injectStreams(file, aListOfFiles);
-				System.out.println("Current size: " + aListOfFiles.size());
+				EclipseBundleRepository.injectStreams(file, aListOfFiles);
+				ProxyConsole.getInstance().normalOutput()
+						.println("Current size: " + aListOfFiles.size());
 			}
 		}
 	}

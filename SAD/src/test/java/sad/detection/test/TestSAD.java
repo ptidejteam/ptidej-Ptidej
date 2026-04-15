@@ -10,11 +10,10 @@
  ******************************************************************************/
 package sad.detection.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import sad.detection.test.classfile.swt.DetectionAntipatternSWTTest;
-import sad.detection.test.classfile.xerces.SpaghettiCodeTest;
-import sad.detection.test.classfile.xerces.SpaghettiCodeTest2;
+import sad.detection.test.classfile.xerces.SpaghettiCode1Test;
+import sad.detection.test.classfile.xerces.SpaghettiCode2Test;
 import sad.detection.test.classfile.xerces.VariousSmellsTest;
 import sad.detection.test.comparison.xerces.BlobTest;
 import sad.detection.test.generic.BoxPlotTest;
@@ -24,15 +23,14 @@ import sad.detection.test.javafile.ideasimsyn.SomeSmellsTest;
  * @author Yann-Gaël Guéhéneuc
  * @since  2004/01/25
  */
-// TODO: Implement and test the tests!
-// Non-fuzzy first, then fuzzy...
 public final class TestSAD extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestSAD suite = new TestSAD();
+		suite.setName(TestSAD.class.getName());
 
 		suite.addTestSuite(DetectionAntipatternSWTTest.class);
-		suite.addTestSuite(SpaghettiCodeTest.class);
-		suite.addTestSuite(SpaghettiCodeTest2.class);
+		suite.addTestSuite(SpaghettiCode1Test.class);
+		suite.addTestSuite(SpaghettiCode2Test.class);
 		suite.addTestSuite(VariousSmellsTest.class);
 		suite.addTestSuite(BlobTest.class);
 		// TODO Add these tests back
@@ -43,17 +41,5 @@ public final class TestSAD extends TestSuite {
 		suite.addTestSuite(SomeSmellsTest.class);
 
 		return suite;
-	}
-
-	public TestSAD() {
-		// Empty block.
-	}
-
-	public TestSAD(final Class theClass) {
-		super(theClass);
-	}
-
-	public TestSAD(final String name) {
-		super(name);
 	}
 }

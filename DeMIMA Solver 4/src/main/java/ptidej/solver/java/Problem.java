@@ -28,6 +28,7 @@ import ptidej.solver.java.approximation.DefaultNoApproximations;
 import ptidej.solver.java.approximation.IApproximations;
 import ptidej.solver.java.combination.Combination;
 import ptidej.solver.java.constraint.BinaryConstraint;
+import ptidej.solver.java.constraint.UnaryConstraint;
 import ptidej.solver.java.constraint.repository.EqualConstraint;
 import ptidej.solver.java.constraint.repository.GreaterOrEqualConstraint;
 import ptidej.solver.java.constraint.repository.LessOrEqualConstraint;
@@ -235,9 +236,8 @@ public class Problem extends PalmProblem {
 						dynamicProblem.addVar(v);
 					}
 
-					// I post new contraints to the dynamic problem.
+					// I post new constraints to the dynamic problem.
 					for (int i = 0; i < nonRemovableConstraints.size(); ++i) {
-
 						dynamicProblem.dynamicPost(
 								(AbstractConstraint) nonRemovableConstraints
 										.get(i));
@@ -315,7 +315,7 @@ public class Problem extends PalmProblem {
 			if (numberOfVar == 1) {
 				// UNARY CONSTRAINT
 				// args.add(Integer.valueOf(constraint.getConstant()));
-				// TO CHECK IF THE ONLY UNARY CONTSTAINT ARE
+				// TO CHECK IF THE ONLY UNARY CONSTRAINTS ARE
 				// GreaterOrEqualConstraint OR LessOrEqualConstraint
 				if (constraint instanceof GreaterOrEqualConstraint) {
 					args.add(((GreaterOrEqualConstraint) constraint).getName());
@@ -337,6 +337,12 @@ public class Problem extends PalmProblem {
 							Integer.valueOf(((LessOrEqualConstraint) constraint)
 									.getConstant()));
 				}
+				else {
+					args.add(((UnaryConstraint) constraint).getName());
+					args.add(((UnaryConstraint) constraint).getXCommand());
+					args.add(this.findDynamicVariable(
+							(Variable) constraint.getVar(0)));
+				}
 			}
 			else {
 				// BINARY (AND MORE) CONSTRAINT 
@@ -355,16 +361,27 @@ public class Problem extends PalmProblem {
 			// Yann 24/04/19: Approximations
 			// I don't forget to include the approximation
 			// as last parameter type and argument.
-			if (constraint instanceof BinaryConstraint) {
-				args.add(((BinaryConstraint) constraint).getApproximations());
+			if (constraint instanceof GreaterOrEqualConstraint
+					|| constraint instanceof LessOrEqualConstraint) {
+				
+				// Nothing to do
 			}
 			else if (constraint instanceof EqualConstraint
 					|| constraint instanceof NotEqualConstraint) {
 
 				args.add(DefaultNoApproximations.getDefaultApproximations());
 			}
+			else if (constraint instanceof UnaryConstraint) {
+				args.add(((UnaryConstraint) constraint).getApproximations());
+			}
+			else if (constraint instanceof BinaryConstraint) {
+				args.add(((BinaryConstraint) constraint).getApproximations());
+			}
 			else {
-				// Nothing to do
+				// Yann 25/11/22: Not normal!
+				// All constraints should handle be
+				// either Equal or Unary or Binary.
+				throw new NullPointerException();
 			}
 
 			final Class[] parameterTypes = new Class[args.size()];
@@ -385,6 +402,10 @@ public class Problem extends PalmProblem {
 					else if (constraint instanceof LessOrEqualConstraint) {
 						constr = (((LessOrEqualConstraint) constraint)
 								.getClass()).getConstructor(parameterTypes);
+					}
+					else {
+						constr = (((UnaryConstraint) constraint).getClass())
+								.getConstructor(parameterTypes);
 					}
 				}
 				else {

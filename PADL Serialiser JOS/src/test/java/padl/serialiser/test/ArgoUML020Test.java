@@ -11,11 +11,13 @@
 package padl.serialiser.test;
 
 import java.io.File;
+
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
-import padl.creator.classfile.LightClassFileCreator;
+import padl.creator.javafile.eclipse.LightJavaFileCreator;
 import padl.kernel.IAbstractModel;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.exception.CreationException;
@@ -43,9 +45,9 @@ public class ArgoUML020Test extends TestCase {
 				ArgoUML020Test.OriginalModel = Factory.getInstance()
 						.createCodeLevelModel("ArgoUML v0.20");
 				((ICodeLevelModel) ArgoUML020Test.OriginalModel)
-						.create(new LightClassFileCreator(new String[] {
-								"../../P-MARt Workspace/ArgoUML v0.20/bin/" },
-								true));
+						.create(new LightJavaFileCreator(
+								"../PADL Serialiser JOS/target/test-classes/ArgoUML v0.20/argouml/src_new/",
+								""));
 				ArgoUML020Test.OriginalModel = new AACRelationshipsAnalysis()
 						.invoke(ArgoUML020Test.OriginalModel);
 

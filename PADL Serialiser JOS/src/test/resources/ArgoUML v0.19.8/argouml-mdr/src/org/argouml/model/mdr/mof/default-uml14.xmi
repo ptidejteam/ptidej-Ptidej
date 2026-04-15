@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+      Converted from UML 1.3 to UML 1.4 on: Fri Sep 02 22:10:50 CEST 2005
+      Converter version 0.3 by Ludovic Maitre and Tom Morris
+-->
+<XMI xmlns:UML="org.omg.xmi.namespace.UML" xmi.version="1.2" timestamp="Fri Sep 02 22:10:50 CEST 2005">
+  <XMI.header>
+    <XMI.documentation>
+      <XMI.exporter>UML 1.3 to UML 1.4 stylesheets</XMI.exporter>
+      <XMI.exporterVersion>0.3</XMI.exporterVersion>
+    </XMI.documentation>
+    
+  </XMI.header>
+  <XMI.content>
+    <UML:Model isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="default" xmi.id="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff">
+      <UML:Namespace.ownedElement>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="access" xmi.id="xmi.4">
+          <UML:Stereotype.baseClass>Permission</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="friend" xmi.id="xmi.5">
+          <UML:Stereotype.baseClass>Permission</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="import" xmi.id="xmi.6">
+          <UML:Stereotype.baseClass>Permission</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="association" xmi.id="xmi.7">
+          <UML:Stereotype.baseClass>AssociationEnd</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="global" xmi.id="xmi.8">
+          <UML:Stereotype.baseClass>AssociationEnd</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="local" xmi.id="xmi.9">
+          <UML:Stereotype.baseClass>AssociationEnd</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="parameter" xmi.id="xmi.10">
+          <UML:Stereotype.baseClass>AssociationEnd</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="self" xmi.id="xmi.11">
+          <UML:Stereotype.baseClass>AssociationEnd</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="become" xmi.id="xmi.12">
+          <UML:Stereotype.baseClass>Flow</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="copy" xmi.id="xmi.13">
+          <UML:Stereotype.baseClass>Flow</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="create" xmi.id="xmi.14">
+          <UML:Stereotype.baseClass>Usage</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="call" xmi.id="xmi.15">
+          <UML:Stereotype.baseClass>Usage</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="instantiate" xmi.id="xmi.16">
+          <UML:Stereotype.baseClass>Usage</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="send" xmi.id="xmi.17">
+          <UML:Stereotype.baseClass>Usage</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="create" xmi.id="xmi.18">
+          <UML:Stereotype.baseClass>BehavioralFeature</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="destroy" xmi.id="xmi.19">
+          <UML:Stereotype.baseClass>BehavioralFeature</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="create" xmi.id="xmi.20">
+          <UML:Stereotype.baseClass>CallEvent</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="destroy" xmi.id="xmi.21">
+          <UML:Stereotype.baseClass>CallEvent</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="derive" xmi.id="xmi.22">
+          <UML:Stereotype.baseClass>Abstraction</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="realize" xmi.id="xmi.23">
+          <UML:Stereotype.baseClass>Abstraction</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="refine" xmi.id="xmi.24">
+          <UML:Stereotype.baseClass>Abstraction</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="trace" xmi.id="xmi.25">
+          <UML:Stereotype.baseClass>Abstraction</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="document" xmi.id="xmi.26">
+          <UML:Stereotype.baseClass>Component</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="executable" xmi.id="xmi.27">
+          <UML:Stereotype.baseClass>Component</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="file" xmi.id="xmi.28">
+          <UML:Stereotype.baseClass>Component</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="library" xmi.id="xmi.29">
+          <UML:Stereotype.baseClass>Component</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="table" xmi.id="xmi.30">
+          <UML:Stereotype.baseClass>Component</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="facade" xmi.id="xmi.31">
+          <UML:Stereotype.baseClass>Package</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="framework" xmi.id="xmi.32">
+          <UML:Stereotype.baseClass>Package</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="metamodel" xmi.id="xmi.33">
+          <UML:Stereotype.baseClass>Package</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="stub" xmi.id="xmi.34">
+          <UML:Stereotype.baseClass>Package</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="systemModel" xmi.id="xmi.35">
+          <UML:Stereotype.baseClass>Model</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="implementation" xmi.id="xmi.38">
+          <UML:Stereotype.baseClass>Generalization</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="implementationClass" xmi.id="xmi.39">
+          <UML:Stereotype.baseClass>Class</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="type" xmi.id="xmi.40">
+          <UML:Stereotype.baseClass>Class</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="implicit" xmi.id="xmi.48">
+          <UML:Stereotype.baseClass>Association</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="invariant" xmi.id="xmi.55">
+          <UML:Stereotype.baseClass>Constraint</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="postcondition" xmi.id="xmi.56">
+          <UML:Stereotype.baseClass>Constraint</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="precondition" xmi.id="xmi.57">
+          <UML:Stereotype.baseClass>Constraint</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="metaclass" xmi.id="xmi.58">
+          <UML:Stereotype.baseClass>Classifier</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="powertype" xmi.id="xmi.59">
+          <UML:Stereotype.baseClass>Classifier</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="process" xmi.id="xmi.60">
+          <UML:Stereotype.baseClass>Classifier</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="thread" xmi.id="xmi.61">
+          <UML:Stereotype.baseClass>Classifier</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="utility" xmi.id="xmi.62">
+          <UML:Stereotype.baseClass>Classifier</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="requirement" xmi.id="xmi.63">
+          <UML:Stereotype.baseClass>Comment</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="responsibility" xmi.id="xmi.64">
+          <UML:Stereotype.baseClass>Comment</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="signalFlow" xmi.id="xmi.65">
+          <UML:Stereotype.baseClass>ObjectFlowState</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="topLevel" xmi.id="xmi.128">
+          <UML:Stereotype.baseClass>Package</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="systemModel" xmi.id="xmi.129">
+          <UML:Stereotype.baseClass>Package</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:Package isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="java" xmi.id="xmi.83">
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+          <UML:Namespace.ownedElement>
+            <UML:Package isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="lang" xmi.id="xmi.84">
+              <UML:ModelElement.namespace>
+                <UML:Namespace xmi.idref="xmi.83"/>
+              </UML:ModelElement.namespace>
+              <UML:Namespace.ownedElement>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="Object" xmi.id="xmi.85">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.84"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="Char" xmi.id="xmi.86">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.84"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="Byte" xmi.id="xmi.95">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.84"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="Boolean" xmi.id="xmi.96">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.84"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="Short" xmi.id="xmi.97">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.84"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="Integer" xmi.id="xmi.98">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.84"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="Long" xmi.id="xmi.99">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.84"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="Float" xmi.id="xmi.100">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.84"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="Double" xmi.id="xmi.101">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.84"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="String" xmi.id="xmi.102">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.84"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+              </UML:Namespace.ownedElement>
+            </UML:Package>
+            <UML:Package isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="util" xmi.id="xmi.103">
+              <UML:ModelElement.namespace>
+                <UML:Namespace xmi.idref="xmi.83"/>
+              </UML:ModelElement.namespace>
+              <UML:Namespace.ownedElement>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="Vector" xmi.id="xmi.104">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.103"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+                <UML:Interface isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="Collection" xmi.id="xmi.105">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.103"/>
+                  </UML:ModelElement.namespace>
+                </UML:Interface>
+                <UML:Interface isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="Iterator" xmi.id="xmi.106">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.103"/>
+                  </UML:ModelElement.namespace>
+                </UML:Interface>
+                <UML:Interface isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="List" xmi.id="xmi.107">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.103"/>
+                  </UML:ModelElement.namespace>
+                </UML:Interface>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="Date" xmi.id="xmi.108">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.103"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="Time" xmi.id="xmi.109">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.103"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+                <UML:Interface isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="Set" xmi.id="xmi.110">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.103"/>
+                  </UML:ModelElement.namespace>
+                </UML:Interface>
+                <UML:Interface isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="SortedSet" xmi.id="xmi.111">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.103"/>
+                  </UML:ModelElement.namespace>
+                </UML:Interface>
+              </UML:Namespace.ownedElement>
+            </UML:Package>
+            <UML:Package isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="math" xmi.id="xmi.112">
+              <UML:ModelElement.namespace>
+                <UML:Namespace xmi.idref="xmi.83"/>
+              </UML:ModelElement.namespace>
+              <UML:Namespace.ownedElement>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="BigDecimal" xmi.id="xmi.113">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.112"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="BigInteger" xmi.id="xmi.114">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.112"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+              </UML:Namespace.ownedElement>
+            </UML:Package>
+            <UML:Package isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="net" xmi.id="xmi.115">
+              <UML:ModelElement.namespace>
+                <UML:Namespace xmi.idref="xmi.83"/>
+              </UML:ModelElement.namespace>
+              <UML:Namespace.ownedElement>
+                <UML:Class isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" isActive="false" name="URL" xmi.id="xmi.116">
+                  <UML:ModelElement.namespace>
+                    <UML:Namespace xmi.idref="xmi.115"/>
+                  </UML:ModelElement.namespace>
+                </UML:Class>
+              </UML:Namespace.ownedElement>
+            </UML:Package>
+          </UML:Namespace.ownedElement>
+        </UML:Package>
+        <UML:Stereotype isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="signalflow" xmi.id="xmi.118">
+          <UML:Stereotype.baseClass>ObjectFlowState</UML:Stereotype.baseClass>
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:Stereotype>
+        <UML:DataType isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="void" xmi.id="xmi.119">
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:DataType>
+        <UML:DataType isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="int" xmi.id="xmi.120">
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:DataType>
+        <UML:DataType isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="short" xmi.id="xmi.121">
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:DataType>
+        <UML:DataType isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="long" xmi.id="xmi.122">
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:DataType>
+        <UML:DataType isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="double" xmi.id="xmi.123">
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:DataType>
+        <UML:DataType isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="float" xmi.id="xmi.124">
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:DataType>
+        <UML:DataType isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="char" xmi.id="xmi.125">
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:DataType>
+        <UML:DataType isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="byte" xmi.id="xmi.126">
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:DataType>
+        <UML:DataType isSpecification="false" isRoot="false" isLeaf="false" isAbstract="false" name="boolean" xmi.id="xmi.127">
+          <UML:ModelElement.namespace>
+            <UML:Namespace xmi.idref="-64--88-11--16-e9dbfe:e2d71a1c1e:-7fff"/>
+          </UML:ModelElement.namespace>
+        </UML:DataType>
+      </UML:Namespace.ownedElement>
+    </UML:Model>
+  </XMI.content>
+</XMI>

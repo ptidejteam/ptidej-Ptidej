@@ -26,39 +26,19 @@
 					</compilerArgs>
 				</configuration>
 			</plugin>
-			<!-- Because of CFParse, I must compile towards 1.4 bytecode -->
-			<!-- 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
 				<configuration>
-					<release combine.self="override" />
-					<source>1.4</source>
-					<target>1.4</target>
-					<compilerId>eclipse</compilerId>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/*Test.java</exclude>
+					</excludes>
 				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.codehaus.plexus</groupId>
-						<artifactId>plexus-compiler-eclipse</artifactId>
-						<version>2.15.0</version>
-					</dependency>
-					<dependency>
-						<groupId>org.eclipse.jdt</groupId>
-						<artifactId>ecj</artifactId>
-						<version>3.37.0</version>
-					</dependency>
-				</dependencies>
 			</plugin>
-			-->
-
 			<!-- Must generate the test-jar for the tests in DeMIMA Solver 4 and
-			DeMIMA Solver Metrics and otehrs -->
+			DeMIMA Solver Metrics and others -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -75,18 +55,11 @@
 	</build>
 
 	<dependencies>
-
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
 			<artifactId>cpl-core</artifactId>
 			<version>1.0.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.12.0</version>
 		</dependency>
 
 		<!-- Test dependencies -->
@@ -96,7 +69,5 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>

@@ -17,16 +17,16 @@ import padl.kernel.exception.CreationException;
 
 public class CPPCreator implements ICodeLevelModelCreator {
 	private final String sourceDirectory;
+
 	public CPPCreator(final String aSourceDirectory) {
 		this.sourceDirectory = aSourceDirectory;
 	}
+
 	public void create(final ICodeLevelModel aCodeLevelModel)
 			throws CreationException {
 
-		EclipseCPPParserCaller
-			.getInstance()
-			.createCodeLevelModelUsingOSGiRemote(
-				this.sourceDirectory,
-				aCodeLevelModel);
+		EclipseCPPParserCaller.getInstance()
+				.createCodeLevelModelUsingOSGiEmbedded(this.sourceDirectory,
+						aCodeLevelModel);
 	}
 }

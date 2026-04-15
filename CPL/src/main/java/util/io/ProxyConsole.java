@@ -88,7 +88,6 @@ public class ProxyConsole {
 	}
 
 	private void setDebugOutput(final PrintWriter messageWriter) {
-
 		this.debugOutput = new MultiChannelPrintWriter(
 				new PrintWriter(new LoggerWriter(DEBUG)), messageWriter);
 	}

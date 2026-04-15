@@ -1,0 +1,15 @@
+/.cvsignore/1.1/Sun Aug 11 07:04:22 2002//TVERSION_0_20_F
+/DiagramFactory.java/1.6/Sun Nov 13 11:01:18 2005//TVERSION_0_20_F
+/ProjectMemberDiagram.java/1.33/Sun Jan  9 14:58:37 2005//TVERSION_0_20_F
+/UMLMutableGraphSupport.java/1.38/Sat Jan 21 22:01:29 2006//TVERSION_0_20_F
+/UmlDiagramRenderer.java/1.17/Sat Dec 10 18:49:32 2005//TVERSION_0_20_F
+/package.html/1.4/Sun Oct 10 08:37:52 2004//TVERSION_0_20_F
+D/activity////
+D/collaboration////
+D/deployment////
+D/layout////
+D/sequence////
+D/state////
+D/static_structure////
+D/ui////
+D/use_case////

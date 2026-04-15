@@ -60,6 +60,7 @@ public class ArgoUMLTest extends TestCase {
 		}
 		catch (final IOException e) {
 			e.printStackTrace();
+			Assert.assertTrue(false);
 		}
 		Assert.assertTrue(true);
 	}

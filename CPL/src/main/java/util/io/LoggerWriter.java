@@ -64,7 +64,8 @@ public class LoggerWriter extends Writer {
 
 	@Override
 	public void write(char[] cbuf, int off, int len) throws IOException {
-		StringBuilder messageBuilder = new StringBuilder();
+		final StringBuilder messageBuilder = new StringBuilder();
+
 		boolean carraigeAndNewLineSkip = false;
 		if (len == 2 && (cbuf[0] == '\r') && cbuf[1] == '\n') {
 			carraigeAndNewLineSkip = true;
@@ -74,9 +75,8 @@ public class LoggerWriter extends Writer {
 			messageBuilder.append(cbuf[i]);
 		}
 		if (!carraigeAndNewLineSkip) {
-			loggerWrite(messageBuilder);
+			this.loggerWrite(messageBuilder);
 		}
-
 	}
 
 	@Override

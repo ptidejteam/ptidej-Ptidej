@@ -40,6 +40,7 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IPackage;
 import padl.kernel.IPackageDefault;
+import padl.kernel.IPackageGhost;
 import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.IRelationship;
@@ -168,6 +169,8 @@ abstract class ConstraintGenerator {
 	public void close(final IPackage p) {
 	}
 	public void close(final IPackageDefault aPackage) {
+	}
+	public void close(final IPackageGhost aPackage) {
 	}
 	public void close(final ISetter aSetter) {
 	}
@@ -573,6 +576,8 @@ abstract class ConstraintGenerator {
 	public void open(final IPackage p) {
 	}
 	public void open(final IPackageDefault aPackage) {
+	}
+	public void open(final IPackageGhost aPackage) {
 	}
 	public final void open(final ISetter p) {
 		this.open((IMethod) p);

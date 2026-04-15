@@ -79,7 +79,7 @@ class FileFolderRepository implements IFileRepository {
 		}
 	}
 
-	private static final NamedInputStream[] getMetaModelFiles(
+	private static final NamedInputStream[] getFiles(
 			final Class<? extends IRepository> aClass)
 			throws FileAccessException {
 
@@ -128,7 +128,7 @@ class FileFolderRepository implements IFileRepository {
 		// TODO Is it still necessary?
 		if (this.fileStreams == null) {
 			this.fileStreams = FileFolderRepository
-					.getMetaModelFiles(this.locator.getClass());
+					.getFiles(this.locator.getClass());
 		}
 		return this.fileStreams;
 	}

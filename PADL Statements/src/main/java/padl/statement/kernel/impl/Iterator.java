@@ -13,7 +13,6 @@ package padl.statement.kernel.impl;
 import padl.kernel.IField;
 import padl.kernel.IInterface;
 import padl.kernel.IMethod;
-import padl.kernel.impl.Statement;
 import padl.statement.kernel.IIterator;
 
 /**

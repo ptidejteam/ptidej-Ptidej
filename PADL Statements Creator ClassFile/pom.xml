@@ -30,7 +30,6 @@
 	</build>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
 			<artifactId>cpl-core</artifactId>
@@ -54,13 +53,5 @@
 			<artifactId>padl-statements</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-
-		<dependency>
-			<groupId>org.apache.bcel</groupId>
-			<artifactId>bcel</artifactId>
-			<version>6.7.0</version>
-		</dependency>
-
 	</dependencies>
-
 </project>

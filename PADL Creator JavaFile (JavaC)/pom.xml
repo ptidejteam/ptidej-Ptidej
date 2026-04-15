@@ -35,6 +35,21 @@
 						--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
 					</argLine>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/TestCreatorJavaFileUsingJavaC.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
+				<configuration>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/*Test.java</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 			<!-- Must generate the test-jar for dependent tests -->
@@ -79,7 +94,7 @@
 			<artifactId>padl-statements</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-		
+
 		<!-- Test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>

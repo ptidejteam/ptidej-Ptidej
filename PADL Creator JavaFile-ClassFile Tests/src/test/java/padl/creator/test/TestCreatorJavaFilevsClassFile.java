@@ -30,7 +30,6 @@
  */
 package padl.creator.test;
 
-import junit.framework.Test;
 import junit.framework.TestSuite;
 import padl.creator.test.newkeywords.NewKeywordsTest;
 import padl.creator.test.relationships.RelationshipsTest;
@@ -40,24 +39,17 @@ import padl.creator.test.relationships.RelationshipsTest;
  * @since  2004/01/25
  */
 public final class TestCreatorJavaFilevsClassFile extends TestSuite {
-	public static Test suite() {
+	public static TestSuite suite() {
 		final TestCreatorJavaFilevsClassFile suite = new TestCreatorJavaFilevsClassFile();
-		suite.addTestSuite(padl.creator.test.comparison.jct.Composite1.class);
+		suite.setName(TestCreatorJavaFilevsClassFile.class.getName());
+
 		suite.addTestSuite(
-				padl.creator.test.comparison.eclipse.Composite1.class);
+				padl.creator.test.comparison.jct.Composite1Test.class);
+		suite.addTestSuite(
+				padl.creator.test.comparison.eclipse.Composite1Test.class);
 		suite.addTestSuite(NewKeywordsTest.class);
 		suite.addTestSuite(RelationshipsTest.class);
+
 		return suite;
-	}
-
-	public TestCreatorJavaFilevsClassFile() {
-	}
-
-	public TestCreatorJavaFilevsClassFile(final Class<?> theClass) {
-		super(theClass);
-	}
-
-	public TestCreatorJavaFilevsClassFile(final String name) {
-		super(name);
 	}
 }

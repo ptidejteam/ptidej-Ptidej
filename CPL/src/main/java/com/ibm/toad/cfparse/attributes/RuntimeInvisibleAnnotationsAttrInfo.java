@@ -1,72 +1,69 @@
 package com.ibm.toad.cfparse.attributes;
 
-import java.io.DataInput;
+import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
-import java.io.DataOutput;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
 import com.ibm.toad.cfparse.ConstantPool;
 
 public final class RuntimeInvisibleAnnotationsAttrInfo extends AttrInfo {
-    private byte[] data;
+	private byte[] data;
 
-    public RuntimeInvisibleAnnotationsAttrInfo(ConstantPool cp, int nameIndex, int attrLen) {
-        super(cp, nameIndex, attrLen);
-    }
+	public RuntimeInvisibleAnnotationsAttrInfo(ConstantPool cp, int nameIndex,
+			int attrLen) {
 
-    public void read(DataInput input) throws IOException {
-        this.d_len = input.readInt();
-        this.data = new byte[this.d_len];
-        input.readFully(this.data);
-    }
+		super(cp, nameIndex, attrLen);
+	}
 
-    public void write(DataOutput output) throws IOException {
-        output.writeInt(this.data.length);
-        output.write(this.data);
-    }
+	@Override
+	public String getName() {
+		return "RuntimeInvisibleAnnotations";
+	}
 
-    @Override
-    public String getName() {
-        return "RuntimeInvisibleAnnotations";
-    }
-    public void setFromBCEL(org.apache.bcel.classfile.RuntimeInvisibleAnnotations bcelAttr) {
-        if (bcelAttr == null) {
-            this.data = new byte[0];
-            this.d_len = 0;
-            return;
-        }
+	public void setFromBCEL(
+			org.apache.bcel.classfile.RuntimeInvisibleAnnotations bcelAttr) {
 
-        // BCEL can serialize the full attribute
-        try {
-            java.io.ByteArrayOutputStream baos = new java.io.ByteArrayOutputStream();
-            java.io.DataOutputStream dos = new java.io.DataOutputStream(baos);
-            bcelAttr.dump(dos);
-            dos.close();
-            byte[] fullData = baos.toByteArray();
+		if (bcelAttr == null) {
+			this.data = new byte[0];
+			this.d_len = 0;
+			return;
+		}
 
-            // Skip the first 6 bytes (attribute_name_index + attribute_length) because your AttrInfo handles them separately
-            this.data = new byte[fullData.length - 6];
-            System.arraycopy(fullData, 6, this.data, 0, this.data.length);
+		// BCEL can serialize the full attribute
+		try {
+			final ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			final DataOutputStream dos = new DataOutputStream(baos);
+			bcelAttr.dump(dos);
+			dos.close();
 
-            this.d_len = this.data.length;
-        } catch (IOException e) {
-            throw new RuntimeException("Error copying RuntimeInvisibleAnnotations", e);
-        }
-    }
+			// Skip the first 6 bytes (attribute_name_index + attribute_length) because your AttrInfo handles them separately
+			final byte[] fullData = baos.toByteArray();
+			this.data = new byte[fullData.length - 6];
+			System.arraycopy(fullData, 6, this.data, 0, this.data.length);
 
-    @Override
-    public String toString() {
-        return "name: RuntimeInvisibleAnnotations  bytes (" + this.data.length + ")";
-    }
+			this.d_len = this.data.length;
+		}
+		catch (final IOException e) {
+			throw new RuntimeException(
+					"Error copying RuntimeInvisibleAnnotations", e);
+		}
+	}
 
- 
-    protected void read(DataInputStream input) throws IOException {
-        read((DataInput) input);
-    }
+	@Override
+	public String toString() {
+		return "name: RuntimeInvisibleAnnotations  bytes (" + this.data.length
+				+ ")";
+	}
 
+	public void read(final DataInputStream input) throws IOException {
+		this.d_len = input.readInt();
+		this.data = new byte[this.d_len];
+		input.readFully(this.data);
+	}
 
-    protected void write(DataOutputStream output) throws IOException {
-        write((DataOutput) output);
-    }
+	protected void write(final DataOutputStream output) throws IOException {
+		output.writeInt(this.data.length);
+		output.write(this.data);
+	}
 }

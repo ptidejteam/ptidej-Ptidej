@@ -1,0 +1,12 @@
+/.cvsignore/1.1/Sun Aug 11 07:04:26 2002//TVERSION_0_20_F
+/CollectionUtil.java/1.2/Wed Jun 22 19:46:42 2005//TVERSION_0_20_F
+/ConfigLoader.java/1.24/Tue May 17 21:05:20 2005//TVERSION_0_20_F
+/CustomSeparator.java/1.5/Fri Aug 27 15:29:17 2004//TVERSION_0_20_F
+/FileConstants.java/1.5/Sun Jan  9 14:59:12 2005//TVERSION_0_20_F
+/FileFilters.java/1.15/Sat Feb  5 09:56:55 2005//TVERSION_0_20_F
+/MyTokenizer.java/1.13/Sun Jan  9 14:59:12 2005//TVERSION_0_20_F
+/SuffixFilter.java/1.8/Sun Nov 13 11:01:18 2005//TVERSION_0_20_F
+/Tools.java/1.22/Sun Nov 13 11:01:18 2005//TVERSION_0_20_F
+/package.html/1.2/Tue Apr 29 19:31:12 2003//TVERSION_0_20_F
+D/logging////
+D/osdep////

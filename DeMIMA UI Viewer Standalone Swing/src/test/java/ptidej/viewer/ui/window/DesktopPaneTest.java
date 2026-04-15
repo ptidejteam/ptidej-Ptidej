@@ -1,8 +1,7 @@
 package ptidej.viewer.ui.window;
 
+import java.io.IOException;
 import java.util.Set;
-
-import javax.imageio.IIOException;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -16,12 +15,12 @@ import ptidej.viewer.ui.DesktopPane;
 import ptidej.viewer.ui.rulecard.IRuleCardListener;
 import ptidej.viewer.ui.rulecard.RuleCardEvent;
 
-public class DesktopPaneTest extends TestCase{
+public class DesktopPaneTest extends TestCase {
 	/**
 	 * @author Vishnu Rameshbabu
 	 * @since 2024/05/14
 	 */
-	DesktopPane desktopPane =  DesktopPane.getInstance();
+	DesktopPane desktopPane = DesktopPane.getInstance();
 	final ICanvasListener aCanvasListener = null;
 	final IGraphModelListener aGraphModelListener = null;
 	final IRuleCardListener aRuleCardListener = null;
@@ -32,7 +31,8 @@ public class DesktopPaneTest extends TestCase{
 	final char[] patternName = null;
 	final int problem = 0;
 	private int solver = 2;
-	private  SourcePlantUMLModelWindow plantUML = null;
+	private SourcePlantUMLModelWindow plantUML = null;
+
 	protected void setUp() {
 		desktopPane.setRuleCardEvent(aRuleCardEvent);
 		desktopPane.setDesignDefects(aDesignDefectList);
@@ -43,19 +43,25 @@ public class DesktopPaneTest extends TestCase{
 		desktopPane.createPlantUMLModelWindow();
 		plantUML = new SourcePlantUMLModelWindow();
 	}
+
 	public void testCaseDesktopPane() {
-		
+
 		Assert.assertNotNull(desktopPane);
-		
+
 	}
+
 	public void testCaseCreatePlantUML() {
-		
+
 		Assert.assertNotNull(plantUML);
-		}
-	@Test(expected = IIOException.class)
+	}
+
+	@Test(expected = IOException.class)
 	public void testCaseCreatePlantUMLImage() {
-		((SourcePlantUMLModelWindow) desktopPane.getInstance().getAbstractRepresentationWindow()).setImagePath("../InvalidPath.txt\\");
+		((SourcePlantUMLModelWindow) desktopPane.getInstance()
+				.getAbstractRepresentationWindow())
+				// TODO What's this weird path?
+				.setImagePath("../InvalidPath.txt\\");
 		plantUML = new SourcePlantUMLModelWindow();
-		
+
 	}
 }

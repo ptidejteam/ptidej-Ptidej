@@ -2,6 +2,8 @@ package padl.creator.cppfile.eclipse.test.big;
 
 import java.util.ArrayList;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -24,18 +26,18 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IPackage;
 import padl.kernel.IPackageDefault;
+import padl.kernel.IPackageGhost;
 import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
 import padl.visitor.IWalker;
-import util.lang.Modifier;
 
 @SuppressWarnings("unused")
 public class JNICollecteNativeVisitor implements IWalker {
 	private final ArrayList<String> listOfNativeMethods = new ArrayList<String>();
 	private IClass currentclass;
-	private final ArrayList<String> listclass= new ArrayList<String>();
+	private final ArrayList<String> listclass = new ArrayList<String>();
 
 	@Override
 	public Object getResult() {
@@ -49,16 +51,16 @@ public class JNICollecteNativeVisitor implements IWalker {
 		this.currentclass = aClass;
 		String name1 = aClass.getDisplayName();
 
-this.listclass.add(name1);
-	
+		this.listclass.add(name1);
+
 	}
 
 	@Override
 	public void open(IMethod aMethod) {
 		// TODO Auto-generated method stub
-		if (Modifier.isNative(aMethod.getVisibility())) {
-			String name = aMethod.getDisplayName();
-					//+ " " +currentclass.getDisplayName();
+		if (Access.isNative(aMethod.getVisibility())) {
+			final String name = aMethod.getDisplayName();
+			//+ " " +currentclass.getDisplayName();
 
 			this.listOfNativeMethods.add(name);
 		}
@@ -144,6 +146,11 @@ this.listclass.add(name1);
 	}
 
 	@Override
+	public void close(IPackageGhost aPackageGhost) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
 	public void close(ISetter aSetter) {
 		// TODO Auto-generated method stub
 
@@ -222,6 +229,11 @@ this.listclass.add(name1);
 	}
 
 	@Override
+	public void open(IPackageGhost aPackageGhost) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
 	public void open(ISetter aSetter) {
 		// TODO Auto-generated method stub
 
@@ -234,7 +246,8 @@ this.listclass.add(name1);
 	}
 
 	@Override
-	public void unknownConstituentHandler(String aCalledMethodName, IConstituent aConstituent) {
+	public void unknownConstituentHandler(String aCalledMethodName,
+			IConstituent aConstituent) {
 		// TODO Auto-generated method stub
 
 	}

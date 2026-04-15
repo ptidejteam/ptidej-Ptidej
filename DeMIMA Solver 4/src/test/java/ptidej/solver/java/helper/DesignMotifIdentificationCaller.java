@@ -35,7 +35,7 @@ import padl.visitor.IWalker;
 import ptidej.solver.Occurrence;
 import ptidej.solver.OccurrenceBuilder;
 import ptidej.solver.java.Problem;
-import ptidej.solver.java.domain.Generator;
+import ptidej.solver.java.domain.GeneratorExcludingGhosts;
 import ptidej.solver.java.domain.Manager;
 import util.io.MultiChannelOutputStream;
 import util.io.ProxyConsole;
@@ -258,7 +258,7 @@ public class DesignMotifIdentificationCaller {
 			aName,
 			anAbstractLevelModel,
 			false,
-			new Generator(),
+			new GeneratorExcludingGhosts(),
 			anOutputFolder);
 	}
 	//	private void analyseIdiomLevelModel(
@@ -346,7 +346,7 @@ public class DesignMotifIdentificationCaller {
 				"CKJM",
 				idiomLevelModel,
 				false,
-				new Generator(),
+				new GeneratorExcludingGhosts(),
 				"CKJM");
 
 			// ptidejSolver.analyseCodeLevelModelFromJava(
@@ -1148,7 +1148,7 @@ public class DesignMotifIdentificationCaller {
 				true));
 
 			this
-				.callPtidejSolver(aName, codeLevelModel, false, new Generator());
+				.callPtidejSolver(aName, codeLevelModel, false, new GeneratorExcludingGhosts());
 		}
 		catch (final CreationException e) {
 			e.printStackTrace();

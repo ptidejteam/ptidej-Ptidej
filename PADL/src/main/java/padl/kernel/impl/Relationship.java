@@ -10,49 +10,53 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
+import com.ibm.toad.cfparse.utils.Access;
+
 import padl.kernel.Constants;
 import padl.kernel.IElementMarker;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IRelationship;
-import padl.kernel.IUseRelationship;
 import padl.kernel.exception.ModelDeclarationException;
 import padl.util.Util;
 import util.io.ProxyConsole;
-import util.lang.Modifier;
 import util.multilingual.MultilingualManager;
 
-abstract class Relationship extends Element implements IElementMarker,
-		IRelationship {
+abstract class Relationship extends Element
+		implements IElementMarker, IRelationship {
 
 	private static final long serialVersionUID = -5857707891166836532L;
 	private int cardinality;
 	private final IFirstClassEntity targetEntity;
 
-	public Relationship(final char[] anID, final IFirstClassEntity aTargetEntity) {
-	    super(anID);
-	    this.targetEntity = aTargetEntity;
+	public Relationship(final char[] anID,
+			final IFirstClassEntity aTargetEntity) {
+		super(anID);
+		this.targetEntity = aTargetEntity;
 	}
+
 	public int getCardinality() {
 		return this.cardinality;
 	}
+
 	public IFirstClassEntity getTargetEntity() {
 		return this.targetEntity;
 	}
+
 	public void performCloneSession() {
-	    super.performCloneSession();
-	   
+		super.performCloneSession();
+
 	}
+
 	public void setCardinality(int aCardinality) {
 		if (aCardinality < 1) {
 			throw new ModelDeclarationException(MultilingualManager.getString(
-				"CARDINALITY",
-				IRelationship.class,
-				new Object[] { Integer.valueOf(this.cardinality) }));
+					"CARDINALITY", IRelationship.class,
+					new Object[] { Integer.valueOf(this.cardinality) }));
 		}
 
 		this.cardinality = aCardinality;
 	}
-	
+
 	public String toString() {
 		if (Constants.DEBUG) {
 			ProxyConsole.getInstance().debugOutput().print("// ");
@@ -61,6 +65,7 @@ abstract class Relationship extends Element implements IElementMarker,
 		}
 		return this.toString(0);
 	}
+
 	public String toString(final int tab) {
 		final StringBuffer buffer = new StringBuffer();
 		Util.addTabs(tab, buffer);
@@ -70,7 +75,7 @@ abstract class Relationship extends Element implements IElementMarker,
 		buffer.append("\nWith: ");
 		buffer.append(this.getTargetEntity().getName());
 		buffer.append("\nVisibility: ");
-		buffer.append(Modifier.toString(this.getVisibility()));
+		buffer.append(Access.getAsString(this.getVisibility()));
 		buffer.append(", cadinality: ");
 		buffer.append(this.getCardinality());
 		buffer.append('\n');

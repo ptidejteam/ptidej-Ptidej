@@ -25,6 +25,7 @@ import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IPackage;
 import padl.kernel.IPackageDefault;
+import padl.kernel.IPackageGhost;
 import padl.kernel.IParameter;
 import padl.kernel.IPrimitiveEntity;
 import padl.kernel.IRelationship;
@@ -247,6 +248,10 @@ public class PlantUMLGenerator implements IGenerator {
 
 	}
 
+	public void close(IPackageGhost aPackageGhost) {
+
+	}
+
 	public void close(ISetter aSetter) {
 
 	}
@@ -284,6 +289,10 @@ public class PlantUMLGenerator implements IGenerator {
 	}
 
 	public void open(IPackageDefault aPackage) {
+
+	}
+
+	public void open(IPackageGhost aPackageGhost) {
 
 	}
 
