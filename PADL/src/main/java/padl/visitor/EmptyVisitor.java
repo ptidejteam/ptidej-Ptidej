@@ -213,4 +213,14 @@ public class EmptyVisitor implements IVisitor{
     public void visit(IUseRelationship aUse) {
 
     }
+
+	@Override
+	public void close(IPackageGhost aPackageGhost) {
+		
+	}
+
+	@Override
+	public void open(IPackageGhost aPackageGhost) {
+		
+	}
 }
