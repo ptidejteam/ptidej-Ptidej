@@ -70,7 +70,6 @@
 		<module>SAD</module>
 		<module>SAD Rules Creator</module>
 		<module>SQUAD</module>
-        <module>Delivarable-2</module>
     </modules>
 
 	<properties>
