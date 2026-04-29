@@ -21,6 +21,7 @@
 package padl.creator.javafile.javac.test;
 
 import junit.framework.TestSuite;
+import padl.creator.javafile.javac.test.simple.PrimitiveParameterTest;
 import padl.creator.javafile.javac.test.simple.SanityTest;
 
 public class TestCreatorJavaFileUsingJavaC extends TestSuite {
@@ -28,6 +29,7 @@ public class TestCreatorJavaFileUsingJavaC extends TestSuite {
 		final TestCreatorJavaFileUsingJavaC suite = new TestCreatorJavaFileUsingJavaC();
 		suite.setName(TestCreatorJavaFileUsingJavaC.class.getName());
 
+		suite.addTestSuite(PrimitiveParameterTest.class);
 		suite.addTestSuite(SanityTest.class);
 
 		return suite;
