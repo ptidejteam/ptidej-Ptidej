@@ -55,7 +55,7 @@ public class CreatorJCT implements ICodeLevelModelCreator {
 	}
 
 	public void create(final ICodeLevelModel model) throws CreationException {
-		final JCTtoPADLTranslator creator = new JCTtoPADLTranslator(model);
+		final JCTtoPADLTranslator creator = new JCTtoPADLTranslator(model, this.jctRootNode);
 		this.jctRootNode.accept(creator, null);
 	}
 }

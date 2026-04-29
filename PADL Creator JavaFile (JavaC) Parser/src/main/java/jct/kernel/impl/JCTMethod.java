@@ -261,8 +261,12 @@ class JCTMethod extends JCTClassMember<IJCTStatement> implements IJCTMethod {
 
 		final Iterator<IJCTParameter> pit = this.getParameters().iterator();
 		while (pit.hasNext()) {
-			final String type = pit.next().getType().getTypeName();
-			result.append(type.substring(1));
+			final IJCTType type = pit.next().getType();
+			if (type.getTypeName().length() == 1) {
+				result.append(type.getSourceCode());
+			} else {
+				result.append(type.getTypeName().substring(1));
+			}
 			if (pit.hasNext())
 				result.append(", ");
 		}

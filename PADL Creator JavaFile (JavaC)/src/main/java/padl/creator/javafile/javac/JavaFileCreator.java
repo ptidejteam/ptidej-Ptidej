@@ -224,10 +224,10 @@ public class JavaFileCreator implements ICodeLevelModelCreator {
 	}
 
 	public void create(final ICodeLevelModel model) throws CreationException {
-		final JCTtoPADLTranslator creator = new JCTtoPADLTranslator(model);
 		try {
 			final IJCTRootNode rootNode = JCTCreatorFromSourceCode.createJCT("",
 					true, this.diag, this.options, this.files);
+			final JCTtoPADLTranslator creator = new JCTtoPADLTranslator(model, rootNode);
 			// TODO: Crashed with Juzzle!
 			rootNode.accept(new JCTCommentExtractor(), null);
 			rootNode.accept(new JCTCommentAttachor(), null);
