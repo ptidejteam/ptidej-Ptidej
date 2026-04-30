@@ -779,19 +779,6 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 					packageJavaLang.addConstituent(entity);
 				}
 				else {
-					/*
-					this.errorMessage.setLength(0);
-					this.errorMessage.append(this.getClass().getName());
-					this.errorMessage.append(" is missing source-code type: ");
-					this.errorMessage.append(v.getType().getSourceCode());
-					
-					final String errorString = this.errorMessage.toString();
-					if (!this.errorMessages.contains(errorString)) {
-						this.errorMessages.add(errorString);
-						ProxyConsole.getInstance().debugOutput()
-								.println(errorString);
-					}
-					*/
 					entity = this.getMissingEntity(parameterTypeName, aParameter);
 				}
 			}
@@ -841,11 +828,21 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 					}
 				}
 			}
+			this.errorMessage.setLength(0);
+			this.errorMessage.append(this.getClass().getName());
+			this.errorMessage.append(" is missing source-code type: ");
+			this.errorMessage.append(entityName);
+			
+			final String errorString = this.errorMessage.toString();
+			if (!this.errorMessages.contains(errorString)) {
+				this.errorMessages.add(errorString);
+				ProxyConsole.getInstance().debugOutput()
+						.println(errorString);
+			}
 			return null; // Searched entity is not a primitive type and was not found in JCT.
 		}
 		IEntity entity = Factory.getInstance().createPrimitiveEntity(
 				entityName.toCharArray());
-		this.model.addConstituent(entity);
 		return entity;
 	}
 	
