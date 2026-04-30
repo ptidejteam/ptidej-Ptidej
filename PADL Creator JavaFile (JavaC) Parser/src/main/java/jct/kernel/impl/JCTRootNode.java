@@ -75,8 +75,8 @@ import jct.util.equiv.Identity;
  *
  * @author Mathieu Lemoine
  */
-class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
-		IJCTRootNode {
+class JCTRootNode extends JCTElementContainer<IJCTPackage>
+		implements IJCTRootNode {
 	/**
 	 * Set of packages of this root node
 	 */
@@ -90,8 +90,8 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 	/**
 	 * List of orphans of this root node
 	 */
-	private final List<IJCTElement> orphans =
-		ListOfElements.decorateList(new OrphanList());
+	private final List<IJCTElement> orphans = ListOfElements
+			.decorateList(new OrphanList());
 
 	/**
 	 * initialized of this root node
@@ -120,8 +120,8 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 		IJCTFactory f = this.factory.get();
 
 		if (null == f)
-			this.factory =
-				new SoftReference<IJCTFactory>(f = new JCTFactory(this));
+			this.factory = new SoftReference<IJCTFactory>(
+					f = new JCTFactory(this));
 		return f;
 	}
 
@@ -133,12 +133,12 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 	}
 
 	public IJCTPrimitiveType getType(
-		final JCTPrimitiveTypes aPrimitiveTypeConstant) {
+			final JCTPrimitiveTypes aPrimitiveTypeConstant) {
 		IJCTPrimitiveType t = this.primitiveTypes.get(aPrimitiveTypeConstant);
 
 		if (null == t)
-			this.primitiveTypes.put(aPrimitiveTypeConstant, t =
-				new JCTPrimitiveType(this, aPrimitiveTypeConstant));
+			this.primitiveTypes.put(aPrimitiveTypeConstant,
+					t = new JCTPrimitiveType(this, aPrimitiveTypeConstant));
 
 		return t;
 	}
@@ -247,8 +247,8 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 		return visitor.visitRootNode(this, aP);
 	}
 
-	private class OrphanList extends ListOfUnique<IJCTElement> implements
-			Serializable {
+	private class OrphanList extends ListOfUnique<IJCTElement>
+			implements Serializable {
 		private static final long serialVersionUID = 4627063330787906314L;
 
 		public OrphanList() {
@@ -264,8 +264,8 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 
 			if (-1 != old_index) {
 				final int max = i > old_index ? i : old_index;
-				final ListIterator<IJCTElement> it =
-					this.listIterator(i < old_index ? i : old_index);
+				final ListIterator<IJCTElement> it = this
+						.listIterator(i < old_index ? i : old_index);
 				while (it.hasNext() && it.nextIndex() <= max) {
 					final IJCTElement elem = it.next();
 					if (elem instanceof JCTElement)
@@ -276,8 +276,8 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 			super.add(i, e);
 
 			if (-1 == old_index)
-				JCTRootNode.this
-					.discardOrphansCachedPathPartBuilderIndex((JCTElement) e);
+				JCTRootNode.this.discardOrphansCachedPathPartBuilderIndex(
+						(JCTElement) e);
 		}
 
 		@Override
@@ -296,7 +296,8 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 	/**
 	 * Discards the Cached Path Part Builder Index stored in each orphan after e
 	 */
-	private void discardOrphansCachedPathPartBuilderIndex(final JCTElement<?> e) {
+	private void discardOrphansCachedPathPartBuilderIndex(
+			final JCTElement<?> e) {
 		// Yann 2010/06/21: New, fastest implementation.
 		final int startIndex = this.orphans.indexOf(e);
 		for (int i = startIndex + 1; i < this.orphans.size(); i++) {
@@ -316,16 +317,11 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 		//	}
 	}
 
-	private final Map<JCTPrimitiveTypes, IJCTPrimitiveType> primitiveTypes =
-		new HashMap<JCTPrimitiveTypes, IJCTPrimitiveType>();
-	private transient final Map<String, WeakReference<IJCTArrayType>> arrayTypes =
-		new HashMap<String, WeakReference<IJCTArrayType>>();
-	private transient final Map<String, WeakReference<IJCTIntersectionType>> intersectionTypes =
-		new HashMap<String, WeakReference<IJCTIntersectionType>>();
-	private transient final Map<String, WeakReference<IJCTClassType>> classTypes =
-		new HashMap<String, WeakReference<IJCTClassType>>();
-	private transient final Set<WeakReference<IJCTClassType>> classesTypes =
-		new HashSet<WeakReference<IJCTClassType>>();
+	private final Map<JCTPrimitiveTypes, IJCTPrimitiveType> primitiveTypes = new HashMap<JCTPrimitiveTypes, IJCTPrimitiveType>();
+	private transient final Map<String, WeakReference<IJCTArrayType>> arrayTypes = new HashMap<String, WeakReference<IJCTArrayType>>();
+	private transient final Map<String, WeakReference<IJCTIntersectionType>> intersectionTypes = new HashMap<String, WeakReference<IJCTIntersectionType>>();
+	private transient final Map<String, WeakReference<IJCTClassType>> classTypes = new HashMap<String, WeakReference<IJCTClassType>>();
+	private transient final Set<WeakReference<IJCTClassType>> classesTypes = new HashSet<WeakReference<IJCTClassType>>();
 
 	private IJCTArrayType getCachedArrayType(final String name) {
 		final WeakReference<IJCTArrayType> ref = this.arrayTypes.get(name);
@@ -342,8 +338,8 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 	}
 
 	private IJCTIntersectionType getCachedIntersectionType(final String name) {
-		final WeakReference<IJCTIntersectionType> ref =
-			this.intersectionTypes.get(name);
+		final WeakReference<IJCTIntersectionType> ref = this.intersectionTypes
+				.get(name);
 
 		if (null == ref)
 			return null;
@@ -374,86 +370,93 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 	/**
 	 * Returns the type designed by the path
 	 */
-	public <T extends IJCTType> T getType(final String path, final Class<T> type) {
-		if (1 == path.length()) {
-			return type.cast(this.getType(JCTPrimitiveTypes.resolveType(path)));
+	public <T extends IJCTType> T getType(final String path,
+			final Class<T> type) {
+
+		String newPath = path;
+
+		if (1 == newPath.length()) {
+			return type
+					.cast(this.getType(JCTPrimitiveTypes.resolveType(newPath)));
 		}
 
-		if (Constants.ARRAY_MARKER == path.charAt(0)) {
-			IJCTArrayType t = this.getCachedArrayType(path);
+		if (Constants.ARRAY_MARKER == newPath.charAt(0)) {
+			IJCTArrayType t = this.getCachedArrayType(newPath);
 			if (null == t) {
-				this.arrayTypes.put(path, new WeakReference<IJCTArrayType>(t =
-					new JCTArrayType(this, this.getType(
-						path.substring(1),
-						IJCTType.class))));
+				this.arrayTypes.put(newPath,
+						new WeakReference<IJCTArrayType>(t = new JCTArrayType(
+								this, this.getType(newPath.substring(1),
+										IJCTType.class))));
 			}
 			return type.cast(t);
 		}
 
-		if (Constants.INTERSECTION_MARKER == path.charAt(0)) {
-			final String names[] =
-				Constants.INTERSECTION_SPLITTER_PATTERN
-					.split(path.substring(1));
+		if (Constants.INTERSECTION_MARKER == newPath.charAt(0)) {
+			final String names[] = Constants.INTERSECTION_SPLITTER_PATTERN
+					.split(newPath.substring(1));
 
 			if (1 == names.length) {
-				return this.getType(path.substring(1), type);
+				return this.getType(newPath.substring(1), type);
 			}
 
-			IJCTIntersectionType t = this.getCachedIntersectionType(path);
+			IJCTIntersectionType t = this.getCachedIntersectionType(newPath);
 			if (null == t) {
 				final IJCTType types[] = new IJCTType[names.length];
 				for (int i = 0; i < names.length; ++i) {
 					types[i] = this.getType(names[i], IJCTType.class);
 				}
-				this.intersectionTypes.put(
-					path,
-					new WeakReference<IJCTIntersectionType>(t =
-						new JCTIntersectionType(this, types)));
+				this.intersectionTypes.put(newPath,
+						new WeakReference<IJCTIntersectionType>(
+								t = new JCTIntersectionType(this, types)));
 			}
 			return type.cast(t);
 		}
 
-		if (Constants.CLASS_MARKER == path.charAt(0)) {
+		if (Constants.CLASS_MARKER_BEGIN == newPath.charAt(0)) {
 			// Yann 2010/06/20: Why not cache the result of this branch?
 			// I added the same cache mechanism as used in the previous
 			// branches in the hope to speed-up computations.
-			IJCTClassType t = this.getCachedClassType(path);
+			IJCTClassType t = this.getCachedClassType(newPath);
 			if (null == t) {
 				final JCTPath p = this.getPath();
 
-				final int dotIndex = path.lastIndexOf(Constants.DOT_SEPARATOR);
+				// Yann 26/04/29: Was not JVM compliant!
+				// The JVM name of a class type is of the form "Lxxx;" (with a ';' at the end).
+				newPath = newPath.substring(0, newPath.length() - 1);
+
+				final int dotIndex = newPath
+						.lastIndexOf(Constants.DOT_SEPARATOR);
 				String classes[];
 				if (-1 != dotIndex) {
 					//p.addPart(new JCTPathPartBuilder(JCTKind.PACKAGE).setData(path.substring(1, dotIndex)).createPathPart());
-					classes =
-						Constants.DOLLAR_SPLITTER_PATTERN.split(path
-							.substring(dotIndex + 1));
+					classes = Constants.DOLLAR_SPLITTER_PATTERN
+							.split(newPath.substring(dotIndex + 1));
 				}
 				else {
-					classes =
-						Constants.DOLLAR_SPLITTER_PATTERN.split(path
-							.substring(1));
+					classes = Constants.DOLLAR_SPLITTER_PATTERN
+							.split(newPath.substring(1));
 				}
 
 				for (final String s : classes) {
-					p.addPart(new JCTPathPartBuilder(JCTKind.CLASS)
-						.setData(s)
-						.createPathPart());
+					p.addPart(new JCTPathPartBuilder(JCTKind.CLASS).setData(s)
+							.createPathPart());
 				}
 
 				final IJCTClass c = (IJCTClass) p.walk(this);
 
-				this.classTypes.put(path, new WeakReference<IJCTClassType>(t =
-					null == c ? null : c.createClassType()));
+				this.classTypes.put(newPath, new WeakReference<IJCTClassType>(
+						t = null == c ? null : c.createClassType()));
 			}
 			return type.cast(t);
 		}
 
 		throw new IllegalArgumentException(
-			"A Type path must be a primitive type name (length = 1) or start by '"
-					+ Constants.ARRAY_MARKER + "', '" + Constants.CLASS_MARKER
-					+ "' or '" + Constants.INTERSECTION_MARKER + "'.\n" + path);
+				"A Type path must be a primitive type name (length = 1) or start by '"
+						+ Constants.ARRAY_MARKER + "', '"
+						+ Constants.CLASS_MARKER_BEGIN + "' or '"
+						+ Constants.INTERSECTION_MARKER + "'.\n" + newPath);
 	}
+
 	public IJCTType getType(final IJCTType... types) {
 		if (0 == types.length)
 			return this.getType(JCTPrimitiveTypes.VOID);
@@ -465,44 +468,41 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 		for (int i = 0; i < types.length; ++i)
 			names[i] = types[i].getTypeName();
 
-		final StringBuilder typeName =
-			new StringBuilder(Constants.INTERSECTION_MARKER);
+		final StringBuilder typeName = new StringBuilder(
+				Constants.INTERSECTION_MARKER);
 
 		for (final String name : names)
 			typeName.append(name).append(Constants.INTERSECTION_SEPARATOR);
 
 		typeName.setLength(typeName.length() - 1);
 
-		IJCTIntersectionType t =
-			this.getCachedIntersectionType(typeName.toString());
+		IJCTIntersectionType t = this
+				.getCachedIntersectionType(typeName.toString());
 		if (null == t)
-			this.intersectionTypes.put(
-				typeName.toString(),
-				new WeakReference<IJCTIntersectionType>(t =
-					new JCTIntersectionType(this, types)));
+			this.intersectionTypes.put(typeName.toString(),
+					new WeakReference<IJCTIntersectionType>(
+							t = new JCTIntersectionType(this, types)));
 
 		return t;
 	}
 
-	public IJCTArrayType registerArrayType(
-		final IJCTType underlyingType,
-		final String underlyingTypeName) {
-		final String arrayTypePath =
-			Constants.ARRAY_MARKER
-					+ (null == underlyingTypeName ? underlyingType
-						.getTypeName() : underlyingTypeName);
+	public IJCTArrayType registerArrayType(final IJCTType underlyingType,
+			final String underlyingTypeName) {
+		final String arrayTypePath = Constants.ARRAY_MARKER
+				+ (null == underlyingTypeName ? underlyingType.getTypeName()
+						: underlyingTypeName);
 
 		IJCTArrayType t = this.getCachedArrayType(arrayTypePath);
 		if (null == t)
-			this.arrayTypes
-				.put(arrayTypePath, new WeakReference<IJCTArrayType>(t =
-					new JCTArrayType(this, underlyingType, underlyingTypeName)));
-		else if (!t.getUnderlyingType().getTypeName().equals(
-			underlyingType.getTypeName()))
+			this.arrayTypes.put(arrayTypePath,
+					new WeakReference<IJCTArrayType>(t = new JCTArrayType(this,
+							underlyingType, underlyingTypeName)));
+		else if (!t.getUnderlyingType().getTypeName()
+				.equals(underlyingType.getTypeName()))
 			throw new IllegalStateException(
-				"An array type is registered with this name ("
-						+ underlyingTypeName
-						+ "), but does not use the same underlying type.");
+					"An array type is registered with this name ("
+							+ underlyingTypeName
+							+ "), but does not use the same underlying type.");
 
 		return t;
 	}
@@ -512,10 +512,9 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 	}
 
 	private ListOfElements<IJCTClassType> getAllClassTypes() {
-		final ListOfElements<IJCTClassType> result =
-			new ListOfElements<IJCTClassType>();
-		final Iterator<WeakReference<IJCTClassType>> it =
-			this.classesTypes.iterator();
+		final ListOfElements<IJCTClassType> result = new ListOfElements<IJCTClassType>();
+		final Iterator<WeakReference<IJCTClassType>> it = this.classesTypes
+				.iterator();
 		while (it.hasNext()) {
 			final WeakReference<IJCTClassType> wct = it.next();
 			if (null == wct.get())
@@ -552,7 +551,7 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 
 	@Override
 	protected <T extends IJCTElement> ListOfElements<T> seeNextPathStep(
-		final JCTKind aKind) {
+			final JCTKind aKind) {
 
 		//	if (this.cachedNextPathStep.containsKey(aKind)) {
 		//		return this.cachedNextPathStep.get(aKind);
@@ -561,72 +560,67 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 		ListOfElements<T> result = new ListOfElements<T>();
 
 		switch (aKind) {
-			case INTERSECTION_TYPE :
-				{
-					final Iterator<Map.Entry<String, WeakReference<IJCTIntersectionType>>> it =
-						this.intersectionTypes.entrySet().iterator();
-					while (it.hasNext()) {
-						final Map.Entry<String, WeakReference<IJCTIntersectionType>> entry =
-							it.next();
-						final IJCTIntersectionType type =
-							entry.getValue().get();
-						if (null == type)
-							it.remove();
-						else
-							result.add((T) type);
-					}
-				}
-				break;
-			case ARRAY_TYPE :
-				{
-					final Iterator<Map.Entry<String, WeakReference<IJCTArrayType>>> it =
-						this.arrayTypes.entrySet().iterator();
-					while (it.hasNext()) {
-						final Map.Entry<String, WeakReference<IJCTArrayType>> entry =
-							it.next();
-						final IJCTArrayType type = entry.getValue().get();
-						if (null == type)
-							it.remove();
-						else
-							result.add((T) type);
-					}
-				}
-				break;
-			case PRIMITIVE_TYPE :
-				// return new ListOfElements(this.primitiveTypes.values());
-				result = new ListOfElements(this.primitiveTypes.values());
-				break;
-			case CLASS_TYPE :
-				// return (ListOfElements<T>) this.getAllClassTypes();
-				result = (ListOfElements<T>) this.getAllClassTypes();
-				break;
-			case ROOT_NODE :
-				result.add((T) this);
-				break;
-			case CLASS :
-				result.addAll((Collection<T>) this.getAllEnclosedElements(
-					JCTKind.CLASS,
-					IJCTClass.class,
-					true));
-			default :
+		case INTERSECTION_TYPE: {
+			final Iterator<Map.Entry<String, WeakReference<IJCTIntersectionType>>> it = this.intersectionTypes
+					.entrySet().iterator();
+			while (it.hasNext()) {
+				final Map.Entry<String, WeakReference<IJCTIntersectionType>> entry = it
+						.next();
+				final IJCTIntersectionType type = entry.getValue().get();
+				if (null == type)
+					it.remove();
+				else
+					result.add((T) type);
+			}
+		}
+			break;
+		case ARRAY_TYPE: {
+			final Iterator<Map.Entry<String, WeakReference<IJCTArrayType>>> it = this.arrayTypes
+					.entrySet().iterator();
+			while (it.hasNext()) {
+				final Map.Entry<String, WeakReference<IJCTArrayType>> entry = it
+						.next();
+				final IJCTArrayType type = entry.getValue().get();
+				if (null == type)
+					it.remove();
+				else
+					result.add((T) type);
+			}
+		}
+			break;
+		case PRIMITIVE_TYPE:
+			// return new ListOfElements(this.primitiveTypes.values());
+			result = new ListOfElements(this.primitiveTypes.values());
+			break;
+		case CLASS_TYPE:
+			// return (ListOfElements<T>) this.getAllClassTypes();
+			result = (ListOfElements<T>) this.getAllClassTypes();
+			break;
+		case ROOT_NODE:
+			result.add((T) this);
+			break;
+		case CLASS:
+			result.addAll((Collection<T>) this.getAllEnclosedElements(
+					JCTKind.CLASS, IJCTClass.class, true));
+		default:
 
-				//	for (final IJCTElement e : new IndirectCollection<IJCTElement>(
-				//		this.getEnclosedElements(),
-				//		this.getOrphans())) {
-				//		if (aKind == e.getKind()) {
-				//			result.add((T) e);
-				//		}
-				//	}
-				for (final IJCTElement e : this.getEnclosedElements()) {
-					if (aKind == e.getKind()) {
-						result.add((T) e);
-					}
+			//	for (final IJCTElement e : new IndirectCollection<IJCTElement>(
+			//		this.getEnclosedElements(),
+			//		this.getOrphans())) {
+			//		if (aKind == e.getKind()) {
+			//			result.add((T) e);
+			//		}
+			//	}
+			for (final IJCTElement e : this.getEnclosedElements()) {
+				if (aKind == e.getKind()) {
+					result.add((T) e);
 				}
-				for (final IJCTElement e : this.getOrphans()) {
-					if (aKind == e.getKind()) {
-						result.add((T) e);
-					}
+			}
+			for (final IJCTElement e : this.getOrphans()) {
+				if (aKind == e.getKind()) {
+					result.add((T) e);
 				}
+			}
 		}
 
 		//	System.out.print(aKind);
@@ -646,20 +640,18 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 			throws IOException {
 		out.defaultWriteObject();
 
-		final Map<String, IJCTArrayType> arrayTypes =
-			new HashMap<String, IJCTArrayType>();
+		final Map<String, IJCTArrayType> arrayTypes = new HashMap<String, IJCTArrayType>();
 		for (final Map.Entry<String, WeakReference<IJCTArrayType>> e : this.arrayTypes
-			.entrySet()) {
+				.entrySet()) {
 			final IJCTArrayType type = e.getValue().get();
 			if (null != type)
 				arrayTypes.put(e.getKey(), type);
 		}
 		out.writeObject(arrayTypes);
 
-		final Map<String, IJCTIntersectionType> intersectionTypes =
-			new HashMap<String, IJCTIntersectionType>();
+		final Map<String, IJCTIntersectionType> intersectionTypes = new HashMap<String, IJCTIntersectionType>();
 		for (final Map.Entry<String, WeakReference<IJCTIntersectionType>> e : this.intersectionTypes
-			.entrySet()) {
+				.entrySet()) {
 			final IJCTIntersectionType type = e.getValue().get();
 			if (null != type)
 				intersectionTypes.put(e.getKey(), type);
@@ -681,26 +673,23 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 		this.factory = new SoftReference<IJCTFactory>(null);
 
 		try {
-			final Field arrayTypesField =
-				JCTRootNode.class.getDeclaredField("arrayTypes");
+			final Field arrayTypesField = JCTRootNode.class
+					.getDeclaredField("arrayTypes");
 			arrayTypesField.setAccessible(true);
-			arrayTypesField.set(
-				this,
-				new HashMap<String, WeakReference<IJCTArrayType>>());
+			arrayTypesField.set(this,
+					new HashMap<String, WeakReference<IJCTArrayType>>());
 			arrayTypesField.setAccessible(false);
-			final Field intersectionTypesField =
-				JCTRootNode.class.getDeclaredField("intersectionTypes");
+			final Field intersectionTypesField = JCTRootNode.class
+					.getDeclaredField("intersectionTypes");
 			intersectionTypesField.setAccessible(true);
-			intersectionTypesField.set(
-				this,
-				new HashMap<String, WeakReference<IJCTIntersectionType>>());
+			intersectionTypesField.set(this,
+					new HashMap<String, WeakReference<IJCTIntersectionType>>());
 			intersectionTypesField.setAccessible(false);
-			final Field classesTypesField =
-				JCTRootNode.class.getDeclaredField("classesTypes");
+			final Field classesTypesField = JCTRootNode.class
+					.getDeclaredField("classesTypes");
 			classesTypesField.setAccessible(true);
-			classesTypesField.set(
-				this,
-				new HashSet<WeakReference<IJCTClassType>>());
+			classesTypesField.set(this,
+					new HashSet<WeakReference<IJCTClassType>>());
 			classesTypesField.setAccessible(false);
 		}
 		catch (final NoSuchFieldException ex) {
@@ -710,22 +699,21 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage> implements
 			throw new LinkageError(ex.toString());
 		}
 
-		final Map<String, IJCTArrayType> arrayTypes =
-			(Map<String, IJCTArrayType>) in.readObject();
+		final Map<String, IJCTArrayType> arrayTypes = (Map<String, IJCTArrayType>) in
+				.readObject();
 		for (final Map.Entry<String, IJCTArrayType> e : arrayTypes.entrySet())
-			this.arrayTypes.put(e.getKey(), new WeakReference<IJCTArrayType>(e
-				.getValue()));
+			this.arrayTypes.put(e.getKey(),
+					new WeakReference<IJCTArrayType>(e.getValue()));
 
-		final Map<String, IJCTIntersectionType> intersectionTypes =
-			(Map<String, IJCTIntersectionType>) in.readObject();
+		final Map<String, IJCTIntersectionType> intersectionTypes = (Map<String, IJCTIntersectionType>) in
+				.readObject();
 		for (final Map.Entry<String, IJCTIntersectionType> e : intersectionTypes
-			.entrySet())
-			this.intersectionTypes.put(
-				e.getKey(),
-				new WeakReference<IJCTIntersectionType>(e.getValue()));
+				.entrySet())
+			this.intersectionTypes.put(e.getKey(),
+					new WeakReference<IJCTIntersectionType>(e.getValue()));
 
-		final Set<IJCTClassType> classesTypes =
-			(Set<IJCTClassType>) in.readObject();
+		final Set<IJCTClassType> classesTypes = (Set<IJCTClassType>) in
+				.readObject();
 		for (final IJCTClassType t : classesTypes)
 			this.classesTypes.add(new WeakReference<IJCTClassType>(t));
 	}

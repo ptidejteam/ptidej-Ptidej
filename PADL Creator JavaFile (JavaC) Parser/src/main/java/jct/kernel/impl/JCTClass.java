@@ -440,8 +440,8 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 		w.append(this.getIsInterface() ? "interface" : "class").append(' ')
 				.append(this.getName());
 
-		if (null != this.getDirectSuperClass() && !"Ljava.lang.Object"
-				.equals(this.getDirectSuperClass().getTypeName())) {
+		if (null != this.getDirectSuperClass() && !this.getDirectSuperClass().getTypeName()
+				.equals(Constants.CLASS_BINARYNAME_OBJECT)) {
 			w.append("\nextends ");
 			this.getDirectSuperClass().getSourceCode(w);
 		}

@@ -312,7 +312,7 @@ public class JCTCreatorFromSourceCode
 					.entrySet().iterator();
 			final Map.Entry<String, IJCTClass> e = it.next();
 			it.remove();
-			
+
 			if (!JCTCreatorFromSourceCode.shouldBeGhost(e.getValue())) {
 				continue;
 			}
@@ -324,7 +324,9 @@ public class JCTCreatorFromSourceCode
 				final String enclosingClassBName = e.getKey().substring(0,
 						index);
 				final IJCTClassType enclosingClassType = JCTRootNode.getType(
-						"L" + enclosingClassBName, IJCTClassType.class);
+						Constants.CLASS_MARKER_BEGIN + enclosingClassBName
+								+ Constants.CLASS_MARKER_END,
+						IJCTClassType.class);
 
 				IJCTClass enclosingClass = enclosingClassType == null ? null
 						: enclosingClassType.getSelector().getElement();
@@ -375,7 +377,7 @@ public class JCTCreatorFromSourceCode
 				final IJCTCompilationUnit cu = JCTFactory.createCompilationUnit(
 						new File(e.getKey().replace('.', File.separatorChar)
 								+ ".class"));
-				
+
 				p.addCompilationUnit(cu);
 
 				cu.addClazz(e.getValue());
@@ -388,15 +390,19 @@ public class JCTCreatorFromSourceCode
 
 		return JCTRootNode;
 	}
-	
+
 	private static boolean shouldBeGhost(final IJCTClass jctClass) {
 		IJCTElement enclosingElement = jctClass.getEnclosingElement();
 		while (enclosingElement != null) {
-			switch (enclosingElement) {		// JEP 441 :)
-				case IJCTClass c when c.getIsGhost() : return true;
-				case IJCTPackage g when g.getIsGhost() : return true;
-				case IJCTRootNode root : return false;
-				default : enclosingElement = enclosingElement.getEnclosingElement();
+			switch (enclosingElement) { // JEP 441 :)
+			case IJCTClass c when c.getIsGhost():
+				return true;
+			case IJCTPackage g when g.getIsGhost():
+				return true;
+			case IJCTRootNode root:
+				return false;
+			default:
+				enclosingElement = enclosingElement.getEnclosingElement();
 			}
 		}
 		return true;
@@ -529,8 +535,10 @@ public class JCTCreatorFromSourceCode
 		final IJCTType aJCTType = aTypeMirror.accept(this, p);
 
 		if (JCTKind.CLASS_TYPE == aJCTType.getKind())
-			name = "L" + ((Symbol.ClassSymbol) ((DeclaredType) aTypeMirror)
-					.asElement()).flatname.toString();
+			name = Constants.CLASS_MARKER_BEGIN
+					+ ((Symbol.ClassSymbol) ((DeclaredType) aTypeMirror)
+							.asElement()).flatname.toString()
+					+ Constants.CLASS_MARKER_END;
 		else
 			name = aJCTType.getTypeName();
 
@@ -573,8 +581,9 @@ public class JCTCreatorFromSourceCode
 
 			underlyingType = ((IJCTClass) ((IJCTSelector<?>) t).getElement())
 					.createClassType();
-			underlyingTypeName = "L"
-					+ this.classeNames.get(((IJCTSelector<?>) t).getElement());
+			underlyingTypeName = Constants.CLASS_MARKER_BEGIN
+					+ this.classeNames.get(((IJCTSelector<?>) t).getElement())
+					+ Constants.CLASS_MARKER_END;
 		}
 
 		if (null != underlyingType)
@@ -1704,7 +1713,7 @@ public class JCTCreatorFromSourceCode
 			this.identifiables.put(e, aJCTIdentifiable);
 			return aJCTIdentifiable;
 		}
-		
+
 		final IJCTClass c = this.factory
 				.createClass(e.getSimpleName().toString(),
 						ElementKind.INTERFACE == e.getKind()
@@ -1839,7 +1848,8 @@ public class JCTCreatorFromSourceCode
 				return ((IJCTClassType) t).getSelector().getElement();
 		}
 
-		return this.rootNode.getType("Ljava.lang.Object", IJCTClassType.class)
+		return this.rootNode
+				.getType(Constants.CLASS_BINARYNAME_OBJECT, IJCTClassType.class)
 				.getSelector().getElement();
 	}
 
@@ -1937,7 +1947,7 @@ public class JCTCreatorFromSourceCode
 
 		final IJCTVariable v = this.factory
 				.createVariable(e.getSimpleName().toString());
-		v.setType(this.rootNode.getType("Ljava.lang.Object",
+		v.setType(this.rootNode.getType(Constants.CLASS_BINARYNAME_OBJECT,
 				IJCTClassType.class));
 		this.identifiables.put(e, v);
 

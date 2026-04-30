@@ -34,6 +34,8 @@ package jct.kernel.impl;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
+
+import jct.kernel.Constants;
 import jct.kernel.IJCTElement;
 import jct.kernel.IJCTElementContainer;
 import jct.kernel.IJCTPackage;
@@ -116,18 +118,13 @@ public class JCTPathPart implements IJCTPathPart {
 		this(resultKind, index, null);
 	}
 
-	public JCTPathPart(
-		final JCTKind resultKind,
-		final Integer index,
-		final String data) {
+	public JCTPathPart(final JCTKind resultKind, final Integer index,
+			final String data) {
 		this(resultKind, index, data, null);
 	}
 
-	public JCTPathPart(
-		final JCTKind resultKind,
-		final Integer index,
-		final String data,
-		final byte[] informativeData) {
+	public JCTPathPart(final JCTKind resultKind, final Integer index,
+			final String data, final byte[] informativeData) {
 		this.resultKind = resultKind;
 		this.index = index;
 		this.data = "null".equals(data) ? null : data;
@@ -161,8 +158,8 @@ public class JCTPathPart implements IJCTPathPart {
 		if (null == this.nextPart)
 			return null;
 
-		final JCTPathPart p =
-			new JCTPathPart(this.resultKind, this.index, this.data);
+		final JCTPathPart p = new JCTPathPart(this.resultKind, this.index,
+				this.data);
 		p.addPart(this.nextPart.getPathPartToEnclosing());
 		return p;
 	}
@@ -176,21 +173,13 @@ public class JCTPathPart implements IJCTPathPart {
 		if (p instanceof JCTPathPart)
 			part = (JCTPathPart) p;
 		else {
-			part =
-				new JCTPathPart(
-					p.getResultKind(),
-					p.getIndex(),
-					p.getData(),
+			part = new JCTPathPart(p.getResultKind(), p.getIndex(), p.getData(),
 					p.getInformativeData());
 			IJCTPathPart it = p.getNextPart();
 			JCTPathPart to = part;
 			while (null != it) {
-				final JCTPathPart toAdd =
-					new JCTPathPart(
-						it.getResultKind(),
-						it.getIndex(),
-						it.getData(),
-						it.getInformativeData());
+				final JCTPathPart toAdd = new JCTPathPart(it.getResultKind(),
+						it.getIndex(), it.getData(), it.getInformativeData());
 				to.addPart(toAdd);
 				to = toAdd;
 				it = it.getNextPart();
@@ -208,13 +197,14 @@ public class JCTPathPart implements IJCTPathPart {
 	/**
 	 * Returns the element designated by this path part
 	 */
-	public IJCTElement walk(final IJCTElementContainer<? extends IJCTElement> e) {
+	public IJCTElement walk(
+			final IJCTElementContainer<? extends IJCTElement> e) {
 		return this.walk(e, e == null || e.getRootNode().isInitialized());
 	}
 
 	protected IJCTElement walk(
-		final IJCTElementContainer<? extends IJCTElement> e,
-		final boolean displayError) {
+			final IJCTElementContainer<? extends IJCTElement> e,
+			final boolean displayError) {
 
 		if (null == e) {
 			if (displayError)
@@ -224,18 +214,19 @@ public class JCTPathPart implements IJCTPathPart {
 
 		final IJCTElement r = this.resolve(e);
 
-		return null == this.nextPart ? r : this.nextPart.walk(
-			(IJCTElementContainer<? extends IJCTElement>) r,
-			displayError);
+		return null == this.nextPart ? r
+				: this.nextPart.walk(
+						(IJCTElementContainer<? extends IJCTElement>) r,
+						displayError);
 	}
 
 	protected IJCTElement resolve(
-		final IJCTElementContainer<? extends IJCTElement> ee) {
+			final IJCTElementContainer<? extends IJCTElement> ee) {
 
-		final Collection<IJCTElement> ec =
-			ee instanceof JCTElementContainer ? ((JCTElementContainer<IJCTElement>) ee)
-				.seeNextPathStep(this.resultKind)
-					: ((IJCTContainer<IJCTElement>) ee).getEnclosedElements();
+		final Collection<IJCTElement> ec = ee instanceof JCTElementContainer
+				? ((JCTElementContainer<IJCTElement>) ee)
+						.seeNextPathStep(this.resultKind)
+				: ((IJCTContainer<IJCTElement>) ee).getEnclosedElements();
 
 		IJCTElement e = null;
 		if (null != this.index) {
@@ -248,9 +239,8 @@ public class JCTPathPart implements IJCTPathPart {
 				return null;
 		}
 
-		if (e == null
-				|| (e instanceof JCTElement && !((JCTElement) e)
-					.isDesignatedBy(this.data)))
+		if (e == null || (e instanceof JCTElement
+				&& !((JCTElement) e).isDesignatedBy(this.data)))
 			for (final IJCTElement el : ec)
 				if (el instanceof JCTElement
 						&& ((JCTElement) el).isDesignatedBy(this.data)) {
@@ -265,21 +255,15 @@ public class JCTPathPart implements IJCTPathPart {
 		return this.walk((IJCTElementContainer<IJCTPackage>) aRootNode);
 	}
 
-	public final static String KIND_INDEX_SEPARATOR = "::";
-	public final static String INDEX_DATA_SEPARATOR = ";";
-	public final static String PART_SEPARATOR = "/";
-
 	@Override
 	public String toString() {
-		final StringBuffer result =
-			new StringBuffer()
-				.append(JCTPathPart.PART_SEPARATOR)
+		final StringBuffer result = new StringBuffer()
+				.append(Constants.PART_SEPARATOR)
 				.append(this.resultKind.toString())
-				.append(JCTPathPart.KIND_INDEX_SEPARATOR)
+				.append(Constants.KIND_INDEX_SEPARATOR)
 				.append(null == this.index ? null : this.index.toString())
-				.append(JCTPathPart.INDEX_DATA_SEPARATOR)
-				.append(this.data)
-				.append(JCTPathPart.INDEX_DATA_SEPARATOR);
+				.append(Constants.INDEX_DATA_SEPARATOR).append(this.data)
+				.append(Constants.INDEX_DATA_SEPARATOR);
 
 		if (null == this.informativeData) {
 			result.append("null");
@@ -321,16 +305,14 @@ public class JCTPathPart implements IJCTPathPart {
 		final IJCTPathPart part = (IJCTPathPart) that;
 
 		return this.getResultKind() == part.getResultKind()
-				&& (this.getIndex() == null ? part.getIndex() == null : this
-					.getIndex()
-					.equals(part.getIndex()))
-				&& (this.getData() == null ? part.getData() == null : this
-					.getData()
-					.equals(part.getData()))
-				&& (this.getInformativeData() == null ? part
-					.getInformativeData() == null : Arrays.equals(
-					this.getInformativeData(),
-					part.getInformativeData()));
+				&& (this.getIndex() == null ? part.getIndex() == null
+						: this.getIndex().equals(part.getIndex()))
+				&& (this.getData() == null ? part.getData() == null
+						: this.getData().equals(part.getData()))
+				&& (this.getInformativeData() == null
+						? part.getInformativeData() == null
+						: Arrays.equals(this.getInformativeData(),
+								part.getInformativeData()));
 	}
 
 	private static final long serialVersionUID = 8293905259074720443L;
