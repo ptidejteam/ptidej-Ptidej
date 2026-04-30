@@ -53,6 +53,7 @@ import padl.test.remove.RemoveAndIteratorTest;
 import padl.test.remove.RemoveTest;
 import padl.test.setter.GetterTest;
 import padl.test.setter.SetterTest;
+import padl.test.visitors.BFVisitorTest;
 
 /**
  * @author Yann-Gaël Guéhéneuc
@@ -114,6 +115,8 @@ public final class TestPADLAnalyses extends junit.framework.TestSuite {
 		suite.addTestSuite(SyntheticBridgeTest.class);
 
 		suite.addTestSuite(Composite1Test.class);
+
+		suite.addTestSuite(BFVisitorTest.class);
 
 		suite.addTestSuite(CloneTest.class);
 		suite.addTestSuite(CopyInTest.class);

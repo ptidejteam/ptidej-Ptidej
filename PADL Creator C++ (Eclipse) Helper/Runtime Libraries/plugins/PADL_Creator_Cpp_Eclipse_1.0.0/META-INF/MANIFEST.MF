@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PADL Creator Cpp Eclipse
+Bundle-SymbolicName: PADL_Creator_Cpp_Eclipse;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: padl.creator.cppfile.eclipse.plugin.Activator
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+DynamicImport-Package: *

@@ -14,6 +14,7 @@ import java.util.BitSet;
 
 import com.ibm.toad.cfparse.attributes.AttrInfo;
 import com.ibm.toad.cfparse.attributes.AttrInfoList;
+import com.ibm.toad.cfparse.attributes.CodeAttrInfo;
 import com.ibm.toad.cfparse.attributes.SourceFileAttrInfo;
 import com.ibm.toad.cfparse.utils.Access;
 import com.ibm.toad.cfparse.utils.CPUtils;
@@ -200,7 +201,20 @@ public final class ClassFile {
 			final MethodInfo methodOfOther = methodListOfOther.get(i);
 
 			// TODO Re-enable this test and fix the difference between CFParse and BCEL (BCEL has sometimes longer bytecode sizes)  
+			// Actually, bytecode length differs between CFParse and BCEL, and comparing with equals won't yield results
+			
+			AttrInfo codeOfThis = methodOfThis.getAttrs().get("Code");
+			AttrInfo codeOfOther = methodOfOther.getAttrs().get("Code");
+			
+			if (codeOfThis != null && codeOfOther != null) {
+				CodeAttrInfo codeAttrOfThis = (CodeAttrInfo) codeOfThis;
+				CodeAttrInfo codeAttrOfOther = (CodeAttrInfo) codeOfOther;
+				
+				equalMethods &= codeAttrOfThis.getMaxStack() == codeAttrOfOther.getMaxStack();
+				equalMethods &= codeAttrOfThis.getMaxLocals() == codeAttrOfOther.getMaxLocals();
+			}
 			// 	equalMethods &= methodOfThis.getAbout().equals(methodOfOther.getAbout());
+			
 			equalMethods &= methodOfThis.getAccess() == methodOfOther
 					.getAccess();
 			equalMethods &= methodOfThis.getDesc()
