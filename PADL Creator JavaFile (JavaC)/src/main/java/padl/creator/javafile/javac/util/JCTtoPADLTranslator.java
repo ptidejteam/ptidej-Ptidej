@@ -74,13 +74,15 @@ import util.io.ProxyConsole;
 public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 	private final IFactory factory;
 	private final ICodeLevelModel model;
+	private final IJCTRootNode rootNode;
 	private final Map<IJCTElement, IConstituent> translator = new HashMap<IJCTElement, IConstituent>();
 	private final StringBuffer errorMessage = new StringBuffer();
 	private final Set<String> errorMessages = new HashSet<>();
 
-	public JCTtoPADLTranslator(final ICodeLevelModel aCodeLevelModel) {
+	public JCTtoPADLTranslator(final ICodeLevelModel aCodeLevelModel, IJCTRootNode rootNode) {
 		this.model = aCodeLevelModel;
 		this.factory = aCodeLevelModel.getFactory();
+		this.rootNode = rootNode;
 	}
 
 	private void copyComments(final IJCTSourceCodePart aSourceCodePart,
@@ -373,6 +375,19 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 
 			if (!packaje.doesContainConstituentWithID(entity.getID())) {
 				packaje.addConstituent(entity);
+			}
+			else {
+				this.errorMessage.setLength(0);
+				this.errorMessage.append(this.getClass().getName());
+				this.errorMessage.append(" already has source-code type: ");
+				this.errorMessage.append(entity.getDisplayName());
+
+				final String errorString = this.errorMessage.toString();
+				if (!this.errorMessages.contains(errorString)) {
+					this.errorMessages.add(errorString);
+					ProxyConsole.getInstance().debugOutput()
+							.println(errorString);
+				}
 			}
 		}
 		return null;
@@ -722,8 +737,9 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		}
 
 		for (final IJCTVariable v : aJCTMethod.getParameters()) {
-			IEntity entity = (IEntity) this.model.getTopLevelEntityFromID(
-					v.getType().getSourceCode().toCharArray());
+			final String parameterTypeName = v.getType().getSourceCode();
+			IEntity entity = (IEntity) this.model
+					.getTopLevelEntityFromID(parameterTypeName.toCharArray());
 			// TODO: This test should not exist!
 			// Yann 2010/06/21: Silly test?
 			// Indeed, the null test below forces to look
@@ -735,29 +751,35 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 			// v.getType() is rather poor, I must add check
 			// manually what is being added.
 			if (entity == null) {
-				if (v.getType().getSourceCode().equals("java.lang.Void")) {
+				entity = (IEntity) this.model
+						.getConstituentFromID(parameterTypeName.toCharArray());
+			}
+
+			if (entity == null) {
+				if (parameterTypeName.equals("java.lang.Object")) {
 					// I assume that this is the first 
 					// time that this class is met...
 					// TODO: Is it always true?
 					final IPackage packageJavaLang = this
 							.getPackageFromModel("java.lang", false);
 					entity = Factory.getInstance().createGhost(
-							"java.lang.Void".toCharArray(),
+							parameterTypeName.toCharArray(),
+							"Object".toCharArray());
+					packageJavaLang.addConstituent(entity);
+				}
+				else if (parameterTypeName.equals("java.lang.Void")) {
+					// I assume that this is the first 
+					// time that this class is met...
+					// TODO: Is it always true?
+					final IPackage packageJavaLang = this
+							.getPackageFromModel("java.lang", false);
+					entity = Factory.getInstance().createGhost(
+							parameterTypeName.toCharArray(),
 							"Void".toCharArray());
 					packageJavaLang.addConstituent(entity);
 				}
 				else {
-					this.errorMessage.setLength(0);
-					this.errorMessage.append(this.getClass().getName());
-					this.errorMessage.append(" is missing source-code type: ");
-					this.errorMessage.append(v.getType().getSourceCode());
-
-					final String errorString = this.errorMessage.toString();
-					if (!this.errorMessages.contains(errorString)) {
-						this.errorMessages.add(errorString);
-						ProxyConsole.getInstance().debugOutput()
-								.println(errorString);
-					}
+					entity = this.getMissingEntity(parameterTypeName, aParameter);
 				}
 			}
 
@@ -788,6 +810,42 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		return m;
 	}
 
+	private IEntity getMissingEntity(String entityName, Object aParameter) {
+		if (entityName.contains(".")) {
+			final String packageName = entityName.substring(0,
+					entityName.lastIndexOf('.'));
+			final String typeName = entityName
+					.substring(entityName.lastIndexOf('.') + 1);
+			final Set<IJCTPackage> packages = this.rootNode.getPackages();
+			for (IJCTPackage pack : packages) {
+				if (pack.getName()!= null && pack.getName().equals(packageName)) {
+					for (IJCTCompilationUnit cu : pack.getCompilationUnits()) {
+						for (IJCTClass clazz : cu.getClazzs()) {
+							if (clazz.getName().equals(typeName)) {
+								return (IEntity) this.visitClass(clazz, aParameter);
+							}
+						}
+					}
+				}
+			}
+			this.errorMessage.setLength(0);
+			this.errorMessage.append(this.getClass().getName());
+			this.errorMessage.append(" is missing source-code type: ");
+			this.errorMessage.append(entityName);
+			
+			final String errorString = this.errorMessage.toString();
+			if (!this.errorMessages.contains(errorString)) {
+				this.errorMessages.add(errorString);
+				ProxyConsole.getInstance().debugOutput()
+						.println(errorString);
+			}
+			return null; // Searched entity is not a primitive type and was not found in JCT.
+		}
+		IEntity entity = Factory.getInstance().createPrimitiveEntity(
+				entityName.toCharArray());
+		return entity;
+	}
+	
 	public IConstituent visitMethodInvocation(
 			final IJCTMethodInvocation aJCTMethodInvocation,
 			final Object aParameter) {

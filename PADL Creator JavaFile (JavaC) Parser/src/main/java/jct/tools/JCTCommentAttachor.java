@@ -188,11 +188,15 @@ class ConstituentOffsetOrder implements Comparator<IJCTSourceCodePart> {
 		if (ia != ib)
 			return ia - ib;
 
-		if (a.getStoredSourceCodeLength() != null
-				&& a.getStoredSourceCodeLength().intValue() != b
-						.getStoredSourceCodeLength().intValue())
-			return b.getStoredSourceCodeLength()
-					- a.getStoredSourceCodeLength();
+		try {
+			if (a.getStoredSourceCodeLength() != null
+					&& a.getStoredSourceCodeLength().intValue() != b
+							.getStoredSourceCodeLength().intValue())
+				return b.getStoredSourceCodeLength()
+						- a.getStoredSourceCodeLength();
+		}
+		catch (final NullPointerException e) {
+		}
 
 		return b.getPath().isEnclosing(a.getPath()) ? 1 : -1;
 	}

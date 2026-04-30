@@ -261,8 +261,17 @@ class JCTMethod extends JCTClassMember<IJCTStatement> implements IJCTMethod {
 
 		final Iterator<IJCTParameter> pit = this.getParameters().iterator();
 		while (pit.hasNext()) {
-			final String type = pit.next().getType().getTypeName();
-			result.append(type.substring(1));
+			final IJCTType type = pit.next().getType();
+			final String typeName = type.getTypeName();
+
+			if (typeName.length() == 1) {
+				result.append(type.getSourceCode());
+			}
+			else {
+				// Yann 26/04/29: Was not JVM compliant!
+				// The JVM name of a class type is of the form "Lxxx;" (with a ';' at the end).
+				result.append(typeName.substring(1, typeName.length() - 1));
+			}
 			if (pit.hasNext())
 				result.append(", ");
 		}

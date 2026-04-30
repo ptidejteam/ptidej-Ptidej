@@ -57,7 +57,7 @@ public class JCTtoPADLConvertor implements ICodeLevelModelCreator {
 
 	@Override
 	public void create(final ICodeLevelModel model) throws CreationException {
-		final JCTtoPADLTranslator creator = new JCTtoPADLTranslator(model);
+		final JCTtoPADLTranslator creator = new JCTtoPADLTranslator(model, this.jctRootNode);
 		this.jctRootNode.accept(creator, null);
 	}
 }

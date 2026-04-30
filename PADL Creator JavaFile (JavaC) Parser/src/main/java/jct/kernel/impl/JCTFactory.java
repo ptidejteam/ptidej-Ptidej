@@ -32,6 +32,7 @@
 package jct.kernel.impl;
 
 import java.io.File;
+
 import jct.kernel.*;
 
 /**
@@ -62,9 +63,8 @@ public class JCTFactory implements IJCTFactory {
 		this(originalRootNode, null);
 	}
 
-	JCTFactory(
-		final IJCTRootNode originalRootNode,
-		final IJCTRootNode associatedRootNode) {
+	JCTFactory(final IJCTRootNode originalRootNode,
+			final IJCTRootNode associatedRootNode) {
 		this.originalRootNode = originalRootNode;
 		this.associatedRootNode = associatedRootNode;
 	}
@@ -99,17 +99,16 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new primitive type.
 	 */
 	public IJCTPrimitiveType createPrimitiveType(
-		final JCTPrimitiveTypes aPrimitiveTypeConstant) {
-		return new JCTPrimitiveType(
-			this.originalRootNode,
-			aPrimitiveTypeConstant);
+			final JCTPrimitiveTypes aPrimitiveTypeConstant) {
+		return new JCTPrimitiveType(this.originalRootNode,
+				aPrimitiveTypeConstant);
 	}
 
 	/**
 	 * Returns a new class type.
 	 */
 	public IJCTClassType createClassType(
-		final IJCTSelector<IJCTClass> classDeclaration) {
+			final IJCTSelector<IJCTClass> classDeclaration) {
 		return new JCTClassType(this.originalRootNode, classDeclaration);
 	}
 
@@ -117,8 +116,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new package.
 	 */
 	public IJCTPackage createPackage(final String name, final boolean isGhost) {
-		final JCTPackage result =
-			new JCTPackage(this.originalRootNode, name, isGhost);
+		final JCTPackage result = new JCTPackage(this.originalRootNode, name,
+				isGhost);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -127,8 +126,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new compilation unit.
 	 */
 	public IJCTCompilationUnit createCompilationUnit(final File sourceFile) {
-		final JCTCompilationUnit result =
-			new JCTCompilationUnit(this.originalRootNode, sourceFile);
+		final JCTCompilationUnit result = new JCTCompilationUnit(
+				this.originalRootNode, sourceFile);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -136,11 +135,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new comment.
 	 */
-	public IJCTComment createComment(
-		final boolean isEndOfLine,
-		final String text) {
-		final JCTComment result =
-			new JCTComment(this.originalRootNode, isEndOfLine, text);
+	public IJCTComment createComment(final boolean isEndOfLine,
+			final String text) {
+		final JCTComment result = new JCTComment(this.originalRootNode,
+				isEndOfLine, text);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -148,16 +146,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new import.
 	 */
-	public IJCTImport createImport(
-		final IJCTImportable importedElement,
-		final boolean isStatic,
-		final boolean isOnDemand) {
-		final JCTImport result =
-			new JCTImport(
-				this.originalRootNode,
-				importedElement,
-				isStatic,
-				isOnDemand);
+	public IJCTImport createImport(final IJCTImportable importedElement,
+			final boolean isStatic, final boolean isOnDemand) {
+		final JCTImport result = new JCTImport(this.originalRootNode,
+				importedElement, isStatic, isOnDemand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -165,12 +157,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new class.
 	 */
-	public IJCTClass createClass(
-		final String name,
-		final boolean isInterface,
-		final boolean isGhost) {
-		final JCTClass result =
-			new JCTClass(this.originalRootNode, name, isInterface, isGhost);
+	public IJCTClass createClass(final String name, final boolean isInterface,
+			final boolean isGhost) {
+		final JCTClass result = new JCTClass(this.originalRootNode, name,
+				isInterface, isGhost);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -188,9 +178,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new method invocation.
 	 */
 	public IJCTMethodInvocation createMethodInvocation(
-		final IJCTSelector<IJCTMethod> methodSelector) {
-		final JCTMethodInvocation result =
-			new JCTMethodInvocation(this.originalRootNode, methodSelector);
+			final IJCTSelector<IJCTMethod> methodSelector) {
+		final JCTMethodInvocation result = new JCTMethodInvocation(
+				this.originalRootNode, methodSelector);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -208,8 +198,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new parameter.
 	 */
 	public IJCTParameter createParameter(final String name) {
-		final JCTParameter result =
-			new JCTParameter(this.originalRootNode, name);
+		final JCTParameter result = new JCTParameter(this.originalRootNode,
+				name);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -236,8 +226,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new assert.
 	 */
 	public IJCTAssert createAssert(final IJCTExpression condition) {
-		final JCTAssert result =
-			new JCTAssert(this.originalRootNode, condition);
+		final JCTAssert result = new JCTAssert(this.originalRootNode,
+				condition);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -263,11 +253,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new label.
 	 */
-	public IJCTLabel createLabel(
-		final String name,
-		final IJCTStatement statement) {
-		final JCTLabel result =
-			new JCTLabel(this.originalRootNode, name, statement);
+	public IJCTLabel createLabel(final String name,
+			final IJCTStatement statement) {
+		final JCTLabel result = new JCTLabel(this.originalRootNode, name,
+				statement);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -276,8 +265,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new do while.
 	 */
 	public IJCTDoWhile createDoWhile(final IJCTExpression condition) {
-		final JCTDoWhile result =
-			new JCTDoWhile(this.originalRootNode, condition);
+		final JCTDoWhile result = new JCTDoWhile(this.originalRootNode,
+				condition);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -294,11 +283,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new for.
 	 */
-	public IJCTFor createFor(
-		final IJCTExpression condition,
-		final IJCTStatement body) {
-		final JCTFor result =
-			new JCTFor(this.originalRootNode, condition, body);
+	public IJCTFor createFor(final IJCTExpression condition,
+			final IJCTStatement body) {
+		final JCTFor result = new JCTFor(this.originalRootNode, condition,
+				body);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -306,12 +294,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new enhanced for.
 	 */
-	public IJCTEnhancedFor createEnhancedFor(
-		final IJCTVariable variable,
-		final IJCTExpression iterable,
-		final IJCTStatement body) {
-		final JCTEnhancedFor result =
-			new JCTEnhancedFor(this.originalRootNode, variable, iterable, body);
+	public IJCTEnhancedFor createEnhancedFor(final IJCTVariable variable,
+			final IJCTExpression iterable, final IJCTStatement body) {
+		final JCTEnhancedFor result = new JCTEnhancedFor(this.originalRootNode,
+				variable, iterable, body);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -319,11 +305,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new if.
 	 */
-	public IJCTIf createIf(
-		final IJCTExpression condition,
-		final IJCTStatement thenStatement) {
-		final JCTIf result =
-			new JCTIf(this.originalRootNode, condition, thenStatement);
+	public IJCTIf createIf(final IJCTExpression condition,
+			final IJCTStatement thenStatement) {
+		final JCTIf result = new JCTIf(this.originalRootNode, condition,
+				thenStatement);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -341,8 +326,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new switch.
 	 */
 	public IJCTSwitch createSwitch(final IJCTExpression expression) {
-		final JCTSwitch result =
-			new JCTSwitch(this.originalRootNode, expression);
+		final JCTSwitch result = new JCTSwitch(this.originalRootNode,
+				expression);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -360,9 +345,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new synchronized.
 	 */
 	public IJCTSynchronized createSynchronized(
-		final IJCTExpression synchronizedObject) {
-		final JCTSynchronized result =
-			new JCTSynchronized(this.originalRootNode, synchronizedObject);
+			final IJCTExpression synchronizedObject) {
+		final JCTSynchronized result = new JCTSynchronized(
+				this.originalRootNode, synchronizedObject);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -371,8 +356,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new throw.
 	 */
 	public IJCTThrow createThrow(final IJCTExpression thrownException) {
-		final JCTThrow result =
-			new JCTThrow(this.originalRootNode, thrownException);
+		final JCTThrow result = new JCTThrow(this.originalRootNode,
+				thrownException);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -398,11 +383,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new array access.
 	 */
-	public IJCTArrayAccess createArrayAccess(
-		final IJCTExpression array,
-		final IJCTExpression index) {
-		final JCTArrayAccess result =
-			new JCTArrayAccess(this.originalRootNode, array, index);
+	public IJCTArrayAccess createArrayAccess(final IJCTExpression array,
+			final IJCTExpression index) {
+		final JCTArrayAccess result = new JCTArrayAccess(this.originalRootNode,
+				array, index);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -411,9 +395,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new expression statement.
 	 */
 	public IJCTExpressionStatement createExpressionStatement(
-		final IJCTExpression expression) {
-		final JCTExpressionStatement result =
-			new JCTExpressionStatement(this.originalRootNode, expression);
+			final IJCTExpression expression) {
+		final JCTExpressionStatement result = new JCTExpressionStatement(
+				this.originalRootNode, expression);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -421,11 +405,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new assignment.
 	 */
-	public IJCTAssignment createAssignment(
-		final IJCTExpression variable,
-		final IJCTExpression value) {
-		final JCTAssignment result =
-			new JCTAssignment(this.originalRootNode, variable, value);
+	public IJCTAssignment createAssignment(final IJCTExpression variable,
+			final IJCTExpression value) {
+		final JCTAssignment result = new JCTAssignment(this.originalRootNode,
+				variable, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -433,11 +416,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new and assignment.
 	 */
-	public IJCTAndAssignment createAndAssignment(
-		final IJCTExpression variable,
-		final IJCTExpression value) {
-		final JCTAndAssignment result =
-			new JCTAndAssignment(this.originalRootNode, variable, value);
+	public IJCTAndAssignment createAndAssignment(final IJCTExpression variable,
+			final IJCTExpression value) {
+		final JCTAndAssignment result = new JCTAndAssignment(
+				this.originalRootNode, variable, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -446,10 +428,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new divide assignment.
 	 */
 	public IJCTDivideAssignment createDivideAssignment(
-		final IJCTExpression variable,
-		final IJCTExpression value) {
-		final JCTDivideAssignment result =
-			new JCTDivideAssignment(this.originalRootNode, variable, value);
+			final IJCTExpression variable, final IJCTExpression value) {
+		final JCTDivideAssignment result = new JCTDivideAssignment(
+				this.originalRootNode, variable, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -458,10 +439,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new left shift assignment.
 	 */
 	public IJCTLeftShiftAssignment createLeftShiftAssignment(
-		final IJCTExpression variable,
-		final IJCTExpression value) {
-		final JCTLeftShiftAssignment result =
-			new JCTLeftShiftAssignment(this.originalRootNode, variable, value);
+			final IJCTExpression variable, final IJCTExpression value) {
+		final JCTLeftShiftAssignment result = new JCTLeftShiftAssignment(
+				this.originalRootNode, variable, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -470,10 +450,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new minus assignment.
 	 */
 	public IJCTMinusAssignment createMinusAssignment(
-		final IJCTExpression variable,
-		final IJCTExpression value) {
-		final JCTMinusAssignment result =
-			new JCTMinusAssignment(this.originalRootNode, variable, value);
+			final IJCTExpression variable, final IJCTExpression value) {
+		final JCTMinusAssignment result = new JCTMinusAssignment(
+				this.originalRootNode, variable, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -482,10 +461,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new multiply assignment.
 	 */
 	public IJCTMultiplyAssignment createMultiplyAssignment(
-		final IJCTExpression variable,
-		final IJCTExpression value) {
-		final JCTMultiplyAssignment result =
-			new JCTMultiplyAssignment(this.originalRootNode, variable, value);
+			final IJCTExpression variable, final IJCTExpression value) {
+		final JCTMultiplyAssignment result = new JCTMultiplyAssignment(
+				this.originalRootNode, variable, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -493,11 +471,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new or assignment.
 	 */
-	public IJCTOrAssignment createOrAssignment(
-		final IJCTExpression variable,
-		final IJCTExpression value) {
-		final JCTOrAssignment result =
-			new JCTOrAssignment(this.originalRootNode, variable, value);
+	public IJCTOrAssignment createOrAssignment(final IJCTExpression variable,
+			final IJCTExpression value) {
+		final JCTOrAssignment result = new JCTOrAssignment(
+				this.originalRootNode, variable, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -506,10 +483,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new plus assignment.
 	 */
 	public IJCTPlusAssignment createPlusAssignment(
-		final IJCTExpression variable,
-		final IJCTExpression value) {
-		final JCTPlusAssignment result =
-			new JCTPlusAssignment(this.originalRootNode, variable, value);
+			final IJCTExpression variable, final IJCTExpression value) {
+		final JCTPlusAssignment result = new JCTPlusAssignment(
+				this.originalRootNode, variable, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -518,10 +494,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new remainder assignment.
 	 */
 	public IJCTRemainderAssignment createRemainderAssignment(
-		final IJCTExpression variable,
-		final IJCTExpression value) {
-		final JCTRemainderAssignment result =
-			new JCTRemainderAssignment(this.originalRootNode, variable, value);
+			final IJCTExpression variable, final IJCTExpression value) {
+		final JCTRemainderAssignment result = new JCTRemainderAssignment(
+				this.originalRootNode, variable, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -530,10 +505,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new right shift assignment.
 	 */
 	public IJCTRightShiftAssignment createRightShiftAssignment(
-		final IJCTExpression variable,
-		final IJCTExpression value) {
-		final JCTRightShiftAssignment result =
-			new JCTRightShiftAssignment(this.originalRootNode, variable, value);
+			final IJCTExpression variable, final IJCTExpression value) {
+		final JCTRightShiftAssignment result = new JCTRightShiftAssignment(
+				this.originalRootNode, variable, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -542,13 +516,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new unsigned right shift assignment.
 	 */
 	public IJCTUnsignedRightShiftAssignment createUnsignedRightShiftAssignment(
-		final IJCTExpression variable,
-		final IJCTExpression value) {
-		final JCTUnsignedRightShiftAssignment result =
-			new JCTUnsignedRightShiftAssignment(
-				this.originalRootNode,
-				variable,
-				value);
+			final IJCTExpression variable, final IJCTExpression value) {
+		final JCTUnsignedRightShiftAssignment result = new JCTUnsignedRightShiftAssignment(
+				this.originalRootNode, variable, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -556,11 +526,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new xor assignment.
 	 */
-	public IJCTXorAssignment createXorAssignment(
-		final IJCTExpression variable,
-		final IJCTExpression value) {
-		final JCTXorAssignment result =
-			new JCTXorAssignment(this.originalRootNode, variable, value);
+	public IJCTXorAssignment createXorAssignment(final IJCTExpression variable,
+			final IJCTExpression value) {
+		final JCTXorAssignment result = new JCTXorAssignment(
+				this.originalRootNode, variable, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -569,9 +538,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new bitwise complement.
 	 */
 	public IJCTBitwiseComplement createBitwiseComplement(
-		final IJCTExpression operand) {
-		final JCTBitwiseComplement result =
-			new JCTBitwiseComplement(this.originalRootNode, operand);
+			final IJCTExpression operand) {
+		final JCTBitwiseComplement result = new JCTBitwiseComplement(
+				this.originalRootNode, operand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -580,8 +549,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new unary minus.
 	 */
 	public IJCTUnaryMinus createUnaryMinus(final IJCTExpression operand) {
-		final JCTUnaryMinus result =
-			new JCTUnaryMinus(this.originalRootNode, operand);
+		final JCTUnaryMinus result = new JCTUnaryMinus(this.originalRootNode,
+				operand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -590,8 +559,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new unary plus.
 	 */
 	public IJCTUnaryPlus createUnaryPlus(final IJCTExpression operand) {
-		final JCTUnaryPlus result =
-			new JCTUnaryPlus(this.originalRootNode, operand);
+		final JCTUnaryPlus result = new JCTUnaryPlus(this.originalRootNode,
+				operand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -600,9 +569,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new prefix decrement.
 	 */
 	public IJCTPrefixDecrement createPrefixDecrement(
-		final IJCTExpression operand) {
-		final JCTPrefixDecrement result =
-			new JCTPrefixDecrement(this.originalRootNode, operand);
+			final IJCTExpression operand) {
+		final JCTPrefixDecrement result = new JCTPrefixDecrement(
+				this.originalRootNode, operand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -611,9 +580,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new prefix increment.
 	 */
 	public IJCTPrefixIncrement createPrefixIncrement(
-		final IJCTExpression operand) {
-		final JCTPrefixIncrement result =
-			new JCTPrefixIncrement(this.originalRootNode, operand);
+			final IJCTExpression operand) {
+		final JCTPrefixIncrement result = new JCTPrefixIncrement(
+				this.originalRootNode, operand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -622,9 +591,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new postfix decrement.
 	 */
 	public IJCTPostfixDecrement createPostfixDecrement(
-		final IJCTExpression operand) {
-		final JCTPostfixDecrement result =
-			new JCTPostfixDecrement(this.originalRootNode, operand);
+			final IJCTExpression operand) {
+		final JCTPostfixDecrement result = new JCTPostfixDecrement(
+				this.originalRootNode, operand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -633,9 +602,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new postfix increment.
 	 */
 	public IJCTPostfixIncrement createPostfixIncrement(
-		final IJCTExpression operand) {
-		final JCTPostfixIncrement result =
-			new JCTPostfixIncrement(this.originalRootNode, operand);
+			final IJCTExpression operand) {
+		final JCTPostfixIncrement result = new JCTPostfixIncrement(
+				this.originalRootNode, operand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -644,9 +613,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new logical complement.
 	 */
 	public IJCTLogicalComplement createLogicalComplement(
-		final IJCTExpression operand) {
-		final JCTLogicalComplement result =
-			new JCTLogicalComplement(this.originalRootNode, operand);
+			final IJCTExpression operand) {
+		final JCTLogicalComplement result = new JCTLogicalComplement(
+				this.originalRootNode, operand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -654,11 +623,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new equal to.
 	 */
-	public IJCTEqualTo createEqualTo(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTEqualTo result =
-			new JCTEqualTo(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTEqualTo createEqualTo(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTEqualTo result = new JCTEqualTo(this.originalRootNode,
+				leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -666,11 +634,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new not equal to.
 	 */
-	public IJCTNotEqualTo createNotEqualTo(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTNotEqualTo result =
-			new JCTNotEqualTo(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTNotEqualTo createNotEqualTo(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTNotEqualTo result = new JCTNotEqualTo(this.originalRootNode,
+				leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -679,13 +646,10 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new conditional and.
 	 */
 	public IJCTConditionalAnd createConditionalAnd(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTConditionalAnd result =
-			new JCTConditionalAnd(
-				this.originalRootNode,
-				leftOperand,
-				rightOperand);
+			final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTConditionalAnd result = new JCTConditionalAnd(
+				this.originalRootNode, leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -694,13 +658,10 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new conditional or.
 	 */
 	public IJCTConditionalOr createConditionalOr(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTConditionalOr result =
-			new JCTConditionalOr(
-				this.originalRootNode,
-				leftOperand,
-				rightOperand);
+			final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTConditionalOr result = new JCTConditionalOr(
+				this.originalRootNode, leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -708,11 +669,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new less than.
 	 */
-	public IJCTLessThan createLessThan(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTLessThan result =
-			new JCTLessThan(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTLessThan createLessThan(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTLessThan result = new JCTLessThan(this.originalRootNode,
+				leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -721,13 +681,10 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new less than or equal.
 	 */
 	public IJCTLessThanOrEqual createLessThanOrEqual(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTLessThanOrEqual result =
-			new JCTLessThanOrEqual(
-				this.originalRootNode,
-				leftOperand,
-				rightOperand);
+			final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTLessThanOrEqual result = new JCTLessThanOrEqual(
+				this.originalRootNode, leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -735,11 +692,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new greater than.
 	 */
-	public IJCTGreaterThan createGreaterThan(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTGreaterThan result =
-			new JCTGreaterThan(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTGreaterThan createGreaterThan(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTGreaterThan result = new JCTGreaterThan(this.originalRootNode,
+				leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -748,13 +704,10 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new greater than or equal.
 	 */
 	public IJCTGreaterThanOrEqual createGreaterThanOrEqual(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTGreaterThanOrEqual result =
-			new JCTGreaterThanOrEqual(
-				this.originalRootNode,
-				leftOperand,
-				rightOperand);
+			final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTGreaterThanOrEqual result = new JCTGreaterThanOrEqual(
+				this.originalRootNode, leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -762,11 +715,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new and.
 	 */
-	public IJCTAnd createAnd(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTAnd result =
-			new JCTAnd(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTAnd createAnd(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTAnd result = new JCTAnd(this.originalRootNode, leftOperand,
+				rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -774,11 +726,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new divide.
 	 */
-	public IJCTDivide createDivide(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTDivide result =
-			new JCTDivide(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTDivide createDivide(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTDivide result = new JCTDivide(this.originalRootNode,
+				leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -786,11 +737,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new left shift.
 	 */
-	public IJCTLeftShift createLeftShift(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTLeftShift result =
-			new JCTLeftShift(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTLeftShift createLeftShift(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTLeftShift result = new JCTLeftShift(this.originalRootNode,
+				leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -798,11 +748,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new minus.
 	 */
-	public IJCTMinus createMinus(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTMinus result =
-			new JCTMinus(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTMinus createMinus(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTMinus result = new JCTMinus(this.originalRootNode, leftOperand,
+				rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -810,11 +759,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new multiply.
 	 */
-	public IJCTMultiply createMultiply(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTMultiply result =
-			new JCTMultiply(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTMultiply createMultiply(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTMultiply result = new JCTMultiply(this.originalRootNode,
+				leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -822,11 +770,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new or.
 	 */
-	public IJCTOr createOr(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTOr result =
-			new JCTOr(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTOr createOr(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTOr result = new JCTOr(this.originalRootNode, leftOperand,
+				rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -834,11 +781,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new plus.
 	 */
-	public IJCTPlus createPlus(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTPlus result =
-			new JCTPlus(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTPlus createPlus(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTPlus result = new JCTPlus(this.originalRootNode, leftOperand,
+				rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -846,11 +792,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new remainder.
 	 */
-	public IJCTRemainder createRemainder(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTRemainder result =
-			new JCTRemainder(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTRemainder createRemainder(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTRemainder result = new JCTRemainder(this.originalRootNode,
+				leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -858,11 +803,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new right shift.
 	 */
-	public IJCTRightShift createRightShift(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTRightShift result =
-			new JCTRightShift(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTRightShift createRightShift(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTRightShift result = new JCTRightShift(this.originalRootNode,
+				leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -871,13 +815,10 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new unsigned right shift.
 	 */
 	public IJCTUnsignedRightShift createUnsignedRightShift(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTUnsignedRightShift result =
-			new JCTUnsignedRightShift(
-				this.originalRootNode,
-				leftOperand,
-				rightOperand);
+			final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTUnsignedRightShift result = new JCTUnsignedRightShift(
+				this.originalRootNode, leftOperand, rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -885,11 +826,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new xor.
 	 */
-	public IJCTXor createXor(
-		final IJCTExpression leftOperand,
-		final IJCTExpression rightOperand) {
-		final JCTXor result =
-			new JCTXor(this.originalRootNode, leftOperand, rightOperand);
+	public IJCTXor createXor(final IJCTExpression leftOperand,
+			final IJCTExpression rightOperand) {
+		final JCTXor result = new JCTXor(this.originalRootNode, leftOperand,
+				rightOperand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -898,14 +838,10 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new conditional operator.
 	 */
 	public IJCTConditionalOperator createConditionalOperator(
-		final IJCTExpression condition,
-		final IJCTExpression thenExpression,
-		final IJCTExpression elseExpression) {
-		final JCTConditionalOperator result =
-			new JCTConditionalOperator(
-				this.originalRootNode,
-				condition,
-				thenExpression,
+			final IJCTExpression condition, final IJCTExpression thenExpression,
+			final IJCTExpression elseExpression) {
+		final JCTConditionalOperator result = new JCTConditionalOperator(
+				this.originalRootNode, condition, thenExpression,
 				elseExpression);
 		this.originalRootNode.addOrphan(result);
 		return result;
@@ -914,11 +850,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new instance of.
 	 */
-	public IJCTInstanceOf createInstanceOf(
-		final IJCTExpression operand,
-		final IJCTType type) {
-		final JCTInstanceOf result =
-			new JCTInstanceOf(this.originalRootNode, operand, type);
+	public IJCTInstanceOf createInstanceOf(final IJCTExpression operand,
+			final IJCTType type) {
+		final JCTInstanceOf result = new JCTInstanceOf(this.originalRootNode,
+				operand, type);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -926,9 +861,10 @@ public class JCTFactory implements IJCTFactory {
 	/**
 	 * Returns a new cast.
 	 */
-	public IJCTCast createCast(final IJCTType type, final IJCTExpression operand) {
-		final JCTCast result =
-			new JCTCast(this.originalRootNode, type, operand);
+	public IJCTCast createCast(final IJCTType type,
+			final IJCTExpression operand) {
+		final JCTCast result = new JCTCast(this.originalRootNode, type,
+				operand);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -937,8 +873,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new new array.
 	 */
 	public IJCTNewArray createNewArray(final IJCTType elementType) {
-		final JCTNewArray result =
-			new JCTNewArray(this.originalRootNode, elementType);
+		final JCTNewArray result = new JCTNewArray(this.originalRootNode,
+				elementType);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -947,8 +883,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new new class.
 	 */
 	public IJCTNewClass createNewClass(final IJCTClassType classType) {
-		final JCTNewClass result =
-			new JCTNewClass(this.originalRootNode, classType);
+		final JCTNewClass result = new JCTNewClass(this.originalRootNode,
+				classType);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -957,8 +893,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new boolean literal.
 	 */
 	public IJCTBooleanLiteral createBooleanLiteral(final boolean value) {
-		final JCTBooleanLiteral result =
-			new JCTBooleanLiteral(this.originalRootNode, value);
+		final JCTBooleanLiteral result = new JCTBooleanLiteral(
+				this.originalRootNode, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -967,8 +903,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new double literal.
 	 */
 	public IJCTDoubleLiteral createDoubleLiteral(final double value) {
-		final JCTDoubleLiteral result =
-			new JCTDoubleLiteral(this.originalRootNode, value);
+		final JCTDoubleLiteral result = new JCTDoubleLiteral(
+				this.originalRootNode, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -977,8 +913,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new float literal.
 	 */
 	public IJCTFloatLiteral createFloatLiteral(final float value) {
-		final JCTFloatLiteral result =
-			new JCTFloatLiteral(this.originalRootNode, value);
+		final JCTFloatLiteral result = new JCTFloatLiteral(
+				this.originalRootNode, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -987,8 +923,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new integer literal.
 	 */
 	public IJCTIntegerLiteral createIntegerLiteral(final int value) {
-		final JCTIntegerLiteral result =
-			new JCTIntegerLiteral(this.originalRootNode, value);
+		final JCTIntegerLiteral result = new JCTIntegerLiteral(
+				this.originalRootNode, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -997,8 +933,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new long literal.
 	 */
 	public IJCTLongLiteral createLongLiteral(final long value) {
-		final JCTLongLiteral result =
-			new JCTLongLiteral(this.originalRootNode, value);
+		final JCTLongLiteral result = new JCTLongLiteral(this.originalRootNode,
+				value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -1007,8 +943,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new character literal.
 	 */
 	public IJCTCharacterLiteral createCharacterLiteral(final char value) {
-		final JCTCharacterLiteral result =
-			new JCTCharacterLiteral(this.originalRootNode, value);
+		final JCTCharacterLiteral result = new JCTCharacterLiteral(
+				this.originalRootNode, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -1017,8 +953,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new string literal.
 	 */
 	public IJCTStringLiteral createStringLiteral(final String value) {
-		final JCTStringLiteral result =
-			new JCTStringLiteral(this.originalRootNode, value);
+		final JCTStringLiteral result = new JCTStringLiteral(
+				this.originalRootNode, value);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -1036,8 +972,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new parenthesis.
 	 */
 	public IJCTParenthesis createParenthesis(final IJCTExpression expression) {
-		final JCTParenthesis result =
-			new JCTParenthesis(this.originalRootNode, expression);
+		final JCTParenthesis result = new JCTParenthesis(this.originalRootNode,
+				expression);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -1046,8 +982,8 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new empty statement.
 	 */
 	public IJCTEmptyStatement createEmptyStatement() {
-		final JCTEmptyStatement result =
-			new JCTEmptyStatement(this.originalRootNode);
+		final JCTEmptyStatement result = new JCTEmptyStatement(
+				this.originalRootNode);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -1056,13 +992,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new member selector.
 	 */
 	public <Member extends IJCTClassMember> IJCTMemberSelector<Member> createMemberSelector(
-		final IJCTExpression qualifyingExpression,
-		final Member member) {
-		final JCTMemberSelector result =
-			new JCTMemberSelector(
-				this.originalRootNode,
-				qualifyingExpression,
-				member);
+			final IJCTExpression qualifyingExpression, final Member member) {
+		final JCTMemberSelector result = new JCTMemberSelector(
+				this.originalRootNode, qualifyingExpression, member);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -1071,9 +1003,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new simple selector.
 	 */
 	public <Identifiable extends IJCTIdentifiable> IJCTSimpleSelector<Identifiable> createSimpleSelector(
-		final Identifiable anIdentifiable) {
-		final JCTSimpleSelector result =
-			new JCTSimpleSelector(this.originalRootNode, anIdentifiable);
+			final Identifiable anIdentifiable) {
+		final JCTSimpleSelector result = new JCTSimpleSelector(
+				this.originalRootNode, anIdentifiable);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -1082,9 +1014,9 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new erroneous selector.
 	 */
 	public IJCTErroneousSelector createErroneousSelector(
-		final String anIdentifier) {
-		final JCTErroneousSelector result =
-			new JCTErroneousSelector(this.originalRootNode, anIdentifier);
+			final String anIdentifier) {
+		final JCTErroneousSelector result = new JCTErroneousSelector(
+				this.originalRootNode, anIdentifier);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
@@ -1093,15 +1025,14 @@ public class JCTFactory implements IJCTFactory {
 	 * Returns a new erroneous expression.
 	 */
 	public IJCTErroneousExpression createErroneousExpression() {
-		final JCTErroneousExpression result =
-			new JCTErroneousExpression(this.originalRootNode);
+		final JCTErroneousExpression result = new JCTErroneousExpression(
+				this.originalRootNode);
 		this.originalRootNode.addOrphan(result);
 		return result;
 	}
 
-	public static IJCTRootNode createJCT(
-		final String name,
-		final boolean initialized) {
+	public static IJCTRootNode createJCT(final String name,
+			final boolean initialized) {
 		final IJCTRootNode root = new JCTRootNode(name);
 
 		if (!initialized)
@@ -1110,37 +1041,33 @@ public class JCTFactory implements IJCTFactory {
 		/// Initializing
 		final IJCTFactory f = root.getFactory();
 
-		final IJCTPackage javaLang =
-			f.createPackage(Constants.PACKAGE_JAVA_LANG, true);
+		final IJCTPackage javaLang = f
+				.createPackage(Constants.PACKAGE_JAVA_LANG, true);
 		root.addPackage(javaLang);
 
 		// Create java.long.Object class
-		final IJCTCompilationUnit objectCU =
-			f.createCompilationUnit(new File(
-				Constants.PATH_TO_PACKAGE_JAVA_LANG
-						+ Constants.CLASSNAME_OBJECT
+		final IJCTCompilationUnit objectCU = f.createCompilationUnit(new File(
+				Constants.PATH_TO_PACKAGE_JAVA_LANG + Constants.CLASSNAME_OBJECT
 						+ Constants.CLASSFILE_EXTENSION));
 		javaLang.addCompilationUnit(objectCU);
 
-		final IJCTClass javaLangObject =
-			f.createClass(Constants.CLASSNAME_OBJECT, false, true);
+		final IJCTClass javaLangObject = f
+				.createClass(Constants.CLASSNAME_OBJECT, false, true);
 		objectCU.addClazz(javaLangObject);
 
 		// Backpatch java.lang.Object extends clause and super field
 		javaLangObject.setDirectSuperClass(javaLangObject.createClassType());
-		javaLangObject
-			.getSuperField()
-			.setType(javaLangObject.createClassType());
+		javaLangObject.getSuperField()
+				.setType(javaLangObject.createClassType());
 
 		// Create java.lang.Class class
-		final IJCTCompilationUnit classCU =
-			f.createCompilationUnit(new File(
+		final IJCTCompilationUnit classCU = f.createCompilationUnit(new File(
 				Constants.PATH_TO_PACKAGE_JAVA_LANG + Constants.CLASSNAME_CLASS
 						+ Constants.CLASSFILE_EXTENSION));
 		javaLang.addCompilationUnit(classCU);
 
-		final IJCTClass javaLangClass =
-			f.createClass(Constants.CLASSNAME_CLASS, false, true);
+		final IJCTClass javaLangClass = f.createClass(Constants.CLASSNAME_CLASS,
+				false, true);
 		classCU.addClazz(javaLangClass);
 
 		//Backpatch java.lang.Object and java.lang.Class class fields
@@ -1148,14 +1075,13 @@ public class JCTFactory implements IJCTFactory {
 		javaLangClass.getClassField().setType(javaLangClass.createClassType());
 
 		// Create java.lang.Void class
-		final IJCTCompilationUnit voidCU =
-			f.createCompilationUnit(new File(
+		final IJCTCompilationUnit voidCU = f.createCompilationUnit(new File(
 				Constants.PATH_TO_PACKAGE_JAVA_LANG + Constants.CLASSNAME_VOID
 						+ Constants.CLASSFILE_EXTENSION));
 		javaLang.addCompilationUnit(voidCU);
 
-		final IJCTClass javaLangVoid =
-			f.createClass(Constants.CLASSNAME_VOID, false, true);
+		final IJCTClass javaLangVoid = f.createClass(Constants.CLASSNAME_VOID,
+				false, true);
 		voidCU.addClazz(javaLangVoid);
 
 		root.assumeInitialized();
@@ -1167,69 +1093,55 @@ public class JCTFactory implements IJCTFactory {
 		return JCTFactory.createJCT(name, true);
 	}
 
-	public static final IJCTPath PATH_TO_OBJECT =
-		JCTFactory.parsePath(new StringBuffer()
-			.append(JCTPathPart.PART_SEPARATOR)
-			.append(JCTKind.ROOT_NODE.toString())
-			.append(JCTPathPart.KIND_INDEX_SEPARATOR)
-			.append("null")
-			.append(JCTPathPart.INDEX_DATA_SEPARATOR)
-			.append("null")
-			.append(JCTPathPart.INDEX_DATA_SEPARATOR)
-			.append("null")
-			.append(JCTPathPart.PART_SEPARATOR)
-			.append(JCTKind.PACKAGE.toString())
-			.append(JCTPathPart.KIND_INDEX_SEPARATOR)
-			.append("null")
-			.append(JCTPathPart.INDEX_DATA_SEPARATOR)
-			.append(Constants.PACKAGE_JAVA_LANG)
-			.append(JCTPathPart.INDEX_DATA_SEPARATOR)
-			.append("null")
-			.append(JCTPathPart.PART_SEPARATOR)
-			.append(JCTKind.CLASS.toString())
-			.append(JCTPathPart.KIND_INDEX_SEPARATOR)
-			.append("null")
-			.append(JCTPathPart.INDEX_DATA_SEPARATOR)
-			.append(Constants.CLASSNAME_OBJECT)
-			.append(JCTPathPart.INDEX_DATA_SEPARATOR)
-			.append("01")
-			.toString());
+	public static final IJCTPath PATH_TO_OBJECT = JCTFactory
+			.parsePath(new StringBuffer().append(Constants.PART_SEPARATOR)
+					.append(JCTKind.ROOT_NODE.toString())
+					.append(Constants.KIND_INDEX_SEPARATOR).append("null")
+					.append(Constants.INDEX_DATA_SEPARATOR).append("null")
+					.append(Constants.INDEX_DATA_SEPARATOR).append("null")
+					.append(Constants.PART_SEPARATOR)
+					.append(JCTKind.PACKAGE.toString())
+					.append(Constants.KIND_INDEX_SEPARATOR).append("null")
+					.append(Constants.INDEX_DATA_SEPARATOR)
+					.append(Constants.PACKAGE_JAVA_LANG)
+					.append(Constants.INDEX_DATA_SEPARATOR).append("null")
+					.append(Constants.PART_SEPARATOR)
+					.append(JCTKind.CLASS.toString())
+					.append(Constants.KIND_INDEX_SEPARATOR).append("null")
+					.append(Constants.INDEX_DATA_SEPARATOR)
+					.append(Constants.CLASSNAME_OBJECT)
+					.append(Constants.INDEX_DATA_SEPARATOR).append("01")
+					.toString());
 
-	public static final IJCTPath PATH_TO_VOID_CLASSTYPE =
-		JCTFactory.parsePath(new StringBuffer()
-			.append(JCTPathPart.PART_SEPARATOR)
-			.append(JCTKind.ROOT_NODE.toString())
-			.append(JCTPathPart.KIND_INDEX_SEPARATOR)
-			.append("null")
-			.append(JCTPathPart.INDEX_DATA_SEPARATOR)
-			.append("null")
-			.append(JCTPathPart.INDEX_DATA_SEPARATOR)
-			.append("null")
-			.append(JCTPathPart.PART_SEPARATOR)
-			.append(JCTKind.CLASS_TYPE.toString())
-			.append(JCTPathPart.KIND_INDEX_SEPARATOR)
-			.append("null")
-			.append(JCTPathPart.INDEX_DATA_SEPARATOR)
-			.append(Constants.CLASS_BINARYNAME_VOID)
-			.append(JCTPathPart.INDEX_DATA_SEPARATOR)
-			.append("null")
-			.toString());
+	public static final IJCTPath PATH_TO_VOID_CLASSTYPE = JCTFactory
+			.parsePath(new StringBuffer().append(Constants.PART_SEPARATOR)
+					.append(JCTKind.ROOT_NODE.toString())
+					.append(Constants.KIND_INDEX_SEPARATOR).append("null")
+					.append(Constants.INDEX_DATA_SEPARATOR).append("null")
+					.append(Constants.INDEX_DATA_SEPARATOR).append("null")
+					.append(Constants.PART_SEPARATOR)
+					.append(JCTKind.CLASS_TYPE.toString())
+					.append(Constants.KIND_INDEX_SEPARATOR).append("null")
+					.append(Constants.INDEX_DATA_SEPARATOR)
+					.append(Constants.CLASS_BINARYNAME_VOID)
+					.append(Constants.INDEX_DATA_SEPARATOR).append("null")
+					.toString());
 
 	public static IJCTPath parsePath(final String stringPath) {
-		final String[] parts = stringPath.split(JCTPathPart.PART_SEPARATOR);
+		final String[] parts = stringPath.split(Constants.PART_SEPARATOR);
 
 		final IJCTPath path = new JCTPath();
 
 		if (!"".equals(parts[0]))
 			throw new IllegalArgumentException(
-				"Nothing must be present before the first "
-						+ JCTPathPart.PART_SEPARATOR + " : " + stringPath);
+					"Nothing must be present before the first "
+							+ Constants.PART_SEPARATOR + " : " + stringPath);
 
 		IJCTPathPart part = JCTFactory.parsePathPart(parts[1]);
 
 		if (JCTKind.ROOT_NODE != part.getResultKind())
 			throw new IllegalArgumentException(
-				"The first part of a path must designate a ROOT_NODE element");
+					"The first part of a path must designate a ROOT_NODE element");
 
 		if (2 == parts.length)
 			return path;
@@ -1247,42 +1159,40 @@ public class JCTFactory implements IJCTFactory {
 	}
 
 	public static JCTPathPart parsePathPart(final String stringPart) {
-		final String[] kind_rest =
-			stringPart.split(JCTPathPart.KIND_INDEX_SEPARATOR);
+		final String[] kind_rest = stringPart
+				.split(Constants.KIND_INDEX_SEPARATOR);
 
 		if (kind_rest.length != 2)
 			throw new IllegalArgumentException(
-				"The path is malformed (no or more than one '"
-						+ JCTPathPart.KIND_INDEX_SEPARATOR + "') : "
-						+ stringPart);
+					"The path is malformed (no or more than one '"
+							+ Constants.KIND_INDEX_SEPARATOR + "') : "
+							+ stringPart);
 
 		final JCTKind kind = JCTKind.valueOf(kind_rest[0]); // Throw an exception if fail
 
-		final String[] args =
-			kind_rest[1].split(JCTPathPart.INDEX_DATA_SEPARATOR);
+		final String[] args = kind_rest[1]
+				.split(Constants.INDEX_DATA_SEPARATOR);
 
 		if (args.length != 3)
 			throw new IllegalArgumentException(
-				"The path is malformed (not enough or too many '"
-						+ JCTPathPart.INDEX_DATA_SEPARATOR + "') : "
-						+ stringPart);
+					"The path is malformed (not enough or too many '"
+							+ Constants.INDEX_DATA_SEPARATOR + "') : "
+							+ stringPart);
 
-		final Integer index =
-			"null".equals(args[0]) ? null : Integer.parseInt(args[0]);
+		final Integer index = "null".equals(args[0]) ? null
+				: Integer.parseInt(args[0]);
 
 		if (args[2].length() % 2 != 0)
 			throw new IllegalArgumentException(
-				"The path is malforme (informative data string must have an even length).");
+					"The path is malforme (informative data string must have an even length).");
 
-		final byte[] informativeData =
-			"null".equals(args[2]) ? null : new byte[args[2].length() / 2];
+		final byte[] informativeData = "null".equals(args[2]) ? null
+				: new byte[args[2].length() / 2];
 
 		if (null != informativeData)
 			for (int i = 0; i < informativeData.length; ++i)
-				informativeData[i] =
-					(byte) (Short.parseShort(args[2].substring(
-						i * 2,
-						(i + 1) * 2), 16) & 0xFF);
+				informativeData[i] = (byte) (Short.parseShort(
+						args[2].substring(i * 2, (i + 1) * 2), 16) & 0xFF);
 
 		return new JCTPathPart(kind, index, args[1], informativeData);
 	}

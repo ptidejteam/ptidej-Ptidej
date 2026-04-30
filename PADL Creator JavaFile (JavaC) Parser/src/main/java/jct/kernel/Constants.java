@@ -40,24 +40,23 @@ public interface Constants {
 	// Path separators
 	char DOT_SEPARATOR = '.';
 	char DOLLAR_SEPARATOR = '$';
+	Pattern DOLLAR_SPLITTER_PATTERN = Pattern
+			.compile("\\" + Constants.DOLLAR_SEPARATOR);
 
 	char METHOD_MARKER = '(';
 	char PARAMETER_SEPARATOR = ',';
-
 	Pattern PARAMETER_SPLITTER_PATTERN = Pattern
 			.compile("\\" + Constants.PARAMETER_SEPARATOR);
 
 	// Type markers, separators and patterns
 	char ARRAY_MARKER = '[';
-	char CLASS_MARKER = 'L';
+	char CLASS_MARKER_BEGIN = 'L';
+	char CLASS_MARKER_END = ';';
 
 	char INTERSECTION_MARKER = '&';
 	char INTERSECTION_SEPARATOR = '|';
-
 	Pattern INTERSECTION_SPLITTER_PATTERN = Pattern
 			.compile("\\" + Constants.INTERSECTION_SEPARATOR);
-	Pattern DOLLAR_SPLITTER_PATTERN = Pattern
-			.compile("\\" + Constants.DOLLAR_SEPARATOR);
 
 	// Magic Strings
 	String ARRAY_TYPE = "$$ARRAY_TYPE$$";
@@ -120,29 +119,34 @@ public interface Constants {
 	String CLASSPATH_STRING = Constants.PACKAGE_JAVA_LANG
 			+ Constants.DOT_SEPARATOR + Constants.CLASSNAME_STRING;
 
-	String CLASS_BINARYNAME_OBJECT = Constants.CLASS_MARKER
-			+ Constants.CLASSPATH_OBJECT;
-	String CLASS_BINARYNAME_CLASS = Constants.CLASS_MARKER
-			+ Constants.CLASSPATH_CLASS;
-	String CLASS_BINARYNAME_VOID = Constants.CLASS_MARKER
-			+ Constants.CLASSPATH_VOID;
+	String CLASS_BINARYNAME_OBJECT = Constants.CLASS_MARKER_BEGIN
+			+ Constants.CLASSPATH_OBJECT + Constants.CLASS_MARKER_END;
+	String CLASS_BINARYNAME_CLASS = Constants.CLASS_MARKER_BEGIN
+			+ Constants.CLASSPATH_CLASS + Constants.CLASS_MARKER_END;
+	String CLASS_BINARYNAME_VOID = Constants.CLASS_MARKER_BEGIN
+			+ Constants.CLASSPATH_VOID + Constants.CLASS_MARKER_END;
 
-	String CLASS_BINARYNAME_DOUBLE = Constants.CLASS_MARKER
-			+ Constants.CLASSPATH_DOUBLE;
-	String CLASS_BINARYNAME_FLOAT = Constants.CLASS_MARKER
-			+ Constants.CLASSPATH_FLOAT;
-	String CLASS_BINARYNAME_LONG = Constants.CLASS_MARKER
-			+ Constants.CLASSPATH_LONG;
-	String CLASS_BINARYNAME_INT = Constants.CLASS_MARKER
-			+ Constants.CLASSPATH_INT;
-	String CLASS_BINARYNAME_SHORT = Constants.CLASS_MARKER
-			+ Constants.CLASSPATH_SHORT;
-	String CLASS_BINARYNAME_BYTE = Constants.CLASS_MARKER
-			+ Constants.CLASSPATH_BYTE;
-	String CLASS_BINARYNAME_BOOLEAN = Constants.CLASS_MARKER
-			+ Constants.CLASSPATH_BOOLEAN;
-	String CLASS_BINARYNAME_CHAR = Constants.CLASS_MARKER
-			+ Constants.CLASSPATH_CHAR;
-	String CLASS_BINARYNAME_STRING = Constants.CLASS_MARKER
-			+ Constants.CLASSPATH_STRING;
+	String CLASS_BINARYNAME_DOUBLE = Constants.CLASS_MARKER_BEGIN
+			+ Constants.CLASSPATH_DOUBLE + Constants.CLASS_MARKER_END;
+	String CLASS_BINARYNAME_FLOAT = Constants.CLASS_MARKER_BEGIN
+			+ Constants.CLASSPATH_FLOAT + Constants.CLASS_MARKER_END;
+	String CLASS_BINARYNAME_LONG = Constants.CLASS_MARKER_BEGIN
+			+ Constants.CLASSPATH_LONG + Constants.CLASS_MARKER_END;
+	String CLASS_BINARYNAME_INT = Constants.CLASS_MARKER_BEGIN
+			+ Constants.CLASSPATH_INT + Constants.CLASS_MARKER_END;
+	String CLASS_BINARYNAME_SHORT = Constants.CLASS_MARKER_BEGIN
+			+ Constants.CLASSPATH_SHORT + Constants.CLASS_MARKER_END;
+	String CLASS_BINARYNAME_BYTE = Constants.CLASS_MARKER_BEGIN
+			+ Constants.CLASSPATH_BYTE + Constants.CLASS_MARKER_END;
+	String CLASS_BINARYNAME_BOOLEAN = Constants.CLASS_MARKER_BEGIN
+			+ Constants.CLASSPATH_BOOLEAN + Constants.CLASS_MARKER_END;
+	String CLASS_BINARYNAME_CHAR = Constants.CLASS_MARKER_BEGIN
+			+ Constants.CLASSPATH_CHAR + Constants.CLASS_MARKER_END;
+	String CLASS_BINARYNAME_STRING = Constants.CLASS_MARKER_BEGIN
+			+ Constants.CLASSPATH_STRING + Constants.CLASS_MARKER_END;
+
+	// Internal JCTPathPart format
+	String KIND_INDEX_SEPARATOR = "#";
+	String INDEX_DATA_SEPARATOR = "@";
+	String PART_SEPARATOR = "/";
 }
