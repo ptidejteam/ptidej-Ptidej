@@ -40,7 +40,7 @@ public class PtidejResourceBundle_fr extends ListResourceBundle {
 				{ "CPL::NameDialog::BUTTON_LABEL", new String("Confirmer") },
 				{ "CPL::NameDialog::TITLE", new String("Note") },
 				{ "CPL::SubtypeLoader::Err_FILES_NOT_FOUND",
-						new String("Loader: Pas de fichier trouve dans {0}") },
+					new String("Loader: Pas de fichier trouve dans {0}") },
 				{
 						"CPL::SubtypeLoader::Err_READING_FILE",
 						new String(
