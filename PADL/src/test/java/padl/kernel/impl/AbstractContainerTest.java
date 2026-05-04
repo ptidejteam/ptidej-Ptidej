@@ -19,6 +19,8 @@ import padl.kernel.IConstituent;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.exception.ModelDeclarationException;
 import padl.test.helper.Reflector;
+import padl.util.ModelStatistics;
+
 import com.ibm.toad.cfparse.utils.Access;
 
 /**
@@ -257,4 +259,6 @@ public class AbstractContainerTest extends TestCase {
 			0,
 			this.clazz.getNumberOfConstituents());
 	}
+	
+	
 }
