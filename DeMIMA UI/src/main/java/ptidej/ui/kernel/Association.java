@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.ui.kernel;
 
+import padl.kernel.Cardinality;
 import ptidej.ui.IVisibility;
 import ptidej.ui.primitive.IPrimitive;
 import ptidej.ui.primitive.IPrimitiveFactory;
@@ -22,7 +23,7 @@ public class Association extends Relationship {
 	public Association(
 		final IPrimitiveFactory primitiveFactory,
 		final String name,
-		final int cardinality,
+		final Cardinality cardinality,
 		final Entity origin,
 		final Entity target) {
 

@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.analysis.repository.aacrelationships;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IField;
 import com.ibm.toad.cfparse.utils.Access;
@@ -19,9 +20,14 @@ import com.ibm.toad.cfparse.utils.Access;
  * @since  2004/08/01
  */
 final class CadinalityOneAccessorsData implements IAccessorsData {
-	public int getCardinality() {
-		return Constants.CARDINALITY_ONE;
+	public Cardinality getCardinality() {
+		return Cardinality.One;
 	}
+	
+	public void setCardinality(Cardinality cardinality) {
+		System.err.println("Trying to set the cardinality of a CadinalityOneAccessorsData Which should have no effect.");
+	}
+	
 	public boolean matches(final String aTargetName, final IField aField) {
 		return (Access.isPrivate(aField.getVisibility()) || Access
 			.isProtected(aField.getVisibility()))

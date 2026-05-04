@@ -13,6 +13,7 @@ package padl.cpp.kernel.impl;
 import java.lang.reflect.Modifier;
 import java.util.List;
 import padl.cpp.kernel.IGlobalField;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IElement;
 import padl.kernel.IElementMarker;
@@ -37,18 +38,18 @@ class GlobalField extends FirstClassEntity implements IElementMarker,
 
 	// Yann 2009/05/01: Duplicate of Element!
 	private IElement attachedElement;
-	private int cardinality;
+	private Cardinality cardinality;
 	private char[] globalFieldType;
 
 	public GlobalField(final char[] anID) {
-		this(anID, null, 1);
+		this(anID, null, Cardinality.One);
 	}
 
 	public GlobalField(
 		final char[] aID,
 		final char[] aName,
 		final char[] aType,
-		final int aCardinality) {
+		final Cardinality aCardinality) {
 
 		super(aID);
 		this.setName(aName);
@@ -59,7 +60,7 @@ class GlobalField extends FirstClassEntity implements IElementMarker,
 	public GlobalField(
 		final char[] aName,
 		final char[] aType,
-		final int aCardinality) {
+		final Cardinality aCardinality) {
 
 		super((String.valueOf(aType) + " " + String.valueOf(aName))
 			.toCharArray());
@@ -106,7 +107,7 @@ class GlobalField extends FirstClassEntity implements IElementMarker,
 		return this.attachedElement;
 	}
 
-	public int getCardinality() {
+	public Cardinality getCardinality() {
 		return this.cardinality;
 	}
 
@@ -145,12 +146,7 @@ class GlobalField extends FirstClassEntity implements IElementMarker,
 	public void removeInheritedEntity(final IFirstClassEntity anEntity) {
 	}
 
-	public void setCardinality(final int cardinality) {
-		if (cardinality < 1) {
-			throw new ModelDeclarationException(
-				"Cardinality must be 1 or greater");
-		}
-
+	public void setCardinality(final Cardinality cardinality) {		
 		this.cardinality = cardinality;
 	}
 

@@ -11,6 +11,8 @@
 package padl.motif.repository;
 
 import org.apache.commons.lang3.ArrayUtils;
+
+import padl.kernel.Cardinality;
 import padl.kernel.IAssociation;
 import padl.kernel.IClass;
 import padl.kernel.IDelegatingMethod;
@@ -100,7 +102,7 @@ public class Facade extends StructuralMotifModel implements Cloneable,
 			this.getFactory().createAssociationRelationship(
 				Facade.CLIENT_FACADE_ASSOCIATION,
 				facadeClass,
-				1);
+				Cardinality.One);
 		aClient.addConstituent(aClientFacadeAssoc);
 
 		for (int i = 0; i < facadeMethodNames.length; i++) {
@@ -137,7 +139,7 @@ public class Facade extends StructuralMotifModel implements Cloneable,
 			this.getFactory().createAssociationRelationship(
 				Facade.FACADE_SUBSYSTEM_CLASS_ASSOCIATION,
 				aSubsystemClass,
-				1);
+				Cardinality.One);
 		facadeClass.addConstituent(aFacadeSubsystemClassAssoc);
 
 		for (int i = 0; i < subsystemClassMethodNames.length; i++) {

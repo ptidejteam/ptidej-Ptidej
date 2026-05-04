@@ -16,6 +16,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import padl.event.IModelListener;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAssociation;
@@ -123,7 +124,7 @@ public class Composite extends StructuralMotifModel implements Cloneable,
 			this.getFactory().createContainerCompositionRelationship(
 				"children".toCharArray(),
 				iComponent,
-				Constants.CARDINALITY_MANY);
+				Cardinality.Many);
 
 		// Class Composite.
 		// %%D\'eclaration de la classe \ygg@code{Composite} :%%

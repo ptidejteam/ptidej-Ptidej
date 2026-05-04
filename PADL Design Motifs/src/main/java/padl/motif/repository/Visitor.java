@@ -12,6 +12,7 @@ package padl.motif.repository;
 
 import org.apache.commons.lang3.ArrayUtils;
 import padl.event.IModelListener;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAssociation;
 import padl.kernel.IClass;
@@ -109,7 +110,7 @@ public class Visitor extends StructuralMotifModel implements Cloneable,
 		acceptMethod.addConstituent(this.getFactory().createParameter(
 			visitorRootInterface,
 			Visitor.STRING,
-			Constants.CARDINALITY_ONE));
+			Cardinality.One));
 		nodeHierarchyRootInterface.addConstituent(acceptMethod);
 
 		final IMethod visitMethod =
@@ -117,14 +118,14 @@ public class Visitor extends StructuralMotifModel implements Cloneable,
 		visitMethod.addConstituent(this.getFactory().createParameter(
 			nodeHierarchyRootInterface,
 			Visitor.ENTITY,
-			Constants.CARDINALITY_ONE));
+			Cardinality.One));
 		visitorRootInterface.addConstituent(visitMethod);
 
 		final IAssociation acceptVisitorAssociation =
 			this.getFactory().createAssociationRelationship(
 				Visitor.ACCEPT_VISITOR,
 				visitorRootInterface,
-				1);
+				Cardinality.One);
 		// acceptVisitorAssociation.attachTo(acceptMethod);
 		nodeHierarchyRootInterface.addConstituent(acceptVisitorAssociation);
 
@@ -132,7 +133,7 @@ public class Visitor extends StructuralMotifModel implements Cloneable,
 			this.getFactory().createAssociationRelationship(
 				Visitor.VISIT_ENTITY,
 				nodeHierarchyRootInterface,
-				1);
+				Cardinality.One);
 		// visitEntityAssociation.attachTo(visitMethod);
 		visitorRootInterface.addConstituent(visitEntityAssociation);
 
@@ -157,7 +158,7 @@ public class Visitor extends StructuralMotifModel implements Cloneable,
 		acceptMethod.addConstituent(this.getFactory().createParameter(
 			visitor,
 			Visitor.STRING,
-			Constants.CARDINALITY_ONE));
+			Cardinality.One));
 		node.addConstituent(acceptMethod);
 
 		final IMethod visitMethod =
@@ -165,14 +166,14 @@ public class Visitor extends StructuralMotifModel implements Cloneable,
 		visitMethod.addConstituent(this.getFactory().createParameter(
 			node,
 			Visitor.ENTITY,
-			Constants.CARDINALITY_ONE));
+			Cardinality.One));
 		visitor.addConstituent(visitMethod);
 
 		final IAssociation acceptVisitorAssociation =
 			this.getFactory().createAssociationRelationship(
 				Visitor.ACCEPT_VISITOR,
 				visitor,
-				1);
+				Cardinality.One);
 		// acceptVisitorAssociation.attachTo(acceptMethod);
 		node.addConstituent(acceptVisitorAssociation);
 
@@ -180,7 +181,7 @@ public class Visitor extends StructuralMotifModel implements Cloneable,
 			this.getFactory().createAssociationRelationship(
 				Visitor.VISIT_ENTITY,
 				node,
-				1);
+				Cardinality.One);
 		// visitEntityAssociation.attachTo(visitMethod);
 		visitor.addConstituent(visitEntityAssociation);
 	}

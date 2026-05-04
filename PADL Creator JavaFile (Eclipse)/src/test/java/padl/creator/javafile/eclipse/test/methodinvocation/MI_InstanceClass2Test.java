@@ -17,6 +17,7 @@ import org.junit.Assert;
 
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
@@ -112,7 +113,7 @@ public class MI_InstanceClass2Test extends TestCase {
 			javaMethodInvocation.getCalledMethod().getDisplayName());
 		Assert.assertEquals(
 			"method invocation cardinality",
-			Constants.CARDINALITY_ONE,
+			Cardinality.One,
 			javaMethodInvocation.getCardinality());
 		Assert.assertEquals(
 			"method invocation visibility",
@@ -207,7 +208,7 @@ public class MI_InstanceClass2Test extends TestCase {
 		//We changed Many by one because for INVOKE STATIC, the cardinality is always ONE
 		Assert.assertEquals(
 			"method invocation cardinality",
-			Constants.CARDINALITY_ONE,
+			Cardinality.One,
 			javaMethodInvocation.getCardinality());
 		Assert.assertEquals(
 			"method invocation visibility",

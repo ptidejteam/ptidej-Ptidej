@@ -18,6 +18,7 @@ import padl.aspectj.kernel.IInterTypeDeclareParents;
 import padl.aspectj.kernel.IInterTypeField;
 import padl.aspectj.kernel.IInterTypeMethod;
 import padl.aspectj.kernel.IPointcut;
+import padl.kernel.Cardinality;
 import padl.kernel.IFactory;
 import padl.kernel.impl.Factory;
 
@@ -55,7 +56,7 @@ public class AspectJFactory extends Factory implements IAspectJFactory {
 		final char[] aName,
 		final char[] type) {
 
-		return new InterTypeField(aName, type, 1);
+		return new InterTypeField(aName, type, Cardinality.One);
 	}
 	public IInterTypeMethod createInterTypeMethode(final char[] aName) {
 		return new InterTypeMethod(aName);

@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAssociation;
 import padl.kernel.IDelegatingMethod;
@@ -119,7 +120,7 @@ class DelegatingMethod extends Method implements IElementMarker,
 		return this.toString(0);
 	}
 	public String toString(final int tab) {
-		if (getTargetAssoc().getCardinality() > 1) {
+		if (getTargetAssoc().getCardinality() == Cardinality.Many) {
 			setCodeLines("for (Enumeration enum = "
 					+ this.targetAssoc.getDisplayName()
 					+ ".elements(); enum.hasMoreElements(); (("

@@ -14,9 +14,6 @@ package padl.kernel;
  * @author Yann-Gaël Guéhéneuc
  * @since  2005/08/05
  */
-public interface IGetter extends IMethod {
+public interface IGetter extends IMethod, ICardinality {
 	String LOGO = "\"G\"";
-
-	int getCardinality();
-	void setCardinality(final int aCardinality);
 }

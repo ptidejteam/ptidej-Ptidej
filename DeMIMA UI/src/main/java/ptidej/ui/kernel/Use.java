@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.ui.kernel;
 
+import padl.kernel.Cardinality;
 import ptidej.ui.IVisibility;
 import ptidej.ui.primitive.IPrimitive;
 import ptidej.ui.primitive.IPrimitiveFactory;
@@ -22,7 +23,7 @@ public class Use extends Relationship {
 		final String methodName,
 		final Entity target) {
 
-		super(primitiveFactory, 0, origin, target);
+		super(primitiveFactory, Cardinality.One, origin, target);
 	}
 	protected IPrimitive getLine() {
 		return this.getPrimitiveFactory().createDottedLine(

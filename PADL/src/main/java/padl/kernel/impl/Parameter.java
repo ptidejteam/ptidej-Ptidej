@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IConstituent;
 import padl.kernel.IEntity;
 import padl.kernel.IParameter;
@@ -17,17 +18,18 @@ import padl.util.Util;
 
 public class Parameter extends Element implements IParameter {
 	private static final long serialVersionUID = -1688444809285895471L;
-	private int cardinality = 1;
+	private Cardinality cardinality = Cardinality.One;
+	private int dimension = 1;
 	private IEntity type;
 
 	public Parameter(final IEntity anEntity, final char[] aName,
-			final int aCardinality) {
+			final Cardinality aCardinality) {
 
 		this(anEntity, aCardinality);
 		this.setName(aName);
 	}
 
-	public Parameter(final IEntity aType, final int aCardinality) {
+	public Parameter(final IEntity aType, final Cardinality aCardinality) {
 		super("Parameter".toCharArray());
 
 		this.setType(aType);
@@ -77,7 +79,7 @@ public class Parameter extends Element implements IParameter {
 	 *   int[]  	has dimension 2
 	 *   int[][]	has dimension 3...
 	 */
-	public int getCardinality() {
+	public Cardinality getCardinality() {
 		return this.cardinality;
 	}
 
@@ -110,11 +112,24 @@ public class Parameter extends Element implements IParameter {
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append(this.getTypeName());
-		for (int i = 1; i < this.cardinality; i++) {
+		// Is this correct?
+		for (int i = 1; i < this.dimension; i++) {
 			buffer.append("[]");
 		}
 		buffer.append(' ');
 		buffer.append(this.getName());
 		return buffer.toString();
+	}
+
+	public void setCardinality(Cardinality cardinality) {
+		this.cardinality = cardinality;	
+	}
+
+	public int getDimension() {
+		return dimension;
+	}
+
+	public void setDimension(int dimension) {
+		this.dimension = dimension;
 	}
 }

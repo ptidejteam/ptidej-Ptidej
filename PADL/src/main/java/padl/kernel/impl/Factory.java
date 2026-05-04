@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import padl.event.EventGenerator;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -75,13 +76,13 @@ public class Factory implements IFactory, Serializable {
 	}
 
 	public IAggregation createAggregationRelationship(final char[] aName,
-			final IFirstClassEntity aTargetEntity, final int aCardinality) {
+			final IFirstClassEntity aTargetEntity, final Cardinality aCardinality) {
 
 		return new Aggregation(aName, aTargetEntity, aCardinality);
 	}
 
 	public IAssociation createAssociationRelationship(final char[] anID,
-			final IFirstClassEntity aTargetEntity, final int aCardinality) {
+			final IFirstClassEntity aTargetEntity, final Cardinality aCardinality) {
 
 		return new Association(anID, aTargetEntity, aCardinality);
 	}
@@ -103,7 +104,7 @@ public class Factory implements IFactory, Serializable {
 	}
 
 	public IComposition createCompositionRelationship(final char[] anID,
-			final IFirstClassEntity aTargetEntity, final int aCardinality) {
+			final IFirstClassEntity aTargetEntity, final Cardinality aCardinality) {
 
 		return new Composition(anID, aTargetEntity, aCardinality);
 	}
@@ -124,14 +125,14 @@ public class Factory implements IFactory, Serializable {
 
 	public IContainerAggregation createContainerAggregationRelationship(
 			final char[] anID, final IFirstClassEntity aTargetEntity,
-			final int aCardinality) {
+			final Cardinality aCardinality) {
 
 		return new ContainerAggregation(anID, aTargetEntity, aCardinality);
 	}
 
 	public IContainerComposition createContainerCompositionRelationship(
 			final char[] anID, final IFirstClassEntity aTargetEntity,
-			final int aCardinality) {
+			final Cardinality aCardinality) {
 
 		return new ContainerComposition(anID, aTargetEntity, aCardinality);
 	}
@@ -143,7 +144,7 @@ public class Factory implements IFactory, Serializable {
 	}
 
 	public ICreation createCreationRelationship(final char[] anID,
-			final IFirstClassEntity aTargetEntity, final int aCardinality) {
+			final IFirstClassEntity aTargetEntity, final Cardinality aCardinality) {
 
 		return new Creation(anID, aTargetEntity, aCardinality);
 	}
@@ -162,12 +163,12 @@ public class Factory implements IFactory, Serializable {
 	}
 
 	public IField createField(final char[] anID, final char[] aName,
-			final char[] aType, final int aCardinality) {
+			final char[] aType, final Cardinality aCardinality) {
 
 		return new Field(anID, aName, aType, aCardinality);
 	}
 
-	public IFieldAccess createFieldAccess(int cardinality, int visibility,
+	public IFieldAccess createFieldAccess(Cardinality cardinality, int visibility,
 			IField field, IFirstClassEntity entityDeclaringField) {
 
 		return new FieldAccess(cardinality, visibility, field,
@@ -246,7 +247,7 @@ public class Factory implements IFactory, Serializable {
 	}
 
 	public IMethodInvocation createMethodInvocation(final int type,
-			final int cardinality, final int visibility,
+			final Cardinality cardinality, final int visibility,
 			final IFirstClassEntity targetEntity) {
 
 		return new MethodInvocation(type, cardinality, visibility,
@@ -254,7 +255,7 @@ public class Factory implements IFactory, Serializable {
 	}
 
 	public IMethodInvocation createMethodInvocation(final int type,
-			final int cardinality, final int visibility,
+			final Cardinality cardinality, final int visibility,
 			final IFirstClassEntity targetEntity,
 			final IFirstClassEntity entityDeclaringField) {
 
@@ -279,13 +280,13 @@ public class Factory implements IFactory, Serializable {
 	}
 
 	public IParameter createParameter(final IEntity aType, final char[] aName,
-			final int aCardinality) {
+			final Cardinality aCardinality) {
 
 		return new Parameter(aType, aName, aCardinality);
 	}
 
 	public IParameter createParameter(final IEntity aType,
-			final int aCardinality) {
+			final Cardinality aCardinality) {
 
 		return new Parameter(aType, aCardinality);
 	}
@@ -329,7 +330,7 @@ public class Factory implements IFactory, Serializable {
 	//		return new Parameter(aPosition, aName, aType);
 	//	}
 	public IUseRelationship createUseRelationship(final char[] anID,
-			final IFirstClassEntity aTargetEntity, final int aCardinality) {
+			final IFirstClassEntity aTargetEntity, final Cardinality aCardinality) {
 
 		return new UseRelationship(anID, aTargetEntity, aCardinality);
 	}

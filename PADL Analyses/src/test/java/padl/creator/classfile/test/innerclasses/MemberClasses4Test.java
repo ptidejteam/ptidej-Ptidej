@@ -13,6 +13,7 @@ package padl.creator.classfile.test.innerclasses;
 import org.junit.Assert;
 import padl.creator.classfile.test.ClassFilePrimitive;
 import padl.creator.classfile.util.Utils;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
@@ -60,7 +61,7 @@ public class MemberClasses4Test extends ClassFilePrimitive {
 					"MemberClass".toCharArray(),
 					"MemberClass".toCharArray(),
 					"String".toCharArray(),
-					Constants.CARDINALITY_ONE);
+					Cardinality.One);
 
 			MemberClasses4Test.CodeLevelModel.addConstituent(packaje);
 			packaje.addConstituent(topLevelClass);

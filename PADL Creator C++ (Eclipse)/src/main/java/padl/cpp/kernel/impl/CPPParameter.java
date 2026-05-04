@@ -12,6 +12,7 @@ package padl.cpp.kernel.impl;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IEntity;
 import padl.kernel.IParameter;
 import padl.kernel.impl.Parameter;
@@ -22,7 +23,7 @@ public class CPPParameter extends Parameter implements IParameter {
 	private final char[] qualitification;
 
 	public CPPParameter(final IEntity anEntity, final char[] aName, final char[] aQualification,
-			final int aCardinality) {
+			final Cardinality aCardinality) {
 
 		super(anEntity, aName, aCardinality);
 		this.qualitification = aQualification;

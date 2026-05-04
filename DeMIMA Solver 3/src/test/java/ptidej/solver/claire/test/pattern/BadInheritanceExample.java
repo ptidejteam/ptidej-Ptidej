@@ -10,7 +10,7 @@
  ******************************************************************************/
 package ptidej.solver.claire.test.pattern;
 
-import padl.kernel.Constants;
+import padl.kernel.Cardinality;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
 import padl.kernel.IClass;
@@ -52,19 +52,19 @@ public final class BadInheritanceExample extends TestMotifModel {
 		G.addInheritedEntity(F);
 
 		final IUseRelationship link1 = this.getFactory().createUseRelationship(
-				"link1".toCharArray(), B, Constants.CARDINALITY_ONE);
+				"link1".toCharArray(), B, Cardinality.One);
 		A.addConstituent(link1);
 		final IAssociation link2 = this.getFactory()
 				.createAssociationRelationship("link2".toCharArray(), C,
-						Constants.CARDINALITY_ONE);
+						Cardinality.One);
 		B.addConstituent(link2);
 		final IAggregation link3 = this.getFactory()
 				.createAggregationRelationship("link3".toCharArray(), E,
-						Constants.CARDINALITY_ONE);
+						Cardinality.One);
 		D.addConstituent(link3);
 		final IComposition link4 = this.getFactory()
 				.createCompositionRelationship("link4".toCharArray(), G,
-						Constants.CARDINALITY_ONE);
+						Cardinality.One);
 		F.addConstituent(link4);
 
 		final IPackage enclosingPackage = this.getFactory()

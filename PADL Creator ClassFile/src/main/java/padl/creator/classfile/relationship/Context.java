@@ -21,6 +21,7 @@ import padl.kernel.Constants;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IOperation;
+import padl.kernel.Cardinality;
 import com.ibm.toad.cfparse.ConstantPool;
 import com.ibm.toad.cfparse.attributes.AttrInfoList;
 import com.ibm.toad.cfparse.attributes.CodeAttrInfo;
@@ -34,7 +35,7 @@ public final class Context implements Cloneable {
 	public static void initialise(final Map aMapOfIDsEntities) {
 		Context.MapOfIDsEntities = aMapOfIDsEntities;
 	}
-	private int cardinality = Constants.CARDINALITY_ONE;
+	private Cardinality cardinality = Cardinality.One;
 	private ConstantPool constantPool;
 	private IFirstClassEntity currentEntity;
 	private final IAbstractLevelModel currentModel;
@@ -104,7 +105,7 @@ public final class Context implements Cloneable {
 			anID,
 			Context.MapOfIDsEntities);
 	}
-	public int getCardinality() {
+	public Cardinality getCardinality() {
 		return this.cardinality;
 	}
 	public ConstantPool getConstantPool() {
@@ -168,7 +169,7 @@ public final class Context implements Cloneable {
 	public boolean isInvocationSiteStatic() {
 		return this.invocationSiteStatic;
 	}
-	public void setCardinality(final int cardinality) {
+	public void setCardinality(final Cardinality cardinality) {
 		this.cardinality = cardinality;
 	}
 	public void setInternalFieldDeclaration(final boolean isInternal) {

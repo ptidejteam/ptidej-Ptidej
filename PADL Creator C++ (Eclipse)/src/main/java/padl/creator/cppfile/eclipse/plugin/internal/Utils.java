@@ -71,6 +71,7 @@ import padl.kernel.IField;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.IOperation;
 import padl.kernel.IStatement;
+import padl.kernel.Cardinality;
 import padl.statement.kernel.IStatementFactory;
 import padl.statement.kernel.impl.StatementFactory;
 import util.io.ProxyConsole;
@@ -385,27 +386,27 @@ public class Utils {
 		// of C++ code...
 		return Utils.EMPTY_AST_STATEMENT;
 	}
-	static int getCardinality(final ICPPVariable aVariable) {
+	static Cardinality getCardinality(final ICPPVariable aVariable) {
 		final IType type = aVariable.getType();
 		if (type instanceof IArrayType) {
-			return Constants.CARDINALITY_MANY;
+			return Cardinality.Many;
 		}
 		else if (type instanceof IPointerType) {
-			return Constants.CARDINALITY_MANY;
+			return Cardinality.Many;
 		}
 		else if (type instanceof IProblemType) {
 			// Could we do better?
 		}
-		return Constants.CARDINALITY_ONE;
+		return Cardinality.One;
 	}
-	static int getCardinality(
+	static Cardinality getCardinality(
 		final IVariable aCPPVariable,
 		final ICPPClassType aCPPClassType) {
 
-		int cardinality = Constants.CARDINALITY_ONE;
+		Cardinality cardinality = Cardinality.One;
 
 		if (aCPPVariable.getType() instanceof IArrayType) {
-			cardinality = Constants.CARDINALITY_MANY;
+			cardinality = Cardinality.Many;
 		}
 		else if (aCPPClassType != null) {
 			cardinality = Utils.getDeepCardinality(aCPPClassType);
@@ -413,23 +414,23 @@ public class Utils {
 
 		return cardinality;
 	}
-	static int getDeepCardinality(final ICPPClassType theType) {
+	static Cardinality getDeepCardinality(final ICPPClassType theType) {
 		if (Utils.isContainerName(theType.getNameCharArray())) {
-			return Constants.CARDINALITY_MANY;
+			return Cardinality.Many;
 		}
 		else if (theType.getBases() != null) {
 			for (final ICPPBase base : theType.getBases()) {
 				if (base.getBaseClass() instanceof ICPPClassType) {
 					if (Utils.getDeepCardinality(
 						(ICPPClassType) base
-							.getBaseClass()) == Constants.CARDINALITY_MANY) {
-						return Constants.CARDINALITY_MANY;
+							.getBaseClass()) == Cardinality.Many) {
+						return Cardinality.Many;
 					}
 				}
 			}
 		}
 
-		return Constants.CARDINALITY_ONE;
+		return Cardinality.One;
 	}
 	static ICPPASTFunctionDefinition getEnclosingFunction(
 		final IASTNode aNode) {

@@ -16,6 +16,7 @@ import java.util.List;
 import padl.creator.classfile.util.ExtendedMethodInfo;
 import padl.creator.classfile.util.ExtendedMethodInvocation;
 import padl.creator.classfile.util.Utils;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IFactory;
@@ -90,10 +91,10 @@ public final class LightMethodInvocationAnalyzer {
 				|| (fieldDeclaringEntity != null && Util
 					.isArrayOrCollection(fieldDeclaringEntity))) {
 
-			context.setCardinality(Constants.CARDINALITY_MANY);
+			context.setCardinality(padl.kernel.Cardinality.Many);
 		}
 		else {
-			context.setCardinality(Constants.CARDINALITY_ONE);
+			context.setCardinality(padl.kernel.Cardinality.One);
 		}
 		if ((index = invocationSiteName.indexOf('[')) == -1) {
 			index = invocationSiteName.length();
@@ -144,7 +145,7 @@ public final class LightMethodInvocationAnalyzer {
 			context.getCurrentEntity(),
 			context.getCurrentMethod(),
 			IMethodInvocation.CLASS_CLASS,
-			Constants.CARDINALITY_ONE,
+			Cardinality.One,
 			fieldDeclaringEntity));
 
 		// Yann 2002/08/21: Cardinality.
@@ -162,10 +163,10 @@ public final class LightMethodInvocationAnalyzer {
 				|| (fieldDeclaringEntity != null && Util
 					.isArrayOrCollection(fieldDeclaringEntity))) {
 
-			context.setCardinality(Constants.CARDINALITY_MANY);
+			context.setCardinality(Cardinality.Many);
 		}
 		else {
-			context.setCardinality(Constants.CARDINALITY_ONE);
+			context.setCardinality(Cardinality.One);
 		}
 		if ((index = invocationSiteName.indexOf('[')) == -1) {
 			index = invocationSiteName.length();
@@ -219,7 +220,7 @@ public final class LightMethodInvocationAnalyzer {
 					.getIndices()[0]);
 		invocationSiteName = invocationSiteName.replace('/', '.');
 
-		context.setCardinality(Constants.CARDINALITY_ONE);
+		context.setCardinality(Cardinality.One);
 
 		if (!Util.isPrimtiveType(invocationSiteName.toCharArray())
 				&& !Utils.isAnonymousOrLocalEntity(invocationSiteName
@@ -319,9 +320,9 @@ public final class LightMethodInvocationAnalyzer {
 			// the context of the cardinality of the creation... but
 			// ask the context of the class is not a collection, just
 			// in case...
-			final int cardinality;
+			final Cardinality cardinality;
 			if (Util.isArrayOrCollection(invocationSiteName.toCharArray())) {
-				cardinality = Constants.CARDINALITY_MANY;
+				cardinality = padl.kernel.Cardinality.Many;
 			}
 			else {
 				cardinality = context.getCardinality();
@@ -424,7 +425,7 @@ public final class LightMethodInvocationAnalyzer {
 						context.setInvocationSiteName(parameterType
 							.toCharArray());
 					}
-					context.setCardinality(Constants.CARDINALITY_ONE);
+					context.setCardinality(Cardinality.One);
 				}
 			}
 			for (int i = 0; i < Constants.SETTERS_CARDINALITY_ONE.length; i++) {
@@ -443,7 +444,7 @@ public final class LightMethodInvocationAnalyzer {
 						context.setInvocationSiteName(parameterType
 							.toCharArray());
 					}
-					context.setCardinality(Constants.CARDINALITY_ONE);
+					context.setCardinality(Cardinality.One);
 				}
 			}
 			for (int i = 0; i < Constants.GETTERS_CARDINALITY_MANY.length; i++) {
@@ -464,10 +465,10 @@ public final class LightMethodInvocationAnalyzer {
 					if (!Util.isObjectModelRoot(parameterType.toCharArray())) {
 						context.setInvocationSiteName(parameterType
 							.toCharArray());
-						context.setCardinality(Constants.CARDINALITY_MANY);
+						context.setCardinality(Cardinality.Many);
 					}
 					else {
-						context.setCardinality(Constants.CARDINALITY_ONE);
+						context.setCardinality(Cardinality.One);
 					}
 				}
 			}
@@ -495,10 +496,10 @@ public final class LightMethodInvocationAnalyzer {
 					if (!Util.isObjectModelRoot(parameterType.toCharArray())) {
 						context.setInvocationSiteName(parameterType
 							.toCharArray());
-						context.setCardinality(Constants.CARDINALITY_MANY);
+						context.setCardinality(Cardinality.Many);
 					}
 					else {
-						context.setCardinality(Constants.CARDINALITY_ONE);
+						context.setCardinality(Cardinality.One);
 					}
 				}
 			}
@@ -685,9 +686,9 @@ public final class LightMethodInvocationAnalyzer {
 			// the context of the cardinality of the creation... but
 			// ask the context of the class is not a collection, just
 			// in case...
-			final int cardinality;
+			final Cardinality cardinality;
 			if (Util.isArrayOrCollection(pTargetEntity)) {
-				cardinality = Constants.CARDINALITY_MANY;
+				cardinality = Cardinality.Many;
 			}
 			else {
 				cardinality = context.getCardinality();
@@ -715,14 +716,14 @@ public final class LightMethodInvocationAnalyzer {
 			case JVMConstants.ANEWARRAY :
 			case JVMConstants.ANEWARRAY_QUICK :
 				this.getCurrentContext().setCardinality(
-					Constants.CARDINALITY_MANY);
+						Cardinality.Many);
 				this.handleNew(this.getCurrentContext(), offset);
 				break;
 
 			case JVMConstants.NEW :
 			case JVMConstants.NEW_QUICK :
 				this.getCurrentContext().setCardinality(
-					Constants.CARDINALITY_ONE);
+					Cardinality.One);
 				this.handleNew(this.getCurrentContext(), offset);
 				break;
 
@@ -789,7 +790,7 @@ public final class LightMethodInvocationAnalyzer {
 			case JVMConstants.CALOAD :
 			case JVMConstants.SALOAD :
 				this.getCurrentContext().setCardinality(
-					Constants.CARDINALITY_MANY);
+						Cardinality.Many);
 				break;
 
 			/*

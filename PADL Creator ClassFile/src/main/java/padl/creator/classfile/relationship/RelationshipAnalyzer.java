@@ -42,6 +42,7 @@ import padl.kernel.IMethodInvocation;
 import padl.kernel.IOperation;
 import padl.kernel.IParameter;
 import padl.kernel.IRelationship;
+import padl.kernel.Cardinality;
 import padl.kernel.impl.Factory;
 import padl.util.Util;
 import util.io.ProxyConsole;
@@ -462,7 +463,7 @@ public class RelationshipAnalyzer {
 				// used just before an instance method invocation,
 				// then a dedicated IMetodInvocation is created.
 				if (((IField) callingFields.lastElement())
-						.getCardinality() == Constants.CARDINALITY_MANY) {
+						.getCardinality() == Cardinality.Many) {
 					foundArrayStaticOrNot = true;
 					foundFieldStaticOrNot = callingFields;
 					foundEntityDeclaringField = entityDeclaringField;
@@ -528,16 +529,16 @@ public class RelationshipAnalyzer {
 						// Creator. From now on, cardinality also matters
 						// in the following...
 
-						final int cardinality;
+						final Cardinality cardinality;
 						// I must use getID because I need the package name, not just the simple name.
 						if (Util.isArrayOrCollection(
 								entityDeclaringMethod.getID())
 								|| foundArrayLoad) {
 
-							cardinality = Constants.CARDINALITY_MANY;
+							cardinality = Cardinality.Many;
 						}
 						else {
-							cardinality = Constants.CARDINALITY_ONE;
+							cardinality = Cardinality.One;
 						}
 
 						methodInvocation = new ExtendedMethodInvocation(
@@ -761,10 +762,10 @@ public class RelationshipAnalyzer {
 			char[] invocationSiteName = ((IMethod) aMethod).getReturnType();
 			String invocationSiteDisplayName = String
 					.valueOf(invocationSiteName);
-			int cardinality = Constants.CARDINALITY_MANY;
+			Cardinality cardinality = Cardinality.Many;
 			int index;
 			if ((index = invocationSiteDisplayName.indexOf('[')) == -1) {
-				cardinality = Constants.CARDINALITY_ONE;
+				cardinality = Cardinality.One;
 				index = invocationSiteDisplayName.length();
 			}
 			invocationSiteDisplayName = invocationSiteDisplayName.substring(0,
@@ -965,7 +966,7 @@ public class RelationshipAnalyzer {
 				//			final int cardinality =
 				//				padl.util.Util.isArrayOrCollection(fieldType)
 				//					? Constants.CARDINALITY_MANY
-				//					: Constants.CARDINALITY_ONE;
+				//					: Cardinality.One;
 				//
 				//			// Creates a new Ghost and a field by the Factory
 				//			entityDeclaringField =
@@ -998,10 +999,10 @@ public class RelationshipAnalyzer {
 				if (aCallingField == null && !usedFieldName.equals("")) {
 					final String fieldType = RelationshipAnalyzer
 							.extractFieldType(oneFieldInfo);
-					final int cardinality = padl.util.Util
+					final Cardinality cardinality = padl.util.Util
 							.isArrayOrCollection(fieldType.toCharArray())
-									? Constants.CARDINALITY_MANY
-									: Constants.CARDINALITY_ONE;
+									? Cardinality.Many
+									: Cardinality.One;
 
 					aCallingField = this.codeLevelModel.getFactory()
 							.createField(usedFieldName.toCharArray(),

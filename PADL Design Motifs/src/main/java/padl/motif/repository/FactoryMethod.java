@@ -11,6 +11,8 @@
 package padl.motif.repository;
 
 import org.apache.commons.lang3.ArrayUtils;
+
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.ICreation;
@@ -84,7 +86,7 @@ public class FactoryMethod extends CreationalMotifModel implements Cloneable,
 			this.getFactory().createUseRelationship(
 				FactoryMethod.KNOW,
 				abstractProduct,
-				Constants.CARDINALITY_ONE);
+				Cardinality.One);
 		abstractFactory.addConstituent(useRelationship);
 
 		final IMethod abstractCreateMethod =
@@ -108,7 +110,7 @@ public class FactoryMethod extends CreationalMotifModel implements Cloneable,
 			this.getFactory().createCreationRelationship(
 				FactoryMethod.CREATE,
 				concreteProduct,
-				Constants.CARDINALITY_ONE);
+				Cardinality.One);
 		concreteFactory.addConstituent(creationLink);
 
 		this.addConstituent(abstractProduct);

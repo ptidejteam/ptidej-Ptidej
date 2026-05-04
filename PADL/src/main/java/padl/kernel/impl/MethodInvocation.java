@@ -18,6 +18,7 @@ import java.util.NoSuchElementException;
 
 import com.ibm.toad.cfparse.utils.Access;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IField;
 import padl.kernel.IFirstClassEntity;
@@ -99,7 +100,7 @@ class MethodInvocation extends Constituent implements IMethodInvocation {
 	//	private final int cardinality;
 	// I removed the final to make DB4O works...
 	// TODO: Understand how to keep it final with DB4O!
-	private int cardinality;
+	private Cardinality cardinality;
 	// Yann 2009/03/20: Serialisation!
 	// I must declare transient the "entityDeclaringField" 
 	// and "targetEntity" to avoid a stack overflow.
@@ -141,13 +142,13 @@ class MethodInvocation extends Constituent implements IMethodInvocation {
 	// and to add the enclosing method (the enclosing method
 	// and entity should be removed later, there should not
 	// appear at all!)
-	public MethodInvocation(final int type, final int cardinality,
+	public MethodInvocation(final int type, final Cardinality cardinality,
 			final int visibility, final IFirstClassEntity targetEntity) {
 
 		this(type, cardinality, visibility, targetEntity, null);
 	}
 
-	public MethodInvocation(final int type, final int cardinality,
+	public MethodInvocation(final int type, final Cardinality cardinality,
 			final int visibility, final IFirstClassEntity targetEntity,
 			final IFirstClassEntity entityDeclaringField) {
 
@@ -234,7 +235,7 @@ class MethodInvocation extends Constituent implements IMethodInvocation {
 		return this.calledMethod;
 	}
 
-	public int getCardinality() {
+	public Cardinality getCardinality() {
 		return this.cardinality;
 	}
 
@@ -534,5 +535,9 @@ class MethodInvocation extends Constituent implements IMethodInvocation {
 		buffer.append(MethodInvocation.getTypeMeaning(this.getType()));
 		buffer.append('\n');
 		return buffer.toString();
+	}
+
+	public void setCardinality(Cardinality cardinality) {
+		this.cardinality = cardinality;	
 	}
 }

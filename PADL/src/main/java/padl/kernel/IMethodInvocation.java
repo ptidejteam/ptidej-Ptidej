@@ -17,7 +17,7 @@ import java.util.List;
  * @author Farouk Zaidi
  * @since  2004/04/02
  */
-public interface IMethodInvocation extends IConstituentOfOperation {
+public interface IMethodInvocation extends IConstituentOfOperation, ICardinality {
 	// Yann 2004/07/31: Field access.
 	// Method invocation are currently used to describe
 	// field access as well. I need a UNKNWOWN value
@@ -36,7 +36,6 @@ public interface IMethodInvocation extends IConstituentOfOperation {
 
 	IOperation getCalledMethod();
 	Iterator getIteratorOnCallingFields();
-	int getCardinality();
 	IFirstClassEntity getFieldDeclaringEntity();
 	IField getFirstCallingField();
 	IFirstClassEntity getTargetEntity();

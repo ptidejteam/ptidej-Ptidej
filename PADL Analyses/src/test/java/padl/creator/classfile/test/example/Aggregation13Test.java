@@ -18,7 +18,7 @@ import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.classfile.test.ClassFilePrimitive;
-import padl.kernel.Constants;
+import padl.kernel.Cardinality;
 import padl.kernel.IAssociation;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IContainerAggregation;
@@ -130,7 +130,7 @@ public class Aggregation13Test extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_PUBLIC), Access.getAsString(
 						Aggregation13Test.Elements[1].getVisibility()));
 		Assert.assertEquals("Association cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) Aggregation13Test.Elements[1])
 						.getCardinality());
 		Assert.assertEquals("Association name",
@@ -150,7 +150,7 @@ public class Aggregation13Test extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_NONE), Access.getAsString(
 						Aggregation13Test.Elements[3].getVisibility()));
 		Assert.assertEquals("ContainerAggregation relationship cardinality",
-				Constants.CARDINALITY_MANY,
+				Cardinality.Many,
 				((IContainerAggregation) Aggregation13Test.Elements[3])
 						.getCardinality());
 		Assert.assertEquals("ContainerAggregation relationship name",
@@ -171,7 +171,7 @@ public class Aggregation13Test extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_NONE), Access.getAsString(
 						Aggregation13Test.Elements[4].getVisibility()));
 		Assert.assertEquals("ContainerAggregation relationship cardinality",
-				Constants.CARDINALITY_MANY,
+				Cardinality.Many,
 				((IContainerAggregation) Aggregation13Test.Elements[4])
 						.getCardinality());
 		Assert.assertEquals("ContainerAggregation relationship name",

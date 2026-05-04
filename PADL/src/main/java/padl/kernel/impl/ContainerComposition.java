@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IAssociation;
 import padl.kernel.IContainerComposition;
 import padl.kernel.IElementMarker;
@@ -26,7 +27,7 @@ class ContainerComposition extends ContainerAggregation implements
 	public ContainerComposition(
 		final char[] anID,
 		final IFirstClassEntity aTargetEntity,
-		final int cardinality) {
+		final Cardinality cardinality) {
 
 		super(anID, aTargetEntity, cardinality);
 	}

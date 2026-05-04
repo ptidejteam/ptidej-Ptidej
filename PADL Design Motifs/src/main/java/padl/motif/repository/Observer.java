@@ -13,6 +13,7 @@ package padl.motif.repository;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.IContainerAggregation;
@@ -87,7 +88,7 @@ public class Observer extends BehaviouralMotifModel
 		// Association observers 
 		final IContainerAggregation anAssoc = this.getFactory()
 				.createContainerAggregationRelationship(Observer.OBSERVERS,
-						this.anInterface, Constants.CARDINALITY_MANY);
+						this.anInterface, Cardinality.Many);
 
 		// Classe Subject 
 		this.aClass = this.getFactory().createClass(Observer.SUBJECT,
@@ -117,7 +118,7 @@ public class Observer extends BehaviouralMotifModel
 		// Assoc subject
 		final IContainerAggregation a2Assoc = this.getFactory()
 				.createContainerAggregationRelationship(Observer.STRING,
-						this.a2Class, Constants.CARDINALITY_ONE);
+						this.a2Class, Cardinality.One);
 
 		// Classe Concrete Observer
 		this.aPDelegatingMethod = this.getFactory().createDelegatingMethod(

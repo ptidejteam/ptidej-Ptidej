@@ -10,6 +10,7 @@
  ******************************************************************************/
 package epi.test;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFactory;
@@ -35,31 +36,31 @@ public class ExampleGraph {
 		classB.addConstituent(factory.createAssociationRelationship(
 			"as".toCharArray(),
 			classA,
-			2));
+			Cardinality.Many));
 		classB.addConstituent(factory.createCreationRelationship(
 			"cr".toCharArray(),
 			classE,
-			1));
+			Cardinality.One));
 		classB.addConstituent(factory.createCreationRelationship(
 			"us".toCharArray(),
 			classD,
-			1));
+			Cardinality.One));
 		classC.addConstituent(factory.createCreationRelationship(
 			"us".toCharArray(),
 			classA,
-			1));
+			Cardinality.One));
 		classC.addConstituent(factory.createAggregationRelationship(
 			"ag".toCharArray(),
 			classB,
-			1));
+			Cardinality.One));
 		classC.addConstituent(factory.createAggregationRelationship(
 			"ag".toCharArray(),
 			classD,
-			1));
+			Cardinality.One));
 		classD.addConstituent(factory.createAggregationRelationship(
 			"as".toCharArray(),
 			classE,
-			1));
+			Cardinality.One));
 
 		codeLevelModel.addConstituent(classA);
 		codeLevelModel.addConstituent(classB);

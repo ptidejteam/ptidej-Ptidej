@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.kernel.cpp.antlr;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IFactory;
 
 /**
@@ -22,7 +23,7 @@ public interface ICPPFactoryANTLR extends IFactory {
 	IGlobalField createGlobalField(
 		final char[] aName,
 		final char[] aType,
-		final int aCardinality);
+		final Cardinality aCardinality);
 	IStructure createStructure(final char[] aName);
 	IUnion createUnion(final char[] aName);
 }
