@@ -38,6 +38,7 @@ import java.util.List;
 import java.util.Map;
 import javax.tools.DiagnosticListener;
 import javax.tools.JavaFileObject;
+import jct.kernel.IJCTRootNode;
 import jct.tools.JCTCreatorFromSourceCode;
 import padl.creator.javafile.javac.util.JCTtoPADLTranslator;
 import padl.kernel.ICodeLevelModel;
@@ -59,10 +60,8 @@ public class CreatorJava implements ICodeLevelModelCreator {
 	 * @param diag DiagnosticListener used to report error during compilation pass.
 	 * @param options Map of options, options flags (without the leading '-') as keys, options values as values. if an option flag does not have or need a value, just set the value to null
 	 */
-	public CreatorJava(
-		final DiagnosticListener<? super JavaFileObject> diag,
-		final Map<String, String> options,
-		final File... files) {
+	public CreatorJava(final DiagnosticListener<? super JavaFileObject> diag,
+			final Map<String, String> options, final File... files) {
 
 		this.diag = diag;
 		this.files = files;
@@ -81,10 +80,8 @@ public class CreatorJava implements ICodeLevelModelCreator {
 	 * @param diag DiagnosticListener used to report error during compilation pass.
 	 * @param options Options to pass to JavaC, splited as in a command line.
 	 */
-	public CreatorJava(
-		final DiagnosticListener<? super JavaFileObject> diag,
-		final Iterable<String> options,
-		final File... files) {
+	public CreatorJava(final DiagnosticListener<? super JavaFileObject> diag,
+			final Iterable<String> options, final File... files) {
 
 		this.diag = diag;
 		this.files = files;
@@ -97,13 +94,15 @@ public class CreatorJava implements ICodeLevelModelCreator {
 	 * Test comments 3
 	 */
 	public void create(final ICodeLevelModel model) throws CreationException {
-		final JCTtoPADLTranslator creator = new JCTtoPADLTranslator(model);
 		try {
-			JCTCreatorFromSourceCode.createJCT(
+			final IJCTRootNode rootNode = JCTCreatorFromSourceCode.createJCT(
 				"", false,
 				this.diag,
 				this.options,
-				this.files).accept(creator, null);
+				this.files);
+			final JCTtoPADLTranslator creator = new JCTtoPADLTranslator(model, rootNode);
+			rootNode.accept(creator, null);
+			
 		}
 		catch (final IOException e) {
 			throw new CreationException(

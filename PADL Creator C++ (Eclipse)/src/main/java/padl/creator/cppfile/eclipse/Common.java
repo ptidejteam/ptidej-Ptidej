@@ -20,6 +20,7 @@ import padl.kernel.ICodeLevelModel;
 import util.io.ProxyConsole;
 import util.io.ProxyDisk;
 import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.security.AnyTypePermission;
 
 public final class Common {
 	public static final String ARGUMENT_DIRECTORY_PTIDEJ_WORKSPACE =
@@ -78,6 +79,7 @@ public final class Common {
 
 		final XStream xstream = new XStream();
 		xstream.setMode(XStream.ID_REFERENCES);
+		xstream.addPermission(AnyTypePermission.ANY);
 		xstream.fromXML(
 			ProxyDisk.getInstance().fileTempInput(
 				Common.SERIALISED_MODEL_FILENAME),
@@ -103,6 +105,7 @@ public final class Common {
 			.println(" is serialising the model");
 		final XStream xstream = new XStream();
 		xstream.setMode(XStream.ID_REFERENCES);
+		xstream.addPermission(AnyTypePermission.ANY);
 		xstream.toXML(
 			aCodeLevelModel,
 			ProxyDisk.getInstance().fileTempOutput(

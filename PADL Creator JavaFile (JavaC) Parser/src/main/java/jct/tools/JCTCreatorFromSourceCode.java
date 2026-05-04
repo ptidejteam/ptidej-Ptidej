@@ -313,9 +313,9 @@ public class JCTCreatorFromSourceCode
 			final Map.Entry<String, IJCTClass> e = it.next();
 			it.remove();
 
-			if (null != e.getValue().getEnclosingElement())
+			if (!JCTCreatorFromSourceCode.shouldBeGhost(e.getValue())) {
 				continue;
-
+			}
 			e.getValue().setIsGhost(true);
 
 			int index = e.getKey().lastIndexOf('$');
@@ -324,7 +324,9 @@ public class JCTCreatorFromSourceCode
 				final String enclosingClassBName = e.getKey().substring(0,
 						index);
 				final IJCTClassType enclosingClassType = JCTRootNode.getType(
-						"L" + enclosingClassBName, IJCTClassType.class);
+						Constants.CLASS_MARKER_BEGIN + enclosingClassBName
+								+ Constants.CLASS_MARKER_END,
+						IJCTClassType.class);
 
 				IJCTClass enclosingClass = enclosingClassType == null ? null
 						: enclosingClassType.getSelector().getElement();
@@ -342,8 +344,8 @@ public class JCTCreatorFromSourceCode
 					++index;
 
 					final String name = enclosingClassBName.substring(index);
-					enclosingClass = JCTFactory.createClass(name, false, false);
-					jctCreator.classes.put(enclosingClassBName, enclosingClass);
+					enclosingClass = JCTFactory.createClass(name, false, true);
+					jctCreator.classes.put(aName, enclosingClass);
 					jctCreator.classeNames.put(enclosingClass,
 							enclosingClassBName);
 				}
@@ -375,6 +377,7 @@ public class JCTCreatorFromSourceCode
 				final IJCTCompilationUnit cu = JCTFactory.createCompilationUnit(
 						new File(e.getKey().replace('.', File.separatorChar)
 								+ ".class"));
+
 				p.addCompilationUnit(cu);
 
 				cu.addClazz(e.getValue());
@@ -386,6 +389,23 @@ public class JCTCreatorFromSourceCode
 		}
 
 		return JCTRootNode;
+	}
+
+	private static boolean shouldBeGhost(final IJCTClass jctClass) {
+		IJCTElement enclosingElement = jctClass.getEnclosingElement();
+		while (enclosingElement != null) {
+			switch (enclosingElement) { // JEP 441 :)
+			case IJCTClass c when c.getIsGhost():
+				return true;
+			case IJCTPackage g when g.getIsGhost():
+				return true;
+			case IJCTRootNode root:
+				return false;
+			default:
+				enclosingElement = enclosingElement.getEnclosingElement();
+			}
+		}
+		return true;
 	}
 
 	private final StringBuffer errorMessage = new StringBuffer();
@@ -515,8 +535,10 @@ public class JCTCreatorFromSourceCode
 		final IJCTType aJCTType = aTypeMirror.accept(this, p);
 
 		if (JCTKind.CLASS_TYPE == aJCTType.getKind())
-			name = "L" + ((Symbol.ClassSymbol) ((DeclaredType) aTypeMirror)
-					.asElement()).flatname.toString();
+			name = Constants.CLASS_MARKER_BEGIN
+					+ ((Symbol.ClassSymbol) ((DeclaredType) aTypeMirror)
+							.asElement()).flatname.toString()
+					+ Constants.CLASS_MARKER_END;
 		else
 			name = aJCTType.getTypeName();
 
@@ -559,8 +581,9 @@ public class JCTCreatorFromSourceCode
 
 			underlyingType = ((IJCTClass) ((IJCTSelector<?>) t).getElement())
 					.createClassType();
-			underlyingTypeName = "L"
-					+ this.classeNames.get(((IJCTSelector<?>) t).getElement());
+			underlyingTypeName = Constants.CLASS_MARKER_BEGIN
+					+ this.classeNames.get(((IJCTSelector<?>) t).getElement())
+					+ Constants.CLASS_MARKER_END;
 		}
 
 		if (null != underlyingType)
@@ -676,8 +699,16 @@ public class JCTCreatorFromSourceCode
 	@Override
 	public IJCTElement visitBlock(final BlockTree node, final Object p) {
 		final IJCTBlock aJCTBlock = this.factory.createBlock();
-		for (final StatementTree statement : node.getStatements())
-			aJCTBlock.addStatement((IJCTStatement) statement.accept(this, p));
+		for (final StatementTree statement : node.getStatements()) {
+			try {
+				aJCTBlock.addStatement(
+						(IJCTStatement) statement.accept(this, p));
+			}
+			catch (final ClassCastException e) {
+				// final IJCTStatement s = this.factory.createEmptyStatement();
+				// aJCTBlock.addStatement(s);
+			}
+		}
 		return this.putSourceCodePosition(aJCTBlock, node);
 	}
 
@@ -784,8 +815,12 @@ public class JCTCreatorFromSourceCode
 		final IJCTCompilationUnit aJCTCompilationUnit = this.factory
 				.createCompilationUnit(new File(node.getSourceFile().toUri()));
 
-		for (final Tree t : node.getTypeDecls())
-			aJCTCompilationUnit.addClazz((IJCTClass) t.accept(this, p));
+		try {
+			for (final Tree t : node.getTypeDecls())
+				aJCTCompilationUnit.addClazz((IJCTClass) t.accept(this, p));
+		}
+		catch (final ClassCastException e) {
+		}
 
 		for (final ImportTree i : node.getImports()) {
 			final IJCTImport aJCTImport = (IJCTImport) i.accept(this,
@@ -1040,7 +1075,10 @@ public class JCTCreatorFromSourceCode
 	@Override
 	public IJCTElement visitForLoop(final ForLoopTree node, final Object p) {
 		final IJCTFor aJCTFor = this.factory.createFor(
-				(IJCTExpression) node.getCondition().accept(this, p),
+				node.getCondition() == null
+						? (IJCTExpression) this.factory
+								.createBooleanLiteral(false)
+						: (IJCTExpression) node.getCondition().accept(this, p),
 				(IJCTStatement) node.getStatement().accept(this, p));
 
 		for (final StatementTree init : node.getInitializer())
@@ -1810,7 +1848,8 @@ public class JCTCreatorFromSourceCode
 				return ((IJCTClassType) t).getSelector().getElement();
 		}
 
-		return this.rootNode.getType("Ljava.lang.Object", IJCTClassType.class)
+		return this.rootNode
+				.getType(Constants.CLASS_BINARYNAME_OBJECT, IJCTClassType.class)
 				.getSelector().getElement();
 	}
 
@@ -1908,7 +1947,7 @@ public class JCTCreatorFromSourceCode
 
 		final IJCTVariable v = this.factory
 				.createVariable(e.getSimpleName().toString());
-		v.setType(this.rootNode.getType("Ljava.lang.Object",
+		v.setType(this.rootNode.getType(Constants.CLASS_BINARYNAME_OBJECT,
 				IJCTClassType.class));
 		this.identifiables.put(e, v);
 

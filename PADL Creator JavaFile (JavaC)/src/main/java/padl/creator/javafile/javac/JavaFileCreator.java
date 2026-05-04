@@ -155,11 +155,13 @@ public class JavaFileCreator implements ICodeLevelModelCreator {
 		}
 
 		this.options = options;
-		final File[] files = new File[filePaths.length];
+		final List<File> files = new ArrayList<File>();
 		for (int i = 0; i < filePaths.length; i++) {
-			files[i] = new File(filePaths[i]);
+			if (filePaths[i].endsWith(".java")) {
+				files.add(new File(filePaths[i]));
+			}
 		}
-		this.files = files;
+		this.files = files.toArray(new File[0]);
 
 		// Yann 24/04/20: Checking for opened modules
 		OpenedModulesGuard.getInstance().addOpenedModuleCheck("jdk.compiler",
@@ -222,10 +224,10 @@ public class JavaFileCreator implements ICodeLevelModelCreator {
 	}
 
 	public void create(final ICodeLevelModel model) throws CreationException {
-		final JCTtoPADLTranslator creator = new JCTtoPADLTranslator(model);
 		try {
 			final IJCTRootNode rootNode = JCTCreatorFromSourceCode.createJCT("",
 					true, this.diag, this.options, this.files);
+			final JCTtoPADLTranslator creator = new JCTtoPADLTranslator(model, rootNode);
 			// TODO: Crashed with Juzzle!
 			rootNode.accept(new JCTCommentExtractor(), null);
 			rootNode.accept(new JCTCommentAttachor(), null);

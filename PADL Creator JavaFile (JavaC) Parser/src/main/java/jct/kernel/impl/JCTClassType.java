@@ -38,6 +38,7 @@ import java.util.Deque;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
+
 import jct.kernel.Constants;
 import jct.kernel.IJCTClass;
 import jct.kernel.IJCTClassType;
@@ -66,9 +67,8 @@ class JCTClassType extends JCTNonPrimitiveType<IJCTSelector<IJCTClass>>
 	 */
 	private final NotNullableReference<IJCTSelector<IJCTClass>> classDeclaration;
 
-	JCTClassType(
-		final IJCTRootNode aRootNode,
-		final IJCTSelector<IJCTClass> classDeclaration) {
+	JCTClassType(final IJCTRootNode aRootNode,
+			final IJCTSelector<IJCTClass> classDeclaration) {
 		super(aRootNode);
 		if (aRootNode instanceof JCTRootNode)
 			((JCTRootNode) aRootNode).registerClassType(this);
@@ -93,7 +93,7 @@ class JCTClassType extends JCTNonPrimitiveType<IJCTSelector<IJCTClass>>
 	public void setSelector(final IJCTSelector<IJCTClass> classSelector) {
 		if (null != this.getSelector().getElement())
 			throw new IllegalStateException(
-				"Can not change the selector unless it was previously erroneous");
+					"Can not change the selector unless it was previously erroneous");
 
 		this.classDeclaration.set(classSelector);
 	}
@@ -103,18 +103,15 @@ class JCTClassType extends JCTNonPrimitiveType<IJCTSelector<IJCTClass>>
 	 */
 	public Set<IJCTNonPrimitiveType> getDirectSuperClasses() {
 		final IJCTClass clazz = this.getSelector().getElement();
-		final Set<IJCTNonPrimitiveType> result =
-			new HashSet<IJCTNonPrimitiveType>();
+		final Set<IJCTNonPrimitiveType> result = new HashSet<IJCTNonPrimitiveType>();
 
 		final IJCTClassType extended = clazz.getDirectSuperClass();
-		if (null != extended
-				&& this.getSelector().getElement() != extended
-					.getSelector()
-					.getElement())
+		if (null != extended && this.getSelector().getElement() != extended
+				.getSelector().getElement())
 			result.add(extended);
 
 		for (final IJCTClassType implemented : clazz
-			.getDirectlyImplementedInterfaces())
+				.getDirectlyImplementedInterfaces())
 			result.add(implemented);
 
 		return Collections.unmodifiableSet(result);
@@ -144,9 +141,9 @@ class JCTClassType extends JCTNonPrimitiveType<IJCTSelector<IJCTClass>>
 			c = c.getDirectEnclosingClass();
 		}
 
-		final StringBuilder str =
-			new StringBuilder().append(Constants.CLASS_MARKER).append(
-				c.getFQN());
+		final StringBuilder str = new StringBuilder()
+				.append(Constants.CLASS_MARKER_BEGIN).append(c.getFQN())
+				.append(Constants.CLASS_MARKER_END);
 
 		while (!names.isEmpty())
 			str.append(Constants.DOLLAR_SEPARATOR).append(names.pop());
@@ -167,7 +164,7 @@ class JCTClassType extends JCTNonPrimitiveType<IJCTSelector<IJCTClass>>
 	@Override
 	public void setName(final String newName) {
 		throw new UnsupportedOperationException(
-			"A ClassType has a (computed and not settable) type name, but no name, therefore you can not set it !");
+				"A ClassType has a (computed and not settable) type name, but no name, therefore you can not set it !");
 	}
 
 	@Override
