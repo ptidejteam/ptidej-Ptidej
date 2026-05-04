@@ -25,6 +25,7 @@ import padl.cpp.kernel.IMemberStructure;
 import padl.cpp.kernel.IStructure;
 import padl.cpp.kernel.IUnion;
 import padl.cpp.kernel.event.CPPEventGenerator;
+import padl.kernel.Cardinality;
 import padl.kernel.IEntity;
 import padl.kernel.IFactory;
 import padl.kernel.IParameter;
@@ -77,9 +78,10 @@ public class CPPFactoryEclipse extends Factory implements ICPPFactoryEclipse {
 		final char[] anID,
 		final char[] aName,
 		final char[] aType,
-		final int aCardinality) {
+		final Cardinality aCardinality,
+		final int dimension) {
 
-		return new GlobalField(anID, aName, aType, aCardinality);
+		return new GlobalField(anID, aName, aType, aCardinality, dimension);
 	}
 
 	public IGlobalFunction createGlobalFunction(
@@ -118,9 +120,9 @@ public class CPPFactoryEclipse extends Factory implements ICPPFactoryEclipse {
 		final IEntity anEntity,
 		final char[] aName,
 		final char[] aQualification,
-		final int aCardinality) {
+		final int dimension) {
 
-		return new CPPParameter(anEntity, aName, aQualification, aCardinality);
+		return new CPPParameter(anEntity, aName, aQualification, dimension);
 	}
 
 	public IStructure createStructure(final char[] aName) {

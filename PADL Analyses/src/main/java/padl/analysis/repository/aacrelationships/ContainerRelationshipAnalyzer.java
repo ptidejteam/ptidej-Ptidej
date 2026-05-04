@@ -16,6 +16,8 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IContainerAggregation;
@@ -42,7 +44,7 @@ final class ContainerRelationshipAnalyzer {
 	private static IMethod createGetterOrSetter(
 		final IMethod aMethod,
 		final int aType,
-		final int aCardinality) {
+		final Cardinality aCardinality) {
 
 		switch (aType) {
 			case ContainerRelationshipAnalyzer.IS_GETTER :
@@ -99,7 +101,7 @@ final class ContainerRelationshipAnalyzer {
 					.createGetterOrSetter(
 						currentMethod,
 						ContainerRelationshipAnalyzer.IS_GETTER,
-						Constants.CARDINALITY_MANY));
+						Cardinality.Many));
 			}
 			else if (ContainerRelationshipAnalyzer.isSettersMany(
 				aMapOfSetters,
@@ -112,7 +114,7 @@ final class ContainerRelationshipAnalyzer {
 					.createGetterOrSetter(
 						currentMethod,
 						ContainerRelationshipAnalyzer.IS_SETTER,
-						Constants.CARDINALITY_MANY));
+						Cardinality.Many));
 			}
 		}
 
@@ -154,7 +156,7 @@ final class ContainerRelationshipAnalyzer {
 					.createGetterOrSetter(
 						currentMethod,
 						ContainerRelationshipAnalyzer.IS_GETTER,
-						Constants.CARDINALITY_ONE));
+						Cardinality.One));
 			}
 			else if (ContainerRelationshipAnalyzer.isSettersOne(
 				aMapOfSetters,
@@ -167,7 +169,7 @@ final class ContainerRelationshipAnalyzer {
 					.createGetterOrSetter(
 						currentMethod,
 						ContainerRelationshipAnalyzer.IS_SETTER,
-						Constants.CARDINALITY_ONE));
+						Cardinality.One));
 			}
 		}
 

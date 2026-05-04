@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.solver.java.test.data.pattern;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IClass;
 import padl.kernel.IContainerComposition;
 import padl.kernel.IFirstClassEntity;
@@ -39,7 +40,7 @@ public final class CompositionAndInheritance extends TestMotifModel {
 
 		final IContainerComposition containerComposition = this.getFactory()
 				.createContainerCompositionRelationship(
-						"containerComposition".toCharArray(), object, 2);
+						"containerComposition".toCharArray(), object, Cardinality.Many);
 		B.addConstituent(containerComposition);
 
 		final IPackage enclosingPackage = this.getFactory()

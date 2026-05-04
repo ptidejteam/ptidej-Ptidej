@@ -17,6 +17,7 @@ import com.ibm.toad.cfparse.utils.Access;
 
 import padl.event.IEvent;
 import padl.event.IModelListener;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IConstituent;
 import padl.kernel.IConstituentOfEntity;
@@ -101,7 +102,7 @@ class ContainerAggregation extends Association implements IElementMarker,
 	//	}
 
 	public ContainerAggregation(final char[] anID,
-			final IFirstClassEntity aTargetEntity, final int cardinality) {
+			final IFirstClassEntity aTargetEntity, final Cardinality cardinality) {
 
 		super(anID, aTargetEntity, cardinality);
 
@@ -276,7 +277,7 @@ class ContainerAggregation extends Association implements IElementMarker,
 	//	public void removeAllConstituent() {
 	//		this.associationElements.clear();
 	//	}
-	public void setCardinality(int cardinality) {
+	public void setCardinality(Cardinality cardinality) {
 		super.setCardinality(cardinality);
 		if (this.isFromVoid) {
 			this.updateAssociation();
@@ -382,10 +383,9 @@ class ContainerAggregation extends Association implements IElementMarker,
 			this.originSetterMethod.resetCodeLines();
 		}
 
-		final Parameter parameter = new Parameter(this.getTargetEntity(),
-				Constants.CARDINALITY_ONE);
+		final Parameter parameter = new Parameter(this.getTargetEntity(), 1);
 
-		if (this.getCardinality() > 1) {
+		if (this.getCardinality() == Cardinality.Many) {
 			this.originField.setType(Constants.DEFAULT_LIST_INTERFACE);
 
 			this.originGetterMethod.setName(

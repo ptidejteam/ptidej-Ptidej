@@ -11,6 +11,8 @@
 package padl.creator.test.relationships.providers;
 
 import java.lang.reflect.Modifier;
+
+import padl.kernel.Cardinality;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
@@ -33,7 +35,7 @@ public class Provider_INSTANCE_CLASS_List extends AbstractProvider implements
 		final IMethodInvocation methodInvocation =
 			Factory.getInstance().createMethodInvocation(
 				IMethodInvocation.INSTANCE_CLASS,
-				padl.kernel.Constants.CARDINALITY_MANY,
+				padl.kernel.Cardinality.Many,
 				Modifier.PUBLIC,
 				targetEntity);
 

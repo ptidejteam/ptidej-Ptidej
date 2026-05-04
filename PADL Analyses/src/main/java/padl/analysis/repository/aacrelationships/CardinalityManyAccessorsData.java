@@ -10,9 +10,12 @@
  ******************************************************************************/
 package padl.analysis.repository.aacrelationships;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IField;
+import util.io.ProxyConsole;
+
 import com.ibm.toad.cfparse.utils.Access;
 
 /**
@@ -22,15 +25,20 @@ import com.ibm.toad.cfparse.utils.Access;
 final class CardinalityManyAccessorsData implements IAccessorsData {
 	public CardinalityManyAccessorsData(final IAbstractModel anAbstractModel) {
 	}
-	public int getCardinality() {
-		return Constants.CARDINALITY_MANY;
+	public Cardinality getCardinality() {
+		return Cardinality.Many;
 	}
+	
+	public void setCardinality(Cardinality cardinality) {
+		ProxyConsole.getInstance().warningOutput().print("Trying to set the cardinality of a " + this.getClass().getSimpleName() + " which should have no effect.");
+	}
+	
 	public boolean matches(final String aTargetName, final IField aField) {
 		// Yann 2007/10/31: Cardinality!
 		// I now correctly use the cardinality of the field,
 		// instead of its name!, to assess whether it can
 		// play a role in a container aggregation.
 		return !Access.isPublic(aField.getVisibility())
-				&& aField.getCardinality() > 1;
+				&& aField.getCardinality() == Cardinality.Many;
 	}
 }

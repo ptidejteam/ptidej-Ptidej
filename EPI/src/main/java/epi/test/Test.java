@@ -10,6 +10,7 @@
  ******************************************************************************/
 package epi.test;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFactory;
@@ -44,30 +45,30 @@ public class Test {
 		classH.addConstituent(factory.createAssociationRelationship(
 			"as1".toCharArray(),
 			classG,
-			1));
+			Cardinality.One));
 		classH.addConstituent(factory.createCreationRelationship(
 			"cr1".toCharArray(),
 			classD,
-			1));
+			Cardinality.One));
 		classH.addConstituent(factory.createCreationRelationship(
 			"cr2".toCharArray(),
 			classE,
-			1));
+			Cardinality.One));
 		classH.addConstituent(factory.createCreationRelationship(
 			"cr3".toCharArray(),
 			classF,
-			1));
+			Cardinality.One));
 		classG.addConstituent(factory.createAggregationRelationship(
 			"ag1".toCharArray(),
 			classA,
-			1));
+			Cardinality.One));
 		classB.addInheritedEntity(classA);
 		classC.addInheritedEntity(classB);
 		classD.addInheritedEntity(classC);
 		classD.addConstituent(factory.createAssociationRelationship(
 			"as2".toCharArray(),
 			classC,
-			1));
+			Cardinality.One));
 		classE.addInheritedEntity(classC);
 		classF.addInheritedEntity(classC);
 		classF.addConstituent(
@@ -76,7 +77,7 @@ public class Test {
 			factory.createContainerCompositionRelationship(
 				"co1".toCharArray(),
 				classB,
-				1));
+				Cardinality.One));
 
 		codeLevelModel.addConstituent(classA);
 		codeLevelModel.addConstituent(classB);

@@ -18,6 +18,7 @@ import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.classfile.test.ClassFilePrimitive;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAssociation;
 import padl.kernel.ICodeLevelModel;
@@ -74,7 +75,7 @@ public class Aggregation14Test extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_PUBLIC), Access.getAsString(
 						Aggregation14Test.Elements[1].getVisibility()));
 		Assert.assertEquals("Association cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) Aggregation14Test.Elements[1])
 						.getCardinality());
 		Assert.assertEquals("Association name",
@@ -113,7 +114,7 @@ public class Aggregation14Test extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_NONE), Access.getAsString(
 						Aggregation14Test.Elements[3].getVisibility()));
 		Assert.assertEquals("Association cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) Aggregation14Test.Elements[3])
 						.getCardinality());
 		Assert.assertEquals("Association name",

@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IElementMarker;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IUseRelationship;
@@ -22,7 +23,7 @@ class UseRelationship extends Relationship implements IElementMarker,
 	public UseRelationship(
 		final char[] anID,
 		final IFirstClassEntity aTargetEntity,
-		final int aCardinality) {
+		final Cardinality aCardinality) {
 
 		  super(anID, aTargetEntity);
 		this.setCardinality(aCardinality);

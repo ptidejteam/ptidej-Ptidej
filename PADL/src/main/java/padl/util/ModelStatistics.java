@@ -16,6 +16,7 @@ import padl.event.EntityEvent;
 import padl.event.IModelListener;
 import padl.event.IdentificationEvent;
 import padl.event.InvokeEvent;
+import padl.kernel.Cardinality;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
 import padl.kernel.IClass;
@@ -58,7 +59,7 @@ public class ModelStatistics implements IModelListener {
 			this.numberOfContainerCompositions++;
 		}
 		else if (pElement instanceof IAggregation) {
-			if (((IAggregation) pElement).getCardinality() == 1) {
+			if (((IAggregation) pElement).getCardinality() == Cardinality.One) {
 				this.numberOfAggregationsOne++;
 			}
 			else {
@@ -66,7 +67,7 @@ public class ModelStatistics implements IModelListener {
 			}
 		}
 		else if (pElement instanceof IContainerAggregation) {
-			if (((IContainerAggregation) pElement).getCardinality() == 1) {
+			if (((IContainerAggregation) pElement).getCardinality() == Cardinality.One) {
 				this.numberOfContainerAggregationsOne++;
 			}
 			else {
@@ -103,7 +104,7 @@ public class ModelStatistics implements IModelListener {
 			this.numberOfContainerCompositions--;
 		}
 		else if (pElement instanceof IAggregation) {
-			if (((IAggregation) pElement).getCardinality() == 1) {
+			if (((IAggregation) pElement).getCardinality() == Cardinality.One) {
 				this.numberOfAggregationsOne--;
 			}
 			else {
@@ -111,7 +112,7 @@ public class ModelStatistics implements IModelListener {
 			}
 		}
 		else if (pElement instanceof IContainerAggregation) {
-			if (((IContainerAggregation) pElement).getCardinality() == 1) {
+			if (((IContainerAggregation) pElement).getCardinality() == Cardinality.One) {
 				this.numberOfContainerAggregationsOne--;
 			}
 			else {

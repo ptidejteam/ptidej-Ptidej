@@ -13,6 +13,7 @@ package pom.test.classfile.specific;
 import org.junit.Assert;
 
 import junit.framework.TestCase;
+import padl.kernel.Cardinality;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IClass;
 import padl.kernel.IField;
@@ -108,7 +109,7 @@ public class UnaryCBOTest extends TestCase {
 		final IMethod method = this.getUniqueMethod(UnaryCBOTest.TestedClass);
 		final IMethodInvocation mi = Factory.getInstance()
 				.createMethodInvocation(
-						IMethodInvocation.CLASS_INSTANCE_FROM_FIELD, 1, 0,
+						IMethodInvocation.CLASS_INSTANCE_FROM_FIELD, Cardinality.One, 0,
 						UnaryCBOTest.FieldClass);
 		mi.setPublic(true);
 
@@ -189,7 +190,7 @@ public class UnaryCBOTest extends TestCase {
 				this.methodId(clazz).toCharArray());
 		final IField field = Factory.getInstance().createField(
 				this.fieldId(clazz).toCharArray(),
-				this.fieldId(clazz).toCharArray(), "int".toCharArray(), 1);
+				this.fieldId(clazz).toCharArray(), "int".toCharArray(), Cardinality.One);
 
 		clazz.addConstituent(method);
 		clazz.addConstituent(field);

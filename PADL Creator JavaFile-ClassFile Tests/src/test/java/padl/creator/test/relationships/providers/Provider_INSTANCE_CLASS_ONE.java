@@ -31,7 +31,7 @@ public class Provider_INSTANCE_CLASS_ONE extends AbstractProvider implements
 		final IMethodInvocation methodInvocation =
 			Factory.getInstance().createMethodInvocation(
 				IMethodInvocation.INSTANCE_CLASS,
-				padl.kernel.Constants.CARDINALITY_ONE,
+				padl.kernel.Cardinality.One,
 				Modifier.PUBLIC,
 				targetEntity);
 

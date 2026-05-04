@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.ui.kernel;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IDelegatingMethod;
 import ptidej.ui.IVisibility;
 import ptidej.ui.primitive.IPrimitive;
@@ -25,7 +26,7 @@ public final class Delegation extends Relationship {
 		Entity target,
 		IDelegatingMethod pDelegation) {
 
-		super(primitiveFactory, 0, origin, target);
+		super(primitiveFactory, Cardinality.One, origin, target);
 		this.pDelegation = pDelegation;
 	}
 	protected IPrimitive getLine() {

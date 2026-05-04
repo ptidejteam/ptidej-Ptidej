@@ -19,6 +19,7 @@ import org.junit.Assert;
 import junit.framework.TestCase;
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
@@ -62,7 +63,7 @@ public class ListenersTest extends TestCase {
 
 				final IParameter aParameter = Factory.getInstance()
 						.createParameter(anAEntity, "a".toCharArray(),
-								Constants.CARDINALITY_ONE);
+								1);
 				final IMethod aSetter = Factory.getInstance()
 						.createMethod("set".toCharArray(), "set".toCharArray());
 				aSetter.addConstituent(aParameter);

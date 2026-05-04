@@ -12,10 +12,12 @@ package padl.kernel.impl;
 
 import org.apache.commons.lang3.ArrayUtils;
 import padl.event.IEvent;
+import padl.kernel.Cardinality;
 import padl.kernel.IElement;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IRelationship;
 import padl.path.IConstants;
+import util.io.ProxyConsole;
 
 /**
  * @author Yann-Gaël Guéhéneuc
@@ -43,8 +45,11 @@ public class DummyRelationship extends Constituent implements IRelationship {
 	public IElement getAttachedElement() {
 		return null;
 	}
-	public int getCardinality() {
-		return 0;
+	public Cardinality getCardinality() {
+		return Cardinality.One;
+	}
+	public void setCardinality(Cardinality cardinality) {
+		ProxyConsole.getInstance().warningOutput().print("Trying to set the cardinality of a " + this.getClass().getSimpleName() + " which should have no effect.");
 	}
 	protected char getPathSymbol() {
 		return IConstants.ELEMENT_SYMBOL;
@@ -56,4 +61,5 @@ public class DummyRelationship extends Constituent implements IRelationship {
 	}
 	public void setCardinality(final int aCardinality) {
 	}
+
 }

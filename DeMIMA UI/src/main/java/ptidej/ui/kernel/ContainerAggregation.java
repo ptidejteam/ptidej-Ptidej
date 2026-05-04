@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.ui.kernel;
 
+import padl.kernel.Cardinality;
 import ptidej.ui.IVisibility;
 import ptidej.ui.primitive.IPrimitiveFactory;
 import ptidej.ui.primitive.ISymbol;
@@ -18,7 +19,7 @@ public final class ContainerAggregation extends Association {
 	public ContainerAggregation(
 		final IPrimitiveFactory primitiveFactory,
 		final String name,
-		final int cardinality,
+		final Cardinality cardinality,
 		final Entity origin,
 		final Entity target) {
 

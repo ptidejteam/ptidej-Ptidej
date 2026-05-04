@@ -12,29 +12,26 @@ package padl.kernel.impl;
 
 import com.ibm.toad.cfparse.utils.Access;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IElementMarker;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IRelationship;
-import padl.kernel.exception.ModelDeclarationException;
 import padl.util.Util;
 import util.io.ProxyConsole;
-import util.multilingual.MultilingualManager;
 
-abstract class Relationship extends Element
-		implements IElementMarker, IRelationship {
+abstract class Relationship extends Element implements IElementMarker, IRelationship {
 
 	private static final long serialVersionUID = -5857707891166836532L;
-	private int cardinality;
+	private Cardinality cardinality;
 	private final IFirstClassEntity targetEntity;
 
-	public Relationship(final char[] anID,
-			final IFirstClassEntity aTargetEntity) {
+	public Relationship(final char[] anID, final IFirstClassEntity aTargetEntity) {
 		super(anID);
 		this.targetEntity = aTargetEntity;
 	}
 
-	public int getCardinality() {
+	public Cardinality getCardinality() {
 		return this.cardinality;
 	}
 
@@ -47,13 +44,7 @@ abstract class Relationship extends Element
 
 	}
 
-	public void setCardinality(int aCardinality) {
-		if (aCardinality < 1) {
-			throw new ModelDeclarationException(MultilingualManager.getString(
-					"CARDINALITY", IRelationship.class,
-					new Object[] { Integer.valueOf(this.cardinality) }));
-		}
-
+	public void setCardinality(Cardinality aCardinality) {
 		this.cardinality = aCardinality;
 	}
 

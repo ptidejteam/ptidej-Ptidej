@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.motif.repository;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IAssociation;
 import padl.kernel.IClass;
 import padl.kernel.IDelegatingMethod;
@@ -128,7 +129,7 @@ public class Proxy extends StructuralMotifModel implements Cloneable,
 			this.getFactory().createAssociationRelationship(
 				Proxy.REAL_SUBJECT,
 				aRealSubject,
-				1);
+				Cardinality.One);
 		aProxy.addConstituent(associationProxyRealSubject);
 		final IMethod aProxyMethod =
 			this.getFactory().createMethod(Proxy.REQUEST, Proxy.REQUEST);

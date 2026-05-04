@@ -105,6 +105,7 @@ import org.eclipse.jdt.core.dom.WildcardType;
 
 import padl.creator.javafile.eclipse.util.MethodInvocationUtils;
 import padl.creator.javafile.eclipse.util.PadlParserUtil;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IEntity;
@@ -683,7 +684,7 @@ public class VisitorThirdParsing extends ExtendedASTVisitor {
 				PadlParserUtil.getDim(leftHandSide.resolveTypeBinding());
 		}
 		else {
-			cardinality = Constants.CARDINALITY_ONE;
+			cardinality = Cardinality.One;
 		}
 		
 		final int visibility = this.myCurrentOperation.getVisibility();
@@ -957,11 +958,11 @@ public class VisitorThirdParsing extends ExtendedASTVisitor {
 				methodBinding.getModifiers(), invocationThroughField,
 				invocationThroughStaticField);
 
-		final int cardinality;
+		final Cardinality cardinality;
 		if (expression instanceof ArrayAccess) {
 			// if the expression on what the invocation is performed 
 			// is an array or a list, the cardinality is MANY
-			cardinality = Constants.CARDINALITY_MANY;
+			cardinality = Cardinality.Many;
 		}
 		else if (expression != null
 				&& expression.resolveTypeBinding() != null) {
@@ -969,7 +970,7 @@ public class VisitorThirdParsing extends ExtendedASTVisitor {
 					.getCardinality(expression.resolveTypeBinding());
 		}
 		else {
-			cardinality = Constants.CARDINALITY_ONE;
+			cardinality = Cardinality.One;
 		}
 		final int visibility = this.myCurrentOperation.getVisibility();
 
@@ -1326,7 +1327,7 @@ public class VisitorThirdParsing extends ExtendedASTVisitor {
 			return;
 		}
 
-		final int cardinality = PadlParserUtil.getCardinality(typeBinding);
+		final Cardinality cardinality = PadlParserUtil.getCardinality(typeBinding);
 		final int visibility = this.myCurrentOperation.getVisibility();
 		final IMethodInvocation methodInvocation = this.padlModel.getFactory()
 				.createMethodInvocation(type, cardinality, visibility,

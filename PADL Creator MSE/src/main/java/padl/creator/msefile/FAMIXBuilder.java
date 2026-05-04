@@ -16,6 +16,7 @@ import padl.creator.msefile.misc.Attribute;
 import padl.creator.msefile.misc.Element;
 import padl.creator.msefile.misc.Package;
 import padl.creator.msefile.misc.Value;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
@@ -182,7 +183,7 @@ public class FAMIXBuilder implements MSEBuilder {
 					Factory.getInstance().createParameter(
 						(IEntity) entities.get("java.lang.Object"),
 						name.toCharArray(),
-						Constants.CARDINALITY_ONE);
+						1);
 				((IOperation) methods.get(idref)).addConstituent(parameter);
 				parameters.put(id, parameter);
 				parameterowners.put(id, idref);
@@ -205,7 +206,7 @@ public class FAMIXBuilder implements MSEBuilder {
 						name.toCharArray(),
 						name.toCharArray(),
 						"java.lang.Object".toCharArray(),
-						1);
+						Cardinality.One);
 				// to complete type and cardinality
 
 				if (this.getHasClassScope(element).equals("true")) {
@@ -259,7 +260,7 @@ public class FAMIXBuilder implements MSEBuilder {
 				final IMethodInvocation invocation =
 					Factory.getInstance().createMethodInvocation(
 						1,
-						1,
+						Cardinality.One,
 						1,
 						(IFirstClassEntity) entities.get(methodsowners
 							.get(invokeref)),
@@ -270,7 +271,7 @@ public class FAMIXBuilder implements MSEBuilder {
 				final IMethodInvocation invocation1 =
 					Factory.getInstance().createMethodInvocation(
 						1,
-						1,
+						Cardinality.One,
 						1,
 						(IFirstClassEntity) entities.get(methodsowners
 							.get(candidateref)),
@@ -318,7 +319,7 @@ public class FAMIXBuilder implements MSEBuilder {
 							id.toCharArray(),
 							(IFirstClassEntity) entities.get(fieldowners
 								.get(accessesref)),
-							1);
+							Cardinality.One);
 
 					if (this.getreadWriteAccess(element).equals("true")) {
 						access.setFinal(false);
@@ -340,7 +341,7 @@ public class FAMIXBuilder implements MSEBuilder {
 							id.toCharArray(),
 							(IFirstClassEntity) entities.get(parameterowners
 								.get(accessesref)),
-							1);
+							Cardinality.One);
 
 					if (this.getreadWriteAccess(element).equals("true")) {
 						accessPar.setFinal(false);

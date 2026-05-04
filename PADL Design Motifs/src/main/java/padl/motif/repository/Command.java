@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.motif.repository;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -56,7 +57,7 @@ public class Command extends BehaviouralMotifModel implements Cloneable,
 			this.getFactory().createAggregationRelationship(
 				Command.COMMAND,
 				command,
-				Constants.CARDINALITY_MANY);
+				Cardinality.Many);
 		Invoker.addConstituent(aComposition);
 		final IClass Receiver =
 			this.getFactory().createClass(Command.RECEIVER, Command.RECEIVER);
@@ -74,7 +75,7 @@ public class Command extends BehaviouralMotifModel implements Cloneable,
 			this.getFactory().createAssociationRelationship(
 				Command.EXECUTE,
 				Receiver,
-				1);
+				Cardinality.One);
 		concreteCommand.addConstituent(associationConcreateCommand);
 		final IDelegatingMethod aPDelegatingMethod =
 			this.getFactory().createDelegatingMethod(
@@ -88,7 +89,7 @@ public class Command extends BehaviouralMotifModel implements Cloneable,
 			this.getFactory().createAssociationRelationship(
 				Command.ACTION,
 				Receiver,
-				1);
+				Cardinality.One);
 		client.addConstituent(associationClientReceiver);
 		final IDelegatingMethod method =
 			this.getFactory().createDelegatingMethod(

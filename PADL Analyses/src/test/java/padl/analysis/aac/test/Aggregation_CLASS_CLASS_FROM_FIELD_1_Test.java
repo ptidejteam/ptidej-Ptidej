@@ -20,6 +20,7 @@ import junit.framework.TestCase;
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAssociation;
 import padl.kernel.ICodeLevelModel;
@@ -99,7 +100,7 @@ public class Aggregation_CLASS_CLASS_FROM_FIELD_1_Test extends TestCase {
 						Aggregation_CLASS_CLASS_FROM_FIELD_1_Test.Elements[6]
 								.getVisibility()));
 		Assert.assertEquals("Aggregation link cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IUseRelationship) Aggregation_CLASS_CLASS_FROM_FIELD_1_Test.Elements[6])
 						.getCardinality());
 		Assert.assertEquals("Aggregation name",
@@ -123,7 +124,7 @@ public class Aggregation_CLASS_CLASS_FROM_FIELD_1_Test extends TestCase {
 						Aggregation_CLASS_CLASS_FROM_FIELD_1_Test.Elements[1]
 								.getVisibility()));
 		Assert.assertEquals("Association link cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) Aggregation_CLASS_CLASS_FROM_FIELD_1_Test.Elements[1])
 						.getCardinality());
 		Assert.assertEquals("Association name",
@@ -153,7 +154,7 @@ public class Aggregation_CLASS_CLASS_FROM_FIELD_1_Test extends TestCase {
 						Aggregation_CLASS_CLASS_FROM_FIELD_1_Test.Elements[7]
 								.getVisibility()));
 		Assert.assertEquals("Association link cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) Aggregation_CLASS_CLASS_FROM_FIELD_1_Test.Elements[7])
 						.getCardinality());
 		Assert.assertEquals("Association name",
@@ -176,7 +177,7 @@ public class Aggregation_CLASS_CLASS_FROM_FIELD_1_Test extends TestCase {
 						Aggregation_CLASS_CLASS_FROM_FIELD_1_Test.Elements[4]
 								.getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IUseRelationship) Aggregation_CLASS_CLASS_FROM_FIELD_1_Test.Elements[4])
 						.getCardinality());
 		Assert.assertEquals("Use relationship name",

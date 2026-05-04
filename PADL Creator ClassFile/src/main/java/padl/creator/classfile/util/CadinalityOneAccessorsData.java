@@ -10,7 +10,9 @@
  ******************************************************************************/
 package padl.creator.classfile.util;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
+import util.io.ProxyConsole;
 
 import com.ibm.toad.cfparse.utils.Access;
 
@@ -19,8 +21,8 @@ import com.ibm.toad.cfparse.utils.Access;
  * @since  2004/08/01
  */
 public final class CadinalityOneAccessorsData implements AccessorsData {
-	public int getCardinality() {
-		return Constants.CARDINALITY_ONE;
+	public Cardinality getCardinality() {
+		return Cardinality.One;
 	}
 	public boolean matches(
 		final char[] targetName,
@@ -30,5 +32,8 @@ public final class CadinalityOneAccessorsData implements AccessorsData {
 			Access.isPrivate(fieldInfo.getVisibility())
 				|| Access.isProtected(fieldInfo.getVisibility()))
 			&& fieldInfo.getType().equals(targetName);
+	}
+	public void setCardinality(Cardinality cardinality) {
+		ProxyConsole.getInstance().warningOutput().print("Trying to set the cardinality of a " + this.getClass().getSimpleName() + " which should have no effect.");
 	}
 }

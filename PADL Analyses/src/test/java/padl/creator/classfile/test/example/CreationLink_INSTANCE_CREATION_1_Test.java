@@ -18,6 +18,7 @@ import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.classfile.test.ClassFilePrimitive;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAssociation;
 import padl.kernel.ICodeLevelModel;
@@ -87,7 +88,7 @@ public class CreationLink_INSTANCE_CREATION_1_Test extends ClassFilePrimitive {
 						CreationLink_INSTANCE_CREATION_1_Test.Elements[1]
 								.getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) CreationLink_INSTANCE_CREATION_1_Test.Elements[1])
 						.getCardinality());
 		Assert.assertEquals("Association relationship name",
@@ -110,7 +111,7 @@ public class CreationLink_INSTANCE_CREATION_1_Test extends ClassFilePrimitive {
 						CreationLink_INSTANCE_CREATION_1_Test.Elements[3]
 								.getVisibility()));
 		Assert.assertEquals("Creation link cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((ICreation) CreationLink_INSTANCE_CREATION_1_Test.Elements[3])
 						.getCardinality());
 		Assert.assertEquals("Creation link name",

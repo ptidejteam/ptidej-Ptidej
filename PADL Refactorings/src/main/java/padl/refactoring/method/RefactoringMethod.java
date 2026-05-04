@@ -202,7 +202,7 @@ public class RefactoringMethod {
 		while (iteratorOnParameters.hasNext()) {
 			final IParameter oldParameter = (IParameter) iteratorOnParameters.next();
 			final IParameter newParameter = Factory.getInstance().createParameter(oldParameter.getType(),
-					oldParameter.getName(), oldParameter.getCardinality());
+					oldParameter.getName(), oldParameter.getDimension());
 			method.addConstituent(newParameter);
 
 			method.setVisibility(theMethod.getVisibility());

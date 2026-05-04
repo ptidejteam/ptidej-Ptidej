@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.motif.repository;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IClass;
 import padl.kernel.IMethod;
 import padl.kernel.IUseRelationship;
@@ -71,7 +72,7 @@ public class Builder extends CreationalMotifModel implements Cloneable,
 			this.getFactory().createUseRelationship(
 				Builder.CREATION,
 				product,
-				1);
+				Cardinality.One);
 		concreteBuilder.addConstituent(useFromCreation);
 
 		this.addConstituent(director);

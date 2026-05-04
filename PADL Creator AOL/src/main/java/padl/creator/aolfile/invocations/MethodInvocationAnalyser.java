@@ -19,6 +19,7 @@ import java.util.Iterator;
 import java.util.List;
 import padl.analysis.IAnalysis;
 import padl.analysis.UnsupportedSourceModelException;
+import padl.kernel.Cardinality;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IConstituentOfOperation;
@@ -131,7 +132,7 @@ public class MethodInvocationAnalyser implements IAnalysis {
 					final IMethodInvocation methodInvocation =
 						Factory.getInstance().createMethodInvocation(
 							IMethodInvocation.INSTANCE_INSTANCE,
-							1,
+							Cardinality.One,
 							targetMethod.getVisibility(),
 							targetType);
 					sourceMethod.addConstituent(methodInvocation);
@@ -219,7 +220,7 @@ public class MethodInvocationAnalyser implements IAnalysis {
 								.createAssociationRelationship(
 									"DuMmY".toCharArray(),
 									methodInvocation.getTargetEntity(),
-									1),
+									Cardinality.One),
 							(IMethod) methodInvocation.getCalledMethod());
 
 					final Iterator iterator =

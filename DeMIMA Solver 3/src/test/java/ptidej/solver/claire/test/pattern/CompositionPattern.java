@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.solver.claire.test.pattern;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IClass;
 import padl.kernel.IComposition;
 import padl.motif.models.TestMotifModel;
@@ -35,7 +36,7 @@ public final class CompositionPattern extends TestMotifModel {
 			this.getFactory().createCompositionRelationship(
 				CompositionPattern.COMPOSITION,
 				anAggregatedClass,
-				2);
+				Cardinality.Many);
 
 		anAggregateClass.addConstituent(aComposition);
 

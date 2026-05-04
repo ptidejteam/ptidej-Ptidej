@@ -17,6 +17,7 @@ import java.util.Stack;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.cdt.core.dom.ast.DOMException;
+import org.eclipse.cdt.core.dom.ast.IASTArrayModifier;
 import org.eclipse.cdt.core.dom.ast.IASTCompositeTypeSpecifier;
 import org.eclipse.cdt.core.dom.ast.IASTDeclSpecifier;
 import org.eclipse.cdt.core.dom.ast.IASTDeclarator;
@@ -79,6 +80,7 @@ import padl.kernel.IMethodInvocation;
 import padl.kernel.IOperation;
 import padl.kernel.IPackage;
 import padl.kernel.IParameter;
+import padl.kernel.Cardinality;
 import padl.kernel.exception.ModelDeclarationException;
 import padl.path.Finder;
 import padl.path.FormatException;
@@ -431,8 +433,8 @@ class GeneratorHelper {
 				final String parameterTypeName = parameterType.toString()
 						.replaceAll("const ", "");
 				final char[] parameterName = aCPPParameter.getNameCharArray();
-				final int cardinality = Utils.getCardinality(aCPPParameter);
-
+				//Unsure of this
+				final int dimension = Utils.getDimension(aCPPParameter);
 				final IParameter padlParameter;
 				final int indexOfSpace;
 				if ((indexOfSpace = parameterTypeName.indexOf(' ')) > -1) {
@@ -441,12 +443,12 @@ class GeneratorHelper {
 					padlParameter = ((ICPPFactoryEclipse) CPPFactoryEclipse
 							.getInstance()).createParameter(parameterEntity,
 									parameterName, parameterQualification,
-									cardinality);
+									dimension);
 				}
 				else {
 					padlParameter = CPPFactoryEclipse.getInstance()
 							.createParameter(parameterEntity, parameterName,
-									cardinality);
+									dimension);
 				}
 
 				aPADLOperation.addConstituent(padlParameter);
@@ -505,7 +507,8 @@ class GeneratorHelper {
 			return;
 		}
 
-		final int cardinality = Utils.getCardinality(aCPPVariable);
+		final Cardinality cardinality = Utils.getCardinality(aCPPVariable);
+		final int dimension = cardinality == Cardinality.Many ? 1 : 0;
 
 		IField field = null;
 		if (aCPPVariable instanceof ICPPField
@@ -513,7 +516,7 @@ class GeneratorHelper {
 
 			field = ((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
 					.createField(id.toCharArray(), fieldName.toCharArray(),
-							fieldTypeEntity.getName(), cardinality);
+							fieldTypeEntity.getName(), cardinality, dimension);
 			Utils.setVisibility(field, (ICPPMember) aCPPVariable);
 		}
 		else if (aCPPVariable instanceof ICPPVariable
@@ -522,7 +525,7 @@ class GeneratorHelper {
 			field = ((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
 					.createGlobalField(id.toCharArray(),
 							fieldName.toCharArray(), fieldTypeEntity.getName(),
-							cardinality);
+							cardinality, dimension);
 		}
 
 		Utils.setConst(field, aCPPVariable);
@@ -727,7 +730,7 @@ class GeneratorHelper {
 		final boolean isFromField = false;
 
 		final int visibility = callingOperation.getVisibility();
-		final int cardinality = Constants.CARDINALITY_ONE;
+		final Cardinality cardinality = Cardinality.One;
 		final int type = Utils.getMethodInvocationType(callingOperation,
 				calledOperation, isFromField);
 
@@ -782,15 +785,27 @@ class GeneratorHelper {
 				}
 			}
 			else {
-				final int cardinality;
-				if (declarator instanceof ICPPASTArrayDeclarator) {
-					cardinality = Constants.CARDINALITY_MANY;
+				final Cardinality cardinality;
+				int dimension = 0;
+				
+				if (declarator instanceof ICPPASTArrayDeclarator arrayDeclarator) {
+					dimension = 1;
+					
+					IASTArrayModifier[] modifiers = arrayDeclarator.getArrayModifiers();
+					
+					if (modifiers != null) {
+						dimension = modifiers.length;
+					}
+					
+					cardinality = Cardinality.Many;
 				}
 				else if (declarator.getPointerOperators().length > 0) {
-					cardinality = Constants.CARDINALITY_MANY;
+					dimension = 0;
+					cardinality = Cardinality.Many;
 				}
 				else {
-					cardinality = Constants.CARDINALITY_ONE;
+					dimension = 0;
+					cardinality = Cardinality.One;
 				}
 				final char[] fieldName = Utils
 						.convertSeparators(declaratorName.toCharArray());
@@ -921,7 +936,7 @@ class GeneratorHelper {
 					// if its binding existed in the previous phase.
 					final IGlobalField field = ((ICPPFactoryEclipse) CPPFactoryEclipse
 							.getInstance()).createGlobalField(id, fieldName,
-									fieldTypeName, cardinality);
+									fieldTypeName, cardinality, dimension);
 					container.addConstituent(field);
 				}
 

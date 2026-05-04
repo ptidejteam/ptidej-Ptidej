@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.example.pattern;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.ICreation;
@@ -32,10 +33,10 @@ public final class CreationExample extends TestMotifModel {
 
 		final ICreation link1 = this.getFactory().createCreationRelationship(
 				"message".toCharArray(), programNodeBuilder,
-				Constants.CARDINALITY_ONE);
+				Cardinality.One);
 		final ICreation link2 = this.getFactory().createCreationRelationship(
 				"message".toCharArray(), programNode,
-				Constants.CARDINALITY_ONE);
+				Cardinality.One);
 
 		compiler.addConstituent(link1);
 		programNodeBuilder.addConstituent(link2);

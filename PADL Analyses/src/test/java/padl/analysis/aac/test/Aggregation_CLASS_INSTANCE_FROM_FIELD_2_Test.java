@@ -20,7 +20,7 @@ import junit.framework.TestCase;
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
-import padl.kernel.Constants;
+import padl.kernel.Cardinality;
 import padl.kernel.IAssociation;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IElement;
@@ -99,7 +99,7 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_2_Test extends TestCase {
 						Aggregation_CLASS_INSTANCE_FROM_FIELD_2_Test.Elements[1]
 								.getVisibility()));
 		Assert.assertEquals("Association link cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) Aggregation_CLASS_INSTANCE_FROM_FIELD_2_Test.Elements[1])
 						.getCardinality());
 		Assert.assertEquals("Association name",
@@ -129,7 +129,7 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_2_Test extends TestCase {
 						Aggregation_CLASS_INSTANCE_FROM_FIELD_2_Test.Elements[5]
 								.getVisibility()));
 		Assert.assertEquals("Association link cardinality",
-				Constants.CARDINALITY_MANY,
+				Cardinality.Many,
 				((IUseRelationship) Aggregation_CLASS_INSTANCE_FROM_FIELD_2_Test.Elements[5])
 						.getCardinality());
 		Assert.assertEquals("Association name",
@@ -152,7 +152,7 @@ public class Aggregation_CLASS_INSTANCE_FROM_FIELD_2_Test extends TestCase {
 						Aggregation_CLASS_INSTANCE_FROM_FIELD_2_Test.Elements[4]
 								.getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IUseRelationship) Aggregation_CLASS_INSTANCE_FROM_FIELD_2_Test.Elements[4])
 						.getCardinality());
 		Assert.assertEquals("Use relationship name",

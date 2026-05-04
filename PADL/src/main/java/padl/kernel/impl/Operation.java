@@ -428,7 +428,7 @@ public abstract class Operation extends Element
 		while (iterator.hasNext()) {
 			final IParameter parameter = (IParameter) iterator.next();
 			buffer.append(parameter.getTypeName());
-			for (int i = 1; i < parameter.getCardinality(); i++) {
+			for (int i = 1; i < parameter.getDimension(); i++) {
 				buffer.append("[]");
 			}
 			if (iterator.hasNext()) {
