@@ -33,6 +33,7 @@ package jct.test.cases;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectStreamClass;
@@ -42,9 +43,12 @@ import org.junit.Assert;
 import jct.kernel.IJCTRootNode;
 import jct.test.common.JCTConstant;
 import jct.test.common.JCTUtil;
+import jct.test.common.SerFileGeneratorJCTUsingJCT;
 import jct.tools.JCTPrettyPrinter;
 import jct.util.collection.IndirectCollection;
 import junit.framework.TestCase;
+import java.io.ObjectOutputStream;
+
 
 public final class JCTUsingJCTTest extends TestCase {
 	private final File srcFiles[] = new File[JCTConstant.FILES.length];
@@ -91,16 +95,24 @@ public final class JCTUsingJCTTest extends TestCase {
 					ObjectStreamClass resultClassDescriptor = super.readClassDescriptor();
 
 					if (resultClassDescriptor.getName()
-							.equals("util.collection.IndirectCollection"))
+							.equals("util.collection.IndirectCollection")) {
 						resultClassDescriptor = ObjectStreamClass
 								.lookup(IndirectCollection.class);
-
+					}
 					return resultClassDescriptor;
 				}
 			};
 			final IJCTRootNode jct = (IJCTRootNode) ois.readObject();
 			ois.close();
 			fis.close();
+			
+//			SerFileGeneratorJCTUsingJCT generator = new SerFileGeneratorJCTUsingJCT();
+//			generator.generate();
+			
+			ObjectOutputStream oos = new ObjectOutputStream(
+	                new FileOutputStream(this.serializedFile));
+	        oos.writeObject(jct);
+	        oos.close();
 
 			jct.accept(new JCTPrettyPrinter(this.tmpDir));
 

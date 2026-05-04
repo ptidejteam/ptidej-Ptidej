@@ -73,7 +73,7 @@ public final class JCTUsingSnpShtTest extends TestCase {
 	public void testCreatorAndPrettyPrinter() {
 		try {
 			final ObjectInputStream ois = new ObjectInputStream(new FileInputStream(this.serializedFile)) {
-				@Override  //added the overide class resolutiom
+				@Override  //added the override class resolution
 				protected Class<?> resolveClass(ObjectStreamClass desc) throws IOException, ClassNotFoundException {
 					if (desc.getName().equals("util.collection.IndirectCollection")) {
 						return jct.util.collection.IndirectCollection.class;
