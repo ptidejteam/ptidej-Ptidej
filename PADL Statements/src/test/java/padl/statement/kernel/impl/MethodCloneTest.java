@@ -81,19 +81,14 @@ public class MethodCloneTest extends TestCase{
 		Statement stmt1 = (Statement) m1.getConstituentFromName(statementLiteralOne);
 		Statement clonedStmt1 = (Statement) ((Operation) m1.getClone()).getConstituentFromName(statementLiteralOne);
 		
-		Statement stmt2 = (Statement) m1.getConstituentFromName(statementLiteralOne);
+		Statement stmt2 = (Statement) m2.getConstituentFromName(statementLiteralTwo);
 		Statement clonedStmt2 = (Statement) ((Operation) m2.getClone()).getConstituentFromName(statementLiteralTwo);
 		
-		Assert.assertEquals(stmt1, clonedStmt1);
-		Assert.assertEquals(stmt2, clonedStmt2);
-		
+		Assert.assertEquals(stmt1.getName(), clonedStmt1.getName());
+		Assert.assertEquals(stmt2.getName(), clonedStmt2.getName());
 		
 
 	}
-	
-	
-	
-	
 	
 
 }

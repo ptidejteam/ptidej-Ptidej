@@ -228,9 +228,7 @@ public abstract class Constituent implements IConstituent {
 	}
 
 	public void endCloneSession() {
-		throw new NullPointerException("This method must be overriden by " + this.getClass());
-		// this.clonedBoundEventList.clear();
-		// this.clonedVetoEventList.clear();
+		this.clone = null;
 	}
 
 	public boolean equals(final Object obj) {
