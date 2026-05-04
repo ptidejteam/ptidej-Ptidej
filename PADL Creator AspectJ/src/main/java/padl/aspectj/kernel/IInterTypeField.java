@@ -10,17 +10,17 @@
  ******************************************************************************/
 package padl.aspectj.kernel;
 
+import padl.kernel.ICardinality;
+
 /**
  * @author Jean-Yves Guyomarc'h
  */
-public interface IInterTypeField extends IInterTypeElement {
+public interface IInterTypeField extends IInterTypeElement, ICardinality {
 
 	String LOGO = "\"ITF\"";
 
 	//IField's methods
-	int getCardinality();
 	char[] getType();
-	void setCardinality(final int aCardinality);
 	void setType(final char[] aType);
 
 }

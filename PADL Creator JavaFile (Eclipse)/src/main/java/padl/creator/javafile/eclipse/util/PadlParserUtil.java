@@ -18,6 +18,8 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
+
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.ICodeLevelModel;
@@ -264,7 +266,7 @@ public class PadlParserUtil {
 	 * @param aTypeBinding
 	 * @return
 	 */
-	public static int getCardinality(final ITypeBinding aTypeBinding) {
+	public static Cardinality getCardinality(final ITypeBinding aTypeBinding) {
 		ITypeBinding typeBinding = aTypeBinding;
 		if (aTypeBinding.isParameterizedType()) {
 			typeBinding = aTypeBinding.getErasure();
@@ -272,10 +274,10 @@ public class PadlParserUtil {
 		if (padl.util.Util.isArrayOrCollection(typeBinding
 			.getQualifiedName()
 			.toCharArray())) {
-			return Constants.CARDINALITY_MANY;
+			return Cardinality.Many;
 		}
 		else {
-			return Constants.CARDINALITY_ONE;
+			return Cardinality.One;
 		}
 	}
 	

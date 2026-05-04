@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.example.pattern;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IClass;
 import padl.kernel.IComposition;
 import padl.kernel.IPackage;
@@ -33,7 +34,7 @@ public final class CompositionExample extends TestMotifModel {
 				"AggregatedClass1".toCharArray());
 		final IComposition anComposition1 = this.getFactory()
 				.createCompositionRelationship("composition".toCharArray(),
-						anAggregatedClass1, 1);
+						anAggregatedClass1, Cardinality.One);
 		anAggregateClass1.addConstituent(anComposition1);
 
 		final IClass anAggregateClass2 = this.getFactory().createClass(
@@ -53,7 +54,7 @@ public final class CompositionExample extends TestMotifModel {
 		subclass3.addInheritedEntity(subclass2);
 		final IComposition anComposition2 = this.getFactory()
 				.createCompositionRelationship("composition".toCharArray(),
-						anAggregatedClass2, 1);
+						anAggregatedClass2, Cardinality.One);
 		anAggregateClass2.addConstituent(anComposition2);
 
 		final IPackage enclosingPackage = this.getFactory()

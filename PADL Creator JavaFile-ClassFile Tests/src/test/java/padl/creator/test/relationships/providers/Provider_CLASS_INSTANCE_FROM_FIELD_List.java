@@ -13,6 +13,8 @@ package padl.creator.test.relationships.providers;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
+
+import padl.kernel.Cardinality;
 import padl.kernel.IField;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IMethod;
@@ -41,7 +43,7 @@ public class Provider_CLASS_INSTANCE_FROM_FIELD_List extends AbstractProvider
 		final IMethodInvocation methodInvocation =
 			Factory.getInstance().createMethodInvocation(
 				IMethodInvocation.CLASS_INSTANCE_FROM_FIELD,
-				padl.kernel.Constants.CARDINALITY_MANY,
+				padl.kernel.Cardinality.Many,
 				Modifier.PUBLIC + Modifier.STATIC,
 				targetEntity,
 				fieldDeclaringEntity);
@@ -56,7 +58,7 @@ public class Provider_CLASS_INSTANCE_FROM_FIELD_List extends AbstractProvider
 				"list".toCharArray(),
 				"list".toCharArray(),
 				"java.util.List".toCharArray(),
-				padl.kernel.Constants.CARDINALITY_MANY);
+				padl.kernel.Cardinality.Many);
 		final List listCallingFields = new ArrayList();
 		listCallingFields.add(invocationField);
 		methodInvocation.setCallingField(listCallingFields);

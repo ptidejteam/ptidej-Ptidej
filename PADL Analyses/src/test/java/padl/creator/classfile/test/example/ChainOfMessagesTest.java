@@ -18,6 +18,7 @@ import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.classfile.test.ClassFilePrimitive;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAssociation;
 import padl.kernel.ICodeLevelModel;
@@ -80,7 +81,7 @@ public class ChainOfMessagesTest extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_PUBLIC), Access.getAsString(
 						ChainOfMessagesTest.Elements[1].getVisibility()));
 		Assert.assertEquals("Association link cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) ChainOfMessagesTest.Elements[1])
 						.getCardinality());
 		Assert.assertEquals("Association link name",
@@ -98,7 +99,7 @@ public class ChainOfMessagesTest extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_PUBLIC), Access.getAsString(
 						ChainOfMessagesTest.Elements[3].getVisibility()));
 		Assert.assertEquals("Association link cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) ChainOfMessagesTest.Elements[3])
 						.getCardinality());
 		Assert.assertEquals("Association link name",
@@ -116,7 +117,7 @@ public class ChainOfMessagesTest extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_PUBLIC), Access.getAsString(
 						ChainOfMessagesTest.Elements[4].getVisibility()));
 		Assert.assertEquals("Association link cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) ChainOfMessagesTest.Elements[4])
 						.getCardinality());
 		Assert.assertEquals("Association link name",

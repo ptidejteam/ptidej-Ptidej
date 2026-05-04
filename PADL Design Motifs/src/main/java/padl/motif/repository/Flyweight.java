@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.motif.repository;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAssociation;
 import padl.kernel.IClass;
@@ -71,7 +72,7 @@ public class Flyweight extends StructuralMotifModel implements Cloneable,
 			this.getFactory().createContainerCompositionRelationship(
 				Flyweight.FLYWEIGHTS,
 				flyweight,
-				Constants.CARDINALITY_MANY);
+				Cardinality.Many);
 		flyweightFactory.addConstituent(aComposition);
 
 		final IClass concreteFlyweight =
@@ -91,7 +92,7 @@ public class Flyweight extends StructuralMotifModel implements Cloneable,
 			this.getFactory().createAssociationRelationship(
 				Flyweight.GET_FLYWEIGHT,
 				flyweightFactory,
-				1);
+				Cardinality.One);
 		client.addConstituent(associationClientFlyweightFactory);
 		final IDelegatingMethod method1 =
 			this.getFactory().createDelegatingMethod(
@@ -104,7 +105,7 @@ public class Flyweight extends StructuralMotifModel implements Cloneable,
 			this.getFactory().createAssociationRelationship(
 				Flyweight.OPERATION,
 				concreteFlyweight,
-				1);
+				Cardinality.One);
 		client.addConstituent(associationClientConcreteFlyweight);
 		final IDelegatingMethod method2 =
 			this.getFactory().createDelegatingMethod(
@@ -116,7 +117,7 @@ public class Flyweight extends StructuralMotifModel implements Cloneable,
 			this.getFactory().createAssociationRelationship(
 				Flyweight.OPERATION,
 				unsharedConcreteFlyweight,
-				1);
+				Cardinality.One);
 		client.addConstituent(associationClientUnsharedConcreteFlyweight);
 		final IDelegatingMethod method3 =
 			this.getFactory().createDelegatingMethod(

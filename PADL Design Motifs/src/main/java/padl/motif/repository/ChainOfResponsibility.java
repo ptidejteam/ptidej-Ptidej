@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.motif.repository;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IAssociation;
 import padl.kernel.IClass;
 import padl.kernel.IDelegatingMethod;
@@ -58,7 +59,7 @@ public class ChainOfResponsibility extends BehaviouralMotifModel implements
 			this.getFactory().createAssociationRelationship(
 				ChainOfResponsibility.SUCCESSOR,
 				Handler,
-				1);
+				Cardinality.One);
 		Handler.addConstituent(associationHandlerSuccessor);
 
 		final IClass concreteHandler =
@@ -72,7 +73,7 @@ public class ChainOfResponsibility extends BehaviouralMotifModel implements
 			this.getFactory().createAssociationRelationship(
 				ChainOfResponsibility.HANDLE_REQUEST,
 				Handler,
-				1);
+				Cardinality.One);
 		Client.addConstituent(associationClientReceiver);
 		final IDelegatingMethod method =
 			this.getFactory().createDelegatingMethod(

@@ -14,6 +14,7 @@ import org.antlr.runtime.tree.CommonTree;
 import padl.creator.csharpfile.v2.parser.CSharpTokens;
 import padl.creator.csharpfile.v2.parser.builder.BuilderContext;
 import padl.creator.csharpfile.v2.parser.builder.CodeBuilder;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.IParameter;
@@ -85,7 +86,7 @@ public class ClassBuilderImpl extends InitialClassBuilderImpl implements
 						context.getModel().getTopLevelEntityFromID(
 							memberType.getToken().getText().toCharArray()),
 						memberName.getText().toCharArray(),
-						Constants.CARDINALITY_ONE);
+						Cardinality.One);
 				this.clazz.addConstituent(parameter);
 				return this.findMembers(
 					node,

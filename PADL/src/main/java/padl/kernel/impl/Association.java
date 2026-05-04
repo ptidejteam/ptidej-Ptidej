@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IAssociation;
 import padl.kernel.IElementMarker;
 import padl.kernel.IFirstClassEntity;
@@ -21,7 +22,7 @@ class Association extends UseRelationship implements IElementMarker,
 	public Association(
 		final char[] anID,
 		final IFirstClassEntity aTargetEntity,
-		final int cardinality) {
+		final Cardinality cardinality) {
 
 		super(anID, aTargetEntity, cardinality);
 	}

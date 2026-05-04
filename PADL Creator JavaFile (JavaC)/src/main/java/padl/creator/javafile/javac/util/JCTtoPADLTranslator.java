@@ -40,6 +40,7 @@ import java.util.StringTokenizer;
 
 import jct.kernel.*;
 import jct.util.IJCTContainer;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAbstractModel;
 import padl.kernel.ICodeLevelModel;
@@ -512,11 +513,11 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 			final IField f = this.factory.createField(
 					aJCTField.getID().toCharArray(),
 					aJCTField.getName().toCharArray(),
-					aJCTField.getType().getSourceCode().toCharArray(), 1);
+					aJCTField.getType().getSourceCode().toCharArray(), Cardinality.One);
 
 			f.setName(aJCTField.getName().toCharArray());
 			if (Util.isArrayOrCollection(f.getType())) {
-				f.setCardinality(Constants.CARDINALITY_MANY);
+				f.setCardinality(Cardinality.Many);
 			}
 
 			for (final JCTModifiers mod : aJCTField.getModifiers()) {
@@ -785,7 +786,7 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 
 			if (entity != null) {
 				m.addConstituent((IConstituentOfOperation) this.factory
-						.createParameter(entity, 0));
+						.createParameter(entity, Cardinality.One));
 			}
 		}
 

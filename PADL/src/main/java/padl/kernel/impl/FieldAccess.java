@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IField;
 import padl.kernel.IFieldAccess;
@@ -23,12 +24,12 @@ import padl.path.IConstants;
 class FieldAccess extends Constituent implements IFieldAccess {
 	private static final long serialVersionUID = 5541766100314762093L;
 
-	private int cardinality;
+	private Cardinality cardinality;
 	private IFirstClassEntity entityDeclaringField;
 	private IField field;
 
 	public FieldAccess(
-		final int cardinality,
+		final Cardinality cardinality,
 		final int visibility,
 		final IField field,
 		final IFirstClassEntity entityDeclaringField) {
@@ -51,8 +52,11 @@ class FieldAccess extends Constituent implements IFieldAccess {
 		}
 		return super.equals(object);
 	}
-	public int getCardinality() {
+	public Cardinality getCardinality() {
 		return this.cardinality;
+	}
+	public void setCardinality(Cardinality cardinality) {
+		this.cardinality = cardinality;	
 	}
 	public IField getField() {
 		return this.field;

@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.solver.claire.test.pattern;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.IUseRelationship;
@@ -31,7 +32,7 @@ public final class UsePattern extends TestMotifModel {
 			this.getFactory().createUseRelationship(
 				UsePattern.MESSAGE,
 				callee,
-				Constants.CARDINALITY_ONE);
+				Cardinality.One);
 		caller.addConstituent(useRelationship);
 		this.addConstituent(caller);
 		this.addConstituent(callee);

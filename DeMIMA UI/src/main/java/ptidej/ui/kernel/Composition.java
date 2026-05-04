@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.ui.kernel;
 
+import padl.kernel.Cardinality;
 import ptidej.ui.IVisibility;
 import ptidej.ui.primitive.IPrimitive;
 import ptidej.ui.primitive.IPrimitiveFactory;
@@ -19,7 +20,7 @@ public final class Composition extends Association {
 	public Composition(
 		final IPrimitiveFactory primitiveFactory,
 		final String name,
-		final int cardinality,
+		final Cardinality cardinality,
 		final Entity origin,
 		final Entity target) {
 

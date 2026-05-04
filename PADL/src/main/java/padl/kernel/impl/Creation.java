@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
+import padl.kernel.Cardinality;
 import padl.kernel.ICreation;
 import padl.kernel.IElementMarker;
 import padl.kernel.IFirstClassEntity;
@@ -20,7 +21,7 @@ class Creation extends UseRelationship implements IElementMarker, ICreation {
 	public Creation(
 		final char[] anID,
 		final IFirstClassEntity targetPEntity,
-		final int cardinality) {
+		final Cardinality cardinality) {
 
 		super(anID, targetPEntity, cardinality);
 	}

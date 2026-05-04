@@ -24,6 +24,7 @@ import com.sdmetrics.model.XMIReader;
 import com.sdmetrics.model.XMITransformations;
 import com.sdmetrics.util.XMLParser;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAssociation;
 import padl.kernel.IClass;
@@ -495,7 +496,7 @@ public final class XMICreator implements IDesignLevelModelCreator {
 
 					final IField field = Factory.getInstance().createField(
 							elementID.toCharArray(), elementName.toCharArray(),
-							XMICreator.UNDEFINED_TYPE.toCharArray(), 1);
+							XMICreator.UNDEFINED_TYPE.toCharArray(), Cardinality.One);
 					return field;
 				}
 			});
@@ -580,7 +581,7 @@ public final class XMICreator implements IDesignLevelModelCreator {
 							final IUseRelationship useRelationship = Factory
 									.getInstance().createUseRelationship(
 											elementID.toCharArray(),
-											targetEntity, 1);
+											targetEntity, Cardinality.One);
 							useRelationship.setVisibility(elementVisbility);
 							sourceEntity.addConstituent(useRelationship);
 						}
@@ -605,19 +606,19 @@ public final class XMICreator implements IDesignLevelModelCreator {
 								association = Factory.getInstance()
 										.createAggregationRelationship(
 												elementID.toCharArray(),
-												targetEntity, 1);
+												targetEntity, Cardinality.One);
 							}
 							else if (elementType == XMICreator.COMPOSITION) {
 								association = Factory.getInstance()
 										.createCompositionRelationship(
 												elementID.toCharArray(),
-												targetEntity, 1);
+												targetEntity, Cardinality.One);
 							}
 							else {
 								association = Factory.getInstance()
 										.createAssociationRelationship(
 												elementID.toCharArray(),
-												targetEntity, 1);
+												targetEntity, Cardinality.One);
 							}
 							association.setVisibility(elementVisbility);
 							sourceEntity.addConstituent(association);

@@ -55,6 +55,7 @@ import padl.kernel.IInterfaceActor;
 import padl.kernel.IMethod;
 import padl.kernel.IPackage;
 import padl.kernel.IParameter;
+import padl.kernel.Cardinality;
 import padl.kernel.impl.ConstituentsRepository;
 import padl.kernel.impl.Factory;
 import padl.util.Util;
@@ -718,6 +719,7 @@ abstract class AbstractClassFileCreator {
 						// Yann 2009/05/02: No String anymore!
 						// Cool, eh?
 						char[] paramType = detectedParameters[i];
+						// probably dimension here instead of cardinality
 						int cardinality = 1;
 						final int bracketIndex = ArrayUtils.indexOf(paramType,
 								'[');
@@ -760,7 +762,7 @@ abstract class AbstractClassFileCreator {
 	}
 
 	private IParameter createParameter(final ICodeLevelModel aCodeLevelModel,
-			final char[] someParamType, final int cardinality) {
+			final char[] someParamType, final Cardinality cardinality) {
 
 		final IParameter parameter;
 		if (Util.isPrimtiveType(someParamType)) {
@@ -927,9 +929,9 @@ abstract class AbstractClassFileCreator {
 			if (element instanceof ExtendedFieldInfo) {
 				final ExtendedFieldInfo currentField = (ExtendedFieldInfo) element;
 				char[] fieldType = currentField.getType();
-				final int cardinality = Util.isArrayOrCollection(fieldType)
-						? Constants.CARDINALITY_MANY
-						: Constants.CARDINALITY_ONE;
+				final Cardinality cardinality = Util.isArrayOrCollection(fieldType)
+						? Cardinality.Many
+						: Cardinality.One;
 
 				// Yann 2003/11/29: Array!
 				// I must take care of removing brackets for array.

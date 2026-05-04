@@ -18,6 +18,7 @@ import java.util.Set;
 
 import com.ibm.toad.cfparse.utils.Access;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -314,7 +315,7 @@ public final class UMLScriptGenerator implements IGenerator {
 
 					uniqueRelations.append("\t\t\t");
 					uniqueRelations.append("<< Container >> ASSOC TO ");
-					if (containerComposition.getCardinality() > 1) {
+					if (containerComposition.getCardinality() == Cardinality.Many) {
 						uniqueRelations.append("[*] ");
 					}
 					uniqueRelations.append("composite ROLE ");
@@ -339,7 +340,7 @@ public final class UMLScriptGenerator implements IGenerator {
 
 					uniqueRelations.append("\t\t\t");
 					uniqueRelations.append("<< Container >> ASSOC TO ");
-					if (containerAggregation.getCardinality() > 1) {
+					if (containerAggregation.getCardinality() == Cardinality.Many) {
 						uniqueRelations.append("[*] ");
 					}
 					uniqueRelations.append("aggregate ROLE ");
@@ -363,7 +364,7 @@ public final class UMLScriptGenerator implements IGenerator {
 
 					uniqueRelations.append("\t\t\t");
 					uniqueRelations.append("ASSOC TO ");
-					if (composition.getCardinality() > 1) {
+					if (composition.getCardinality() == Cardinality.Many) {
 						uniqueRelations.append("[*] ");
 					}
 					uniqueRelations.append("composite ROLE ");
@@ -386,7 +387,7 @@ public final class UMLScriptGenerator implements IGenerator {
 
 					uniqueRelations.append("\t\t\t");
 					uniqueRelations.append("ASSOC TO ");
-					if (aggregation.getCardinality() > 1) {
+					if (aggregation.getCardinality() == Cardinality.Many) {
 						uniqueRelations.append("[*] ");
 					}
 					uniqueRelations.append("aggregate ROLE ");
@@ -409,7 +410,7 @@ public final class UMLScriptGenerator implements IGenerator {
 
 					uniqueRelations.append("\t\t\t");
 					uniqueRelations.append("ASSOC TO ");
-					if (association.getCardinality() > 1) {
+					if (association.getCardinality() == Cardinality.Many) {
 						uniqueRelations.append("[*] ");
 					}
 					uniqueRelations.append("ROLE ");

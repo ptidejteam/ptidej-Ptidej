@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IAssociation;
 import padl.kernel.IComposition;
 import padl.kernel.IElementMarker;
@@ -29,14 +30,14 @@ class Composition extends Aggregation implements IElementMarker, IComposition {
 	public Composition(
 		final char[] anID,
 		final IFirstClassEntity aTargetEntity,
-		final int cardinality) {
+		final Cardinality cardinality) {
 
 		super(anID, aTargetEntity, cardinality);
 	}
 	public Composition(
 		final char[] anID,
 		final IFirstClassEntity aTargetEntity,
-		final int cardinality,
+		final Cardinality cardinality,
 		final IField originField,
 		final IMethod originGetterMethod,
 		final IMethod originSetterMethod) {

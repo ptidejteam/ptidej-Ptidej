@@ -18,7 +18,7 @@ import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.classfile.test.ClassFilePrimitive;
-import padl.kernel.Constants;
+import padl.kernel.Cardinality;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
 import padl.kernel.ICodeLevelModel;
@@ -83,7 +83,7 @@ public class Aggregation10Test extends ClassFilePrimitive {
 				Access.getAsString(Aggregation10Test.Elements[elementPosition]
 						.getVisibility()));
 		Assert.assertEquals("Aggregation cardinality",
-				Constants.CARDINALITY_MANY,
+				Cardinality.Many,
 				((IAggregation) Aggregation10Test.Elements[elementPosition])
 						.getCardinality());
 		Assert.assertEquals("Aggregation name",
@@ -104,7 +104,7 @@ public class Aggregation10Test extends ClassFilePrimitive {
 		Assert.assertEquals("Association link visibility", Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(Aggregation10Test.Elements[elementPosition].getVisibility()));
 		Assert.assertEquals("Association link cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) Aggregation10Test.Elements[elementPosition])
 						.getCardinality());
 		Assert.assertEquals("Association link name",
@@ -127,7 +127,7 @@ public class Aggregation10Test extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_PUBLIC), Access.getAsString(
 						Aggregation10Test.Elements[1].getVisibility()));
 		Assert.assertEquals("Association link cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) Aggregation10Test.Elements[1])
 						.getCardinality());
 		Assert.assertEquals("Association link name",
@@ -149,7 +149,7 @@ public class Aggregation10Test extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(Aggregation10Test.Elements[elementPosition]
 						.getVisibility()));
-		Assert.assertEquals("Use link cardinality", Constants.CARDINALITY_ONE,
+		Assert.assertEquals("Use link cardinality", Cardinality.One,
 				((IUseRelationship) Aggregation10Test.Elements[elementPosition])
 						.getCardinality());
 		Assert.assertEquals("Use link name",

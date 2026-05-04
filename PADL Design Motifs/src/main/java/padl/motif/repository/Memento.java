@@ -11,6 +11,8 @@
 package padl.motif.repository;
 
 import org.apache.commons.lang3.ArrayUtils;
+
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAggregation;
 import padl.kernel.IClass;
@@ -48,7 +50,7 @@ public class Memento extends BehaviouralMotifModel implements Cloneable,
 			this.getFactory().createCreationRelationship(
 				Memento.CREATE,
 				memento,
-				Constants.CARDINALITY_ONE);
+				Cardinality.One);
 		originator.addConstituent(creationLink);
 
 		final IMethod originatorCreateMethod =
@@ -78,7 +80,7 @@ public class Memento extends BehaviouralMotifModel implements Cloneable,
 			this.getFactory().createAggregationRelationship(
 				Memento.STRING,
 				memento,
-				Constants.CARDINALITY_MANY);
+				Cardinality.Many);
 		caretaker.addConstituent(aComposition);
 
 		this.addConstituent(originator);

@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.motif.repository;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.IUseRelationship;
@@ -50,26 +51,26 @@ public class Mediator extends BehaviouralMotifModel implements Cloneable,
 			this.getFactory().createUseRelationship(
 				Mediator.CLIENT1_MEDIATOR,
 				mediator,
-				Constants.CARDINALITY_MANY);
+				Cardinality.Many);
 		client1.addConstituent(client1Mediator);
 		final IUseRelationship mediatorClient1 =
 			this.getFactory().createUseRelationship(
 				Mediator.MEDIATOR_CLIENT1,
 				client1,
-				Constants.CARDINALITY_MANY);
+				Cardinality.Many);
 		mediator.addConstituent(mediatorClient1);
 
 		final IUseRelationship client2Mediator =
 			this.getFactory().createUseRelationship(
 				Mediator.CLIENT2_MEDIATOR,
 				mediator,
-				Constants.CARDINALITY_MANY);
+				Cardinality.Many);
 		client2.addConstituent(client2Mediator);
 		final IUseRelationship mediatorClient2 =
 			this.getFactory().createUseRelationship(
 				Mediator.MEDIATOR_CLIENT2,
 				client2,
-				Constants.CARDINALITY_MANY);
+				Cardinality.Many);
 		mediator.addConstituent(mediatorClient2);
 
 		this.addConstituent(client1);

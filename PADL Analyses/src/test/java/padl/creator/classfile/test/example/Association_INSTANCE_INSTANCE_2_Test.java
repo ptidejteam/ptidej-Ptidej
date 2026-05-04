@@ -18,7 +18,7 @@ import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.classfile.test.ClassFilePrimitive;
-import padl.kernel.Constants;
+import padl.kernel.Cardinality;
 import padl.kernel.IAssociation;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IElement;
@@ -81,7 +81,7 @@ public class Association_INSTANCE_INSTANCE_2_Test extends ClassFilePrimitive {
 						Association_INSTANCE_INSTANCE_2_Test.Elements[1]
 								.getVisibility()));
 		Assert.assertEquals("Association link cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) Association_INSTANCE_INSTANCE_2_Test.Elements[1])
 						.getCardinality());
 		Assert.assertEquals("Association link name",
@@ -109,7 +109,7 @@ public class Association_INSTANCE_INSTANCE_2_Test extends ClassFilePrimitive {
 						Association_INSTANCE_INSTANCE_2_Test.Elements[3]
 								.getVisibility()));
 		Assert.assertEquals("Association link cardinality",
-				Constants.CARDINALITY_MANY,
+				Cardinality.Many,
 				((IAssociation) Association_INSTANCE_INSTANCE_2_Test.Elements[3])
 						.getCardinality());
 		Assert.assertEquals("Association link name",
@@ -155,7 +155,7 @@ public class Association_INSTANCE_INSTANCE_2_Test extends ClassFilePrimitive {
 	//				.getVisibility()));
 	//		Assert.assertEquals(
 	//			"Association link cardinality",
-	//			Constants.CARDINALITY_ONE,
+	//			Cardinality.One,
 	//			((IAssociation) Association_INSTANCE_INSTANCE_2.Elements[5])
 	//				.getCardinality());
 	//		Assert.assertEquals(
