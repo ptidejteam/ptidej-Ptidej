@@ -105,14 +105,19 @@ public final class JCTUsingJCTTest extends TestCase {
 			final IJCTRootNode jct = (IJCTRootNode) ois.readObject();
 			ois.close();
 			fis.close();
-			
+//		this command allows the use of the SerFileGeneratorJCTUsingJCT generator but leads to other complications with the SRC_PATH
 //			SerFileGeneratorJCTUsingJCT generator = new SerFileGeneratorJCTUsingJCT();
 //			generator.generate();
-			
+
+// added command to improve the SER files regeneration
 			ObjectOutputStream oos = new ObjectOutputStream(
 	                new FileOutputStream(this.serializedFile));
 	        oos.writeObject(jct);
 	        oos.close();
+	        
+	        if (!this.tmpDir.exists() && !this.tmpDir.mkdirs()) {
+	            Assert.fail("Could not create tmp directory: " + this.tmpDir.getAbsolutePath());
+	        }
 
 			jct.accept(new JCTPrettyPrinter(this.tmpDir));
 
