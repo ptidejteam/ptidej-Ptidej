@@ -229,8 +229,6 @@ public abstract class Constituent implements IConstituent {
 
 	public void endCloneSession() {
 		this.clone = null;
-		// this.clonedBoundEventList.clear();
-		// this.clonedVetoEventList.clear();
 	}
 
 	public boolean equals(final Object obj) {

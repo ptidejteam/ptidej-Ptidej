@@ -98,7 +98,6 @@ public abstract class Operation extends Element
 		// I cannot use the addConstituent() method here because I don't
 		// want the method invocations to be sorted!
 		//	super.addConstituent(aMethodInvocation);
-		// TODO Is this comment still true with the GenericContainerOfInsertionOrderedConstituents?
 		this.container.directlyAddConstituentWithUniqueID(aMethodConstituent);
 
 		// Yann 2014/04/17: Law and order!
@@ -279,6 +278,14 @@ public abstract class Operation extends Element
 		}
 	}
 
+	public void endCloneSession() {
+		final Iterator iterator = this.getIteratorOnModelListeners();
+		while (iterator.hasNext()) {
+			((Operation) this.getClone()).addModelListener((IModelListener) iterator.next());
+		}
+		
+	}
+	
 	public void removeConstituentFromID(final char[] anID) {
 		this.container.removeConstituentFromID(anID);
 		this.updatePathWithParameters();
@@ -301,10 +308,7 @@ public abstract class Operation extends Element
 		((Operation) this
 				.getClone()).container = new GenericContainerOfInsertionOrderedConstituents(
 						((Operation) this.getClone()));
-
-		// Yann 2015/09/01: Clone of listeners!
-		// I don't forget to clone the listners too...
-		// TODO To implement
+		
 	}
 
 	public String toString() {

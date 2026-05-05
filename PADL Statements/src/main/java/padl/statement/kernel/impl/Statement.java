@@ -27,4 +27,8 @@ class Statement extends Constituent implements IStatement {
 	protected char getPathSymbol() {
 		return IConstants.STATEMENT_SYMBOL;
 	}
+	
+	public void endCloneSession() {
+		
+	}
 }
