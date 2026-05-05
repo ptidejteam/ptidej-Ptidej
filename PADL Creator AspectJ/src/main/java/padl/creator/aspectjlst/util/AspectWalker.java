@@ -203,8 +203,7 @@ public class AspectWalker extends HierarchyWalker {
 					this.codeLevelModel.addConstituent(entity);
 				}
 			}
-			final IParameter param = this.factory.createParameter(entity,
-					Cardinality.One);
+			final IParameter param = this.factory.createParameter(entity, 1);
 			it_method.addConstituent(param);
 			paramBuffer.append(param.getTypeName());
 			paramBuffer.append(" ");

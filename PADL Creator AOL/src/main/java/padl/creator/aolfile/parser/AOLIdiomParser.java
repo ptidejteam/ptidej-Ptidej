@@ -1763,7 +1763,7 @@ class CUP$AOLIdiomParser$actions {
 					this.parser.addToListOfArguments(
 							Factory.getInstance().createParameter(targetEntity,
 									("a" + t).toCharArray(),
-									Cardinality.One));
+									1));
 				}
 			}
 
@@ -1815,7 +1815,7 @@ class CUP$AOLIdiomParser$actions {
 					this.parser.addToListOfArguments(
 							Factory.getInstance().createParameter(targetEntity,
 									("a" + t).toCharArray(),
-									Cardinality.One));
+									1));
 				}
 			}
 
@@ -1866,7 +1866,7 @@ class CUP$AOLIdiomParser$actions {
 				if (targetEntity != null) {
 					this.parser.addToListOfArguments(Factory.getInstance()
 							.createParameter(targetEntity, n.toCharArray(),
-									Cardinality.One));
+									1));
 				}
 			}
 

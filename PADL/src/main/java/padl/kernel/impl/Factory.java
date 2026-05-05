@@ -280,15 +280,15 @@ public class Factory implements IFactory, Serializable {
 	}
 
 	public IParameter createParameter(final IEntity aType, final char[] aName,
-			final Cardinality aCardinality) {
+			final int dimension) {
 
-		return new Parameter(aType, aName, aCardinality);
+		return new Parameter(aType, aName, dimension);
 	}
 
 	public IParameter createParameter(final IEntity aType,
-			final Cardinality aCardinality) {
+			final int dimension) {
 
-		return new Parameter(aType, aCardinality);
+		return new Parameter(aType, dimension);
 	}
 
 	public IPrimitiveEntity createPrimitiveEntity(

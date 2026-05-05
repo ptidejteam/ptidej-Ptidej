@@ -119,9 +119,9 @@ public class CPPFactoryEclipse extends Factory implements ICPPFactoryEclipse {
 		final IEntity anEntity,
 		final char[] aName,
 		final char[] aQualification,
-		final Cardinality aCardinality) {
+		final int dimension) {
 
-		return new CPPParameter(anEntity, aName, aQualification, aCardinality);
+		return new CPPParameter(anEntity, aName, aQualification, dimension);
 	}
 
 	public IStructure createStructure(final char[] aName) {

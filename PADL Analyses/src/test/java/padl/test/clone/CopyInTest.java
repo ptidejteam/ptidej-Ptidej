@@ -56,7 +56,7 @@ public final class CopyInTest extends TestCase {
 					Factory.getInstance().createParameter(
 						entity,
 						"a".toCharArray(),
-						Cardinality.One);
+						1);
 				final IMethod aSetter =
 					Factory.getInstance().createMethod(
 						"set".toCharArray(),

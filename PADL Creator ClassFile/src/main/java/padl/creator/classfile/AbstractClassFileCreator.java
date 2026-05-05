@@ -716,18 +716,18 @@ abstract class AbstractClassFileCreator {
 						// Cool, eh?
 						char[] paramType = detectedParameters[i];
 						// probably dimension here instead of cardinality
-						int cardinality = 1;
+						int dimension = 1;
 						final int bracketIndex = ArrayUtils.indexOf(paramType,
 								'[');
 						if (bracketIndex > -1) {
-							cardinality = (paramType.length - bracketIndex) / 2
+							dimension = (paramType.length - bracketIndex) / 2
 									+ 1;
 							paramType = ArrayUtils.subarray(paramType, 0,
 									bracketIndex);
 						}
 
 						final IParameter parameter = this.createParameter(
-								aCodeLevelModel, paramType, cardinality);
+								aCodeLevelModel, paramType, dimension);
 						currentConstructor.addConstituent(parameter);
 					}
 
@@ -758,20 +758,21 @@ abstract class AbstractClassFileCreator {
 	}
 
 	private IParameter createParameter(final ICodeLevelModel aCodeLevelModel,
-			final char[] someParamType, final Cardinality cardinality) {
+			final char[] someParamType, final int dimension) {
 
 		final IParameter parameter;
 		if (Util.isPrimtiveType(someParamType)) {
 			parameter = aCodeLevelModel.getFactory()
 					.createParameter(aCodeLevelModel.getFactory()
-							.createPrimitiveEntity(someParamType), cardinality);
+							.createPrimitiveEntity(someParamType), dimension);
 		}
 		else {
 			parameter = aCodeLevelModel.getFactory()
 					.createParameter(
 							Utils.getEntityOrCreateGhost(aCodeLevelModel,
+									
 									someParamType, this.mapOfIDsEntities),
-							cardinality);
+							dimension);
 		}
 		return parameter;
 	}

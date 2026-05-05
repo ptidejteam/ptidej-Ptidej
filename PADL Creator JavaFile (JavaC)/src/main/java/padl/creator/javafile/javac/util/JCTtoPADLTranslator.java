@@ -786,7 +786,7 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 
 			if (entity != null) {
 				m.addConstituent((IConstituentOfOperation) this.factory
-						.createParameter(entity, Cardinality.One));
+						.createParameter(entity, 1));
 			}
 		}
 

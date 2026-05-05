@@ -215,7 +215,7 @@ public class InterfaceMethodBuilderImpl extends AbstractPADLCodeBuilder
 						context.getModel().getTopLevelEntityFromID(
 							memberType.getToken().getText().toCharArray()),
 						memberName.getText().toCharArray(),
-						Cardinality.One);
+						1);
 				this.method.addConstituent(parameter);
 				if (node.getChildren().size() > memberName.getChildIndex() + 1
 						&& ((CommonTree) node.getChild(memberName

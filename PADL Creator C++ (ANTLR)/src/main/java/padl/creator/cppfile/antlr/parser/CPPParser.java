@@ -2753,7 +2753,7 @@ public final class CPPParser implements CPPParserConstants {
 				CPPParser.getFactory().createParameter(
 					targetEntity,
 					CPPParser.getTypeParameter().toCharArray(),
-					Cardinality.One);
+					1);
 			CPPParser.addToListOfArguments(param);
 		}
 

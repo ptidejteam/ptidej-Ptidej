@@ -383,8 +383,7 @@ class ContainerAggregation extends Association implements IElementMarker,
 			this.originSetterMethod.resetCodeLines();
 		}
 
-		final Parameter parameter = new Parameter(this.getTargetEntity(),
-				Cardinality.One);
+		final Parameter parameter = new Parameter(this.getTargetEntity(), 1);
 
 		if (this.getCardinality() == Cardinality.Many) {
 			this.originField.setType(Constants.DEFAULT_LIST_INTERFACE);

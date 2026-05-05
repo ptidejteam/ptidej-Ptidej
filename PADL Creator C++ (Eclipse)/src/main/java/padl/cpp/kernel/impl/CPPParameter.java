@@ -23,9 +23,9 @@ public class CPPParameter extends Parameter implements IParameter {
 	private final char[] qualitification;
 
 	public CPPParameter(final IEntity anEntity, final char[] aName, final char[] aQualification,
-			final Cardinality aCardinality) {
+			final int dimension) {
 
-		super(anEntity, aName, aCardinality);
+		super(anEntity, aName, dimension);
 		this.qualitification = aQualification;
 	}
 

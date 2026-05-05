@@ -46,7 +46,7 @@ public class GetterTest extends TestCase {
 					Factory.getInstance().createParameter(
 						entity,
 						parameterName,
-						Cardinality.One);
+						1);
 				final IMethod aGetter =
 					Factory.getInstance().createMethod(
 						"get".toCharArray(),
@@ -58,7 +58,7 @@ public class GetterTest extends TestCase {
 					Factory.getInstance().createParameter(
 						entity,
 						parameterName,
-						Cardinality.One);
+						1);
 				final IMethod aSetter =
 					Factory.getInstance().createMethod(
 						"set".toCharArray(),

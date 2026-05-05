@@ -90,8 +90,8 @@ public interface IFactory {
 	IParameter createParameter(
 		final IEntity aType,
 		final char[] aName,
-		final Cardinality aCardinality);
-	IParameter createParameter(final IEntity aType, final Cardinality aCardinality);
+		final int dimension);
+	IParameter createParameter(final IEntity aType, final int dimension);
 	IPrimitiveEntity createPrimitiveEntity(final char[] aPrimitiveEntityName);
 	ISetter createSetter(final char[] anID, final char[] aName);
 	ISetter createSetter(final IMethod aMethod);

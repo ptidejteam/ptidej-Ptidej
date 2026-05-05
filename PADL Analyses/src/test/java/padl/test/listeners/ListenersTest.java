@@ -63,7 +63,7 @@ public class ListenersTest extends TestCase {
 
 				final IParameter aParameter = Factory.getInstance()
 						.createParameter(anAEntity, "a".toCharArray(),
-								Cardinality.One);
+								1);
 				final IMethod aSetter = Factory.getInstance()
 						.createMethod("set".toCharArray(), "set".toCharArray());
 				aSetter.addConstituent(aParameter);

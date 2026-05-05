@@ -51,7 +51,7 @@ public class SetterTest extends TestCase {
 					Factory.getInstance().createParameter(
 						anEntity,
 						"a".toCharArray(),
-						Cardinality.One);
+						1);
 				final IMethod aSetter =
 					Factory.getInstance().createMethod(
 						"set".toCharArray(),

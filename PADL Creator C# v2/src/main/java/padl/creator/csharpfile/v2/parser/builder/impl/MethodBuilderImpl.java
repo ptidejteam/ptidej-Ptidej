@@ -611,7 +611,7 @@ public class MethodBuilderImpl extends AbstractPADLCodeBuilder implements
 				final IParameter parameter =
 					this.factory.createParameter(target, memberName
 						.getText()
-						.toCharArray(), Cardinality.One);
+						.toCharArray(), 1);
 				this.method.addConstituent(parameter);
 				if (node.getChildren().size() > memberName.getChildIndex() + 1
 						&& ((CommonTree) node.getChild(memberName

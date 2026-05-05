@@ -56,7 +56,7 @@ public class SanityTest extends TestCase {
 				Factory.getInstance().createParameter(
 					entity,
 					"a".toCharArray(),
-					Cardinality.One);
+					1);
 			final IMethod aSetter =
 				Factory.getInstance().createMethod(
 					"set".toCharArray(),
@@ -169,7 +169,7 @@ public class SanityTest extends TestCase {
 		final IMethod setter =
 			(IMethod) firstClassEntity.getConstituentFromID("set");
 		final IParameter parameter =
-			Factory.getInstance().createParameter(firstClassEntity, Cardinality.Many);
+			Factory.getInstance().createParameter(firstClassEntity, 2);
 		setter.addConstituent(parameter);
 		Assert.assertEquals("Method ID", "set", setter.getDisplayID());
 		Assert.assertEquals("Method Name", "set", setter.getDisplayName());

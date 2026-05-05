@@ -23,18 +23,27 @@ public class Parameter extends Element implements IParameter {
 	private IEntity type;
 
 	public Parameter(final IEntity anEntity, final char[] aName,
-			final Cardinality aCardinality) {
+			final int dimension) {
 
-		this(anEntity, aCardinality);
+		this(anEntity, dimension);
 		this.setName(aName);
 	}
 
-	public Parameter(final IEntity aType, final Cardinality aCardinality) {
+	public Parameter(final IEntity aType, final int dimension) {
 		super("Parameter".toCharArray());
 
 		this.setType(aType);
 		this.setNameFromType(aType);
-		this.cardinality = aCardinality;
+		this.dimension = dimension;
+		
+		if (this.dimension > 1)
+		{
+			this.cardinality = Cardinality.Many;
+		}
+		else 
+		{
+			this.cardinality = Cardinality.One;
+		}
 	}
 
 	//	public Parameter(final String aName, final String aType) {

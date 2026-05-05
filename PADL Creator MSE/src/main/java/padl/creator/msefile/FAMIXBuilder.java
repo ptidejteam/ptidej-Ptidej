@@ -183,7 +183,7 @@ public class FAMIXBuilder implements MSEBuilder {
 					Factory.getInstance().createParameter(
 						(IEntity) entities.get("java.lang.Object"),
 						name.toCharArray(),
-						Cardinality.One);
+						1);
 				((IOperation) methods.get(idref)).addConstituent(parameter);
 				parameters.put(id, parameter);
 				parameterowners.put(id, idref);

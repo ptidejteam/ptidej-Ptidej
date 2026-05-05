@@ -432,8 +432,8 @@ class GeneratorHelper {
 				final String parameterTypeName = parameterType.toString()
 						.replaceAll("const ", "");
 				final char[] parameterName = aCPPParameter.getNameCharArray();
-				final Cardinality cardinality = Utils.getCardinality(aCPPParameter);
-
+				//Unsure of this
+				final int dimension = Utils.getCardinality(aCPPParameter) == Cardinality.Many ? 2 : 1;
 				final IParameter padlParameter;
 				final int indexOfSpace;
 				if ((indexOfSpace = parameterTypeName.indexOf(' ')) > -1) {
@@ -442,12 +442,12 @@ class GeneratorHelper {
 					padlParameter = ((ICPPFactoryEclipse) CPPFactoryEclipse
 							.getInstance()).createParameter(parameterEntity,
 									parameterName, parameterQualification,
-									cardinality);
+									dimension);
 				}
 				else {
 					padlParameter = CPPFactoryEclipse.getInstance()
 							.createParameter(parameterEntity, parameterName,
-									cardinality);
+									dimension);
 				}
 
 				aPADLOperation.addConstituent(padlParameter);

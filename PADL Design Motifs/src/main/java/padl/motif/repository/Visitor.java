@@ -110,7 +110,7 @@ public class Visitor extends StructuralMotifModel implements Cloneable,
 		acceptMethod.addConstituent(this.getFactory().createParameter(
 			visitorRootInterface,
 			Visitor.STRING,
-			Cardinality.One));
+			1));
 		nodeHierarchyRootInterface.addConstituent(acceptMethod);
 
 		final IMethod visitMethod =
@@ -118,7 +118,7 @@ public class Visitor extends StructuralMotifModel implements Cloneable,
 		visitMethod.addConstituent(this.getFactory().createParameter(
 			nodeHierarchyRootInterface,
 			Visitor.ENTITY,
-			Cardinality.One));
+			1));
 		visitorRootInterface.addConstituent(visitMethod);
 
 		final IAssociation acceptVisitorAssociation =
@@ -158,7 +158,7 @@ public class Visitor extends StructuralMotifModel implements Cloneable,
 		acceptMethod.addConstituent(this.getFactory().createParameter(
 			visitor,
 			Visitor.STRING,
-			Cardinality.One));
+			1));
 		node.addConstituent(acceptMethod);
 
 		final IMethod visitMethod =
@@ -166,7 +166,7 @@ public class Visitor extends StructuralMotifModel implements Cloneable,
 		visitMethod.addConstituent(this.getFactory().createParameter(
 			node,
 			Visitor.ENTITY,
-			Cardinality.One));
+			1));
 		visitor.addConstituent(visitMethod);
 
 		final IAssociation acceptVisitorAssociation =

@@ -39,7 +39,7 @@ public interface ICPPFactoryEclipse extends IFactory {
 		final IEntity parameterEntity,
 		final char[] parameterName,
 		final char[] parameterQualification,
-		final Cardinality cardinality);
+		final int dimension);
 	IStructure createStructure(final char[] anID);
 	IUnion createUnion(final char[] anID);
 }

@@ -86,7 +86,7 @@ public class ClassBuilderImpl extends InitialClassBuilderImpl implements
 						context.getModel().getTopLevelEntityFromID(
 							memberType.getToken().getText().toCharArray()),
 						memberName.getText().toCharArray(),
-						Cardinality.One);
+						1);
 				this.clazz.addConstituent(parameter);
 				return this.findMembers(
 					node,
