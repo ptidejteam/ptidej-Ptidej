@@ -29,6 +29,7 @@ import padl.serialiser.DB4OSerialiser;
 import padl.util.Util;
 
 public class JHotDraw51Test extends TestCase {
+	// this causes an issue
 	private static IAbstractLevelModel AbstractLevelModel;
 	private static IAbstractLevelModel SerialisedAbstractLevelModel;
 	private static String SerialisedFileName;
