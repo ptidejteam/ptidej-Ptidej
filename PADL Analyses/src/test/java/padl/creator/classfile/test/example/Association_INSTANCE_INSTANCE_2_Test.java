@@ -131,7 +131,7 @@ public class Association_INSTANCE_INSTANCE_2_Test extends ClassFilePrimitive {
 				Access.getAsString(
 						Association_INSTANCE_INSTANCE_2_Test.Elements[4]
 								.getVisibility()));
-		Assert.assertEquals("Use relationship cardinality", 2,
+		Assert.assertEquals("Use relationship cardinality", padl.kernel.Cardinality.Many,
 				((IUseRelationship) Association_INSTANCE_INSTANCE_2_Test.Elements[4])
 						.getCardinality());
 		Assert.assertEquals("Use relationship name",

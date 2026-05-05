@@ -29,6 +29,7 @@ import padl.kernel.IFirstClassEntity;
 import padl.kernel.IIdiomLevelModel;
 import padl.kernel.IUseRelationship;
 import padl.kernel.exception.CreationException;
+import padl.test.PADLPrimitive;
 import padl.util.Util;
 
 /**
@@ -106,7 +107,7 @@ public class Aggregation11Test extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(Aggregation11Test.Elements[elementPosition]
 						.getVisibility()));
-		Assert.assertEquals("Use relationship cardinality", 1,
+		Assert.assertEquals("Use relationship cardinality", padl.kernel.Cardinality.One,
 				((IUseRelationship) Aggregation11Test.Elements[elementPosition])
 						.getCardinality());
 		Assert.assertEquals("Use relationship name",

@@ -72,7 +72,7 @@ public class Aggregation13Test extends ClassFilePrimitive {
 		Assert.assertEquals("Use relationship visibility",
 				Access.getAsString(Access.ACC_NONE), Access.getAsString(
 						Aggregation13Test.Elements[6].getVisibility()));
-		Assert.assertEquals("Use relationship cardinality", 1,
+		Assert.assertEquals("Use relationship cardinality", padl.kernel.Cardinality.One,
 				((IUseRelationship) Aggregation13Test.Elements[6])
 						.getCardinality());
 		Assert.assertEquals("Use relationship name",

@@ -17,20 +17,16 @@ import padl.kernel.Constants;
 import padl.kernel.IElementMarker;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IRelationship;
-import padl.kernel.exception.ModelDeclarationException;
 import padl.util.Util;
 import util.io.ProxyConsole;
-import util.multilingual.MultilingualManager;
 
-abstract class Relationship extends Element
-		implements IElementMarker, IRelationship {
+abstract class Relationship extends Element implements IElementMarker, IRelationship {
 
 	private static final long serialVersionUID = -5857707891166836532L;
 	private Cardinality cardinality;
 	private final IFirstClassEntity targetEntity;
 
-	public Relationship(final char[] anID,
-			final IFirstClassEntity aTargetEntity) {
+	public Relationship(final char[] anID, final IFirstClassEntity aTargetEntity) {
 		super(anID);
 		this.targetEntity = aTargetEntity;
 	}
