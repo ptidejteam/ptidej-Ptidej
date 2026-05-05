@@ -148,8 +148,6 @@ public class ModelStatistics implements IModelListener {
 		}
 	}
 	public void entityAnalyzed(final AnalysisEvent analysisEvent) {
-		ProxyConsole.getInstance().normalOutput().print("Analyzing: ");
-		ProxyConsole.getInstance().normalOutput().println(analysisEvent);
 	}
 	public void entityIdentified(final IdentificationEvent recognitionEvent) {
 		ProxyConsole.getInstance().normalOutput().print("Identified: ");

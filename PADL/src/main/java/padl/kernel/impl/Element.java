@@ -10,6 +10,8 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
+import java.io.IOException;
+
 /*
  * Classe Element used for type checking and the "attached" protocol.
  * In this protocol, delegation is used instead of bound properties in order to
@@ -18,54 +20,43 @@ package padl.kernel.impl;
  */
 
 import org.apache.commons.lang3.ArrayUtils;
+
 import padl.kernel.Constants;
 import padl.kernel.IElement;
-import padl.kernel.exception.ModelDeclarationException;
 import padl.path.IConstants;
-import util.multilingual.MultilingualManager;
 
 public abstract class Element extends Constituent implements IElement {
 	private static final long serialVersionUID = -600323363393722203L;
-	private IElement attachedElement;
+
+	private AttachmentSupport attachment = new AttachmentSupport();
+
+	private void readObject(final java.io.ObjectInputStream in) throws IOException, ClassNotFoundException {
+		in.defaultReadObject();
+		if (this.attachment == null) {
+			this.attachment = new AttachmentSupport();
+		}
+	}
 
 	public Element(final char[] actorID) {
 		super(actorID);
 	}
+
 	protected char getPathSymbol() {
 		return IConstants.ELEMENT_SYMBOL;
 	}
+
 	public void attachTo(final IElement anElement) {
-		if (anElement != null) {
-			if (anElement == this) {
-				throw new ModelDeclarationException(
-					MultilingualManager
-						.getString("ELEM_ATTACH", IElement.class));
-			}
-
-			if (!anElement.getClass().isInstance(this)) {
-				throw new ModelDeclarationException(
-					MultilingualManager.getString(
-						"ATTACH",
-						IElement.class,
-						new Object[] { anElement.getClass() }));
-			}
-
-			this.detach();
-			this.attachedElement = anElement;
-		}
+		this.attachment.attachTo(this, anElement);
 	}
+
 	public void detach() {
-		final IElement oldAttachedElement = this.getAttachedElement();
-
-		if (oldAttachedElement == null) {
-			return;
-		}
-
-		this.attachedElement = null;
+		this.attachment.detach();
 	}
+
 	public IElement getAttachedElement() {
-		return this.attachedElement;
+		return this.attachment.getAttachedElement();
 	}
+
 	public char[] getName() {
 		// Delegation is used...
 		if (this.getAttachedElement() == null) {
@@ -73,17 +64,19 @@ public abstract class Element extends Constituent implements IElement {
 		}
 		return this.getAttachedElement().getName();
 	}
+
 	/**
 	 * This methods is used by the clone protocol.
 	 */
+
 	public void performCloneSession() {
 		if (this.getAttachedElement() != null) {
-			((Element) this.getClone()).attachedElement =
-				(Element) this.getAttachedElement().getClone();
+			((Element) this.getClone()).attachment.setAttachedElement((Element) this.getAttachedElement().getClone());
 		}
 
 		super.performCloneSession();
 	}
+
 	public void startCloneSession() {
 		super.startCloneSession();
 
@@ -98,15 +91,12 @@ public abstract class Element extends Constituent implements IElement {
 		// This code is actually dumb! Because the ID of an element
 		// can contain legitimate underscores... So, I replace such
 		// underscore with something that only PADL would do...
-		final int index =
-			this.getDisplayID().indexOf(Constants.NUMBER_SEPARATOR);
+		final int index = this.getDisplayID().indexOf(Constants.NUMBER_SEPARATOR);
 		if (index > 0) {
-			((Element) this.getClone()).setID(ArrayUtils.subarray(
-				this.getID(),
-				0,
-				index));
+			((Element) this.getClone()).setID(ArrayUtils.subarray(this.getID(), 0, index));
 		}
 
-		((Element) this.getClone()).attachedElement = null;
+		((Element) this.getClone()).attachment.setAttachedElement(null);
+
 	}
 }
