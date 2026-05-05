@@ -101,15 +101,6 @@ public class MessageFollowsImmediatelyTest extends TestCase {
 		//System.out.println(problem.getPalmSolver().solutions);
 		System.out.println("Number of solutions : "
 				+ this.problem.getPalmSolver().solutions.size());
-		for (int i = 0; i < this.problem.getPalmSolver().solutions
-				.size(); i++) {
-			final PalmSolution solution = (PalmSolution) this.problem
-					.getPalmSolver().solutions.get(i);
-			int value0 = solution.getValue(0);
-			int value1 = solution.getValue(1);
-			System.out.println(this.sd.getIdxFirstLevelMessage(value0) + " "
-					+ this.sd.getIdxFirstLevelMessage(value1));
-		}
 	}
 
 	public void testSolutions() {

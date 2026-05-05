@@ -133,10 +133,6 @@ abstract class AbstractClassFileCreator {
 
 		for (int i = 0; i < someClassFiles.length; i++) {
 			// I add this new package to the current AbstractLevelModel model.
-			ProxyConsole.getInstance().normalOutput()
-					.print("Loading class files in: ");
-			ProxyConsole.getInstance().normalOutput()
-					.println(someClassFiles[i]);
 
 			final ClassFile[] classFiles;
 			if (someClassFiles[i].endsWith(".jar")) {
