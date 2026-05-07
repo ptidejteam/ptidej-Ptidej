@@ -1,6 +1,9 @@
 package padl.kernel;
 
-public final class Cardinality {
+import java.io.Serializable;
+
+public final class Cardinality implements Serializable
+{
 
 	public static final Cardinality One = new Cardinality(1);
 	public static final Cardinality Many = new Cardinality(2);
