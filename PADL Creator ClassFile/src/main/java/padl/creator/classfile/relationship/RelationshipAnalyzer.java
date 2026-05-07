@@ -704,7 +704,7 @@ public class RelationshipAnalyzer {
 								this.codeLevelModel.getFactory(),
 								anOriginEntity, aMethod,
 								IMethodInvocation.CLASS_CLASS,
-								parameter.getCardinality(),
+								parameter.getDimension(),
 								(IFirstClassEntity) targetEntity);
 					}
 					else {
@@ -712,7 +712,7 @@ public class RelationshipAnalyzer {
 								this.codeLevelModel.getFactory(),
 								anOriginEntity, aMethod,
 								IMethodInvocation.INSTANCE_CLASS,
-								parameter.getCardinality(),
+								parameter.getDimension(),
 								(IFirstClassEntity) targetEntity);
 					}
 

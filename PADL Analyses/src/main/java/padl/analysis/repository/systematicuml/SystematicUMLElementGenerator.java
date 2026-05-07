@@ -271,7 +271,7 @@ public class SystematicUMLElementGenerator implements IWalker {
 			this.factory.createParameter(
 				aParameter.getType(),
 				aParameter.getName(),
-				aParameter.getCardinality());
+				aParameter.getDimension());
 		this.newMethod.addConstituent(newParameter);
 	}
 	public void visit(final IPrimitiveEntity aPrimitiveEntity) {
