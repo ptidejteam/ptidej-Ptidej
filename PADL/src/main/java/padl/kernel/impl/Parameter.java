@@ -18,7 +18,7 @@ import padl.util.Util;
 
 public class Parameter extends Element implements IParameter {
 	private static final long serialVersionUID = -1688444809285895471L;
-	private Cardinality cardinality = Cardinality.One;
+	private int cardinality = Cardinality.One;
 	private int dimension = 1;
 	private IEntity type;
 
@@ -87,7 +87,7 @@ public class Parameter extends Element implements IParameter {
 	 *   int[]  	has dimension 2
 	 *   int[][]	has dimension 3...
 	 */
-	public Cardinality getCardinality() {
+	public int getCardinality() {
 		return this.cardinality;
 	}
 
@@ -128,7 +128,7 @@ public class Parameter extends Element implements IParameter {
 		return buffer.toString();
 	}
 	
-	public void setCardinality(Cardinality cardinality) {
+	public void setCardinality(int cardinality) {
 		this.cardinality = cardinality;	
 	}
 
