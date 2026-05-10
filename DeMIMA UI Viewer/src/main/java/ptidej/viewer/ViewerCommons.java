@@ -108,9 +108,20 @@ public class ViewerCommons {
 									.errorOutput());
 							}
 							catch (final InvocationTargetException ite) {
-								ite.printStackTrace(ProxyConsole
-									.getInstance()
-									.errorOutput());
+							    if (ite.getCause() != null && ite.getCause().getClass().getSimpleName()
+							            .equals("UnsupportedSourceModelException")) {
+							        javax.swing.JOptionPane.showMessageDialog(
+							            null,
+							            "The current model does not support AAC Relationships analysis.\n"
+							            + "Please load a Java bytecode or source code model first.",
+							            "Unsupported Model Type",
+							            javax.swing.JOptionPane.WARNING_MESSAGE);
+							    }
+							    else {
+							        ite.printStackTrace(ProxyConsole
+							            .getInstance()
+							            .errorOutput());
+							    }
 							}
 						}
 					};
