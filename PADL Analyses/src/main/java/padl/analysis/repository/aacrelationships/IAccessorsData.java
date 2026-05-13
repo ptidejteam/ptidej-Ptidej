@@ -10,14 +10,14 @@
  ******************************************************************************/
 package padl.analysis.repository.aacrelationships;
 
+import padl.kernel.ICardinality;
 import padl.kernel.IField;
 
 /**
  * @author Yann-Gaël Guéhéneuc
  * @since  2004/08/01
  */
-interface IAccessorsData {
-	int getCardinality();
+interface IAccessorsData extends ICardinality {
 	boolean matches(
 		final String targetName,
 		final IField fieldInfo);

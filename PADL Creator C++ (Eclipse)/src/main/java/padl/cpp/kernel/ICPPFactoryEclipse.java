@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.cpp.kernel;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IEntity;
 import padl.kernel.IFactory;
 import padl.kernel.IParameter;
@@ -28,7 +29,7 @@ public interface ICPPFactoryEclipse extends IFactory {
 		final char[] aID,
 		final char[] aName,
 		final char[] aType,
-		final int aCardinality);
+		final Cardinality aCardinality);
 	IGlobalFunction createGlobalFunction(final char[] anID, final char[] aName);
 	IGlobalFunctionGhost createGlobalFunctionGhost(
 		final char[] anID,
@@ -38,7 +39,7 @@ public interface ICPPFactoryEclipse extends IFactory {
 		final IEntity parameterEntity,
 		final char[] parameterName,
 		final char[] parameterQualification,
-		final int cardinality);
+		final int dimension);
 	IStructure createStructure(final char[] anID);
 	IUnion createUnion(final char[] anID);
 }

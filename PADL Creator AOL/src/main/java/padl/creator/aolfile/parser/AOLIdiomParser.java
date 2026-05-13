@@ -24,7 +24,7 @@ import com.ibm.toad.cfparse.utils.Access;
 
 import padl.creator.aolfile.AOLCreator;
 import padl.creator.aolfile.misc.Utils;
-import padl.kernel.Constants;
+import padl.kernel.Cardinality;
 import padl.kernel.IAssociation;
 import padl.kernel.IContainerAggregation;
 import padl.kernel.IElement;
@@ -791,7 +791,7 @@ class CUP$AOLIdiomParser$actions {
 											("UNKNOWN" + Math.random())
 													.toCharArray(),
 											targetEntity,
-											Constants.CARDINALITY_MANY);
+											Cardinality.Many);
 							sourceEntity.addConstituent(aggregation);
 						}
 					}
@@ -868,7 +868,7 @@ class CUP$AOLIdiomParser$actions {
 											("UNKNOWN" + Math.random())
 													.toCharArray(),
 											targetEntity,
-											Constants.CARDINALITY_MANY);
+											Cardinality.Many);
 							aggregation.setName(n.toCharArray());
 							sourceEntity.addConstituent(aggregation);
 						}
@@ -1341,7 +1341,7 @@ class CUP$AOLIdiomParser$actions {
 											("UNKNOWN" + Math.random())
 													.toCharArray(),
 											targetEntity,
-											Constants.CARDINALITY_MANY);
+											Cardinality.Many);
 							sourceEntity.addConstituent(association);
 						}
 					}
@@ -1416,7 +1416,7 @@ class CUP$AOLIdiomParser$actions {
 											("UNKNOWN" + Math.random())
 													.toCharArray(),
 											targetEntity,
-											Constants.CARDINALITY_MANY);
+											Cardinality.Many);
 							association.setName(n.toCharArray());
 							sourceEntity.addConstituent(association);
 						}
@@ -1763,7 +1763,7 @@ class CUP$AOLIdiomParser$actions {
 					this.parser.addToListOfArguments(
 							Factory.getInstance().createParameter(targetEntity,
 									("a" + t).toCharArray(),
-									Constants.CARDINALITY_ONE));
+									1));
 				}
 			}
 
@@ -1815,7 +1815,7 @@ class CUP$AOLIdiomParser$actions {
 					this.parser.addToListOfArguments(
 							Factory.getInstance().createParameter(targetEntity,
 									("a" + t).toCharArray(),
-									Constants.CARDINALITY_ONE));
+									1));
 				}
 			}
 
@@ -1866,7 +1866,7 @@ class CUP$AOLIdiomParser$actions {
 				if (targetEntity != null) {
 					this.parser.addToListOfArguments(Factory.getInstance()
 							.createParameter(targetEntity, n.toCharArray(),
-									Constants.CARDINALITY_ONE));
+									1));
 				}
 			}
 
@@ -2375,7 +2375,7 @@ class CUP$AOLIdiomParser$actions {
 				// TODO: Should compute the cardinality!
 				final IField field = Factory.getInstance().createField(
 						n.toCharArray(), n.toCharArray(), t.toCharArray(),
-						Constants.CARDINALITY_ONE);
+						Cardinality.One);
 				this.parser.addToListOfElements(field);
 			}
 
@@ -2404,7 +2404,7 @@ class CUP$AOLIdiomParser$actions {
 				// TODO: Should compute the cardinality!
 				final IField field = Factory.getInstance().createField(
 						n.toCharArray(), n.toCharArray(), "".toCharArray(),
-						Constants.CARDINALITY_ONE);
+						Cardinality.One);
 				this.parser.addToListOfElements(field);
 			}
 
@@ -2439,7 +2439,7 @@ class CUP$AOLIdiomParser$actions {
 				// TODO: Should compute the cardinality!
 				final IField field = Factory.getInstance().createField(
 						n.toCharArray(), n.toCharArray(), "".toCharArray(),
-						Constants.CARDINALITY_ONE);
+						Cardinality.One);
 				if (v.equals("PUBLIC")) {
 					field.setVisibility(Access.ACC_PUBLIC);
 				}
@@ -2489,7 +2489,7 @@ class CUP$AOLIdiomParser$actions {
 				// TODO: Should compute the cardinality!
 				final IField field = Factory.getInstance().createField(
 						n.toCharArray(), n.toCharArray(), t.toCharArray(),
-						Constants.CARDINALITY_ONE);
+						Cardinality.One);
 				if (v.equals("PUBLIC")) {
 					field.setVisibility(Access.ACC_PUBLIC);
 				}

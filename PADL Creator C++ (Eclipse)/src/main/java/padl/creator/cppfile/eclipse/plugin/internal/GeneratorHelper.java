@@ -79,6 +79,7 @@ import padl.kernel.IMethodInvocation;
 import padl.kernel.IOperation;
 import padl.kernel.IPackage;
 import padl.kernel.IParameter;
+import padl.kernel.Cardinality;
 import padl.kernel.exception.ModelDeclarationException;
 import padl.path.Finder;
 import padl.path.FormatException;
@@ -431,8 +432,8 @@ class GeneratorHelper {
 				final String parameterTypeName = parameterType.toString()
 						.replaceAll("const ", "");
 				final char[] parameterName = aCPPParameter.getNameCharArray();
-				final int cardinality = Utils.getCardinality(aCPPParameter);
-
+				//Unsure of this
+				final int dimension = Utils.getCardinality(aCPPParameter) == Cardinality.Many ? 2 : 1;
 				final IParameter padlParameter;
 				final int indexOfSpace;
 				if ((indexOfSpace = parameterTypeName.indexOf(' ')) > -1) {
@@ -441,12 +442,12 @@ class GeneratorHelper {
 					padlParameter = ((ICPPFactoryEclipse) CPPFactoryEclipse
 							.getInstance()).createParameter(parameterEntity,
 									parameterName, parameterQualification,
-									cardinality);
+									dimension);
 				}
 				else {
 					padlParameter = CPPFactoryEclipse.getInstance()
 							.createParameter(parameterEntity, parameterName,
-									cardinality);
+									dimension);
 				}
 
 				aPADLOperation.addConstituent(padlParameter);
@@ -505,7 +506,7 @@ class GeneratorHelper {
 			return;
 		}
 
-		final int cardinality = Utils.getCardinality(aCPPVariable);
+		final Cardinality cardinality = Utils.getCardinality(aCPPVariable);
 
 		IField field = null;
 		if (aCPPVariable instanceof ICPPField
@@ -727,7 +728,7 @@ class GeneratorHelper {
 		final boolean isFromField = false;
 
 		final int visibility = callingOperation.getVisibility();
-		final int cardinality = Constants.CARDINALITY_ONE;
+		final Cardinality cardinality = Cardinality.One;
 		final int type = Utils.getMethodInvocationType(callingOperation,
 				calledOperation, isFromField);
 
@@ -782,15 +783,15 @@ class GeneratorHelper {
 				}
 			}
 			else {
-				final int cardinality;
+				final Cardinality cardinality;
 				if (declarator instanceof ICPPASTArrayDeclarator) {
-					cardinality = Constants.CARDINALITY_MANY;
+					cardinality = Cardinality.Many;
 				}
 				else if (declarator.getPointerOperators().length > 0) {
-					cardinality = Constants.CARDINALITY_MANY;
+					cardinality = Cardinality.Many;
 				}
 				else {
-					cardinality = Constants.CARDINALITY_ONE;
+					cardinality = Cardinality.One;
 				}
 				final char[] fieldName = Utils
 						.convertSeparators(declaratorName.toCharArray());

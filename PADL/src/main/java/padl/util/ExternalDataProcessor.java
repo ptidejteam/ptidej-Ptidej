@@ -13,6 +13,8 @@ package padl.util;
 import java.util.Iterator;
 import java.util.Properties;
 import java.util.StringTokenizer;
+
+import padl.kernel.Cardinality;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
@@ -31,7 +33,7 @@ public final class ExternalDataProcessor {
 		final IFirstClassEntity anOriginEntity,
 		final String aRelationshipName,
 		final IFirstClassEntity aTargetEntity,
-		final int aCardinality) {
+		final Cardinality aCardinality) {
 
 		final IAggregation aggregation =
 			anAbstractModel.getFactory().createAggregationRelationship(
@@ -45,7 +47,7 @@ public final class ExternalDataProcessor {
 		final IFirstClassEntity anOriginEntity,
 		final String aRelationshipName,
 		final IFirstClassEntity aTargetEntity,
-		final int aCardinality) {
+		final Cardinality aCardinality) {
 
 		final IComposition composition =
 			anAbstractModel.getFactory().createCompositionRelationship(
@@ -121,9 +123,9 @@ public final class ExternalDataProcessor {
 								.nextToken()
 								.trim()
 								.toCharArray());
-					final Integer cardinality =
-						Integer.valueOf(tokenizer.nextToken().trim());
-
+					final Cardinality cardinality =
+							Cardinality.valueOf(tokenizer.nextToken().trim());
+					
 					if (originEntity != null && targetEntity != null) {
 						if (name.equals("addAggregationRelationship")) {
 							ExternalDataProcessor.addAggregationRelationship(
@@ -131,7 +133,7 @@ public final class ExternalDataProcessor {
 								originEntity,
 								relationshipName,
 								targetEntity,
-								cardinality.intValue());
+								cardinality);
 						}
 						else if (name.equals("addCompositionRelationship")) {
 							ExternalDataProcessor.addCompositionRelationship(
@@ -139,7 +141,7 @@ public final class ExternalDataProcessor {
 								originEntity,
 								relationshipName,
 								targetEntity,
-								cardinality.intValue());
+								cardinality);
 						}
 					}
 				}

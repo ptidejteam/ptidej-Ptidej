@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import org.junit.Assert;
 import junit.framework.TestCase;
+import padl.kernel.Cardinality;
 import padl.kernel.IConstituent;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.exception.ModelDeclarationException;
@@ -81,7 +82,7 @@ public class AbstractContainerTest extends TestCase {
 		MethodInvocation minvocation =
 			new MethodInvocation(
 				IMethodInvocation.CLASS_CLASS,
-				0,
+				Cardinality.One,
 				Access.ACC_PUBLIC,
 				firstClassEntity);
 		method.addConstituent(minvocation);
@@ -89,7 +90,7 @@ public class AbstractContainerTest extends TestCase {
 		minvocation =
 			new MethodInvocation(
 				IMethodInvocation.CLASS_CLASS,
-				0,
+				Cardinality.One,
 				Access.ACC_PUBLIC,
 				firstClassEntity);
 		method.addConstituent(minvocation);

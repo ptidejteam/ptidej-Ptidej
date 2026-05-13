@@ -38,6 +38,7 @@ import org.antlr.runtime.tree.TreeAdaptor;
 import com.ibm.toad.cfparse.utils.Access;
 
 import padl.csharp.kernel.ICSharpFactory;
+import padl.kernel.Cardinality;
 import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IConstituentOfEntity;
@@ -28680,7 +28681,7 @@ public class CSharpParser extends Parser implements Constants {
 				//System.out.println("la mama");
 				this.element1 = this.getFactory().createField(
 						retval.name.toCharArray(), retval.name.toCharArray(),
-						retval.Type.toCharArray(), 1);
+						retval.Type.toCharArray(), Cardinality.One);
 				//		if (methodstock = true) {
 				//			MethodStockBody.add(element1);
 				//			ElementMethodNumber = ElementMethodNumber + 1;

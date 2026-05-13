@@ -24,7 +24,7 @@ import com.ibm.toad.cfparse.utils.Access;
 
 import padl.creator.aolfile.AOLCreator;
 import padl.creator.aolfile.misc.Utils;
-import padl.kernel.Constants;
+import padl.kernel.Cardinality;
 import padl.kernel.IAssociation;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IContainerAggregation;
@@ -1025,7 +1025,7 @@ class CUP$AOLCodeParser$actions {
 										("UNKNOWN" + Math.random())
 												.toCharArray(),
 										targetEntity,
-										Constants.CARDINALITY_MANY);
+										Cardinality.Many);
 						sourceEntity.addConstituent(aggregation);
 					}
 				}
@@ -1099,7 +1099,7 @@ class CUP$AOLCodeParser$actions {
 										("UNKNOWN" + Math.random())
 												.toCharArray(),
 										targetEntity,
-										Constants.CARDINALITY_MANY);
+										Cardinality.Many);
 						aggregation.setName(n.toCharArray());
 						sourceEntity.addConstituent(aggregation);
 					}
@@ -1451,7 +1451,7 @@ class CUP$AOLCodeParser$actions {
 					final IAssociation association = Factory.getInstance()
 							.createAssociationRelationship(
 									("UNKNOWN" + Math.random()).toCharArray(),
-									targetEntity, Constants.CARDINALITY_MANY);
+									targetEntity, Cardinality.Many);
 					this.parser.addToListOfElements(association);
 				}
 			}
@@ -1507,7 +1507,7 @@ class CUP$AOLCodeParser$actions {
 					final IAssociation association = Factory.getInstance()
 							.createAssociationRelationship(
 									(n + Math.random()).toCharArray(),
-									targetEntity, Constants.CARDINALITY_MANY);
+									targetEntity, Cardinality.Many);
 					association.setName(n.toCharArray());
 					this.parser.addToListOfElements(association);
 				}
@@ -2001,7 +2001,7 @@ class CUP$AOLCodeParser$actions {
 					this.parser.addToListOfArguments(
 							Factory.getInstance().createParameter(targetEntity,
 									("a" + t).toCharArray(),
-									Constants.CARDINALITY_ONE));
+									1));
 				}
 			}
 
@@ -2054,7 +2054,7 @@ class CUP$AOLCodeParser$actions {
 						this.parser.addToListOfArguments(
 								Factory.getInstance().createParameter(
 										targetEntity, ("a" + t).toCharArray(),
-										Constants.CARDINALITY_ONE));
+										1));
 					}
 				}
 				else {
@@ -2117,7 +2117,7 @@ class CUP$AOLCodeParser$actions {
 					if (targetEntity != null) {
 						this.parser.addToListOfArguments(Factory.getInstance()
 								.createParameter(targetEntity, n.toCharArray(),
-										Constants.CARDINALITY_ONE));
+										1));
 					}
 				}
 				else {
@@ -3164,12 +3164,12 @@ class CUP$AOLCodeParser$actions {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(),
 							("UNKNOWN" + Math.random()).toCharArray(),
-							Constants.CARDINALITY_ONE);
+							Cardinality.One);
 				}
 				else {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(), t.toCharArray(),
-							Constants.CARDINALITY_ONE);
+							Cardinality.One);
 				}
 				if (v.equals("PUBLIC")) {
 					field.setVisibility(Access.ACC_PUBLIC);
@@ -3223,12 +3223,12 @@ class CUP$AOLCodeParser$actions {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(),
 							("UNKNOWN" + Math.random()).toCharArray(),
-							Constants.CARDINALITY_ONE);
+							Cardinality.One);
 				}
 				else {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(), t.toCharArray(),
-							Constants.CARDINALITY_ONE);
+							Cardinality.One);
 				}
 				if (v.equals("PUBLIC")) {
 					field.setVisibility(Access.ACC_PUBLIC);
@@ -3282,12 +3282,12 @@ class CUP$AOLCodeParser$actions {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(),
 							("UNKNOWN" + Math.random()).toCharArray(),
-							Constants.CARDINALITY_ONE);
+							Cardinality.One);
 				}
 				else {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(), t.toCharArray(),
-							Constants.CARDINALITY_ONE);
+							Cardinality.One);
 				}
 				if (v.equals("PUBLIC")) {
 					field.setVisibility(Access.ACC_PUBLIC);
@@ -3341,12 +3341,12 @@ class CUP$AOLCodeParser$actions {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(),
 							("UNKNOWN" + Math.random()).toCharArray(),
-							Constants.CARDINALITY_ONE);
+							Cardinality.One);
 				}
 				else {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(), t.toCharArray(),
-							Constants.CARDINALITY_ONE);
+							Cardinality.One);
 				}
 				if (v.equals("PUBLIC")) {
 					field.setVisibility(Access.ACC_PUBLIC);
@@ -3409,12 +3409,12 @@ class CUP$AOLCodeParser$actions {
 					field = Factory.getInstance().createField(
 							(n1 + n2).toCharArray(), (n1 + n2).toCharArray(),
 							("UNKNOWN" + Math.random()).toCharArray(),
-							Constants.CARDINALITY_ONE);
+							Cardinality.One);
 				}
 				else {
 					field = Factory.getInstance().createField(
 							(n1 + n2).toCharArray(), (n1 + n2).toCharArray(),
-							t.toCharArray(), Constants.CARDINALITY_ONE);
+							t.toCharArray(), Cardinality.One);
 				}
 				if (v.equals("PUBLIC")) {
 					field.setVisibility(Access.ACC_PUBLIC);

@@ -11,6 +11,7 @@
 package padl.aspectj.kernel.impl;
 
 import padl.aspectj.kernel.IInterTypeField;
+import padl.kernel.Cardinality;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.impl.Field;
 
@@ -30,7 +31,7 @@ public class InterTypeField extends Field implements IInterTypeField {
 	public InterTypeField(
 		final char[] anID,
 		final char[] aFieldType,
-		final int aCardinality) {
+		final Cardinality aCardinality) {
 
 		super(anID, anID, aFieldType, aCardinality);
 		this.target = null;

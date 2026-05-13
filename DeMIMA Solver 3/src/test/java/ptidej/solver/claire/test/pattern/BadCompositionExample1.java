@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.solver.claire.test.pattern;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAggregation;
 import padl.kernel.IClass;
@@ -34,7 +35,7 @@ public final class BadCompositionExample1 extends TestMotifModel {
 				"AggregatedClass1".toCharArray());
 		final IAggregation anAggregation1 = this.getFactory()
 				.createAggregationRelationship("aggregation".toCharArray(),
-						anAggregatedClass1, Constants.CARDINALITY_ONE);
+						anAggregatedClass1, Cardinality.One);
 		anAggregateClass1.addConstituent(anAggregation1);
 
 		final IClass anAggregateClass2 = this.getFactory().createClass(
@@ -54,7 +55,7 @@ public final class BadCompositionExample1 extends TestMotifModel {
 		subclass3.addInheritedEntity(subclass2);
 		final IAggregation anAggregation2 = this.getFactory()
 				.createAggregationRelationship("aggregation".toCharArray(),
-						anAggregatedClass2, Constants.CARDINALITY_ONE);
+						anAggregatedClass2, Cardinality.One);
 		anAggregateClass2.addConstituent(anAggregation2);
 
 		final IPackage enclosingPackage = this.getFactory()

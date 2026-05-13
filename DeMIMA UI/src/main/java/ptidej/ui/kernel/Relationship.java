@@ -14,13 +14,16 @@ import java.awt.Dimension;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
+
+import padl.kernel.Cardinality;
+import padl.kernel.ICardinality;
 import ptidej.ui.Constants;
 import ptidej.ui.RGB;
 import ptidej.ui.primitive.IPrimitive;
 import ptidej.ui.primitive.IPrimitiveFactory;
 import ptidej.ui.primitive.ISymbol;
 
-public abstract class Relationship extends Element {
+public abstract class Relationship extends Element implements ICardinality {
 	private static Point centralPoint(
 		final Point position,
 		final Dimension dimension) {
@@ -278,7 +281,7 @@ public abstract class Relationship extends Element {
 		return false;
 	}
 
-	private final int cardinality;
+	private Cardinality cardinality;
 	private Point destination;
 	private IPrimitive line;
 	private Entity originEntity;
@@ -288,7 +291,7 @@ public abstract class Relationship extends Element {
 
 	public Relationship(
 		final IPrimitiveFactory primitiveFactory,
-		final int cardinality,
+		final Cardinality cardinality,
 		final Entity origin,
 		final Entity target) {
 
@@ -415,8 +418,12 @@ public abstract class Relationship extends Element {
 		// except for not having a null value.
 		return targetCentralPoint;
 	}
-	protected final int getCardinality() {
+	public final Cardinality getCardinality() {
 		return this.cardinality;
+	}
+	
+	public final void setCardinality(final Cardinality cardinality) {
+		this.cardinality = cardinality;
 	}
 	protected final RGB getColor() {
 		final RGB color;
@@ -435,7 +442,7 @@ public abstract class Relationship extends Element {
 	public final String getName() {
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append(this.getSymbol());
-		buffer.append((this.getCardinality() > 1) ? "* " : " ");
+		buffer.append((this.getCardinality() == Cardinality.Many) ? "* " : " ");
 		// buffer.append(this.getTypeAndFieldNames());
 		buffer.append(this.getTargetEntity().getName());
 		return buffer.toString();

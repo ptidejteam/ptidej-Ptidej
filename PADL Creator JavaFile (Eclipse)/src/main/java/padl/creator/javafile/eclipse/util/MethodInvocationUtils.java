@@ -25,6 +25,8 @@ import org.eclipse.jdt.core.dom.IVariableBinding;
 import org.eclipse.jdt.core.dom.ParenthesizedExpression;
 import org.eclipse.jdt.core.dom.QualifiedName;
 import org.eclipse.jdt.core.dom.SimpleName;
+
+import padl.kernel.Cardinality;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IEntity;
 import padl.kernel.IField;
@@ -99,7 +101,8 @@ public class MethodInvocationUtils {
 			// Yann: May use a Ghost with no name (empty string) when parsing Foutse's "colossus" data!
 			// TODO: Understand why it could be null...
 			if (paramEntity != null && !typeBinding.isCapture()) {
-				final int paramDim = PadlParserUtil.getCardinality(typeBinding);
+				//Dimension not cardinality
+				final int paramDim = PadlParserUtil.getDimension(typeBinding);
 				final IParameter param =
 					aPadlModel.getFactory().createParameter(
 						paramEntity,
@@ -302,7 +305,7 @@ public class MethodInvocationUtils {
 			final ITypeBinding fieldTypeBinding = variableBinding.getType();
 			final String fieldType =
 				PadlParserUtil.getTypeName(fieldTypeBinding, true);
-			final int cardinality = PadlParserUtil.getCardinality(fieldTypeBinding);
+			final Cardinality cardinality = PadlParserUtil.getCardinality(fieldTypeBinding);
 			field =
 				aPadlModel.getFactory().createField(
 					fieldID.toCharArray(),

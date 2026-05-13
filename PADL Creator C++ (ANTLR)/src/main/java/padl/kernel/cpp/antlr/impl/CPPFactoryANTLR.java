@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.kernel.cpp.antlr.impl;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IFactory;
 import padl.kernel.cpp.antlr.ICPPFactoryANTLR;
 import padl.kernel.cpp.antlr.IDestructor;
@@ -46,7 +47,7 @@ public class CPPFactoryANTLR extends Factory implements ICPPFactoryANTLR {
 	public IGlobalField createGlobalField(
 		final char[] aName,
 		final char[] aType,
-		final int aCardinality) {
+		final Cardinality aCardinality) {
 
 		return new GlobalField(aName, aType, aCardinality);
 	}

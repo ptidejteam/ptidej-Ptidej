@@ -42,7 +42,7 @@ public class Provider_INSTANCE_INSTANCE_FROM_FIELD_ONE extends AbstractProvider
 		final IMethodInvocation methodInvocation =
 			Factory.getInstance().createMethodInvocation(
 				IMethodInvocation.INSTANCE_INSTANCE_FROM_FIELD,
-				padl.kernel.Constants.CARDINALITY_ONE,
+				padl.kernel.Cardinality.One,
 				Modifier.PUBLIC,
 				targetEntity,
 				fieldDeclaringEntity);
@@ -57,7 +57,7 @@ public class Provider_INSTANCE_INSTANCE_FROM_FIELD_ONE extends AbstractProvider
 				"a".toCharArray(),
 				"a".toCharArray(),
 				"padl.creator.test.relationships.providers.A".toCharArray(),
-				padl.kernel.Constants.CARDINALITY_ONE);
+				padl.kernel.Cardinality.One);
 		final List listCallingFields = new ArrayList();
 		listCallingFields.add(invocationField);
 		methodInvocation.setCallingField(listCallingFields);

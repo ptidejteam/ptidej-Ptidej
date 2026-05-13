@@ -33,6 +33,7 @@ import org.eclipse.jdt.core.dom.TypeDeclaration;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 
 import padl.creator.javafile.eclipse.util.PadlParserUtil;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
@@ -582,7 +583,7 @@ public class VisitorSecondParsing extends ExtendedASTVisitor {
 		else {
 			final String typeName = PadlParserUtil.getTypeName(type, true);
 			final String fieldName = node.getName().toString();
-			final int cardinality = PadlParserUtil.getCardinality(type);
+			final Cardinality cardinality = PadlParserUtil.getCardinality(type);
 			final IField field =
 				this.padlModel.getFactory().createField(
 					fieldName.toCharArray(),

@@ -15,6 +15,7 @@ import org.junit.Assert;
 import junit.framework.TestCase;
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.ICodeLevelModel;
@@ -55,7 +56,7 @@ public class SanityTest extends TestCase {
 				Factory.getInstance().createParameter(
 					entity,
 					"a".toCharArray(),
-					Constants.CARDINALITY_ONE);
+					1);
 			final IMethod aSetter =
 				Factory.getInstance().createMethod(
 					"set".toCharArray(),
@@ -67,7 +68,7 @@ public class SanityTest extends TestCase {
 					"a".toCharArray(),
 					"a".toCharArray(),
 					entityName,
-					2);
+					Cardinality.Many);
 			aField.setPrivate(true);
 
 			entity.addConstituent(aGetter);

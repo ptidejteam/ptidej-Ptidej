@@ -11,6 +11,8 @@
 package padl.creator.classfile.util;
 
 import java.util.List;
+
+import padl.kernel.Cardinality;
 import padl.kernel.IFactory;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IMethodInvocation;
@@ -30,7 +32,7 @@ public class ExtendedMethodInvocation {
 		final IFirstClassEntity enclosingEntity,
 		final IOperation enclosingMethod,
 		final int type,
-		final int cardinality,
+		final Cardinality cardinality,
 		final IFirstClassEntity targetEntity) {
 
 		this.enclosingEntity = enclosingEntity;
@@ -47,7 +49,7 @@ public class ExtendedMethodInvocation {
 		final IFirstClassEntity enclosingEntity,
 		final IOperation enclosingMethod,
 		final int type,
-		final int cardinality,
+		final Cardinality cardinality,
 		final IFirstClassEntity targetEntity,
 		final IFirstClassEntity entityDeclaringField) {
 
@@ -61,7 +63,7 @@ public class ExtendedMethodInvocation {
 				targetEntity,
 				entityDeclaringField);
 	}
-	public int getCardinality() {
+	public Cardinality getCardinality() {
 		return this.methodInvocation.getCardinality();
 	}
 	public IOperation getEnclosingMethod() {

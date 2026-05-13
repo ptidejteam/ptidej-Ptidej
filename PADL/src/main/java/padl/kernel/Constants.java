@@ -27,10 +27,6 @@ public interface Constants {
 	int WEAKLY_REQUIRED = 25;
 	int OPTIONAL = 1;
 
-	// Cardinalities.
-	int CARDINALITY_ONE = 1;
-	int CARDINALITY_MANY = 2;
-
 	// Prefix of getters and setters.
 	// Yann 2006/02/23: New names.
 	// I add "get" and "set" to MANY because of class 

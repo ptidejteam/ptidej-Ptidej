@@ -55,6 +55,7 @@ import padl.kernel.IInterfaceActor;
 import padl.kernel.IMethod;
 import padl.kernel.IPackage;
 import padl.kernel.IParameter;
+import padl.kernel.Cardinality;
 import padl.kernel.impl.ConstituentsRepository;
 import padl.kernel.impl.Factory;
 import padl.util.Util;
@@ -714,18 +715,19 @@ abstract class AbstractClassFileCreator {
 						// Yann 2009/05/02: No String anymore!
 						// Cool, eh?
 						char[] paramType = detectedParameters[i];
-						int cardinality = 1;
+						// probably dimension here instead of cardinality
+						int dimension = 1;
 						final int bracketIndex = ArrayUtils.indexOf(paramType,
 								'[');
 						if (bracketIndex > -1) {
-							cardinality = (paramType.length - bracketIndex) / 2
+							dimension = (paramType.length - bracketIndex) / 2
 									+ 1;
 							paramType = ArrayUtils.subarray(paramType, 0,
 									bracketIndex);
 						}
 
 						final IParameter parameter = this.createParameter(
-								aCodeLevelModel, paramType, cardinality);
+								aCodeLevelModel, paramType, dimension);
 						currentConstructor.addConstituent(parameter);
 					}
 
@@ -756,20 +758,21 @@ abstract class AbstractClassFileCreator {
 	}
 
 	private IParameter createParameter(final ICodeLevelModel aCodeLevelModel,
-			final char[] someParamType, final int cardinality) {
+			final char[] someParamType, final int dimension) {
 
 		final IParameter parameter;
 		if (Util.isPrimtiveType(someParamType)) {
 			parameter = aCodeLevelModel.getFactory()
 					.createParameter(aCodeLevelModel.getFactory()
-							.createPrimitiveEntity(someParamType), cardinality);
+							.createPrimitiveEntity(someParamType), dimension);
 		}
 		else {
 			parameter = aCodeLevelModel.getFactory()
 					.createParameter(
 							Utils.getEntityOrCreateGhost(aCodeLevelModel,
+									
 									someParamType, this.mapOfIDsEntities),
-							cardinality);
+							dimension);
 		}
 		return parameter;
 	}
@@ -923,9 +926,9 @@ abstract class AbstractClassFileCreator {
 			if (element instanceof ExtendedFieldInfo) {
 				final ExtendedFieldInfo currentField = (ExtendedFieldInfo) element;
 				char[] fieldType = currentField.getType();
-				final int cardinality = Util.isArrayOrCollection(fieldType)
-						? Constants.CARDINALITY_MANY
-						: Constants.CARDINALITY_ONE;
+				final Cardinality cardinality = Util.isArrayOrCollection(fieldType)
+						? Cardinality.Many
+						: Cardinality.One;
 
 				// Yann 2003/11/29: Array!
 				// I must take care of removing brackets for array.

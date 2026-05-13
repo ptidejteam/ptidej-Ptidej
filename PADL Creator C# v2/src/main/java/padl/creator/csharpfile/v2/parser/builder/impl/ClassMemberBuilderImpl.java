@@ -14,7 +14,7 @@ import org.antlr.runtime.tree.CommonTree;
 import padl.creator.csharpfile.v2.parser.CSharpTokens;
 import padl.creator.csharpfile.v2.parser.builder.BuilderContext;
 import padl.creator.csharpfile.v2.parser.builder.CodeBuilder;
-import padl.kernel.Constants;
+import padl.kernel.Cardinality;
 import padl.kernel.IConstituent;
 import padl.kernel.IEntity;
 import padl.kernel.IField;
@@ -74,7 +74,7 @@ public class ClassMemberBuilderImpl extends AbstractPADLCodeBuilder {
 					name.getText().toCharArray(),
 					name.getText().toCharArray(),
 					type.getText().toCharArray(),
-					Constants.CARDINALITY_ONE);
+					Cardinality.One);
 			if (modifier != null) {
 				final CSharpTokens modifierType =
 					CSharpTokens.findByType(modifier.getType());
@@ -175,7 +175,7 @@ public class ClassMemberBuilderImpl extends AbstractPADLCodeBuilder {
 
 			// hardcoded list detection for class member fields
 			if (type.getText().contains("List")) {
-				this.field.setCardinality(2); // a list has a potential cardinality of more than one... 
+				this.field.setCardinality(Cardinality.Many); // a list has a potential cardinality of more than one... 
 				final CommonTree openingBrace =
 					this.findNextChildOfType(
 						node,

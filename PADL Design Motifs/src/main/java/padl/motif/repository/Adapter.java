@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.motif.repository;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IAssociation;
 import padl.kernel.IClass;
 import padl.kernel.IDelegatingMethod;
@@ -52,7 +53,7 @@ public class Adapter extends StructuralMotifModel implements Cloneable,
 			this.getFactory().createAssociationRelationship(
 				Adapter.REQUEST,
 				adaptee,
-				1);
+				Cardinality.One);
 		adapter.addConstituent(associationAdapterAdaptee);
 		final IDelegatingMethod request =
 			this.getFactory().createDelegatingMethod(
@@ -72,7 +73,7 @@ public class Adapter extends StructuralMotifModel implements Cloneable,
 			this.getFactory().createAssociationRelationship(
 				Adapter.REQUEST,
 				target,
-				1);
+				Cardinality.One);
 		client.addConstituent(associationClientTarget);
 		final IDelegatingMethod method =
 			this.getFactory().createDelegatingMethod(

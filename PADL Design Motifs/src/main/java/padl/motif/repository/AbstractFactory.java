@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.motif.repository;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.ICreation;
@@ -59,7 +60,7 @@ public class AbstractFactory extends CreationalMotifModel implements Cloneable,
 			this.getFactory().createUseRelationship(
 				AbstractFactory.USE,
 				abstractFactory,
-				Constants.CARDINALITY_ONE);
+				Cardinality.One);
 		Client.addConstituent(ClientuseRelationship);
 
 		this.addConstituent(Client);
@@ -99,7 +100,7 @@ public class AbstractFactory extends CreationalMotifModel implements Cloneable,
 			this.getFactory().createUseRelationship(
 				AbstractFactory.KNOW,
 				abstractProduct,
-				Constants.CARDINALITY_ONE);
+				Cardinality.One);
 		abstractFactory.addConstituent(useRelationship);
 
 		final char[] nameAndID =
@@ -121,13 +122,13 @@ public class AbstractFactory extends CreationalMotifModel implements Cloneable,
 			this.getFactory().createCreationRelationship(
 				"create".toCharArray(),
 				concreteProduct,
-				Constants.CARDINALITY_ONE);
+				Cardinality.One);
 		concreteFactory.addConstituent(creationLink);
 		final IUseRelationship ClientuseRelationship =
 			this.getFactory().createUseRelationship(
 				AbstractFactory.USE,
 				abstractProduct,
-				Constants.CARDINALITY_ONE);
+				Cardinality.One);
 		Client.addConstituent(ClientuseRelationship);
 		this.addConstituent(abstractProduct);
 		this.addConstituent(concreteProduct);

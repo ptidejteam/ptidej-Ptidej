@@ -18,6 +18,7 @@ import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.classfile.test.ClassFilePrimitive;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAssociation;
 import padl.kernel.ICodeLevelModel;
@@ -28,6 +29,7 @@ import padl.kernel.IFirstClassEntity;
 import padl.kernel.IIdiomLevelModel;
 import padl.kernel.IUseRelationship;
 import padl.kernel.exception.CreationException;
+import padl.test.PADLPrimitive;
 import padl.util.Util;
 
 /**
@@ -77,7 +79,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Association visibility",
 				Access.getAsString(Access.ACC_PUBLIC),
 				Access.getAsString(elements[1].getVisibility()));
-		Assert.assertEquals("Association cardinality", 1,
+		Assert.assertEquals("Association cardinality", padl.kernel.Cardinality.One,
 				((IAssociation) elements[1]).getCardinality());
 		Assert.assertEquals("Association name",
 				"padl.kernel.impl.Association:java.lang.Object:1",
@@ -98,7 +100,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Container aggregation visibility",
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(elements[3].getVisibility()));
-		Assert.assertEquals("Container aggregation cardinality", 2,
+		Assert.assertEquals("Container aggregation cardinality", padl.kernel.Cardinality.Many,
 				((IContainerAggregation) elements[3]).getCardinality());
 		Assert.assertEquals("Container aggregation name",
 				"padl.kernel.impl.ContainerAggregation:padl.example.aggregation.A:2",
@@ -116,7 +118,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Use relationship visibility",
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(elements[5].getVisibility()));
-		Assert.assertEquals("Use relationship cardinality", 1,
+		Assert.assertEquals("Use relationship cardinality", padl.kernel.Cardinality.One,
 				((IUseRelationship) elements[5]).getCardinality());
 		Assert.assertEquals("Use relationship name",
 				"padl.kernel.impl.UseRelationship:padl.example.aggregation.A:1",
@@ -151,7 +153,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_PUBLIC),
 				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) elements[1]).getCardinality());
 		Assert.assertEquals("Association name",
 				"padl.kernel.impl.Association:java.lang.Object:1",
@@ -175,7 +177,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(elements[4].getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) elements[4]).getCardinality());
 		Assert.assertEquals("Use relationship name",
 				"padl.kernel.impl.Association:padl.example.aggregation.A:1",
@@ -204,7 +206,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_PUBLIC),
 				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) elements[1]).getCardinality());
 		Assert.assertEquals("Association name",
 				"padl.kernel.impl.Association:java.lang.Object:1",
@@ -228,7 +230,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Use relationship visibility",
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(elements[4].getVisibility()));
-		Assert.assertEquals("Use relationship cardinality", 1,
+		Assert.assertEquals("Use relationship cardinality", padl.kernel.Cardinality.One,
 				((IUseRelationship) elements[4]).getCardinality());
 		Assert.assertEquals("Use relationship name",
 				"padl.kernel.impl.UseRelationship:padl.example.aggregation.A:1",
@@ -256,7 +258,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Association visibility",
 				Access.getAsString(Access.ACC_PUBLIC),
 				Access.getAsString(elements[1].getVisibility()));
-		Assert.assertEquals("Association cardinality", 1,
+		Assert.assertEquals("Association cardinality", padl.kernel.Cardinality.One,
 				((IAssociation) elements[1]).getCardinality());
 		Assert.assertEquals("Association name",
 				"padl.kernel.impl.Association:java.lang.Object:1",
@@ -277,7 +279,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("ContainerAggregation link visibility",
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(elements[3].getVisibility()));
-		Assert.assertEquals("ContainerAggregation link cardinality", 2,
+		Assert.assertEquals("ContainerAggregation link cardinality", padl.kernel.Cardinality.Many,
 				((IContainerAggregation) elements[3]).getCardinality());
 		Assert.assertEquals("ContainerAggregation link name",
 				"padl.kernel.impl.ContainerAggregation:padl.example.aggregation.A:2",
@@ -295,7 +297,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Use relationship visibility",
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(elements[5].getVisibility()));
-		Assert.assertEquals("Use relationship cardinality", 1,
+		Assert.assertEquals("Use relationship cardinality", padl.kernel.Cardinality.One,
 				((IUseRelationship) elements[5]).getCardinality());
 		Assert.assertEquals("Use relationship name",
 				"padl.kernel.impl.UseRelationship:padl.example.aggregation.A:1+padl.kernel.impl.UseRelationship:padl.example.aggregation.A:1",
@@ -329,7 +331,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Association visibility",
 				Access.getAsString(Access.ACC_PUBLIC),
 				Access.getAsString(elements[1].getVisibility()));
-		Assert.assertEquals("Association cardinality", 1,
+		Assert.assertEquals("Association cardinality", padl.kernel.Cardinality.One,
 				((IAssociation) elements[1]).getCardinality());
 		Assert.assertEquals("Association name",
 				"padl.kernel.impl.Association:java.lang.Object:1",
@@ -350,7 +352,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Container aggregation visibility",
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(elements[3].getVisibility()));
-		Assert.assertEquals("Container aggregation cardinality", 2,
+		Assert.assertEquals("Container aggregation cardinality", padl.kernel.Cardinality.Many,
 				((IContainerAggregation) elements[3]).getCardinality());
 		Assert.assertEquals("Container aggregation name",
 				"padl.kernel.impl.ContainerAggregation:padl.example.aggregation.A:2",
@@ -368,7 +370,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Use relationship visibility",
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(elements[5].getVisibility()));
-		Assert.assertEquals("Use relationship cardinality", 1,
+		Assert.assertEquals("Use relationship cardinality", padl.kernel.Cardinality.One,
 				((IUseRelationship) elements[5]).getCardinality());
 		Assert.assertEquals("Use relationship name",
 				"padl.kernel.impl.UseRelationship:padl.example.aggregation.A:1",
@@ -400,7 +402,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_PUBLIC),
 				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) elements[1]).getCardinality());
 		Assert.assertEquals("Association name",
 				"padl.kernel.impl.Association:java.lang.Object:1",
@@ -413,7 +415,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Association visibility",
 				Access.getAsString(Access.ACC_PUBLIC),
 				Access.getAsString(elements[1].getVisibility()));
-		Assert.assertEquals("Association cardinality", 1,
+		Assert.assertEquals("Association cardinality", padl.kernel.Cardinality.One,
 				((IAssociation) elements[1]).getCardinality());
 		Assert.assertEquals("Association name",
 				"padl.kernel.impl.Association:java.lang.Object:1",
@@ -436,7 +438,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Use relationship visibility",
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(elements[4].getVisibility()));
-		Assert.assertEquals("Use relationship cardinality", 1,
+		Assert.assertEquals("Use relationship cardinality", padl.kernel.Cardinality.One,
 				((IUseRelationship) elements[4]).getCardinality());
 		Assert.assertEquals("Use relationship name",
 				"padl.kernel.impl.UseRelationship:padl.example.aggregation.A:1",
@@ -467,7 +469,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_PUBLIC),
 				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) elements[1]).getCardinality());
 		Assert.assertEquals("Association name",
 				"padl.kernel.impl.Association:java.lang.Object:1",
@@ -491,7 +493,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(elements[4].getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) elements[4]).getCardinality());
 		Assert.assertEquals("Use relationship name",
 				"padl.kernel.impl.Association:padl.example.aggregation.A:1",
@@ -522,7 +524,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_PUBLIC),
 				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) elements[1]).getCardinality());
 		Assert.assertEquals("Association name",
 				"padl.kernel.impl.Association:java.lang.Object:1",
@@ -545,7 +547,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Use relationship visibility",
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(elements[4].getVisibility()));
-		Assert.assertEquals("Use relationship cardinality", 1,
+		Assert.assertEquals("Use relationship cardinality", padl.kernel.Cardinality.One,
 				((IUseRelationship) elements[4]).getCardinality());
 		Assert.assertEquals("Use relationship name",
 				"padl.kernel.impl.UseRelationship:padl.example.aggregation.A:1",
@@ -573,7 +575,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Association visibility",
 				Access.getAsString(Access.ACC_PUBLIC),
 				Access.getAsString(elements[1].getVisibility()));
-		Assert.assertEquals("Association cardinality", 1,
+		Assert.assertEquals("Association cardinality", padl.kernel.Cardinality.One,
 				((IAssociation) elements[1]).getCardinality());
 		Assert.assertEquals("Association name",
 				"padl.kernel.impl.Association:java.lang.Object:1",
@@ -594,7 +596,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("ContainerAggregation link visibility",
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(elements[3].getVisibility()));
-		Assert.assertEquals("ContainerAggregation link cardinality", 2,
+		Assert.assertEquals("ContainerAggregation link cardinality", padl.kernel.Cardinality.Many,
 				((IContainerAggregation) elements[3]).getCardinality());
 		Assert.assertEquals("ContainerAggregation link name",
 				"padl.kernel.impl.ContainerAggregation:padl.example.aggregation.A:2",
@@ -612,7 +614,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 		Assert.assertEquals("Use relationship visibility",
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(elements[5].getVisibility()));
-		Assert.assertEquals("Use relationship cardinality", 1,
+		Assert.assertEquals("Use relationship cardinality", padl.kernel.Cardinality.One,
 				((IUseRelationship) elements[5]).getCardinality());
 		Assert.assertEquals("Use relationship name",
 				"padl.kernel.impl.UseRelationship:padl.example.aggregation.A:1+padl.kernel.impl.UseRelationship:padl.example.aggregation.A:1",
@@ -645,7 +647,7 @@ public class AggregationsTest extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_PUBLIC),
 				Access.getAsString(elements[1].getVisibility()));
 		Assert.assertEquals("Association cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) elements[1]).getCardinality());
 		Assert.assertEquals("Association name",
 				"padl.kernel.impl.Association:java.lang.Object:1",

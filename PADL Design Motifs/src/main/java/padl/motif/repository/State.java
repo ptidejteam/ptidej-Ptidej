@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.motif.repository;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAggregation;
 import padl.kernel.IClass;
@@ -50,7 +51,7 @@ public class State extends BehaviouralMotifModel implements Cloneable,
 			this.getFactory().createAggregationRelationship(
 				State.STRING,
 				state,
-				Constants.CARDINALITY_MANY);
+				Cardinality.Many);
 		// context.addImplementedEntity(state);
 		context.addConstituent(aComposition);
 

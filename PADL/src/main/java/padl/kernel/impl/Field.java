@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IElementMarker;
 import padl.kernel.IField;
@@ -22,7 +23,7 @@ import com.ibm.toad.cfparse.utils.Access;
 // Sebastien Colladon 21/04/2012 : Change the visibility to public in order to allow other project to extend from this class in the particular case of eclipse bundle loader (avoid IllegalAccessError).
 public class Field extends Element implements IElementMarker, IField {
 	private static final long serialVersionUID = -2269333542392931119L;
-	private int cardinality;
+	private Cardinality cardinality;
 	private char[] fieldType;
 
 	public Field(final String anID) {
@@ -30,14 +31,14 @@ public class Field extends Element implements IElementMarker, IField {
 	}
 
 	public Field(final char[] anID) {
-		this(anID, anID, null, 1);
+		this(anID, anID, null, Cardinality.One);
 	}
 
 	public Field(
 		final char[] anID,
 		final char[] aName,
 		final char[] aFieldType,
-		final int aCardinality) {
+		final Cardinality aCardinality) {
 
 		super(anID);
 		this.setType(aFieldType);
@@ -45,7 +46,7 @@ public class Field extends Element implements IElementMarker, IField {
 		this.setCardinality(aCardinality);
 	}
 
-	public int getCardinality() {
+	public Cardinality getCardinality() {
 		return this.cardinality;
 	}
 
@@ -57,17 +58,11 @@ public class Field extends Element implements IElementMarker, IField {
 		return this.fieldType;
 	}
 
-	public void setCardinality(int cardinality) {
-		if (cardinality < 1) {
-			throw new ModelDeclarationException(MultilingualManager.getString(
-				"CARDINALITY",
-				IField.class,
-				new Object[] { Integer.valueOf(cardinality) }));
-		}
-
+	public void setCardinality(Cardinality cardinality) {
 		this.cardinality = cardinality;
+		
 	}
-
+	
 	public void setType(final char[] fieldType) {
 		this.fieldType = fieldType;
 	}
@@ -114,4 +109,5 @@ public class Field extends Element implements IElementMarker, IField {
 		codeEq.append(';');
 		return codeEq.toString();
 	}
+
 }

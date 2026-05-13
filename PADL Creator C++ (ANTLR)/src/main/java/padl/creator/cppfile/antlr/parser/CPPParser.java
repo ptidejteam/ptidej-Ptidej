@@ -23,6 +23,7 @@ import java.util.List;
 import com.ibm.toad.cfparse.utils.Access;
 
 import padl.creator.cppfile.antlr.CPPCreator;
+import padl.kernel.Cardinality;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IConstructor;
 import padl.kernel.IElement;
@@ -1228,7 +1229,7 @@ public final class CPPParser implements CPPParserConstants {
 					CPPParser.getFactory().createGlobalField(
 						name.toCharArray(),
 						CPPParser.getTypeGlobalField().toCharArray(),
-						1);
+						Cardinality.One);
 				gfield.setVisibility(CPPParser.getAccess());
 				CPPParser.createAndGetDefaultPackage().addConstituent(gfield);
 			}
@@ -1384,7 +1385,7 @@ public final class CPPParser implements CPPParserConstants {
 									.createUseRelationship(
 										("uR" + CPPParser.UniqueIdentifier++).toCharArray(),
 										targetEntity,
-										2);
+										Cardinality.Many);
 							CPPParser.addToListOfElements(useRelationship);
 						}
 					}
@@ -1496,7 +1497,7 @@ public final class CPPParser implements CPPParserConstants {
 											("uR" + CPPParser.UniqueIdentifier++)
 												.toCharArray(),
 											targetEntity,
-											2);
+											Cardinality.Many);
 								CPPParser.addToListOfElements(useRelationship);
 							}
 						}
@@ -1596,7 +1597,7 @@ public final class CPPParser implements CPPParserConstants {
 													("uR" + CPPParser.UniqueIdentifier++)
 														.toCharArray(),
 													targetEntity,
-													2);
+													Cardinality.Many);
 										CPPParser
 											.addToListOfElements(useRelationship);
 									}
@@ -1928,7 +1929,7 @@ public final class CPPParser implements CPPParserConstants {
 						name.toCharArray(),
 						name.toCharArray(),
 						(CPPParser.getTypeMember()).toCharArray(),
-						1);
+						Cardinality.One);
 				field.setVisibility(CPPParser.getAccess());
 				CPPParser.addToListOfElements(field);
 			}
