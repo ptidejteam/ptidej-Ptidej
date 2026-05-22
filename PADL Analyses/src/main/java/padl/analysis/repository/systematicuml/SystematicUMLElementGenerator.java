@@ -234,7 +234,6 @@ public class SystematicUMLElementGenerator implements IWalker {
 			aField.getID(),
 			aField.getName(),
 			aField.getType(),
-			aField.getCardinality(),
 			aField.getDimension()));
 	}
 	public void visit(final IMethodInvocation aMethodInvocation) {

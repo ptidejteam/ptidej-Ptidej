@@ -56,7 +56,7 @@ public class AspectJFactory extends Factory implements IAspectJFactory {
 		final char[] aName,
 		final char[] type) {
 
-		return new InterTypeField(aName, type, Cardinality.One, 0);
+		return new InterTypeField(aName, type, 0);
 	}
 	public IInterTypeMethod createInterTypeMethode(final char[] aName) {
 		return new InterTypeMethod(aName);

@@ -61,7 +61,6 @@ public class MemberClasses4Test extends ClassFilePrimitive {
 					"MemberClass".toCharArray(),
 					"MemberClass".toCharArray(),
 					"String".toCharArray(),
-					Cardinality.One,
 					0);
 
 			MemberClasses4Test.CodeLevelModel.addConstituent(packaje);

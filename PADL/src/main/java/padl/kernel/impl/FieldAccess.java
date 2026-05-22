@@ -30,7 +30,6 @@ class FieldAccess extends Constituent implements IFieldAccess {
 	private IField field;
 
 	public FieldAccess(
-		final Cardinality cardinality,
 		final int dimension,
 		final int visibility,
 		final IField field,
@@ -38,7 +37,7 @@ class FieldAccess extends Constituent implements IFieldAccess {
 
 		super(Constants.DEFAULT_METHODINVOCATION_ID);
 
-		this.setCardinality(cardinality);
+		this.setCardinality(dimension > 0 ? Cardinality.Many : Cardinality.One);
 		this.setDimension(dimension);
 		this.setVisibility(visibility);
 		this.field = field;

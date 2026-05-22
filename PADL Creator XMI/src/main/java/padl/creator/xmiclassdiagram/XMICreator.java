@@ -496,7 +496,7 @@ public final class XMICreator implements IDesignLevelModelCreator {
 
 					final IField field = Factory.getInstance().createField(
 							elementID.toCharArray(), elementName.toCharArray(),
-							XMICreator.UNDEFINED_TYPE.toCharArray(), Cardinality.One, 0);
+							XMICreator.UNDEFINED_TYPE.toCharArray(), 0);
 					return field;
 				}
 			});

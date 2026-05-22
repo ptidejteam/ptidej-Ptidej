@@ -68,7 +68,6 @@ public final class CopyInTest extends TestCase {
 						"a".toCharArray(),
 						"a".toCharArray(),
 						entityName,
-						Cardinality.Many,
 						1);
 				aField.setPrivate(true);
 

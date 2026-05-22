@@ -74,7 +74,6 @@ public class ClassMemberBuilderImpl extends AbstractPADLCodeBuilder {
 					name.getText().toCharArray(),
 					name.getText().toCharArray(),
 					type.getText().toCharArray(),
-					Cardinality.One,
 					0);
 			if (modifier != null) {
 				final CSharpTokens modifierType =

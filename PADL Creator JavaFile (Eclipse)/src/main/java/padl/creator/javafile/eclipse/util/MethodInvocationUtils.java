@@ -305,14 +305,12 @@ public class MethodInvocationUtils {
 			final ITypeBinding fieldTypeBinding = variableBinding.getType();
 			final String fieldType =
 				PadlParserUtil.getTypeName(fieldTypeBinding, true);
-			final Cardinality cardinality = PadlParserUtil.getCardinality(fieldTypeBinding);
 			final int dimension = PadlParserUtil.getDimension(fieldTypeBinding);
 			field =
 				aPadlModel.getFactory().createField(
 					fieldID.toCharArray(),
 					fieldName.toCharArray(),
 					fieldType.toCharArray(),
-					cardinality,
 					dimension);
 			anEntity.addConstituent(field);
 		}

@@ -78,10 +78,9 @@ public class CPPFactoryEclipse extends Factory implements ICPPFactoryEclipse {
 		final char[] anID,
 		final char[] aName,
 		final char[] aType,
-		final Cardinality aCardinality,
 		final int dimension) {
 
-		return new GlobalField(anID, aName, aType, aCardinality, dimension);
+		return new GlobalField(anID, aName, aType, dimension);
 	}
 
 	public IGlobalFunction createGlobalFunction(

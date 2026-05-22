@@ -28681,7 +28681,7 @@ public class CSharpParser extends Parser implements Constants {
 				//System.out.println("la mama");
 				this.element1 = this.getFactory().createField(
 						retval.name.toCharArray(), retval.name.toCharArray(),
-						retval.Type.toCharArray(), Cardinality.One, 0);
+						retval.Type.toCharArray(), 0);
 				//		if (methodstock = true) {
 				//			MethodStockBody.add(element1);
 				//			ElementMethodNumber = ElementMethodNumber + 1;

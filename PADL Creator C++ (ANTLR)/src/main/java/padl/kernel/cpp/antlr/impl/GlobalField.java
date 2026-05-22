@@ -48,19 +48,18 @@ class GlobalField extends FirstClassEntity implements IElementMarker,
 	private char[] globalFieldType;
 
 	public GlobalField(final char[] anID) {
-		this(anID, null, Cardinality.One, 0);
+		this(anID, null, 0);
 	}
 	public GlobalField(
 		final char[] aName,
 		final char[] aType,
-		final Cardinality aCardinality,
 		final int dimension) {
 
 		super((String.valueOf(aType) + " " + String.valueOf(aName))
 			.toCharArray());
 		this.setName(aName);
 		this.setType(aType);
-		this.setCardinality(aCardinality);
+		this.setCardinality(dimension > 0 ? Cardinality.Many : Cardinality.One);
 		this.setDimension(dimension);
 	}
 	public void addConstituent(final IElement anElement) {

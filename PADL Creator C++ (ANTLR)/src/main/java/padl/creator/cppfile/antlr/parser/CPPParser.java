@@ -1229,7 +1229,6 @@ public final class CPPParser implements CPPParserConstants {
 					CPPParser.getFactory().createGlobalField(
 						name.toCharArray(),
 						CPPParser.getTypeGlobalField().toCharArray(),
-						Cardinality.One,
 						0);
 				gfield.setVisibility(CPPParser.getAccess());
 				CPPParser.createAndGetDefaultPackage().addConstituent(gfield);
@@ -1930,7 +1929,6 @@ public final class CPPParser implements CPPParserConstants {
 						name.toCharArray(),
 						name.toCharArray(),
 						(CPPParser.getTypeMember()).toCharArray(),
-						Cardinality.One,
 						0);
 				field.setVisibility(CPPParser.getAccess());
 				CPPParser.addToListOfElements(field);

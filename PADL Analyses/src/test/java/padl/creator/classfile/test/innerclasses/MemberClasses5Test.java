@@ -70,7 +70,6 @@ public class MemberClasses5Test extends ClassFilePrimitive {
 				"MemberClass".toCharArray(),
 				"MemberClass".toCharArray(),
 				"String".toCharArray(),
-				Cardinality.One,
 				0);
 		try {
 			topLevelClass.addConstituent(field);

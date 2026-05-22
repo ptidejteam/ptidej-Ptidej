@@ -163,15 +163,15 @@ public class Factory implements IFactory, Serializable {
 	}
 
 	public IField createField(final char[] anID, final char[] aName,
-			final char[] aType, final Cardinality aCardinality, final int dimension) {
+			final char[] aType, final int dimension) {
 
-		return new Field(anID, aName, aType, aCardinality, dimension);
+		return new Field(anID, aName, aType, dimension);
 	}
 
-	public IFieldAccess createFieldAccess(Cardinality cardinality, int dimension, int visibility,
+	public IFieldAccess createFieldAccess(int dimension, int visibility,
 			IField field, IFirstClassEntity entityDeclaringField) {
 
-		return new FieldAccess(cardinality, dimension, visibility, field,
+		return new FieldAccess(dimension, visibility, field,
 				entityDeclaringField);
 	}
 

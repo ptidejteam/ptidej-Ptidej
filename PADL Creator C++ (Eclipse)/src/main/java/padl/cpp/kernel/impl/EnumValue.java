@@ -19,15 +19,14 @@ public class EnumValue extends Field implements IEnumValue {
 	private static final long serialVersionUID = 1L;
 
 	public EnumValue(final char[] anID) {
-		super(anID, anID, "EnumValue".toCharArray(), Cardinality.One, 0);
+		super(anID, anID, "EnumValue".toCharArray(), 0);
 	}
 	private EnumValue(
 		final char[] anID,
 		final char[] aName,
 		final char[] aFieldType,
-		final Cardinality aCardinality,
 		final int dimension) {
 
-		super(anID, aName, aFieldType, aCardinality, dimension);
+		super(anID, aName, aFieldType, dimension);
 	}
 }

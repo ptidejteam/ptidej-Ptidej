@@ -68,7 +68,6 @@ public class SanityTest extends TestCase {
 					"a".toCharArray(),
 					"a".toCharArray(),
 					entityName,
-					Cardinality.Many,
 					1);
 			aField.setPrivate(true);
 

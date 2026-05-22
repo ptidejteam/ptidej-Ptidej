@@ -32,20 +32,19 @@ public class Field extends Element implements IElementMarker, IField {
 	}
 
 	public Field(final char[] anID) {
-		this(anID, anID, null, Cardinality.One, 0);
+		this(anID, anID, null, 0);
 	}
 
 	public Field(
 		final char[] anID,
 		final char[] aName,
 		final char[] aFieldType,
-		final Cardinality aCardinality,
 		final int dimension) {
 
 		super(anID);
 		this.setType(aFieldType);
 		this.setName(aName);
-		this.setCardinality(aCardinality);
+		this.setCardinality(dimension > 0 ? Cardinality.Many : Cardinality.One);
 		this.setDimension(dimension);
 	}
 

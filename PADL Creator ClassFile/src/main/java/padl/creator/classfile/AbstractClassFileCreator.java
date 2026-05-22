@@ -715,8 +715,8 @@ abstract class AbstractClassFileCreator {
 						// Yann 2009/05/02: No String anymore!
 						// Cool, eh?
 						char[] paramType = detectedParameters[i];
-						// probably dimension here instead of cardinality
-						int dimension = 1;
+
+						int dimension = 0;
 						final int bracketIndex = ArrayUtils.indexOf(paramType,
 								'[');
 						if (bracketIndex > -1) {
@@ -954,8 +954,8 @@ abstract class AbstractClassFileCreator {
 				if (Util.isPrimtiveType(fieldType)) {
 					field = aCodeLevelModel.getFactory().createField(
 							currentField.getName(), currentField.getName(),
-							fieldType, cardinality, dimension);
-				}
+							fieldType, dimension);
+					field.setCardinality(cardinality);				}
 				else {
 					final IFirstClassEntity targetEntity = Utils
 							.getEntityOrCreateGhost(aCodeLevelModel, fieldType,
@@ -972,7 +972,7 @@ abstract class AbstractClassFileCreator {
 					//	}
 					field = aCodeLevelModel.getFactory().createField(
 							currentField.getName(), currentField.getName(),
-							targetEntity.getID(), cardinality, dimension);
+							targetEntity.getID(), dimension);
 				}
 				field.setVisibility(currentField.getVisibility());
 
@@ -1082,18 +1082,18 @@ abstract class AbstractClassFileCreator {
 						// Yann 2009/05/02: No String anymore!
 						// Cool, eh?
 						char[] paramType = detectedParameters[i];
-						int cardinality = 1;
+						int dimension = 0;
 						final int bracketIndex = ArrayUtils.indexOf(paramType,
 								'[');
 						if (bracketIndex > -1) {
-							cardinality = (paramType.length - bracketIndex) / 2
+							dimension = (paramType.length - bracketIndex) / 2
 									+ 1;
 							paramType = ArrayUtils.subarray(paramType, 0,
 									bracketIndex);
 						}
 
 						final IParameter parameter = this.createParameter(
-								aCodeLevelModel, paramType, cardinality);
+								aCodeLevelModel, paramType, dimension);
 						currentMethod.addConstituent(parameter);
 					}
 

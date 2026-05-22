@@ -2375,7 +2375,6 @@ class CUP$AOLIdiomParser$actions {
 				// TODO: Should compute the cardinality and dimension!
 				final IField field = Factory.getInstance().createField(
 						n.toCharArray(), n.toCharArray(), t.toCharArray(),
-						Cardinality.One,
 						0);
 				this.parser.addToListOfElements(field);
 			}
@@ -2405,7 +2404,6 @@ class CUP$AOLIdiomParser$actions {
 				// TODO: Should compute the cardinality and dimension!
 				final IField field = Factory.getInstance().createField(
 						n.toCharArray(), n.toCharArray(), "".toCharArray(),
-						Cardinality.One,
 						0);
 				this.parser.addToListOfElements(field);
 			}
@@ -2441,7 +2439,6 @@ class CUP$AOLIdiomParser$actions {
 				// TODO: Should compute the cardinality and dimension!
 				final IField field = Factory.getInstance().createField(
 						n.toCharArray(), n.toCharArray(), "".toCharArray(),
-						Cardinality.One,
 						0);
 				if (v.equals("PUBLIC")) {
 					field.setVisibility(Access.ACC_PUBLIC);
@@ -2492,7 +2489,6 @@ class CUP$AOLIdiomParser$actions {
 				// TODO: Should compute the cardinality and dimension!
 				final IField field = Factory.getInstance().createField(
 						n.toCharArray(), n.toCharArray(), t.toCharArray(),
-						Cardinality.One,
 						0);
 				if (v.equals("PUBLIC")) {
 					field.setVisibility(Access.ACC_PUBLIC);

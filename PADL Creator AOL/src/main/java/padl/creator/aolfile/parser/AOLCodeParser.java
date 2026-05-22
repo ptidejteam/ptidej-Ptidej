@@ -3164,13 +3164,11 @@ class CUP$AOLCodeParser$actions {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(),
 							("UNKNOWN" + Math.random()).toCharArray(),
-							Cardinality.One,
 							0);
 				}
 				else {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(), t.toCharArray(),
-							Cardinality.One,
 							0);
 				}
 				if (v.equals("PUBLIC")) {
@@ -3225,13 +3223,11 @@ class CUP$AOLCodeParser$actions {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(),
 							("UNKNOWN" + Math.random()).toCharArray(),
-							Cardinality.One,
 							0);
 				}
 				else {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(), t.toCharArray(),
-							Cardinality.One,
 							0);
 				}
 				if (v.equals("PUBLIC")) {
@@ -3286,13 +3282,11 @@ class CUP$AOLCodeParser$actions {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(),
 							("UNKNOWN" + Math.random()).toCharArray(),
-							Cardinality.One,
 							0);
 				}
 				else {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(), t.toCharArray(),
-							Cardinality.One,
 							0);
 				}
 				if (v.equals("PUBLIC")) {
@@ -3347,13 +3341,11 @@ class CUP$AOLCodeParser$actions {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(),
 							("UNKNOWN" + Math.random()).toCharArray(),
-							Cardinality.One,
 							0);
 				}
 				else {
 					field = Factory.getInstance().createField(n.toCharArray(),
 							n.toCharArray(), t.toCharArray(),
-							Cardinality.One,
 							0);
 				}
 				if (v.equals("PUBLIC")) {
@@ -3417,14 +3409,12 @@ class CUP$AOLCodeParser$actions {
 					field = Factory.getInstance().createField(
 							(n1 + n2).toCharArray(), (n1 + n2).toCharArray(),
 							("UNKNOWN" + Math.random()).toCharArray(),
-							Cardinality.One,
 							0);
 				}
 				else {
 					field = Factory.getInstance().createField(
 							(n1 + n2).toCharArray(), (n1 + n2).toCharArray(),
 							t.toCharArray(), 
-							Cardinality.One, 
 							0);
 				}
 				if (v.equals("PUBLIC")) {

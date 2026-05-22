@@ -60,7 +60,6 @@ public final class RemoveTest extends TestCase {
 				"a".toCharArray(),
 				"a".toCharArray(),
 				entityName,
-				Cardinality.Many,
 				1);
 		aField.setPrivate(true);
 

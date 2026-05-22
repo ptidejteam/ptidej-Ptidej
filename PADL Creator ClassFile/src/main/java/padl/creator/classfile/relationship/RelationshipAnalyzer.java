@@ -999,10 +999,6 @@ public class RelationshipAnalyzer {
 				if (aCallingField == null && !usedFieldName.equals("")) {
 					final String fieldType = RelationshipAnalyzer
 							.extractFieldType(oneFieldInfo);
-					final Cardinality cardinality = padl.util.Util
-							.isArrayOrCollection(fieldType.toCharArray())
-									? Cardinality.Many
-									: Cardinality.One;	
 					int dimension = 0;
 					
 					if (padl.util.Util.isCollection(fieldType.toCharArray())) {
@@ -1015,7 +1011,7 @@ public class RelationshipAnalyzer {
 					aCallingField = this.codeLevelModel.getFactory()
 							.createField(usedFieldName.toCharArray(),
 									usedFieldName.toCharArray(),
-									fieldType.toCharArray(), cardinality, dimension);
+									fieldType.toCharArray(), dimension);
 					aCallingField.setVisibility(Access.ACC_PUBLIC);
 					entityDeclaringField.addConstituent(aCallingField);
 				}

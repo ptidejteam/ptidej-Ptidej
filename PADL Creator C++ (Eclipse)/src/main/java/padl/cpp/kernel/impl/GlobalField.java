@@ -50,13 +50,12 @@ class GlobalField extends FirstClassEntity implements IElementMarker,
 		final char[] aID,
 		final char[] aName,
 		final char[] aType,
-		final Cardinality aCardinality,
 		final int dimension) {
 
 		super(aID);
 		this.setName(aName);
 		this.setType(aType);
-		this.setCardinality(aCardinality);
+		this.setCardinality(dimension > 0 ? Cardinality.Many : Cardinality.One);
 		this.setDimension(dimension);
 	}
 

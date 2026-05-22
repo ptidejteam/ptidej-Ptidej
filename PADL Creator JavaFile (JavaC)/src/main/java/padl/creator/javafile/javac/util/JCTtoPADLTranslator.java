@@ -513,7 +513,7 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 			final IField f = this.factory.createField(
 					aJCTField.getID().toCharArray(),
 					aJCTField.getName().toCharArray(),
-					aJCTField.getType().getSourceCode().toCharArray(), Cardinality.One, 0);
+					aJCTField.getType().getSourceCode().toCharArray(), 0);
 
 			f.setName(aJCTField.getName().toCharArray());
 			if (Util.isArrayOrCollection(f.getType())) {

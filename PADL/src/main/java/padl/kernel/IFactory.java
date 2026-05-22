@@ -57,10 +57,8 @@ public interface IFactory {
 		final char[] anID,
 		final char[] aName,
 		final char[] aType,
-		final Cardinality aCardinality,
 		final int dimension);
 	IFieldAccess createFieldAccess(
-		final Cardinality cardinality,
 		final int dimension,
 		final int visibility,
 		final IField field,

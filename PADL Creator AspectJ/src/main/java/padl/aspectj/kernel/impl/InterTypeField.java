@@ -31,10 +31,9 @@ public class InterTypeField extends Field implements IInterTypeField {
 	public InterTypeField(
 		final char[] anID,
 		final char[] aFieldType,
-		final Cardinality aCardinality,
 		final int dimension) {
 
-		super(anID, anID, aFieldType, aCardinality, dimension);
+		super(anID, anID, aFieldType, dimension);
 		this.target = null;
 	}
 

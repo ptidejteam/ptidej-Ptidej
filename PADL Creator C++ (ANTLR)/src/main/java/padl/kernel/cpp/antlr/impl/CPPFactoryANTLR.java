@@ -47,10 +47,9 @@ public class CPPFactoryANTLR extends Factory implements ICPPFactoryANTLR {
 	public IGlobalField createGlobalField(
 		final char[] aName,
 		final char[] aType,
-		final Cardinality aCardinality,
 		final int dimension) {
 
-		return new GlobalField(aName, aType, aCardinality, dimension);
+		return new GlobalField(aName, aType, dimension);
 	}
 	public IStructure createStructure(final char[] aName) {
 		return new Structure(aName);

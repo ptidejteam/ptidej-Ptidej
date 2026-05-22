@@ -59,8 +59,7 @@ public class Provider_INSTANCE_INSTANCE_FROM_FIELD_List extends
 				"list".toCharArray(),
 				"list".toCharArray(),
 				"java.util.List".toCharArray(),
-				padl.kernel.Cardinality.Many,
-				0);
+				1);
 		final List listCallingFields = new ArrayList();
 		listCallingFields.add(invocationField);
 		methodInvocation.setCallingField(listCallingFields);

@@ -57,7 +57,7 @@ public class Provider_INSTANCE_INSTANCE_FROM_FIELD_ONE extends AbstractProvider
 				"a".toCharArray(),
 				"a".toCharArray(),
 				"padl.creator.test.relationships.providers.A".toCharArray(),
-				padl.kernel.Cardinality.One, 0);
+				 0);
 		final List listCallingFields = new ArrayList();
 		listCallingFields.add(invocationField);
 		methodInvocation.setCallingField(listCallingFields);

@@ -190,7 +190,7 @@ public class UnaryCBOTest extends TestCase {
 				this.methodId(clazz).toCharArray());
 		final IField field = Factory.getInstance().createField(
 				this.fieldId(clazz).toCharArray(),
-				this.fieldId(clazz).toCharArray(), "int".toCharArray(), Cardinality.One);
+				this.fieldId(clazz).toCharArray(), "int".toCharArray(), 0);
 
 		clazz.addConstituent(method);
 		clazz.addConstituent(field);

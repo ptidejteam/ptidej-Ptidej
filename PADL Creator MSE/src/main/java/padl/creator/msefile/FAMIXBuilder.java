@@ -206,7 +206,7 @@ public class FAMIXBuilder implements MSEBuilder {
 						name.toCharArray(),
 						name.toCharArray(),
 						"java.lang.Object".toCharArray(),
-						Cardinality.One);
+						0);
 				// to complete type and cardinality
 
 				if (this.getHasClassScope(element).equals("true")) {

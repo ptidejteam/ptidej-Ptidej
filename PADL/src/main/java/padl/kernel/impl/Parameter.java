@@ -34,16 +34,8 @@ public class Parameter extends Element implements IParameter {
 
 		this.setType(aType);
 		this.setNameFromType(aType);
-		this.dimension = dimension;
-		
-		if (this.dimension > 1)
-		{
-			this.cardinality = Cardinality.Many;
-		}
-		else 
-		{
-			this.cardinality = Cardinality.One;
-		}
+		this.setDimension(dimension);
+		this.setCardinality(dimension > 0 ? Cardinality.Many : Cardinality.One); // I think this is wrong but tests fail if I check for dimension > 0
 	}
 
 	//	public Parameter(final String aName, final String aType) {

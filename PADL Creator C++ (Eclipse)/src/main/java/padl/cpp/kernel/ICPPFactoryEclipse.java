@@ -29,7 +29,6 @@ public interface ICPPFactoryEclipse extends IFactory {
 		final char[] aID,
 		final char[] aName,
 		final char[] aType,
-		final Cardinality aCardinality,
 		final int dimension);
 	IGlobalFunction createGlobalFunction(final char[] anID, final char[] aName);
 	IGlobalFunctionGhost createGlobalFunctionGhost(

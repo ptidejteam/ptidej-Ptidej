@@ -28,6 +28,7 @@ import padl.aspectj.kernel.IAspect;
 import padl.aspectj.kernel.IAspectJFactory;
 import padl.aspectj.kernel.IInterTypeDeclareParents;
 import padl.aspectj.kernel.IInterTypeElement;
+import padl.aspectj.kernel.IInterTypeField;
 import padl.aspectj.kernel.IInterTypeMethod;
 import padl.creator.aspectjlst.AspectCreator;
 import padl.kernel.Cardinality;
@@ -128,7 +129,7 @@ public class AspectWalker extends HierarchyWalker {
 		//		 TODO: check the FIELD creation (Cardinality)
 		element = this.factory.createField(node.getName().toCharArray(),
 				node.getName().toCharArray(),
-				node.getCorrespondingType().toCharArray(), Cardinality.One, 0);
+				node.getCorrespondingType().toCharArray(), 0);
 		element.setName(node.getName().toCharArray());
 		return element;
 	}
@@ -147,7 +148,6 @@ public class AspectWalker extends HierarchyWalker {
 		element = this.factory.createInterTypeField(
 				node.getName().toCharArray(),
 				node.getCorrespondingType().toCharArray());
-		node.get
 		element.setName(node.getName().toCharArray());
 		this.setITRelationShip(node, element);
 

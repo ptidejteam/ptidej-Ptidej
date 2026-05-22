@@ -433,7 +433,6 @@ class GeneratorHelper {
 				final String parameterTypeName = parameterType.toString()
 						.replaceAll("const ", "");
 				final char[] parameterName = aCPPParameter.getNameCharArray();
-				//Unsure of this
 				final int dimension = Utils.getDimension(aCPPParameter);
 				final IParameter padlParameter;
 				final int indexOfSpace;
@@ -507,8 +506,7 @@ class GeneratorHelper {
 			return;
 		}
 
-		final Cardinality cardinality = Utils.getCardinality(aCPPVariable);
-		final int dimension = cardinality == Cardinality.Many ? 1 : 0;
+		final int dimension = Utils.getDimension(aCPPVariable);
 
 		IField field = null;
 		if (aCPPVariable instanceof ICPPField
@@ -516,7 +514,7 @@ class GeneratorHelper {
 
 			field = ((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
 					.createField(id.toCharArray(), fieldName.toCharArray(),
-							fieldTypeEntity.getName(), cardinality, dimension);
+							fieldTypeEntity.getName(), dimension);
 			Utils.setVisibility(field, (ICPPMember) aCPPVariable);
 		}
 		else if (aCPPVariable instanceof ICPPVariable
@@ -525,7 +523,7 @@ class GeneratorHelper {
 			field = ((ICPPFactoryEclipse) CPPFactoryEclipse.getInstance())
 					.createGlobalField(id.toCharArray(),
 							fieldName.toCharArray(), fieldTypeEntity.getName(),
-							cardinality, dimension);
+							dimension);
 		}
 
 		Utils.setConst(field, aCPPVariable);
@@ -785,7 +783,6 @@ class GeneratorHelper {
 				}
 			}
 			else {
-				final Cardinality cardinality;
 				int dimension = 0;
 				
 				if (declarator instanceof ICPPASTArrayDeclarator arrayDeclarator) {
@@ -795,17 +792,13 @@ class GeneratorHelper {
 					
 					if (modifiers != null) {
 						dimension = modifiers.length;
-					}
-					
-					cardinality = Cardinality.Many;
+					}					
 				}
 				else if (declarator.getPointerOperators().length > 0) {
 					dimension = 0;
-					cardinality = Cardinality.Many;
 				}
 				else {
 					dimension = 0;
-					cardinality = Cardinality.One;
 				}
 				final char[] fieldName = Utils
 						.convertSeparators(declaratorName.toCharArray());
@@ -936,7 +929,7 @@ class GeneratorHelper {
 					// if its binding existed in the previous phase.
 					final IGlobalField field = ((ICPPFactoryEclipse) CPPFactoryEclipse
 							.getInstance()).createGlobalField(id, fieldName,
-									fieldTypeName, cardinality, dimension);
+									fieldTypeName, dimension);
 					container.addConstituent(field);
 				}
 

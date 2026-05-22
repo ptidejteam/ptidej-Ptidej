@@ -58,7 +58,6 @@ public class Provider_CLASS_INSTANCE_FROM_FIELD_List extends AbstractProvider
 				"list".toCharArray(),
 				"list".toCharArray(),
 				"java.util.List".toCharArray(),
-				padl.kernel.Cardinality.Many,
 				1);
 		final List listCallingFields = new ArrayList();
 		listCallingFields.add(invocationField);
