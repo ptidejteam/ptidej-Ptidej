@@ -15,6 +15,7 @@ import org.antlr.runtime.tree.CommonTree;
 import padl.creator.csharpfile.v2.parser.CSharpTokens;
 import padl.creator.csharpfile.v2.parser.builder.BuilderContext;
 import padl.creator.csharpfile.v2.parser.builder.CodeBuilder;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.IConstituent;
@@ -94,7 +95,7 @@ public class MethodBuilderImpl extends AbstractPADLCodeBuilder implements
 							this.method.addConstituent(this.factory
 								.createMethodInvocation(
 									IMethodInvocation.CLASS_INSTANCE,
-									1,
+									Cardinality.One,
 									0,
 									(IFirstClassEntity) constituent));
 						}
@@ -468,7 +469,7 @@ public class MethodBuilderImpl extends AbstractPADLCodeBuilder implements
 				invocation =
 					this.factory.createMethodInvocation(
 						IMethodInvocation.INSTANCE_INSTANCE,
-						1,
+						Cardinality.One,
 						0,
 						(IFirstClassEntity) entity,
 						clazz);
@@ -503,7 +504,7 @@ public class MethodBuilderImpl extends AbstractPADLCodeBuilder implements
 				final IMethodInvocation invocation =
 					this.factory.createMethodInvocation(
 						IMethodInvocation.INSTANCE_CREATION,
-						1,
+						Cardinality.One,
 						0,
 						(IFirstClassEntity) constituent);
 				this.method.addConstituent(invocation);
@@ -610,7 +611,7 @@ public class MethodBuilderImpl extends AbstractPADLCodeBuilder implements
 				final IParameter parameter =
 					this.factory.createParameter(target, memberName
 						.getText()
-						.toCharArray(), Constants.CARDINALITY_ONE);
+						.toCharArray(), 1);
 				this.method.addConstituent(parameter);
 				if (node.getChildren().size() > memberName.getChildIndex() + 1
 						&& ((CommonTree) node.getChild(memberName

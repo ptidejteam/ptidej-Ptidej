@@ -10,6 +10,7 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IAggregation;
 import padl.kernel.IElementMarker;
 import padl.kernel.IField;
@@ -28,14 +29,14 @@ class Aggregation extends Association implements IElementMarker, IAggregation {
 	public Aggregation(
 		final char[] anID,
 		final IFirstClassEntity aTargetEntity,
-		final int aCardinality) {
+		final Cardinality aCardinality) {
 
 		super(anID, aTargetEntity, aCardinality);
 	}
 	public Aggregation(
 		final char[] anID,
 		final IFirstClassEntity aTargetEntity,
-		final int aCardinality,
+		final Cardinality aCardinality,
 		final IField anOriginField,
 		final IMethod anOriginGetterMethod,
 		final IMethod anOriginSetterMethod) {

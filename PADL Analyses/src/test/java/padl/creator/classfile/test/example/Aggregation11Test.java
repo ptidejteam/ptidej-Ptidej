@@ -18,7 +18,7 @@ import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.classfile.test.ClassFilePrimitive;
-import padl.kernel.Constants;
+import padl.kernel.Cardinality;
 import padl.kernel.IAggregation;
 import padl.kernel.IAssociation;
 import padl.kernel.ICodeLevelModel;
@@ -29,6 +29,7 @@ import padl.kernel.IFirstClassEntity;
 import padl.kernel.IIdiomLevelModel;
 import padl.kernel.IUseRelationship;
 import padl.kernel.exception.CreationException;
+import padl.test.PADLPrimitive;
 import padl.util.Util;
 
 /**
@@ -79,7 +80,7 @@ public class Aggregation11Test extends ClassFilePrimitive {
 				Access.getAsString(Aggregation11Test.Elements[elementPosition]
 						.getVisibility()));
 		Assert.assertEquals("Aggregation cardinality",
-				Constants.CARDINALITY_MANY,
+				Cardinality.Many,
 				((IAggregation) Aggregation11Test.Elements[elementPosition])
 						.getCardinality());
 		Assert.assertEquals("Aggregation name",
@@ -106,7 +107,7 @@ public class Aggregation11Test extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_NONE),
 				Access.getAsString(Aggregation11Test.Elements[elementPosition]
 						.getVisibility()));
-		Assert.assertEquals("Use relationship cardinality", 1,
+		Assert.assertEquals("Use relationship cardinality", padl.kernel.Cardinality.One,
 				((IUseRelationship) Aggregation11Test.Elements[elementPosition])
 						.getCardinality());
 		Assert.assertEquals("Use relationship name",
@@ -130,7 +131,7 @@ public class Aggregation11Test extends ClassFilePrimitive {
 				Access.getAsString(Aggregation11Test.Elements[elementPosition]
 						.getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) Aggregation11Test.Elements[elementPosition])
 						.getCardinality());
 		Assert.assertEquals("Association relationship name",
@@ -177,7 +178,7 @@ public class Aggregation11Test extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_PUBLIC), Access.getAsString(
 						Aggregation11Test.Elements[1].getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) Aggregation11Test.Elements[1])
 						.getCardinality());
 		Assert.assertEquals("Association relationship name",
@@ -198,7 +199,7 @@ public class Aggregation11Test extends ClassFilePrimitive {
 				Access.getAsString(Access.ACC_NONE), Access.getAsString(
 						Aggregation11Test.Elements[7].getVisibility()));
 		Assert.assertEquals("ContainerAggregation relationship cardinality",
-				Constants.CARDINALITY_MANY,
+				Cardinality.Many,
 				((IContainerAggregation) Aggregation11Test.Elements[7])
 						.getCardinality());
 		Assert.assertEquals("ContainerAggregation relationship name",

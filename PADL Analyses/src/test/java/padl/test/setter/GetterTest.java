@@ -14,6 +14,7 @@ import org.junit.Assert;
 import junit.framework.TestCase;
 import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
@@ -45,7 +46,7 @@ public class GetterTest extends TestCase {
 					Factory.getInstance().createParameter(
 						entity,
 						parameterName,
-						Constants.CARDINALITY_ONE);
+						1);
 				final IMethod aGetter =
 					Factory.getInstance().createMethod(
 						"get".toCharArray(),
@@ -57,7 +58,7 @@ public class GetterTest extends TestCase {
 					Factory.getInstance().createParameter(
 						entity,
 						parameterName,
-						Constants.CARDINALITY_ONE);
+						1);
 				final IMethod aSetter =
 					Factory.getInstance().createMethod(
 						"set".toCharArray(),

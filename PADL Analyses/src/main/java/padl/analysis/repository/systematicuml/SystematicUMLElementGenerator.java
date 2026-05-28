@@ -234,7 +234,7 @@ public class SystematicUMLElementGenerator implements IWalker {
 			aField.getID(),
 			aField.getName(),
 			aField.getType(),
-			aField.getCardinality()));
+			aField.getDimension()));
 	}
 	public void visit(final IMethodInvocation aMethodInvocation) {
 		// The target entity can be null if this 
@@ -271,7 +271,7 @@ public class SystematicUMLElementGenerator implements IWalker {
 			this.factory.createParameter(
 				aParameter.getType(),
 				aParameter.getName(),
-				aParameter.getCardinality());
+				aParameter.getDimension());
 		this.newMethod.addConstituent(newParameter);
 	}
 	public void visit(final IPrimitiveEntity aPrimitiveEntity) {

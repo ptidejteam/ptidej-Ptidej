@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.solver.claire.test.pattern;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.ICreation;
@@ -35,7 +36,7 @@ public final class CreationPattern extends TestMotifModel {
 			this.getFactory().createCreationRelationship(
 				CreationPattern.MESSAGE,
 				created,
-				Constants.CARDINALITY_ONE);
+				Cardinality.One);
 		creator.addConstituent(creationLink);
 		this.addConstituent(creator);
 		this.addConstituent(created);

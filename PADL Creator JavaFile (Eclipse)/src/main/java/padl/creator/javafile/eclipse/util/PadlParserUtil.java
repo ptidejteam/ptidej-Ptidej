@@ -18,6 +18,8 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.eclipse.jdt.core.dom.ITypeBinding;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 import org.eclipse.jdt.core.dom.SingleVariableDeclaration;
+
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.ICodeLevelModel;
@@ -28,6 +30,7 @@ import padl.kernel.IFirstClassEntity;
 import padl.kernel.IPackage;
 import padl.kernel.IParameter;
 import padl.kernel.impl.Factory;
+import padl.util.Util;
 
 public class PadlParserUtil {
 
@@ -264,7 +267,7 @@ public class PadlParserUtil {
 	 * @param aTypeBinding
 	 * @return
 	 */
-	public static int getCardinality(final ITypeBinding aTypeBinding) {
+	public static Cardinality getCardinality(final ITypeBinding aTypeBinding) {
 		ITypeBinding typeBinding = aTypeBinding;
 		if (aTypeBinding.isParameterizedType()) {
 			typeBinding = aTypeBinding.getErasure();
@@ -272,10 +275,10 @@ public class PadlParserUtil {
 		if (padl.util.Util.isArrayOrCollection(typeBinding
 			.getQualifiedName()
 			.toCharArray())) {
-			return Constants.CARDINALITY_MANY;
+			return Cardinality.Many;
 		}
 		else {
-			return Constants.CARDINALITY_ONE;
+			return Cardinality.One;
 		}
 	}
 	
@@ -283,13 +286,22 @@ public class PadlParserUtil {
 	 * Returns the dimension of a type
 	 * int		has dimension 0
 	 * int[]	has dimension 1
-	 * int[][]	has dimension 2...
+	 * Vector has dimension 1 (any collections, actually)
+	 * int[][]	has dimension 2
+	 * Vector[] has dimension 2...
 	 * 
 	 * @param aTypeBinding
 	 * @return
 	 */
 	public static int getDimension(final ITypeBinding aTypeBinding) {
-		return aTypeBinding.getDimensions();
+		ITypeBinding typeBinding = aTypeBinding;
+		// TODO Do we handle Vector[] or Vector<ArrayList> correctly?
+		if (Util.isCollection(typeBinding.getQualifiedName().toCharArray())) {
+			return 1;
+			} 
+		else {
+			return aTypeBinding.getDimensions();
+			} 
 	}
 
 	/**
@@ -508,7 +520,11 @@ public class PadlParserUtil {
 					//	int[]	has for cardinality 2
 					//	int[][]	has for cardniality 3
 					//	...
-					final int dim = PadlParserUtil.getDimension(type) + 1;
+					// Luca 2026/05/26: New handling of dimension and cardinality
+					// int 		has dimension 0 / Cardinality.ONE
+					// int[] 	has dimension 1 / Cardinality.MANY
+					// etc
+					final int dim = PadlParserUtil.getDimension(type);
 					final IParameter parameter =
 								model.getFactory().createParameter(
 									entity,

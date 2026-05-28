@@ -17,6 +17,7 @@ import org.junit.Assert;
 
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
@@ -110,7 +111,7 @@ public class MI_InstanceInstanceTest extends TestCase {
 			javaMethodInvocation.getCalledMethod().getDisplayName());
 		Assert.assertEquals(
 			"method invocation cardinality",
-			Constants.CARDINALITY_ONE,
+			Cardinality.One,
 			javaMethodInvocation.getCardinality());
 		Assert.assertEquals(
 			"method invocation visibility",
@@ -199,7 +200,7 @@ public class MI_InstanceInstanceTest extends TestCase {
 			javaMethodInvocation.getCalledMethod().getDisplayName());
 		Assert.assertEquals(
 			"method invocation cardinality",
-			Constants.CARDINALITY_MANY,
+			Cardinality.Many,
 			javaMethodInvocation.getCardinality());
 		Assert.assertEquals(
 			"method invocation visibility",

@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.example.pattern;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IClass;
 import padl.kernel.IPackage;
@@ -32,10 +33,10 @@ public final class UseExample extends TestMotifModel {
 
 		final IUseRelationship link1 = this.getFactory().createUseRelationship(
 				"message".toCharArray(), programNodeBuilder,
-				Constants.CARDINALITY_ONE);
+				Cardinality.One);
 		final IUseRelationship link2 = this.getFactory().createUseRelationship(
 				"message".toCharArray(), programNode,
-				Constants.CARDINALITY_ONE);
+				Cardinality.One);
 
 		compiler.addConstituent(link1);
 		programNodeBuilder.addConstituent(link2);

@@ -12,6 +12,8 @@ package ptidej.ui.kernel;
 
 import java.awt.Dimension;
 import java.awt.Point;
+
+import padl.kernel.Cardinality;
 import ptidej.ui.IVisibility;
 import ptidej.ui.primitive.IPrimitiveFactory;
 import ptidej.ui.primitive.ISymbol;
@@ -33,7 +35,7 @@ public abstract class AbstractInheritance extends Relationship {
 		Entity origin,
 		Entity target) {
 
-		super(primitiveFactory, 0, origin, target);
+		super(primitiveFactory, Cardinality.One, origin, target);
 		this.intermediaryPoints = new IntermediaryPoint[0];
 	}
 	protected ISymbol getOriginSymbol() {

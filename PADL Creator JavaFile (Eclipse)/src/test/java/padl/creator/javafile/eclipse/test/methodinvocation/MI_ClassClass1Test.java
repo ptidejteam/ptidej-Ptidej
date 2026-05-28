@@ -15,11 +15,11 @@ import java.util.Iterator;
 import org.junit.Assert;
 import junit.framework.TestCase;
 import padl.creator.javafile.eclipse.test.util.Utils;
-import padl.kernel.Constants;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
+import padl.kernel.Cardinality;
 import util.io.ProxyConsole;
 
 public class MI_ClassClass1Test extends TestCase {
@@ -109,7 +109,7 @@ public class MI_ClassClass1Test extends TestCase {
 			javaMethodInvocation.getCalledMethod().getDisplayName());
 		Assert.assertEquals(
 			"method invocation cardinality",
-			Constants.CARDINALITY_ONE,
+			Cardinality.One,
 			javaMethodInvocation.getCardinality());
 		Assert.assertEquals("method invocation visibility", Modifier.STATIC
 				+ Modifier.PUBLIC, javaMethodInvocation.getVisibility());
@@ -201,7 +201,7 @@ public class MI_ClassClass1Test extends TestCase {
 			javaMethodInvocation.getCalledMethod().getDisplayName());
 		Assert.assertEquals(
 			"method invocation cardinality",
-			Constants.CARDINALITY_ONE,
+			Cardinality.One,
 			javaMethodInvocation.getCardinality());
 		Assert.assertEquals("method invocation visibility", Modifier.STATIC
 				+ Modifier.PUBLIC, javaMethodInvocation.getVisibility());

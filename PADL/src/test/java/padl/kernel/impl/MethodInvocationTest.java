@@ -12,6 +12,7 @@ package padl.kernel.impl;
 
 import java.util.HashSet;
 import junit.framework.TestCase;
+import padl.kernel.Cardinality;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IMethodInvocation;
 import com.ibm.toad.cfparse.utils.Access;
@@ -40,13 +41,13 @@ public class MethodInvocationTest extends TestCase {
 		final MethodInvocation methodInv1 =
 			new MethodInvocation(
 				IMethodInvocation.INSTANCE_CLASS,
-				0,
+				Cardinality.One,
 				Access.ACC_PUBLIC,
 				firstClassEntity);
 		final MethodInvocation methodInv2 =
 			new MethodInvocation(
 				IMethodInvocation.INSTANCE_CLASS,
-				0,
+				Cardinality.One,
 				Access.ACC_PUBLIC,
 				firstClassEntity);
 

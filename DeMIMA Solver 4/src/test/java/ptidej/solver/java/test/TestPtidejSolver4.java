@@ -12,7 +12,8 @@ package ptidej.solver.java.test;
 
 import junit.framework.TestSuite;
 import ptidej.solver.java.test.example.Composite1FromClassFilesTest;
-import ptidej.solver.java.test.example.Composite1FromJavaFilesTest;
+import ptidej.solver.java.test.example.Composite1FromJavaFilesUsingEclipseTest;
+import ptidej.solver.java.test.example.Composite1FromJavaFilesUsingJavaCTest;
 import ptidej.solver.java.test.manager.ManagerTest;
 import ptidej.solver.java.test.simple.CompositionAndInheritanceTest;
 import ptidej.solver.java.test.simple.CompositionTest;
@@ -36,7 +37,8 @@ public final class TestPtidejSolver4 extends TestSuite {
 		suite.addTestSuite(ManagerTest.class);
 		suite.addTestSuite(CompositionAndInheritanceTest.class);
 		suite.addTestSuite(Composite1FromClassFilesTest.class);
-		suite.addTestSuite(Composite1FromJavaFilesTest.class);
+		suite.addTestSuite(Composite1FromJavaFilesUsingEclipseTest.class);
+		suite.addTestSuite(Composite1FromJavaFilesUsingJavaCTest.class);
 		suite.addTestSuite(CompositionTest.class);
 		suite.addTestSuite(CreationTest.class);
 		suite.addTestSuite(GoodInheritanceTest.class);

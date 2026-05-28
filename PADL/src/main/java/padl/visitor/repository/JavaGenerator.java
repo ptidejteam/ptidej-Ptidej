@@ -14,6 +14,7 @@ import java.util.Iterator;
 
 import com.ibm.toad.cfparse.utils.Access;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IAggregation;
@@ -222,7 +223,7 @@ public final class JavaGenerator implements IGenerator {
 	}
 
 	public void open(final IDelegatingMethod p) {
-		if (p.getTargetAssoc().getCardinality() > 1) {
+		if (p.getTargetAssoc().getCardinality() == Cardinality.Many) {
 			p.setCodeLines(
 					"for (java.util.Enumeration enum = "
 							+ p.getTargetAssoc().getDisplayName()

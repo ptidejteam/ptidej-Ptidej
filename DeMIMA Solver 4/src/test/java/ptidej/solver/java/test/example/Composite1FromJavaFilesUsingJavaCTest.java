@@ -20,6 +20,7 @@ import java.util.Properties;
 import org.junit.Assert;
 
 import junit.framework.TestCase;
+import padl.creator.csharpfile.v1.parser.CSharpParser.nEW_return;
 import padl.generator.helper.ModelGenerator;
 import padl.kernel.IIdiomLevelModel;
 import ptidej.solver.Occurrence;
@@ -30,18 +31,18 @@ import ptidej.solver.java.problem.CompositeMotif;
 import util.io.ProxyConsole;
 import util.io.ReaderInputStream;
 
-public class Composite1FromJavaFilesTest extends TestCase {
+public class Composite1FromJavaFilesUsingJavaCTest extends TestCase {
 	private static int NumberOfExpectedSolutions;
 	private static Occurrence[] FoundSolutions;
 	private static Occurrence[] ExpectedSolutions;
 
-	public Composite1FromJavaFilesTest(final String name) {
+	public Composite1FromJavaFilesUsingJavaCTest(final String name) {
 		super(name);
 	}
 	protected void setUp()
 			throws IllegalAccessException, InstantiationException {
 
-		if (Composite1FromJavaFilesTest.FoundSolutions == null) {
+		if (Composite1FromJavaFilesUsingJavaCTest.FoundSolutions == null) {
 			try {
 				final String rootPath =
 						"../DeMIMA/src/test/java/ptidej/example/composite1/";
@@ -53,16 +54,14 @@ public class Composite1FromJavaFilesTest extends TestCase {
 						.toString();
 				}
 				final IIdiomLevelModel idiomLevelModel = ModelGenerator
-					.generateModelFromJavaFilesDirectoriesUsingEclipse(
+					.generateModelFromJavaFilesDirectoryUsingJavaC(
 						"",
-						"../DeMIMA/src/test/java/",
-						someFilesPaths,
-						null);
+						new String[] {"../DeMIMA/src/test/java/ptidej/example/composite1/"});
 
 				// Expected solutions.
-				Composite1FromJavaFilesTest.ExpectedSolutions = SolutionReader
+				Composite1FromJavaFilesUsingJavaCTest.ExpectedSolutions = SolutionReader
 					.getExpectedSolutions("Composite1", idiomLevelModel);
-				Composite1FromJavaFilesTest.NumberOfExpectedSolutions =
+				Composite1FromJavaFilesUsingJavaCTest.NumberOfExpectedSolutions =
 					SolutionReader.getExpectedNumberOfSolutions(
 						"Composite1",
 						idiomLevelModel);
@@ -87,7 +86,7 @@ public class Composite1FromJavaFilesTest extends TestCase {
 						new StringReader(writer.getBuffer().toString())));
 				final OccurrenceBuilder solutionBuilder =
 					OccurrenceBuilder.getInstance();
-				Composite1FromJavaFilesTest.FoundSolutions =
+				Composite1FromJavaFilesUsingJavaCTest.FoundSolutions =
 					solutionBuilder.getCanonicalOccurrences(properties);
 			}
 			catch (final IOException e) {
@@ -98,16 +97,16 @@ public class Composite1FromJavaFilesTest extends TestCase {
 	public void testNumberOfSolutions() {
 		Assert.assertEquals(
 			"Number of solutions",
-			Composite1FromJavaFilesTest.NumberOfExpectedSolutions,
-			Composite1FromJavaFilesTest.FoundSolutions.length);
+			Composite1FromJavaFilesUsingJavaCTest.NumberOfExpectedSolutions,
+			Composite1FromJavaFilesUsingJavaCTest.FoundSolutions.length);
 	}
 	public void testSolutions() {
 		for (int i =
-			0; i < Composite1FromJavaFilesTest.NumberOfExpectedSolutions; i++) {
+			0; i < Composite1FromJavaFilesUsingJavaCTest.NumberOfExpectedSolutions; i++) {
 			Assert.assertEquals(
 				"",
-				Composite1FromJavaFilesTest.ExpectedSolutions[i],
-				Composite1FromJavaFilesTest.FoundSolutions[i]);
+				Composite1FromJavaFilesUsingJavaCTest.ExpectedSolutions[i],
+				Composite1FromJavaFilesUsingJavaCTest.FoundSolutions[i]);
 		}
 	}
 }

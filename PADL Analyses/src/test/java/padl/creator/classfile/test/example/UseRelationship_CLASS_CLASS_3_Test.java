@@ -18,6 +18,7 @@ import padl.analysis.UnsupportedSourceModelException;
 import padl.analysis.repository.AACRelationshipsAnalysis;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.classfile.test.ClassFilePrimitive;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IAssociation;
 import padl.kernel.ICodeLevelModel;
@@ -81,7 +82,7 @@ public class UseRelationship_CLASS_CLASS_3_Test extends ClassFilePrimitive {
 						UseRelationship_CLASS_CLASS_3_Test.Elements[1]
 								.getVisibility()));
 		Assert.assertEquals("Association relationship cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IAssociation) UseRelationship_CLASS_CLASS_3_Test.Elements[1])
 						.getCardinality());
 		Assert.assertEquals("Association relationship name",
@@ -110,7 +111,7 @@ public class UseRelationship_CLASS_CLASS_3_Test extends ClassFilePrimitive {
 						UseRelationship_CLASS_CLASS_3_Test.Elements[3]
 								.getVisibility()));
 		Assert.assertEquals("Use relationship cardinality",
-				Constants.CARDINALITY_ONE,
+				Cardinality.One,
 				((IUseRelationship) UseRelationship_CLASS_CLASS_3_Test.Elements[3])
 						.getCardinality());
 		Assert.assertEquals("Use relationship name",

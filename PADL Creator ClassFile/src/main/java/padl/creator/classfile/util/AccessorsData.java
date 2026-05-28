@@ -10,12 +10,13 @@
  ******************************************************************************/
 package padl.creator.classfile.util;
 
+import padl.kernel.ICardinality;
+
 /**
  * @author Yann-Gaël Guéhéneuc
  * @since  2004/08/01
  */
-public interface AccessorsData {
-	int getCardinality();
+public interface AccessorsData extends ICardinality {
 	boolean matches(
 		final char[] targetName,
 		final ExtendedFieldInfo fieldInfo);

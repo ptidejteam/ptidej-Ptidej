@@ -22,7 +22,7 @@ public interface ICPPFactoryANTLR extends IFactory {
 	IGlobalField createGlobalField(
 		final char[] aName,
 		final char[] aType,
-		final int aCardinality);
+		final int dimension);
 	IStructure createStructure(final char[] aName);
 	IUnion createUnion(final char[] aName);
 }

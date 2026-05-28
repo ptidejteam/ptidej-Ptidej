@@ -28,8 +28,10 @@ import padl.aspectj.kernel.IAspect;
 import padl.aspectj.kernel.IAspectJFactory;
 import padl.aspectj.kernel.IInterTypeDeclareParents;
 import padl.aspectj.kernel.IInterTypeElement;
+import padl.aspectj.kernel.IInterTypeField;
 import padl.aspectj.kernel.IInterTypeMethod;
 import padl.creator.aspectjlst.AspectCreator;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IConstituent;
@@ -127,7 +129,7 @@ public class AspectWalker extends HierarchyWalker {
 		//		 TODO: check the FIELD creation (Cardinality)
 		element = this.factory.createField(node.getName().toCharArray(),
 				node.getName().toCharArray(),
-				node.getCorrespondingType().toCharArray(), 1);
+				node.getCorrespondingType().toCharArray(), 0);
 		element.setName(node.getName().toCharArray());
 		return element;
 	}
@@ -142,7 +144,7 @@ public class AspectWalker extends HierarchyWalker {
 	}
 
 	private IConstituentOfEntity createITField(final IProgramElement node) {
-		IInterTypeElement element = null;
+		IInterTypeField element = null;
 		element = this.factory.createInterTypeField(
 				node.getName().toCharArray(),
 				node.getCorrespondingType().toCharArray());
@@ -202,8 +204,7 @@ public class AspectWalker extends HierarchyWalker {
 					this.codeLevelModel.addConstituent(entity);
 				}
 			}
-			final IParameter param = this.factory.createParameter(entity,
-					Constants.CARDINALITY_ONE);
+			final IParameter param = this.factory.createParameter(entity, 1);
 			it_method.addConstituent(param);
 			paramBuffer.append(param.getTypeName());
 			paramBuffer.append(" ");

@@ -10,6 +10,7 @@
  ******************************************************************************/
 package ptidej.solver.claire.test.defect;
 
+import padl.kernel.Cardinality;
 import padl.kernel.IAssociation;
 import padl.kernel.IClass;
 import padl.kernel.IPackage;
@@ -34,7 +35,7 @@ public final class AssociationPattern extends TestMotifModel {
 				"AggregatedClass1".toCharArray());
 		final IAssociation anAssociation1 = this.getFactory()
 				.createAssociationRelationship("association".toCharArray(),
-						anAggregatedClass1, 1);
+						anAggregatedClass1, Cardinality.One);
 		anAggregateClass1.addConstituent(anAssociation1);
 
 		final IClass anAssociatedClass = this.getFactory().createClass(
@@ -42,7 +43,7 @@ public final class AssociationPattern extends TestMotifModel {
 				"AssociatedClass1".toCharArray());
 		final IAssociation anAssociation2 = this.getFactory()
 				.createAssociationRelationship("association".toCharArray(),
-						anAssociatedClass, 1);
+						anAssociatedClass, Cardinality.One);
 		anAggregatedClass1.addConstituent(anAssociation2);
 
 		final IClass anAggregateClass2 = this.getFactory().createClass(
@@ -62,7 +63,7 @@ public final class AssociationPattern extends TestMotifModel {
 		subclass3.addInheritedEntity(subclass2);
 		final IAssociation anAssociation3 = this.getFactory()
 				.createAssociationRelationship("association".toCharArray(),
-						anAggregatedClass2, 1);
+						anAggregatedClass2, Cardinality.One);
 		anAggregateClass2.addConstituent(anAssociation3);
 
 		final IPackage enclosingPackage = this.getFactory()

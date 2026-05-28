@@ -10,10 +10,13 @@
  ******************************************************************************/
 package padl.creator.classfile.util;
 
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
 import padl.util.Util;
+import util.io.ProxyConsole;
+
 import com.ibm.toad.cfparse.utils.Access;
 
 /**
@@ -25,8 +28,8 @@ public final class CardinalityManyAccessorsData implements AccessorsData {
 	public CardinalityManyAccessorsData(final ICodeLevelModel aCodeLevelModel) {
 		this.codeLevelModel = aCodeLevelModel;
 	}
-	public int getCardinality() {
-		return Constants.CARDINALITY_MANY;
+	public Cardinality getCardinality() {
+		return Cardinality.Many;
 	}
 	public boolean matches(
 		final char[] targetName,
@@ -45,5 +48,8 @@ public final class CardinalityManyAccessorsData implements AccessorsData {
 		}
 		return !Access.isPublic(fieldInfo.getVisibility())
 				&& isArrayOrCollection;
+	}
+	public void setCardinality(Cardinality cardinality) {
+		ProxyConsole.getInstance().warningOutput().print("Trying to set the cardinality of a " + this.getClass().getSimpleName() + " which should have no effect.");
 	}
 }

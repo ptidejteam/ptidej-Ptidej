@@ -14,6 +14,7 @@ import org.antlr.runtime.tree.CommonTree;
 import padl.creator.csharpfile.v2.parser.CSharpTokens;
 import padl.creator.csharpfile.v2.parser.builder.BuilderContext;
 import padl.creator.csharpfile.v2.parser.builder.CodeBuilder;
+import padl.kernel.Cardinality;
 import padl.kernel.Constants;
 import padl.kernel.IConstituent;
 import padl.kernel.IConstituentOfOperation;
@@ -214,7 +215,7 @@ public class InterfaceMethodBuilderImpl extends AbstractPADLCodeBuilder
 						context.getModel().getTopLevelEntityFromID(
 							memberType.getToken().getText().toCharArray()),
 						memberName.getText().toCharArray(),
-						Constants.CARDINALITY_ONE);
+						1);
 				this.method.addConstituent(parameter);
 				if (node.getChildren().size() > memberName.getChildIndex() + 1
 						&& ((CommonTree) node.getChild(memberName

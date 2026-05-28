@@ -458,6 +458,16 @@ public class Util {
 		return false;
 	}
 
+	public static int getArrayDimension(final char[] aTypeName) {
+	    int dimension = 0;
+	    for (final char c : aTypeName) {
+	        if (c == ']') {
+	            dimension++;
+	        }
+	    }
+	    return dimension;
+	}
+	
 	public static boolean isArrayOrCollection(final IFirstClassEntity anEntity) {
 		if (Util.isArray(anEntity.getID())) {
 			return true;

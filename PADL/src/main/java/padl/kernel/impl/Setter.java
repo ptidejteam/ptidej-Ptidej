@@ -11,6 +11,8 @@
 package padl.kernel.impl;
 
 import java.util.Iterator;
+
+import padl.kernel.Cardinality;
 import padl.kernel.IConstituent;
 import padl.kernel.IMethod;
 import padl.kernel.ISetter;
@@ -21,7 +23,7 @@ import padl.kernel.ISetter;
  */
 class Setter extends Method implements ISetter {
 	private static final long serialVersionUID = 1314084068977253108L;
-	private int cardinality;
+	private Cardinality cardinality;
 	public Setter(final IMethod aMethod) {
 		super(aMethod.getID());
 
@@ -56,10 +58,10 @@ class Setter extends Method implements ISetter {
 	public Setter(final char[] anID) {
 		super(anID);
 	}
-	public int getCardinality() {
+	public Cardinality getCardinality() {
 		return this.cardinality;
 	}
-	public void setCardinality(final int aCardinality) {
+	public void setCardinality(final Cardinality aCardinality) {
 		this.cardinality = aCardinality;
 	}
 }
