@@ -162,44 +162,47 @@ class EclipseBundleRepository implements IFileRepository {
 			final Collection<NamedInputStream> aListOfFiles) {
 
 		final String[] files = theCurrentDirectory.list();
-		if (files == null) {
-			ProxyConsole.getInstance().errorOutput().println("Cannot process : "
-					+ theCurrentDirectory.getAbsolutePath());
-			System.exit(1);
+		if (files == null || files.length == 0) {
+			ProxyConsole.getInstance().errorOutput()
+					.println("Cannot process: "
+							+ theCurrentDirectory.getAbsolutePath()
+							+ " (null or empty)");
 		}
-		for (int i = 0; i < files.length; i++) {
-			final File file = new File(theCurrentDirectory, files[i]);
-			if (file.isFile()) {
-				FileInputStream fileInputStream = null;
-				try {
-					fileInputStream = new FileInputStream(file);
-					aListOfFiles.add(new NamedInputStream(
-							file.getCanonicalPath(), fileInputStream));
-				}
-				catch (final FileNotFoundException fnfe) {
-					fnfe.printStackTrace(
-							ProxyConsole.getInstance().errorOutput());
-				}
-				catch (final IOException ioe) {
-					ioe.printStackTrace(
-							ProxyConsole.getInstance().errorOutput());
-				}
-				finally {
-					if (fileInputStream != null) {
-						try {
-							fileInputStream.close();
-						}
-						catch (IOException ioe) {
-							ProxyConsole.getInstance().errorOutput()
-									.println("Warning: cannot close file!");
+		else {
+			for (int i = 0; i < files.length; i++) {
+				final File file = new File(theCurrentDirectory, files[i]);
+				if (file.isFile()) {
+					FileInputStream fileInputStream = null;
+					try {
+						fileInputStream = new FileInputStream(file);
+						aListOfFiles.add(new NamedInputStream(
+								file.getCanonicalPath(), fileInputStream));
+					}
+					catch (final FileNotFoundException fnfe) {
+						fnfe.printStackTrace(
+								ProxyConsole.getInstance().errorOutput());
+					}
+					catch (final IOException ioe) {
+						ioe.printStackTrace(
+								ProxyConsole.getInstance().errorOutput());
+					}
+					finally {
+						if (fileInputStream != null) {
+							try {
+								fileInputStream.close();
+							}
+							catch (IOException ioe) {
+								ProxyConsole.getInstance().errorOutput()
+										.println("Warning: cannot close file!");
+							}
 						}
 					}
 				}
-			}
-			else {
-				EclipseBundleRepository.injectStreams(file, aListOfFiles);
-				ProxyConsole.getInstance().normalOutput()
-						.println("Current size: " + aListOfFiles.size());
+				else {
+					EclipseBundleRepository.injectStreams(file, aListOfFiles);
+					ProxyConsole.getInstance().normalOutput()
+							.println("Current size: " + aListOfFiles.size());
+				}
 			}
 		}
 	}

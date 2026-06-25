@@ -21,31 +21,29 @@ import util.io.ProxyDisk;
  */
 public class FastComputeDomainReduction extends Solver {
 
-	public FastComputeDomainReduction(
-		final String path,
-		final String name,
-		final String motif) {
+	public FastComputeDomainReduction(final String path, final String name,
+			final String motif) {
+
 		this(path, null, name, motif);
 	}
-	public FastComputeDomainReduction(
-		final String path,
-		final String[] packageNames,
-		final String name,
-		final String motif) {
+
+	public FastComputeDomainReduction(final String path,
+			final String[] packageNames, final String name,
+			final String motif) {
+
 		super(path, packageNames, name, motif);
 	}
+
 	public Class getMotif(final int mode) {
 		Class motif = null;
 		try {
 			if (mode == Logger.WITH_RULES) {
-				motif =
-					Class.forName(Solver.FingerprintPackageName
-							+ this.getMotifName());
+				motif = Class.forName(
+						Solver.FingerprintPackageName + this.getMotifName());
 			}
 			else {
-				motif =
-					Class.forName(Solver.NoFingerprintPackageName
-							+ this.getMotifName());
+				motif = Class.forName(
+						Solver.NoFingerprintPackageName + this.getMotifName());
 			}
 		}
 		catch (final ClassNotFoundException e) {
@@ -59,7 +57,6 @@ public class FastComputeDomainReduction extends Solver {
 		// args: -src path [-pkg [packageName]] -name programName -motif motif
 		FastComputeDomainReduction compute = null;
 		if (args[2].equals("-pkg")) {
-
 			//Creation of pkg tab
 			int cpt = 3;
 			ArrayList pkgList = new ArrayList();
@@ -71,37 +68,32 @@ public class FastComputeDomainReduction extends Solver {
 			for (int i = 0; i < pkgList.size(); i++)
 				pkgTab[i] = (String) pkgList.get(i);
 
-			compute =
-				new FastComputeDomainReduction(
-					args[1],
-					pkgTab,
-					args[cpt + 1],
-					args[cpt + 3]);
+			compute = new FastComputeDomainReduction(args[1], pkgTab,
+					args[cpt + 1], args[cpt + 3]);
 
 		}
 		else {
-			if (args.length == 6) {
-				compute =
-					new FastComputeDomainReduction(args[1], args[3], args[5]);
+			if (args.length != 6) {
+				System.out.println(
+						"Usage: FastComputeDomainReduction -src path [-pkg [packageName]] -name programName -motif motif");
 			}
 			else {
-				System.out
-					.println("Usage: FastComputeDomainReduction -src path [-pkg [packageName]] -name programName -motif motif");
-				System.exit(0);
+				compute = new FastComputeDomainReduction(args[1], args[3],
+						args[5]);
+				try {
+					final PrintWriter out = new PrintWriter(ProxyDisk
+							.getInstance()
+							.fileTempOutput("DomainReductionFor"
+									+ compute.getMotifName() + "On"
+									+ compute.getProgramName() + ".txt"));
+					compute.computeDomainReduction(out);
+					out.flush();
+					out.close();
+				}
+				catch (final Exception e) {
+					e.printStackTrace();
+				}
 			}
-		}
-
-		try {
-			final PrintWriter out =
-				new PrintWriter(ProxyDisk.getInstance().fileTempOutput(
-					"DomainReductionFor" + compute.getMotifName() + "On"
-							+ compute.getProgramName() + ".txt"));
-			compute.computeDomainReduction(out);
-			out.flush();
-			out.close();
-		}
-		catch (final Exception e) {
-			e.printStackTrace();
 		}
 	}
 }

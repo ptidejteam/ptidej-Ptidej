@@ -28,13 +28,12 @@ import padl.path.IConstants;
 public abstract class Element extends Constituent implements IElement {
 	private static final long serialVersionUID = -600323363393722203L;
 
-	private AttachmentSupport attachment = new AttachmentSupport();
+	private IElement attachedElement;
 
-	private void readObject(final java.io.ObjectInputStream in) throws IOException, ClassNotFoundException {
+	private void readObject(final java.io.ObjectInputStream in)
+			throws IOException, ClassNotFoundException {
+
 		in.defaultReadObject();
-		if (this.attachment == null) {
-			this.attachment = new AttachmentSupport();
-		}
 	}
 
 	public Element(final char[] actorID) {
@@ -46,15 +45,15 @@ public abstract class Element extends Constituent implements IElement {
 	}
 
 	public void attachTo(final IElement anElement) {
-		this.attachment.attachTo(this, anElement);
+		this.attachedElement = anElement;
 	}
 
 	public void detach() {
-		this.attachment.detach();
+		this.attachedElement = null;
 	}
 
 	public IElement getAttachedElement() {
-		return this.attachment.getAttachedElement();
+		return this.attachedElement;
 	}
 
 	public char[] getName() {
@@ -71,7 +70,8 @@ public abstract class Element extends Constituent implements IElement {
 
 	public void performCloneSession() {
 		if (this.getAttachedElement() != null) {
-			((Element) this.getClone()).attachment.setAttachedElement((Element) this.getAttachedElement().getClone());
+			((Element) this.getClone()).attachedElement = (Element) this
+					.getAttachedElement().getClone();
 		}
 
 		super.performCloneSession();
@@ -91,12 +91,13 @@ public abstract class Element extends Constituent implements IElement {
 		// This code is actually dumb! Because the ID of an element
 		// can contain legitimate underscores... So, I replace such
 		// underscore with something that only PADL would do...
-		final int index = this.getDisplayID().indexOf(Constants.NUMBER_SEPARATOR);
+		final int index = this.getDisplayID()
+				.indexOf(Constants.NUMBER_SEPARATOR);
 		if (index > 0) {
-			((Element) this.getClone()).setID(ArrayUtils.subarray(this.getID(), 0, index));
+			((Element) this.getClone())
+					.setID(ArrayUtils.subarray(this.getID(), 0, index));
 		}
 
-		((Element) this.getClone()).attachment.setAttachedElement(null);
-
+		((Element) this.getClone()).attachedElement = null;
 	}
 }

@@ -13,7 +13,6 @@ package padl.kernel;
 /**
  * @author Yann-Gaël Guéhéneuc
  */
-public interface IRelationship extends IElement, ICardinality {
-	
-	IFirstClassEntity getTargetEntity();	
+public interface IRelationship extends IMemberElement, ICardinality {
+	IFirstClassEntity getTargetEntity();
 }

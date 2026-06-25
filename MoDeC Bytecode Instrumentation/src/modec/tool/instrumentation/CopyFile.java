@@ -39,7 +39,7 @@ public class CopyFile {
 	private static int override = OVERWRITE_ASK;
 
 	public static Long copyFile(final File srcFile, final File destFile)
-		throws IOException {
+			throws IOException {
 
 		final InputStream in = new FileInputStream(srcFile);
 		final OutputStream out = new FileOutputStream(destFile);
@@ -51,20 +51,21 @@ public class CopyFile {
 		final byte[] buffer = new byte[bufferSize];
 		int bytesRead;
 		while ((bytesRead = in.read(buffer)) >= 0) {
-			if (verify) {
+			if (checksum != null && verify) {
 				checksum.update(buffer, 0, bytesRead);
 			}
 			out.write(buffer, 0, bytesRead);
 		}
 		out.close();
 		in.close();
-		if (verify) {
+		if (checksum != null && verify) {
 			return Long.valueOf(checksum.getValue());
 		}
 		else {
 			return null;
 		}
 	}
+
 	public static Long createChecksum(final File file) throws IOException {
 		final InputStream in = new FileInputStream(file);
 		final CRC32 checksum = new CRC32();
@@ -95,13 +96,11 @@ public class CopyFile {
 		}
 		else if (override == OVERWRITE_ASK) {
 			return readYesNoFromStandardInput(
-				"File exists. " + "Overwrite (y/n)?");
+					"File exists. " + "Overwrite (y/n)?");
 		}
 		else {
-			throw new InternalError(
-				"Program error. Invalid "
-					+ "value for override: "
-					+ override);
+			throw new InternalError("Program error. Invalid "
+					+ "value for override: " + override);
 		}
 	}
 
@@ -138,7 +137,7 @@ public class CopyFile {
 		if (copyOriginalTimestamp) {
 			if (!destFile.setLastModified(srcFile.lastModified())) {
 				System.err.println(
-					"Error: Could not set " + "timestamp of copied file.");
+						"Error: Could not set " + "timestamp of copied file.");
 			}
 		}
 
@@ -164,8 +163,8 @@ public class CopyFile {
 	public static boolean readYesNoFromStandardInput(final String message) {
 		System.out.println(message);
 		String line;
-		final BufferedReader in =
-			new BufferedReader(new InputStreamReader(System.in));
+		final BufferedReader in = new BufferedReader(
+				new InputStreamReader(System.in));
 		Boolean answer = null;
 		try {
 			while ((line = in.readLine()) != null) {
@@ -179,9 +178,7 @@ public class CopyFile {
 					break;
 				}
 				else {
-					System.out.println(
-						"Could not understand answer (\""
-							+ line
+					System.out.println("Could not understand answer (\"" + line
 							+ "\"). Please use y for yes or n for no.");
 				}
 			}
@@ -192,7 +189,8 @@ public class CopyFile {
 			return answer.booleanValue();
 		}
 		catch (IOException ioe) {
-			throw new InternalError("Cannot read from stdin or write to stdout.");
+			throw new InternalError(
+					"Cannot read from stdin or write to stdout.");
 		}
 	}
 }

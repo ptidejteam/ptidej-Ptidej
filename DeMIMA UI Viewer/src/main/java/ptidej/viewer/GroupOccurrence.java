@@ -15,6 +15,7 @@ import java.awt.Point;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
 import ptidej.solver.Occurrence;
 import ptidej.solver.OccurrenceBuilder;
 import ptidej.solver.OccurrenceComponent;
@@ -40,13 +41,10 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 	private final Occurrence occurrence;
 	private final OccurrenceBuilder solutionBuilder;
 
-	public GroupOccurrence(
-		final Canvas canvas,
-		final IOccurrencePrimitiveFactory primitiveFactory,
-		final Occurrence solution,
-		final OccurrenceBuilder solutionBuilder,
-		final ModelGraph modelGraph,
-		final IUILayout layout) {
+	public GroupOccurrence(final Canvas canvas,
+			final IOccurrencePrimitiveFactory primitiveFactory,
+			final Occurrence solution, final OccurrenceBuilder solutionBuilder,
+			final ModelGraph modelGraph, final IUILayout layout) {
 
 		super(primitiveFactory);
 
@@ -57,9 +55,10 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 		this.layout = layout;
 
 		this.canvas.GroupSolutionsNumber++;
-		this.canvas.GroupSolutionsCount.put(this, Integer.valueOf(
-			this.canvas.GroupSolutionsNumber));
+		this.canvas.GroupSolutionsCount.put(this,
+				Integer.valueOf(this.canvas.GroupSolutionsNumber));
 	}
+
 	public void build() {
 		this.groupRectangleButtons.clear();
 
@@ -72,16 +71,15 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 		// is a positive solution.
 		boolean isPositive;
 		if (this.occurrence.getComponent(Occurrence.SIGN) != null
-				&& this.occurrence
-					.getComponent(Occurrence.SIGN)
-					.getDisplayValue()
-					.equals("Positive")
+				&& this.occurrence.getComponent(Occurrence.SIGN)
+						.getDisplayValue().equals("Positive")
 				|| this.occurrence.getComponent(Occurrence.SIGN) == null
-				&& this.occurrence.getComponent(Occurrence.NAME) != null
-				&& String.valueOf(
-					this.occurrence
-						.getComponent(Occurrence.NAME)
-						.getDisplayValue()).indexOf("Design Motif") > -1) {
+						&& this.occurrence.getComponent(Occurrence.NAME) != null
+						&& String
+								.valueOf(this.occurrence
+										.getComponent(Occurrence.NAME)
+										.getDisplayValue())
+								.indexOf("Design Motif") > -1) {
 
 			// Yann 2007/04/02: Noname :-)
 			// I must test if a Name exists because of the antipatterns
@@ -93,8 +91,8 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 
 		final List components = this.occurrence.getComponents();
 		for (int i = 0; i < components.size(); i++) {
-			final OccurrenceComponent component =
-				(OccurrenceComponent) components.get(i);
+			final OccurrenceComponent component = (OccurrenceComponent) components
+					.get(i);
 			// final String componentName = component.getName();
 			final String componentValue = component.getDisplayValue();
 
@@ -106,41 +104,30 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 			if (this.currentModel.getEntity(componentValue) != null) {
 				int count = 1;
 				if (this.canvas.EntityRolesCount.containsKey(componentValue)) {
-					count =
-						((Integer) this.canvas.EntityRolesCount
+					count = ((Integer) this.canvas.EntityRolesCount
 							.get(componentValue)).intValue() + 1;
 				}
-				this.canvas.EntityRolesCount.put(componentValue, Integer.valueOf(
-					count));
+				this.canvas.EntityRolesCount.put(componentValue,
+						Integer.valueOf(count));
 
 				final IButton button;
 				if (isPositive) {
-					button =
-						this
-							.getPrimitiveFactory()
-							.createButton(
-								Integer.toString(((Integer) this.canvas.GroupSolutionsCount
-									.get(this)).intValue()),
-								this
-									.getComponentPosition(componentValue, count),
-								false,
-								RGB
-									.computePositivePercentagedColor(this.occurrence
-										.getConfidence()));
+					button = this.getPrimitiveFactory().createButton(
+							Integer.toString(
+									((Integer) this.canvas.GroupSolutionsCount
+											.get(this)).intValue()),
+							this.getComponentPosition(componentValue, count),
+							false, RGB.computePositivePercentagedColor(
+									this.occurrence.getConfidence()));
 				}
 				else {
-					button =
-						this
-							.getPrimitiveFactory()
-							.createButton(
-								Integer.toString(((Integer) this.canvas.GroupSolutionsCount
-									.get(this)).intValue()),
-								this
-									.getComponentPosition(componentValue, count),
-								false,
-								RGB
-									.computeNegativePercentagedColor(this.occurrence
-										.getConfidence()));
+					button = this.getPrimitiveFactory().createButton(
+							Integer.toString(
+									((Integer) this.canvas.GroupSolutionsCount
+											.get(this)).intValue()),
+							this.getComponentPosition(componentValue, count),
+							false, RGB.computeNegativePercentagedColor(
+									this.occurrence.getConfidence()));
 				}
 
 				// Yann 2003/12/09: Selection.
@@ -158,7 +145,7 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 		// check first before setting position or something...
 		if (this.groupRectangleButtons.size() > 0) {
 			this.setPosition(((IButton) this.groupRectangleButtons.get(0))
-				.getPosition());
+					.getPosition());
 
 			this.reComputeDimension();
 		}
@@ -169,7 +156,9 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 			this.isSelected(false);
 		}
 	}
-	private Point getComponentPosition(final String entityName, final int count) {
+
+	private Point getComponentPosition(final String entityName,
+			final int count) {
 		final Constituent constituent = this.currentModel.getEntity(entityName);
 
 		// Yann 2003/12/09: Ghost.
@@ -179,22 +168,26 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 		//	}
 
 		final Point point = new Point(constituent.getPosition());
-		point.translate(
-			-Constants.SOLUTION_FRAME_GAP.width,
-			-Constants.SOLUTION_FRAME_GAP.height / 2 - Constants.FONT_HEIGHT);
+		point.translate(-Constants.SOLUTION_FRAME_GAP.width,
+				-Constants.SOLUTION_FRAME_GAP.height / 2
+						- Constants.FONT_HEIGHT);
 		point.translate((count - 1) * Constants.FONT_WIDTH * 3, 0);
 
 		return point;
 	}
+
 	public int getPercentage() {
 		return this.occurrence.getConfidence();
 	}
+
 	public Occurrence getSolution() {
 		return this.occurrence;
 	}
+
 	public boolean isShowable() {
 		return this.groupRectangleButtons.size() > 0;
 	}
+
 	public void paint(final int xOffset, final int yOffset) {
 		final Iterator allButtons = this.groupRectangleButtons.iterator();
 		while (allButtons.hasNext()) {
@@ -202,6 +195,7 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 			button.paint(xOffset, yOffset);
 		}
 	}
+
 	public boolean processMouseEvent(MouseEvent me) {
 		final int nbOfButtons = this.groupRectangleButtons.size();
 		IButton button = null;
@@ -216,13 +210,14 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 		}
 
 		// If one GroupSolutionButton of this GroupSolution has been clicked.
-		if (hasBeenPressed) {
+		if (button != null && hasBeenPressed) {
 			this.isSelected(!this.isSelected());
 			this.groupOccurrenceTip.setPosition(button.getDestination());
 		}
 
 		return hasBeenPressed;
 	}
+
 	private void reComputeDimension() {
 		// Yann 2014/05/09: Dimension of the tip vs. group occurrence!
 		// I should not forget that the dimension of the group
@@ -252,29 +247,29 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 		}
 
 		if (this.isSelected()) {
-			temp =
-				this.groupOccurrenceTip.getPosition().x
-						+ this.groupOccurrenceTip.getDimension().width;
+			temp = this.groupOccurrenceTip.getPosition().x
+					+ this.groupOccurrenceTip.getDimension().width;
 			maxX = temp > maxX ? temp : maxX;
 
-			temp =
-				this.groupOccurrenceTip.getPosition().y
-						+ this.groupOccurrenceTip.getDimension().height;
+			temp = this.groupOccurrenceTip.getPosition().y
+					+ this.groupOccurrenceTip.getDimension().height;
 			maxY = temp > maxY ? temp : maxY;
 		}
 
 		this.setDimension(new Dimension(maxX - minX, maxY - minY));
 	}
+
 	protected void setDimensionSpecifics(final Dimension dimension) {
 	}
+
 	protected void setPositionSpecifics(final Point position) {
 	}
+
 	protected void setSelectedSpecifics(boolean isSelected) {
 		// I check if this GroupSolution had been selected already.
 		if (isSelected) {
 			// I get the position of the extreme right bottom button.
-			final Point tipPosition =
-				((IButton) this.groupRectangleButtons
+			final Point tipPosition = ((IButton) this.groupRectangleButtons
 					.get(this.groupRectangleButtons.size() - 1))
 					.getDestination();
 
@@ -290,23 +285,22 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 				// shown at all because some models may contain
 				// ghosts... I choose this solution for the
 				// sake of simplicity.
-				final LaidoutModelGraph modelGraph =
-					new LaidoutModelGraph(
-						Builder.getCurrentBuilder((IOccurrencePrimitiveFactory) this
-							.getPrimitiveFactory()),
+				final LaidoutModelGraph modelGraph = new LaidoutModelGraph(
+						Builder.getCurrentBuilder(
+								(IOccurrencePrimitiveFactory) this
+										.getPrimitiveFactory()),
 						this.solutionBuilder.getMicroArchitectureModel(
-							this.occurrence,
-							this.currentModel.getAbstractModel()),
+								this.occurrence,
+								this.currentModel.getAbstractModel()),
 						this.layout);
 				modelGraph.construct();
 				modelGraph.setVisibleElements(this.getVisibleElements());
 				modelGraph.build();
-				this.groupOccurrenceTip =
-					((IOccurrencePrimitiveFactory) this.getPrimitiveFactory())
+				this.groupOccurrenceTip = ((IOccurrencePrimitiveFactory) this
+						.getPrimitiveFactory())
 						.createGroupOccurrenceTip(tipPosition,
-						// modelGraph,
-							this.toString(),
-							Constants.FOREGROUND_COLOR);
+								// modelGraph,
+								this.toString(), Constants.FOREGROUND_COLOR);
 			}
 			else {
 				this.groupOccurrenceTip.setPosition(tipPosition);
@@ -326,11 +320,13 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 			button.setSelected(isSelected);
 		}
 	}
+
 	protected void setVisibleElementsSpecifics(final int visibility) {
 		if (this.groupOccurrenceTip != null) {
 			this.groupOccurrenceTip.setVisibleElements(visibility);
 		}
 	}
+
 	public String toString() {
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append("Micro-architecture ");
@@ -341,12 +337,12 @@ public final class GroupOccurrence extends Constituent implements IVisibility {
 		buffer.append(this.occurrence.getName());
 		buffer.append('\n');
 
-		final Iterator allComponents =
-			this.occurrence.getComponents().iterator();
+		final Iterator allComponents = this.occurrence.getComponents()
+				.iterator();
 		while (allComponents.hasNext()) {
 			buffer.append('\t');
-			buffer.append(((OccurrenceComponent) allComponents.next())
-				.toString());
+			buffer.append(
+					((OccurrenceComponent) allComponents.next()).toString());
 			buffer.append('\n');
 		}
 
