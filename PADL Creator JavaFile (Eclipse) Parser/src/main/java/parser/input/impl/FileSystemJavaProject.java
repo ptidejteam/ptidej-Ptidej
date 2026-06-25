@@ -19,13 +19,11 @@ import parser.reader.NamedReaderType;
 import parser.reader.impl.filesystem.FileNamedReaderFactory;
 
 public class FileSystemJavaProject extends SourceInputsHolder {
-	public FileSystemJavaProject(
-		final List<String> classPaths,
+	public FileSystemJavaProject(final List<String> classPaths,
 			final List<String> sourcePaths) throws Exception {
 
 		this.buildClasspathEntries(classPaths);
-		this.setSourcepathEntries(this
-			.buildSourcepathEntries(sourcePaths));
+		this.setSourcepathEntries(this.buildSourcepathEntries(sourcePaths));
 	}
 
 	protected void buildClasspathEntries(final List<String> classPaths) {
@@ -33,13 +31,15 @@ public class FileSystemJavaProject extends SourceInputsHolder {
 
 		if (classPaths != null) {
 			for (final String classpath : classPaths) {
-				final NamedReader reader =
-					FileNamedReaderFactory.Instance
-						.createNamedReaderFromFile(classpath);
-				if (reader != null) {
-					jars.addAll(this.findReadersByType(
-						reader,
-						NamedReaderType.JarFile));
+				// Yann 2026/06/24: Visiting too much
+				// I don't visit the whole directory if the classpath is empty.
+				if (!classpath.isEmpty()) {
+					final NamedReader reader = FileNamedReaderFactory.Instance
+							.createNamedReaderFromFile(classpath);
+					if (reader != null) {
+						jars.addAll(this.findReadersByType(reader,
+								NamedReaderType.JarFile));
+					}
 				}
 			}
 		}
@@ -51,22 +51,20 @@ public class FileSystemJavaProject extends SourceInputsHolder {
 		final List<NamedReader> compilationUnits = new ArrayList<NamedReader>();
 
 		for (final NamedReader src : this.getSourcepathEntries()) {
-			compilationUnits.addAll(this.findReadersByType(
-				src,
-				NamedReaderType.JavaFile));
+			compilationUnits.addAll(
+					this.findReadersByType(src, NamedReaderType.JavaFile));
 		}
 		return compilationUnits.toArray(new NamedReader[0]);
 	}
 
 	protected NamedReader[] buildSourcepathEntries(
-		final List<String> sourceFilesAndDirectories) {
+			final List<String> sourceFilesAndDirectories) {
 		final List<NamedReader> readers = new ArrayList<NamedReader>();
 
 		if (sourceFilesAndDirectories != null) {
 			NamedReader reader = null;
 			for (final String sourceFileOrDirectory : sourceFilesAndDirectories) {
-				reader =
-					FileNamedReaderFactory.Instance
+				reader = FileNamedReaderFactory.Instance
 						.createNamedReaderFromFile(sourceFileOrDirectory);
 				if (reader != null) {
 					readers.add(reader);
@@ -77,9 +75,8 @@ public class FileSystemJavaProject extends SourceInputsHolder {
 		return readers.toArray(new NamedReader[0]);
 	}
 
-	protected List<NamedReader> findReadersByType(
-		final NamedReader parent,
-		final NamedReaderType type) {
+	protected List<NamedReader> findReadersByType(final NamedReader parent,
+			final NamedReaderType type) {
 
 		final List<NamedReader> readersFound = new ArrayList<NamedReader>();
 
@@ -92,9 +89,8 @@ public class FileSystemJavaProject extends SourceInputsHolder {
 				for (final NamedReader element : elements) {
 					if (element != null) {
 						if (element.getType() == NamedReaderType.Directory) {
-							readersFound.addAll(this.findReadersByType(
-								element,
-								type));
+							readersFound.addAll(
+									this.findReadersByType(element, type));
 						}
 						else if (element.getType() == type) {
 							readersFound.add(element);
