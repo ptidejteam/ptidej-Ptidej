@@ -13,12 +13,10 @@ package padl.kernel;
 /**
  * @author Yann-Gaël Guéhéneuc
  */
-public interface IRelationship extends IElement {
+public interface IRelationship extends IMemberElement {
 	int getCardinality();
 
 	void setCardinality(final int aCardinality);
 
 	IFirstClassEntity getTargetEntity();
-
-	
 }

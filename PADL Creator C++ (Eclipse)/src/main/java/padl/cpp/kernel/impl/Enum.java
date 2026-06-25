@@ -14,6 +14,7 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
 import padl.cpp.kernel.IEnum;
 import padl.kernel.IElement;
 import padl.kernel.IEntityMarker;
@@ -24,26 +25,41 @@ class Enum extends FirstClassEntity implements IEntityMarker, IEnum {
 	private static final long serialVersionUID = 1124498017343286793L;
 
 	private boolean forceAbstract = false;
-	@SuppressWarnings("rawtypes")
-	private final List<?> listOfSuperInterfaces = new ArrayList();
+	private final List listOfSuperInterfaces = new ArrayList();
 
 	public Enum(final char[] anID) {
 		super(anID);
 	}
+
+	public void attachTo(final IElement anElement) {
+	}
+
+	public void detach() {
+	}
+
+	public IElement getAttachedElement() {
+		return null;
+	}
+
 	public boolean isForceAbstract() {
 		return this.forceAbstract;
 	}
-	public List<?> listOfImplementedEntities() {
+
+	public List listOfImplementedEntities() {
 		return this.listOfSuperInterfaces;
 	}
+
 	public void setAbstract(final boolean aBoolean) {
 		this.forceAbstract = aBoolean;
 		super.setAbstract(aBoolean);
 	}
+
 	public void setVisibility(final int visibility) {
-		super.setVisibility(this.isForceAbstract() ? visibility
-				| Modifier.ABSTRACT : visibility);
+		super.setVisibility(
+				this.isForceAbstract() ? visibility | Modifier.ABSTRACT
+						: visibility);
 	}
+
 	public String toString() {
 		final StringBuffer codeEq = new StringBuffer();
 		codeEq.append(super.toString());
@@ -52,7 +68,7 @@ class Enum extends FirstClassEntity implements IEntityMarker, IEnum {
 
 		// Can enum have super-classes?
 		// TODO Remove?
-		final Iterator<?> iterator = this.listOfSuperInterfaces.iterator();
+		final Iterator iterator = this.listOfSuperInterfaces.iterator();
 		if (iterator.hasNext()) {
 			codeEq.append(" implements ");
 			while (iterator.hasNext()) {
@@ -63,12 +79,5 @@ class Enum extends FirstClassEntity implements IEntityMarker, IEnum {
 			}
 		}
 		return codeEq.toString();
-	}
-	public void attachTo(final IElement anElement) {
-	}
-	public void detach() {
-	}
-	public IElement getAttachedElement() {
-		return null;
 	}
 }

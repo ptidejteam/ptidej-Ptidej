@@ -68,7 +68,8 @@ local.properties
 
 # Specific to Ptidej
 Configuration\ Area
-Temp/
+PADL Creator C++ (Eclipse) Helper
+Temp
 **/*.log
 
 # Specific to MacOS

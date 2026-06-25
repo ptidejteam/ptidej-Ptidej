@@ -228,6 +228,7 @@ public abstract class Constituent implements IConstituent {
 	}
 
 	public void endCloneSession() {
+		// Fail fast!
 		this.clone = null;
 		// this.clonedBoundEventList.clear();
 		// this.clonedVetoEventList.clear();

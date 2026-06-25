@@ -37,22 +37,23 @@ import padl.kernel.IFirstClassEntity;
 
 /**
  * @author floresvw
+ * @since 2004/08/10
  */
-
-//Ward 2004/08/19: Hierarchy level
-//For now IStructure is created at the same level as IClass.
-//So, it has all the inheritance properties.
-//Implementation to be checked ...
-
+// Ward 2004/08/19: Hierarchy level
+// For now IStructure is created at the same level as IClass.
+// So, it has all the inheritance properties.
+// Implementation to be checked ...
 // Yann 2013/07/17: IElement!
 // In C++, classes may contain structures so I added IElement.
 // In C++, methods may contain structures too, so I added IConstituentOfOperation.
-public interface IStructure extends IAmicable, IConstituentOfOperation,
-		IElement, IFirstClassEntity {
+public interface IStructure extends IFirstClassEntity, IElement,
+		IConstituentOfOperation, IAmicable {
 
 	String LOGO = "\"S\"";
 
 	boolean isForceAbstract();
+
 	void setAbstract(final boolean aBoolean);
+
 	void setVisibility(final int aVisibility);
 }

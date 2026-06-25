@@ -279,6 +279,15 @@ public abstract class Operation extends Element
 		}
 	}
 
+	public void endCloneSession() {
+		final Iterator iterator = this.getIteratorOnModelListeners();
+		while (iterator.hasNext()) {
+			((Operation) this.getClone())
+					.addModelListener((IModelListener) iterator.next());
+		}
+
+	}
+
 	public void removeConstituentFromID(final char[] anID) {
 		this.container.removeConstituentFromID(anID);
 		this.updatePathWithParameters();

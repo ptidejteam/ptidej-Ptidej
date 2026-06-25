@@ -13,11 +13,16 @@ package padl.kernel;
 /**
  * @author Yann-Gaël Guéhéneuc
  */
-public interface IParameter extends IElement, IConstituentOfOperation {
+public interface IParameter extends IMemberElement, IConstituentOfOperation {
 	String LOGO = "\"P\"";
+
 	int getCardinality();
+
 	String getDisplayTypeName();
+
 	IEntity getType();
+
 	char[] getTypeName();
+
 	void setType(final IEntity aType);
 }

@@ -33,13 +33,15 @@ public class FileSystemJavaProject extends SourceInputsHolder {
 
 		if (classPaths != null) {
 			for (final String classpath : classPaths) {
-				final NamedReader reader =
-					FileNamedReaderFactory.Instance
-						.createNamedReaderFromFile(classpath);
-				if (reader != null) {
-					jars.addAll(this.findReadersByType(
-						reader,
-						NamedReaderType.JarFile));
+				// Yann 2026/06/24: Visiting too much
+				// I don't visit the whole directory if the classpath is empty.
+				if (!classpath.isEmpty()) {
+					final NamedReader reader = FileNamedReaderFactory.Instance
+							.createNamedReaderFromFile(classpath);
+					if (reader != null) {
+						jars.addAll(this.findReadersByType(reader,
+								NamedReaderType.JarFile));
+					}
 				}
 			}
 		}

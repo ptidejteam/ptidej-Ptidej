@@ -13,12 +13,16 @@ package padl.kernel;
 /**
  * @author Yann-Gaël Guéhéneuc
  */
-public interface IField extends IElement {
+public interface IField extends IMemberElement {
 	String LOGO = "\"F\"";
 
 	int getCardinality();
+
 	String getDisplayTypeName();
+
 	char[] getType();
+
 	void setCardinality(final int aCardinality);
+
 	void setType(final char[] aType);
 }
