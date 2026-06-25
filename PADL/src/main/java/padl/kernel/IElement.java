@@ -14,7 +14,4 @@ package padl.kernel;
  * @author Yann-Gaël Guéhéneuc
  */
 public interface IElement extends IConstituentOfEntity {
-	void attachTo(final IElement anElement);
-	void detach();
-	IElement getAttachedElement();
 }

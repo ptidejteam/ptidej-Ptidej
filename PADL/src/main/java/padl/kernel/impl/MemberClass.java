@@ -10,9 +10,6 @@
  ******************************************************************************/
 package padl.kernel.impl;
 
-import java.io.IOException;
-
-import padl.kernel.IElement;
 import padl.kernel.IMemberClass;
 import padl.path.IConstants;
 
@@ -20,45 +17,25 @@ import padl.path.IConstants;
  * @author Yann-Gaël Guéhéneuc
  * @since 2005/08/15
  */
-
 // Yann 2013/07/17: Accesses!
 // Must be public for subclasses in other projects
-
 public class MemberClass extends Class implements IMemberClass {
 	private static final long serialVersionUID = 561945038924822504L;
-
-	// Sikandar Ejaz 2026/02/27: Removed the attachedElement field!
-	// The problem was that MemberClass extends Class which ultimately extends
-	// Constituent — not Element. So MemberClass doesn't inherit from Element and
-	// therefore doesn't get the attachment logic for free. This means MemberClass
-	// implements IElement directly but its parent chain doesn't go through Element.
-
-	private AttachmentSupport attachment = new AttachmentSupport();
-
-	private void readObject(final java.io.ObjectInputStream in) throws IOException, ClassNotFoundException {
-		in.defaultReadObject();
-		if (this.attachment == null) {
-			this.attachment = new AttachmentSupport();
-		}
-	}
 
 	public MemberClass(final char[] anID, final char[] aName) {
 		super(anID, aName);
 	}
 
-	public void attachTo(final IElement anElement) {
-		this.attachment.attachTo(this, anElement);
-	}
-
-	public void detach() {
-		this.attachment.detach();
-	}
-
-	public IElement getAttachedElement() {
-		return this.attachment.getAttachedElement();
-	}
-
 	protected char getPathSymbol() {
 		return IConstants.MEMBER_ENTITY_SYMBOL;
+	}
+
+	public String toString() {
+		final StringBuffer codeEq = new StringBuffer();
+		codeEq.append(super.toString());
+		codeEq.append(" member class ");
+		codeEq.append(this.getName());
+		codeEq.append(';');
+		return codeEq.toString();
 	}
 }
