@@ -5,8 +5,10 @@ import java.util.List;
 import padl.kernel.IAbstractModel;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IGhost;
+import pom.metrics.IMetric;
+import pom.metrics.IUnaryMetric;
 
-public class DITnoGhost extends DIT {
+public class DITnoGhost extends DIT implements IMetric, IUnaryMetric {
 	
 	@Override
 	public String getDefinition() {

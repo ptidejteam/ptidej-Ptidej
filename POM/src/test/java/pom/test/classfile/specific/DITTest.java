@@ -14,7 +14,6 @@ import org.junit.Assert;
 
 import junit.framework.TestCase;
 import padl.creator.classfile.CompleteClassFileCreator;
-import padl.creator.javafile.javac.JavaFileCreator;
 import padl.generator.helper.ModelGenerator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
@@ -31,8 +30,8 @@ public class DITTest extends TestCase {
 		"../POM/target/test-classes/Metric Specific for Java/bin/pom/test/rsc/specific/testDIT/";
 	private static final String rootJavaC =
 			"../POM/target/test-classes/Metric Specific for Java/src/pom/test/rsc/specific/testDIT/";
-	protected final String metricName = "DIT";
-	protected final double expectedDITGhost = 4d;
+	protected String metricName = "DIT";
+	protected double expectedDITGhost = 4d;
 	public DITTest(String name) {
 		super(name);
 	}

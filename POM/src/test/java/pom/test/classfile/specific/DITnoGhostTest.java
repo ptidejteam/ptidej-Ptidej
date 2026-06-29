@@ -16,10 +16,10 @@ import padl.kernel.IFirstClassEntity;
 import pom.metrics.IUnaryMetric;
 
 public class DITnoGhostTest extends DITTest {
-	protected final String metricName = "DITnoGhost";
-	protected final double expectedDITGhost = 1d;
 	public DITnoGhostTest(String name) {
 		super(name);
+		this.metricName = "DITnoGhost";
+		this.expectedDITGhost = 1d;
 	}
 	
 }
