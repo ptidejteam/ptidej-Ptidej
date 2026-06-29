@@ -11,19 +11,12 @@
 package padl.util.adapter;
 
 import java.util.Iterator;
-import padl.event.IEvent;
-import padl.event.IModelListener;
-import padl.kernel.FirstClassAdapter;
 import padl.kernel.IClass;
-import padl.kernel.IConstituent;
 import padl.kernel.IConstituentExtension;
-import padl.kernel.IConstituentOfEntity;
-import padl.kernel.IElement;
 import padl.kernel.IFilter;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IInterfaceActor;
 import padl.kernel.impl.Factory;
-import padl.visitor.IVisitor;
 
 /**
  * @author Yann-Gaël Guéhéneuc
