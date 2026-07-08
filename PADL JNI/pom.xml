@@ -15,30 +15,29 @@
 	<name>PADL JNI</name>
 
 	<build>
-		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.13.0</version>
-				<configuration>
-					<compilerArgs>
-						<arg>-proc:none</arg>
-					</compilerArgs>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.5.4</version>
 				<configuration>
-					<skipTests>true</skipTests>
+					<argLine>--add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --enable-native-access=ALL-UNNAMED</argLine>
+					<excludes>
+						<!-- Excluded on purpose -->
+						<exclude>**/*Test.java</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
+		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
 			<artifactId>cpl-core</artifactId>
@@ -53,13 +52,7 @@
 
 		<dependency>
 			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-analyses</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-creator-classfile</artifactId>
+			<artifactId>padl-creator-javafile-eclipse</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 
@@ -69,10 +62,12 @@
 			<version>1.0.0</version>
 		</dependency>
 
+		<!-- Test dependencies -->
 		<dependency>
-			<groupId>net.ptidej.padl</groupId>
-			<artifactId>padl-creator-javafile-eclipse</artifactId>
-			<version>1.0.0</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>
