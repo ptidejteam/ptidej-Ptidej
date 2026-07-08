@@ -1,6 +1,7 @@
-package padl.creator.cppfile.eclipse.test.big;
+package padl.jni;
 
 import java.util.ArrayList;
+
 import padl.cpp.kernel.ICPPClass;
 import padl.cpp.kernel.ICPPGhost;
 import padl.cpp.kernel.ICPPMemberClass;
@@ -48,35 +49,26 @@ public class JNICollecteFctGlobaleVisitor2 implements ICPPWalker {
 	private IMethod currentMethod;
 	private IClass currentclass;
 	private ICPPClass currentcppclass;
-	
 
 	@Override
 	public Object getResult() {
-		return (this.currentclass);
-		// TODO Auto-generated method stub
-	
-		
+		return this.currentclass;
 	}
 
 	@Override
-	public void open(IClass aClass) {
-		// TODO Auto-generated method stub
+	public void open(final IClass aClass) {
 		this.currentclass = aClass;
 	}
 
 	@Override
-	public void open(ICPPClass aCPPClass) {
-		// TODO Auto-generated method stub
-		this.currentcppclass=aCPPClass;
+	public void open(final ICPPClass aCPPClass) {
+		this.currentcppclass = aCPPClass;
 	}
 
 	@Override
-	public void open(IMethod aMethod) {
-
+	public void open(final IMethod aMethod) {
 		this.currentMethod = aMethod;
 		System.out.println(aMethod.getDisplayName());
-		
-		
 	}
 
 	// ********************** NOT USED YET ***********************
@@ -259,7 +251,8 @@ public class JNICollecteFctGlobaleVisitor2 implements ICPPWalker {
 	}
 
 	@Override
-	public void unknownConstituentHandler(String aCalledMethodName, IConstituent aConstituent) {
+	public void unknownConstituentHandler(String aCalledMethodName,
+			IConstituent aConstituent) {
 		// TODO Auto-generated method stub
 
 	}
@@ -317,8 +310,7 @@ public class JNICollecteFctGlobaleVisitor2 implements ICPPWalker {
 		// TODO Auto-generated method stub
 		// ArrayList<String> ListeMethodJNI = new ArrayList<String>();
 		// System.out.println(aParameter.getDisplayTypeName()+aParameter.getDisplayName());
-		
-	
+
 	}
 
 	@Override
@@ -399,7 +391,6 @@ public class JNICollecteFctGlobaleVisitor2 implements ICPPWalker {
 
 	}
 
-	
 	@Override
 	public void open(ICPPGhost aCPPGhost) {
 		// TODO Auto-generated method stub
@@ -465,7 +456,4 @@ public class JNICollecteFctGlobaleVisitor2 implements ICPPWalker {
 		// TODO Auto-generated method stub
 
 	}
-
-	
-
 }

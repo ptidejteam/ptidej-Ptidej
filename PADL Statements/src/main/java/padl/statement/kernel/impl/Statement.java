@@ -24,11 +24,12 @@ class Statement extends Constituent implements IStatement {
 	public Statement(char[] anID) {
 		super(anID);
 	}
+
 	protected char getPathSymbol() {
 		return IConstants.STATEMENT_SYMBOL;
 	}
-	
+
 	public void endCloneSession() {
-		
+
 	}
 }

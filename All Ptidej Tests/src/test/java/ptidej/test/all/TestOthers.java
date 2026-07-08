@@ -21,6 +21,7 @@ import padl.pagerank.test.TestPADLGeneratorPageRank;
 import padl.refactoring.test.TestRefactorings;
 import padl.serialiser.test.TestDB4OSerialiser;
 import padl.serialiser.test.TestJOSSerialiser;
+import padl.statement.test.TestStatements;
 import padl.test.TestPADL;
 import pom.test.TestPOM;
 import ptidej.ui.kernel.builder.test.TestAspectJBuilder;
@@ -43,12 +44,12 @@ public final class TestOthers extends TestSuite {
 		suite.addTest(TestPADLAnalyses.suite());
 		suite.addTest(TestPADLGenerator.suite());
 		suite.addTest(TestPADLGeneratorPageRank.suite());
-		// TODO Add this test
-		//		suite.addTest(TestPADLJNI.suite());
+		suite.addTest(TestPADLJNI.suite());
 		suite.addTest(TestMicroPatterns.suite());
 		suite.addTest(TestRefactorings.suite());
 		suite.addTest(TestDB4OSerialiser.suite());
 		suite.addTest(TestJOSSerialiser.suite());
+		suite.addTest(TestStatements.suite());
 		suite.addTest(TestPOM.suite());
 		suite.addTest(TestSAD.suite());
 		suite.addTest(TestSQUAD.suite());

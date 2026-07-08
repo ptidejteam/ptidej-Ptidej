@@ -1,182 +1,103 @@
-package padl.creator.cppfile.eclipse.test.big;
+package padl.jni.helper;
 
 import java.util.ArrayList;
 //import junit.framework.TestCase;
 import java.util.Iterator;
+import java.util.List;
+
 import padl.creator.cppfile.eclipse.CPPCreator;
 import padl.creator.javafile.eclipse.CompleteJavaFileCreator;
+import padl.jni.JNICollecteFctGlobaleVisitor;
+import padl.jni.JNICollecteNativeVisitor;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.ICodeLevelModelCreator;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
 import padl.visitor.IWalker;
 
-public class PadlModelJNI {
+public class PADLModelJNICreator {
 	// Method that check if all the natives methods have an implementation in
 	// C++ files, in others words for each
 	// native methods we check if there is a JNI implementation in a c++ files.
-	public static ArrayList<String> NatifMissed(
-		ArrayList<String> listNatif,
-		ArrayList<String> listJNI) {
-		final ArrayList<String> JniNatifIntersect = new ArrayList<String>();
-		Iterator it = listNatif.iterator();
+	public static List<String> getMissingNativeMethods(
+			final List<String> listNativeMethods,
+			final List<String> listJNIFunctions) {
+
+		final List<String> intersection = new ArrayList<String>();
+		final Iterator it = listNativeMethods.iterator();
 		while (it.hasNext()) {
-			Object o = it.next();
-			if (!listJNI.contains(o)) {
-				JniNatifIntersect.add((String) o);
+			final Object o = it.next();
+			if (!listJNIFunctions.contains(o)) {
+				intersection.add((String) o);
 			}
 		}
 
-		return JniNatifIntersect;
+		return intersection;
 	}
 
 	// The opposite direction of NatifMissed.
-	public static ArrayList<String> JNIMissed(
-		ArrayList<String> listNatif,
-		ArrayList<String> listJNI) {
-		final ArrayList<String> NatifIntersect = new ArrayList<String>();
-		Iterator it = listJNI.iterator();
+	public static List<String> getMissingJNIFunctions(
+			final List<String> listNativeMethods,
+			final List<String> listJNIFunctions) {
+
+		final List<String> intersection = new ArrayList<String>();
+		final Iterator it = listJNIFunctions.iterator();
 		while (it.hasNext()) {
-			Object o = it.next();
-			if (!listNatif.contains(o)) {
-				NatifIntersect.add((String) o);
+			final Object o = it.next();
+			if (!listNativeMethods.contains(o)) {
+				intersection.add((String) o);
 			}
 		}
 
-		return NatifIntersect;
+		return intersection;
 	}
 
 	public static void main(String[] args) throws CreationException {
-		final String apathJ =
-			"../PADL JNI Tests/rsc/ogre4j/ogre4j/src/java";
+		final String apathJ = "../PADL JNI Tests/rsc/ogre4j/ogre4j/src/java";
 		// Faut compiler les fichiers.java 
-		final String apathC =
-			"../PADL JNI Tests/rsc/ogre4j/ogre4j/src/native/src";
+		final String apathC = "../PADL JNI Tests/rsc/ogre4j/ogre4j/src/native/src";
 
-		final ICodeLevelModel hybrid =
-			Factory.getInstance().createCodeLevelModel("Hybrid");
-		final ICodeLevelModelCreator javaCreator =
-			new CompleteJavaFileCreator(apathJ, "");
+		final ICodeLevelModel hybrid = Factory.getInstance()
+				.createCodeLevelModel("Hybrid");
+		final ICodeLevelModelCreator javaCreator = new CompleteJavaFileCreator(
+				apathJ, "");
 		javaCreator.create(hybrid);
 		final ICodeLevelModelCreator cppCreator = new CPPCreator(apathC);
 		cppCreator.create(hybrid);
 
 		System.out.println(
-			"******************List Of Natives Methods*************************");
+				"******************List Of Natives Methods*************************");
 		final IWalker nativeAnalysis = new JNICollecteNativeVisitor();
 		hybrid.walk(nativeAnalysis);
 
-		final ArrayList<String> listOfNativeMethods =
-			(ArrayList<String>) nativeAnalysis.getResult();
+		final ArrayList<String> listOfNativeMethods = (ArrayList<String>) nativeAnalysis
+				.getResult();
 		System.out.println(listOfNativeMethods.size());
 		System.out.println(listOfNativeMethods);
 		System.out.println(
-			"********************List Of JNI Methods***********************");//PB: pas d'affichage des methodes globales qui retournent Void
+				"********************List Of JNI Methods***********************");//PB: pas d'affichage des methodes globales qui retournent Void
 		final IWalker globalesAnalysis = new JNICollecteFctGlobaleVisitor();
 		hybrid.walk(globalesAnalysis);
-		final ArrayList<String> listOfJNIMethods =
-			(ArrayList<String>) globalesAnalysis.getResult();
+		final ArrayList<String> listOfJNIMethods = (ArrayList<String>) globalesAnalysis
+				.getResult();
 		System.out.println(listOfJNIMethods.size());
 		System.out.println(listOfJNIMethods);
 
 		System.out.println(
-			"******************List Of Native Methods Missed on JNI methods**************************");
-		System.out
-			.println(NatifMissed(listOfNativeMethods, listOfJNIMethods).size());
-		System.out.println(NatifMissed(listOfNativeMethods, listOfJNIMethods));
+				"******************List Of Native Methods Missed on JNI methods**************************");
+		System.out.println(
+				getMissingNativeMethods(listOfNativeMethods, listOfJNIMethods)
+						.size());
+		System.out.println(
+				getMissingNativeMethods(listOfNativeMethods, listOfJNIMethods));
 
 		System.out.println(
-			"******************List Of JNI Methods Missed on Natives methods**************************");
-		System.out
-			.println(JNIMissed(listOfNativeMethods, listOfJNIMethods).size());
-		System.out.println(JNIMissed(listOfNativeMethods, listOfJNIMethods));
+				"******************List Of JNI Methods Missed on Natives methods**************************");
+		System.out.println(
+				getMissingJNIFunctions(listOfNativeMethods, listOfJNIMethods)
+						.size());
+		System.out.println(
+				getMissingJNIFunctions(listOfNativeMethods, listOfJNIMethods));
 
-	}
-
-	// The testCases
-	// The same method as 'NatifMissed' but here we use it for our test case to
-	// count the number of natives methods
-	// that don't have a JNI implementation in a c++ files.
-	public int NatifMissedTestCase() throws CreationException {
-		ICodeLevelModel hybrid = this.CreateModelTestCase();
-		final IWalker nativeAnalysis = new JNICollecteNativeVisitor();
-		hybrid.walk(nativeAnalysis);
-		final ArrayList<String> listOfNativeMethods =
-			(ArrayList<String>) nativeAnalysis.getResult();
-		final IWalker globalesAnalysis = new JNICollecteFctGlobaleVisitor();
-		hybrid.walk(globalesAnalysis);
-		final ArrayList<String> listOfJNIMethods =
-			(ArrayList<String>) globalesAnalysis.getResult();
-		final ArrayList<String> JniNatifIntersect = new ArrayList<String>();
-		Iterator it = listOfNativeMethods.iterator();
-		while (it.hasNext()) {
-			Object o = it.next();
-			if (!listOfJNIMethods.contains(o)) {
-				JniNatifIntersect.add((String) o);
-			}
-		}
-
-		return JniNatifIntersect.size();
-	}
-
-	// a Method used for the test case to count the number of JNI methods exist
-	// in C++ files that they don't have
-	// a native declaration in java files. (the opposite direction of
-	// NatifMissedTestCase).
-	public int JNIMissedTestCase() throws CreationException {
-		ICodeLevelModel hybrid = this.CreateModelTestCase();
-		final IWalker nativeAnalysis = new JNICollecteNativeVisitor();
-		hybrid.walk(nativeAnalysis);
-		final ArrayList<String> listOfNativeMethods =
-			(ArrayList<String>) nativeAnalysis.getResult();
-		final IWalker globalesAnalysis = new JNICollecteFctGlobaleVisitor();
-		hybrid.walk(globalesAnalysis);
-		final ArrayList<String> listOfJNIMethods =
-			(ArrayList<String>) globalesAnalysis.getResult();
-		final ArrayList<String> NatifIntersect = new ArrayList<String>();
-		Iterator it = listOfJNIMethods.iterator();
-		while (it.hasNext()) {
-			Object o = it.next();
-			if (!listOfNativeMethods.contains(o)) {
-				NatifIntersect.add((String) o);
-			}
-		}
-
-		return NatifIntersect.size();
-	}
-
-	// This method is used in the Test Case and it allow us to return the Model
-	// Hybrid which contain the constituents
-	// for Java files and C++ files.
-	public ICodeLevelModel CreateModelTestCase() throws CreationException {
-		final String apathJ =
-			"../PADL JNI Tests/rsc/ogre4j/ogre4j/src/java";
-		final String apathC =
-			"../PADL JNI Tests/rsc/ogre4j/ogre4j/src/native/src";
-		final ICodeLevelModel hybrid =
-			Factory.getInstance().createCodeLevelModel("Hybrid");
-		final ICodeLevelModelCreator javaCreator =
-			new CompleteJavaFileCreator(apathJ, "");
-		javaCreator.create(hybrid);
-		final ICodeLevelModelCreator cppCreator = new CPPCreator(apathC);
-		try {
-			cppCreator.create(hybrid);
-		}
-		catch (final Exception parserFailure) {
-			// Keep the JNI analysis helpers usable even when the Eclipse C++
-			// parser runtime is not fully available in headless mode.
-		}
-		return (hybrid);
-	}
-
-	// Method used in the test case and which give the number of natives methods
-	// existing in java files.
-	public int NBNatif() throws CreationException {
-		ICodeLevelModel model = this.CreateModelTestCase();
-		final IWalker nativeAnalysis = new JNICollecteNativeVisitor();
-		model.walk(nativeAnalysis);
-		final ArrayList<String> listOfNativeMethods =
-			(ArrayList<String>) nativeAnalysis.getResult();
-		return listOfNativeMethods.size();
 	}
 }

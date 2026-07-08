@@ -47,7 +47,6 @@
 		<module>PADL Creator C++ (ANTLR)</module>
 		<module>PADL Creator C++ (Eclipse)</module>
 		<module>PADL JNI</module>
-		<module>PADL JNI Tests</module>
 		<module>PADL Creator ClassFile</module>
 		<module>PADL Creator JavaFile (Eclipse)</module>
 		<module>PADL Creator JavaFile (Eclipse) Parser</module>
@@ -77,5 +76,4 @@
 		<maven.compiler.release>25</maven.compiler.release>
 		<maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
 	</properties>
-
 </project>

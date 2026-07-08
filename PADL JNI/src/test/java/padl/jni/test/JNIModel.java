@@ -1,28 +1,19 @@
-package padl.creator.cppfile.eclipse.test.big;
+package padl.jni.test;
+
+import org.junit.Assert;
 
 import junit.framework.TestCase;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.exception.CreationException;
 
 public class JNIModel extends TestCase {
-
-	protected void setUp() throws Exception {
-		super.setUp();
-	}
-
-	protected void tearDown() throws Exception {
-		super.tearDown();
-	}
-
 	public void testModel() throws CreationException {
 		try {
-			PadlModelJNI JNI = new PadlModelJNI();
-			ICodeLevelModel model = JNI.CreateModelTestCase();
-			assertTrue(model.getNumberOfConstituents() >= 1);
+			final ICodeLevelModel model = Helper.createModel();
+			Assert.assertTrue(model.getNumberOfConstituents() > 0);
 		}
-		catch (final Throwable parserFailure) {
-			assertTrue(true);
+		catch (final Exception e) {
+			Assert.assertTrue(false);
 		}
 	}
-
 }

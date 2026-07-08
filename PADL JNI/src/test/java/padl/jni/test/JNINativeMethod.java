@@ -1,21 +1,18 @@
-package padl.creator.cppfile.eclipse.test.big;
+package padl.jni.test;
+
+import org.junit.Assert;
 
 import junit.framework.TestCase;
 import padl.kernel.exception.CreationException;
 
 public class JNINativeMethod extends TestCase {
-	protected void setUp() throws Exception {
-		super.setUp();
-	}
-
 	public void testNativeMethod() throws CreationException {
 		try {
-			PadlModelJNI JNI = new PadlModelJNI();
-			int nb = JNI.NBNatif();
-			assertTrue(nb >= 0);
+			final int nb = Helper.getNumberOfNativeMethods();
+			Assert.assertTrue(nb > 0);
 		}
-		catch (final Throwable parserFailure) {
-			assertTrue(true);
+		catch (final Exception e) {
+			Assert.assertTrue(false);
 		}
 	}
 }

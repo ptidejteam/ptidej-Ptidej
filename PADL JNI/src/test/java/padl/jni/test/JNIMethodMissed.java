@@ -1,23 +1,18 @@
-package padl.creator.cppfile.eclipse.test.big;
+package padl.jni.test;
+
+import org.junit.Assert;
 
 import junit.framework.TestCase;
 import padl.kernel.exception.CreationException;
 
 public class JNIMethodMissed extends TestCase {
-
-	protected void setUp() throws Exception {
-		super.setUp();
-	}
-
 	public void testNativeMethod() throws CreationException {
 		try {
-			PadlModelJNI JNI = new PadlModelJNI();
-			int nb = JNI.JNIMissedTestCase();
-			assertTrue(nb >= 0);
+			final int nb = Helper.getMissingJNIFunctions();
+			Assert.assertTrue(nb >= 0);
 		}
-		catch (final Throwable parserFailure) {
-			assertTrue(true);
+		catch (final Exception e) {
+			Assert.assertTrue(true);
 		}
 	}
-
 }
