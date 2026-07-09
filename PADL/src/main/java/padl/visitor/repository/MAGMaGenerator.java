@@ -70,9 +70,6 @@ public class MAGMaGenerator implements IWalker {
 		this.stackOfEnclosingEntities = new Stack();
 		this.listOfEntities = new ArrayList();
 	}
-	public void close(final IAbstractLevelModel anAbstractLevelModel) {
-		this.close((IAbstractModel) anAbstractLevelModel);
-	}
 	public void close(final IAbstractModel anAbstractModel) {
 		this.header.append(this.numberOfVertices);
 		this.header.append(',');
@@ -139,8 +136,6 @@ public class MAGMaGenerator implements IWalker {
 			.append(this.vertices.toString())
 			.append(this.edges.toString())
 			.toString();
-	}
-	public void open(final IAbstractLevelModel anAbstractLevelModel) {
 	}
 	public void open(IAbstractModel anAbstractModel) {
 		this.model = anAbstractModel;
