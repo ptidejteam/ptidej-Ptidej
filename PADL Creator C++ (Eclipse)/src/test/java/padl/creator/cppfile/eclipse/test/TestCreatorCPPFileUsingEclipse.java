@@ -48,9 +48,7 @@ public final class TestCreatorCPPFileUsingEclipse extends TestSuite {
 		suite.addTestSuite(StructuresTest.class);
 		suite.addTestSuite(TypeNameQualifiersTest.class);
 
-		// ChromeTest is a very large integration case and is highly unstable in
-		// CI/headless environments due runtime/indexing variance.
-		// Keep the rest of the suite as the stable regression signal.
+		// ChromeTest is a very large integration case, takes long, not so useful.
 		//	suite.addTestSuite(ChromeTest.class);
 		suite.addTestSuite(CryptoTest.class);
 		suite.addTestSuite(QMakeTest.class);
