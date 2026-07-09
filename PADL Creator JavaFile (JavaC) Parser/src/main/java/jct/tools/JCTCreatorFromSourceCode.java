@@ -572,17 +572,17 @@ public class JCTCreatorFromSourceCode
 								.getType()).sym)
 						.toString();
 		}
-		else if (t instanceof IJCTSelector<?>
-				&& ((IJCTSelector<?>) t).getElement() instanceof IJCTClass) {
+		else if (t instanceof IJCTSelector
+				&& ((IJCTSelector) t).getElement() instanceof IJCTClass) {
 			Tree type = node.getType();
 
 			if (Tree.Kind.PARAMETERIZED_TYPE == type.getKind())
 				type = ((ParameterizedTypeTree) type).getType();
 
-			underlyingType = ((IJCTClass) ((IJCTSelector<?>) t).getElement())
+			underlyingType = ((IJCTClass) ((IJCTSelector) t).getElement())
 					.createClassType();
 			underlyingTypeName = Constants.CLASS_MARKER_BEGIN
-					+ this.classeNames.get(((IJCTSelector<?>) t).getElement())
+					+ this.classeNames.get(((IJCTSelector) t).getElement())
 					+ Constants.CLASS_MARKER_END;
 		}
 
@@ -2267,7 +2267,7 @@ class OffsetTranslator extends JCTMap<Void, IJCTSourceCodePart> {
 
 	@Override
 	public Void visitErroneousSelector(
-			IJCTErroneousSelector<?> erroneousSelectorElement,
+			IJCTErroneousSelector erroneousSelectorElement,
 			IJCTSourceCodePart additionalParameter) {
 		this.visitSourceCodePart(erroneousSelectorElement, additionalParameter);
 		return super.visitErroneousSelector(erroneousSelectorElement,

@@ -45,13 +45,13 @@ class EclipseBundleRepository implements IFileRepository {
 	 * @param bundleName
 	 *            the bundle name
 	 */
-	public EclipseBundleRepository(final Collection<?> bundleNames)
+	public EclipseBundleRepository(final Collection bundleNames)
 			throws Exception {
 		this(EclipseBundleRepository.class.getClassLoader(), bundleNames);
 	}
 
 	public EclipseBundleRepository(final ClassLoader cl,
-			final Collection<?> bundleNames) throws Exception {
+			final Collection bundleNames) throws Exception {
 
 		this.cl = cl;
 		final Collection<NamedInputStream> listOfStreams = this
@@ -71,22 +71,22 @@ class EclipseBundleRepository implements IFileRepository {
 	}
 
 	private Collection<NamedInputStream> getStreams(
-			final Collection<?> bundleNames) throws Exception {
+			final Collection bundleNames) throws Exception {
 		Collection<NamedInputStream> streams = new ArrayList<NamedInputStream>();
 
 		try {
-			final Iterator<?> iteratorOnBundleNames = bundleNames.iterator();
+			final Iterator iteratorOnBundleNames = bundleNames.iterator();
 			while (iteratorOnBundleNames.hasNext()) {
 				final String bundleName = (String) iteratorOnBundleNames.next();
-				final Class<?> platformClass = this.cl
+				final Class platformClass = this.cl
 						.loadClass("org.eclipse.core.runtime.Platform");
-				final Class<?> bundleClass = this.cl
+				final Class bundleClass = this.cl
 						.loadClass("org.osgi.framework.Bundle");
 				//	final Class fileLocatorClass =
 				//		this.cl.loadClass("org.eclipse.core.runtime.FileLocator");
-				final Class<?> abstractBundleClass = this.cl.loadClass(
+				final Class abstractBundleClass = this.cl.loadClass(
 						"org.eclipse.osgi.framework.internal.core.AbstractBundle");
-				final Class<?> bundleDataClass = this.cl.loadClass(
+				final Class bundleDataClass = this.cl.loadClass(
 						"org.eclipse.osgi.framework.adaptor.BundleData");
 
 				final Method getBundle = platformClass.getDeclaredMethod(
@@ -120,7 +120,7 @@ class EclipseBundleRepository implements IFileRepository {
 				final Object bundleData = getBundleData.invoke(bundle,
 						new Object[0]);
 
-				final Enumeration<?> entries = (Enumeration<?>) getEntryPaths
+				final Enumeration entries = (Enumeration) getEntryPaths
 						.invoke(bundleData, new Object[] { "." });
 				while (entries.hasMoreElements()) {
 					String entry = (String) entries.nextElement();

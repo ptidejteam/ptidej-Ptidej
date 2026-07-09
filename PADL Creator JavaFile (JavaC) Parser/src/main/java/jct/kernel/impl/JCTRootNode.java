@@ -297,12 +297,12 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage>
 	 * Discards the Cached Path Part Builder Index stored in each orphan after e
 	 */
 	private void discardOrphansCachedPathPartBuilderIndex(
-			final JCTElement<?> e) {
+			final JCTElement e) {
 		// Yann 2010/06/21: New, fastest implementation.
 		final int startIndex = this.orphans.indexOf(e);
 		for (int i = startIndex + 1; i < this.orphans.size(); i++) {
 			final IJCTElement element = this.orphans.get(i);
-			((JCTElement<?>) element).discardCachedPathPartBuilderIndex();
+			((JCTElement) element).discardCachedPathPartBuilderIndex();
 		}
 		//	final Iterator<IJCTElement> it = this.getOrphans().iterator();
 		//	// Reach e.
@@ -313,7 +313,7 @@ class JCTRootNode extends JCTElementContainer<IJCTPackage>
 		//		final IJCTElement elem = it.next();
 		//		// Yann 2010/06/21: Unnecessary test?
 		//		//	if (null != elem && elem instanceof JCTElement) {
-		//		((JCTElement<?>) elem).discardCachedPathPartBuilderIndex();
+		//		((JCTElement) elem).discardCachedPathPartBuilderIndex();
 		//	}
 	}
 

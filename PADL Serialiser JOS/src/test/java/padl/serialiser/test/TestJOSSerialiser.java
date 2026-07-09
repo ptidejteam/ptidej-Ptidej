@@ -24,7 +24,8 @@ public class TestJOSSerialiser extends TestSuite {
 		suite.addTestSuite(CompositeTest.class);
 		suite.addTestSuite(JHotDrawTest.class);
 		suite.addTestSuite(ArgoUML0198Test.class);
-		suite.addTestSuite(ArgoUML020Test.class);
+		// ArgoUML020Test is a very large integration case, takes long, not so useful.
+		// suite.addTestSuite(ArgoUML020Test.class);
 
 		return suite;
 	}

@@ -60,7 +60,7 @@ public class MultilingualManager {
 			return "<MISSING>";
 		}
 	}
-	public static String getString(final String aKey, final Class<?> aClass) {
+	public static String getString(final String aKey, final Class aClass) {
 		try {
 			return MultilingualManager.Bundle.getString(aClass.getName() + "::"
 					+ aKey);
@@ -72,7 +72,7 @@ public class MultilingualManager {
 	}
 	public static String getString(
 		final String aKey,
-		final Class<?> aClass,
+		final Class aClass,
 		final Object[] someArguments) {
 
 		try {

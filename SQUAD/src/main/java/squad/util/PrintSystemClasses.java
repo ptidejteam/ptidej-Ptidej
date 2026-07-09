@@ -209,14 +209,14 @@ public class PrintSystemClasses {
 
 	/** This method is for Eclipse, where I analyze the kernel (equinoxe) with plugins one at the time
 	 */
-	@SuppressWarnings("unused")
+
 	public static void printTotalClasses(String dirName, final String aName,
 			List<String> files, String t, String file) {
 
 		final CallSmellDetection detection = new CallSmellDetection();
-		TreeSet<?> cls = new TreeSet<Object>();
+		TreeSet cls = new TreeSet<Object>();
 
-		List<?> jarfiles = detection.extractJarsFromDir(dirName, files);
+		List jarfiles = detection.extractJarsFromDir(dirName, files);
 
 		List<String> equinoxfiles = new ArrayList<String>();
 		List<String> elsefiles = new ArrayList<String>();
@@ -280,7 +280,7 @@ public class PrintSystemClasses {
 			codeLevelModel
 					.create(new CompleteClassFileCreator(someJARFiles, true));
 
-			Iterator<?> iter = codeLevelModel.getIteratorOnTopLevelEntities();
+			Iterator iter = codeLevelModel.getIteratorOnTopLevelEntities();
 
 			try {
 				final Writer out = ProxyDisk.getInstance().fileTempOutput(file,
@@ -358,7 +358,7 @@ public class PrintSystemClasses {
 			}
 
 			// Metric Values.
-			final Iterator<?> entityIterator = codeLevelModel
+			final Iterator entityIterator = codeLevelModel
 					.getIteratorOnTopLevelEntities();
 
 			while (entityIterator.hasNext()) {
@@ -462,7 +462,6 @@ public class PrintSystemClasses {
 	 * @throws ParseException
 	 */
 
-	@SuppressWarnings("unused")
 	private static void indexFiles(String path)
 			throws IOException, ParseException {
 

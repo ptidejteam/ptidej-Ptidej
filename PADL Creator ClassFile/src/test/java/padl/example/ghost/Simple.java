@@ -15,7 +15,6 @@ package padl.example.ghost;
  * @author 	Yann-Gaël Guéhéneuc
  * @since		2002/10/10
  */
-@SuppressWarnings("unused")
 public class Simple {
 	private A anA;
 	private A[] listOfAs;

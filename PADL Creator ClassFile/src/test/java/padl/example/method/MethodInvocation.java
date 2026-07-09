@@ -14,7 +14,6 @@ package padl.example.method;
  * @author Yann-Gaël Guéhéneuc
  * @since  2006/02/11
  */
-@SuppressWarnings("unused")
 public class MethodInvocation {
 	private int immutable;
 	private int mutable;

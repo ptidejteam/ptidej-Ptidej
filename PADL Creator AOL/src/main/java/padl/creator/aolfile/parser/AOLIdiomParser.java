@@ -42,7 +42,6 @@ import util.multilingual.MultilingualManager;
 /** CUP v0.10k generated parser.
   * @version Wed Sep 07 19:06:31 EDT 2011
   */
-@SuppressWarnings("rawtypes")
 public class AOLIdiomParser
 		extends padl.creator.aolfile.javacup.runtime.lr_parser {
 
@@ -364,7 +363,6 @@ public class AOLIdiomParser
 		return this.listOfElements;
 	}
 
-	@SuppressWarnings("unchecked")
 	void addToListOfElements(final IElement anElement) {
 		this.listOfElements.add(anElement);
 	}
@@ -377,7 +375,6 @@ public class AOLIdiomParser
 		return this.listOfGeneralizations;
 	}
 
-	@SuppressWarnings("unchecked")
 	void addToListOfGeneralizations(final String aName) {
 		this.listOfGeneralizations.add(aName);
 	}
@@ -390,7 +387,6 @@ public class AOLIdiomParser
 		return this.listOfRelations;
 	}
 
-	@SuppressWarnings("unchecked")
 	void addToListOfRelations(final String aTargetClassName) {
 		this.listOfRelations.add(aTargetClassName);
 	}
@@ -403,7 +399,6 @@ public class AOLIdiomParser
 		return this.listOfArguments;
 	}
 
-	@SuppressWarnings("unchecked")
 	void addToListOfArguments(final IParameter aParameter) {
 		this.listOfArguments.add(aParameter);
 	}
@@ -444,7 +439,6 @@ public class AOLIdiomParser
 }
 
 /** Cup generated class to encapsulate user supplied action code.*/
-@SuppressWarnings("rawtypes")
 class CUP$AOLIdiomParser$actions {
 	private final AOLIdiomParser parser;
 

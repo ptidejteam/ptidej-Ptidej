@@ -15,7 +15,6 @@ import java.util.Hashtable;
 /**
  * Manages the symbol table and scopes within a given compilation unit.
  */
-@SuppressWarnings("rawtypes")
 public class SymtabManager {
 	/**
 	 * Global symbol table indexed by the name of the scope (class/function).
@@ -163,7 +162,6 @@ public class SymtabManager {
 	/**
 	 * Opens a new scope (with optional name and type flag).
 	 */
-	@SuppressWarnings("unchecked")
 	public static Scope OpenScope(final String scopeName, final boolean isType) {
 		Scope newScope;
 

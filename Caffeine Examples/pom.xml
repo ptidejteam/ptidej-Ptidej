@@ -12,18 +12,19 @@
 
 	<groupId>net.ptidej.caffeine-examples</groupId>
 	<artifactId>caffeine-examples</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<name>Caffeine Examples</name>
 
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
+				<version>3.15.0</version>
 				<configuration>
-					<release>24</release>
+					<release>${maven.compiler.release}</release>
 					<compilerArgs>
-						<arg>-proc:none</arg>
+						<arg>-Xlint:deprecation</arg>
+						<arg>-Xlint:unchecked</arg>
 					</compilerArgs>
 				</configuration>
 			</plugin>
@@ -41,7 +42,7 @@
 		<dependency>
 			<groupId>net.ptidej.caffeine</groupId>
 			<artifactId>caffeine-core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 </project>

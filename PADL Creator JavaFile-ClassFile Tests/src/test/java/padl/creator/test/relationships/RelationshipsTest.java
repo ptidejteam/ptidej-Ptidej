@@ -14,6 +14,7 @@ import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 
 import org.junit.Assert;
+
 import junit.framework.TestCase;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.javafile.eclipse.CompleteJavaFileCreator;
@@ -26,7 +27,6 @@ import padl.kernel.IMethodInvocation;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
 
-
 public class RelationshipsTest extends TestCase {
 	public RelationshipsTest(final String aName) {
 		super(aName);
@@ -36,47 +36,45 @@ public class RelationshipsTest extends TestCase {
 	 * Test the existence of the same MI in the JavaFile model as in the ClassFile model.
 	 */
 	private void testInclusionOfMIsFromJavaFilesModelInClassFilesModel(
-		final ITestProvider aProvider,
-		final IMethod aMethodFromJavaFilesModel,
-		final IMethod aMethodFromClassFilesModel) {
+			final ITestProvider aProvider,
+			final IMethod aMethodFromJavaFilesModel,
+			final IMethod aMethodFromClassFilesModel) {
 
 		Assert.assertTrue(
-			"Method invocations built for " + aProvider.getTestClassName()
-					+ " are different!",
-			MethodInvocationComparator
-				.isMIofJavaModelMethodIncludedInMIofClassModelMethod(
-					aMethodFromJavaFilesModel,
-					aMethodFromClassFilesModel));
+				"Method invocations built for " + aProvider.getTestClassName()
+						+ " are different!",
+				MethodInvocationComparator
+						.isMIofJavaModelMethodIncludedInMIofClassModelMethod(
+								aMethodFromJavaFilesModel,
+								aMethodFromClassFilesModel));
 	}
 
 	/**
 	 * Tests methods have been separated - see also the method callMIinclusionTest
 	 * @param aProvider
 	 */
-	private void testExpectedMIs(
-		final ITestProvider aProvider,
-		final IMethod theTestMethodFromJavaFilesModel) {
+	private void testExpectedMIs(final ITestProvider aProvider,
+			final IMethod theTestMethodFromJavaFilesModel) {
 
 		// Get methodFromJavaFileModel's method invocation
-		final IMethodInvocation javaMethodInvocation =
-			(IMethodInvocation) theTestMethodFromJavaFilesModel
+		final IMethodInvocation javaMethodInvocation = (IMethodInvocation) theTestMethodFromJavaFilesModel
 				.getConstituentFromID("Method Invocation_>PADL<_1");
-		final IMethodInvocation expectedMethodInvocation =
-			aProvider.getExpectedMethodInvocation();
+		final IMethodInvocation expectedMethodInvocation = aProvider
+				.getExpectedMethodInvocation();
 
 		// Test that the method invocation is which is expected
 		Assert.assertEquals(
-			" TestClass " + aProvider.getTestClassName()
-					+ ": doest not contain the expected method invocation",
-			expectedMethodInvocation,
-			javaMethodInvocation);
+				" TestClass " + aProvider.getTestClassName()
+						+ ": doest not contain the expected method invocation",
+				expectedMethodInvocation, javaMethodInvocation);
 	}
+
 	private ICodeLevelModel createModelFromClassFiles(
-		final String[] pathsToFiles) {
+			final String[] pathsToFiles) {
 
 		try {
-			final ICodeLevelModel codeLevelModel =
-				Factory.getInstance().createCodeLevelModel("Test Model");
+			final ICodeLevelModel codeLevelModel = Factory.getInstance()
+					.createCodeLevelModel("Test Model");
 			codeLevelModel.create(new CompleteClassFileCreator(pathsToFiles));
 			return codeLevelModel;
 		}
@@ -84,43 +82,44 @@ public class RelationshipsTest extends TestCase {
 			throw new RuntimeException(e);
 		}
 	}
-	private ICodeLevelModel createModelFromJavaFiles(final String[] pathsToFiles) {
+
+	private ICodeLevelModel createModelFromJavaFiles(
+			final String[] pathsToFiles) {
 		try {
-			final ICodeLevelModel codeLevelModel =
-				Factory.getInstance().createCodeLevelModel("Test Model");
+			final ICodeLevelModel codeLevelModel = Factory.getInstance()
+					.createCodeLevelModel("Test Model");
 			codeLevelModel.create(new CompleteJavaFileCreator(
-				"../PADL Creator JavaFile-ClassFile Tests/src/test/java/",
-				"",
-				pathsToFiles));
+					"../PADL Creator JavaFile-ClassFile Tests/src/test/java/",
+					"", pathsToFiles));
 			return codeLevelModel;
 		}
 		catch (final CreationException e) {
 			throw new RuntimeException(e);
 		}
 	}
-	private IMethod getTestMethodFromModel(
-		final ICodeLevelModel aCodeLevelModel,
-		final String aTestClassName) {
 
-		final IClass testClass =
-			(IClass) aCodeLevelModel.getTopLevelEntityFromID(aTestClassName);
+	private IMethod getTestMethodFromModel(
+			final ICodeLevelModel aCodeLevelModel,
+			final String aTestClassName) {
+
+		final IClass testClass = (IClass) aCodeLevelModel
+				.getTopLevelEntityFromID(aTestClassName);
 		Assert.assertNotNull(testClass);
 
-		final IMethod testMethod =
-			(IMethod) testClass.getConstituentFromID("foo()");
+		final IMethod testMethod = (IMethod) testClass
+				.getConstituentFromID("foo()");
 		Assert.assertNotNull(testMethod);
 
 		return testMethod;
 	}
+
 	public void testRelationships() {
 		final String testProviderClassName = ITestProvider.class.getName();
-		final String testProviderPackageName =
-			testProviderClassName.substring(
-				0,
-				testProviderClassName.lastIndexOf('.'));
-		final File pathToTest =
-			new File("../PADL Creator JavaFile-ClassFile Tests/target/test-classes/"
-					+ testProviderPackageName.replace('.', '/'));
+		final String testProviderPackageName = testProviderClassName
+				.substring(0, testProviderClassName.lastIndexOf('.'));
+		final File pathToTest = new File(
+				"../PADL Creator JavaFile-ClassFile Tests/target/test-classes/"
+						+ testProviderPackageName.replace('.', '/'));
 		final String[] potentialTests = pathToTest.list();
 		for (int i = 0; i < potentialTests.length; i++) {
 			final String potentialTest = potentialTests[i];
@@ -129,49 +128,44 @@ public class RelationshipsTest extends TestCase {
 					final StringBuffer testClassName = new StringBuffer();
 					testClassName.append(testProviderPackageName);
 					testClassName.append('.');
-					testClassName.append(potentialTest.substring(
-						0,
-						potentialTest.indexOf('.')));
-					final ITestProvider provider =
-						(ITestProvider) Class
+					testClassName.append(potentialTest.substring(0,
+							potentialTest.indexOf('.')));
+					final ITestProvider provider = (ITestProvider) Class
 							.forName(testClassName.toString())
 							.getDeclaredConstructor().newInstance();
 
 					// Create the needed data...
-					final String pathToByteCodeOfTestClass =
-						provider.getPathToByteCodeOfTestClass();
-					final String pathToByteCodeOfHelperClass =
-						provider.getPathToByteCodeOfHelperClass();
+					final String pathToByteCodeOfTestClass = provider
+							.getPathToByteCodeOfTestClass();
+					final String pathToByteCodeOfHelperClass = provider
+							.getPathToByteCodeOfHelperClass();
 
-					final String pathToJavaCodeOfTestClass =
-						provider.getPathToJavaCodeOfTestClass();
-					final String pathToJavaCodeOfHelperClass =
-						provider.getPathToJavaCodeOfHelperClass();
+					final String pathToJavaCodeOfTestClass = provider
+							.getPathToJavaCodeOfTestClass();
+					final String pathToJavaCodeOfHelperClass = provider
+							.getPathToJavaCodeOfHelperClass();
 
-					final ICodeLevelModel classFilesModel =
-						this.createModelFromClassFiles(new String[] {
-								pathToByteCodeOfTestClass,
-								pathToByteCodeOfHelperClass });
-					final ICodeLevelModel javaFilesModel =
-						this.createModelFromJavaFiles(new String[] {
-								pathToJavaCodeOfTestClass,
-								pathToJavaCodeOfHelperClass });
-					final IMethod methodFromClassFileModel =
-						this.getTestMethodFromModel(
-							classFilesModel,
-							provider.getTestClassName());
+					final ICodeLevelModel classFilesModel = this
+							.createModelFromClassFiles(
+									new String[] { pathToByteCodeOfTestClass,
+											pathToByteCodeOfHelperClass });
+					final ICodeLevelModel javaFilesModel = this
+							.createModelFromJavaFiles(
+									new String[] { pathToJavaCodeOfTestClass,
+											pathToJavaCodeOfHelperClass });
+					final IMethod methodFromClassFileModel = this
+							.getTestMethodFromModel(classFilesModel,
+									provider.getTestClassName());
 
-					final IMethod methodFromJavaFileModel =
-						this.getTestMethodFromModel(
-							javaFilesModel,
-							provider.getTestClassName());
+					final IMethod methodFromJavaFileModel = this
+							.getTestMethodFromModel(javaFilesModel,
+									provider.getTestClassName());
 
 					// Test code...
 					this.testExpectedMIs(provider, methodFromJavaFileModel);
 					this.testInclusionOfMIsFromJavaFilesModelInClassFilesModel(
-						provider,
-						methodFromJavaFileModel,
-						methodFromClassFileModel);
+							provider, methodFromJavaFileModel,
+							methodFromClassFileModel);
 				}
 				catch (final InstantiationException e) {
 					throw new RuntimeException(e);
@@ -181,13 +175,17 @@ public class RelationshipsTest extends TestCase {
 				}
 				catch (final ClassNotFoundException e) {
 					throw new RuntimeException(e);
-				} catch (IllegalArgumentException e) {
+				}
+				catch (IllegalArgumentException e) {
 					e.printStackTrace();
-				} catch (InvocationTargetException e) {
+				}
+				catch (InvocationTargetException e) {
 					e.printStackTrace();
-				} catch (NoSuchMethodException e) {
+				}
+				catch (NoSuchMethodException e) {
 					e.printStackTrace();
-				} catch (SecurityException e) {
+				}
+				catch (SecurityException e) {
 					e.printStackTrace();
 				}
 			}

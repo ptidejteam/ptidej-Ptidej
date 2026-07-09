@@ -90,7 +90,7 @@ public final class OccurrenceGenerator {
 			buffer.append(OccurrenceGenerator.PACKAGE_NAME_PROBLEMS);
 			buffer.append(motifName);
 			buffer.append("Motif");
-			final Class<?> chosenPattern = Class.forName(buffer.toString());
+			final Class chosenPattern = Class.forName(buffer.toString());
 			final Method problemMethod = chosenPattern.getDeclaredMethod(
 					"getProblem", new Class[] { List.class });
 			final ptidej.solver.java.Problem problem = (ptidej.solver.java.Problem) problemMethod

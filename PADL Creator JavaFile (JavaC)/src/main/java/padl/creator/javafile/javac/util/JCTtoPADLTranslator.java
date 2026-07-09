@@ -489,7 +489,7 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 	}
 
 	public IConstituent visitErroneousSelector(
-			final IJCTErroneousSelector<?> aJCTErroneousSelector,
+			final IJCTErroneousSelector aJCTErroneousSelector,
 			final Object aParameter) {
 
 		return null;
@@ -920,7 +920,6 @@ public class JCTtoPADLTranslator implements IJCTVisitor<IConstituent, Object> {
 		return null;
 	}
 
-	@SuppressWarnings("unchecked")
 	public IConstituent visitPackage(final IJCTPackage aJCTPackage,
 			final Object aParameter) {
 

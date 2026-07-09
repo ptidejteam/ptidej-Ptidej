@@ -44,7 +44,7 @@ public class JNICollecteFctGlobaleVisitor extends WalkerAdapter
 	public void open(final IGlobalFunction aGlobalFunction) {
 		this.listOfcurrentglobalfunction.add(aGlobalFunction.getDisplayName());
 
-		final Iterator<?> iterator = aGlobalFunction
+		final Iterator iterator = aGlobalFunction
 				.getIteratorOnConstituents();
 		while (iterator.hasNext()) {
 			final IConstituent constituent = (IConstituent) iterator.next();

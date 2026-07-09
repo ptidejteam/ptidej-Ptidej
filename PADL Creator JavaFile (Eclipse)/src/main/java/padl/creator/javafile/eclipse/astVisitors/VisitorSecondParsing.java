@@ -263,7 +263,7 @@ public class VisitorSecondParsing extends ExtendedASTVisitor {
 	 */
 	private void manageSuperInterfaces(final TypeDeclaration node) {
 		final ITypeBinding[] interfaces = node.resolveBinding().getInterfaces();
-		final List<?> interfacesList = node.superInterfaceTypes();
+		final List interfacesList = node.superInterfaceTypes();
 
 		if (interfaces.length != 0) {
 			final int nbInterfaces = interfaces.length;
@@ -295,7 +295,7 @@ public class VisitorSecondParsing extends ExtendedASTVisitor {
 			}
 		}
 		else if (interfacesList.size() != 0) {
-			final Iterator<?> iter = interfacesList.iterator();
+			final Iterator iter = interfacesList.iterator();
 			while (iter.hasNext()) {
 
 				final IFirstClassEntity interfaz =

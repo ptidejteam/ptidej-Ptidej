@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.example.relationship;
 
-@SuppressWarnings("static-access")
 public class FieldAccess_INSTANCE_CLASS {
 	private A a;
 	

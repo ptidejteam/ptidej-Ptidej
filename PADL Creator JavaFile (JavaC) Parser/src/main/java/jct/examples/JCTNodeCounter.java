@@ -481,7 +481,7 @@ public final class JCTNodeCounter
     { return this.reduce(super.visitSimpleSelector(simpleSelectorElement, additionalParameter), 1); }
 
     @Override
-    public Integer visitErroneousSelector(final IJCTErroneousSelector<?> erroneousSelectorElement, final Integer additionalParameter)
+    public Integer visitErroneousSelector(final IJCTErroneousSelector erroneousSelectorElement, final Integer additionalParameter)
     { return this.reduce(super.visitErroneousSelector(erroneousSelectorElement, additionalParameter), 1); }
 
     @Override

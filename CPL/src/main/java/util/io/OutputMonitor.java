@@ -25,11 +25,8 @@ public class OutputMonitor extends Thread {
 	private final PrintStream printStream;
 	private boolean isVerbose;
 
-	public OutputMonitor(
-		final String threadName,
-		final String header,
-		final InputStream inputStream,
-		final PrintStream printStream) {
+	public OutputMonitor(final String threadName, final String header,
+			final InputStream inputStream, final PrintStream printStream) {
 
 		this.setName(threadName);
 		this.setPriority(Thread.MAX_PRIORITY);
@@ -38,12 +35,9 @@ public class OutputMonitor extends Thread {
 		this.printStream = printStream;
 		this.isVerbose = true;
 	}
-	@SuppressWarnings("resource")
-	public OutputMonitor(
-		final String threadName,
-		final String header,
-		final InputStream inputStream,
-		final PrintWriter printWriter) {
+
+	public OutputMonitor(final String threadName, final String header,
+			final InputStream inputStream, final PrintWriter printWriter) {
 
 		this.setName(threadName);
 		this.setPriority(Thread.MAX_PRIORITY);
@@ -56,6 +50,7 @@ public class OutputMonitor extends Thread {
 	public boolean isVerbose() {
 		return this.isVerbose;
 	}
+
 	public void run() {
 		try {
 			int value = 0;
@@ -84,11 +79,11 @@ public class OutputMonitor extends Thread {
 								this.printStream.print(' ');
 								this.printStream.print(lastWrittenChar);
 								while (value > 0) {
-									final int available =
-										this.inputStream.available();
-									value =
-										this.inputStream.read(bytes =
-											new byte[available], 0, available);
+									final int available = this.inputStream
+											.available();
+									value = this.inputStream.read(
+											bytes = new byte[available], 0,
+											available);
 									for (int i = 0; i < value; i++) {
 										lastWrittenChar = (char) bytes[i];
 										this.printStream.print(lastWrittenChar);
@@ -110,6 +105,7 @@ public class OutputMonitor extends Thread {
 			ioe.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 	}
+
 	public void setVerbose(final boolean isVerbose) {
 		this.isVerbose = isVerbose;
 	}

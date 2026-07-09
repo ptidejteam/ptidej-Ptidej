@@ -24,7 +24,6 @@ import com.ibm.toad.cfparse.utils.Access;
  * @author Ward Flores
  * @since 2004/08/18
  */
-@SuppressWarnings("rawtypes")
 class Enum extends FirstClassEntity implements IEntityMarker, IEnum {
 	private static final long serialVersionUID = 1124498017343286793L;
 

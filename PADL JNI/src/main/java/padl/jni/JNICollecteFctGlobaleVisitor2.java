@@ -43,7 +43,6 @@ import padl.kernel.IPrimitiveEntity;
 import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
 
-@SuppressWarnings("unused")
 public class JNICollecteFctGlobaleVisitor2 implements ICPPWalker {
 	final ArrayList<String> listOfJNIMethods = new ArrayList<String>();
 	private IMethod currentMethod;

@@ -56,12 +56,13 @@ public class MethodDump {
 			}
 		}
 	}
-	@SuppressWarnings("unused")
+
 	public void detectOperators() {
 		this.f = this.p.floatValue() + 15f;
 		int aLocalInt = this.p.intValue() << 7;
 		aLocalInt >>= this.p.intValue() / 100 + (int) this.f;
 	}
+
 	public void dynamicMethod(
 		Integer anInteger,
 		String aString,

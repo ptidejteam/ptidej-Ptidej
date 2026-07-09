@@ -531,7 +531,7 @@ public class MethodBuilderImpl extends AbstractPADLCodeBuilder implements
 			IMethodInvocation invocation = null;
 
 			// check this class
-			Iterator<?> iter = clazz.getIteratorOnConstituents(IField.class);
+			Iterator iter = clazz.getIteratorOnConstituents(IField.class);
 			while (iter.hasNext() && invocation == null) {
 				final IField field = (IField) iter.next();
 				invocation =
@@ -545,7 +545,7 @@ public class MethodBuilderImpl extends AbstractPADLCodeBuilder implements
 
 			// check all inherited classes
 			if (invocation == null) {
-				final Iterator<?> iter2 =
+				final Iterator iter2 =
 					clazz.getIteratorOnInheritedEntities();
 				while (iter2.hasNext()) {
 					final Object classObj = iter2.next();

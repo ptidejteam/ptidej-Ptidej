@@ -12,35 +12,30 @@ package padl.creator.test.relationships.providers;
 
 import java.lang.reflect.Modifier;
 
-import padl.kernel.Cardinality;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.IMethod;
 import padl.kernel.IMethodInvocation;
 import padl.kernel.impl.Factory;
 
-public class Provider_CLASS_CLASS_MANY extends AbstractProvider implements
-		ITestProvider {
+public class Provider_CLASS_CLASS_MANY extends AbstractProvider
+		implements ITestProvider {
 
 	public String getHelperClassName() {
 		return "padl.creator.test.relationships.providers.A";
 	}
+
 	public IMethodInvocation getExpectedMethodInvocation() {
-		final IFirstClassEntity targetEntity =
-			Factory.getInstance().createClass(
-				"padl.creator.test.relationships.providers.A".toCharArray(),
-				"A".toCharArray());
+		final IFirstClassEntity targetEntity = Factory.getInstance()
+				.createClass("padl.creator.test.relationships.providers.A"
+						.toCharArray(), "A".toCharArray());
 
-		final IMethodInvocation methodInvocation =
-			Factory.getInstance().createMethodInvocation(
-				IMethodInvocation.CLASS_CLASS,
-				padl.kernel.Cardinality.Many,
-				Modifier.PUBLIC + Modifier.STATIC,
-				targetEntity);
+		final IMethodInvocation methodInvocation = Factory.getInstance()
+				.createMethodInvocation(IMethodInvocation.CLASS_CLASS,
+						padl.kernel.Cardinality.Many,
+						Modifier.PUBLIC + Modifier.STATIC, targetEntity);
 
-		final IMethod calledMethod =
-			Factory.getInstance().createMethod(
-				"staticMethod()".toCharArray(),
-				"staticMethod".toCharArray());
+		final IMethod calledMethod = Factory.getInstance().createMethod(
+				"staticMethod()".toCharArray(), "staticMethod".toCharArray());
 		methodInvocation.setCalledMethod(calledMethod);
 
 		return methodInvocation;
@@ -50,7 +45,6 @@ public class Provider_CLASS_CLASS_MANY extends AbstractProvider implements
 class Test_CLASS_CLASS_MANY {
 	private static A[] a;
 
-	@SuppressWarnings("static-access")
 	public static void foo() {
 		Test_CLASS_CLASS_MANY.a[0].staticMethod();
 	}

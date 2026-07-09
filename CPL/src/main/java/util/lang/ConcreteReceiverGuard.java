@@ -133,7 +133,7 @@ public final class ConcreteReceiverGuard {
 		this.doCheck(aConcreteReceiverClassToEnforce, anErrorMessage);
 	}
 	public void checkCallingClassName(
-		final Class<?> aConcreteReceiverClassToEnforce,
+		final Class aConcreteReceiverClassToEnforce,
 		final String anErrorMessage) {
 
 		this.checkCallingClassName(

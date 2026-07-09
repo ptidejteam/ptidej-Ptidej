@@ -276,7 +276,7 @@ public class SimpleSmellDetection {
 			 * 
 			 */
 
-			Iterator<?> iter = codeLevelModel.getIteratorOnTopLevelEntities();
+			Iterator iter = codeLevelModel.getIteratorOnTopLevelEntities();
 
 			final Writer out =
 				ProxyDisk.getInstance().fileTempOutput(
@@ -369,7 +369,7 @@ public class SimpleSmellDetection {
 			 * 
 			 */
 
-			Iterator<?> iter = codeLevelModel.getIteratorOnTopLevelEntities();
+			Iterator iter = codeLevelModel.getIteratorOnTopLevelEntities();
 
 			final Writer out =
 				ProxyDisk.getInstance().fileTempOutput(
@@ -442,7 +442,7 @@ public class SimpleSmellDetection {
 				final String antipatternName = SimpleSmellDetection.SMELLS[i];
 
 				final long startTime = System.currentTimeMillis();
-				final Class<?> detectionClass =
+				final Class detectionClass =
 					Class.forName("sad.designsmell.detection."
 							+ antipatternName + '.' + antipatternName
 							+ "Detection");
@@ -529,7 +529,7 @@ public class SimpleSmellDetection {
 					SimpleSmellDetection.CODE_SMELLS[i];
 
 				final long startTime = System.currentTimeMillis();
-				final Class<?> detectionClass =
+				final Class detectionClass =
 					Class.forName("sad.codesmell.detection.ComplexClass."
 							+ codesmellName + "Detection");
 
@@ -624,7 +624,7 @@ public class SimpleSmellDetection {
 				System.out.println("Identifying occurrences of the "
 						+ motifName + " design motif...");
 
-				final Class<?> problemClass;
+				final Class problemClass;
 
 				problemClass =
 					Class.forName("ptidej.solver.java.problem." + motifName
@@ -856,7 +856,7 @@ public class SimpleSmellDetection {
 	 * Create an Array from a list
 	 */
 
-	public static String[] createArrayOfJars(List<?> l) {
+	public static String[] createArrayOfJars(List l) {
 		String[] files = new String[l.size()];
 		for (int i = 0; i < l.size(); i++) {
 			files[i] = (String) l.get(i);
