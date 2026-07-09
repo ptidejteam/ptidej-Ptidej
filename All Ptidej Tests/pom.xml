@@ -35,7 +35,6 @@
 				<configuration>
 					<!-- Must export/open some hidden packages -->
 					<argLine>
-						-Xmx8G
 						--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED
 						--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED
@@ -43,8 +42,8 @@
 						--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
 						--add-opens=java.base/java.util=ALL-UNNAMED
 					</argLine>
-					<!-- Excluded on purpose -->
 					<excludes>
+						<!-- Excluded on purpose -->
 						<exclude>**/TestAllPtidej.java</exclude>
 						<exclude>**/TestCreators.java</exclude>
 						<exclude>**/TestDeMIMA.java</exclude>

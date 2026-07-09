@@ -33,18 +33,23 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.5.6</version>
 				<configuration>
-					<argLine>--add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --enable-native-access=ALL-UNNAMED</argLine>
+					<!-- Must export/open some hidden packages -->
+					<argLine>
+						--add-opens java.base/java.net=ALL-UNNAMED
+						--add-opens java.base/java.util=ALL-UNNAMED
+						--enable-native-access=ALL-UNNAMED
+					</argLine>
 					<excludes>
 						<!-- Excluded on purpose -->
 						<exclude>**/*Test.java</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
-			<!-- Must generate the test-jar for the tests in All Ptidej Tests -->
+			<!-- Must generate the test-jar for dependent tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.3.0</version>
+				<version>3.5.0</version>
 				<executions>
 					<execution>
 						<goals>

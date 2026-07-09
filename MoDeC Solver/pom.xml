@@ -39,11 +39,11 @@
 					</excludes>
 				</configuration>
 			</plugin>
-			<!-- Must generate the test-jar for the tests in All Ptidej Tests -->
+			<!-- Must generate the test-jar for dependent tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.3.0</version>
+				<version>3.5.0</version>
 				<executions>
 					<execution>
 						<goals>
