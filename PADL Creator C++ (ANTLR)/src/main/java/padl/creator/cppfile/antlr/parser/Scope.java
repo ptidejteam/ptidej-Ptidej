@@ -12,7 +12,6 @@ package padl.creator.cppfile.antlr.parser;
 
 import java.util.Hashtable;
 
-@SuppressWarnings("rawtypes")
 public class Scope {
 	/**
 	  * Name of the scope (set only for class/function scopes).
@@ -64,7 +63,6 @@ public class Scope {
 	/** 
 	 * Checks if a given name is the name of a type in this scope.
 	 */
-	@SuppressWarnings("unchecked")
 	public boolean IsTypeName(final String name) {
 		//2004/08/16: Sebastien Robidoux
 		//This test is now broken.
@@ -81,7 +79,6 @@ public class Scope {
 	/**
 	 * Inserts a name into the table to say that it is the name of a type.
 	 */
-	@SuppressWarnings("unchecked")
 	public void PutTypeName(final String name) {
 		this.typeTable.put(name, name);
 	}
@@ -89,7 +86,6 @@ public class Scope {
 	/**
 	 * A type with a scope (class/struct/union).
 	 */
-	@SuppressWarnings("unchecked")
 	public void PutTypeName(final String name, final Scope sc) {
 		this.typeTable.put(name, sc);
 	}

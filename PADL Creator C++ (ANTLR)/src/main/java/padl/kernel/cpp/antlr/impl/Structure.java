@@ -24,7 +24,6 @@ import com.ibm.toad.cfparse.utils.Access;
  * @author Ward Flores
  * @since 2004/08/18
  */
-@SuppressWarnings("rawtypes")
 class Structure extends FirstClassEntity implements IEntityMarker, IStructure {
 	private static final long serialVersionUID = -6073309025082506778L;
 

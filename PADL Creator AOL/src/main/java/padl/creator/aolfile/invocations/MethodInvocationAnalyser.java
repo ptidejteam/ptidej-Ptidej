@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
 import padl.analysis.IAnalysis;
 import padl.analysis.UnsupportedSourceModelException;
 import padl.kernel.Cardinality;
@@ -35,24 +36,25 @@ import util.io.ProxyConsole;
  * @author Yann-Gaël Guéhéneuc
  * @since  2007/01/29
  */
-@SuppressWarnings("rawtypes")
 public class MethodInvocationAnalyser implements IAnalysis {
 	private String cldFile;
+
 	public String getCLDFile() {
 		return this.cldFile;
 	}
+
 	public String getName() {
 		return "Method invocation adder";
 	}
-	@SuppressWarnings("unchecked")
+
 	public IAbstractModel invoke(final IAbstractModel anAbstractModel)
 			throws UnsupportedSourceModelException {
 
 		try {
-			final IAbstractLevelModel newAbstractLevelModel =
-				(IAbstractLevelModel) anAbstractModel.clone();
-			final BufferedReader reader =
-				new BufferedReader(new FileReader(this.cldFile));
+			final IAbstractLevelModel newAbstractLevelModel = (IAbstractLevelModel) anAbstractModel
+					.clone();
+			final BufferedReader reader = new BufferedReader(
+					new FileReader(this.cldFile));
 			final List listOfModifiedMethods = new ArrayList();
 
 			// A typical line looks like:
@@ -68,26 +70,26 @@ public class MethodInvocationAnalyser implements IAnalysis {
 
 				firstIndex = line.indexOf('\t') + 1;
 				secondIndex = line.indexOf("::", firstIndex);
-				final String sourceTypeName =
-					line.substring(firstIndex, secondIndex);
+				final String sourceTypeName = line.substring(firstIndex,
+						secondIndex);
 
 				firstIndex = secondIndex + 2;
 				secondIndex = line.indexOf('(', firstIndex);
-				final String sourceMethodName =
-					line.substring(firstIndex, secondIndex);
+				final String sourceMethodName = line.substring(firstIndex,
+						secondIndex);
 
 				// Yann 2007/010/29: Lazy
 				// For the sake of simplicity, I forget for now about parameters.
 
 				firstIndex = line.indexOf('"', secondIndex) + 1;
 				secondIndex = line.indexOf("::", firstIndex);
-				final String targetTypeName =
-					line.substring(firstIndex, secondIndex);
+				final String targetTypeName = line.substring(firstIndex,
+						secondIndex);
 
 				firstIndex = secondIndex + 2;
 				secondIndex = line.indexOf('"', firstIndex);
-				final String targetMethodName =
-					line.substring(firstIndex, secondIndex);
+				final String targetMethodName = line.substring(firstIndex,
+						secondIndex);
 
 				IFirstClassEntity sourceType = null;
 				IOperation sourceMethod = null;
@@ -95,51 +97,43 @@ public class MethodInvocationAnalyser implements IAnalysis {
 				IOperation targetMethod = null;
 
 				try {
-					sourceType =
-						(IFirstClassEntity) newAbstractLevelModel
-							.getConstituentFromName(sourceTypeName
-								.toCharArray());
+					sourceType = (IFirstClassEntity) newAbstractLevelModel
+							.getConstituentFromName(
+									sourceTypeName.toCharArray());
 
-					sourceMethod =
-						(IOperation) sourceType
-							.getConstituentFromName(sourceMethodName
-								.toCharArray());
+					sourceMethod = (IOperation) sourceType
+							.getConstituentFromName(
+									sourceMethodName.toCharArray());
 
-					targetType =
-						(IFirstClassEntity) newAbstractLevelModel
-							.getConstituentFromName(targetTypeName
-								.toCharArray());
+					targetType = (IFirstClassEntity) newAbstractLevelModel
+							.getConstituentFromName(
+									targetTypeName.toCharArray());
 					if (targetType == null) {
-						targetType =
-							Factory.getInstance().createGhost(
+						targetType = Factory.getInstance().createGhost(
 								targetTypeName.toCharArray(),
 								targetTypeName.toCharArray());
 						newAbstractLevelModel.addConstituent(targetType);
 					}
 
-					targetMethod =
-						(IOperation) targetType
-							.getConstituentFromName(targetMethodName
-								.toCharArray());
+					targetMethod = (IOperation) targetType
+							.getConstituentFromName(
+									targetMethodName.toCharArray());
 					if (targetMethod == null) {
-						targetMethod =
-							Factory.getInstance().createMethod(
+						targetMethod = Factory.getInstance().createMethod(
 								targetMethodName.toCharArray(),
 								targetMethodName.toCharArray());
 						targetType.addConstituent(targetMethod);
 					}
 
-					final IMethodInvocation methodInvocation =
-						Factory.getInstance().createMethodInvocation(
-							IMethodInvocation.INSTANCE_INSTANCE,
-							Cardinality.One,
-							targetMethod.getVisibility(),
-							targetType);
+					final IMethodInvocation methodInvocation = Factory
+							.getInstance().createMethodInvocation(
+									IMethodInvocation.INSTANCE_INSTANCE,
+									Cardinality.One,
+									targetMethod.getVisibility(), targetType);
 					sourceMethod.addConstituent(methodInvocation);
 
-					listOfModifiedMethods.add(new Couple(
-						sourceType,
-						sourceMethod));
+					listOfModifiedMethods
+							.add(new Couple(sourceType, sourceMethod));
 				}
 				catch (final NullPointerException e) {
 					numberOfFailures++;
@@ -173,61 +167,51 @@ public class MethodInvocationAnalyser implements IAnalysis {
 			reader.close();
 
 			ProxyConsole.getInstance().debugOutput().print("Added ");
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.print(numberOfInvocations - numberOfFailures);
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.print(" method invocations (");
+			ProxyConsole.getInstance().debugOutput()
+					.print(numberOfInvocations - numberOfFailures);
+			ProxyConsole.getInstance().debugOutput()
+					.print(" method invocations (");
 			ProxyConsole.getInstance().debugOutput().print(numberOfFailures);
 			ProxyConsole.getInstance().debugOutput().print(" failures for ");
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.print(numberOfInvocations);
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.println(" potential invocations)");
+			ProxyConsole.getInstance().debugOutput().print(numberOfInvocations);
+			ProxyConsole.getInstance().debugOutput()
+					.println(" potential invocations)");
 
 			// Yann 2007/02/02: Delegations
 			// I go through the method in which only one method invocation 
 			// has been added to convert them into delegations.
 			int numberOfAddedDelegations = 0;
-			final Iterator iteratorOnModifiedMethods =
-				listOfModifiedMethods.iterator();
+			final Iterator iteratorOnModifiedMethods = listOfModifiedMethods
+					.iterator();
 			while (iteratorOnModifiedMethods.hasNext()) {
 				final Couple couple = (Couple) iteratorOnModifiedMethods.next();
-				final IFirstClassEntity firstClassEntity =
-					couple.getDeclaringEntity();
+				final IFirstClassEntity firstClassEntity = couple
+						.getDeclaringEntity();
 				final IOperation method = couple.getModifiedMethod();
 
-				if (method instanceof IMethod
-						&& method
-							.getNumberOfConstituents(IMethodInvocation.class) == 1) {
+				if (method instanceof IMethod && method.getNumberOfConstituents(
+						IMethodInvocation.class) == 1) {
 
-					final IMethodInvocation methodInvocation =
-						(IMethodInvocation) method.getIteratorOnConstituents(
-							IMethodInvocation.class).next();
+					final IMethodInvocation methodInvocation = (IMethodInvocation) method
+							.getIteratorOnConstituents(IMethodInvocation.class)
+							.next();
 
-					final IDelegatingMethod delegation =
-						Factory.getInstance().createDelegatingMethod(
-							method.getName(),
-							Factory
-								.getInstance()
-								.createAssociationRelationship(
-									"DuMmY".toCharArray(),
-									methodInvocation.getTargetEntity(),
-									Cardinality.One),
-							(IMethod) methodInvocation.getCalledMethod());
+					final IDelegatingMethod delegation = Factory.getInstance()
+							.createDelegatingMethod(method.getName(),
+									Factory.getInstance()
+											.createAssociationRelationship(
+													"DuMmY".toCharArray(),
+													methodInvocation
+															.getTargetEntity(),
+													Cardinality.One),
+									(IMethod) methodInvocation
+											.getCalledMethod());
 
-					final Iterator iterator =
-						method.getIteratorOnConstituents();
+					final Iterator iterator = method
+							.getIteratorOnConstituents();
 					while (iterator.hasNext()) {
-						final IConstituentOfOperation constituentOfOperation =
-							(IConstituentOfOperation) iterator.next();
+						final IConstituentOfOperation constituentOfOperation = (IConstituentOfOperation) iterator
+								.next();
 						delegation.addConstituent(constituentOfOperation);
 					}
 
@@ -238,10 +222,8 @@ public class MethodInvocationAnalyser implements IAnalysis {
 			}
 
 			ProxyConsole.getInstance().debugOutput().print("Added ");
-			ProxyConsole
-				.getInstance()
-				.debugOutput()
-				.print(numberOfAddedDelegations);
+			ProxyConsole.getInstance().debugOutput()
+					.print(numberOfAddedDelegations);
 			ProxyConsole.getInstance().debugOutput().println(" delegations");
 
 			return newAbstractLevelModel;
@@ -250,10 +232,8 @@ public class MethodInvocationAnalyser implements IAnalysis {
 			cnse.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 		catch (final FileNotFoundException e) {
-			ProxyConsole
-				.getInstance()
-				.errorOutput()
-				.println("No CLD file given?");
+			ProxyConsole.getInstance().errorOutput()
+					.println("No CLD file given?");
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());
 		}
 		catch (final IOException e) {
@@ -261,6 +241,7 @@ public class MethodInvocationAnalyser implements IAnalysis {
 		}
 		throw new UnsupportedSourceModelException();
 	}
+
 	public void setCLDFile(final String aCLDFile) {
 		this.cldFile = aCLDFile;
 	}

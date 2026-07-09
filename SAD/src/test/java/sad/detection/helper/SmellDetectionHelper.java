@@ -104,7 +104,7 @@ public final class SmellDetectionHelper {
 				final String antipatternName = someSmells[i];
 
 				final long startTime = System.currentTimeMillis();
-				final Class<?> detectionClass =
+				final Class detectionClass =
 					Class.forName("sad.designsmell.detection.repository."
 							+ antipatternName + '.' + antipatternName
 							+ "Detection");
@@ -545,7 +545,6 @@ public final class SmellDetectionHelper {
 		final int nbAllOcc = allOccurrences.length;
 		for (int j = 0; j < nbAllOcc; j++) {
 			final Occurrence occ = allOccurrences[j];
-			@SuppressWarnings("unchecked")
 			final List<OccurrenceComponent> listOccComponents =
 				(List<OccurrenceComponent>) occ.getComponents();
 			if (!listOccComponents.isEmpty()) {

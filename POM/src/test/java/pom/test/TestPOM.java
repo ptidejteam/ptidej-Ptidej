@@ -22,6 +22,7 @@ import pom.test.classfile.specific.AIDTest;
 import pom.test.classfile.specific.CBOTest;
 import pom.test.classfile.specific.CacheTest;
 import pom.test.classfile.specific.DITTest;
+import pom.test.classfile.specific.DITnoGhostTest;
 import pom.test.classfile.specific.NMITest;
 import pom.test.classfile.specific.NOCTest;
 import pom.test.classfile.specific.UnaryCBOTest;
@@ -61,6 +62,7 @@ public class TestPOM extends TestSuite {
 		suite.addTestSuite(CacheTest.class);
 		suite.addTestSuite(CBOTest.class);
 		suite.addTestSuite(DITTest.class);
+		suite.addTestSuite(DITnoGhostTest.class);
 		suite.addTestSuite(NMITest.class);
 		suite.addTestSuite(NOCTest.class);
 		suite.addTestSuite(UnaryCBOTest.class);

@@ -84,7 +84,7 @@ public final class Context implements Cloneable {
 	//			mde.printStackTrace(Output.getInstance().errorOutput());
 	//		}
 	//	}
-	@SuppressWarnings("deprecation")
+
 	public void addMethodInvocation(
 		final ExtendedMethodInvocation methodInvocation) {
 		if (!this.messageTypes.contains(methodInvocation)) {

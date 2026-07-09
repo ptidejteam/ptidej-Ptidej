@@ -53,7 +53,7 @@ public class StrongReference extends AbstractList<Object> implements List<Object
 		this.element = null;
 	}
 
-	public StrongReference(final Collection<?> c) {
+	public StrongReference(final Collection c) {
 		this.element = 0 == c.size() ? null : c.iterator().next();
 	}
 

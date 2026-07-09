@@ -8,24 +8,18 @@
  * Contributors:
  *     Yann-Gaël Guéhéneuc  and others, see in file; API and its implementation
  ******************************************************************************/
-package padl.creator.cppfile.eclipse.test.big;
+package pom.test.classfile.specific;
 
-import junit.framework.TestSuite;
+import org.junit.Assert;
 
-/**
- * @author yann
- */
-public class TestPADLJNI extends TestSuite {
-	public static TestSuite suite() {
-		final TestPADLJNI suite = new TestPADLJNI();
-		suite.setName(TestPADLJNI.class.getName());
+import padl.kernel.IFirstClassEntity;
+import pom.metrics.IUnaryMetric;
 
-		suite.addTestSuite(JNIGlobalFunction.class);
-		suite.addTestSuite(JNIMethodMissed.class);
-		suite.addTestSuite(JNIModel.class);
-		suite.addTestSuite(JNINativeMethod.class);
-		suite.addTestSuite(JNINativeMethodMissed.class);
-
-		return suite;
+public class DITnoGhostTest extends DITTest {
+	public DITnoGhostTest(String name) {
+		super(name);
+		this.metricName = "DITnoGhost";
+		this.expectedDITGhost = 1d;
 	}
+	
 }

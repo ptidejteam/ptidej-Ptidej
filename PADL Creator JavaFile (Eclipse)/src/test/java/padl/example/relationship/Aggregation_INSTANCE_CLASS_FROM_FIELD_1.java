@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.example.relationship;
 
-@SuppressWarnings("unused")
 public class Aggregation_INSTANCE_CLASS_FROM_FIELD_1 {
 	private A a;
 	public void foo() {

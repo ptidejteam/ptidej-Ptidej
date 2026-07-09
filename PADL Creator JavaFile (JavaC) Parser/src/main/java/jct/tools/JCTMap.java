@@ -472,7 +472,7 @@ public class JCTMap<R, P> implements IJCTVisitor<R, P> {
 		return this.reduceErroneousExpression(results);
 	}
 
-	public R visitErroneousSelector(final IJCTErroneousSelector<?> t,
+	public R visitErroneousSelector(final IJCTErroneousSelector t,
 			final P p) {
 		return null;
 	}

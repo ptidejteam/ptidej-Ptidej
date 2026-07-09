@@ -89,7 +89,7 @@ public final class OccurrenceGenerator {
 			buffer.append("ptidej.solver.fingerprint.problem.");
 			buffer.append(motifName);
 			buffer.append("Motif");
-			final Class<?> chosenPattern = Class.forName(buffer.toString());
+			final Class chosenPattern = Class.forName(buffer.toString());
 			final Method problemMethod = chosenPattern.getDeclaredMethod(
 					"getProblem",
 					new Class[] { List.class, ReducedDomainBuilder.class });

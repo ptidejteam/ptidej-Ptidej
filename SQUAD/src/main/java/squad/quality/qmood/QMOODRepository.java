@@ -50,7 +50,6 @@ public class QMOODRepository implements IRepository {
 
 			for (int i = 0; i < classFiles.length; i++) {
 				try {
-					@SuppressWarnings("unchecked")
 					final Class<IQualityAttribute> attributeClass = (Class<IQualityAttribute>) Class
 							.forName(classFiles[i].getName());
 					final IQualityAttribute qualityAttribute = attributeClass

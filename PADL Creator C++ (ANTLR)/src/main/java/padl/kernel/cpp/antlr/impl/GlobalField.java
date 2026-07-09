@@ -34,8 +34,6 @@ import com.ibm.toad.cfparse.utils.Access;
 // Global fields are created at the same level as classes.
 // GlobalField has all the properties of Class.
 // Implementation to be checked...
-
-@SuppressWarnings("rawtypes")
 class GlobalField extends FirstClassEntity implements IElementMarker,
 		IGlobalField {
 

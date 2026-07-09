@@ -27,7 +27,6 @@ public class EclipseJDTParserWrapper {
 	private final SourceInputsHolder javaProject;
 	private final ASTParser parser;
 
-	@SuppressWarnings("deprecation")
 	public EclipseJDTParserWrapper(final SourceInputsHolder aJavaProject) {
 		this.javaProject = aJavaProject;
 

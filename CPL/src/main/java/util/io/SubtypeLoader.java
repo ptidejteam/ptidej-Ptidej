@@ -228,7 +228,7 @@ public final class SubtypeLoader {
 			}
 
 			final List<ClassFile> aListOfClasses = new ArrayList<ClassFile>();
-			final Enumeration<?> classList = currentJarFile.entries();
+			final Enumeration classList = currentJarFile.entries();
 
 			while (classList.hasMoreElements()) {
 				try {

@@ -253,7 +253,7 @@ public class ResultsPrettyPrinter {
 						currentRepo.defectsTypes.iterator(); iter.hasNext();) {
 
 						String versionedDefect = version + "--" + iter.next();
-						TreeSet<?> defectClasses =
+						TreeSet defectClasses =
 							currentRepo.allDefectsPerVersionPerTypes
 								.get(versionedDefect);
 
@@ -323,7 +323,7 @@ public class ResultsPrettyPrinter {
 						String defect = iter.next();
 						String versionedDefect = version + "--" + defect;
 
-						TreeSet<?> defectClasses =
+						TreeSet defectClasses =
 							currentRepo.allDefectsPerVersionPerTypes
 								.get(versionedDefect);
 

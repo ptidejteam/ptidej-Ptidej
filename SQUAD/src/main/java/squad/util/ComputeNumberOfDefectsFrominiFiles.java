@@ -46,7 +46,6 @@ public class ComputeNumberOfDefectsFrominiFiles {
 
 	}
 
-	@SuppressWarnings("unused")
 	public static int computeNumberOfFromDir(String aDefectName, String path) {
 		int result = 0;
 

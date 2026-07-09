@@ -42,7 +42,6 @@ import util.multilingual.MultilingualManager;
 /** CUP v0.10k generated parser.
   * @version Tue Oct 11 22:19:51 EDT 2011
   */
-@SuppressWarnings("rawtypes")
 public class AOLCodeParser
 		extends padl.creator.aolfile.javacup.runtime.lr_parser {
 
@@ -451,7 +450,6 @@ public class AOLCodeParser
 		return this.listOfElements;
 	}
 
-	@SuppressWarnings("unchecked")
 	void addToListOfElements(final IElement anElement) {
 		this.listOfElements.add(anElement);
 	}
@@ -464,7 +462,6 @@ public class AOLCodeParser
 		return this.listOfGeneralizations;
 	}
 
-	@SuppressWarnings("unchecked")
 	void addToListOfGeneralizations(final String aName) {
 		this.listOfGeneralizations.add(aName);
 	}
@@ -477,7 +474,6 @@ public class AOLCodeParser
 		return this.listOfArguments;
 	}
 
-	@SuppressWarnings("unchecked")
 	void addToListOfArguments(final IParameter aParameter) {
 		this.listOfArguments.add(aParameter);
 	}
@@ -518,7 +514,6 @@ public class AOLCodeParser
 }
 
 /** Cup generated class to encapsulate user supplied action code.*/
-@SuppressWarnings("rawtypes")
 class CUP$AOLCodeParser$actions {
 	private final AOLCodeParser parser;
 

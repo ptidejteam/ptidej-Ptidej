@@ -148,7 +148,7 @@ public class MetricsGenerator {
 				}
 
 				// Metric Values.
-				final Iterator<?> entityIterator =
+				final Iterator entityIterator =
 					codeLevelModel.getIteratorOnTopLevelEntities();
 				while (entityIterator.hasNext()) {
 					final IFirstClassEntity entity =

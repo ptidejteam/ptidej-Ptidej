@@ -75,7 +75,7 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>, Set<T>,
 
 		@Override
 		public boolean equals(Object o) {
-			return (o instanceof ListOfUnique<?>.TWithEquivalence)
+			return (o instanceof ListOfUnique.TWithEquivalence)
 					&& this.equalsp.areEquivalent(this.object, ((TWithEquivalence) o).object);
 		}
 
@@ -181,7 +181,6 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>, Set<T>,
 	 * 
 	 * @param e musts be of type T, otherwise, result is undefined.
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public boolean contains(final Object e) {
 		return this.elements.contains(new TWithEquivalence((T) e));
@@ -230,7 +229,6 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>, Set<T>,
 		return oldIndex;
 	}
 
-	@SuppressWarnings("unchecked")
 	private int indexOf1(final Object e) {
 		if (!this.contains(e)) {
 			return -1;
@@ -251,7 +249,6 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>, Set<T>,
 	 * 
 	 * @param e musts be of type T, otherwise, result is undefined.
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public int lastIndexOf(final Object e) {
 		if (!this.contains(e))
@@ -271,13 +268,12 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>, Set<T>,
 	 * @param o musts be a {@code List<T>} when it's a List, otherwise, result is
 	 *          undefined.
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public boolean equals(final Object o) {
 		if (this == o)
 			return true;
 
-		if (!(o instanceof List<?>))
+		if (!(o instanceof List))
 			return false;
 
 		final List<T> that = (List<T>) o;
@@ -299,7 +295,6 @@ public class ListOfUnique<T> extends AbstractList<T> implements List<T>, Set<T>,
 	 * 
 	 * @param o musts be of type T, otherwise, result is undefined.
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public boolean remove(Object o) {
 		if (!this.contains(o)) {

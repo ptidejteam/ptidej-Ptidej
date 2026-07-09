@@ -73,7 +73,7 @@ public class ComputeQMOOD {
 	}
 
 	// /////////
-	public static String[] createArrayOfJars(List<?> l, Object s) {
+	public static String[] createArrayOfJars(List l, Object s) {
 		String[] files = new String[l.size() + 1];
 		for (int i = 0; i < l.size(); i++) {
 			files[i] = (String) l.get(i);
@@ -150,7 +150,7 @@ public class ComputeQMOOD {
 				}
 
 				// QMOOD Values.
-				final Iterator<?> entityIterator =
+				final Iterator entityIterator =
 					codeLevelModel.getIteratorOnTopLevelEntities();
 				while (entityIterator.hasNext()) {
 					final IFirstClassEntity entity =

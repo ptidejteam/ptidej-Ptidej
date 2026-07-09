@@ -240,7 +240,6 @@ abstract class AbstractClassFileCreator {
 				this.constituentsRepository, listOfElements);
 	}
 
-	@SuppressWarnings("deprecation")
 	private void createElements(final ICodeLevelModel aCodeLevelModel,
 			final List listOfSourceConstituents,
 			final ConstituentsRepository constituentsRepository,

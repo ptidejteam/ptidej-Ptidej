@@ -81,7 +81,6 @@ public class DB4OSerialiser implements IAbstractModelSerialiser {
 			final Predicate predictate = new Predicate() {
 				private static final long serialVersionUID = 8696338824535129529L;
 
-				@SuppressWarnings("unused")
 				public boolean match(final Object o) {
 					return true;
 				}

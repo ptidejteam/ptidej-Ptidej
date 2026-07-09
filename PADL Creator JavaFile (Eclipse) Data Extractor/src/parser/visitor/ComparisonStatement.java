@@ -57,7 +57,6 @@ public class ComparisonStatement extends ExtendedASTVisitor {
 		return super.visit(aNamedCompilationUnit);
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	public boolean visit(final SwitchCase node) {
 		System.out.println("SwitchCase: " + node.getExpression());

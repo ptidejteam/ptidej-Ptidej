@@ -16,8 +16,6 @@ import java.util.Vector;
  * Class scope extends Scope in that its search method also searches all its
  * superclasses.
  */
-
-@SuppressWarnings("rawtypes")
 public class ClassScope extends Scope {
 	/**
 	 * The list of scopes corresponding to classes this class inherits.
@@ -34,7 +32,6 @@ public class ClassScope extends Scope {
 	/**
 	 * Add a super class.
 	 */
-	@SuppressWarnings("unchecked")
 	public void AddSuper(final Scope sc) {
 		if (sc == null) {
 			return;

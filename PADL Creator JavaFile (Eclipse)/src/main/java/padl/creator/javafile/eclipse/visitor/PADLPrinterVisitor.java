@@ -154,7 +154,6 @@ public class PADLPrinterVisitor implements IWalker {
 		return null;
 	}
 
-	@SuppressWarnings("resource")
 	@Override
 	public void open(final IAbstractModel anAbstractModel) {
 		if (this.inFile) {
@@ -272,7 +271,7 @@ public class PADLPrinterVisitor implements IWalker {
 		this.writer.println("	Start of type " + entity.getClass().toString()
 				+ " entity.toString()" + entity.toString());
 		this.writer.println(" 		ID " + entity.getDisplayID());
-		final Iterator<?> iter = entity.getIteratorOnInheritedEntities();
+		final Iterator iter = entity.getIteratorOnInheritedEntities();
 
 		this.writer.println();
 		this.writer.println("		Super-classes and interfaces");

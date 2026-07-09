@@ -352,10 +352,10 @@ class JCTClass extends JCTClassMember<IJCTClassMember> implements IJCTClass {
 				&& JCTKind.COMPILATION_UNIT == this.getEnclosingElement()
 						.getKind())
 			if (null != this.getEnclosingElement().getEnclosingElement())
-				list.add((JCTElementContainer<?>) this.getEnclosingElement()
+				list.add((JCTElementContainer) this.getEnclosingElement()
 						.getEnclosingElement());
 			else
-				list.add((JCTElementContainer<?>) this.getEnclosingElement());
+				list.add((JCTElementContainer) this.getEnclosingElement());
 
 		return list;
 	}
