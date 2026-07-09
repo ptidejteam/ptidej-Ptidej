@@ -653,7 +653,7 @@ public interface IJCTVisitor<R, P> {
 	 * Visits a erroneous selector.
 	 */
 	public R visitErroneousSelector(
-		final IJCTErroneousSelector<?> erroneousSelectorElement,
+		final IJCTErroneousSelector erroneousSelectorElement,
 		final P additionalParameter);
 
 	/**

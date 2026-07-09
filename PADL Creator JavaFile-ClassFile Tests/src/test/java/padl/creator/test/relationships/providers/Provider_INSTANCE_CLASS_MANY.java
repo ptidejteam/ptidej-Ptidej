@@ -50,7 +50,6 @@ public class Provider_INSTANCE_CLASS_MANY extends AbstractProvider implements
 class Test_INSTANCE_CLASS_MANY {
 	private A[] a;
 
-	@SuppressWarnings("static-access")
 	public void foo() {
 		this.a[0].staticMethod();
 	}

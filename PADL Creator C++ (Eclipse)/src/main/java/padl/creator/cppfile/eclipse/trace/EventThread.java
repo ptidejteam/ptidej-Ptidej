@@ -187,8 +187,8 @@ public class EventThread extends Thread {
 	 */
 	private void classPrepareEvent(final ClassPrepareEvent event) {
 		final EventRequestManager mgr = this.vm.eventRequestManager();
-		final List<?> fields = event.referenceType().visibleFields();
-		for (final Iterator<?> it = fields.iterator(); it.hasNext();) {
+		final List fields = event.referenceType().visibleFields();
+		for (final Iterator it = fields.iterator(); it.hasNext();) {
 			final Field field = (Field) it.next();
 			final ModificationWatchpointRequest req =
 				mgr.createModificationWatchpointRequest(field);

@@ -216,7 +216,7 @@ public class JavaFileCreator implements ICodeLevelModelCreator {
 	}
 
 	private static <T> List<T> castList(Class<? extends T> clazz,
-			Collection<?> c) {
+			Collection c) {
 		List<T> r = new ArrayList<T>(c.size());
 		for (Object o : c)
 			r.add(clazz.cast(o));

@@ -30,15 +30,10 @@ import org.jdom2.input.SAXBuilder;
 import util.io.ProxyDisk;
 
 public class TrackChanges {
-
-	/**
-	 * @param args
-	 */
-	@SuppressWarnings("unused")
 	public static void main(String[] args)
 			throws FileNotFoundException, IOException, ParseException {
 		// TODO Auto-generated method stub
-		List<?> files = new ArrayList<Object>();
+		List files = new ArrayList<Object>();
 		TreeSet<String> Classes = new TreeSet<String>();
 
 		TrackChanges trk = new TrackChanges();
@@ -107,12 +102,11 @@ public class TrackChanges {
 			document = sxb.build(new File(xlgfile));
 			racine = document.getRootElement();
 		}
-		catch (Exception e) {
+		catch (final Exception e) {
 		}
-		;
-		List<?> logentries = racine.getChildren("logentry");
+		List logentries = racine.getChildren("logentry");
 
-		Iterator<?> it = logentries.iterator();
+		Iterator it = logentries.iterator();
 		while (it.hasNext()) {
 
 			Element courant = (Element) it.next();
@@ -141,12 +135,11 @@ public class TrackChanges {
 			document = sxb.build(new File(xlgfile));
 			racine = document.getRootElement();
 		}
-		catch (Exception e) {
+		catch (final Exception e) {
 		}
-		;
-		List<?> logentries = racine.getChildren("logentry");
+		List logentries = racine.getChildren("logentry");
 
-		Iterator<?> it = logentries.iterator();
+		Iterator it = logentries.iterator();
 		while (it.hasNext()) {
 
 			Element courant = (Element) it.next();
@@ -182,11 +175,10 @@ public class TrackChanges {
 			racine = document.getRootElement();
 
 		}
-		catch (Exception e) {
+		catch (final Exception e) {
 		}
-		;
-		List<?> logentries = racine.getChildren();
-		Iterator<?> it = logentries.iterator();
+		List logentries = racine.getChildren();
+		Iterator it = logentries.iterator();
 
 		while (it.hasNext()) {
 
@@ -226,12 +218,11 @@ public class TrackChanges {
 			document = sxb.build(new File(xlgfile));
 			racine = document.getRootElement();
 		}
-		catch (Exception e) {
+		catch (final Exception e) {
 		}
-		;
-		List<?> logentries = racine.getChildren("logentry");
+		List logentries = racine.getChildren("logentry");
 
-		Iterator<?> it = logentries.iterator();
+		Iterator it = logentries.iterator();
 		while (it.hasNext()) {
 
 			Element courant = (Element) it.next();
@@ -267,11 +258,10 @@ public class TrackChanges {
 			racine = document.getRootElement();
 
 		}
-		catch (Exception e) {
+		catch (final Exception e) {
 		}
-		;
-		List<?> logentries = racine.getChildren();
-		Iterator<?> it = logentries.iterator();
+		List logentries = racine.getChildren();
+		Iterator it = logentries.iterator();
 
 		while (it.hasNext()) {
 
@@ -331,12 +321,11 @@ public class TrackChanges {
 			document = sxb.build(new File(xlgfile));
 			racine = document.getRootElement();
 		}
-		catch (Exception e) {
+		catch (final Exception e) {
 		}
-		;
-		List<?> logentries = racine.getChildren("logentry");
+		List logentries = racine.getChildren("logentry");
 
-		Iterator<?> it = logentries.iterator();
+		Iterator it = logentries.iterator();
 		while (it.hasNext()) {
 
 			Element courant = (Element) it.next();
@@ -366,11 +355,10 @@ public class TrackChanges {
 			racine = document.getRootElement();
 
 		}
-		catch (Exception e) {
+		catch (final Exception e) {
 		}
-		;
-		List<?> logentries = racine.getChildren();
-		Iterator<?> it = logentries.iterator();
+		List logentries = racine.getChildren();
+		Iterator it = logentries.iterator();
 
 		while (it.hasNext()) {
 
@@ -405,12 +393,11 @@ public class TrackChanges {
 			document = sxb.build(new File(xlgfile));
 			racine = document.getRootElement();
 		}
-		catch (Exception e) {
+		catch (final Exception e) {
 		}
-		;
-		List<?> logentries = racine.getChildren("logentry");
+		List logentries = racine.getChildren("logentry");
 
-		Iterator<?> it = logentries.iterator();
+		Iterator it = logentries.iterator();
 		while (it.hasNext()) {
 
 			Element courant = (Element) it.next();
@@ -440,11 +427,10 @@ public class TrackChanges {
 			racine = document.getRootElement();
 
 		}
-		catch (Exception e) {
+		catch (final Exception e) {
 		}
-		;
-		List<?> logentries = racine.getChildren();
-		Iterator<?> it = logentries.iterator();
+		List logentries = racine.getChildren();
+		Iterator it = logentries.iterator();
 
 		while (it.hasNext()) {
 
@@ -475,11 +461,10 @@ public class TrackChanges {
 			racine = document.getRootElement();
 
 		}
-		catch (Exception e) {
+		catch (final Exception e) {
 		}
-		;
-		List<?> logentries = racine.getChildren();
-		Iterator<?> it = logentries.iterator();
+		List logentries = racine.getChildren();
+		Iterator it = logentries.iterator();
 
 		while (it.hasNext()) {
 
@@ -643,7 +628,7 @@ public class TrackChanges {
 
 	public void outputCVSFutur(String outputDir, String inputDir,
 			final String delimiter, String progName, String versionDt,
-			TreeSet<?> Classes) throws IOException, ParseException {
+			TreeSet Classes) throws IOException, ParseException {
 
 		try {
 			final Writer output = ProxyDisk.getInstance().fileTempOutput(
@@ -689,7 +674,7 @@ public class TrackChanges {
 	 */
 	public void outputCVSPast(String outputDir, String inputDir,
 			final String delimiter, String progName, String versionDt,
-			TreeSet<?> Classes) throws IOException, ParseException {
+			TreeSet Classes) throws IOException, ParseException {
 
 		try {
 			final Writer output = ProxyDisk.getInstance().fileTempOutput(

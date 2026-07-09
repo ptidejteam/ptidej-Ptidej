@@ -104,7 +104,7 @@ public class ListOfElements<Element extends IJCTElement> extends
 	}
 
 	@Override
-	public boolean containsAll(final Collection<?> c) {
+	public boolean containsAll(final Collection c) {
 		return this.list.containsAll(c);
 	}
 
@@ -163,12 +163,12 @@ public class ListOfElements<Element extends IJCTElement> extends
 	}
 
 	@Override
-	public boolean removeAll(final Collection<?> c) {
+	public boolean removeAll(final Collection c) {
 		return this.list.removeAll(c);
 	}
 
 	@Override
-	public boolean retainAll(final Collection<?> c) {
+	public boolean retainAll(final Collection c) {
 		return this.list.retainAll(c);
 	}
 

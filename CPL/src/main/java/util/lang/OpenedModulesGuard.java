@@ -44,10 +44,10 @@ public class OpenedModulesGuard {
 	public Optional<String> checkOpenedModules() {
 		for (final PackageInfo packageInfo : this.list) {
 			try {
-				final Class<?> clazz = Class.forName(packageInfo.className);
-				final Constructor<?>[] constructors = clazz
+				final Class clazz = Class.forName(packageInfo.className);
+				final Constructor[] constructors = clazz
 						.getDeclaredConstructors();
-				final Constructor<?> constructor = constructors[0];
+				final Constructor constructor = constructors[0];
 				constructor.setAccessible(true);
 			}
 			catch (final ClassNotFoundException

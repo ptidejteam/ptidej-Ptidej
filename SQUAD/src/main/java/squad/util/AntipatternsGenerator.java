@@ -11,20 +11,14 @@
 package squad.util;
 
 public class AntipatternsGenerator {
-
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 	}
-@SuppressWarnings("unused")
-public static void GenerateAntipatterns(){
-	
-	   DataFileTableModel antipatterns =
-			new DataFileTableModel("FinalResults/Test/ArgoUML/TotalResultsofArgoUML.v0.10.1.csv");
-	   
-	   
-}
+
+	public static void GenerateAntipatterns() {
+		DataFileTableModel antipatterns = new DataFileTableModel(
+				"FinalResults/Test/ArgoUML/TotalResultsofArgoUML.v0.10.1.csv");
+
+	}
 }

@@ -9,21 +9,22 @@
 		<artifactId>all-ptidej</artifactId>
 		<version>1.0.0</version>
 	</parent>
+
 	<groupId>net.ptidej.caffeine</groupId>
 	<artifactId>caffeine-core</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<name>Caffeine</name>
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
+				<version>3.15.0</version>
 				<configuration>
-					<!-- <debug>true</debug> -->
-					<!-- <optimize>false</optimize> -->
 					<release>${maven.compiler.release}</release>
 					<compilerArgs>
-						<arg>-proc:none</arg>
+						<arg>-Xlint:deprecation</arg>
+						<arg>-Xlint:unchecked</arg>
 					</compilerArgs>
 				</configuration>
 			</plugin>
@@ -81,6 +82,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
 	<dependencies>
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>

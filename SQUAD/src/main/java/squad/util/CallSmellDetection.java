@@ -60,7 +60,6 @@ public class CallSmellDetection {
 	private static final String[] SMELLS = new String[] { "MessageChains",
 			"RefusedParentBequest" };
 
-	@SuppressWarnings("unused")
 	private static final String[] CODE_SMELLS =
 		new String[] { "ComplexClassOnlyDetection" };
 
@@ -338,7 +337,7 @@ public class CallSmellDetection {
 				final String antipatternName = CallSmellDetection.SMELLS[i];
 
 				final long startTime = System.currentTimeMillis();
-				final Class<?> detectionClass =
+				final Class detectionClass =
 					Class.forName("sad.designsmell.detection."
 							+ antipatternName + '.' + antipatternName
 							+ "Detection");

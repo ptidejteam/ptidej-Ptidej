@@ -603,7 +603,7 @@ public interface IJCTFactory {
 	/**
 	 * Returns a new erroneous selector.
 	 */
-	public IJCTErroneousSelector<?> createErroneousSelector(
+	public IJCTErroneousSelector createErroneousSelector(
 		final String anIdentifier);
 
 	/**

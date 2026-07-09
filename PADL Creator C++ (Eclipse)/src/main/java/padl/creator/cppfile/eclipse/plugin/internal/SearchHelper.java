@@ -608,7 +608,7 @@ public abstract class SearchHelper {
 			// finds a method with the same name, but different parameters,
 			// then it should choose it too, else it should look for
 			// for (ghost) global functions.
-			final Iterator<?> iterator =
+			final Iterator iterator =
 				declaringEntity.getIteratorOnConstituents(IOperation.class);
 			while (iterator.hasNext()) {
 				final IOperation possibleOperation =

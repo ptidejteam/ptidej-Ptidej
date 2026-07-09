@@ -69,7 +69,6 @@ public class ListofClassesGenerator {
 
 	}
 
-	@SuppressWarnings("unused")
 	private static void generateListofClasses(
 		final String aPath,
 		final String aName,
@@ -80,7 +79,7 @@ public class ListofClassesGenerator {
 			codeLevelModel.create(new CompleteClassFileCreator(
 				new String[] { aPath },
 				true));
-			Iterator<?> iter = codeLevelModel.getIteratorOnTopLevelEntities();
+			Iterator iter = codeLevelModel.getIteratorOnTopLevelEntities();
 
 			final Writer out =
 				ProxyDisk.getInstance().fileTempOutput(anOutputFile, true);
@@ -127,7 +126,7 @@ public class ListofClassesGenerator {
 				true));
 
 			System.out.println("Construction of the model completed........");
-			Iterator<?> iter = codeLevelModel.getIteratorOnTopLevelEntities();
+			Iterator iter = codeLevelModel.getIteratorOnTopLevelEntities();
 
 			final Writer out =
 				ProxyDisk.getInstance().fileTempOutput(anOutputFile, true);

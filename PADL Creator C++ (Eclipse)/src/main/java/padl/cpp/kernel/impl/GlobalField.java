@@ -137,11 +137,11 @@ class GlobalField extends FirstClassEntity implements IElementMarker,
 		return false;
 	}
 
-	public List<?> listOfInheritedEntities() {
+	public List listOfInheritedEntities() {
 		return null;
 	}
 
-	public List<?> listOfInheritingEntities() {
+	public List listOfInheritingEntities() {
 		return null;
 	}
 

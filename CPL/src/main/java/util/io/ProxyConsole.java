@@ -72,8 +72,8 @@ public class ProxyConsole {
 		return this.normalOutput;
 	}
 
-	public void printSetContent(final Writer writer, final Set<?> aSet) {
-		final Iterator<?> iterator = aSet.iterator();
+	public void printSetContent(final Writer writer, final Set aSet) {
+		final Iterator iterator = aSet.iterator();
 		while (iterator.hasNext()) {
 			final Object object = iterator.next();
 			try {

@@ -18,7 +18,6 @@ package padl.example.aggregation;
  * the paramter of method setA().
  */
 public class Aggregation3 {
-	@SuppressWarnings("unused")
 	private A a;
 	void setA(final A newA) {
 		this.a = newA;

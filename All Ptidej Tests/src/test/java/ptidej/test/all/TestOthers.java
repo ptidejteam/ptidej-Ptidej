@@ -16,6 +16,7 @@ import jct.test.TestCreatorJavaFileUsingJavaCParser;
 import junit.framework.TestSuite;
 import padl.analysis.test.TestPADLAnalyses;
 import padl.generator.test.TestPADLGenerator;
+import padl.jni.test.TestPADLJNI;
 import padl.micropatterns.test.TestMicroPatterns;
 import padl.pagerank.test.TestPADLGeneratorPageRank;
 import padl.refactoring.test.TestRefactorings;

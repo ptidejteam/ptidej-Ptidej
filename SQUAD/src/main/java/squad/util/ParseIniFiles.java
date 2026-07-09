@@ -71,7 +71,7 @@ public class ParseIniFiles {
 					final Occurrence occurrence = occurrences[j];
 
 					//System.out.println("Occurence: " + occurrence.getName());
-					final Iterator<?> components =
+					final Iterator components =
 						occurrence.getComponents().iterator();
 					while (components.hasNext()) {
 						final OccurrenceComponent component =
@@ -119,7 +119,7 @@ public class ParseIniFiles {
 				ProxyDisk.getInstance().fileTempOutput(destinationFile);
 			writer.write("CodesmellName, Classname");
 			writer.write('\n');
-			final Iterator<?> iterator = setOfEntities.iterator();
+			final Iterator iterator = setOfEntities.iterator();
 			while (iterator.hasNext()) {
 				final String entityName = (String) iterator.next();
 				writer.write(entityName);

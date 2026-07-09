@@ -33,7 +33,6 @@ import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
 import padl.visitor.IWalker;
 
-@SuppressWarnings("unused")
 public class JNICollecteNativeVisitor implements IWalker {
 	private final ArrayList<String> listOfNativeMethods = new ArrayList<String>();
 	private IClass currentclass;

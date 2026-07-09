@@ -11,11 +11,9 @@
 package padl.example.annotator;
 
 public class D {
-
 	C nonStaticField;
 	static C staticField;
 
-	@SuppressWarnings("unused")
 	static void staticCallingMethod(final C parameter) {
 		final C localVariable = new C();
 		C localVariable1;

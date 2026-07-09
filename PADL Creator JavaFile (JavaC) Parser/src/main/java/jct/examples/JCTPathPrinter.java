@@ -360,7 +360,7 @@ public class JCTPathPrinter extends JCTMap<Void, Void> implements IJCTVisitor<Vo
 
 	@Override
 	public Void visitErroneousSelector(
-            IJCTErroneousSelector<?> erroneousSelectorElement,
+            IJCTErroneousSelector erroneousSelectorElement,
             Void additionalParameter) {
 		try { this.writer.write(erroneousSelectorElement.getPath() + "\n"); } catch (IOException e) { }
 		return super.visitErroneousSelector(erroneousSelectorElement, additionalParameter);

@@ -76,19 +76,19 @@ class GlobalFunction extends Method implements IGlobalFunction {
 		return null;
 	}
 	@Override
-	public Iterator<?> getIteratorOnInheritedEntities() {
+	public Iterator getIteratorOnInheritedEntities() {
 		return new EmptyIterator<>();
 	}
 	@Override
-	public Iterator<?> getIteratorOnInheritedEntities(final IFilter aFilter) {
+	public Iterator getIteratorOnInheritedEntities(final IFilter aFilter) {
 		return new EmptyIterator<>();
 	}
 	@Override
-	public Iterator<?> getIteratorOnInheritingEntities() {
+	public Iterator getIteratorOnInheritingEntities() {
 		return new EmptyIterator<>();
 	}
 	@Override
-	public Iterator<?> getIteratorOnInheritingEntities(final IFilter aFilter) {
+	public Iterator getIteratorOnInheritingEntities(final IFilter aFilter) {
 		return new EmptyIterator<>();
 	}
 	public int getNumberOfInheritedEntities() {

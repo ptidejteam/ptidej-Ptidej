@@ -32,8 +32,7 @@ public class CsvFileIndexer {
 	 */
 
 	private IndexWriter writer;
-	@SuppressWarnings("unused")
-	private ArrayList<?> queue = new ArrayList<Object>();
+	private ArrayList queue = new ArrayList<Object>();
 
 	/**
 	 * Constructor

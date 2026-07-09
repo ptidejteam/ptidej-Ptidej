@@ -28,7 +28,7 @@ class Structure extends FirstClassEntity implements IEntityMarker, IStructure {
 	private boolean forceAbstract = false;
 	private List<IFirstClassEntity> friendClassList = new ArrayList<IFirstClassEntity>();
 	private List<IOperation> friendFunctionList = new ArrayList<IOperation>();
-	private final List<?> listOfSuperInterfaces = new ArrayList();
+	private final List listOfSuperInterfaces = new ArrayList();
 
 	public Structure(final char[] anID) {
 		super(anID);
@@ -50,7 +50,7 @@ class Structure extends FirstClassEntity implements IEntityMarker, IStructure {
 		return this.forceAbstract;
 	}
 
-	public List<?> listOfImplementedEntities() {
+	public List listOfImplementedEntities() {
 		return this.listOfSuperInterfaces;
 	}
 

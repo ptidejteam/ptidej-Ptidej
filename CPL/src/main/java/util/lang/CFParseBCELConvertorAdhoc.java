@@ -1187,7 +1187,7 @@ public class CFParseBCELConvertorAdhoc {
 
 	private static boolean searchFor(
 			final com.ibm.toad.cfparse.ConstantPool aCFParseCP,
-			final String anAttributeName, final Class<?> anAttributeType) {
+			final String anAttributeName, final Class anAttributeType) {
 
 		boolean found = false;
 		//	int iterator = 0;

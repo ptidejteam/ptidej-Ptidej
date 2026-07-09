@@ -59,7 +59,7 @@ class JarFileRepository implements IFileRepository {
 
 		try {
 			final JarFile jarFile = new JarFile(JarFileRepository.JarFile);
-			final Enumeration<?> entries = jarFile.entries();
+			final Enumeration entries = jarFile.entries();
 			while (entries.hasMoreElements()) {
 				final JarEntry entry = (JarEntry) entries.nextElement();
 				final String entryName = entry.getName();

@@ -273,7 +273,7 @@ public class MethodInvocationUtils {
 		// same name so I don't check the type
 
 		try {
-			final Iterator<?> iter =
+			final Iterator iter =
 				anEntity.getIteratorOnConstituents(Class
 					.forName("padl.kernel.impl.Field"));
 

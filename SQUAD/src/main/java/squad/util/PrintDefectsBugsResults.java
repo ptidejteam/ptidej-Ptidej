@@ -53,7 +53,6 @@ public class PrintDefectsBugsResults {
 	 * 
 	 */
 
-	@SuppressWarnings("unused")
 	public static void main(String[] args) throws FileNotFoundException,
 		IOException, ParseException {
 		// TODO Auto-generated method stub
@@ -360,7 +359,7 @@ public class PrintDefectsBugsResults {
 						String defect = iter.next();
 						String versionedDefect = version + "--" + defect;
 
-						TreeSet<?> defectClasses = currentRepo.allDefectsPerVersionPerTypes
+						TreeSet defectClasses = currentRepo.allDefectsPerVersionPerTypes
 							.get(versionedDefect);
 
 						if (defectClasses.contains(involvedClass)) {
@@ -520,7 +519,7 @@ public class PrintDefectsBugsResults {
 							String defect = iter.next();
 							String versionedDefect = version + "--" + defect;
 
-							TreeSet<?> defectClasses = currentRepo.allDefectsPerVersionPerTypes
+							TreeSet defectClasses = currentRepo.allDefectsPerVersionPerTypes
 								.get(versionedDefect);
 
 							if (defectClasses.contains(involvedClass)) {
@@ -707,7 +706,7 @@ public class PrintDefectsBugsResults {
 
 						String versionedDefect = version + "--"
 							+ iter.next();
-						TreeSet<?> defectClasses = currentRepo.allDefectsPerVersionPerTypes
+						TreeSet defectClasses = currentRepo.allDefectsPerVersionPerTypes
 							.get(versionedDefect);
 
 						int test = 0;
@@ -776,7 +775,7 @@ public class PrintDefectsBugsResults {
 						String defect = iter.next();
 						String versionedDefect = version + "--" + defect;
 
-						TreeSet<?> defectClasses = currentRepo.allDefectsPerVersionPerTypes
+						TreeSet defectClasses = currentRepo.allDefectsPerVersionPerTypes
 							.get(versionedDefect);
 
 						if (defectClasses.contains(involvedClass)) {
@@ -824,11 +823,11 @@ public class PrintDefectsBugsResults {
 			document = sxb.build(new File(XMLBugfile));
 			racine = document.getRootElement();
 		}
-		catch (Exception e) {
-		};
-		List<?> className = racine.getChildren("product");
+		catch (final Exception e) {
+		}
+		List className = racine.getChildren("product");
 
-		Iterator<?> it = className.iterator();
+		Iterator it = className.iterator();
 		while (it.hasNext()) {
 
 			Element courant = (Element) it.next();
@@ -909,7 +908,7 @@ public class PrintDefectsBugsResults {
 						String defect = iter.next();
 						String versionedDefect = version + "--" + defect;
 
-						TreeSet<?> defectClasses = currentRepo.allDefectsPerVersionPerTypes
+						TreeSet defectClasses = currentRepo.allDefectsPerVersionPerTypes
 							.get(versionedDefect);
 
 						if (defectClasses.contains(involvedClass)) {
@@ -1019,7 +1018,7 @@ public class PrintDefectsBugsResults {
 						String defect = iter.next();
 						String versionedDefect = version + "--" + defect;
 
-						TreeSet<?> defectClasses = currentRepo.allDefectsPerVersionPerTypes
+						TreeSet defectClasses = currentRepo.allDefectsPerVersionPerTypes
 							.get(versionedDefect);
 
 						if (defectClasses.contains(involvedClass)) {
@@ -1222,7 +1221,7 @@ public class PrintDefectsBugsResults {
 							String defect = iter.next();
 							String versionedDefect = version + "--" + defect;
 
-							TreeSet<?> defectClasses = currentRepo.allDefectsPerVersionPerTypes
+							TreeSet defectClasses = currentRepo.allDefectsPerVersionPerTypes
 								.get(versionedDefect);
 
 							if (defectClasses.contains(involvedClass)) {
@@ -1359,7 +1358,7 @@ public class PrintDefectsBugsResults {
 							String defect = iter.next();
 							String versionedDefect = version + "--" + defect;
 
-							TreeSet<?> defectClasses = currentRepo.allDefectsPerVersionPerTypes
+							TreeSet defectClasses = currentRepo.allDefectsPerVersionPerTypes
 								.get(versionedDefect);
 
 							if (defectClasses.contains(involvedClass)) {
@@ -1500,7 +1499,7 @@ public class PrintDefectsBugsResults {
 							String defect = iter.next();
 							String versionedDefect = version + "--" + defect;
 
-							TreeSet<?> defectClasses = currentRepo.allDefectsPerVersionPerTypes
+							TreeSet defectClasses = currentRepo.allDefectsPerVersionPerTypes
 								.get(versionedDefect);
 
 							if (defectClasses.contains(involvedClass)) {
@@ -1641,7 +1640,7 @@ public class PrintDefectsBugsResults {
 							String defect = iter.next();
 							String versionedDefect = version + "--" + defect;
 
-							TreeSet<?> defectClasses = currentRepo.allDefectsPerVersionPerTypes
+							TreeSet defectClasses = currentRepo.allDefectsPerVersionPerTypes
 								.get(versionedDefect);
 
 							if (defectClasses.contains(involvedClass)) {
@@ -1779,7 +1778,7 @@ public class PrintDefectsBugsResults {
 							String defect = iter.next();
 							String versionedDefect = version + "--" + defect;
 
-							TreeSet<?> defectClasses = currentRepo.allDefectsPerVersionPerTypes
+							TreeSet defectClasses = currentRepo.allDefectsPerVersionPerTypes
 								.get(versionedDefect);
 
 							if (defectClasses.contains(involvedClass)) {
