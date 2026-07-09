@@ -12,6 +12,7 @@ package padl.creator.javafile.eclipse.test.util;
 
 import java.io.IOException;
 import java.io.Writer;
+
 import padl.analysis.UnsupportedSourceModelException;
 import padl.creator.classfile.CompleteClassFileCreator;
 import padl.creator.classfile.LightClassFileCreator;
@@ -22,6 +23,7 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.exception.CreationException;
 import padl.kernel.impl.Factory;
 import padl.util.ModelStatistics;
+import padl.visitor.IGenerator;
 import padl.visitor.repository.JavaGenerator;
 import util.io.ProxyConsole;
 import util.io.ProxyDisk;
@@ -291,11 +293,11 @@ public class Utils {
 			writer.write(aStatisticListener.toString());
 
 			// Print the model by the generator
-			final JavaGenerator javaGenerator = new JavaGenerator();
+			final IGenerator javaGenerator = new JavaGenerator();
 			model.generate(javaGenerator);
 
 			writer.write(" result from the java generator");
-			writer.write(javaGenerator.getResult().toString());
+			writer.write(javaGenerator.getCode());
 			writer.close();
 
 			ProxyConsole
@@ -314,7 +316,7 @@ public class Utils {
 			ProxyConsole
 				.getInstance()
 				.normalOutput()
-				.println(javaGenerator.getResult().toString());
+				.println(javaGenerator.getCode());
 		}
 		catch (final IOException e) {
 			e.printStackTrace(ProxyConsole.getInstance().errorOutput());

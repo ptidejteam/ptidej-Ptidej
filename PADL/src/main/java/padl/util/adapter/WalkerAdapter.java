@@ -42,8 +42,6 @@ import padl.visitor.IWalker;
 import util.io.ProxyConsole;
 
 public abstract class WalkerAdapter implements IWalker {
-	public void close(final IAbstractLevelModel anAbstractLevelModel) {
-	}
 	public void close(final IAbstractModel anAbstractModel) {
 	}
 	public void close(final IClass aClass) {
@@ -79,8 +77,6 @@ public abstract class WalkerAdapter implements IWalker {
 	}
 	public Object getResult() {
 		return null;
-	}
-	public void open(final IAbstractLevelModel anAbstractLevelModel) {
 	}
 	public void open(final IAbstractModel anAbstractModel) {
 	}

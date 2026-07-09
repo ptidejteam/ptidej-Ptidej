@@ -52,9 +52,6 @@ public final class JavaGenerator implements IGenerator {
 	private final StringBuffer buffer = new StringBuffer();
 	private int indentation = 0;
 
-	public void close(final IAbstractLevelModel p) {
-	}
-
 	public void close(IAbstractModel anAbstractModel) {
 	}
 
@@ -140,10 +137,6 @@ public final class JavaGenerator implements IGenerator {
 		return "Java";
 	}
 
-	public Object getResult() {
-		return this.buffer.toString();
-	}
-
 	private void nameAndParameters(final IOperation p) {
 		this.buffer.append(p.getName());
 		this.buffer.append('(');
@@ -173,10 +166,6 @@ public final class JavaGenerator implements IGenerator {
 		this.buffer.append('}');
 		this.buffer.append('\n');
 		this.buffer.append('\n');
-	}
-
-	public void open(final IAbstractLevelModel p) {
-		this.open((IAbstractModel) p);
 	}
 
 	public void open(IAbstractModel anAbstractModel) {
