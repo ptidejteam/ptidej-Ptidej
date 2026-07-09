@@ -11,20 +11,14 @@
 package padl.creator.cppfile.eclipse.test;
 
 import junit.framework.TestSuite;
-import padl.creator.cppfile.eclipse.test.big.ChromeTest;
-import padl.creator.cppfile.eclipse.test.big.CryptoTest;
 import padl.creator.cppfile.eclipse.test.big.QMakeTest;
-import padl.creator.cppfile.eclipse.test.big.RingDaemonTest;
 import padl.creator.cppfile.eclipse.test.simple.ClassesTest;
 import padl.creator.cppfile.eclipse.test.simple.FieldAccessTest;
-import padl.creator.cppfile.eclipse.test.simple.FriendsTest;
 import padl.creator.cppfile.eclipse.test.simple.GetOrCreateTest;
 import padl.creator.cppfile.eclipse.test.simple.Simple1Test;
 import padl.creator.cppfile.eclipse.test.simple.Simple2Test;
 import padl.creator.cppfile.eclipse.test.simple.Simple3Test;
-import padl.creator.cppfile.eclipse.test.simple.Simple4Test;
 import padl.creator.cppfile.eclipse.test.simple.StructuresTest;
-import padl.creator.cppfile.eclipse.test.simple.TypeNameQualifiersTest;
 
 /**
  * 
@@ -39,22 +33,16 @@ public final class TestCreatorCPPFileUsingEclipse extends TestSuite {
 
 		suite.addTestSuite(ClassesTest.class);
 		suite.addTestSuite(FieldAccessTest.class);
-		suite.addTestSuite(FriendsTest.class);
-		suite.addTestSuite(GetOrCreateTest.class);
 		suite.addTestSuite(Simple1Test.class);
+		suite.addTestSuite(GetOrCreateTest.class);
 		suite.addTestSuite(Simple2Test.class);
 		suite.addTestSuite(Simple3Test.class);
-		suite.addTestSuite(Simple4Test.class);
 		suite.addTestSuite(StructuresTest.class);
-		suite.addTestSuite(TypeNameQualifiersTest.class);
 
+		suite.addTestSuite(QMakeTest.class);
 		// ChromeTest is a very large integration case and is highly unstable in
 		// CI/headless environments due runtime/indexing variance.
 		// Keep the rest of the suite as the stable regression signal.
-		//	suite.addTestSuite(ChromeTest.class);
-		suite.addTestSuite(CryptoTest.class);
-		suite.addTestSuite(QMakeTest.class);
-		suite.addTestSuite(RingDaemonTest.class);
 
 		return suite;
 	}

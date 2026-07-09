@@ -130,7 +130,7 @@ public class Utils {
 
 		// I don't forget to update the variable holding code lines...
 		final List<String> listOfStatements = new ArrayList<String>();
-		final Iterator iterator =
+		final Iterator<?> iterator =
 			anOperation.getIteratorOnConstituents(IStatement.class);
 		while (iterator.hasNext()) {
 			final IStatement s = (IStatement) iterator.next();
@@ -717,10 +717,10 @@ public class Utils {
 		return cleanedName;
 	}
 	static void reportUnknownType(
-		final Class aReporter,
+		final Class<?> aReporter,
 		final String aMessage,
 		final char[] aTypeName,
-		final Class aTypeType) {
+		final Class<?> aTypeType) {
 
 		final StringBuffer buffer = new StringBuffer();
 		buffer.append(aReporter.getName());
@@ -741,10 +741,10 @@ public class Utils {
 		}
 	}
 	static void reportUnknownType(
-		final Class aReporter,
+		final Class<?> aReporter,
 		final String aMessage,
 		final String aTypeName,
-		final Class aTypeType) {
+		final Class<?> aTypeType) {
 
 		Utils.reportUnknownType(
 			aReporter,

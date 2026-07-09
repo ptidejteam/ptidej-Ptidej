@@ -70,7 +70,7 @@ public final class Common {
 		// Yann 2013/05/23: Listeners!
 		// I save the desired listener before "erasing" the model...
 		final List<IModelListener> listeners = new ArrayList<IModelListener>();
-		final Iterator iterator =
+		final Iterator<?> iterator =
 			aCodeLevelModel.getIteratorOnModelListeners();
 		while (iterator.hasNext()) {
 			final IModelListener listener = (IModelListener) iterator.next();

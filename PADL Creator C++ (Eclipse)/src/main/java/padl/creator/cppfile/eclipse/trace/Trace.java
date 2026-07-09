@@ -180,9 +180,9 @@ public class Trace {
 	 * Find a com.sun.jdi.CommandLineLaunch connector
 	 */
 	LaunchingConnector findLaunchingConnector() {
-		final List connectors =
+		final List<?> connectors =
 			Bootstrap.virtualMachineManager().allConnectors();
-		final Iterator iter = connectors.iterator();
+		final Iterator<?> iter = connectors.iterator();
 		while (iter.hasNext()) {
 			final Connector connector = (Connector) iter.next();
 			if (connector.name().equals("com.sun.jdi.CommandLineLaunch")) {
