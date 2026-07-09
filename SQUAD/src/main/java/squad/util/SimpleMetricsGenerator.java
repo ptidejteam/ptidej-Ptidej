@@ -31,7 +31,6 @@ public class SimpleMetricsGenerator {
 			"EIC", "EIP", "NCP", "PIIR", "PP", "REIP", "RFP", "RPII", "RRFP",
 			"RRTP", "RTP" };
 
-	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -178,7 +177,7 @@ public class SimpleMetricsGenerator {
 			}
 
 			// Metric Values.
-			final Iterator<?> entityIterator =
+			final Iterator entityIterator =
 				idiomLevelModel.getIteratorOnTopLevelEntities();
 			while (entityIterator.hasNext()) {
 				final IFirstClassEntity firstClassEntity =
@@ -241,7 +240,7 @@ public class SimpleMetricsGenerator {
 			ioe.printStackTrace();
 		}
 	}
-	@SuppressWarnings("unused")
+
 	private static void computeMetricsFromJARs(
 		final String[] someJARs,
 		final String anOutputFileName) {

@@ -46,7 +46,6 @@ public class Provider_CLASS_CLASS_ONE extends AbstractProvider implements
 }
 
 class Test_CLASS_CLASS_ONE {
-	@SuppressWarnings("unused")
 	private static A a;
 
 	public static void foo() {

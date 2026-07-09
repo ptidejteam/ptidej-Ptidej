@@ -50,7 +50,6 @@ public class Provider_INSTANCE_CLASS_List extends AbstractProvider implements
 }
 
 class Test_INSTANCE_CLASS_List {
-	@SuppressWarnings("unused")
 	private VectorTest vector;
 
 	public void foo() {

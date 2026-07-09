@@ -105,7 +105,6 @@ class JCTMemberSelector<Member extends IJCTClassMember> extends
 		return visitor.visitMemberSelector(this, aP);
 	}
 
-	@SuppressWarnings("unchecked")
 	private void check() {
 		if (JCTKind.CLASS != this.getElement().getEnclosingElement().getKind())
 			throw new IllegalStateException(

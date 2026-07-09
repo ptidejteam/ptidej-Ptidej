@@ -492,13 +492,13 @@ public class PadlParserUtil {
 	}
 
 	public static List<IParameter> getListOfParameters(
-		final List<?> aListOfVars,
+		final List aListOfVars,
 		final IPackage packag,
 		final ICodeLevelModel model) {
 		// get the list of parameters
 
 		final List<IParameter> listOfParameters = new ArrayList<IParameter>();
-		final Iterator<?> iterator = aListOfVars.iterator();
+		final Iterator iterator = aListOfVars.iterator();
 		while (iterator.hasNext()) {
 			final SingleVariableDeclaration var =
 				(SingleVariableDeclaration) iterator.next();

@@ -99,7 +99,6 @@ class JCTErroneousSelector extends JCTSourceCodePart implements
 		return (IJCTClassMember) element;
 	}
 
-	//@SuppressWarnings("unchecked")
 	public void setElement(final IJCTIdentifiable e) {
 		this.getIdentifier().setElement(e);
 	}
@@ -131,7 +130,6 @@ class JCTErroneousSelector extends JCTSourceCodePart implements
 				"getMemberSelector is implemented only by MEMBER_SELECTOR");
 	}
 
-	//@SuppressWarnings("unchecked")
 	public void setMemberSelector(final IJCTSimpleSelector e) {
 		if (JCTKind.MEMBER_SELECTOR == this.getIdentifier().getKind())
 			((IJCTMemberSelector) this.getIdentifier()).setMemberSelector(e);
@@ -168,7 +166,6 @@ class JCTErroneousSelector extends JCTSourceCodePart implements
 	}
 
 	@Override
-	//@SuppressWarnings("unchecked")
 	public Collection<IJCTExpression> getEnclosedElements() {
 		if (JCTKind.MEMBER_SELECTOR == this.getIdentifier().getKind())
 			return ((JCTMemberSelector) this.getIdentifier())

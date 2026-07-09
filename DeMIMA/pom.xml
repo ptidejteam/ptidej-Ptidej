@@ -19,17 +19,19 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
+				<version>3.15.0</version>
 				<configuration>
+					<release>${maven.compiler.release}</release>
 					<compilerArgs>
-						<arg>-proc:none</arg>
+						<arg>-Xlint:deprecation</arg>
+						<arg>-Xlint:unchecked</arg>
 					</compilerArgs>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.5.3</version>
+				<version>3.5.6</version>
 				<configuration>
 					<excludes>
 						<!-- Excluded on purpose -->
@@ -37,12 +39,11 @@
 					</excludes>
 				</configuration>
 			</plugin>
-			<!-- Must generate the test-jar for the tests in DeMIMA Solver 4 and
-			DeMIMA Solver Metrics -->
+			<!-- Must generate the test-jar for dependent tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.3.0</version>
+				<version>3.5.0</version>
 				<executions>
 					<execution>
 						<goals>

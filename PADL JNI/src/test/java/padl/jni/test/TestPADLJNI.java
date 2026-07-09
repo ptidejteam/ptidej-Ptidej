@@ -8,7 +8,7 @@
  * Contributors:
  *     Yann-Gaël Guéhéneuc  and others, see in file; API and its implementation
  ******************************************************************************/
-package padl.creator.cppfile.eclipse.test.big;
+package padl.jni.test;
 
 import junit.framework.TestSuite;
 

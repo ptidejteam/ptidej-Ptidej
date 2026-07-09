@@ -136,7 +136,7 @@ public final class XMICreator implements IDesignLevelModelCreator {
 				final IContainer oldConstituent = (IContainer) container
 						.getConstituentFromID(constituent.getID());
 				if (!oldConstituent.getClass().equals(constituent.getClass())) {
-					final Iterator<?> iterator = oldConstituent
+					final Iterator iterator = oldConstituent
 							.getConcurrentIteratorOnConstituents();
 					while (iterator.hasNext()) {
 						final IConstituent innerConstituent = (IConstituent) iterator
@@ -627,7 +627,7 @@ public final class XMICreator implements IDesignLevelModelCreator {
 
 			// Copy of the content of the "new", temporary code-level model
 			// into the one given by the user to implement the Builder pattern.
-			final Iterator<?> iterator = codeLevelModel
+			final Iterator iterator = codeLevelModel
 					.getConcurrentIteratorOnConstituents();
 			while (iterator.hasNext()) {
 				final IConstituent constituent = (IConstituent) iterator.next();
@@ -640,7 +640,6 @@ public final class XMICreator implements IDesignLevelModelCreator {
 		}
 	}
 
-	@SuppressWarnings("unused")
 	private void print(final MetaModel metaModel, final Model model) {
 		// Iterate over all model element types in the metamodel
 		for (final MetaModelElement type : metaModel) {

@@ -20,7 +20,7 @@ import padl.refactoring.test.method.RefactoringRenameMethodTest;
  * @author Yann-Gaël Guéhéneuc
  * @since  2006/08/08
  */
-public final class TestRefactorings extends junit.framework.TestSuite {
+public final class TestRefactorings extends TestSuite {
 	public static TestSuite suite() {
 		final TestRefactorings suite = new TestRefactorings();
 		suite.setName(TestRefactorings.class.getName());

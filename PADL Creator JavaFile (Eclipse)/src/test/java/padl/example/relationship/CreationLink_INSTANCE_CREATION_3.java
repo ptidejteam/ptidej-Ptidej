@@ -10,7 +10,6 @@
  ******************************************************************************/
 package padl.example.relationship;
 
-@SuppressWarnings("unused")
 public class CreationLink_INSTANCE_CREATION_3 {
 	public void foo() {
 		final A[] a = new A[10];

@@ -32,7 +32,7 @@ public class ClassLoader extends java.lang.ClassLoader {
 		this.directory = directory;
 	}
 
-	private Class<?> defineClasses(final String name,
+	private Class defineClasses(final String name,
 			final InputStream inputStream) {
 		try {
 			int b;
@@ -48,7 +48,7 @@ public class ClassLoader extends java.lang.ClassLoader {
 				length++;
 			}
 
-			final Class<?> newClass = this.defineClass(name, bytes, 0, length);
+			final Class newClass = this.defineClass(name, bytes, 0, length);
 			return newClass;
 		}
 		catch (final IOException ioe) {
@@ -68,8 +68,8 @@ public class ClassLoader extends java.lang.ClassLoader {
 		}
 	}
 
-	protected Class<?> findClass(final String name) {
-		Class<?> newClass = null;
+	protected Class findClass(final String name) {
+		Class newClass = null;
 		try {
 			//	newClass = this.getParent().loadClass(name);
 			newClass = super.findClass(name);

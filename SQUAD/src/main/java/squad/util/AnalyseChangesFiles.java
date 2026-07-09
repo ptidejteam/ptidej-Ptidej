@@ -20,60 +20,41 @@ public class AnalyseChangesFiles {
 
 	}
 
-	@SuppressWarnings("unused")
 	public static void CombineBlobProbsandChanges() {
-
-		DataFileTableModel DesignChurn =
-			new DataFileTableModel(
+		DataFileTableModel DesignChurn = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/DesignChurn.csv");
 
-		DataFileTableModel NIM =
-			new DataFileTableModel(
+		DataFileTableModel NIM = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/NIM.csv");
-		DataFileTableModel NNM =
-			new DataFileTableModel(
+		DataFileTableModel NNM = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/NNM.csv");
-		DataFileTableModel NSM =
-			new DataFileTableModel(
+		DataFileTableModel NSM = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/NSM.csv");
-		DataFileTableModel NPMPrev =
-			new DataFileTableModel(
+		DataFileTableModel NPMPrev = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/NPMPrev.csv");
-		DataFileTableModel NPMNext =
-			new DataFileTableModel(
+		DataFileTableModel NPMNext = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/NPMNext.csv");
-		DataFileTableModel Instability =
-			new DataFileTableModel(
+		DataFileTableModel Instability = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/Instability.csv");
-		DataFileTableModel Stress =
-			new DataFileTableModel(
+		DataFileTableModel Stress = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/Stress.csv");
-		DataFileTableModel InstructionsAdded =
-			new DataFileTableModel(
+		DataFileTableModel InstructionsAdded = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/InstructionsAdded.csv");
-		DataFileTableModel InstructionsDeleted =
-			new DataFileTableModel(
+		DataFileTableModel InstructionsDeleted = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/InstructionsDeleted.csv");
-		DataFileTableModel InstructionsModified =
-			new DataFileTableModel(
+		DataFileTableModel InstructionsModified = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/InstructionsModified.csv");
-		DataFileTableModel InstructionsChange =
-			new DataFileTableModel(
+		DataFileTableModel InstructionsChange = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/InstructionsChange.csv");
-		DataFileTableModel InstructionsChangeRatio =
-			new DataFileTableModel(
+		DataFileTableModel InstructionsChangeRatio = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/InstructionsChangeRatio.csv");
-		DataFileTableModel ClassAdded =
-			new DataFileTableModel(
+		DataFileTableModel ClassAdded = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/ClassAdded.csv");
-		DataFileTableModel ClassRemoved =
-			new DataFileTableModel(
+		DataFileTableModel ClassRemoved = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/ClassRemoved.csv");
-		DataFileTableModel ClassToInterface =
-			new DataFileTableModel(
+		DataFileTableModel ClassToInterface = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/ClassToInterface.csv");
-		DataFileTableModel InterfaceToClass =
-			new DataFileTableModel(
+		DataFileTableModel InterfaceToClass = new DataFileTableModel(
 				"D:/Documents/Workspace/Defects evolution/Analysis/metrics of change/InterfaceToClass.csv");
 
 		//System.out.println(data_0_role.getValueAt(1, 3));

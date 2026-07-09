@@ -226,7 +226,7 @@ public class StoredSourceCodePrinter extends JCTMap<Void, Void>
         return super.visitErroneousExpression(t, p);
     }
 
-    public Void visitErroneousSelector(final IJCTErroneousSelector<?> t, final Void p)
+    public Void visitErroneousSelector(final IJCTErroneousSelector t, final Void p)
     {
         this.visit(t);
         return super.visitErroneousSelector(t, p);

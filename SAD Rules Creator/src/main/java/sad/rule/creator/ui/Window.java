@@ -35,6 +35,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
+
 import sad.rule.creator.RULECreator;
 import sad.rule.creator.ui.metaModel.Attribute;
 import sad.rule.creator.ui.metaModel.ListAttributes;
@@ -45,21 +46,21 @@ import sad.rule.creator.ui.metaModel.Relationship;
 import sad.rule.creator.ui.metaModel.Rule;
 import sad.rule.creator.ui.metaModel.RuleCard;
 
-@SuppressWarnings("deprecation")
 public class Window extends Frame implements ActionListener {
-
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
 	public static void main(final String argv[]) {
 		new Window();
 	}
+
 	String file = "";
 
-	//////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////
 	// elements' creation
-	//////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////
 
 	String fileContent = "";
 	// load_panel's elments
@@ -102,9 +103,9 @@ public class Window extends Frame implements ActionListener {
 	Label label2 = new Label("");
 	Label label3 = new Label("");
 
-	/////////////////////////////////////////////////////////	
-	// elements' positionning
 	/////////////////////////////////////////////////////////
+	// elements' positionning
+	////////////////////////////////////////////////////////
 
 	Label label4 = new Label("");
 
@@ -218,8 +219,8 @@ public class Window extends Frame implements ActionListener {
 			else {
 				System.out.println("Ouverture du fichier");
 				this.readFile(this.tLoad.getText());
-				this.RCreator =
-					new RULECreator(new String[] { this.tLoad.getText() });
+				this.RCreator = new RULECreator(
+						new String[] { this.tLoad.getText() });
 				this.RCreator.parse();
 				//Not implemented: Naouel this.updateWindow(this.RCreator.parser.ruleCard);
 
@@ -231,35 +232,32 @@ public class Window extends Frame implements ActionListener {
 			System.out.println("Mise a jour du fichier effectue");
 
 			try {
-				final LineNumberReader reader =
-					new LineNumberReader(new InputStreamReader(
-						new FileInputStream(this.tLoad.getText())));
+				final LineNumberReader reader = new LineNumberReader(
+						new InputStreamReader(
+								new FileInputStream(this.tLoad.getText())));
 
 				final StringBuffer buffer = new StringBuffer();
 				String readLine;
 
-				final Rule currentRule =
-					(Rule) this.RCard
-						.getListRules()
+				final Rule currentRule = (Rule) this.RCard.getListRules()
 						.getRules()
 						.elementAt(this.rulesList.getSelectedIndex());
-				final OperatorStringString currentOss =
-					currentRule.getContentRule().getOperatorStringString();
+				final OperatorStringString currentOss = currentRule
+						.getContentRule().getOperatorStringString();
 				if (currentOss != null) {
-					final String line =
-						"RULE : " + currentRule.getName() + " {"
-								+ currentOss.getName() + " "
-								+ currentOss.getFirstString() + " "
-								+ currentOss.getSecondString() + " } ; ";
+					final String line = "RULE : " + currentRule.getName() + " {"
+							+ currentOss.getName() + " "
+							+ currentOss.getFirstString() + " "
+							+ currentOss.getSecondString() + " } ; ";
 					final String name = this.rTypeT.getText();
 					final String first = this.rNameT.getText();
 					final String second = this.aTypeT.getText();
 					currentOss.setName(name);
 					currentOss.setFirstString(first);
 					currentOss.setSecondString(second);
-					final String lineAdd =
-						"RULE : " + currentRule.getName() + " {" + name + " "
-								+ first + " " + second + " } ; ";
+					final String lineAdd = "RULE : " + currentRule.getName()
+							+ " {" + name + " " + first + " " + second
+							+ " } ; ";
 					while ((readLine = reader.readLine()) != null) {
 						System.out.println(readLine);
 						if (readLine.equals(line) == true) {
@@ -273,24 +271,23 @@ public class Window extends Frame implements ActionListener {
 					}
 				}
 
-				final ListAttributes listAtt =
-					currentRule.getContentRule().getListAttributes();
+				final ListAttributes listAtt = currentRule.getContentRule()
+						.getListAttributes();
 				if (listAtt != null) {
 					final Attribute att = listAtt.getAttribute();
 					if (att != null) {
-						final String line =
-							"RULE : " + currentRule.getName() + " {("
-									+ att.getType() + ": " + att.getName()
-									+ ", " + att.getValue() + ") } ; ";
+						final String line = "RULE : " + currentRule.getName()
+								+ " {(" + att.getType() + ": " + att.getName()
+								+ ", " + att.getValue() + ") } ; ";
 						final String type = this.aTypeT.getText();
 						final String name = this.aNameT.getText();
 						final String value = this.aValueT.getText();
 						att.setName(name);
 						att.setValue(value);
 						att.setType(type);
-						final String lineAdd =
-							"RULE : " + currentRule.getName() + " {(" + type
-									+ ": " + name + ", " + value + ") } ; ";
+						final String lineAdd = "RULE : " + currentRule.getName()
+								+ " {(" + type + ": " + name + ", " + value
+								+ ") } ; ";
 						while ((readLine = reader.readLine()) != null) {
 							System.out.println(readLine);
 							if (readLine.equals(line) == true) {
@@ -303,23 +300,19 @@ public class Window extends Frame implements ActionListener {
 							buffer.append('\n');
 						}
 					}
-					final OperatorAttributeAttribute oAA =
-						currentRule
-							.getContentRule()
-							.getListAttributes()
+					final OperatorAttributeAttribute oAA = currentRule
+							.getContentRule().getListAttributes()
 							.getOperatorAttributeAttribute();
 					if (oAA != null) {
-						final String line =
-							"RULE : " + currentRule.getName() + " {"
-									+ oAA.getName() + " ("
-									+ oAA.getFirstAttribute().getType() + ": "
-									+ oAA.getFirstAttribute().getName() + ", "
-									+ oAA.getFirstAttribute().getValue()
-									+ ") ("
-									+ oAA.getSecondAttribute().getType() + ": "
-									+ oAA.getSecondAttribute().getName() + ", "
-									+ oAA.getSecondAttribute().getValue()
-									+ ") } ; ";
+						final String line = "RULE : " + currentRule.getName()
+								+ " {" + oAA.getName() + " ("
+								+ oAA.getFirstAttribute().getType() + ": "
+								+ oAA.getFirstAttribute().getName() + ", "
+								+ oAA.getFirstAttribute().getValue() + ") ("
+								+ oAA.getSecondAttribute().getType() + ": "
+								+ oAA.getSecondAttribute().getName() + ", "
+								+ oAA.getSecondAttribute().getValue()
+								+ ") } ; ";
 						final String fAType = this.rNameT.getText();
 						final String fAName = this.rFCardT.getText();
 						final String fAValue = this.rTCardT.getText();
@@ -328,17 +321,16 @@ public class Window extends Frame implements ActionListener {
 						final String sAValue = this.aValueT.getText();
 						final String name = this.rTypeT.getText();
 						oAA.setName(name);
-						final Attribute fAtt =
-							new Attribute(fAType, fAName, fAValue);
-						final Attribute sAtt =
-							new Attribute(sAType, sAName, sAValue);
+						final Attribute fAtt = new Attribute(fAType, fAName,
+								fAValue);
+						final Attribute sAtt = new Attribute(sAType, sAName,
+								sAValue);
 						oAA.setFirstAttribute(fAtt);
 						oAA.setSecondAttribute(sAtt);
-						final String lineAdd =
-							"RULE : " + currentRule.getName() + " {" + name
-									+ " (" + fAType + ": " + fAName + ", "
-									+ fAValue + ") (" + sAType + ": " + sAName
-									+ ", " + sAValue + ") } ; ";
+						final String lineAdd = "RULE : " + currentRule.getName()
+								+ " {" + name + " (" + fAType + ": " + fAName
+								+ ", " + fAValue + ") (" + sAType + ": "
+								+ sAName + ", " + sAValue + ") } ; ";
 						while ((readLine = reader.readLine()) != null) {
 							System.out.println(readLine);
 							if (readLine.equals(line) == true) {
@@ -352,17 +344,16 @@ public class Window extends Frame implements ActionListener {
 						}
 					}
 				}
-				final ListRelationships lrs =
-					currentRule.getContentRule().getListRelationships();
+				final ListRelationships lrs = currentRule.getContentRule()
+						.getListRelationships();
 				if (lrs != null) {
-					final Relationship rs =
-						(Relationship) lrs.getRelationships().elementAt(0);
-					final String line =
-						"RULE : " + currentRule.getName() + " {" + rs.getType()
-								+ ": " + rs.getName() + " FROM: "
-								+ rs.getFrom() + " " + rs.getFromCardinality()
-								+ " TO: " + rs.getTo() + " "
-								+ rs.getToCardinality() + " } ; ";
+					final Relationship rs = (Relationship) lrs
+							.getRelationships().elementAt(0);
+					final String line = "RULE : " + currentRule.getName() + " {"
+							+ rs.getType() + ": " + rs.getName() + " FROM: "
+							+ rs.getFrom() + " " + rs.getFromCardinality()
+							+ " TO: " + rs.getTo() + " " + rs.getToCardinality()
+							+ " } ; ";
 					final String name = this.rNameT.getText();
 					final String type = this.rTypeT.getText();
 					final String from = this.rFromT.getText();
@@ -375,10 +366,9 @@ public class Window extends Frame implements ActionListener {
 					rs.setTo(to);
 					rs.setFromCardinality(fromCard);
 					rs.setToCardinality(toCard);
-					final String lineAdd =
-						"RULE : " + currentRule.getName() + " {" + type + ": "
-								+ name + " FROM: " + from + " " + fromCard
-								+ " TO: " + to + " " + toCard + " } ; ";
+					final String lineAdd = "RULE : " + currentRule.getName()
+							+ " {" + type + ": " + name + " FROM: " + from + " "
+							+ fromCard + " TO: " + to + " " + toCard + " } ; ";
 					while ((readLine = reader.readLine()) != null) {
 						System.out.println(readLine);
 						if (readLine.equals(line) == true) {
@@ -418,24 +408,24 @@ public class Window extends Frame implements ActionListener {
 	public boolean handleEvent(final Event e) {
 		if (e.target instanceof List) {
 			switch (e.id) {
-				case Event.LIST_SELECT :
-					final int sIndex = ((Integer) e.arg).intValue();
-					//System.out.println(sIndex);
-					this.aTypeT.setText("");
-					this.aNameT.setText("");
-					this.aValueT.setText("");
-					this.rNameT.setText("");
-					this.rTypeT.setText("");
-					this.rFromT.setText("");
-					this.rToT.setText("");
-					this.rFCardT.setText("");
-					this.rTCardT.setText("");
+			case Event.LIST_SELECT:
+				final int sIndex = ((Integer) e.arg).intValue();
+				//System.out.println(sIndex);
+				this.aTypeT.setText("");
+				this.aNameT.setText("");
+				this.aValueT.setText("");
+				this.rNameT.setText("");
+				this.rTypeT.setText("");
+				this.rFromT.setText("");
+				this.rToT.setText("");
+				this.rFCardT.setText("");
+				this.rTCardT.setText("");
 
-					this.loadRule(sIndex);
+				this.loadRule(sIndex);
 
-					break;
-				case Event.LIST_DESELECT :
-					((Integer) e.arg).intValue();
+				break;
+			case Event.LIST_DESELECT:
+				((Integer) e.arg).intValue();
 
 			}
 		}
@@ -443,10 +433,10 @@ public class Window extends Frame implements ActionListener {
 	}
 
 	public void loadRule(final int aRuleId) {
-		final Rule currentRule =
-			(Rule) this.RCard.getListRules().getRules().elementAt(aRuleId);
-		final OperatorStringString currentOss =
-			currentRule.getContentRule().getOperatorStringString();
+		final Rule currentRule = (Rule) this.RCard.getListRules().getRules()
+				.elementAt(aRuleId);
+		final OperatorStringString currentOss = currentRule.getContentRule()
+				.getOperatorStringString();
 		if (currentOss != null) {
 			this.relationship.setText("Operator");
 			this.relationship.setForeground(Color.BLUE);
@@ -482,8 +472,8 @@ public class Window extends Frame implements ActionListener {
 			this.aTypeT.setText(currentOss.getSecondString());
 
 		}
-		final ListAttributes listAtt =
-			currentRule.getContentRule().getListAttributes();
+		final ListAttributes listAtt = currentRule.getContentRule()
+				.getListAttributes();
 		if (listAtt != null) {
 			final Attribute att = listAtt.getAttribute();
 			if (att != null) {
@@ -518,11 +508,8 @@ public class Window extends Frame implements ActionListener {
 				this.aNameT.setText(att.getName());
 				this.aValueT.setText(att.getValue());
 			}
-			final OperatorAttributeAttribute oAA =
-				currentRule
-					.getContentRule()
-					.getListAttributes()
-					.getOperatorAttributeAttribute();
+			final OperatorAttributeAttribute oAA = currentRule.getContentRule()
+					.getListAttributes().getOperatorAttributeAttribute();
 			if (oAA != null) {
 				this.relationship.setText("Operator");
 				this.attributes.setText("Attribute2");
@@ -558,13 +545,13 @@ public class Window extends Frame implements ActionListener {
 				this.rTypeT.setText(oAA.getName());
 			}
 		}
-		final ListRelationships lrs =
-			currentRule.getContentRule().getListRelationships();
+		final ListRelationships lrs = currentRule.getContentRule()
+				.getListRelationships();
 		if (lrs != null) {
 			//for(int j=0; j < lrs.getRelationships().size(); j++)
 			//{}
-			final Relationship rs =
-				(Relationship) lrs.getRelationships().elementAt(0);
+			final Relationship rs = (Relationship) lrs.getRelationships()
+					.elementAt(0);
 
 			this.relationship.setText("Relation");
 			this.relationship.setForeground(Color.BLUE);
@@ -608,9 +595,8 @@ public class Window extends Frame implements ActionListener {
 
 	public void readFile(final String file) {
 		try {
-			final LineNumberReader reader =
-				new LineNumberReader(new InputStreamReader(new FileInputStream(
-					file)));
+			final LineNumberReader reader = new LineNumberReader(
+					new InputStreamReader(new FileInputStream(file)));
 
 			final StringBuffer buffer = new StringBuffer();
 			String readLine;
@@ -627,9 +613,9 @@ public class Window extends Frame implements ActionListener {
 		}
 	}
 
-	//////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////
 	// Window creation
-	//////////////////////////////////////////////////////     
+	//////////////////////////////////////////////////////
 
 	public void updateWindow(final RuleCard aRuleCard) {
 		this.RCard = aRuleCard;
@@ -642,8 +628,8 @@ public class Window extends Frame implements ActionListener {
 
 		int i = 0;
 		while (i < this.RCard.getListRules().getRules().size()) {
-			final Rule currentRule =
-				(Rule) this.RCard.getListRules().getRules().elementAt(i);
+			final Rule currentRule = (Rule) this.RCard.getListRules().getRules()
+					.elementAt(i);
 			this.rulesList.add(currentRule.getName());
 			i++;
 		}

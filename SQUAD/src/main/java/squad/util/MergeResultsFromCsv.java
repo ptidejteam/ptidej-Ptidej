@@ -65,7 +65,6 @@ public class MergeResultsFromCsv {
 		s.close();*/
 	}
 
-	@SuppressWarnings("unused")
 	private static String getFileVersion(final String FileName) {
 		final String substring1 = "v";
 		final String substring2 = ".csv";

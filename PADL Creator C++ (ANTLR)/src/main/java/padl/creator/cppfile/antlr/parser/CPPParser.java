@@ -41,7 +41,6 @@ import padl.kernel.cpp.antlr.ICPPFactoryANTLR;
 import padl.kernel.cpp.antlr.IDestructor;
 import padl.kernel.cpp.antlr.IGlobalField;
 
-@SuppressWarnings("rawtypes")
 public final class CPPParser implements CPPParserConstants {
 	private static String vers = "0.4";
 	private static String id = "C++ Parser";
@@ -110,7 +109,6 @@ public final class CPPParser implements CPPParserConstants {
 	private static List getListOfElements() {
 		return CPPParser.listOfElements;
 	}
-	@SuppressWarnings("unchecked")
 	private static void addToListOfElements(final IElement anElement) {
 		CPPParser.listOfElements.add(anElement);
 	}
@@ -125,7 +123,6 @@ public final class CPPParser implements CPPParserConstants {
 	private static List getListOfGeneralizations() {
 		return CPPParser.listOfGeneralizations;
 	}
-	@SuppressWarnings("unchecked")
 	private static void addToListOfGeneralizations(final String aName) {
 		CPPParser.listOfGeneralizations.add(aName);
 	}
@@ -140,7 +137,6 @@ public final class CPPParser implements CPPParserConstants {
 	private static List getListOfUseDisplay() {
 		return CPPParser.listOfUseDisplay;
 	}
-	@SuppressWarnings("unchecked")
 	private static void addToListOfUseDisplay(final String aName) {
 		final Iterator iterator = CPPParser.listOfUseDisplay.iterator();
 		while (iterator.hasNext())
@@ -184,7 +180,6 @@ public final class CPPParser implements CPPParserConstants {
 	private static List getListOfArguments() {
 		return CPPParser.listOfArguments;
 	}
-	@SuppressWarnings("unchecked")
 	private static void addToListOfArguments(final IParameter aParameter) {
 		CPPParser.listOfArguments.add(aParameter);
 	}
@@ -11433,7 +11428,6 @@ public final class CPPParser implements CPPParserConstants {
 	static private int[] jj_lasttokens = new int[100];
 	static private int jj_endpos;
 
-	@SuppressWarnings("unchecked")
 	static private void jj_add_error_token(int kind, int pos) {
 		if (pos >= 100)
 			return;
@@ -11468,7 +11462,6 @@ public final class CPPParser implements CPPParserConstants {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
 	static public ParseException generateParseException() {
 		jj_expentries.removeAllElements();
 		boolean[] la1tokens = new boolean[131];

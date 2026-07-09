@@ -102,7 +102,6 @@ class JCTSimpleSelector<Identifiable extends IJCTIdentifiable> extends
 	// TODO : case of static qualified class member
 	// TODO : not fully qualified class names (context-dependent)
 	// TODO : take care of enclosing classes
-	@SuppressWarnings("fallthrough")
 	public Writer getSourceCode(final Writer w) throws IOException {
 		if (JCTKind.SIMPLE_IDENTIFIER == this.getKind())
 			w.append(this.getElement().getName());

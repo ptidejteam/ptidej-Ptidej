@@ -56,7 +56,7 @@ abstract class JCTElement<Component extends IJCTElement> extends
 	/**
 	 * enclosing element of this element
 	 */
-	private JCTElementContainer<?> enclosingElement;
+	private JCTElementContainer enclosingElement;
 
 	/**
 	 * root node of this element
@@ -213,7 +213,7 @@ abstract class JCTElement<Component extends IJCTElement> extends
 
 		if (null == p.getIndex()) {
 			int i = 0;
-			final Iterator<?> it =
+			final Iterator it =
 				this.seePreviousPathStep().get(0).seeNextPathStep(
 					this.getKind()).iterator();
 			while (it.hasNext())
@@ -257,7 +257,7 @@ abstract class JCTElement<Component extends IJCTElement> extends
 
 			{
 				this
-					.add((JCTElementContainer<?>) (null == JCTElement.this.enclosingElement ? JCTElement.this
+					.add((JCTElementContainer) (null == JCTElement.this.enclosingElement ? JCTElement.this
 						.getRootNode()
 							: JCTElement.this.enclosingElement));
 			}

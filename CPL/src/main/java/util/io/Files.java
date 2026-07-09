@@ -22,7 +22,7 @@ import java.util.List;
  * @since  2004/07/21
  */
 public class Files {
-	public static String getClassPath(final Class<?> aClass) {
+	public static String getClassPath(final Class aClass) {
 		// Yann 2003/10/26: Relativity!
 		// A user found a major drawback of this class:
 		// Everything is hardcoded and thus prevent install

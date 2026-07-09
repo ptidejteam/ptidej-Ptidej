@@ -37,16 +37,10 @@ import org.apache.lucene.store.LockObtainFailedException;
 
 import util.io.ProxyDisk;
 
-@SuppressWarnings("unused")
 public class AnalysePropFiles {
-
-	/**
-	 * @param args
-	 */
-
 	private IndexWriter writer;
-	private ArrayList<?> queue = new ArrayList<Object>();
-	private Vector<?> eltFields;
+	private ArrayList queue = new ArrayList<Object>();
+	private Vector eltFields;
 
 	public static void main(String[] args) throws IOException, ParseException {
 		// TODO Auto-generated method stub

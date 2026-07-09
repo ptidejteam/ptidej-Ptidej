@@ -13,7 +13,6 @@ package padl.example.relationship;
 import java.util.ArrayList;
 import java.util.List;
 
-@SuppressWarnings("unused")
 public class CreationLink_INSTANCE_CREATION_4 {
 	public void foo() {
 		final List a = new ArrayList();

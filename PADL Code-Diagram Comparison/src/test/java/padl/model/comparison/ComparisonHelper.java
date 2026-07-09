@@ -26,7 +26,6 @@ import ptidej.solver.java.helper.DesignMotifIdentificationCaller;
 import sad.detection.helper.SmellDetectionHelper;
 import util.io.ProxyDisk;
 
-@SuppressWarnings("unused")
 public class ComparisonHelper {
 	private static void computeForAbstractLevelModel(
 			final IAbstractLevelModel aModel, final String anOutputDirectory,

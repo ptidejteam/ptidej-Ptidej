@@ -1,7 +1,8 @@
-package padl.creator.cppfile.eclipse.test.big;
+package padl.jni;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+
 import padl.cpp.kernel.ICPPClass;
 import padl.cpp.kernel.ICPPGhost;
 import padl.cpp.kernel.ICPPMemberClass;
@@ -26,8 +27,7 @@ public class JNICollecteFctGlobaleVisitor extends WalkerAdapter
 
 	final ArrayList<String> listOfJNIMethods = new ArrayList<String>();
 	final ArrayList<String> listOfcppclasss = new ArrayList<String>();
-	final ArrayList<String> listOfcurrentglobalfunction =
-		new ArrayList<String>();
+	final ArrayList<String> listOfcurrentglobalfunction = new ArrayList<String>();
 	final ArrayList<String> listOfcurrentmethod = new ArrayList<String>();
 	final ArrayList<String> listOfcurrentparameter = new ArrayList<String>();
 
@@ -44,15 +44,14 @@ public class JNICollecteFctGlobaleVisitor extends WalkerAdapter
 	public void open(final IGlobalFunction aGlobalFunction) {
 		this.listOfcurrentglobalfunction.add(aGlobalFunction.getDisplayName());
 
-		final Iterator<?> iterator =
-			aGlobalFunction.getIteratorOnConstituents();
+		final Iterator iterator = aGlobalFunction
+				.getIteratorOnConstituents();
 		while (iterator.hasNext()) {
 			final IConstituent constituent = (IConstituent) iterator.next();
 			if (constituent instanceof IParameter) {
 				final IParameter parameter = (IParameter) constituent;
 				if (parameter.getDisplayName().startsWith("env") && parameter
-					.getDisplayTypeName()
-					.startsWith("ProblemType")) {
+						.getDisplayTypeName().startsWith("ProblemType")) {
 
 					this.listOfJNIMethods.add(aGlobalFunction.getDisplayName());
 				}
@@ -72,6 +71,8 @@ public class JNICollecteFctGlobaleVisitor extends WalkerAdapter
 	@Override
 	public void visit(final IParameter aParameter) {
 	}
+
+	// ********************** NOT USED YET ***********************
 
 	@Override
 	public void close(ICPPClass aCPPClass) {

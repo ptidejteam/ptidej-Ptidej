@@ -1,4 +1,4 @@
-package padl.creator.cppfile.eclipse.test.big;
+package padl.jni;
 
 import java.util.ArrayList;
 
@@ -33,7 +33,6 @@ import padl.kernel.ISetter;
 import padl.kernel.IUseRelationship;
 import padl.visitor.IWalker;
 
-@SuppressWarnings("unused")
 public class JNICollecteNativeVisitor implements IWalker {
 	private final ArrayList<String> listOfNativeMethods = new ArrayList<String>();
 	private IClass currentclass;
@@ -41,13 +40,11 @@ public class JNICollecteNativeVisitor implements IWalker {
 
 	@Override
 	public Object getResult() {
-		// TODO Auto-generated method stub
 		return this.listOfNativeMethods;
 	}
 
 	@Override
 	public void open(IClass aClass) {
-		// TODO Auto-generated method stub
 		this.currentclass = aClass;
 		String name1 = aClass.getDisplayName();
 
@@ -57,7 +54,6 @@ public class JNICollecteNativeVisitor implements IWalker {
 
 	@Override
 	public void open(IMethod aMethod) {
-		// TODO Auto-generated method stub
 		if (Access.isNative(aMethod.getVisibility())) {
 			final String name = aMethod.getDisplayName();
 			//+ " " +currentclass.getDisplayName();
@@ -65,6 +61,7 @@ public class JNICollecteNativeVisitor implements IWalker {
 			this.listOfNativeMethods.add(name);
 		}
 	}
+
 	// ********************** NOT USED YET ***********************
 
 	@Override

@@ -139,7 +139,6 @@ class JCTClonerFirstPass implements IJCTVisitor<IJCTElement, Void> {
 		return p;
 	}
 
-	@SuppressWarnings("unlikely-arg-type")
 	public IJCTElement visitCompilationUnit(final IJCTCompilationUnit t,
 			final Void v) {
 		IJCTCompilationUnit cu = (IJCTCompilationUnit) this.translator.get(t);
@@ -667,7 +666,6 @@ class JCTClonerSecondPass implements IJCTVisitor<IJCTElement, Void> {
 		return p;
 	}
 
-	@SuppressWarnings("unlikely-arg-type")
 	public IJCTElement visitCompilationUnit(final IJCTCompilationUnit t,
 			final Void v) {
 		final IJCTCompilationUnit cu = (IJCTCompilationUnit) this.translator

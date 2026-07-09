@@ -48,7 +48,6 @@ public class JCTtoPADLConvertor implements ICodeLevelModelCreator {
 	/**
 	 * @param aRootNode The JCT from which the PADL Model will be made.
 	 */
-	@SuppressWarnings("unused")
 	public JCTtoPADLConvertor(
 		final IJCTRootNode aRootNode,
 		final IFactory PADLImplementationProvider) {

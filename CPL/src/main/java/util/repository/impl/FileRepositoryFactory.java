@@ -122,9 +122,9 @@ public class FileRepositoryFactory {
 		// Check if run within environments like eclipse
 		final ClassLoader cl = aRepository.getClass().getClassLoader();
 		try {
-			final Class<?> workspaceClass = cl
+			final Class workspaceClass = cl
 					.loadClass("org.eclipse.core.resources.IWorkspace");
-			final Class<?> resourcesClass = cl
+			final Class resourcesClass = cl
 					.loadClass("org.eclipse.core.resources.ResourcesPlugin");
 			if (workspaceClass != null || resourcesClass != null) {
 				// In eclipse
@@ -184,7 +184,7 @@ public class FileRepositoryFactory {
 	private boolean isJarsInJar(final IRepository aRepository) {
 		// Warning! Eclipse of course does funny things...
 		try {
-			final Class<?> jarInJarLoader = aRepository.getClass()
+			final Class jarInJarLoader = aRepository.getClass()
 					.getClassLoader().loadClass(
 							"org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader");
 
