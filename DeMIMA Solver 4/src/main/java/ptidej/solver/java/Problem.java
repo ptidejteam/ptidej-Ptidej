@@ -72,6 +72,10 @@ public class Problem extends PalmProblem {
 	public Problem(final int maxWeight, final String name,
 			final List allEntities) {
 
+		if (allEntities.size() == 0) {
+			throw new RuntimeException("ptidej.solver.java.Problem: The list of entities cannot be empty!");
+		}
+
 		// Yann 2007/11/21: Cache!
 		BinaryConstraint.resetEntityList();
 

@@ -143,8 +143,9 @@ abstract class Primitive extends TestCase {
 		}
 		catch (final IllegalAccessException | InvocationTargetException
 				| IOException | NoSuchMethodException e) {
-			e.printStackTrace();
-			return new Occurrence[0];
+			// e.printStackTrace();
+			// return new Occurrence[0];
+			throw new RuntimeException(e);
 		}
 
 		try {
@@ -157,8 +158,9 @@ abstract class Primitive extends TestCase {
 			return occurrences;
 		}
 		catch (final IOException e) {
-			e.printStackTrace();
-			return new Occurrence[0];
+			// e.printStackTrace();
+			// return new Occurrence[0];
+			throw new RuntimeException(e);
 		}
 	}
 

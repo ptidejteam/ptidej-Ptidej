@@ -12,6 +12,9 @@ package ptidej.solver.fingerprint.test;
 
 import junit.framework.TestSuite;
 import ptidej.solver.fingerprint.test.comparison.CompositeComposite2ComparisonTest;
+import ptidej.solver.fingerprint.test.comparison.CompositeJUnitTest;
+import ptidej.solver.fingerprint.test.comparison.CompositeLexiTest;
+import ptidej.solver.fingerprint.test.comparison.CompositeQuickUMLTest;
 import ptidej.solver.fingerprint.test.complex.CompositeComposite1Test;
 import ptidej.solver.fingerprint.test.complex.CompositeComposite2Test;
 import ptidej.solver.fingerprint.test.simple.Composition1Test;
@@ -25,13 +28,10 @@ public final class TestPtidejSolverFingerprints extends TestSuite {
 		suite.setName(TestPtidejSolverFingerprints.class.getName());
 
 		suite.addTestSuite(CompositeComposite2ComparisonTest.class);
-		// The following test takes a long time...
-		// TODO Test fails in GitHub but not locally...
-		//	suite.addTestSuite(CompositeJUnitTest.class);
+		suite.addTestSuite(CompositeJUnitTest.class);
 		// Tests taking a long time, also missing class files
-		//		suite.addTestSuite(CompositeJHotDraw.class);
-		//		suite.addTestSuite(CompositeLexi.class);
-		//		suite.addTestSuite(CompositeQuickUml.class);
+		//	suite.addTestSuite(CompositeLexiTest.class);
+		//	suite.addTestSuite(CompositeQuickUMLTest.class);
 		suite.addTestSuite(CompositeComposite1Test.class);
 		suite.addTestSuite(CompositeComposite2Test.class);
 		suite.addTestSuite(Composition1Test.class);

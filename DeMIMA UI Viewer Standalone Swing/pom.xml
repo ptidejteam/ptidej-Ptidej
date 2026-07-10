@@ -19,31 +19,15 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.15.0</version>
-				<configuration>
-					<release>${maven.compiler.release}</release>
-					<compilerArgs>
-						<arg>-Xlint:deprecation</arg>
-						<arg>-Xlint:unchecked</arg>
-					</compilerArgs>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.5.6</version>
-				<configuration>
-					<excludes>
-						<!-- Excluded on purpose -->
-						<exclude>**/*Test.java</exclude>
-					</excludes>
-				</configuration>
 			</plugin>
 			<!-- Must generate the test-jar for dependent tests -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.5.0</version>
 				<configuration>
 					<archive>
 						<manifest>
@@ -201,47 +185,22 @@
 		<dependency>
 			<groupId>org.apache.xmlgraphics</groupId>
 			<artifactId>batik-anim</artifactId>
-			<version>1.16</version>
-			<exclusions>
-				<exclusion>
-					<groupId>xml-apis</groupId>
-					<artifactId>xml-apis</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.xmlgraphics</groupId>
 			<artifactId>batik-svggen</artifactId>
-			<version>1.16</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.xmlgraphics</groupId>
 			<artifactId>batik-transcoder</artifactId>
-			<version>1.16</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.xmlgraphics</groupId>
 			<artifactId>batik-codec</artifactId>
-			<version>1.16</version>
 		</dependency>
-
-		<!--
-		This one dependency MUST COME BEFORE LAST because it bring with it
-		org.eclipse.equinox.common_3.6, which itself bring with it an old
-		version of SubMonitor, which leads to
-			java.lang.NoSuchMethodError: 'org.eclipse.core.runtime.SubMonitor
-		org.eclipse.core.runtime.SubMonitor.split(int)' 
-		-->
-		<!-- 
-		<dependency>
-			<groupId>net.ptidej.demima</groupId>
-			<artifactId>demima-ui-cpp</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		-->
 
 		<!--
 		DIRTY HACK (cf. https://wiki.ptidej.net/doku.php?id=dirty_hack)

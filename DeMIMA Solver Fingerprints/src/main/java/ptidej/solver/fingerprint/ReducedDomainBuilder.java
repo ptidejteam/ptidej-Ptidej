@@ -121,8 +121,17 @@ public class ReducedDomainBuilder {
 				if (rule.compute(this.metrics, this.abstractLevelModel,
 						firstClassEntity)) {
 
-					this.abstractLevelModel.removeTopLevelEntityFromID(firstClassEntity.getID());
+					this.abstractLevelModel.removeTopLevelEntityFromID(
+							firstClassEntity.getID());
 					newCodeLevelModel.addConstituent(firstClassEntity);
+				}
+				else {
+					ProxyConsole.getInstance().debugOutput().print(
+							"ptidej.solver.fingerprint.ReducedDomainBuilder: ");
+					ProxyConsole.getInstance().debugOutput()
+							.print(firstClassEntity);
+					ProxyConsole.getInstance().debugOutput()
+							.println(" was removed");
 				}
 			}
 		}

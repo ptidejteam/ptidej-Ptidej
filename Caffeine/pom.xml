@@ -19,19 +19,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.15.0</version>
-				<configuration>
-					<release>${maven.compiler.release}</release>
-					<compilerArgs>
-						<arg>-Xlint:deprecation</arg>
-						<arg>-Xlint:unchecked</arg>
-					</compilerArgs>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-install-plugin</artifactId>
-				<version>3.1.1</version>
 				<executions>
 					<execution>
 						<id>install-cfparse</id>
@@ -92,18 +83,14 @@
 		<dependency>
 			<groupId>com.ibm.toad</groupId>
 			<artifactId>cfparse</artifactId>
-			<version>1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>javassist</groupId>
 			<artifactId>javassist</artifactId>
-			<version>1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>JIProlog</groupId>
 			<artifactId>JIProlog</artifactId>
-			<version>1.0</version>
 		</dependency>
 	</dependencies>
-	<packaging>jar</packaging>
 </project>

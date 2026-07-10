@@ -4,29 +4,21 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>net.ptidej.jchoco</groupId>
-	<artifactId>jchoco-core</artifactId>
-	<name>JChoco</name>
-
 	<parent>
 		<groupId>net.ptidej</groupId>
 		<artifactId>all-ptidej</artifactId>
 		<version>1.0.0</version>
 	</parent>
 
+	<groupId>net.ptidej.jchoco</groupId>
+	<artifactId>jchoco-core</artifactId>
+	<name>JChoco</name>
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.15.0</version>
-				<configuration>
-					<release>${maven.compiler.release}</release>
-					<compilerArgs>
-						<arg>-Xlint:deprecation</arg>
-						<arg>-Xlint:unchecked</arg>
-					</compilerArgs>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -35,7 +27,6 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.13.2</version>
 		</dependency>
 	</dependencies>
 </project>

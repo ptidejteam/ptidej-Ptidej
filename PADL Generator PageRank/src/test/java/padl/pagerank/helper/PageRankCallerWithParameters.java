@@ -10,24 +10,27 @@
  ******************************************************************************/
 package padl.pagerank.helper;
 
-import padl.generator.helper.ModelGenerator;
+import padl.analysis.UnsupportedSourceModelException;
+import padl.analysis.repository.AACRelationshipsAnalysis;
+import padl.creator.cppfile.eclipse.test.helper.ModelGenerator;
+import padl.kernel.ICodeLevelModel;
 import padl.kernel.IIdiomLevelModel;
 import padl.pagerank.PageRankRankingGenerator;
 import padl.pagerank.utils.InputDataGeneratorWith9Relations;
 import padl.visitor.IGenerator;
 
 public class PageRankCallerWithParameters {
-	public static void main(final String[] args) {
-		final IGenerator generator =
-			new InputDataGeneratorWith9Relations(false, true);
+	public static void main(final String[] args) throws UnsupportedSourceModelException {
+		final IGenerator generator = new InputDataGeneratorWith9Relations(false,
+				true);
 
-		final IIdiomLevelModel idiomLevelModel =
-			ModelGenerator.generateModelFromClassFilesDirectory(args[0]);
+		final ICodeLevelModel codeLevelModel = ModelGenerator
+				.generateModelFromCppFilesUsingEclipse("", args[0]);
+		final IIdiomLevelModel idiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
+				.invoke(codeLevelModel);
 
-		PageRankRankingGenerator.getInstance().generateModel(
-			idiomLevelModel,
-			args[1],
-			generator);
+		PageRankRankingGenerator.getInstance().generateModel(idiomLevelModel,
+				args[1], generator);
 		generator.reset();
 	}
 }
