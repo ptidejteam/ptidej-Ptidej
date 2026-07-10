@@ -51,7 +51,7 @@ public class WorldTest extends CppPrimitive {
 					.createCodeLevelModel("World.cpp");
 			try {
 				codeLevelModel.create(new CPPCreator(new String[] {
-						"../PADL Creator C++ (ANTLR)/target/test-classes/world.cpp" }));
+						"../PADL Creator C++ (JavaCC)/target/test-classes/world.cpp" }));
 			}
 			catch (final CreationException e) {
 				e.printStackTrace();

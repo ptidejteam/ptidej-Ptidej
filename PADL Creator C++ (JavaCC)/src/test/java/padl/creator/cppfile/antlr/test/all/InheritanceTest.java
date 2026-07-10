@@ -52,7 +52,7 @@ public class InheritanceTest extends CppPrimitive {
 					.createCodeLevelModel("her.cpp");
 			try {
 				codeLevelModel.create(new CPPCreator(new String[] {
-						"../PADL Creator C++ (ANTLR)/target/test-classes/her.cpp" }));
+						"../PADL Creator C++ (JavaCC)/target/test-classes/her.cpp" }));
 			}
 			catch (final CreationException e) {
 				e.printStackTrace();

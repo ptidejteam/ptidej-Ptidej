@@ -44,7 +44,7 @@ public class CpointTest extends CppPrimitive {
 					.createCodeLevelModel("Cpoint.cpp");
 			try {
 				codeLevelModel.create(new CPPCreator(new String[] {
-						"../PADL Creator C++ (ANTLR)/target/test-classes/Cpoint.cpp" }));
+						"../PADL Creator C++ (JavaCC)/target/test-classes/Cpoint.cpp" }));
 			}
 			catch (final CreationException e) {
 				e.printStackTrace();
