@@ -27,19 +27,21 @@ public final class CompositeJUnitTest extends Primitive {
 		if (CompositeJUnitTest.BuiltSolutionsNoRule == null) {
 			CompositeJUnitTest.BuiltSolutionsNoRule = Primitive.automaticSolve(
 					ptidej.solver.java.problem.CompositeMotif.class,
-					"../DeMIMA Solver Fingerprints/target/test-classes/JUnit v3.7/bin/",
+					"../DeMIMA Solver Fingerprints/target/test-classes/JUnit v3.7/bin/junit/framework/",
 					"JUnit");
 		}
 
 		if (CompositeJUnitTest.BuiltSolutions == null) {
 			CompositeJUnitTest.BuiltSolutions = Primitive.automaticSolve(
 					ptidej.solver.fingerprint.problem.CompositeMotif.class,
-					"../DeMIMA Solver Fingerprints/target/test-classes/JUnit v3.7/bin/",
-					"JUnit", Rule.C_LEAF_ROLE_1);
+					"../DeMIMA Solver Fingerprints/target/test-classes/JUnit v3.7/bin/junit/framework/",
+					"JUnit", Rule.C_LEAF_TEST);
 		}
 	}
 
 	public void testNumberSolution() {
+		Assert.assertTrue("Some solution with rules.",
+				CompositeJUnitTest.BuiltSolutions.length > 0);
 		Assert.assertTrue("Less solution with rules.",
 				CompositeJUnitTest.BuiltSolutions.length < CompositeJUnitTest.BuiltSolutionsNoRule.length);
 	}

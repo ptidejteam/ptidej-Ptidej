@@ -16,8 +16,14 @@ import java.io.Writer;
 
 import org.junit.Assert;
 
-import padl.generator.helper.ModelGenerator;
+import padl.analysis.UnsupportedSourceModelException;
+import padl.analysis.repository.AACRelationshipsAnalysis;
+import padl.creator.classfile.CompleteClassFileCreator;
+import padl.creator.cppfile.eclipse.test.helper.ModelGenerator;
+import padl.kernel.ICodeLevelModel;
 import padl.kernel.IIdiomLevelModel;
+import padl.kernel.exception.CreationException;
+import padl.kernel.impl.Factory;
 import padl.pagerank.PageRankRankingGenerator;
 import padl.pagerank.utils.InputDataGeneratorWith9Relations;
 import padl.pagerank.utils.InputDataGeneratorWith9RelationsForCPP;
@@ -37,11 +43,18 @@ public class PageRankCallerWithNoParameters {
 		for (int i = 0; i < someNames.length; i++) {
 			final String name = someNames[i];
 
-			final IIdiomLevelModel idomLevelModel = ModelGenerator
-					.generateModelFromClassFilesDirectory(name, somePaths[i]);
+			final ICodeLevelModel codeLevelModel = Factory.getInstance()
+					.createCodeLevelModel("ptidej.example.composite2");
+			try {
+				codeLevelModel
+						.create(new CompleteClassFileCreator(somePaths, true));
+			}
+			catch (final CreationException e) {
+				e.printStackTrace();
+			}
 
 			final long startTime = System.currentTimeMillis();
-			idomLevelModel.generate(generator);
+			codeLevelModel.generate(generator);
 			try {
 				final String outputFile = "rsc/" + name + ".txt";
 				final Writer fw = ProxyDisk.getInstance()
@@ -66,27 +79,34 @@ public class PageRankCallerWithNoParameters {
 			final String aPath, final IGenerator aGenerator,
 			final Writer aResultWriter) {
 
-		long startTime = System.currentTimeMillis();
-		final IIdiomLevelModel idomLevelModel = ModelGenerator
-				.generateModelFromCppFilesUsingANTLR(aName,
-						new String[] { aPath }, null);
-		ProxyConsole.getInstance().debugOutput().print("Model generated in ");
-		ProxyConsole.getInstance().debugOutput()
-				.print(System.currentTimeMillis() - startTime);
-		ProxyConsole.getInstance().debugOutput().println(" ms.");
-
-		startTime = System.currentTimeMillis();
-		idomLevelModel.generate(aGenerator);
 		try {
+			long startTime = System.currentTimeMillis();
+			final ICodeLevelModel codeLevelModel = ModelGenerator
+					.generateModelFromCppFilesUsingEclipse(aName, aPath);
+			IIdiomLevelModel idiomLevelModel;
+			idiomLevelModel = (IIdiomLevelModel) new AACRelationshipsAnalysis()
+					.invoke(codeLevelModel);
+			ProxyConsole.getInstance().debugOutput()
+					.print("Model generated in ");
+			ProxyConsole.getInstance().debugOutput()
+					.print(System.currentTimeMillis() - startTime);
+			ProxyConsole.getInstance().debugOutput().println(" ms.");
+
+			startTime = System.currentTimeMillis();
+			idiomLevelModel.generate(aGenerator);
 			aResultWriter.write(aGenerator.getCode());
+			ProxyConsole.getInstance().debugOutput()
+					.print("Model analysed in ");
+			ProxyConsole.getInstance().debugOutput()
+					.print(System.currentTimeMillis() - startTime);
+			ProxyConsole.getInstance().debugOutput().println(" ms.");
+		}
+		catch (final UnsupportedSourceModelException e) {
+			e.printStackTrace();
 		}
 		catch (final IOException e) {
 			e.printStackTrace();
 		}
-		ProxyConsole.getInstance().debugOutput().print("Model analysed in ");
-		ProxyConsole.getInstance().debugOutput()
-				.print(System.currentTimeMillis() - startTime);
-		ProxyConsole.getInstance().debugOutput().println(" ms.");
 	}
 
 	public static void callForSomeCPPFiles(final String[] someNames,

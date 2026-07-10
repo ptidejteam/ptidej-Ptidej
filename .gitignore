@@ -1,7 +1,7 @@
 # From https://github.com/github/gitignore/blob/main/Global/Eclipse.gitignore
 
 .metadata
-bin/
+*/bin/
 tmp/
 *.tmp
 *.bak

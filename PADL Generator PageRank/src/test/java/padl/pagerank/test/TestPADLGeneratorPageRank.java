@@ -20,8 +20,7 @@ public class TestPADLGeneratorPageRank extends TestSuite {
 		final TestPADLGeneratorPageRank suite = new TestPADLGeneratorPageRank();
 		suite.setName(TestPADLGeneratorPageRank.class.getName());
 
-		// TODO Add this test back
-		//		suite.addTestSuite(CPPTest.class);
+		suite.addTestSuite(SanityTest.class);
 
 		return suite;
 	}
