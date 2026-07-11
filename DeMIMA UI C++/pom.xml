@@ -6,7 +6,7 @@
 
 	<groupId>net.ptidej.demima</groupId>
 	<artifactId>demima-ui-cpp</artifactId>
-	<name>DeMIMA UI CPP</name>
+	<name>DeMIMA UI C++</name>
 
 	<parent>
 		<groupId>net.ptidej</groupId>
