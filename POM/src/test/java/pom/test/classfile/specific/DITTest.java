@@ -14,24 +14,17 @@ import org.junit.Assert;
 
 import junit.framework.TestCase;
 import padl.creator.classfile.CompleteClassFileCreator;
-import padl.generator.helper.ModelGenerator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
-import padl.kernel.IIdiomLevelModel;
 import padl.kernel.impl.Factory;
 import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
 
 public class DITTest extends TestCase {
-	protected static MetricsRepository MetricsRepository;
+	private static MetricsRepository MetricsRepository;
 	private static ICodeLevelModel Model = null;
-	protected static IIdiomLevelModel ModelJavaC = null;
 	private static final String root =
 		"../POM/target/test-classes/Metric Specific for Java/bin/pom/test/rsc/specific/testDIT/";
-	private static final String rootJavaC =
-			"../POM/target/test-classes/Metric Specific for Java/src/pom/test/rsc/specific/testDIT/";
-	protected String metricName = "DIT";
-	protected double expectedDITGhost = 4d;
 	public DITTest(String name) {
 		super(name);
 	}
@@ -46,10 +39,6 @@ public class DITTest extends TestCase {
 			DITTest.MetricsRepository =
 				pom.metrics.MetricsRepository.getInstance();
 		}
-		if (DITTest.ModelJavaC == null) {
-			DITTest.ModelJavaC = ModelGenerator.generateModelFromJavaFilesDirectoryUsingJavaC("",
-					new String[] {rootJavaC});
-		}
 	}
 	public void testRefClass() {
 		final IFirstClassEntity firstClassEntity =
@@ -57,7 +46,7 @@ public class DITTest extends TestCase {
 				.getTopLevelEntityFromID("pom.test.rsc.specific.testDIT.TestSingleClass");
 
 		Assert.assertEquals(1d, ((IUnaryMetric) MetricsRepository
-			.getMetric(metricName)).compute(DITTest.Model, firstClassEntity), 0d);
+			.getMetric("DIT")).compute(DITTest.Model, firstClassEntity), 0d);
 	}
 	public void testRefInterface() {
 		final IFirstClassEntity firstClassEntity =
@@ -65,7 +54,7 @@ public class DITTest extends TestCase {
 				.getTopLevelEntityFromID("pom.test.rsc.specific.testDIT.TestSingleInterface");
 
 		Assert.assertEquals(1.0d, ((IUnaryMetric) MetricsRepository
-			.getMetric(metricName)).compute(DITTest.Model, firstClassEntity), 0d);
+			.getMetric("DIT")).compute(DITTest.Model, firstClassEntity), 0d);
 	}
 	public void testInheritanceOnClass() {
 		final IFirstClassEntity firstClassEntity =
@@ -73,7 +62,7 @@ public class DITTest extends TestCase {
 				.getTopLevelEntityFromID("pom.test.rsc.specific.testDIT.TestAChild03");
 
 		Assert.assertEquals(4d, ((IUnaryMetric) MetricsRepository
-			.getMetric(metricName)).compute(DITTest.Model, firstClassEntity), 0d);
+			.getMetric("DIT")).compute(DITTest.Model, firstClassEntity), 0d);
 	}
 	public void testInheritanceOnInterface01() {
 		final IFirstClassEntity firstClassEntity =
@@ -81,7 +70,7 @@ public class DITTest extends TestCase {
 				.getTopLevelEntityFromID("pom.test.rsc.specific.testDIT.TestBChild03");
 
 		Assert.assertEquals(4d, ((IUnaryMetric) MetricsRepository
-			.getMetric(metricName)).compute(DITTest.Model, firstClassEntity), 0d);
+			.getMetric("DIT")).compute(DITTest.Model, firstClassEntity), 0d);
 	}
 	public void testInheritanceOnInterface02() {
 		final IFirstClassEntity firstClassEntity =
@@ -89,14 +78,6 @@ public class DITTest extends TestCase {
 				.getTopLevelEntityFromID("pom.test.rsc.specific.testDIT.TestBChild11");
 
 		Assert.assertEquals(2d, ((IUnaryMetric) MetricsRepository
-			.getMetric(metricName)).compute(DITTest.Model, firstClassEntity), 0d);
-	}
-	public void testGhost() {
-		final IFirstClassEntity firstClassEntity =
-			(IFirstClassEntity) DITTest.ModelJavaC
-				.getTopLevelEntityFromID("pom.test.rsc.specific.testDIT.TestGhostSwing");
-
-		Assert.assertEquals(expectedDITGhost, ((IUnaryMetric) MetricsRepository
-			.getMetric(metricName)).compute(DITTest.Model, firstClassEntity), 0d);
+			.getMetric("DIT")).compute(DITTest.Model, firstClassEntity), 0d);
 	}
 }

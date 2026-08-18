@@ -25,8 +25,13 @@ import pom.metrics.IUnaryMetric;
  * @author Foutse Khomh
  * @since  2007/03/01
  */
-public class CAM extends AbstractMetric implements IMetric, IUnaryMetric,
+public class CAM extends AbstractMetric implements IMetric,
 		IDependencyIndependentMetric {
+
+	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
+		return this.concretelyCompute(null, anEntity);
+	}
+
 	public String getDefinition() {
 		final String def =
 			"Relateness among methods of the class based upon the parameter list of the methods. The metrics is computed using the summation of the intersection of parameters of a method with the maximum independant set of all parameter types in the class.";

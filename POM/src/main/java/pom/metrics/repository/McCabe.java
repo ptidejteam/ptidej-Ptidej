@@ -23,7 +23,12 @@ import pom.metrics.IMetric;
 import pom.metrics.IUnaryMetric;
 import util.io.ProxyConsole;
 
-public class McCabe extends AbstractMetric implements IMetric, IUnaryMetric, IDependencyIndependentMetric {
+public class McCabe extends AbstractMetric implements IMetric, IDependencyIndependentMetric {
+	
+	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
+		return this.concretelyCompute(null, anEntity);
+	}
+
 	// Must be public because of reflection use to traverse the entity below...
 	public final class McCabeComputer extends StatementWalkerAdapter {
 		private int mcCabe;

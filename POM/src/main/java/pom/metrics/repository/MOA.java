@@ -24,8 +24,13 @@ import pom.metrics.IUnaryMetric;
  * @author Foutse Khomh
  * @since  2007/03/01
  */
-public class MOA extends AbstractMetric implements IMetric, IUnaryMetric, 
+public class MOA extends AbstractMetric implements IMetric, 
 	IDependencyIndependentMetric {
+
+	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
+		return this.concretelyCompute(null, anEntity);
+	}
+
 	public String getDefinition() {
 		final String def =
 			"Data declarations whose types are user-defined entities.";

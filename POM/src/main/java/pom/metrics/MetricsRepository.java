@@ -42,6 +42,7 @@ public class MetricsRepository implements IRepository {
 	private final IMetric[] allMetrics;
 	private final IBinaryMetric[] binaryMetrics;
 	private final IUnaryMetric[] unaryMetrics;
+	private final INaryMetric[] naryMetrics;
 
 	// @Note David: Added model independent metrics
 	private final IDependencyIndependentMetric[] dependencyIndependentMetrics;
@@ -60,6 +61,7 @@ public class MetricsRepository implements IRepository {
 			this.allMetrics = new IMetric[0];
 			this.binaryMetrics = new IBinaryMetric[0];
 			this.unaryMetrics = new IUnaryMetric[0];
+			this.naryMetrics = new INaryMetric[0];
 			this.dependencyIndependentMetrics = new IDependencyIndependentMetric[0];
 			return;
 		}
@@ -67,6 +69,7 @@ public class MetricsRepository implements IRepository {
 		final List listOfAllMetrics = new ArrayList();
 		final List listOfUnaryMetrics = new ArrayList();
 		final List listOfBinaryMetrics = new ArrayList();
+		final List listOfNaryMetrics = new ArrayList();
 
 		// David: Added independent metrics
 		final List listOfIndependentMetrics = new ArrayList();
@@ -87,6 +90,11 @@ public class MetricsRepository implements IRepository {
 				//	else if (IBinaryMetric.class.isAssignableFrom(metricClass)) {
 				if (IBinaryMetric.class.isAssignableFrom(metricClass)) {
 					listOfBinaryMetrics.add(metric);
+				}
+
+				// INary metrics: metrics operating on multiple entities
+				if (INaryMetric.class.isAssignableFrom(metricClass)) {
+					listOfNaryMetrics.add(metric);
 				}
 
 				// David: Added IIndependentMetrics
@@ -118,6 +126,8 @@ public class MetricsRepository implements IRepository {
 		listOfBinaryMetrics.toArray(this.binaryMetrics);
 		this.unaryMetrics = new IUnaryMetric[listOfUnaryMetrics.size()];
 		listOfUnaryMetrics.toArray(this.unaryMetrics);
+		this.naryMetrics = new INaryMetric[listOfNaryMetrics.size()];
+		listOfNaryMetrics.toArray(this.naryMetrics);
 
 		this.dependencyIndependentMetrics = new IDependencyIndependentMetric[listOfIndependentMetrics
 				.size()];
@@ -170,6 +180,10 @@ public class MetricsRepository implements IRepository {
 
 	public IUnaryMetric[] getUnaryMetrics() {
 		return this.unaryMetrics;
+	}
+
+	public INaryMetric[] getNaryMetrics() {
+		return this.naryMetrics;
 	}
 
 	public IDependencyIndependentMetric[] getIndependentMetrics() {

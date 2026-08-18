@@ -24,7 +24,12 @@ import pom.metrics.IUnaryMetric;
  * @since  2007/03/01
  */
 public class DAM extends AbstractMetric
-		implements IMetric, IUnaryMetric, IDependencyIndependentMetric {
+		implements IMetric, IDependencyIndependentMetric {
+
+	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
+		return this.concretelyCompute(null, anEntity);
+	}
+
 	protected double concretelyCompute(final IAbstractModel anAbstractModel,
 			final IFirstClassEntity firstClassEntity) {
 

@@ -41,7 +41,12 @@ import pom.metrics.IUnaryMetric;
  * 
  * Modifications made to fit the new architecture
  */
-public class PIIR extends AbstractMetric implements IMetric, IUnaryMetric, IDependencyIndependentMetric {
+public class PIIR extends AbstractMetric implements IMetric, IDependencyIndependentMetric {
+	
+	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
+		return this.concretelyCompute(null, anEntity);
+	}
+
 	//  Is this the best way to implement this metrics???
 	
 	protected double concretelyCompute(

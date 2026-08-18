@@ -52,7 +52,7 @@ public class DIT extends AbstractMetric implements IMetric, IUnaryMetric {
 	 * @param list
 	 * @return the highest DIT in the list of entities
 	 */
-	protected double maxDIT(
+	private double maxDIT(
 		final IAbstractModel anAbstractModel,
 		final List list) {
 
@@ -72,7 +72,7 @@ public class DIT extends AbstractMetric implements IMetric, IUnaryMetric {
 	 * @param array
 	 * @return the max value in an array
 	 */
-	protected double maxValue(final double[] array) {
+	private double maxValue(final double[] array) {
 		if (array == null) {
 			return -1;
 		}
