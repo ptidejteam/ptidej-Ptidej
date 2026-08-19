@@ -54,7 +54,6 @@ import padl.visitor.IWalker;
  * @author Yann-Gaël Guéhéneuc
  */
 public class Factory implements IFactory, Serializable {
-	private static IPackageDefault DefaultPackage;
 	private static final IFirstClassEntity HIERARCHY_ROOT_ENTITY = new Ghost(
 			Constants.DEFAULT_HIERARCHY_ROOT_ID,
 			Constants.DEFAULT_HIERARCHY_ROOT_NAME);
@@ -62,7 +61,6 @@ public class Factory implements IFactory, Serializable {
 	private static final long serialVersionUID = -4969943969597847522L;
 
 	// Sebastien Colladon 19/04/2012 : Change with the abstract type for more flexibility in the legacy
-	// TODO Make field and constructor private
 	private static IFactory UniqueInstance;
 
 	public static IFactory getInstance() {
@@ -187,9 +185,6 @@ public class Factory implements IFactory, Serializable {
 	}
 
 	public IGhost createGhost(final char[] anID, final char[] aName) {
-		// Yann 2009/05/03: Useless?
-		// Is the following check really necessary now?
-		// TODO: Remove spurious code.
 		String id = String.valueOf(anID);
 		// Yann 2004/01/23: Ghost, arrays, and primitive types.
 		// I make sure before creating a ghost that it is not
@@ -198,11 +193,6 @@ public class Factory implements IFactory, Serializable {
 		if (bracketIndex > -1) {
 			id = id.substring(0, bracketIndex);
 		}
-		/*if (Util.isPrimtiveType(id.toCharArray())) {
-			throw new ModelDeclarationException(MultilingualManager.getString(
-				"ADD",
-				Factory.class));
-		}*/
 
 		return new Ghost(id.toCharArray(), aName);
 	}
@@ -268,10 +258,6 @@ public class Factory implements IFactory, Serializable {
 	}
 
 	public IPackageDefault createPackageDefault() {
-		// TODO: Remove static variable!
-		if (Factory.DefaultPackage == null) {
-			Factory.DefaultPackage = new PackageDefault();
-		}
 		return new PackageDefault();
 	}
 
