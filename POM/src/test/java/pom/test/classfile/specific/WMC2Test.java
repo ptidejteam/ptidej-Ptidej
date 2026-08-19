@@ -17,6 +17,7 @@ import padl.creator.classfile.CompleteClassFileCreator;
 import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.impl.Factory;
+import pom.metrics.IDependencyIndependentMetric;
 import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
 
@@ -45,8 +46,8 @@ public class WMC2Test extends TestCase {
 				.getTopLevelEntityFromID(
 						"pom.test.rsc.specific.testWMC.TestSingleClass");
 
-		Assert.assertEquals(1d, ((IUnaryMetric) metrics.getMetric("WMC1"))
-				.compute(model, firstClassEntity), 0d);
+		Assert.assertEquals(1d, ((IDependencyIndependentMetric) metrics.getMetric("WMC1"))
+				.compute(firstClassEntity), 0d);
 	}
 
 	public void testRefInterface() {
@@ -54,8 +55,8 @@ public class WMC2Test extends TestCase {
 				.getTopLevelEntityFromID(
 						"pom.test.rsc.specific.testWMC.TestSingleInterface");
 
-		Assert.assertEquals(0d, ((IUnaryMetric) metrics.getMetric("WMC1"))
-				.compute(model, firstClassEntity), 0d);
+		Assert.assertEquals(0d, ((IDependencyIndependentMetric) metrics.getMetric("WMC1"))
+				.compute(firstClassEntity), 0d);
 	}
 
 	public void test01() {
@@ -63,8 +64,8 @@ public class WMC2Test extends TestCase {
 				.getTopLevelEntityFromID(
 						"pom.test.rsc.specific.testWMC.TestAClass01");
 
-		Assert.assertEquals(2d, ((IUnaryMetric) metrics.getMetric("WMC1"))
-				.compute(model, firstClassEntity), 0d);
+		Assert.assertEquals(2d, ((IDependencyIndependentMetric) metrics.getMetric("WMC1"))
+				.compute(firstClassEntity), 0d);
 	}
 
 	public void test02() {
@@ -72,7 +73,7 @@ public class WMC2Test extends TestCase {
 				.getTopLevelEntityFromID(
 						"pom.test.rsc.specific.testWMC.TestAClass02");
 
-		Assert.assertEquals(5d, ((IUnaryMetric) metrics.getMetric("WMC1"))
-				.compute(model, firstClassEntity), 0d);
+		Assert.assertEquals(5d, ((IDependencyIndependentMetric) metrics.getMetric("WMC1"))
+				.compute(firstClassEntity), 0d);
 	}
 }
