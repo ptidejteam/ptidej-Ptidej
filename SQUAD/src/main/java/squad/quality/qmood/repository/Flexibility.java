@@ -27,20 +27,20 @@ public final class Flexibility extends AbstractQualityAttribute implements
 		final IFirstClassEntity entity) {
 		final double result =
 			(0.25)
-					* ((IUnaryMetric) MetricsRepository
+					* ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 						.getInstance()
 						.getMetric("DAM"))
-						.compute(anAbstractModel, entity)
+						.compute(entity)
 					+ (-0.25)
 					* ((IUnaryMetric) MetricsRepository
 						.getInstance()
 						.getMetric("DCC"))
 						.compute(anAbstractModel, entity)
 					+ (0.5)
-					* ((IUnaryMetric) MetricsRepository
+					* ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 						.getInstance()
 						.getMetric("MOA"))
-						.compute(anAbstractModel, entity)
+						.compute(entity)
 					+ (0.5)
 					* ((IUnaryMetric) MetricsRepository
 						.getInstance()

@@ -44,8 +44,8 @@ public class Scalability extends AbstractQualityAttribute implements
 			((IUnaryMetric) MetricsRepository.getInstance().getMetric(
 				"connectivity")).compute(anAbstractModel, entity);
 		final double Lcom5 =
-			((IUnaryMetric) MetricsRepository.getInstance().getMetric("LCOM5"))
-				.compute(anAbstractModel, entity);
+			((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("LCOM5"))
+				.compute(entity);
 		final double ICHClass =
 			((IUnaryMetric) MetricsRepository.getInstance().getMetric(
 				"ICHClass")).compute(anAbstractModel, entity);

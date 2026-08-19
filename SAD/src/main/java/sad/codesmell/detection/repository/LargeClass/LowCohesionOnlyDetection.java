@@ -72,9 +72,9 @@ public class LowCohesionOnlyDetection extends AbstractCodeSmellDetection impleme
 				thereIsLowCohesionOnly = true;
 
 				
-	final double LCOM5 = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("LCOM5")).compute(anAbstractLevelModel, aClass);
+	final double LCOM5 = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("LCOM5")).compute(aClass);
 	mapOfLowCohesionOnlyValues.put(aClass, new Double[] {Double.valueOf(LCOM5), Double.valueOf(0)});
-				//final double LCOM5 = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("LCOM5")).compute(anAbstractLevelModel, aClass);
+				//final double LCOM5 = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("LCOM5")).compute(aClass);
 				//mapOfLowCohesionOnlyValues.put(aClass, Double.valueOf(LCOM5));
 			}
 		}
@@ -95,7 +95,7 @@ public class LowCohesionOnlyDetection extends AbstractCodeSmellDetection impleme
 					ClassProperty classProp = new ClassProperty(aLowCohesionOnlyClass);
 					
 					
-	final double LCOM5 = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("LCOM5")).compute(anAbstractLevelModel, aLowCohesionOnlyClass);
+	final double LCOM5 = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("LCOM5")).compute(aLowCohesionOnlyClass);
 
 HashMap thresholdMap = new HashMap();
 thresholdMap.put("LCOM5_MaxBound", Double.valueOf(boxPlot.getMaxBound()));

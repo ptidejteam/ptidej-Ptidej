@@ -26,8 +26,8 @@ public class ModularityAtRuntime extends AbstractQualityAttribute implements
 		final IFirstClassEntity entity) {
 
 		final double Lcom5 =
-			((IUnaryMetric) MetricsRepository.getInstance().getMetric("LCOM5"))
-				.compute(anAbstractModel, entity);
+			((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("LCOM5"))
+				.compute(entity);
 		final double Dcaec =
 			((IUnaryMetric) MetricsRepository.getInstance().getMetric("DCAEC"))
 				.compute(anAbstractModel, entity);

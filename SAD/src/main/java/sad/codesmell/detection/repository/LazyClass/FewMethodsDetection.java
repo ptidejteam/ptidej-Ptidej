@@ -72,8 +72,8 @@ public class FewMethodsDetection extends AbstractCodeSmellDetection implements I
 				thereIsFewMethods = true;
 
 				
-	final double NMD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(anAbstractLevelModel, aClass);
-	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aClass);
+	final double NMD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(aClass);
+	final double NAD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(aClass);
 	mapOfFewMethodsValues.put(aClass, new Double[] {Double.valueOf (NMD + NAD), Double.valueOf(0)});
 				//final double NMD_NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD_NAD")).compute(anAbstractLevelModel, aClass);
 				//mapOfFewMethodsValues.put(aClass, Double.valueOf(NMD_NAD));
@@ -96,8 +96,8 @@ public class FewMethodsDetection extends AbstractCodeSmellDetection implements I
 					ClassProperty classProp = new ClassProperty(aFewMethodsClass);
 					
 					
-	final double NMD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(anAbstractLevelModel, aFewMethodsClass);
-	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aFewMethodsClass);
+	final double NMD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(aFewMethodsClass);
+	final double NAD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(aFewMethodsClass);
 
 HashMap thresholdMap = new HashMap();
 thresholdMap.put("NMD_NAD_MinBound", Double.valueOf(boxPlot.getMinBound()));

@@ -72,9 +72,9 @@ public class ComplexClassOnlyDetection extends AbstractCodeSmellDetection implem
 				thereIsComplexClassOnly = true;
 
 				
-	final double McCabe = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("McCabe")).compute(anAbstractLevelModel, aClass);
+	final double McCabe = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("McCabe")).compute(aClass);
 	mapOfComplexClassOnlyValues.put(aClass, new Double[] {Double.valueOf(McCabe), Double.valueOf(0)});
-				//final double McCabe = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("McCabe")).compute(anAbstractLevelModel, aClass);
+				//final double McCabe = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("McCabe")).compute(aClass);
 				//mapOfComplexClassOnlyValues.put(aClass, Double.valueOf(McCabe));
 			}
 		}
@@ -95,7 +95,7 @@ public class ComplexClassOnlyDetection extends AbstractCodeSmellDetection implem
 					ClassProperty classProp = new ClassProperty(aComplexClassOnlyClass);
 					
 					
-	final double McCabe = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("McCabe")).compute(anAbstractLevelModel, aComplexClassOnlyClass);
+	final double McCabe = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("McCabe")).compute(aComplexClassOnlyClass);
 
 HashMap thresholdMap = new HashMap();
 thresholdMap.put("McCabe_MaxBound", Double.valueOf(boxPlot.getMaxBound()));

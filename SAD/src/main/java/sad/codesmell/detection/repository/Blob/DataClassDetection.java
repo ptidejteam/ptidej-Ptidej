@@ -59,8 +59,8 @@ public class DataClassDetection extends AbstractCodeSmellDetection implements IC
 					
 					ClassProperty classProp = new ClassProperty(aClass);
 					try {
-						double NMD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(anAbstractLevelModel, aClass);
-						double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aClass); 
+						double NMD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(aClass);
+						double NAD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(aClass); 
 								
 						classProp.addProperty(new MetricProperty("NMD+NAD", NMD+NAD, new HashMap()));
 						DataClassFound.add(new CodeSmell("DataClass", "", classProp));

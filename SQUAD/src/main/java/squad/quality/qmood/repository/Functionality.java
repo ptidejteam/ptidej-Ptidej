@@ -27,10 +27,10 @@ public final class Functionality extends AbstractQualityAttribute implements
 		final IFirstClassEntity entity) {
 		double result =
 			(0.12)
-					* ((IUnaryMetric) MetricsRepository
+					* ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 						.getInstance()
 						.getMetric("CAM"))
-						.compute(anAbstractModel, entity)
+						.compute(entity)
 					+ (0.22)
 					* ((IUnaryMetric) MetricsRepository
 						.getInstance()
@@ -38,10 +38,10 @@ public final class Functionality extends AbstractQualityAttribute implements
 						anAbstractModel,
 						entity)
 					+ (0.22)
-					* ((IUnaryMetric) MetricsRepository
+					* ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 						.getInstance()
 						.getMetric("CIS"))
-						.compute(anAbstractModel, entity)
+						.compute(entity)
 					+ (0.22)
 					* ((IUnaryMetric) MetricsRepository
 						.getInstance()

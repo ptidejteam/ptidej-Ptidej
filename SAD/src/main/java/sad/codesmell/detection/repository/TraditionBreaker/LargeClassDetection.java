@@ -72,8 +72,8 @@ public class LargeClassDetection extends AbstractCodeSmellDetection implements I
 				thereIsLargeClass = true;
 
 				
-	final double NMD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(anAbstractLevelModel, aClass);
-	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aClass);
+	final double NMD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(aClass);
+	final double NAD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(aClass);
 	mapOfLargeClassValues.put(aClass, new Double[] {Double.valueOf (NMD + NAD), Double.valueOf(0)});
 				//final double NMD_NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD_NAD")).compute(anAbstractLevelModel, aClass);
 				//mapOfLargeClassValues.put(aClass, Double.valueOf(NMD_NAD));
@@ -96,8 +96,8 @@ public class LargeClassDetection extends AbstractCodeSmellDetection implements I
 					ClassProperty classProp = new ClassProperty(aLargeClassClass);
 					
 					
-	final double NMD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(anAbstractLevelModel, aLargeClassClass);
-	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aLargeClassClass);
+	final double NMD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NMD")).compute(aLargeClassClass);
+	final double NAD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(aLargeClassClass);
 
 HashMap thresholdMap = new HashMap();
 thresholdMap.put("NMD_NAD_LowerQuartile", Double.valueOf(boxPlot.getLowerQuartile()));
