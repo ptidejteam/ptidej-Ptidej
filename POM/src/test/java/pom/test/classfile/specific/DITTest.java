@@ -21,6 +21,8 @@ import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
 
 public class DITTest extends TestCase {
+	protected String metricName = this.metricName;
+	protected double expectedDITGhost = 0d;
 	private static MetricsRepository MetricsRepository;
 	private static ICodeLevelModel Model = null;
 	private static final String root =
@@ -46,7 +48,7 @@ public class DITTest extends TestCase {
 				.getTopLevelEntityFromID("pom.test.rsc.specific.testDIT.TestSingleClass");
 
 		Assert.assertEquals(1d, ((IUnaryMetric) MetricsRepository
-			.getMetric("DIT")).compute(DITTest.Model, firstClassEntity), 0d);
+			.getMetric(this.metricName)).compute(DITTest.Model, firstClassEntity), 0d);
 	}
 	public void testRefInterface() {
 		final IFirstClassEntity firstClassEntity =
@@ -54,7 +56,7 @@ public class DITTest extends TestCase {
 				.getTopLevelEntityFromID("pom.test.rsc.specific.testDIT.TestSingleInterface");
 
 		Assert.assertEquals(1.0d, ((IUnaryMetric) MetricsRepository
-			.getMetric("DIT")).compute(DITTest.Model, firstClassEntity), 0d);
+			.getMetric(this.metricName)).compute(DITTest.Model, firstClassEntity), 0d);
 	}
 	public void testInheritanceOnClass() {
 		final IFirstClassEntity firstClassEntity =
@@ -62,7 +64,7 @@ public class DITTest extends TestCase {
 				.getTopLevelEntityFromID("pom.test.rsc.specific.testDIT.TestAChild03");
 
 		Assert.assertEquals(4d, ((IUnaryMetric) MetricsRepository
-			.getMetric("DIT")).compute(DITTest.Model, firstClassEntity), 0d);
+			.getMetric(this.metricName)).compute(DITTest.Model, firstClassEntity), 0d);
 	}
 	public void testInheritanceOnInterface01() {
 		final IFirstClassEntity firstClassEntity =
@@ -70,7 +72,7 @@ public class DITTest extends TestCase {
 				.getTopLevelEntityFromID("pom.test.rsc.specific.testDIT.TestBChild03");
 
 		Assert.assertEquals(4d, ((IUnaryMetric) MetricsRepository
-			.getMetric("DIT")).compute(DITTest.Model, firstClassEntity), 0d);
+			.getMetric(this.metricName)).compute(DITTest.Model, firstClassEntity), 0d);
 	}
 	public void testInheritanceOnInterface02() {
 		final IFirstClassEntity firstClassEntity =
@@ -78,6 +80,6 @@ public class DITTest extends TestCase {
 				.getTopLevelEntityFromID("pom.test.rsc.specific.testDIT.TestBChild11");
 
 		Assert.assertEquals(2d, ((IUnaryMetric) MetricsRepository
-			.getMetric("DIT")).compute(DITTest.Model, firstClassEntity), 0d);
+			.getMetric(this.metricName)).compute(DITTest.Model, firstClassEntity), 0d);
 	}
 }
