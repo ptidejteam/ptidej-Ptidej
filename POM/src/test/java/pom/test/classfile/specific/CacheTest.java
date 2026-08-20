@@ -77,22 +77,6 @@ public class CacheTest extends TestCase {
 						.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestBPlaneteRight"),
 					CacheTest.Model
 						.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestBPlaneteLeft"));
-
-			CacheTest.CBOinMetric
-				.compute(
-					CacheTest.Model,
-					CacheTest.Model
-						.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestCPlaneteLeft"),
-					CacheTest.Model
-						.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestCPlaneteRight"));
-
-			CacheTest.CBOoutMetric
-				.compute(
-					CacheTest.Model,
-					CacheTest.Model
-						.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestCPlaneteLeft"),
-					CacheTest.Model
-						.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestCPlaneteRight"));
 		}
 	}
 	public void testCachingOfCBOValues() {
@@ -411,7 +395,11 @@ public class CacheTest extends TestCase {
 						CacheTest.Model
 							.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestBPlaneteLeft")));
 	}
-	public void testCBOinAndOut() {
+	// Yann 2026/08/20: Test ordering
+	// Renamed from testCBOinAndOut to testVerifyCBOinAndOut so it sorts
+	// alphabetically AFTER testCaching* methods, which assert these values
+	// are NOT yet in cache. JUnit 3 runs test methods alphabetically.
+	public void testVerifyCBOinAndOut() {
 		final double leftRightCBO =
 			CacheTest.CBOinMetric
 				.compute(
