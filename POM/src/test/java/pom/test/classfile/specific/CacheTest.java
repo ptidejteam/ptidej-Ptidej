@@ -1,4 +1,4 @@
-﻿/*******************************************************************************
+/*******************************************************************************
  * Copyright (c) 2001-2014 Yann-Ga├½l Gu├⌐h├⌐neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
