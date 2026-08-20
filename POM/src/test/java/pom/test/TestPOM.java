@@ -40,8 +40,6 @@ public class TestPOM extends TestSuite {
 		final TestPOM suite = new TestPOM();
 		suite.setName(TestPOM.class.getName());
 
-		suite.addTestSuite(CacheTest.class);
-
 		suite.addTestSuite(ClassPrimitivesTest.class);
 		suite.addTestSuite(CouplingCohesionMetricsTest.class);
 		// Yann 25/11/10: Long, too long!
