@@ -21,8 +21,8 @@ import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
 
 public class DITTest extends TestCase {
-	protected String metricName = this.metricName;
-	protected double expectedDITGhost = 0d;
+	protected String metricName = "DIT";
+	
 	private static MetricsRepository MetricsRepository;
 	private static ICodeLevelModel Model = null;
 	private static final String root =
