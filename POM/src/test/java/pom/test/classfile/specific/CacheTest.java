@@ -1,12 +1,12 @@
-/*******************************************************************************
- * Copyright (c) 2001-2014 Yann-Gaël Guéhéneuc and others.
+﻿/*******************************************************************************
+ * Copyright (c) 2001-2014 Yann-Ga├½l Gu├⌐h├⌐neuc and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the GNU Public License v2.0
  * which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * 
  * Contributors:
- *     Yann-Gaël Guéhéneuc and others, see in file; API and its implementation
+ *     Yann-Ga├½l Gu├⌐h├⌐neuc and others, see in file; API and its implementation
  ******************************************************************************/
 package pom.test.classfile.specific;
 
@@ -77,6 +77,22 @@ public class CacheTest extends TestCase {
 						.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestBPlaneteRight"),
 					CacheTest.Model
 						.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestBPlaneteLeft"));
+
+			CacheTest.CBOinMetric
+				.compute(
+					CacheTest.Model,
+					CacheTest.Model
+						.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestCPlaneteLeft"),
+					CacheTest.Model
+						.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestCPlaneteRight"));
+
+			CacheTest.CBOoutMetric
+				.compute(
+					CacheTest.Model,
+					CacheTest.Model
+						.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestCPlaneteLeft"),
+					CacheTest.Model
+						.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestCPlaneteRight"));
 		}
 	}
 	public void testCachingOfCBOValues() {
@@ -395,11 +411,7 @@ public class CacheTest extends TestCase {
 						CacheTest.Model
 							.getTopLevelEntityFromID("pom.test.rsc.specific.testCBO.TestBPlaneteLeft")));
 	}
-	// Yann 2026/08/20: Test ordering
-	// Renamed from testCBOinAndOut to testVerifyCBOinAndOut so it sorts
-	// alphabetically AFTER testCaching* methods, which assert these values
-	// are NOT yet in cache. JUnit 3 runs test methods alphabetically.
-	public void testVerifyCBOinAndOut() {
+	public void testCBOinAndOut() {
 		final double leftRightCBO =
 			CacheTest.CBOinMetric
 				.compute(
