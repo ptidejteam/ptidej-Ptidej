@@ -40,6 +40,13 @@ public class TestPOM extends TestSuite {
 		final TestPOM suite = new TestPOM();
 		suite.setName(TestPOM.class.getName());
 
+		// Yann 2026/08/20: CacheTest must run first
+		// CacheTest asserts that certain metric values are NOT already in cache.
+		// Any test that computes CBO on the shared "Test.TestMetrics" model before
+		// CacheTest runs will pre-populate the CacheManager and cause CacheTest to fail.
+		// Therefore CacheTest MUST be the first test suite registered.
+		suite.addTestSuite(CacheTest.class);
+
 		suite.addTestSuite(ClassPrimitivesTest.class);
 		suite.addTestSuite(CouplingCohesionMetricsTest.class);
 		// Yann 25/11/10: Long, too long!
@@ -57,7 +64,6 @@ public class TestPOM extends TestSuite {
 		suite.addTestSuite(UnaryMetricsTest.class);
 
 		suite.addTestSuite(AIDTest.class);
-		suite.addTestSuite(CacheTest.class);
 		suite.addTestSuite(CBOTest.class);
 		suite.addTestSuite(DITTest.class);
 		suite.addTestSuite(NMITest.class);
