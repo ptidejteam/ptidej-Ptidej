@@ -32,13 +32,13 @@ public final class Effectiveness extends AbstractQualityAttribute implements
 						.getInstance()
 						.getMetric("ANA")).compute(anAbstractModel, entity)
 					+ (0.2)
-					* ((IUnaryMetric) MetricsRepository
+					* ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 						.getInstance()
-						.getMetric("DAM")).compute(anAbstractModel, entity)
+						.getMetric("DAM")).compute(entity)
 					+ (0.2)
-					* ((IUnaryMetric) MetricsRepository
+					* ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 						.getInstance()
-						.getMetric("MOA")).compute(anAbstractModel, entity)
+						.getMetric("MOA")).compute(entity)
 					+ (0.2)
 					* ((IUnaryMetric) MetricsRepository
 						.getInstance()

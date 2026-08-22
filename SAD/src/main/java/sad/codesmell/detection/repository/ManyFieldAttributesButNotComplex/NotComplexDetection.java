@@ -72,9 +72,9 @@ public class NotComplexDetection extends AbstractCodeSmellDetection implements I
 				thereIsNotComplex = true;
 
 				
-	final double WMC = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("WMC")).compute(anAbstractLevelModel, aClass);
+	final double WMC = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("WMC")).compute(aClass);
 	mapOfNotComplexValues.put(aClass, new Double[] {Double.valueOf(WMC), Double.valueOf(0)});
-				//final double WMC = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("WMC")).compute(anAbstractLevelModel, aClass);
+				//final double WMC = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("WMC")).compute(aClass);
 				//mapOfNotComplexValues.put(aClass, Double.valueOf(WMC));
 			}
 		}
@@ -95,7 +95,7 @@ public class NotComplexDetection extends AbstractCodeSmellDetection implements I
 					ClassProperty classProp = new ClassProperty(aNotComplexClass);
 					
 					
-	final double WMC = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("WMC")).compute(anAbstractLevelModel, aNotComplexClass);
+	final double WMC = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("WMC")).compute(aNotComplexClass);
 
 HashMap thresholdMap = new HashMap();
 thresholdMap.put("WMC_MinBound", Double.valueOf(boxPlot.getMinBound()));

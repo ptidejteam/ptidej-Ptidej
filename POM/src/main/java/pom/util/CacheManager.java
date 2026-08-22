@@ -18,6 +18,7 @@ import padl.kernel.IConstituent;
 import padl.kernel.IFirstClassEntity;
 import pom.metrics.IBinaryMetric;
 import pom.metrics.IMetric;
+import pom.metrics.INaryMetric;
 
 public class CacheManager {
 	private static Map MapOfUniqueInstance;
@@ -59,10 +60,10 @@ public class CacheManager {
 			}
 		}
 		else {
-			//	this.cache.put(this.getBinaryMetricKey(
-			//		aMetric,
-			//		anEntity,
-			//		anotherEntity), Double.valueOf(aValue));
+			this.cache.put(this.getBinaryMetricKey(
+				aMetric,
+				anEntity,
+				anotherEntity), Double.valueOf(aValue));
 		}
 	}
 
@@ -74,6 +75,13 @@ public class CacheManager {
 		//		aMethodName,
 		//		aConstituent,
 		//		anotherConstituent), aValue);
+	}
+
+	public void cacheNaryMetricValue(final INaryMetric aMetric,
+			final IFirstClassEntity[] entities, final double aValue) {
+
+		this.cache.put(this.getNaryMetricKey(aMetric, entities),
+				Double.valueOf(aValue));
 	}
 
 	public void cacheUnaryMetricValue(final IMetric aMetric,
@@ -91,6 +99,26 @@ public class CacheManager {
 		buffer.append(aMetric.getClass().getName());
 		buffer.append(anEntity.getID());
 		buffer.append(anotherEntity.getID());
+		return buffer.toString();
+	}
+
+	private String getNaryMetricKey(final INaryMetric aMetric,
+			final IFirstClassEntity[] entities) {
+
+		final StringBuffer buffer = new StringBuffer();
+		buffer.append(aMetric.getClass().getName());
+
+		// Sort entity IDs to make the cache key order-independent.
+		// e.g. [A, B, C] and [C, A, B] produce the same key.
+		final String[] ids = new String[entities.length];
+		for (int i = 0; i < entities.length; i++) {
+			ids[i] = new String(entities[i].getID());
+		}
+		java.util.Arrays.sort(ids);
+		for (int i = 0; i < ids.length; i++) {
+			buffer.append(ids[i]);
+		}
+
 		return buffer.toString();
 	}
 
@@ -143,6 +171,13 @@ public class CacheManager {
 			return this.cache.containsKey(
 					this.getBinaryMetricKey(aMetric, anEntity, anotherEntity));
 		}
+	}
+
+	public boolean isNaryMetricValueInCache(final INaryMetric aMetric,
+			final IFirstClassEntity[] entities) {
+
+		return this.cache
+				.containsKey(this.getNaryMetricKey(aMetric, entities));
 	}
 
 	public boolean isUnaryMetricValueInCache(final IMetric aMetric,
@@ -198,6 +233,13 @@ public class CacheManager {
 		else {
 			throw new NoSuchValueInCacheException(aKey);
 		}
+	}
+
+	public double retrieveNaryMetricValue(final INaryMetric aMetric,
+			final IFirstClassEntity[] entities) {
+
+		return this.retrieveMetricValueFromCache(
+				this.getNaryMetricKey(aMetric, entities));
 	}
 
 	public double retrieveUnaryMetricValue(final IMetric aMetric,

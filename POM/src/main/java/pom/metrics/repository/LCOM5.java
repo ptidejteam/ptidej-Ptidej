@@ -37,7 +37,12 @@ import pom.metrics.IUnaryMetric;
  *      semantic is kept. Other metrics can be considered for the evaluation
  *      of the entity
  */
-public class LCOM5 extends AbstractLCOM implements IMetric, IUnaryMetric, IDependencyIndependentMetric {
+public class LCOM5 extends AbstractLCOM implements IMetric, IDependencyIndependentMetric {
+	
+	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
+		return this.concretelyCompute(null, anEntity);
+	}
+
 	protected double concretelyCompute(
 		final IAbstractModel anAbstractModel,
 		final IFirstClassEntity firstClassEntity) {

@@ -72,9 +72,9 @@ public class ManyAttributesDetection extends AbstractCodeSmellDetection implemen
 				thereIsManyAttributes = true;
 
 				
-	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aClass);
+	final double NAD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(aClass);
 	mapOfManyAttributesValues.put(aClass, new Double[] {Double.valueOf(NAD), Double.valueOf(0)});
-				//final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aClass);
+				//final double NAD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(aClass);
 				//mapOfManyAttributesValues.put(aClass, Double.valueOf(NAD));
 			}
 		}
@@ -95,7 +95,7 @@ public class ManyAttributesDetection extends AbstractCodeSmellDetection implemen
 					ClassProperty classProp = new ClassProperty(aManyAttributesClass);
 					
 					
-	final double NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(anAbstractLevelModel, aManyAttributesClass);
+	final double NAD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NAD")).compute(aManyAttributesClass);
 
 HashMap thresholdMap = new HashMap();
 thresholdMap.put("NAD_MaxBound", Double.valueOf(boxPlot.getMaxBound()));

@@ -57,12 +57,12 @@ public class LargeClassOnlyDetection extends AbstractCodeSmellDetection
 				final IClass aClass = (IClass) entity;
 				thereIsLargeClassOnly = true;
 
-				final double NMD = ((IUnaryMetric) MetricsRepository
+				final double NMD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 						.getInstance().getMetric("NMD"))
-						.compute(anAbstractLevelModel, aClass);
-				final double NAD = ((IUnaryMetric) MetricsRepository
+						.compute(aClass);
+				final double NAD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 						.getInstance().getMetric("NAD"))
-						.compute(anAbstractLevelModel, aClass);
+						.compute(aClass);
 				mapOfLargeClassOnlyValues.put(aClass, new Double[] {
 						Double.valueOf(NMD + NAD), Double.valueOf(0) });
 				//final double NMD_NAD = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NMD_NAD")).compute(anAbstractLevelModel, aClass);
@@ -86,12 +86,12 @@ public class LargeClassOnlyDetection extends AbstractCodeSmellDetection
 					ClassProperty classProp = new ClassProperty(
 							aLargeClassOnlyClass);
 
-					final double NMD = ((IUnaryMetric) MetricsRepository
+					final double NMD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 							.getInstance().getMetric("NMD")).compute(
-									anAbstractLevelModel, aLargeClassOnlyClass);
-					final double NAD = ((IUnaryMetric) MetricsRepository
+									aLargeClassOnlyClass);
+					final double NAD = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 							.getInstance().getMetric("NAD")).compute(
-									anAbstractLevelModel, aLargeClassOnlyClass);
+									aLargeClassOnlyClass);
 
 					HashMap thresholdMap = new HashMap();
 					thresholdMap.put("NMD_NAD_MaxBound",

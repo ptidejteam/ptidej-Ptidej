@@ -15,6 +15,7 @@ import padl.kernel.IFirstClassEntity;
 import padl.util.Util;
 import pom.metrics.IBinaryMetric;
 import pom.metrics.IMetric;
+import pom.metrics.INaryMetric;
 import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
 import pom.operators.Operators;
@@ -142,6 +143,35 @@ abstract class AbstractMetric {
 	protected IUnaryMetric getUnaryMetricInstance(final String aMetricName) {
 		return (IUnaryMetric) MetricsRepository.getInstance().getMetric(
 			aMetricName);
+	}
+	public final double compute(
+		final IAbstractModel anAbstractModel,
+		final IFirstClassEntity[] entities) {
+
+		try {
+			return CacheManager.getInstance(anAbstractModel)
+				.retrieveNaryMetricValue((INaryMetric) this, entities);
+		}
+		catch (final NoSuchValueInCacheException e) {
+			double result =
+				this.concretelyCompute(anAbstractModel, entities);
+			CacheManager.getInstance(anAbstractModel).cacheNaryMetricValue(
+				(INaryMetric) this,
+				entities,
+				result);
+			return result;
+		}
+	}
+	protected double concretelyCompute(
+		final IAbstractModel anAbstractModel,
+		final IFirstClassEntity[] entities) {
+
+		// Useless for unary/binary metrics.
+		return 0;
+	}
+	protected INaryMetric getNaryMetricInstance(final String metricName) {
+		return (INaryMetric) MetricsRepository.getInstance().getMetric(
+			metricName);
 	}
 	public boolean isSymmetrical() {
 		return false;

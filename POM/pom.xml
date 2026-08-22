@@ -19,18 +19,18 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.13.0</version>
+				<configuration>
+					<compilerArgs>
+						<arg>-proc:none</arg>
+					</compilerArgs>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.3</version>
 				<configuration>
-					<argLine>
-						--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
-						--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED
-						--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED
-						--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
-						--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
-					</argLine>
 					<excludes>
 						<!-- Excluded on purpose -->
 						<exclude>**/*Test.java</exclude>
@@ -43,11 +43,26 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.3.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
+		<!-- Missing PMD Tool dependency added here -->
+		<dependency>
+			<groupId>net.sourceforge.pmd</groupId>
+			<artifactId>pmd-java</artifactId>
+			<version>6.55.0</version>
+		</dependency>
+
 		<!-- Main dependencies -->
 		<dependency>
 			<groupId>net.ptidej.cpl</groupId>
@@ -77,6 +92,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

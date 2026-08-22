@@ -33,15 +33,15 @@ public final class Reusability extends AbstractQualityAttribute implements
 						.getMetric("DCC"))
 						.compute(anAbstractModel, entity)
 					+ (0.25)
-					* ((IUnaryMetric) MetricsRepository
+					* ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 						.getInstance()
 						.getMetric("CAM"))
-						.compute(anAbstractModel, entity)
+						.compute(entity)
 					+ (0.5)
-					* ((IUnaryMetric) MetricsRepository
+					* ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 						.getInstance()
 						.getMetric("CIS"))
-						.compute(anAbstractModel, entity)
+						.compute(entity)
 					+ (0.5)
 					* ((IUnaryMetric) MetricsRepository
 						.getInstance()

@@ -32,7 +32,11 @@ import pom.metrics.IMetric;
 import pom.metrics.IUnaryMetric;
 
 public class NMDExtended extends AbstractMetric implements IMetric,
-		IUnaryMetric, IDependencyIndependentMetric {
+		IDependencyIndependentMetric {
+
+	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
+		return this.concretelyCompute(null, anEntity);
+	}
 
 	/**
 	 * @param iEntity

@@ -26,8 +26,13 @@ import pom.metrics.IDependencyIndependentMetric;
 import pom.metrics.IMetric;
 import pom.metrics.IUnaryMetric;
 
-public class NMD extends AbstractMetric implements IMetric, IUnaryMetric, 
+public class NMD extends AbstractMetric implements IMetric, 
 	IDependencyIndependentMetric {
+
+	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
+		return this.concretelyCompute(null, anEntity);
+	}
+
 	/**
 	 * @param iEntity
 	 * @return double : number of methods declared COMMENTS [warning] Number of

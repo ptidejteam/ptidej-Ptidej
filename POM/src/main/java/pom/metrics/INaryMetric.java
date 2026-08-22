@@ -10,15 +10,16 @@
  ******************************************************************************/
 package pom.metrics;
 
-// Tagging interface for model independent metrics (like LCOM...).
-// Now INaryMetric is fully integrated alongside IUnaryMetric and IBinaryMetric
-// in MetricsRepository, CacheManager, AbstractMetric, and the UI layers.
-//
-// TODO: If a dependency-independent n-ary metric is created in the future,
-// this interface should also extend INaryMetric (and all implementations
-// like LCOM1, LCOM2, LCOM5, WMC would need to implement the n-ary compute).
-public interface IDependencyIndependentMetric extends IMetric {
+import padl.kernel.IAbstractModel;
+import padl.kernel.IFirstClassEntity;
 
-	double compute(final padl.kernel.IFirstClassEntity anEntity);
-
+/**
+ * Interface for metrics that operate on multiple (N) entities.
+ * N-ary metrics compute a value based on a collection of entities,
+ * complementing IUnaryMetric (single entity) and IBinaryMetric (pair of entities).
+ */
+public interface INaryMetric extends IMetric {
+	double compute(
+		final IAbstractModel anAbstractModel,
+		final IFirstClassEntity[] entities);
 }

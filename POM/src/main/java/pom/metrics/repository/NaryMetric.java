@@ -12,35 +12,36 @@ package pom.metrics.repository;
 
 import padl.kernel.IAbstractModel;
 import padl.kernel.IFirstClassEntity;
-import pom.metrics.IDependencyIndependentMetric;
-import pom.metrics.IMetric;
-import pom.metrics.IUnaryMetric;
+import pom.metrics.INaryMetric;
 
 /**
- * LCOM1 - Lack of COhesion in Methods Version 1
- * 
- * @author Farouk ZAIDI
- * @since  2004/01/31 
- * 
- * @author Duc-Loc Huynh
- * @since  2005/08/18
- * 
- * Modifications made to fit the new architecture
+ * Default implementation of INaryMetric.
+ * N-ary metrics compute values based on multiple entities.
+ * Subclasses MUST override concretelyCompute(model, entities).
  */
-public class LCOM1 extends AbstractLCOM implements IMetric, IDependencyIndependentMetric {
-	
-	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
-		return this.concretelyCompute(null, anEntity);
+public class NaryMetric extends AbstractMetric implements INaryMetric {
+	public String getDefinition() {
+		return "N-ary metric over multiple entities.";
 	}
 
+	// N-ary metrics do not compute values for a single entity.
+	// This method is required by AbstractMetric but always returns 0
+	// for n-ary metrics. Subclasses compute via the n-ary overload.
+	@Override
 	protected double concretelyCompute(
 		final IAbstractModel anAbstractModel,
 		final IFirstClassEntity anEntity) {
 
-		return super.pairsOfMethodNotSharingFields(anEntity);
+		return 0;
 	}
-	public String getDefinition() {
-		String def = "Lack of cohesion in the methods of an entity.";
-		return def;
+
+	@Override
+	protected double concretelyCompute(
+		final IAbstractModel anAbstractModel,
+		final IFirstClassEntity[] entities) {
+
+		// Default implementation. Subclasses should override
+		// to provide actual n-ary metric computation.
+		return 0;
 	}
 }

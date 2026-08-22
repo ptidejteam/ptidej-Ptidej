@@ -29,7 +29,12 @@ import pom.metrics.IDependencyIndependentMetric;
 import pom.metrics.IMetric;
 import pom.metrics.IUnaryMetric;
 
-public class NOTI extends AbstractMetric implements IMetric, IUnaryMetric, IDependencyIndependentMetric {
+public class NOTI extends AbstractMetric implements IMetric, IDependencyIndependentMetric {
+	
+	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
+		return this.concretelyCompute(null, anEntity);
+	}
+
 	protected double concretelyCompute(
 		final IAbstractModel anAbstractModel,
 		final IFirstClassEntity firstClassEntity) {

@@ -72,9 +72,9 @@ public class LongParameterListClassDetection extends AbstractCodeSmellDetection 
 				thereIsLongParameterListClass = true;
 
 				
-	final double NOParam = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(anAbstractLevelModel, aClass);
+	final double NOParam = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(aClass);
 	mapOfLongParameterListClassValues.put(aClass, new Double[] {Double.valueOf(NOParam), Double.valueOf(0)});
-				//final double NOParam = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(anAbstractLevelModel, aClass);
+				//final double NOParam = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(aClass);
 				//mapOfLongParameterListClassValues.put(aClass, Double.valueOf(NOParam));
 			}
 		}
@@ -95,7 +95,7 @@ public class LongParameterListClassDetection extends AbstractCodeSmellDetection 
 					ClassProperty classProp = new ClassProperty(aLongParameterListClassClass);
 					
 					
-	final double NOParam = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(anAbstractLevelModel, aLongParameterListClassClass);
+	final double NOParam = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(aLongParameterListClassClass);
 
 HashMap thresholdMap = new HashMap();
 thresholdMap.put("NOParam_MaxBound", Double.valueOf(boxPlot.getMaxBound()));

@@ -66,7 +66,7 @@ public class MessageChainsClassDetection extends AbstractCodeSmellDetection impl
 			final IEntity entity = (IEntity) iter.next();
 			if (entity instanceof IClass) {
 				final IClass aClass = (IClass) entity;
-				final double NOTI = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NOTI")).compute(anAbstractLevelModel, aClass);
+				final double NOTI = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NOTI")).compute(aClass);
 				
 				if (NOTI >= 4.0) {
 					try {
@@ -78,7 +78,7 @@ public class MessageChainsClassDetection extends AbstractCodeSmellDetection impl
 						thresholdMap.put("NOTI", Double.valueOf(4.0));
 						
 						dc.getClassProperty().addProperty(new MetricProperty("NOTI", 
-							((IUnaryMetric) MetricsRepository.getInstance().getMetric("NOTI")).compute(anAbstractLevelModel, aClass), thresholdMap));
+							((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NOTI")).compute(aClass), thresholdMap));
 						
 						classesMessageChainsClass.add(dc);
 					}

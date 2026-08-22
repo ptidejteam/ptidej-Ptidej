@@ -36,7 +36,11 @@ import pom.metrics.IUnaryMetric;
  *         + number of attributes of the member classes
  */
 public class NADExtended extends AbstractMetric implements IMetric,
-		IUnaryMetric, IDependencyIndependentMetric {
+		IDependencyIndependentMetric {
+
+	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
+		return this.concretelyCompute(null, anEntity);
+	}
 
 	protected double concretelyCompute(
 		final IAbstractModel anAbstractModel,

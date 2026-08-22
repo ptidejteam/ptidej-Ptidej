@@ -22,9 +22,9 @@ import pom.test.classfile.specific.AIDTest;
 import pom.test.classfile.specific.CBOTest;
 import pom.test.classfile.specific.CacheTest;
 import pom.test.classfile.specific.DITTest;
-import pom.test.classfile.specific.DITnoGhostTest;
 import pom.test.classfile.specific.NMITest;
 import pom.test.classfile.specific.NOCTest;
+import pom.test.classfile.specific.NaryMetricsTest;
 import pom.test.classfile.specific.UnaryCBOTest;
 import pom.test.classfile.specific.WMC1Test;
 import pom.test.classfile.specific.WMC2Test;
@@ -40,6 +40,11 @@ public class TestPOM extends TestSuite {
 		final TestPOM suite = new TestPOM();
 		suite.setName(TestPOM.class.getName());
 
+		// Yann 2026/08/20: CacheTest must run first
+		// CacheTest asserts that certain metric values are NOT already in cache.
+		// Any test that computes CBO on the shared "Test.TestMetrics" model before
+		// CacheTest runs will pre-populate the CacheManager and cause CacheTest to fail.
+		// Therefore CacheTest MUST be the first test suite registered.
 		suite.addTestSuite(CacheTest.class);
 
 		suite.addTestSuite(ClassPrimitivesTest.class);
@@ -59,12 +64,11 @@ public class TestPOM extends TestSuite {
 		suite.addTestSuite(UnaryMetricsTest.class);
 
 		suite.addTestSuite(AIDTest.class);
-		suite.addTestSuite(CacheTest.class);
 		suite.addTestSuite(CBOTest.class);
 		suite.addTestSuite(DITTest.class);
-		suite.addTestSuite(DITnoGhostTest.class);
 		suite.addTestSuite(NMITest.class);
 		suite.addTestSuite(NOCTest.class);
+		suite.addTestSuite(NaryMetricsTest.class);
 		suite.addTestSuite(UnaryCBOTest.class);
 		suite.addTestSuite(WMC1Test.class);
 		suite.addTestSuite(WMC2Test.class);

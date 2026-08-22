@@ -66,7 +66,7 @@ public class MethodNoParameterDetection extends AbstractCodeSmellDetection imple
 			final IEntity entity = (IEntity) iter.next();
 			if (entity instanceof IClass) {
 				final IClass aClass = (IClass) entity;
-				final double NOParam = ((IUnaryMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(anAbstractLevelModel, aClass);
+				final double NOParam = ((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(aClass);
 				
 				if (NOParam < 5.0) {
 					try {
@@ -78,7 +78,7 @@ public class MethodNoParameterDetection extends AbstractCodeSmellDetection imple
 						thresholdMap.put("NOParam", Double.valueOf(5.0));
 						
 						dc.getClassProperty().addProperty(new MetricProperty("NOParam", 
-							((IUnaryMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(anAbstractLevelModel, aClass), thresholdMap));
+							((pom.metrics.IDependencyIndependentMetric) MetricsRepository.getInstance().getMetric("NOParam")).compute(aClass), thresholdMap));
 						
 						classesMethodNoParameter.add(dc);
 					}

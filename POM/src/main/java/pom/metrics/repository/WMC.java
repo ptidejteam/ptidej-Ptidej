@@ -31,7 +31,12 @@ import pom.metrics.IUnaryMetric;
  * 
  * Modifications made to fit the new architecture
  */
-public class WMC extends AbstractMetric implements IMetric, IUnaryMetric, IDependencyIndependentMetric {
+public class WMC extends AbstractMetric implements IMetric, IDependencyIndependentMetric {
+	
+	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
+		return this.concretelyCompute(null, anEntity);
+	}
+
 	protected double concretelyCompute(
 		final IAbstractModel anAbstractModel,
 		final IFirstClassEntity anEntity) {

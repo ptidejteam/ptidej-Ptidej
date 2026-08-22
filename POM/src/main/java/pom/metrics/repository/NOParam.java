@@ -25,7 +25,12 @@ import pom.metrics.IUnaryMetric;
  * @author Alban Tiberghien
  * @since 2008//08/04
  */
-public class NOParam extends AbstractMetric implements IMetric, IUnaryMetric, IDependencyIndependentMetric {
+public class NOParam extends AbstractMetric implements IMetric, IDependencyIndependentMetric {
+	
+	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
+		return this.concretelyCompute(null, anEntity);
+	}
+
 	public String getDefinition() {
 		final String def =
 			"Maximum mumber of parameters of the methods of an entity.";

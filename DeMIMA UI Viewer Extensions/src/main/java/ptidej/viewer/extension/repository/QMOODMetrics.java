@@ -136,12 +136,10 @@ public class QMOODMetrics implements IWalker {
 						(IAbstractLevelModel) this.abstractModel,
 						anEntity)
 					+ (0.25)
-					* ((IUnaryMetric) this.metrics.getMetric("CAM")).compute(
-						(IAbstractLevelModel) this.abstractModel,
+					* ((pom.metrics.IDependencyIndependentMetric) this.metrics.getMetric("CAM")).compute(
 						anEntity)
 					+ (0.5)
-					* ((IUnaryMetric) this.metrics.getMetric("CIS")).compute(
-						(IAbstractLevelModel) this.abstractModel,
+					* ((pom.metrics.IDependencyIndependentMetric) this.metrics.getMetric("CIS")).compute(
 						anEntity)
 					+ (0.5)
 					* ((IUnaryMetric) this.metrics.getMetric("DSC")).compute(
@@ -150,16 +148,14 @@ public class QMOODMetrics implements IWalker {
 
 		final double flex =
 			(0.25)
-					* ((IUnaryMetric) this.metrics.getMetric("DAM")).compute(
-						(IAbstractLevelModel) this.abstractModel,
+					* ((pom.metrics.IDependencyIndependentMetric) this.metrics.getMetric("DAM")).compute(
 						anEntity)
 					+ (-0.25)
 					* ((IUnaryMetric) this.metrics.getMetric("DCC")).compute(
 						(IAbstractLevelModel) this.abstractModel,
 						anEntity)
 					+ (0.5)
-					* ((IUnaryMetric) this.metrics.getMetric("MOA")).compute(
-						(IAbstractLevelModel) this.abstractModel,
+					* ((pom.metrics.IDependencyIndependentMetric) this.metrics.getMetric("MOA")).compute(
 						anEntity)
 					+ (0.5)
 					* ((IUnaryMetric) this.metrics.getMetric("NOPM")).compute(
@@ -172,24 +168,21 @@ public class QMOODMetrics implements IWalker {
 						(IAbstractLevelModel) this.abstractModel,
 						anEntity)
 					+ (0.33)
-					* ((IUnaryMetric) this.metrics.getMetric("DAM")).compute(
-						(IAbstractLevelModel) this.abstractModel,
+					* ((pom.metrics.IDependencyIndependentMetric) this.metrics.getMetric("DAM")).compute(
 						anEntity)
 					+ (-0.33)
 					* ((IUnaryMetric) this.metrics.getMetric("DCC")).compute(
 						(IAbstractLevelModel) this.abstractModel,
 						anEntity)
 					+ (0.33)
-					* ((IUnaryMetric) this.metrics.getMetric("CAM")).compute(
-						(IAbstractLevelModel) this.abstractModel,
+					* ((pom.metrics.IDependencyIndependentMetric) this.metrics.getMetric("CAM")).compute(
 						anEntity)
 					+ (-0.33)
 					* ((IUnaryMetric) this.metrics.getMetric("NOPM")).compute(
 						(IAbstractLevelModel) this.abstractModel,
 						anEntity)
 					+ (-0.33)
-					* ((IUnaryMetric) this.metrics.getMetric("NOM")).compute(
-						(IAbstractLevelModel) this.abstractModel,
+					* ((pom.metrics.IDependencyIndependentMetric) this.metrics.getMetric("NOM")).compute(
 						anEntity)
 					+ (-0.33)
 					* ((IUnaryMetric) this.metrics.getMetric("DSC")).compute(
@@ -198,16 +191,14 @@ public class QMOODMetrics implements IWalker {
 
 		final double funct =
 			(0.12)
-					* ((IUnaryMetric) this.metrics.getMetric("CAM")).compute(
-						(IAbstractLevelModel) this.abstractModel,
+					* ((pom.metrics.IDependencyIndependentMetric) this.metrics.getMetric("CAM")).compute(
 						anEntity)
 					+ (0.22)
 					* ((IUnaryMetric) this.metrics.getMetric("NOPM")).compute(
 						(IAbstractLevelModel) this.abstractModel,
 						anEntity)
 					+ (0.22)
-					* ((IUnaryMetric) this.metrics.getMetric("CIS")).compute(
-						(IAbstractLevelModel) this.abstractModel,
+					* ((pom.metrics.IDependencyIndependentMetric) this.metrics.getMetric("CIS")).compute(
 						anEntity)
 					+ (0.22)
 					* ((IUnaryMetric) this.metrics.getMetric("DSC")).compute(
@@ -242,12 +233,10 @@ public class QMOODMetrics implements IWalker {
 						(IAbstractLevelModel) this.abstractModel,
 						anEntity)
 					+ (0.2)
-					* ((IUnaryMetric) this.metrics.getMetric("DAM")).compute(
-						(IAbstractLevelModel) this.abstractModel,
+					* ((pom.metrics.IDependencyIndependentMetric) this.metrics.getMetric("DAM")).compute(
 						anEntity)
 					+ (0.2)
-					* ((IUnaryMetric) this.metrics.getMetric("MOA")).compute(
-						(IAbstractLevelModel) this.abstractModel,
+					* ((pom.metrics.IDependencyIndependentMetric) this.metrics.getMetric("MOA")).compute(
 						anEntity)
 					+ (0.2)
 					* ((IUnaryMetric) this.metrics.getMetric("MFA")).compute(

@@ -19,6 +19,7 @@ import padl.kernel.IAbstractLevelModel;
 import padl.kernel.IFirstClassEntity;
 import pom.metrics.IBinaryMetric;
 import pom.metrics.IMetric;
+import pom.metrics.INaryMetric;
 import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
 import ptidej.viewer.ui.DesktopPane;
@@ -92,6 +93,51 @@ public class MetricPanel extends JPanel {
 							.getInstance()
 							.normalOutput()
 							.print(metric.getName());
+					}
+					else if (metric instanceof pom.metrics.IDependencyIndependentMetric) {
+						ProxyConsole
+							.getInstance()
+							.normalOutput()
+							.print("Entities");
+						ProxyConsole.getInstance().normalOutput().print("\t\t");
+						ProxyConsole
+							.getInstance()
+							.normalOutput()
+							.println(metric.getName() + " (Independent)");
+						final Iterator iterator =
+							model.getIteratorOnTopLevelEntities();
+						while (iterator.hasNext()) {
+							final IFirstClassEntity entity =
+								(IFirstClassEntity) iterator.next();
+							ProxyConsole
+								.getInstance()
+								.normalOutput()
+								.print(entity.getDisplayName());
+							ProxyConsole
+								.getInstance()
+								.normalOutput()
+								.print("\t\t");
+							ProxyConsole
+								.getInstance()
+								.normalOutput()
+								.println(
+									((pom.metrics.IDependencyIndependentMetric) metric).compute(
+										entity));
+						}
+					}
+					else if (metric instanceof INaryMetric) {
+						ProxyConsole
+							.getInstance()
+							.normalOutput()
+							.print("N-ary metric: ");
+						ProxyConsole
+							.getInstance()
+							.normalOutput()
+							.println(metric.getName());
+						ProxyConsole
+							.getInstance()
+							.normalOutput()
+							.println("N-ary metrics compute across multiple entities.");
 					}
 					else {
 						ProxyConsole

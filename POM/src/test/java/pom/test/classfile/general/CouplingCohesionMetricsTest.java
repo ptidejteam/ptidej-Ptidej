@@ -18,6 +18,7 @@ import padl.kernel.ICodeLevelModel;
 import padl.kernel.IFirstClassEntity;
 import padl.kernel.impl.Factory;
 import pom.metrics.IBinaryMetric;
+import pom.metrics.IDependencyIndependentMetric;
 import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
 
@@ -159,9 +160,9 @@ public final class CouplingCohesionMetricsTest extends TestCase {
 		final String id = "MethodDump";
 		final IFirstClassEntity firstClassEntity = (IFirstClassEntity) ModelForCouplingCohesion
 				.getTopLevelEntityFromID("pom.test.rsc." + id);
-		final double lcom = ((IUnaryMetric) MetricsRepository
+		final double lcom = ((IDependencyIndependentMetric) MetricsRepository
 				.getMetric("LCOM2"))
-				.compute(ModelForCouplingCohesion, firstClassEntity);
+				.compute(firstClassEntity);
 		Assert.assertEquals("LCOM2", 0d, lcom, 0);
 	}
 
@@ -169,8 +170,8 @@ public final class CouplingCohesionMetricsTest extends TestCase {
 		final IFirstClassEntity firstClassEntity = (IFirstClassEntity) ModelForCouplingCohesion
 				.getTopLevelEntityFromID("pom.test.rsc.H");
 		Assert.assertEquals("Computing LCOM5 for the class pom.test.rsc.H",
-				0.9d, ((IUnaryMetric) MetricsRepository.getMetric("LCOM5"))
-						.compute(ModelForCouplingCohesion, firstClassEntity),
+				0.9d, ((IDependencyIndependentMetric) MetricsRepository.getMetric("LCOM5"))
+						.compute(firstClassEntity),
 				0.003);
 	}
 
@@ -178,8 +179,8 @@ public final class CouplingCohesionMetricsTest extends TestCase {
 	public void testWMCforAClass() {
 		final IFirstClassEntity firstClassEntity = (IFirstClassEntity) ModelForCouplingCohesion
 				.getTopLevelEntityFromID("pom.test.rsc.A");
-		final double wmc = ((IUnaryMetric) MetricsRepository.getMetric("WMC"))
-				.compute(ModelForCouplingCohesion, firstClassEntity);
+		final double wmc = ((IDependencyIndependentMetric) MetricsRepository.getMetric("WMC"))
+				.compute(firstClassEntity);
 		Assert.assertEquals("Computing of the weight for an entity:", 36d, wmc,
 				0);
 	}

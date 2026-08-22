@@ -33,20 +33,20 @@ public final class Understandability extends AbstractQualityAttribute implements
 						.getMetric("ANA"))
 						.compute(anAbstractModel, entity)
 					+ (0.33)
-					* ((IUnaryMetric) MetricsRepository
+					* ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 						.getInstance()
 						.getMetric("DAM"))
-						.compute(anAbstractModel, entity)
+						.compute(entity)
 					+ (-0.33)
 					* ((IUnaryMetric) MetricsRepository
 						.getInstance()
 						.getMetric("DCC"))
 						.compute(anAbstractModel, entity)
 					+ (0.33)
-					* ((IUnaryMetric) MetricsRepository
+					* ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 						.getInstance()
 						.getMetric("CAM"))
-						.compute(anAbstractModel, entity)
+						.compute(entity)
 					+ (-0.33)
 					* ((IUnaryMetric) MetricsRepository
 						.getInstance()
@@ -54,10 +54,10 @@ public final class Understandability extends AbstractQualityAttribute implements
 						anAbstractModel,
 						entity)
 					+ (-0.33)
-					* ((IUnaryMetric) MetricsRepository
+					* ((pom.metrics.IDependencyIndependentMetric) MetricsRepository
 						.getInstance()
 						.getMetric("NOM"))
-						.compute(anAbstractModel, entity)
+						.compute(entity)
 					+ (-0.33)
 					* ((IUnaryMetric) MetricsRepository
 						.getInstance()

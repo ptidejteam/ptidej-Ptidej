@@ -22,8 +22,13 @@ import pom.metrics.IUnaryMetric;
  * @author Foutse Khomh
  * @since  2007/03/01
  */
-public class CIS extends AbstractMetric implements IMetric, IUnaryMetric, 
+public class CIS extends AbstractMetric implements IMetric, 
 	IDependencyIndependentMetric {
+
+	public double compute(final padl.kernel.IFirstClassEntity anEntity) {
+		return this.concretelyCompute(null, anEntity);
+	}
+
 	protected double concretelyCompute(
 		final IAbstractModel anAbstractModel,
 		final IFirstClassEntity firstClassEntity) {
