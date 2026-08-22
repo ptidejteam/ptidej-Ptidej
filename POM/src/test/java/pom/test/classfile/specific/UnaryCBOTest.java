@@ -22,6 +22,7 @@ import padl.kernel.IPackage;
 import padl.kernel.impl.Factory;
 import pom.metrics.IUnaryMetric;
 import pom.metrics.MetricsRepository;
+import padl.kernel.Cardinality;
 
 /**
  * Basic test case for CBO that is implementented using 
@@ -106,10 +107,13 @@ public class UnaryCBOTest extends TestCase {
 		field.setType(UnaryCBOTest.FieldClass.getID());
 
 		final IMethod method = this.getUniqueMethod(UnaryCBOTest.TestedClass);
+
 		final IMethodInvocation mi = Factory.getInstance()
-				.createMethodInvocation(
-						IMethodInvocation.CLASS_INSTANCE_FROM_FIELD, 1, 0,
-						UnaryCBOTest.FieldClass);
+		        .createMethodInvocation(
+		                IMethodInvocation.CLASS_INSTANCE_FROM_FIELD,
+		                Cardinality.One,
+		                0,
+		                UnaryCBOTest.FieldClass);
 		mi.setPublic(true);
 
 		final IMethod methodInvoked = getUniqueMethod(FieldClass);
