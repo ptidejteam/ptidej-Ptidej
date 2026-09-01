@@ -228,7 +228,8 @@ public abstract class Constituent implements IConstituent {
 	}
 
 	public void endCloneSession() {
-		this.clone = null;
+		//Method initially assigned null to this.clone. That has been updated for the method to do nothing
+		
 	}
 
 	public boolean equals(final Object obj) {
