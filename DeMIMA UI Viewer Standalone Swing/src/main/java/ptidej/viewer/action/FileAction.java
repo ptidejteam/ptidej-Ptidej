@@ -181,6 +181,15 @@ public class FileAction extends AbstractAction {
 					true);
 			this.processSelectedFile(IRepresentation.TYPE_CPP, file);
 		}
+		else if (action.equals(Resources.CS_FILE)) {
+			final File file = this.selectFile(
+					MultilingualManager.getString("ADD_CS_FILE",
+							FileAction.class),
+					"cs", MultilingualManager.getString("TYPE_CS_NAME",
+							FileAction.class),
+					true);
+			this.processSelectedFile(IRepresentation.TYPE_CS, file);
+		}
 		else if (action.equals(Resources.AOL_CODE_FILE)) {
 			final File file = this.selectFile(
 					MultilingualManager.getString("ADD_AOL_CODE_FILE",

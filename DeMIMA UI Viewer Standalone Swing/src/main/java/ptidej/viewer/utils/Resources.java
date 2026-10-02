@@ -62,6 +62,7 @@ public final class Resources {
 		"CONT_COMPOSITION_NAMES";
 	public static final String COPYRIGHT = "COPYRIGHT";
 	public static final String CPP_FILE = "CPP_FILE";
+	public static final String CS_FILE = "CS_FILE";
 	public static final String CREATION_DISPLAY = "CREATION_DISPLAY";
 	public static final String CREATION_NAMES = "CREATION_NAMES";
 	public static final String CREATOR = "Creator";

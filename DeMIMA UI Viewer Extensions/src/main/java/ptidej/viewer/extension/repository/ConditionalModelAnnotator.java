@@ -108,6 +108,8 @@ public final class ConditionalModelAnnotator implements IViewerExtension {
 	public String getName() {
 		return "Model Annotator with Conditionals";
 	}
+	
+	// This method is never actually called .-.
 	public void invoke(final IRepresentation aRepresentation) {
 		final IAbstractLevelModel anAbstractLevelModel =
 			(IAbstractLevelModel) aRepresentation.getSourceModel();
@@ -118,7 +120,7 @@ public final class ConditionalModelAnnotator implements IViewerExtension {
 
 		final Iterator files =
 			aRepresentation
-				.getSourceFiles(IRepresentation.TYPE_JAVA_CLASSFILES)
+				.getSourceFiles(IRepresentation.TYPE_JAVA_CLASSFILES) // Why Java Class files???
 				.iterator();
 		while (files.hasNext()) {
 			final String file = (String) files.next();

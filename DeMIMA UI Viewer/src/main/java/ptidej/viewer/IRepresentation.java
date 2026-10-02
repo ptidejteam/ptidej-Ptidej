@@ -31,7 +31,8 @@ public interface IRepresentation {
 	String TYPE_JAVA_CLASSFILES = "JavaClassfilesIdiomModel";
 	String TYPE_JAVA_JAVAFILES = "JavaSourcefilesIdiomModel";
 	String TYPE_MSE = "MSE Idiom Model";
-
+	String TYPE_CS = "CsIdiomModel";
+	
 	void addOccurrences(final Occurrence[] someOccurrences);
 	void addSourceFile(final String aFileType, final String aPath);
 	void addSourceFileName(final String aFileType, final String aName);

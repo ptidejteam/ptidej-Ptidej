@@ -44,6 +44,7 @@ import ptidej.ui.event.ISelectionListener;
 import ptidej.ui.kernel.Constituent;
 import ptidej.ui.kernel.builder.AspectJBuilder;
 import ptidej.ui.kernel.builder.Builder;
+import ptidej.ui.kernel.builder.CPPBuilder;
 import ptidej.ui.layout.IUILayout;
 import ptidej.ui.primitive.IPrimitiveFactory;
 import ptidej.viewer.IRepresentation;
@@ -529,7 +530,6 @@ public abstract class AbstractRepresentationWindow extends JInternalFrame
 								.getPrimitiveFactory()));
 				worker.execute();
 			}
-			/*
 			else if (fileType.equals(IRepresentation.TYPE_CPP)) {
 				//	final IIdiomLevelModel idiomLevelModel =
 				//		ModelGenerator.generateModelFromCppFilesUsingEclipse(this
@@ -548,7 +548,24 @@ public abstract class AbstractRepresentationWindow extends JInternalFrame
 								.getPrimitiveFactory()));
 				worker.execute();
 			}
-			*/
+			else if (fileType.equals(IRepresentation.TYPE_CS)) {
+				//	final IIdiomLevelModel idiomLevelModel =
+				//		ModelGenerator.generateModelFromCppFilesUsingEclipse(this
+				//			.getSourceModel()
+				//			.getDisplayName(), filesArray);
+				//	this.setBuilder(CPPBuilder.getCurrentBuilder(this
+				//		.getPrimitiveFactory()));
+				//	this.setSourceModel(idiomLevelModel);
+				final SwingWorker worker =
+					new Worker(
+						"generateModelFromCSharpFilesV1",
+						filesArray,
+						namesArray,
+						Builder
+							.getCurrentBuilder(AbstractRepresentationWindow.this
+								.getPrimitiveFactory()));
+				worker.execute();
+			}
 			else if (fileType.equals(IRepresentation.TYPE_JAVA_CLASSFILES)
 					|| fileType.equals("JavaCode")) {
 
