@@ -44,14 +44,9 @@ import util.repository.IRepository;
 import util.repository.impl.FileRepositoryFactory;
 
 public class DesignSmellDetectionsRepository implements IRepository {
-	private static DesignSmellDetectionsRepository UniqueInstance;
-
+	// Not a singleton: each call reloads the detections from the repository.
 	public static DesignSmellDetectionsRepository getInstance() {
-		// TODO: Do not use Singleton pattern to force reload
-		//if (AntipatternRepository.UniqueInstance == null) {
-		DesignSmellDetectionsRepository.UniqueInstance = new DesignSmellDetectionsRepository();
-		//}
-		return DesignSmellDetectionsRepository.UniqueInstance;
+		return new DesignSmellDetectionsRepository();
 	}
 
 	private IDesignSmellDetection[] designSmells;
