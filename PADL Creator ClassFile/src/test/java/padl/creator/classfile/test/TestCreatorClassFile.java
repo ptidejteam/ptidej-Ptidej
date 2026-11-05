@@ -17,6 +17,7 @@ import padl.creator.classfile.test.inheritance.InheritanceTest;
 import padl.creator.classfile.test.methodInvocation.MethodInvocationMissingTest;
 import padl.creator.classfile.test.path.ArgoUMLPathTest;
 import padl.creator.classfile.test.topLevelEntity.TopLevelEntityTest;
+import padl.creator.classfile.test.traversal.TraversalOnClassFilesTest;
 
 /**
  * @author Yann-Gaël Guéhéneuc
@@ -33,6 +34,7 @@ public final class TestCreatorClassFile extends TestSuite {
 		suite.addTestSuite(MethodInvocationMissingTest.class);
 		suite.addTestSuite(ArgoUMLPathTest.class);
 		suite.addTestSuite(TopLevelEntityTest.class);
+		suite.addTestSuite(TraversalOnClassFilesTest.class);
 
 		return suite;
 	}

@@ -14,6 +14,7 @@ import junit.framework.TestSuite;
 import padl.kernel.impl.AbstractContainerTest;
 import padl.kernel.impl.MethodInvocationTest;
 import padl.test.defaultpackage.DefaultPackageTest;
+import padl.visitor.traversal.TraversalTest;
 
 /**
  * @author Yann-Gaël Guéhéneuc
@@ -27,6 +28,7 @@ public final class TestPADL extends TestSuite {
 		suite.addTestSuite(AbstractContainerTest.class);
 		suite.addTestSuite(MethodInvocationTest.class);
 		suite.addTestSuite(DefaultPackageTest.class); // Added by Mathieu Lemoine, 2009-05-15
+		suite.addTestSuite(TraversalTest.class);
 
 		return suite;
 	}
