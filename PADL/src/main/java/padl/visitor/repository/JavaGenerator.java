@@ -376,17 +376,17 @@ public final class JavaGenerator implements IGenerator {
 		Util.addTabs(this.indentation, this.buffer);
 		this.buffer.append("// Aggregation: ");
 		this.buffer.append(p.getName());
-		this.buffer.append('\n');
-
-		this.visit((IField) p.getConstituentFromName(p.getOriginFieldName()));
-		this.buffer.append('\n');
-		this.open((IMethod) p
-				.getConstituentFromName(p.getOriginGetterMethodName()));
-		this.buffer.append('\n');
-		this.open((IMethod) p
-				.getConstituentFromName(p.getOriginSetterMethodName()));
-		this.buffer.append('\n');
-	}
+ 		this.buffer.append('\n');
+ 
+		this.visit((IField) p.getConstituentFromID(p.getOriginFieldName()));
+ 		this.buffer.append('\n');
+ 		this.open((IMethod) p
+				.getConstituentFromID(p.getOriginGetterMethodName()));
+ 		this.buffer.append('\n');
+ 		this.open((IMethod) p
+				.getConstituentFromID(p.getOriginSetterMethodName()));
+ 		this.buffer.append('\n');
+ 	}
 
 	public void visit(final IContainerComposition p) {
 		this.visit((IContainerAggregation) p);
