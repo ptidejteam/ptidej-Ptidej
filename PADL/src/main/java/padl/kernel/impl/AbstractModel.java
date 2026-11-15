@@ -203,6 +203,11 @@ public abstract class AbstractModel implements IAbstractModel {
 		aGenerator.close(this);
 		return aGenerator.getCode();
 	}
+	public String generateAlternative(final IGenerator aGenerator) {		
+		aGenerator.open(this);
+		aGenerator.close(this);
+		return aGenerator.getCode();
+	}
 	public Iterator getConcurrentIteratorOnConstituents() {
 		return this.container.getConcurrentIteratorOnConstituents();
 	}
