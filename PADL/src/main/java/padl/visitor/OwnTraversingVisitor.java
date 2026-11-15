@@ -2,12 +2,10 @@ package padl.visitor;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 import java.util.Iterator;
-import java.util.Set;
 
 import padl.kernel.IAbstractModel;
 import padl.kernel.IConstituent;
@@ -16,10 +14,6 @@ import padl.kernel.IPackage;
 
 public class OwnTraversingVisitor extends EmptyVisitor implements IGenerator {
     private final IGenerator delegate;
-
-    // Caching the set of completed subtree
-    private final Set<IConstituent> completed =
-            Collections.newSetFromMap(new HashMap<>());
 
     // Inspired by Constituent.cachedCorrespondingInterfaceNames.
     // Caching for Map<String, Method> for performance, if there is no Method with the string, a null entry is entered into methodCache
@@ -69,7 +63,7 @@ public class OwnTraversingVisitor extends EmptyVisitor implements IGenerator {
     }
 
     private void traverse(final IConstituent c) {
-        if (!allowed(c) || completed.contains(c)) {
+        if (!allowed(c)) {
             return;
         }
         for (Class<?> k = c.getClass(); k != null; k = k.getSuperclass()) {
@@ -82,20 +76,17 @@ public class OwnTraversingVisitor extends EmptyVisitor implements IGenerator {
                         traverseChildrenOf(container);
                     }
                     call(close, c);
-                    completed.add(c);
                     return;
                 }
                 final Method visit = findVisitorMethod("visit", i);
                 if (visit != null) {
                     call(visit, c);
-                    completed.add(c);
                     return;
                 }
             }
         }
 
         this.delegate.unknownConstituentHandler("visit", c);
-        this.completed.add(c);
     }
 
     private void traverseChildrenOf(final IContainer c) {
@@ -119,12 +110,10 @@ public class OwnTraversingVisitor extends EmptyVisitor implements IGenerator {
     @Override
     public void reset() {
         delegate.reset();
-        completed.clear();
     }
 
     @Override
     public void open(IAbstractModel anAbstractModel) {
-        completed.clear();
         delegate.open(anAbstractModel);
         traverseAll(anAbstractModel.getIteratorOnConstituents());
     }
