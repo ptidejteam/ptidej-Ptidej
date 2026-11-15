@@ -378,13 +378,13 @@ public final class JavaGenerator implements IGenerator {
 		this.buffer.append(p.getName());
  		this.buffer.append('\n');
  
-		this.visit((IField) p.getConstituentFromID(p.getOriginFieldName()));
+		this.visit((IField) p.getConstituentFromName(p.getOriginFieldName()));
  		this.buffer.append('\n');
  		this.open((IMethod) p
-				.getConstituentFromID(p.getOriginGetterMethodName()));
+				.getConstituentFromName(p.getOriginGetterMethodName()));
  		this.buffer.append('\n');
  		this.open((IMethod) p
-				.getConstituentFromID(p.getOriginSetterMethodName()));
+				.getConstituentFromName(p.getOriginSetterMethodName()));
  		this.buffer.append('\n');
  	}
 
