@@ -17,6 +17,11 @@ import padl.kernel.impl.AbstractModel;
 import padl.kernel.impl.Factory;
 import padl.visitor.repository.JavaGenerator;
 
+import padl.kernel.IClass;
+import padl.kernel.IMethod;
+import padl.visitor.EmptyVisitor;
+import padl.visitor.IGenerator;
+
 public class AlternativelyPatternedVisitorTest {
 
 	private static final String CLASS_PATH =
@@ -60,5 +65,48 @@ public class AlternativelyPatternedVisitorTest {
 			"Both generators should produce identical code",
 			javaGenerator.getCode(),
 			alternativeGenerator.getCode());
+	}
+
+	public static class CountingGenerator extends EmptyVisitor implements IGenerator {
+		public int classes = 0;
+		public int methods = 0;
+
+		@Override
+		public void open(final IClass aClass) {
+			this.classes++;
+		}
+
+		@Override
+		public void open(final IMethod aMethod) {
+			this.methods++;
+		}
+
+		public String getCode() {
+			return this.classes + " classes, " + this.methods + " methods";
+		}
+	}
+
+	@Test
+	public void ownTraversalVisitsSameElementsAsAccept() {
+		final CountingGenerator viaAccept = new CountingGenerator();
+		codeLevelModel.generate(viaAccept);
+
+		final CountingGenerator viaOwn = new CountingGenerator();
+		((AbstractModel) codeLevelModel).generateAlternative(
+				new JavaAlternativelyPatterenedGenerator(viaOwn));
+
+		assertTrue(viaAccept.classes > 0);
+		assertEquals(viaAccept.classes, viaOwn.classes);
+		assertEquals(viaAccept.methods, viaOwn.methods);
+	}
+
+	@Test
+	public void multiRunTest() {
+		final JavaAlternativelyPatterenedGenerator generator =
+				new JavaAlternativelyPatterenedGenerator();
+		((AbstractModel) codeLevelModel).generateAlternative(generator);
+		final String first = generator.getCode();
+		((AbstractModel) codeLevelModel).generateAlternative(generator);
+		assertEquals(first, generator.getCode());
 	}
 }
