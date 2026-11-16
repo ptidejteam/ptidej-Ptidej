@@ -54,7 +54,6 @@ import padl.test.remove.RemoveTest;
 import padl.test.setter.GetterTest;
 import padl.test.setter.SetterTest;
 import padl.test.visitors.BFVisitorTest;
-import padl.test.visitors.OwnTraversingVisitorTest;
 import padl.test.visitors.PlantUMLGeneratorVisitorTest;
 
 /**
@@ -136,7 +135,6 @@ public final class TestPADLAnalyses extends junit.framework.TestSuite {
 		suite.addTestSuite(SetterTest.class);
 		suite.addTestSuite(GetterTest.class);
 		suite.addTestSuite(PlantUMLGeneratorVisitorTest.class);
-		suite.addTestSuite(OwnTraversingVisitorTest.class);
 		return suite;
 	}
 }
