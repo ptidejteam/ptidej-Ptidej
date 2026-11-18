@@ -1,4 +1,4 @@
-package padl.alternativeVisitor.test;
+package padl.creator.classfile.assignment;
 
 import junit.framework.TestCase;
 import padl.alternativeVisitor.DfsIterator;

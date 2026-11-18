@@ -17,6 +17,13 @@ public final class DfsIterator<T extends IVisitor> implements JavaAlternativelyP
             aConstituent
         ));
     }
+    /* Reverse order, so that the first child is on top of the stack */
+    public void addChildren(final java.util.List<IConstituent> children, final java.util.function.Predicate<IConstituent> supportsOpenClose) {
+        for (int i = children.size() - 1; i >= 0; i--) {
+            this.enter(children.get(i), supportsOpenClose.test(children.get(i)));
+            this.leave(children.get(i), supportsOpenClose.test(children.get(i)));
+        }
+    }
     public void leave(final IConstituent aConstituent, final boolean supportsOpenClose) {
         if (!supportsOpenClose)
             return;

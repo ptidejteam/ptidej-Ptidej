@@ -17,5 +17,6 @@ public class SkipIterator<T extends IVisitor> implements JavaAlternativelyPatter
         }
     }
     public void enter(final IConstituent aConstituent, final boolean supportsOpenClose) {this.iter.enter(aConstituent, supportsOpenClose);}
+    public void addChildren(final java.util.List<IConstituent> children, final java.util.function.Predicate<IConstituent> supportsOpenClose) {this.iter.addChildren(children, supportsOpenClose);}
     public void leave(final IConstituent aConstituent, final boolean supportsOpenClose) {this.iter.leave(aConstituent, supportsOpenClose);}
 }

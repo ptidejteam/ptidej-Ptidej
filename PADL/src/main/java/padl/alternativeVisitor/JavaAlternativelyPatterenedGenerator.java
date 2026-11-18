@@ -17,10 +17,17 @@ public final class JavaAlternativelyPatterenedGenerator<T extends IVisitor> impl
         Optional<Action> getNext();
         void enter(final IConstituent aConstituent, final boolean supportsOpenClose);
         void leave(final IConstituent aConstituent, final boolean supportsOpenClose);
+        /* Schedules the children of a container, in the order of the strategy */
+        void addChildren(final java.util.List<IConstituent> children, final java.util.function.Predicate<IConstituent> supportsOpenClose);
     }
 
     private final JavaGenerator renderer;
     private final ActionIterator<T> iterator;
+
+    /* Default constructor: depth-first, as required by the test of PR #521 */
+    public JavaAlternativelyPatterenedGenerator() {
+        this(new DfsIterator<>());
+    }
 
     /* Simple constructor to just choose which iteration order */
     public JavaAlternativelyPatterenedGenerator(final ActionIterator<T> iterator) {
@@ -62,21 +69,16 @@ public final class JavaAlternativelyPatterenedGenerator<T extends IVisitor> impl
                     else this.dispatchVisit(action.getConstituent());
                     break;
             }
-            if (action.getKind() != Action.Kind.Close && aConstituent instanceof IContainer container) {
-                // **HORRIBLE HACK**
-                // We should better avoid raw types.
-                //
-                // This code doesn't compile without the cast
-                // because getConcurrentIteratorOnConstituents
-                // and getIteratorOnConstituents return a raw
-                // `Iterator` type.
+            // Only an opened container schedules its own children.
+            if (action.getKind() == Action.Kind.Open && action.getConstituent() instanceof IContainer container) {
                 @SuppressWarnings("unchecked")
                 final Iterator<IConstituent> iter = container instanceof IFirstClassEntity || container instanceof IOperation
                     ? container.getConcurrentIteratorOnConstituents()
                     : container.getIteratorOnConstituents();
-                iter.forEachRemaining(v -> this.iterator.enter((IConstituent) v, this.supportsOpenClose(v)));
+                final java.util.List<IConstituent> children = new java.util.ArrayList<>();
+                iter.forEachRemaining(children::add);
+                this.iterator.addChildren(children, this::supportsOpenClose);
             }
-            this.iterator.leave(action.getConstituent(), this.supportsOpenClose(action.getConstituent()));
         }
     }
 

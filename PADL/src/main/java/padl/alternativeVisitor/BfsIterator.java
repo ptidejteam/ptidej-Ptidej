@@ -18,6 +18,12 @@ public final class BfsIterator<T extends IVisitor> implements JavaAlternativelyP
             aConstituent
         ));
     }
+    public void addChildren(final java.util.List<IConstituent> children, final java.util.function.Predicate<IConstituent> supportsOpenClose) {
+        for (final IConstituent child : children) {
+            this.enter(child, supportsOpenClose.test(child));
+            this.leave(child, supportsOpenClose.test(child));
+        }
+    }
     public void leave(final IConstituent aConstituent, final boolean supportsOpenClose) {
         if (!supportsOpenClose)
             return;
