@@ -20,23 +20,24 @@ import padl.visitor.repository.JavaGenerator;
 public class AlternativelyPatternedVisitorTest {
 
 	private static final String CLASS_PATH =
-		"../PADL/target/classes/padl/kernel/impl/Factory.class";
+		"../PADL Creator ClassFile/target/test-classes/topLevelEntities/swing 1.3.1/";
 
 	private static ICodeLevelModel codeLevelModel;
 
 	@BeforeClass
 	public static void createModel() {
-		final ICodeLevelModelCreator creator =
-			new CompleteClassFileCreator(new String[] { CLASS_PATH });
+		
+		codeLevelModel = Factory.getInstance().createCodeLevelModel("");
 
 		try {
-			codeLevelModel =
-				Factory.getInstance().createCodeLevelModel("Test Model");
-			codeLevelModel.create(creator);
+			codeLevelModel.create(new CompleteClassFileCreator(new String[] {
+					CLASS_PATH },
+					true));
 		}
 		catch (final CreationException e) {
 			fail("Could not create the code-level model: " + e.getMessage());
 		}
+		
 	}
 
 	@Test
